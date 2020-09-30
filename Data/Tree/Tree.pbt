@@ -74,6 +74,57 @@ Objects {
   ChildIds: 6926216394858540610
   ChildIds: 3949646926361116126
   ChildIds: 7593868476968474171
+  ChildIds: 14374752619787861237
+  ChildIds: 13265910483270990401
+  ChildIds: 10137920415263307521
+  ChildIds: 5710031023250350265
+  ChildIds: 9730898347651022390
+  ChildIds: 6824762059754410892
+  ChildIds: 6277561189983775282
+  ChildIds: 10938996938663446985
+  ChildIds: 17338099282774047488
+  ChildIds: 14629249523846130797
+  ChildIds: 11419272900590488107
+  ChildIds: 13025375218938064028
+  ChildIds: 8903514396079524211
+  ChildIds: 3918694528640039018
+  ChildIds: 12870176042643489390
+  ChildIds: 8128421418600125926
+  ChildIds: 18139089256621366885
+  ChildIds: 6588830784451461517
+  ChildIds: 1167688742965812286
+  ChildIds: 15279243288496720658
+  ChildIds: 6874960950340008701
+  ChildIds: 13902673511117459196
+  ChildIds: 17560647008369306271
+  ChildIds: 17800607465450379230
+  ChildIds: 4933242486435730165
+  ChildIds: 14391627314456104218
+  ChildIds: 13359666208348467411
+  ChildIds: 6794846087132031925
+  ChildIds: 4342290997640323827
+  ChildIds: 13995321256503844896
+  ChildIds: 2577831390502314676
+  ChildIds: 2211951264531413569
+  ChildIds: 14319976159570519187
+  ChildIds: 17882489589436940330
+  ChildIds: 9671135538355429591
+  ChildIds: 6207344577349034093
+  ChildIds: 17479714132498265151
+  ChildIds: 10054513661398796312
+  ChildIds: 10113548422641482311
+  ChildIds: 4555124564944032846
+  ChildIds: 10684049012134181664
+  ChildIds: 9496763353976487022
+  ChildIds: 15953244400636705271
+  ChildIds: 17423917233210897214
+  ChildIds: 2603486898731586670
+  ChildIds: 11205104528150162419
+  ChildIds: 9696275112344888137
+  ChildIds: 5657311776661771685
+  ChildIds: 11883561041736467956
+  ChildIds: 5602634255079347373
+  ChildIds: 4016951851227711851
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -82,6 +133,3070 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 4016951851227711851
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9968.77832
+            Y: -10883.8906
+            Z: 2913.78516
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -101.49025
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 5602634255079347373
+  Name: "Plant_branches_big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10575267032911545469
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_branches_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -8954.76855
+            Y: -11590.2969
+            Z: 2889.13843
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10240628397337775553
+    }
+  }
+}
+Objects {
+  Id: 11883561041736467956
+  Name: "Rock_02"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7974900407688567360
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9861.19629
+            Y: -7536.63672
+            Z: 2856.90332
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.503053784
+            Y: 0.503053784
+            Z: 0.503053784
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -177.416962
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11106787426060956844
+    }
+  }
+}
+Objects {
+  Id: 5657311776661771685
+  Name: "Small_palm"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16295755683547083001
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small_palm"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -10123.9766
+            Y: -8969.55566
+            Z: 2872.87891
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.21394491
+            Y: 1.21394491
+            Z: 1.21394491
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 2576864945443041003
+    }
+  }
+}
+Objects {
+  Id: 9696275112344888137
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -8555.76563
+            Y: -7677.40234
+            Z: 2860.75439
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 49.7911301
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 11205104528150162419
+  Name: "Rock_02"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7974900407688567360
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -29136.4336
+            Y: -34519.3359
+            Z: 5260.7793
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.717058063
+            Y: 0.717058063
+            Z: 0.717058063
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Roll: 25.1552429
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11106787426060956844
+    }
+  }
+}
+Objects {
+  Id: 2603486898731586670
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -28818.0742
+            Y: -34131.3203
+            Z: 5095.91699
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 64.8697739
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 17423917233210897214
+  Name: "Bush Green 02"
+  Transform {
+    Location {
+      X: -30541.8555
+      Y: -29998.1387
+      Z: 4155.60156
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.880472064
+      Y: 0.880472064
+      Z: 0.880472064
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13800436588944964225
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 15953244400636705271
+  Name: "Plant_combination_01"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9562506397257196928
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_combination_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9220.11914
+            Y: -11034.6611
+            Z: 2899.13525
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 8.60961723
+            Yaw: -2.60727
+            Roll: -15.2359514
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16761194216714760008
+    }
+  }
+}
+Objects {
+  Id: 9496763353976487022
+  Name: "Plant_combination_01"
+  Transform {
+    Location {
+      X: -3546.4248
+      Y: -5520.37207
+      Z: 3388.21021
+    }
+    Rotation {
+      Pitch: 11.7420778
+      Yaw: 35.4283447
+      Roll: -14.1914282
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9562506397257196928
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_combination_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9505.44238
+            Y: -11092.5645
+            Z: 2903.57813
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 11.7420778
+            Yaw: 120.900078
+            Roll: -14.1923695
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16761194216714760008
+    }
+  }
+}
+Objects {
+  Id: 10684049012134181664
+  Name: "Plant_combination_01"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9562506397257196928
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_combination_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9320.99707
+            Y: -11335.3496
+            Z: 2903.57813
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 11.7420778
+            Yaw: 35.4283447
+            Roll: -14.1914568
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16761194216714760008
+    }
+  }
+}
+Objects {
+  Id: 4555124564944032846
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9849.17578
+            Y: -9051.43164
+            Z: 2911.35474
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
+  }
+}
+Objects {
+  Id: 10113548422641482311
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Location {
+      X: -9590.85742
+      Y: -9046.61328
+      Z: 2884.3772
+    }
+    Rotation {
+      Yaw: -53.9132767
+    }
+    Scale {
+      X: 1.44730484
+      Y: 1.44730484
+      Z: 1.44730484
+    }
+  }
+  ParentId: 10244168996742092131
+  ChildIds: 13058177570617198862
+  ChildIds: 16706220304274412564
+  ChildIds: 9611854853079137807
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 10113548422641482311
+    SubobjectId: 8006897166724501526
+    InstanceId: 2446556660018494520
+    TemplateId: 5154525849982912730
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 9611854853079137807
+  Name: "Fern 01"
+  Transform {
+    Location {
+      X: -0.76483196
+      Y: -2.81643701
+      Z: -4.17172527
+    }
+    Rotation {
+      Yaw: 41.8117638
+      Roll: 3.08434494e-07
+    }
+    Scale {
+      X: 0.551253438
+      Y: 0.551253438
+      Z: 0.909618556
+    }
+  }
+  ParentId: 10113548422641482311
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.025744684
+        G: 0.0364583321
+        B: 0.0153808584
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Nature_Leaves:id"
+      AssetReference {
+        Id: 17201051112233946141
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15128280182623405640
+    }
+    Teams {
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 9611854853079137807
+    SubobjectId: 7359047989305185374
+    InstanceId: 2446556660018494520
+    TemplateId: 5154525849982912730
+  }
+}
+Objects {
+  Id: 16706220304274412564
+  Name: "Fern 01"
+  Transform {
+    Location {
+      X: -3.23657346
+      Y: 0.979054093
+      Z: 40.8646812
+    }
+    Rotation {
+      Pitch: -2.12442017
+      Yaw: 70.7997818
+      Roll: -6.61825562
+    }
+    Scale {
+      X: 0.396344602
+      Y: 0.355315149
+      Z: 0.625306666
+    }
+  }
+  ParentId: 10113548422641482311
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.0514893681
+        G: 0.0729166642
+        B: 0.0307617169
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Nature_Leaves:id"
+      AssetReference {
+        Id: 17201051112233946141
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15128280182623405640
+    }
+    Teams {
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 16706220304274412564
+    SubobjectId: 332376740116708933
+    InstanceId: 2446556660018494520
+    TemplateId: 5154525849982912730
+  }
+}
+Objects {
+  Id: 13058177570617198862
+  Name: "Fern 01"
+  Transform {
+    Location {
+      X: -1.1871841
+      Y: -3.32764244
+      Z: 5.37760878
+    }
+    Rotation {
+      Pitch: 1.03406322
+      Yaw: -33.3074646
+      Roll: 0.714184582
+    }
+    Scale {
+      X: 0.611027479
+      Y: 0.611027479
+      Z: 1.00825107
+    }
+  }
+  ParentId: 10113548422641482311
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.0404559337
+        G: 0.0572916679
+        B: 0.0241699219
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Nature_Leaves:id"
+      AssetReference {
+        Id: 17201051112233946141
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15128280182623405640
+    }
+    Teams {
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 13058177570617198862
+    SubobjectId: 6229405622172869471
+    InstanceId: 2446556660018494520
+    TemplateId: 5154525849982912730
+  }
+}
+Objects {
+  Id: 10054513661398796312
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9773.35156
+            Y: -8592.98145
+            Z: 2880.8335
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -101.519485
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
+  }
+}
+Objects {
+  Id: 17479714132498265151
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9864.8457
+            Y: -8481.1582
+            Z: 2872.22363
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 6207344577349034093
+  Name: "Rock_01"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1487438617200535213
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -212.008
+            Y: -130.02507
+            Z: -74.5760956
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31531048
+            Y: 3.31380844
+            Z: 3.65529037
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14346529383871859021
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -16902.6133
+            Y: -14663.0176
+            Z: 2311.32983
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -96.3246536
+            Roll: 1.9289273e-05
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.48383689
+            Y: 1.48383689
+            Z: 1.48383689
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16490605118105290762
+    }
+  }
+}
+Objects {
+  Id: 9671135538355429591
+  Name: "Savanna_tree"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5997988510749436408
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Savanna_tree"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9349.47461
+            Y: -6770.75635
+            Z: 2817.35107
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.7209301
+            Y: 1.7209301
+            Z: 1.7209301
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -179.162811
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4892213723100784896
+    }
+  }
+}
+Objects {
+  Id: 17882489589436940330
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -30986.5273
+            Y: -30147.6953
+            Z: 4300.62891
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 84.9947281
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 14319976159570519187
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -30882.4844
+            Y: -30097.8965
+            Z: 4265.88379
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
+  }
+}
+Objects {
+  Id: 2211951264531413569
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -31058.1836
+            Y: -30913.8184
+            Z: 4410.88281
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -11.2919006
+            Yaw: 66.9347458
+            Roll: 0.598182917
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 2577831390502314676
+  Name: "Plant_branches_big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10575267032911545469
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_branches_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -30633.9219
+            Y: -31450.0605
+            Z: 4484.51074
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -112.297333
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.3645165
+            Y: 1.3645165
+            Z: 1.3645165
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10240628397337775553
+    }
+  }
+}
+Objects {
+  Id: 13995321256503844896
+  Name: "Plant_branches_big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10575267032911545469
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_branches_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -31006.2344
+            Y: -31376.4824
+            Z: 4455.63965
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -130.649414
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10240628397337775553
+    }
+  }
+}
+Objects {
+  Id: 4342290997640323827
+  Name: "Plant_branches_big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7022391001291310086
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.267486572
+            Yaw: -34.861908
+            Roll: -2.87298584
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9939043548605120334
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 8.04071
+            Yaw: 89.6946259
+            Roll: -18.458313
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10575267032911545469
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_branches_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -30533.5195
+            Y: -31327.4492
+            Z: 4432.05273
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.61008656
+            Y: 1.61008656
+            Z: 1.61008656
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 25.9927883
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12072322761245618581
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 16.5295887
+            Yaw: -136.564606
+            Roll: -37.4957275
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10240628397337775553
+    }
+  }
+}
+Objects {
+  Id: 6794846087132031925
+  Name: "Savanna_tree"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5997988510749436408
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Savanna_tree"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -31429.6016
+            Y: -31648.0215
+            Z: 4622.17773
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -14.0466585
+            Yaw: 87.6503143
+            Roll: 1.87687182
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.23517
+            Y: 1.23517
+            Z: 1.23517
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4892213723100784896
+    }
+  }
+}
+Objects {
+  Id: 13359666208348467411
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -28268.8281
+            Y: -29844.9629
+            Z: 3846.82349
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.81314194
+            Yaw: 55.6991692
+            Roll: 9.26939106
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 14391627314456104218
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -28321.832
+            Y: -29700.0898
+            Z: 3804.97192
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
+  }
+}
+Objects {
+  Id: 4933242486435730165
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -28384.1016
+            Y: -31596.7813
+            Z: 4395.11621
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -46.0734024
+            Roll: 11.2916536
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 17800607465450379230
+  Name: "Rock_01"
+  Transform {
+    Location {
+      X: -31808.6406
+      Y: -30894.1172
+      Z: 4182.53516
+    }
+    Rotation {
+      Pitch: 15.0469131
+      Yaw: -169.19577
+      Roll: 2.83608842
+    }
+    Scale {
+      X: 2.17135429
+      Y: 2.17135429
+      Z: 2.17135429
+    }
+  }
+  ParentId: 10244168996742092131
+  ChildIds: 2645050943201835070
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17800607465450379230
+    SubobjectId: 14346529383871859021
+    InstanceId: 4122164282698852955
+    TemplateId: 16490605118105290762
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 2645050943201835070
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: -223.947983
+      Y: -90.8699875
+      Z: 137.618591
+    }
+    Rotation {
+      Yaw: 40.7653313
+      Roll: 4.00158257e-07
+    }
+    Scale {
+      X: 1.05395806
+      Y: 2.65535307
+      Z: 1.43040705
+    }
+  }
+  ParentId: 17800607465450379230
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8619008964759729738
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.69419885
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.315476328
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.838541687
+        G: 0.838541687
+        B: 0.838541687
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 2645050943201835070
+    SubobjectId: 1487438617200535213
+    InstanceId: 4122164282698852955
+    TemplateId: 16490605118105290762
+  }
+}
+Objects {
+  Id: 17560647008369306271
+  Name: "Rock 03"
+  Transform {
+    Location {
+      X: -28120.5313
+      Y: -31731.623
+      Z: 4294.7959
+    }
+    Rotation {
+      Pitch: -79.7181168
+      Yaw: 179.999878
+      Roll: -142.472656
+    }
+    Scale {
+      X: 1.95389676
+      Y: 1.9538945
+      Z: 1.92023242
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8619008964759729738
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.848705
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.737095475
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6981536508008379085
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 13902673511117459196
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: -31195.5664
+      Y: -29578.1309
+      Z: 4235.07422
+    }
+    Rotation {
+      Pitch: 78.0096283
+      Yaw: -61.3071785
+      Roll: -67.0313568
+    }
+    Scale {
+      X: 2.46816778
+      Y: 3.35407782
+      Z: 8.76762295
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8772095799891222028
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.44345713
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.737095475
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 6874960950340008701
+  Name: "Rock 03"
+  Transform {
+    Location {
+      X: -27135.5469
+      Y: -31285.7617
+      Z: 4262.55273
+    }
+    Rotation {
+      Pitch: -79.714325
+      Yaw: 113.208702
+      Roll: -142.473297
+    }
+    Scale {
+      X: 0.909652531
+      Y: 1.58996356
+      Z: 1.56259418
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8619008964759729738
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.848705
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.737095475
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6981536508008379085
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 15279243288496720658
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: -28196.1875
+      Y: -31123.9
+      Z: 4123.41797
+    }
+    Rotation {
+      Pitch: 54.2764473
+      Yaw: 91.8133545
+      Roll: -116.416412
+    }
+    Scale {
+      X: 1.53666508
+      Y: 3.58166146
+      Z: 6.80798101
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8772095799891222028
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.44345713
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.737095475
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 1167688742965812286
+  Name: "Rock_02"
+  Transform {
+    Location {
+      X: -19119.082
+      Y: -23650.2695
+      Z: 4233.71826
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2069282792018648764
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 95.2669678
+            Y: 137.085464
+            Z: 152.335358
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 1.53581572
+            Yaw: -57.760437
+            Roll: 4.47886467
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2878885901451109221
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 61.96595
+            Y: 29.6903248
+            Z: 96.2779922
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -137.578079
+          }
+        }
+        Overrides {
+          Name: "DisableReceiveDecals"
+          Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7974900407688567360
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -27578.8711
+            Y: -30264.9531
+            Z: 4319.8877
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 36.2151299
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.43357253
+            Y: 1.43357253
+            Z: 1.43357253
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12172319136831528051
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -212.007706
+            Y: -130.024948
+            Z: -97.9415
+          }
+        }
+        Overrides {
+          Name: "DisableReceiveDecals"
+          Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13490781987154354587
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -207.991623
+            Y: 51.9592247
+            Z: -296.678772
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 40.0706329
+          }
+        }
+        Overrides {
+          Name: "DisableReceiveDecals"
+          Bool: true
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11106787426060956844
+    }
+  }
+}
+Objects {
+  Id: 6588830784451461517
+  Name: "Rock_02"
+  Transform {
+    Location {
+      X: -19119.082
+      Y: -23650.2695
+      Z: 4233.71826
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7974900407688567360
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -24944.2695
+            Y: -29466.6914
+            Z: 3749.08618
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11106787426060956844
+    }
+  }
+}
+Objects {
+  Id: 18139089256621366885
+  Name: "Rock_01"
+  Transform {
+    Location {
+      X: -17900.209
+      Y: -24032.0156
+      Z: 3938.70435
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14346529383871859021
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rock_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23725.3945
+            Y: -29848.4375
+            Z: 3454.07227
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16490605118105290762
+    }
+  }
+}
+Objects {
+  Id: 8128421418600125926
+  Name: "Palm_Tree_kelp_02"
+  Transform {
+    Location {
+      X: -19415.9668
+      Y: -26543.8477
+      Z: 4783.19287
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.787804425
+      Y: 0.787804425
+      Z: 0.787804425
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17724463767299612675
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Palm_Tree_kelp_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -25241.1523
+            Y: -32360.2695
+            Z: 4298.56055
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.787804425
+            Y: 0.787804425
+            Z: 0.787804425
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14045367162651513996
+    }
+  }
+}
+Objects {
+  Id: 12870176042643489390
+  Name: "Grass Tall"
+  Transform {
+    Location {
+      X: -23284.1055
+      Y: -31330.7207
+      Z: 3823.52417
+    }
+    Rotation {
+      Pitch: -3.82943416
+      Yaw: -0.238098174
+      Roll: 8.24223
+    }
+    Scale {
+      X: 0.706265152
+      Y: 0.706265152
+      Z: 0.706265152
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Grass:id"
+      AssetReference {
+        Id: 1702837764955470267
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8553298544017934648
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 3918694528640039018
+  Name: "Grass Tall"
+  Transform {
+    Location {
+      X: -22521.6094
+      Y: -31599.4805
+      Z: 3861.16284
+    }
+    Rotation {
+      Pitch: -2.92547226
+      Yaw: -0.266326785
+      Roll: 10.6248465
+    }
+    Scale {
+      X: 0.600172937
+      Y: 0.600172937
+      Z: 0.600172937
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Grass:id"
+      AssetReference {
+        Id: 14162988344218746234
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8553298544017934648
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableCastShadows: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 8903514396079524211
+  Name: "plant_02"
+  Transform {
+    Location {
+      X: -17621.834
+      Y: -25445.7207
+      Z: 4309.71289
+    }
+    Rotation {
+      Pitch: 6.24165201
+      Yaw: 176.647873
+      Roll: 2.49005103
+    }
+    Scale {
+      X: 0.885634363
+      Y: 0.885634363
+      Z: 0.885634363
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5251873025135899780
+      value {
+        Overrides {
+          Name: "Name"
+          String: "plant_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23447.0195
+            Y: -31262.1426
+            Z: 3825.08081
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 6.24165201
+            Yaw: 176.647873
+            Roll: 2.49005055
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.885634363
+            Y: 0.885634363
+            Z: 0.885634363
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3024778326165103976
+    }
+  }
+}
+Objects {
+  Id: 13025375218938064028
+  Name: "Palm_Tree_kelp"
+  Transform {
+    Location {
+      X: -18827.3027
+      Y: -26260.0586
+      Z: 4667.65186
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.735539436
+      Y: 0.735539436
+      Z: 0.735539436
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6394854372994741511
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Palm_Tree_kelp"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -24652.4883
+            Y: -32076.4805
+            Z: 4183.01953
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.735539436
+            Y: 0.735539436
+            Z: 0.735539436
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1721108279989058967
+    }
+  }
+}
+Objects {
+  Id: 11419272900590488107
+  Name: "Palm_Tree_02"
+  Transform {
+    Location {
+      X: -17719.9922
+      Y: -26543.8477
+      Z: 4665.10596
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.787804425
+      Y: 0.787804425
+      Z: 0.787804425
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7205272924992499337
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Palm_Tree_02"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23545.1797
+            Y: -32360.2695
+            Z: 4180.47363
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.787804425
+            Y: 0.787804425
+            Z: 0.787804425
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14627611778414521991
+    }
+  }
+}
+Objects {
+  Id: 14629249523846130797
+  Name: "Palm_Tree"
+  Transform {
+    Location {
+      X: -16648.4434
+      Y: -26516.5723
+      Z: 4541.08838
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.574217498
+      Y: 0.574217498
+      Z: 0.574217498
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10559408919856731641
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Palm_Tree"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22473.6289
+            Y: -32332.9941
+            Z: 4056.4563
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.574217498
+            Y: 0.574217498
+            Z: 0.574217498
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13116306161421341137
+    }
+  }
+}
+Objects {
+  Id: 17338099282774047488
+  Name: "Savanna_tree"
+  Transform {
+    Location {
+      X: -16788.6367
+      Y: -24341.2734
+      Z: 4132.96973
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.23517
+      Y: 1.23517
+      Z: 1.23517
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5997988510749436408
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Savanna_tree"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22613.8242
+            Y: -30157.6953
+            Z: 3648.33765
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.23517
+            Y: 1.23517
+            Z: 1.23517
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4892213723100784896
+    }
+  }
+}
+Objects {
+  Id: 10938996938663446985
+  Name: "Small_palm_flower"
+  Transform {
+    Location {
+      X: -17708.7422
+      Y: -25295.2227
+      Z: 4214.3418
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4137738316238168700
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small_palm_flower"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23533.9297
+            Y: -31111.6445
+            Z: 3729.70972
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15098451683578824339
+    }
+  }
+}
+Objects {
+  Id: 6277561189983775282
+  Name: "Small_palm"
+  Transform {
+    Location {
+      X: -17432.2441
+      Y: -25348.9922
+      Z: 4209.13
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16295755683547083001
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small_palm"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23257.4297
+            Y: -31165.4141
+            Z: 3724.4978
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 2576864945443041003
+    }
+  }
+}
+Objects {
+  Id: 6824762059754410892
+  Name: "Plant_combination_01"
+  Transform {
+    Location {
+      X: -16761.8652
+      Y: -25521.2324
+      Z: 4262.76611
+    }
+    Rotation {
+      Pitch: 11.809267
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9562506397257196928
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_combination_01"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22587.0508
+            Y: -31337.6543
+            Z: 3778.13403
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 11.809267
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16761194216714760008
+    }
+  }
+}
+Objects {
+  Id: 9730898347651022390
+  Name: "Plant_branches_big"
+  Transform {
+    Location {
+      X: -16503.8184
+      Y: -25491.2344
+      Z: 4261.83301
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10575267032911545469
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Plant_branches_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22329.0039
+            Y: -31307.6563
+            Z: 3777.20093
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10240628397337775553
+    }
+  }
+}
+Objects {
+  Id: 5710031023250350265
+  Name: "Rock Pile 001"
+  Transform {
+    Location {
+      X: -22871.3828
+      Y: -31019.5859
+      Z: 3761.30249
+    }
+    Rotation {
+      Pitch: -5.94665623
+      Yaw: 9.29416275
+      Roll: 16.1188087
+    }
+    Scale {
+      X: 1
+      Y: 1.00000286
+      Z: 0.463588536
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5784961500467902601
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14293176668765266901
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 10137920415263307521
+  Name: "YellowFL_Plant_Big"
+  Transform {
+    Location {
+      X: -16734.3594
+      Y: -25203.6016
+      Z: 4236.06592
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.44730484
+      Y: 1.44730484
+      Z: 1.44730484
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8006897166724501526
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22559.5469
+            Y: -31020.0234
+            Z: 3751.43384
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.44730484
+            Y: 1.44730484
+            Z: 1.44730484
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5154525849982912730
+    }
+  }
+}
+Objects {
+  Id: 13265910483270990401
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Location {
+      X: -16473.4863
+      Y: -25184.5938
+      Z: 4233.1875
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.31202734
+      Y: 1.31202734
+      Z: 1.31202734
+    }
+  }
+  ParentId: 10244168996742092131
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22298.6719
+            Y: -31001.0156
+            Z: 3748.55542
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
+  }
+}
+Objects {
+  Id: 14374752619787861237
+  Name: "YellowFL_Plant_Small"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10244168996742092131
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14204610683103225517
+      value {
+        Overrides {
+          Name: "Name"
+          String: "YellowFL_Plant_Small"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9963.25098
+            Y: -11022.9453
+            Z: 2935.42969
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -144.883652
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.31202734
+            Y: 1.31202734
+            Z: 1.31202734
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3168550522020651484
+    }
   }
 }
 Objects {
@@ -173438,11 +176553,14 @@ Objects {
   Name: "Swimmable Water Default"
   Transform {
     Location {
-      X: -17597.3145
-      Y: -16470.875
+      X: -17861.9668
+      Y: -16503.9785
+      Z: -109.237305
     }
     Rotation {
-      Yaw: 46.2256088
+      Pitch: 4.09811328e-05
+      Yaw: 42.8763924
+      Roll: 2.37477616e-05
     }
     Scale {
       X: 495.687439
@@ -173847,7 +176965,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 8619008964759729738
       }
     }
     Overrides {
@@ -173916,7 +177034,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 8619008964759729738
       }
     }
     Overrides {
@@ -173985,7 +177103,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 8619008964759729738
       }
     }
     Overrides {
@@ -174692,7 +177810,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 8619008964759729738
       }
     }
     Overrides {
@@ -174865,7 +177983,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 8619008964759729738
       }
     }
     Overrides {
@@ -176243,6 +179361,7 @@ Objects {
         Id: 8553298544017934648
       }
       DistanceBetweenInstances: 100
+      MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
@@ -176272,7 +179391,7 @@ Objects {
       Materials {
         key: "Nature_Grass"
         value {
-          Id: 841534158063459245
+          Id: 1702837764955470267
         }
       }
       LocalPositionOffset {
@@ -176322,7 +179441,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 841534158063459245
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -176334,7 +179453,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 102400
+        Max: 5000
       }
     }
     Foliage {
@@ -176342,6 +179461,7 @@ Objects {
         Id: 4044214825842439722
       }
       DistanceBetweenInstances: 100
+      MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
@@ -176389,6 +179509,7 @@ Objects {
         Id: 14293176668765266901
       }
       DistanceBetweenInstances: 400
+      MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
         Min: 12800
@@ -176435,58 +179556,10 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 289294461852093715
-      }
-      DistanceBetweenInstances: 2000
-      SpawnDistance: 28800
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 32
-      }
-      Scaling {
-        ScaleX {
-          Min: 1
-          Max: 1
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Branch"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -10
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
         Id: 16388825162191980240
       }
-      DistanceBetweenInstances: 400
-      MaterialChannel: 3
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 2
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
@@ -176516,7 +179589,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 841534158063459245
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -176533,61 +179606,9 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 1755255133030522901
-      }
-      DistanceBetweenInstances: 4000
-      MaterialChannel: 2
-      SpawnDistance: 28800
-      EnableCollision: true
-      CullDistance {
-        Min: 10000
-        Max: 80000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.3
-          Max: 0.5
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Trunk"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -860
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 400
+      DistanceBetweenInstances: 300
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
@@ -176618,7 +179639,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 841534158063459245
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -176738,7 +179759,6 @@ Objects {
         Id: 4842806961858489681
       }
       DistanceBetweenInstances: 2000
-      MaterialChannel: 2
       SpawnDistance: 24000
       EnableCollision: true
       CullDistance {
@@ -176747,7 +179767,7 @@ Objects {
       }
       ReceivesDecals: true
       GroundSlopeAngle {
-        Max: 90
+        Max: 32
       }
       Scaling {
         Scaling: Free
@@ -176764,9 +179784,212 @@ Objects {
           Max: 1.2
         }
       }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 8619008964759729738
+        }
+      }
+      LocalPositionOffset {
+        Z: -70
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 5000
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 8553298544017934648
+      }
+      DistanceBetweenInstances: 120
+      MaterialChannel: 2
+      SpawnDistance: 28800
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.5
+          Max: 0.8
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.6
+          Max: 0.7
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Grass"
+        value {
+          Id: 14162988344218746234
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 14293176668765266901
+      }
+      DistanceBetweenInstances: 2000
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 12800
+        Max: 25600
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.4
+          Max: 0.6
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.3
+          Max: 0.4
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 5784961500467902601
+        }
+      }
+      LocalPositionOffset {
+        Z: -10
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 5000
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 8553298544017934648
+      }
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 2
+      SpawnDistance: 28800
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.8
+          Max: 1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.8
+          Max: 1.5
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Grass"
+        value {
+          Id: 1702837764955470267
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 901541979513849367
+      }
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 2
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      CastShadow: true
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        ScaleX {
+          Min: 0.5
+          Max: 0.8
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
       RotationAlignment: AlignToWorldUp
       RandomYaw: true
       RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
       Materials {
         key: "Shared_BaseMaterial"
         value {
@@ -176774,7 +179997,164 @@ Objects {
         }
       }
       LocalPositionOffset {
-        Z: -70
+        Z: -20
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 13800436588944964225
+      }
+      DistanceBetweenInstances: 1000
+      MaterialChannel: 2
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      CastShadow: true
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        ScaleX {
+          Min: 0.4
+          Max: 0.7
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -20
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 11876426917449002523
+      }
+      DistanceBetweenInstances: 400
+      MaterialChannel: 2
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.5
+          Max: 0.7
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1.4
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -10
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 14293176668765266901
+      }
+      DistanceBetweenInstances: 300
+      MaterialChannel: 2
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 12800
+        Max: 25600
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        ScaleX {
+          Min: 0.6
+          Max: 0.8
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.3
+          Max: 0.4
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 5784961500467902601
+        }
+      }
+      LocalPositionOffset {
+        Z: -20
       }
       LocalRotationOffset {
       }
@@ -176873,6 +180253,20 @@ Objects {
   }
   ParentId: 4781671109827199097
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 3040292673401796244
+      value {
+        Overrides {
+          Name: "bp:Light Color"
+          Color {
+            R: 0.953125
+            G: 0.706559122
+            B: 0.580810547
+            A: 1
+          }
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 12972791516930567956
       value {

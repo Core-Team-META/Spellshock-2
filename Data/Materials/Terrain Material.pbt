@@ -9,7 +9,7 @@
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 9222070773466988839
+          Id: 15281399694292404596
         }
       }
       Overrides {
@@ -24,14 +24,14 @@
       }
       Overrides {
         Name: "material1side_scale"
-        Float: 0.3
+        Float: 0.5
       }
       Overrides {
         Name: "cmpc:Material1_Sides"
         Color {
-          R: 1
-          G: 0.738543034
-          B: 0.580000043
+          R: 0.8125
+          G: 0.54379642
+          B: 0.380859375
           A: 1
         }
       }
@@ -39,15 +39,6 @@
         Name: "cmp:Material2"
         AssetReference {
           Id: 15697206862897547361
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material2"
-        Color {
-          R: 0.65625
-          G: 0.65625
-          B: 0.65625
-          A: 1
         }
       }
       Overrides {
@@ -73,7 +64,7 @@
       Overrides {
         Name: "cmp:Material3_Sides"
         AssetReference {
-          Id: 15281399694292404596
+          Id: 14643090495247569259
         }
       }
       Overrides {
@@ -85,7 +76,7 @@
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 16476630519103366502
+          Id: 15281399694292404596
         }
       }
       Overrides {
@@ -98,7 +89,7 @@
       }
       Overrides {
         Name: "material3_scale"
-        Float: 0.6
+        Float: 0.8
       }
       Overrides {
         Name: "material3side_scale"
@@ -107,9 +98,9 @@
       Overrides {
         Name: "cmpc:Material2_Sides"
         Color {
-          R: 1
-          G: 0.847019911
-          B: 0.580000043
+          R: 0.864583313
+          G: 0.648700297
+          B: 0.532455623
           A: 1
         }
       }
@@ -126,6 +117,51 @@
         Name: "material1_genmask"
         Float: 0
       }
+      Overrides {
+        Name: "cmpc:Material1"
+        Color {
+          R: 0.96875
+          G: 0.808561325
+          B: 0.711425781
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material3"
+        Color {
+          R: 0.854166687
+          G: 0.621533394
+          B: 0.48046875
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material3_Sides"
+        Color {
+          R: 0.864583313
+          G: 0.805900276
+          B: 0.532455623
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material4_Sides"
+        Color {
+          R: 1
+          G: 0.879470229
+          B: 0.65
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material2"
+        Color {
+          R: 0.927083313
+          G: 0.864312053
+          B: 0.864312053
+          A: 1
+        }
+      }
     }
     Assets {
       Id: 12032822587521192598
@@ -137,12 +173,12 @@
       }
     }
     Assets {
-      Id: 9222070773466988839
-      Name: "Grass Basic"
+      Id: 15281399694292404596
+      Name: "Sand 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_001_uv"
+        AssetId: "mi_sand_001_uv"
       }
     }
     Assets {
@@ -182,12 +218,12 @@
       }
     }
     Assets {
-      Id: 15281399694292404596
-      Name: "Sand 01"
+      Id: 14643090495247569259
+      Name: "Dirt 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_001_uv"
+        AssetId: "dirt_001"
       }
     }
     Assets {
@@ -200,12 +236,12 @@
       }
     }
     Assets {
-      Id: 16476630519103366502
-      Name: "Rocks River Bed 01"
+      Id: 15281399694292404596
+      Name: "Sand 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "puddle_river_bed_001"
+        AssetId: "mi_sand_001_uv"
       }
     }
   }

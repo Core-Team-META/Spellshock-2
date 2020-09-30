@@ -251,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15128280182623405640
+  Name: "Fern 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fern_generic_004"
+  }
+}
+Assets {
   Id: 15100497118567945550
   Name: "Pyramid - 8-Sided Truncated Polished"
   PlatformAssetType: 1
@@ -401,6 +410,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "plastic_matte_001"
+  }
+}
+Assets {
+  Id: 13800436588944964225
+  Name: "Bush Green 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_002"
   }
 }
 Assets {
@@ -590,6 +608,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "urb_sub_craftsman_part_stair_001_balust"
+  }
+}
+Assets {
+  Id: 11876426917449002523
+  Name: "Bush Leafy Low 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_bush_002"
   }
 }
 Assets {
@@ -1646,15 +1673,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1755255133030522901
-  Name: "Tree Oak Bare 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_tree_oak_002"
-  }
-}
-Assets {
   Id: 1693247766034882366
   Name: "Gear - generic large five-spoked"
   PlatformAssetType: 1
@@ -1751,6 +1769,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_barrel_001"
+  }
+}
+Assets {
+  Id: 901541979513849367
+  Name: "Bush Green 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_001"
   }
 }
 Assets {
