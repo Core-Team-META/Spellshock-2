@@ -2,7 +2,7 @@
   Id: 14587921019247066876
   Name: "Ligntning Sphere Plasma Material"
   PlatformAssetType: 13
-  SerializationVersion: 63
+  SerializationVersion: 65
   CustomMaterialAsset {
     BaseMaterialId: 1951593977860928200
     ParameterOverrides {

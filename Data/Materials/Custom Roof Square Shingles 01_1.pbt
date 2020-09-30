@@ -2,7 +2,7 @@
   Id: 14262886758387296021
   Name: "Custom Roof Square Shingles 01"
   PlatformAssetType: 13
-  SerializationVersion: 63
+  SerializationVersion: 65
   CustomMaterialAsset {
     BaseMaterialId: 2115913270908487285
     ParameterOverrides {
