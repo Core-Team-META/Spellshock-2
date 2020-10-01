@@ -20,7 +20,7 @@
       }
       Overrides {
         Name: "material1_scale"
-        Float: 0.8
+        Float: 1.4
       }
       Overrides {
         Name: "material1side_scale"
@@ -44,7 +44,7 @@
       Overrides {
         Name: "cmp:Material2_Sides"
         AssetReference {
-          Id: 998074920267973145
+          Id: 15281399694292404596
         }
       }
       Overrides {
@@ -53,7 +53,7 @@
       }
       Overrides {
         Name: "material2side_scale"
-        Float: 0.1
+        Float: 1.4
       }
       Overrides {
         Name: "cmp:Material3"
@@ -76,7 +76,7 @@
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 15281399694292404596
+          Id: 15979377991647608535
         }
       }
       Overrides {
@@ -85,11 +85,11 @@
       }
       Overrides {
         Name: "material4side_scale"
-        Float: 0.6
+        Float: 0.2
       }
       Overrides {
         Name: "material3_scale"
-        Float: 0.8
+        Float: 1.4
       }
       Overrides {
         Name: "material3side_scale"
@@ -98,9 +98,9 @@
       Overrides {
         Name: "cmpc:Material2_Sides"
         Color {
-          R: 0.864583313
-          G: 0.648700297
-          B: 0.532455623
+          R: 1
+          G: 0.931854308
+          B: 0.79
           A: 1
         }
       }
@@ -148,8 +148,8 @@
         Name: "cmpc:Material4_Sides"
         Color {
           R: 1
-          G: 0.879470229
-          B: 0.65
+          G: 0.931854308
+          B: 0.79
           A: 1
         }
       }
@@ -200,12 +200,12 @@
       }
     }
     Assets {
-      Id: 998074920267973145
-      Name: "Cliff 01"
+      Id: 15281399694292404596
+      Name: "Sand 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_cliff_001_uv"
+        AssetId: "mi_sand_001_uv"
       }
     }
     Assets {
@@ -236,12 +236,12 @@
       }
     }
     Assets {
-      Id: 15281399694292404596
-      Name: "Sand 01"
+      Id: 15979377991647608535
+      Name: "Cliff 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_001_uv"
+        AssetId: "cliff_002"
       }
     }
   }

@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17999095934034705962
+  Name: "Waterfall Base Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_waterfall_base_volume"
+  }
+}
+Assets {
   Id: 17925863108097959649
   Name: "I"
   PlatformAssetType: 1
@@ -242,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15601518032554125788
+  Name: "Fantasy Shield 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_003"
+  }
+}
+Assets {
   Id: 15156283657915966751
   Name: "A"
   PlatformAssetType: 1
@@ -305,12 +323,30 @@ Assets {
   }
 }
 Assets {
+  Id: 14942585471315214147
+  Name: "Decal Stains Bottom 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_stain_bottom_001"
+  }
+}
+Assets {
   Id: 14881799801148158487
   Name: "Trim Top 8m 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_trim_top_6m_002"
+  }
+}
+Assets {
+  Id: 14834300160033285312
+  Name: "Long Banner Manticore"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_001"
   }
 }
 Assets {
@@ -458,6 +494,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13354969486855787710
+  Name: "Decal Sand Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_sand_patch_001"
+  }
+}
+Assets {
   Id: 13352595166498895188
   Name: "Large Round Wood Beam 6m"
   PlatformAssetType: 1
@@ -482,6 +527,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_stone-edge_corner_2m_001"
+  }
+}
+Assets {
+  Id: 13186791447862463406
+  Name: "Stone Wall End 6m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_stone-edge_6m_001"
   }
 }
 Assets {
@@ -980,6 +1034,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8539981025625262831
+  Name: "Decal Painted Lines 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_lines_001"
+  }
+}
+Assets {
   Id: 8353147935132205805
   Name: "Prism - 6-Sided Half"
   PlatformAssetType: 1
@@ -1022,6 +1085,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_002"
+  }
+}
+Assets {
+  Id: 8179760419682545374
+  Name: "Waterfall Straight"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "fxsm_waterfall_straight"
   }
 }
 Assets {
@@ -1439,6 +1511,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4607775144269372543
+  Name: "Bottle 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_bottle_003"
+  }
+}
+Assets {
   Id: 4603537691901304316
   Name: "Torch Fire VFX"
   PlatformAssetType: 8
@@ -1787,6 +1868,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_006"
+  }
+}
+Assets {
+  Id: 586768559664971120
+  Name: "Fabric Burlap New 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fan_fabric_burlap_002_uv"
   }
 }
 Assets {

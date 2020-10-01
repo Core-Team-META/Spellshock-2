@@ -8,23 +8,23 @@
     ParameterOverrides {
       Overrides {
         Name: "damage_amount"
-        Float: 0.581750274
+        Float: 0.68478924
       }
       Overrides {
         Name: "color_accent"
         Color {
-          R: 0.635417
-          G: 0.447698742
-          B: 0.152235299
+          R: 0.90625
+          G: 0.638520837
+          B: 0.217122376
           A: 1
         }
       }
       Overrides {
         Name: "color_damage"
         Color {
-          R: 0.5625
-          G: 0.53700161
-          B: 0.372375429
+          R: 0.921875
+          G: 0.880086
+          B: 0.610281944
           A: 1
         }
       }
