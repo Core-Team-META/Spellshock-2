@@ -242,6 +242,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15697206862897547361
+  Name: "Bricks Rough Stone Floor 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_stone_floor_rough_002"
+  }
+}
+Assets {
   Id: 15611201305513171321
   Name: "Nature Wind Intense Gusty Howling Whistle 01 SFX"
   PlatformAssetType: 7
@@ -257,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_shield_003"
+  }
+}
+Assets {
+  Id: 15223421943927964872
+  Name: "Cube - Arched"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_arched_001"
   }
 }
 Assets {
@@ -581,6 +599,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_part_doorway_001"
+  }
+}
+Assets {
+  Id: 12650985443469059164
+  Name: "Bricks Large Foundation 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_large_foundation_001"
   }
 }
 Assets {
@@ -944,6 +971,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9318816676439421301
+  Name: "Smoke Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_smoke_volume_vfx"
+  }
+}
+Assets {
   Id: 9242571079105582533
   Name: "Pipe Curved 90 Large"
   PlatformAssetType: 1
@@ -1304,6 +1340,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6491903416860593592
+  Name: "Steam Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_steam_volume_vfx"
+  }
+}
+Assets {
   Id: 6476226809204619067
   Name: "Stone Block Big Broken"
   PlatformAssetType: 1
@@ -1337,6 +1382,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_elven_symbols_001"
+  }
+}
+Assets {
+  Id: 6248700263324820103
+  Name: "Ember Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_ember_volume_vfx"
   }
 }
 Assets {
@@ -1565,6 +1619,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4209751927826907232
+  Name: "Branches Cluster Medium"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_medium_001"
+  }
+}
+Assets {
   Id: 4100897573787463767
   Name: "Cone - Truncated Hollow Concave"
   PlatformAssetType: 1
@@ -1706,6 +1769,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_half_003"
+  }
+}
+Assets {
+  Id: 2437857163573821662
+  Name: "Large Wood Board 8m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_large_board_6m"
   }
 }
 Assets {

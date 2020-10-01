@@ -15,7 +15,7 @@
             Z: 0.825478375
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 4201583025705890426
         ChildIds: 11430559833854037685
         ChildIds: 5137390223417621432
         ChildIds: 13780052961958589681
@@ -24,6 +24,7 @@
         ChildIds: 892375207559780887
         ChildIds: 5948020610953646932
         ChildIds: 14219446284788214801
+        ChildIds: 3147805983555945612
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -39,16 +40,19 @@
         Name: "Rock Block 01"
         Transform {
           Location {
+            X: -0.105631687
+            Y: -0.715472043
+            Z: -31.9281
           }
           Rotation {
             Pitch: -0.917511
-            Yaw: -112.965424
+            Yaw: -112.965332
             Roll: -177.155365
           }
           Scale {
-            X: 1.42224038
-            Y: 1.57606184
-            Z: 0.351781398
+            X: 1.4222331
+            Y: 1.57604158
+            Z: 0.405413091
           }
         }
         ParentId: 5395131134347800283
@@ -439,6 +443,59 @@
               Id: 18099048474841844083
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.838541687
+              G: 0.838541687
+              B: 0.838541687
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8978661562815925692
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3147805983555945612
+        Name: "Rock Block 01"
+        Transform {
+          Location {
+            X: 0.309565812
+            Y: -1.07501364
+            Z: -126.828384
+          }
+          Rotation {
+            Pitch: -0.917511
+            Yaw: -112.96524
+            Roll: -177.155365
+          }
+          Scale {
+            X: 1.42223549
+            Y: 1.57602787
+            Z: 0.858807623
+          }
+        }
+        ParentId: 5395131134347800283
+        UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {

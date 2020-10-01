@@ -90,6 +90,15 @@
               Id: 10313519700874090434
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -279,6 +288,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 10313519700874090434
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
             }
           }
         }
@@ -472,6 +490,15 @@
               Id: 10313519700874090434
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -661,6 +688,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 10313519700874090434
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
             }
           }
         }
@@ -854,6 +890,15 @@
               Id: 10313519700874090434
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1045,6 +1090,15 @@
               Id: 10313519700874090434
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1202,6 +1256,17 @@
           }
         }
         ParentId: 17432915248040355474
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.619791687
+              G: 0.619791687
+              B: 0.619791687
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1259,6 +1324,12 @@
           Overrides {
             Name: "ma:Building_LowerTrimOuter:utile"
             Float: 0.560945272
+          }
+          Overrides {
+            Name: "ma:Building_LowerTrimInner:id"
+            AssetReference {
+              Id: 12650985443469059164
+            }
           }
         }
         Collidable_v2 {
@@ -1334,6 +1405,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 10313519700874090434
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
             }
           }
         }
@@ -1528,6 +1608,15 @@
               Id: 10313519700874090434
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.541666687
+              G: 0.541666687
+              B: 0.541666687
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1718,6 +1807,15 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 12650985443469059164
+      Name: "Bricks Large Foundation 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_brick_large_foundation_001"
       }
     }
     PrimaryAssetId {
