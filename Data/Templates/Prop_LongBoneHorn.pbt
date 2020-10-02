@@ -10,15 +10,16 @@
         Name: "Prop_LongBoneHorn"
         Transform {
           Scale {
-            X: 2.23454952
-            Y: 2.23454952
-            Z: 2.23454952
+            X: 1.1741935
+            Y: 1.1741935
+            Z: 1.1741935
           }
         }
-        ParentId: 3675417152901240153
+        ParentId: 15628482461256129661
         ChildIds: 6746730675093772691
         ChildIds: 7916837312388507122
         ChildIds: 10617484344607898660
+        ChildIds: 9407843414592484267
         ChildIds: 4814613818050713207
         ChildIds: 15684399102903793191
         ChildIds: 16712372064731162580
@@ -57,12 +58,29 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15498075899340950546
+              Id: 1626097446304398136
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 0.906507552
+              B: 0.775618136
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.586514294
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.287441105
           }
         }
         Collidable_v2 {
@@ -129,19 +147,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -30.7886734
-            Y: 2.25248933
-            Z: 17.5544033
+            X: -30.7885799
+            Y: 2.25342822
+            Z: 17.5547581
           }
           Rotation {
             Pitch: -24.328064
-            Yaw: 6.15167737e-05
+            Yaw: 6.21245e-05
             Roll: -3.05175781e-05
           }
           Scale {
-            X: 0.773319304
-            Y: 0.773318768
-            Z: 0.472626179
+            X: 0.726548731
+            Y: 0.726548254
+            Z: 0.44404161
           }
         }
         ParentId: 7916837312388507122
@@ -159,15 +177,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 6.80729389
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -185,11 +203,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -201,19 +216,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -36.7576752
-            Y: 2.25269151
-            Z: 90.059494
+            X: -33.8450394
+            Y: 0.232037768
+            Z: 89.7494125
           }
           Rotation {
             Pitch: -18.995575
-            Yaw: 2.37847144e-05
+            Yaw: 1.68091774e-05
             Roll: -6.10351563e-05
           }
           Scale {
-            X: 0.67328459
-            Y: 0.673284
-            Z: 0.411488235
+            X: 0.615370691
+            Y: 0.615370095
+            Z: 0.376093149
           }
         }
         ParentId: 7916837312388507122
@@ -231,15 +246,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 5.44733477
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -257,11 +272,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -273,17 +285,16 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -33.8293076
-            Y: 2.25258136
-            Z: 50.0006027
+            X: -33.829422
+            Y: 2.2528522
+            Z: 49.9996758
           }
           Rotation {
-            Roll: 1.56483281e-06
           }
           Scale {
-            X: 0.718016326
-            Y: 0.718015671
-            Z: 0.438826948
+            X: 0.645585954
+            Y: 0.645585299
+            Z: 0.39455995
           }
         }
         ParentId: 7916837312388507122
@@ -301,15 +312,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 4.76551342
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -327,11 +338,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -343,19 +351,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -221.282822
-            Y: -0.000428017433
-            Z: -450.143951
+            X: -223.785767
+            Y: -3.23267508
+            Z: -439.27417
           }
           Rotation {
             Pitch: -22.79422
-            Yaw: 0.000321629603
+            Yaw: 0.000317340688
             Roll: -0.000122070313
           }
           Scale {
-            X: 1.89342964
-            Y: 1.89343154
-            Z: 0.991666138
+            X: 2.63753271
+            Y: 2.63753462
+            Z: 1.92616653
           }
         }
         ParentId: 7916837312388507122
@@ -373,9 +381,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.817708313
+              G: 0.783637047
+              B: 0.783637047
               A: 1
             }
           }
@@ -385,7 +393,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.5
+            Float: 6.51053238
           }
         }
         Collidable_v2 {
@@ -396,13 +404,11 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6239692794259041880
+            Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -414,19 +420,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -188.408615
-            Y: -0.000166451224
-            Z: -394.412262
+            X: -188.408752
+            Y: -0.000674978655
+            Z: -394.414093
           }
           Rotation {
             Pitch: -35.6049194
-            Yaw: 0.000334227807
+            Yaw: 0.000336544035
             Roll: -0.000274658203
           }
           Scale {
-            X: 1.89342964
-            Y: 1.89343059
-            Z: 0.879029393
+            X: 2.61077237
+            Y: 2.61076021
+            Z: 1.30832791
           }
         }
         ParentId: 7916837312388507122
@@ -444,9 +450,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
@@ -456,7 +462,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.5
+            Float: 9.72387409
           }
         }
         Collidable_v2 {
@@ -467,13 +473,11 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6239692794259041880
+            Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -485,19 +489,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -161.547516
-            Y: -0.000166451224
-            Z: -340.334869
+            X: -161.547943
+            Y: -3.47107291
+            Z: -340.337738
           }
           Rotation {
             Pitch: -21.5253601
-            Yaw: 0.00030419149
+            Yaw: 0.000306157104
             Roll: -9.15527344e-05
           }
           Scale {
-            X: 1.77670372
-            Y: 1.77670467
-            Z: 0.824839294
+            X: 2.43531346
+            Y: 2.43528366
+            Z: 1.43685424
           }
         }
         ParentId: 7916837312388507122
@@ -515,9 +519,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
@@ -527,7 +531,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.5
+            Float: 9.2999649
           }
         }
         Collidable_v2 {
@@ -538,13 +542,11 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6239692794259041880
+            Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -576,12 +578,29 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15498075899340950546
+              Id: 1626097446304398136
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 0.906507552
+              B: 0.775618136
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.586514294
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.287441105
           }
         }
         Collidable_v2 {
@@ -606,23 +625,60 @@
         }
       }
       Objects {
+        Id: 9407843414592484267
+        Name: "Decal Stains Round 01"
+        Transform {
+          Location {
+            X: 17.1109447
+            Y: 76.0393295
+            Z: 25.3872032
+          }
+          Rotation {
+            Pitch: 7.75878048
+            Yaw: 158.398956
+            Roll: -81.4664383
+          }
+          Scale {
+            X: 0.262381434
+            Y: 0.811037183
+            Z: 0.811035573
+          }
+        }
+        ParentId: 7140711368903109326
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 12385794193739794509
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+      }
+      Objects {
         Id: 4814613818050713207
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: 0.523533165
-            Y: 42.4194069
-            Z: -169.35791
+            X: -0.341865569
+            Y: 48.0299835
+            Z: -166.983566
           }
           Rotation {
             Pitch: -23.3002319
-            Yaw: -90.4326782
+            Yaw: -90.4326172
             Roll: -2.50006104
           }
           Scale {
-            X: 1.29207897
-            Y: 1.29207718
-            Z: 0.698275506
+            X: 1.59341156
+            Y: 1.59338689
+            Z: 1.04331303
           }
         }
         ParentId: 7140711368903109326
@@ -640,9 +696,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
@@ -652,7 +708,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.5
+            Float: 9.2999649
           }
         }
         Collidable_v2 {
@@ -663,13 +719,11 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6239692794259041880
+            Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -681,19 +735,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -0.966694057
-            Y: 47.1341705
-            Z: -208.935699
+            X: -0.967123806
+            Y: 58.8575859
+            Z: -207.046951
           }
           Rotation {
             Pitch: -9.15615845
             Yaw: -89.9996338
-            Roll: 8.64792469e-07
+            Roll: 4.32396234e-07
           }
           Scale {
-            X: 1.27745962
-            Y: 1.27746987
-            Z: 0.693758965
+            X: 1.54072213
+            Y: 1.54072571
+            Z: 1.03488624
           }
         }
         ParentId: 7140711368903109326
@@ -711,9 +765,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
@@ -723,7 +777,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.5
+            Float: 9.2999649
           }
         }
         Collidable_v2 {
@@ -734,13 +788,11 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6239692794259041880
+            Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -772,12 +824,29 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15498075899340950546
+              Id: 1626097446304398136
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 0.906507552
+              B: 0.775618136
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.586514294
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.287441105
           }
         }
         Collidable_v2 {
@@ -842,19 +911,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -30.7886734
-            Y: 2.25248933
-            Z: 17.5544033
+            X: -30.7882595
+            Y: 2.25236607
+            Z: 17.5541496
           }
           Rotation {
-            Pitch: -24.328064
-            Yaw: 6.15167737e-05
+            Pitch: -24.3280334
+            Yaw: 5.71717537e-05
             Roll: -3.05175781e-05
           }
           Scale {
-            X: 0.773319304
-            Y: 0.773318768
-            Z: 0.472626179
+            X: 0.696809709
+            Y: 0.696809232
+            Z: 0.425866187
           }
         }
         ParentId: 7236757893670952707
@@ -872,15 +941,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 5.69563437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -898,11 +967,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -914,19 +980,19 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -36.7576752
-            Y: 2.25269151
-            Z: 90.059494
+            X: -33.1606941
+            Y: -2.14732647
+            Z: 88.8202286
           }
           Rotation {
-            Pitch: -18.995575
-            Yaw: 2.37847144e-05
+            Pitch: -10.065155
+            Yaw: 1.22538077e-05
             Roll: -6.10351563e-05
           }
           Scale {
-            X: 0.67328459
-            Y: 0.673284
-            Z: 0.411488235
+            X: 0.532781422
+            Y: 0.532780707
+            Z: 0.325617462
           }
         }
         ParentId: 7236757893670952707
@@ -944,15 +1010,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 4.16903257
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -970,11 +1036,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -986,17 +1049,16 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -33.8293076
-            Y: 2.25258136
-            Z: 50.0006027
+            X: -33.8292923
+            Y: 2.2523973
+            Z: 50.0007095
           }
           Rotation {
-            Roll: 1.56483281e-06
           }
           Scale {
-            X: 0.718016326
-            Y: 0.718015671
-            Z: 0.438826948
+            X: 0.646956742
+            Y: 0.646956146
+            Z: 0.395397723
           }
         }
         ParentId: 7236757893670952707
@@ -1014,15 +1076,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.6875
+              G: 0.658854127
+              B: 0.658854127
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 4.55776024
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -1040,11 +1102,8 @@
             Id: 6239692794259041880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1059,6 +1118,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 1626097446304398136
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {
@@ -1080,12 +1148,30 @@
       }
     }
     Assets {
+      Id: 7585887110500972880
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
       Id: 13950225922132296555
       Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 12385794193739794509
+      Name: "Decal Stains Round 01"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "bp_decal_stain_round_001"
       }
     }
     PrimaryAssetId {

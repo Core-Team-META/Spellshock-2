@@ -251,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15683169359350375517
+  Name: "Capsule"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_capsule_001"
+  }
+}
+Assets {
   Id: 15611201305513171321
   Name: "Nature Wind Intense Gusty Howling Whistle 01 SFX"
   PlatformAssetType: 7
@@ -374,6 +383,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_terrain_rock-moss_001_wa"
+  }
+}
+Assets {
+  Id: 14749020928150968129
+  Name: "Street Light Pole Clamp 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_st_post_lights_post_clamp_001"
   }
 }
 Assets {
@@ -782,6 +800,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11574609574133751124
+  Name: "Street Light Pole 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_st_post_lights_pole_002"
+  }
+}
+Assets {
   Id: 11521250418432815603
   Name: "Ivy 05"
   PlatformAssetType: 1
@@ -1151,6 +1178,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7887065314915247394
+  Name: "Stone Arch Half 6m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_stone-arch-half_6m_002"
+  }
+}
+Assets {
   Id: 7873949318783264336
   Name: "Carpet 01"
   PlatformAssetType: 2
@@ -1214,6 +1250,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7631280887685656354
+  Name: "Cylinder - Chamfered"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_chamfer"
+  }
+}
+Assets {
   Id: 7585887110500972880
   Name: "Ring - Thick"
   PlatformAssetType: 1
@@ -1256,6 +1301,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_arch_fancy_ogive_6m_001"
+  }
+}
+Assets {
+  Id: 7073534569077104555
+  Name: "Wood Siding White"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_siding_white_001_uv"
   }
 }
 Assets {
@@ -1700,6 +1754,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3381892915705863687
+  Name: "Wood Planks White"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_planks_white_001_uv"
+  }
+}
+Assets {
   Id: 3263408764700054627
   Name: "Cylinder - Polished"
   PlatformAssetType: 1
@@ -1760,6 +1823,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_scifi_trim_001_end"
+  }
+}
+Assets {
+  Id: 2546368164849416374
+  Name: "Fantasy Castle Wall 01 - Curved"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_wall_curve_001"
   }
 }
 Assets {
@@ -1943,15 +2015,6 @@ Assets {
   }
 }
 Assets {
-  Id: 586768559664971120
-  Name: "Fabric Burlap New 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_fabric_burlap_002_uv"
-  }
-}
-Assets {
   Id: 377159667400922669
   Name: "Torch Metal"
   PlatformAssetType: 1
@@ -2012,5 +2075,14 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_brick_stone_floor_large_001"
+  }
+}
+Assets {
+  Id: 114278397929005302
+  Name: "Horn"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_horn_001"
   }
 }
