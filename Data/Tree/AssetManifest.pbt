@@ -242,15 +242,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15697206862897547361
-  Name: "Bricks Rough Stone Floor 02"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_stone_floor_rough_002"
-  }
-}
-Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1
@@ -518,6 +509,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_gas_cylinder_001"
+  }
+}
+Assets {
+  Id: 13598645306353249799
+  Name: "Fantasy Castle Wall Foundation 01 - Curved"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_wall_found_001_curve_001"
   }
 }
 Assets {
