@@ -2033,6 +2033,15 @@ Assets {
   }
 }
 Assets {
+  Id: 998074920267973145
+  Name: "Cliff 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_cliff_001_uv"
+  }
+}
+Assets {
   Id: 901541979513849367
   Name: "Bush Green 01"
   PlatformAssetType: 1

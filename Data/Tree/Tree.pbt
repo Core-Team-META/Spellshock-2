@@ -23,6 +23,9 @@ Objects {
   ChildIds: 880106829888079510
   ChildIds: 1352836353958948428
   ChildIds: 10244168996742092131
+  ChildIds: 9154894635184402458
+  ChildIds: 2990303121119599163
+  ChildIds: 2956865286942158284
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +35,136 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 2956865286942158284
+  Name: "Torch Metal"
+  Transform {
+    Location {
+      X: -16996.2754
+      Y: -20582.0586
+      Z: 3484.28467
+    }
+    Rotation {
+      Pitch: 31.4773617
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 377159667400922669
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 2990303121119599163
+  Name: "Torch Holder Metal"
+  Transform {
+    Location {
+      X: -16972.8887
+      Y: -20581.3906
+      Z: 3486.40479
+    }
+    Rotation {
+      Pitch: 0.390536547
+      Yaw: 92.1634445
+      Roll: 7.06058693
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15796848555389387332
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 9154894635184402458
+  Name: "Point Light"
+  Transform {
+    Location {
+      X: -17092.666
+      Y: -20581.8457
+      Z: 3582.4939
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.929938257
+      Y: 0.929938257
+      Z: 0.929938257
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Light {
+    Intensity: 11.5039902
+    Color {
+      R: 0.929999948
+      G: 0.332582772
+      A: 1
+    }
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 291.160309
+        PointLight {
+          SourceRadius: 263.121307
+          FallOffExponent: 30
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
   }
 }
 Objects {
@@ -144,6 +277,7 @@ Objects {
   ChildIds: 17883780875499887638
   ChildIds: 13269404367257185669
   ChildIds: 2286666694671230833
+  ChildIds: 5260288528714677940
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -152,6 +286,68 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 5260288528714677940
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: -31615.1094
+      Y: -20554.7246
+      Z: 2868.21265
+    }
+    Rotation {
+      Pitch: 80.6029739
+      Yaw: -111.632874
+      Roll: -117.976013
+    }
+    Scale {
+      X: 4.53905
+      Y: 10.0275879
+      Z: 11.9036064
+    }
+  }
+  ParentId: 10244168996742092131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 108034947177375280
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.44345713
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.737095475
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
   }
 }
 Objects {
@@ -193,15 +389,6 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
     }
   }
   Collidable_v2 {
@@ -265,15 +452,6 @@ Objects {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -335,15 +513,6 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
     }
   }
   Collidable_v2 {
@@ -407,15 +576,6 @@ Objects {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -477,15 +637,6 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
     }
   }
   Collidable_v2 {
@@ -549,15 +700,6 @@ Objects {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -619,15 +761,6 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 0.737095475
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.9375
-        G: 0.73268193
-        B: 0.54687506
-        A: 1
-      }
     }
   }
   Collidable_v2 {
@@ -33524,10 +33657,10 @@ Objects {
     Location {
       X: -1157.99219
       Y: 5896.56055
-      Z: 382.563965
+      Z: 423.999512
     }
     Rotation {
-      Yaw: 33.292202
+      Yaw: 33.2922363
     }
     Scale {
       X: 0.442436397
@@ -33873,10 +34006,10 @@ Objects {
     Location {
       X: -321.035156
       Y: 6253.21289
-      Z: 264.47168
+      Z: 264.239746
     }
     Rotation {
-      Yaw: 23.0803032
+      Yaw: 23.080265
     }
     Scale {
       X: 0.442436397
@@ -34222,10 +34355,10 @@ Objects {
     Location {
       X: 531.568359
       Y: 6468.28125
-      Z: 200.153809
+      Z: 231.084473
     }
     Rotation {
-      Yaw: 16.6777115
+      Yaw: 16.6777401
     }
     Scale {
       X: 0.442436397
@@ -40620,7 +40753,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8772095799891222028
+        Id: 998074920267973145
       }
     }
     Overrides {
@@ -40629,11 +40762,11 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 2.44345713
+      Float: 1.14459062
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 0.737095475
+      Float: 1.5637126
     }
   }
   Collidable_v2 {
@@ -40742,11 +40875,12 @@ Objects {
   ChildIds: 361423783530876650
   ChildIds: 3503760712781518504
   ChildIds: 13099007872946826429
-  ChildIds: 15895370446508906964
   ChildIds: 18151858052301285432
   ChildIds: 11195227534603275347
+  ChildIds: 15895370446508906964
   ChildIds: 7355940198678689929
   ChildIds: 16038450496961479534
+  ChildIds: 8227754344927063227
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -40755,6 +40889,63 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 8227754344927063227
+  Name: "Waterfall Base Volume VFX"
+  Transform {
+    Location {
+      X: 28.2753906
+      Y: 474.052734
+      Z: -1400.48291
+    }
+    Rotation {
+      Pitch: 4.92299509
+      Yaw: -31.3222656
+      Roll: 28.8441372
+    }
+    Scale {
+      X: 1.59792197
+      Y: 4.19710875
+      Z: 1.59792781
+    }
+  }
+  ParentId: 6488572765080979025
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.84789205
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 5.43984652
+    }
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 0.457000017
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 17999095934034705962
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
   }
 }
 Objects {
@@ -40809,13 +41000,13 @@ Objects {
   Name: "Rock 02"
   Transform {
     Location {
-      X: -1453.8418
-      Y: 137.845703
+      X: -663.744141
+      Y: -139.605469
       Z: -1691.16577
     }
     Rotation {
       Pitch: 5.35585833
-      Yaw: -66.7595215
+      Yaw: -40.5112
       Roll: -151.292282
     }
     Scale {
@@ -40856,20 +41047,77 @@ Objects {
   }
 }
 Objects {
+  Id: 15895370446508906964
+  Name: "Waterfall Base Volume VFX"
+  Transform {
+    Location {
+      X: 109.763672
+      Y: -31.6328125
+      Z: -1328.88745
+    }
+    Rotation {
+      Pitch: 4.92299509
+      Yaw: -5.07421875
+      Roll: 28.843874
+    }
+    Scale {
+      X: 1.59792197
+      Y: 4.19710875
+      Z: 1.59792781
+    }
+  }
+  ParentId: 6488572765080979025
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.84789205
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 5.43984652
+    }
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 0.457000017
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 17999095934034705962
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+}
+Objects {
   Id: 11195227534603275347
   Name: "Waterfall Straight"
   Transform {
     Location {
-      X: 77.5058594
-      Y: 451.6875
-      Z: 1177.78491
+      X: 17.4902344
+      Y: 352.537109
+      Z: 1123.22681
     }
     Rotation {
-      Yaw: -29.1333
+      Yaw: -43.3520508
     }
     Scale {
-      X: 0.608094871
-      Y: 1.2832731
+      X: 0.60809052
+      Y: 0.872069776
       Z: 2.00182033
     }
   }
@@ -40921,12 +41169,12 @@ Objects {
       Z: 1073.76978
     }
     Rotation {
-      Yaw: 14.3400736
+      Yaw: 14.3401146
     }
     Scale {
       X: 0.608152092
       Y: 2.30803561
-      Z: 7.36802387
+      Z: 7.23843527
     }
   }
   ParentId: 6488572765080979025
@@ -40964,63 +41212,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 15895370446508906964
-  Name: "Waterfall Base Volume VFX"
-  Transform {
-    Location {
-      X: -712.335938
-      Y: -107.412109
-      Z: -1328.88745
-    }
-    Rotation {
-      Pitch: 4.92299509
-      Yaw: -31.3222351
-      Roll: 28.8441372
-    }
-    Scale {
-      X: 1.59792197
-      Y: 4.19710875
-      Z: 1.59792781
-    }
-  }
-  ParentId: 6488572765080979025
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 2.84789205
-    }
-    Overrides {
-      Name: "bp:Density"
-      Float: 5.43984652
-    }
-    Overrides {
-      Name: "bp:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.457000017
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 17999095934034705962
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
     }
   }
 }
@@ -41524,7 +41715,7 @@ Objects {
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: -33438.832
+      X: -33394.2344
       Y: -19419.543
       Z: 5407.82129
     }
@@ -47233,9 +47424,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1.2
-        G: 1.15757179
-        B: 0.996514797
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
         A: 1
       }
     }
@@ -47286,9 +47477,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1.2
-        G: 1.15757179
-        B: 0.996514797
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
         A: 1
       }
     }
@@ -50077,6 +50268,17 @@ Objects {
     }
   }
   ParentId: 7593868476968474171
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -50118,6 +50320,15 @@ Objects {
   }
   ParentId: 7593868476968474171
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -52842,9 +53053,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1.2
-        G: 1.15757179
-        B: 0.996514797
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
         A: 1
       }
     }
@@ -55096,6 +55307,15 @@ Objects {
   }
   ParentId: 6907369313996932058
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -55582,6 +55802,15 @@ Objects {
   }
   ParentId: 6907369313996932058
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -58326,6 +58555,15 @@ Objects {
   }
   ParentId: 7593868476968474171
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -58794,6 +59032,15 @@ Objects {
   }
   ParentId: 7593868476968474171
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -58875,6 +59122,17 @@ Objects {
     }
   }
   ParentId: 7593868476968474171
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -72951,6 +73209,15 @@ Objects {
   }
   ParentId: 11151362215882524013
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78614,16 +78881,10 @@ Objects {
   ChildIds: 18316288241851582758
   ChildIds: 9881883281231076011
   ChildIds: 7310966256212778459
-  ChildIds: 4299376116091035743
-  ChildIds: 18273079560782153709
   ChildIds: 17578072513459075360
   ChildIds: 7919931559680309977
   ChildIds: 10084894067029401932
-  ChildIds: 6233074012694198866
-  ChildIds: 2058410924725393841
-  ChildIds: 8729603732162646914
   ChildIds: 8356750736187679153
-  ChildIds: 6338949497361084084
   ChildIds: 3285651363190572784
   ChildIds: 17422819381807578565
   ChildIds: 7229285357988581939
@@ -78665,6 +78926,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78710,6 +78980,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78755,6 +79034,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78797,6 +79085,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78841,6 +79138,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78886,6 +79192,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78930,6 +79245,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -78958,23 +79282,32 @@ Objects {
   Name: "Stone Block Big Broken"
   Transform {
     Location {
-      X: -52.1794968
-      Y: 11.6911573
-      Z: 177.309631
+      X: -46.5297241
+      Y: -10.1756697
+      Z: 177.309967
     }
     Rotation {
       Pitch: 1.36603776e-05
-      Yaw: -165.513565
+      Yaw: -162.486893
       Roll: 179.999756
     }
     Scale {
       X: 1.65349209
-      Y: 1.51101756
+      Y: 1.51101732
       Z: 1.23491728
     }
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79020,51 +79353,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12891613213664917379
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
       }
     }
-  }
-}
-Objects {
-  Id: 6338949497361084084
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: 176.396027
-      Y: 125.091026
-      Z: 171.361084
-    }
-    Rotation {
-      Pitch: 1.36603776e-05
-      Yaw: -165.513535
-      Roll: 179.999756
-    }
-    Scale {
-      X: 1.65348732
-      Y: 0.758780479
-      Z: 1.46050656
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79110,6 +79407,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79125,137 +79431,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 8729603732162646914
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: -42.7481155
-      Y: -7.20266962
-      Z: 121.243256
-    }
-    Rotation {
-      Pitch: 3.4150944e-05
-      Yaw: -156.174
-      Roll: 179.999756
-    }
-    Scale {
-      X: 1.65348911
-      Y: 1.51102471
-      Z: 1.41727054
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12891613213664917379
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 2058410924725393841
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: 67.9227829
-      Y: 50.308876
-      Z: 61.2433739
-    }
-    Rotation {
-      Yaw: -161.188293
-    }
-    Scale {
-      X: 1.75000012
-      Y: 1.75000012
-      Z: 1.5
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12891613213664917379
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 6233074012694198866
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: -45.8466644
-      Y: -3.36755157
-      Z: 61.2434845
-    }
-    Rotation {
-      Yaw: -161.188293
-    }
-    Scale {
-      X: 1.75000012
-      Y: 1.75000012
-      Z: 1.5
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1147296945445517997
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
     EnableCameraCollision: true
     StaticMesh {
       Physics {
@@ -79283,6 +79458,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79326,6 +79510,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79368,6 +79561,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79378,94 +79580,6 @@ Objects {
   CoreMesh {
     MeshAsset {
       Id: 3948711934400020999
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 18273079560782153709
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: 66.3702774
-      Y: 69.6016541
-      Z: 116.793663
-    }
-    Rotation {
-      Pitch: 1.36603776e-05
-      Yaw: -165.513687
-      Roll: 179.999756
-    }
-    Scale {
-      X: 1.65349221
-      Y: 1.5110184
-      Z: 1.46050322
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12891613213664917379
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 4299376116091035743
-  Name: "Stone Block Big Broken"
-  Transform {
-    Location {
-      X: 209.110519
-      Y: 98.4029388
-      Z: 90.8192444
-    }
-    Rotation {
-      Yaw: 18.8110523
-    }
-    Scale {
-      X: 1.75000012
-      Y: 1.75000012
-      Z: 0.919287145
-    }
-  }
-  ParentId: 8395495366304559005
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6476226809204619067
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -79498,6 +79612,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79587,6 +79710,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.926882923
+        B: 0.763837814
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79629,6 +79761,15 @@ Objects {
   }
   ParentId: 8395495366304559005
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -83372,6 +83513,15 @@ Objects {
   }
   ParentId: 8257554673187434807
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -83413,6 +83563,17 @@ Objects {
     }
   }
   ParentId: 8257554673187434807
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -83453,6 +83614,17 @@ Objects {
     }
   }
   ParentId: 8257554673187434807
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -83644,6 +83816,15 @@ Objects {
   }
   ParentId: 8257554673187434807
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84168,6 +84349,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84266,6 +84456,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84316,6 +84515,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84473,6 +84681,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84522,6 +84739,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84570,6 +84796,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84620,6 +84855,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84719,6 +84963,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84924,6 +85177,15 @@ Objects {
   }
   ParentId: 8095918256997761588
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -85017,6 +85279,15 @@ Objects {
   }
   ParentId: 12840518120534950347
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -85062,6 +85333,15 @@ Objects {
   }
   ParentId: 12840518120534950347
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -85106,6 +85386,15 @@ Objects {
   }
   ParentId: 12840518120534950347
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -85278,6 +85567,15 @@ Objects {
   }
   ParentId: 12840518120534950347
   UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.854166687
+        G: 0.791712523
+        B: 0.652444839
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -218555,14 +218853,14 @@ Objects {
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: 30619.502
-      Y: 29637.2715
-      Z: 4692.68652
+      X: 33540.5156
+      Y: 31099.127
+      Z: 6736.18506
     }
     Rotation {
-      Pitch: -79.2637939
-      Yaw: -149.861328
-      Roll: 101.190651
+      Pitch: -79.2581787
+      Yaw: -121.733521
+      Roll: 101.192123
     }
     Scale {
       X: 24.5236301
@@ -219952,9 +220250,9 @@ Objects {
   Name: "Rock 01"
   Transform {
     Location {
-      X: 346.263672
-      Y: 23720.7656
-      Z: 3179.06958
+      X: 8.90429688
+      Y: 25395.1953
+      Z: 3179.06982
     }
     Rotation {
       Yaw: 60.3504295
