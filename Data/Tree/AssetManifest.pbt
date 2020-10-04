@@ -557,6 +557,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13266663870848907036
+  Name: "Coral Branches Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_branch_big_01"
+  }
+}
+Assets {
   Id: 13263895099928006297
   Name: "Stone Wall End Corner 2m 001"
   PlatformAssetType: 1
@@ -680,6 +689,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
+  }
+}
+Assets {
+  Id: 12113592595878168643
+  Name: "Scorch Mark Decal"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_scorchmark"
   }
 }
 Assets {
@@ -1058,6 +1076,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_plane_1m_001"
+  }
+}
+Assets {
+  Id: 8828521707055617985
+  Name: "Hill 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_005"
   }
 }
 Assets {
@@ -1862,6 +1889,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2211930898932802599
+  Name: "Pyramid - 4-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_truncated_001"
+  }
+}
+Assets {
   Id: 2140913818093261140
   Name: "SciFi Trim 01 bend 90"
   PlatformAssetType: 1
@@ -2021,6 +2057,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torch_001"
+  }
+}
+Assets {
+  Id: 347789783967993960
+  Name: "Coral Branches Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_branch_small_01"
   }
 }
 Assets {

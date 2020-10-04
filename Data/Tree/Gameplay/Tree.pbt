@@ -40,8 +40,8 @@ Objects {
   Name: "Base Forcefields"
   Transform {
     Location {
-      X: 8320.73438
-      Y: 7214.05859
+      X: 8005.90186
+      Y: 8135.97852
     }
     Rotation {
     }
@@ -1560,12 +1560,12 @@ Objects {
   Name: "Blight Player Spawns"
   Transform {
     Location {
-      X: -23545.3848
-      Y: -33332.8164
-      Z: 6001.53223
+      X: -22834.8633
+      Y: -32936.5156
+      Z: 5749.61523
     }
     Rotation {
-      Yaw: -0.0223999023
+      Yaw: -163.413132
     }
     Scale {
       X: 1
@@ -1600,8 +1600,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -702.102661
-      Y: -269.80069
+      X: -702.103149
+      Y: -269.802612
+      Z: -43.3022461
     }
     Rotation {
       Yaw: -136.110443
@@ -1631,8 +1632,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 421.148865
-      Y: 263.898438
+      X: 421.148773
+      Y: 263.899261
+      Z: -36.0249023
     }
     Rotation {
       Yaw: -136.110443
@@ -1662,8 +1664,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 101.302757
-      Y: 627.336
+      X: 101.30394
+      Y: 627.335876
+      Z: -22.668457
     }
     Rotation {
       Yaw: -136.110443
@@ -1693,8 +1696,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 117.889099
-      Y: 336.358093
+      X: 117.890671
+      Y: 336.360077
+      Z: -26.7231445
     }
     Rotation {
       Yaw: -136.110443
@@ -1724,8 +1728,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -264.687317
-      Y: -624.085876
+      X: -264.687744
+      Y: -624.08313
+      Z: -114.634277
     }
     Rotation {
       Yaw: -136.110443
@@ -1755,8 +1760,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: -324.25946
-      Y: -200.798584
+      X: -324.260254
+      Y: -200.799316
+      Z: -66.7036133
     }
     Rotation {
       Yaw: -136.110413
@@ -1786,8 +1792,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 568.224792
-      Y: 42.1629295
+      X: 568.224182
+      Y: 42.1636047
+      Z: -42.418457
     }
     Rotation {
       Yaw: -136.110443
@@ -1817,8 +1824,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 22.0692921
-      Y: -239.833191
+      X: 22.0695038
+      Y: -239.830734
+      Z: -108.401367
     }
     Rotation {
       Yaw: -136.110443
@@ -1848,8 +1856,9 @@ Objects {
   Name: "Player Start"
   Transform {
     Location {
-      X: 60.4131775
-      Y: 64.764328
+      X: 60.4138641
+      Y: 64.7631073
+      Z: -36.1269531
     }
     Rotation {
       Yaw: -136.110443
@@ -1880,10 +1889,11 @@ Objects {
   Transform {
     Location {
       X: -23617.4863
-      Y: -32544.5273
-      Z: 5973.62109
+      Y: -32018.5449
+      Z: 5666.97949
     }
     Rotation {
+      Pitch: -6.48791504
     }
     Scale {
       X: 1

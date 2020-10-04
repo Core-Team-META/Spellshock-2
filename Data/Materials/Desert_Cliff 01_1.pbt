@@ -35,7 +35,7 @@
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0.185767248
+        Float: 0.13010253
       }
       Overrides {
         Name: "color"

@@ -20,15 +20,6 @@
         Float: 1
       }
       Overrides {
-        Name: "gradient_color"
-        Color {
-          R: 0.520833313
-          G: 0.282136
-          B: 0.170898438
-          A: 1
-        }
-      }
-      Overrides {
         Name: "gradient_shift"
         Float: 0
       }

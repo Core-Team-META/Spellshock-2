@@ -1,43 +1,36 @@
 ﻿Assets {
-  Id: 14611952744706121197
-  Name: "small_plant_bark"
+  Id: 6937472095790113762
+  Name: "small_branch_foliage"
   PlatformAssetType: 13
   SerializationVersion: 65
   CustomMaterialAsset {
     BaseMaterialId: 1964254608213071037
     ParameterOverrides {
       Overrides {
-        Name: "damage_amount"
-        Float: 0
-      }
-      Overrides {
-        Name: "emissive_boost"
-        Float: 0
-      }
-      Overrides {
-        Name: "gradient_color"
+        Name: "color"
         Color {
-          R: 0.307291657
-          G: 0.166810051
-          B: 0.081624344
+          R: 1
+          G: 1
+          B: 1
           A: 1
         }
       }
       Overrides {
-        Name: "gradient_falloff"
-        Float: 0.73458451
+        Name: "color_accent"
+        Color {
+          R: 0.559248
+          G: 0.635417
+          B: 0.016547
+          A: 1
+        }
       }
       Overrides {
-        Name: "gradient_shift"
-        Float: 0.0696543306
+        Name: "material_scale"
+        Float: 6
       }
       Overrides {
-        Name: "gradient_worldspace"
-        Bool: false
-      }
-      Overrides {
-        Name: "roughness_multiplier"
-        Float: 0.857195914
+        Name: "damage_amount"
+        Float: 0
       }
       Overrides {
         Name: "color_damage"
@@ -47,6 +40,18 @@
           B: 0.462573
           A: 1
         }
+      }
+      Overrides {
+        Name: "emissive_boost"
+        Float: 0
+      }
+      Overrides {
+        Name: "gradient_worldspace"
+        Bool: false
+      }
+      Overrides {
+        Name: "roughness_multiplier"
+        Float: 0.857195914
       }
       Overrides {
         Name: "u_tiles"
