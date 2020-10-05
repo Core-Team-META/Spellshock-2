@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17409295383154929877
+  Name: "Wood Planks Beveled Painted 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_bevel_planks_white_001_uv"
+  }
+}
+Assets {
   Id: 17337708386170482113
   Name: "I-Beam 4m"
   PlatformAssetType: 1
@@ -1133,6 +1142,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8528600366674269189
+  Name: "Wedge - Convex"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_wedge_curved_convex_001"
+  }
+}
+Assets {
   Id: 8353147935132205805
   Name: "Prism - 6-Sided Half"
   PlatformAssetType: 1
@@ -1736,6 +1754,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3891005045467292245
+  Name: "Arch"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_001"
+  }
+}
+Assets {
   Id: 3817933812062928360
   Name: "Wood Planks"
   PlatformAssetType: 2
@@ -1967,6 +1994,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_frosted_glass_nodistortion"
+  }
+}
+Assets {
+  Id: 1471773936938775611
+  Name: "Ellipsoid - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ellipsoid_truncated_001"
   }
 }
 Assets {

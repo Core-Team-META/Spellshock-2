@@ -91,6 +91,7 @@ Objects {
       ChatMode {
         Value: "mc:echatmode:teamonly"
       }
+      EnablePlayModeProfiler: true
     }
   }
 }

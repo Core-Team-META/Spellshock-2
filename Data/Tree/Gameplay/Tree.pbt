@@ -73,8 +73,8 @@ Objects {
   Name: "Glade Geometry"
   Transform {
     Location {
-      X: -12579.1895
-      Y: -8400.17578
+      X: -12196.0938
+      Y: -10193.2744
       Z: 130.184326
     }
     Rotation {
@@ -194,12 +194,12 @@ Objects {
   Name: "GladeForcefield"
   Transform {
     Location {
-      X: 10670.8145
-      Y: 12591.3047
+      X: 11053.9199
+      Y: 10798.207
       Z: 3767.38452
     }
     Rotation {
-      Yaw: -15.6029663
+      Yaw: -15.6030273
     }
     Scale {
       X: 89.25
@@ -2734,8 +2734,8 @@ Objects {
   Name: "Point E"
   Transform {
     Location {
-      X: -18303.9063
-      Y: -18131.8691
+      X: -16513.3652
+      Y: -17234.8945
       Z: 2396.33154
     }
     Rotation {
@@ -5927,9 +5927,9 @@ Objects {
   Name: "Point A"
   Transform {
     Location {
-      X: 6255
-      Y: 8609.15
-      Z: 2760.90698
+      X: 7058.57227
+      Y: 6633.85693
+      Z: 2688.91284
     }
     Rotation {
     }
