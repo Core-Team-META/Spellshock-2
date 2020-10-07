@@ -429,12 +429,12 @@ Objects {
   Name: "Glade Equipment Spawners"
   Transform {
     Location {
-      X: 19155.9707
-      Y: 21479.5957
-      Z: 5030.59668
+      X: 18945.0293
+      Y: 19129.6953
+      Z: 6536.15918
     }
     Rotation {
-      Yaw: -16.0094604
+      Yaw: 13.4725866
     }
     Scale {
       X: 1
@@ -465,8 +465,8 @@ Objects {
   Name: "Equipment Spawner"
   Transform {
     Location {
-      X: 710
-      Y: 214
+      X: -34.7005539
+      Y: 214.000839
     }
     Rotation {
     }
@@ -620,8 +620,8 @@ Objects {
   Name: "Equipment Spawner"
   Transform {
     Location {
-      X: 660
-      Y: -126
+      X: -84.7017288
+      Y: -125.999138
     }
     Rotation {
     }
@@ -1241,12 +1241,12 @@ Objects {
   Name: "Glade Player Spawns"
   Transform {
     Location {
-      X: 19705.252
-      Y: 22425.0977
-      Z: 5115.81055
+      X: 18531.6816
+      Y: 19917.043
+      Z: 6537.25293
     }
     Rotation {
-      Yaw: 9.79648685
+      Yaw: 10.9767618
     }
     Scale {
       X: 1

@@ -935,6 +935,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10230959292029196430
+  Name: "Prism - 3-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_001"
+  }
+}
+Assets {
   Id: 10222256584730616192
   Name: "Pipe Curved 90"
   PlatformAssetType: 1
@@ -1943,6 +1952,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1952435039649611950
+  Name: "Marble Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_gen_marble_tiles_001_uv"
+  }
+}
+Assets {
   Id: 1944519723993473514
   Name: "Pipe - 4-Sided Thick"
   PlatformAssetType: 1
@@ -2012,6 +2030,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_001"
+  }
+}
+Assets {
+  Id: 1259997542378019594
+  Name: "Fantasy Castle Stairs 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_001"
   }
 }
 Assets {
