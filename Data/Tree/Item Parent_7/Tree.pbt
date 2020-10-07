@@ -1,7 +1,7 @@
 ﻿Name: "Item Parent_7"
-RootId: 16227087276685033575
+RootId: 13650090517800546173
 Objects {
-  Id: 13324150126324389849
+  Id: 8352634684119630989
   Name: "EquipmentSpawnerServer"
   Transform {
     Location {
@@ -14,18 +14,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16227087276685033575
+  ParentId: 13650090517800546173
   UnregisteredParameters {
     Overrides {
       Name: "cs:Root"
       ObjectReference {
-        SelfId: 18095109810780445709
+        SelfId: 10252605909596351546
       }
     }
     Overrides {
       Name: "cs:SpawnParent"
       ObjectReference {
-        SelfId: 16227087276685033575
+        SelfId: 13650090517800546173
       }
     }
   }
@@ -42,9 +42,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 9797582354142542594
+    SelfId: 8167229739919114415
     SubobjectId: 12274140100333201689
-    InstanceId: 2301851898735394910
+    InstanceId: 17104224668878984526
     TemplateId: 7013148133446455782
   }
 }
