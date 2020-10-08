@@ -24,6 +24,7 @@ Objects {
   ChildIds: 1352836353958948428
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
+  ChildIds: 10661356697076551539
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -33,6 +34,37 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 10661356697076551539
+  Name: "Julieta_Props"
+  Transform {
+    Location {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Julieta_Props"
+  }
+  InstanceHistory {
+    SelfId: 10661356697076551539
+    SubobjectId: 2005880449096804415
+    InstanceId: 1056700272226791114
+    TemplateId: 3016561015879885400
+    WasRoot: true
   }
 }
 Objects {
