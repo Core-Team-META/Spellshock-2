@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12935185397369316502
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -440,7 +440,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 12104713056743484326
+              Id: 5808222625397640473
             }
           }
           Overrides {
@@ -1140,7 +1140,9 @@
           }
         }
         ParentId: 389882129398021018
+        ChildIds: 17603482927302860847
         ChildIds: 1412048591863833559
+        ChildIds: 16740683306554179974
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1159,8 +1161,72 @@
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 1
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.5
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
             CanMove: true
             CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "2hand_melee_dig_shovel"
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_34"
+          }
+        }
+      }
+      Objects {
+        Id: 17603482927302860847
+        Name: "Throw"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -81.3007355
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10132999686423340489
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          CastPhaseSettings {
+            Duration: 0.5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1170,6 +1236,8 @@
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1177,34 +1245,36 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
-            Duration: 1
+            Duration: 3
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
           }
-          Animation: "unarmed_magic_up"
-          CanBePrevented: true
+          Animation: "unarmed_throw"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:extraaction_19"
           }
         }
       }
       Objects {
         Id: 1412048591863833559
-        Name: "EarthquakeAbility"
+        Name: "ExcavateAbilityServer"
         Transform {
           Location {
           }
@@ -1222,15 +1292,33 @@
             }
           }
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:PickupTemplate"
+            AssetReference {
+              Id: 11318441308667137252
+            }
+          }
+          Overrides {
+            Name: "cs:PickupAbility"
             ObjectReference {
               SubObjectId: 10132999686423340489
             }
           }
           Overrides {
-            Name: "cs:FX_Template"
+            Name: "cs:ThrowAbility"
+            ObjectReference {
+              SubObjectId: 17603482927302860847
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileTemplate"
             AssetReference {
-              Id: 16119998931012082798
+              Id: 11324149636644572705
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
             }
           }
         }
@@ -1244,6 +1332,70 @@
         Script {
           ScriptAsset {
             Id: 14161684854126715918
+          }
+        }
+      }
+      Objects {
+        Id: 16740683306554179974
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10132999686423340489
+        ChildIds: 285787547396984869
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 285787547396984869
+        Name: "ExcavateAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 16740683306554179974
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:PickupAbility"
+            ObjectReference {
+              SubObjectId: 10132999686423340489
+            }
+          }
+          Overrides {
+            Name: "cs:ThrowAbility"
+            ObjectReference {
+              SubObjectId: 17603482927302860847
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 343876453884158946
           }
         }
       }
@@ -3446,12 +3598,12 @@
       }
     }
     Assets {
-      Id: 12104713056743484326
-      Name: "Fantasy Ability Yellow 031"
+      Id: 5808222625397640473
+      Name: "Fantasy Ability Yellow 004"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_031"
+        AssetId: "UI_Fantasy_Ability_Yellow_004"
       }
     }
     Assets {

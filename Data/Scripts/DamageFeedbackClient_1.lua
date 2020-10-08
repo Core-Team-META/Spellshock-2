@@ -124,7 +124,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
             if Object.IsValid(sourcePlayer) then
                 UI.ShowDamageDirection(sourcePlayer)
                 ShowFlyUpText(damage, position, SELF_DAMAGE_TEXT_COLOR)
-            elseif position ~= Vector3.ZERO then
+            elseif position and position ~= Vector3.ZERO then
                 UI.ShowDamageDirection(position)
                 ShowFlyUpText(damage, position, SELF_DAMAGE_TEXT_COLOR)
             end

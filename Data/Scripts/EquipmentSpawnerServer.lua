@@ -1,4 +1,8 @@
 ﻿local root = script:GetCustomProperty("Root"):WaitForObject()
+local IS_ENABLED = root:GetCustomProperty("IsEnabled")
+
+if IS_ENABLED == false then return end
+
 local spawnParentRef = script:GetCustomProperty("SpawnParent")
 local spawnParent = script
 if spawnParentRef then spawnParent = spawnParentRef:WaitForObject() end

@@ -2,12 +2,9 @@
 local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 
 function OnPickupAbilityRecovery(thisAbility)
-	print("ENABLED: "..tostring(ThrowAbility.isEnabled))
-	ThrowAbility:Activate()
+	if PickupAbility.owner == Game.GetLocalPlayer() then
+		ThrowAbility:Activate()
+	end
 end
 
-function OnThrowAbilityRecovery(thisAbility)
-	
-end
-
-PickupAbility.cooldownEvent:Connect(OnPickupAbilityRecovery)
+PickupAbility.recoveryEvent:Connect(OnPickupAbilityRecovery)

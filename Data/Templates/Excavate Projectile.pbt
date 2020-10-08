@@ -1,12 +1,12 @@
 ﻿Assets {
-  Id: 17476149719176912547
+  Id: 11324149636644572705
   Name: "Excavate Projectile"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 3808756987566413276
+      RootId: 4490010504281126794
       Objects {
-        Id: 3808756987566413276
+        Id: 4490010504281126794
         Name: "Excavate Projectile"
         Transform {
           Scale {
@@ -16,7 +16,16 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 8045127840492447099
+        ChildIds: 6018889959419422200
+        ChildIds: 2068698311717592142
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+              SubObjectId: 2068698311717592142
+            }
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37,7 +46,7 @@
         }
       }
       Objects {
-        Id: 8045127840492447099
+        Id: 6018889959419422200
         Name: "ClientContext"
         Transform {
           Location {
@@ -50,8 +59,8 @@
             Z: 1
           }
         }
-        ParentId: 3808756987566413276
-        ChildIds: 18407455236237268156
+        ParentId: 4490010504281126794
+        ChildIds: 1367580372839929252
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -63,7 +72,7 @@
         }
       }
       Objects {
-        Id: 18407455236237268156
+        Id: 1367580372839929252
         Name: "Rock 03"
         Transform {
           Location {
@@ -76,7 +85,7 @@
             Z: 1
           }
         }
-        ParentId: 8045127840492447099
+        ParentId: 6018889959419422200
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -95,6 +104,38 @@
           StaticMesh {
             Physics {
             }
+          }
+        }
+      }
+      Objects {
+        Id: 2068698311717592142
+        Name: "Trigger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2.92200637
+            Y: 2.92200637
+            Z: 2.92200637
+          }
+        }
+        ParentId: 4490010504281126794
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
           }
         }
       }

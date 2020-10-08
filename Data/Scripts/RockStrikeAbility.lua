@@ -18,7 +18,7 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY) then return end
 	if other == ABILITY.owner then return end
 	
-	if COMBAT().IsDead(other) then return end
+	if not other:IsA("Player") and COMBAT().IsDead(other) then return end
 	
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(ABILITY.owner) then return end
