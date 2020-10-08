@@ -16,7 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 14130136122875808964
+        ChildIds: 3235480019240431594
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -28,50 +28,38 @@
         }
       }
       Objects {
-        Id: 14130136122875808964
-        Name: "Cube - Bottom-Aligned"
+        Id: 3235480019240431594
+        Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
         Transform {
           Location {
+            X: -608.216797
           }
           Rotation {
+            Yaw: 135
           }
           Scale {
-            X: 1
-            Y: 6
-            Z: 5.89999723
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 5650286938846012579
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12094516816268993523
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.25
-              B: 0.195364296
-              A: 1
-            }
-          }
-        }
+        WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
-            Id: 198353679974341757
+            Id: 8386322457426737957
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -80,21 +68,12 @@
       }
     }
     Assets {
-      Id: 198353679974341757
-      Name: "Cube - Bottom-Aligned"
+      Id: 8386322457426737957
+      Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 12094516816268993523
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
+        AssetId: "sm_ts_fan_cas_stairs_spiral_wall_001_sm"
       }
     }
     PrimaryAssetId {
