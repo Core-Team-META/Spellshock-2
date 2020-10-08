@@ -9,6 +9,7 @@ local SPEED = 1500
 local MOVE_DURATION = 2
 local LIFE_SPAN = 6
 local DAMAGE_RANGE = Vector2.New(20, 30)
+local IMPULSE_AMOUNT = 150000
 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
@@ -22,26 +23,20 @@ function OnBeginOverlap(thisTrigger, other)
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(ABILITY.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
+			
+	local dmg = Damage.New()
+	dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = ABILITY.owner
+	dmg.sourceAbility = ABILITY
+			
+	COMBAT().ApplyDamage(other, dmg, ABILITY.owner)
 	
-	--if ignoreList[other] ~= 1 then
-		--ignoreList[other] = 1
-		
-		local dmg = Damage.New()
-		dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = ABILITY.owner
-		dmg.sourceAbility = ABILITY
-		
-		--[[local otherPos = other:GetWorldPosition()
-		local meleePos = HIT_BOX:GetWorldPosition()
-		local pos = (otherPos + meleePos) / 2
-		local rot = Rotation.New(otherPos - meleePos, Vector3.UP)]]
-		
-		COMBAT().ApplyDamage(other, dmg, ABILITY.owner)
-		
-				
-		--BroadcastDamageFeedback(dmg.amount, pos)
-	--end
+	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
+	directionVector = -directionVector
+	directionVector.z = 0.6
+	local impulseVector = directionVector * IMPULSE_AMOUNT
+	other:AddImpulse(impulseVector)
 end
 
 function OnAbilityExecute(thisAbility)
@@ -58,6 +53,10 @@ function OnAbilityExecute(thisAbility)
 	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
+	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
+	ViewRotation.x = 0
+	ViewRotation.y = 0
+	RockProjectile:SetWorldRotation(ViewRotation)
 	RockProjectile.lifeSpan = LIFE_SPAN
 	RockProjectile:MoveContinuous(VelocityVector)
 	CurrentProjectile = RockProjectile
