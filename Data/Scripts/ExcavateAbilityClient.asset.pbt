@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 14161684854126715918
-  Name: "EarthquakeAbility"
+  Id: 343876453884158946
+  Name: "ExcavateAbilityClient"
   PlatformAssetType: 3
   TextAsset {
   }

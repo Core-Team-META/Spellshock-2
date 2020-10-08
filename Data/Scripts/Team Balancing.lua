@@ -18,7 +18,7 @@ function OnPlayerJoin(player)
 end
 
 function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY then
+	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
 		print("-------------Checking for team balancing")
 		Task.Wait(0.05)
 		local Team1 = Game.GetPlayers({includeTeams=1})
