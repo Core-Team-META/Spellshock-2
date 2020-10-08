@@ -107,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17587880652047825598
+  Name: "Cylinder - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_001"
+  }
+}
+Assets {
   Id: 17409295383154929877
   Name: "Wood Planks Beveled Painted 01"
   PlatformAssetType: 2
@@ -131,6 +140,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_stairs_001_150cm"
+  }
+}
+Assets {
+  Id: 17237692812658431496
+  Name: "Fantasy Staff Head 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_head_staff_001"
   }
 }
 Assets {
