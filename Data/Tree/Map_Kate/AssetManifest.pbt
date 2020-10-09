@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16701925266063006038
+  Name: "Craftsman Stairs 01 Pillar"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_sub_craftsman_stairs_001_pillar"
+  }
+}
+Assets {
   Id: 16536652190868273770
   Name: "Rock Block 02"
   PlatformAssetType: 1
@@ -566,6 +575,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13633382478652610944
+  Name: "Decal Stone Cracks Variants 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_stone_cracks_001"
+  }
+}
+Assets {
   Id: 13628509557036005748
   Name: "Text 05: ~"
   PlatformAssetType: 1
@@ -743,6 +761,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
+  }
+}
+Assets {
+  Id: 12334547367277822682
+  Name: "Pyramid - 3-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_threesided_truncated_001"
   }
 }
 Assets {
@@ -1043,6 +1070,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9861376578465382099
+  Name: "Pyramid - 3-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_threesided_001"
+  }
+}
+Assets {
   Id: 9679522123063662323
   Name: "E"
   PlatformAssetType: 1
@@ -1130,6 +1166,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_03"
+  }
+}
+Assets {
+  Id: 8967718814469894689
+  Name: "Fantasy Castle Accessory Tower 01 - 12m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_acc_tower_001_12m"
   }
 }
 Assets {
