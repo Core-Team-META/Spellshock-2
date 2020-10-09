@@ -170,15 +170,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16956732760613111471
-  Name: "Fantasy Castle Bannister 01 - Straight"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_bannister_001_straight"
-  }
-}
-Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
@@ -464,6 +455,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter_hemisphere_001"
+  }
+}
+Assets {
+  Id: 14402556056167558311
+  Name: "Sand 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_sand_001_uv"
   }
 }
 Assets {
@@ -2015,15 +2015,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2211930898932802599
-  Name: "Pyramid - 4-Sided Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pyramid_truncated_001"
-  }
-}
-Assets {
   Id: 2140913818093261140
   Name: "SciFi Trim 01 bend 90"
   PlatformAssetType: 1
@@ -2039,15 +2030,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_chamfer"
-  }
-}
-Assets {
-  Id: 1998107328759659852
-  Name: "Sci-Fi Base Trim 02 Corner 45"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_scf_base_trim_002_corner45_ref"
   }
 }
 Assets {
