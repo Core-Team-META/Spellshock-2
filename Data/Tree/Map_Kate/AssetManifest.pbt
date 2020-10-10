@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16782431065943393215
+  Name: "Ambient Occlusion Recolor Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_AO_Recolor"
+  }
+}
+Assets {
   Id: 16701925266063006038
   Name: "Craftsman Stairs 01 Pillar"
   PlatformAssetType: 1
@@ -986,6 +995,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_roof_001_arch"
+  }
+}
+Assets {
+  Id: 10378479423839914021
+  Name: "Metal Iron 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_iron_001"
   }
 }
 Assets {
@@ -1940,6 +1958,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_porch_001_rail"
+  }
+}
+Assets {
+  Id: 3487921759055330973
+  Name: "Door Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_door_3x6_001"
   }
 }
 Assets {

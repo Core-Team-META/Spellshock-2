@@ -8,6 +8,15 @@
   }
 }
 Assets {
+  Id: 15128280182623405640
+  Name: "Fern 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fern_generic_004"
+  }
+}
+Assets {
   Id: 14293176668765266901
   Name: "Rock Pile 001"
   PlatformAssetType: 1
@@ -32,15 +41,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_coral_branch_big_01"
-  }
-}
-Assets {
-  Id: 11876426917449002523
-  Name: "Bush Leafy Low 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_foliage_gen_leafy_bush_002"
   }
 }
 Assets {

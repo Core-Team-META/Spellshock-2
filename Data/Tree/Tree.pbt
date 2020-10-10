@@ -632,7 +632,7 @@ Objects {
       Asset {
         Id: 8553298544017934648
       }
-      DistanceBetweenInstances: 120
+      DistanceBetweenInstances: 100
       MaterialChannel: 2
       SpawnDistance: 28800
       CullDistance {
@@ -842,7 +842,7 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 11876426917449002523
+        Id: 15128280182623405640
       }
       DistanceBetweenInstances: 400
       MaterialChannel: 2
@@ -851,6 +851,7 @@ Objects {
         Min: 10000
         Max: 20000
       }
+      CastShadow: true
       ReceivesDecals: true
       GroundSlopeAngle {
         Max: 90
@@ -867,7 +868,7 @@ Objects {
         }
         ScaleZ {
           Min: 1
-          Max: 1.4
+          Max: 1
         }
       }
       RotationAlignment: AlignToWorldUp
@@ -876,7 +877,7 @@ Objects {
       Materials {
         key: "Nature_Leaves"
         value {
-          Id: 841534158063459245
+          Id: 17201051112233946141
         }
       }
       LocalPositionOffset {
@@ -951,6 +952,7 @@ Objects {
         Min: 10000
         Max: 20000
       }
+      CastShadow: true
       ReceivesDecals: true
       GroundSlopeAngle {
         Max: 90
@@ -1001,6 +1003,7 @@ Objects {
         Min: 10000
         Max: 20000
       }
+      CastShadow: true
       ReceivesDecals: true
       GroundSlopeAngle {
         Max: 90
@@ -1139,6 +1142,18 @@ Objects {
           Name: "bp:Fade Out Radius"
           Float: 4500
         }
+        Overrides {
+          Name: "bp:Quality"
+          Float: 76
+        }
+        Overrides {
+          Name: "bp:Power"
+          Float: 1
+        }
+        Overrides {
+          Name: "bp:Radius"
+          Float: 350
+        }
       }
     }
     ParameterOverrideMap {
@@ -1187,7 +1202,7 @@ Objects {
       value {
         Overrides {
           Name: "bp:Fog Density"
-          Float: 1.84735274
+          Float: 1
         }
         Overrides {
           Name: "bp:Albedo"
@@ -1207,6 +1222,10 @@ Objects {
     ParameterOverrideMap {
       key: 11667531286984335862
       value {
+        Overrides {
+          Name: "bp:Shadow Max"
+          Float: 0.07
+        }
       }
     }
     ParameterOverrideMap {
