@@ -580,56 +580,6 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 4842806961858489681
-      }
-      DistanceBetweenInstances: 2000
-      SpawnDistance: 24000
-      EnableCollision: true
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 32
-      }
-      Scaling {
-        Scaling: Free
-        ScaleX {
-          Min: 1
-          Max: 2
-        }
-        ScaleY {
-          Min: 1
-          Max: 2
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1.2
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 8619008964759729738
-        }
-      }
-      LocalPositionOffset {
-        Z: -70
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 5000
-      }
-    }
-    Foliage {
-      Asset {
         Id: 8553298544017934648
       }
       DistanceBetweenInstances: 100
@@ -681,7 +631,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 2000
+      DistanceBetweenInstances: 1500
       SpawnDistance: 24000
       CullDistance {
         Min: 12800

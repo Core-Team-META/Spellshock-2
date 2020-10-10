@@ -2285,6 +2285,15 @@ Assets {
   }
 }
 Assets {
+  Id: 551966555971815703
+  Name: "Fantasy Castle Floor 02 - Corner 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_floor_002_4m_corner_001"
+  }
+}
+Assets {
   Id: 377159667400922669
   Name: "Torch Metal"
   PlatformAssetType: 1
@@ -2318,6 +2327,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_stairs_001_pillar"
+  }
+}
+Assets {
+  Id: 238039622760425136
+  Name: "Fantasy Castle Floor 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_floor_002_4m"
   }
 }
 Assets {
