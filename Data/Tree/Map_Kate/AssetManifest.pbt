@@ -125,6 +125,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17415737976547250906
+  Name: "Fern 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fern_generic_001"
+  }
+}
+Assets {
   Id: 17409295383154929877
   Name: "Wood Planks Beveled Painted 01"
   PlatformAssetType: 2
@@ -2300,6 +2309,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_mag_001"
+  }
+}
+Assets {
+  Id: 2264041107168619230
+  Name: "Cone - Bullet"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bullet_001"
   }
 }
 Assets {

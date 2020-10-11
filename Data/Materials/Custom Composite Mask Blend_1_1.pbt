@@ -90,6 +90,15 @@
         Name: "gradient_falloff"
         Float: 0.182994708
       }
+      Overrides {
+        Name: "cmpc:Material2"
+        Color {
+          R: 1
+          G: 1
+          B: 1
+          A: 1
+        }
+      }
     }
     Assets {
       Id: 2868304604294957594
