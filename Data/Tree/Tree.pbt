@@ -1174,7 +1174,7 @@ Objects {
       value {
         Overrides {
           Name: "bp:Shadow Max"
-          Float: 0.07
+          Float: 0.04
         }
       }
     }

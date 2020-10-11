@@ -120,18 +120,18 @@
       Overrides {
         Name: "cmpc:Material1"
         Color {
-          R: 1
-          G: 0.83464396
-          B: 0.734375
+          R: 0.796875
+          G: 0.705566406
+          B: 0.705566406
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material3"
         Color {
-          R: 1
-          G: 0.83464396
-          B: 0.734375
+          R: 0.708333313
+          G: 0.627170146
+          B: 0.627170146
           A: 1
         }
       }
