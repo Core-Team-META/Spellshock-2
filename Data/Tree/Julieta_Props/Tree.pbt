@@ -1,16 +1,116 @@
 ﻿Name: "Julieta_Props"
 RootId: 10661356697076551539
 Objects {
+  Id: 3848224290902016032
+  Name: "Point Light"
+  Transform {
+    Location {
+      X: -7285.53906
+      Y: -8048.21973
+      Z: 3697.09644
+    }
+    Rotation {
+      Yaw: 19.5102386
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10661356697076551539
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Light {
+    Intensity: 7.33919954
+    Color {
+      R: 1
+      G: 0.927947
+      B: 0.68
+      A: 1
+    }
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 1012.42352
+        PointLight {
+          SourceRadius: 20
+          SoftSourceRadius: 20
+          FallOffExponent: 8
+          UseFallOffExponent: true
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
+  }
+}
+Objects {
+  Id: 12015895981174249755
+  Name: "Market Tent 2"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10661356697076551539
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 464620634806594912
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Market Tent 2"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -7013.93
+            Y: -7910.77686
+            Z: 3470.1123
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -159.678482
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.27933681
+            Y: 1.27933681
+            Z: 1.27933681
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4045014363137092692
+    }
+  }
+}
+Objects {
   Id: 5793589064130877899
   Name: "Market Tent"
   Transform {
     Location {
-      X: -7833.8042
-      Y: -8030.89844
+      X: -7903.70898
+      Y: -8108.96973
       Z: 3460.67
     }
     Rotation {
-      Yaw: 22.7953377
+      Yaw: 22.7953053
     }
     Scale {
       X: 1.64959538
@@ -8581,14 +8681,14 @@ Objects {
   Name: "Market Vendor"
   Transform {
     Location {
-      X: -7316.03662
-      Y: -7334.35
-      Z: 3469.55566
+      X: -7334.58252
+      Y: -7291.80566
+      Z: 3479.69214
     }
     Rotation {
-      Pitch: -0.944397
-      Yaw: -162.219711
-      Roll: 2.94244385
+      Pitch: 0.485120982
+      Yaw: -162.201157
+      Roll: -1.51074219
     }
     Scale {
       X: 1.53743041
