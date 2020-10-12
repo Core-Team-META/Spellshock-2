@@ -557,6 +557,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14633329416983781101
+  Name: "Decal Moss Patch"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_moss_patch_001"
+  }
+}
+Assets {
   Id: 14580885173560146840
   Name: "Quarter hemisphere"
   PlatformAssetType: 1

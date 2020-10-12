@@ -98,9 +98,9 @@
       Overrides {
         Name: "cmpc:Material2_Sides"
         Color {
-          R: 1
-          G: 0.931854308
-          B: 0.79
+          R: 0.796875
+          G: 0.705566406
+          B: 0.705566406
           A: 1
         }
       }
