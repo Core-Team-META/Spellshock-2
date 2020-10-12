@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15599228502728747198
+  Name: "Tornado VFX"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_tornado"
+  }
+}
+Assets {
   Id: 14263746284030313578
   Name: "Frame Outlined Thick 006"
   PlatformAssetType: 9
@@ -53,12 +62,39 @@ Assets {
   }
 }
 Assets {
+  Id: 9987944490551258706
+  Name: "Electricity Spark Humming Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_electricity_spark_humming_loop_01_Cue_ref"
+  }
+}
+Assets {
   Id: 8509829824645761235
   Name: "Icon Damage"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Damage"
+  }
+}
+Assets {
+  Id: 8277485499354448455
+  Name: "Fantasy Ability Yellow 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_005"
+  }
+}
+Assets {
+  Id: 7508041128758836201
+  Name: "Fantasy Ability Blue 053"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_053"
   }
 }
 Assets {
@@ -80,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6189799991312674808
+  Name: "Fantasy Ability Red 023"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_023"
+  }
+}
+Assets {
   Id: 5547947379889405266
   Name: "Fantasy Corners 001"
   PlatformAssetType: 9
@@ -95,6 +140,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 5187162620904886536
+  Name: "Fantasy Ability Blue 038"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_038"
+  }
+}
+Assets {
+  Id: 5172885977700681968
+  Name: "Fantasy Ability Blue 052"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_052"
   }
 }
 Assets {
@@ -149,6 +212,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_020"
+  }
+}
+Assets {
+  Id: 549876127927703467
+  Name: "Fantasy Ability Red 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_015"
   }
 }
 Assets {
