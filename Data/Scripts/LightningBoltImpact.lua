@@ -11,9 +11,9 @@ function OnTargetImpact(theWeapon, impactData)
 		return
 	end
 	
-	API_SE.ApplyStatusEffect(impactData.targetObject, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+	API_SE.ApplyStatusEffect(impactData.targetObject, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
 	Task.Wait()
-	API_SE.ApplyStatusEffect(impactData.targetObject, API_SE.STATUS_EFFECT_DEFINITIONS["Burn"].id)
+	--API_SE.ApplyStatusEffect(impactData.targetObject, API_SE.STATUS_EFFECT_DEFINITIONS["Burn"].id)
 	
 	--[[
 	local dmg = Damage.New(amount)

@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12935185397369316502
         ChildIds: 18222319590489236690
         ChildIds: 11747234676183721272
         ChildIds: 10663446143340725464
@@ -1619,8 +1619,6 @@
         Name: "Lightning Bolt"
         Transform {
           Location {
-            X: -430.835754
-            Z: -97.2486572
           }
           Rotation {
           }
@@ -1642,7 +1640,7 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Equipment {
-          SocketName: "right_prop"
+          SocketName: "upper_spine"
           PickupTrigger {
             SelfId: 13280567125270901216
           }
@@ -1657,10 +1655,12 @@
               Id: 841534158063459245
             }
             ImpactAssetRef {
-              Id: 841534158063459245
+              Id: 3025603993560060871
             }
             Muzzle {
               Location {
+                X: 50
+                Z: 20
               }
               Rotation {
               }
@@ -1679,9 +1679,9 @@
             }
             BurstCount: 1
             BurstDuration: 4
-            Range: 100000
+            Range: 5000
             ImpactPlayerAssetRef {
-              Id: 841534158063459245
+              Id: 3025603993560060871
             }
             ReticleType {
               Value: "mc:ereticletype:crosshair"
@@ -1689,12 +1689,11 @@
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 2000
-            ProjectileLifeSpan: 10
-            ProjectileLength: 100
-            ProjectileRadius: 4
+            ProjectileSpeed: 3000
+            ProjectileLength: 91.5544281
+            ProjectileRadius: 102.491974
             SpreadMin: 1
-            SpreadMax: 90
+            SpreadMax: 2
             SpreadDecreaseSpeed: 6
             SpreadIncreasePerShot: 2
             SpreadPenaltyPerShot: 1.5
@@ -1811,7 +1810,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 8
+            Duration: 2
             CanMove: true
             CanJump: true
             CanRotate: true

@@ -6,7 +6,7 @@ local STUN_EFFECT_TEMPLATE = script:GetCustomProperty("StunEffectTemplate")
 local data = {}
 
 data.name = "Stun"
-data.duration = 10.0
+data.duration = 5.0
 data.icon = STUN_ICON
 data.color = Color.GREEN
 data.effectTemplate = STUN_EFFECT_TEMPLATE
