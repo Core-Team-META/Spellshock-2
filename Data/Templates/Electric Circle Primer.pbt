@@ -54,9 +54,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.443643779
+              R: 0.443644196
               B: 0.87
-              A: 0.125
+              A: 0.595
             }
           }
         }
@@ -74,7 +74,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
