@@ -1,6 +1,54 @@
 ﻿Name: "Julieta_Props"
 RootId: 10661356697076551539
 Objects {
+  Id: 18023542384570156561
+  Name: "Market Tent 2_New"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10661356697076551539
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9450369217401753592
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Market Tent 2_New"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9006.91406
+            Y: -5456.93848
+            Z: 3365.78662
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -36.7706833
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.32939374
+            Y: 1.32939374
+            Z: 1.32939374
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12527094592906841678
+    }
+  }
+}
+Objects {
   Id: 4071638246874862961
   Name: "Market Vendor"
   Transform {

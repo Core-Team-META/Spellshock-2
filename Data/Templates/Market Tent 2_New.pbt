@@ -972,7 +972,6 @@
           }
         }
         ParentId: 1533787364608992104
-        ChildIds: 649094367793982503
         ChildIds: 3283524042568105113
         ChildIds: 233275239655401627
         Collidable_v2 {
@@ -983,67 +982,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 649094367793982503
-        Name: "Rock Block 01"
-        Transform {
-          Location {
-            X: 1.86636591
-            Y: 4.30254316
-            Z: 253.812027
-          }
-          Rotation {
-            Pitch: -11.9055653
-            Yaw: 0.532350063
-            Roll: 15.506629
-          }
-          Scale {
-            X: 0.25739938
-            Y: 0.25739938
-            Z: 0.122640043
-          }
-        }
-        ParentId: 3859901973182751954
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10378479423839914021
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.99014294
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 3.36410618
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16718390130615866986
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -1194,7 +1132,6 @@
         ParentId: 1533787364608992104
         ChildIds: 10716611024775944069
         ChildIds: 3661220105701265883
-        ChildIds: 9711805465951944978
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1331,67 +1268,6 @@
         }
       }
       Objects {
-        Id: 9711805465951944978
-        Name: "Rock Block 01"
-        Transform {
-          Location {
-            X: 0.539744198
-            Y: -0.132089809
-            Z: 239.751266
-          }
-          Rotation {
-            Pitch: -15.1745625
-            Yaw: 93.7772446
-            Roll: -12.3338184
-          }
-          Scale {
-            X: 0.25739938
-            Y: 0.25739938
-            Z: 0.122640043
-          }
-        }
-        ParentId: 17866367202933486152
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10378479423839914021
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.99014294
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 3.36410618
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16718390130615866986
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 3697426252034854247
         Name: "Support"
         Transform {
@@ -1414,7 +1290,6 @@
         ParentId: 1533787364608992104
         ChildIds: 6089042749433188261
         ChildIds: 615844597620491577
-        ChildIds: 4093136613235103278
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1553,67 +1428,6 @@
         }
       }
       Objects {
-        Id: 4093136613235103278
-        Name: "Rock Block 01"
-        Transform {
-          Location {
-            X: 5.8615756
-            Y: 21.6986122
-            Z: 310.787445
-          }
-          Rotation {
-            Pitch: 4.59212732
-            Yaw: -49.2751884
-            Roll: 19.0253983
-          }
-          Scale {
-            X: 0.25739938
-            Y: 0.25739938
-            Z: 0.122640043
-          }
-        }
-        ParentId: 3697426252034854247
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10378479423839914021
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.99014294
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 3.36410618
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16718390130615866986
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 7583782470663906303
         Name: "Support"
         Transform {
@@ -1636,7 +1450,6 @@
         ParentId: 1533787364608992104
         ChildIds: 10282163161956239683
         ChildIds: 13527817638727919736
-        ChildIds: 9288056162537140986
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1768,67 +1581,6 @@
           Teams {
           }
           DisableCastShadows: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9288056162537140986
-        Name: "Rock Block 01"
-        Transform {
-          Location {
-            X: -11.7411184
-            Y: 32.692009
-            Z: 312.990509
-          }
-          Rotation {
-            Pitch: -7.89359474
-            Yaw: 120.823608
-            Roll: -17.9471512
-          }
-          Scale {
-            X: 0.25739938
-            Y: 0.25739938
-            Z: 0.122640043
-          }
-        }
-        ParentId: 7583782470663906303
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10378479423839914021
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.99014294
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 3.36410618
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16718390130615866986
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
           StaticMesh {
             Physics {
             }
@@ -4795,6 +4547,12 @@
         ChildIds: 13217013937126494255
         ChildIds: 16601501531176019736
         ChildIds: 10761655814303935526
+        ChildIds: 8925625418895159287
+        ChildIds: 6530827378433050934
+        ChildIds: 6357539756446525200
+        ChildIds: 1133307384053238845
+        ChildIds: 13038011910616150846
+        ChildIds: 15661581684937370391
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5352,6 +5110,366 @@
         }
       }
       Objects {
+        Id: 8925625418895159287
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 84.2729263
+            Y: -7.75619221
+            Z: 89.4852905
+          }
+          Rotation {
+            Pitch: -7.85766602
+            Yaw: 171.220093
+            Roll: 8.48824406
+          }
+          Scale {
+            X: 0.206122205
+            Y: 0.20612213
+            Z: 0.121759288
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6530827378433050934
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 86.8497772
+            Y: -6.29100704
+            Z: 78.3836594
+          }
+          Rotation {
+            Pitch: 16.4604683
+            Yaw: 169.707397
+            Roll: -11.032196
+          }
+          Scale {
+            X: 0.206122205
+            Y: 0.20612213
+            Z: 0.121759288
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6357539756446525200
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 87.6232758
+            Y: -18.0508156
+            Z: 81.9604645
+          }
+          Rotation {
+            Pitch: -51.921936
+            Yaw: 171.801758
+            Roll: 87.4637451
+          }
+          Scale {
+            X: 0.164769679
+            Y: 0.16476962
+            Z: 0.0973317623
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1133307384053238845
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 88.910408
+            Y: -23.5309372
+            Z: 81.9604645
+          }
+          Rotation {
+            Pitch: -49.6824341
+            Yaw: 145.774887
+            Roll: 107.776581
+          }
+          Scale {
+            X: 0.147324547
+            Y: 0.147324488
+            Z: 0.087026678
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13038011910616150846
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 83.0068512
+            Y: -255.658478
+            Z: 77.1615
+          }
+          Rotation {
+            Pitch: -48.2210388
+            Yaw: -162.527939
+            Roll: 67.6326218
+          }
+          Scale {
+            X: 0.164769679
+            Y: 0.164769635
+            Z: 0.0973317623
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15661581684937370391
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 82.9610825
+            Y: -249.306335
+            Z: 75.4964294
+          }
+          Rotation {
+            Pitch: -51.901947
+            Yaw: 164.706741
+            Roll: 93.0503616
+          }
+          Scale {
+            X: 0.164769679
+            Y: 0.164769635
+            Z: 0.0973317623
+          }
+        }
+        ParentId: 9120888683284488757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 17460940699938174693
         Name: "Rope Tied"
         Transform {
@@ -5381,6 +5499,8 @@
         ChildIds: 11139550830921184996
         ChildIds: 15471098671916627287
         ChildIds: 1147398848374333860
+        ChildIds: 6235403582482980206
+        ChildIds: 11459497698445941851
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6075,6 +6195,126 @@
             X: 0.162612259
             Y: 0.162608653
             Z: 0.130920202
+          }
+        }
+        ParentId: 17460940699938174693
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6235403582482980206
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 78.9252396
+            Y: 14.0466347
+            Z: 80.6457367
+          }
+          Rotation {
+            Pitch: -31.7288513
+            Yaw: -176.486145
+            Roll: -21.6452026
+          }
+          Scale {
+            X: 0.199620754
+            Y: 0.199637324
+            Z: 0.149184451
+          }
+        }
+        ParentId: 17460940699938174693
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.905605197
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.712104201
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1978759747315071937
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11459497698445941851
+        Name: "Donut"
+        Transform {
+          Location {
+            X: 78.9252396
+            Y: 14.0466347
+            Z: 80.6457367
+          }
+          Rotation {
+            Pitch: -31.7282104
+            Yaw: -176.485641
+            Roll: 2.80251
+          }
+          Scale {
+            X: 0.199620768
+            Y: 0.199637324
+            Z: 0.149184451
           }
         }
         ParentId: 17460940699938174693
@@ -7313,24 +7553,6 @@
       }
     }
     Assets {
-      Id: 16718390130615866986
-      Name: "Rock Block 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_006"
-      }
-    }
-    Assets {
-      Id: 10378479423839914021
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
       Id: 4489563712437375651
       Name: "Bone Human Ulna 01"
       PlatformAssetType: 1
@@ -7436,6 +7658,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_modern_axe_001"
+      }
+    }
+    Assets {
+      Id: 10378479423839914021
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
       }
     }
     Assets {
