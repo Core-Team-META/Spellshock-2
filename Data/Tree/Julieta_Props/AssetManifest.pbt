@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 18097083884483661581
+  Name: "Crescent - 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_crescent_002"
+  }
+}
+Assets {
   Id: 18030659526651300930
   Name: "Metal Gold 01"
   PlatformAssetType: 2
@@ -8,39 +17,12 @@
   }
 }
 Assets {
-  Id: 18014941405078390650
-  Name: "Kelp Tall Bush 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_tall_bush_01"
-  }
-}
-Assets {
   Id: 17663779083660574160
   Name: "Bottle 06"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_bottle_006"
-  }
-}
-Assets {
-  Id: 17587880652047825598
-  Name: "Cylinder - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
-  Id: 17485881147669499682
-  Name: "Cube - Rounded - bottom aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_rounded_001"
   }
 }
 Assets {
@@ -62,48 +44,12 @@ Assets {
   }
 }
 Assets {
-  Id: 15665311592750007871
-  Name: "Food Citrus 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_food_generic_citrus_001_uv"
-  }
-}
-Assets {
-  Id: 15389123512634345687
-  Name: "Crescent - 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_crescent_002"
-  }
-}
-Assets {
   Id: 15311550138640852139
   Name: "Cone - Truncated Hollow Concave"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_hollow_convex_001"
-  }
-}
-Assets {
-  Id: 15022686768039723999
-  Name: "Large Round Wood Beam 8m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_large_beam_round_6m"
-  }
-}
-Assets {
-  Id: 14764814241270937025
-  Name: "Wicker Basket 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_wicker_001_uv"
   }
 }
 Assets {
@@ -116,21 +62,21 @@ Assets {
   }
 }
 Assets {
-  Id: 14014504692453732684
-  Name: "Food Corn 01"
-  PlatformAssetType: 2
+  Id: 13754159522859767566
+  Name: "Bone Human Ribcage Half"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_food_generic_corn_001_uv"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_ribhalf_01_ref"
   }
 }
 Assets {
-  Id: 13791225619385764102
-  Name: "Wicker Basket 02"
-  PlatformAssetType: 2
+  Id: 12905923173550510229
+  Name: "Cylinder - Polished"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_wicker_002_uv"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_test_001"
   }
 }
 Assets {
@@ -161,15 +107,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12531876463208577149
-  Name: "Ring 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_002"
-  }
-}
-Assets {
   Id: 11960181978941569243
   Name: "Manticore Logo"
   PlatformAssetType: 1
@@ -197,15 +134,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10413465125058823580
-  Name: "Horn"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_horn_001"
-  }
-}
-Assets {
   Id: 10378479423839914021
   Name: "Metal Iron 01"
   PlatformAssetType: 2
@@ -215,21 +143,12 @@ Assets {
   }
 }
 Assets {
-  Id: 9830804841269268102
-  Name: "Hay 02"
-  PlatformAssetType: 2
+  Id: 9368501975616237166
+  Name: "Simple Crate 150cm"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_hay_002_uv"
-  }
-}
-Assets {
-  Id: 9571902954734362392
-  Name: "Moss 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_moss_001_uv"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_crate_simple_150cm_001"
   }
 }
 Assets {
@@ -239,15 +158,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hill_005"
-  }
-}
-Assets {
-  Id: 9188351867310556903
-  Name: "Fantasy Chest Lid 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fantasy_chest_lid_001_ref"
   }
 }
 Assets {
@@ -269,30 +179,39 @@ Assets {
   }
 }
 Assets {
-  Id: 8904692500059269086
-  Name: "Kelp Bush 01"
-  PlatformAssetType: 1
+  Id: 7873949318783264336
+  Name: "Carpet 01"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_kelp_bush_01"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_carpets_001_uv"
   }
 }
 Assets {
-  Id: 8509644064107880223
-  Name: "Cone - Truncated Hollow Wide Thin"
-  PlatformAssetType: 1
+  Id: 6054953119424435965
+  Name: "Fantasy Human Guy 2"
+  PlatformAssetType: 17
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_hollow_006"
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_guy_fantasy_003_ref"
   }
 }
 Assets {
-  Id: 8294807043175688377
-  Name: "Ellipsoid - Truncated"
+  Id: 5944393796542654307
+  Name: "Capsule"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ellipsoid_truncated_001"
+    AssetId: "sm_capsule_001"
+  }
+}
+Assets {
+  Id: 5931224016695282927
+  Name: "Liquid Decal"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "dcl_liquid"
   }
 }
 Assets {
@@ -305,48 +224,21 @@ Assets {
   }
 }
 Assets {
-  Id: 5489775416547967874
-  Name: "Hemisphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hemisphere_001"
-  }
-}
-Assets {
-  Id: 5318852982404395572
-  Name: "Bark Redwood 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_redwood_001_uv"
-  }
-}
-Assets {
-  Id: 5271639852184247581
-  Name: "Ring - Extra Thick"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_006"
-  }
-}
-Assets {
-  Id: 5061372286056644297
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 4533424030597734882
   Name: "Lens"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_lense_001"
+  }
+}
+Assets {
+  Id: 4489563712437375651
+  Name: "Bone Human Ulna 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_ulna_01_ref"
   }
 }
 Assets {
@@ -368,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4281380979366999084
+  Name: "Hatchet - Blade"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_modern_axe_001"
+  }
+}
+Assets {
   Id: 3937103910117390938
   Name: "Bottle 05"
   PlatformAssetType: 1
@@ -377,12 +278,12 @@ Assets {
   }
 }
 Assets {
-  Id: 3753434009625901326
-  Name: "Fantasy Chest Base 01"
+  Id: 3735447043741744555
+  Name: "Coral Table 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fantasy_chest_001_ref"
+    AssetId: "sm_coral_table_01"
   }
 }
 Assets {
@@ -404,15 +305,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3533190463953898497
-  Name: "Fantasy Chest Treasure Pile 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_fantasy_chest_treasure_pile_001_ref"
-  }
-}
-Assets {
   Id: 3497829363992038407
   Name: "Gem - Trillion Polished"
   PlatformAssetType: 1
@@ -428,6 +320,24 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_rope_001"
+  }
+}
+Assets {
+  Id: 2715939630273116812
+  Name: "Ceramic Terracotta Pots Old 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fan_terracotta_pots_002_uv"
+  }
+}
+Assets {
+  Id: 2260950217581256970
+  Name: "Rock 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
   }
 }
 Assets {
@@ -467,6 +377,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1190425863537549876
+  Name: "Bone Human Tibula 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_tib_01_ref"
+  }
+}
+Assets {
   Id: 889917629752285723
   Name: "Bark Redwood 01"
   PlatformAssetType: 2
@@ -485,11 +404,11 @@ Assets {
   }
 }
 Assets {
-  Id: 705109368338738633
-  Name: "Bark Dead 01"
-  PlatformAssetType: 2
+  Id: 482873605194865923
+  Name: "Bone Human Humerus 01"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_dead_001_uv"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_humerus_01_ref"
   }
 }
