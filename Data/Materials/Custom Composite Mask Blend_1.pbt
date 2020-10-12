@@ -15,7 +15,7 @@
       Overrides {
         Name: "cmp:Material2"
         AssetReference {
-          Id: 15697206862897547361
+          Id: 12293427156744400159
         }
       }
       Overrides {
@@ -29,6 +29,24 @@
       Overrides {
         Name: "blend_amount"
         Float: 0.840368807
+      }
+      Overrides {
+        Name: "cmpc:Material2"
+        Color {
+          R: 0.765625
+          G: 0.765625
+          B: 0.765625
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material1"
+        Color {
+          R: 0.8125
+          G: 0.8125
+          B: 0.8125
+          A: 1
+        }
       }
     }
     Assets {
@@ -50,12 +68,12 @@
       }
     }
     Assets {
-      Id: 15697206862897547361
-      Name: "Bricks Rough Stone Floor 02"
+      Id: 12293427156744400159
+      Name: "Bricks Rough Stone Floor 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_brick_stone_floor_rough_002"
+        AssetId: "mi_brick_stone_floor_rough_001"
       }
     }
   }

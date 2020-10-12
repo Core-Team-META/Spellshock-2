@@ -9,17 +9,27 @@
       Overrides {
         Name: "color"
         Color {
-          R: 0.89
-          G: 0.300596029
+          R: 0.415000021
+          G: 0.359071195
+          B: 0.18675001
           A: 1
         }
       }
       Overrides {
         Name: "color_secondary"
         Color {
-          R: 1
-          G: 0.720463574
-          B: 0.37
+          R: 0.415000021
+          G: 0.359071195
+          B: 0.18675001
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "color_tertiary"
+        Color {
+          R: 0.415000021
+          G: 0.359071195
+          B: 0.18675001
           A: 1
         }
       }
