@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15818682822090430829
+  Name: "Pipe - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_003"
+  }
+}
+Assets {
   Id: 15796848555389387332
   Name: "Torch Holder Metal"
   PlatformAssetType: 1
@@ -980,6 +989,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11892494746123028781
+  Name: "Cylinder - Chamfered Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_002"
+  }
+}
+Assets {
   Id: 11891671282715261184
   Name: "Craftsman Part - Stair Balust"
   PlatformAssetType: 1
@@ -1076,6 +1094,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_pole_002"
+  }
+}
+Assets {
+  Id: 11535495265175524988
+  Name: "Ring - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_003"
   }
 }
 Assets {
@@ -1349,6 +1376,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9544913535066953067
+  Name: "Fantasy Sword Guard 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_guard_sword_002"
+  }
+}
+Assets {
   Id: 9368501975616237166
   Name: "Simple Crate 150cm"
   PlatformAssetType: 1
@@ -1400,6 +1436,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_roof_001_cap"
+  }
+}
+Assets {
+  Id: 9223391083233434823
+  Name: "Cylinder - Chamfered Small Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_003"
   }
 }
 Assets {
