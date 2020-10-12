@@ -333,7 +333,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 11909993637017581644
+              SelfId: 282391035961481586
             }
           }
           Overrides {
@@ -583,7 +583,7 @@
           }
         }
         ParentId: 10663446143340725464
-        ChildIds: 11909993637017581644
+        ChildIds: 5002372427654228113
         ChildIds: 734593391777780833
         ChildIds: 4565537237503929626
         ChildIds: 3879989441895773405
@@ -599,7 +599,7 @@
         }
       }
       Objects {
-        Id: 11909993637017581644
+        Id: 5002372427654228113
         Name: "E Special"
         Transform {
           Location {
@@ -610,7 +610,82 @@
           }
         }
         ParentId: 4710130442374076997
-        ChildIds: 2612371648215345225
+        ChildIds: 17933779248872740279
+        ChildIds: 17692966453424551073
+        ChildIds: 3456260185239028213
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "1hand_melee_rm_combo_closer_uppercut"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_32"
+          }
+        }
+      }
+      Objects {
+        Id: 17933779248872740279
+        Name: "E Primer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 5002372427654228113
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -648,7 +723,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 8
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -659,14 +734,13 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_32"
@@ -674,8 +748,8 @@
         }
       }
       Objects {
-        Id: 2612371648215345225
-        Name: "FireCloakServer"
+        Id: 17692966453424551073
+        Name: "PlaceElectricCircleServer"
         Transform {
           Location {
           }
@@ -684,24 +758,46 @@
           Scale {
           }
         }
-        ParentId: 11909993637017581644
+        ParentId: 5002372427654228113
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:MainAbility"
             ObjectReference {
-              SubObjectId: 11909993637017581644
+              SubObjectId: 5002372427654228113
             }
           }
           Overrides {
-            Name: "cs:FireCloakTemplate"
-            AssetReference {
-              Id: 9012068803185341832
+            Name: "cs:PrimerAbility"
+            ObjectReference {
+              SubObjectId: 17933779248872740279
             }
+          }
+          Overrides {
+            Name: "cs:WallTemplate"
+            AssetReference {
+              Id: 15303948334794438477
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Place Shock Circle"
           }
           Overrides {
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
             }
           }
         }
@@ -714,7 +810,79 @@
         }
         Script {
           ScriptAsset {
-            Id: 12815152771472942926
+            Id: 948722703146738115
+          }
+        }
+      }
+      Objects {
+        Id: 3456260185239028213
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5002372427654228113
+        ChildIds: 9214703864209953364
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 9214703864209953364
+        Name: "PlaceObjectAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 3456260185239028213
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:WallTemplate"
+            AssetReference {
+              Id: 4827230565070222589
+            }
+          }
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 17692966453424551073
+            }
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 1200
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
           }
         }
       }
@@ -976,6 +1144,10 @@
           Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 1200
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
           }
         }
         Collidable_v2 {

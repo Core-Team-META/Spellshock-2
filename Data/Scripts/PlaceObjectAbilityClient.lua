@@ -6,6 +6,7 @@ local PrimerAbility = ServerScript:GetCustomProperty("PrimerAbility"):WaitForObj
 
 local EventName = ServerScript:GetCustomProperty("EventName")
 local MAX_PLACEMENT_RANGE = script:GetCustomProperty("MaxPlacementRange")
+local MatchNormal = script:GetCustomProperty("MatchNormal")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local objectHalogram = nil
@@ -34,19 +35,18 @@ function CalculatePlacement()
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
 	if hr ~= nil then
-		return hr:GetImpactPosition()
+		return hr:GetImpactPosition(), hr:GetImpactNormal()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000,
 			{ignorePlayers = true})
 		if hr ~= nil then
-			return hr:GetImpactPosition()
+			return hr:GetImpactPosition(), hr:GetImpactNormal()
 		else
 			return nil
 		end
 	end
-
 end
 
 function Tick()
@@ -62,10 +62,16 @@ function Tick()
 		objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
 		
 		-- calculate placement:
-		local ghostPlacement = CalculatePlacement()
-		if ghostPlacement ~= nil then
-			objectHalogram:SetWorldPosition(ghostPlacement)
+		local impactPosition, impactNormal = CalculatePlacement()
+		local quat = Quaternion.New(Vector3.UP, impactNormal)
+		if impactPosition ~= nil then
+			objectHalogram:SetWorldPosition(impactPosition)
 			objectHalogram.visibility = Visibility.INHERIT
+			
+			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
+			if MatchNormal then				
+				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
+			end
 		else
 			objectHalogram.visibility = Visibility.FORCE_OFF
 		end
