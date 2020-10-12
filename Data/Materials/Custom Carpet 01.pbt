@@ -9,18 +9,18 @@
       Overrides {
         Name: "color_tertiary"
         Color {
-          R: 1
-          G: 0.344371
-          B: 0.01
+          R: 0.786458313
+          G: 0.279188275
+          B: 0.0204807017
           A: 1
         }
       }
       Overrides {
         Name: "color_secondary"
         Color {
-          R: 1
-          G: 0.344371
-          B: 0.01
+          R: 0.666666687
+          G: 0.229580492
+          B: 0.00666666031
           A: 1
         }
       }

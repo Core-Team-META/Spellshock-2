@@ -38,6 +38,23 @@
         Name: "bubbles"
         Float: 0.319645762
       }
+      Overrides {
+        Name: "surface displacement amount"
+        Float: 1
+      }
+      Overrides {
+        Name: "surface height"
+        Float: 0.5
+      }
+      Overrides {
+        Name: "top color"
+        Color {
+          R: 0.0651041716
+          G: 0.25
+          B: 0.075399
+          A: 1
+        }
+      }
     }
     Assets {
       Id: 17595738821218993691

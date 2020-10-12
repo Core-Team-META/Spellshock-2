@@ -49,7 +49,7 @@
       }
       Overrides {
         Name: "material2_scale"
-        Float: 0.8
+        Float: 1.7
       }
       Overrides {
         Name: "material2side_scale"
@@ -98,9 +98,9 @@
       Overrides {
         Name: "cmpc:Material2_Sides"
         Color {
-          R: 1
-          G: 0.931854308
-          B: 0.79
+          R: 0.796875
+          G: 0.705566406
+          B: 0.705566406
           A: 1
         }
       }
@@ -120,18 +120,18 @@
       Overrides {
         Name: "cmpc:Material1"
         Color {
-          R: 1
-          G: 0.83464396
-          B: 0.734375
+          R: 0.796875
+          G: 0.705566406
+          B: 0.705566406
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material3"
         Color {
-          R: 0.854166687
-          G: 0.621533394
-          B: 0.48046875
+          R: 0.708333313
+          G: 0.627170146
+          B: 0.627170146
           A: 1
         }
       }
@@ -156,9 +156,9 @@
       Overrides {
         Name: "cmpc:Material2"
         Color {
-          R: 0.927083313
-          G: 0.864312053
-          B: 0.864312053
+          R: 0.947916687
+          G: 0.838807523
+          B: 0.696126342
           A: 1
         }
       }

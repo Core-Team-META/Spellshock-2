@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8978661562815925692
+  Name: "Rock Hexagonal"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_008"
+  }
+}
+Assets {
   Id: 7073534569077104555
   Name: "Wood Siding White"
   PlatformAssetType: 2
@@ -68,15 +77,6 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_fire_volume_vfx"
-  }
-}
-Assets {
-  Id: 2143996029754697336
-  Name: "Pyramid - 6-Sided Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pyramid_sixsided_truncated_001"
   }
 }
 Assets {

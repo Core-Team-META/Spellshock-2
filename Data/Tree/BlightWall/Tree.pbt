@@ -2141,12 +2141,12 @@ Objects {
   Name: "Decal Stains Bottom 01"
   Transform {
     Location {
-      X: -20.3710938
-      Y: -52.5517578
-      Z: 470.034546
+      X: -20.3719406
+      Y: -52.5520744
+      Z: 670.385742
     }
     Rotation {
-      Yaw: -179.999969
+      Yaw: -179.999954
       Roll: 90.0000687
     }
     Scale {
