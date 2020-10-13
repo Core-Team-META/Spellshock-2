@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10769838940944209875
+  Name: "Score Tick Tally Single 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_score_tick_count_tally_single_01_Cue_ref"
+  }
+}
+Assets {
   Id: 8509829824645761235
   Name: "Icon Damage"
   PlatformAssetType: 9
@@ -134,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3523597868239921442
+  Name: "Icon Crystal"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Crystal"
+  }
+}
+Assets {
   Id: 3483798833601977176
   Name: "Fantasy Shape 003"
   PlatformAssetType: 9
@@ -158,6 +176,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_020"
+  }
+}
+Assets {
+  Id: 1711561592277562603
+  Name: "Icon Close"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Close"
   }
 }
 Assets {

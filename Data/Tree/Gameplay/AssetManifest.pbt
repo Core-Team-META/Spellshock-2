@@ -8,6 +8,15 @@
   }
 }
 Assets {
+  Id: 15683169359350375517
+  Name: "Capsule"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_capsule_001"
+  }
+}
+Assets {
   Id: 14834300160033285312
   Name: "Long Banner Manticore"
   PlatformAssetType: 1
@@ -41,6 +50,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_add_edgeline_local"
+  }
+}
+Assets {
+  Id: 4998159696449081601
+  Name: "Wireframe"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "wireframe_glow_001"
   }
 }
 Assets {

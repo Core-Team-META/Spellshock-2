@@ -30,6 +30,7 @@ Every time the state changes, the server updates the variables and the client's 
 local ABCP = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
+local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
 local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
@@ -158,6 +159,7 @@ function GetState()
     result.isEnabled = script:GetCustomProperty("IsEnabled")
     result.attackingTeam = 0
     result.order = ORDER
+    result.spawnPoints = SpawnPoints
 
     return result
 end

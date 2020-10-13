@@ -46,9 +46,9 @@
           Rotation {
           }
           Scale {
-            X: 4
-            Y: 4
-            Z: 4
+            X: 10
+            Y: 10
+            Z: 10
           }
         }
         ParentId: 15881528091333770182
@@ -84,6 +84,7 @@
           }
         }
         ParentId: 15881528091333770182
+        ChildIds: 12270563499582565451
         ChildIds: 503670896475274375
         WantsNetworking: true
         Collidable_v2 {
@@ -96,6 +97,58 @@
         }
       }
       Objects {
+        Id: 12270563499582565451
+        Name: "Sphere"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 10
+            Y: 10
+            Z: 10
+          }
+        }
+        ParentId: 9370512835473868609
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 6186751883754370952
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.590000033
+              G: 0.105496779
+              A: 0.431000024
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6585207450897081622
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 503670896475274375
         Name: "Rock 03"
         Transform {
@@ -104,9 +157,9 @@
           Rotation {
           }
           Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.3
+            X: 0.114032313
+            Y: 0.114032313
+            Z: 0.342097
           }
         }
         ParentId: 9370512835473868609
@@ -216,6 +269,24 @@
             Id: 2331688389429807128
           }
         }
+      }
+    }
+    Assets {
+      Id: 6585207450897081622
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 6186751883754370952
+      Name: "Edgeline Wavy Object Fade Advanced"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_add_edgeline_local"
       }
     }
     Assets {

@@ -21,6 +21,7 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 local VISUAL_GEOMETRY = script:GetCustomProperty("VisualGeometry"):WaitForObject()
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
+local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
 local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
@@ -125,6 +126,7 @@ function GetState()
     result.isEnabled = SERVER_SCRIPT:GetCustomProperty("IsEnabled")
     result.attackingTeam = 0
     result.order = ORDER
+    result.spawnPoints = SpawnPoints
 
     return result
 end

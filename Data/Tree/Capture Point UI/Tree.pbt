@@ -73,50 +73,6 @@ Objects {
   }
 }
 Objects {
-  Id: 981066530760677664
-  Name: "WorldIndicatorCapturePoint"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 527033524674069522
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 18054168368149915615
-      value {
-        Overrides {
-          Name: "Name"
-          String: "WorldIndicatorCapturePoint"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 2180257237140361536
-    }
-  }
-}
-Objects {
   Id: 3986398912683848877
   Name: "GlobalCapturePointDisplay"
   Transform {

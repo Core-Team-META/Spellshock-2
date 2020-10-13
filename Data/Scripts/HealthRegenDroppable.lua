@@ -28,7 +28,7 @@ function Tick(dTime)
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
 			if thisObject:IsA("Player") and thisObject.team == Ability.owner.team then
-				local newHealth = thisObject.hitPoints + 1
+				local newHealth = thisObject.hitPoints + 3
 				if newHealth > thisObject.maxHitPoints then
 					thisObject.hitPoints = thisObject.maxHitPoints
 				else

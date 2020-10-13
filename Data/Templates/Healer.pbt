@@ -1416,17 +1416,18 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1
-            BurstDuration: 7
+            BurstCount: 10
+            BurstDuration: 1.5
+            BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 20000
+            Range: 10000
             ImpactPlayerAssetRef {
               Id: 14373757464648078715
             }
             ReticleType {
               Value: "mc:ereticletype:crosshair"
             }
-            MaxAmmo: 6
+            MaxAmmo: 10
             AmmoType: "rounds"
             MultiShot: 1
             ProjectileSpeed: 8000

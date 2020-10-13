@@ -16,10 +16,8 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 15495420014246491179
         ChildIds: 13053741114535399576
         ChildIds: 17226080263403413402
-        ChildIds: 1558805332977434498
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -27,47 +25,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 15495420014246491179
-        Name: "BeatingHeart"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5687295513379892252
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ScaleRoot"
-            ObjectReference {
-              SubObjectId: 13053741114535399576
-            }
-          }
-          Overrides {
-            Name: "cs:BeatSound"
-            ObjectReference {
-              SubObjectId: 1558805332977434498
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8292884019671371150
-          }
         }
       }
       Objects {
@@ -80,9 +37,9 @@
             Yaw: 89.9999542
           }
           Scale {
-            X: 0.216146857
-            Y: 0.216146857
-            Z: 0.216146857
+            X: 0.284319729
+            Y: 0.284319729
+            Z: 0.284319729
           }
         }
         ParentId: 5687295513379892252
@@ -185,37 +142,6 @@
           }
         }
       }
-      Objects {
-        Id: 1558805332977434498
-        Name: "Meta Heartbeat Single 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5687295513379892252
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 2239276936877868351
-          }
-          Volume: 1.5
-          Falloff: 1000
-          Radius: 1500
-          IsAttenuationEnabled: true
-        }
-      }
     }
     Assets {
       Id: 14924162947975896582
@@ -242,15 +168,6 @@
       PrimaryAsset {
         AssetType: "BlueprintAssetRef"
         AssetId: "fxbp_local_outline"
-      }
-    }
-    Assets {
-      Id: 2239276936877868351
-      Name: "Meta Heartbeat Single 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_meta_heartbeat_single_01_Cue_ref"
       }
     }
     PrimaryAssetId {
