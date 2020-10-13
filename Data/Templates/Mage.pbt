@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 18222319590489236690
         ChildIds: 11747234676183721272
         ChildIds: 10663446143340725464
@@ -333,7 +333,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SelfId: 282391035961481586
+              SubObjectId: 5002372427654228113
             }
           }
           Overrides {
@@ -345,7 +345,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 6189799991312674808
+              Id: 446811230504789476
             }
           }
           Overrides {
@@ -4722,12 +4722,12 @@
       }
     }
     Assets {
-      Id: 6189799991312674808
-      Name: "Fantasy Ability Red 023"
+      Id: 446811230504789476
+      Name: "Fantasy Ability Purple 012"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_023"
+        AssetId: "UI_Fantasy_Ability_Purple_012"
       }
     }
     Assets {

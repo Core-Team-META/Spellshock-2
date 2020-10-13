@@ -47,8 +47,6 @@ Objects {
     }
   }
   ParentId: 13850080541975460496
-  ChildIds: 17698228576492361842
-  ChildIds: 11922155441321255506
   ChildIds: 147450128155564149
   UnregisteredParameters {
     Overrides {
@@ -121,78 +119,15 @@ Objects {
   }
 }
 Objects {
-  Id: 11922155441321255506
-  Name: "Trigger"
-  Transform {
-    Location {
-      Z: 51.0133667
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2020964321309586316
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-}
-Objects {
-  Id: 17698228576492361842
-  Name: "Teleportation"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2020964321309586316
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7622126395157271680
-    }
-  }
-}
-Objects {
   Id: 18379094614016020798
   Name: "Teleporter to Destination"
   Transform {
     Location {
-      X: 91.1777344
-      Y: -241.097656
+      X: 78.2246094
+      Y: -197.574219
     }
     Rotation {
-      Yaw: -70.5565186
+      Yaw: -160.482224
     }
     Scale {
       X: 1
@@ -387,11 +322,14 @@ Objects {
   Name: "Base 1"
   Transform {
     Location {
-      X: -40184.0547
-      Y: -53558.2227
-      Z: -1165.44434
+      X: -43410.5313
+      Y: -54778.4766
+      Z: -1035.24658
     }
     Rotation {
+      Pitch: 3.25975537
+      Yaw: -114.626663
+      Roll: -1.4932251
     }
     Scale {
       X: 1
@@ -431,8 +369,6 @@ Objects {
     }
   }
   ParentId: 10710090477715492169
-  ChildIds: 1162540356125837178
-  ChildIds: 6419058950376907696
   ChildIds: 8469623281213089870
   UnregisteredParameters {
     Overrides {
@@ -501,69 +437,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 6419058950376907696
-  Name: "Trigger"
-  Transform {
-    Location {
-      Z: 51.0133667
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4339718912055853961
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-}
-Objects {
-  Id: 1162540356125837178
-  Name: "Teleportation"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4339718912055853961
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7622126395157271680
     }
   }
 }

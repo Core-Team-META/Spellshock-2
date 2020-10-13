@@ -1,8 +1,8 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 13953665942188952890
-  Name: "Mage"
+  Id: 14177440517455706519
+  Name: "Healer"
   Transform {
     Scale {
       X: 1
@@ -20,18 +20,18 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 12470675891570633924
+      key: 1551665899132109167
       value {
         Overrides {
           Name: "Name"
-          String: "Mage"
+          String: "Healer"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 19130.4727
-            Y: 19740.2559
-            Z: 7317.03516
+            X: 19019.627
+            Y: 19759.6309
+            Z: 7318.6582
           }
         }
         Overrides {
@@ -42,7 +42,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 84492020368917091
+      Id: 10891347061023344361
     }
   }
 }
@@ -183,16 +183,16 @@ Objects {
   }
 }
 Objects {
-  Id: 15497840710051940267
+  Id: 5782594925224994604
   Name: "Equipment Spawners"
   Transform {
     Location {
-      X: -21375
-      Y: -31919.5527
-      Z: 6530
+      X: -24964.1152
+      Y: -32164.3574
+      Z: 6418.38623
     }
     Rotation {
-      Yaw: 89.9999542
+      Yaw: 1.0691849
     }
     Scale {
       X: 1
@@ -201,11 +201,11 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
-  ChildIds: 6684189863942383347
-  ChildIds: 17612575861959678413
-  ChildIds: 17589476979852013318
-  ChildIds: 8095808328740648329
-  ChildIds: 94279015921396546
+  ChildIds: 10669969969850093714
+  ChildIds: 892317619564514928
+  ChildIds: 9335975385538524820
+  ChildIds: 1869412860632611366
+  ChildIds: 16618102766173663034
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -217,16 +217,13 @@ Objects {
   }
 }
 Objects {
-  Id: 94279015921396546
-  Name: "Equipment Spawner"
+  Id: 16618102766173663034
+  Name: "Equipment Spawner UPDATED"
   Transform {
     Location {
-      X: 564.999939
-      Y: 200.000366
-      Z: -64.3959961
+      Y: -600
     }
     Rotation {
-      Yaw: 13.4728804
     }
     Scale {
       X: 1
@@ -234,490 +231,16 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15497840710051940267
-  ChildIds: 1067235668807174200
-  ChildIds: 5831771988579741882
+  ParentId: 5782594925224994604
+  ChildIds: 5061774706737235824
+  ChildIds: 14063165802175154561
+  ChildIds: 14585641621883485212
+  ChildIds: 11683588186788871195
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 5954119496985367550
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 5831771988579741882
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 94279015921396546
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_3"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 1067235668807174200
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 94279015921396546
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 8095808328740648329
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: 294.999939
-      Y: 80.0002136
-      Z: -45.4990234
-    }
-    Rotation {
-      Yaw: 13.4728432
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15497840710051940267
-  ChildIds: 4470248196886281188
-  ChildIds: 12443297863965039732
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 17242794308955100454
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 12443297863965039732
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8095808328740648329
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 4470248196886281188
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 8095808328740648329
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 17589476979852013318
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: 5.00000668
-      Y: -9.99999809
-      Z: -34.296875
-    }
-    Rotation {
-      Yaw: 13.4728022
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15497840710051940267
-  ChildIds: 3270903314621759494
-  ChildIds: 3825341653830888895
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 84492020368917091
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 3825341653830888895
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17589476979852013318
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_1"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 3270903314621759494
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 17589476979852013318
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 17612575861959678413
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: -284.999939
-      Y: -90.0002136
-      Z: -35.6533203
-    }
-    Rotation {
-      Yaw: 13.4727669
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15497840710051940267
-  ChildIds: 6440474883973753164
-  ChildIds: 17694927102596798427
-  UnregisteredParameters {
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
@@ -725,12 +248,8 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
+      Name: "cs:Label"
+      String: "Healer"
     }
   }
   Collidable_v2 {
@@ -742,56 +261,12 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
 }
 Objects {
-  Id: 17694927102596798427
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17612575861959678413
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_2"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 6440474883973753164
+  Id: 11683588186788871195
   Name: "Cylinder"
   Transform {
     Location {
-      Z: -5
     }
     Rotation {
       Yaw: -3.05175781e-05
@@ -802,7 +277,7 @@ Objects {
       Z: 2
     }
   }
-  ParentId: 17612575861959678413
+  ParentId: 16618102766173663034
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -837,7 +312,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13950225922132296555
+      Id: 17587880652047825598
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -849,24 +324,49 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
+}
+Objects {
+  Id: 14585641621883485212
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 16618102766173663034
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
   }
 }
 Objects {
-  Id: 6684189863942383347
-  Name: "Equipment Spawner"
+  Id: 14063165802175154561
+  Name: "Equipment Label"
   Transform {
     Location {
-      X: -574.999878
-      Y: -175.000427
-      Z: -5.62011719
+      Z: 231.850586
     }
     Rotation {
-      Yaw: 13.4727335
     }
     Scale {
       X: 1
@@ -874,10 +374,804 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15497840710051940267
-  ChildIds: 11896588211744997019
-  ChildIds: 7778785310230822035
+  ParentId: 16618102766173663034
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 5061774706737235824
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16618102766173663034
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 16618102766173663034
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 14585641621883485212
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 14063165802175154561
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 1869412860632611366
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: -300
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5782594925224994604
+  ChildIds: 15747055054815738867
+  ChildIds: 5648472522798187573
+  ChildIds: 18301591584626305968
+  ChildIds: 16275415820011384384
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 5954119496985367550
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Assassin"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16275415820011384384
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 1869412860632611366
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 18301591584626305968
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 1869412860632611366
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 5648472522798187573
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1869412860632611366
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 15747055054815738867
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1869412860632611366
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1869412860632611366
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 18301591584626305968
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 5648472522798187573
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 9335975385538524820
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5782594925224994604
+  ChildIds: 16120622315051268811
+  ChildIds: 9928448798483701268
+  ChildIds: 12200423247643166583
+  ChildIds: 7811674448727930770
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 84492020368917091
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Mage"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7811674448727930770
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 9335975385538524820
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 12200423247643166583
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 9335975385538524820
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 9928448798483701268
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9335975385538524820
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 16120622315051268811
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9335975385538524820
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 9335975385538524820
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 12200423247643166583
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 9928448798483701268
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 892317619564514928
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: 300
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5782594925224994604
+  ChildIds: 18396089622999700830
+  ChildIds: 8062893550962022781
+  ChildIds: 11347893137146053115
+  ChildIds: 6195507757524412691
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 17242794308955100454
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Hunter"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6195507757524412691
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 892317619564514928
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 11347893137146053115
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 892317619564514928
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 8062893550962022781
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 892317619564514928
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 18396089622999700830
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 892317619564514928
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 892317619564514928
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 11347893137146053115
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 8062893550962022781
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 10669969969850093714
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: 600
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5782594925224994604
+  ChildIds: 1655529913447244027
+  ChildIds: 8573403810899346370
+  ChildIds: 13004745428359184542
+  ChildIds: 8266090454344185733
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
@@ -885,12 +1179,8 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
+      Name: "cs:Label"
+      String: "Tank"
     }
   }
   Collidable_v2 {
@@ -902,56 +1192,12 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
 }
 Objects {
-  Id: 7778785310230822035
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6684189863942383347
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_4"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 11896588211744997019
+  Id: 8266090454344185733
   Name: "Cylinder"
   Transform {
     Location {
-      Z: -5
     }
     Rotation {
       Yaw: -3.05175781e-05
@@ -962,7 +1208,7 @@ Objects {
       Z: 2
     }
   }
-  ParentId: 6684189863942383347
+  ParentId: 10669969969850093714
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -997,7 +1243,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13950225922132296555
+      Id: 17587880652047825598
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1009,11 +1255,129 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
+}
+Objects {
+  Id: 13004745428359184542
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 10669969969850093714
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 8573403810899346370
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10669969969850093714
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 1655529913447244027
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10669969969850093714
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 10669969969850093714
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 13004745428359184542
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 8573403810899346370
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
   }
 }
 Objects {
@@ -1021,11 +1385,12 @@ Objects {
   Name: "Equipment Spawners"
   Transform {
     Location {
-      X: 19580
-      Y: 19025
-      Z: 7400
+      X: 19689.2695
+      Y: 19061.5469
+      Z: 7262.50586
     }
     Rotation {
+      Yaw: 108.493881
     }
     Scale {
       X: 1
@@ -1035,10 +1400,10 @@ Objects {
   }
   ParentId: 12935185397369316502
   ChildIds: 8039469647497027952
-  ChildIds: 10282994448312167396
-  ChildIds: 10252605909596351546
-  ChildIds: 9750276070341717134
-  ChildIds: 16605423934109047727
+  ChildIds: 1132661241704069348
+  ChildIds: 15504043701109405572
+  ChildIds: 7381666855948480534
+  ChildIds: 5724020214019301736
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1050,16 +1415,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16605423934109047727
-  Name: "Equipment Spawner"
+  Id: 5724020214019301736
+  Name: "Equipment Spawner UPDATED"
   Transform {
     Location {
-      X: 565
-      Y: 200
-      Z: 1.22265625
+      Y: -600
     }
     Rotation {
-      Yaw: 13.4728432
     }
     Scale {
       X: 1
@@ -1068,489 +1430,15 @@ Objects {
     }
   }
   ParentId: 832037447795371647
-  ChildIds: 3761204345713608291
-  ChildIds: 3218288963433333627
+  ChildIds: 13399825952387168007
+  ChildIds: 6496904476162485815
+  ChildIds: 2185662881569081771
+  ChildIds: 17636000159494768775
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 5954119496985367550
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 3218288963433333627
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16605423934109047727
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_5"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 3761204345713608291
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 16605423934109047727
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 9750276070341717134
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: 295
-      Y: 80
-      Z: 1.22265625
-    }
-    Rotation {
-      Yaw: 13.4728031
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 832037447795371647
-  ChildIds: 778804464637785285
-  ChildIds: 9647353247447216936
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 17242794308955100454
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 9647353247447216936
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9750276070341717134
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_6"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 778804464637785285
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 9750276070341717134
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 10252605909596351546
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: 5
-      Y: -10
-      Z: 1.22265625
-    }
-    Rotation {
-      Yaw: 13.472765
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 832037447795371647
-  ChildIds: 10060580125024495623
-  ChildIds: 13650090517800546173
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TemplateToSpawn"
-      AssetReference {
-        Id: 84492020368917091
-      }
-    }
-    Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 13650090517800546173
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10252605909596351546
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_7"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 10060580125024495623
-  Name: "Cylinder"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 2
-    }
-  }
-  ParentId: 10252605909596351546
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3110766469218200335
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:Noise Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13950225922132296555
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 10282994448312167396
-  Name: "Equipment Spawner"
-  Transform {
-    Location {
-      X: -285
-      Y: -90
-      Z: 1.22265625
-    }
-    Rotation {
-      Yaw: 13.4727249
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 832037447795371647
-  ChildIds: 14897557652890917994
-  ChildIds: 4569339767143248014
-  UnregisteredParameters {
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
@@ -1558,12 +1446,8 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
+      Name: "cs:Label"
+      String: "Healer"
     }
   }
   Collidable_v2 {
@@ -1575,56 +1459,12 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
 }
 Objects {
-  Id: 4569339767143248014
-  Name: "Item Parent"
-  Transform {
-    Location {
-      Z: 50
-    }
-    Rotation {
-      Yaw: -3.05175781e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10282994448312167396
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_8"
-  }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-  }
-}
-Objects {
-  Id: 14897557652890917994
+  Id: 17636000159494768775
   Name: "Cylinder"
   Transform {
     Location {
-      Z: -5
     }
     Rotation {
       Yaw: -3.05175781e-05
@@ -1635,7 +1475,7 @@ Objects {
       Z: 2
     }
   }
-  ParentId: 10282994448312167396
+  ParentId: 5724020214019301736
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1670,7 +1510,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13950225922132296555
+      Id: 17587880652047825598
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1682,24 +1522,139 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
+}
+Objects {
+  Id: 2185662881569081771
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 5724020214019301736
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
   }
 }
 Objects {
-  Id: 8039469647497027952
-  Name: "Equipment Spawner"
+  Id: 6496904476162485815
+  Name: "Equipment Label"
   Transform {
     Location {
-      X: -575
-      Y: -175
-      Z: 1.22265625
+      Z: 231.850586
     }
     Rotation {
-      Yaw: 13.4726858
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5724020214019301736
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 13399825952387168007
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5724020214019301736
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 5724020214019301736
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 2185662881569081771
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 6496904476162485815
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 7381666855948480534
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: -300
+    }
+    Rotation {
     }
     Scale {
       X: 1
@@ -1708,22 +1663,24 @@ Objects {
     }
   }
   ParentId: 832037447795371647
-  ChildIds: 15240737169077739568
-  ChildIds: 1346856920943046083
+  ChildIds: 9629402996210993979
+  ChildIds: 15936763835310395718
+  ChildIds: 4078874415799324682
+  ChildIds: 13985486901022508886
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
-        Id: 17020530466204675231
+        Id: 5954119496985367550
       }
     }
     Overrides {
-      Name: "cs:RespawnDelay"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: false
+      Name: "cs:Label"
+      String: "Assassin"
     }
   }
   Collidable_v2 {
@@ -1735,23 +1692,112 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8996644397761754929
-    SubobjectId: 12095495588624637575
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
-    WasRoot: true
-  }
 }
 Objects {
-  Id: 1346856920943046083
-  Name: "Item Parent"
+  Id: 13985486901022508886
+  Name: "Cylinder"
   Transform {
     Location {
-      Z: 50
     }
     Rotation {
       Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 7381666855948480534
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4078874415799324682
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 7381666855948480534
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 15936763835310395718
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
     }
     Scale {
       X: 1
@@ -1759,8 +1805,115 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8039469647497027952
+  ParentId: 7381666855948480534
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 9629402996210993979
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7381666855948480534
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 7381666855948480534
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 4078874415799324682
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 15936763835310395718
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 15504043701109405572
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 832037447795371647
+  ChildIds: 1193328205802063464
+  ChildIds: 16388239261511500732
+  ChildIds: 52741278872167580
+  ChildIds: 407875523540166877
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 84492020368917091
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Mage"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1769,14 +1922,473 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
-    IsFilePartition: true
-    FilePartitionName: "Item Parent_9"
+    IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 2687103260422965145
-    SubobjectId: 18323976330650086959
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
+}
+Objects {
+  Id: 407875523540166877
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 15504043701109405572
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 52741278872167580
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 15504043701109405572
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 16388239261511500732
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15504043701109405572
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 1193328205802063464
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15504043701109405572
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 15504043701109405572
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 52741278872167580
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 16388239261511500732
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 1132661241704069348
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: 300
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 832037447795371647
+  ChildIds: 10032923969395602471
+  ChildIds: 2652907278537712669
+  ChildIds: 16832973573003601978
+  ChildIds: 3590463778891655023
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 17242794308955100454
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Hunter"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3590463778891655023
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 2
+      Y: 2
+      Z: 2
+    }
+  }
+  ParentId: 1132661241704069348
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3110766469218200335
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:Noise Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17587880652047825598
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16832973573003601978
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 1132661241704069348
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 2652907278537712669
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1132661241704069348
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 10032923969395602471
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1132661241704069348
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 1132661241704069348
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 16832973573003601978
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 2652907278537712669
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
+  }
+}
+Objects {
+  Id: 8039469647497027952
+  Name: "Equipment Spawner UPDATED"
+  Transform {
+    Location {
+      Y: 600
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 832037447795371647
+  ChildIds: 5307647137065656887
+  ChildIds: 9455440369001036177
+  ChildIds: 13787534325987102302
+  ChildIds: 15240737169077739568
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:TemplateToSpawn"
+      AssetReference {
+        Id: 17020530466204675231
+      }
+    }
+    Overrides {
+      Name: "cs:Label"
+      String: "Tank"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
   }
 }
 Objects {
@@ -1784,7 +2396,6 @@ Objects {
   Name: "Cylinder"
   Transform {
     Location {
-      Z: -5
     }
     Rotation {
       Yaw: -3.05175781e-05
@@ -1830,7 +2441,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13950225922132296555
+      Id: 17587880652047825598
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -1842,11 +2453,129 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 5575442608772696286
-    SubobjectId: 10835281155786744168
-    InstanceId: 17104224668878984526
-    TemplateId: 7013148133446455782
+}
+Objects {
+  Id: 13787534325987102302
+  Name: "Trigger"
+  Transform {
+    Location {
+      Z: 108.67041
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.18071043
+      Y: 1.18071043
+      Z: 2.19222379
+    }
+  }
+  ParentId: 8039469647497027952
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 9455440369001036177
+  Name: "Equipment Label"
+  Transform {
+    Location {
+      Z: 231.850586
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8039469647497027952
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Equipment Label"
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 5307647137065656887
+  Name: "EquipmentSpawnerServer"
+  Transform {
+    Location {
+      Z: 50
+    }
+    Rotation {
+      Yaw: -3.07358532e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8039469647497027952
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 8039469647497027952
+      }
+    }
+    Overrides {
+      Name: "cs:Trigger"
+      ObjectReference {
+        SelfId: 13787534325987102302
+      }
+    }
+    Overrides {
+      Name: "cs:EquipmentLabel"
+      ObjectReference {
+        SelfId: 9455440369001036177
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5397905155890732100
+    }
   }
 }
 Objects {

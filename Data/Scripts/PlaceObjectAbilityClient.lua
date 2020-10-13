@@ -63,13 +63,13 @@ function Tick()
 		
 		-- calculate placement:
 		local impactPosition, impactNormal = CalculatePlacement()
-		local quat = Quaternion.New(Vector3.UP, impactNormal)
 		if impactPosition ~= nil then
 			objectHalogram:SetWorldPosition(impactPosition)
 			objectHalogram.visibility = Visibility.INHERIT
 			
 			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
-			if MatchNormal then				
+			if MatchNormal then		
+				local quat = Quaternion.New(Vector3.UP, impactNormal)
 				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
 			end
 		else

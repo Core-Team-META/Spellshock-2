@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12935185397369316502
         ChildIds: 17566732273178486209
         ChildIds: 14081494435077508625
         ChildIds: 4708996743668767698
@@ -1186,7 +1186,7 @@
       }
       Objects {
         Id: 993888919830758102
-        Name: "SunBeamAbility"
+        Name: "HealerBeamAbility"
         Transform {
           Location {
           }
@@ -1204,9 +1204,15 @@
             }
           }
           Overrides {
-            Name: "cs:VFX_Template"
+            Name: "cs:ModuleManager"
             AssetReference {
-              Id: 8381065170024406029
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 17277006247643650522
             }
           }
         }
@@ -1219,7 +1225,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 15762428864747628620
+            Id: 3643779854759022285
           }
         }
       }

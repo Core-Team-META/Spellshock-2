@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -1571,6 +1571,7 @@
           }
         }
         ParentId: 13709554481697835406
+        ChildIds: 3890386686321137353
         ChildIds: 13203218025387527418
         ChildIds: 11631127456224602423
         ChildIds: 12017777593537436719
@@ -1586,6 +1587,36 @@
         }
         NetworkContext {
           Type: Server
+        }
+      }
+      Objects {
+        Id: 3890386686321137353
+        Name: "EquipmentStanceServer"
+        Transform {
+          Location {
+            X: -18774.25
+            Y: -19545.7031
+            Z: -7270.2793
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1379897022802046285
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1427829216143793458
+          }
         }
       }
       Objects {
