@@ -25,6 +25,7 @@ Objects {
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
+  ChildIds: 15277824185009810197
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,6 +35,59 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 15277824185009810197
+  Name: "Assassin"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1159151102923687182
+      value {
+        Overrides {
+          Name: "Script"
+          AssetReference {
+            Id: 643752288155017208
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10563247408154172815
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Assassin"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23076.4766
+            Y: -31944.1914
+            Z: 6833.94189
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -39.3795776
+            Yaw: 84.0116806
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5954119496985367550
+    }
   }
 }
 Objects {
