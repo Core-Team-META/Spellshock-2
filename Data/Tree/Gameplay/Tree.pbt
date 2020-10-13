@@ -1109,9 +1109,9 @@ Objects {
   Name: "Point E"
   Transform {
     Location {
-      X: -16641.9707
-      Y: -17259.5195
-      Z: 2396.33154
+      X: -13371.9141
+      Y: -19317.5742
+      Z: 2353.79028
     }
     Rotation {
       Yaw: 139.11441
@@ -2085,9 +2085,9 @@ Objects {
   Name: "Point D"
   Transform {
     Location {
-      X: -14115.5049
-      Y: 4178.62402
-      Z: 863.740234
+      X: -14873.1758
+      Y: 3339.50781
+      Z: 807.046387
     }
     Rotation {
       Yaw: 119.944794
@@ -2998,9 +2998,9 @@ Objects {
   Name: "Point C"
   Transform {
     Location {
-      X: 6500.66943
-      Y: -16425.4668
-      Z: 5070.4834
+      X: 8298.51074
+      Y: -15373.3652
+      Z: 5074.38916
     }
     Rotation {
       Yaw: 87.3509
