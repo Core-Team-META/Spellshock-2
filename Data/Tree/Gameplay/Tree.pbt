@@ -6420,7 +6420,10 @@ Objects {
         Overrides {
           Name: "cs:DefaultMovementSettings"
           ObjectReference {
-            SelfId: 8150831668550169607
+            SelfId: 18224688022444578463
+            SubObjectId: 11592647923584693331
+            InstanceId: 1967900192041222895
+            TemplateId: 425347663873707340
           }
         }
         Overrides {

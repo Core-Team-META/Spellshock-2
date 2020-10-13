@@ -77,6 +77,8 @@ function ApplyEquipmentPlayerProperties(player)
             maxArmorPenetration = 100 -- percent
 
         }
+        
+		print("HERE")
         ABES.SetDefaultSettings(player, weaponSettings)
     end
 end
@@ -90,6 +92,7 @@ function ResetPlayerDefaultProperties(player)
 end
 
 function OnEquipped(_, player)
+
     -- Reset both buffs and equipment player properties
     ApplyEquipmentPlayerProperties(player)
 

@@ -692,7 +692,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 7
+            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -807,7 +807,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1070,7 +1070,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1186,7 +1186,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 12
             CanMove: true
             CanJump: true
             CanRotate: true

@@ -1050,52 +1050,6 @@ Objects {
   }
 }
 Objects {
-  Id: 14177440517455706519
-  Name: "Healer"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1551665899132109167
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Healer"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 19019.627
-            Y: 19759.6309
-            Z: 7318.6582
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10891347061023344361
-    }
-  }
-}
-Objects {
   Id: 8293898011953904661
   Name: "Tornado VFX"
   Transform {
@@ -12639,7 +12593,7 @@ Objects {
     Overrides {
       Name: "cs:API"
       AssetReference {
-        Id: 6948551954958756486
+        Id: 11974742996071064388
       }
     }
   }
@@ -12676,7 +12630,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
