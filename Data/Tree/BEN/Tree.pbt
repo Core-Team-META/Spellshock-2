@@ -51,8 +51,8 @@ Objects {
     Overrides {
       Name: "cs:SelfColor"
       Color {
-        R: 0.65
-        G: 0.271192044
+        R: 0.105960079
+        G: 0.799999952
         A: 1
       }
     }
