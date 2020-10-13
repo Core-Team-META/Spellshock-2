@@ -100,8 +100,10 @@ function Tick(DeltaTime)
 	else
 		PANEL.visibility = Visibility.FORCE_OFF
 		
-		UI.SetCursorVisible(false)
-		UI.SetCanCursorInteractWithUI(false)
+		if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
+			UI.SetCursorVisible(false)
+			UI.SetCanCursorInteractWithUI(false)
+		end
 	end
 		
 	-- Add indicators for new points
