@@ -989,7 +989,7 @@
         ParentId: 6244749195347854120
         UnregisteredParameters {
           Overrides {
-            Name: "cs:WallTemplate"
+            Name: "cs:ObjectTemplate"
             AssetReference {
               Id: 3831024531209106368
             }

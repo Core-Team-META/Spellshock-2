@@ -30,7 +30,10 @@ function PlaceObject(thisPlayer, position, rotation)
 end
 
 function OnEquip(equipment, player)
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
+	if(EventName) then
+		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
+	end
+
 	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
 	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
 end

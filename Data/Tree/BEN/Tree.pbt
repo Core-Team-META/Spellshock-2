@@ -1526,7 +1526,7 @@ Objects {
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
-        Id: 5954119496985367550
+        Id: 17802584465689016806
       }
     }
     Overrides {
@@ -2724,7 +2724,7 @@ Objects {
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
-        Id: 5954119496985367550
+        Id: 17802584465689016806
       }
     }
     Overrides {

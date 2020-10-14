@@ -13,7 +13,7 @@
       Overrides {
         Name: "cs:APIStatusEffects"
         AssetReference {
-          Id: 14748071004312265457
+          Id: 6140123420589022677
         }
       }
     }
