@@ -1,12 +1,12 @@
 ﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
-local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 
+local ObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 local MainAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = ServerScript:GetCustomProperty("PrimerAbility"):WaitForObject()
-
+local MAX_PLACEMENT_RANGE = ServerScript:GetCustomProperty("MaxPlacementRange")
+local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local EventName = ServerScript:GetCustomProperty("EventName")
-local MAX_PLACEMENT_RANGE = script:GetCustomProperty("MaxPlacementRange")
-local MatchNormal = script:GetCustomProperty("MatchNormal")
+
 local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 

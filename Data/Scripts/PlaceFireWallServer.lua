@@ -4,6 +4,7 @@ local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
 local ObjectTemplate = script:GetCustomProperty("WallTemplate")
 local EventName = script:GetCustomProperty("EventName")
+local Duration = script:GetCustomProperty("Duration")
 
 local EventListeners = {}
 
@@ -23,6 +24,7 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		newWall:SetNetworkedCustomProperty("Team", thisPlayer.team)
+		newWall.lifeSpan = Duration
 	end
 end
 

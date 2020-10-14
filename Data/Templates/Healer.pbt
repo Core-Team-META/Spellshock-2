@@ -341,7 +341,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 16190717823155226306
+              Id: 17558830247768350468
             }
           }
         }
@@ -388,7 +388,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 3097412835118161701
+              Id: 16190717823155226306
             }
           }
         }
@@ -435,7 +435,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 2405107929537719662
+              Id: 15243588104929013665
             }
           }
         }
@@ -482,7 +482,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 8122403482733386600
+              Id: 11777958130908294853
             }
           }
         }
@@ -622,7 +622,7 @@
           }
         }
         ParentId: 5294904730835550769
-        ChildIds: 1605737885764800753
+        ChildIds: 993888919830758102
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -673,7 +673,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_pickup"
+          Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
@@ -681,20 +681,15 @@
         }
       }
       Objects {
-        Id: 1605737885764800753
-        Name: "HealthRegenDroppable"
+        Id: 993888919830758102
+        Name: "HealerBeamAbility"
         Transform {
           Location {
-            X: -347.46167
-            Y: 27.4628296
-            Z: -93.4432373
+            Z: -43.4432373
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
         ParentId: 5850532589229611122
@@ -706,9 +701,15 @@
             }
           }
           Overrides {
-            Name: "cs:ObjectTemplate"
+            Name: "cs:ModuleManager"
             AssetReference {
-              Id: 12922134233902895912
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 17277006247643650522
             }
           }
         }
@@ -721,13 +722,295 @@
         }
         Script {
           ScriptAsset {
-            Id: 9661033693027507890
+            Id: 3643779854759022285
           }
         }
       }
       Objects {
         Id: 4954212764507547815
         Name: "E Special"
+        Transform {
+          Location {
+            X: -747.46167
+            Y: -197.53717
+            Z: 47.2486572
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 5294904730835550769
+        ChildIds: 3475970003604166815
+        ChildIds: 8104286553099354162
+        ChildIds: 16727727690677607632
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "unarmed_magic_up"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_32"
+          }
+        }
+      }
+      Objects {
+        Id: 3475970003604166815
+        Name: "E Primer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4954212764507547815
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_32"
+          }
+        }
+      }
+      Objects {
+        Id: 8104286553099354162
+        Name: "HealingCystalAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4954212764507547815
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:MainAbility"
+            ObjectReference {
+              SubObjectId: 4954212764507547815
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerAbility"
+            ObjectReference {
+              SubObjectId: 3475970003604166815
+            }
+          }
+          Overrides {
+            Name: "cs:ObjectTemplate"
+            AssetReference {
+              Id: 12922134233902895912
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 12922134233902895912
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Place Crystal"
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:DelayBetweenHeals"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12680176866972182826
+          }
+        }
+      }
+      Objects {
+        Id: 16727727690677607632
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4954212764507547815
+        ChildIds: 7575872334836133316
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 7575872334836133316
+        Name: "HealingCystalAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 16727727690677607632
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 8104286553099354162
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 12861631058086445073
+        Name: "R Special"
         Transform {
           Location {
             X: -747.46167
@@ -758,10 +1041,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
+            Duration: 1
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -770,7 +1050,6 @@
           }
           ExecutePhaseSettings {
             Duration: 0.3
-            CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -778,11 +1057,10 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 8
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -793,13 +1071,12 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
+          Animation: "2hand_staff_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_32"
+            Value: "mc:egameaction:extraaction_33"
           }
         }
       }
@@ -814,12 +1091,12 @@
           Scale {
           }
         }
-        ParentId: 4954212764507547815
+        ParentId: 12861631058086445073
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 4954212764507547815
+              SubObjectId: 12861631058086445073
             }
           }
           Overrides {
@@ -849,275 +1126,6 @@
         }
       }
       Objects {
-        Id: 12861631058086445073
-        Name: "R Special"
-        Transform {
-          Location {
-            X: -747.46167
-            Y: -197.53717
-            Z: 47.2486572
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 5294904730835550769
-        ChildIds: 12139134703541129570
-        ChildIds: 7772888270278360582
-        ChildIds: 14219781561193657802
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Ability {
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 1
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 10
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          Animation: "2hand_staff_magic_up"
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_33"
-          }
-        }
-      }
-      Objects {
-        Id: 12139134703541129570
-        Name: "R Primer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 12861631058086445073
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 0.5
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_33"
-          }
-        }
-      }
-      Objects {
-        Id: 7772888270278360582
-        Name: "SelectAndHealAbilityServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 12861631058086445073
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:MainAbility"
-            ObjectReference {
-              SubObjectId: 12861631058086445073
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerAbility"
-            ObjectReference {
-              SubObjectId: 12139134703541129570
-            }
-          }
-          Overrides {
-            Name: "cs:HealVFX"
-            AssetReference {
-              Id: 14325639722933592118
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10306636722762919683
-          }
-        }
-      }
-      Objects {
-        Id: 14219781561193657802
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12861631058086445073
-        ChildIds: 11488220241194405347
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 11488220241194405347
-        Name: "SelectAndHealAbilityClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 14219781561193657802
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:MainAbility"
-            ObjectReference {
-              SubObjectId: 12861631058086445073
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerAbility"
-            ObjectReference {
-              SubObjectId: 12139134703541129570
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-          Overrides {
-            Name: "cs:PlayerVisual"
-            AssetReference {
-              Id: 8037362499574704942
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 15082181132643432971
-          }
-        }
-      }
-      Objects {
         Id: 9970096027225536454
         Name: "T Special"
         Transform {
@@ -1129,7 +1137,7 @@
           }
         }
         ParentId: 5294904730835550769
-        ChildIds: 993888919830758102
+        ChildIds: 9559338655160658381
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1147,7 +1155,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 2
+            Duration: 1.5
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1164,7 +1172,6 @@
           }
           RecoveryPhaseSettings {
             Duration: 1
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1175,7 +1182,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"
@@ -1185,24 +1191,21 @@
         }
       }
       Objects {
-        Id: 993888919830758102
-        Name: "HealerBeamAbility"
+        Id: 9559338655160658381
+        Name: "SunBeamAbility"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 9970096027225536454
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 9970096027225536454
-            }
-          }
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
@@ -1210,9 +1213,15 @@
             }
           }
           Overrides {
-            Name: "cs:ProjectileTemplate"
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 9970096027225536454
+            }
+          }
+          Overrides {
+            Name: "cs:VFX_Template"
             AssetReference {
-              Id: 17277006247643650522
+              Id: 8381065170024406029
             }
           }
         }
@@ -1225,7 +1234,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 3643779854759022285
+            Id: 15762428864747628620
           }
         }
       }
@@ -2417,6 +2426,15 @@
       }
     }
     Assets {
+      Id: 17558830247768350468
+      Name: "Fantasy Ability Yellow 017"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Yellow_017"
+      }
+    }
+    Assets {
       Id: 16190717823155226306
       Name: "Fantasy Ability Teal 022"
       PlatformAssetType: 9
@@ -2426,30 +2444,21 @@
       }
     }
     Assets {
-      Id: 3097412835118161701
-      Name: "Fantasy Ability Blue 028"
+      Id: 15243588104929013665
+      Name: "Fantasy Ability Teal 005"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_028"
+        AssetId: "UI_Fantasy_Ability_Teal_005"
       }
     }
     Assets {
-      Id: 2405107929537719662
-      Name: "Fantasy Ability Green 019"
+      Id: 11777958130908294853
+      Name: "Fantasy Ability Yellow 001"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Green_019"
-      }
-    }
-    Assets {
-      Id: 8122403482733386600
-      Name: "Fantasy Ability Blue 037"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_037"
+        AssetId: "UI_Fantasy_Ability_Yellow_001"
       }
     }
     Assets {
