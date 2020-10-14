@@ -4850,6 +4850,15 @@ Objects {
           Name: "bp:Shadow Max"
           Float: 0.04
         }
+        Overrides {
+          Name: "bp:Scene Tint"
+          Color {
+            R: 0.996514797
+            G: 1.06434321
+            B: 1.2
+            A: 1
+          }
+        }
       }
     }
     ParameterOverrideMap {
