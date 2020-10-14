@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 7137406222810709920
         ChildIds: 5361708159967945625
         ChildIds: 406380117814010332
@@ -992,7 +992,7 @@
         ParentId: 13372907053990075206
         UnregisteredParameters {
           Overrides {
-            Name: "cs:WallTemplate"
+            Name: "cs:ObjectTemplate"
             AssetReference {
               Id: 4603934176734530980
             }

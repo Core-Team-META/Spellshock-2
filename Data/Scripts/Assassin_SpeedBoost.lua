@@ -7,7 +7,7 @@ local LOW_HEALTH_SPEED_MOD = ABILITY:GetCustomProperty("LowHealthEnemySpeedModif
 
 function OnAbilityExecute(thisAbility)
     -- Apply the speed modifier
-    API_SE.ApplyStatusEffect(thisAbility.owner, API_SE.STATUS_EFFECT_DEFINITIONS["BonusSpeed"].id)
+    API_SE.ApplyStatusEffect(thisAbility.owner, API_SE.STATUS_EFFECT_DEFINITIONS["Speed"].id)
     
 end
 

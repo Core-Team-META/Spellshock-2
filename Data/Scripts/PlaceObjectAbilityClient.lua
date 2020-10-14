@@ -1,5 +1,5 @@
 ﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
-local ObjectTemplate = script:GetCustomProperty("WallTemplate")
+local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 
 local MainAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = ServerScript:GetCustomProperty("PrimerAbility"):WaitForObject()
@@ -7,6 +7,7 @@ local PrimerAbility = ServerScript:GetCustomProperty("PrimerAbility"):WaitForObj
 local EventName = ServerScript:GetCustomProperty("EventName")
 local MAX_PLACEMENT_RANGE = script:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = script:GetCustomProperty("MatchNormal")
+local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local objectHalogram = nil
@@ -21,7 +22,9 @@ function OnMainAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER and Object.IsValid(objectHalogram) then
 		local targetPosition = CalculatePlacement()
 		if targetPosition then
+		if(EventName) then
 			Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation())
+		end
 			objectHalogram:Destroy()
 			objectHalogram = nil
 		end
@@ -59,7 +62,11 @@ function Tick()
 		
 		local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 		--hologram.SetWorldPosition(player:GetWorldPosition() + player:GetWorldRotation():GetForwardVector() * 100)
-		objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
+		if(MatchPlayerRotation) then
+			objectHalogram:SetWorldRotation(playerViewRotation)
+		else
+			objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
+		end
 		
 		-- calculate placement:
 		local impactPosition, impactNormal = CalculatePlacement()
