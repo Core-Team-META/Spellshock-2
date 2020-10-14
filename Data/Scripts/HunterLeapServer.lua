@@ -1,8 +1,8 @@
 ﻿local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 local TrapTemplate = script:GetCustomProperty("TrapTemplate")
-
-local OwnerImpulseMultiplier = 200000
-local EnemyImpulseMultiplier = 150000
+local TrapLifeSpan = script:GetCustomProperty("TrapLifeSpan")
+local OwnerImpulseMultiplier = script:GetCustomProperty("OwnerImpulse")
+local EnemyImpulseMultiplier = script:GetCustomProperty("EnemyImpulse")
 
 function AddImpulse(player)
 	local impulseVector
@@ -31,6 +31,7 @@ function OnAbilityExecute(thisAbility)
 	local targetPosition = thisAbility.owner:GetWorldPosition()
 	targetPosition.z = targetPosition.z - 100
 	local newTrap = World.SpawnAsset(TrapTemplate, {position = targetPosition})
+	newTrap.lifeSpan = TrapLifeSpan
 	newTrap:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), 700, {ignoreTeams = thisAbility.owner.team})

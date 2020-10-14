@@ -19,9 +19,9 @@ local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local ShootAbility = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local OtherAbility = script:GetCustomProperty("OtherAbility"):WaitForObject()
 
-local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageToPlayers")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
+local Duration = script:GetCustomProperty("Duration")
 
-local Duration = 5
 local Timer = 0
 
 function OnMainAbilityExecute(thisAbility)
@@ -35,7 +35,7 @@ MainAbility.executeEvent:Connect(OnMainAbilityExecute)
 function OnTargetImpact(theWeapon, impactData)
 	if not impactData.targetObject:IsA("Player") then return end	
 	
-	local dmg = Damage.New(DAMAGE_TO_PLAYERS)
+	local dmg = Damage.New(DamageAmount)
 		
 	dmg:SetHitResult(impactData:GetHitResult())
 	dmg.reason = DamageReason.COMBAT

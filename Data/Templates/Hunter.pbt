@@ -734,6 +734,18 @@
               Id: 15664502698481242815
             }
           }
+          Overrides {
+            Name: "cs:TrapLifeSpan"
+            Float: 7
+          }
+          Overrides {
+            Name: "cs:OwnerImpulse"
+            Int: 150000
+          }
+          Overrides {
+            Name: "cs:EnemyImpulse"
+            Int: 150000
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1091,12 +1103,6 @@
         ParentId: 16077949688686323587
         UnregisteredParameters {
           Overrides {
-            Name: "cs:HawkTemplate"
-            AssetReference {
-              Id: 2969735918098534603
-            }
-          }
-          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 16077949688686323587
@@ -1112,6 +1118,12 @@
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:HawkTemplate"
+            AssetReference {
+              Id: 2969735918098534603
             }
           }
         }
@@ -1232,7 +1244,7 @@
       }
       Objects {
         Id: 7556104036679301992
-        Name: "Rapid Fire Crossbow"
+        Name: "Multishot Crossbow"
         Transform {
           Location {
             Y: 250.623047
@@ -1314,10 +1326,10 @@
               Id: 841534158063459245
             }
             BurstCount: 1000
-            BurstDuration: 4
+            BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 2000
+            Range: 1500
             ImpactPlayerAssetRef {
               Id: 14373757464648078715
             }
@@ -1326,16 +1338,14 @@
             }
             MaxAmmo: 1000000
             AmmoType: "rounds"
-            MultiShot: 1
+            MultiShot: 5
             ProjectileSpeed: 25000
             ProjectileLifeSpan: 10
             ProjectileLength: 50
             ProjectileRadius: 5
-            SpreadMin: 0.4
-            SpreadMax: 2
-            SpreadDecreaseSpeed: 6
-            SpreadIncreasePerShot: 1
-            SpreadAperture: 0.2
+            SpreadMin: 20
+            SpreadMax: 30
+            SpreadAperture: 150
             DefaultAbility {
               SubObjectId: 3298102761747402805
             }
@@ -1347,7 +1357,7 @@
       }
       Objects {
         Id: 8388633186393392347
-        Name: "DestructibleWeaponServer"
+        Name: "RapidFireDamageServer"
         Transform {
           Location {
           }
@@ -1368,10 +1378,6 @@
             }
           }
           Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 10
-          }
-          Overrides {
             Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 6922611339924357768
@@ -1388,6 +1394,14 @@
             ObjectReference {
               SubObjectId: 10839953769775855596
             }
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 5
           }
         }
         WantsNetworking: true
@@ -1419,6 +1433,7 @@
         }
         ParentId: 7556104036679301992
         ChildIds: 16686133452027158721
+        ChildIds: 9763053527060074221
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1473,8 +1488,211 @@
         }
       }
       Objects {
+        Id: 9763053527060074221
+        Name: "Ability Duration Display"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8818728013034544862
+        ChildIds: 17628230939858546359
+        ChildIds: 18415241466693714607
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Canvas {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17628230939858546359
+        Name: "AbilityDurationUI"
+        Transform {
+          Location {
+            X: -8712.15332
+            Y: -9682.38867
+            Z: -3036.5564
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9763053527060074221
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AbilityProgressBar"
+            ObjectReference {
+              SubObjectId: 9705984977891592012
+            }
+          }
+          Overrides {
+            Name: "cs:UIPanel"
+            ObjectReference {
+              SubObjectId: 18415241466693714607
+            }
+          }
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 8388633186393392347
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9094472670648911279
+          }
+        }
+      }
+      Objects {
+        Id: 18415241466693714607
+        Name: "UI Panel"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9763053527060074221
+        ChildIds: 9705984977891592012
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 100
+          UIX: -600
+          UIY: 18
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9705984977891592012
+        Name: "Ability Progress Bar"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18415241466693714607
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 28
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          StatBar {
+            Color {
+              R: 0.86
+              G: 0.290463597
+              A: 1
+            }
+            BackgroundColor {
+              R: 0.39
+              G: 0.0619867668
+              A: 1
+            }
+            Percent: 0.648584783
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
         Id: 3298102761747402805
-        Name: "Rapid Shoot"
+        Name: "Multi Shoot"
         ParentId: 7556104036679301992
         UnregisteredParameters {
         }
@@ -1529,7 +1747,7 @@
       }
       Objects {
         Id: 6922611339924357768
-        Name: "Rapid Fire"
+        Name: "Activate Multishoot"
         Transform {
           Location {
           }
