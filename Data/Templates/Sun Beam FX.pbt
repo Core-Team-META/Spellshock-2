@@ -49,12 +49,12 @@
         Name: "Trigger"
         Transform {
           Location {
-            X: 550
+            X: 1040
           }
           Rotation {
           }
           Scale {
-            X: 10.4000015
+            X: 20.2
             Y: 0.7
             Z: 0.7
           }
@@ -122,7 +122,35 @@
         UnregisteredParameters {
           Overrides {
             Name: "bp:Beam Length"
-            Float: 2
+            Float: 4
+          }
+          Overrides {
+            Name: "bp:Beam Width Scale"
+            Float: 2.02815151
+          }
+          Overrides {
+            Name: "bp:Spiral Width Multiplier"
+            Float: 0.4284
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.919999957
+              G: 0.493509918
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Color"
+            Color {
+              R: 0.9
+              G: 0.160927176
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -196,6 +224,38 @@
           Overrides {
             Name: "bp:Enable Central Flare Element"
             Bool: false
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.919999957
+              G: 0.493509918
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Color"
+            Color {
+              R: 0.919999957
+              G: 0.493509918
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Ground Element Color"
+            Color {
+              R: 0.919999957
+              G: 0.493509918
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Spiral Color"
+            Color {
+              R: 0.9
+              G: 0.160927176
+              A: 1
+            }
           }
         }
         Collidable_v2 {

@@ -1293,7 +1293,7 @@ Objects {
       value {
         Overrides {
           Name: "CameraInitialDistance"
-          Float: 1000
+          Float: 600
         }
         Overrides {
           Name: "CameraIsDistanceAdjustable"
@@ -1305,12 +1305,11 @@ Objects {
         }
         Overrides {
           Name: "CameraMaximumDistance"
-          Float: 1000
+          Float: 800
         }
         Overrides {
           Name: "CameraPositionOffset"
           Vector {
-            Y: 60
             Z: 130
           }
         }

@@ -28,6 +28,52 @@ Objects {
   }
 }
 Objects {
+  Id: 10896401114595900096
+  Name: "Healer"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1551665899132109167
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Healer"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 8500.18066
+            Y: 9802.5459
+            Z: 3118.57617
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10891347061023344361
+    }
+  }
+}
+Objects {
   Id: 13951373838526103043
   Name: "Map Mode"
   Transform {
@@ -12630,7 +12676,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -12675,9 +12721,9 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: 9731.18457
-      Y: 10125.3242
-      Z: 7367.42383
+      X: -631.238281
+      Y: -97.3418
+      Z: 3173.02515
     }
     Rotation {
       Yaw: -91.6407776
