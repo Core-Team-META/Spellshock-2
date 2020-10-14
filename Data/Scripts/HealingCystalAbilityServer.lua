@@ -2,10 +2,14 @@
 local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
-local ObjectTemplate = script:GetCustomProperty("WallTemplate")
+local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EventName = script:GetCustomProperty("EventName")
-local Duration = script:GetCustomProperty("Duration")
+local HealAmount = script:GetCustomProperty("HealAmount")
+local LifeSpan = script:GetCustomProperty("Duration")
+local Delay = script:GetCustomProperty("DelayBetweenHeals")
 
+local Timer = Delay
+local HealTrigger = nil
 local EventListeners = {}
 
 function OnPrimerAbilityExecute(thisAbility)
@@ -22,12 +26,9 @@ end
 
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
-		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
-		newWall.lifeSpan = Duration
-		if newWall:GetCustomProperty("Team") ~= nil then
-			Task.Wait()
-			newWall:SetNetworkedCustomProperty("Team", MainAbility.owner.team)
-		end
+		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
+		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
+		newObject.lifeSpan = LifeSpan
 	end
 end
 
@@ -45,6 +46,28 @@ function OnUnequip(equipment, player)
 		listener:Disconnect()
 	end
 end
+
+function Tick(dTime)
+	Timer = Timer - dTime 
+	
+	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
+		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
+		for _, thisObject in pairs(OverlappingObjects) do
+			if thisObject:IsA("Player") and thisObject.team == PrimerAbility.owner.team then
+				local newHealth = thisObject.hitPoints + HealAmount
+				if newHealth > thisObject.maxHitPoints then
+					thisObject.hitPoints = thisObject.maxHitPoints
+				else
+					thisObject.hitPoints = newHealth
+				end
+			end
+		end
+		Timer = Delay
+	end
+end
+
+MainAbility.isEnabled = false
+PrimerAbility.isEnabled = true
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)

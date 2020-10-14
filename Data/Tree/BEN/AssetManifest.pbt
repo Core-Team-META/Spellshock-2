@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 17824683867460661746
+  Name: "Fantasy Staff 013"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Staff_013"
+  }
+}
+Assets {
   Id: 17587880652047825598
   Name: "Cylinder - Bottom-Aligned"
   PlatformAssetType: 1
@@ -8,12 +17,30 @@
   }
 }
 Assets {
+  Id: 17558830247768350468
+  Name: "Fantasy Ability Yellow 017"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_017"
+  }
+}
+Assets {
   Id: 16327934883181731081
   Name: "Icon Food"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Food"
+  }
+}
+Assets {
+  Id: 16190717823155226306
+  Name: "Fantasy Ability Teal 022"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_022"
   }
 }
 Assets {
@@ -35,6 +62,24 @@ Assets {
   }
 }
 Assets {
+  Id: 15243588104929013665
+  Name: "Fantasy Ability Teal 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_005"
+  }
+}
+Assets {
+  Id: 14993209367206018702
+  Name: "Plasma Ball Projectile VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_plasmaball_projectile"
+  }
+}
+Assets {
   Id: 14263746284030313578
   Name: "Frame Outlined Thick 006"
   PlatformAssetType: 9
@@ -50,6 +95,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 11777958130908294853
+  Name: "Fantasy Ability Yellow 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_001"
   }
 }
 Assets {
@@ -71,12 +125,39 @@ Assets {
   }
 }
 Assets {
+  Id: 10542250655788089163
+  Name: "Fantasy Pommel 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_pommel_005"
+  }
+}
+Assets {
+  Id: 9922580225629130299
+  Name: "Fantasy Staff Head 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_head_staff_002"
+  }
+}
+Assets {
   Id: 8509829824645761235
   Name: "Icon Damage"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Damage"
+  }
+}
+Assets {
+  Id: 8277485499354448455
+  Name: "Fantasy Ability Yellow 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_005"
   }
 }
 Assets {
@@ -95,6 +176,33 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
+  }
+}
+Assets {
+  Id: 6722267691116138132
+  Name: "Fantasy Staff Grip 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_grip_staff_001"
+  }
+}
+Assets {
+  Id: 6693051322045641436
+  Name: "Rope"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_rope_001"
+  }
+}
+Assets {
+  Id: 5574279695839094619
+  Name: "Fantasy Staff Guard 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_guard_staff_002"
   }
 }
 Assets {
@@ -158,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Shape_003"
+  }
+}
+Assets {
+  Id: 3134265528574068078
+  Name: "Icon Target"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Target"
   }
 }
 Assets {

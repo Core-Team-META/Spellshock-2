@@ -741,7 +741,80 @@
           }
         }
         ParentId: 5294904730835550769
-        ChildIds: 1605737885764800753
+        ChildIds: 3475970003604166815
+        ChildIds: 8104286553099354162
+        ChildIds: 16727727690677607632
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "unarmed_magic_up"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_32"
+          }
+        }
+      }
+      Objects {
+        Id: 3475970003604166815
+        Name: "E Primer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4954212764507547815
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -779,7 +852,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 8
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -790,14 +863,13 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_32"
@@ -805,8 +877,8 @@
         }
       }
       Objects {
-        Id: 1605737885764800753
-        Name: "HealthRegenDroppable"
+        Id: 8104286553099354162
+        Name: "HealingCystalAbilityServer"
         Transform {
           Location {
           }
@@ -818,9 +890,21 @@
         ParentId: 4954212764507547815
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 4954212764507547815
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerAbility"
+            ObjectReference {
+              SubObjectId: 3475970003604166815
             }
           }
           Overrides {
@@ -828,6 +912,32 @@
             AssetReference {
               Id: 12922134233902895912
             }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 12922134233902895912
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Place Crystal"
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:DelayBetweenHeals"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
           }
         }
         WantsNetworking: true
@@ -839,7 +949,62 @@
         }
         Script {
           ScriptAsset {
-            Id: 9661033693027507890
+            Id: 12680176866972182826
+          }
+        }
+      }
+      Objects {
+        Id: 16727727690677607632
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4954212764507547815
+        ChildIds: 7575872334836133316
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 7575872334836133316
+        Name: "HealingCystalAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 16727727690677607632
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 8104286553099354162
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
           }
         }
       }
@@ -896,7 +1061,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -907,7 +1071,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_up"
@@ -1009,7 +1172,6 @@
           }
           RecoveryPhaseSettings {
             Duration: 1
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1020,7 +1182,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"

@@ -908,6 +908,12 @@
         ParentId: 14197628666696183902
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+          Overrides {
             Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 14197628666696183902
@@ -926,14 +932,22 @@
             }
           }
           Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 7855160156328725233
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 14575263373624238445
             }
           }
           Overrides {
             Name: "cs:EventName"
             String: "Place Wall"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 2000
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 7
           }
         }
         WantsNetworking: true
@@ -989,20 +1003,10 @@
         ParentId: 6244749195347854120
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 3831024531209106368
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 17018529854047630224
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1000
           }
         }
         Collidable_v2 {

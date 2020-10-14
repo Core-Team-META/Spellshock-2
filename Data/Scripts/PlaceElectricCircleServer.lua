@@ -10,9 +10,8 @@ local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
 local ObjectTemplate = script:GetCustomProperty("WallTemplate")
 local EventName = script:GetCustomProperty("EventName")
-
-local LifeSpan = 8
-local DamageAmount = 30
+local LifeSpan = script:GetCustomProperty("Duration")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
 
 local EventListeners = {}
 

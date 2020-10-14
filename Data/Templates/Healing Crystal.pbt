@@ -153,6 +153,7 @@
         Name: "Rock 03"
         Transform {
           Location {
+            Z: 100
           }
           Rotation {
           }
