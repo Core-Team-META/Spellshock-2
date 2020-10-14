@@ -16,7 +16,7 @@ local HEAL_MOD = ABILITY:GetCustomProperty("BonusHealingModifier") or 0.75
 function OnProjectileImpact(projectile, other, hitresult)
 	if not Object.IsValid(ABILITY.owner) then return end
     if other == ABILITY.owner then return end
-	
+	if not other:IsA("Player") then return end
 	if COMBAT().IsDead(other) then return end
 	
 	local otherTeam = COMBAT().GetTeam(other)

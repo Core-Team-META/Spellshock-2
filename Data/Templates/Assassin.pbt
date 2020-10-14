@@ -902,6 +902,16 @@
               SubObjectId: 4569115510025570718
             }
           }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 6707806880900167025
+            }
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Float: 1100
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -956,20 +966,10 @@
         ParentId: 402186348370924036
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 6707806880900167025
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 16643304497702283874
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1100
           }
           Overrides {
             Name: "cs:MatchPlayerRotation"
@@ -1337,6 +1337,16 @@
               SubObjectId: 4569115510025570718
             }
           }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 10954821910650501415
+            }
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Float: 1100
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1391,20 +1401,10 @@
         ParentId: 11551345710519521344
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 10954821910650501415
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 16091957662915003674
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1100
           }
         }
         Collidable_v2 {
@@ -1813,6 +1813,16 @@
               SubObjectId: 4569115510025570718
             }
           }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 1347797259897975161
+            }
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Float: 1000
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1869,20 +1879,10 @@
         ParentId: 2319229106837867255
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 1347797259897975161
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 18064715845314033605
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1000
           }
         }
         Collidable_v2 {
