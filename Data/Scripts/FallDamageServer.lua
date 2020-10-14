@@ -77,6 +77,8 @@ function Tick(deltaTime)
 				if HEAR_OTHER_PLAYERS_DAMAGE_SOUNDS then
 					Events.BroadcastToAllPlayers("FallDamage", player)
 				else
+					print("Oof Ouch")
+					
 					Events.BroadcastToPlayer(player, "FallDamage", player)
 				end
 			end
