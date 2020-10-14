@@ -5,12 +5,13 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
-local SPEED = 1000
-local RANGE = 4000
+local SPEED = script:GetCustomProperty("Speed")
+local RANGE = script:GetCustomProperty("Range")
+local HEALING_AMOUNT = script:GetCustomProperty("HealingAmount")
+local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
+
 local MOVE_DURATION = RANGE / SPEED
-local LIFE_SPAN = MOVE_DURATION + 0.5
-local DAMAGE_RANGE = Vector2.New(30, 50)
-local HEALING_AMOUNT = 30
+local LIFE_SPAN = MOVE_DURATION + 0.3
 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil

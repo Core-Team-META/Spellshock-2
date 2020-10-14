@@ -529,7 +529,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 8277485499354448455
+              Id: 3883077169241788816
             }
           }
         }
@@ -710,6 +710,25 @@
             Name: "cs:ProjectileTemplate"
             AssetReference {
               Id: 17277006247643650522
+            }
+          }
+          Overrides {
+            Name: "cs:Speed"
+            Int: 1000
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 4000
+          }
+          Overrides {
+            Name: "cs:HealingAmount"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 30
+              Y: 50
             }
           }
         }
@@ -1023,7 +1042,7 @@
           }
         }
         ParentId: 5294904730835550769
-        ChildIds: 1528518920701063323
+        ChildIds: 1175861072708434832
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1041,7 +1060,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.7
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1049,7 +1068,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1073,7 +1092,7 @@
             CanRotate: true
             IsTargetDataUpdated: true
           }
-          Animation: "2hand_staff_magic_up"
+          Animation: "unarmed_shout"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
@@ -1081,8 +1100,8 @@
         }
       }
       Objects {
-        Id: 1528518920701063323
-        Name: "HealingAuraServer"
+        Id: 1175861072708434832
+        Name: "AreaStunAbilityServer"
         Transform {
           Location {
           }
@@ -1106,10 +1125,14 @@
             }
           }
           Overrides {
-            Name: "cs:HealingAuraTemplate"
+            Name: "cs:VFX_Template"
             AssetReference {
-              Id: 3462382851178288174
+              Id: 9583554867605228300
             }
+          }
+          Overrides {
+            Name: "cs:StunRadius"
+            Int: 500
           }
         }
         WantsNetworking: true
@@ -1121,7 +1144,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 2032145814419261177
+            Id: 10907208932040528762
           }
         }
       }
@@ -1224,6 +1247,14 @@
               Id: 8381065170024406029
             }
           }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 50
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1240,7 +1271,7 @@
       }
       Objects {
         Id: 12132236651039923972
-        Name: "Shift"
+        Name: "Teleport"
         Transform {
           Location {
           }
@@ -1250,6 +1281,79 @@
           }
         }
         ParentId: 5294904730835550769
+        ChildIds: 3735304455931922060
+        ChildIds: 16559630345007010090
+        ChildIds: 16463792143238490401
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.15
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 7
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_22"
+          }
+        }
+      }
+      Objects {
+        Id: 3735304455931922060
+        Name: "Teleport Primer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 12132236651039923972
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1305,10 +1409,123 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_roll"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_22"
+          }
+        }
+      }
+      Objects {
+        Id: 16559630345007010090
+        Name: "TeleportAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 12132236651039923972
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:MainAbility"
+            ObjectReference {
+              SubObjectId: 12132236651039923972
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerAbility"
+            ObjectReference {
+              SubObjectId: 3735304455931922060
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 500164608151091677
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Teleport"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 2000
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13911884867529172379
+          }
+        }
+      }
+      Objects {
+        Id: 16463792143238490401
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 12132236651039923972
+        ChildIds: 15759265484500681867
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 15759265484500681867
+        Name: "TeleportAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 16463792143238490401
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 16559630345007010090
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
           }
         }
       }
@@ -2462,12 +2679,12 @@
       }
     }
     Assets {
-      Id: 8277485499354448455
-      Name: "Fantasy Ability Yellow 005"
+      Id: 3883077169241788816
+      Name: "Fantasy Ability Teal 010"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_005"
+        AssetId: "UI_Fantasy_Ability_Teal_010"
       }
     }
     Assets {

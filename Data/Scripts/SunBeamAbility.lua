@@ -4,12 +4,12 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 local VFX_Template = script:GetCustomProperty("VFX_Template")
+local HealAmount = script:GetCustomProperty("HealAmount")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
 
+local LifeSpan = 3
 local HealTrigger = nil
 local Beam = nil
-local HealAmount = 50
-local DamageAmount = 50
-local LifeSpan = 3
 
 function OnAbilityCast(thisAbility)
 	if not thisAbility.owner.isGrounded then
@@ -19,10 +19,12 @@ function OnAbilityCast(thisAbility)
 	
 	local ViewPosition = Ability.owner:GetViewWorldPosition()
 	local ViewRotation = Ability.owner:GetViewWorldRotation()
-	local ViewOffsetVector = ViewRotation * Vector3.FORWARD * 2000
+	local ViewOffsetVector = ViewRotation * Vector3.FORWARD * 2500
 	local TargetPosition = ViewPosition + ViewOffsetVector
 	
-	local DifferenceVector = TargetPosition - ViewPosition
+	--CoreDebug.DrawLine(ViewPosition, TargetPosition, {duration = 5})
+	
+	local DifferenceVector = TargetPosition - Ability.owner:GetWorldPosition()
 	local vfxRotation = Rotation.New(DifferenceVector, Vector3.UP)
 	
 	local vfxPosition = (ViewRotation * Vector3.FORWARD * 100) + thisAbility.owner:GetWorldPosition()

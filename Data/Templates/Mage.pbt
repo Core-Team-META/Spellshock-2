@@ -761,6 +761,12 @@
         ParentId: 5002372427654228113
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
             Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 5002372427654228113
@@ -779,9 +785,9 @@
             }
           }
           Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 12470675891570633924
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 4827230565070222589
             }
           }
           Overrides {
@@ -799,6 +805,22 @@
             AssetReference {
               Id: 9770511928359673738
             }
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 1500
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
           }
         }
         WantsNetworking: true
@@ -854,24 +876,10 @@
         ParentId: 3456260185239028213
         UnregisteredParameters {
           Overrides {
-            Name: "cs:WallTemplate"
-            AssetReference {
-              Id: 4827230565070222589
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 17692966453424551073
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1200
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: true
           }
         }
         Collidable_v2 {
@@ -1049,6 +1057,12 @@
         ParentId: 734593391777780833
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
             Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 734593391777780833
@@ -1067,14 +1081,26 @@
             }
           }
           Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 12470675891570633924
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 2124661416244044752
             }
           }
           Overrides {
             Name: "cs:EventName"
             String: "Place Fire Wall"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 1500
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 7
           }
         }
         WantsNetworking: true
@@ -1130,24 +1156,10 @@
         ParentId: 13844109985313961578
         UnregisteredParameters {
           Overrides {
-            Name: "cs:WallTemplate"
-            AssetReference {
-              Id: 2124661416244044752
-            }
-          }
-          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 15867255519921286120
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1200
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: true
           }
         }
         Collidable_v2 {
