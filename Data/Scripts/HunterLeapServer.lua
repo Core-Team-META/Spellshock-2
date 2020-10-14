@@ -21,6 +21,12 @@ function AddImpulse(player)
 	player:AddImpulse(impulseVector)
 end
 
+function OnAbilityCast(thisAbility)
+	if not thisAbility.owner.isGrounded then
+		thisAbility:Interrupt()
+	end
+end
+
 function OnAbilityExecute(thisAbility)
 	local targetPosition = thisAbility.owner:GetWorldPosition()
 	targetPosition.z = targetPosition.z - 100
@@ -35,3 +41,4 @@ function OnAbilityExecute(thisAbility)
 end
 
 Ability.executeEvent:Connect(OnAbilityExecute)
+Ability.castEvent:Connect(OnAbilityCast)

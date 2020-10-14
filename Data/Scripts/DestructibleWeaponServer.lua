@@ -23,7 +23,7 @@ local DAMAGE_TO_OBJECTS = script:GetCustomProperty("DamageToObjects")
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
-	if impactData.targetObject:IsA("Player") then
+	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
 		amount = DAMAGE_TO_PLAYERS
 	else 
 		return
