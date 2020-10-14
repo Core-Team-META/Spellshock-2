@@ -791,6 +791,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13161146325196931920
+  Name: "Coral Table 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_table_02"
+  }
+}
+Assets {
   Id: 13136636915376819201
   Name: "Craftsman Roof 01 Corner Out"
   PlatformAssetType: 1
@@ -2804,6 +2813,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_hollow_004"
+  }
+}
+Assets {
+  Id: 1074325996530918974
+  Name: "Hay 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fan_hay_002_uv"
   }
 }
 Assets {

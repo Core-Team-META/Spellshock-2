@@ -876,6 +876,12 @@
         ParentId: 3456260185239028213
         UnregisteredParameters {
           Overrides {
+            Name: "cs:ObjectTemplate"
+            AssetReference {
+              Id: 4827230565070222589
+            }
+          }
+          Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 17692966453424551073
@@ -1155,6 +1161,12 @@
         }
         ParentId: 13844109985313961578
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:ObjectTemplate"
+            AssetReference {
+              Id: 2124661416244044752
+            }
+          }
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {

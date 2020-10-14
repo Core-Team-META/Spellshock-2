@@ -25,7 +25,7 @@
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0.0620983094
+        Float: 0
       }
       Overrides {
         Name: "gradient_worldspace"
@@ -33,7 +33,7 @@
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.507903755
+        Float: 0.613688111
       }
       Overrides {
         Name: "roughness_multiplier"
@@ -63,6 +63,12 @@
           G: 0.859072864
           B: 0.72
           A: 1
+        }
+      }
+      Overrides {
+        Name: "gradient_direction"
+        Vector {
+          Z: 1
         }
       }
     }

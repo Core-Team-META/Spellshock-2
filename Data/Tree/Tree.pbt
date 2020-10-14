@@ -432,7 +432,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 230
+      DistanceBetweenInstances: 200
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
@@ -993,6 +993,56 @@ Objects {
         Max: 102400
       }
     }
+    Foliage {
+      Asset {
+        Id: 8021476752120115971
+      }
+      DistanceBetweenInstances: 100
+      MaterialChannel: 2
+      SpawnDistance: 28800
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        Scaling: Free
+        ScaleX {
+          Min: 0.1
+          Max: 0.1
+        }
+        ScaleY {
+          Min: 0.1
+          Max: 0.2
+        }
+        ScaleZ {
+          Min: 0.05
+          Max: 0.1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 5784961500467902601
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 5000
+      }
+    }
   }
 }
 Objects {
@@ -1175,6 +1225,15 @@ Objects {
         Overrides {
           Name: "bp:Shadow Max"
           Float: 0.04
+        }
+        Overrides {
+          Name: "bp:Scene Tint"
+          Color {
+            R: 0.996514797
+            G: 1.06434321
+            B: 1.2
+            A: 1
+          }
         }
       }
     }
