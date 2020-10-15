@@ -1192,7 +1192,7 @@
           }
         }
         ParentId: 4710130442374076997
-        ChildIds: 13332445491670160558
+        ChildIds: 6527319456722080700
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1210,7 +1210,10 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.15
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1219,6 +1222,9 @@
           }
           ExecutePhaseSettings {
             Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1226,10 +1232,11 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
+            Duration: 6
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1242,15 +1249,16 @@
             CanRotate: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
+          Animation: "unarmed_shout"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_34"
           }
         }
       }
       Objects {
-        Id: 13332445491670160558
-        Name: "DeathBeamAbilityServer"
+        Id: 6527319456722080700
+        Name: "SunBeamAbility"
         Transform {
           Location {
           }
@@ -1260,6 +1268,38 @@
           }
         }
         ParentId: 4565537237503929626
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 4565537237503929626
+            }
+          }
+          Overrides {
+            Name: "cs:VFX_Template"
+            AssetReference {
+              Id: 975250975012962628
+            }
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:TimeBetweenDamage"
+            Float: 0.3
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 6
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

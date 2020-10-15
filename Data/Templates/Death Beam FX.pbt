@@ -43,6 +43,7 @@
         Transform {
           Location {
             X: 790.662109
+            Z: 110
           }
           Rotation {
           }
@@ -75,6 +76,7 @@
         Name: "ClientContext"
         Transform {
           Location {
+            Z: 110
           }
           Rotation {
           }
