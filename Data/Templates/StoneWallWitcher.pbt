@@ -63,7 +63,6 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }

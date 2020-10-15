@@ -899,13 +899,13 @@
           Overrides {
             Name: "cs:WallTemplate"
             AssetReference {
-              Id: 14575263373624238445
+              Id: 8766393355139966205
             }
           }
           Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
-              Id: 14575263373624238445
+              Id: 17438938420799065589
             }
           }
           Overrides {
