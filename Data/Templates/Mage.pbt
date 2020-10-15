@@ -303,7 +303,7 @@
         ChildIds: 3651362449464797999
         ChildIds: 467991210720303434
         ChildIds: 6507087611232739841
-        ChildIds: 1639510144358817549
+        ChildIds: 17002085600729582046
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -483,10 +483,13 @@
         }
       }
       Objects {
-        Id: 1639510144358817549
+        Id: 17002085600729582046
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
+            X: -8459.89648
+            Y: -10068.3701
+            Z: -3036.43213
           }
           Rotation {
           }
@@ -501,7 +504,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 3879989441895773405
+              SubObjectId: 15170256011419368665
             }
           }
           Overrides {
@@ -513,16 +516,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 8277485499354448455
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 0.44
-              G: 0.532715082
-              B: 1
-              A: 1
+              Id: 3883077169241788816
             }
           }
         }
@@ -586,7 +580,7 @@
         ChildIds: 5002372427654228113
         ChildIds: 734593391777780833
         ChildIds: 4565537237503929626
-        ChildIds: 3879989441895773405
+        ChildIds: 15170256011419368665
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1198,7 +1192,7 @@
           }
         }
         ParentId: 4710130442374076997
-        ChildIds: 892242552513223870
+        ChildIds: 13332445491670160558
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1255,8 +1249,8 @@
         }
       }
       Objects {
-        Id: 892242552513223870
-        Name: "WildFireAbilityServer"
+        Id: 13332445491670160558
+        Name: "DeathBeamAbilityServer"
         Transform {
           Location {
           }
@@ -1266,38 +1260,6 @@
           }
         }
         ParentId: 4565537237503929626
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 4565537237503929626
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:LightningStormTemplate"
-            AssetReference {
-              Id: 13917466264583367927
-            }
-          }
-          Overrides {
-            Name: "cs:WildFireTemplate"
-            AssetReference {
-              Id: 16871229772278373878
-            }
-          }
-        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1307,78 +1269,79 @@
         }
         Script {
           ScriptAsset {
-            Id: 11812058148819114094
+            Id: 3663272336971205616
           }
         }
       }
       Objects {
-        Id: 3879989441895773405
-        Name: "Air Boost"
+        Id: 15170256011419368665
+        Name: "Teleport"
         Transform {
           Location {
+            X: -8459.89648
+            Y: -10068.3701
+            Z: -3036.43213
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
         ParentId: 4710130442374076997
-        ChildIds: 6561337442153222996
-        ChildIds: 2833833954599931206
+        ChildIds: 126034762099774914
+        ChildIds: 16610941272423617628
+        ChildIds: 11166636345477378186
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
-          IsEnabled: true
+          KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.1
             CanMove: true
+            CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           ExecutePhaseSettings {
+            Duration: 0.15
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           RecoveryPhaseSettings {
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
+              Value: "mc:eabilitysetfacing:aim"
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 7
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
           }
           CanBePrevented: true
           KeyBinding_v2 {
@@ -1387,33 +1350,122 @@
         }
       }
       Objects {
-        Id: 6561337442153222996
-        Name: "ImpulseBoostServer"
+        Id: 126034762099774914
+        Name: "Teleport Primer"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
-        ParentId: 3879989441895773405
+        ParentId: 15170256011419368665
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_22"
+          }
+        }
+      }
+      Objects {
+        Id: 16610941272423617628
+        Name: "TeleportAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 15170256011419368665
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
             ObjectReference {
-              SubObjectId: 3879989441895773405
+              SubObjectId: 12470675891570633924
             }
           }
           Overrides {
-            Name: "cs:BoostDirection"
-            Vector {
-              X: 300
-              Z: 2000
+            Name: "cs:MainAbility"
+            ObjectReference {
+              SubObjectId: 15170256011419368665
             }
+          }
+          Overrides {
+            Name: "cs:PrimerAbility"
+            ObjectReference {
+              SubObjectId: 126034762099774914
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 500164608151091677
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Teleport"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 2000
           }
         }
         WantsNetworking: true
@@ -1425,12 +1477,12 @@
         }
         Script {
           ScriptAsset {
-            Id: 12115058129235105879
+            Id: 13911884867529172379
           }
         }
       }
       Objects {
-        Id: 2833833954599931206
+        Id: 11166636345477378186
         Name: "ClientContext"
         Transform {
           Location {
@@ -1438,19 +1490,13 @@
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
-        ParentId: 3879989441895773405
-        ChildIds: 7980385836769403597
-        ChildIds: 437131951997138595
-        UnregisteredParameters {
-        }
+        ParentId: 15170256011419368665
+        ChildIds: 7780239615903285919
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1459,25 +1505,22 @@
         }
       }
       Objects {
-        Id: 7980385836769403597
-        Name: "AbilityVFXTriggerClient"
+        Id: 7780239615903285919
+        Name: "TeleportAbilityClient"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
-        ParentId: 2833833954599931206
+        ParentId: 11166636345477378186
         UnregisteredParameters {
           Overrides {
-            Name: "cs:EffectsParent"
+            Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 437131951997138595
+              SubObjectId: 16610941272423617628
             }
           }
         }
@@ -1489,296 +1532,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 6591918883784579786
-          }
-        }
-      }
-      Objects {
-        Id: 437131951997138595
-        Name: "Boost Effects"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2833833954599931206
-        ChildIds: 15612531654844515648
-        ChildIds: 7706684534855845930
-        ChildIds: 18001408278301257064
-        ChildIds: 7857241793071914949
-        ChildIds: 14670783042424043508
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsFilePartition: true
-          FilePartitionName: "Boost Effects"
-        }
-      }
-      Objects {
-        Id: 15612531654844515648
-        Name: "Cast Burst Ring VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 437131951997138595
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              G: 0.7
-              B: 2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              G: 0.091390714
-              B: 0.299999952
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Count"
-            Int: 1
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Appearance"
-            Enum {
-              Value: "mc:ecastringappearance:newenumerator1"
-            }
-          }
-          Overrides {
-            Name: "bp:Life Min"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Life Max"
-            Float: 0.4
-          }
-          Overrides {
-            Name: "bp:U Tiles"
-            Int: 1
-          }
-          Overrides {
-            Name: "bp:Size"
-            Vector {
-              X: 0.5
-              Y: 0.5
-              Z: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 5188278867866707632
-          }
-          TeamSettings {
-          }
-          Vfx {
-          }
-        }
-      }
-      Objects {
-        Id: 7706684534855845930
-        Name: "Spark Trail Wavy VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 437131951997138595
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              G: 0.7
-              B: 2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Chaos"
-            Float: 0.35
-          }
-          Overrides {
-            Name: "bp:Spawn Radius"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 7
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 5891367910865939212
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 18001408278301257064
-        Name: "Electricity Spark Arc 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 437131951997138595
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 5471556188207705424
-          }
-          Pitch: 500
-          Volume: 1
-          Falloff: 3600
-          Radius: 400
-          EnableOcclusion: true
-          FadeOutTime: 1.5
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 7857241793071914949
-        Name: "Electricity Zap Spark 01 SFX"
-        Transform {
-          Location {
-            X: 222.721298
-            Y: -800
-            Z: -50
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 437131951997138595
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 16304464363672301237
-          }
-          Volume: 1
-          Falloff: 3600
-          Radius: 400
-          EnableOcclusion: true
-          FadeOutTime: 1.5
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 14670783042424043508
-        Name: "UtilityAttachOnEquip"
-        Transform {
-          Location {
-            X: -0.645584106
-            Y: 22.2377319
-            Z: 0.853820801
-          }
-          Rotation {
-            Pitch: -2.19787955
-            Yaw: -88.3370895
-            Roll: -127.119499
-          }
-          Scale {
-            X: 1.15384626
-            Y: 1.15384626
-            Z: 1.15384626
-          }
-        }
-        ParentId: 437131951997138595
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Socket"
-            String: "root"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 17977548762940923427
+            Id: 17529172217946308633
           }
         }
       }
@@ -4773,48 +4527,12 @@
       }
     }
     Assets {
-      Id: 8277485499354448455
-      Name: "Fantasy Ability Yellow 005"
+      Id: 3883077169241788816
+      Name: "Fantasy Ability Teal 010"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_005"
-      }
-    }
-    Assets {
-      Id: 5188278867866707632
-      Name: "Cast Burst Ring VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_cast_circle_generic"
-      }
-    }
-    Assets {
-      Id: 5891367910865939212
-      Name: "Spark Trail Wavy VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_spark_trail_wavy"
-      }
-    }
-    Assets {
-      Id: 5471556188207705424
-      Name: "Electricity Spark Arc 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_electricity_spark_arc_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 16304464363672301237
-      Name: "Electricity Zap Spark 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_electricity_zap_spark_01_Cue_ref"
+        AssetId: "UI_Fantasy_Ability_Teal_010"
       }
     }
     Assets {

@@ -3469,7 +3469,13 @@
         ChildIds: 274493358176543512
         UnregisteredParameters {
           Overrides {
-            Name: "cs:EndingVFX"
+            Name: "cs:DashFX"
+            AssetReference {
+              Id: 8213125305841566245
+            }
+          }
+          Overrides {
+            Name: "cs:EndingFX"
             AssetReference {
               Id: 3001366697168823164
             }
@@ -3480,7 +3486,7 @@
           }
           Overrides {
             Name: "cs:OwnerImpulse"
-            Int: 10000
+            Int: 25000
           }
           Overrides {
             Name: "cs:EnemyImpulse"
@@ -3551,7 +3557,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 2
+            Duration: 1
             CanMove: true
             IsTargetDataUpdated: true
             Facing_V2 {
