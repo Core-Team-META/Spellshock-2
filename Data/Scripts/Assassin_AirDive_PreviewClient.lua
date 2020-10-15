@@ -5,7 +5,6 @@ local PREVIEW_OBJECT_TEMPLATE = script:GetCustomProperty("PreviewObject")
 local CONFIRM_BINDING = script:GetCustomProperty("ConfirmBinding")
 local MAX_PLACEMENT_RANGE = script:GetCustomProperty("MaxPlacementRange")
 
-local VELOCITY_TRIGGER = script:GetCustomProperty("VelocitySlowTrigger"):WaitForObject()
 local CONFIRM_SOUND = script:GetCustomProperty("ConfirmSound"):WaitForObject()
 local IMPACT_VFX = script:GetCustomProperty("ImpactVFX")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -25,13 +24,33 @@ end
 function OnConfirmAbilityExecute(thisAbility)
     if thisAbility.owner == LOCAL_PLAYER then
         --print("Confirmed airDive location")
-        if previewObject and Object.IsValid(previewObject) then
-            CONFIRM_SOUND:Play()
+		if previewObject and Object.IsValid(previewObject) then
+			local targetPosition = previewObject:GetWorldPosition()
+			CONFIRM_SOUND:Play()
             Events.BroadcastToServer("AssassinAirDiveTargetChosen", previewObject:GetWorldPosition() + Vector3.UP * 100)
+			
+			previewObject:Destroy()
+            previewObject = nil
+
+			local teammates = Game.GetPlayers({includeTeams = LOCAL_PLAYER.team})
+			for i, p in ipairs(teammates) do
+				if (p == player) then
+					table.remove(teammates, i)
+					break
+				end
+			end
+		
+			while(LOCAL_PLAYER.isGrounded == false and LOCAL_PLAYER.isDead == false) do
+				local players = Game.FindPlayersInSphere(targetPosition, MAIN_ABILITY:GetCustomProperty("ImpactRadius"), {ignorePlayers = teammates, includeTeams = LOCAL_PLAYER.team })
+				if(players == LOCAL_PLAYER) then break end
+				Task.Wait()
+			end
+
+			World.SpawnAsset(IMPACT_VFX, {position = targetPosition - Vector3.UP * 50})
+
             --print("Target Chosen event broadcasted")
             --print("Destroy AirDive preview")
-            previewObject:Destroy()
-            previewObject = nil
+            
         end
 
     end
@@ -81,14 +100,6 @@ function Tick()
 	end
 end
 
-function OnBeginOverlap(theTrigger, player)
-    -- The object's type must be checked because CoreObjects also overlap triggers
-    if player and player:IsA("Player") and player == MAIN_ABILITY.owner then    
-        -- Play VFX
-        World.SpawnAsset(IMPACT_VFX, {position = theTrigger:GetWorldPosition() - Vector3.UP * 50})
-    end
-end
 
-VELOCITY_TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
 MAIN_ABILITY.executeEvent:Connect( OnMainAbilityExecute )
 CONFIRM_ABILITY.executeEvent:Connect( OnConfirmAbilityExecute )
