@@ -1436,7 +1436,6 @@
         ParentId: 8722233437890789111
         ChildIds: 12353899413265367957
         ChildIds: 7681391975235107164
-        ChildIds: 8608916635159647707
         ChildIds: 1302420456206572084
         ChildIds: 18064715845314033605
         ChildIds: 2319229106837867255
@@ -1661,74 +1660,6 @@
         }
       }
       Objects {
-        Id: 8608916635159647707
-        Name: "Trigger"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 3.60000014
-            Y: 3.60000014
-            Z: 3.60000014
-          }
-        }
-        ParentId: 87249608989476396
-        ChildIds: 7633467576616705082
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
-        }
-      }
-      Objects {
-        Id: 7633467576616705082
-        Name: "Ball"
-        Transform {
-          Location {
-            Z: 13.8888884
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8608916635159647707
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9426188198345824359
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 1302420456206572084
         Name: "Assassin_AirDive"
         Transform {
@@ -1760,12 +1691,6 @@
             Name: "cs:ConfirmAbility"
             ObjectReference {
               SubObjectId: 7681391975235107164
-            }
-          }
-          Overrides {
-            Name: "cs:VelocitySlowTrigger"
-            ObjectReference {
-              SubObjectId: 8608916635159647707
             }
           }
         }
@@ -1943,12 +1868,6 @@
             Name: "cs:ImpactVFX"
             AssetReference {
               Id: 3219672101883223829
-            }
-          }
-          Overrides {
-            Name: "cs:VelocitySlowTrigger"
-            ObjectReference {
-              SubObjectId: 8608916635159647707
             }
           }
           Overrides {
@@ -2963,15 +2882,6 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Yellow_005"
-      }
-    }
-    Assets {
-      Id: 9426188198345824359
-      Name: "Ball"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_001"
       }
     }
     Assets {

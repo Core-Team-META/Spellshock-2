@@ -5,7 +5,6 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local CONFIRM_ABILITY = script:GetCustomProperty("ConfirmAbility"):WaitForObject()
-local VELOCITY_TRIGGER = script:GetCustomProperty("VelocitySlowTrigger"):WaitForObject()
 
 local KILL_THRESHOLD = ABILITY:GetCustomProperty("KillThreshold") or .25
 local DAMAGE_RANGE = ABILITY:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
@@ -19,6 +18,8 @@ local targetConfirmed = false
 local waitingForTarget = false
 local flyingTimer = 0
 local defaultGrav = 0
+local defaultJumps
+local defaultMovement
 
 function OnAbilityExecute(thisAbility)
     local owner = thisAbility.owner
@@ -30,6 +31,8 @@ function OnAbilityExecute(thisAbility)
     owner:ResetVelocity()
     waitingForTarget = true
     flyingTimer = 0
+    defaultMovement = owner.movementControlMode
+    defaultJumps = owner.maxJumpCount
 end
 
 function OnTargetChosen(player, targetPos)
@@ -37,28 +40,35 @@ function OnTargetChosen(player, targetPos)
     local playerPos = player:GetWorldPosition()
     local launchVector = (targetPos - playerPos) * player.mass
     --print(launchVector)
-    local oldMovementMode = player.movementControlMode
-    local oldJumpCount = player.maxJumpCount
+    
     player.movementControlMode = MovementControlMode.NONE
     player.maxJumpCount = 0
     player:ResetVelocity()
     player:AddImpulse(launchVector)
-    VELOCITY_TRIGGER:SetWorldPosition(targetPos)
     Task.Wait()
-    VELOCITY_TRIGGER.collision = Collision.FORCE_ON
-    
+
+    local teammates = Game.GetPlayers({includeTeams = COMBAT().GetTeam(player)})
+    for i, p in ipairs(teammates) do
+        if (p == player) then
+            table.remove(teammates, i)
+            break
+        end
+    end
+
     while(player.isGrounded == false and player.isDead == false) do
-        VELOCITY_TRIGGER:SetWorldPosition(targetPos)
+        local players = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
+        if(players == player) then break end
         Task.Wait()
     end
-    player.movementControlMode = oldMovementMode
-    player.maxJumpCount = oldJumpCount
+    player.movementControlMode = defaultMovement
+    player.maxJumpCount = defaultJumps
 
     if player.isDead then 
         CONFIRM_ABILITY.isEnabled = false
         return 
     end
 
+    player:ResetVelocity()
     -- Grounded
     player:ActivateWalking()
     player.gravityScale = defaultGrav
@@ -101,22 +111,10 @@ function Tick(dt)
         flyingTimer = flyingTimer + dt
         if(flyingTimer > FLYING_DURATION) then
             waitingForTarget = false
-            OnTargetChosen(ABILITY.owner:GetWorldPosition() * Vector3.UP * -10000)
+            OnTargetChosen(ABILITY.owner, ABILITY.owner:GetWorldPosition() * Vector3.UP * -10000)
         end
     end
 end
-
-function OnBeginOverlap(theTrigger, player)
-    -- The object's type must be checked because CoreObjects also overlap triggers
-      if player and player:IsA("Player") and player == ABILITY.owner then
-        print("Reset Velocity")
-        player.gravityScale = defaultGrav
-        player:ResetVelocity()
-        theTrigger.collision = Collision.FORCE_OFF
-      end
-  end
   
-VELOCITY_TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
-
 ABILITY.executeEvent:Connect( OnAbilityExecute )
 Events.ConnectForPlayer("AssassinAirDiveTargetChosen", OnTargetChosen)
