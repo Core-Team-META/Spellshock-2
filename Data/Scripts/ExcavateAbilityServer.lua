@@ -1,19 +1,19 @@
 ﻿-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
-
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
-local PickupTemplate = script:GetCustomProperty("PickupTemplate")
+
 local PickupAbility = script:GetCustomProperty("PickupAbility"):WaitForObject()
 local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 
 local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
+local PickupTemplate = script:GetCustomProperty("PickupTemplate")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
+local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local LifeSpan = script:GetCustomProperty("LifeSpan")
 
 local PickupObject = nil
 local CurrentProjectile = nil
-local DamageAmount = 50
-local ProjectileSpeed = 1300
-local LifeSpan = 7 
 local Timer = 0
 
 function OnPickupExecute(thisAbility)
