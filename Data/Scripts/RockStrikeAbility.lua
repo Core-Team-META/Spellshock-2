@@ -2,14 +2,14 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
-local ABILITY = script.parent
 
-local SPEED = 1500
-local MOVE_DURATION = 2
-local LIFE_SPAN = 6
-local DAMAGE_RANGE = Vector2.New(20, 30)
-local IMPULSE_AMOUNT = 150000
+local SPEED = script:GetCustomProperty("ProjectileSpeed")
+local MOVE_DURATION = script:GetCustomProperty("MoveDuration")
+local LIFE_SPAN = script:GetCustomProperty("LifeSpan")
+local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
+local IMPULSE_AMOUNT = script:GetCustomProperty("ImpulseAmount")
 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil

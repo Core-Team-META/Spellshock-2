@@ -75,8 +75,8 @@
           }
           Scale {
             X: 1
-            Y: 1
-            Z: 1.49999988
+            Y: 2.19999981
+            Z: 1.5
           }
         }
         ParentId: 6423439104742076654
@@ -129,6 +129,10 @@
             Name: "bp:Life"
             Float: 4
           }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -157,9 +161,9 @@
           Rotation {
           }
           Scale {
-            X: 1.8
-            Y: 1.8
-            Z: 1.79999983
+            X: 1.80000007
+            Y: 3.2
+            Z: 2.39999986
           }
         }
         ParentId: 6232673024924705328
