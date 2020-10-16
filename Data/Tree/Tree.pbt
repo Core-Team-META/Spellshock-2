@@ -26,6 +26,7 @@ Objects {
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
   ChildIds: 821036326116957773
+  ChildIds: 2291379196395348792
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +36,53 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 2291379196395348792
+  Name: "Catapult"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11611935791228445355
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Catapult"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -9247.28906
+            Y: -5445.13574
+            Z: 3408.19507
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14832740568359622477
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.409179688
+            Y: 152.42543
+            Z: -167.163681
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4539284850511781023
+    }
   }
 }
 Objects {
