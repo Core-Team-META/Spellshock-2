@@ -9,18 +9,25 @@ local Duration = script:GetCustomProperty("Duration")
 local EventListeners = {}
 
 function OnPrimerAbilityExecute(thisAbility)
-	print("Toggling ON")
+	--print("Toggling ON")
 	thisAbility.isEnabled = false
 	MainAbility.isEnabled = true
 end
 
 function OnMainAbilityReady(thisAbility)
-	print("Toggling OFF")
+	--print("Toggling OFF")
 	thisAbility.isEnabled = false
 	PrimerAbility.isEnabled = true
 end
 
 function PlaceObject(thisPlayer, position, rotation)
+	-- check if the placement was canceled
+	if position == nil then
+		MainAbility.isEnabled = false
+		PrimerAbility.isEnabled = true
+		return
+	end
+
 	if thisPlayer == Equipment.owner then
 		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		newWall.lifeSpan = Duration

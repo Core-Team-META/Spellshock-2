@@ -21,6 +21,18 @@
         ChildIds: 16112677035434330704
         ChildIds: 3186470043807040376
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Orc_Costume"
+            AssetReference {
+              Id: 9974119495161503475
+            }
+          }
+          Overrides {
+            Name: "cs:Elf_Costume"
+            AssetReference {
+              Id: 9974119495161503475
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -53,6 +65,7 @@
         ParentId: 7855160156328725233
         ChildIds: 16551887910612709530
         ChildIds: 2773547866361185318
+        ChildIds: 9889259402150851656
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -286,6 +299,48 @@
         }
       }
       Objects {
+        Id: 9889259402150851656
+        Name: "EquipCostumeServer"
+        Transform {
+          Location {
+            X: -8835
+            Y: -9820
+            Z: -3090
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4159325021862714735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+          Overrides {
+            Name: "cs:HidePlayer"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8367692547684378330
+          }
+        }
+      }
+      Objects {
         Id: 4127929006948487058
         Name: "ClientContext"
         Transform {
@@ -300,6 +355,7 @@
           }
         }
         ParentId: 7855160156328725233
+        ChildIds: 10592921671569649599
         ChildIds: 737157021763664976
         ChildIds: 18215660602860694460
         ChildIds: 15862854556548652189
@@ -312,6 +368,44 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 10592921671569649599
+        Name: "EquipCostumeClient"
+        Transform {
+          Location {
+            X: -8835
+            Y: -9820
+            Z: -3090
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4127929006948487058
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15448460343788315077
+          }
         }
       }
       Objects {
@@ -2205,7 +2299,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 10965229460380713944
+              Id: 1031800327856440791
             }
           }
         }
@@ -2252,7 +2346,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 10965229460380713944
+              Id: 1031800327856440791
             }
           }
         }
@@ -2299,7 +2393,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 10965229460380713944
+              Id: 1031800327856440791
             }
           }
         }
@@ -5565,6 +5659,15 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Club_008"
+      }
+    }
+    Assets {
+      Id: 1031800327856440791
+      Name: "Fantasy Hammer 005"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Hammer_005"
       }
     }
     Assets {

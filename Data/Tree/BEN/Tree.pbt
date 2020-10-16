@@ -12630,7 +12630,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

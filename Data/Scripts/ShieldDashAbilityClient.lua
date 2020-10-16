@@ -2,10 +2,13 @@
 local ShieldBash = script:GetCustomProperty("ShieldBash"):WaitForObject()
 
 local Ability = ServerScript:GetCustomProperty("Ability"):WaitForObject()
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 function OnAbilityCooldown(thisAbility)
-	Task.Wait()
-	ShieldBash:Activate()
+	if LOCAL_PLAYER == Ability.owner then
+		Task.Wait()
+		ShieldBash:Activate()
+	end
 end
 
 Ability.cooldownEvent:Connect(OnAbilityCooldown)

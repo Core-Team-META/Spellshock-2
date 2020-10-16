@@ -11,23 +11,42 @@ local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local objectHalogram = nil
+local BindingPressedConnection = nil
+local CancelBindings = {
+	ability_extra_20 = true, 
+	ability_extra_22 = true, 
+	ability_extra_23 = true, 
+	ability_extra_24 = true, 
+	ability_primary = true, 
+	ability_secondary = true
+}
+
+function OnBindingPressed(player, binding)
+	if CancelBindings[binding] and binding ~= MainAbility.actionBinding then
+		-- Cancel placement
+		objectHalogram:Destroy()
+		objectHalogram = nil
+		BindingPressedConnection:Disconnect()
+		Events.BroadcastToServer(EventName, nil)
+	end
+end
 
 function OnPrimerAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER then
 		objectHalogram = World.SpawnAsset(ObjectTemplate)
+		BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect( OnBindingPressed )
 	end
 end
 
 function OnMainAbilityExecute(thisAbility)
-	if thisAbility.owner == LOCAL_PLAYER and Object.IsValid(objectHalogram) then
+	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
 		local targetPosition = CalculatePlacement()
-		if targetPosition then
-		if(EventName) then
+		if targetPosition and EventName then
 			Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation())
 		end
-			objectHalogram:Destroy()
-			objectHalogram = nil
-		end
+		objectHalogram:Destroy()
+		objectHalogram = nil
+		BindingPressedConnection:Disconnect()
 	end
 end
 
