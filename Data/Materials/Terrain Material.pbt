@@ -20,7 +20,7 @@
       }
       Overrides {
         Name: "material1_scale"
-        Float: 1.4
+        Float: 1
       }
       Overrides {
         Name: "material1side_scale"
@@ -29,9 +29,9 @@
       Overrides {
         Name: "cmpc:Material1_Sides"
         Color {
-          R: 0.8125
-          G: 0.54379642
-          B: 0.380859375
+          R: 0.9375
+          G: 0.600100696
+          B: 0.395507813
           A: 1
         }
       }
@@ -53,7 +53,7 @@
       }
       Overrides {
         Name: "material2side_scale"
-        Float: 1.4
+        Float: 1
       }
       Overrides {
         Name: "cmp:Material3"
@@ -89,7 +89,7 @@
       }
       Overrides {
         Name: "material3_scale"
-        Float: 1.4
+        Float: 1
       }
       Overrides {
         Name: "material3side_scale"

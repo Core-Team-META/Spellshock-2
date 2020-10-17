@@ -998,6 +998,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11893514062468969040
+  Name: "Bone Human Ribcage 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_ribcage_01_ref"
+  }
+}
+Assets {
   Id: 11892494746123028781
   Name: "Cylinder - Chamfered Polished"
   PlatformAssetType: 1
@@ -1097,6 +1106,24 @@ Assets {
   }
 }
 Assets {
+  Id: 11628847588654774132
+  Name: "Pipe - 45-Degree Long "
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_curve45_004"
+  }
+}
+Assets {
+  Id: 11594524757616528940
+  Name: "Bone Human Skull 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_skull_01_ref"
+  }
+}
+Assets {
   Id: 11574609574133751124
   Name: "Street Light Pole 02"
   PlatformAssetType: 1
@@ -1169,6 +1196,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11312867989431867200
+  Name: "Bone Human Jaw 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_jaw_01_ref"
+  }
+}
+Assets {
   Id: 11162297399913732681
   Name: "Cube - Polished"
   PlatformAssetType: 1
@@ -1202,6 +1238,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_pommel_002"
+  }
+}
+Assets {
+  Id: 10743705362862236791
+  Name: "Bone Human Scapula 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_scap_01_ref"
   }
 }
 Assets {
@@ -1247,6 +1292,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_001"
+  }
+}
+Assets {
+  Id: 10373577859092754191
+  Name: "Bone Raw"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_bone_raw_001_uv_ref"
   }
 }
 Assets {
@@ -1319,6 +1373,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_002"
+  }
+}
+Assets {
+  Id: 9906755287606891984
+  Name: "Bone Human Spine 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_spine_01_ref"
   }
 }
 Assets {
@@ -2186,6 +2249,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4956137530833491633
+  Name: "Bone Human Pile Straight 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_pile_str_01_ref"
+  }
+}
+Assets {
   Id: 4842806961858489681
   Name: "Rock Flat 01"
   PlatformAssetType: 1
@@ -2309,6 +2381,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_bottle_003"
+  }
+}
+Assets {
+  Id: 4371559941960540326
+  Name: "Tree Birch Bare 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_birch_004"
   }
 }
 Assets {
@@ -2525,6 +2606,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_column_top_001"
+  }
+}
+Assets {
+  Id: 2790673031089680043
+  Name: "Bone Human Scattered 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_scatter_02_ref"
   }
 }
 Assets {
@@ -2921,6 +3011,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_roof_001_beam"
+  }
+}
+Assets {
+  Id: 300451936523033639
+  Name: "Bone Human Pile Straight 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_pile_str_02_ref"
   }
 }
 Assets {
