@@ -224,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16825643228001246048
+  Name: "Gem - Pear Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gem_pear_polished_001"
+  }
+}
+Assets {
   Id: 16782431065943393215
   Name: "Ambient Occlusion Recolor Post Process"
   PlatformAssetType: 20
@@ -590,6 +599,24 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_sand_001_uv"
+  }
+}
+Assets {
+  Id: 14333097303507909878
+  Name: "Bone Human Scattered 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_scatter_01_ref"
+  }
+}
+Assets {
+  Id: 14310375594674475352
+  Name: "Fantasy Castle Wall Foundation 01 - Pillar 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_wall_found_001_pillar_01"
   }
 }
 Assets {
@@ -1529,6 +1556,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8978661562815925692
+  Name: "Rock Hexagonal"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_008"
+  }
+}
+Assets {
   Id: 8969474998654965263
   Name: "Fabric Burlap New 01"
   PlatformAssetType: 2
@@ -2345,6 +2381,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_ulna_01_ref"
+  }
+}
+Assets {
+  Id: 4476100996546935695
+  Name: "Helix - 0.25"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_helix_002"
   }
 }
 Assets {

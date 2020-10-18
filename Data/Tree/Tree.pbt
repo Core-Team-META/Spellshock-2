@@ -1478,10 +1478,6 @@ Objects {
       key: 9040451368152896180
       value {
         Overrides {
-          Name: "bp:Fog Density"
-          Float: 1
-        }
-        Overrides {
           Name: "bp:Albedo"
           Color {
             R: 1
@@ -1493,6 +1489,14 @@ Objects {
         Overrides {
           Name: "bp:Light Absorption Amount"
           Float: 2
+        }
+        Overrides {
+          Name: "bp:Fog Density"
+          Float: 3
+        }
+        Overrides {
+          Name: "bp:Falloff"
+          Float: 0.163206235
         }
       }
     }
