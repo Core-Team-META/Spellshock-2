@@ -1,11 +1,11 @@
 ﻿Name: "Armor Plates_2"
-RootId: 6218842403973134086
+RootId: 2873633589303917705
 Objects {
-  Id: 7959279003700883502
+  Id: 5185158226383590674
   Name: "Rock Block 01"
   Transform {
     Location {
-      X: -4162.80469
+      X: 1643.60522
       Y: 745.538208
       Z: -204.729233
     }
@@ -20,7 +20,7 @@ Objects {
       Z: 1.61151254
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -63,14 +63,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 2127470680848589597
-    SubobjectId: 7885444003024248639
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 5185158226383590674
+    SubobjectId: 15218289260397607958
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 13060707037086485222
+  Id: 7740629665084505239
   Name: "Nails"
   Transform {
     Location {
@@ -86,7 +86,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -100,148 +100,14 @@ Objects {
     FilePartitionName: "Nails_2"
   }
   InstanceHistory {
-    SelfId: 3914190728689535793
-    SubobjectId: 5096119296700823315
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 7740629665084505239
+    SubobjectId: 18422929990570710419
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 4684113882452199753
-  Name: "Rock Block 02"
-  Transform {
-    Location {
-      X: 1098.69653
-      Y: 242.996582
-      Z: 548.989868
-    }
-    Rotation {
-      Pitch: -12.6696777
-      Roll: -1.93591309
-    }
-    Scale {
-      X: 3.99999404
-      Y: 1.710096
-      Z: 6.49999857
-    }
-  }
-  ParentId: 6218842403973134086
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11891381492705318643
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 16536652190868273770
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 17599441428314955854
-    SubobjectId: 9571614302951365740
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-  }
-}
-Objects {
-  Id: 12146376169356474536
-  Name: "Rock Block 01"
-  Transform {
-    Location {
-      X: -1925.59326
-      Y: 206.960403
-      Z: 4754.55859
-    }
-    Rotation {
-      Pitch: 82.9037704
-      Yaw: 1.81024917e-11
-    }
-    Scale {
-      X: 4.52814102
-      Y: 0.671575367
-      Z: 7.05726337
-    }
-  }
-  ParentId: 6218842403973134086
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11891381492705318643
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 692942829504898313
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 17916488222972460382
-    SubobjectId: 9821460018506580348
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-  }
-}
-Objects {
-  Id: 12227663809330659133
+  Id: 14093024704181560386
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -258,7 +124,7 @@ Objects {
       Z: 5.15123892
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -300,151 +166,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 917808219086776676
-    SubobjectId: 8958864118613185862
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 14093024704181560386
+    SubobjectId: 6292412482294517062
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 4666127965807512995
-  Name: "Rock Block 01"
-  Transform {
-    Location {
-      X: -3853.99438
-      Y: 218.990311
-      Z: 4631.85107
-    }
-    Rotation {
-      Pitch: 79.7449722
-      Yaw: -15.4008789
-      Roll: -107.232239
-    }
-    Scale {
-      X: 4.43195772
-      Y: 3.75605822
-      Z: 0.731569052
-    }
-  }
-  ParentId: 6218842403973134086
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11891381492705318643
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 692942829504898313
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableDistanceFieldLighting: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3075937571017425175
-    SubobjectId: 6505201349237603637
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-  }
-}
-Objects {
-  Id: 10538662460332736740
-  Name: "Rock Block 01"
-  Transform {
-    Location {
-      X: 1172.88367
-      Y: 240.828308
-      Z: 2531.07544
-    }
-    Rotation {
-      Pitch: 13.3673897
-      Yaw: 177.578506
-      Roll: 89.4697647
-    }
-    Scale {
-      X: 6.56822443
-      Y: 5.24859142
-      Z: 1.27961898
-    }
-  }
-  ParentId: 6218842403973134086
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11891381492705318643
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 692942829504898313
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3008942883037780784
-    SubobjectId: 6424696414342702866
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-  }
-}
-Objects {
-  Id: 3210838523040708992
+  Id: 10226659479751723747
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -463,7 +192,7 @@ Objects {
       Z: 2.17277932
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -505,14 +234,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 13285865732169849300
-    SubobjectId: 14449819988752836086
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 10226659479751723747
+    SubobjectId: 1813609252583269351
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 3715587902485802929
+  Id: 3147798079523247520
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -531,7 +260,7 @@ Objects {
       Z: 1.6115154
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -574,14 +303,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 3811696587867317007
-    SubobjectId: 4903627369619726125
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 3147798079523247520
+    SubobjectId: 13792380719593307300
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 1637796820771738335
+  Id: 15403509161953886588
   Name: "Rock Block 02"
   Transform {
     Location {
@@ -600,7 +329,7 @@ Objects {
       Z: 0.38641414
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -642,14 +371,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 8760786357339293976
-    SubobjectId: 683529009488426298
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 15403509161953886588
+    SubobjectId: 4684615955493513336
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 6320728461128188628
+  Id: 15890921389052586530
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -668,7 +397,7 @@ Objects {
       Z: 5.68217468
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -710,14 +439,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7651041549864713033
-    SubobjectId: 1928955737464620907
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 15890921389052586530
+    SubobjectId: 5206368237143393062
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }
 Objects {
-  Id: 4610813208069996713
+  Id: 13416743085780203015
   Name: "Rock Block 02"
   Transform {
     Location {
@@ -736,7 +465,7 @@ Objects {
       Z: 7.28233767
     }
   }
-  ParentId: 6218842403973134086
+  ParentId: 2873633589303917705
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -754,7 +483,7 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.7
     }
   }
   Collidable_v2 {
@@ -778,9 +507,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16958202182016356337
-    SubobjectId: 11222778733081506771
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
+    SelfId: 13416743085780203015
+    SubobjectId: 3384033306440277763
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
   }
 }

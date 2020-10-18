@@ -10,9 +10,9 @@
         Name: "Catapult"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.37566304
+            Y: 1.37566304
+            Z: 1.37566304
           }
         }
         ParentId: 4781671109827199097
