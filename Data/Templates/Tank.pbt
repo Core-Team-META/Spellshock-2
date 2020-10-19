@@ -124,7 +124,7 @@
           }
           Overrides {
             Name: "cs:JumpCount"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:MaxHealth"

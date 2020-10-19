@@ -16,6 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 7809573825500659419
         ChildIds: 12633553877787045846
         Lifespan: 1.2
         WantsNetworking: true
@@ -26,6 +27,40 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 7809573825500659419
+        Name: "Heavy Ground Rocky Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14594014689050906518
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 13237751532011680534
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -104,6 +139,15 @@
             AutoPlay: true
           }
         }
+      }
+    }
+    Assets {
+      Id: 13237751532011680534
+      Name: "Heavy Ground Rocky Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_heavy_ground_rocky_impact_01a_Cue_ref"
       }
     }
     Assets {

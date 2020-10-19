@@ -15,12 +15,11 @@ function OnPrimerAbilityExecute(thisAbility)
 end
 
 function OnMainAbilityExecute(thisAbility)
-	print("Disabling")
+	print("Disabling: "..tostring(MainAbility.isEnabled))
 	MainAbility.isEnabled = false
 end
 
 function OnMainAbilityReady(thisAbility)
-	Task.Wait()
 	print("Toggling OFF")
 	MainAbility.isEnabled = false
 	PrimerAbility.isEnabled = true

@@ -134,7 +134,7 @@
           }
           Overrides {
             Name: "bp:Life"
-            Float: 4
+            Float: 2
           }
           Overrides {
             Name: "bp:Density"
