@@ -711,7 +711,7 @@ Objects {
         Id: 901541979513849367
       }
       DistanceBetweenInstances: 5000
-      MaterialChannel: 2
+      MaterialChannel: 3
       SpawnDistance: 38400
       CullDistance {
         Min: 10000
@@ -768,7 +768,7 @@ Objects {
         Id: 13800436588944964225
       }
       DistanceBetweenInstances: 5000
-      MaterialChannel: 2
+      MaterialChannel: 3
       SpawnDistance: 38400
       CullDistance {
         Min: 10000

@@ -2510,6 +2510,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4080200756085571976
+  Name: "Bone Human Pelvis Half 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_pelvis_01_ref"
+  }
+}
+Assets {
   Id: 3948711934400020999
   Name: "Stone Block Long Broken"
   PlatformAssetType: 1
@@ -2678,6 +2687,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_frosted_glass"
+  }
+}
+Assets {
+  Id: 2936973073191675332
+  Name: "Bone Human Skull Pile 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_skull_pile_02_ref"
   }
 }
 Assets {
