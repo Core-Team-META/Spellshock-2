@@ -305,7 +305,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 6500
+        Max: 7800
       }
     }
     Foliage {
@@ -701,7 +701,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 6500
+        Max: 7800
       }
     }
     Foliage {
@@ -1219,7 +1219,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 6500
+        Max: 7800
       }
     }
     Foliage {
@@ -1444,11 +1444,19 @@ Objects {
         }
         Overrides {
           Name: "bp:Fog Density"
-          Float: 3
+          Float: 1.08070362
         }
         Overrides {
           Name: "bp:Falloff"
-          Float: 0.163206235
+          Float: 0.05
+        }
+        Overrides {
+          Name: "bp:Layered Fog Density"
+          Float: 3.72912765
+        }
+        Overrides {
+          Name: "bp:Layered Fog Offset Height"
+          Float: 15.5264587
         }
       }
     }
