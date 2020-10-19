@@ -55,6 +55,8 @@
         }
         ParentId: 6232673024924705328
         ChildIds: 3822421572071530647
+        ChildIds: 13162011552501732878
+        ChildIds: 12927734483610992421
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -163,6 +165,79 @@
         }
       }
       Objects {
+        Id: 13162011552501732878
+        Name: "Nature Rocks Debris Falling Heavy 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6423439104742076654
+        Lifespan: 3
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 358916433543470531
+          }
+          AutoPlay: true
+          Repeat: true
+          Pitch: 600
+          Volume: 1
+          Falloff: 6300
+          Radius: 1050
+          FadeOutTime: 1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 12927734483610992421
+        Name: "Single Rock Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6423439104742076654
+        Lifespan: 3
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5081948203355976238
+          }
+          AutoPlay: true
+          Repeat: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          FadeOutTime: 1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
         Id: 2712909545838817798
         Name: "Damage Trigger"
         Transform {
@@ -204,6 +279,24 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_ice_spikes_line"
+      }
+    }
+    Assets {
+      Id: 358916433543470531
+      Name: "Nature Rocks Debris Falling Heavy 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_nature_rocks_debris_falling_heavy_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     PrimaryAssetId {
