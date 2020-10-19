@@ -16,7 +16,6 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 7430722513666021256
         ChildIds: 2106469873888650692
         WantsNetworking: true
         Collidable_v2 {
@@ -30,54 +29,13 @@
         }
       }
       Objects {
-        Id: 7430722513666021256
-        Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
-        Transform {
-          Location {
-            X: -608.216797
-          }
-          Rotation {
-            Yaw: 135
-          }
-          Scale {
-            X: 2
-            Y: 2
-            Z: 2
-          }
-        }
-        ParentId: 13710811239096943882
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8386322457426737957
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 2106469873888650692
         Name: "ClientContext"
         Transform {
           Location {
-            X: 95.4172363
-            Y: -12.2539063
-            Z: 60.0163574
+            X: 101.597656
+            Y: 37.3320313
+            Z: 60.0166
           }
           Rotation {
           }
@@ -128,7 +86,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -177,7 +143,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -226,7 +200,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -274,7 +256,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -322,7 +312,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -371,7 +369,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13485454785687081648
+              Id: 11298485870920045711
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.920529842
+              A: 1
             }
           }
         }
@@ -394,15 +400,6 @@
             }
           }
         }
-      }
-    }
-    Assets {
-      Id: 8386322457426737957
-      Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_stairs_spiral_wall_001_sm"
       }
     }
     Assets {

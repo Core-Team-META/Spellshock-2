@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 821036326116957773
+        ParentId: 12935185397369316502
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -775,11 +775,11 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Int: 3000
+            Int: 4000
           }
           Overrides {
             Name: "cs:MoveDuration"
-            Float: 1.3
+            Float: 1
           }
           Overrides {
             Name: "cs:LifeSpan"
@@ -1118,7 +1118,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.5
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1126,7 +1126,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1285,7 +1285,7 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Int: 1500
+            Int: 2000
           }
           Overrides {
             Name: "cs:LifeSpan"
@@ -1371,7 +1371,7 @@
       }
       Objects {
         Id: 3579025016395869037
-        Name: "Shift"
+        Name: "Roll"
         Transform {
           Location {
           }
@@ -1405,7 +1405,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           ExecutePhaseSettings {
@@ -1414,7 +1414,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           RecoveryPhaseSettings {
@@ -1425,7 +1425,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           CooldownPhaseSettings {

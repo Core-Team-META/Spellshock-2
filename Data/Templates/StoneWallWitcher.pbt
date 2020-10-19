@@ -35,6 +35,7 @@
         Transform {
           Location {
             X: -608.216797
+            Z: -253.461914
           }
           Rotation {
             Yaw: 135
@@ -93,6 +94,10 @@
         ChildIds: 11139542045060548204
         ChildIds: 1419666337087859661
         ChildIds: 10687953563802784930
+        ChildIds: 10531653274093458084
+        ChildIds: 14726203995364734502
+        ChildIds: 15805635764746464634
+        ChildIds: 13251117096675294545
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -157,17 +162,18 @@
           }
           Overrides {
             Name: "cs:RepeatCount"
-            Int: 0
+            Int: -1
           }
           Overrides {
             Name: "cs:IntervalDelayRange"
             Vector2 {
-              Y: 1
+              X: 6
+              Y: 6
             }
           }
           Overrides {
             Name: "cs:BounceOnRepeat"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "cs:StartEventName"
@@ -856,6 +862,142 @@
           }
         }
       }
+      Objects {
+        Id: 10531653274093458084
+        Name: "Ground Shaking Deep Impact Hit 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2720851433633226448
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 14914271970296004369
+          }
+          AutoPlay: true
+          Pitch: 1600
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 14726203995364734502
+        Name: "Rock Boulder Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2720851433633226448
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7781372639348645855
+          }
+          AutoPlay: true
+          Pitch: -800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 15805635764746464634
+        Name: "Dirt Soil Gravel Toss Throw 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2720851433633226448
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5328464418326360599
+          }
+          AutoPlay: true
+          Pitch: -1600
+          Volume: 1
+          Falloff: 6300
+          Radius: 1050
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 13251117096675294545
+        Name: "Single Rock Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2720851433633226448
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5081948203355976238
+          }
+          AutoPlay: true
+          Pitch: -800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 8386322457426737957
@@ -882,6 +1024,42 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_gun_impact_dirt_sm"
+      }
+    }
+    Assets {
+      Id: 14914271970296004369
+      Name: "Ground Shaking Deep Impact Hit 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_designer_ground_shaking_deep_impact_hit_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 7781372639348645855
+      Name: "Rock Boulder Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_rock_boulder_ground_impact_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 5328464418326360599
+      Name: "Dirt Soil Gravel Toss Throw 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_dirt_soil_gravel_toss_throw_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     PrimaryAssetId {

@@ -9,14 +9,20 @@ local Duration = script:GetCustomProperty("Duration")
 local EventListeners = {}
 
 function OnPrimerAbilityExecute(thisAbility)
-	--print("Toggling ON")
-	thisAbility.isEnabled = false
+	print("Toggling ON")
+	PrimerAbility.isEnabled = false
 	MainAbility.isEnabled = true
 end
 
+function OnMainAbilityExecute(thisAbility)
+	print("Disabling")
+	MainAbility.isEnabled = false
+end
+
 function OnMainAbilityReady(thisAbility)
-	--print("Toggling OFF")
-	thisAbility.isEnabled = false
+	Task.Wait()
+	print("Toggling OFF")
+	MainAbility.isEnabled = false
 	PrimerAbility.isEnabled = true
 end
 
@@ -44,6 +50,7 @@ function OnEquip(equipment, player)
 	end
 
 	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
+	table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
 	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
 end
 
