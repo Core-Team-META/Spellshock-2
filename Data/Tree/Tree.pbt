@@ -25,7 +25,7 @@ Objects {
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
-  ChildIds: 821036326116957773
+  ChildIds: 14162296025304194376
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,10 +38,13 @@ Objects {
   }
 }
 Objects {
-  Id: 821036326116957773
+  Id: 14162296025304194376
   Name: "Witcher"
   Transform {
     Location {
+      X: -23068.9922
+      Y: -31700
+      Z: 6550
     }
     Rotation {
     }
@@ -52,7 +55,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
