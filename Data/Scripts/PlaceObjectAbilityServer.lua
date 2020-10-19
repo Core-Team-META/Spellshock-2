@@ -21,14 +21,14 @@ function OnMainAbilityReady(thisAbility)
 end
 
 function PlaceObject(thisPlayer, position, rotation)
-	-- check if the placement was canceled
-	if position == nil then
-		MainAbility.isEnabled = false
-		PrimerAbility.isEnabled = true
-		return
-	end
-
 	if thisPlayer == Equipment.owner then
+		-- check if the placement was canceled
+		if position == nil then
+			MainAbility.isEnabled = false
+			PrimerAbility.isEnabled = true
+			return
+		end
+	
 		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		newWall.lifeSpan = Duration
 		if newWall:GetCustomProperty("Team") ~= nil then

@@ -10,6 +10,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 function Tick(deltaTime)
 	local PlayerRotation = LOCAL_PLAYER:GetWorldRotation()
 	local PlayerPosition = LOCAL_PLAYER:GetWorldPosition()
+	PlayerPosition.z = PlayerPosition.z + 50
 	
 	local ConeUnitVector = (PlayerRotation * Vector3.FORWARD)
 	local ConeUnitVector = ConeUnitVector / ConeUnitVector.size
