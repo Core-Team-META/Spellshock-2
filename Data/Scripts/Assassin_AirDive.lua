@@ -40,7 +40,7 @@ function OnTargetChosen(player, targetPos)
     local playerPos = player:GetWorldPosition()
     local launchVector = (targetPos - playerPos) * player.mass
     --print(launchVector)
-    
+    player.serverUserData.immuneToFallDamage = true
     player.movementControlMode = MovementControlMode.NONE
     player.maxJumpCount = 0
     player:ResetVelocity()
@@ -54,8 +54,10 @@ function OnTargetChosen(player, targetPos)
             break
         end
     end
+    local reachedMaxTime = false
+    Task.Spawn(function() Task.Wait(1) reachedMaxTime = true end)
 
-    while(player.isGrounded == false and player.isDead == false) do
+    while(player.isGrounded == false and player.isDead == false and reachedMaxTime == false) do
         local players = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
         if(players == player) then break end
         Task.Wait()
@@ -74,7 +76,10 @@ function OnTargetChosen(player, targetPos)
     player.gravityScale = defaultGrav
 
     -- Stun / deal damage / check radius etcs
-    DamageInArea(targetPos, player)
+    DamageInArea(player:GetWorldPosition(), player)
+
+    player.serverUserData.immuneToFallDamage = false
+
 end
 
 function DamageInArea(targetPos, localPlayer)
@@ -101,18 +106,6 @@ function DamageInArea(targetPos, localPlayer)
         COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
         
 
-    end
-end
-
-
-
-function Tick(dt)
-    if(waitingForTarget) then
-        flyingTimer = flyingTimer + dt
-        if(flyingTimer > FLYING_DURATION) then
-            waitingForTarget = false
-            OnTargetChosen(ABILITY.owner, ABILITY.owner:GetWorldPosition() * Vector3.UP * -10000)
-        end
     end
 end
   

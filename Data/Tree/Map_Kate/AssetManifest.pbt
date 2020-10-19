@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17076031360332202797
+  Name: "Terrain - Desert"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_terrain_rock-sand_001_wa"
+  }
+}
+Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
@@ -1124,6 +1133,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11711746794142574135
+  Name: "Diamond - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_diamond_hq_001"
+  }
+}
+Assets {
   Id: 11688883060434924445
   Name: "Lense - Quarter"
   PlatformAssetType: 1
@@ -1256,6 +1274,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10771108408610196052
+  Name: "Chain Tile 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_chain_001"
   }
 }
 Assets {
@@ -1994,6 +2021,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_rope_001"
+  }
+}
+Assets {
+  Id: 6641170506571814994
+  Name: "Pyramid - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_hq_001"
   }
 }
 Assets {

@@ -15,7 +15,7 @@
             Z: 1.37566304
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 1551213308783341965
         ChildIds: 14959081437812059297
         ChildIds: 17476655053811340237
         ChildIds: 5328438734998330084
@@ -3343,7 +3343,7 @@
         }
         ParentId: 11611935791228445355
         ChildIds: 14832740568359622477
-        ChildIds: 7590924843490975743
+        ChildIds: 7762047373641057002
         ChildIds: 10964900541361203976
         ChildIds: 6404527088856393544
         ChildIds: 14136318480151742759
@@ -3384,8 +3384,8 @@
         Transform {
           Location {
             X: 0.409179688
-            Y: 205.45166
-            Z: -195.182129
+            Y: 152.42543
+            Z: -167.163681
           }
           Rotation {
             Pitch: 27.8517
@@ -3393,9 +3393,9 @@
             Roll: 1.25532242e-05
           }
           Scale {
-            X: 6.66741896
-            Y: 11.7089911
-            Z: 4.89629269
+            X: 5.4186964
+            Y: 5.41852617
+            Z: 5.41852617
           }
         }
         ParentId: 15209513526728561712
@@ -3468,35 +3468,110 @@
         }
       }
       Objects {
+        Id: 7762047373641057002
+        Name: "Group"
+        Transform {
+          Location {
+            X: -4.54042387
+            Y: -367.105804
+            Z: 120.75695
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.11525249
+            Y: 1.11525249
+            Z: 1.11525249
+          }
+        }
+        ParentId: 15209513526728561712
+        ChildIds: 3918492846949309070
+        ChildIds: 7590924843490975743
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3918492846949309070
+        Name: "Hemishpere (thin)"
+        Transform {
+          Location {
+            X: 1.11320019
+            Y: 21.0441303
+            Z: 75.5654
+          }
+          Rotation {
+            Pitch: -1.22122192
+            Yaw: -0.625305176
+            Roll: -152.501434
+          }
+          Scale {
+            X: 1.59017503
+            Y: 1.59015965
+            Z: 1.7148273
+          }
+        }
+        ParentId: 7762047373641057002
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3817933812062928360
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7147607578013694397
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 7590924843490975743
         Name: "Cauldron"
         Transform {
           Location {
-            X: 5.54980469
-            Y: -372.428589
-            Z: 98.7049103
+            X: -0.89161545
+            Y: -16.7504082
+            Z: 0.000354942458
           }
           Rotation {
-            Yaw: -4.35775757
-            Roll: 27.3515968
+            Yaw: -4.35775805
+            Roll: 27.3515358
           }
           Scale {
-            X: 1.35127723
-            Y: 1.14082229
-            Z: 1.14082229
+            X: 1.1410054
+            Y: 1.1408149
+            Z: 0.962774217
           }
         }
-        ParentId: 15209513526728561712
+        ParentId: 7762047373641057002
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
-              A: 1
-            }
-          }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
@@ -3515,7 +3590,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 12889861000896994476
             }
           }
         }
@@ -3544,18 +3619,18 @@
         Name: "Large Round Wood Beam 8m"
         Transform {
           Location {
-            X: -1.89941406
-            Y: -264.027344
-            Z: 121.412598
+            X: -1.899652
+            Y: -264.027466
+            Z: 121.412956
           }
           Rotation {
-            Pitch: -61.3068199
+            Pitch: -61.3068237
             Yaw: -89.9999695
             Roll: 89.9998169
           }
           Scale {
-            X: 0.395908296
-            Y: 0.300962567
+            X: 0.340034485
+            Y: 0.300985247
             Z: 0.485132962
           }
         }
@@ -9742,12 +9817,39 @@
       }
     }
     Assets {
+      Id: 7147607578013694397
+      Name: "Hemishpere (thin)"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hemisphere_002"
+      }
+    }
+    Assets {
+      Id: 3817933812062928360
+      Name: "Wood Planks"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_planks_001_uv"
+      }
+    }
+    Assets {
       Id: 17817199863625306170
       Name: "Cauldron"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_prop_fantasy_cauldron_001"
+      }
+    }
+    Assets {
+      Id: 12889861000896994476
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

@@ -3771,45 +3771,6 @@ Objects {
   }
 }
 Objects {
-  Id: 13873208951641510908
-  Name: "BlightWallRight"
-  Transform {
-    Location {
-      X: -450.233887
-      Y: 4489.51318
-      Z: 851.107422
-    }
-    Rotation {
-      Yaw: -47.4889832
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5653658287900364047
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "BlightWallRight"
-  }
-  InstanceHistory {
-    SelfId: 13873208951641510908
-    SubobjectId: 6071083836256647928
-    InstanceId: 9578568188372146332
-    TemplateId: 2418048523852605265
-    WasRoot: true
-  }
-}
-Objects {
   Id: 4125339779025659763
   Name: "BlightGates"
   Transform {
@@ -3839,44 +3800,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "BlightGates"
-  }
-}
-Objects {
-  Id: 16585249245731149473
-  Name: "BlightWall"
-  Transform {
-    Location {
-      X: 3584.67285
-      Y: 1545.31104
-      Z: 905.596191
-    }
-    Rotation {
-      Yaw: -25.1509399
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5653658287900364047
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "BlightWall"
-  }
-  InstanceHistory {
-    SelfId: 14119571086794134933
-    SubobjectId: 12905691303589374391
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-    WasRoot: true
   }
 }

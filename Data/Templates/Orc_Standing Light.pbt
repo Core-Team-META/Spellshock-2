@@ -557,14 +557,14 @@
           Location {
             X: 0.016054064
             Y: -1.47340631
-            Z: 67.7628632
+            Z: 68.8224335
           }
           Rotation {
           }
           Scale {
-            X: 1.62796915
-            Y: 1.62061191
-            Z: 0.191158116
+            X: 1.60789418
+            Y: 1.60062814
+            Z: 3.28309393
           }
         }
         ParentId: 12961582838220771135
@@ -596,7 +596,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 12167237750251133404
+            Id: 9146532306811306174
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -2113,6 +2113,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pipe_eightsided_002"
+      }
+    }
+    Assets {
+      Id: 9146532306811306174
+      Name: "Ring - Beveled Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ring_faceted_002"
       }
     }
     Assets {

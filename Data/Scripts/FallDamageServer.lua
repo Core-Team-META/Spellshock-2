@@ -56,12 +56,16 @@ end
 -- Checks for any players that hit the ground since last frame, applies damage if appropriate, and sends events
 function Tick(deltaTime)
 	for _, player in pairs(Game.GetPlayers()) do
+		if(player.serverUserData.immuneToFallDamage) then return end
+		
 		local fallingSpeed = math.max(0.0, -player:GetVelocity().z)
 		local isGrounded = player.isGrounded
 
 		-- Did this player hit the ground since last frame
 		if not player.isDead and isGrounded and not previousGroundedStates[player] then
 			if previousFallingSpeeds[player] > MAXIMUM_SAFE_SPEED then
+
+				
 				-- How much damage should we deal, from none (0.0) to all (1.0)
 				local t = 1.0
 
@@ -77,7 +81,7 @@ function Tick(deltaTime)
 				if HEAR_OTHER_PLAYERS_DAMAGE_SOUNDS then
 					Events.BroadcastToAllPlayers("FallDamage", player)
 				else
-					print("Oof Ouch")
+					--print("Oof Ouch")
 					
 					Events.BroadcastToPlayer(player, "FallDamage", player)
 				end
