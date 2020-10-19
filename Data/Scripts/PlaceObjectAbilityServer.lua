@@ -14,11 +14,13 @@ function OnPrimerAbilityExecute(thisAbility)
 	MainAbility.isEnabled = true
 end
 
-function OnMainAbilityCooldown(thisAbility)
+function OnMainAbilityExecute(thisAbility)
+	print("Disabling")
 	MainAbility.isEnabled = false
 end
 
 function OnMainAbilityReady(thisAbility)
+	Task.Wait()
 	print("Toggling OFF")
 	MainAbility.isEnabled = false
 	PrimerAbility.isEnabled = true
@@ -48,7 +50,7 @@ function OnEquip(equipment, player)
 	end
 
 	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
-	table.insert(EventListeners, MainAbility.cooldownEvent:Connect( OnMainAbilityCooldown))
+	table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
 	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
 end
 
