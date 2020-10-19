@@ -401,7 +401,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 7508041128758836201
+              Id: 15169274932824598981
             }
           }
           Overrides {
@@ -4549,12 +4549,12 @@
       }
     }
     Assets {
-      Id: 7508041128758836201
-      Name: "Fantasy Ability Blue 053"
+      Id: 15169274932824598981
+      Name: "Fantasy Ability Purple 022"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_053"
+        AssetId: "UI_Fantasy_Ability_Purple_022"
       }
     }
     Assets {

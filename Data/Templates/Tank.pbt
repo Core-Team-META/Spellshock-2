@@ -775,11 +775,11 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Int: 1500
+            Int: 3000
           }
           Overrides {
             Name: "cs:MoveDuration"
-            Float: 2
+            Float: 1.3
           }
           Overrides {
             Name: "cs:LifeSpan"

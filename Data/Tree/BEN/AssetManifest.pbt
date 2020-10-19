@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15169274932824598981
+  Name: "Fantasy Ability Purple 022"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_022"
+  }
+}
+Assets {
   Id: 14263746284030313578
   Name: "Frame Outlined Thick 006"
   PlatformAssetType: 9
@@ -71,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9987944490551258706
+  Name: "Electricity Spark Humming Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_electricity_spark_humming_loop_01_Cue_ref"
+  }
+}
+Assets {
   Id: 8509829824645761235
   Name: "Icon Damage"
   PlatformAssetType: 9
@@ -98,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6271704335464012675
+  Name: "Cone"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_001"
+  }
+}
+Assets {
   Id: 5547947379889405266
   Name: "Fantasy Corners 001"
   PlatformAssetType: 9
@@ -113,6 +140,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 5187162620904886536
+  Name: "Fantasy Ability Blue 038"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_038"
+  }
+}
+Assets {
+  Id: 5172885977700681968
+  Name: "Fantasy Ability Blue 052"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_052"
   }
 }
 Assets {
@@ -140,6 +185,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFI_Icon_041"
+  }
+}
+Assets {
+  Id: 3883077169241788816
+  Name: "Fantasy Ability Teal 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_010"
   }
 }
 Assets {
@@ -188,11 +242,29 @@ Assets {
   }
 }
 Assets {
+  Id: 549876127927703467
+  Name: "Fantasy Ability Red 015"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_015"
+  }
+}
+Assets {
   Id: 459681693286281986
   Name: "Coin"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_icon_Coin"
+  }
+}
+Assets {
+  Id: 446811230504789476
+  Name: "Fantasy Ability Purple 012"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_012"
   }
 }
