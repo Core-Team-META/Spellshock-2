@@ -38,6 +38,18 @@ Objects {
             X: 118.992188
           }
         }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {
@@ -75,6 +87,18 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
           }
         }
       }
