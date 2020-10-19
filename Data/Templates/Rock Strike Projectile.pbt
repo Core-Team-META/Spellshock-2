@@ -75,7 +75,7 @@
           }
           Scale {
             X: 1
-            Y: 2.19999981
+            Y: 4.3
             Z: 1.5
           }
         }
@@ -136,7 +136,7 @@
           }
           Overrides {
             Name: "bp:Density"
-            Float: 2
+            Float: 2.5
           }
           Overrides {
             Name: "bp:Cracks Color"
@@ -167,14 +167,15 @@
         Name: "Damage Trigger"
         Transform {
           Location {
+            X: -70
             Z: -20
           }
           Rotation {
           }
           Scale {
-            X: 1.80000007
-            Y: 3.2
-            Z: 2.39999986
+            X: 2.69999957
+            Y: 4.5
+            Z: 2.4
           }
         }
         ParentId: 6232673024924705328

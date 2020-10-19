@@ -34,7 +34,7 @@ function OnBeginOverlap(thisTrigger, other)
 	
 	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
 	directionVector = -directionVector
-	directionVector.z = 0.6
+	directionVector.z = 0.8
 	local impulseVector = directionVector * IMPULSE_AMOUNT
 	other:AddImpulse(impulseVector)
 end
