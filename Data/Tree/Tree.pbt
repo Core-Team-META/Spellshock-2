@@ -25,8 +25,7 @@ Objects {
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
-  ChildIds: 821036326116957773
-  ChildIds: 2291379196395348792
+  ChildIds: 14162296025304194376
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -39,57 +38,13 @@ Objects {
   }
 }
 Objects {
-  Id: 2291379196395348792
-  Name: "Catapult"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11611935791228445355
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Catapult"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -9247.28906
-            Y: -5445.13574
-            Z: 3408.19507
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 14832740568359622477
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.409179688
-            Y: 152.42543
-            Z: -167.163681
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4539284850511781023
-    }
-  }
-}
-Objects {
-  Id: 821036326116957773
+  Id: 14162296025304194376
   Name: "Witcher"
   Transform {
     Location {
+      X: -23068.9922
+      Y: -31700
+      Z: 6550
     }
     Rotation {
     }
@@ -100,7 +55,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -353,7 +307,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 5000
+        Max: 6500
       }
     }
     Foliage {
@@ -539,7 +493,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 5784961500467902601
+          Id: 15710974556442677409
         }
       }
       LocalPositionOffset {
@@ -667,7 +621,7 @@ Objects {
       }
       ReceivesDecals: true
       GroundSlopeAngle {
-        Max: 45
+        Max: 60
       }
       Scaling {
         Scaling: LockXY
@@ -707,7 +661,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 1500
+      DistanceBetweenInstances: 1000
       SpawnDistance: 24000
       CullDistance {
         Min: 12800
@@ -737,7 +691,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 5784961500467902601
+          Id: 15710974556442677409
         }
       }
       LocalPositionOffset {
@@ -749,7 +703,7 @@ Objects {
       }
       Height {
         Min: -102400
-        Max: 5000
+        Max: 6500
       }
     }
     Foliage {
@@ -952,7 +906,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 5784961500467902601
+          Id: 15710974556442677409
         }
       }
       LocalPositionOffset {
@@ -1119,6 +1073,207 @@ Objects {
         Max: 5000
       }
     }
+    Foliage {
+      Asset {
+        Id: 14293176668765266901
+      }
+      DistanceBetweenInstances: 400
+      MaterialChannel: 1
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 12800
+        Max: 25600
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.2
+          Max: 0.4
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.3
+          Max: 0.3
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 15710974556442677409
+        }
+      }
+      LocalPositionOffset {
+        Z: -21
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 20000
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 6981536508008379085
+      }
+      DistanceBetweenInstances: 300
+      MaterialChannel: 1
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.05
+          Max: 0.1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.07
+          Max: 0.07
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 15710974556442677409
+        }
+      }
+      LocalPositionOffset {
+        Z: -60
+      }
+      LocalRotationOffset {
+        Pitch: 30
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 6981536508008379085
+      }
+      DistanceBetweenInstances: 200
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.05
+          Max: 0.1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.07
+          Max: 0.07
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 15710974556442677409
+        }
+      }
+      LocalPositionOffset {
+        Z: -60
+      }
+      LocalRotationOffset {
+        Pitch: 30
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 6500
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 14293176668765266901
+      }
+      DistanceBetweenInstances: 300
+      MaterialChannel: 1
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 12800
+        Max: 25600
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.4
+          Max: 0.6
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.3
+          Max: 0.3
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 15710974556442677409
+        }
+      }
+      LocalPositionOffset {
+        Z: -21
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 20000
+      }
+    }
   }
 }
 Objects {
@@ -1277,10 +1432,6 @@ Objects {
       key: 9040451368152896180
       value {
         Overrides {
-          Name: "bp:Fog Density"
-          Float: 1
-        }
-        Overrides {
           Name: "bp:Albedo"
           Color {
             R: 1
@@ -1292,6 +1443,14 @@ Objects {
         Overrides {
           Name: "bp:Light Absorption Amount"
           Float: 2
+        }
+        Overrides {
+          Name: "bp:Fog Density"
+          Float: 3
+        }
+        Overrides {
+          Name: "bp:Falloff"
+          Float: 0.163206235
         }
       }
     }

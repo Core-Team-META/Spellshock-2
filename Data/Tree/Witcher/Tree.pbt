@@ -1,8 +1,8 @@
 ﻿Name: "Witcher"
-RootId: 821036326116957773
+RootId: 14162296025304194376
 Objects {
-  Id: 14585456894064172798
-  Name: "OrcTankFullCostume"
+  Id: 8615156845781070155
+  Name: "Orc Assassin Costume"
   Transform {
     Scale {
       X: 1
@@ -10,33 +10,32 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 821036326116957773
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
+  ParentId: 14162296025304194376
   TemplateInstance {
     ParameterOverrideMap {
-      key: 12616095747474882370
+      key: 827510651135112473
       value {
         Overrides {
           Name: "Name"
-          String: "OrcTankFullCostume"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -23617.6602
-            Y: -32315.7207
-            Z: 6503.5835
-          }
+          String: "Orc Assassin Costume"
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 118.992188
           }
         }
         Overrides {
@@ -54,13 +53,13 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 9029571701635250529
+      Id: 15182184640494259521
     }
   }
 }
 Objects {
-  Id: 16575242612118862933
-  Name: "Tank"
+  Id: 13892309671555513298
+  Name: "Orc Healer Costume"
   Transform {
     Scale {
       X: 1
@@ -68,29 +67,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 821036326116957773
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
+  ParentId: 14162296025304194376
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7855160156328725233
+      key: 827510651135112473
       value {
         Overrides {
           Name: "Name"
-          String: "Tank"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -22590.6484
-            Y: -32153.9297
-            Z: 6505.74316
-          }
+          String: "Orc Healer Costume"
         }
         Overrides {
           Name: "Rotation"
@@ -120,7 +104,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 17020530466204675231
+      Id: 2362225133279161332
     }
   }
 }

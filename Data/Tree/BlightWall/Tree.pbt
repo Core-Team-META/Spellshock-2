@@ -2588,7 +2588,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Armor Plates_2"
+    FilePartitionName: "Armor Plates"
   }
   InstanceHistory {
     SelfId: 732851636492634981

@@ -3771,9 +3771,17 @@ Objects {
   }
 }
 Objects {
-  Id: 9578568188372146332
-  Name: "OrcWallRight"
+  Id: 13873208951641510908
+  Name: "BlightWallRight"
   Transform {
+    Location {
+      X: -450.233887
+      Y: 4489.51318
+      Z: 851.107422
+    }
+    Rotation {
+      Yaw: -47.4889832
+    }
     Scale {
       X: 1
       Y: 1
@@ -3789,141 +3797,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 2954539665808008124
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1045.45313
-            Y: 3.16113281
-            Z: -72.7109375
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 90
-            Yaw: 2.53044152
-            Roll: 2.53031945
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.74261713
-            Y: 4.29854727
-            Z: 3.08336568
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6071083836256647928
-      value {
-        Overrides {
-          Name: "Name"
-          String: "BlightWallRight"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -450.233887
-            Y: 4489.51318
-            Z: 851.107422
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -47.4889832
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 7993352197704231058
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -20.371254
-            Y: -52.5518494
-            Z: 729.368164
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -179.999954
-            Roll: 90.0000687
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11939942240044282289
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 741.556641
-            Y: -68.5556641
-            Z: 2219.14185
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -90
-            Yaw: 90
-            Roll: 179.841919
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.18006229
-            Y: 1.19431984
-            Z: 2.10679698
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 14096847872319644421
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1185.88623
-            Y: -10.1915359
-            Z: 2213.41211
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.8745923
-            Y: 4.42947054
-            Z: 11.2845526
-          }
-        }
-        Overrides {
-          Name: "ma:Shared_BaseMaterial:smart"
-          Bool: true
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 2418048523852605265
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "BlightWallRight"
+  }
+  InstanceHistory {
+    SelfId: 13873208951641510908
+    SubobjectId: 6071083836256647928
+    InstanceId: 9578568188372146332
+    TemplateId: 2418048523852605265
+    WasRoot: true
   }
 }
 Objects {

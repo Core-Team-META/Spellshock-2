@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6981536508008379085
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
   Id: 4044214825842439722
   Name: "Grass Short"
   PlatformAssetType: 1
