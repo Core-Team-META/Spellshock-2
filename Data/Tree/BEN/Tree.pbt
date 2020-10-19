@@ -2970,6 +2970,52 @@ Objects {
   }
 }
 Objects {
+  Id: 15189766637386980967
+  Name: "Tank"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7855160156328725233
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Tank"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 8615
+            Y: 9580
+            Z: 3130
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17020530466204675231
+    }
+  }
+}
+Objects {
   Id: 2644148728258825907
   Name: "RespawnPlayerServer"
   Transform {
@@ -15599,7 +15645,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {
