@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 821036326116957773
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -30,7 +30,7 @@
           Overrides {
             Name: "cs:Elf_Costume"
             AssetReference {
-              Id: 9974119495161503475
+              Id: 7801033221654521675
             }
           }
         }

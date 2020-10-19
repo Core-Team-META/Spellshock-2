@@ -84,24 +84,27 @@
           Overrides {
             Name: "bp:Base Color"
             Color {
-              R: 0.419999957
-              G: 0.150198653
+              R: 0.17716001
+              G: 0.206000015
+              B: 0.164800018
               A: 1
             }
           }
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.220000029
-              G: 0.0874172375
+              R: 0.314
+              G: 0.16345793
+              B: 0.0763019919
               A: 1
             }
           }
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 0.210000038
-              G: 0.0542384163
+              R: 0.504
+              G: 0.347633272
+              B: 0.135071978
               A: 1
             }
           }
@@ -109,7 +112,8 @@
             Name: "bp:Ground Frost Color"
             Color {
               R: 0.200000048
-              G: 0.0437086076
+              G: 0.0905960426
+              B: 0.0600000173
               A: 0.8
             }
           }
@@ -117,7 +121,8 @@
             Name: "bp:Vapor Color"
             Color {
               R: 0.149999976
-              G: 0.062582776
+              G: 0.088807933
+              B: 0.0449999943
               A: 0.113725
             }
           }
@@ -132,6 +137,12 @@
           Overrides {
             Name: "bp:Density"
             Float: 2
+          }
+          Overrides {
+            Name: "bp:Cracks Color"
+            Color {
+              A: 1
+            }
           }
         }
         Collidable_v2 {
