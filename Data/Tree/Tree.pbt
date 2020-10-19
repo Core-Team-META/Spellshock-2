@@ -25,6 +25,7 @@ Objects {
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
+  ChildIds: 14162296025304194376
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,6 +35,35 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 14162296025304194376
+  Name: "Witcher"
+  Transform {
+    Location {
+      X: -23068.9922
+      Y: -31700
+      Z: 6550
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Witcher"
   }
 }
 Objects {
