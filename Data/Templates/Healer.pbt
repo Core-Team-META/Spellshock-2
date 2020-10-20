@@ -15,12 +15,24 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 17566732273178486209
         ChildIds: 14081494435077508625
         ChildIds: 4708996743668767698
         ChildIds: 8885717294518384202
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Orc_Costume"
+            AssetReference {
+              Id: 2362225133279161332
+            }
+          }
+          Overrides {
+            Name: "cs:Elf_Costume"
+            AssetReference {
+              Id: 1553787859656583436
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -53,6 +65,7 @@
         ParentId: 1551665899132109167
         ChildIds: 3046495783826538503
         ChildIds: 1655075835825390059
+        ChildIds: 11544957051384721582
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -286,6 +299,48 @@
         }
       }
       Objects {
+        Id: 11544957051384721582
+        Name: "EquipCostumeServer"
+        Transform {
+          Location {
+            X: -9595
+            Y: -10175
+            Z: -3000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:HidePlayer"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8367692547684378330
+          }
+        }
+      }
+      Objects {
         Id: 14081494435077508625
         Name: "ClientContext"
         Transform {
@@ -300,6 +355,7 @@
           }
         }
         ParentId: 1551665899132109167
+        ChildIds: 11847324983615396029
         ChildIds: 3881228644314600608
         ChildIds: 5795171100363106368
         ChildIds: 3717753775970788700
@@ -313,6 +369,44 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 11847324983615396029
+        Name: "EquipCostumeClient"
+        Transform {
+          Location {
+            X: -9595
+            Y: -10175
+            Z: -3000
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15448460343788315077
+          }
         }
       }
       Objects {
@@ -1779,7 +1873,6 @@
         }
         ParentId: 18270922159998676275
         ChildIds: 3721482863954062775
-        ChildIds: 17039805127939886030
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1904,279 +1997,6 @@
         Script {
           ScriptAsset {
             Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 17039805127939886030
-        Name: "Geo"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1
-          }
-        }
-        ParentId: 13141893348608307507
-        ChildIds: 15139442514987901769
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 15139442514987901769
-        Name: "Group"
-        Transform {
-          Location {
-            Z: -72.9711151
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17039805127939886030
-        ChildIds: 16107176768975994956
-        ChildIds: 3329065412266059887
-        ChildIds: 14500628296159159660
-        ChildIds: 7541359856470876174
-        ChildIds: 5346804042607821244
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 16107176768975994956
-        Name: "Plasma Ball Projectile VFX"
-        Transform {
-          Location {
-            Z: 137.396881
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.565931499
-            Y: 0.565931499
-            Z: 0.565931499
-          }
-        }
-        ParentId: 15139442514987901769
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.127549693
-              B: 0.179999948
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 14993209367206018702
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 3329065412266059887
-        Name: "Fantasy Staff Grip 01"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.25
-            Y: 1.25
-            Z: 1.32189977
-          }
-        }
-        ParentId: 15139442514987901769
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.619791687
-              G: 0.412418127
-              B: 0.362758517
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 35
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 55
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6722267691116138132
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14500628296159159660
-        Name: "Fantasy Pommel 05"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
-          }
-        }
-        ParentId: 15139442514987901769
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10542250655788089163
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7541359856470876174
-        Name: "Fantasy Staff Guard 02"
-        Transform {
-          Location {
-            Z: 104.253876
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15139442514987901769
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5574279695839094619
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5346804042607821244
-        Name: "Fantasy Staff Head 02"
-        Transform {
-          Location {
-            Z: 110.253876
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 1.5
-          }
-        }
-        ParentId: 15139442514987901769
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.261986911
-              B: 0.460000038
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9922580225629130299
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
           }
         }
       }
@@ -2703,60 +2523,6 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Purple_033"
-      }
-    }
-    Assets {
-      Id: 14993209367206018702
-      Name: "Plasma Ball Projectile VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_plasmaball_projectile"
-      }
-    }
-    Assets {
-      Id: 6722267691116138132
-      Name: "Fantasy Staff Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_staff_001"
-      }
-    }
-    Assets {
-      Id: 6693051322045641436
-      Name: "Rope"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_rope_001"
-      }
-    }
-    Assets {
-      Id: 10542250655788089163
-      Name: "Fantasy Pommel 05"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_005"
-      }
-    }
-    Assets {
-      Id: 5574279695839094619
-      Name: "Fantasy Staff Guard 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_guard_staff_002"
-      }
-    }
-    Assets {
-      Id: 9922580225629130299
-      Name: "Fantasy Staff Head 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_head_staff_002"
       }
     }
     Assets {

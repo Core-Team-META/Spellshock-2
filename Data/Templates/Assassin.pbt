@@ -21,6 +21,18 @@
         ChildIds: 15969373231472315619
         ChildIds: 2814372295396067417
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Orc_Costume"
+            AssetReference {
+              Id: 15182184640494259521
+            }
+          }
+          Overrides {
+            Name: "cs:Elf_Costume"
+            AssetReference {
+              Id: 15182184640494259521
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -53,6 +65,7 @@
         ParentId: 4569115510025570718
         ChildIds: 7926632237305793917
         ChildIds: 15581592299774707229
+        ChildIds: 5124582396827107511
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -286,6 +299,48 @@
         }
       }
       Objects {
+        Id: 5124582396827107511
+        Name: "EquipCostumeServer"
+        Transform {
+          Location {
+            X: -1570
+            Y: -580
+            Z: 40
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3557475336528325194
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:HidePlayer"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8367692547684378330
+          }
+        }
+      }
+      Objects {
         Id: 12390733973333184270
         Name: "ClientContext"
         Transform {
@@ -300,6 +355,7 @@
           }
         }
         ParentId: 4569115510025570718
+        ChildIds: 3657339729496937378
         ChildIds: 7522061224197707128
         ChildIds: 12562863691850379453
         ChildIds: 43585359367409744
@@ -313,6 +369,44 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 3657339729496937378
+        Name: "EquipCostumeClient"
+        Transform {
+          Location {
+            X: -1570
+            Y: -580
+            Z: 40
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ParentEquipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15448460343788315077
+          }
         }
       }
       Objects {
