@@ -16,9 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 14409500207644942432
         ChildIds: 7809573825500659419
         ChildIds: 12633553877787045846
-        Lifespan: 1.2
+        Lifespan: 1.4
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -27,6 +28,53 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 14409500207644942432
+        Name: "Epic Explosion Sub Bass Designer Sweetener Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14594014689050906518
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_explosions_sw_sub_standalone:17"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 13483340026631542943
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: 300
+            Volume: 1
+            Falloff: 3600
+            Radius: 400
+            EnableOcclusion: true
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
       Objects {
@@ -55,7 +103,8 @@
             Id: 13237751532011680534
           }
           AutoPlay: true
-          Volume: 1
+          Pitch: -200
+          Volume: 1.5
           Falloff: -1
           Radius: -1
           EnableOcclusion: true
@@ -68,13 +117,13 @@
         Name: "Cast Burst Ring VFX"
         Transform {
           Location {
-            X: 200
+            X: 400
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
+            X: 1.5
+            Y: 1.5
             Z: 1
           }
         }
@@ -83,16 +132,18 @@
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 0.320000052
-              G: 0.069933787
+              R: 0.692000031
+              G: 0.279549599
+              B: 0.0692000166
               A: 1
             }
           }
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.659000039
-              G: 0.144019842
+              R: 1
+              G: 0.40397352
+              B: 0.100000024
               A: 1
             }
           }
@@ -112,11 +163,11 @@
           }
           Overrides {
             Name: "bp:Life Min"
-            Float: 0.851379573
+            Float: 1
           }
           Overrides {
             Name: "bp:Life Max"
-            Float: 1.13666952
+            Float: 1.5
           }
           Overrides {
             Name: "bp:V Tiles"
@@ -139,6 +190,15 @@
             AutoPlay: true
           }
         }
+      }
+    }
+    Assets {
+      Id: 13483340026631542943
+      Name: "Epic Explosion Sub Bass Designer Sweetener Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_explosion_sub_bass_impact_designer_sweetener_set_01_ref"
       }
     }
     Assets {
