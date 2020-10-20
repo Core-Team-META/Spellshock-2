@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 11318441308667137252
-  Name: "ExcavatePickup"
+  Id: 13459923181472021410
+  Name: "Boulder Break FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 7399763170539373942
+      RootId: 14906872731711980010
       Objects {
-        Id: 7399763170539373942
-        Name: "ExcavatePickup"
+        Id: 14906872731711980010
+        Name: "Boulder Break FX"
         Transform {
           Scale {
             X: 1
@@ -16,9 +16,9 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 17972889907043631369
-        ChildIds: 15972998548284205286
-        ChildIds: 8074818658758239883
+        ChildIds: 11206038007579275473
+        ChildIds: 1957655719083352279
+        Lifespan: 1.3
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -30,7 +30,7 @@
         }
       }
       Objects {
-        Id: 17972889907043631369
+        Id: 11206038007579275473
         Name: "Gun Impact Small VFX"
         Transform {
           Location {
@@ -38,16 +38,20 @@
           Rotation {
           }
           Scale {
-            X: 2.89999986
-            Y: 2.89999986
-            Z: 2.89999986
+            X: 7.8999958
+            Y: 7.8999958
+            Z: 7.8999958
           }
         }
-        ParentId: 7399763170539373942
+        ParentId: 14906872731711980010
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Gravity"
-            Float: -9
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Dust"
+            Bool: true
           }
         }
         Collidable_v2 {
@@ -68,11 +72,10 @@
         }
       }
       Objects {
-        Id: 15972998548284205286
-        Name: "Rock 03"
+        Id: 1957655719083352279
+        Name: "Single Rock Ground Impact 01 SFX"
         Transform {
           Location {
-            Z: 119.584961
           }
           Rotation {
           }
@@ -82,45 +85,7 @@
             Z: 1
           }
         }
-        ParentId: 7399763170539373942
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6981536508008379085
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8074818658758239883
-        Name: "Heavy Ground Rocky Impact 01 SFX"
-        Transform {
-          Location {
-            X: 160
-            Z: 255
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7399763170539373942
+        ParentId: 14906872731711980010
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -129,7 +94,7 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 13237751532011680534
+            Id: 5081948203355976238
           }
           AutoPlay: true
           Volume: 1
@@ -151,21 +116,12 @@
       }
     }
     Assets {
-      Id: 6981536508008379085
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 13237751532011680534
-      Name: "Heavy Ground Rocky Impact 01 SFX"
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_heavy_ground_rocky_impact_01a_Cue_ref"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     PrimaryAssetId {

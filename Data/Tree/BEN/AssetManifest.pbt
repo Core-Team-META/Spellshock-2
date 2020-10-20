@@ -8,15 +8,6 @@
   }
 }
 Assets {
-  Id: 17370828256945431127
-  Name: "Fantasy Ability Yellow 026"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_026"
-  }
-}
-Assets {
   Id: 16327934883181731081
   Name: "Icon Food"
   PlatformAssetType: 9
@@ -80,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10965229460380713944
-  Name: "Fantasy Club 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Club_008"
-  }
-}
-Assets {
   Id: 10769838940944209875
   Name: "Score Tick Tally Single 01 SFX"
   PlatformAssetType: 7
@@ -107,30 +89,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8543810822213371756
-  Name: "Fantasy Ability Blue 017"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_017"
-  }
-}
-Assets {
   Id: 8509829824645761235
   Name: "Icon Damage"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Damage"
-  }
-}
-Assets {
-  Id: 8277485499354448455
-  Name: "Fantasy Ability Yellow 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_005"
   }
 }
 Assets {
@@ -161,39 +125,12 @@ Assets {
   }
 }
 Assets {
-  Id: 5808222625397640473
-  Name: "Fantasy Ability Yellow 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_004"
-  }
-}
-Assets {
-  Id: 5669285538739143439
-  Name: "Fantasy Ability Blue 022"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_022"
-  }
-}
-Assets {
   Id: 5547947379889405266
   Name: "Fantasy Corners 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_001"
-  }
-}
-Assets {
-  Id: 5434412692211921473
-  Name: "Fantasy Shield 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Shield_004"
   }
 }
 Assets {
@@ -302,15 +239,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Close"
-  }
-}
-Assets {
-  Id: 1031800327856440791
-  Name: "Fantasy Hammer 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Hammer_005"
   }
 }
 Assets {
