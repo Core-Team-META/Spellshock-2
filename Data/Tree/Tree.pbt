@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 1967900192041222895
+  ChildIds: 755867795888381768
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 3914344002842474517
@@ -1557,9 +1557,11 @@ Objects {
   }
 }
 Objects {
-  Id: 1967900192041222895
+  Id: 755867795888381768
   Name: "Third Person Camera Settings"
   Transform {
+    Location {
+    }
     Scale {
       X: 1
       Y: 1
@@ -1567,59 +1569,216 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6230487291917958532
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Third Person Camera Settings"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
+  ChildIds: 18224688022444578463
+  ChildIds: 14717897013436287132
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 755867795888381768
+    SubobjectId: 6230487291917958532
+    InstanceId: 1967900192041222895
+    TemplateId: 425347663873707340
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 14717897013436287132
+  Name: "Client Context"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 755867795888381768
+  ChildIds: 17856428405439583264
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 14717897013436287132
+    SubobjectId: 10397188341633673808
+    InstanceId: 1967900192041222895
+    TemplateId: 425347663873707340
+  }
+}
+Objects {
+  Id: 17856428405439583264
+  Name: "Third Person Camera"
+  Transform {
+    Location {
+      Z: 500
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14717897013436287132
+  ChildIds: 15136490717982017326
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    AttachToLocalPlayer: true
+    InitialDistance: 600
+    IsDistanceAdjustable: true
+    MinDistance: 400
+    MaxDistance: 800
+    PositionOffset {
+      Z: 130
+    }
+    RotationOffset {
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:lookangle"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    DoesPositionOffsetSpring: true
+  }
+  InstanceHistory {
+    SelfId: 17856428405439583264
+    SubobjectId: 12377164915522451180
+    InstanceId: 1967900192041222895
+    TemplateId: 425347663873707340
+  }
+}
+Objects {
+  Id: 15136490717982017326
+  Name: "CameraShake"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17856428405439583264
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6142737434011546352
+    }
+  }
+}
+Objects {
+  Id: 18224688022444578463
+  Name: "Third Person Player Settings"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 755867795888381768
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Settings {
+    IsDefault: true
+    PlayerMovementSettings {
+      WalkSpeed: 640
+      MaxAcceleration: 1800
+      WalkableFloorAngle: 44
+      JumpMaxCount: 1
+      JumpVelocity: 900
+      GroundFriction: 8
+      GravityScale: 1.9
+      MaxSwimSpeed: 420
+      Buoyancy: 1
+      TouchForceFactor: 1
+      BrakingDecelerationFlying: 600
+      MaxFlightSpeed: 600
+      MovementControlMode {
+        Value: "mc:emovementcontrolmode:lookrelative"
       }
-    }
-    ParameterOverrideMap {
-      key: 11592647923584693331
-      value {
-        Overrides {
-          Name: "DismountWhenDamaged"
-          Bool: false
-        }
+      LookControlMode {
+        Value: "mc:elookcontrolmode:relative"
       }
-    }
-    ParameterOverrideMap {
-      key: 12377164915522451180
-      value {
-        Overrides {
-          Name: "CameraInitialDistance"
-          Float: 600
-        }
-        Overrides {
-          Name: "CameraIsDistanceAdjustable"
-          Bool: true
-        }
-        Overrides {
-          Name: "CameraMinimumDistance"
-          Float: 400
-        }
-        Overrides {
-          Name: "CameraMaximumDistance"
-          Float: 800
-        }
-        Overrides {
-          Name: "CameraPositionOffset"
-          Vector {
-            Z: 130
-          }
-        }
+      FacingMode {
+        Value: "mc:efacingmode:faceaimwhenactive"
       }
+      DefaultRotationRate: 540
+      SlideRotationRate: 20
+      LookAtCursorProjectionPlane {
+        Value: "mc:eprojectionplane:xy"
+      }
+      MountedMaxAcceleration: 1800
+      MountedWalkSpeed: 960
+      MountedJumpMaxCount: 1
+      MountedJumpVelocity: 900
+      HeadVisibleToSelf: true
+      IsSlideEnabled: true
+      IsCrouchEnabled: true
+      IsJumpEnabled: true
+      CanMoveForward: true
+      CanMoveBackward: true
+      CanMoveLeft: true
+      CanMoveRight: true
+      AbilityAimMode {
+        Value: "mc:eabilityaimmode:viewrelative"
+      }
+      AppearanceChannelingTime: 2
+      MountChannelingTime: 2
+      FlipOnMultiJump: true
     }
-    TemplateAsset {
-      Id: 425347663873707340
-    }
+  }
+  InstanceHistory {
+    SelfId: 18224688022444578463
+    SubobjectId: 11592647923584693331
+    InstanceId: 1967900192041222895
+    TemplateId: 425347663873707340
   }
 }
