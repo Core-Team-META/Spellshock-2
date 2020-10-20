@@ -825,7 +825,7 @@ Objects {
       Asset {
         Id: 15128280182623405640
       }
-      DistanceBetweenInstances: 400
+      DistanceBetweenInstances: 600
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
