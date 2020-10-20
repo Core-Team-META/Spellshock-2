@@ -266,6 +266,7 @@ Objects {
       }
       DistanceBetweenInstances: 2500
       SpawnDistance: 28800
+      EnableCollision: true
       CullDistance {
         Min: 10000
         Max: 20000
