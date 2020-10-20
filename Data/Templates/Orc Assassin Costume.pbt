@@ -5984,7 +5984,7 @@
       }
       Objects {
         Id: 4623060174469015620
-        Name: "right_prop"
+        Name: "left_prop"
         Transform {
           Location {
             X: 1.93774414
