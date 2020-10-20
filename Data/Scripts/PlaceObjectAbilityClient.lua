@@ -31,8 +31,16 @@ function OnBindingPressed(player, binding)
 	end
 end
 
+function OnPrimerAbilityCast(thisAbility)
+	print("here")
+	if MainAbility.isEnabled or not thisAbility.isEnabled then
+		thisAbility:Interrupt()	
+	end
+end
+
 function OnPrimerAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER then
+		print("HALOGRAM")
 		objectHalogram = World.SpawnAsset(ObjectTemplate)
 		BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect( OnBindingPressed )
 	end
@@ -105,6 +113,7 @@ function Tick()
 end
 
 MainAbility.executeEvent:Connect( OnMainAbilityExecute )
+PrimerAbility.castEvent:Connect( OnPrimerAbilityCast )
 PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute )
 
 

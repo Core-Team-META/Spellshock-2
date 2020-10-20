@@ -7,20 +7,30 @@ local EventName = script:GetCustomProperty("EventName")
 local Duration = script:GetCustomProperty("Duration")
 
 local EventListeners = {}
+PrimerEnabled = true
+MainEnabled = false
 
 function OnPrimerAbilityExecute(thisAbility)
-	print("Toggling ON")
+	--print("Toggling ON")
 	PrimerAbility.isEnabled = false
 	MainAbility.isEnabled = true
 end
 
+function OnMainAbilityCast(thisAbility)
+	--print("CASTING: "..tostring(MainAbility.isEnabled))
+	if not MainAbility.isEnabled then
+		print("INTERRUPTING")
+		MainAbility:Interrupt()
+	end
+end
+
 function OnMainAbilityExecute(thisAbility)
-	print("Disabling: "..tostring(MainAbility.isEnabled))
+	--print("Disabling")
 	MainAbility.isEnabled = false
 end
 
 function OnMainAbilityReady(thisAbility)
-	print("Toggling OFF")
+	--print("Toggling OFF")
 	MainAbility.isEnabled = false
 	PrimerAbility.isEnabled = true
 end
@@ -49,6 +59,7 @@ function OnEquip(equipment, player)
 	end
 
 	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
+	table.insert(EventListeners, MainAbility.castEvent:Connect(OnMainAbilityCast))
 	table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
 	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
 end
