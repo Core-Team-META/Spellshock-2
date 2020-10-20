@@ -1226,7 +1226,7 @@
           }
           Animation: "unarmed_throw"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_19"
+            Value: "mc:egameaction:extraaction_10"
           }
         }
       }
@@ -2811,7 +2811,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 1
+            Duration: 1.3
             CanMove: true
             IsTargetDataUpdated: true
             Facing_V2 {
