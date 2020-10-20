@@ -76,7 +76,7 @@
           }
           Overrides {
             Name: "cs:Timer"
-            Float: 1.3
+            Float: 1.2
           }
         }
         Collidable_v2 {
