@@ -17,7 +17,7 @@ Objects {
   ChildIds: 1967900192041222895
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
-  ChildIds: 3914344002842474517
+  ChildIds: 7854617941785706132
   ChildIds: 728687643111351772
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
@@ -1348,13 +1348,9 @@ Objects {
   }
 }
 Objects {
-  Id: 3914344002842474517
-  Name: "Environment_v2"
+  Id: 7854617941785706132
+  Name: "Environment_v3"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -1364,139 +1360,16 @@ Objects {
   ParentId: 4781671109827199097
   TemplateInstance {
     ParameterOverrideMap {
-      key: 664476208461261656
-      value {
-        Overrides {
-          Name: "bp:Fade Out Distance"
-          Float: 10000
-        }
-        Overrides {
-          Name: "bp:Fade Out Radius"
-          Float: 4500
-        }
-        Overrides {
-          Name: "bp:Quality"
-          Float: 76
-        }
-        Overrides {
-          Name: "bp:Power"
-          Float: 1
-        }
-        Overrides {
-          Name: "bp:Radius"
-          Float: 350
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3040292673401796244
-      value {
-        Overrides {
-          Name: "bp:Light Color"
-          Color {
-            R: 0.953125
-            G: 0.706559122
-            B: 0.580810547
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -55.7193
-            Yaw: 169.320099
-            Roll: 4.45716524
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 7534285852893654563
-      value {
-        Overrides {
-          Name: "bp:Blend Amount"
-          Float: 0.358973712
-        }
-        Overrides {
-          Name: "bp:Intensity"
-          Float: 0.5
-        }
-        Overrides {
-          Name: "bp:Ambient Image"
-          Enum {
-            Value: "mc:eambientcubemapssmall:17"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9040451368152896180
-      value {
-        Overrides {
-          Name: "bp:Albedo"
-          Color {
-            R: 1
-            G: 0.905562937
-            B: 0.69
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Light Absorption Amount"
-          Float: 2
-        }
-        Overrides {
-          Name: "bp:Fog Density"
-          Float: 1.08070362
-        }
-        Overrides {
-          Name: "bp:Falloff"
-          Float: 0.05
-        }
-        Overrides {
-          Name: "bp:Layered Fog Density"
-          Float: 3.72912765
-        }
-        Overrides {
-          Name: "bp:Layered Fog Offset Height"
-          Float: 15.5264587
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11667531286984335862
-      value {
-        Overrides {
-          Name: "bp:Shadow Max"
-          Float: 0.04
-        }
-        Overrides {
-          Name: "bp:Scene Tint"
-          Color {
-            R: 0.996514797
-            G: 1.06434321
-            B: 1.2
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12972791516930567956
+      key: 10284309483680957982
       value {
         Overrides {
           Name: "Name"
-          String: "Environment_v2"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
+          String: "Environment_v3"
         }
       }
     }
     TemplateAsset {
-      Id: 7681445003745404991
+      Id: 15600583839331343652
     }
   }
 }

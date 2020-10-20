@@ -1916,15 +1916,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7581977289155741997
-  Name: "Terrain - Grass"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_terrain_rock-grass-001_wa"
-  }
-}
-Assets {
   Id: 7576601744876530806
   Name: "Scifi Panel 1x3m Angled Right"
   PlatformAssetType: 1
