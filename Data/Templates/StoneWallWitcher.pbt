@@ -261,9 +261,9 @@
           Rotation {
           }
           Scale {
-            X: 0.75
-            Y: 0.75
-            Z: 0.75
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 11406876658059551942
@@ -413,9 +413,9 @@
           Rotation {
           }
           Scale {
-            X: 0.75
-            Y: 0.75
-            Z: 0.75
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 11406876658059551942
@@ -565,9 +565,9 @@
           Rotation {
           }
           Scale {
-            X: 0.75
-            Y: 0.75
-            Z: 0.75
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 11406876658059551942
@@ -651,17 +651,17 @@
           Location {
             X: 13.838623
             Y: 527.620605
-            Z: -33.6276855
+            Z: -1.46110034
           }
           Rotation {
             Pitch: -6.50338745
-            Yaw: 39.3478966
-            Roll: 8.7833643
+            Yaw: 39.3478699
+            Roll: 8.78338814
           }
           Scale {
-            X: 0.551835895
-            Y: 0.902666569
-            Z: 1.84041286
+            X: 0.611593306
+            Y: 1.00041533
+            Z: 2.03970814
           }
         }
         ParentId: 4696256280386177950
@@ -1175,7 +1175,7 @@
       Name: "StoneWallMovement"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local RockWall = script:GetCustomProperty(\"RockWall\"):WaitForObject()\r\nlocal Center = script:GetCustomProperty(\"Center\"):WaitForObject()\r\nlocal Mid = script:GetCustomProperty(\"Mid\"):WaitForObject()\r\nlocal Outer = script:GetCustomProperty(\"Outer\"):WaitForObject()\r\nlocal GravelSFX = script:GetCustomProperty(\"GravelSFX\"):WaitForObject()\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\n \r\nlocal task = Task.Spawn(function()\r\n    Task.Wait(0) --play when the ability is spawned\r\n    Ease3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Center, Vector3.New(95, 12, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Mid, Vector3.New(10, 1, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Outer, Vector3.New(-105, -9, 0), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Task.Wait(6) --play 1 sec before the ability is destroyed\r\n    GravelSFX:Play()\r\n    Ease3D.EasePosition(RockWall, Vector3.New(0, 0, -500), 1, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EasePosition(Center, Vector3.New(95, 12, -25), 1, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Mid, Vector3.New(10, 1, -50), 1, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Outer, Vector3.New(-105, -9, -75), 1, Ease3D.EasingEquation.QUINTIC, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Center, Vector3.New(.75), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EaseScale(Mid, Vector3.New(.75), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EaseScale(Outer, Vector3.New(.75), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Task.Wait(3)\r\n    end)\r\ntask.repeatCount = -1\r\ntask.repeatInterval = -1"
+        Text: "local RockWall = script:GetCustomProperty(\"RockWall\"):WaitForObject()\r\nlocal Center = script:GetCustomProperty(\"Center\"):WaitForObject()\r\nlocal Mid = script:GetCustomProperty(\"Mid\"):WaitForObject()\r\nlocal Outer = script:GetCustomProperty(\"Outer\"):WaitForObject()\r\nlocal GravelSFX = script:GetCustomProperty(\"GravelSFX\"):WaitForObject()\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\n \r\nlocal task = Task.Spawn(function()\r\n    Task.Wait(0) --play when the ability is spawned\r\n    Ease3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Center, Vector3.New(95, 12, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Mid, Vector3.New(10, 1, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Outer, Vector3.New(-105, -9, 0), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n    Task.Wait(6) --play 1 sec before the ability is destroyed\r\n    GravelSFX:Play()\r\n    Ease3D.EasePosition(RockWall, Vector3.New(0, 0, -500), 1, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EasePosition(Center, Vector3.New(95, 12, -25), 1, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Mid, Vector3.New(10, 1, -50), 1, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EasePosition(Outer, Vector3.New(-105, -9, -75), 1, Ease3D.EasingEquation.QUINTIC, Ease3D.EasingDirection.OUT)\r\n    Ease3D.EaseScale(Center, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EaseScale(Mid, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Ease3D.EaseScale(Outer, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n    Task.Wait(3)\r\n    end)\r\ntask.repeatCount = -1\r\ntask.repeatInterval = -1"
       }
     }
     Assets {
