@@ -3080,15 +3080,15 @@
         Name: "Trigger"
         Transform {
           Location {
-            X: 74.0507813
+            X: 125
             Z: 100
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1.30000007
-            Z: 1.80000007
+            X: 1.6
+            Y: 4.3
+            Z: 3.3
           }
         }
         ParentId: 14809710803316002615
