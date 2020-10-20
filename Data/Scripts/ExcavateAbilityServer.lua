@@ -16,6 +16,12 @@ local PickupObject = nil
 local CurrentProjectile = nil
 local Timer = 0
 
+function OnPickupCast(thisAbility)
+	if not thisAbility.owner.isGrounded then
+		thisAbility:Interrupt()
+	end
+end
+
 function OnPickupExecute(thisAbility)
 	PickupObject = World.SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
@@ -73,6 +79,7 @@ function Tick(dTime)
 	end
 end
 
+PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
