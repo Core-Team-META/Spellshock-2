@@ -39,6 +39,12 @@ function OnBeginOverlap(thisTrigger, other)
 	other:AddImpulse(impulseVector)
 end
 
+function OnAbilityCast(thisAbility)
+	if not thisAbility.owner.isGrounded then
+		thisAbility:Interrupt()
+	end
+end
+
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 	
@@ -84,4 +90,5 @@ function Tick(deltaTime)
 	end
 end
 
+ABILITY.castEvent:Connect( OnAbilityCast )
 ABILITY.executeEvent:Connect( OnAbilityExecute )

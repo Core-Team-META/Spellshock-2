@@ -2998,8 +2998,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 8635
-            Y: 9430
+            X: 7265
+            Y: 9240
             Z: 3130
           }
         }
@@ -15645,7 +15645,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

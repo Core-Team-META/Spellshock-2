@@ -17,6 +17,7 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 7430722513666021256
+        ChildIds: 15469572666479234443
         ChildIds: 2720851433633226448
         WantsNetworking: true
         Collidable_v2 {
@@ -34,16 +35,61 @@
         Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
         Transform {
           Location {
-            X: -608.216797
+            X: -664.555359
             Z: -253.461914
           }
           Rotation {
+            Pitch: 1.99999535
             Yaw: 135
+            Roll: -2
           }
           Scale {
             X: 2
             Y: 2
-            Z: 2
+            Z: 2.32886147
+          }
+        }
+        ParentId: 13710811239096943882
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8386322457426737957
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15469572666479234443
+        Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
+        Transform {
+          Location {
+            X: -662.257629
+            Z: -253.461914
+          }
+          Rotation {
+            Pitch: 1.99999535
+            Yaw: 135
+            Roll: -2
+          }
+          Scale {
+            X: 2.2
+            Y: 2.2
+            Z: 2.32886147
           }
         }
         ParentId: 13710811239096943882
@@ -88,13 +134,13 @@
           }
         }
         ParentId: 13710811239096943882
-        ChildIds: 16998095232032329030
+        ChildIds: 3296973046739858113
         ChildIds: 11406876658059551942
         ChildIds: 9883689104738568985
         ChildIds: 11139542045060548204
         ChildIds: 1419666337087859661
         ChildIds: 10687953563802784930
-        ChildIds: 10531653274093458084
+        ChildIds: 17741601769599339807
         ChildIds: 14726203995364734502
         ChildIds: 15805635764746464634
         ChildIds: 13251117096675294545
@@ -109,13 +155,10 @@
         }
       }
       Objects {
-        Id: 16998095232032329030
-        Name: "Object Mover"
+        Id: 3296973046739858113
+        Name: "StoneWallMovement"
         Transform {
           Location {
-            X: -7872.32813
-            Y: -8949.66211
-            Z: -3098.42871
           }
           Rotation {
           }
@@ -128,148 +171,44 @@
         ParentId: 2720851433633226448
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
+            Name: "cs:Ease3D"
+            AssetReference {
+              Id: 16050147283496351669
+            }
+          }
+          Overrides {
+            Name: "cs:RockWall"
             ObjectReference {
               SubObjectId: 11406876658059551942
             }
           }
           Overrides {
-            Name: "cs:MoveTo"
-            Vector {
-              Z: -500
+            Name: "cs:Center"
+            ObjectReference {
+              SubObjectId: 4827425980728611759
             }
           }
           Overrides {
-            Name: "cs:LocalSpace"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Reverse"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:AutoStart"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:StartDelayRange"
-            Vector2 {
+            Name: "cs:Mid"
+            ObjectReference {
+              SubObjectId: 5668841228816495267
             }
           }
           Overrides {
-            Name: "cs:RepeatCount"
-            Int: -1
-          }
-          Overrides {
-            Name: "cs:IntervalDelayRange"
-            Vector2 {
-              X: 6
-              Y: 6
+            Name: "cs:Outer"
+            ObjectReference {
+              SubObjectId: 4696256280386177950
             }
           }
           Overrides {
-            Name: "cs:BounceOnRepeat"
-            Bool: true
+            Name: "cs:GravelSFX"
+            ObjectReference {
+              SubObjectId: 15805635764746464634
+            }
           }
           Overrides {
-            Name: "cs:StartEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:StopEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:ResetEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:OnStartedEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:OnStoppedEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:OnResetEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:OnCompletedEventName"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:Duration:tooltip"
-            String: "Time in seconds for the object to perform the action."
-          }
-          Overrides {
-            Name: "cs:StartDelayRange:tooltip"
-            String: "Random delay range for the object to take action at the start of the game."
-          }
-          Overrides {
-            Name: "cs:LocalSpace:tooltip"
-            String: "Whether MoveTo is in local space"
-          }
-          Overrides {
-            Name: "cs:Reverse:tooltip"
-            String: "If true, the object will start from MoveTo position and move towards the initial position."
-          }
-          Overrides {
-            Name: "cs:MoveTo:tooltip"
-            String: "Target location for the object to move."
-          }
-          Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Object to transform"
-          }
-          Overrides {
-            Name: "cs:AutoStart:tooltip"
-            String: "If true, the specified object will start the action automatically."
-          }
-          Overrides {
-            Name: "cs:RepeatCount:tooltip"
-            String: "Number of times the object is moved. If set to -1, the action will keep repeating indefinitely."
-          }
-          Overrides {
-            Name: "cs:BounceOnRepeat:tooltip"
-            String: "Whether to reverse alternating repeats, so that the object transforms smoothly."
-          }
-          Overrides {
-            Name: "cs:StartEventName:tooltip"
-            String: "Specify the event that will trigger this action to start"
-          }
-          Overrides {
-            Name: "cs:StopEventName:tooltip"
-            String: "Specify the event that will trigger this action to stop"
-          }
-          Overrides {
-            Name: "cs:ResetEventName:tooltip"
-            String: "This event will trigger this action to reset"
-          }
-          Overrides {
-            Name: "cs:OnStartedEventName:tooltip"
-            String: "Event that will be broadcasted when the action starts"
-          }
-          Overrides {
-            Name: "cs:OnStoppedEventName:tooltip"
-            String: "Event that will be broadcasted when the action stops"
-          }
-          Overrides {
-            Name: "cs:OnResetEventName:tooltip"
-            String: "Event that will be broadcasted when the action is reset"
-          }
-          Overrides {
-            Name: "cs:OnCompletedEventName:tooltip"
-            String: "Event that will be broadcasted when the action is completed"
-          }
-          Overrides {
-            Name: "cs:IntervalDelayRange:tooltip"
-            String: "Random delay time between each action repeat."
+            Name: "cs:Timer"
+            Float: 6
           }
         }
         Collidable_v2 {
@@ -280,7 +219,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 6126478455621128065
+            Id: 2030853132610666942
           }
         }
       }
@@ -290,6 +229,7 @@
         Transform {
           Location {
             X: -0.00048828125
+            Z: -500
           }
           Rotation {
           }
@@ -300,10 +240,37 @@
           }
         }
         ParentId: 2720851433633226448
-        ChildIds: 12036084412136431826
-        ChildIds: 16102590806502136337
-        ChildIds: 4386247943863525194
-        ChildIds: 14648571038722674638
+        ChildIds: 4827425980728611759
+        ChildIds: 5668841228816495267
+        ChildIds: 4696256280386177950
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4827425980728611759
+        Name: "Center"
+        Transform {
+          Location {
+            X: 95
+            Y: 12
+            Z: -25
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
+          }
+        }
+        ParentId: 11406876658059551942
         ChildIds: 13133176632046731401
         ChildIds: 2771879851343891049
         Collidable_v2 {
@@ -317,25 +284,26 @@
         }
       }
       Objects {
-        Id: 12036084412136431826
+        Id: 13133176632046731401
         Name: "Rock 03"
         Transform {
           Location {
-            X: -119.099121
-            Y: -537.036133
+            X: -53.8816757
+            Y: -148.021896
+            Z: -32.8287354
           }
           Rotation {
-            Pitch: -3.42132568
-            Yaw: -41.0685425
-            Roll: 3.86405373
+            Pitch: -73.7551
+            Yaw: 89.7269287
+            Roll: 153.442871
           }
           Scale {
-            X: 0.723454475
-            Y: 1.2713362
-            Z: 2.93990493
+            X: 1.57190204
+            Y: 0.616050601
+            Z: 1.00000024
           }
         }
-        ParentId: 11406876658059551942
+        ParentId: 4827425980728611759
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -364,7 +332,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6981536508008379085
+            Id: 16830154065229832196
           }
           Teams {
           }
@@ -377,26 +345,26 @@
         }
       }
       Objects {
-        Id: 16102590806502136337
+        Id: 2771879851343891049
         Name: "Rock 03"
         Transform {
           Location {
-            X: -91.421875
-            Y: 518.205078
-            Z: 36.6826172
+            X: -4.8213706
+            Y: 161.744431
+            Z: -51.958252
           }
           Rotation {
-            Pitch: 0.0269314349
-            Yaw: 33.4353333
-            Roll: 0.528609574
+            Pitch: 2.62154245
+            Yaw: -156.110962
+            Roll: -87.4246826
           }
           Scale {
-            X: 0.611332893
-            Y: 0.999990225
-            Z: 2.31245661
+            X: 0.611332774
+            Y: 2.43794966
+            Z: 1.49371278
           }
         }
-        ParentId: 11406876658059551942
+        ParentId: 4827425980728611759
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -410,11 +378,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.991654515
+            Float: 1.90427315
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.16735387
+            Float: 1.80349541
           }
         }
         Collidable_v2 {
@@ -438,26 +406,56 @@
         }
       }
       Objects {
+        Id: 5668841228816495267
+        Name: "Mid"
+        Transform {
+          Location {
+            X: 10
+            Y: 1
+            Z: -50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
+          }
+        }
+        ParentId: 11406876658059551942
+        ChildIds: 4386247943863525194
+        ChildIds: 14648571038722674638
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 4386247943863525194
         Name: "Rock 03"
         Transform {
           Location {
-            X: 4.36376953
-            Y: -349.583
-            Z: 19.8217773
+            X: -5.67675781
+            Y: -341.807983
+            Z: -27.1427422
           }
           Rotation {
-            Pitch: -0.502380848
-            Yaw: 144.702026
-            Roll: -0.166626066
+            Pitch: 11.622386
+            Yaw: 57.2594872
+            Roll: -96.9325562
           }
           Scale {
-            X: 0.611332893
-            Y: 0.999990225
-            Z: 2.31245661
+            X: 1.22204757
+            Y: 1.92840552
+            Z: 0.683571219
           }
         }
-        ParentId: 11406876658059551942
+        ParentId: 5668841228816495267
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -503,21 +501,22 @@
         Name: "Rock 03"
         Transform {
           Location {
-            X: 15.7172852
-            Y: 352.213867
+            X: 5.67675781
+            Y: 350.898438
+            Z: -17.9208584
           }
           Rotation {
-            Pitch: -4.93630743
-            Yaw: 24.4198303
-            Roll: -1.50234962
+            Pitch: -0.638702393
+            Yaw: 128.643158
+            Roll: -96.0233765
           }
           Scale {
-            X: 0.723454475
-            Y: 1.2713362
-            Z: 2.93990493
+            X: 1.25920451
+            Y: 2.2142303
+            Z: 0.582107186
           }
         }
-        ParentId: 11406876658059551942
+        ParentId: 5668841228816495267
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -559,25 +558,56 @@
         }
       }
       Objects {
-        Id: 13133176632046731401
-        Name: "Rock 03"
+        Id: 4696256280386177950
+        Name: "Outer"
         Transform {
           Location {
-            X: 92.2041
-            Y: -112.564453
+            X: -105
+            Y: -9
+            Z: -75
           }
           Rotation {
-            Pitch: 4.88434315
-            Yaw: 168.632294
-            Roll: -1.66372681
           }
           Scale {
-            X: 0.723454475
-            Y: 1.2713362
-            Z: 2.93990493
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 11406876658059551942
+        ChildIds: 12036084412136431826
+        ChildIds: 16102590806502136337
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12036084412136431826
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: 42.015789
+            Y: -478.463379
+            Z: -16.5120449
+          }
+          Rotation {
+            Pitch: -74.6200256
+            Yaw: 107.925461
+            Roll: -46.9902039
+          }
+          Scale {
+            X: 1.11178052
+            Y: 0.605498731
+            Z: 0.556096435
+          }
+        }
+        ParentId: 4696256280386177950
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -606,7 +636,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6981536508008379085
+            Id: 16830154065229832196
           }
           Teams {
           }
@@ -619,26 +649,26 @@
         }
       }
       Objects {
-        Id: 2771879851343891049
+        Id: 16102590806502136337
         Name: "Rock 03"
         Transform {
           Location {
-            X: 98.2368164
-            Y: 135.823242
-            Z: 12.8847656
+            X: 13.838623
+            Y: 527.620605
+            Z: -1.46110034
           }
           Rotation {
-            Pitch: 0.0622776598
-            Yaw: 29.5964031
-            Roll: 0.525615752
+            Pitch: -6.50338745
+            Yaw: 39.3478699
+            Roll: 8.78338814
           }
           Scale {
-            X: 0.611332893
-            Y: 0.999990225
-            Z: 2.31245661
+            X: 0.611593306
+            Y: 1.00041533
+            Z: 2.03970814
           }
         }
-        ParentId: 11406876658059551942
+        ParentId: 4696256280386177950
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -652,11 +682,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.90427315
+            Float: 0.991654515
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.80349541
+            Float: 1.16735387
           }
         }
         Collidable_v2 {
@@ -863,8 +893,8 @@
         }
       }
       Objects {
-        Id: 10531653274093458084
-        Name: "Ground Shaking Deep Impact Hit 01 SFX"
+        Id: 17741601769599339807
+        Name: "Creature Giant Monster Crunchy Footstep 01 SFX"
         Transform {
           Location {
           }
@@ -885,13 +915,13 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 14914271970296004369
+            Id: 2857265776108627199
           }
           AutoPlay: true
-          Pitch: 1600
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Pitch: -1600
+          Volume: 2
+          Falloff: 6300
+          Radius: 1050
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -922,7 +952,7 @@
             Id: 7781372639348645855
           }
           AutoPlay: true
-          Pitch: -800
+          Pitch: -1200
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -956,7 +986,7 @@
             Id: 5328464418326360599
           }
           AutoPlay: true
-          Pitch: -1600
+          Pitch: -2400
           Volume: 1
           Falloff: 6300
           Radius: 1050
@@ -1009,6 +1039,15 @@
       }
     }
     Assets {
+      Id: 16830154065229832196
+      Name: "Rock 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_001"
+      }
+    }
+    Assets {
       Id: 6981536508008379085
       Name: "Rock 03"
       PlatformAssetType: 1
@@ -1027,12 +1066,12 @@
       }
     }
     Assets {
-      Id: 14914271970296004369
-      Name: "Ground Shaking Deep Impact Hit 01 SFX"
+      Id: 2857265776108627199
+      Name: "Creature Giant Monster Crunchy Footstep 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_designer_ground_shaking_deep_impact_hit_01_Cue_ref"
+        AssetId: "sfx_monster_giant_creature_crunchy_footstep_01a_Cue_ref"
       }
     }
     Assets {

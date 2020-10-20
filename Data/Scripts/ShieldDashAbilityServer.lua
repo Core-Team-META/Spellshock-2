@@ -61,6 +61,12 @@ function ToggleDash(mode)
 	isDashing = mode
 end
 
+function OnAbilityCast(thisAbility)
+	if not thisAbility.owner.isGrounded then
+		thisAbility:Interrupt()
+	end
+end
+
 function OnAbilityExecute(thisAbility)
 	ToggleDash(true)
 end
@@ -75,6 +81,7 @@ function OnAbilityCooldown(thisAbility)
 	end
 end
 
+Ability.castEvent:Connect(OnAbilityCast)
 Ability.executeEvent:Connect(OnAbilityExecute)
 Ability.cooldownEvent:Connect(OnAbilityCooldown)
 

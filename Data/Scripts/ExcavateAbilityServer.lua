@@ -16,6 +16,12 @@ local PickupObject = nil
 local CurrentProjectile = nil
 local Timer = 0
 
+function OnPickupCast(thisAbility)
+	if not thisAbility.owner.isGrounded then
+		thisAbility:Interrupt()
+	end
+end
+
 function OnPickupExecute(thisAbility)
 	PickupObject = World.SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
@@ -32,6 +38,8 @@ function OnBeginOverlap(thisTrigger, other)
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(PickupAbility.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, PickupAbility.owner.team) then return end
+	
+	Events.BroadcastToPlayer(other, "Camera Shake", 10, 90, 5)
 			
 	local dmg = Damage.New()
 	dmg.amount = DamageAmount
@@ -73,6 +81,7 @@ function Tick(dTime)
 	end
 end
 
+PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
