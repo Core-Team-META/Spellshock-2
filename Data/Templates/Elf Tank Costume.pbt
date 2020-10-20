@@ -5562,295 +5562,12 @@
       }
     }
     Assets {
-      Id: 16872470887009927623
-      Name: "Rock Hexagonal"
+      Id: 4438523867532045845
+      Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_008"
-      }
-    }
-    Assets {
-      Id: 170793496707065939
-      Name: "Fantasy Axe Base 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_base_axe_001"
-      }
-    }
-    Assets {
-      Id: 6777629735529728799
-      Name: "Fantasy Mace Head 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_head_mace_002"
-      }
-    }
-    Assets {
-      Id: 1056608531509739891
-      Name: "Custom Additive Soft Edge_1"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 11279883391063370210
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 1.20316362
-              G: 35.9167213
-              B: 26.0812149
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 11279883391063370210
-      Name: "Additive Soft Edge"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
-      }
-    }
-    Assets {
-      Id: 11392267178736274211
-      Name: "Lens - Half"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_half_lense_001"
-      }
-    }
-    Assets {
-      Id: 14298941920366970956
-      Name: "Thruster Flame VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_thruster_flame"
-      }
-    }
-    Assets {
-      Id: 9675776263369201294
-      Name: "Fantasy Pommel 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_003"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 10914354925542967262
-      Name: "Fantasy Castle Pillar 02 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_pillar_002_mid"
-      }
-    }
-    Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 12949356198995646650
-      Name: "Fantasy Sword Guard 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_guard_sword_002"
-      }
-    }
-    Assets {
-      Id: 1920010878601219178
-      Name: "Fantasy Sword Guard 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_guard_sword_001"
-      }
-    }
-    Assets {
-      Id: 16312281148657110259
-      Name: "Gemstone"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 6631081666212622438
-        ParameterOverrides {
-          Overrides {
-            Name: "roughness"
-            Float: 0.260147184
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 1.19138467
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 1.07233322
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0.234832898
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0.800185382
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.120000005
-              G: 1
-              B: 0.702781498
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              Z: -1
-            }
-          }
-          Overrides {
-            Name: "color"
-            Color {
-              G: 0.730039418
-              B: 0.868000031
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "color_secondary"
-            Color {
-              R: 0.170000017
-              G: 1
-              B: 0.653708696
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "color_accent"
-            Color {
-              R: 0.32
-              G: 0.851390362
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "metallic"
-            Float: 0.926756859
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 6631081666212622438
-      Name: "Camouflage - Splinter"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "camo_splinter_001"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 7185380311906960862
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 1562276358413043561
-      Name: "Fantasy Shield Strap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_strap_001"
-      }
-    }
-    Assets {
-      Id: 4322675021483384603
-      Name: "Fantasy Shield 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_002"
-      }
-    }
-    Assets {
-      Id: 8177352336675649221
-      Name: "Text 05: 7"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F6_Text_033"
-      }
-    }
-    Assets {
-      Id: 15769318737476800682
-      Name: "Custom Leather Tufted 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 15683261416245687687
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              G: 0.748542666
-              B: 0.89
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15683261416245687687
-      Name: "Leather Tufted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fabric_tufted_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
+        AssetId: "sm_weap_fan_shield_001"
       }
     }
     Assets {
@@ -5863,12 +5580,156 @@
       }
     }
     Assets {
-      Id: 4438523867532045845
-      Name: "Fantasy Shield 01"
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 8177352336675649221
+      Name: "Text 05: 7"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_001"
+        AssetId: "F6_Text_033"
+      }
+    }
+    Assets {
+      Id: 4322675021483384603
+      Name: "Fantasy Shield 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_002"
+      }
+    }
+    Assets {
+      Id: 1562276358413043561
+      Name: "Fantasy Shield Strap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 1920010878601219178
+      Name: "Fantasy Sword Guard 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_guard_sword_001"
+      }
+    }
+    Assets {
+      Id: 12949356198995646650
+      Name: "Fantasy Sword Guard 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_guard_sword_002"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 10914354925542967262
+      Name: "Fantasy Castle Pillar 02 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_pillar_002_mid"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 9675776263369201294
+      Name: "Fantasy Pommel 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_003"
+      }
+    }
+    Assets {
+      Id: 14298941920366970956
+      Name: "Thruster Flame VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_flame"
+      }
+    }
+    Assets {
+      Id: 11392267178736274211
+      Name: "Lens - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_half_lense_001"
+      }
+    }
+    Assets {
+      Id: 6777629735529728799
+      Name: "Fantasy Mace Head 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_head_mace_002"
+      }
+    }
+    Assets {
+      Id: 170793496707065939
+      Name: "Fantasy Axe Base 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_base_axe_001"
+      }
+    }
+    Assets {
+      Id: 16872470887009927623
+      Name: "Rock Hexagonal"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_008"
       }
     }
     PrimaryAssetId {
@@ -5878,4 +5739,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

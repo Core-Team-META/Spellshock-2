@@ -30,7 +30,7 @@
           Overrides {
             Name: "cs:Elf_Costume"
             AssetReference {
-              Id: 15182184640494259521
+              Id: 13654207909089287810
             }
           }
         }

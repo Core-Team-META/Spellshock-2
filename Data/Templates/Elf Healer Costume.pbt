@@ -5818,194 +5818,12 @@
       }
     }
     Assets {
-      Id: 6510724190985268714
-      Name: "Rock 02"
+      Id: 4322675021483384603
+      Name: "Fantasy Shield 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
-      }
-    }
-    Assets {
-      Id: 1920010878601219178
-      Name: "Fantasy Sword Guard 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_guard_sword_001"
-      }
-    }
-    Assets {
-      Id: 2811265457860980199
-      Name: "Text 05: J"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F6_Text_009"
-      }
-    }
-    Assets {
-      Id: 6777629735529728799
-      Name: "Fantasy Mace Head 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_head_mace_002"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 9675776263369201294
-      Name: "Fantasy Pommel 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_003"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 10914354925542967262
-      Name: "Fantasy Castle Pillar 02 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_pillar_002_mid"
-      }
-    }
-    Assets {
-      Id: 2331688389429807128
-      Name: "ObjectTransformContinuousController"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2020 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[\r\n    Universal utility to continuously move, rotate and scale Core Objects.\r\n--]]\r\n\r\n-- User exposed settings properties\r\nlocal OBJECT = script:GetCustomProperty(\"Object\"):WaitForObject()\r\nlocal DELAY_RANGE = script:GetCustomProperty(\"StartDelayRange\")\r\nlocal LOCAL_SPACE = script:GetCustomProperty(\"LocalSpace\")\r\n\r\n-- User exposed action properties\r\nlocal MOVE_VELOCITY = script:GetCustomProperty(\"MoveVelocity\")\r\nlocal ROTATE_VELOCITY = script:GetCustomProperty(\"RotateVelocity\")\r\nlocal ROTATION_MULTIPLIER = script:GetCustomProperty(\"RotationMultiplier\")\r\nlocal SCALE_VELOCITY = script:GetCustomProperty(\"ScaleVelocity\")\r\n\r\n-- Check user properties\r\nif not Object.IsValid(OBJECT) then\r\n    error(\"This script needs an object to change transform properties.\")\r\nend\r\n\r\nif DELAY_RANGE.x < 0 then\r\n    warn(\"DelayRange can\'t be negative. Setting it to 0.\")\r\n    DELAY_RANGE.x = 0\r\nend\r\n\r\nif DELAY_RANGE.y < 0 then\r\n    warn(\"DelayRange can\'t be negative. Setting it to 0.\")\r\n    DELAY_RANGE.y = 0\r\nend\r\n\r\n-- nil StartAction()\r\n-- Starts moving, rotating or scaling the target object\r\nfunction StartAction()\r\n    if not Object.IsValid(OBJECT) then return end\r\n\r\n    Task.Wait(RandomFloat(DELAY_RANGE.x, DELAY_RANGE.y))\r\n\r\n    -- Check if the object has been destroyed\r\n    if not Object.IsValid(OBJECT) then\r\n        warn(\"Target object is not valid or has been destroyed.\")\r\n        return\r\n    end\r\n\r\n    -- Start the action\r\n    if MOVE_VELOCITY then\r\n        OBJECT:MoveContinuous(MOVE_VELOCITY, LOCAL_SPACE)\r\n    elseif ROTATE_VELOCITY then\r\n        OBJECT:RotateContinuous(ROTATE_VELOCITY, ROTATION_MULTIPLIER, LOCAL_SPACE)\r\n    elseif SCALE_VELOCITY then\r\n        OBJECT:ScaleContinuous(SCALE_VELOCITY, LOCAL_SPACE)\r\n    end\r\nend\r\n\r\n-- <float> RandomFloat(number, number)\r\n-- Returns a random float value between the bounds\r\nfunction RandomFloat(lower, greater)\r\n    return lower + math.random()  * (greater - lower)\r\nend\r\n\r\n-- Initialize\r\nStartAction()\r\n"
-      }
-    }
-    Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 4727064726142651218
-      Name: "Custom Edge Line Wavy"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8442400693995056375
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 1
-              G: 0.456953645
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "noise color"
-            Color {
-              R: 0.690000057
-              G: 0.0274172071
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "vertical fade"
-            Float: 4
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 8442400693995056375
-      Name: "Edge Line Wavy"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_add_edgeline"
-      }
-    }
-    Assets {
-      Id: 12309717141551746397
-      Name: "Prism - 3-Sided Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_hq_001"
-      }
-    }
-    Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 4438523867532045845
-      Name: "Fantasy Shield 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_001"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 15769318737476800682
-      Name: "Custom Leather Tufted 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 15683261416245687687
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              G: 0.748542666
-              B: 0.89
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15683261416245687687
-      Name: "Leather Tufted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fabric_tufted_001_uv_ref"
+        AssetId: "sm_weap_fan_shield_002"
       }
     }
     Assets {
@@ -6018,12 +5836,120 @@
       }
     }
     Assets {
-      Id: 4322675021483384603
-      Name: "Fantasy Shield 02"
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 4438523867532045845
+      Name: "Fantasy Shield 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_002"
+        AssetId: "sm_weap_fan_shield_001"
+      }
+    }
+    Assets {
+      Id: 17567893295837774896
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 12309717141551746397
+      Name: "Prism - 3-Sided Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_hq_001"
+      }
+    }
+    Assets {
+      Id: 15339827692159902109
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 10914354925542967262
+      Name: "Fantasy Castle Pillar 02 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_pillar_002_mid"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 9675776263369201294
+      Name: "Fantasy Pommel 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_003"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 6777629735529728799
+      Name: "Fantasy Mace Head 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_head_mace_002"
+      }
+    }
+    Assets {
+      Id: 2811265457860980199
+      Name: "Text 05: J"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F6_Text_009"
+      }
+    }
+    Assets {
+      Id: 1920010878601219178
+      Name: "Fantasy Sword Guard 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_guard_sword_001"
+      }
+    }
+    Assets {
+      Id: 6510724190985268714
+      Name: "Rock 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
       }
     }
     PrimaryAssetId {
@@ -6033,4 +5959,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true
