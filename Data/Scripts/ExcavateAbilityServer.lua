@@ -39,7 +39,7 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(PickupAbility.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, PickupAbility.owner.team) then return end
 	
-	Events.BroadcastToPlayer(other, "Camera Shake", 10, 90, 5)
+	Events.BroadcastToPlayer(other, "Camera Shake", 5, 90, 5)
 			
 	local dmg = Damage.New()
 	dmg.amount = DamageAmount
@@ -57,7 +57,7 @@ function OnThrowExecute(thisAbility)
 	
 	local directionVector = PickupAbility.owner:GetWorldRotation() * Vector3.FORWARD
 	local positionOffset = directionVector * 200
-	print("OFFSET: "..tostring(position))
+	positionOffset.z = positionOffset.z + 150
 	local spawnPosition = PickupAbility.owner:GetWorldPosition() + positionOffset
 	local velocityVector = directionVector * ProjectileSpeed
 	

@@ -72,14 +72,14 @@
         Name: "Rock 03"
         Transform {
           Location {
-            Z: 119.584961
+            Z: 195
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.7
+            Y: 1.7
+            Z: 1.7
           }
         }
         ParentId: 7399763170539373942

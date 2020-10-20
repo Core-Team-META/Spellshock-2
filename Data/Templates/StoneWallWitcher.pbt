@@ -46,13 +46,13 @@
           Scale {
             X: 2
             Y: 2
-            Z: 2.32886147
+            Z: 2.2
           }
         }
         ParentId: 13710811239096943882
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:forceoff"
@@ -89,13 +89,13 @@
           Scale {
             X: 2.2
             Y: 2.2
-            Z: 2.32886147
+            Z: 2.2
           }
         }
         ParentId: 13710811239096943882
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:forceoff"

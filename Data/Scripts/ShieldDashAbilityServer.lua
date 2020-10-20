@@ -10,6 +10,7 @@ local EndingFX = Equipment:GetCustomProperty("EndingFX")
 local Radius = Equipment:GetCustomProperty("EndingRadius")
 local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
 local EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
+local DamageAmount = Equipment:GetCustomProperty("DamageAmount")
 
 local DashImpulseVector = nil
 local originalPlayerSettings = {}
@@ -25,6 +26,14 @@ function AddImpulseToPlayer(player)
 
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
+	
+	-- Do damage
+	local dmg = Damage.New(DamageAmount)
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = Ability.owner
+	dmg.sourceAbility = Ability
+	
+	COMBAT().ApplyDamage(player, dmg, dmg.sourcePlayer)
 end
 
 function OnBeginOverlap(thisTrigger, other)
@@ -90,15 +99,3 @@ function Tick(deltaTime)
 		Ability.owner:AddImpulse(DashImpulseVector * (deltaTime * 10))
 	end
 end
-
---[[
-local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), 600, {ignoreTeams = thisAbility.owner.team})
-	for _, enemy in pairs(nearbyEnemies) do 
-		local dmg = Damage.New(DamageAmount)
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = thisAbility.owner
-		dmg.sourceAbility = thisAbility
-		
-		COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
-	end
-	]]

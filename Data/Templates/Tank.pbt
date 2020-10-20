@@ -2746,6 +2746,10 @@
             Name: "cs:EnemyImpulse"
             Int: 150000
           }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 20
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
