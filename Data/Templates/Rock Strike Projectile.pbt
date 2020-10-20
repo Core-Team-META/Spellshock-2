@@ -86,27 +86,24 @@
           Overrides {
             Name: "bp:Base Color"
             Color {
-              R: 0.17716001
-              G: 0.206000015
-              B: 0.164800018
+              R: 0.2666
+              G: 0.31
+              B: 0.248000011
               A: 1
             }
           }
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.314
-              G: 0.16345793
-              B: 0.0763019919
+              R: 0.157
+              G: 0.103517957
+              B: 0.038150996
               A: 1
             }
           }
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 0.504
-              G: 0.347633272
-              B: 0.135071978
               A: 1
             }
           }

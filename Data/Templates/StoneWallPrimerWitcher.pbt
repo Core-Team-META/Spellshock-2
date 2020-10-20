@@ -87,7 +87,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -101,14 +101,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -156,7 +148,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -170,14 +162,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -225,7 +209,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -239,14 +223,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -294,7 +270,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -308,14 +284,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -363,7 +331,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -377,14 +345,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -432,7 +392,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8714953556762787271
+              Id: 5207442777822938154
             }
           }
           Overrides {
@@ -446,14 +406,6 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 22.0352745
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.473774642
-              B: 0.98
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -478,30 +430,21 @@
       }
     }
     Assets {
-      Id: 16830154065229832196
-      Name: "Rock 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_001"
-      }
-    }
-    Assets {
-      Id: 8714953556762787271
-      Name: "Force Field"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_forceField"
-      }
-    }
-    Assets {
       Id: 6981536508008379085
       Name: "Rock 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 16830154065229832196
+      Name: "Rock 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_001"
       }
     }
     PrimaryAssetId {
@@ -511,4 +454,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true
