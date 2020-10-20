@@ -38,6 +38,8 @@ function OnBeginOverlap(thisTrigger, other)
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(PickupAbility.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, PickupAbility.owner.team) then return end
+	
+	Events.BroadcastToPlayer(other, "Camera Shake", 10, 90, 5)
 			
 	local dmg = Damage.New()
 	dmg.amount = DamageAmount
