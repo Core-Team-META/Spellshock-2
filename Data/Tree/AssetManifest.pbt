@@ -26,21 +26,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13800436588944964225
-  Name: "Bush Green 02"
+  Id: 11228299035028749551
+  Name: "Leafy Patch 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_002"
-  }
-}
-Assets {
-  Id: 13266663870848907036
-  Name: "Coral Branches Big"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_branch_big_01"
+    AssetId: "sm_foliage_gen_leafy_groundcover_002"
   }
 }
 Assets {
@@ -80,29 +71,20 @@ Assets {
   }
 }
 Assets {
-  Id: 901541979513849367
-  Name: "Bush Green 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bush_generic_001"
-  }
-}
-Assets {
-  Id: 347789783967993960
-  Name: "Coral Branches Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_coral_branch_small_01"
-  }
-}
-Assets {
   Id: 289294461852093715
   Name: "Branches Cluster Small"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_branches_small_001"
+  }
+}
+Assets {
+  Id: 84254442598276906
+  Name: "Bush Leafy Low 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_bush_002"
   }
 }

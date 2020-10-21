@@ -9,18 +9,18 @@
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 15281399694292404596
+          Id: 15979377991647608535
         }
       }
       Overrides {
         Name: "cmp:Material1_Sides"
         AssetReference {
-          Id: 998074920267973145
+          Id: 15979377991647608535
         }
       }
       Overrides {
         Name: "material1_scale"
-        Float: 1
+        Float: 0.25
       }
       Overrides {
         Name: "material1side_scale"
@@ -29,9 +29,9 @@
       Overrides {
         Name: "cmpc:Material1_Sides"
         Color {
-          R: 0.9375
-          G: 0.600100696
-          B: 0.395507813
+          R: 0.932291687
+          G: 0.521015167
+          B: 0.184516087
           A: 1
         }
       }
@@ -49,7 +49,7 @@
       }
       Overrides {
         Name: "material2_scale"
-        Float: 1.7
+        Float: 1
       }
       Overrides {
         Name: "material2side_scale"
@@ -64,7 +64,7 @@
       Overrides {
         Name: "cmp:Material3_Sides"
         AssetReference {
-          Id: 14643090495247569259
+          Id: 17686025311361638391
         }
       }
       Overrides {
@@ -76,7 +76,7 @@
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 15979377991647608535
+          Id: 17686025311361638391
         }
       }
       Overrides {
@@ -93,7 +93,7 @@
       }
       Overrides {
         Name: "material3side_scale"
-        Float: 0.6
+        Float: 0.25
       }
       Overrides {
         Name: "cmpc:Material2_Sides"
@@ -105,24 +105,15 @@
         }
       }
       Overrides {
-        Name: "cmpc:Material4"
-        Color {
-          R: 1
-          G: 0.879470229
-          B: 0.65
-          A: 1
-        }
-      }
-      Overrides {
         Name: "material1_genmask"
         Float: 0
       }
       Overrides {
         Name: "cmpc:Material1"
         Color {
-          R: 0.796875
-          G: 0.705566406
-          B: 0.705566406
+          R: 0.932291687
+          G: 0.521015167
+          B: 0.184516087
           A: 1
         }
       }
@@ -130,35 +121,35 @@
         Name: "cmpc:Material3"
         Color {
           R: 0.796875
-          G: 0.705566406
-          B: 0.705566406
+          G: 0.610107422
+          B: 0.610107422
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material3_Sides"
         Color {
-          R: 0.864583313
-          G: 0.805900276
-          B: 0.532455623
+          R: 0.932291687
+          G: 0.521015167
+          B: 0.184516087
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material4_Sides"
         Color {
-          R: 0.927083313
-          G: 0.815834522
-          B: 0.584255695
+          R: 0.932291687
+          G: 0.521015167
+          B: 0.184516087
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material2"
         Color {
-          R: 0.833333313
-          G: 0.833333313
-          B: 0.833333313
+          R: 1
+          G: 0.575000048
+          B: 0.291666687
           A: 1
         }
       }
@@ -173,21 +164,21 @@
       }
     }
     Assets {
-      Id: 15281399694292404596
-      Name: "Sand 01"
+      Id: 15979377991647608535
+      Name: "Cliff 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_001_uv"
+        AssetId: "cliff_002"
       }
     }
     Assets {
-      Id: 998074920267973145
-      Name: "Cliff 01"
+      Id: 15979377991647608535
+      Name: "Cliff 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_cliff_001_uv"
+        AssetId: "cliff_002"
       }
     }
     Assets {
@@ -218,12 +209,12 @@
       }
     }
     Assets {
-      Id: 14643090495247569259
-      Name: "Dirt 01"
+      Id: 17686025311361638391
+      Name: "Cliff 03"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "dirt_001"
+        AssetId: "cliff_003"
       }
     }
     Assets {
@@ -236,12 +227,12 @@
       }
     }
     Assets {
-      Id: 15979377991647608535
-      Name: "Cliff 02"
+      Id: 17686025311361638391
+      Name: "Cliff 03"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "cliff_002"
+        AssetId: "cliff_003"
       }
     }
   }

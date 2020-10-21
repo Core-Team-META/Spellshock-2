@@ -21,7 +21,7 @@
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.575908
+        Float: 0.379451811
       }
       Overrides {
         Name: "gradient_direction"
@@ -35,11 +35,20 @@
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0.0847663805
+        Float: 0
       }
       Overrides {
         Name: "rotate_material"
         Float: 90
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.9375
+          G: 0.600100696
+          B: 0.395507813
+          A: 1
+        }
       }
     }
     Assets {
