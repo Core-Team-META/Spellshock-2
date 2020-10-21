@@ -11,6 +11,7 @@ PrimerEnabled = true
 MainEnabled = false
 
 function OnPrimerAbilityExecute(thisAbility)
+	Task.Wait()
 	--print("Toggling ON")
 	PrimerAbility.isEnabled = false
 	MainAbility.isEnabled = true
@@ -30,6 +31,7 @@ function OnMainAbilityExecute(thisAbility)
 end
 
 function OnMainAbilityReady(thisAbility)
+	Task.Wait(0.1)
 	--print("Toggling OFF")
 	MainAbility.isEnabled = false
 	PrimerAbility.isEnabled = true
@@ -54,6 +56,7 @@ function PlaceObject(thisPlayer, position, rotation)
 end
 
 function OnEquip(equipment, player)
+	print("Escavate Server Equip")
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	end
