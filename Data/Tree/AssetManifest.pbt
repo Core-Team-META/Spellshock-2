@@ -71,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 289294461852093715
-  Name: "Branches Cluster Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_gen_branches_small_001"
-  }
-}
-Assets {
   Id: 84254442598276906
   Name: "Bush Leafy Low 01"
   PlatformAssetType: 1

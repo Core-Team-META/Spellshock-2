@@ -1007,15 +1007,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12293427156744400159
-  Name: "Bricks Rough Stone Floor 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_stone_floor_rough_001"
-  }
-}
-Assets {
   Id: 12113592595878168643
   Name: "Scorch Mark Decal"
   PlatformAssetType: 14
@@ -1232,6 +1223,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11383327596701470451
+  Name: "Decal Bones 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_fan_ground_bones_001"
+  }
+}
+Assets {
   Id: 11380357722301189422
   Name: "Decal Dirt Patch"
   PlatformAssetType: 14
@@ -1328,6 +1328,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_planks_dark_001_uv"
+  }
+}
+Assets {
+  Id: 10633518646770753022
+  Name: "Decal Bones 02"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_fan_ground_bones_002"
   }
 }
 Assets {
@@ -2204,15 +2213,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5934716746427908552
-  Name: "Terrain - Grass Cliffs"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_terrain_cliff-grass-001_wa"
-  }
-}
-Assets {
   Id: 5931224016695282927
   Name: "Liquid Decal"
   PlatformAssetType: 14
@@ -3029,15 +3029,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_barrel_001"
-  }
-}
-Assets {
-  Id: 998074920267973145
-  Name: "Cliff 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_cliff_001_uv"
   }
 }
 Assets {
