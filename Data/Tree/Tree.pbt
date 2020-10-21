@@ -154,7 +154,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -7098.5791
+      Z: -14041.0469
     }
     Rotation {
       Yaw: 1.74744964
@@ -365,9 +365,9 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 2500
       MaterialChannel: 2
-      SpawnDistance: 24000
+      SpawnDistance: 28800
       CullDistance {
         Min: 12800
         Max: 25600
@@ -413,59 +413,10 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 289294461852093715
-      }
-      DistanceBetweenInstances: 2000
-      MaterialChannel: 2
-      SpawnDistance: 28800
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 32
-      }
-      Scaling {
-        ScaleX {
-          Min: 1
-          Max: 1
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Branch"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -10
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
         Id: 8021476752120115971
       }
       DistanceBetweenInstances: 1500
-      MaterialChannel: 2
+      MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
@@ -545,7 +496,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -765,6 +716,7 @@ Objects {
         Id: 6981536508008379085
       }
       DistanceBetweenInstances: 200
+      MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
@@ -772,7 +724,7 @@ Objects {
       }
       ReceivesDecals: true
       GroundSlopeAngle {
-        Max: 90
+        Max: 45
       }
       Scaling {
         Scaling: LockXY
@@ -794,7 +746,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -921,7 +873,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 40000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -969,7 +921,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 40000
       }
       ReceivesDecals: true
       GroundSlopeAngle {

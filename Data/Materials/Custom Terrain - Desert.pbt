@@ -8,11 +8,11 @@
     ParameterOverrides {
       Overrides {
         Name: "density"
-        Float: 0.802588701
+        Float: 1
       }
       Overrides {
         Name: "material_scale"
-        Float: 8
+        Float: 15
       }
       Overrides {
         Name: "gradient_color"
@@ -45,23 +45,23 @@
       }
       Overrides {
         Name: "splotchiness"
-        Float: 0.613688111
+        Float: 0.742140532
       }
       Overrides {
         Name: "color"
         Color {
           R: 0.9375
-          G: 0.609791
-          B: 0.3125
+          G: 0.589309394
+          B: 0.27343753
           A: 1
         }
       }
       Overrides {
         Name: "color_top"
         Color {
-          R: 1
-          G: 0.859072864
-          B: 0.72
+          R: 0.4375
+          G: 0.375844419
+          B: 0.315
           A: 1
         }
       }
@@ -70,6 +70,10 @@
         Vector {
           Z: 1
         }
+      }
+      Overrides {
+        Name: "edge_wear"
+        Float: 0.273667
       }
     }
     Assets {

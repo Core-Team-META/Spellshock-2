@@ -81,7 +81,7 @@
       }
       Overrides {
         Name: "material4_scale"
-        Float: 0.6
+        Float: 1.2
       }
       Overrides {
         Name: "material4side_scale"
@@ -150,6 +150,15 @@
           R: 1
           G: 0.575000048
           B: 0.291666687
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material4"
+        Color {
+          R: 0.947916687
+          G: 0.947916687
+          B: 0.947916687
           A: 1
         }
       }

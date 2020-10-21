@@ -10,9 +10,9 @@
         Name: "Small_palm"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.49132216
+            Y: 1.49132216
+            Z: 1.49132216
           }
         }
         ParentId: 15778795352663330980
@@ -117,11 +117,11 @@
           }
           Overrides {
             Name: "ma:Nature_Trunk:utile"
-            Float: 0.3
+            Float: 0.228898808
           }
           Overrides {
             Name: "ma:Nature_Trunk:vtile"
-            Float: 0.25
+            Float: 0.493734181
           }
         }
         Collidable_v2 {
