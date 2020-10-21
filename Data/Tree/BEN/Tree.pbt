@@ -1,8 +1,8 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 15189766637386980967
-  Name: "Tank"
+  Id: 7330647505038056083
+  Name: "Healer"
   Transform {
     Scale {
       X: 1
@@ -20,18 +20,18 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7855160156328725233
+      key: 1551665899132109167
       value {
         Overrides {
           Name: "Name"
-          String: "Tank"
+          String: "Healer"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 7265
-            Y: 9240
-            Z: 3130
+            X: 8020
+            Y: 10235
+            Z: 3075
           }
         }
         Overrides {
@@ -42,7 +42,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 17020530466204675231
+      Id: 10891347061023344361
     }
   }
 }

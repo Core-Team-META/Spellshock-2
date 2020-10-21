@@ -3,6 +3,7 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
+local EndingFX = script:GetCustomProperty("EndingFX")
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
 local SPEED = script:GetCustomProperty("Speed")
@@ -11,7 +12,8 @@ local HEALING_AMOUNT = script:GetCustomProperty("HealingAmount")
 local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
 
 local MOVE_DURATION = RANGE / SPEED
-local LIFE_SPAN = MOVE_DURATION + 0.3
+local LIFE_SPAN = MOVE_DURATION + 5
+
 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
@@ -52,20 +54,22 @@ function OnAbilityExecute(thisAbility)
 	ProjectileVelocity = VelocityVector
 	
 	local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
-	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
+	CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
+	local DamageTrigger = CurrentProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
 	ViewRotation.x = 0
 	ViewRotation.y = 0
-	RockProjectile:SetWorldRotation(ViewRotation)
-	RockProjectile.lifeSpan = LIFE_SPAN
-	RockProjectile:MoveContinuous(VelocityVector)
-	CurrentProjectile = RockProjectile
+	CurrentProjectile:SetWorldRotation(ViewRotation)
+	CurrentProjectile.lifeSpan = LIFE_SPAN
+	CurrentProjectile:MoveContinuous(VelocityVector)
+	
 	Task.Spawn(function ()
-		CurrentProjectile = nil
 		OverlapEvent:Disconnect()
-		RockProjectile:StopMove()
+		CurrentProjectile:StopMove()
+		World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
+		CurrentProjectile.lifeSpan = 0.1
+		CurrentProjectile = nil
 	end, MOVE_DURATION)
 end
 

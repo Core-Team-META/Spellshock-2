@@ -21,7 +21,7 @@ function OnInteracted(thisTrigger, player)
 			equipment:Destroy()
 		end
 	end
-	Task.Wait()
+	Task.Wait(0.1)
 	local newEquipment = World.SpawnAsset(TEMPLATE, {position = TRIGGER:GetWorldPosition()})
 	newEquipment:Equip(player)
 end

@@ -172,6 +172,8 @@ function Module.Ease(object, property, goal, easeDuration, easingEquation, easin
 	if(type(easingEquation) == "nil") then easingEquation = Module.EasingEquation.LINEAR end
 	if(type(easingDirection) == "nil") then easingDirection = Module.EasingDirection.INOUT end
 
+	if not object or not Object.IsValid(object) then return end
+
 	local success, response = verifyEase(object, property, easeDuration, easingEquation, easingDirection)
 	assert(success, response)
 
