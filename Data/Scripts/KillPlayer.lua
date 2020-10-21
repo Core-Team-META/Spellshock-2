@@ -4,6 +4,8 @@ function OnBindingPressed(whichPlayer, binding)
 	--print("player " .. whichPlayer.name .. " pressed binding: " .. binding)
 	if (binding == "ability_extra_9") then 
 		whichPlayer:Die()
+	elseif binding == "ability_extra_8" then
+		whichPlayer.hitPoints = 50
 	end
 end
 

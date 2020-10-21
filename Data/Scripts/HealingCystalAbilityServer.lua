@@ -3,14 +3,16 @@ local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
 local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
+local EndingFX = script:GetCustomProperty("EndingFX")
 local EventName = script:GetCustomProperty("EventName")
 local HealAmount = script:GetCustomProperty("HealAmount")
 local LifeSpan = script:GetCustomProperty("Duration")
 local Delay = script:GetCustomProperty("DelayBetweenHeals")
 
-local Timer = Delay
+local Timer = 0
 local HealTrigger = nil
 local EventListeners = {}
+local DestroyedEventListener = nil
 
 function OnPrimerAbilityExecute(thisAbility)
 	print("Toggling ON")
@@ -24,11 +26,18 @@ function OnMainAbilityReady(thisAbility)
 	PrimerAbility.isEnabled = true
 end
 
+function OnCrystalDestroyed(thisObject)
+	print("Crystal being destroyed")
+	World.SpawnAsset(EndingFX, {position = thisObject:GetWorldPosition()})
+	DestroyedEventListener:Disconnect()
+end
+
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = LifeSpan
+		DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
 	end
 end
 

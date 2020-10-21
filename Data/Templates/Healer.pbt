@@ -909,7 +909,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 12
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1035,7 +1035,7 @@
           Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
-              Id: 12922134233902895912
+              Id: 2309478069929941983
             }
           }
           Overrides {
@@ -1052,11 +1052,17 @@
           }
           Overrides {
             Name: "cs:Duration"
-            Int: 8
+            Int: 10
           }
           Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 3000
+          }
+          Overrides {
+            Name: "cs:EndingFX"
+            AssetReference {
+              Id: 16966857285875434478
+            }
           }
         }
         WantsNetworking: true

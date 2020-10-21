@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 12922134233902895912
-  Name: "Healing Crystal"
+  Id: 2309478069929941983
+  Name: "Healing Crystal Primer"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15881528091333770182
+      RootId: 11946573129182812687
       Objects {
-        Id: 15881528091333770182
-        Name: "Healing Crystal"
+        Id: 11946573129182812687
+        Name: "Healing Crystal Primer"
         Transform {
           Scale {
             X: 1
@@ -16,13 +16,12 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3131974802326434051
-        ChildIds: 9370512835473868609
+        ChildIds: 8404267313367063133
         UnregisteredParameters {
           Overrides {
             Name: "cs:Trigger"
             ObjectReference {
-              SubObjectId: 3131974802326434051
+              SelfId: 8014698632045992513
             }
           }
         }
@@ -38,39 +37,7 @@
         }
       }
       Objects {
-        Id: 3131974802326434051
-        Name: "Trigger"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 10
-            Y: 10
-            Z: 10
-          }
-        }
-        ParentId: 15881528091333770182
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
-        }
-      }
-      Objects {
-        Id: 9370512835473868609
+        Id: 8404267313367063133
         Name: "ClientContext"
         Transform {
           Location {
@@ -83,12 +50,9 @@
             Z: 1
           }
         }
-        ParentId: 15881528091333770182
-        ChildIds: 10221998848433220853
-        ChildIds: 12270563499582565451
-        ChildIds: 503670896475274375
-        ChildIds: 10815423656957167270
-        ChildIds: 776464694987287931
+        ParentId: 11946573129182812687
+        ChildIds: 18366089847830052191
+        ChildIds: 1579329543340073091
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -100,64 +64,7 @@
         }
       }
       Objects {
-        Id: 10221998848433220853
-        Name: "Treasure Ray Burst"
-        Transform {
-          Location {
-            Z: -0.000244140625
-          }
-          Rotation {
-          }
-          Scale {
-            X: 5.49999952
-            Y: 5.49999952
-            Z: 5.49999952
-          }
-        }
-        ParentId: 9370512835473868609
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 3.18946743
-          }
-          Overrides {
-            Name: "bp:Volume Type"
-            Enum {
-              Value: "mc:evfxvolumetype:2"
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Sparkle Density"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "bp:Enable Ray"
-            Bool: true
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 3816918904715199575
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 12270563499582565451
+        Id: 18366089847830052191
         Name: "Sphere"
         Transform {
           Location {
@@ -170,7 +77,7 @@
             Z: 10
           }
         }
-        ParentId: 9370512835473868609
+        ParentId: 8404267313367063133
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -201,7 +108,7 @@
         }
       }
       Objects {
-        Id: 503670896475274375
+        Id: 1579329543340073091
         Name: "Rock 03"
         Transform {
           Location {
@@ -215,8 +122,8 @@
             Z: 0.342097
           }
         }
-        ParentId: 9370512835473868609
-        ChildIds: 8343774181861340624
+        ParentId: 8404267313367063133
+        ChildIds: 43891689467054249
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -254,7 +161,7 @@
         }
       }
       Objects {
-        Id: 8343774181861340624
+        Id: 43891689467054249
         Name: "Object Rotator Continuous"
         Transform {
           Scale {
@@ -263,12 +170,12 @@
             Z: 3.33333325
           }
         }
-        ParentId: 503670896475274375
+        ParentId: 1579329543340073091
         UnregisteredParameters {
           Overrides {
             Name: "cs:Object"
             ObjectReference {
-              SubObjectId: 503670896475274375
+              SubObjectId: 1579329543340073091
             }
           }
           Overrides {
@@ -323,85 +230,6 @@
           }
         }
       }
-      Objects {
-        Id: 10815423656957167270
-        Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
-        Transform {
-          Location {
-            Z: 170
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9370512835473868609
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 4937714845344107743
-          }
-          AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 776464694987287931
-        Name: "Magic Bright Light Spell Loop 01 SFX"
-        Transform {
-          Location {
-            Z: 15
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9370512835473868609
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 9254182311543276521
-          }
-          AutoPlay: true
-          Volume: 0.7
-          Falloff: 1000
-          Radius: 516.585388
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-    }
-    Assets {
-      Id: 3816918904715199575
-      Name: "Treasure Ray Burst"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Treasure_Rays"
-      }
     }
     Assets {
       Id: 6585207450897081622
@@ -428,24 +256,6 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "Energy_Tube_Glow"
-      }
-    }
-    Assets {
-      Id: 4937714845344107743
-      Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_fantasy_shiny_glow_cast_02_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 9254182311543276521
-      Name: "Magic Bright Light Spell Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_bright_light_spell_loop_01_Cue_ref"
       }
     }
     PrimaryAssetId {
