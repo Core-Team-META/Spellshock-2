@@ -1007,6 +1007,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12293427156744400159
+  Name: "Bricks Rough Stone Floor 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_stone_floor_rough_001"
+  }
+}
+Assets {
   Id: 12113592595878168643
   Name: "Scorch Mark Decal"
   PlatformAssetType: 14
@@ -1247,6 +1256,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_jaw_01_ref"
+  }
+}
+Assets {
+  Id: 11228299035028749551
+  Name: "Leafy Patch 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_groundcover_002"
   }
 }
 Assets {

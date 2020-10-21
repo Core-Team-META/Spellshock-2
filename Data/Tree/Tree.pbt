@@ -154,7 +154,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -10447.6553
+      Z: -7098.5791
     }
     Rotation {
       Yaw: 1.74744964
@@ -176,7 +176,7 @@ Objects {
     Material {
       Id: 12775742126801417230
     }
-    VoxelSize: 1000
+    VoxelSize: 800
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
   }
@@ -210,56 +210,6 @@ Objects {
     VoxelSize: 150
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
-    Foliage {
-      Asset {
-        Id: 8553298544017934648
-      }
-      DistanceBetweenInstances: 100
-      MaterialChannel: 3
-      SpawnDistance: 28800
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 45
-      }
-      Scaling {
-        Scaling: LockXY
-        ScaleX {
-          Min: 0.5
-          Max: 1
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1.2
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Grass"
-        value {
-          Id: 1702837764955470267
-        }
-      }
-      LocalPositionOffset {
-        Z: -30
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
     Foliage {
       Asset {
         Id: 8021476752120115971
@@ -309,54 +259,6 @@ Objects {
       Height {
         Min: -102400
         Max: 7800
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 4044214825842439722
-      }
-      DistanceBetweenInstances: 100
-      MaterialChannel: 3
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 45
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.4
-          Max: 0.8
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Grass"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
       }
     }
     Foliage {
@@ -414,7 +316,7 @@ Objects {
         Id: 16388825162191980240
       }
       DistanceBetweenInstances: 1000
-      MaterialChannel: 2
+      MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
@@ -463,7 +365,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 200
+      DistanceBetweenInstances: 500
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
@@ -562,7 +464,7 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 2500
+      DistanceBetweenInstances: 1500
       MaterialChannel: 2
       SpawnDistance: 28800
       CullDistance {
@@ -594,60 +496,11 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 841534158063459245
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
         Z: -120
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 8553298544017934648
-      }
-      DistanceBetweenInstances: 100
-      MaterialChannel: 2
-      SpawnDistance: 28800
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 60
-      }
-      Scaling {
-        Scaling: LockXY
-        ScaleX {
-          Min: 0.5
-          Max: 0.8
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 0.6
-          Max: 0.7
-        }
-      }
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Grass"
-        value {
-          Id: 14162988344218746234
-        }
-      }
-      LocalPositionOffset {
       }
       LocalRotationOffset {
       }
@@ -709,175 +562,9 @@ Objects {
     }
     Foliage {
       Asset {
-        Id: 901541979513849367
-      }
-      DistanceBetweenInstances: 5000
-      MaterialChannel: 3
-      SpawnDistance: 38400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.5
-          Max: 0.8
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -20
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 13800436588944964225
-      }
-      DistanceBetweenInstances: 5000
-      MaterialChannel: 3
-      SpawnDistance: 38400
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.4
-          Max: 0.7
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 841534158063459245
-        }
-      }
-      LocalPositionOffset {
-        Z: -20
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 15128280182623405640
-      }
-      DistanceBetweenInstances: 600
-      MaterialChannel: 2
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        Scaling: LockXY
-        ScaleX {
-          Min: 0.5
-          Max: 0.7
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Nature_Leaves"
-        value {
-          Id: 17201051112233946141
-        }
-      }
-      LocalPositionOffset {
-        Z: -10
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 600
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
@@ -907,109 +594,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
-        }
-      }
-      LocalPositionOffset {
-        Z: -20
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 13266663870848907036
-      }
-      DistanceBetweenInstances: 400
-      MaterialChannel: 2
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.6
-          Max: 0.8
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 6937472095790113762
-        }
-      }
-      LocalPositionOffset {
-        Z: -15
-      }
-      LocalRotationOffset {
-      }
-      GlobalPositionOffset {
-      }
-      Height {
-        Min: -102400
-        Max: 102400
-      }
-    }
-    Foliage {
-      Asset {
-        Id: 347789783967993960
-      }
-      DistanceBetweenInstances: 300
-      MaterialChannel: 2
-      SpawnDistance: 24000
-      CullDistance {
-        Min: 10000
-        Max: 20000
-      }
-      CastShadow: true
-      ReceivesDecals: true
-      GroundSlopeAngle {
-        Max: 90
-      }
-      Scaling {
-        ScaleX {
-          Min: 0.6
-          Max: 0.8
-        }
-        ScaleY {
-          Min: 1
-          Max: 1
-        }
-        ScaleZ {
-          Min: 1
-          Max: 1
-        }
-      }
-      RotationAlignment: AlignToWorldUp
-      RandomYaw: true
-      RandomPitchAngle: 6
-      Materials {
-        key: "Shared_BaseMaterial"
-        value {
-          Id: 6937472095790113762
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -1028,8 +613,8 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 100
-      MaterialChannel: 2
+      DistanceBetweenInstances: 300
+      MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
@@ -1109,7 +694,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -1159,7 +744,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -1260,7 +845,7 @@ Objects {
       Materials {
         key: "Shared_BaseMaterial"
         value {
-          Id: 15710974556442677409
+          Id: 5784961500467902601
         }
       }
       LocalPositionOffset {
@@ -1273,6 +858,252 @@ Objects {
       Height {
         Min: -102400
         Max: 20000
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 15128280182623405640
+      }
+      DistanceBetweenInstances: 600
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      CastShadow: true
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.5
+          Max: 0.7
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 17201051112233946141
+        }
+      }
+      LocalPositionOffset {
+        Z: -10
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 11228299035028749551
+      }
+      DistanceBetweenInstances: 200
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 35
+      }
+      Scaling {
+        ScaleX {
+          Min: 1
+          Max: 1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 84254442598276906
+      }
+      DistanceBetweenInstances: 500
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 90
+      }
+      Scaling {
+        ScaleX {
+          Min: 1
+          Max: 1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 4044214825842439722
+      }
+      DistanceBetweenInstances: 100
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        ScaleX {
+          Min: 0.4
+          Max: 0.8
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Grass"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 8553298544017934648
+      }
+      DistanceBetweenInstances: 200
+      MaterialChannel: 3
+      SpawnDistance: 28800
+      CullDistance {
+        Min: 10000
+        Max: 20000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        Scaling: LockXY
+        ScaleX {
+          Min: 0.5
+          Max: 1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 0.6
+          Max: 0.6
+        }
+      }
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Grass"
+        value {
+          Id: 1702837764955470267
+        }
+      }
+      LocalPositionOffset {
+        Z: -30
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: -102400
+        Max: 102400
       }
     }
   }
