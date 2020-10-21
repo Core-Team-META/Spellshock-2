@@ -75,6 +75,18 @@
             }
           }
           Overrides {
+            Name: "cs:FarLeftRock"
+            ObjectReference {
+              SubObjectId: 9584584598451431117
+            }
+          }
+          Overrides {
+            Name: "cs:FarRightRock"
+            ObjectReference {
+              SubObjectId: 109409672939713348
+            }
+          }
+          Overrides {
             Name: "cs:Timer"
             Float: 0.7
           }
@@ -329,6 +341,8 @@
           }
         }
         ParentId: 13042010303399603354
+        ChildIds: 9584584598451431117
+        ChildIds: 109409672939713348
         ChildIds: 15335027319647048982
         ChildIds: 14218458124779959056
         ChildIds: 10154848248121418769
@@ -340,6 +354,130 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9584584598451431117
+        Name: "FarLeftRock"
+        Transform {
+          Location {
+            X: -190
+            Y: -9
+            Z: -130
+          }
+          Rotation {
+            Pitch: -41.4007568
+            Yaw: 115.846901
+            Roll: 134.389633
+          }
+          Scale {
+            X: 0.232898235
+            Y: 0.172506824
+            Z: 0.517547131
+          }
+        }
+        ParentId: 3591678663094950267
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13450058284859899371
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1.2
+              G: 1.05438054
+              B: 0.90625
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1197983536016875073
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 109409672939713348
+        Name: "FarRightRock"
+        Transform {
+          Location {
+            X: -190
+            Y: 30
+            Z: -130
+          }
+          Rotation {
+            Pitch: -46.0680542
+            Yaw: -120.382233
+            Roll: -117.582306
+          }
+          Scale {
+            X: 0.232898235
+            Y: 0.172506824
+            Z: 0.517547131
+          }
+        }
+        ParentId: 3591678663094950267
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13450058284859899371
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1.2
+              G: 1.05438054
+              B: 0.90625
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1197983536016875073
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
         }
       }
       Objects {
