@@ -1,6 +1,54 @@
 ﻿Name: "Julieta_Props"
 RootId: 10661356697076551539
 Objects {
+  Id: 9788961569195219258
+  Name: "Mine Pulley"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10661356697076551539
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12442927682610065071
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Mine Pulley"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -18842.0098
+            Y: 6017.82227
+            Z: 1208.2793
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.0922246
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.780561388
+            Y: 0.780561388
+            Z: 0.780561388
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11771491110792182820
+    }
+  }
+}
+Objects {
   Id: 688307502103904167
   Name: "Mine Cart"
   Transform {
