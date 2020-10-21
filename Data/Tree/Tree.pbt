@@ -1199,6 +1199,47 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 10996667072626111982
+      value {
+        Overrides {
+          Name: "bp:Color Saturation"
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Color Contrast"
+          Color {
+            R: 1.2
+            G: 1.08373511
+            B: 1.06800008
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12813456790253805465
+      value {
+        Overrides {
+          Name: "bp:Intensity"
+          Float: 3.2
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13018181793327756467
+      value {
+        Overrides {
+          Name: "bp:Fog Density"
+          Float: 1.16997027
+        }
+      }
+    }
     TemplateAsset {
       Id: 15600583839331343652
     }
