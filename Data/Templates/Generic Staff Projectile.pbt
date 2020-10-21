@@ -7,7 +7,7 @@
       RootId: 9486937400231907118
       Objects {
         Id: 9486937400231907118
-        Name: "Basic Staff Projectile"
+        Name: "Generic Staff Projectile"
         Transform {
           Scale {
             X: 1
@@ -82,8 +82,8 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.269999981
-              B: 0.230662152
+              R: 0.86
+              G: 0.170860946
               A: 1
             }
           }
@@ -98,9 +98,8 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.479166657
-              G: 0.479166657
-              B: 0.479166657
+              R: 0.950000048
+              G: 0.566225231
               A: 1
             }
           }
@@ -139,8 +138,8 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.580000043
-              B: 0.241986573
+              R: 0.590000033
+              G: 0.164105952
               A: 1
             }
           }
@@ -181,6 +180,16 @@
           }
         }
         ParentId: 9486937400231907118
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 5
+              G: 2.16666698
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

@@ -6,7 +6,11 @@ local IS_ENABLED = ROOT:GetCustomProperty("IsEnabled")
 local TEMPLATE = ROOT:GetCustomProperty("TemplateToSpawn")
 local LABEL = ROOT:GetCustomProperty("Label")
 
-if IS_ENABLED == false then return end
+if IS_ENABLED == false then 
+	EQUIPMENT_LABEL.text = "DISABLED"
+	TRIGGER.interactionLabel = "DISABLED"
+	return 
+end
 
 TRIGGER.interactionLabel = LABEL
 EQUIPMENT_LABEL.text = LABEL

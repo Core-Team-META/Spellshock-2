@@ -1,52 +1,6 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 7330647505038056083
-  Name: "Healer"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1551665899132109167
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Healer"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 8020
-            Y: 10235
-            Z: 3075
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10891347061023344361
-    }
-  }
-}
-Objects {
   Id: 2644148728258825907
   Name: "RespawnPlayerServer"
   Transform {
@@ -1521,7 +1475,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1753,7 +1707,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1986,7 +1940,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2719,7 +2673,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2951,7 +2905,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3184,7 +3138,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -12641,6 +12595,10 @@ Objects {
       AssetReference {
         Id: 11974742996071064388
       }
+    }
+    Overrides {
+      Name: "cs:SameTeam"
+      Bool: false
     }
   }
   Collidable_v2 {

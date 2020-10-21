@@ -1,4 +1,8 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+﻿-- Module dependencies
+local MODULE = require( script:GetCustomProperty("ModuleManager") )
+function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
 
@@ -6,6 +10,7 @@ local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EndingFX = script:GetCustomProperty("EndingFX")
 local EventName = script:GetCustomProperty("EventName")
 local HealAmount = script:GetCustomProperty("HealAmount")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
 local LifeSpan = script:GetCustomProperty("Duration")
 local Delay = script:GetCustomProperty("DelayBetweenHeals")
 
@@ -62,12 +67,22 @@ function Tick(dTime)
 	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
-			if thisObject:IsA("Player") and thisObject.team == PrimerAbility.owner.team then
-				local newHealth = thisObject.hitPoints + HealAmount
-				if newHealth > thisObject.maxHitPoints then
-					thisObject.hitPoints = thisObject.maxHitPoints
+			if thisObject:IsA("Player") and not thisObject.isDead then
+				if thisObject.team == PrimerAbility.owner.team then
+					local newHealth = thisObject.hitPoints + HealAmount
+					if newHealth > thisObject.maxHitPoints then
+						thisObject.hitPoints = thisObject.maxHitPoints
+					else
+						thisObject.hitPoints = newHealth
+					end
 				else
-					thisObject.hitPoints = newHealth
+					local dmg = Damage.New()
+					dmg.amount = DamageAmount
+					dmg.reason = DamageReason.COMBAT
+					dmg.sourcePlayer = MainAbility.owner
+					dmg.sourceAbility = MainAbility
+							
+					COMBAT().ApplyDamage(thisObject, dmg, dmg.sourcePlayer)
 				end
 			end
 		end

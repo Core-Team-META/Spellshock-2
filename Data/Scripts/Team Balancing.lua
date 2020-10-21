@@ -1,11 +1,12 @@
 ﻿local ABGS = require(script:GetCustomProperty("API"))
+local SameTeam = script:GetCustomProperty("SameTeam")
 
 function OnPlayerJoin(player)
-	--[[
-	if true then
+	
+	if SameTeam then
 		player.team = 1
 		return
-	end --]]
+	end 
 	
 	local playerTeamPlayers = Game.GetPlayers({includeTeams=player.team})
 	local otherTeamPlayers = Game.GetPlayers({includeTeams=(3-player.team)})

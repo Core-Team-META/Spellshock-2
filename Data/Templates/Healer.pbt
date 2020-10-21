@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 17566732273178486209
         ChildIds: 14081494435077508625
         ChildIds: 4708996743668767698
@@ -808,7 +808,7 @@
           }
           Overrides {
             Name: "cs:Speed"
-            Int: 1000
+            Int: 2000
           }
           Overrides {
             Name: "cs:Range"
@@ -1009,6 +1009,12 @@
         ParentId: 4954212764507547815
         UnregisteredParameters {
           Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 1551665899132109167
@@ -1044,6 +1050,10 @@
           }
           Overrides {
             Name: "cs:HealAmount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
             Int: 3
           }
           Overrides {
@@ -1238,7 +1248,11 @@
           }
           Overrides {
             Name: "cs:StunRadius"
-            Int: 500
+            Int: 700
+          }
+          Overrides {
+            Name: "cs:ImpulseAmount"
+            Int: 150000
           }
         }
         WantsNetworking: true
@@ -1664,7 +1678,7 @@
       }
       Objects {
         Id: 18270922159998676275
-        Name: "Magic Staff"
+        Name: "Healer Staff"
         Transform {
           Location {
             Z: 43.4432373
@@ -1754,7 +1768,7 @@
             AttackCooldown: 0.25
             Range: 10000
             ImpactPlayerAssetRef {
-              Id: 14373757464648078715
+              Id: 11972259582471283945
             }
             ReticleType {
               Value: "mc:ereticletype:crosshair"
@@ -1809,13 +1823,13 @@
           Overrides {
             Name: "cs:BlastDamageRange"
             Vector2 {
-              X: 7
-              Y: 12
+              X: 15
+              Y: 20
             }
           }
           Overrides {
             Name: "cs:BlastRadius"
-            Float: 100
+            Float: 150
           }
           Overrides {
             Name: "cs:BlastKnockbackSpeed"
@@ -1824,7 +1838,7 @@
           Overrides {
             Name: "cs:BlastImpactTemplate"
             AssetReference {
-              Id: 16946794819248017744
+              Id: 841534158063459245
             }
           }
         }

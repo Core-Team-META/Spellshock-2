@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 3731118247202363736
-  Name: "Generic Staff Surface Impact FX"
+  Name: "Healer Staff Surface Impact FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 3283174904146554182
       Objects {
         Id: 3283174904146554182
-        Name: "Generic Staff Surface Impact FX"
+        Name: "Healer Staff Surface Impact FX"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,6 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 17902586010684765450
         ChildIds: 18186610568967347458
         ChildIds: 12018579724646899035
         ChildIds: 11192231061561991447
@@ -32,48 +31,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 17902586010684765450
-        Name: "Decal Bullet Damage Stone"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: -90
-            Yaw: -25.2393742
-            Roll: 25.239336
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3283174904146554182
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Fade Delay"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11302073280474298634
-          }
-          DecalBP {
-          }
         }
       }
       Objects {
@@ -98,18 +55,17 @@
           Overrides {
             Name: "bp:Emissive Color C"
             Color {
-              R: 0.219130322
-              G: 0.0781521201
-              B: 0.223958328
+              R: 1
+              G: 0.664900661
+              B: 0.0799999833
               A: 1
             }
           }
           Overrides {
             Name: "bp:Emissive Color B"
             Color {
-              R: 0.100314669
-              G: 0.115872391
-              B: 0.223958328
+              R: 0.64
+              G: 0.165298
               A: 1
             }
           }
@@ -120,8 +76,8 @@
           Overrides {
             Name: "bp:Emissive Color A"
             Color {
-              R: 0.00999999
-              G: 0.0037748313
+              R: 0.190000013
+              G: 0.0188741758
               A: 1
             }
           }
@@ -272,8 +228,8 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.265232086
-              B: 0.450000048
+              R: 0.710000038
+              G: 0.338543057
               A: 1
             }
           }
@@ -314,8 +270,8 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.127549693
-              B: 0.179999948
+              R: 0.679999948
+              G: 0.297218531
               A: 1
             }
           }
@@ -352,15 +308,6 @@
             AutoPlay: true
           }
         }
-      }
-    }
-    Assets {
-      Id: 11302073280474298634
-      Name: "Decal Bullet Damage Stone"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_bullet_stone_001"
       }
     }
     Assets {
