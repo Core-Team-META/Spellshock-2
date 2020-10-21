@@ -825,6 +825,12 @@
               Y: 50
             }
           }
+          Overrides {
+            Name: "cs:EndingFX"
+            AssetReference {
+              Id: 16417575589097358380
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
