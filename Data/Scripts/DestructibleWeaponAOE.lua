@@ -11,7 +11,7 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 
 
-local WEAPON = script.parent
+local WEAPON = script:FindAncestorByType("Weapon")
 local ATTACK_ABILITY = script:GetCustomProperty("AttackAbility"):WaitForObject()
 
 local BLAST_IMPACT_TEMPLATE = script:GetCustomProperty("BlastImpactTemplate")

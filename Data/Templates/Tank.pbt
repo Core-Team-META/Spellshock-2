@@ -301,7 +301,7 @@
           Overrides {
             Name: "cs:HeroKitEquipment"
             ObjectReference {
-              SubObjectId: 13069050915453077852
+              SubObjectId: 16112677035434330704
             }
           }
         }
@@ -376,10 +376,9 @@
         ParentId: 7855160156328725233
         ChildIds: 10592921671569649599
         ChildIds: 5122084799032956487
-        ChildIds: 737157021763664976
-        ChildIds: 18215660602860694460
-        ChildIds: 15862854556548652189
-        ChildIds: 5811905548029831615
+        ChildIds: 7161437949086862621
+        ChildIds: 285787547396984869
+        ChildIds: 7744017418315419898
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -464,6 +463,108 @@
         }
       }
       Objects {
+        Id: 7161437949086862621
+        Name: "PlaceObjectAbilityClient"
+        Transform {
+          Location {
+            X: 8105
+            Y: 10210
+            Z: 3120
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4127929006948487058
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 12132287434350879122
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 285787547396984869
+        Name: "ExcavateAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 4127929006948487058
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:PickupAbility"
+            ObjectReference {
+              SubObjectId: 10132999686423340489
+            }
+          }
+          Overrides {
+            Name: "cs:ThrowAbility"
+            ObjectReference {
+              SubObjectId: 17603482927302860847
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 343876453884158946
+          }
+        }
+      }
+      Objects {
+        Id: 7744017418315419898
+        Name: "Ability Icons"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4127929006948487058
+        ChildIds: 737157021763664976
+        ChildIds: 18215660602860694460
+        ChildIds: 15862854556548652189
+        ChildIds: 5811905548029831615
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 737157021763664976
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -477,7 +578,7 @@
             Z: 1
           }
         }
-        ParentId: 4127929006948487058
+        ParentId: 7744017418315419898
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -524,7 +625,7 @@
             Z: 1
           }
         }
-        ParentId: 4127929006948487058
+        ParentId: 7744017418315419898
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -571,7 +672,7 @@
             Z: 1
           }
         }
-        ParentId: 4127929006948487058
+        ParentId: 7744017418315419898
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -627,7 +728,7 @@
             Z: 1
           }
         }
-        ParentId: 4127929006948487058
+        ParentId: 7744017418315419898
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -684,40 +785,14 @@
           }
         }
         ParentId: 7855160156328725233
-        ChildIds: 389882129398021018
-        ChildIds: 13069050915453077852
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 389882129398021018
-        Name: "Abilities"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16112677035434330704
         ChildIds: 13453640365647745389
         ChildIds: 743168345218125817
         ChildIds: 10132999686423340489
         ChildIds: 3579025016395869037
+        ChildIds: 13709554481697835406
+        ChildIds: 14809710803316002615
+        UnregisteredParameters {
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -740,7 +815,7 @@
           Scale {
           }
         }
-        ParentId: 389882129398021018
+        ParentId: 16112677035434330704
         ChildIds: 17611315973771645835
         UnregisteredParameters {
           Overrides {
@@ -879,9 +954,8 @@
           Scale {
           }
         }
-        ParentId: 389882129398021018
+        ParentId: 16112677035434330704
         ChildIds: 12132287434350879122
-        ChildIds: 3904673144127415215
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1025,64 +1099,6 @@
         }
       }
       Objects {
-        Id: 3904673144127415215
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 743168345218125817
-        ChildIds: 7161437949086862621
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 7161437949086862621
-        Name: "PlaceObjectAbilityClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 3904673144127415215
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 12132287434350879122
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 17529172217946308633
-          }
-        }
-      }
-      Objects {
         Id: 10132999686423340489
         Name: "Boulder Throw"
         Transform {
@@ -1093,10 +1109,9 @@
           Scale {
           }
         }
-        ParentId: 389882129398021018
+        ParentId: 16112677035434330704
         ChildIds: 17603482927302860847
         ChildIds: 1412048591863833559
-        ChildIds: 16740683306554179974
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1302,70 +1317,6 @@
         }
       }
       Objects {
-        Id: 16740683306554179974
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10132999686423340489
-        ChildIds: 285787547396984869
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 285787547396984869
-        Name: "ExcavateAbilityClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 16740683306554179974
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:PickupAbility"
-            ObjectReference {
-              SubObjectId: 10132999686423340489
-            }
-          }
-          Overrides {
-            Name: "cs:ThrowAbility"
-            ObjectReference {
-              SubObjectId: 17603482927302860847
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 343876453884158946
-          }
-        }
-      }
-      Objects {
         Id: 3579025016395869037
         Name: "Roll"
         Transform {
@@ -1376,7 +1327,7 @@
           Scale {
           }
         }
-        ParentId: 389882129398021018
+        ParentId: 16112677035434330704
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1394,9 +1345,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
+            Duration: 1
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -1407,6 +1356,8 @@
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1440,34 +1391,6 @@
         }
       }
       Objects {
-        Id: 13069050915453077852
-        Name: "Equipment"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16112677035434330704
-        ChildIds: 13709554481697835406
-        ChildIds: 14809710803316002615
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 13709554481697835406
         Name: "Mace and Shield"
         Transform {
@@ -1481,7 +1404,7 @@
             Z: 1
           }
         }
-        ParentId: 13069050915453077852
+        ParentId: 16112677035434330704
         ChildIds: 1379897022802046285
         ChildIds: 8995388716193119271
         ChildIds: 13977688717675933557
@@ -2198,7 +2121,7 @@
             Z: 1
           }
         }
-        ParentId: 13069050915453077852
+        ParentId: 16112677035434330704
         ChildIds: 15328715113681216029
         ChildIds: 274493358176543512
         UnregisteredParameters {

@@ -57,6 +57,13 @@ function OnPlayerDied(player, _)
 	SpecialAbility.isEnabled = false
 end
 
+function OnPlayerRespawn(player)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
@@ -68,6 +75,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
 

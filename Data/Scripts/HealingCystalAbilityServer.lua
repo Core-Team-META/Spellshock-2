@@ -78,6 +78,13 @@ function OnPlayerDied(player, _)
 	SpecialAbility.isEnabled = false
 end
 
+function OnPlayerRespawn(player)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
@@ -89,6 +96,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
 
@@ -104,8 +112,8 @@ function Tick(dTime)
 	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
-			if thisObject:IsA("Player") and not thisObject.isDead then
-				if thisObject.team == PrimerAbility.owner.team then
+			if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
+				if thisObject.team == SpecialAbility.owner.team then
 					local newHealth = thisObject.hitPoints + HealAmount
 					if newHealth > thisObject.maxHitPoints then
 						thisObject.hitPoints = thisObject.maxHitPoints

@@ -25,6 +25,7 @@ local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject
 
 -- User exposed properties
 local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
+local SHORT_NAME = COMPONENT_ROOT:GetCustomProperty("ShortName")
 local CAPTURE_THRESHOLD = COMPONENT_ROOT:GetCustomProperty("CaptureThreshold")
 local CAPTURE_TIME = COMPONENT_ROOT:GetCustomProperty("CaptureTime")
 local DECAY_SPEED = COMPONENT_ROOT:GetCustomProperty("DecaySpeed")
@@ -116,6 +117,7 @@ function GetState()
 
     result.id = COMPONENT_ROOT.id
     result.name = NAME
+    result.shortName = SHORT_NAME
     result.worldPosition = COMPONENT_ROOT:GetWorldPosition()
     result.progressedTeam = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
     result.owningTeam = owningTeam

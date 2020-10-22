@@ -176,6 +176,7 @@ function Tick(DeltaTime)
 		local iconImage = indicator:GetCustomProperty("IconImage"):WaitForObject()
 		local iconBackground = indicator:GetCustomProperty("IconBackground"):WaitForObject()
 		local nameText = indicator:GetCustomProperty("NameText"):WaitForObject()
+		local shortName = indicator:GetCustomProperty("ShortName"):WaitForObject()
 		local panelClipper = indicator:GetCustomProperty("PanelClipper"):WaitForObject()
 		
 		-- Setting panel clip progress
@@ -212,6 +213,7 @@ function Tick(DeltaTime)
 		-- Set name text
 		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.name
+			shortName.text = capturePointState.shortName
 			nameText.isVisible = true
 		else
 			nameText.isVisible = false

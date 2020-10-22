@@ -30,6 +30,7 @@ local CancelBindings = {
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isPreviewing" then
+		if SpecialAbility.owner ~= LOCAL_PLAYER then return end
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
 		if isPreviewing then

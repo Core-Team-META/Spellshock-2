@@ -1087,11 +1087,11 @@ Objects {
     }
   }
   ParentId: 6139923059512821780
-  ChildIds: 4559935034785672696
-  ChildIds: 17910728817571265557
-  ChildIds: 16321515820500395030
-  ChildIds: 16313267587009276285
   ChildIds: 13392592636105101133
+  ChildIds: 16321515820500395030
+  ChildIds: 17910728817571265557
+  ChildIds: 16313267587009276285
+  ChildIds: 4559935034785672696
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1105,16 +1105,15 @@ Objects {
   }
 }
 Objects {
-  Id: 13392592636105101133
-  Name: "Point E"
+  Id: 4559935034785672696
+  Name: "Point TG"
   Transform {
     Location {
-      X: -13371.9141
-      Y: -19317.5742
-      Z: 2353.79028
+      X: 7058.57227
+      Y: 6633.85693
+      Z: 2688.91284
     }
     Rotation {
-      Yaw: 139.11441
     }
     Scale {
       X: 1
@@ -1123,15 +1122,19 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 11189476031660639139
-  ChildIds: 4208566297764116835
-  ChildIds: 18308183104947120330
-  ChildIds: 16314171741228489821
-  ChildIds: 14713109632114477840
+  ChildIds: 6896745742610861950
+  ChildIds: 9666154360724432599
+  ChildIds: 1117841902434570665
+  ChildIds: 17737350920039328442
+  ChildIds: 15742096495686500615
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "War Camp"
+      String: "Temple Glade"
+    }
+    Overrides {
+      Name: "cs:ShortName"
+      String: "TG"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -1249,13 +1252,12 @@ Objects {
   }
 }
 Objects {
-  Id: 14713109632114477840
+  Id: 15742096495686500615
   Name: "Spawn Points"
   Transform {
     Location {
     }
     Rotation {
-      Yaw: -139.11441
     }
     Scale {
       X: 1
@@ -1263,9 +1265,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13392592636105101133
-  ChildIds: 13618026709082559922
-  ChildIds: 11107824073196214716
+  ParentId: 4559935034785672696
+  ChildIds: 14434310473645765923
+  ChildIds: 14773343175116809841
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1277,13 +1279,13 @@ Objects {
   }
 }
 Objects {
-  Id: 11107824073196214716
+  Id: 14773343175116809841
   Name: "Spawn Point"
   Transform {
     Location {
-      X: -5082.26
-      Y: -5033.70703
-      Z: 927.091064
+      X: 1279.46094
+      Y: -6421.82959
+      Z: -258.031494
     }
     Rotation {
     }
@@ -1293,7 +1295,7 @@ Objects {
       Z: 1.16559088
     }
   }
-  ParentId: 14713109632114477840
+  ParentId: 15742096495686500615
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -1335,13 +1337,13 @@ Objects {
   }
 }
 Objects {
-  Id: 13618026709082559922
+  Id: 14434310473645765923
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 7337.00391
-      Y: 482.119141
-      Z: 427.091064
+      X: 2174.99219
+      Y: 4436.32715
+      Z: -128.344482
     }
     Rotation {
     }
@@ -1351,7 +1353,7 @@ Objects {
       Z: 1.16559088
     }
   }
-  ParentId: 14713109632114477840
+  ParentId: 15742096495686500615
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -1393,27 +1395,63 @@ Objects {
   }
 }
 Objects {
-  Id: 16314171741228489821
+  Id: 17737350920039328442
+  Name: "Rock Hexagonal"
+  Transform {
+    Location {
+      X: 22.5786133
+      Y: 17.2001953
+      Z: -588.251
+    }
+    Rotation {
+    }
+    Scale {
+      X: 4.3103919
+      Y: 4.3103919
+      Z: 2.93881464
+    }
+  }
+  ParentId: 4559935034785672696
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8978661562815925692
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 1117841902434570665
   Name: "ZoneTrigger"
   Transform {
     Location {
-      X: -11.3539982
-      Y: -1.20275688
-      Z: 178.130371
+      Z: -194.049805
     }
     Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
     }
     Scale {
-      X: 34.5380363
-      Y: 34.5380363
-      Z: 34.5380363
+      X: 56.6868172
+      Y: 56.6868172
+      Z: 34.1170883
     }
   }
-  ParentId: 13392592636105101133
-  ChildIds: 6498596544747344427
+  ParentId: 4559935034785672696
+  ChildIds: 17842198777960786693
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1439,7 +1477,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6498596544747344427
+  Id: 17842198777960786693
   Name: "Mounted Volume"
   Transform {
     Location {
@@ -1452,7 +1490,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16314171741228489821
+  ParentId: 1117841902434570665
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1474,50 +1512,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18308183104947120330
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -3.83331513
-      Y: 4.379807
-      Z: -69.7983398
-    }
-    Rotation {
-      Yaw: -139.11441
-    }
-    Scale {
-      X: 4.20031834
-      Y: 4.20031834
-      Z: 1.02646399
-    }
-  }
-  ParentId: 13392592636105101133
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 4208566297764116835
+  Id: 9666154360724432599
   Name: "ClientContext"
   Transform {
     Location {
@@ -1531,9 +1526,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13392592636105101133
-  ChildIds: 715224953526643395
-  ChildIds: 7817820503045406307
+  ParentId: 4559935034785672696
+  ChildIds: 10184263260861828745
+  ChildIds: 4883590113462174898
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1552,7 +1547,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7817820503045406307
+  Id: 4883590113462174898
   Name: "GeoVisual"
   Transform {
     Location {
@@ -1565,9 +1560,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4208566297764116835
-  ChildIds: 4485848568877990483
-  ChildIds: 14312433245467608491
+  ParentId: 9666154360724432599
+  ChildIds: 3463963719083692016
+  ChildIds: 12224005881596937350
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1587,24 +1582,25 @@ Objects {
   }
 }
 Objects {
-  Id: 14312433245467608491
+  Id: 12224005881596937350
   Name: "Banner"
   Transform {
     Location {
+      Z: -360
     }
     Rotation {
     }
     Scale {
-      X: 0.403156787
-      Y: 0.403156787
-      Z: 0.403156787
+      X: 0.403
+      Y: 0.403
+      Z: 0.403
     }
   }
-  ParentId: 7817820503045406307
-  ChildIds: 6373266736092719640
-  ChildIds: 6661073092148940404
-  ChildIds: 13794092800188603521
-  ChildIds: 7664384847024382780
+  ParentId: 4883590113462174898
+  ChildIds: 13210385536125352604
+  ChildIds: 4574109051852311528
+  ChildIds: 13390927883516808291
+  ChildIds: 6784613581657852595
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1617,31 +1613,30 @@ Objects {
     IsGroup: true
   }
   InstanceHistory {
-    SelfId: 10488989213289545146
-    SubobjectId: 1277066023291063707
+    SelfId: 6688002334567377978
+    SubobjectId: 15923006883903167515
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 7664384847024382780
+  Id: 6784613581657852595
   Name: "Long Banner Manticore"
   Transform {
     Location {
-      X: 10.7570686
-      Y: 10.7791653
-      Z: 1888.19238
+      Y: -0.639733315
+      Z: 1888.19226
     }
     Rotation {
       Yaw: 179.999954
     }
     Scale {
-      X: 2.93930459
-      Y: 2.93930459
-      Z: 2.93930459
+      X: 2.93930483
+      Y: 2.93930483
+      Z: 2.93930483
     }
   }
-  ParentId: 14312433245467608491
+  ParentId: 12224005881596937350
   UnregisteredParameters {
     Overrides {
       Name: "ma:Prop_Cloth:color"
@@ -1668,21 +1663,20 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 8410691699733004624
-    SubobjectId: 17623055245583282545
+    SelfId: 5704724935635000362
+    SubobjectId: 14916535284465970187
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 13794092800188603521
+  Id: 13390927883516808291
   Name: "Cylinder - bottom aligned"
   Transform {
     Location {
@@ -1700,7 +1694,7 @@ Objects {
       Z: 4.00000095
     }
   }
-  ParentId: 14312433245467608491
+  ParentId: 12224005881596937350
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1723,21 +1717,20 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 3250675987207790471
-    SubobjectId: 12481115329081339814
+    SelfId: 5182921183033550409
+    SubobjectId: 14394634221470946920
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 6661073092148940404
+  Id: 4574109051852311528
   Name: "Cylinder - bottom aligned"
   Transform {
     Location {
@@ -1750,7 +1743,7 @@ Objects {
       Z: 18.8153458
     }
   }
-  ParentId: 14312433245467608491
+  ParentId: 12224005881596937350
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1773,30 +1766,27 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 5123658280399085743
-    SubobjectId: 14353966910303359118
+    SelfId: 17682029573366708728
+    SubobjectId: 8451669782142618073
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 6373266736092719640
+  Id: 13210385536125352604
   Name: "Long Banner Manticore"
   Transform {
     Location {
-      X: 12.1230764
-      Y: -33.2119102
-      Z: 1888.19238
+      Y: -17.3100586
+      Z: 1888.19263
     }
     Rotation {
-      Yaw: -3.05175781e-05
     }
     Scale {
       X: 2.93930459
@@ -1804,7 +1794,7 @@ Objects {
       Z: 2.93930459
     }
   }
-  ParentId: 14312433245467608491
+  ParentId: 12224005881596937350
   UnregisteredParameters {
     Overrides {
       Name: "ma:Prop_Cloth:color"
@@ -1831,35 +1821,34 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 8410691699733004624
-    SubobjectId: 17623055245583282545
+    SelfId: 5704724935635000362
+    SubobjectId: 14916535284465970187
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 4485848568877990483
+  Id: 3463963719083692016
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -791.12915
+      Z: -1000
     }
     Rotation {
     }
     Scale {
-      X: 2.45210028
-      Y: 2.45210028
-      Z: 89.9148788
+      X: 2.44975877
+      Y: 2.44975877
+      Z: 83.4626694
     }
   }
-  ParentId: 7817820503045406307
+  ParentId: 4883590113462174898
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1907,7 +1896,7 @@ Objects {
   }
 }
 Objects {
-  Id: 715224953526643395
+  Id: 10184263260861828745
   Name: "CapturePointControlClient"
   Transform {
     Location {
@@ -1920,7 +1909,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4208566297764116835
+  ParentId: 9666154360724432599
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -1931,25 +1920,25 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 13392592636105101133
+        SelfId: 4559935034785672696
       }
     }
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 16314171741228489821
+        SelfId: 1117841902434570665
       }
     }
     Overrides {
       Name: "cs:VisualGeometry"
       ObjectReference {
-        SelfId: 7817820503045406307
+        SelfId: 4883590113462174898
       }
     }
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 11189476031660639139
+        SelfId: 6896745742610861950
       }
     }
   }
@@ -1972,7 +1961,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11189476031660639139
+  Id: 6896745742610861950
   Name: "CapturePointControlServer"
   Transform {
     Location {
@@ -1986,7 +1975,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13392592636105101133
+  ParentId: 4559935034785672696
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -1997,13 +1986,13 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 13392592636105101133
+        SelfId: 4559935034785672696
       }
     }
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 16314171741228489821
+        SelfId: 1117841902434570665
       }
     }
     Overrides {
@@ -2033,7 +2022,7 @@ Objects {
     Overrides {
       Name: "cs:SpawnPoints"
       ObjectReference {
-        SelfId: 14713109632114477840
+        SelfId: 15742096495686500615
       }
     }
     Overrides {
@@ -2082,7 +2071,7 @@ Objects {
 }
 Objects {
   Id: 16313267587009276285
-  Name: "Point D"
+  Name: "Point OM"
   Transform {
     Location {
       X: -14873.1758
@@ -2108,6 +2097,10 @@ Objects {
     Overrides {
       Name: "cs:Name"
       String: "Old Mine"
+    }
+    Overrides {
+      Name: "cs:ShortName"
+      String: "OM"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -2994,920 +2987,8 @@ Objects {
   }
 }
 Objects {
-  Id: 16321515820500395030
-  Name: "Point C"
-  Transform {
-    Location {
-      X: 8298.51074
-      Y: -15373.3652
-      Z: 5074.38916
-    }
-    Rotation {
-      Yaw: 87.3509
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11072925829585333935
-  ChildIds: 13776159642541525489
-  ChildIds: 754991252659707758
-  ChildIds: 910755362034130703
-  ChildIds: 14073809783710211574
-  ChildIds: 18269206194719203306
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Name"
-      String: "Overlook"
-    }
-    Overrides {
-      Name: "cs:CaptureThreshold"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:CaptureTime"
-      Float: 8
-    }
-    Overrides {
-      Name: "cs:DecaySpeed"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:TeamScoreRate"
-      Int: 3
-    }
-    Overrides {
-      Name: "cs:MultiplyWithPlayers"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ResetOnRoundEnd"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:EnabledByDefault"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ChangeColorWhenDisabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:DisabledColor"
-      Color {
-        R: 0.0497065745
-        G: 0.0497065745
-        B: 0.0497065745
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "cs:DisableOnCapture"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Order"
-      Int: 3
-    }
-    Overrides {
-      Name: "cs:Name:tooltip"
-      String: "In-game name of this capture point. Does not need to be unique."
-    }
-    Overrides {
-      Name: "cs:CaptureThreshold:tooltip"
-      String: "When the point is this fraction captured, the capturing team \"owns\" it. Must be in the range 0 to 1."
-    }
-    Overrides {
-      Name: "cs:CaptureTime:tooltip"
-      String: "Number of seconds to full capture (divided by players if MultiplyWithPlayers)"
-    }
-    Overrides {
-      Name: "cs:DecaySpeed:tooltip"
-      String: "Speed at which capture progress decays when no players are present."
-    }
-    Overrides {
-      Name: "cs:MultiplyWithPlayers:tooltip"
-      String: "If the capturing team has multiple members, it captures that many times faster."
-    }
-    Overrides {
-      Name: "cs:ResetOnRoundEnd:tooltip"
-      String: "Capture point resets to default state at the end of round event. This also disables the capture point outside of a round."
-    }
-    Overrides {
-      Name: "cs:EnabledByDefault:tooltip"
-      String: "Whether this capture point is enabled by default (and on reset)"
-    }
-    Overrides {
-      Name: "cs:ChangeColorWhenDisabled:tooltip"
-      String: "If this capture point should change color when disabled"
-    }
-    Overrides {
-      Name: "cs:DisabledColor:tooltip"
-      String: "Which color this capture point\'s geometry is when disabled (does not affect team-colored geometry)"
-    }
-    Overrides {
-      Name: "cs:DisableOnCapture:tooltip"
-      String: "This point will be disabled when it is captured"
-    }
-    Overrides {
-      Name: "cs:Order:tooltip"
-      String: "Controls the order in which capture points show in some UI and game logic"
-    }
-    Overrides {
-      Name: "cs:TeamScoreRate:tooltip"
-      String: "Number of points awarded to the owning team every five seconds"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 7816823398785716610
-    SubobjectId: 17029099350970556835
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 18269206194719203306
-  Name: "Spawn Points"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -87.3509
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16321515820500395030
-  ChildIds: 5780186930419382058
-  ChildIds: 7102490510392368314
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7102490510392368314
-  Name: "Spawn Point"
-  Transform {
-    Location {
-      X: 3167.2041
-      Y: -8167.80908
-      Z: 11.9980469
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1.16559088
-    }
-  }
-  ParentId: 18269206194719203306
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4998159696449081601
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0776820555
-        G: 0.690000057
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 5780186930419382058
-  Name: "Spawn Point"
-  Transform {
-    Location {
-      X: 3598.3855
-      Y: 8931.46875
-      Z: -1618.50781
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1.16559088
-    }
-  }
-  ParentId: 18269206194719203306
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4998159696449081601
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0776820555
-        G: 0.690000057
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15683169359350375517
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 14073809783710211574
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -15.0114727
-      Y: 19.7623615
-      Z: -222.772461
-    }
-    Rotation {
-      Yaw: -87.3509
-    }
-    Scale {
-      X: 4.52212954
-      Y: 4.52212954
-      Z: 1.54716408
-    }
-  }
-  ParentId: 16321515820500395030
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 910755362034130703
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      X: -11.3549538
-      Y: -1.20334816
-      Z: -50
-    }
-    Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
-    }
-    Scale {
-      X: 34.4459038
-      Y: 34.4459038
-      Z: 34.4459038
-    }
-  }
-  ParentId: 16321515820500395030
-  ChildIds: 7466301329744946637
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 7466301329744946637
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 910755362034130703
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
-    }
-  }
-}
-Objects {
-  Id: 754991252659707758
-  Name: "ClientContext"
-  Transform {
-    Location {
-      Z: -0.000122070313
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16321515820500395030
-  ChildIds: 3266274084411309890
-  ChildIds: 9001953783686175703
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 6341621249318438212
-    SubobjectId: 15575868879628088677
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 9001953783686175703
-  Name: "GeoVisual"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 754991252659707758
-  ChildIds: 11038912078856122676
-  ChildIds: 13152761450086118744
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17508685154901761579
-    SubobjectId: 8273733429672668682
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 13152761450086118744
-  Name: "Banner"
-  Transform {
-    Location {
-      Z: -133.447266
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.405
-      Y: 0.405
-      Z: 0.405
-    }
-  }
-  ParentId: 9001953783686175703
-  ChildIds: 986944691147878980
-  ChildIds: 8794010315811397489
-  ChildIds: 11979076072127064351
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 6688002334567377978
-    SubobjectId: 15923006883903167515
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 11979076072127064351
-  Name: "Cylinder - bottom aligned"
-  Transform {
-    Location {
-      X: 193.484131
-      Y: -11.4611816
-      Z: 1876.59351
-    }
-    Rotation {
-      Pitch: 90
-      Roll: 2.07160312e-07
-    }
-    Scale {
-      X: 0.4
-      Y: 0.4
-      Z: 4.00000095
-    }
-  }
-  ParentId: 13152761450086118744
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 17118136979191323600
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5182921183033550409
-    SubobjectId: 14394634221470946920
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 8794010315811397489
-  Name: "Cylinder - bottom aligned"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.200772822
-      Y: 0.200772822
-      Z: 18.8153458
-    }
-  }
-  ParentId: 13152761450086118744
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 17118136979191323600
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 17682029573366708728
-    SubobjectId: 8451669782142618073
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 986944691147878980
-  Name: "Long Banner Manticore"
-  Transform {
-    Location {
-      Y: -17.3100586
-      Z: 1888.19263
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.93930459
-      Y: 2.93930459
-      Z: 2.93930459
-    }
-  }
-  ParentId: 13152761450086118744
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Prop_Cloth:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14834300160033285312
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 5704724935635000362
-    SubobjectId: 14916535284465970187
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 11038912078856122676
-  Name: "Big Outline"
-  Transform {
-    Location {
-      Z: -1000
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.44814515
-      Y: 2.44814515
-      Z: 83
-    }
-  }
-  ParentId: 9001953783686175703
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 3266274084411309890
-  Name: "CapturePointControlClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 754991252659707758
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:API"
-      AssetReference {
-        Id: 5415161041024035059
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 16321515820500395030
-      }
-    }
-    Overrides {
-      Name: "cs:ZoneTrigger"
-      ObjectReference {
-        SelfId: 910755362034130703
-      }
-    }
-    Overrides {
-      Name: "cs:VisualGeometry"
-      ObjectReference {
-        SelfId: 9001953783686175703
-      }
-    }
-    Overrides {
-      Name: "cs:ServerScript"
-      ObjectReference {
-        SelfId: 13776159642541525489
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 3021211325381086942
-    }
-  }
-  InstanceHistory {
-    SelfId: 8590540648471918176
-    SubobjectId: 17806907340105057857
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 13776159642541525489
-  Name: "CapturePointControlServer"
-  Transform {
-    Location {
-      Z: -0.000122070313
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16321515820500395030
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:API"
-      AssetReference {
-        Id: 5415161041024035059
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 16321515820500395030
-      }
-    }
-    Overrides {
-      Name: "cs:ZoneTrigger"
-      ObjectReference {
-        SelfId: 910755362034130703
-      }
-    }
-    Overrides {
-      Name: "cs:ProgressedTeam"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:FriendliesPresent"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:EnemiesPresent"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:LastCaptureProgress"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:LastUpdateTime"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 18269206194719203306
-      }
-    }
-    Overrides {
-      Name: "cs:FriendliesPresent:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ProgressedTeam:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:EnemiesPresent:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:LastCaptureProgress:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:LastUpdateTime:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:IsEnabled:isrep"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8171380333325991621
-    }
-  }
-  InstanceHistory {
-    SelfId: 16073018770838361761
-    SubobjectId: 6856653175336429184
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
   Id: 17910728817571265557
-  Name: "Point B"
+  Name: "Point AR"
   Transform {
     Location {
       X: -5867.57422
@@ -3934,6 +3015,10 @@ Objects {
       String: "Ancient Ruins"
     }
     Overrides {
+      Name: "cs:ShortName"
+      String: "AR"
+    }
+    Overrides {
       Name: "cs:CaptureThreshold"
       Float: 1
     }
@@ -3980,7 +3065,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Order"
-      Int: 2
+      Int: 3
     }
     Overrides {
       Name: "cs:Name:tooltip"
@@ -4845,13 +3930,390 @@ Objects {
   }
 }
 Objects {
-  Id: 4559935034785672696
-  Name: "Point A"
+  Id: 16321515820500395030
+  Name: "Point O"
   Transform {
     Location {
-      X: 7058.57227
-      Y: 6633.85693
-      Z: 2688.91284
+      X: 8298.51074
+      Y: -15373.3652
+      Z: 5074.38916
+    }
+    Rotation {
+      Yaw: 87.3509
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11072925829585333935
+  ChildIds: 13776159642541525489
+  ChildIds: 754991252659707758
+  ChildIds: 910755362034130703
+  ChildIds: 14073809783710211574
+  ChildIds: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Name"
+      String: "Overlook"
+    }
+    Overrides {
+      Name: "cs:ShortName"
+      String: "O"
+    }
+    Overrides {
+      Name: "cs:CaptureThreshold"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:CaptureTime"
+      Float: 8
+    }
+    Overrides {
+      Name: "cs:DecaySpeed"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:TeamScoreRate"
+      Int: 3
+    }
+    Overrides {
+      Name: "cs:MultiplyWithPlayers"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ResetOnRoundEnd"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:EnabledByDefault"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ChangeColorWhenDisabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:DisabledColor"
+      Color {
+        R: 0.0497065745
+        G: 0.0497065745
+        B: 0.0497065745
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:DisableOnCapture"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Order"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:Name:tooltip"
+      String: "In-game name of this capture point. Does not need to be unique."
+    }
+    Overrides {
+      Name: "cs:CaptureThreshold:tooltip"
+      String: "When the point is this fraction captured, the capturing team \"owns\" it. Must be in the range 0 to 1."
+    }
+    Overrides {
+      Name: "cs:CaptureTime:tooltip"
+      String: "Number of seconds to full capture (divided by players if MultiplyWithPlayers)"
+    }
+    Overrides {
+      Name: "cs:DecaySpeed:tooltip"
+      String: "Speed at which capture progress decays when no players are present."
+    }
+    Overrides {
+      Name: "cs:MultiplyWithPlayers:tooltip"
+      String: "If the capturing team has multiple members, it captures that many times faster."
+    }
+    Overrides {
+      Name: "cs:ResetOnRoundEnd:tooltip"
+      String: "Capture point resets to default state at the end of round event. This also disables the capture point outside of a round."
+    }
+    Overrides {
+      Name: "cs:EnabledByDefault:tooltip"
+      String: "Whether this capture point is enabled by default (and on reset)"
+    }
+    Overrides {
+      Name: "cs:ChangeColorWhenDisabled:tooltip"
+      String: "If this capture point should change color when disabled"
+    }
+    Overrides {
+      Name: "cs:DisabledColor:tooltip"
+      String: "Which color this capture point\'s geometry is when disabled (does not affect team-colored geometry)"
+    }
+    Overrides {
+      Name: "cs:DisableOnCapture:tooltip"
+      String: "This point will be disabled when it is captured"
+    }
+    Overrides {
+      Name: "cs:Order:tooltip"
+      String: "Controls the order in which capture points show in some UI and game logic"
+    }
+    Overrides {
+      Name: "cs:TeamScoreRate:tooltip"
+      String: "Number of points awarded to the owning team every five seconds"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 7816823398785716610
+    SubobjectId: 17029099350970556835
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 18269206194719203306
+  Name: "Spawn Points"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -87.3509
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16321515820500395030
+  ChildIds: 5780186930419382058
+  ChildIds: 7102490510392368314
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7102490510392368314
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 3167.2041
+      Y: -8167.80908
+      Z: 11.9980469
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 5780186930419382058
+  Name: "Spawn Point"
+  Transform {
+    Location {
+      X: 3598.3855
+      Y: 8931.46875
+      Z: -1618.50781
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.16559088
+    }
+  }
+  ParentId: 18269206194719203306
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4998159696449081601
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0776820555
+        G: 0.690000057
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 14073809783710211574
+  Name: "Rock Hexagonal"
+  Transform {
+    Location {
+      X: -15.0114727
+      Y: 19.7623615
+      Z: -222.772461
+    }
+    Rotation {
+      Yaw: -87.3509
+    }
+    Scale {
+      X: 4.52212954
+      Y: 4.52212954
+      Z: 1.54716408
+    }
+  }
+  ParentId: 16321515820500395030
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8978661562815925692
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 910755362034130703
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+      X: -11.3549538
+      Y: -1.20334816
+      Z: -50
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: -0.0337219238
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 34.4459038
+      Y: 34.4459038
+      Z: 34.4459038
+    }
+  }
+  ParentId: 16321515820500395030
+  ChildIds: 7466301329744946637
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 7466301329744946637
+  Name: "Mounted Volume"
+  Transform {
+    Location {
     }
     Rotation {
     }
@@ -4861,16 +4323,560 @@ Objects {
       Z: 1
     }
   }
+  ParentId: 910755362034130703
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+    MountedVolume {
+    }
+  }
+}
+Objects {
+  Id: 754991252659707758
+  Name: "ClientContext"
+  Transform {
+    Location {
+      Z: -0.000122070313
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16321515820500395030
+  ChildIds: 3266274084411309890
+  ChildIds: 9001953783686175703
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 6341621249318438212
+    SubobjectId: 15575868879628088677
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 9001953783686175703
+  Name: "GeoVisual"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 754991252659707758
+  ChildIds: 11038912078856122676
+  ChildIds: 13152761450086118744
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 17508685154901761579
+    SubobjectId: 8273733429672668682
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 13152761450086118744
+  Name: "Banner"
+  Transform {
+    Location {
+      Z: -133.447266
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.405
+      Y: 0.405
+      Z: 0.405
+    }
+  }
+  ParentId: 9001953783686175703
+  ChildIds: 986944691147878980
+  ChildIds: 8794010315811397489
+  ChildIds: 11979076072127064351
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 6688002334567377978
+    SubobjectId: 15923006883903167515
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 11979076072127064351
+  Name: "Cylinder - bottom aligned"
+  Transform {
+    Location {
+      X: 193.484131
+      Y: -11.4611816
+      Z: 1876.59351
+    }
+    Rotation {
+      Pitch: 90
+      Roll: 2.07160312e-07
+    }
+    Scale {
+      X: 0.4
+      Y: 0.4
+      Z: 4.00000095
+    }
+  }
+  ParentId: 13152761450086118744
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17118136979191323600
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14017539756736382852
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 5182921183033550409
+    SubobjectId: 14394634221470946920
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 8794010315811397489
+  Name: "Cylinder - bottom aligned"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.200772822
+      Y: 0.200772822
+      Z: 18.8153458
+    }
+  }
+  ParentId: 13152761450086118744
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17118136979191323600
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14017539756736382852
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 17682029573366708728
+    SubobjectId: 8451669782142618073
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 986944691147878980
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      Y: -17.3100586
+      Z: 1888.19263
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2.93930459
+      Y: 2.93930459
+      Z: 2.93930459
+    }
+  }
+  ParentId: 13152761450086118744
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14834300160033285312
+    }
+    Teams {
+      UseTeamColor: true
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 5704724935635000362
+    SubobjectId: 14916535284465970187
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 11038912078856122676
+  Name: "Big Outline"
+  Transform {
+    Location {
+      Z: -1000
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2.44814515
+      Y: 2.44814515
+      Z: 83
+    }
+  }
+  ParentId: 9001953783686175703
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 16945204928432289310
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 0.634
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14017539756736382852
+    }
+    Teams {
+      UseTeamColor: true
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableCastShadows: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 3906627555187087444
+    SubobjectId: 13123011876186695797
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 3266274084411309890
+  Name: "CapturePointControlClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 754991252659707758
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:API"
+      AssetReference {
+        Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 16321515820500395030
+      }
+    }
+    Overrides {
+      Name: "cs:ZoneTrigger"
+      ObjectReference {
+        SelfId: 910755362034130703
+      }
+    }
+    Overrides {
+      Name: "cs:VisualGeometry"
+      ObjectReference {
+        SelfId: 9001953783686175703
+      }
+    }
+    Overrides {
+      Name: "cs:ServerScript"
+      ObjectReference {
+        SelfId: 13776159642541525489
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3021211325381086942
+    }
+  }
+  InstanceHistory {
+    SelfId: 8590540648471918176
+    SubobjectId: 17806907340105057857
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 13776159642541525489
+  Name: "CapturePointControlServer"
+  Transform {
+    Location {
+      Z: -0.000122070313
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16321515820500395030
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:API"
+      AssetReference {
+        Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 16321515820500395030
+      }
+    }
+    Overrides {
+      Name: "cs:ZoneTrigger"
+      ObjectReference {
+        SelfId: 910755362034130703
+      }
+    }
+    Overrides {
+      Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:FriendliesPresent"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:EnemiesPresent"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:LastCaptureProgress"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:LastUpdateTime"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 18269206194719203306
+      }
+    }
+    Overrides {
+      Name: "cs:FriendliesPresent:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ProgressedTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:EnemiesPresent:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureProgress:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastUpdateTime:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:IsEnabled:isrep"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8171380333325991621
+    }
+  }
+  InstanceHistory {
+    SelfId: 16073018770838361761
+    SubobjectId: 6856653175336429184
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 13392592636105101133
+  Name: "Point WC"
+  Transform {
+    Location {
+      X: -13371.9141
+      Y: -19317.5742
+      Z: 2353.79028
+    }
+    Rotation {
+      Yaw: 139.11441
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
   ParentId: 11072925829585333935
-  ChildIds: 6896745742610861950
-  ChildIds: 9666154360724432599
-  ChildIds: 1117841902434570665
-  ChildIds: 17737350920039328442
-  ChildIds: 15742096495686500615
+  ChildIds: 11189476031660639139
+  ChildIds: 4208566297764116835
+  ChildIds: 18308183104947120330
+  ChildIds: 16314171741228489821
+  ChildIds: 14713109632114477840
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "Temple Glade"
+      String: "War Camp"
+    }
+    Overrides {
+      Name: "cs:ShortName"
+      String: "WC"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -4988,12 +4994,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15742096495686500615
+  Id: 14713109632114477840
   Name: "Spawn Points"
   Transform {
     Location {
     }
     Rotation {
+      Yaw: -139.11441
     }
     Scale {
       X: 1
@@ -5001,9 +5008,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4559935034785672696
-  ChildIds: 14434310473645765923
-  ChildIds: 14773343175116809841
+  ParentId: 13392592636105101133
+  ChildIds: 13618026709082559922
+  ChildIds: 11107824073196214716
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -5015,13 +5022,13 @@ Objects {
   }
 }
 Objects {
-  Id: 14773343175116809841
+  Id: 11107824073196214716
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 1279.46094
-      Y: -6421.82959
-      Z: -258.031494
+      X: -5082.26
+      Y: -5033.70703
+      Z: 927.091064
     }
     Rotation {
     }
@@ -5031,7 +5038,7 @@ Objects {
       Z: 1.16559088
     }
   }
-  ParentId: 15742096495686500615
+  ParentId: 14713109632114477840
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -5073,13 +5080,13 @@ Objects {
   }
 }
 Objects {
-  Id: 14434310473645765923
+  Id: 13618026709082559922
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 2174.99219
-      Y: 4436.32715
-      Z: -128.344482
+      X: 7337.00391
+      Y: 482.119141
+      Z: 427.091064
     }
     Rotation {
     }
@@ -5089,7 +5096,7 @@ Objects {
       Z: 1.16559088
     }
   }
-  ParentId: 15742096495686500615
+  ParentId: 14713109632114477840
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
@@ -5131,63 +5138,27 @@ Objects {
   }
 }
 Objects {
-  Id: 17737350920039328442
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: 22.5786133
-      Y: 17.2001953
-      Z: -588.251
-    }
-    Rotation {
-    }
-    Scale {
-      X: 4.3103919
-      Y: 4.3103919
-      Z: 2.93881464
-    }
-  }
-  ParentId: 4559935034785672696
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 1117841902434570665
+  Id: 16314171741228489821
   Name: "ZoneTrigger"
   Transform {
     Location {
-      Z: -194.049805
+      X: -11.3539982
+      Y: -1.20275688
+      Z: 178.130371
     }
     Rotation {
+      Pitch: 0.719020784
+      Yaw: -0.0337219238
+      Roll: -0.00622558594
     }
     Scale {
-      X: 56.6868172
-      Y: 56.6868172
-      Z: 34.1170883
+      X: 34.5380363
+      Y: 34.5380363
+      Z: 34.5380363
     }
   }
-  ParentId: 4559935034785672696
-  ChildIds: 17842198777960786693
+  ParentId: 13392592636105101133
+  ChildIds: 6498596544747344427
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -5213,7 +5184,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17842198777960786693
+  Id: 6498596544747344427
   Name: "Mounted Volume"
   Transform {
     Location {
@@ -5226,7 +5197,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1117841902434570665
+  ParentId: 16314171741228489821
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -5248,7 +5219,50 @@ Objects {
   }
 }
 Objects {
-  Id: 9666154360724432599
+  Id: 18308183104947120330
+  Name: "Rock Hexagonal"
+  Transform {
+    Location {
+      X: -3.83331513
+      Y: 4.379807
+      Z: -69.7983398
+    }
+    Rotation {
+      Yaw: -139.11441
+    }
+    Scale {
+      X: 4.20031834
+      Y: 4.20031834
+      Z: 1.02646399
+    }
+  }
+  ParentId: 13392592636105101133
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8978661562815925692
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4208566297764116835
   Name: "ClientContext"
   Transform {
     Location {
@@ -5262,9 +5276,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4559935034785672696
-  ChildIds: 10184263260861828745
-  ChildIds: 4883590113462174898
+  ParentId: 13392592636105101133
+  ChildIds: 715224953526643395
+  ChildIds: 7817820503045406307
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -5283,7 +5297,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4883590113462174898
+  Id: 7817820503045406307
   Name: "GeoVisual"
   Transform {
     Location {
@@ -5296,9 +5310,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666154360724432599
-  ChildIds: 3463963719083692016
-  ChildIds: 12224005881596937350
+  ParentId: 4208566297764116835
+  ChildIds: 4485848568877990483
+  ChildIds: 14312433245467608491
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -5318,25 +5332,24 @@ Objects {
   }
 }
 Objects {
-  Id: 12224005881596937350
+  Id: 14312433245467608491
   Name: "Banner"
   Transform {
     Location {
-      Z: -360
     }
     Rotation {
     }
     Scale {
-      X: 0.403
-      Y: 0.403
-      Z: 0.403
+      X: 0.403156787
+      Y: 0.403156787
+      Z: 0.403156787
     }
   }
-  ParentId: 4883590113462174898
-  ChildIds: 13210385536125352604
-  ChildIds: 4574109051852311528
-  ChildIds: 13390927883516808291
-  ChildIds: 6784613581657852595
+  ParentId: 7817820503045406307
+  ChildIds: 6373266736092719640
+  ChildIds: 6661073092148940404
+  ChildIds: 13794092800188603521
+  ChildIds: 7664384847024382780
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -5349,30 +5362,31 @@ Objects {
     IsGroup: true
   }
   InstanceHistory {
-    SelfId: 6688002334567377978
-    SubobjectId: 15923006883903167515
+    SelfId: 10488989213289545146
+    SubobjectId: 1277066023291063707
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 6784613581657852595
+  Id: 7664384847024382780
   Name: "Long Banner Manticore"
   Transform {
     Location {
-      Y: -0.639733315
-      Z: 1888.19226
+      X: 10.7570686
+      Y: 10.7791653
+      Z: 1888.19238
     }
     Rotation {
       Yaw: 179.999954
     }
     Scale {
-      X: 2.93930483
-      Y: 2.93930483
-      Z: 2.93930483
+      X: 2.93930459
+      Y: 2.93930459
+      Z: 2.93930459
     }
   }
-  ParentId: 12224005881596937350
+  ParentId: 14312433245467608491
   UnregisteredParameters {
     Overrides {
       Name: "ma:Prop_Cloth:color"
@@ -5399,20 +5413,21 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 5704724935635000362
-    SubobjectId: 14916535284465970187
+    SelfId: 8410691699733004624
+    SubobjectId: 17623055245583282545
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 13390927883516808291
+  Id: 13794092800188603521
   Name: "Cylinder - bottom aligned"
   Transform {
     Location {
@@ -5430,7 +5445,7 @@ Objects {
       Z: 4.00000095
     }
   }
-  ParentId: 12224005881596937350
+  ParentId: 14312433245467608491
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -5453,20 +5468,21 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 5182921183033550409
-    SubobjectId: 14394634221470946920
+    SelfId: 3250675987207790471
+    SubobjectId: 12481115329081339814
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 4574109051852311528
+  Id: 6661073092148940404
   Name: "Cylinder - bottom aligned"
   Transform {
     Location {
@@ -5479,7 +5495,7 @@ Objects {
       Z: 18.8153458
     }
   }
-  ParentId: 12224005881596937350
+  ParentId: 14312433245467608491
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -5502,27 +5518,30 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 17682029573366708728
-    SubobjectId: 8451669782142618073
+    SelfId: 5123658280399085743
+    SubobjectId: 14353966910303359118
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 13210385536125352604
+  Id: 6373266736092719640
   Name: "Long Banner Manticore"
   Transform {
     Location {
-      Y: -17.3100586
-      Z: 1888.19263
+      X: 12.1230764
+      Y: -33.2119102
+      Z: 1888.19238
     }
     Rotation {
+      Yaw: -3.05175781e-05
     }
     Scale {
       X: 2.93930459
@@ -5530,7 +5549,7 @@ Objects {
       Z: 2.93930459
     }
   }
-  ParentId: 12224005881596937350
+  ParentId: 14312433245467608491
   UnregisteredParameters {
     Overrides {
       Name: "ma:Prop_Cloth:color"
@@ -5557,34 +5576,35 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableReceiveDecals: true
     StaticMesh {
       Physics {
       }
     }
   }
   InstanceHistory {
-    SelfId: 5704724935635000362
-    SubobjectId: 14916535284465970187
+    SelfId: 8410691699733004624
+    SubobjectId: 17623055245583282545
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
   }
 }
 Objects {
-  Id: 3463963719083692016
+  Id: 4485848568877990483
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -1000
+      Z: -791.12915
     }
     Rotation {
     }
     Scale {
-      X: 2.44975877
-      Y: 2.44975877
-      Z: 83.4626694
+      X: 2.45210028
+      Y: 2.45210028
+      Z: 89.9148788
     }
   }
-  ParentId: 4883590113462174898
+  ParentId: 7817820503045406307
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -5632,7 +5652,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10184263260861828745
+  Id: 715224953526643395
   Name: "CapturePointControlClient"
   Transform {
     Location {
@@ -5645,7 +5665,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9666154360724432599
+  ParentId: 4208566297764116835
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -5656,25 +5676,25 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 4559935034785672696
+        SelfId: 13392592636105101133
       }
     }
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 1117841902434570665
+        SelfId: 16314171741228489821
       }
     }
     Overrides {
       Name: "cs:VisualGeometry"
       ObjectReference {
-        SelfId: 4883590113462174898
+        SelfId: 7817820503045406307
       }
     }
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 6896745742610861950
+        SelfId: 11189476031660639139
       }
     }
   }
@@ -5697,7 +5717,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6896745742610861950
+  Id: 11189476031660639139
   Name: "CapturePointControlServer"
   Transform {
     Location {
@@ -5711,7 +5731,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4559935034785672696
+  ParentId: 13392592636105101133
   UnregisteredParameters {
     Overrides {
       Name: "cs:API"
@@ -5722,13 +5742,13 @@ Objects {
     Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
-        SelfId: 4559935034785672696
+        SelfId: 13392592636105101133
       }
     }
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 1117841902434570665
+        SelfId: 16314171741228489821
       }
     }
     Overrides {
@@ -5758,7 +5778,7 @@ Objects {
     Overrides {
       Name: "cs:SpawnPoints"
       ObjectReference {
-        SelfId: 15742096495686500615
+        SelfId: 14713109632114477840
       }
     }
     Overrides {
