@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 18141993204830915813
+  Name: "Fantasy Castle Accessory Roof 01 "
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_acc_roof_001"
+  }
+}
+Assets {
   Id: 18097083884483661581
   Name: "Crescent - 02"
   PlatformAssetType: 1
@@ -1700,6 +1709,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8619830679695120720
+  Name: "Prism - 6-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_001"
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -1967,6 +1985,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_bricks_mortar_001_uv"
+  }
+}
+Assets {
+  Id: 7147607578013694397
+  Name: "Hemishpere (thin)"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_002"
   }
 }
 Assets {
@@ -2609,6 +2636,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3665975595307183562
+  Name: "Craftsman Part - Inside Center Trim 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_sub_craftsman_part_intTrim_001_mid"
+  }
+}
+Assets {
   Id: 3662715017593123519
   Name: "Carpet 02"
   PlatformAssetType: 2
@@ -2843,6 +2879,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2010742609626872711
+  Name: "Prism - 8-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_octagon_001"
+  }
+}
+Assets {
   Id: 1978759747315071937
   Name: "Donut"
   PlatformAssetType: 1
@@ -2948,6 +2993,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_001"
+  }
+}
+Assets {
+  Id: 1364294402302747595
+  Name: "Amethyst"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_amethyst"
   }
 }
 Assets {
@@ -3182,6 +3236,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_horn_001"
+  }
+}
+Assets {
+  Id: 51633199919536629
+  Name: "Square Column Segment"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_column_square_segment_001"
   }
 }
 Assets {
