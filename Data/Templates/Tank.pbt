@@ -114,7 +114,6 @@
           }
         }
         ParentId: 4159325021862714735
-        ChildIds: 4498930441719624703
         ChildIds: 15787800980568093750
         UnregisteredParameters {
           Overrides {
@@ -211,36 +210,6 @@
         Script {
           ScriptAsset {
             Id: 643752288155017208
-          }
-        }
-      }
-      Objects {
-        Id: 4498930441719624703
-        Name: "PlayerEnergyRegenServer"
-        Transform {
-          Location {
-            X: -3366.67944
-            Y: 2359.71118
-            Z: -33.1054077
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16551887910612709530
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12958287165690366055
           }
         }
       }
