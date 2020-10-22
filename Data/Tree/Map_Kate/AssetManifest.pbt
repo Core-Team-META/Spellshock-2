@@ -386,6 +386,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15761460511220986007
+  Name: "Emissive Glow Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_emissive_001"
+  }
+}
+Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1
@@ -572,6 +581,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_post_clamp_001"
+  }
+}
+Assets {
+  Id: 14746711894802914664
+  Name: "Pipe"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_001"
   }
 }
 Assets {
@@ -953,6 +971,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12476654224073211161
+  Name: "Rock Hexagonal"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_008"
+  }
+}
+Assets {
   Id: 12456021343966508143
   Name: "Scifi Panel 1x4m"
   PlatformAssetType: 1
@@ -1193,6 +1220,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_003"
+  }
+}
+Assets {
+  Id: 11534525569341258104
+  Name: "Invisible"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_invisible_001"
   }
 }
 Assets {
@@ -1700,6 +1736,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8751406400362347694
+  Name: "Pipe - 90-Degree Long Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_curve90_005"
+  }
+}
+Assets {
   Id: 8626697804450090273
   Name: "Stone Arch (doorway) 001"
   PlatformAssetType: 1
@@ -2021,6 +2066,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter-pipe_002"
+  }
+}
+Assets {
+  Id: 7034271320763119631
+  Name: "Wood Raw White"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_raw_white_001_uv"
   }
 }
 Assets {
@@ -2357,6 +2411,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5061372286056644297
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
   Id: 4956137530833491633
   Name: "Bone Human Pile Straight 01"
   PlatformAssetType: 1
@@ -2510,6 +2573,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4322675021483384603
+  Name: "Fantasy Shield 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_002"
+  }
+}
+Assets {
   Id: 4320885659990681021
   Name: "Curved Wedge - Concave"
   PlatformAssetType: 1
@@ -2534,6 +2606,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_branches_medium_001"
+  }
+}
+Assets {
+  Id: 4193024863549911546
+  Name: "Column Base 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_column_bottom_002"
   }
 }
 Assets {
@@ -3164,6 +3245,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_roof_001_beam"
+  }
+}
+Assets {
+  Id: 326849343922180961
+  Name: "Chain Ceiling Anchor"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_chain_top_001"
   }
 }
 Assets {
