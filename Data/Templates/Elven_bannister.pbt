@@ -10,9 +10,9 @@
         Name: "Elven_bannister"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.24802315
+            Y: 1.24802315
+            Z: 1.24802315
           }
         }
         ParentId: 4781671109827199097
@@ -103,7 +103,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11337413471323694429
+              Id: 1626097446304398136
             }
           }
         }
@@ -212,7 +212,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11337413471323694429
+              Id: 1626097446304398136
             }
           }
         }
@@ -266,7 +266,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11337413471323694429
+              Id: 1626097446304398136
             }
           }
         }
@@ -322,7 +322,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11337413471323694429
+              Id: 1626097446304398136
             }
           }
         }
@@ -378,7 +378,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11337413471323694429
+              Id: 1626097446304398136
             }
           }
         }
@@ -421,12 +421,12 @@
       }
     }
     Assets {
-      Id: 11337413471323694429
-      Name: "Metal Gold 01"
+      Id: 1626097446304398136
+      Name: "Stucco Tintable"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_001"
+        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {
@@ -436,15 +436,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_scifi_trim_001_4m"
-      }
-    }
-    Assets {
-      Id: 1626097446304398136
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {

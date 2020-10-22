@@ -665,15 +665,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14265726385927418716
-  Name: "Fantasy Castle Trim - Battlement 01 4m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_battlement_001_4m"
-  }
-}
-Assets {
   Id: 14231809728886464860
   Name: "Wood Raw White"
   PlatformAssetType: 2
@@ -779,15 +770,6 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_stone_cracks_001"
-  }
-}
-Assets {
-  Id: 13628509557036005748
-  Name: "Text 05: ~"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "F6_Text_036"
   }
 }
 Assets {
@@ -2654,15 +2636,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3891005045467292245
-  Name: "Arch"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_arch_001"
-  }
-}
-Assets {
   Id: 3817933812062928360
   Name: "Wood Planks"
   PlatformAssetType: 2
@@ -2822,15 +2795,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_skull_pile_02_ref"
-  }
-}
-Assets {
-  Id: 2852188377307191484
-  Name: "Column Topper 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_column_top_001"
   }
 }
 Assets {

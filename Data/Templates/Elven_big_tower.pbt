@@ -1910,9 +1910,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.677083313
-              G: 0.677083313
-              B: 0.677083313
+              R: 0.578125
+              G: 0.578125
+              B: 0.578125
               A: 1
             }
           }
@@ -1969,9 +1969,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.677083313
-              G: 0.677083313
-              B: 0.677083313
+              R: 0.578125
+              G: 0.578125
+              B: 0.578125
               A: 1
             }
           }

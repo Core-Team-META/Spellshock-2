@@ -65,7 +65,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 13004660898277130106
+              Id: 15380009543243484126
             }
           }
           Overrides {
@@ -75,9 +75,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.453125
-              G: 0.453125
-              B: 0.453125
+              R: 0.854166687
+              G: 0.854166687
+              B: 0.854166687
               A: 1
             }
           }
