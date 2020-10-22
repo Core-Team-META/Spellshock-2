@@ -1,83 +1,81 @@
 ﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
-local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
+local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
+local TeleportFX = script:GetCustomProperty("TeleportFX")
 local EventName = script:GetCustomProperty("EventName")
 local EventListeners = {}
 
-local isExecuting = false
+local isPreviewing = false
+local isPlacing = false
 
-function OnPrimerAbilityExecute(thisAbility)
-	Task.Wait()
-	print("Toggling ON")
-	thisAbility.isEnabled = false
-	MainAbility.isEnabled = true
+function OnBindingPressed(player, binding)
+	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
+		isPreviewing = true
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		PrimaryAbility.isEnabled = false
+		SpecialAbility.isEnabled = true
+	end
 end
 
-
---[[function OnBindingPressed(player, binding)
-	if binding == MainAbility.actionBinding and isExecuting == false then
-		isExecuting = true
-		Task.Wait()
-		MainAbility.isEnabled = true
-	end
-end]]
-
-function OnMainAbilityCast(thisAbility)
-	--print("CASTING: "..tostring(MainAbility.isEnabled))
-	if not MainAbility.isEnabled then
+function OnSpecialAbilityCast(thisAbility)
+	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
-		MainAbility:Interrupt()
+		SpecialAbility:Interrupt()
 	end
 end
 
-function OnMainAbilityExecute(thisAbility)
-	MainAbility.isEnabled = false
-end
-
-function OnMainAbilityReady(thisAbility)
-	Task.Wait(0.1)
-	print("Toggling OFF")
-	MainAbility.isEnabled = false
-	PrimerAbility.isEnabled = true
-	isExecuting = false
+function OnSpecialAbilityReady(thisAbility)
+	isPlacing = false
 end
 
 function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
+		Task.Wait()
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		print("~ Received Broadcast ~")
+		-- check if the placement was canceled
 		if position == nil then
-			isExecuting = false
-			MainAbility.isEnabled = false
 			return
 		end
-	
-		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 20))
+		
+		isPlacing = true
+		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 30))
+		World.SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
 	end
 end
 
+function OnPlayerDied(player, _)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
+end
+
 function OnEquip(equipment, player)
-	print("Server Equip")
-	isExecuting = false
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, Teleport))
 	end
-	
-	table.insert(EventListeners, MainAbility.castEvent:Connect(OnMainAbilityCast))
-	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
-	table.insert(EventListeners, MainAbility.executeEvent:Connect( OnMainAbilityExecute ))
-	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
-	--table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
+		
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
+	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
+	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
 
 function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	isExecuting = false
 end
-
-MainAbility.isEnabled = false
-PrimerAbility.isEnabled = true
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)

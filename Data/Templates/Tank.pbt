@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -967,7 +967,7 @@
             }
           }
           Overrides {
-            Name: "cs:MainAbility"
+            Name: "cs:SpecialAbility"
             ObjectReference {
               SubObjectId: 743168345218125817
             }

@@ -1190,8 +1190,8 @@ Objects {
   Name: "Equipment Spawners"
   Transform {
     Location {
-      X: -24964.1152
-      Y: -32164.3574
+      X: -24465
+      Y: -31820
       Z: 6418.38623
     }
     Rotation {
@@ -10680,8 +10680,8 @@ Objects {
   }
   ParentId: 14630094839131329020
   ChildIds: 14464833702860519262
-  ChildIds: 13099902584835452612
   ChildIds: 6780570553192328827
+  ChildIds: 13099902584835452612
   ChildIds: 545011635975053091
   ChildIds: 5426947969470091416
   UnregisteredParameters {
@@ -10747,7 +10747,7 @@ Objects {
     Width: 200
     Height: 30
     UIX: 10
-    UIY: -30
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -10805,7 +10805,8 @@ Objects {
   Control {
     Width: 200
     Height: 30
-    UIX: 10
+    UIX: 47
+    UIY: 34
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -10819,7 +10820,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 16
+      Size: 20
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -10834,65 +10835,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 6780570553192328827
-  Name: "Equipment Icon"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16242997972117519037
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: -25
-    Height: -25
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 11595486818978203444
-      }
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -10933,6 +10875,65 @@ Objects {
     Image {
       Brush {
         Id: 5547947379889405266
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6780570553192328827
+  Name: "Equipment Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16242997972117519037
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: -5
+    Height: -5
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11595486818978203444
       }
       Color {
         R: 1
@@ -12487,17 +12488,17 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 182
-    Height: 26
+    Width: 37
+    Height: 35
     UIX: 111.853783
-    UIY: -79.9000854
+    UIY: -70.9000854
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "Team"
+      Label: "Elf"
       Color {
         R: 1
         G: 1
@@ -12638,7 +12639,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -12683,8 +12684,8 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: -631.238281
-      Y: -97.3418
+      X: -2071.18457
+      Y: -540.324219
       Z: 3121.79834
     }
     Rotation {

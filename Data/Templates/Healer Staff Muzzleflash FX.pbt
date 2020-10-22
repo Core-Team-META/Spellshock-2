@@ -7,7 +7,7 @@
       RootId: 1735922973232511623
       Objects {
         Id: 1735922973232511623
-        Name: "Poison Staff Muzzleflash FX"
+        Name: "Healer Staff Muzzleflash FX"
         Transform {
           Scale {
             X: 1
@@ -17,6 +17,7 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 7872514914426734254
+        Lifespan: 0.6
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -53,7 +54,6 @@
             Id: 14120599425736490656
           }
           AutoPlay: true
-          Transient: true
           Volume: 1
           Falloff: 5000
           Radius: -1

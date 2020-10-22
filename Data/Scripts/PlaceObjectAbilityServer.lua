@@ -1,7 +1,7 @@
 ﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
-local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
-local AbilityBinding = MainAbility:GetCustomProperty("Binding")
+local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local ObjectTemplate = script:GetCustomProperty("WallTemplate")
 local EventName = script:GetCustomProperty("EventName")
@@ -17,26 +17,18 @@ function OnBindingPressed(player, binding)
 		isPreviewing = true
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 		PrimaryAbility.isEnabled = false
-		MainAbility.isEnabled = true
+		SpecialAbility.isEnabled = true
 	end
 end
 
-function OnMainAbilityCast(thisAbility)
-	--print("CASTING: "..tostring(MainAbility.isEnabled))
+function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
-		MainAbility:Interrupt()
+		SpecialAbility:Interrupt()
 	end
 end
 
-function OnMainAbilityExecute(thisAbility)
-	--print("Disabling")
-	--isPreviewing = false
-	--isPlacing = true
-end
-
-function OnMainAbilityReady(thisAbility)
-	--isPreviewing = false
+function OnSpecialAbilityReady(thisAbility)
 	isPlacing = false
 end
 
@@ -45,7 +37,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		Task.Wait()
 		isPreviewing = false
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		MainAbility.isEnabled = false
+		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
 		print("~ Received Broadcast ~")
@@ -55,11 +47,11 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
-		newWall.lifeSpan = Duration
-		if newWall:GetCustomProperty("Team") ~= nil then
+		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
+		newObject.lifeSpan = Duration
+		if newObject:GetCustomProperty("Team") ~= nil then
 			Task.Wait()
-			newWall:SetNetworkedCustomProperty("Team", MainAbility.owner.team)
+			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
 		end
 	end
 end
@@ -68,11 +60,10 @@ function OnPlayerDied(player, _)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	PrimaryAbility.isEnabled = true
-	MainAbility.isEnabled = false
+	SpecialAbility.isEnabled = false
 end
 
 function OnEquip(equipment, player)
-	print("Escavate Server Equip")
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
@@ -80,9 +71,8 @@ function OnEquip(equipment, player)
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	end
 		
-	table.insert(EventListeners, MainAbility.castEvent:Connect(OnMainAbilityCast))
-	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
-	--table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
+	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
