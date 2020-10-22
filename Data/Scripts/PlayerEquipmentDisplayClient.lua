@@ -39,16 +39,20 @@ local INITIAL_AMMO_TEXT_COLOR = AMMO_TEXT:GetColor()
 function Tick()
     for _, equipment in ipairs(LOCAL_PLAYER:GetEquipment()) do
         if Object.IsValid(equipment) and equipment:GetAttachedToSocketName() == SOCKET then
-            EQUIPMENT_NAME_TEXT.visibility = Visibility.INHERIT
-            EQUIPMENT_NAME_TEXT.text = equipment.name
+            if equipment:GetCustomProperty("enableUI") then 
 
-            if AOI.GetObjectIcon(equipment) then
-                EQUIPMENT_ICON:SetImage(AOI.GetObjectIcon(equipment))
-                EQUIPMENT_ICON:SetColor(AOI.GetObjectColor(equipment))
-            else
-                EQUIPMENT_ICON:SetImage(DEFAULT_IMAGE)
-                EQUIPMENT_ICON:SetColor(DEFAULT_COLOR)
-            end
+	            EQUIPMENT_NAME_TEXT.visibility = Visibility.INHERIT
+	            EQUIPMENT_NAME_TEXT.text = equipment.name
+	
+	            if AOI.GetObjectIcon(equipment) then
+	                EQUIPMENT_ICON:SetImage(AOI.GetObjectIcon(equipment))
+	                EQUIPMENT_ICON:SetColor(AOI.GetObjectColor(equipment))
+	            else
+	                EQUIPMENT_ICON:SetImage(DEFAULT_IMAGE)
+	                EQUIPMENT_ICON:SetColor(DEFAULT_COLOR)
+	            end
+	            return
+	        end
 
             if equipment:IsA("Weapon") then
                 AMMO_TEXT.visibility = Visibility.INHERIT

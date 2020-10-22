@@ -32,6 +32,7 @@ local BINDING = COMPONENT_ROOT:GetCustomProperty("Binding")
 local BINDING_HINT = COMPONENT_ROOT:GetCustomProperty("BindingHint")
 local SHOW_ABILITY_NAME = COMPONENT_ROOT:GetCustomProperty("ShowAbilityName")
 local HIDE_WHEN_DISABLED = COMPONENT_ROOT:GetCustomProperty("HideWhenDisabled")
+local IGNORE_OVERRIDE = COMPONENT_ROOT:GetCustomProperty("IgnoreOverride")
 
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -50,7 +51,7 @@ function GetLocalPlayerAbilityWithBinding()
     local abilities = LOCAL_PLAYER:GetAbilities()
     for _, ability in pairs(abilities) do
     	local OverrideBinding = ability:GetCustomProperty("Binding")
-    	if OverrideBinding == BINDING then
+    	if not IGNORE_OVERRIDE and OverrideBinding == BINDING then
     		return ability
     	end
     

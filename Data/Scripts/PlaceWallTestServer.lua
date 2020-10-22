@@ -1,4 +1,5 @@
 ﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local AbilityBinding = MainAbility:GetCustomProperty("Binding")
 
@@ -12,8 +13,11 @@ local isPreviewing = false
 local isPlacing = false
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and not isPreviewing and not isPlacing then
+	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		PrimaryAbility.isEnabled = false
+		MainAbility.isEnabled = true
 	end
 end
 
@@ -27,23 +31,30 @@ end
 
 function OnMainAbilityExecute(thisAbility)
 	--print("Disabling")
-	isPreviewing = false
-	isPlacing = true
+	--isPreviewing = false
+	--isPlacing = true
 end
 
 function OnMainAbilityReady(thisAbility)
-	isPreviewing = false
+	--isPreviewing = false
 	isPlacing = false
 end
 
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
+		Task.Wait()
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		MainAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil then
-			isPreviewing = false
 			return
 		end
-	
+		
+		isPlacing = true
 		local newWall = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		newWall.lifeSpan = Duration
 		if newWall:GetCustomProperty("Team") ~= nil then
@@ -53,27 +64,33 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
+function OnPlayerDied(player, _)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	PrimaryAbility.isEnabled = true
+	MainAbility.isEnabled = false
+end
+
 function OnEquip(equipment, player)
 	print("Escavate Server Equip")
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	end
-
-	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
+		
 	table.insert(EventListeners, MainAbility.castEvent:Connect(OnMainAbilityCast))
-	table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
+	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
+	--table.insert(EventListeners, MainAbility.executeEvent:Connect(OnMainAbilityExecute))
+	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
-	
-	isPreviewing = false
-	isPlacing = false
 end
 
 function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	isPreviewing = false
-	isPlacing = false
 end
 
 Equipment.equippedEvent:Connect(OnEquip)

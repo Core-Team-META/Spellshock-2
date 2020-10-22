@@ -12,8 +12,10 @@ local EventName = ServerScript:GetCustomProperty("EventName")
 local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-local isPreviewing = false
+local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
 local isPlacing = false
+
+local AllHalograms = {}
 
 local objectHalogram = nil
 local EventListeners = {}
@@ -26,39 +28,46 @@ local CancelBindings = {
 	ability_extra_12 = true
 }
 
+function OnNetworkedPropertyChanged(thisObject, name)
+	if name == "isPreviewing" then
+		isPreviewing = ServerScript:GetCustomProperty(name)
+		
+		if isPreviewing then
+			objectHalogram = World.SpawnAsset(ObjectTemplate)
+			AllHalograms[objectHalogram.id] = objectHalogram
+		else
+			if objectHalogram and Object.IsValid(objectHalogram) then
+				AllHalograms[objectHalogram.id] = nil
+				objectHalogram:Destroy()
+				objectHalogram = nil				
+			end
+		end
+	end
+end
+
 function OnBindingPressed(player, binding)		
-	if binding == AbilityBinding and isPreviewing == false and isPlacing == false then
+	--[[if binding == AbilityBinding and isPreviewing == false and isPlacing == false then
 		print("PREVIEWING")
 		isPreviewing = true
 		objectHalogram = World.SpawnAsset(ObjectTemplate)
-	
-	elseif CancelBindings[binding] and isPreviewing then
-		
-		if objectHalogram and Object.IsValid(objectHalogram) then
-			print("Canceling: "..binding)
-			-- Cancel placement
-			objectHalogram:Destroy()
-			objectHalogram = nil
-			Events.BroadcastToServer(EventName, nil)
-			isPreviewing = false
-			isPlacing = false
+		AllHalograms[objectHalogram.id] = objectHalogram]]
+	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+		print("Canceling: "..binding)
+		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+			Task.Wait()
 		end
 	end
 end
 
 function OnMainAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
-		print("~ Executing placement ~")
-		isPreviewing = false
-		isPlacing = true
-		
 		local targetPosition = CalculatePlacement()
 		if targetPosition and EventName then
-			Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation())
+			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+				Task.Wait()
+			end
+			print("~ Executing placement ~")
 		end
-		
-		objectHalogram:Destroy()
-		objectHalogram = nil
 	end
 end
 
@@ -69,9 +78,9 @@ end
 
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
-	isPreviewing = false
-	isPlacing = false
-	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
+	--isPreviewing = false
+	--isPlacing = false
+	--table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
 	table.insert(EventListeners, MainAbility.executeEvent:Connect( OnMainAbilityExecute ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
 end
@@ -81,8 +90,6 @@ function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	isPreviewing = false
-	isPlacing = false
 	
 	if objectHalogram and Object.IsValid(objectHalogram) then
 		objectHalogram:Destroy()
@@ -111,6 +118,14 @@ function CalculatePlacement()
 end
 
 function Tick()
+	for id, halogram in pairs(AllHalograms) do
+		if halogram ~= objectHalogram and Object.IsValid(halogram) then
+			print("REMOVING LEFT OVER HALOGRAM")
+			halogram:Destroy()
+			AllHalograms[id] = nil
+		end
+	end
+
 	if objectHalogram and Object.IsValid(objectHalogram) then
 		if MainAbility.owner == nil or LOCAL_PLAYER.isDead then
 			objectHalogram:Destroy()
@@ -149,8 +164,9 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
+ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 
-print("COMPILED")
+print("PlaceWallTestClient COMPILED")
 --MainAbility.executeEvent:Connect( OnMainAbilityExecute )
 --PrimerAbility.castEvent:Connect( OnPrimerAbilityCast )
 --PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute )

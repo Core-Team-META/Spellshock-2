@@ -7,9 +7,9 @@ local ORIG_TEAM = LOCAL_PLAYER.team
 
 function UpdateTeam(team)
     if (team == 1) then
-        TEAM_BOX.text = "HERO"
+        TEAM_BOX.text = "ORC"
     else
-        TEAM_BOX.text = "BANDIT"
+        TEAM_BOX.text = "ELF"
     end
 end
 
