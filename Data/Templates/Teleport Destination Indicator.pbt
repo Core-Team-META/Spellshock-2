@@ -47,7 +47,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6658585544379660340
+              Id: 17393503133865181723
             }
           }
         }
@@ -80,15 +80,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_001"
-      }
-    }
-    Assets {
-      Id: 6658585544379660340
-      Name: "Additive Edgeline Top Fade"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_add_edgeline_sharpline_topfade"
       }
     }
     PrimaryAssetId {

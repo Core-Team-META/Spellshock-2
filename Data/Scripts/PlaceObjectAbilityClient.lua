@@ -2,8 +2,8 @@
 
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local ObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
-local MainAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
-local AbilityBinding = MainAbility:GetCustomProperty("Binding")
+local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local MAX_PLACEMENT_RANGE = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
@@ -54,7 +54,7 @@ function OnBindingPressed(player, binding)
 	end
 end
 
-function OnMainAbilityExecute(thisAbility)
+function OnSpecialAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
 		local targetPosition = CalculatePlacement()
 		if targetPosition and EventName then
@@ -66,14 +66,9 @@ function OnMainAbilityExecute(thisAbility)
 	end
 end
 
-function OnMainAbilityReady(thisAbility)
-	isPlacing = false
-	isPreviewing = false
-end
-
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
-	table.insert(EventListeners, MainAbility.executeEvent:Connect( OnMainAbilityExecute ))
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect( OnSpecialAbilityExecute ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
 end
 
@@ -119,7 +114,7 @@ function Tick()
 	end
 
 	if objectHalogram and Object.IsValid(objectHalogram) then
-		if MainAbility.owner == nil or LOCAL_PLAYER.isDead then
+		if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
 			objectHalogram:Destroy()
 			objectHalogram = nil
 			return

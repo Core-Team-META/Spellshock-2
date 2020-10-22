@@ -3,8 +3,9 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
-local PrimerAbility = script:GetCustomProperty("PrimerAbility"):WaitForObject()
+local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EndingFX = script:GetCustomProperty("EndingFX")
@@ -19,16 +20,27 @@ local HealTrigger = nil
 local EventListeners = {}
 local DestroyedEventListener = nil
 
-function OnPrimerAbilityExecute(thisAbility)
-	print("Toggling ON")
-	thisAbility.isEnabled = false
-	MainAbility.isEnabled = true
+local isPreviewing = false
+local isPlacing = false
+
+function OnBindingPressed(player, binding)
+	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
+		isPreviewing = true
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		PrimaryAbility.isEnabled = false
+		SpecialAbility.isEnabled = true
+	end
 end
 
-function OnMainAbilityReady(thisAbility)
-	print("Toggling OFF")
-	thisAbility.isEnabled = false
-	PrimerAbility.isEnabled = true
+function OnSpecialAbilityCast(thisAbility)
+	if isPreviewing == false or isPlacing then
+		print("INTERRUPTING")
+		SpecialAbility:Interrupt()
+	end
+end
+
+function OnSpecialAbilityReady(thisAbility)
+	isPlacing = false
 end
 
 function OnCrystalDestroyed(thisObject)
@@ -39,6 +51,19 @@ end
 
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
+		Task.Wait()
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		-- check if the placement was canceled
+		if position == nil then
+			return
+		end
+		
+		isPlacing = true
+		
 		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = LifeSpan
@@ -46,13 +71,25 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
+function OnPlayerDied(player, _)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
+end
+
 function OnEquip(equipment, player)
+	isPreviewing = false
+	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	end
-
-	table.insert(EventListeners, MainAbility.readyEvent:Connect( OnMainAbilityReady ))
-	table.insert(EventListeners, PrimerAbility.executeEvent:Connect( OnPrimerAbilityExecute ))
+		
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
+	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
+	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
 
 function OnUnequip(equipment, player)
@@ -79,8 +116,8 @@ function Tick(dTime)
 					local dmg = Damage.New()
 					dmg.amount = DamageAmount
 					dmg.reason = DamageReason.COMBAT
-					dmg.sourcePlayer = MainAbility.owner
-					dmg.sourceAbility = MainAbility
+					dmg.sourcePlayer = SpecialAbility.owner
+					dmg.sourceAbility = SpecialAbility
 							
 					COMBAT().ApplyDamage(thisObject, dmg, dmg.sourcePlayer)
 				end
@@ -89,9 +126,6 @@ function Tick(dTime)
 		Timer = Delay
 	end
 end
-
-MainAbility.isEnabled = false
-PrimerAbility.isEnabled = true
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)

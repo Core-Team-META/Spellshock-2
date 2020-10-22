@@ -51,7 +51,6 @@ function Tick()
 	                EQUIPMENT_ICON:SetImage(DEFAULT_IMAGE)
 	                EQUIPMENT_ICON:SetColor(DEFAULT_COLOR)
 	            end
-	            return
 	        end
 
             if equipment:IsA("Weapon") then
