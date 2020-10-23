@@ -2924,15 +2924,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2536231208558228393
-  Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_lg"
-  }
-}
-Assets {
   Id: 2452465297983906772
   Name: "Fantasy Castle Wall 03 Half"
   PlatformAssetType: 1

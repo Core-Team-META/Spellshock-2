@@ -1125,7 +1125,6 @@ Objects {
   ChildIds: 6896745742610861950
   ChildIds: 9666154360724432599
   ChildIds: 1117841902434570665
-  ChildIds: 17737350920039328442
   ChildIds: 15742096495686500615
   UnregisteredParameters {
     Overrides {
@@ -1388,47 +1387,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 17737350920039328442
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: 22.5786133
-      Y: 17.2001953
-      Z: -588.251
-    }
-    Rotation {
-    }
-    Scale {
-      X: 4.3103919
-      Y: 4.3103919
-      Z: 2.93881464
-    }
-  }
-  ParentId: 4559935034785672696
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
       }
@@ -2090,7 +2048,6 @@ Objects {
   ParentId: 11072925829585333935
   ChildIds: 5975281328721219987
   ChildIds: 6431342082131964287
-  ChildIds: 14293027046151830160
   ChildIds: 15775325265298528751
   ChildIds: 5510827948355619499
   UnregisteredParameters {
@@ -2439,48 +2396,6 @@ Objects {
       Value: "mc:etriggershape:sphere"
     }
     MountedVolume {
-    }
-  }
-}
-Objects {
-  Id: 14293027046151830160
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -34.0382614
-      Y: 5.91172791
-      Z: -1222.03735
-    }
-    Rotation {
-      Yaw: -119.944794
-    }
-    Scale {
-      X: 4.58576632
-      Y: 4.58576632
-      Z: 2.10585785
-    }
-  }
-  ParentId: 16313267587009276285
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
     }
   }
 }
@@ -3951,7 +3866,6 @@ Objects {
   ChildIds: 13776159642541525489
   ChildIds: 754991252659707758
   ChildIds: 910755362034130703
-  ChildIds: 14073809783710211574
   ChildIds: 18269206194719203306
   UnregisteredParameters {
     Overrides {
@@ -4215,48 +4129,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 14073809783710211574
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -15.0114727
-      Y: 19.7623615
-      Z: -222.772461
-    }
-    Rotation {
-      Yaw: -87.3509
-    }
-    Scale {
-      X: 4.52212954
-      Y: 4.52212954
-      Z: 1.54716408
-    }
-  }
-  ParentId: 16321515820500395030
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
       }
@@ -4866,7 +4738,6 @@ Objects {
   ParentId: 11072925829585333935
   ChildIds: 11189476031660639139
   ChildIds: 4208566297764116835
-  ChildIds: 18308183104947120330
   ChildIds: 16314171741228489821
   ChildIds: 14713109632114477840
   UnregisteredParameters {
@@ -5215,49 +5086,6 @@ Objects {
       Value: "mc:etriggershape:sphere"
     }
     MountedVolume {
-    }
-  }
-}
-Objects {
-  Id: 18308183104947120330
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -3.83331513
-      Y: 4.379807
-      Z: -69.7983398
-    }
-    Rotation {
-      Yaw: -139.11441
-    }
-    Scale {
-      X: 4.20031834
-      Y: 4.20031834
-      Z: 1.02646399
-    }
-  }
-  ParentId: 13392592636105101133
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableReceiveDecals: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
     }
   }
 }
