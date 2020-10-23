@@ -1544,7 +1544,7 @@ Objects {
   Name: "Banner"
   Transform {
     Location {
-      Z: -360
+      Z: -142.702637
     }
     Rotation {
     }
@@ -1796,7 +1796,7 @@ Objects {
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -1000
+      Z: -212.977783
     }
     Rotation {
     }
@@ -2439,6 +2439,7 @@ Objects {
   Name: "GeoVisual"
   Transform {
     Location {
+      Z: 317.623291
     }
     Rotation {
     }
@@ -2474,10 +2475,10 @@ Objects {
   Name: "Banner"
   Transform {
     Location {
-      Z: -1098.58057
+      Z: -1180.54956
     }
     Rotation {
-      Yaw: 70.0000381
+      Yaw: 70.0000458
     }
     Scale {
       X: 0.405
@@ -2670,7 +2671,7 @@ Objects {
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -1196.55151
+      Z: -1258.04504
     }
     Rotation {
     }
@@ -3353,6 +3354,7 @@ Objects {
   Name: "GeoVisual"
   Transform {
     Location {
+      Z: 231.879639
     }
     Rotation {
     }
@@ -3583,7 +3585,7 @@ Objects {
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -1000
+      Z: -86.3798828
     }
     Rotation {
     }
@@ -4256,6 +4258,7 @@ Objects {
   Name: "GeoVisual"
   Transform {
     Location {
+      Z: 263.150391
     }
     Rotation {
     }
@@ -4486,7 +4489,7 @@ Objects {
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -1000
+      Z: -227.160156
     }
     Rotation {
     }
@@ -5164,6 +5167,7 @@ Objects {
   Name: "Banner"
   Transform {
     Location {
+      Z: 143.764893
     }
     Rotation {
     }
@@ -5422,7 +5426,7 @@ Objects {
   Name: "Big Outline"
   Transform {
     Location {
-      Z: -791.12915
+      Z: 163.873779
     }
     Rotation {
     }
