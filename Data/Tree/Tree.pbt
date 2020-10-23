@@ -26,6 +26,11 @@ Objects {
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
+  ChildIds: 10847475115936183263
+  ChildIds: 12117967644652967285
+  ChildIds: 12419766084897398505
+  ChildIds: 17417064048651013341
+  ChildIds: 10925421981391100152
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +40,311 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 10925421981391100152
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6674.26367
+            Y: 7609.61621
+            Z: 1997.78882
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 17417064048651013341
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 7913.0376
+            Y: -14402.208
+            Z: 4638.28564
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -11.5517578
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 12419766084897398505
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -15257.8477
+            Y: 4314.07275
+            Z: -597.465515
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 12117967644652967285
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1048507134004773571
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2433259003244970061
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2792855362672017024
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3292504148453386908
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3789026382259959218
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4960686911392085274
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10701262481659004221
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15757281494394125413
+      value {
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 0.557291687
+            G: 0.557291687
+            B: 0.466497
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6255.72803
+            Y: -4195.54492
+            Z: 2397.41602
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 32.9798
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 10847475115936183263
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -13753.8164
+            Y: -18343.2207
+            Z: 2042.66626
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
   }
 }
 Objects {

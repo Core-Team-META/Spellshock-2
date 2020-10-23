@@ -188,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17205556389324759255
+  Name: "Pipe - Quarter Wedge"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter_pipe_wedge_001"
+  }
+}
+Assets {
   Id: 17182007171222709614
   Name: "P"
   PlatformAssetType: 1
@@ -392,6 +401,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_emissive_001"
+  }
+}
+Assets {
+  Id: 15697206862897547361
+  Name: "Bricks Rough Stone Floor 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_stone_floor_rough_002"
   }
 }
 Assets {
@@ -1052,6 +1070,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11976559336949726522
+  Name: "Craftsman Porch Fence Post 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_sub_craftsman_porch_001_post"
+  }
+}
+Assets {
   Id: 11893514062468969040
   Name: "Bone Human Ribcage 01"
   PlatformAssetType: 1
@@ -1319,6 +1346,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10777523509111713302
+  Name: "Prism - 6-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_hq_001"
   }
 }
 Assets {
@@ -1934,6 +1970,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7742378127041197280
+  Name: "Prism - 8-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_octagon_hq_001"
+  }
+}
+Assets {
   Id: 7712285640960349746
   Name: "Pyramid - 4-Sided Truncated Hollow Thick"
   PlatformAssetType: 1
@@ -2093,6 +2138,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_scifi_trim_001_bend_up"
+  }
+}
+Assets {
+  Id: 6717054932271956401
+  Name: "Magic Glass"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_magic_glass"
   }
 }
 Assets {
@@ -2609,6 +2663,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4093061049435782625
+  Name: "Truncated Teardrop"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_truncated_teardrop_001"
+  }
+}
+Assets {
   Id: 4080200756085571976
   Name: "Bone Human Pelvis Half 01"
   PlatformAssetType: 1
@@ -2753,6 +2816,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3255814708276840062
+  Name: "Truncated Cone"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_001"
+  }
+}
+Assets {
   Id: 3240158528397641148
   Name: "Modern Weapon - Barrel 02"
   PlatformAssetType: 1
@@ -2849,15 +2921,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_curve_001"
-  }
-}
-Assets {
-  Id: 2536231208558228393
-  Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_lg"
   }
 }
 Assets {
@@ -3128,6 +3191,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_barrel_001"
+  }
+}
+Assets {
+  Id: 939741315801487960
+  Name: "Rock Obsidian 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fresnel_rock_obsidian_001_uv"
   }
 }
 Assets {
