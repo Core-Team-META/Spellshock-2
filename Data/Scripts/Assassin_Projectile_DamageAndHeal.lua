@@ -4,6 +4,7 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
+local BoomerangTemplate = script:GetCustomProperty("BoomerangTemplate")
 
 local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
 local SPEED = ABILITY:GetCustomProperty("ProjectileSpeed") or 1500
@@ -12,6 +13,8 @@ local DAMAGE_RANGE = ABILITY:GetCustomProperty("DamageRange") or Vector2.New(20,
 local BASE_DAMAGE_MOD = ABILITY:GetCustomProperty("BaseDamageModifier") or 0.6
 local BONUS_DAMAGE_MOD = ABILITY:GetCustomProperty("BonusDamageModifier") or 0.1
 local HEAL_MOD = ABILITY:GetCustomProperty("BonusHealingModifier") or 0.75
+
+local CurrentBoomerange = nil
 
 function OnProjectileImpact(projectile, other, hitresult)
 	if not Object.IsValid(ABILITY.owner) then return end
@@ -34,7 +37,7 @@ function OnProjectileImpact(projectile, other, hitresult)
     
     local healAmount = damageAmount * HEAL_MOD
     local heal = Damage.New()
-    heal.amount = healAmount
+    heal.amount = -healAmount
     heal.reason = DamageReason.COMBAT
     heal.sourcePlayer = ABILITY.owner
     heal.sourceAbility = ABILITY
@@ -45,19 +48,30 @@ function OnProjectileImpact(projectile, other, hitresult)
 
 end
 
+function OnAbilityCast(thisAbility)
+	CurrentBoomerange = World.SpawnAsset(BoomerangTemplate, {position = thisAbility.owner:GetWorldPosition()})
+	CurrentBoomerange:AttachToPlayer(thisAbility.owner, "right_prop")
+end
+
 function OnAbilityExecute(thisAbility)
+	Task.Wait(0.35)
+	CurrentBoomerange:Destroy()
+	CurrentBoomerange = nil
+	
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
 	local lookQuaternion = Quaternion.New(lookRotation)
     local forwardVector = lookQuaternion:GetForwardVector()
 	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*200)
     
     local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
+    projectile.capsuleLength = 130
+    projectile.capsuleRadius =  projectile.capsuleLength/2
     projectile.lifeSpan = LIFE_SPAN
     projectile.speed = SPEED
     projectile.gravityScale = 0
     projectile.shouldDieOnImpact = true
     projectile.impactEvent:Connect(OnProjectileImpact)
-    
 end
 
+ABILITY.castEvent:Connect( OnAbilityCast )
 ABILITY.executeEvent:Connect( OnAbilityExecute )

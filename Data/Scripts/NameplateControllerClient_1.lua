@@ -201,6 +201,10 @@ function IsNameplateVisible(player)
 		return false
 	end
 
+	if player.clientUserData.isInvisible then
+		return false
+	end
+
 	if player == GetViewedPlayer() then
 		return SHOW_ON_SELF
 	end

@@ -33,6 +33,25 @@
               Id: 13654207909089287810
             }
           }
+          Overrides {
+            Name: "cs:EquipmentIcon"
+            AssetReference {
+              Id: 12302547594047116782
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:enableUI"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -95,7 +114,6 @@
           }
         }
         ParentId: 3557475336528325194
-        ChildIds: 9369396223508113508
         ChildIds: 17103559494860760055
         UnregisteredParameters {
           Overrides {
@@ -124,7 +142,7 @@
           }
           Overrides {
             Name: "cs:JumpCount"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:MaxHealth"
@@ -192,36 +210,6 @@
         Script {
           ScriptAsset {
             Id: 643752288155017208
-          }
-        }
-      }
-      Objects {
-        Id: 9369396223508113508
-        Name: "PlayerEnergyRegenServer"
-        Transform {
-          Location {
-            X: -3366.67944
-            Y: 2359.71118
-            Z: -33.1054077
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7926632237305793917
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12958287165690366055
           }
         }
       }
@@ -356,6 +344,7 @@
         }
         ParentId: 4569115510025570718
         ChildIds: 3657339729496937378
+        ChildIds: 1286326275560935440
         ChildIds: 7522061224197707128
         ChildIds: 12562863691850379453
         ChildIds: 43585359367409744
@@ -410,6 +399,44 @@
         }
       }
       Objects {
+        Id: 1286326275560935440
+        Name: "EquipmentSetIconClient"
+        Transform {
+          Location {
+            X: -8020
+            Y: -10220
+            Z: -3060
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:API"
+            AssetReference {
+              Id: 7445855579671141283
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10109220941690346490
+          }
+        }
+      }
+      Objects {
         Id: 7522061224197707128
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -440,15 +467,16 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 8034368523082394441
+              Id: 606548452417380641
             }
           }
           Overrides {
             Name: "cs:Color"
             Color {
-              R: 0.440000057
-              G: 0.236026525
-              A: 0.5
+              R: 1
+              G: 1
+              B: 1
+              A: 1
             }
           }
         }
@@ -495,7 +523,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 12537685385517776343
+              Id: 18132479792113096322
             }
           }
           Overrides {
@@ -504,7 +532,7 @@
               R: 1
               G: 1
               B: 1
-              A: 0.5
+              A: 1
             }
           }
         }
@@ -560,7 +588,7 @@
               R: 1
               G: 1
               B: 1
-              A: 0.5
+              A: 1
             }
           }
         }
@@ -616,7 +644,7 @@
               R: 1
               G: 1
               B: 1
-              A: 0.5
+              A: 1
             }
           }
         }
@@ -651,7 +679,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 10185021239602375970
+              SubObjectId: 4951305031756499143
             }
           }
           Overrides {
@@ -664,15 +692,6 @@
             Name: "cs:Icon"
             AssetReference {
               Id: 8277485499354448455
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.5
             }
           }
         }
@@ -737,7 +756,7 @@
         ChildIds: 10946969989301189966
         ChildIds: 2893309587662806563
         ChildIds: 87249608989476396
-        ChildIds: 10185021239602375970
+        ChildIds: 4951305031756499143
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -759,6 +778,8 @@
           }
           Scale {
             X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 8722233437890789111
@@ -772,7 +793,7 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Float: 1500
+            Float: 2000
           }
           Overrides {
             Name: "cs:ProjectileLifespan"
@@ -824,7 +845,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.5
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -833,7 +854,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -851,7 +872,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_throw"
+          Animation: "2hand_sword_slash_spin"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
@@ -880,6 +901,12 @@
               SubObjectId: 7787036789120996490
             }
           }
+          Overrides {
+            Name: "cs:BoomerangTemplate"
+            AssetReference {
+              Id: 14161552992450762216
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -904,10 +931,13 @@
           }
           Scale {
             X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 8722233437890789111
-        ChildIds: 8385286389223139123
+        ChildIds: 11411700836215041466
+        ChildIds: 6960798327974289137
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -956,7 +986,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -971,10 +1001,13 @@
         }
       }
       Objects {
-        Id: 8385286389223139123
-        Name: "Assassin_SpeedBoost"
+        Id: 11411700836215041466
+        Name: "Assassin_InvisibilityServer"
         Transform {
           Location {
+            X: -8020
+            Y: -10220
+            Z: -3060
           }
           Rotation {
           }
@@ -987,16 +1020,52 @@
         ParentId: 10946969989301189966
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 10946969989301189966
             }
           }
           Overrides {
-            Name: "cs:APIStatusEffects"
+            Name: "cs:BeginningFX"
             AssetReference {
-              Id: 6140123420589022677
+              Id: 15761765853344411097
             }
+          }
+          Overrides {
+            Name: "cs:EndingFX"
+            AssetReference {
+              Id: 1429104248892819753
+            }
+          }
+          Overrides {
+            Name: "cs:InvisibleCostumeTemplate"
+            AssetReference {
+              Id: 3663157921045218335
+            }
+          }
+          Overrides {
+            Name: "cs:InvisibilityActiveTemplate"
+            AssetReference {
+              Id: 15482014499059417987
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
+          }
+          Overrides {
+            Name: "cs:isInvisible"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:isInvisible:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -1008,8 +1077,112 @@
         }
         Script {
           ScriptAsset {
-            Id: 5244785049853465609
+            Id: 6553233916944605564
           }
+        }
+      }
+      Objects {
+        Id: 6960798327974289137
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10946969989301189966
+        ChildIds: 5815969532402457262
+        ChildIds: 10153399237310665229
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 5815969532402457262
+        Name: "Assassin_InvisibilityClient"
+        Transform {
+          Location {
+            X: -8020
+            Y: -10220
+            Z: -3060
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6960798327974289137
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 11411700836215041466
+            }
+          }
+          Overrides {
+            Name: "cs:AudioFX"
+            ObjectReference {
+              SubObjectId: 10153399237310665229
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11848089031478388226
+          }
+        }
+      }
+      Objects {
+        Id: 10153399237310665229
+        Name: "Magic Dark Beam Breathy Loop 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6960798327974289137
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 15728915025310165628
+          }
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -1022,6 +1195,8 @@
           }
           Scale {
             X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 8722233437890789111
@@ -1490,15 +1665,17 @@
         }
       }
       Objects {
-        Id: 10185021239602375970
-        Name: "Shift"
+        Id: 4951305031756499143
+        Name: "Roll"
         Transform {
           Location {
+            X: -8020
+            Y: -10220
+            Z: -3060
           }
           Rotation {
           }
           Scale {
-            X: 1
           }
         }
         ParentId: 8722233437890789111
@@ -1519,6 +1696,15 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
+            Duration: 1
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:movement"
+            }
+          }
+          ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
             CanJump: true
@@ -1526,16 +1712,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           RecoveryPhaseSettings {
@@ -1546,7 +1723,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           CooldownPhaseSettings {
@@ -1787,7 +1964,6 @@
           }
         }
         ParentId: 2716804742797173936
-        ChildIds: 8744606286454173370
         ChildIds: 800269245416336375
         ChildIds: 12938845594830669437
         UnregisteredParameters {
@@ -1800,41 +1976,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 8744606286454173370
-        Name: "EquipmentSetIconClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18340669584196412261
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10109220941690346490
-          }
         }
       }
       Objects {
@@ -2191,21 +2332,30 @@
       }
     }
     Assets {
-      Id: 8034368523082394441
-      Name: "Fantasy Ability Green 043"
+      Id: 12302547594047116782
+      Name: "Fantasy Ability Purple 021"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Green_043"
+        AssetId: "UI_Fantasy_Ability_Purple_021"
       }
     }
     Assets {
-      Id: 12537685385517776343
-      Name: "Fantasy Ability Red 014"
+      Id: 606548452417380641
+      Name: "Fantasy Ability Red 002"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_014"
+        AssetId: "UI_Fantasy_Ability_Red_002"
+      }
+    }
+    Assets {
+      Id: 18132479792113096322
+      Name: "Fantasy Ability Purple 032"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Purple_032"
       }
     }
     Assets {
@@ -2233,6 +2383,15 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Yellow_005"
+      }
+    }
+    Assets {
+      Id: 15728915025310165628
+      Name: "Magic Dark Beam Breathy Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_dark_beam_breathy_loop_01_Cue_ref"
       }
     }
     Assets {
