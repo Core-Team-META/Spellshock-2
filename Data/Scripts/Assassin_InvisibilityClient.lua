@@ -11,6 +11,8 @@ local InvisibilityActiveFX = nil
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isInvisible" then
+		if not Equipment.owner then return end
+		
 		local isInvisible = thisObject:GetCustomProperty("isInvisible")
 		Equipment.owner.clientUserData.isInvisible = isInvisible
 		if Equipment.owner == LOCAL_PLAYER then
@@ -18,7 +20,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 				for _, attachment in ipairs(PlayerAttachments) do
 					attachment.visibility = Visibility.INHERIT
 				end
-				AudioFX:Play()
+				AudioFX:FadeIn(1)
 				InvisibilityActiveFX = World.SpawnAsset(InvisibilityActiveTemplate)
 			else
 				AudioFX:FadeOut(1)
@@ -52,14 +54,15 @@ function DetachCostume(player)
 		attachment:Destroy()
 	end
 	PlayerAttachments = {}
+	player.clientUserData.isInvisible = false
 	
 	if Object.IsValid(AudioFX) then
 		AudioFX:Stop()
 	end
 	
-	if Object.IsValid(InvisibilityActiveTemplate) then
-		InvisibilityActiveTemplate:Destroy()
-		InvisibilityActiveTemplate = nil
+	if Object.IsValid(InvisibilityActiveFX) then
+		InvisibilityActiveFX:Destroy()
+		InvisibilityActiveFX = nil
 	end
 end
 

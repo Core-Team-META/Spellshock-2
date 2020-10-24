@@ -8,7 +8,7 @@ local BoomerangTemplate = script:GetCustomProperty("BoomerangTemplate")
 
 local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
 local SPEED = ABILITY:GetCustomProperty("ProjectileSpeed") or 1500
-local LIFE_SPAN = ABILITY:GetCustomProperty("ProjectileLifespan") or 1
+local PROJECTILE_RANGE = ABILITY:GetCustomProperty("ProjectileRange") or 2000
 local DAMAGE_RANGE = ABILITY:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
 local BASE_DAMAGE_MOD = ABILITY:GetCustomProperty("BaseDamageModifier") or 0.6
 local BONUS_DAMAGE_MOD = ABILITY:GetCustomProperty("BonusDamageModifier") or 0.1
@@ -17,6 +17,7 @@ local HEAL_MOD = ABILITY:GetCustomProperty("BonusHealingModifier") or 0.75
 local CurrentBoomerange = nil
 
 function OnProjectileImpact(projectile, other, hitresult)
+	print("Boomerang Hit")
 	if not Object.IsValid(ABILITY.owner) then return end
     if other == ABILITY.owner then return end
 	if not other:IsA("Player") then return end
@@ -54,7 +55,7 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	Task.Wait(0.35)
+	--Task.Wait(0.35)
 	CurrentBoomerange:Destroy()
 	CurrentBoomerange = nil
 	
@@ -62,11 +63,13 @@ function OnAbilityExecute(thisAbility)
 	local lookQuaternion = Quaternion.New(lookRotation)
     local forwardVector = lookQuaternion:GetForwardVector()
 	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*200)
+	worldPosition.z = worldPosition.z + 50
     
     local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
+    projectile.owner = ABILITY.owner
     projectile.capsuleLength = 130
     projectile.capsuleRadius =  projectile.capsuleLength/2
-    projectile.lifeSpan = LIFE_SPAN
+    projectile.lifeSpan = PROJECTILE_RANGE / SPEED
     projectile.speed = SPEED
     projectile.gravityScale = 0
     projectile.shouldDieOnImpact = true

@@ -6218,6 +6218,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
+    Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 2856361661930886233
@@ -6936,6 +6942,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 7445855579671141283
+      }
+    }
+    Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
       }
     }
     Overrides {
@@ -7660,6 +7672,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
+    Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 14601420070144344494
@@ -8378,6 +8396,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 7445855579671141283
+      }
+    }
+    Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
       }
     }
     Overrides {
@@ -9102,6 +9126,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
+    Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 11449743180360008097
@@ -9820,6 +9850,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 7445855579671141283
+      }
+    }
+    Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
       }
     }
     Overrides {
@@ -10545,6 +10581,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 7445855579671141283
+      }
+    }
+    Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
       }
     }
     Overrides {

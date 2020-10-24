@@ -1766,6 +1766,7 @@ Objects {
       MountedWalkSpeed: 960
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
+      DismountWhenDamaged: true
       HeadVisibleToSelf: true
       IsSlideEnabled: true
       IsCrouchEnabled: true
@@ -1778,7 +1779,7 @@ Objects {
         Value: "mc:eabilityaimmode:viewrelative"
       }
       AppearanceChannelingTime: 2
-      MountChannelingTime: 2
+      MountChannelingTime: 1
       FlipOnMultiJump: true
     }
   }

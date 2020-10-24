@@ -17,6 +17,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom properties --
 local AOI = require(script:GetCustomProperty("API"))
+local AS = require(script:GetCustomProperty("API_Spectator"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local ICON = script:GetCustomProperty("Icon"):WaitForObject()
@@ -74,7 +75,7 @@ function UpdateCurrentAbility()
 
     currentAbility = newAbility
 
-    if Object.IsValid(currentAbility) then
+    if Object.IsValid(currentAbility) and not AS.IsSpectating() and not AS.IsRespawning() then
         PANEL.visibility = Visibility.INHERIT
 
         local icon = AOI.GetObjectIcon(currentAbility)

@@ -345,9 +345,9 @@
         ParentId: 4569115510025570718
         ChildIds: 3657339729496937378
         ChildIds: 1286326275560935440
-        ChildIds: 7522061224197707128
-        ChildIds: 12562863691850379453
         ChildIds: 43585359367409744
+        ChildIds: 12562863691850379453
+        ChildIds: 7522061224197707128
         ChildIds: 13905999893717263144
         ChildIds: 9824824817757129903
         WantsNetworking: true
@@ -437,7 +437,7 @@
         }
       }
       Objects {
-        Id: 7522061224197707128
+        Id: 43585359367409744
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
@@ -455,7 +455,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 7787036789120996490
+              SubObjectId: 8184323746341847196
             }
           }
           Overrides {
@@ -467,7 +467,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 606548452417380641
+              Id: 6375726263607251280
             }
           }
           Overrides {
@@ -549,7 +549,7 @@
         }
       }
       Objects {
-        Id: 43585359367409744
+        Id: 7522061224197707128
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
@@ -567,7 +567,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 2893309587662806563
+              SubObjectId: 7787036789120996490
             }
           }
           Overrides {
@@ -579,7 +579,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 7213916008464166860
+              Id: 606548452417380641
             }
           }
           Overrides {
@@ -752,9 +752,9 @@
           }
         }
         ParentId: 15969373231472315619
-        ChildIds: 7787036789120996490
+        ChildIds: 8184323746341847196
         ChildIds: 10946969989301189966
-        ChildIds: 2893309587662806563
+        ChildIds: 7787036789120996490
         ChildIds: 87249608989476396
         ChildIds: 4951305031756499143
         WantsNetworking: true
@@ -769,10 +769,13 @@
         }
       }
       Objects {
-        Id: 7787036789120996490
+        Id: 8184323746341847196
         Name: "Q Special"
         Transform {
           Location {
+            X: -8716.59375
+            Y: -10186.3799
+            Z: -2964.70215
           }
           Rotation {
           }
@@ -783,44 +786,27 @@
           }
         }
         ParentId: 8722233437890789111
-        ChildIds: 6077411007921151374
+        ChildIds: 18378548991232479363
         UnregisteredParameters {
           Overrides {
             Name: "cs:ProjectileTemplate"
             AssetReference {
-              Id: 17990456245832998922
+              Id: 6481751857886768330
             }
           }
           Overrides {
-            Name: "cs:ProjectileSpeed"
-            Float: 2000
+            Name: "cs:Damage"
+            Float: 20
           }
           Overrides {
-            Name: "cs:ProjectileLifespan"
-            Float: 1
+            Name: "cs:Radius"
+            Float: 500
           }
           Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 20
-              Y: 30
+            Name: "cs:ImpactFX"
+            AssetReference {
+              Id: 5202994091235663908
             }
-          }
-          Overrides {
-            Name: "cs:BaseDamageModifier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:BonusDamageModifier"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "cs:BonusHealingModifier"
-            Float: 0.75
-          }
-          Overrides {
-            Name: "cs:BonusDamageModifier:tooltip"
-            String: "This ability deals bonus damage based on the enemy\'s max hitpoints."
           }
         }
         WantsNetworking: true
@@ -845,7 +831,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -854,7 +840,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.5
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -872,7 +858,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "2hand_sword_slash_spin"
+          Animation: "unarmed_throw"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
@@ -880,8 +866,8 @@
         }
       }
       Objects {
-        Id: 6077411007921151374
-        Name: "Assassin_Projectile_DamageAndHeal"
+        Id: 18378548991232479363
+        Name: "Assassin_PoisonGrenadeAbility"
         Transform {
           Location {
           }
@@ -893,18 +879,18 @@
             Z: 1
           }
         }
-        ParentId: 7787036789120996490
+        ParentId: 8184323746341847196
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 7787036789120996490
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
             }
           }
           Overrides {
-            Name: "cs:BoomerangTemplate"
+            Name: "cs:ModuleManager"
             AssetReference {
-              Id: 14161552992450762216
+              Id: 9770511928359673738
             }
           }
         }
@@ -917,7 +903,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 11448023727438118213
+            Id: 10868725130796666737
           }
         }
       }
@@ -1177,7 +1163,7 @@
           AudioAsset {
             Id: 15728915025310165628
           }
-          Volume: 1
+          Volume: 0.8
           Falloff: -1
           Radius: -1
           EnableOcclusion: true
@@ -1186,7 +1172,7 @@
         }
       }
       Objects {
-        Id: 2893309587662806563
+        Id: 7787036789120996490
         Name: "R Special"
         Transform {
           Location {
@@ -1200,8 +1186,22 @@
           }
         }
         ParentId: 8722233437890789111
-        ChildIds: 3230373681166436340
+        ChildIds: 6077411007921151374
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 17990456245832998922
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Float: 3000
+          }
+          Overrides {
+            Name: "cs:ProjectileRange"
+            Float: 3000
+          }
           Overrides {
             Name: "cs:DamageRange"
             Vector2 {
@@ -1214,8 +1214,16 @@
             Float: 1
           }
           Overrides {
-            Name: "cs:Radius"
-            Float: 500
+            Name: "cs:BonusDamageModifier"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "cs:BonusHealingModifier"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "cs:BonusDamageModifier:tooltip"
+            String: "This ability deals bonus damage based on the enemy\'s max hitpoints."
           }
         }
         WantsNetworking: true
@@ -1229,7 +1237,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1240,7 +1248,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.2
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -1249,7 +1257,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1260,14 +1268,14 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 7
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_punch_right"
+          Animation: "2hand_sword_slash_spin"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
@@ -1275,8 +1283,8 @@
         }
       }
       Objects {
-        Id: 3230373681166436340
-        Name: "Assassin_Melee_ConalSilence"
+        Id: 6077411007921151374
+        Name: "Assassin_Projectile_DamageAndHeal"
         Transform {
           Location {
           }
@@ -1288,18 +1296,18 @@
             Z: 1
           }
         }
-        ParentId: 2893309587662806563
+        ParentId: 7787036789120996490
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 2893309587662806563
+              SubObjectId: 7787036789120996490
             }
           }
           Overrides {
-            Name: "cs:APIStatusEffects"
+            Name: "cs:BoomerangTemplate"
             AssetReference {
-              Id: 6140123420589022677
+              Id: 14161552992450762216
             }
           }
         }
@@ -1312,7 +1320,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 15183397283648465844
+            Id: 11448023727438118213
           }
         }
       }
@@ -2341,12 +2349,12 @@
       }
     }
     Assets {
-      Id: 606548452417380641
-      Name: "Fantasy Ability Red 002"
+      Id: 6375726263607251280
+      Name: "Fantasy Ability Green 043"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_002"
+        AssetId: "UI_Fantasy_Ability_Green_043"
       }
     }
     Assets {
@@ -2359,12 +2367,12 @@
       }
     }
     Assets {
-      Id: 7213916008464166860
-      Name: "Fantasy Ability Purple 035"
+      Id: 606548452417380641
+      Name: "Fantasy Ability Red 002"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Purple_035"
+        AssetId: "UI_Fantasy_Ability_Red_002"
       }
     }
     Assets {

@@ -9,11 +9,29 @@ local EventListeners = {}
 local Timer = -1
 local isInvisible = false
 
+local CancelKeys = {
+	ability_extra_20 = true, 
+	ability_extra_22 = true, 
+	ability_extra_23 = true, 
+	ability_extra_24 = true, 
+	ability_primary = true,
+	ability_secondary = true
+}
+
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary" and isInvisible then
+	if CancelKeys[binding] and isInvisible then
 		DisableInvisility()
+		if binding == "ability_primary" then
+			-- Attack
+		end
 	end
 end
+
+function OnPlayerDamaged(player, damage)
+	if isInvisible and not player.isDead then
+		DisableInvisility()
+	end	
+end	
 
 function OnAbilityExecute(thisAbility)
 	print("GOING INVISIBLE")
@@ -45,10 +63,18 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, Ability.executeEvent:Connect(OnAbilityExecute))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
+
 	--table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 end
 
 function OnUnequip(thisEquipment, player)
+	player:SetVisibility(true)
+	isInvisible = false
+	if Object.IsValid(script) then
+		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
+	end
+	
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
