@@ -80,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17853943551029294903
+  Name: "Short Banner Fleur-de-lis"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_003"
+  }
+}
+Assets {
   Id: 17838077166380846502
   Name: "Pyramid - Corner"
   PlatformAssetType: 1
@@ -365,6 +374,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crate_narrow_lid_simple_160cm_001"
+  }
+}
+Assets {
+  Id: 16041797034686368363
+  Name: "Fantasy Castle Stairs Spiral Wall 01 - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_wall_002_lg_ref"
   }
 }
 Assets {
@@ -1664,6 +1682,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9005202394387316338
+  Name: "Craftsman Wall Interior 02 Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_sub_craftsman_wall_int_002_corner"
+  }
+}
+Assets {
   Id: 8993869571187819051
   Name: "Stone Block Long"
   PlatformAssetType: 1
@@ -2939,6 +2966,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_large_board_6m"
+  }
+}
+Assets {
+  Id: 2406204288165372094
+  Name: "Decal Vines End 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_liane_002"
   }
 }
 Assets {

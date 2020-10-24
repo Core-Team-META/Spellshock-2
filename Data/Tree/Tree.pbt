@@ -1143,6 +1143,45 @@ Objects {
   ParentId: 4781671109827199097
   TemplateInstance {
     ParameterOverrideMap {
+      key: 9859930587159095033
+      value {
+        Overrides {
+          Name: "bp:Horizon Falloff"
+          Float: 6
+        }
+        Overrides {
+          Name: "bp:Haze Falloff"
+          Float: 15
+        }
+        Overrides {
+          Name: "bp:Cloud Color"
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Cloud Lighting Brightness"
+          Float: 10
+        }
+        Overrides {
+          Name: "bp:Cloud Opacity"
+          Float: 0.699113607
+        }
+        Overrides {
+          Name: "bp:Cloud Ambient Color"
+          Color {
+            R: 1
+            G: 0.654732347
+            B: 0.427083313
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 10284309483680957982
       value {
         Overrides {
@@ -1188,7 +1227,11 @@ Objects {
       value {
         Overrides {
           Name: "bp:Fog Density"
-          Float: 1.16997027
+          Float: 1
+        }
+        Overrides {
+          Name: "bp:Falloff"
+          Float: 0.114205852
         }
       }
     }

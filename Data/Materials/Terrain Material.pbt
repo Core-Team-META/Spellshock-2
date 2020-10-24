@@ -64,7 +64,7 @@
       Overrides {
         Name: "cmp:Material3_Sides"
         AssetReference {
-          Id: 17686025311361638391
+          Id: 15979377991647608535
         }
       }
       Overrides {
@@ -76,7 +76,7 @@
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 17686025311361638391
+          Id: 15979377991647608535
         }
       }
       Overrides {
@@ -139,8 +139,8 @@
         Name: "cmpc:Material4_Sides"
         Color {
           R: 0.932291687
-          G: 0.521015167
-          B: 0.184516087
+          G: 0.646534622
+          B: 0.412733287
           A: 1
         }
       }
@@ -218,12 +218,12 @@
       }
     }
     Assets {
-      Id: 17686025311361638391
-      Name: "Cliff 03"
+      Id: 15979377991647608535
+      Name: "Cliff 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "cliff_003"
+        AssetId: "cliff_002"
       }
     }
     Assets {
@@ -236,12 +236,12 @@
       }
     }
     Assets {
-      Id: 17686025311361638391
-      Name: "Cliff 03"
+      Id: 15979377991647608535
+      Name: "Cliff 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "cliff_003"
+        AssetId: "cliff_002"
       }
     }
   }
