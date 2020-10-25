@@ -476,6 +476,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15240646233324917545
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
+  }
+}
+Assets {
   Id: 15223421943927964872
   Name: "Cube - Arched"
   PlatformAssetType: 1
@@ -926,6 +935,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12806717230968640779
+  Name: "Pipe - Half Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_002"
+  }
+}
+Assets {
   Id: 12739861598754122677
   Name: "Grass and Soil"
   PlatformAssetType: 2
@@ -941,6 +959,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_part_doorway_001"
+  }
+}
+Assets {
+  Id: 12709608691889458801
+  Name: "Square Column Topper 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_column_square_top_001"
   }
 }
 Assets {
@@ -1403,6 +1430,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10727817675464078874
+  Name: "Arch Fancy 3m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_fancy_3m_001"
+  }
+}
+Assets {
   Id: 10634098119816284342
   Name: "Wood Planks Dark"
   PlatformAssetType: 2
@@ -1697,6 +1733,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_03"
+  }
+}
+Assets {
+  Id: 8984376095539011304
+  Name: "Park Bench"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_park_bench_001"
   }
 }
 Assets {
@@ -2726,6 +2771,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3874182602644405188
+  Name: "Square Column Base 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_column_square_bottom_002"
+  }
+}
+Assets {
   Id: 3817933812062928360
   Name: "Wood Planks"
   PlatformAssetType: 2
@@ -2948,6 +3002,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_wall_curve_001"
+  }
+}
+Assets {
+  Id: 2536231208558228393
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_lg"
   }
 }
 Assets {

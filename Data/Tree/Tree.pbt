@@ -1143,6 +1143,20 @@ Objects {
   ParentId: 4781671109827199097
   TemplateInstance {
     ParameterOverrideMap {
+      key: 3013977707158365793
+      value {
+        Overrides {
+          Name: "bp:Tint Color"
+          Color {
+            R: 0.78
+            G: 0.845999897
+            B: 1
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9859930587159095033
       value {
         Overrides {
