@@ -1032,7 +1032,7 @@
           Overrides {
             Name: "cs:InvisibleCostumeTemplate"
             AssetReference {
-              Id: 3663157921045218335
+              Id: 14330017190000743294
             }
           }
           Overrides {
