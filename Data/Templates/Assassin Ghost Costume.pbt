@@ -160,7 +160,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -207,7 +207,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -317,7 +317,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -423,7 +423,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -533,7 +533,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -582,7 +582,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -719,7 +719,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -800,7 +800,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -906,7 +906,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1016,7 +1016,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1065,7 +1065,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1170,7 +1170,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1278,7 +1278,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1356,7 +1356,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1462,7 +1462,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1510,7 +1510,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1618,7 +1618,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1727,7 +1727,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1833,7 +1833,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -1943,7 +1943,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -2052,7 +2052,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -2158,7 +2158,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1292801991992378833
+              Id: 1471451371423214926
             }
           }
         }
@@ -2248,93 +2248,12 @@
       }
     }
     Assets {
-      Id: 1253704568415386038
-      Name: "Bone Human Foot 01"
+      Id: 789507999122443389
+      Name: "Bone Human Skull 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_foot_01_ref"
-      }
-    }
-    Assets {
-      Id: 3959027211898446303
-      Name: "Bone Human Tibula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_tib_01_ref"
-      }
-    }
-    Assets {
-      Id: 4074048108565904374
-      Name: "Bone Human Femur 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_femur_01_ref"
-      }
-    }
-    Assets {
-      Id: 13084149956552606530
-      Name: "Bone Human Pelvis Half 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
-      }
-    }
-    Assets {
-      Id: 2786041674281211395
-      Name: "Bone Human Spine 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_spine_01_ref"
-      }
-    }
-    Assets {
-      Id: 6270427605214860761
-      Name: "Bone Human Ribcage 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_ribcage_01_ref"
-      }
-    }
-    Assets {
-      Id: 14370226190137504949
-      Name: "Bone Human Hand 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_hand_01_ref"
-      }
-    }
-    Assets {
-      Id: 8269588534607695232
-      Name: "Bone Human Ulna 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_ulna_01_ref"
-      }
-    }
-    Assets {
-      Id: 10697295044577467934
-      Name: "Bone Human Humerus 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_humerus_01_ref"
-      }
-    }
-    Assets {
-      Id: 11234991097743207333
-      Name: "Bone Human Scapula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_scap_01_ref"
+        AssetId: "sm_bones_human_skull_01_ref"
       }
     }
     Assets {
@@ -2347,64 +2266,93 @@
       }
     }
     Assets {
-      Id: 1292801991992378833
-      Name: "AssassinPhantom"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 4373914948280322111
-        ParameterOverrides {
-          Overrides {
-            Name: "fresnel exponent"
-            Float: 0.881969273
-          }
-          Overrides {
-            Name: "plasma scale"
-            Float: 0
-          }
-          Overrides {
-            Name: "outer color"
-            Color {
-              R: 0.18
-              G: 0.934834301
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "plasma inner color"
-            Color {
-              G: 0.0451655
-              B: 0.220000029
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "plasma outer color"
-            Color {
-              G: 0.590000033
-              B: 0.355562925
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 4373914948280322111
-      Name: "Plasma"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_plasmafield"
-      }
-    }
-    Assets {
-      Id: 789507999122443389
-      Name: "Bone Human Skull 01"
+      Id: 11234991097743207333
+      Name: "Bone Human Scapula 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
+        AssetId: "sm_bones_human_scap_01_ref"
+      }
+    }
+    Assets {
+      Id: 10697295044577467934
+      Name: "Bone Human Humerus 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_humerus_01_ref"
+      }
+    }
+    Assets {
+      Id: 8269588534607695232
+      Name: "Bone Human Ulna 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_ulna_01_ref"
+      }
+    }
+    Assets {
+      Id: 14370226190137504949
+      Name: "Bone Human Hand 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_hand_01_ref"
+      }
+    }
+    Assets {
+      Id: 6270427605214860761
+      Name: "Bone Human Ribcage 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_ribcage_01_ref"
+      }
+    }
+    Assets {
+      Id: 2786041674281211395
+      Name: "Bone Human Spine 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_spine_01_ref"
+      }
+    }
+    Assets {
+      Id: 13084149956552606530
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
+      }
+    }
+    Assets {
+      Id: 4074048108565904374
+      Name: "Bone Human Femur 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_femur_01_ref"
+      }
+    }
+    Assets {
+      Id: 3959027211898446303
+      Name: "Bone Human Tibula 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_tib_01_ref"
+      }
+    }
+    Assets {
+      Id: 1253704568415386038
+      Name: "Bone Human Foot 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_foot_01_ref"
       }
     }
     PrimaryAssetId {
@@ -2414,4 +2362,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true
