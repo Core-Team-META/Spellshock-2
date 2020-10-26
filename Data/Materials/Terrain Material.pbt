@@ -76,7 +76,7 @@
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 15979377991647608535
+          Id: 17686025311361638391
         }
       }
       Overrides {
@@ -138,9 +138,9 @@
       Overrides {
         Name: "cmpc:Material4_Sides"
         Color {
-          R: 0.932291687
-          G: 0.646534622
-          B: 0.412733287
+          R: 1
+          G: 0.759375036
+          B: 0.5625
           A: 1
         }
       }
@@ -236,12 +236,12 @@
       }
     }
     Assets {
-      Id: 15979377991647608535
-      Name: "Cliff 02"
+      Id: 17686025311361638391
+      Name: "Cliff 03"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "cliff_002"
+        AssetId: "cliff_003"
       }
     }
   }
