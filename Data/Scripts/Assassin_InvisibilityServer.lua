@@ -1,9 +1,16 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+﻿-- Module dependencies
+local MODULE = require( script:GetCustomProperty("ModuleManager") )
+function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local Ability = script:GetCustomProperty("MainAbility"):WaitForObject()
+local WeaponAbility = script:GetCustomProperty("WeaponAbility"):WaitForObject()
 
 local BeginningFX = script:GetCustomProperty("BeginningFX")
 local EndingFX = script:GetCustomProperty("EndingFX")
 local Duration = script:GetCustomProperty("Duration")
+local AttackRadius = script:GetCustomProperty("AttackRadius")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
 
 local EventListeners = {}
 local Timer = -1
@@ -18,12 +25,33 @@ local CancelKeys = {
 	ability_secondary = true
 }
 
+
+function Attack()
+	if not Object.IsValid(Ability) or not Ability.owner then return end
+	
+	local playerFacingDirection = Ability.owner:GetWorldRotation() * Vector3.FORWARD
+	local spherePosition = Ability.owner:GetWorldPosition() + (playerFacingDirection * 100)
+	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = Ability.owner.team, ignoreDead = true})
+	CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
+	
+	for _, enemy in pairs(nearbyEnemies) do
+		local dmg = Damage.New()
+		dmg.amount = DamageAmount
+		dmg.reason = DamageReason.COMBAT
+		dmg.sourcePlayer = Ability.owner
+		dmg.sourceAbility = Ability
+				
+		COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
+	end	
+end	
+
 function OnBindingPressed(player, binding)
 	if CancelKeys[binding] and isInvisible then
-		DisableInvisility()
 		if binding == "ability_primary" then
-			-- Attack
+			Attack()
 		end
+		Task.Wait()
+		DisableInvisility()
 	end
 end
 
@@ -34,7 +62,7 @@ function OnPlayerDamaged(player, damage)
 end	
 
 function OnAbilityExecute(thisAbility)
-	print("GOING INVISIBLE")
+	WeaponAbility.isEnabled = false
 	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
@@ -48,6 +76,7 @@ function DisableInvisility()
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
 		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
+		WeaponAbility.isEnabled = true
 	end
 end
 

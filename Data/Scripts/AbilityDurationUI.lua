@@ -5,18 +5,25 @@ local UIPanel = script:GetCustomProperty("UIPanel"):WaitForObject()
 local Duration = ServerScript:GetCustomProperty("Duration")
 local MainAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
 
-local FillColor = script:GetCustomProperty("FillColor")
-local BackgroundColor = script:GetCustomProperty("BackgroundColor")
+--[[if not MainAbility then
+	MainAbility = ServerScript:GetCustomProperty("Ability")
+end
+
+if MainAbility then
+	MainAbility = MainAbility:WaitForObject()
+else
+	error("Server script is missing ability reference")
+end]]
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local Timer = 0
+local Timer = -1
 
 UIPanel.visibility = Visibility.FORCE_OFF
 
 function OnMainAbilityExecute(thisAbility)
 	if LOCAL_PLAYER == thisAbility.owner then
 		Timer = Duration
-		UIPanel.visibility = Visibility.INHERIT
+		UIPanel.visibility = Visibility.FORCE_ON
 	end
 end
 
@@ -28,7 +35,10 @@ function Tick(deltaTime)
 		if Timer < 0 then
 			UIPanel.visibility = Visibility.FORCE_OFF
 			return
+		else 
+			UIPanel.visibility = Visibility.FORCE_ON
 		end
 		AbilityProgressBar.progress = Timer / Duration
+		print(tostring(AbilityProgressBar.progress))
 	end
 end

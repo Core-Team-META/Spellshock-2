@@ -345,11 +345,8 @@
         ParentId: 4569115510025570718
         ChildIds: 3657339729496937378
         ChildIds: 1286326275560935440
-        ChildIds: 43585359367409744
-        ChildIds: 12562863691850379453
-        ChildIds: 7522061224197707128
-        ChildIds: 13905999893717263144
-        ChildIds: 9824824817757129903
+        ChildIds: 4051678230221737164
+        ChildIds: 4969653445563453122
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -437,6 +434,36 @@
         }
       }
       Objects {
+        Id: 4051678230221737164
+        Name: "Ability Icons"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 43585359367409744
+        ChildIds: 12562863691850379453
+        ChildIds: 7522061224197707128
+        ChildIds: 13905999893717263144
+        ChildIds: 9824824817757129903
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 43585359367409744
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -450,7 +477,7 @@
             Z: 1
           }
         }
-        ParentId: 12390733973333184270
+        ParentId: 4051678230221737164
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -506,7 +533,7 @@
             Z: 1
           }
         }
-        ParentId: 12390733973333184270
+        ParentId: 4051678230221737164
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -562,7 +589,7 @@
             Z: 1
           }
         }
-        ParentId: 12390733973333184270
+        ParentId: 4051678230221737164
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -618,7 +645,7 @@
             Z: 1
           }
         }
-        ParentId: 12390733973333184270
+        ParentId: 4051678230221737164
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -674,7 +701,7 @@
             Z: 1
           }
         }
-        ParentId: 12390733973333184270
+        ParentId: 4051678230221737164
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -704,6 +731,212 @@
         Script {
           ScriptAsset {
             Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 4969653445563453122
+        Name: "Invisibility Duration Display"
+        Transform {
+          Location {
+            X: -743.253906
+            Y: 178.604492
+            Z: -4.11523438
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 11664221664873935096
+        ChildIds: 18386550716797038013
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceon"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Canvas {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11664221664873935096
+        Name: "AbilityDurationUI"
+        Transform {
+          Location {
+            X: -8712.15332
+            Y: -9682.38867
+            Z: -3036.5564
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4969653445563453122
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AbilityProgressBar"
+            ObjectReference {
+              SubObjectId: 10037560810511873998
+            }
+          }
+          Overrides {
+            Name: "cs:UIPanel"
+            ObjectReference {
+              SubObjectId: 18386550716797038013
+            }
+          }
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 11411700836215041466
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9094472670648911279
+          }
+        }
+      }
+      Objects {
+        Id: 18386550716797038013
+        Name: "UI Panel"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4969653445563453122
+        ChildIds: 10037560810511873998
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 100
+          UIX: -485
+          UIY: 18
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10037560810511873998
+        Name: "Ability Progress Bar"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18386550716797038013
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 28
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          StatBar {
+            Color {
+              R: 0.629000306
+              B: 0.74
+              A: 1
+            }
+            BackgroundColor {
+              R: 0.131655619
+              B: 0.28
+              A: 1
+            }
+            Percent: 0.648584783
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleright"
+              }
+            }
           }
         }
       }
@@ -909,7 +1142,7 @@
       }
       Objects {
         Id: 10946969989301189966
-        Name: "E Special"
+        Name: "Death\'s Shadow"
         Transform {
           Location {
           }
@@ -922,6 +1155,7 @@
           }
         }
         ParentId: 8722233437890789111
+        ChildIds: 15582202196448252345
         ChildIds: 11411700836215041466
         ChildIds: 6960798327974289137
         UnregisteredParameters {
@@ -954,6 +1188,8 @@
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -987,6 +1223,82 @@
         }
       }
       Objects {
+        Id: 15582202196448252345
+        Name: "Attack"
+        Transform {
+          Location {
+            X: 10832.7295
+            Y: -4475.39795
+            Z: 3332.22217
+          }
+          Rotation {
+            Yaw: -19.8776398
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10946969989301189966
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "2hand_sword_slash_vertical"
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_10"
+          }
+        }
+      }
+      Objects {
         Id: 11411700836215041466
         Name: "Assassin_InvisibilityServer"
         Transform {
@@ -1012,9 +1324,21 @@
             }
           }
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:MainAbility"
             ObjectReference {
               SubObjectId: 10946969989301189966
+            }
+          }
+          Overrides {
+            Name: "cs:AttackAbility"
+            ObjectReference {
+              SubObjectId: 15582202196448252345
+            }
+          }
+          Overrides {
+            Name: "cs:WeaponAbility"
+            ObjectReference {
+              SubObjectId: 6522519753598108575
             }
           }
           Overrides {
@@ -1044,6 +1368,14 @@
           Overrides {
             Name: "cs:Duration"
             Float: 8
+          }
+          Overrides {
+            Name: "cs:AttackRadius"
+            Int: 150
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 40
           }
           Overrides {
             Name: "cs:isInvisible"
@@ -1704,7 +2036,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
+            Duration: 0.7
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true

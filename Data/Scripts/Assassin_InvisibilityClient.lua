@@ -4,19 +4,29 @@ local AudioFX = script:GetCustomProperty("AudioFX"):WaitForObject()
 
 local InvisibleCostumeTemplate = ServerScript:GetCustomProperty("InvisibleCostumeTemplate")
 local InvisibilityActiveTemplate = ServerScript:GetCustomProperty("InvisibilityActiveTemplate")
+local AttackAbility = ServerScript:GetCustomProperty("AttackAbility"):WaitForObject()
 
 local PlayerAttachments = {}
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local InvisibilityActiveFX = nil
+local BindingPressedConnection = nil
+local isInvisible = false
+
+function OnBindingPressed(player, binding)
+	if binding == "ability_primary" and isInvisible then
+		AttackAbility:Activate()
+	end
+end
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isInvisible" then
 		if not Equipment.owner then return end
 		
-		local isInvisible = thisObject:GetCustomProperty("isInvisible")
+		isInvisible = thisObject:GetCustomProperty("isInvisible")
 		Equipment.owner.clientUserData.isInvisible = isInvisible
 		if Equipment.owner == LOCAL_PLAYER then
 			if isInvisible then
+				
 				for _, attachment in ipairs(PlayerAttachments) do
 					attachment.visibility = Visibility.INHERIT
 				end
@@ -37,7 +47,6 @@ function OnNetworkedPropertyChanged(thisObject, name)
 end
 
 function AttachCostume(player)	
-	print("ATTACHING")
 	local InvisibleCostume = World.SpawnAsset(InvisibleCostumeTemplate)
 	for _, attachment in ipairs(InvisibleCostume:GetChildren()) do
 		attachment:AttachToPlayer(player, attachment.name)
@@ -69,11 +78,14 @@ end
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
 	AttachCostume(player)
+	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 end
 
 function OnUnequip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
 	DetachCostume(player)
+	BindingPressedConnection:Disconnect()
+	BindingPressedConnection = nil
 end
 
 if Equipment.owner then
