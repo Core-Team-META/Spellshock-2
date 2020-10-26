@@ -197,15 +197,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17205556389324759255
-  Name: "Pipe - Quarter Wedge"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_quarter_pipe_wedge_001"
-  }
-}
-Assets {
   Id: 17182007171222709614
   Name: "P"
   PlatformAssetType: 1
@@ -764,6 +755,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13800436588944964225
+  Name: "Bush Green 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_002"
+  }
+}
+Assets {
   Id: 13791225619385764102
   Name: "Wicker Basket 02"
   PlatformAssetType: 2
@@ -1016,6 +1016,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12484798020569700940
+  Name: "Wood Raw"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_raw_001_uv"
+  }
+}
+Assets {
   Id: 12476654224073211161
   Name: "Rock Hexagonal"
   PlatformAssetType: 1
@@ -1067,15 +1076,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
-  }
-}
-Assets {
-  Id: 12334547367277822682
-  Name: "Pyramid - 3-Sided Truncated"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pyramid_threesided_truncated_001"
   }
 }
 Assets {
@@ -1592,15 +1592,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9861376578465382099
-  Name: "Pyramid - 3-Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pyramid_threesided_001"
-  }
-}
-Assets {
   Id: 9679522123063662323
   Name: "E"
   PlatformAssetType: 1
@@ -2096,6 +2087,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7613660189645541274
+  Name: "Wood Planks"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_planks_001_uv"
+  }
+}
+Assets {
   Id: 7585887110500972880
   Name: "Ring - Thick"
   PlatformAssetType: 1
@@ -2147,6 +2147,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_arch_fancy_ogive_6m_001"
+  }
+}
+Assets {
+  Id: 7136798186812893292
+  Name: "Tree Birch 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_birch_001"
   }
 }
 Assets {
@@ -2210,15 +2219,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_scifi_trim_001_bend_up"
-  }
-}
-Assets {
-  Id: 6717054932271956401
-  Name: "Magic Glass"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxmi_magic_glass"
   }
 }
 Assets {
@@ -2354,6 +2354,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_brick_cobblestone_floor_001"
+  }
+}
+Assets {
+  Id: 6139386554215852665
+  Name: "Fantasy Shield Strap 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_strap_001"
   }
 }
 Assets {
@@ -2537,6 +2546,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4846662083301446138
+  Name: "Craftsman Part - Stair Balust"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "urb_sub_craftsman_part_stair_001_balust"
+  }
+}
+Assets {
   Id: 4842806961858489681
   Name: "Rock Flat 01"
   PlatformAssetType: 1
@@ -2624,6 +2642,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_ulna_01_ref"
+  }
+}
+Assets {
+  Id: 4488444258523261897
+  Name: "Flare Billboard"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_flare_object"
   }
 }
 Assets {
@@ -3284,21 +3311,21 @@ Assets {
   }
 }
 Assets {
+  Id: 1012196051933563749
+  Name: "Decal Wood Ends Variations"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_wood_rings_001"
+  }
+}
+Assets {
   Id: 999045349070579722
   Name: "Wooden Barrel"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_barrel_001"
-  }
-}
-Assets {
-  Id: 939741315801487960
-  Name: "Rock Obsidian 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fresnel_rock_obsidian_001_uv"
   }
 }
 Assets {
@@ -3326,6 +3353,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_carpet_tile_001"
+  }
+}
+Assets {
+  Id: 750590760549569354
+  Name: "Fantasy Pommel 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_pommel_005"
   }
 }
 Assets {

@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 1292801991992378833
-  Name: "AssassinPhantom"
+  Name: "HealerAura2"
   PlatformAssetType: 13
   SerializationVersion: 65
   CustomMaterialAsset {
@@ -17,24 +17,30 @@
       Overrides {
         Name: "outer color"
         Color {
-          G: 0.206699818
-          B: 0.954000056
           A: 1
         }
       }
       Overrides {
         Name: "plasma inner color"
         Color {
-          G: 0.0461323559
-          B: 0.162
+          R: 0.909999967
+          G: 0.0903973579
           A: 1
         }
       }
       Overrides {
         Name: "plasma outer color"
         Color {
-          G: 0.355000019
-          B: 0.213940397
+          R: 0.99
+          G: 0.255695343
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "inner color"
+        Color {
+          R: 0.72
+          G: 0.386225194
           A: 1
         }
       }
