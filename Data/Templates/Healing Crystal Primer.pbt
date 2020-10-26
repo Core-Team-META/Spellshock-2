@@ -53,6 +53,8 @@
         ParentId: 11946573129182812687
         ChildIds: 18366089847830052191
         ChildIds: 1579329543340073091
+        ChildIds: 7396188871755482088
+        ChildIds: 10700945106922529879
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -123,12 +125,11 @@
           }
         }
         ParentId: 8404267313367063133
-        ChildIds: 43891689467054249
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7142068506126400895
+              Id: 1292801991992378833
             }
           }
           Overrides {
@@ -161,61 +162,35 @@
         }
       }
       Objects {
-        Id: 43891689467054249
-        Name: "Object Rotator Continuous"
+        Id: 7396188871755482088
+        Name: "Rock 03"
         Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+          }
           Scale {
-            X: 10
-            Y: 10
-            Z: 3.33333325
+            X: 0.0924340785
+            Y: 0.0924340785
+            Z: 0.277302295
           }
         }
-        ParentId: 1579329543340073091
+        ParentId: 8404267313367063133
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 1579329543340073091
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1292801991992378833
             }
           }
           Overrides {
-            Name: "cs:RotateVelocity"
-            Rotator {
-              Yaw: 30
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.710000038
+              G: 0.239801347
+              A: 1
             }
-          }
-          Overrides {
-            Name: "cs:RotationMultiplier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LocalSpace"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:StartDelayRange"
-            Vector2 {
-            }
-          }
-          Overrides {
-            Name: "cs:RotationMultiplier:tooltip"
-            String: "Optional multiplier for very fast rotations."
-          }
-          Overrides {
-            Name: "cs:StartDelayRange:tooltip"
-            String: "Random delay range for the object to take action at the start of the game."
-          }
-          Overrides {
-            Name: "cs:LocalSpace:tooltip"
-            String: "Whether RotateTo is in local space"
-          }
-          Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Object to transform"
-          }
-          Overrides {
-            Name: "cs:RotateVelocity:tooltip"
-            String: "Smoothly rotates the object over time by the given angular velocity."
           }
         }
         Collidable_v2 {
@@ -224,20 +199,152 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 2331688389429807128
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10700945106922529879
+        Name: "Rock 03"
+        Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.0531613939
+            Y: 0.0531613939
+            Z: 0.159484252
+          }
+        }
+        ParentId: 8404267313367063133
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13330662989199046504
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.710000038
+              G: 0.239801347
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
           }
         }
       }
     }
     Assets {
-      Id: 6585207450897081622
-      Name: "Sphere"
-      PlatformAssetType: 1
+      Id: 13330662989199046504
+      Name: "Custom Emissive Glow Transparent"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 3702191406046426907
+        ParameterOverrides {
+          Overrides {
+            Name: "emissive_boost"
+            Float: 95.9261551
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 3702191406046426907
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 1292801991992378833
+      Name: "HealingAura2"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 4373914948280322111
+        ParameterOverrides {
+          Overrides {
+            Name: "fresnel exponent"
+            Float: 0.881969273
+          }
+          Overrides {
+            Name: "plasma scale"
+            Float: 161.951096
+          }
+          Overrides {
+            Name: "outer color"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "plasma inner color"
+            Color {
+              R: 0.78
+              G: 0.557880759
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "plasma outer color"
+            Color {
+              R: 1
+              G: 0.896159
+              B: 0.44
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "inner color"
+            Color {
+              R: 0.590000033
+              G: 0.19927153
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 4373914948280322111
+      Name: "Plasma"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_plasmafield"
       }
     }
     Assets {
@@ -250,12 +357,59 @@
       }
     }
     Assets {
-      Id: 7142068506126400895
-      Name: "Energy Tube Glow"
+      Id: 925672138032122417
+      Name: "Healing Crystal Aura"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 6186751883754370952
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "noise color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "overall brightness"
+            Float: 1.76582801
+          }
+          Overrides {
+            Name: "noise spread"
+            Float: 222.525848
+          }
+          Overrides {
+            Name: "fresnel"
+            Float: 6
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 6186751883754370952
+      Name: "Edgeline Wavy Object Fade Advanced"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "Energy_Tube_Glow"
+        AssetId: "fxma_add_edgeline_local"
+      }
+    }
+    Assets {
+      Id: 6585207450897081622
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
       }
     }
     PrimaryAssetId {
@@ -265,3 +419,4 @@
   }
   SerializationVersion: 65
 }
+IncludesAllDependencies: true
