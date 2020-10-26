@@ -46,6 +46,7 @@
         ChildIds: 4297665605012189947
         ChildIds: 1378132400329110120
         ChildIds: 16671837046992992493
+        ChildIds: 15379858004952278550
         ChildIds: 6780238906983008546
         WantsNetworking: true
         Collidable_v2 {
@@ -74,8 +75,14 @@
           }
         }
         ParentId: 12663157462442662214
-        ChildIds: 7113146981277504093
-        ChildIds: 8460464430833028920
+        ChildIds: 8452833139948224238
+        ChildIds: 669988750557070949
+        ChildIds: 10117495841601449409
+        ChildIds: 6614289242189973431
+        ChildIds: 11730346535379725159
+        ChildIds: 5027829344105442346
+        ChildIds: 16926332451643891882
+        ChildIds: 11307359698543178860
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -87,22 +94,34 @@
         }
       }
       Objects {
-        Id: 7113146981277504093
-        Name: "Grenade Canister 04"
+        Id: 8452833139948224238
+        Name: "Bottle 06"
         Transform {
           Location {
+            Z: -0.95236969
           }
           Rotation {
-            Yaw: -98.7714233
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.606318951
+            Y: 0.606318951
+            Z: 0.49557206
           }
         }
         ParentId: 4297665605012189947
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:id"
+            AssetReference {
+              Id: 8131365588139303669
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -112,13 +131,12 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6855348992067761797
+            Id: 1781685294255403318
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -126,23 +144,38 @@
         }
       }
       Objects {
-        Id: 8460464430833028920
-        Name: "Grenade Handle 01"
+        Id: 669988750557070949
+        Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            Z: 14.3583984
+            Z: 21.1614819
           }
           Rotation {
-            Yaw: -98.7714386
+            Roll: 179.999954
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.62914824
+            Y: 1.62914824
+            Z: 0.265516788
           }
         }
         ParentId: 4297665605012189947
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0700000525
+              G: 0.0471995063
+              B: 0.0375200287
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -152,13 +185,676 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5544820850613172301
+            Id: 3682206342183528038
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10117495841601449409
+        Name: "Fantasy Pommel 03"
+        Transform {
+          Location {
+            Z: 16.9226608
+          }
+          Rotation {
+            Roll: -179.999969
+          }
+          Scale {
+            X: 1.65454006
+            Y: 1.65454113
+            Z: 0.571858168
+          }
+        }
+        ParentId: 4297665605012189947
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5861223425148352605
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.15
+              G: 0.15
+              B: 0.15
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17238982204385840214
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6614289242189973431
+        Name: "Group"
+        Transform {
+          Location {
+            Y: -0.428344727
+            Z: 21.4572754
+          }
+          Rotation {
+            Roll: 22.4999371
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4297665605012189947
+        ChildIds: 10637121015934601466
+        ChildIds: 5719703556695202116
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10637121015934601466
+        Name: "Pipe - 45-Degree Long "
+        Transform {
+          Location {
+            X: -0.0546997078
+            Y: -0.0204003435
+            Z: -5.00120223e-07
+          }
+          Rotation {
+            Yaw: -179.999954
+            Roll: 5.12398328e-05
+          }
+          Scale {
+            X: 0.0195150375
+            Y: 0.0195150375
+            Z: 0.0195150375
+          }
+        }
+        ParentId: 6614289242189973431
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.328051299
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.301914513
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7782164574935454890
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5719703556695202116
+        Name: "Group"
+        Transform {
+          Location {
+            X: -1.1484375
+            Z: 2.71633911
+          }
+          Rotation {
+            Pitch: 3.4150944e-05
+            Yaw: 90.0000305
+            Roll: 44.9999542
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6614289242189973431
+        ChildIds: 7750375683531031645
+        ChildIds: 1896906853198954879
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7750375683531031645
+        Name: "Pipe - 45-Degree Long "
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.0195150375
+            Y: 0.0195150375
+            Z: 0.0195150375
+          }
+        }
+        ParentId: 5719703556695202116
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.328051299
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.301914513
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7782164574935454890
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1896906853198954879
+        Name: "Group"
+        Transform {
+          Location {
+            X: 1.07355523
+            Y: -2.53308099e-06
+            Z: 2.68277788
+          }
+          Rotation {
+            Pitch: 40.7894363
+            Yaw: 149.638779
+            Roll: -20.940979
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5719703556695202116
+        ChildIds: 6129553027498725972
+        ChildIds: 2147695208650810699
+        ChildIds: 1385926181587889735
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6129553027498725972
+        Name: "Pipe - 45-Degree Long "
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.0195150375
+            Y: 0.0195150375
+            Z: 0.0195150375
+          }
+        }
+        ParentId: 1896906853198954879
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.328051299
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.301914513
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7782164574935454890
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2147695208650810699
+        Name: "Cylinder - Bottom-Aligned"
+        Transform {
+          Location {
+            X: 1.02539289
+            Y: -1.13487249e-05
+            Z: 2.70724
+          }
+          Rotation {
+            Pitch: -44.9999695
+            Yaw: -6.10351563e-05
+            Roll: 6.04715497e-05
+          }
+          Scale {
+            X: 0.0207495559
+            Y: 0.020749582
+            Z: 0.00178930466
+          }
+        }
+        ParentId: 1896906853198954879
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13330662989199046504
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 0.344370842
+              B: 0.00999999
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6747614045051753376
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1385926181587889735
+        Name: "Pipe - 45-Degree Long "
+        Transform {
+          Location {
+          }
+          Rotation {
+            Roll: 3.0735835e-05
+          }
+          Scale {
+            X: 0.0209422726
+            Y: 0.0209422726
+            Z: 0.0209422726
+          }
+        }
+        ParentId: 1896906853198954879
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 7630438330936839124
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.830000043
+              G: 0.577152371
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7782164574935454890
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11730346535379725159
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+            Z: 6.85502577
+          }
+          Rotation {
+            Pitch: -3.05175781e-05
+            Yaw: 179.999954
+            Roll: 6.52276794e-05
+          }
+          Scale {
+            X: 0.212630615
+            Y: 0.956837535
+            Z: 0.566618621
+          }
+        }
+        ParentId: 4297665605012189947
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0700000525
+              G: 0.0471995063
+              B: 0.0375200287
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1562276358413043561
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5027829344105442346
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+            X: 1.83105476e-05
+            Y: 1.22070314e-05
+            Z: 6.85502386
+          }
+          Rotation {
+            Pitch: 8.19622655e-05
+            Yaw: 59.9998627
+            Roll: 3.25688781e-12
+          }
+          Scale {
+            X: 0.212630615
+            Y: 0.956837595
+            Z: 0.566618621
+          }
+        }
+        ParentId: 4297665605012189947
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0700000525
+              G: 0.0471995063
+              B: 0.0375200287
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1562276358413043561
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16926332451643891882
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+            X: 1.83105476e-05
+            Y: 1.22070314e-05
+            Z: 6.85502386
+          }
+          Rotation {
+            Pitch: -3.05175781e-05
+            Yaw: -60.0001221
+            Roll: -6.10351563e-05
+          }
+          Scale {
+            X: 0.212630615
+            Y: 0.956837595
+            Z: 0.566618621
+          }
+        }
+        ParentId: 4297665605012189947
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0700000525
+              G: 0.0471995063
+              B: 0.0375200287
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1562276358413043561
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11307359698543178860
+        Name: "Fantasy Pommel 03"
+        Transform {
+          Location {
+            X: 1.83105476e-05
+            Y: 1.22070314e-05
+            Z: -0.0185127258
+          }
+          Rotation {
+            Pitch: -3.05175781e-05
+            Yaw: 179.999954
+            Roll: -3.05175781e-05
+          }
+          Scale {
+            X: 1.65454078
+            Y: 1.65454125
+            Z: 0.228482381
+          }
+        }
+        ParentId: 4297665605012189947
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5861223425148352605
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.15
+              G: 0.15
+              B: 0.15
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17238982204385840214
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -283,6 +979,51 @@
         }
       }
       Objects {
+        Id: 15379858004952278550
+        Name: "Fuse Sparks VFX"
+        Transform {
+          Location {
+            X: -5.26600361
+            Y: 4.88541269
+            Z: 18.0502567
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.1
+            Y: 0.1
+            Z: 0.1
+          }
+        }
+        ParentId: 12663157462442662214
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Smoke"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 4.66166782
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 5262690753478460949
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
         Id: 6780238906983008546
         Name: "Bomb Wick Fuse Burning Loop 01 SFX"
         Transform {
@@ -319,30 +1060,21 @@
       }
     }
     Assets {
-      Id: 6855348992067761797
-      Name: "Grenade Canister 04"
-      PlatformAssetType: 1
+      Id: 13794025398718660291
+      Name: "Bomb Wick Fuse Burning Loop 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weapons_grenade_sphere_001"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_bomb_wick_fuse_burning_loop_01_Cue_ref"
       }
     }
     Assets {
-      Id: 5544820850613172301
-      Name: "Grenade Handle 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weapons_grenade_handle_001"
-      }
-    }
-    Assets {
-      Id: 18228955417608075210
-      Name: "Magic Swirl Element Volume"
+      Id: 5262690753478460949
+      Name: "Fuse Sparks VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_magic_swirl_element_volume_vfx"
+        AssetId: "fxbp_fuse_sparks"
       }
     }
     Assets {
@@ -355,12 +1087,249 @@
       }
     }
     Assets {
-      Id: 13794025398718660291
-      Name: "Bomb Wick Fuse Burning Loop 01 SFX"
-      PlatformAssetType: 7
+      Id: 18228955417608075210
+      Name: "Magic Swirl Element Volume"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_bomb_wick_fuse_burning_loop_01_Cue_ref"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_magic_swirl_element_volume_vfx"
+      }
+    }
+    Assets {
+      Id: 1562276358413043561
+      Name: "Fantasy Shield Strap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 7630438330936839124
+      Name: "PoisonWick"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 6186751883754370952
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.559999943
+              G: 0.211390734
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "noise color"
+            Color {
+              R: 1
+              G: 0.855894
+              B: 0.36
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "falloff hardness"
+            Float: 10.8261442
+          }
+          Overrides {
+            Name: "falloff scale"
+            Float: 352.966248
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 6186751883754370952
+      Name: "Edgeline Wavy Object Fade Advanced"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_add_edgeline_local"
+      }
+    }
+    Assets {
+      Id: 13330662989199046504
+      Name: "Custom Emissive Glow Transparent"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 3702191406046426907
+        ParameterOverrides {
+          Overrides {
+            Name: "emissive_boost"
+            Float: 95.9261551
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 3702191406046426907
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 6747614045051753376
+      Name: "Cylinder - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_001"
+      }
+    }
+    Assets {
+      Id: 3090596827184957478
+      Name: "Rope"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_rope_001"
+      }
+    }
+    Assets {
+      Id: 7782164574935454890
+      Name: "Pipe - 45-Degree Long "
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_004"
+      }
+    }
+    Assets {
+      Id: 5861223425148352605
+      Name: "Metal Basic Steel"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "steel_001"
+      }
+    }
+    Assets {
+      Id: 17238982204385840214
+      Name: "Fantasy Pommel 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_002"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 8131365588139303669
+      Name: "PoisonBombLiquid"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 9322150260226817646
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.124834262
+              G: 0.65
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "inner color"
+            Color {
+              R: 0.0198013242
+              G: 0.13
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "top color"
+            Color {
+              R: 0.0706620663
+              G: 0.97
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "foam color"
+            Color {
+              R: 0.0519204661
+              G: 0.98
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "speed"
+            Float: 20
+          }
+          Overrides {
+            Name: "bubble direction"
+            Vector {
+              Z: 1
+            }
+          }
+          Overrides {
+            Name: "wave height"
+            Float: 4.45785332
+          }
+          Overrides {
+            Name: "surface height"
+            Float: 0.175766215
+          }
+          Overrides {
+            Name: "bubbles"
+            Float: 1
+          }
+          Overrides {
+            Name: "scale"
+            Float: 2.8816433
+          }
+          Overrides {
+            Name: "wave scale multiplier"
+            Float: 0.537170589
+          }
+          Overrides {
+            Name: "top edge foam distance"
+            Float: -3
+          }
+          Overrides {
+            Name: "edge power"
+            Float: 0.499116749
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 9322150260226817646
+      Name: "Emissive Container Liquid"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_emissive_cutoff_liquid"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 1781685294255403318
+      Name: "Bottle 06"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_fantasy_bottle_006"
       }
     }
     PrimaryAssetId {
@@ -370,3 +1339,4 @@
   }
   SerializationVersion: 65
 }
+IncludesAllDependencies: true
