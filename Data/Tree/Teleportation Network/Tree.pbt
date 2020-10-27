@@ -357,8 +357,9 @@ Objects {
   Name: "Teleporter Back to Hub"
   Transform {
     Location {
-      X: 110.296875
-      Y: -354.707031
+      X: 224.520233
+      Y: 318.76355
+      Z: -50.9942551
     }
     Rotation {
     }
@@ -445,10 +446,14 @@ Objects {
   Name: "Teleporter to Destination"
   Transform {
     Location {
-      Z: -13.2485352
+      X: -0.651189804
+      Y: -0.297963977
+      Z: -24.6729393
     }
     Rotation {
-      Yaw: -172.112411
+      Pitch: -4.081604
+      Yaw: -172.112335
+      Roll: -3.89465332
     }
     Scale {
       X: 1

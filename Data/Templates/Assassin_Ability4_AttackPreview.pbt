@@ -34,14 +34,12 @@
           Location {
           }
           Rotation {
-            Pitch: 1.81245208
-            Yaw: 160.338074
-            Roll: -3.71466064
+            Yaw: 89.9999542
           }
           Scale {
             X: 8.1
             Y: 8.1
-            Z: 14.2999916
+            Z: 4.20173025
           }
         }
         ParentId: 4567106359937562646
@@ -53,7 +51,7 @@
           Overrides {
             Name: "bp:Color Shapes"
             Color {
-              R: 0.141059563
+              R: 0.235000089
               B: 0.299999952
               A: 1
             }

@@ -1,6 +1,7 @@
 ﻿-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("MainAbility"):WaitForObject()
@@ -25,7 +26,6 @@ local CancelKeys = {
 	ability_secondary = true
 }
 
-
 function Attack()
 	if not Object.IsValid(Ability) or not Ability.owner then return end
 	
@@ -42,6 +42,8 @@ function Attack()
 		dmg.sourceAbility = Ability
 				
 		COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
+		return
 	end	
 end	
 
@@ -93,8 +95,7 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
-
-	--table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 end
 
 function OnUnequip(thisEquipment, player)
