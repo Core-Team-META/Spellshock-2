@@ -346,7 +346,7 @@
         ChildIds: 3657339729496937378
         ChildIds: 1286326275560935440
         ChildIds: 4051678230221737164
-        ChildIds: 4969653445563453122
+        ChildIds: 11664221664873935096
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -735,13 +735,13 @@
         }
       }
       Objects {
-        Id: 4969653445563453122
-        Name: "Invisibility Duration Display"
+        Id: 11664221664873935096
+        Name: "Invisibility Duration UI"
         Transform {
           Location {
-            X: -743.253906
-            Y: 178.604492
-            Z: -4.11523438
+            X: -9455.40625
+            Y: -9503.78223
+            Z: -3040.67188
           }
           Rotation {
           }
@@ -752,73 +752,46 @@
           }
         }
         ParentId: 12390733973333184270
-        ChildIds: 11664221664873935096
-        ChildIds: 18386550716797038013
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
-        }
-        Control {
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Canvas {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11664221664873935096
-        Name: "AbilityDurationUI"
-        Transform {
-          Location {
-            X: -8712.15332
-            Y: -9682.38867
-            Z: -3036.5564
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4969653445563453122
         UnregisteredParameters {
           Overrides {
-            Name: "cs:AbilityProgressBar"
+            Name: "cs:Equipment"
             ObjectReference {
-              SubObjectId: 10037560810511873998
-            }
-          }
-          Overrides {
-            Name: "cs:UIPanel"
-            ObjectReference {
-              SubObjectId: 18386550716797038013
+              SubObjectId: 4569115510025570718
             }
           }
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 11411700836215041466
+            }
+          }
+          Overrides {
+            Name: "cs:DisplayTemplate"
+            AssetReference {
+              Id: 7156155829847915259
+            }
+          }
+          Overrides {
+            Name: "cs:FillColor"
+            Color {
+              R: 0.629000306
+              B: 0.74
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:BackgroundColor"
+            Color {
+              R: 0.131655619
+              B: 0.28
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Position"
+            Vector2 {
+              X: -485
+              Y: 18
             }
           }
         }
@@ -831,112 +804,6 @@
         Script {
           ScriptAsset {
             Id: 9094472670648911279
-          }
-        }
-      }
-      Objects {
-        Id: 18386550716797038013
-        Name: "UI Panel"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4969653445563453122
-        ChildIds: 10037560810511873998
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 100
-          UIX: -485
-          UIY: 18
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10037560810511873998
-        Name: "Ability Progress Bar"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18386550716797038013
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 28
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          StatBar {
-            Color {
-              R: 0.629000306
-              B: 0.74
-              A: 1
-            }
-            BackgroundColor {
-              R: 0.131655619
-              B: 0.28
-              A: 1
-            }
-            Percent: 0.648584783
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
           }
         }
       }
@@ -1041,6 +908,14 @@
               Id: 5202994091235663908
             }
           }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 1800
+          }
+          Overrides {
+            Name: "cs:ProjectileGravity"
+            Float: 1
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1084,7 +959,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
+            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1554,6 +1429,30 @@
             Float: 0.75
           }
           Overrides {
+            Name: "cs:BoomerangTemplate"
+            AssetReference {
+              Id: 14161552992450762216
+            }
+          }
+          Overrides {
+            Name: "cs:PlayerImpactFX"
+            AssetReference {
+              Id: 6697248670123946068
+            }
+          }
+          Overrides {
+            Name: "cs:BeginningFX"
+            AssetReference {
+              Id: 3260618482035830264
+            }
+          }
+          Overrides {
+            Name: "cs:NormalImpactFX"
+            AssetReference {
+              Id: 11650929185820647296
+            }
+          }
+          Overrides {
             Name: "cs:BonusDamageModifier:tooltip"
             String: "This ability deals bonus damage based on the enemy\'s max hitpoints."
           }
@@ -1569,7 +1468,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.2
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1580,7 +1479,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -1636,12 +1535,6 @@
               SubObjectId: 7787036789120996490
             }
           }
-          Overrides {
-            Name: "cs:BoomerangTemplate"
-            AssetReference {
-              Id: 14161552992450762216
-            }
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1671,36 +1564,12 @@
           }
         }
         ParentId: 8722233437890789111
-        ChildIds: 7681391975235107164
         ChildIds: 1302420456206572084
         ChildIds: 2319229106837867255
         UnregisteredParameters {
           Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 20
-              Y: 30
-            }
-          }
-          Overrides {
-            Name: "cs:BaseDamageModifier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:ImpactRadius"
-            Float: 500
-          }
-          Overrides {
-            Name: "cs:HeightOffset"
-            Float: 2000
-          }
-          Overrides {
-            Name: "cs:FlyingDuration"
-            Float: 6
-          }
-          Overrides {
-            Name: "cs:LaunchForce"
-            Float: 30
+            Name: "cs:Binding"
+            String: "ability_extra_24"
           }
         }
         WantsNetworking: true
@@ -1714,115 +1583,47 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 7
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          Animation: "unarmed_punch_right"
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
-          }
-        }
-      }
-      Objects {
-        Id: 7681391975235107164
-        Name: "T Confirm"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 87249608989476396
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Ability {
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
             Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
           }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "2hand_sword_thrust"
+          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
@@ -1843,7 +1644,13 @@
         ParentId: 87249608989476396
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
             ObjectReference {
               SubObjectId: 87249608989476396
             }
@@ -1855,10 +1662,59 @@
             }
           }
           Overrides {
-            Name: "cs:ConfirmAbility"
-            ObjectReference {
-              SubObjectId: 7681391975235107164
+            Name: "cs:MaxPlacementRange"
+            Int: 7000
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Air Dive"
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 17869001443527042596
             }
+          }
+          Overrides {
+            Name: "cs:ImpactVFX"
+            AssetReference {
+              Id: 3219672101883223829
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 50
+              Y: 60
+            }
+          }
+          Overrides {
+            Name: "cs:BaseDamageModifier"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:ImpactRadius"
+            Float: 500
+          }
+          Overrides {
+            Name: "cs:HeightOffset"
+            Float: 2000
+          }
+          Overrides {
+            Name: "cs:FlyingDuration"
+            Float: 4
+          }
+          Overrides {
+            Name: "cs:LaunchForce"
+            Float: 30
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -1889,7 +1745,7 @@
           }
         }
         ParentId: 87249608989476396
-        ChildIds: 133803074562556897
+        ChildIds: 14022298515563068289
         ChildIds: 11309600053152836331
         WantsNetworking: true
         Collidable_v2 {
@@ -1902,10 +1758,13 @@
         }
       }
       Objects {
-        Id: 133803074562556897
-        Name: "Assassin_AirDive_PreviewClient"
+        Id: 14022298515563068289
+        Name: "Assassin_AirDive_Client"
         Transform {
           Location {
+            X: -7995.12695
+            Y: -10268.626
+            Z: -3040.23633
           }
           Rotation {
           }
@@ -1918,35 +1777,9 @@
         ParentId: 2319229106837867255
         UnregisteredParameters {
           Overrides {
-            Name: "cs:MainAbility"
+            Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 87249608989476396
-            }
-          }
-          Overrides {
-            Name: "cs:ConfirmAbility"
-            ObjectReference {
-              SubObjectId: 7681391975235107164
-            }
-          }
-          Overrides {
-            Name: "cs:PreviewObject"
-            AssetReference {
-              Id: 17869001443527042596
-            }
-          }
-          Overrides {
-            Name: "cs:ConfirmBinding"
-            String: "ability_primary"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Float: 7000
-          }
-          Overrides {
-            Name: "cs:ImpactVFX"
-            AssetReference {
-              Id: 3219672101883223829
+              SubObjectId: 1302420456206572084
             }
           }
           Overrides {
@@ -1956,9 +1789,9 @@
             }
           }
           Overrides {
-            Name: "cs:AirDiveServerScript"
-            ObjectReference {
-              SubObjectId: 1302420456206572084
+            Name: "cs:TimerUI_Template"
+            AssetReference {
+              Id: 7156155829847915259
             }
           }
         }
@@ -1970,7 +1803,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 3201122550070554730
+            Id: 2585631326682394561
           }
         }
       }

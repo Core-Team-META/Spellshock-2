@@ -6,7 +6,8 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local ABILITY = script.parent
 
 local DAMAGE = ABILITY:GetCustomProperty("Damage")
-
+local ProjectileSpeed = ABILITY:GetCustomProperty("ProjectileSpeed")
+local ProjectileGravity = ABILITY:GetCustomProperty("ProjectileGravity")
 local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
 local ImpactFX = ABILITY:GetCustomProperty("ImpactFX")
 local RADIUS = ABILITY:GetCustomProperty("Radius")
@@ -55,8 +56,8 @@ function OnAbilityExecute(thisAbility)
     local grenadeProjectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
-    grenadeProjectile.speed = 2500
-    grenadeProjectile.gravityScale = 0.8
+    grenadeProjectile.speed = ProjectileSpeed
+    grenadeProjectile.gravityScale = ProjectileGravity
     grenadeProjectile.shouldDieOnImpact = true
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end

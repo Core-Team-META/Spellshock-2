@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 11318441308667137252
-  Name: "ExcavatePickup"
+  Id: 6697248670123946068
+  Name: "Boomerang Player Impact"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 7399763170539373942
+      RootId: 17164488839080999864
       Objects {
-        Id: 7399763170539373942
-        Name: "ExcavatePickup"
+        Id: 17164488839080999864
+        Name: "Boomerang Player Impact"
         Transform {
           Scale {
             X: 1
@@ -16,9 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 17972889907043631369
-        ChildIds: 15972998548284205286
-        ChildIds: 8074818658758239883
+        ChildIds: 4568767026683429242
+        ChildIds: 3160947372228500372
+        ChildIds: 4078864483943058041
+        Lifespan: 1.4
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -30,24 +31,32 @@
         }
       }
       Objects {
-        Id: 17972889907043631369
-        Name: "Gun Impact Small VFX"
+        Id: 4568767026683429242
+        Name: "Impact Player Body Hits & Cracks Set 01 SFX"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 2.89999986
-            Y: 2.89999986
-            Z: 2.89999986
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 7399763170539373942
+        ParentId: 17164488839080999864
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Gravity"
-            Float: -9
+            Name: "bp:Body Impact Type"
+            Enum {
+              Value: "mc:esfx_bodyhitsimpact_01:10"
+            }
+          }
+          Overrides {
+            Name: "bp:Bone Crack Type"
+            Enum {
+              Value: "mc:esfx_bonecracks_01:7"
+            }
           }
         }
         Collidable_v2 {
@@ -58,71 +67,26 @@
         }
         Blueprint {
           BlueprintAsset {
-            Id: 3902609303942155418
+            Id: 5275213438083375409
           }
           TeamSettings {
           }
-          Vfx {
+          AudioBP {
             AutoPlay: true
+            Volume: 0.8
+            Falloff: 3600
+            Radius: 400
+            EnableOcclusion: true
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
           }
         }
       }
       Objects {
-        Id: 15972998548284205286
-        Name: "Rock 03"
+        Id: 3160947372228500372
+        Name: "Gibs Explosion VFX"
         Transform {
           Location {
-            Z: 195
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.7
-            Y: 1.7
-            Z: 1.7
-          }
-        }
-        ParentId: 7399763170539373942
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2367714287426564257
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6981536508008379085
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8074818658758239883
-        Name: "Heavy Ground Rocky Impact 01 SFX"
-        Transform {
-          Location {
-            X: 160
-            Z: 255
           }
           Rotation {
           }
@@ -132,7 +96,57 @@
             Z: 1
           }
         }
-        ParentId: 7399763170539373942
+        ParentId: 17164488839080999864
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Drops"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Blobs"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.8
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.8
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 7877567306408366910
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 4078864483943058041
+        Name: "Gore Bloody Impact 02 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17164488839080999864
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -141,12 +155,12 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 888725854457039636
+            Id: 10535737080702242801
           }
           AutoPlay: true
           Volume: 1
-          Falloff: -1
-          Radius: -1
+          Falloff: 3600
+          Radius: 400
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -154,30 +168,30 @@
       }
     }
     Assets {
-      Id: 3902609303942155418
-      Name: "Gun Impact Small VFX"
+      Id: 5275213438083375409
+      Name: "Impact Player Body Hits & Cracks Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_body_impacts_hits_cracks_ref"
+      }
+    }
+    Assets {
+      Id: 7877567306408366910
+      Name: "Gibs Explosion VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_gun_impact_dirt_sm"
+        AssetId: "fxbp_bloody_explosion"
       }
     }
     Assets {
-      Id: 6981536508008379085
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 888725854457039636
-      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      Id: 10535737080702242801
+      Name: "Sword Blade Body Flesh Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
+        AssetId: "sfx_sword_body_flesh_impact_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
