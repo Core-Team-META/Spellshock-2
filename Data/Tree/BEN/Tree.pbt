@@ -1940,7 +1940,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3138,7 +3138,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -12728,7 +12728,7 @@ Objects {
     Location {
       X: -2071.18457
       Y: -540.324219
-      Z: 3121.79834
+      Z: 3175
     }
     Rotation {
       Yaw: -91.6407776
