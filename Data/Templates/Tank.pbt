@@ -1022,7 +1022,7 @@
             }
           }
           Overrides {
-            Name: "cs:WallTemplate"
+            Name: "cs:ObjectTemplate"
             AssetReference {
               Id: 8766393355139966205
             }

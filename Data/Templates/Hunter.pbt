@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 5729982720240152246
+        ParentId: 4781671109827199097
         ChildIds: 7137406222810709920
         ChildIds: 5361708159967945625
         ChildIds: 406380117814010332
@@ -32,6 +32,25 @@
             AssetReference {
               Id: 1453546943157492303
             }
+          }
+          Overrides {
+            Name: "cs:EquipmentIcon"
+            AssetReference {
+              Id: 8744665518178580042
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:enableUI"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -112,7 +131,7 @@
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "1hand_melee_stance"
+            String: "2hand_rifle_aim_shoulder"
           }
           Overrides {
             Name: "cs:WalkSpeed"
@@ -356,6 +375,7 @@
         }
         ParentId: 2069545901692075652
         ChildIds: 1577513358185365798
+        ChildIds: 8056306599204561674
         ChildIds: 2616006816711334649
         ChildIds: 4846120483526496886
         ChildIds: 16566479844955403044
@@ -406,6 +426,41 @@
         Script {
           ScriptAsset {
             Id: 15448460343788315077
+          }
+        }
+      }
+      Objects {
+        Id: 8056306599204561674
+        Name: "EquipmentSetIconClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:API"
+            AssetReference {
+              Id: 7445855579671141283
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10109220941690346490
           }
         }
       }
@@ -540,7 +595,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 10459930732528262171
+              SubObjectId: 12322270892486371816
             }
           }
           Overrides {
@@ -601,7 +656,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 10946120406971566714
+              Id: 2453109304991346687
             }
           }
           Overrides {
@@ -718,7 +773,7 @@
         ChildIds: 10679331535669617236
         ChildIds: 1433284731599134094
         ChildIds: 16077949688686323587
-        ChildIds: 10459930732528262171
+        ChildIds: 12322270892486371816
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -868,13 +923,16 @@
           }
         }
         ParentId: 8738223765773217925
-        ChildIds: 3531799594491030026
         ChildIds: 11108734766873830573
         ChildIds: 13372907053990075206
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:Binding"
+            String: "ability_extra_23"
           }
         }
         WantsNetworking: true
@@ -925,81 +983,9 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
+          Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_33"
-          }
-        }
-      }
-      Objects {
-        Id: 3531799594491030026
-        Name: "R Primer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 1433284731599134094
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 0.5
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_33"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
@@ -1023,19 +1009,19 @@
             }
           }
           Overrides {
-            Name: "cs:MainAbility"
+            Name: "cs:SpecialAbility"
             ObjectReference {
               SubObjectId: 1433284731599134094
             }
           }
           Overrides {
-            Name: "cs:PrimerAbility"
+            Name: "cs:PrimaryAbility"
             ObjectReference {
-              SubObjectId: 3531799594491030026
+              SubObjectId: 10839953769775855596
             }
           }
           Overrides {
-            Name: "cs:WallTemplate"
+            Name: "cs:ObjectTemplate"
             AssetReference {
               Id: 15664502698481242815
             }
@@ -1043,7 +1029,7 @@
           Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
-              Id: 15664502698481242815
+              Id: 4603934176734530980
             }
           }
           Overrides {
@@ -1057,6 +1043,14 @@
           Overrides {
             Name: "cs:Duration"
             Float: 7
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -1235,71 +1229,74 @@
         }
       }
       Objects {
-        Id: 10459930732528262171
-        Name: "Shift"
+        Id: 12322270892486371816
+        Name: "Roll"
         Transform {
           Location {
+            X: -7160
+            Y: -10325
+            Z: -3110
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
         ParentId: 8738223765773217925
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: false
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
           IsEnabled: true
+          KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1
-            CanMove: true
+            Duration: 0.7
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           ExecutePhaseSettings {
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           RecoveryPhaseSettings {
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
+              Value: "mc:eabilitysetfacing:movement"
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
           }
           Animation: "unarmed_roll"
           CanBePrevented: true
@@ -1323,6 +1320,7 @@
           }
         }
         ParentId: 406380117814010332
+        ChildIds: 6922611339924357768
         ChildIds: 7556104036679301992
         ChildIds: 13944462686745880869
         WantsNetworking: true
@@ -1334,6 +1332,75 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6922611339924357768
+        Name: "Activate Multishoot"
+        Transform {
+          Location {
+            Y: 250.623047
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999821
+            Y: 0.999999821
+            Z: 1
+          }
+        }
+        ParentId: 5242507662312205528
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_30"
+          }
         }
       }
       Objects {
@@ -1355,7 +1422,6 @@
         ChildIds: 8388633186393392347
         ChildIds: 8818728013034544862
         ChildIds: 3298102761747402805
-        ChildIds: 6922611339924357768
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -1423,7 +1489,7 @@
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 1500
+            Range: 2000
             ImpactPlayerAssetRef {
               Id: 14373757464648078715
             }
@@ -1432,13 +1498,13 @@
             }
             MaxAmmo: 1000000
             AmmoType: "rounds"
-            MultiShot: 5
+            MultiShot: 10
             ProjectileSpeed: 25000
             ProjectileLifeSpan: 10
             ProjectileLength: 50
             ProjectileRadius: 5
-            SpreadMin: 20
-            SpreadMax: 30
+            SpreadMin: 1
+            SpreadMax: 10
             SpreadAperture: 150
             DefaultAbility {
               SubObjectId: 3298102761747402805
@@ -1497,6 +1563,18 @@
             Name: "cs:Duration"
             Float: 5
           }
+          Overrides {
+            Name: "cs:SpecialEquipment"
+            ObjectReference {
+              SubObjectId: 7556104036679301992
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryEquipment"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1527,7 +1605,7 @@
         }
         ParentId: 7556104036679301992
         ChildIds: 16686133452027158721
-        ChildIds: 9763053527060074221
+        ChildIds: 17628230939858546359
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1582,87 +1660,57 @@
         }
       }
       Objects {
-        Id: 9763053527060074221
-        Name: "Ability Duration Display"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8818728013034544862
-        ChildIds: 17628230939858546359
-        ChildIds: 18415241466693714607
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Canvas {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 17628230939858546359
         Name: "AbilityDurationUI"
         Transform {
           Location {
-            X: -8712.15332
-            Y: -9682.38867
+            X: -8712.15234
+            Y: -9682.3877
             Z: -3036.5564
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
+            X: 0.99999994
+            Y: 0.99999994
             Z: 1
           }
         }
-        ParentId: 9763053527060074221
+        ParentId: 8818728013034544862
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:AbilityProgressBar"
-            ObjectReference {
-              SubObjectId: 9705984977891592012
-            }
-          }
-          Overrides {
-            Name: "cs:UIPanel"
-            ObjectReference {
-              SubObjectId: 18415241466693714607
-            }
-          }
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 8388633186393392347
+            }
+          }
+          Overrides {
+            Name: "cs:FillColor"
+            Color {
+              R: 0.86
+              G: 0.290463597
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:BackgroundColor"
+            Color {
+              R: 0.39
+              G: 0.0619867668
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Position"
+            Vector2 {
+              X: -600
+              Y: 18
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
             }
           }
         }
@@ -1675,112 +1723,6 @@
         Script {
           ScriptAsset {
             Id: 9094472670648911279
-          }
-        }
-      }
-      Objects {
-        Id: 18415241466693714607
-        Name: "UI Panel"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9763053527060074221
-        ChildIds: 9705984977891592012
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 100
-          UIX: -600
-          UIY: 18
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9705984977891592012
-        Name: "Ability Progress Bar"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18415241466693714607
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 28
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          StatBar {
-            Color {
-              R: 0.86
-              G: 0.290463597
-              A: 1
-            }
-            BackgroundColor {
-              R: 0.39
-              G: 0.0619867668
-              A: 1
-            }
-            Percent: 0.648584783
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
           }
         }
       }
@@ -1840,74 +1782,6 @@
         }
       }
       Objects {
-        Id: 6922611339924357768
-        Name: "Activate Multishoot"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 7556104036679301992
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.05
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.05
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          CooldownPhaseSettings {
-            Duration: 10
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-          }
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_30"
-          }
-        }
-      }
-      Objects {
         Id: 13944462686745880869
         Name: "Crossbow"
         Transform {
@@ -1929,21 +1803,6 @@
         ChildIds: 10540071309458970955
         ChildIds: 18214553218914697683
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:EquipmentIcon"
-            AssetReference {
-              Id: 10377827557337385769
-            }
-          }
-          Overrides {
-            Name: "cs:EquipmentColor"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2105,7 +1964,6 @@
         }
         ParentId: 13944462686745880869
         ChildIds: 9444411452001214971
-        ChildIds: 1179795776734049068
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -2133,7 +1991,6 @@
           }
         }
         ParentId: 13500843537647582575
-        ChildIds: 2284399836664443476
         ChildIds: 2695547812234798459
         UnregisteredParameters {
         }
@@ -2146,41 +2003,6 @@
         Folder {
           IsFilePartition: true
           FilePartitionName: "Scripts_2"
-        }
-      }
-      Objects {
-        Id: 2284399836664443476
-        Name: "EquipmentSetIconClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1
-          }
-        }
-        ParentId: 9444411452001214971
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10109220941690346490
-          }
         }
       }
       Objects {
@@ -2208,7 +2030,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 10797831819759656868
+              Id: 2439865559819884120
             }
           }
         }
@@ -2221,861 +2043,6 @@
         Script {
           ScriptAsset {
             Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 1179795776734049068
-        Name: "Fantasy Weapon - Crossbow 01 (Prop)"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.8
-            Y: 0.8
-            Z: 0.8
-          }
-        }
-        ParentId: 13500843537647582575
-        ChildIds: 3263357697639362260
-        ChildIds: 16491492682509854673
-        ChildIds: 8208752159457496698
-        ChildIds: 3389021465514897647
-        ChildIds: 12713385097683903469
-        ChildIds: 2246963931217217114
-        ChildIds: 11943486649939331136
-        ChildIds: 16207600588073492047
-        ChildIds: 13652179514282964289
-        ChildIds: 3649801278481338359
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3263357697639362260
-        Name: "Fantasy Crossbow Bolt 01"
-        Transform {
-          Location {
-            X: 39.5371933
-            Z: 25.1326046
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 3337256621200851928
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16491492682509854673
-        Name: "Fantasy Crossbow Bow 01"
-        Transform {
-          Location {
-            X: 78.321228
-            Y: 0.234181732
-            Z: 13.1491394
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.04588425
-            Y: 0.745029926
-            Z: 1.23014295
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 12.1441069
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 30.0516434
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 13.4303703
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 27.1735153
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12875975218361332960
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8208752159457496698
-        Name: "Fantasy Crossbow Foregrip 01"
-        Transform {
-          Location {
-            X: 33.3169479
-            Z: 15.1326046
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 0.850824475
-              B: 0.748269916
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 16.9866276
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 33.2346268
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15312805567995783140
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3389021465514897647
-        Name: "Fantasy Crossbow Grip 01"
-        Transform {
-          Location {
-            X: 1.7599206
-            Y: -7.62939453e-06
-            Z: 8.08739853
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 1
-              G: 0.850824475
-              B: 0.748269916
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 13.4303703
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 31.0772381
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 8.97838116
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 27.1735153
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1562290466453296467
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12713385097683903469
-        Name: "Fantasy Crossbow Stock 01"
-        Transform {
-          Location {
-            X: -3.46280432
-            Z: 17.1326046
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 1
-              G: 0.850824475
-              B: 0.748269916
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 17.566349
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 33.2346268
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5386842465317264650
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2246963931217217114
-        Name: "spyglass"
-        Transform {
-          Location {
-            X: 22.4590454
-            Z: 28.1634216
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.241053671
-            Y: 0.241053671
-            Z: 0.241053671
-          }
-        }
-        ParentId: 1179795776734049068
-        ChildIds: 10854037004484005782
-        ChildIds: 4049625175124098362
-        ChildIds: 4919855968823439512
-        ChildIds: 12834813299647528612
-        ChildIds: 17816363963595683878
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 10854037004484005782
-        Name: "Urban Pipe Clamp 04"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2246963931217217114
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 2773263720070698009
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14156010982424257760
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13148505073156703051
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4049625175124098362
-        Name: "Urban Pipe Coupling 02"
-        Transform {
-          Location {
-            X: 5
-            Z: 40
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -9.65934305e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2246963931217217114
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 11337413471323694429
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.09809875
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 13.6474314
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16163665952175281032
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4919855968823439512
-        Name: "Fantasy Pommel 03"
-        Transform {
-          Location {
-            Z: 40
-          }
-          Rotation {
-            Pitch: 90
-          }
-          Scale {
-            X: 7.75
-            Y: 7.75
-            Z: 5
-          }
-        }
-        ParentId: 2246963931217217114
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 21.0949669
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 44.411
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8174682436388858304
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12834813299647528612
-        Name: "Lense"
-        Transform {
-          Location {
-            X: 59.3283081
-            Z: 40
-          }
-          Rotation {
-            Pitch: -90
-            Yaw: -5.46415104e-05
-            Roll: 0.00012158676
-          }
-          Scale {
-            X: 0.295233727
-            Y: 0.295233727
-            Z: 0.295233727
-          }
-        }
-        ParentId: 2246963931217217114
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 3720753995173186750
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4533424030597734882
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17816363963595683878
-        Name: "Lense"
-        Transform {
-          Location {
-            X: -50.1000977
-            Z: 40
-          }
-          Rotation {
-            Pitch: -90
-            Yaw: 5.46415104e-05
-          }
-          Scale {
-            X: 0.18389754
-            Y: 0.18389754
-            Z: 0.18389754
-          }
-        }
-        ParentId: 2246963931217217114
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 3720753995173186750
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4533424030597734882
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11943486649939331136
-        Name: "Gem - Pear Polished"
-        Transform {
-          Location {
-            X: 93.2002563
-            Z: 12.2798462
-          }
-          Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 90.0000076
-            Roll: -89.9999313
-          }
-          Scale {
-            X: 0.0833448917
-            Y: 0.0833448917
-            Z: 0.0833448917
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17777965235899846507
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23402971
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.174361318
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16207600588073492047
-        Name: "Gem - Pear Polished"
-        Transform {
-          Location {
-            X: 92.0702744
-            Z: 12.2798462
-          }
-          Rotation {
-            Pitch: 3.4150944e-05
-            Yaw: 89.9999924
-            Roll: -89.9999313
-          }
-          Scale {
-            X: 0.113202631
-            Y: 0.113202631
-            Z: 0.113202631
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16263323653671506076
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.51349962
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 6.85016251
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16825643228001246048
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13652179514282964289
-        Name: "Cylinder - bottom aligned"
-        Transform {
-          Location {
-            X: 27.3290405
-            Y: 0.611613
-            Z: 26.3302612
-          }
-          Rotation {
-            Pitch: 10.535471
-            Yaw: 35.251503
-            Roll: -102.873421
-          }
-          Scale {
-            X: 0.008
-            Y: 0.008
-            Z: 0.603219151
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14017539756736382852
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3649801278481338359
-        Name: "Cylinder - bottom aligned"
-        Transform {
-          Location {
-            X: 27.3290405
-            Y: 0.611613
-            Z: 26.3302612
-          }
-          Rotation {
-            Pitch: 10.5353889
-            Yaw: 140.794876
-            Roll: -102.87545
-          }
-          Scale {
-            X: 0.00788303092
-            Y: 0.008
-            Z: 0.603218436
-          }
-        }
-        ParentId: 1179795776734049068
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4809529976550021000
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14017539756736382852
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
           }
         }
       }
@@ -3532,6 +2499,15 @@
       }
     }
     Assets {
+      Id: 8744665518178580042
+      Name: "Fantasy Ability Green 018"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Green_018"
+      }
+    }
+    Assets {
       Id: 13636798656365981194
       Name: "Fantasy Ability Teal 007"
       PlatformAssetType: 9
@@ -3559,12 +2535,12 @@
       }
     }
     Assets {
-      Id: 10946120406971566714
-      Name: "Fantasy Ability Teal 024"
+      Id: 2453109304991346687
+      Name: "Fantasy Ability Green 014"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Teal_024"
+        AssetId: "UI_Fantasy_Ability_Green_014"
       }
     }
     Assets {
@@ -3595,138 +2571,12 @@
       }
     }
     Assets {
-      Id: 10797831819759656868
-      Name: "Fantasy Ability Blue 041"
+      Id: 2439865559819884120
+      Name: "Fantasy Crossbow 002"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_041"
-      }
-    }
-    Assets {
-      Id: 3337256621200851928
-      Name: "Fantasy Crossbow Bolt 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_bolt_cross_001"
-      }
-    }
-    Assets {
-      Id: 16263323653671506076
-      Name: "Metal Steel Brushed"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stainless-steel_001_uv"
-      }
-    }
-    Assets {
-      Id: 4809529976550021000
-      Name: "Metal Old Beaten Gold 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_002"
-      }
-    }
-    Assets {
-      Id: 12875975218361332960
-      Name: "Fantasy Crossbow Bow 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_bow_cross_001"
-      }
-    }
-    Assets {
-      Id: 15312805567995783140
-      Name: "Fantasy Crossbow Foregrip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_foregrip_cross_001"
-      }
-    }
-    Assets {
-      Id: 1562290466453296467
-      Name: "Fantasy Crossbow Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_cross_001"
-      }
-    }
-    Assets {
-      Id: 5386842465317264650
-      Name: "Fantasy Crossbow Stock 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_stock_cross_001"
-      }
-    }
-    Assets {
-      Id: 13148505073156703051
-      Name: "Urban Pipe Clamp 04"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_clamp_004_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
-      }
-    }
-    Assets {
-      Id: 11337413471323694429
-      Name: "Metal Gold 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_001"
-      }
-    }
-    Assets {
-      Id: 8174682436388858304
-      Name: "Fantasy Pommel 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_003"
-      }
-    }
-    Assets {
-      Id: 4533424030597734882
-      Name: "Lens"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_lense_001"
-      }
-    }
-    Assets {
-      Id: 16825643228001246048
-      Name: "Gem - Pear Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_pear_polished_001"
-      }
-    }
-    Assets {
-      Id: 14017539756736382852
-      Name: "Cylinder - bottom aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_001"
+        AssetId: "UI_Fantasy_Weapon_Crossbow_002"
       }
     }
     Assets {

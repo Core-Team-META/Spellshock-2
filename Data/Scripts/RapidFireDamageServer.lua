@@ -15,6 +15,8 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 
 local WEAPON = script.parent
+local SpecialEquipment = script:GetCustomProperty("SpecialEquipment"):WaitForObject()
+local PrimaryEquipment = script:GetCustomProperty("PrimaryEquipment"):WaitForObject()
 local MainAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local ShootAbility = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local OtherAbility = script:GetCustomProperty("OtherAbility"):WaitForObject()
@@ -25,6 +27,8 @@ local Duration = script:GetCustomProperty("Duration")
 local Timer = 0
 
 function OnMainAbilityExecute(thisAbility)
+	SpecialEquipment.isEnabled = true
+	PrimaryEquipment.isEnabled = false
 	OtherAbility.isEnabled = false
 	ShootAbility.isEnabled = true
 	Timer = Duration
@@ -54,7 +58,6 @@ end
 
 WEAPON.targetImpactedEvent:Connect(OnTargetImpact)
 
-
 function OnObjectDamaged(id, prevHealth, dmgAmount, impactPosition, impactRotation, sourceObject)
 	if sourceObject == WEAPON.owner then
 		BroadcastDamageFeedback(dmgAmount, impactPosition)
@@ -81,12 +84,37 @@ function OnDestroyed(obj)
 	Cleanup()
 end
 
+function OnWeaponShoot(thisWeapon, thisProjectile)
+	print(thisWeapon.name .. " is firing")
+end
+
+function OnEquip(equipment, player)
+	Task.Wait()
+	ShootAbility.isEnabled = false
+	OtherAbility.isEnabled = true
+	
+	SpecialEquipment.isEnabled = false
+	PrimaryEquipment.isEnabled = true
+	
+	SpecialEquipment.projectileSpawnedEvent:Connect( OnWeaponShoot )
+	PrimaryEquipment.projectileSpawnedEvent:Connect( OnWeaponShoot )
+end
+
+function OnUnequip(equipment, player)
+	
+end
+
+SpecialEquipment.equippedEvent:Connect(OnEquip)
+SpecialEquipment.unequippedEvent:Connect(OnUnequip)
+
 function Tick(deltaTime)
 	if Timer > 0 then
 		Timer = Timer - deltaTime
 		if Timer < 0 then
 			ShootAbility.isEnabled = false
 			OtherAbility.isEnabled = true
+			SpecialEquipment.isEnabled = false
+			PrimaryEquipment.isEnabled = true
 		end
 	end
 end

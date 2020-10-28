@@ -16,10 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 1297753756919023063
-        ChildIds: 12432461408495405615
-        ChildIds: 15059436937600381399
-        ChildIds: 1113554823320291737
+        ChildIds: 10178021330108528412
+        ChildIds: 3919377553131050000
+        ChildIds: 18344250110930802806
+        ChildIds: 15887748454189734900
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -31,7 +31,7 @@
         }
       }
       Objects {
-        Id: 1297753756919023063
+        Id: 10178021330108528412
         Name: "Branches Cluster Big"
         Transform {
           Location {
@@ -46,14 +46,6 @@
           }
         }
         ParentId: 1539522716044344770
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Branch:id"
-            AssetReference {
-              Id: 12094516816268993523
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -76,11 +68,11 @@
         }
       }
       Objects {
-        Id: 12432461408495405615
+        Id: 3919377553131050000
         Name: "Branches Cluster Medium"
         Transform {
           Location {
-            X: -107.050476
+            X: -107.049805
           }
           Rotation {
             Yaw: -53.4757767
@@ -92,14 +84,6 @@
           }
         }
         ParentId: 1539522716044344770
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Branch:id"
-            AssetReference {
-              Id: 12094516816268993523
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -122,12 +106,12 @@
         }
       }
       Objects {
-        Id: 15059436937600381399
+        Id: 18344250110930802806
         Name: "Branches Cluster Small"
         Transform {
           Location {
-            X: 138.62735
-            Y: -99.2706604
+            X: 138.62793
+            Y: -99.2705078
           }
           Rotation {
           }
@@ -138,14 +122,6 @@
           }
         }
         ParentId: 1539522716044344770
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Branch:id"
-            AssetReference {
-              Id: 12094516816268993523
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -168,7 +144,7 @@
         }
       }
       Objects {
-        Id: 1113554823320291737
+        Id: 15887748454189734900
         Name: "Branches Cluster Big"
         Transform {
           Location {
@@ -184,14 +160,6 @@
           }
         }
         ParentId: 1539522716044344770
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Branch:id"
-            AssetReference {
-              Id: 12094516816268993523
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -221,15 +189,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gen_branches_big_001"
-      }
-    }
-    Assets {
-      Id: 12094516816268993523
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
       }
     }
     Assets {

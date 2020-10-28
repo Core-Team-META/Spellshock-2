@@ -54,6 +54,7 @@
         }
         ParentId: 1093514064848656811
         ChildIds: 17256274653596879371
+        ChildIds: 2755016470197811651
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -165,6 +166,42 @@
           }
         }
       }
+      Objects {
+        Id: 2755016470197811651
+        Name: "Creature Bird Hawk Cry 01 SFX"
+        Transform {
+          Location {
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6987913540614044554
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 672228843221556369
+          }
+          AutoPlay: true
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 14320420807192399895
@@ -173,6 +210,15 @@
       PrimaryAsset {
         AssetType: "AnimatedMeshAssetRef"
         AssetId: "npc_dragonling_chubby_basic_001_ref"
+      }
+    }
+    Assets {
+      Id: 672228843221556369
+      Name: "Creature Bird Hawk Cry 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_bird_hawk_cry_01a_Cue_ref"
       }
     }
     PrimaryAssetId {

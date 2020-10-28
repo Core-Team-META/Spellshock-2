@@ -136,6 +136,7 @@
         ChildIds: 3452068735345498731
         ChildIds: 11020509807251717013
         ChildIds: 8833127351558468646
+        ChildIds: 3955233732039941753
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -302,6 +303,41 @@
           }
         }
       }
+      Objects {
+        Id: 3955233732039941753
+        Name: "Impact Nature Tree Branch Hard 01 SFX"
+        Transform {
+          Location {
+            Z: 120
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9537260727542515943
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 13192433533409481268
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 7006441219039210678
@@ -328,6 +364,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gen_branches_small_001"
+      }
+    }
+    Assets {
+      Id: 13192433533409481268
+      Name: "Impact Nature Tree Branch Hard 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_impact_tree_hard_01_Cue_ref"
       }
     }
     PrimaryAssetId {
