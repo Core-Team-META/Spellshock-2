@@ -26,7 +26,6 @@
         ChildIds: 17147813527372249738
         ChildIds: 887185170638684401
         ChildIds: 16021980467172891957
-        ChildIds: 7200384195724207868
         ChildIds: 13646235458351247452
         ChildIds: 8611165912306747432
         ChildIds: 17482592696516241271
@@ -477,341 +476,6 @@
         }
       }
       Objects {
-        Id: 7200384195724207868
-        Name: "Group"
-        Transform {
-          Location {
-            X: 13.2724609
-            Y: -7.56835938
-            Z: 1084.39771
-          }
-          Rotation {
-            Yaw: -29.3703918
-          }
-          Scale {
-            X: 0.824912429
-            Y: 0.824912429
-            Z: 0.824912429
-          }
-        }
-        ParentId: 16063818355390569732
-        ChildIds: 11738167196243404448
-        ChildIds: 14345874625734528335
-        ChildIds: 16357872624984449136
-        ChildIds: 1413870290502888488
-        ChildIds: 1718897590232481784
-        ChildIds: 7620812168075467671
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 11738167196243404448
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: 126.730553
-            Y: 25.5782852
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.164917
-            Yaw: 9.54724
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14345874625734528335
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: 40.9232635
-            Y: 125.72274
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.164917
-            Yaw: 68.8311234
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16357872624984449136
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: -85.54422
-            Y: 105.860733
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.164917
-            Yaw: 126.215469
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1413870290502888488
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: -32.4331741
-            Y: -130.034973
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.164917
-            Yaw: -103.643188
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1718897590232481784
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: 84.7705078
-            Y: -99.0686874
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.1649475
-            Yaw: -49.5608521
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7620812168075467671
-        Name: "Wedge - Corner Complex"
-        Transform {
-          Location {
-            X: -134.445953
-            Y: -28.0575771
-            Z: 20.9511967
-          }
-          Rotation {
-            Pitch: -59.164978
-            Yaw: -169.140915
-            Roll: -179.999954
-          }
-          Scale {
-            X: 5.48177958
-            Y: 6.10897064
-            Z: 4.77879143
-          }
-        }
-        ParentId: 7200384195724207868
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17118136979191323600
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8834933182589795814
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 13646235458351247452
         Name: "Scifi Ship Engine 01"
         Transform {
@@ -860,8 +524,9 @@
             Id: 6789604014209716330
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -2274,12 +1939,12 @@
       }
     }
     Assets {
-      Id: 8834933182589795814
-      Name: "Wedge - Corner Complex"
+      Id: 6789604014209716330
+      Name: "Scifi Ship Engine 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_corelogo_shape_001"
+        AssetId: "sm_scf_ship_engine_001_ref"
       }
     }
     Assets {
@@ -2289,15 +1954,6 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 6789604014209716330
-      Name: "Scifi Ship Engine 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_scf_ship_engine_001_ref"
       }
     }
     Assets {

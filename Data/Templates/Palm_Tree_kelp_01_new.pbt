@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 1664113282525323766
         ChildIds: 8381946262341368480
         ChildIds: 9470666448041979234
         ChildIds: 7691045379245716057
@@ -149,10 +149,10 @@
             Id: 901541979513849367
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -208,10 +208,10 @@
             Id: 3179843506183788979
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -267,10 +267,10 @@
             Id: 3179843506183788979
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -326,10 +326,10 @@
             Id: 3179843506183788979
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -385,10 +385,10 @@
             Id: 901541979513849367
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -444,10 +444,10 @@
             Id: 3179843506183788979
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -503,10 +503,9 @@
             Id: 901541979513849367
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -718,7 +717,7 @@
           Overrides {
             Name: "ma:Nature_Leaves:id"
             AssetReference {
-              Id: 532304363034804995
+              Id: 8340788593877699680
             }
           }
           Overrides {
@@ -739,13 +738,10 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 12416815806534727809
+            Id: 8777307662385110705
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -777,7 +773,7 @@
           Overrides {
             Name: "ma:Nature_Leaves:id"
             AssetReference {
-              Id: 532304363034804995
+              Id: 8340788593877699680
             }
           }
           Overrides {
@@ -798,13 +794,10 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 1984553197323830660
+            Id: 8777307662385110705
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -836,7 +829,7 @@
           Overrides {
             Name: "ma:Nature_Leaves:id"
             AssetReference {
-              Id: 532304363034804995
+              Id: 8340788593877699680
             }
           }
           Overrides {
@@ -857,13 +850,10 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 1984553197323830660
+            Id: 8777307662385110705
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -997,21 +987,12 @@
       }
     }
     Assets {
-      Id: 12416815806534727809
-      Name: "Kelp Bush 01"
+      Id: 8777307662385110705
+      Name: "Fern 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_kelp_bush_01"
-      }
-    }
-    Assets {
-      Id: 1984553197323830660
-      Name: "Kelp Bush 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_kelp_bush_02"
+        AssetId: "sm_fern_generic_003"
       }
     }
     PrimaryAssetId {
