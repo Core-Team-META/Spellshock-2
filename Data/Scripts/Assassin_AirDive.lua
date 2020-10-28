@@ -13,6 +13,7 @@ local BASE_DAMAGE_MOD = script:GetCustomProperty("BaseDamageModifier") or 1
 local IMPACT_RADIUS = script:GetCustomProperty("ImpactRadius") or 500
 local LAUNCH_FORCE = script:GetCustomProperty("LaunchForce") or 40
 local ImpactVFX = script:GetCustomProperty("ImpactVFX")
+local LaunchFX = script:GetCustomProperty("LaunchFX")
 local EventName = script:GetCustomProperty("EventName")
 
 local EventListeners = {}
@@ -27,21 +28,7 @@ function OnBindingPressed(player, binding)
 	and not isExecuting and not player.isDead and player.isGrounded then
 		--PrimaryAbility.isEnabled = false
 		print("STARTING AIR DIVE")
-	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
-	    DefaultPlayerSetttings.gravityScale = player.gravityScale
-	    Task.Wait(1)
-	    isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-	    
-	    player.gravityScale = 0
-	    player:ResetVelocity()
-	    --waitingForTarget = true
-	    DefaultPlayerSetttings.movementControlMode = player.movementControlMode
-	    DefaultPlayerSetttings.maxJumpCount = player.maxJumpCount
-	    
-	    player.movementControlMode = MovementControlMode.NONE
-	    player.maxJumpCount = 0
-	    -- disable any active abilities
+		 -- disable any active abilities
 	    ActiveAbilities = {}
 	    for _, playerAbility in pairs(player:GetAbilities()) do
 	    	if playerAbility.isEnabled and playerAbility ~= ABILITY then
@@ -49,7 +36,25 @@ function OnBindingPressed(player, binding)
 	    		table.insert(ActiveAbilities, playerAbility)
 	    	end
 	    end
-	    ABILITY.isEnabled = true
+	    
+	    DefaultPlayerSetttings.gravityScale = player.gravityScale
+	    DefaultPlayerSetttings.movementControlMode = player.movementControlMode
+	    DefaultPlayerSetttings.maxJumpCount = player.maxJumpCount
+	    
+	    player.movementControlMode = MovementControlMode.NONE
+	    player.maxJumpCount = 0
+	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
+	    
+	    World.SpawnAsset(LaunchFX, {position = player:GetWorldPosition()})
+	    
+	    Task.Wait(1)
+	    	   
+	    player.gravityScale = 0
+	    player:ResetVelocity()
+	   	
+	   	isPreviewing = true
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		ABILITY.isEnabled = true
 	end
 end
 
@@ -86,7 +91,7 @@ function OnTargetChosen(player, targetPos)
 		
 		isExecuting = true
 	    local playerPos = player:GetWorldPosition()
-	    local launchVector = (targetPos - playerPos) * player.mass
+	    local launchVector = (targetPos - playerPos) * player.mass * 5
 	    --print(launchVector)
 	    player.serverUserData.immuneToFallDamage = true
 	    player.movementControlMode = MovementControlMode.NONE
@@ -104,7 +109,7 @@ function OnTargetChosen(player, targetPos)
 	    end
 	    local reachedMaxTime = false
 	    Task.Spawn(function() Task.Wait(1) reachedMaxTime = true end)
-	
+		
 	    while(player.isGrounded == false and player.isDead == false and reachedMaxTime == false) do
 	        local players = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
 	        if(players == player) then break end
@@ -130,7 +135,7 @@ end
 function DamageInArea(targetPos, localPlayer)
     -- Get enemies in a sphere
     local enemiesInRange = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)})
-
+	CoreDebug.DrawSphere(targetPos, IMPACT_RADIUS, {duration = 5})
     for _, enemy in ipairs(enemiesInRange) do
         API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
 
@@ -154,6 +159,7 @@ end
   
 function OnEquip(equipment, player)
 	isPreviewing = false
+	isExecuting = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
 	if(EventName) then
@@ -165,6 +171,9 @@ function OnEquip(equipment, player)
 	--table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	--table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	
+	Task.Wait()
+	ABILITY.isEnabled = false
 end
 
 function OnUnequip(equipment, player)

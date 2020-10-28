@@ -20,7 +20,7 @@ local BeginningFX = ABILITY:GetCustomProperty("BeginningFX")
 local CurrentBoomerange = nil
 
 function OnProjectileImpact(projectile, other, hitresult)
-	print("Boomerang Hit")
+	print("-- Boomerang Hit")
 	if not Object.IsValid(ABILITY.owner) then return end
     if other == ABILITY.owner then return end
 	if not other:IsA("Player") then 
@@ -69,12 +69,27 @@ function OnAbilityExecute(thisAbility)
 	CurrentBoomerange = nil
 	
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
+    local lookPosition = thisAbility.owner:GetViewWorldPosition()
 	local lookQuaternion = Quaternion.New(lookRotation)
-    local forwardVector = lookQuaternion:GetForwardVector()
-	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*100)
-	worldPosition.z = worldPosition.z + 50
+    local forwardVector = lookRotation * Vector3.FORWARD
+    local rangePosition = lookPosition + (forwardVector * PROJECTILE_RANGE)
+	local worldPosition = thisAbility.owner:GetWorldPosition()
+	local spawnPosition = worldPosition + (forwardVector*100)
+	spawnPosition.z = spawnPosition.z + 50
     
-    local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
+    --CoreDebug.DrawLine(lookPosition, rangePosition, {duration = 5})
+    local hitResult = World.Raycast(lookPosition, rangePosition, {ignoreTeams = thisAbility.owner.team})
+    local targetPosition = rangePosition
+    if hitResult then
+    	targetPosition = hitResult:GetImpactPosition()
+    end
+    
+    local directionVector = targetPosition - worldPosition
+    directionVector = directionVector:GetNormalized()
+    
+    -- Spawn projectile
+    local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, spawnPosition, directionVector)
+    print("-- Spawned")
     projectile.owner = ABILITY.owner
     projectile.capsuleLength = 130
     projectile.capsuleRadius =  projectile.capsuleLength/2

@@ -12,10 +12,12 @@ local EndingFX = script:GetCustomProperty("EndingFX")
 local Duration = script:GetCustomProperty("Duration")
 local AttackRadius = script:GetCustomProperty("AttackRadius")
 local DamageAmount = script:GetCustomProperty("DamageAmount")
+local SpeedBoost = script:GetCustomProperty("SpeedBoost")
 
 local EventListeners = {}
 local Timer = -1
 local isInvisible = false
+local OriginalWalkSpeed
 
 local CancelKeys = {
 	ability_extra_20 = true, 
@@ -68,6 +70,7 @@ function OnAbilityExecute(thisAbility)
 	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
+	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + SpeedBoost
 	Timer = Duration
 	script:SetNetworkedCustomProperty("isInvisible", isInvisible)
 end
@@ -77,6 +80,7 @@ function DisableInvisility()
 		World.SpawnAsset(EndingFX, {position = Ability.owner:GetWorldPosition()})
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
+		Ability.owner.maxWalkSpeed = OriginalWalkSpeed
 		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
 		WeaponAbility.isEnabled = true
 	end
@@ -91,6 +95,7 @@ function OnPlayerRespawn(player)
 end
 
 function OnEquip(thisEquipment, player)
+	OriginalWalkSpeed = player.maxWalkSpeed
 	table.insert(EventListeners, Ability.executeEvent:Connect(OnAbilityExecute))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
@@ -99,6 +104,7 @@ function OnEquip(thisEquipment, player)
 end
 
 function OnUnequip(thisEquipment, player)
+	player.maxWalkSpeed = OriginalWalkSpeed
 	player:SetVisibility(true)
 	isInvisible = false
 	if Object.IsValid(script) then

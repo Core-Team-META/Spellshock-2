@@ -48,6 +48,7 @@
         ChildIds: 16671837046992992493
         ChildIds: 15379858004952278550
         ChildIds: 6780238906983008546
+        ChildIds: 752734297684057866
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1050,8 +1051,43 @@
             Id: 13794025398718660291
           }
           AutoPlay: true
-          Volume: 0.7
+          Volume: 2
           Falloff: 1000
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 752734297684057866
+        Name: "Grenade Object Toss Throw Gear Shuffle 01 SFX"
+        Transform {
+          Location {
+            X: -50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12663157462442662214
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 9052054768173682124
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
           Radius: -1
           EnableOcclusion: true
           IsSpatializationEnabled: true
@@ -1060,258 +1096,12 @@
       }
     }
     Assets {
-      Id: 13794025398718660291
-      Name: "Bomb Wick Fuse Burning Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_bomb_wick_fuse_burning_loop_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 5262690753478460949
-      Name: "Fuse Sparks VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_fuse_sparks"
-      }
-    }
-    Assets {
-      Id: 17977280587505271142
-      Name: "Basic Projectile Trail VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_basic_projectile_trail"
-      }
-    }
-    Assets {
-      Id: 18228955417608075210
-      Name: "Magic Swirl Element Volume"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_magic_swirl_element_volume_vfx"
-      }
-    }
-    Assets {
-      Id: 1562276358413043561
-      Name: "Fantasy Shield Strap 01"
+      Id: 1781685294255403318
+      Name: "Bottle 06"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_strap_001"
-      }
-    }
-    Assets {
-      Id: 7630438330936839124
-      Name: "PoisonWick"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 6186751883754370952
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.559999943
-              G: 0.211390734
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "noise color"
-            Color {
-              R: 1
-              G: 0.855894
-              B: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "falloff hardness"
-            Float: 10.8261442
-          }
-          Overrides {
-            Name: "falloff scale"
-            Float: 352.966248
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 6186751883754370952
-      Name: "Edgeline Wavy Object Fade Advanced"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_add_edgeline_local"
-      }
-    }
-    Assets {
-      Id: 13330662989199046504
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 3702191406046426907
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 95.9261551
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 3702191406046426907
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 6747614045051753376
-      Name: "Cylinder - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_001"
-      }
-    }
-    Assets {
-      Id: 3090596827184957478
-      Name: "Rope"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_rope_001"
-      }
-    }
-    Assets {
-      Id: 7782164574935454890
-      Name: "Pipe - 45-Degree Long "
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_004"
-      }
-    }
-    Assets {
-      Id: 5861223425148352605
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
-      }
-    }
-    Assets {
-      Id: 17238982204385840214
-      Name: "Fantasy Pommel 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_002"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 8131365588139303669
-      Name: "PoisonBombLiquid"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9322150260226817646
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.124834262
-              G: 0.65
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "inner color"
-            Color {
-              R: 0.0198013242
-              G: 0.13
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "top color"
-            Color {
-              R: 0.0706620663
-              G: 0.97
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "foam color"
-            Color {
-              R: 0.0519204661
-              G: 0.98
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "speed"
-            Float: 20
-          }
-          Overrides {
-            Name: "bubble direction"
-            Vector {
-              Z: 1
-            }
-          }
-          Overrides {
-            Name: "wave height"
-            Float: 4.45785332
-          }
-          Overrides {
-            Name: "surface height"
-            Float: 0.175766215
-          }
-          Overrides {
-            Name: "bubbles"
-            Float: 1
-          }
-          Overrides {
-            Name: "scale"
-            Float: 2.8816433
-          }
-          Overrides {
-            Name: "wave scale multiplier"
-            Float: 0.537170589
-          }
-          Overrides {
-            Name: "top edge foam distance"
-            Float: -3
-          }
-          Overrides {
-            Name: "edge power"
-            Float: 0.499116749
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9322150260226817646
-      Name: "Emissive Container Liquid"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_emissive_cutoff_liquid"
+        AssetId: "sm_prop_fantasy_bottle_006"
       }
     }
     Assets {
@@ -1324,12 +1114,111 @@
       }
     }
     Assets {
-      Id: 1781685294255403318
-      Name: "Bottle 06"
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_fantasy_bottle_006"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 17238982204385840214
+      Name: "Fantasy Pommel 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_002"
+      }
+    }
+    Assets {
+      Id: 5861223425148352605
+      Name: "Metal Basic Steel"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "steel_001"
+      }
+    }
+    Assets {
+      Id: 7782164574935454890
+      Name: "Pipe - 45-Degree Long "
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_004"
+      }
+    }
+    Assets {
+      Id: 3090596827184957478
+      Name: "Rope"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_rope_001"
+      }
+    }
+    Assets {
+      Id: 6747614045051753376
+      Name: "Cylinder - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_001"
+      }
+    }
+    Assets {
+      Id: 1562276358413043561
+      Name: "Fantasy Shield Strap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 18228955417608075210
+      Name: "Magic Swirl Element Volume"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_magic_swirl_element_volume_vfx"
+      }
+    }
+    Assets {
+      Id: 17977280587505271142
+      Name: "Basic Projectile Trail VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_basic_projectile_trail"
+      }
+    }
+    Assets {
+      Id: 5262690753478460949
+      Name: "Fuse Sparks VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_fuse_sparks"
+      }
+    }
+    Assets {
+      Id: 13794025398718660291
+      Name: "Bomb Wick Fuse Burning Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_bomb_wick_fuse_burning_loop_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 9052054768173682124
+      Name: "Grenade Object Toss Throw Gear Shuffle 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_grenade_object_toss_throw_gear_shuffle_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -1339,4 +1228,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

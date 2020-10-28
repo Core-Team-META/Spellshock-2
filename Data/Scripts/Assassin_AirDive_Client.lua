@@ -44,6 +44,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			objectHalogram = World.SpawnAsset(ObjectTemplate)
 			AllHalograms[objectHalogram.id] = objectHalogram
 			flyingTimer = FLYING_DURATION
+			
 		else
 			flyingTimer = -1
 			if objectHalogram and Object.IsValid(objectHalogram) then

@@ -56,7 +56,7 @@ function GetLocalPlayerAbilityWithBinding()
     		return ability
     	end
     
-        if ability.actionBinding == BINDING then 
+        if ability.actionBinding == BINDING and not OverrideBinding then 
             return ability
         end
     end

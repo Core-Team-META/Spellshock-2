@@ -270,7 +270,7 @@
           Overrides {
             Name: "cs:HeroKitEquipment"
             ObjectReference {
-              SubObjectId: 13586336964591689483
+              SubObjectId: 15969373231472315619
             }
           }
         }
@@ -346,7 +346,7 @@
         ChildIds: 3657339729496937378
         ChildIds: 1286326275560935440
         ChildIds: 4051678230221737164
-        ChildIds: 11664221664873935096
+        ChildIds: 10043064803718761066
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -735,19 +735,19 @@
         }
       }
       Objects {
-        Id: 11664221664873935096
-        Name: "Invisibility Duration UI"
+        Id: 10043064803718761066
+        Name: "AddReticle"
         Transform {
           Location {
-            X: -9455.40625
-            Y: -9503.78223
-            Z: -3040.67188
+            X: 23445
+            Y: 31230
+            Z: -6400
           }
           Rotation {
           }
           Scale {
-            X: 0.99999994
-            Y: 0.99999994
+            X: 1
+            Y: 1
             Z: 1
           }
         }
@@ -759,41 +759,6 @@
               SubObjectId: 4569115510025570718
             }
           }
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 11411700836215041466
-            }
-          }
-          Overrides {
-            Name: "cs:DisplayTemplate"
-            AssetReference {
-              Id: 7156155829847915259
-            }
-          }
-          Overrides {
-            Name: "cs:FillColor"
-            Color {
-              R: 0.629000306
-              B: 0.74
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:BackgroundColor"
-            Color {
-              R: 0.131655619
-              B: 0.28
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Position"
-            Vector2 {
-              X: -485
-              Y: 18
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -803,7 +768,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 9094472670648911279
+            Id: 1774529140029345986
           }
         }
       }
@@ -822,41 +787,14 @@
           }
         }
         ParentId: 4569115510025570718
-        ChildIds: 8722233437890789111
-        ChildIds: 13586336964591689483
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8722233437890789111
-        Name: "Abilities"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15969373231472315619
         ChildIds: 8184323746341847196
         ChildIds: 10946969989301189966
         ChildIds: 7787036789120996490
         ChildIds: 87249608989476396
         ChildIds: 4951305031756499143
+        ChildIds: 2716804742797173936
+        UnregisteredParameters {
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -874,7 +812,7 @@
         Transform {
           Location {
             X: -8716.59375
-            Y: -10186.3799
+            Y: -10186.3789
             Z: -2964.70215
           }
           Rotation {
@@ -885,7 +823,7 @@
             Z: 1
           }
         }
-        ParentId: 8722233437890789111
+        ParentId: 15969373231472315619
         ChildIds: 18378548991232479363
         UnregisteredParameters {
           Overrides {
@@ -910,11 +848,11 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Int: 1800
+            Int: 2500
           }
           Overrides {
             Name: "cs:ProjectileGravity"
-            Float: 1
+            Float: 1.5
           }
         }
         WantsNetworking: true
@@ -1029,7 +967,7 @@
             Z: 1
           }
         }
-        ParentId: 8722233437890789111
+        ParentId: 15969373231472315619
         ChildIds: 15582202196448252345
         ChildIds: 11411700836215041466
         ChildIds: 6960798327974289137
@@ -1253,6 +1191,10 @@
             Int: 40
           }
           Overrides {
+            Name: "cs:SpeedBoost"
+            Int: 200
+          }
+          Overrides {
             Name: "cs:isInvisible"
             Bool: false
           }
@@ -1332,6 +1274,12 @@
               SubObjectId: 10153399237310665229
             }
           }
+          Overrides {
+            Name: "cs:TimerUI_Template"
+            AssetReference {
+              Id: 7156155829847915259
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1392,7 +1340,7 @@
             Z: 1
           }
         }
-        ParentId: 8722233437890789111
+        ParentId: 15969373231472315619
         ChildIds: 6077411007921151374
         UnregisteredParameters {
           Overrides {
@@ -1403,11 +1351,11 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Float: 3000
+            Float: 5000
           }
           Overrides {
             Name: "cs:ProjectileRange"
-            Float: 3000
+            Float: 8000
           }
           Overrides {
             Name: "cs:DamageRange"
@@ -1563,7 +1511,7 @@
             Z: 1
           }
         }
-        ParentId: 8722233437890789111
+        ParentId: 15969373231472315619
         ChildIds: 1302420456206572084
         ChildIds: 2319229106837867255
         UnregisteredParameters {
@@ -1682,6 +1630,12 @@
             }
           }
           Overrides {
+            Name: "cs:LaunchFX"
+            AssetReference {
+              Id: 13247852012678535360
+            }
+          }
+          Overrides {
             Name: "cs:DamageRange"
             Vector2 {
               X: 50
@@ -1694,7 +1648,7 @@
           }
           Overrides {
             Name: "cs:ImpactRadius"
-            Float: 500
+            Float: 600
           }
           Overrides {
             Name: "cs:HeightOffset"
@@ -1851,7 +1805,7 @@
           Scale {
           }
         }
-        ParentId: 8722233437890789111
+        ParentId: 15969373231472315619
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1915,33 +1869,6 @@
         }
       }
       Objects {
-        Id: 13586336964591689483
-        Name: "Equipment"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15969373231472315619
-        ChildIds: 2716804742797173936
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 2716804742797173936
         Name: "Dagger"
         Transform {
@@ -1955,7 +1882,7 @@
             Z: 1
           }
         }
-        ParentId: 13586336964591689483
+        ParentId: 15969373231472315619
         ChildIds: 5534575406005060671
         ChildIds: 18340669584196412261
         ChildIds: 6522519753598108575
@@ -1964,21 +1891,6 @@
           Overrides {
             Name: "cs:EquipmentStance"
             String: "unarmed_ready"
-          }
-          Overrides {
-            Name: "cs:EquipmentIcon"
-            AssetReference {
-              Id: 10192819447049905622
-            }
-          }
-          Overrides {
-            Name: "cs:EquipmentColor"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
           }
         }
         WantsNetworking: true
@@ -2339,7 +2251,7 @@
               R: 1
               G: 1
               B: 1
-              A: 0.5
+              A: 1
             }
           }
           Overrides {
@@ -2363,7 +2275,7 @@
       }
       Objects {
         Id: 6522519753598108575
-        Name: "Slash 1"
+        Name: "Dagger"
         Transform {
           Location {
           }

@@ -1,36 +1,22 @@
 ﻿Assets {
-  Id: 7156155829847915259
-  Name: "Helper_AbilityDuration"
+  Id: 2561260553194061753
+  Name: "Recticle 1"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 2919626177933564
+      RootId: 12536579366909273378
       Objects {
-        Id: 2919626177933564
-        Name: "Helper_AbilityDuration"
+        Id: 12536579366909273378
+        Name: "Recticle 1"
         Transform {
           Scale {
-            X: 0.99999994
-            Y: 0.99999994
+            X: 1
+            Y: 1
             Z: 1
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 5391140708781585695
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:UIPanel"
-            ObjectReference {
-              SubObjectId: 5391140708781585695
-            }
-          }
-          Overrides {
-            Name: "cs:AbilityProgressBar"
-            ObjectReference {
-              SubObjectId: 6071179386030668520
-            }
-          }
-        }
+        ChildIds: 12619553236580260224
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -60,10 +46,13 @@
         }
       }
       Objects {
-        Id: 5391140708781585695
+        Id: 12619553236580260224
         Name: "UI Panel"
         Transform {
           Location {
+            X: 23840
+            Y: 31965
+            Z: -6435
           }
           Rotation {
           }
@@ -73,10 +62,8 @@
             Z: 1
           }
         }
-        ParentId: 2919626177933564
-        ChildIds: 6071179386030668520
-        UnregisteredParameters {
-        }
+        ParentId: 12536579366909273378
+        ChildIds: 10822781534300392268
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -86,7 +73,6 @@
         Control {
           Width: 100
           Height: 100
-          UIY: 18
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -97,20 +83,20 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomright"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomright"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
         }
       }
       Objects {
-        Id: 6071179386030668520
-        Name: "Ability Progress Bar"
+        Id: 10822781534300392268
+        Name: "UI Image"
         Transform {
           Location {
           }
@@ -122,7 +108,7 @@
             Z: 1
           }
         }
-        ParentId: 5391140708781585695
+        ParentId: 12619553236580260224
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -130,39 +116,48 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 100
-          Height: 28
+          Width: 50
+          Height: 50
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
-          StatBar {
+          Image {
+            Brush {
+              Id: 8274321332368694435
+            }
             Color {
-              R: 0.629000306
-              B: 0.74
-              A: 1
+              R: 1
+              G: 1
+              B: 1
+              A: 0.8
             }
-            BackgroundColor {
-              R: 0.131655619
-              B: 0.28
-              A: 1
+            TeamSettings {
             }
-            Percent: 0.648584783
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 8274321332368694435
+      Name: "Frame Ring 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameRing_007"
       }
     }
     PrimaryAssetId {

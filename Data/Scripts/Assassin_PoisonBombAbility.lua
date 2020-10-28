@@ -34,7 +34,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
         --Play ImpactFX
         local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition()})
 
-        Task.Wait(.2)
+        Task.Wait(.1)
 
         -- Teleport
         local teleportPosition = hitResult:GetImpactPosition() + Vector3.New(0, 0, 120)
@@ -50,6 +50,7 @@ function OnAbilityExecute(thisAbility)
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
 	local lookQuaternion = Quaternion.New(lookRotation)
     local forwardVector = lookQuaternion:GetForwardVector()
+    forwardVector.z = forwardVector.z + 0.2
 	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*200)
 	worldPosition.z = worldPosition.z + 50
 
