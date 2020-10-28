@@ -755,6 +755,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13874502513103367460
+  Name: "Awning 01 Mainstreet"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_awning_001_ref"
+  }
+}
+Assets {
   Id: 13802195091322210055
   Name: "Plastic Matte"
   PlatformAssetType: 2
@@ -1472,6 +1481,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_fan_ground_bones_002"
+  }
+}
+Assets {
+  Id: 10577491396371571795
+  Name: "Depth of Field Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_DOF"
   }
 }
 Assets {

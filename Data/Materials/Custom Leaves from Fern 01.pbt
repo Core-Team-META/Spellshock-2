@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 8340788593877699680
-  Name: "Custom Leaves from Fern 01"
+  Name: "Orc_palm_ Leaves from Fern 01"
   PlatformAssetType: 13
   SerializationVersion: 65
   CustomMaterialAsset {
@@ -8,7 +8,7 @@
     ParameterOverrides {
       Overrides {
         Name: "wind_intensity"
-        Float: 0
+        Float: 0.3
       }
     }
     Assets {
