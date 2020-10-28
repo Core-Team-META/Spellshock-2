@@ -871,8 +871,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 40000
+        Min: 15000
+        Max: 25000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -919,8 +919,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 40000
+        Min: 15000
+        Max: 25000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1057,6 +1057,176 @@ Objects {
         Max: 102400
       }
     }
+    Foliage {
+      Asset {
+        Id: 10784387645319107096
+      }
+      DistanceBetweenInstances: 9300
+      MaterialChannel: 3
+      SpawnDistance: 38400
+      CullDistance {
+        Min: 200000
+        Max: 300000
+      }
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 32
+      }
+      Scaling {
+        ScaleX {
+          Min: 1.4
+          Max: 1.9
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      Materials {
+        key: "Nature_Trunk"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -100
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: 8000
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 901541979513849367
+      }
+      DistanceBetweenInstances: 1500
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 15000
+        Max: 30000
+      }
+      CastShadow: true
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        ScaleX {
+          Min: 1
+          Max: 1.5
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -50
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: 7000
+        Max: 102400
+      }
+    }
+    Foliage {
+      Asset {
+        Id: 13800436588944964225
+      }
+      DistanceBetweenInstances: 1500
+      MaterialChannel: 3
+      SpawnDistance: 24000
+      CullDistance {
+        Min: 15000
+        Max: 30000
+      }
+      CastShadow: true
+      ReceivesDecals: true
+      GroundSlopeAngle {
+        Max: 45
+      }
+      Scaling {
+        ScaleX {
+          Min: 1
+          Max: 1
+        }
+        ScaleY {
+          Min: 1
+          Max: 1
+        }
+        ScaleZ {
+          Min: 1
+          Max: 1
+        }
+      }
+      RotationAlignment: AlignToWorldUp
+      RandomYaw: true
+      RandomPitchAngle: 6
+      Materials {
+        key: "Nature_Leaves"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      Materials {
+        key: "Shared_BaseMaterial"
+        value {
+          Id: 841534158063459245
+        }
+      }
+      LocalPositionOffset {
+        Z: -50
+      }
+      LocalRotationOffset {
+      }
+      GlobalPositionOffset {
+      }
+      Height {
+        Min: 7000
+        Max: 102400
+      }
+    }
   }
 }
 Objects {
@@ -1181,7 +1351,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Cloud Opacity"
-          Float: 0.699113607
+          Float: 0.531870544
         }
         Overrides {
           Name: "bp:Cloud Ambient Color"
@@ -1191,6 +1361,14 @@ Objects {
             B: 0.427083313
             A: 1
           }
+        }
+        Overrides {
+          Name: "bp:Clouds"
+          Bool: true
+        }
+        Overrides {
+          Name: "bp:Brightness"
+          Float: 1.92576838
         }
       }
     }
@@ -1218,9 +1396,18 @@ Objects {
         Overrides {
           Name: "bp:Color Contrast"
           Color {
-            R: 1.2
-            G: 1.08373511
-            B: 1.06800008
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Scene Tint"
+          Color {
+            R: 0.996514797
+            G: 1.07451749
+            B: 1.2
             A: 1
           }
         }
@@ -1240,11 +1427,44 @@ Objects {
       value {
         Overrides {
           Name: "bp:Fog Density"
-          Float: 1
+          Float: 5.11931133
         }
         Overrides {
           Name: "bp:Falloff"
-          Float: 0.114205852
+          Float: 0.268444896
+        }
+        Overrides {
+          Name: "bp:Layered Fog Density"
+          Float: 0.609780073
+        }
+        Overrides {
+          Name: "bp:Layered Fog Falloff"
+          Float: 0.133485734
+        }
+        Overrides {
+          Name: "bp:Directional Inscattering Color"
+          Color {
+            R: 0.176052496
+            G: 0.344494373
+            B: 0.614583313
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Start"
+          Float: 0
+        }
+        Overrides {
+          Name: "bp:Light Absorption Amount"
+          Float: 0.768384278
+        }
+        Overrides {
+          Name: "bp:View Distance"
+          Float: 1349.46814
+        }
+        Overrides {
+          Name: "bp:Beam View Direction"
+          Float: 0.216638148
         }
       }
     }

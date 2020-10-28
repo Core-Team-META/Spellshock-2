@@ -9,7 +9,7 @@
       Overrides {
         Name: "cmp:Material1"
         AssetReference {
-          Id: 15979377991647608535
+          Id: 9222070773466988839
         }
       }
       Overrides {
@@ -58,11 +58,29 @@
       }
       Overrides {
         Name: "material2_scale"
-        Float: 0.02
+        Float: 0.05
       }
       Overrides {
         Name: "material2side_scale"
         Float: 0.05
+      }
+      Overrides {
+        Name: "cmpc:Material2"
+        Color {
+          R: 1
+          G: 0.781296194
+          B: 0.551599145
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material2_Sides"
+        Color {
+          R: 1
+          G: 0.781296194
+          B: 0.551599145
+          A: 1
+        }
       }
     }
     Assets {
@@ -75,12 +93,12 @@
       }
     }
     Assets {
-      Id: 15979377991647608535
-      Name: "Cliff 02"
+      Id: 9222070773466988839
+      Name: "Grass Basic"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "cliff_002"
+        AssetId: "mi_grass_001_uv"
       }
     }
     Assets {

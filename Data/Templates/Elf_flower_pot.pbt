@@ -124,9 +124,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -171,9 +172,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -218,9 +220,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -265,9 +268,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -312,9 +316,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -359,9 +364,10 @@
             Id: 11803454095962429961
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -652,10 +658,10 @@
             Id: 11892494746123028781
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -691,10 +697,7 @@
             Id: 901541979513849367
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
