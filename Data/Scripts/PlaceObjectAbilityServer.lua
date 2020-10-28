@@ -3,7 +3,7 @@ local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject(
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local ObjectTemplate = script:GetCustomProperty("WallTemplate")
+local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EventName = script:GetCustomProperty("EventName")
 local Duration = script:GetCustomProperty("Duration")
 
@@ -72,6 +72,7 @@ end
 
 function OnEquip(equipment, player)
 	isPreviewing = false
+	isPlacing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
 	if(EventName) then
@@ -83,6 +84,9 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	
+	Task.Wait()
+	SpecialAbility.isEnabled = false
 end
 
 function OnUnequip(equipment, player)
