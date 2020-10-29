@@ -2042,30 +2042,12 @@
       }
     }
     Assets {
-      Id: 7647569689338897125
-      Name: "Pyramid - Polished"
+      Id: 15529149580810381787
+      Name: "Cube - Rounded Bottom-Aligned"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_hq_001"
-      }
-    }
-    Assets {
-      Id: 1982661357157207299
-      Name: "Ring - Quarter Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_001"
-      }
-    }
-    Assets {
-      Id: 12905923173550510229
-      Name: "Cylinder - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_test_001"
+        AssetId: "sm_cube_rounded_001"
       }
     }
     Assets {
@@ -2078,12 +2060,30 @@
       }
     }
     Assets {
-      Id: 15529149580810381787
-      Name: "Cube - Rounded Bottom-Aligned"
+      Id: 12905923173550510229
+      Name: "Cylinder - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_001"
+        AssetId: "sm_cylinder_hq_test_001"
+      }
+    }
+    Assets {
+      Id: 1982661357157207299
+      Name: "Ring - Quarter Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_001"
+      }
+    }
+    Assets {
+      Id: 7647569689338897125
+      Name: "Pyramid - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_hq_001"
       }
     }
     PrimaryAssetId {
@@ -2093,4 +2093,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

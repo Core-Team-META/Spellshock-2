@@ -2253,6 +2253,10 @@
               SubObjectId: 7058021207408241195
             }
           }
+          Overrides {
+            Name: "cs:StunTimer"
+            Float: 1
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2501,7 +2505,7 @@
       Name: "TrapActivated"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local Trap = script:GetCustomProperty(\"Trap\"):WaitForObject()\r\nlocal Jaw = script:GetCustomProperty(\"Jaw\"):WaitForObject()\r\nlocal JawOffset = script:GetCustomProperty(\"JawOffset\"):WaitForObject()\r\nlocal SparkVFX = script:GetCustomProperty(\"SparkVFX\"):WaitForObject()\r\nlocal DustVFX = script:GetCustomProperty(\"DustVFX\"):WaitForObject()\r\nlocal KlangSFX = script:GetCustomProperty(\"KlangSFX\"):WaitForObject()\r\nlocal DestroySFX = script:GetCustomProperty(\"DestroySFX\"):WaitForObject()\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\n\r\nTask.Wait(5)\r\nEase3D.EaseRotation(Jaw, Rotation.New(0, 90, 0), .4, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)\r\nEase3D.EaseRotation(JawOffset, Rotation.New(0, 90, 180), .4, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)\r\nEase3D.EaseRotation(Trap, Rotation.New(3, 5, 2), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.1)\r\nDustVFX:Play()\r\nKlangSFX:Play()\r\nEase3D.EasePosition(Trap, Vector3.New(0, 0, 50), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.2)\r\nEase3D.EasePosition(Trap, Vector3.New(0, 0, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.2)\r\nEase3D.EaseRotation(Trap, Rotation.New(0, 0, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(2)\r\nSparkVFX:Play()\r\nDestroySFX:Play()\r\nTask.Wait(.2)\r\nTrap:Destroy()"
+        Text: "local Trap = script:GetCustomProperty(\"Trap\"):WaitForObject()\r\nlocal Jaw = script:GetCustomProperty(\"Jaw\"):WaitForObject()\r\nlocal JawOffset = script:GetCustomProperty(\"JawOffset\"):WaitForObject()\r\nlocal SparkVFX = script:GetCustomProperty(\"SparkVFX\"):WaitForObject()\r\nlocal DustVFX = script:GetCustomProperty(\"DustVFX\"):WaitForObject()\r\nlocal KlangSFX = script:GetCustomProperty(\"KlangSFX\"):WaitForObject()\r\nlocal DestroySFX = script:GetCustomProperty(\"DestroySFX\"):WaitForObject()\r\nlocal StunTimer = script:GetCustomProperty(\"StunTimer\")\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\n\r\nTask.Wait(5)\r\nEase3D.EaseRotation(Jaw, Rotation.New(0, 90, 0), .4, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)\r\nEase3D.EaseRotation(JawOffset, Rotation.New(0, 90, 180), .4, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)\r\nEase3D.EaseRotation(Trap, Rotation.New(3, 5, 2), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.1)\r\nDustVFX:Play()\r\nKlangSFX:Play()\r\nEase3D.EasePosition(Trap, Vector3.New(0, 0, 50), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.2)\r\nEase3D.EasePosition(Trap, Vector3.New(0, 0, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(.2)\r\nEase3D.EaseRotation(Trap, Rotation.New(0, 0, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\nTask.Wait(StunTimer)\r\nSparkVFX:Play()\r\nDestroySFX:Play()\r\nTask.Wait(.2)\r\nTrap:Destroy()"
       }
     }
     Assets {

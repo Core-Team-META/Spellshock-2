@@ -1023,13 +1023,13 @@
           Overrides {
             Name: "cs:ObjectTemplate"
             AssetReference {
-              Id: 15664502698481242815
+              Id: 16410313391671534621
             }
           }
           Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
-              Id: 4603934176734530980
+              Id: 15863781025588256896
             }
           }
           Overrides {
@@ -1042,7 +1042,11 @@
           }
           Overrides {
             Name: "cs:Duration"
-            Float: 7
+            Float: 20
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
           }
           Overrides {
             Name: "cs:isPreviewing"
