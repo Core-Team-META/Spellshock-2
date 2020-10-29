@@ -665,6 +665,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14577953825021911847
+  Name: "Fantasy Pommel 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_pommel_001"
+  }
+}
+Assets {
   Id: 14402556056167558311
   Name: "Sand 01"
   PlatformAssetType: 2
@@ -1133,6 +1142,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12167237750251133404
+  Name: "Pipe - 8-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_eightsided_002"
+  }
+}
+Assets {
   Id: 12113592595878168643
   Name: "Scorch Mark Decal"
   PlatformAssetType: 14
@@ -1499,6 +1517,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_stairs_001_L"
+  }
+}
+Assets {
+  Id: 10542250655788089163
+  Name: "Fantasy Pommel 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_pommel_005"
   }
 }
 Assets {

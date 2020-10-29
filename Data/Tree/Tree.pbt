@@ -871,8 +871,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 10000
+        Max: 20000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -919,8 +919,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 10000
+        Max: 20000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1073,16 +1073,17 @@ Objects {
         Max: 32
       }
       Scaling {
+        Scaling: LockXY
         ScaleX {
           Min: 1.4
-          Max: 1.9
+          Max: 1.4
         }
         ScaleY {
           Min: 1
           Max: 1
         }
         ScaleZ {
-          Min: 1
+          Min: 0.8
           Max: 1
         }
       }
@@ -1122,7 +1123,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 15000
-        Max: 30000
+        Max: 25000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -1179,7 +1180,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 15000
-        Max: 30000
+        Max: 25000
       }
       CastShadow: true
       ReceivesDecals: true
