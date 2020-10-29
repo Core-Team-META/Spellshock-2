@@ -20,6 +20,7 @@ local EventListeners = {}
 local DefaultPlayerSetttings = {}
 local isPreviewing = false
 local isExecuting = false
+local isFlying = false
 
 local ActiveAbilities = {}
 
@@ -27,7 +28,7 @@ function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and not isPreviewing 
 	and not isExecuting and not player.isDead and player.isGrounded then
 		--PrimaryAbility.isEnabled = false
-		print("STARTING AIR DIVE")
+		--print("STARTING AIR DIVE")
 		 -- disable any active abilities
 	    ActiveAbilities = {}
 	    for _, playerAbility in pairs(player:GetAbilities()) do
@@ -43,12 +44,14 @@ function OnBindingPressed(player, binding)
 	    
 	    player.movementControlMode = MovementControlMode.NONE
 	    player.maxJumpCount = 0
+	    isFlying = true
 	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
 	    
 	    World.SpawnAsset(LaunchFX, {position = player:GetWorldPosition()})
 	    
 	    Task.Wait(1)
-	    	   
+	    if not player or not Object.IsValid(player) or player.isDead then return end
+	    
 	    player.gravityScale = 0
 	    player:ResetVelocity()
 	   	
@@ -60,7 +63,7 @@ end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isExecuting then
-		print("INTERRUPTING")
+		--print("INTERRUPTING")
 		ABILITY:Interrupt()
 	end
 end
@@ -86,6 +89,7 @@ function OnTargetChosen(player, targetPos)
 			player.movementControlMode = DefaultPlayerSetttings.movementControlMode
 			player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
 			player.gravityScale = DefaultPlayerSetttings.gravityScale
+			isFlying = false
 			return
 		end
 		
@@ -122,7 +126,7 @@ function OnTargetChosen(player, targetPos)
 	    -- Grounded
 	    player:ActivateWalking()
 	    player.gravityScale = DefaultPlayerSetttings.gravityScale
-	    
+	    isFlying = false
 	    World.SpawnAsset(ImpactVFX, {position = player:GetWorldPosition() - Vector3.UP * 50})
 	
 	    -- Stun / deal damage / check radius etcs
@@ -152,9 +156,48 @@ function DamageInArea(targetPos, localPlayer)
         dmg.sourcePlayer = ABILITY.owner
         dmg.sourceAbility = ABILITY
         
-        print("Deal damage")
+        --print("Deal damage")
         COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
     end
+end
+  
+function DisableFlying(player)
+	if isFlying then
+		--print("Disabling Flying")
+		for _, playerAbility in pairs(ActiveAbilities) do
+	    	playerAbility.isEnabled = true
+	    end
+	    ActiveAbilities = {}
+		
+		player.movementControlMode = DefaultPlayerSetttings.movementControlMode
+	    player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
+	    player:ResetVelocity()
+	    player:ActivateWalking()
+	    player.gravityScale = DefaultPlayerSetttings.gravityScale
+	    isFlying = false
+	end
+	
+	if Object.IsValid(ABILITY) then
+		ABILITY.isEnabled = false
+	end
+end
+  
+function PrintAbilities(player)
+	for _, thisAbility in pairs(player:GetAbilities()) do
+		print(thisAbility.name)
+		print(thisAbility.actionBinding)
+		print(thisAbility.isEnabled)
+		print("\n")
+	end
+end  
+  
+function OnPlayerDied(player, _)
+	Task.Wait()
+	DisableFlying(player)
+end
+
+function OnPlayerRespawn(player)
+	DisableFlying(player)
 end
   
 function OnEquip(equipment, player)
@@ -168,8 +211,8 @@ function OnEquip(equipment, player)
 		
 	table.insert(EventListeners, ABILITY.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, ABILITY.readyEvent:Connect( OnSpecialAbilityReady ))
-	--table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	--table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
+	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	
 	Task.Wait()
@@ -180,6 +223,7 @@ function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
+	DisableFlying()
 end
 
 Equipment.equippedEvent:Connect(OnEquip)

@@ -1655,7 +1655,7 @@
             BurstDuration: 1.5
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 10000
+            Range: 7000
             ImpactPlayerAssetRef {
               Id: 11972259582471283945
             }

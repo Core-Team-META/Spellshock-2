@@ -808,7 +808,7 @@
       }
       Objects {
         Id: 8184323746341847196
-        Name: "Q Special"
+        Name: "Venom Bomb"
         Transform {
           Location {
             X: -8716.59375
@@ -1351,7 +1351,7 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Float: 5000
+            Float: 6000
           }
           Overrides {
             Name: "cs:ProjectileRange"
@@ -1528,7 +1528,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
-          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5
@@ -1839,7 +1838,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
@@ -1850,7 +1849,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {

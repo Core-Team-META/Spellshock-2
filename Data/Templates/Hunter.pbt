@@ -1276,7 +1276,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
@@ -1287,7 +1287,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
@@ -1854,7 +1854,7 @@
             BurstDuration: 2
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 100000
+            Range: 7000
             ImpactPlayerAssetRef {
               Id: 14373757464648078715
             }

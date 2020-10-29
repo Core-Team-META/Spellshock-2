@@ -59,7 +59,7 @@ end
 
 function OnBindingPressed(player, binding)		
 	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-		print("Canceling: "..binding)
+		--print("Canceling: "..binding)
 		flyingTimer = -1
 		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
 			Task.Wait()
@@ -75,7 +75,7 @@ function OnSpecialAbilityExecute(thisAbility)
 			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 				Task.Wait()
 			end
-			print("~ Executing placement ~")
+			--print("~ Executing placement ~")
 		end
 	end
 end
@@ -135,7 +135,7 @@ end
 function Tick(deltaTime)
 	for id, halogram in pairs(AllHalograms) do
 		if halogram ~= objectHalogram and Object.IsValid(halogram) then
-			print("REMOVING LEFT OVER HALOGRAM")
+			--print("REMOVING LEFT OVER HALOGRAM")
 			halogram:Destroy()
 			AllHalograms[id] = nil
 		end

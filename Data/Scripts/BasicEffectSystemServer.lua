@@ -37,6 +37,7 @@ local DEFAULT_SETTINGS = COMPONENT_ROOT:GetCustomProperty("DefaultMovementSettin
 -- Variables
 local defaultSettings = nil
 
+
 -- DEFAULT SETTINGS FUNCTIONS --
 function RegisterDefaultSettings(player)
     DEFAULT_SETTINGS:ApplyToPlayer(player)
@@ -94,9 +95,9 @@ function UpdatePlayerEffects(player)
     player.serverUserData.regenSpeed = settings.regenSpeed
     player.serverUserData.criticalHitChance = settings.criticalHitChance
 
-    for _, ability in ipairs(player:GetAbilities()) do
-        ability.isEnabled = true
-    end
+    --for _, ability in ipairs(player:GetAbilities()) do
+        --ability.isEnabled = true
+    --end
 
     -- Go through each effect to apply the stats
     for _, value in ipairs(player.serverUserData.effects) do
@@ -109,12 +110,12 @@ function UpdatePlayerEffects(player)
             player.maxJumpCount = 0
             player.canMount = false
         end
-        if value.freezeAbilities then
-            for _, ability in ipairs(player:GetAbilities()) do
-                ability:Interrupt()
-                ability.isEnabled = false
-            end
-        end
+        --if value.freezeAbilities then
+            --for _, ability in ipairs(player:GetAbilities()) do
+                --ability:Interrupt()
+                --ability.isEnabled = false
+            --end
+        --end
         if value.speedModifier then
             speedModifier = speedModifier + value.speedModifier
         end

@@ -49,14 +49,38 @@ function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 	
 	-- Get the velocity vecotr based on the player's forward vector
-	local LookRotation = player:GetLookWorldRotation()
-	local LookQuaternion = Quaternion.New(LookRotation)
-	local ForwardVector = LookQuaternion:GetForwardVector() * Vector3.New(1, 1, 0)
+	local PlayerRotation = player:GetWorldRotation()
+	local LookQuaternion = Quaternion.New(PlayerRotation)
+	local ForwardVector = LookQuaternion:GetForwardVector()
+	ForwardVector.z = 0
 	local VelocityVector = ForwardVector * SPEED
 	ProjectileVelocity = VelocityVector
 	
-	local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
+	local spawnPosition
+	
+	local PlayerPosition = player:GetWorldPosition()
+	local forwardRange = PlayerPosition + (ForwardVector * 200)
+	local forwardHitResult = World.Raycast(PlayerPosition, forwardRange, {ignorePlayers = true})
+	CoreDebug.DrawLine(PlayerPosition, forwardRange, {duration = 5})
+	
+	if forwardHitResult then
+		spawnPosition = forwardHitResult:GetImpactPosition()
+	else
+		local downRange = forwardRange - Vector3.New(0, 0, 10000)
+		local downHitResult = World.Raycast(forwardRange, downRange, {ignorePlayers = true})
+		
+		if downHitResult then
+			spawnPosition = downHitResult:GetImpactPosition()
+			CoreDebug.DrawLine(forwardRange, spawnPosition, {duration = 5, color = Color.BLUE})
+		else
+			spawnPosition = player:GetWorldPosition() + (ForwardVector*200)
+		end
+	end
+	
+	spawnPosition.z = spawnPosition.z + 100
+	
+	--local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
+	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=spawnPosition})
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()

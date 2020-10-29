@@ -77,6 +77,7 @@ end
 
 function DisableInvisility()
 	if isInvisible then
+		print("Disable Invis")
 		World.SpawnAsset(EndingFX, {position = Ability.owner:GetWorldPosition()})
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
@@ -92,6 +93,7 @@ end
 
 function OnPlayerRespawn(player)
 	DisableInvisility()
+	print("Weapon: "..tostring(WeaponAbility.isEnabled))
 end
 
 function OnEquip(thisEquipment, player)

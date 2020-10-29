@@ -65,8 +65,8 @@ end
 function OnAbilityExecute(thisAbility)
 	--Task.Wait(0.35)
 	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
-	CurrentBoomerange:Destroy()
-	CurrentBoomerange = nil
+	--CurrentBoomerange:Destroy()
+	--CurrentBoomerange = nil
 	
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
     local lookPosition = thisAbility.owner:GetViewWorldPosition()
@@ -74,7 +74,7 @@ function OnAbilityExecute(thisAbility)
     local forwardVector = lookRotation * Vector3.FORWARD
     local rangePosition = lookPosition + (forwardVector * PROJECTILE_RANGE)
 	local worldPosition = thisAbility.owner:GetWorldPosition()
-	local spawnPosition = worldPosition + (forwardVector*100)
+	local spawnPosition = worldPosition + (forwardVector*20)
 	spawnPosition.z = spawnPosition.z + 50
     
     --CoreDebug.DrawLine(lookPosition, rangePosition, {duration = 5})
@@ -100,5 +100,5 @@ function OnAbilityExecute(thisAbility)
     projectile.impactEvent:Connect(OnProjectileImpact)
 end
 
-ABILITY.castEvent:Connect( OnAbilityCast )
+--ABILITY.castEvent:Connect( OnAbilityCast )
 ABILITY.executeEvent:Connect( OnAbilityExecute )

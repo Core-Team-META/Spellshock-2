@@ -51,7 +51,7 @@ function OnAbilityExecute(thisAbility)
 	local lookQuaternion = Quaternion.New(lookRotation)
     local forwardVector = lookQuaternion:GetForwardVector()
     forwardVector.z = forwardVector.z + 0.2
-	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*200)
+	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*20)
 	worldPosition.z = worldPosition.z + 50
 
     local grenadeProjectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)

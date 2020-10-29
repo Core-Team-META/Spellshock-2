@@ -45,7 +45,7 @@ function Teleport(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 30))
+		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 50))
 		World.SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
 	end
 end

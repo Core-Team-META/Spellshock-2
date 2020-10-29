@@ -1330,7 +1330,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
@@ -1341,7 +1341,7 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:movement"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
