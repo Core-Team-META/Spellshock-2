@@ -5,14 +5,19 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local Root = script.parent
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
-
+local TrapActivationTemplate = script:GetCustomProperty("TrapActivationTemplate")
 local DamageAmount = script:GetCustomProperty("DamageAmount")
 
 local OwnerTeam = 0
+local OverlapEvent 
 
 function DoDamage(other)
 	if other:IsA("Player") and other.team ~= OwnerTeam and not other.isDead then
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
+		OverlapEvent:Disconnect()
+		Root.visibility = Visibility.FORCE_OFF
+		World.SpawnAsset(TrapActivationTemplate, {position = Root:GetWorldPosition(), rotation = Root:GetWorldRotation()})
+		
+		--API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
 		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
 		
 		local dmg = Damage.New()
@@ -22,6 +27,7 @@ function DoDamage(other)
 		--dmg.sourceAbility = SpecialAbility
 				
 		COMBAT().ApplyDamage(other, dmg) --, dmg.sourcePlayer)
+		Root:Destroy()
 	end
 end
 
@@ -32,7 +38,7 @@ end
 function OnNetworkPropertyChanged(thisObject, name)
 	OwnerTeam = thisObject:GetCustomProperty("Team")
 	Task.Wait(1)
-	Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
+	OverlapEvent = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
 end
 
 Root.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChanged )

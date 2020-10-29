@@ -1041,12 +1041,12 @@
             Int: 1500
           }
           Overrides {
-            Name: "cs:Duration"
-            Float: 20
-          }
-          Overrides {
             Name: "cs:MatchNormal"
             Bool: true
+          }
+          Overrides {
+            Name: "cs:MaxTraps"
+            Int: 2
           }
           Overrides {
             Name: "cs:isPreviewing"
@@ -1066,7 +1066,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 4247586888110783424
+            Id: 15428462289765350781
           }
         }
       }
