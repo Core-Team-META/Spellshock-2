@@ -827,7 +827,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1265,7 +1265,7 @@
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
-            Int: 2000
+            Int: 3000
           }
           Overrides {
             Name: "cs:LifeSpan"

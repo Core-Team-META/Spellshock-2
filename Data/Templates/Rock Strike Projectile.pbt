@@ -72,6 +72,7 @@
         Name: "Rock Trail VFX"
         Transform {
           Location {
+            Z: -133.121094
           }
           Rotation {
           }
@@ -240,7 +241,7 @@
         Transform {
           Location {
             X: -70
-            Z: -20
+            Z: -105.733398
           }
           Rotation {
           }

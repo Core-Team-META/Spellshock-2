@@ -1195,6 +1195,12 @@
         ParentId: 16077949688686323587
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
+            }
+          }
+          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 16077949688686323587
@@ -1217,6 +1223,22 @@
             AssetReference {
               Id: 2969735918098534603
             }
+          }
+          Overrides {
+            Name: "cs:HawkSpeed"
+            Int: 1000
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:LifeSpan"
+            Float: 10
+          }
+          Overrides {
+            Name: "cs:HawkRange"
+            Int: 1500
           }
         }
         WantsNetworking: true

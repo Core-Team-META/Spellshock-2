@@ -3,16 +3,19 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
-local HawkTemplate = script:GetCustomProperty("HawkTemplate")
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+
+local HawkTemplate = script:GetCustomProperty("HawkTemplate")
+local HawkSpeed = script:GetCustomProperty("HawkSpeed")
+local HawkRange = script:GetCustomProperty("HawkRange")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
+local LifeSpan = script:GetCustomProperty("LifeSpan")
 
 local HitPlayers = {}
 local CurrentHawk = nil
 local HawkTarget = nil
 local PreviousTarget = nil
-local HawkSpeed = 1000
-local DamageAmount = 30
-local LifeSpan = 10
 local Timer = 0
 
 function OnAbilityExecute(thisAbility)
@@ -26,6 +29,15 @@ function OnAbilityExecute(thisAbility)
 	Timer = LifeSpan
 end
 
+function OnUnequip(equipment, player)
+	if CurrentHawk and Object.IsValid(CurrentHawk) then
+		CurrentHawk:Destroy()
+	end
+end
+
+Equipment.unequippedEvent:Connect(OnUnequip)
+Ability.executeEvent:Connect(OnAbilityExecute)
+
 function Tick(deltaTime)
 	if Timer > 0 then
 		Timer = Timer - deltaTime
@@ -35,7 +47,7 @@ function Tick(deltaTime)
 			return
 		end
 		
-		if HawkTarget and Object.IsValid(HawkTarget) then
+		if HawkTarget and Object.IsValid(HawkTarget) and not HawkTarget.isDead then
 			CurrentHawk:LookAtContinuous(HawkTarget, true)
 			
 			local DistanceVector = HawkTarget:GetWorldPosition() - CurrentHawk:GetWorldPosition()
@@ -67,8 +79,10 @@ function Tick(deltaTime)
 				--CurrentHawk:MoveContinuous(velocityVector)
 			end
 		else
+			HawkTarget = nil
 			-- Check for enemies in the area
-			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), 1000, {ignoreTeams=Ability.owner.team, ingoreDead = true})
+			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), HawkRange, {ignoreTeams=Ability.owner.team, ingoreDead = true})
+			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})
 			for _, enemy in pairs(neabyEnemies) do
 				-- check if the enemy was already hit
 				if not HitPlayers[enemy] and not enemy.isDead then
@@ -87,5 +101,3 @@ function Tick(deltaTime)
 		end
 	end
 end
-
-Ability.executeEvent:Connect(OnAbilityExecute)

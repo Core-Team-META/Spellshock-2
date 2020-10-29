@@ -9,12 +9,13 @@ function AddImpulse(player)
 	
 	if player == Ability.owner then
 		local forwardVector = player:GetWorldRotation() * Vector3.FORWARD
-		local oppositeVector = -forwardVector + Vector3.New(0, 0, 0.7)
+		local oppositeVector = -forwardVector
+		oppositeVector.z = 1
 		impulseVector = oppositeVector * OwnerImpulseMultiplier
 	else
 		local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
 		directionVector = directionVector/directionVector.size
-		directionVector.z = 0.5
+		directionVector.z = 0.7
 		impulseVector = directionVector * EnemyImpulseMultiplier
 	end
 	player:ResetVelocity()

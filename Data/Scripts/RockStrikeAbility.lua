@@ -77,7 +77,7 @@ function OnAbilityExecute(thisAbility)
 		end
 	end
 	
-	spawnPosition.z = spawnPosition.z + 100
+	spawnPosition.z = spawnPosition.z + 200
 	
 	--local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
 	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=spawnPosition})
@@ -106,8 +106,8 @@ function Tick(deltaTime)
 		
 		local impactPosition = hitResult:GetImpactPosition()
 		local Zdiff = rayStart.z - impactPosition.z 
-		if Zdiff > 105 or Zdiff < 95 then
-			local targetPosition = Vector3.New(rayStart.x, rayStart.y, impactPosition.z+100)
+		if Zdiff > 205 or Zdiff < 195 then
+			local targetPosition = Vector3.New(rayStart.x, rayStart.y, impactPosition.z+200)
 			CurrentProjectile:MoveTo(targetPosition, 0)
 			CurrentProjectile:MoveContinuous(ProjectileVelocity)
 		end

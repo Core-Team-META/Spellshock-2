@@ -39,9 +39,12 @@
           }
           Settings {
             IsEnabled: true
-            Mass: 100
+            OverrideMass: true
+            Mass: 1000
+            LinearDamping: 0.1
+            AngularDamping: 0.5
           }
-          Radius: 200
+          Radius: 180
           Length: 200
         }
       }

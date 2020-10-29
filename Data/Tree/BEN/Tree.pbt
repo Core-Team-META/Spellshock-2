@@ -12665,8 +12665,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: 9731.18457
-      Y: 10125.3242
+      X: 10126.4219
+      Y: -12664.8389
+      Z: 5790.78711
     }
     Rotation {
     }
@@ -12681,7 +12682,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -12726,12 +12727,8 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: -2071.18457
-      Y: -540.324219
-      Z: 3175
     }
     Rotation {
-      Yaw: -91.6407776
     }
     Scale {
       X: 1
