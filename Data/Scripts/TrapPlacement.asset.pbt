@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 6822716955623708278
-  Name: "ThornDamageHandler"
+  Id: 15679536523653727947
+  Name: "TrapPlacement"
   PlatformAssetType: 3
   TextAsset {
   }
