@@ -4097,119 +4097,12 @@
       }
     }
     Assets {
-      Id: 17397324931887173102
-      Name: "Pyramid - 4-Sided Truncated Polished"
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_truncated_hq_001"
-      }
-    }
-    Assets {
-      Id: 11236189850874066005
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 13898612443987996531
-      Name: "YellowFeatherTop"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 1781535275264321496
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 1
-              G: 0.462384105
-              B: 0.00999999
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "color_secondary"
-            Color {
-              R: 0.209
-              G: 0.1477478
-              B: 0.124146
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.840000033
-              G: 0.266000062
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 1
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 1781535275264321496
-      Name: "Wallpaper Chevron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_wallpaper_004"
-      }
-    }
-    Assets {
-      Id: 7647569689338897125
-      Name: "Pyramid - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_hq_001"
-      }
-    }
-    Assets {
-      Id: 11234991097743207333
-      Name: "Bone Human Scapula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_scap_01_ref"
-      }
-    }
-    Assets {
-      Id: 12357757896131286157
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
-      }
-    }
-    Assets {
-      Id: 6293838519925911015
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
+        AssetId: "sm_bones_human_skull_01_ref"
       }
     }
     Assets {
@@ -4222,74 +4115,66 @@
       }
     }
     Assets {
-      Id: 8911288174540730015
-      Name: "YellowFeatherBottom"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 1781535275264321496
-        ParameterOverrides {
-          Overrides {
-            Name: "rotate_material"
-            Float: 180
-          }
-          Overrides {
-            Name: "color_secondary"
-            Color {
-              R: 0.115
-              G: 0.0812966377
-              B: 0.06831
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 1
-              G: 0.607417226
-              B: 0.220000029
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              Z: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0.0238804743
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0.985823572
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0
-          }
-          Overrides {
-            Name: "v_offset"
-            Float: 0.0323175415
-          }
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.74
-              G: 0.132317901
-              A: 1
-            }
-          }
-        }
+      Id: 17567893295837774896
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
       }
     }
     Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
+      Id: 6293838519925911015
+      Name: "Horn"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
+        AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 12357757896131286157
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 11234991097743207333
+      Name: "Bone Human Scapula 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_scap_01_ref"
+      }
+    }
+    Assets {
+      Id: 7647569689338897125
+      Name: "Pyramid - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_hq_001"
+      }
+    }
+    Assets {
+      Id: 11236189850874066005
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 17397324931887173102
+      Name: "Pyramid - 4-Sided Truncated Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_truncated_hq_001"
       }
     }
     PrimaryAssetId {
@@ -4299,4 +4184,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true
