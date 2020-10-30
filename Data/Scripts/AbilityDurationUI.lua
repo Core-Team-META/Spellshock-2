@@ -3,7 +3,7 @@ local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local DisplayTemplate = script:GetCustomProperty("DisplayTemplate")
 local Duration = ServerScript:GetCustomProperty("Duration")
-local MainAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
+local MainAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 
 local FillColor = script:GetCustomProperty("FillColor")
 local BackgroundColor = script:GetCustomProperty("BackgroundColor")
@@ -41,7 +41,7 @@ end
 function OnEquip(equipment, player)
 	Task.Wait()
 	if MainAbility.owner ~= LOCAL_PLAYER then return end
-
+	print("Setting up Timer")
 	DurationDisplay = World.SpawnAsset(DisplayTemplate)
 	AbilityProgressBar = DurationDisplay:GetCustomProperty("AbilityProgressBar"):WaitForObject()
 	UIPanel = DurationDisplay:GetCustomProperty("UIPanel"):WaitForObject()
@@ -59,6 +59,10 @@ function OnUnequip(equipment, player)
 	DurationDisplay:Destroy()
 end
 
+if Equipment.owner then
+	OnEquip(Equipment, Equipment.owner)
+end
+
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 
@@ -74,3 +78,5 @@ function Tick(deltaTime)
 		AbilityProgressBar.progress = Timer / Duration
 	end
 end
+
+print("COMPILED")

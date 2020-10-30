@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 7826957446471998063
-  Name: "Crossbow Impact Projectile Aligned"
+  Id: 8871137856751991335
+  Name: "Multishot Impact Projectile Aligned"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5088298425934907829
+      RootId: 17050812709015838518
       Objects {
-        Id: 5088298425934907829
-        Name: "Crossbow Impact Projectile Aligned"
+        Id: 17050812709015838518
+        Name: "Multishot Impact Projectile Aligned"
         Transform {
           Scale {
             X: 1
@@ -16,10 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 16217201820609862265
+        ChildIds: 13969847774118382954
         UnregisteredParameters {
         }
-        Lifespan: 5
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -31,7 +31,7 @@
         }
       }
       Objects {
-        Id: 16217201820609862265
+        Id: 13969847774118382954
         Name: "Impact Geo"
         Transform {
           Location {
@@ -45,8 +45,8 @@
             Z: 1
           }
         }
-        ParentId: 5088298425934907829
-        ChildIds: 12985836376233420554
+        ParentId: 17050812709015838518
+        ChildIds: 7554614711232836577
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -58,7 +58,7 @@
         }
       }
       Objects {
-        Id: 12985836376233420554
+        Id: 7554614711232836577
         Name: "Fantasy Crossbow Bolt 01"
         Transform {
           Location {
@@ -73,7 +73,7 @@
             Z: 1
           }
         }
-        ParentId: 16217201820609862265
+        ParentId: 13969847774118382954
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

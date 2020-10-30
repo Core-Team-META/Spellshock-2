@@ -3,6 +3,7 @@ local TrapTemplate = script:GetCustomProperty("TrapTemplate")
 local TrapLifeSpan = script:GetCustomProperty("TrapLifeSpan")
 local OwnerImpulseMultiplier = script:GetCustomProperty("OwnerImpulse")
 local EnemyImpulseMultiplier = script:GetCustomProperty("EnemyImpulse")
+local ImpulseRadius = script:GetCustomProperty("ImpulseRadius")
 
 function AddImpulse(player)
 	local impulseVector
@@ -30,12 +31,21 @@ end
 
 function OnAbilityExecute(thisAbility)
 	local targetPosition = thisAbility.owner:GetWorldPosition()
-	targetPosition.z = targetPosition.z - 100
-	local newTrap = World.SpawnAsset(TrapTemplate, {position = targetPosition})
+	local targetRotation = Rotation.ZERO
+	
+	local hitResult = World.Raycast(targetPosition, targetPosition - Vector3.New(0,0,5000), {ignorePlayers = true})
+	if hitResult then
+		print("got a hit")
+		targetPosition = hitResult:GetImpactPosition()
+		targetRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
+	else
+		targetPosition.z = targetPosition.z - 100
+	end
+	local newTrap = World.SpawnAsset(TrapTemplate, {position = targetPosition, rotation = targetRotation})
 	newTrap.lifeSpan = TrapLifeSpan
 	newTrap:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	
-	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), 700, {ignoreTeams = thisAbility.owner.team})
+	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulse(enemy)
 	end

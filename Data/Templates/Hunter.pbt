@@ -376,6 +376,7 @@
         ParentId: 2069545901692075652
         ChildIds: 1577513358185365798
         ChildIds: 8056306599204561674
+        ChildIds: 16686133452027158721
         ChildIds: 2616006816711334649
         ChildIds: 4846120483526496886
         ChildIds: 16566479844955403044
@@ -465,6 +466,48 @@
         }
       }
       Objects {
+        Id: 16686133452027158721
+        Name: "SetAbilityIconClientOptimized"
+        Transform {
+          Location {
+            Y: 250.623047
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 6922611339924357768
+            }
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 3369441422951943214
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
         Id: 2616006816711334649
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -495,7 +538,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 13636798656365981194
+              Id: 15619941488256063062
             }
           }
           Overrides {
@@ -770,6 +813,7 @@
           }
         }
         ParentId: 406380117814010332
+        ChildIds: 6922611339924357768
         ChildIds: 10679331535669617236
         ChildIds: 1433284731599134094
         ChildIds: 16077949688686323587
@@ -783,6 +827,232 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6922611339924357768
+        Name: "Multishoot"
+        Transform {
+          Location {
+            Y: 250.623047
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999821
+            Y: 0.999999821
+            Z: 1
+          }
+        }
+        ParentId: 8738223765773217925
+        ChildIds: 6616549539712204980
+        ChildIds: 8818728013034544862
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+          }
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_30"
+          }
+        }
+      }
+      Objects {
+        Id: 6616549539712204980
+        Name: "MultishootAbilityServer"
+        Transform {
+          Location {
+            Y: -250.623108
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.00000024
+            Y: 1.00000024
+            Z: 1
+          }
+        }
+        ParentId: 6922611339924357768
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 6922611339924357768
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryWeapon"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialWeaponTemplate"
+            AssetReference {
+              Id: 10494890791234986688
+            }
+          }
+          Overrides {
+            Name: "cs:RootEquipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 7
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6044326641807591751
+          }
+        }
+      }
+      Objects {
+        Id: 8818728013034544862
+        Name: "Client Context"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1
+          }
+        }
+        ParentId: 6922611339924357768
+        ChildIds: 17628230939858546359
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 17628230939858546359
+        Name: "AbilityDurationUI"
+        Transform {
+          Location {
+            X: -8712.15234
+            Y: -9682.3877
+            Z: -3036.5564
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 8818728013034544862
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 6616549539712204980
+            }
+          }
+          Overrides {
+            Name: "cs:FillColor"
+            Color {
+              R: 0.86
+              G: 0.290463597
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:BackgroundColor"
+            Color {
+              R: 0.39
+              G: 0.0619867668
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Position"
+            Vector2 {
+              X: -600
+              Y: 18
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9094472670648911279
+          }
         }
       }
       Objects {
@@ -846,7 +1116,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 15
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -880,12 +1150,12 @@
           Overrides {
             Name: "cs:TrapTemplate"
             AssetReference {
-              Id: 15664502698481242815
+              Id: 3018525531227009304
             }
           }
           Overrides {
             Name: "cs:TrapLifeSpan"
-            Float: 7
+            Float: 10
           }
           Overrides {
             Name: "cs:OwnerImpulse"
@@ -894,6 +1164,10 @@
           Overrides {
             Name: "cs:EnemyImpulse"
             Int: 150000
+          }
+          Overrides {
+            Name: "cs:ImpulseRadius"
+            Int: 700
           }
         }
         WantsNetworking: true
@@ -1346,8 +1620,6 @@
           }
         }
         ParentId: 406380117814010332
-        ChildIds: 6922611339924357768
-        ChildIds: 7556104036679301992
         ChildIds: 13944462686745880869
         WantsNetworking: true
         Collidable_v2 {
@@ -1358,453 +1630,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 6922611339924357768
-        Name: "Activate Multishoot"
-        Transform {
-          Location {
-            Y: 250.623047
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.999999821
-            Y: 0.999999821
-            Z: 1
-          }
-        }
-        ParentId: 5242507662312205528
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.05
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.05
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-          }
-          CooldownPhaseSettings {
-            Duration: 10
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-          }
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_30"
-          }
-        }
-      }
-      Objects {
-        Id: 7556104036679301992
-        Name: "Multishot Crossbow"
-        Transform {
-          Location {
-            Y: 250.623047
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 5242507662312205528
-        ChildIds: 8388633186393392347
-        ChildIds: 8818728013034544862
-        ChildIds: 3298102761747402805
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:EquipmentIcon"
-            AssetReference {
-              Id: 10377827557337385769
-            }
-          }
-          Overrides {
-            Name: "cs:EquipmentColor"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Equipment {
-          SocketName: "right_prop"
-          PickupTrigger {
-            SelfId: 14041977020221580370
-          }
-          Weapon {
-            ProjectileAssetRef {
-              Id: 7873447472770106816
-            }
-            MuzzleFlashAssetRef {
-              Id: 3452198850354539067
-            }
-            TrailAssetRef {
-              Id: 16943198897384362849
-            }
-            ImpactAssetRef {
-              Id: 4200143341945439636
-            }
-            UseReticle: true
-            Muzzle {
-              Location {
-                X: 100
-                Z: 25
-              }
-            }
-            AnimationSet: "2hand_rifle_aim_shoulder"
-            OutOfAmmoSfxAssetRef {
-              Id: 1518160165269425996
-            }
-            ReloadSfxAssetRef {
-              Id: 13298384700354758282
-            }
-            ShootAnimation: "2hand_rifle_shoot"
-            ImpactProjectileAssetRef {
-              Id: 7826957446471998063
-            }
-            BeamAssetRef {
-              Id: 841534158063459245
-            }
-            BurstCount: 1000
-            BurstDuration: 1
-            BurstStopsWithRelease: true
-            AttackCooldown: 0.25
-            Range: 2000
-            ImpactPlayerAssetRef {
-              Id: 14373757464648078715
-            }
-            ReticleType {
-              Value: "mc:ereticletype:crosshair"
-            }
-            MaxAmmo: 1000000
-            AmmoType: "rounds"
-            MultiShot: 10
-            ProjectileSpeed: 25000
-            ProjectileLifeSpan: 10
-            ProjectileLength: 50
-            ProjectileRadius: 5
-            SpreadMin: 1
-            SpreadMax: 10
-            SpreadAperture: 150
-            DefaultAbility {
-              SubObjectId: 3298102761747402805
-            }
-            ReloadAbility {
-              SelfId: 16543406513003124316
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8388633186393392347
-        Name: "RapidFireDamageServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1
-          }
-        }
-        ParentId: 7556104036679301992
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:MainAbility"
-            ObjectReference {
-              SubObjectId: 6922611339924357768
-            }
-          }
-          Overrides {
-            Name: "cs:ShootAbility"
-            ObjectReference {
-              SubObjectId: 3298102761747402805
-            }
-          }
-          Overrides {
-            Name: "cs:OtherAbility"
-            ObjectReference {
-              SubObjectId: 10839953769775855596
-            }
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 5
-          }
-          Overrides {
-            Name: "cs:SpecialEquipment"
-            ObjectReference {
-              SubObjectId: 7556104036679301992
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryEquipment"
-            ObjectReference {
-              SubObjectId: 13944462686745880869
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 771072002086908321
-          }
-        }
-      }
-      Objects {
-        Id: 8818728013034544862
-        Name: "Client Context"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7556104036679301992
-        ChildIds: 16686133452027158721
-        ChildIds: 17628230939858546359
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 16686133452027158721
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8818728013034544862
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 6922611339924357768
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 3369441422951943214
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 17628230939858546359
-        Name: "AbilityDurationUI"
-        Transform {
-          Location {
-            X: -8712.15234
-            Y: -9682.3877
-            Z: -3036.5564
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 8818728013034544862
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 8388633186393392347
-            }
-          }
-          Overrides {
-            Name: "cs:FillColor"
-            Color {
-              R: 0.86
-              G: 0.290463597
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:BackgroundColor"
-            Color {
-              R: 0.39
-              G: 0.0619867668
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Position"
-            Vector2 {
-              X: -600
-              Y: 18
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 2069545901692075652
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 9094472670648911279
-          }
-        }
-      }
-      Objects {
-        Id: 3298102761747402805
-        Name: "Multi Shoot"
-        ParentId: 7556104036679301992
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Ability {
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.15
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-          }
-          CooldownPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-          }
-          Animation: "2hand_rifle_shoot"
-          KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
-          }
         }
       }
       Objects {
@@ -2125,6 +1950,7 @@
             IsTargetDataUpdated: true
           }
           Animation: "2hand_rifle_shoot"
+          CanBePrevented: true
         }
       }
       Objects {
@@ -2534,12 +2360,21 @@
       }
     }
     Assets {
-      Id: 13636798656365981194
-      Name: "Fantasy Ability Teal 007"
+      Id: 3369441422951943214
+      Name: "Fantasy Ability Yellow 033"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Teal_007"
+        AssetId: "UI_Fantasy_Ability_Yellow_033"
+      }
+    }
+    Assets {
+      Id: 15619941488256063062
+      Name: "Fantasy Ability Teal 024"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Teal_024"
       }
     }
     Assets {
@@ -2576,24 +2411,6 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Purple_011"
-      }
-    }
-    Assets {
-      Id: 10377827557337385769
-      Name: "Fantasy Crossbow 006"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Crossbow_006"
-      }
-    }
-    Assets {
-      Id: 3369441422951943214
-      Name: "Fantasy Ability Yellow 033"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_033"
       }
     }
     Assets {
