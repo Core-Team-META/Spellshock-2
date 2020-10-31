@@ -101,6 +101,7 @@ function Tick(DeltaTime)
 		PANEL.visibility = Visibility.FORCE_OFF
 		
 		if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
+			print("Disabling cursor")
 			UI.SetCursorVisible(false)
 			UI.SetCanCursorInteractWithUI(false)
 		end

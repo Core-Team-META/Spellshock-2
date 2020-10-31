@@ -3,6 +3,7 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PickupAbility = script:GetCustomProperty("PickupAbility"):WaitForObject()
 local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 
@@ -23,6 +24,9 @@ function OnPickupCast(thisAbility)
 end
 
 function OnPickupExecute(thisAbility)
+	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
+		CurrentProjectile:Destroy()
+	end
 	PickupObject = World.SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
 	--PickupAbility.owner.animationStance = "unarmed_carry_score_card"
@@ -72,6 +76,23 @@ function OnThrowAbilityRecovery(thisAbility)
 	ThrowAbility.isEnabled = false
 end
 
+function OnEquip(equipment, player)
+	
+end
+
+function OnUnequip(equipment, player)
+	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
+		CurrentProjectile:Destroy()
+	end
+end
+
+--Equipment.equippedEvent:Connect(OnEquip)
+Equipment.unequippedEvent:Connect(OnUnequip)
+PickupAbility.castEvent:Connect( OnPickupCast )
+PickupAbility.executeEvent:Connect(OnPickupExecute)
+ThrowAbility.executeEvent:Connect(OnThrowExecute)
+ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
+
 function Tick(dTime)
 	if Timer > 0 then
 		Timer = Timer - dTime
@@ -80,8 +101,3 @@ function Tick(dTime)
 		end
 	end
 end
-
-PickupAbility.castEvent:Connect( OnPickupCast )
-PickupAbility.executeEvent:Connect(OnPickupExecute)
-ThrowAbility.executeEvent:Connect(OnThrowExecute)
-ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)

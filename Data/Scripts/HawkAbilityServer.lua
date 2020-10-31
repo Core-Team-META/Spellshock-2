@@ -25,7 +25,12 @@ function OnAbilityExecute(thisAbility)
 	HitPlayers = {}
 	PreviousTarget = nil
 	CurrentHawk = World.SpawnAsset(HawkTemplate, {position = startingPosition, rotation = startingRotation})
+	Task.Wait()
+	Task.Wait()
+	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
+	CurrentHawk:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	Task.Wait(1)
+	CurrentHawk.lifeSpan = LifeSpan + 2
 	Timer = LifeSpan
 end
 
@@ -43,11 +48,13 @@ function Tick(deltaTime)
 		Timer = Timer - deltaTime
 		if Timer < 0 then
 			CurrentHawk:Destroy()
-			CurrentHawk = nil			
+			CurrentHawk = nil
+			HawkTarget = nil
 			return
 		end
 		
-		if HawkTarget and Object.IsValid(HawkTarget) and not HawkTarget.isDead then
+		if HawkTarget and Object.IsValid(HawkTarget) and not HawkTarget.isDead 
+		and CurrentHawk and Object.IsValid(CurrentHawk) then
 			CurrentHawk:LookAtContinuous(HawkTarget, true)
 			
 			local DistanceVector = HawkTarget:GetWorldPosition() - CurrentHawk:GetWorldPosition()
@@ -67,9 +74,11 @@ function Tick(deltaTime)
 				COMBAT().ApplyDamage(HawkTarget, dmg, Ability.owner)
 				
 				Task.Wait(0.5)
+				if not CurrentHawk or Object.IsValid(CurrentHawk) then return end
 				local targetPosition = CurrentHawk:GetWorldPosition() + Vector3.New(0, 0, 100)
 				CurrentHawk:MoveTo(targetPosition, 1.5)
 				Task.Wait(1)
+				if not CurrentHawk or Object.IsValid(CurrentHawk) then return end
 				CurrentHawk:SetNetworkedCustomProperty("Attack", false)
 				PreviousTarget = HawkTarget
 				HawkTarget = nil
@@ -95,7 +104,7 @@ function Tick(deltaTime)
 				end
 			end
 			
-			if HawkTarget == nil and PreviousTarget ~= nil and not PreviousTarget.isDead then
+			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not PreviousTarget.isDead then
 				HawkTarget = PreviousTarget
 			end
 		end

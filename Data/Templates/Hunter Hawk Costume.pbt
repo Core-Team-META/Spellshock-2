@@ -39,6 +39,7 @@
         ChildIds: 7796865549780322234
         ChildIds: 15721243922450673792
         ChildIds: 17786067887159376321
+        ChildIds: 17304720482750476996
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -4095,6 +4096,90 @@
           IsGroup: true
         }
       }
+      Objects {
+        Id: 17304720482750476996
+        Name: "VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6060940848020682210
+        ChildIds: 5416980840956051796
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5416980840956051796
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17304720482750476996
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+              Z: 10
+            }
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 14231394991004806063
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
     }
     Assets {
       Id: 11594524757616528940
@@ -4175,6 +4260,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pyramid_truncated_hq_001"
+      }
+    }
+    Assets {
+      Id: 14231394991004806063
+      Name: "Callout Sparkle"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_sparkles_volume_vfx"
       }
     }
     PrimaryAssetId {

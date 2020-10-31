@@ -6,6 +6,8 @@ function OnBindingPressed(whichPlayer, binding)
 		whichPlayer:Die()
 	elseif binding == "ability_extra_8" then
 		whichPlayer.hitPoints = 50
+	elseif binding == "ability_extra_57" then
+		whichPlayer.team = 3-whichPlayer.team
 	end
 end
 

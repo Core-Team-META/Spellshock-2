@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:Orc_Costume"
             AssetReference {
-              Id: 2113972422834919410
+              Id: 1453546943157492303
             }
           }
           Overrides {
@@ -1815,6 +1815,7 @@
         }
         ParentId: 13944462686745880869
         ChildIds: 9444411452001214971
+        ChildIds: 11537850216701276195
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1894,6 +1895,45 @@
         Script {
           ScriptAsset {
             Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 11537850216701276195
+        Name: "RangeIndicatorHandler"
+        Transform {
+          Location {
+            X: -22819.2461
+            Y: -13815.6084
+            Z: -7300
+          }
+          Rotation {
+            Yaw: -16.3261738
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13500843537647582575
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11565410270089156903
           }
         }
       }

@@ -1224,15 +1224,21 @@
         ParentId: 10132999686423340489
         UnregisteredParameters {
           Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
             }
           }
           Overrides {
-            Name: "cs:PickupTemplate"
-            AssetReference {
-              Id: 11318441308667137252
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
             }
           }
           Overrides {
@@ -1248,15 +1254,15 @@
             }
           }
           Overrides {
-            Name: "cs:ProjectileTemplate"
+            Name: "cs:PickupTemplate"
             AssetReference {
-              Id: 11324149636644572705
+              Id: 11318441308667137252
             }
           }
           Overrides {
-            Name: "cs:ModuleManager"
+            Name: "cs:ProjectileTemplate"
             AssetReference {
-              Id: 9770511928359673738
+              Id: 11324149636644572705
             }
           }
           Overrides {
