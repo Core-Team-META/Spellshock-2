@@ -12,7 +12,7 @@ function OnNetworkPropertyChanged(thisObject, name)
 	if name == "Attack" then
 		local isAttacking = thisObject:GetCustomProperty(name)
 		if isAttacking then
-			AnimatedMesh:PlayAnimation("unarmed_claw", {playbackRate = 0.8})
+			AnimatedMesh:PlayAnimation("unarmed_slash", {playbackRate = 0.8})
 			AttackSound:Play()
 		end
 	elseif name == "Team" then
@@ -20,9 +20,9 @@ function OnNetworkPropertyChanged(thisObject, name)
 		local Team = thisObject:GetCustomProperty(name)
 		local OwnerID = thisObject:GetCustomProperty("Owner")
 		
-		local hawkTemplate = ElfTemplate
+		local hawkTemplate = OrcTemplate
 		if Team == 2 then
-			hawkTemplate = OrcTemplate
+			hawkTemplate = ElfTemplate
 		end
 		
 		local HawkCostume = World.SpawnAsset(hawkTemplate, {parent = AnimatedMesh})

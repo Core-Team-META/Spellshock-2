@@ -12,6 +12,7 @@ local HawkRange = script:GetCustomProperty("HawkRange")
 local DamageAmount = script:GetCustomProperty("DamageAmount")
 local LifeSpan = script:GetCustomProperty("LifeSpan")
 
+local EventListeners = {}
 local HitPlayers = {}
 local CurrentHawk = nil
 local HawkTarget = nil
@@ -34,9 +35,27 @@ function OnAbilityExecute(thisAbility)
 	Timer = LifeSpan
 end
 
-function OnUnequip(equipment, player)
+function OnPlayerRespawn(player)
+	Timer = -1
 	if CurrentHawk and Object.IsValid(CurrentHawk) then
 		CurrentHawk:Destroy()
+		CurrentHawk = nil
+	end
+	HawkTarget = nil
+	PreviousTarget = nil
+end
+
+function OnEquip(thisEquipment, player)
+	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+end
+
+function OnUnequip(thisEquipment, player)
+	if CurrentHawk and Object.IsValid(CurrentHawk) then
+		CurrentHawk:Destroy()
+	end
+	
+	for _, listener in ipairs(EventListeners) do
+		listener:Disconnect()
 	end
 end
 
@@ -50,6 +69,7 @@ function Tick(deltaTime)
 			CurrentHawk:Destroy()
 			CurrentHawk = nil
 			HawkTarget = nil
+			PreviousTarget = nil
 			return
 		end
 		
@@ -74,11 +94,11 @@ function Tick(deltaTime)
 				COMBAT().ApplyDamage(HawkTarget, dmg, Ability.owner)
 				
 				Task.Wait(0.5)
-				if not CurrentHawk or Object.IsValid(CurrentHawk) then return end
+				if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
 				local targetPosition = CurrentHawk:GetWorldPosition() + Vector3.New(0, 0, 100)
 				CurrentHawk:MoveTo(targetPosition, 1.5)
 				Task.Wait(1)
-				if not CurrentHawk or Object.IsValid(CurrentHawk) then return end
+				if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
 				CurrentHawk:SetNetworkedCustomProperty("Attack", false)
 				PreviousTarget = HawkTarget
 				HawkTarget = nil

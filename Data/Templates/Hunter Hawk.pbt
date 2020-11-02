@@ -20,18 +20,18 @@
         UnregisteredParameters {
           Overrides {
             Name: "cs:AnimationStance"
-            String: "unarmed_walk_forward"
+            String: "unarmed_idle_ready"
           }
           Overrides {
             Name: "cs:ElfTemplate"
             AssetReference {
-              Id: 16407294674257551536
+              Id: 4501010028541852362
             }
           }
           Overrides {
             Name: "cs:OrcTemplate"
             AssetReference {
-              Id: 16407294674257551536
+              Id: 4969187534573241661
             }
           }
           Overrides {

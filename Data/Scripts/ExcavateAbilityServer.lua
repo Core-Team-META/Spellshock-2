@@ -83,6 +83,7 @@ end
 function OnUnequip(equipment, player)
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
 		CurrentProjectile:Destroy()
+		CurrentProjectile = nil
 	end
 end
 
