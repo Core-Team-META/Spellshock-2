@@ -25,13 +25,14 @@ function OnAbilityExecute(thisAbility)
 	local startingRotation = thisAbility.owner:GetWorldRotation()
 	HitPlayers = {}
 	PreviousTarget = nil
+	HawkTarget = nil
 	CurrentHawk = World.SpawnAsset(HawkTemplate, {position = startingPosition, rotation = startingRotation})
 	Task.Wait()
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	CurrentHawk:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	Task.Wait(1)
-	CurrentHawk.lifeSpan = LifeSpan + 2
+	CurrentHawk.lifeSpan = LifeSpan + 5
 	Timer = LifeSpan
 end
 
@@ -66,8 +67,10 @@ function Tick(deltaTime)
 	if Timer > 0 then
 		Timer = Timer - deltaTime
 		if Timer < 0 then
-			CurrentHawk:Destroy()
-			CurrentHawk = nil
+			if CurrentHawk and Object.IsValid(CurrentHawk) then
+				CurrentHawk:Destroy()
+				CurrentHawk = nil
+			end
 			HawkTarget = nil
 			PreviousTarget = nil
 			return
@@ -78,7 +81,7 @@ function Tick(deltaTime)
 			CurrentHawk:LookAtContinuous(HawkTarget, true)
 			
 			local DistanceVector = HawkTarget:GetWorldPosition() - CurrentHawk:GetWorldPosition()
-			print("DISTANCE: "..tostring(DistanceVector.size))
+			--print("DISTANCE: "..tostring(DistanceVector.size))
 				
 			if DistanceVector.size < 150 then
 				API_SE.ApplyStatusEffect(HawkTarget, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
@@ -86,7 +89,7 @@ function Tick(deltaTime)
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 				
 				local dmg = Damage.New()
-				dmg.amount = DamageAmount
+				dmg.amount = 1--DamageAmount
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = Ability.owner
 				dmg.sourceAbility = Ability
@@ -109,6 +112,7 @@ function Tick(deltaTime)
 			end
 		else
 			HawkTarget = nil
+			if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
 			-- Check for enemies in the area
 			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), HawkRange, {ignoreTeams=Ability.owner.team, ingoreDead = true})
 			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})

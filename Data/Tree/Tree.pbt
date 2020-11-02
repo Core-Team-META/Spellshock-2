@@ -1730,7 +1730,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 960
+      MountedWalkSpeed: 1400
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -1746,7 +1746,6 @@ Objects {
         Value: "mc:eabilityaimmode:viewrelative"
       }
       AppearanceChannelingTime: 2
-      MountChannelingTime: 1
       FlipOnMultiJump: true
     }
   }

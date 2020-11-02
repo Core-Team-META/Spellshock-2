@@ -8,6 +8,15 @@
   }
 }
 Assets {
+  Id: 16806313330175629846
+  Name: "Frame Flat 020"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameFlat_020"
+  }
+}
+Assets {
   Id: 16327934883181731081
   Name: "Icon Food"
   PlatformAssetType: 9

@@ -123,6 +123,10 @@
             Name: "bp:Shape Index"
             Int: 7
           }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 2
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

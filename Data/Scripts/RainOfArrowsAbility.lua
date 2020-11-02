@@ -68,7 +68,6 @@ function PlaceObject(thisPlayer, position, rotation)
 					
 			COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
 			--API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
-			return
 		end	
 	end
 end

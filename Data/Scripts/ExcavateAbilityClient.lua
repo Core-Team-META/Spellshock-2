@@ -3,7 +3,7 @@ local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 
 function OnPickupAbilityExecute(thisAbility) 
 	if PickupAbility.owner == Game.GetLocalPlayer() then
-		Events.Broadcast("Camera Shake", 5, 90, 5)
+		Events.Broadcast("Camera Shake", 2, 90, 5)
 	end
 end
 

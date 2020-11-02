@@ -27,6 +27,7 @@ local NAME_TEXT = script:GetCustomProperty("NameText"):WaitForObject()
 local PROGRESS_INDICATOR = script:GetCustomProperty("ProgressIndicator"):WaitForObject()
 local RIGHT_SHADOW = script:GetCustomProperty("RightShadow"):WaitForObject()
 local LEFT_SHADOW = script:GetCustomProperty("LeftShadow"):WaitForObject()
+local ACTIVE_FRAME = script:GetCustomProperty("ActiveFrame"):WaitForObject()
 
 -- User exposed properties
 local BINDING = COMPONENT_ROOT:GetCustomProperty("Binding")
@@ -92,6 +93,12 @@ function UpdateCurrentAbility()
         else
             ICON:SetColor(ICON_COLOR)
         end
+
+		if currentAbility:GetCustomProperty("Binding") and currentAbility.isEnabled then
+			ACTIVE_FRAME.visibility = Visibility.INHERIT
+		else
+			ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
+		end
 
         NAME_TEXT.text = currentAbility.name
         executeDuration = currentAbility.executePhaseSettings.duration

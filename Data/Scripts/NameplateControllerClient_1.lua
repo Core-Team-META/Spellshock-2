@@ -243,7 +243,7 @@ function Tick(deltaTime)
 	for _, player in pairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
 
-		if nameplate then
+		if nameplate and Object.IsValid(player) then
 			-- We calculate visibility every frame to handle when teams change
 			local visible = IsNameplateVisible(player)
 

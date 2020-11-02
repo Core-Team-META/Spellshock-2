@@ -962,7 +962,7 @@
             IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 20
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1035,7 +1035,7 @@
           }
           Overrides {
             Name: "cs:DamageAmount"
-            Int: 40
+            Int: 60
           }
           Overrides {
             Name: "cs:DamageRadius"
