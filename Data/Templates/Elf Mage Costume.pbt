@@ -888,8 +888,6 @@
         ChildIds: 6640533378093263634
         ChildIds: 9819274393678047087
         ChildIds: 10924349712104158608
-        ChildIds: 11531030638128134829
-        ChildIds: 16176978351577873218
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1278,246 +1276,6 @@
             X: 1.82094967
             Y: 0.398898929
             Z: 0.714272797
-          }
-        }
-        ParentId: 248492223121152644
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 6.2516675
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 8.35984898
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Faces:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:utile"
-            Float: 4.12768316
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:vtile"
-            Float: 6.2516675
-          }
-          Overrides {
-            Name: "ma:Font.Faces:utile"
-            Float: 5.75358057
-          }
-          Overrides {
-            Name: "ma:Font.Faces:vtile"
-            Float: 7.69379425
-          }
-          Overrides {
-            Name: "ma:Font.Sides:utile"
-            Float: 7.69379425
-          }
-          Overrides {
-            Name: "ma:Font.Sides:vtile"
-            Float: 8.01990509
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2811265457860980199
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11531030638128134829
-        Name: "Fantasy Crossbow Foregrip 01"
-        Transform {
-          Location {
-            X: -34.0056305
-            Y: 14.9999819
-            Z: -51.5100861
-          }
-          Rotation {
-            Pitch: -21.1603088
-            Yaw: 18.2932129
-            Roll: -52.8782959
-          }
-          Scale {
-            X: 1.67419469
-            Y: 0.323236704
-            Z: 0.487734795
-          }
-        }
-        ParentId: 248492223121152644
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 6.2516675
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 8.35984898
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Faces:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:utile"
-            Float: 4.12768316
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:vtile"
-            Float: 6.2516675
-          }
-          Overrides {
-            Name: "ma:Font.Faces:utile"
-            Float: 5.75358057
-          }
-          Overrides {
-            Name: "ma:Font.Faces:vtile"
-            Float: 7.69379425
-          }
-          Overrides {
-            Name: "ma:Font.Sides:utile"
-            Float: 7.69379425
-          }
-          Overrides {
-            Name: "ma:Font.Sides:vtile"
-            Float: 8.01990509
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2811265457860980199
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16176978351577873218
-        Name: "Fantasy Crossbow Foregrip 01"
-        Transform {
-          Location {
-            X: -34.0224609
-            Y: -14.9958496
-            Z: -51.512207
-          }
-          Rotation {
-            Pitch: 21.1582851
-            Yaw: 161.705017
-            Roll: -52.8779297
-          }
-          Scale {
-            X: -1.67420459
-            Y: 0.323236704
-            Z: 0.487734795
           }
         }
         ParentId: 248492223121152644
@@ -2559,17 +2317,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: -2.10900703e-06
+            Y: 1.23426446e-06
+            Z: -2.97969182e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.0185539182
+            Y: 0.0185542163
+            Z: 0.0274145156
           }
         }
         ParentId: 17292918333984699015
@@ -2610,7 +2370,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -4222,17 +3982,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: 2.10553731e-06
+            Y: 1.2342673e-06
+            Z: -2.97971601e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.0184921958
+            Y: 0.0184924882
+            Z: 0.0273233224
           }
         }
         ParentId: 1779386280394070604
@@ -4273,7 +4035,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -5374,12 +5136,12 @@
       }
     }
     Assets {
-      Id: 7605493991257760329
-      Name: "Cylinder - Rounded"
+      Id: 1687528788148422459
+      Name: "Prism - 8-Sided"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_002"
+        AssetId: "sm_prism_octagon_001"
       }
     }
     Assets {

@@ -2063,19 +2063,18 @@
         Name: "Diamond"
         Transform {
           Location {
-            X: 2.8804152
-            Y: 5.00731039
-            Z: -10.3026896
+            X: -4.08391523
+            Y: -1.42369413
+            Z: 24.0946426
           }
           Rotation {
-            Pitch: -2.66995239
-            Yaw: 23.3959503
-            Roll: -1.81066895
+            Yaw: -90
+            Roll: 157.500061
           }
           Scale {
-            X: 0.38023591
-            Y: 0.355101943
-            Z: 1.39270484
+            X: 0.387223423
+            Y: 0.53217566
+            Z: 0.53217566
           }
         }
         ParentId: 3068330862780985631
@@ -2099,7 +2098,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6091530056907801096
+            Id: 6293838519925911015
           }
           Teams {
           }
@@ -2148,19 +2147,18 @@
         Name: "Diamond"
         Transform {
           Location {
-            X: 2.88024354
-            Y: -0.807977259
-            Z: -10.3026266
+            X: -4.08403349
+            Y: 5.62296295
+            Z: 24.0947304
           }
           Rotation {
-            Pitch: 1.72232771
-            Yaw: -13.4221191
-            Roll: 2.57466745
+            Yaw: -90
+            Roll: 157.500015
           }
           Scale {
-            X: 0.38023591
-            Y: 0.355101943
-            Z: 1.39270484
+            X: 0.387223423
+            Y: 0.53217566
+            Z: 0.53217566
           }
         }
         ParentId: 9088255150283470890
@@ -2184,7 +2182,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 6091530056907801096
+            Id: 6293838519925911015
           }
           Teams {
           }
@@ -15466,6 +15464,10 @@
         ChildIds: 9175717317262905953
         ChildIds: 8332549617498485015
         ChildIds: 14666250921317801070
+        ChildIds: 6230177476507043652
+        ChildIds: 2642440005518771671
+        ChildIds: 16477535756016117415
+        ChildIds: 1779979657428797774
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -15987,17 +15989,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: 5.29898784e-07
+            Y: 2.14120632e-06
+            Z: -3.11307667e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.018864803
+            Y: 0.0188651
+            Z: 0.0278738644
           }
         }
         ParentId: 11793086218143008156
@@ -16037,7 +16041,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -16288,17 +16292,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: -5.59584396e-06
+            Y: 2.87929858e-09
+            Z: -2.86545419e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.018864803
+            Y: 0.0188651
+            Z: 0.0278738644
           }
         }
         ParentId: 9175717317262905953
@@ -16338,7 +16344,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -16511,6 +16517,262 @@
             X: -0.100116625
             Y: 0.0502415039
             Z: 0.148572624
+          }
+        }
+        ParentId: 2290749159981635590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6230177476507043652
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -8.39819336
+            Y: 7.45034027
+            Z: -13.2417297
+          }
+          Rotation {
+            Pitch: 9.44205284
+            Yaw: 97.0819244
+            Roll: 62.2520943
+          }
+          Scale {
+            X: -0.100116625
+            Y: 0.0502415039
+            Z: 0.148572624
+          }
+        }
+        ParentId: 2290749159981635590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2642440005518771671
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -7.05297852
+            Y: 9.60852814
+            Z: -14.8095398
+          }
+          Rotation {
+            Pitch: -6.95227051
+            Yaw: 40.8755264
+            Roll: 70.7646942
+          }
+          Scale {
+            X: -0.172943205
+            Y: 0.0502420217
+            Z: 0.196805656
+          }
+        }
+        ParentId: 2290749159981635590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16477535756016117415
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 8.46106
+            Y: 9.98231506
+            Z: -13.2055969
+          }
+          Rotation {
+            Pitch: 3.1941855
+            Yaw: -48.9136658
+            Roll: 67.2918777
+          }
+          Scale {
+            X: -0.137154311
+            Y: 0.0398449488
+            Z: 0.178822964
+          }
+        }
+        ParentId: 2290749159981635590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1779979657428797774
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 10.2674561
+            Y: 9.33037567
+            Z: -11.831604
+          }
+          Rotation {
+            Pitch: -15.723938
+            Yaw: -98.2460327
+            Roll: 66.7252197
+          }
+          Scale {
+            X: -0.110459961
+            Y: 0.0320899263
+            Z: 0.14401865
           }
         }
         ParentId: 2290749159981635590
@@ -20269,17 +20531,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: -1.22915744e-05
+            Y: -6.57193823e-06
+            Z: -2.61666e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.0186778419
+            Y: 0.0186781399
+            Z: 0.0275976174
           }
         }
         ParentId: 2731431426134480560
@@ -20319,7 +20583,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -20570,17 +20834,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: 4.8498373e-06
+            Y: 6.25761504e-06
+            Z: -3.50169539e-05
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.0186778419
+            Y: 0.0186781399
+            Z: 0.0275976174
           }
         }
         ParentId: 1865368135042657705
@@ -20620,7 +20886,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -20872,17 +21138,19 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            Z: -3.05175781e-05
+            X: -3.81469727e-06
+            Y: 3.05175781e-05
+            Z: 0.000122070313
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -1.79750532e-05
-            Roll: -90.0000076
+            Yaw: -3.05175781e-05
+            Roll: -90
           }
           Scale {
-            X: -0.0176845752
-            Y: 0.0176848564
-            Z: 0.0261300113
+            X: -0.0186778419
+            Y: 0.0186781399
+            Z: 0.0275976174
           }
         }
         ParentId: 13623900800511688353
@@ -20922,7 +21190,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -24586,8 +24854,6 @@
         }
         ParentId: 11884653733724069963
         ChildIds: 9122315500280397891
-        ChildIds: 8812284110536255389
-        ChildIds: 15897857844011046674
         ChildIds: 10658399687252896298
         ChildIds: 13768961754263660390
         Collidable_v2 {
@@ -24657,135 +24923,13 @@
         }
       }
       Objects {
-        Id: 8812284110536255389
-        Name: "Horn"
-        Transform {
-          Location {
-            X: -5.50004148
-            Y: 3.68457413
-            Z: -10.722785
-          }
-          Rotation {
-            Pitch: -0.832977295
-            Yaw: -145.132599
-            Roll: -63.9992676
-          }
-          Scale {
-            X: 0.0624807328
-            Y: 0.062483687
-            Z: 0.116527364
-          }
-        }
-        ParentId: 3962474593346257358
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.242426932
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.37239477
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 93328804870534166
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 483881465470598580
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15897857844011046674
-        Name: "Horn"
-        Transform {
-          Location {
-            X: 5.50003624
-            Y: 3.68418145
-            Z: -10.7227468
-          }
-          Rotation {
-            Pitch: 0.83309859
-            Yaw: 145.128693
-            Roll: -63.9993591
-          }
-          Scale {
-            X: 0.0624807328
-            Y: 0.062483687
-            Z: 0.116527364
-          }
-        }
-        ParentId: 3962474593346257358
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 93328804870534166
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.155678213
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.37751472
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 483881465470598580
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 10658399687252896298
         Name: "Horn"
         Transform {
           Location {
-            X: 3.99998474
-            Y: 8.48745823
-            Z: -12.8662529
+            X: 4.13076925
+            Y: 7.74962473
+            Z: -11.136754
           }
           Rotation {
             Pitch: 14.3876839
@@ -24793,9 +24937,9 @@
             Roll: -65.5667419
           }
           Scale {
-            X: 0.0483387262
-            Y: 0.0483410098
-            Z: 0.0901523605
+            X: 0.0529804379
+            Y: 0.0529823899
+            Z: 0.0658090934
           }
         }
         ParentId: 3962474593346257358
@@ -24827,7 +24971,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 483881465470598580
+            Id: 6293838519925911015
           }
           Teams {
           }
@@ -24844,9 +24988,9 @@
         Name: "Horn"
         Transform {
           Location {
-            X: -3.99999285
-            Y: 8.48726845
-            Z: -12.8662844
+            X: -3.18166304
+            Y: 9.40429592
+            Z: -10.351552
           }
           Rotation {
             Pitch: -14.3874207
@@ -24854,9 +24998,9 @@
             Roll: -65.5674438
           }
           Scale {
-            X: 0.0483387262
-            Y: 0.0483410023
-            Z: 0.0901523605
+            X: 0.0529804379
+            Y: 0.0529823825
+            Z: 0.0658090934
           }
         }
         ParentId: 3962474593346257358
@@ -24888,7 +25032,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 483881465470598580
+            Id: 6293838519925911015
           }
           Teams {
           }
@@ -25575,300 +25719,12 @@
       }
     }
     Assets {
-      Id: 4080200756085571976
-      Name: "Bone Human Pelvis Half 01"
+      Id: 3575562120921027951
+      Name: "Bone Human Scapula 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
-      }
-    }
-    Assets {
-      Id: 11236189850874066005
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 7363477334452929865
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 18423898048047861963
-      Name: "Fantasy Axe Blade 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_blade_axe_001"
-      }
-    }
-    Assets {
-      Id: 12324597429549854992
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
-      }
-    }
-    Assets {
-      Id: 483881465470598580
-      Name: "Pyramid - 5-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_fivesided_001"
-      }
-    }
-    Assets {
-      Id: 6091530056907801096
-      Name: "Diamond"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_diamond_001"
-      }
-    }
-    Assets {
-      Id: 12510064410993333055
-      Name: "Fantasy Pommel 04"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_004"
-      }
-    }
-    Assets {
-      Id: 4640068498251427509
-      Name: "Asphalt 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_asphault_001"
-      }
-    }
-    Assets {
-      Id: 2970711086579668885
-      Name: "Pyramid - 3-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_threesided_001"
-      }
-    }
-    Assets {
-      Id: 10696576532019313521
-      Name: "Fantasy Shield 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_003"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 14653709633606201813
-      Name: "Fantasy Gauntlet Arm 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_gauntlet_arm_001"
-      }
-    }
-    Assets {
-      Id: 6293838519925911015
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 7605493991257760329
-      Name: "Cylinder - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_002"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 1562276358413043561
-      Name: "Fantasy Shield Strap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_strap_001"
-      }
-    }
-    Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 11582207148866167210
-      Name: "Ring - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_005"
-      }
-    }
-    Assets {
-      Id: 11076240285386210842
-      Name: "Prism - 5-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_pentagon_001"
-      }
-    }
-    Assets {
-      Id: 15003152280729680734
-      Name: "Bark Redwood 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_redwood_001_uv"
-      }
-    }
-    Assets {
-      Id: 2635330027741249494
-      Name: "Diamond - 6-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_diamond_6_sided_001"
-      }
-    }
-    Assets {
-      Id: 3090596827184957478
-      Name: "Rope"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_rope_001"
-      }
-    }
-    Assets {
-      Id: 14577953825021911847
-      Name: "Fantasy Pommel 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_001"
-      }
-    }
-    Assets {
-      Id: 15312805567995783140
-      Name: "Fantasy Crossbow Foregrip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_foregrip_cross_001"
-      }
-    }
-    Assets {
-      Id: 7983931894419878278
-      Name: "Road Ramp Bottom Edge"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_urb_road_ramp_edge_bot_001"
-      }
-    }
-    Assets {
-      Id: 17091160006555877630
-      Name: "Cube - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_002"
-      }
-    }
-    Assets {
-      Id: 14136476971165319361
-      Name: "Pyramid - 3-Sided Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_threesided_truncated_001"
-      }
-    }
-    Assets {
-      Id: 13919353999127920386
-      Name: "Pyramid - 5-Sided Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_fivesided_truncated_001"
-      }
-    }
-    Assets {
-      Id: 3568686109993315893
-      Name: "Bone Human Femur 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_femur_01_ref"
-      }
-    }
-    Assets {
-      Id: 14495621931721378041
-      Name: "Bone Human Tibula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_tib_01_ref"
+        AssetId: "sm_bones_human_scap_01_ref"
       }
     }
     Assets {
@@ -25881,12 +25737,727 @@
       }
     }
     Assets {
-      Id: 3575562120921027951
-      Name: "Bone Human Scapula 01"
+      Id: 14495621931721378041
+      Name: "Bone Human Tibula 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_scap_01_ref"
+        AssetId: "sm_bones_human_tib_01_ref"
+      }
+    }
+    Assets {
+      Id: 10651293239361370041
+      Name: "Custom Bark Pine 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 3029116851565738319
+        ParameterOverrides {
+          Overrides {
+            Name: "damage_amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "color_damage"
+            Color {
+              R: 0.186
+              G: 0.114709027
+              B: 0.0677039921
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_direction"
+            Vector {
+              X: -1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.39
+              G: 0.170463577
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.066070959
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.850814
+          }
+          Overrides {
+            Name: "u_tiles"
+            Float: 1.07233322
+          }
+          Overrides {
+            Name: "v_tiles"
+            Float: 1.47060585
+          }
+          Overrides {
+            Name: "color_accent"
+            Color {
+              R: 0.712
+              G: 0.324964345
+              B: 0.0697759092
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 3029116851565738319
+      Name: "Bark Pine 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_pine_001_uv"
+      }
+    }
+    Assets {
+      Id: 3568686109993315893
+      Name: "Bone Human Femur 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_femur_01_ref"
+      }
+    }
+    Assets {
+      Id: 13919353999127920386
+      Name: "Pyramid - 5-Sided Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_fivesided_truncated_001"
+      }
+    }
+    Assets {
+      Id: 14136476971165319361
+      Name: "Pyramid - 3-Sided Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_threesided_truncated_001"
+      }
+    }
+    Assets {
+      Id: 17091160006555877630
+      Name: "Cube - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_002"
+      }
+    }
+    Assets {
+      Id: 7983931894419878278
+      Name: "Road Ramp Bottom Edge"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_urb_road_ramp_edge_bot_001"
+      }
+    }
+    Assets {
+      Id: 15312805567995783140
+      Name: "Fantasy Crossbow Foregrip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_foregrip_cross_001"
+      }
+    }
+    Assets {
+      Id: 14577953825021911847
+      Name: "Fantasy Pommel 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_001"
+      }
+    }
+    Assets {
+      Id: 3090596827184957478
+      Name: "Rope"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_rope_001"
+      }
+    }
+    Assets {
+      Id: 8911288174540730015
+      Name: "YellowFeatherBottom"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 1781535275264321496
+        ParameterOverrides {
+          Overrides {
+            Name: "rotate_material"
+            Float: 180
+          }
+          Overrides {
+            Name: "color_secondary"
+            Color {
+              R: 0.115
+              G: 0.0812966377
+              B: 0.06831
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 1
+              G: 0.607417226
+              B: 0.220000029
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_direction"
+            Vector {
+              Z: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.0238804743
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.985823572
+          }
+          Overrides {
+            Name: "u_offset"
+            Float: 0
+          }
+          Overrides {
+            Name: "v_offset"
+            Float: 0.0323175415
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.74
+              G: 0.132317901
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 1781535275264321496
+      Name: "Wallpaper Chevron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_gen_wallpaper_004"
+      }
+    }
+    Assets {
+      Id: 2635330027741249494
+      Name: "Diamond - 6-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_diamond_6_sided_001"
+      }
+    }
+    Assets {
+      Id: 15003152280729680734
+      Name: "Bark Redwood 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_redwood_001_uv"
+      }
+    }
+    Assets {
+      Id: 11076240285386210842
+      Name: "Prism - 5-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_pentagon_001"
+      }
+    }
+    Assets {
+      Id: 6419995403362959337
+      Name: "Flat"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 5926978936608099879
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 5926978936608099879
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 11582207148866167210
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
+      Id: 14105471954471642787
+      Name: "Custom Fabric Burlap Old 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 16814107545177638090
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.186
+              G: 0.114709027
+              B: 0.0677039921
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "u_tiles"
+            Float: 2.12167645
+          }
+          Overrides {
+            Name: "v_tiles"
+            Float: 0.35220626
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 16814107545177638090
+      Name: "Fabric Burlap Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fan_fabric_burlap_001_uv"
+      }
+    }
+    Assets {
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 7605493991257760329
+      Name: "Cylinder - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_002"
+      }
+    }
+    Assets {
+      Id: 1562276358413043561
+      Name: "Fantasy Shield Strap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 1687528788148422459
+      Name: "Prism - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_001"
+      }
+    }
+    Assets {
+      Id: 6073374154520949901
+      Name: "Custom Grass from Grass Tall"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 8599686871907610035
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.492
+              G: 0.317356318
+              B: 0.228288
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_roots"
+            Color {
+              R: 0.168000013
+              G: 0.108365551
+              B: 0.077952005
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "dist_rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "dist_radius"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_intensity"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_weight"
+            Float: 0.05
+          }
+          Overrides {
+            Name: "wind_speed"
+            Float: 0
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 8599686871907610035
+      Name: "Grass (default)"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_dynamic_001_uv"
+      }
+    }
+    Assets {
+      Id: 14653709633606201813
+      Name: "Fantasy Gauntlet Arm 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_gauntlet_arm_001"
+      }
+    }
+    Assets {
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 10696576532019313521
+      Name: "Fantasy Shield 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_003"
+      }
+    }
+    Assets {
+      Id: 16936111728464854852
+      Name: "WolfFur"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 12357757896131286157
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0.741118729
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0.606109202
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.204000011
+              G: 0.204000011
+              B: 0.204000011
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.926756859
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 12357757896131286157
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 2970711086579668885
+      Name: "Pyramid - 3-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_threesided_001"
+      }
+    }
+    Assets {
+      Id: 4640068498251427509
+      Name: "Asphalt 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_gen_asphault_001"
+      }
+    }
+    Assets {
+      Id: 12510064410993333055
+      Name: "Fantasy Pommel 04"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_004"
+      }
+    }
+    Assets {
+      Id: 6293838519925911015
+      Name: "Horn"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 483881465470598580
+      Name: "Pyramid - 5-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_fivesided_001"
+      }
+    }
+    Assets {
+      Id: 93328804870534166
+      Name: "Custom Bark Dead 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 7663308268157147922
+        ParameterOverrides {
+          Overrides {
+            Name: "color_accent"
+            Color {
+              R: 1
+              G: 0.639072835
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.661
+              G: 0.48008737
+              B: 0.327856
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.168373272
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.659174085
+          }
+          Overrides {
+            Name: "color_damage"
+            Color {
+              R: 0.625
+              G: 0.578504
+              B: 0.403837
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 7663308268157147922
+      Name: "Bark Dead 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_dead_001_uv"
+      }
+    }
+    Assets {
+      Id: 12324597429549854992
+      Name: "Teardrop - Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_truncated_teardrop_001"
+      }
+    }
+    Assets {
+      Id: 13330662989199046504
+      Name: "Custom Emissive Glow Transparent"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 3702191406046426907
+        ParameterOverrides {
+          Overrides {
+            Name: "emissive_boost"
+            Float: 95.9261551
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 3702191406046426907
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 18423898048047861963
+      Name: "Fantasy Axe Blade 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_blade_axe_001"
+      }
+    }
+    Assets {
+      Id: 7363477334452929865
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 177765282158027649
+      Name: "WolfSkin2"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 4640068498251427509
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.807000041
+              G: 0.635055184
+              B: 0.587496042
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 11236189850874066005
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 2858322153361950350
+      Name: "Custom Fabric Burlap Old 01_1"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 16814107545177638090
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.385416657
+              G: 0.039061062
+              B: 0.0260958895
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 4080200756085571976
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
       }
     }
     PrimaryAssetId {
@@ -25896,3 +26467,4 @@
   }
   SerializationVersion: 65
 }
+IncludesAllDependencies: true
