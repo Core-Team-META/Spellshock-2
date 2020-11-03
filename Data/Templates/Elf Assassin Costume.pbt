@@ -3866,120 +3866,12 @@
       }
     }
     Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 4080200756085571976
-      Name: "Bone Human Pelvis Half 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
-      }
-    }
-    Assets {
-      Id: 5475761223416488121
-      Name: "Fabric Burlap New 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fan_fabric_burlap_002_uv"
-      }
-    }
-    Assets {
-      Id: 11312867989431867200
-      Name: "Bone Human Jaw 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_jaw_01_ref"
-      }
-    }
-    Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 4322675021483384603
-      Name: "Fantasy Shield 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_002"
-      }
-    }
-    Assets {
-      Id: 14629909211943041809
-      Name: "Metal Gold 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_001"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 17160283160308691459
-      Name: "Text 05: ~"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F6_Text_036"
-      }
-    }
-    Assets {
-      Id: 14237220486008111868
-      Name: "Knife - Blade"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_knife_001"
-      }
-    }
-    Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 7185380311906960862
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
+        AssetId: "sm_weap_fan_grip_sword_001"
       }
     }
     Assets {
@@ -3992,12 +3884,295 @@
       }
     }
     Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
+      Id: 16312281148657110259
+      Name: "Gemstone"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 6631081666212622438
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0.260147184
+          }
+          Overrides {
+            Name: "u_tiles"
+            Float: 1.19138467
+          }
+          Overrides {
+            Name: "v_tiles"
+            Float: 1.07233322
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.234832898
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.800185382
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.120000005
+              G: 1
+              B: 0.702781498
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_direction"
+            Vector {
+              Z: -1
+            }
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              G: 0.730039418
+              B: 0.868000031
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_secondary"
+            Color {
+              R: 0.170000017
+              G: 1
+              B: 0.653708696
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_accent"
+            Color {
+              R: 0.32
+              G: 0.851390362
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "metallic"
+            Float: 0.926756859
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 6631081666212622438
+      Name: "Camouflage - Splinter"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "camo_splinter_001"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 14237220486008111868
+      Name: "Knife - Blade"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_knife_001"
+      }
+    }
+    Assets {
+      Id: 17160283160308691459
+      Name: "Text 05: ~"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F6_Text_036"
+      }
+    }
+    Assets {
+      Id: 15769318737476800682
+      Name: "Custom Leather Tufted 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 15683261416245687687
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              G: 0.748542666
+              B: 0.89
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 15683261416245687687
+      Name: "Leather Tufted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fabric_tufted_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 14629909211943041809
+      Name: "Metal Gold 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_gold_001"
+      }
+    }
+    Assets {
+      Id: 4322675021483384603
+      Name: "Fantasy Shield 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_002"
+      }
+    }
+    Assets {
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 11312867989431867200
+      Name: "Bone Human Jaw 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_jaw_01_ref"
+      }
+    }
+    Assets {
+      Id: 5475761223416488121
+      Name: "Fabric Burlap New 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fan_fabric_burlap_002_uv"
+      }
+    }
+    Assets {
+      Id: 4080200756085571976
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
+      }
+    }
+    Assets {
+      Id: 1009636138000564291
+      Name: "Core Glow"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 675563715440209277
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.770833313
+              G: 0.418311417
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "emissive_boost"
+            Float: 8.01551151
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 675563715440209277
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 6419995403362959337
+      Name: "Flat"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 5926978936608099879
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 5926978936608099879
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 15339827692159902109
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
       }
     }
     PrimaryAssetId {
@@ -4007,3 +4182,4 @@
   }
   SerializationVersion: 65
 }
+IncludesAllDependencies: true

@@ -4269,7 +4269,6 @@
           }
         }
         ParentId: 4715152013758925910
-        ChildIds: 12269325997697819343
         ChildIds: 12869254814821878433
         ChildIds: 1372242333840215754
         ChildIds: 8872252817179450877
@@ -4287,81 +4286,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 12269325997697819343
-        Name: "Object Rotator Continuous"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 218197444865903724
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11209532063898242036
-            }
-          }
-          Overrides {
-            Name: "cs:RotateVelocity"
-            Rotator {
-              Yaw: 120
-            }
-          }
-          Overrides {
-            Name: "cs:RotationMultiplier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LocalSpace"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:StartDelayRange"
-            Vector2 {
-              Y: 1
-            }
-          }
-          Overrides {
-            Name: "cs:RotationMultiplier:tooltip"
-            String: "Optional multiplier for very fast rotations."
-          }
-          Overrides {
-            Name: "cs:StartDelayRange:tooltip"
-            String: "Random delay range for the object to take action at the start of the game."
-          }
-          Overrides {
-            Name: "cs:LocalSpace:tooltip"
-            String: "Whether RotateTo is in local space"
-          }
-          Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Object to transform"
-          }
-          Overrides {
-            Name: "cs:RotateVelocity:tooltip"
-            String: "Smoothly rotates the object over time by the given angular velocity."
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2331688389429807128
-          }
         }
       }
       Objects {
@@ -4849,9 +4773,7 @@
         }
         ParentId: 218197444865903724
         ChildIds: 17798190122974628362
-        ChildIds: 1663067695180983431
         ChildIds: 17965766024961499776
-        ChildIds: 9055306442303932943
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4868,7 +4790,7 @@
         Transform {
           Location {
             X: 4.55643797
-            Y: 3.5
+            Y: 3.49990392
             Z: 20.873312
           }
           Rotation {
@@ -4877,133 +4799,9 @@
             Roll: -179.999756
           }
           Scale {
-            X: 0.335020959
-            Y: 0.219441682
-            Z: 0.122908525
-          }
-        }
-        ParentId: 17704021406538771003
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Font.Bevel:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Faces:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Sides:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:utile"
-            Float: 0.939793646
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:vtile"
-            Float: 0.771617472
-          }
-          Overrides {
-            Name: "ma:Font.Faces:utile"
-            Float: 2.68984795
-          }
-          Overrides {
-            Name: "ma:Font.Faces:vtile"
-            Float: 1.48880112
-          }
-          Overrides {
-            Name: "ma:Font.Sides:utile"
-            Float: 2.06801677
-          }
-          Overrides {
-            Name: "ma:Font.Sides:vtile"
-            Float: 2.20850015
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2811265457860980199
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1663067695180983431
-        Name: "Text 05: 5"
-        Transform {
-          Location {
-            X: 2.90397239
-            Y: -4.55651093
-            Z: 20.8733292
-          }
-          Rotation {
-            Pitch: -61.7379761
-            Yaw: -90.0003357
-            Roll: -179.999756
-          }
-          Scale {
-            X: 0.335020959
-            Y: 0.219441682
-            Z: 0.122908525
+            X: 0.491500318
+            Y: 0.321937
+            Z: 0.180315882
           }
         }
         ParentId: 17704021406538771003
@@ -5116,7 +4914,7 @@
         Transform {
           Location {
             X: -4.55653954
-            Y: -3.5
+            Y: -3.49987292
             Z: 20.8732662
           }
           Rotation {
@@ -5125,133 +4923,9 @@
             Roll: -179.999802
           }
           Scale {
-            X: 0.335020959
-            Y: 0.219441682
-            Z: 0.122908525
-          }
-        }
-        ParentId: 17704021406538771003
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Font.Bevel:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Faces:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Sides:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:utile"
-            Float: 0.939793646
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:vtile"
-            Float: 0.771617472
-          }
-          Overrides {
-            Name: "ma:Font.Faces:utile"
-            Float: 2.68984795
-          }
-          Overrides {
-            Name: "ma:Font.Faces:vtile"
-            Float: 1.48880112
-          }
-          Overrides {
-            Name: "ma:Font.Sides:utile"
-            Float: 2.06801677
-          }
-          Overrides {
-            Name: "ma:Font.Sides:vtile"
-            Float: 2.20850015
-          }
-          Overrides {
-            Name: "ma:Font.Bevel:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Faces:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2811265457860980199
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9055306442303932943
-        Name: "Text 05: 5"
-        Transform {
-          Location {
-            X: -2.90392327
-            Y: 4.55669546
-            Z: 20.873
-          }
-          Rotation {
-            Pitch: -61.7379761
-            Yaw: 89.9997482
-            Roll: -179.999756
-          }
-          Scale {
-            X: 0.335020959
-            Y: 0.219441682
-            Z: 0.122908525
+            X: 0.491500318
+            Y: 0.321937
+            Z: 0.180315882
           }
         }
         ParentId: 17704021406538771003
@@ -5818,120 +5492,12 @@
       }
     }
     Assets {
-      Id: 4322675021483384603
-      Name: "Fantasy Shield 02"
+      Id: 6510724190985268714
+      Name: "Rock 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_002"
-      }
-    }
-    Assets {
-      Id: 14629909211943041809
-      Name: "Metal Gold 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_001"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 4438523867532045845
-      Name: "Fantasy Shield 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_001"
-      }
-    }
-    Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 12309717141551746397
-      Name: "Prism - 3-Sided Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_hq_001"
-      }
-    }
-    Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 10914354925542967262
-      Name: "Fantasy Castle Pillar 02 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_pillar_002_mid"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 9675776263369201294
-      Name: "Fantasy Pommel 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_003"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 6777629735529728799
-      Name: "Fantasy Mace Head 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_head_mace_002"
-      }
-    }
-    Assets {
-      Id: 2811265457860980199
-      Name: "Text 05: J"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F6_Text_009"
+        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
       }
     }
     Assets {
@@ -5944,12 +5510,186 @@
       }
     }
     Assets {
-      Id: 6510724190985268714
-      Name: "Rock 02"
+      Id: 2811265457860980199
+      Name: "Text 05: J"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+        AssetId: "F6_Text_009"
+      }
+    }
+    Assets {
+      Id: 6777629735529728799
+      Name: "Fantasy Mace Head 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_head_mace_002"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 9675776263369201294
+      Name: "Fantasy Pommel 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_003"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 10914354925542967262
+      Name: "Fantasy Castle Pillar 02 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_pillar_002_mid"
+      }
+    }
+    Assets {
+      Id: 15339827692159902109
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 4727064726142651218
+      Name: "Custom Edge Line Wavy"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 8442400693995056375
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 1
+              G: 0.456953645
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "noise color"
+            Color {
+              R: 0.690000057
+              G: 0.0274172071
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "vertical fade"
+            Float: 4
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 8442400693995056375
+      Name: "Edge Line Wavy"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_add_edgeline"
+      }
+    }
+    Assets {
+      Id: 12309717141551746397
+      Name: "Prism - 3-Sided Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_hq_001"
+      }
+    }
+    Assets {
+      Id: 17567893295837774896
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 4438523867532045845
+      Name: "Fantasy Shield 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_001"
+      }
+    }
+    Assets {
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 15769318737476800682
+      Name: "Custom Leather Tufted 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 15683261416245687687
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              G: 0.748542666
+              B: 0.89
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 15683261416245687687
+      Name: "Leather Tufted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fabric_tufted_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 14629909211943041809
+      Name: "Metal Gold 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_gold_001"
+      }
+    }
+    Assets {
+      Id: 4322675021483384603
+      Name: "Fantasy Shield 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_002"
       }
     }
     PrimaryAssetId {
@@ -5959,3 +5699,4 @@
   }
   SerializationVersion: 65
 }
+IncludesAllDependencies: true
