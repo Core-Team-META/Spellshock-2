@@ -30,6 +30,7 @@ Every time the state changes, the server updates the variables and the client's 
 local ABCP = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
+local CAPTURE_TRIGGER = script:GetCustomProperty("CaptureTrigger"):WaitForObject()
 local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
@@ -69,8 +70,10 @@ end
 -- Variables
 -- This can be derived from other values, so doesn't need to be replicated. However, we care when it changes to
 -- broadcast events and change colors.
-local owningTeam = 0
 
+local capturePlayer = nil
+local damageEvent = nil
+local bindingEvents = {}
 local lastTeamScoreAwardTime = time()
 
 -- nil Reset()
@@ -97,24 +100,16 @@ function GetCaptureSpeed()
     if not script:GetCustomProperty("IsEnabled") then
         return 0.0
     end
-
-    local friendliesPresent = script:GetCustomProperty("FriendliesPresent")
-    local enemiesPresent = script:GetCustomProperty("EnemiesPresent")
-
-    -- Contested
-    if enemiesPresent > 0 and friendliesPresent > 0 then
-        return 0.0
-    end
-
-    -- Empty
-    if enemiesPresent == 0 and friendliesPresent == 0 then
-        return -DECAY_SPEED
+   
+    if not capturePlayer then
+         return -DECAY_SPEED    
     end
 
     local multiplier = 1
+    local friendliesPresent = script:GetCustomProperty("FriendliesPresent")
+    local enemiesPresent = script:GetCustomProperty("EnemiesPresent")
     
-    if enemiesPresent > 0 then
-        -- Only enemies, we are moving backwards
+    if capturePlayer.team ~= script:GetCustomProperty("ProgressedTeam") then
         multiplier = -1
 
         if MULTIPLY_WITH_PLAYERS then
@@ -125,7 +120,13 @@ function GetCaptureSpeed()
             multiplier = friendliesPresent
         end
     end
-
+    
+    local newCaptureSpeed = multiplier / CAPTURE_TIME
+    
+    if newCaptureSpeed ~= script:GetCustomProperty("LastCaptureSpeed") then
+    	script:SetNetworkedCustomProperty("LastCaptureSpeed", newCaptureSpeed)
+    end
+    
     return multiplier / CAPTURE_TIME
 end
 
@@ -153,7 +154,7 @@ function GetState()
     result.shortName = SHORT_NAME
     result.worldPosition = COMPONENT_ROOT:GetWorldPosition()
     result.progressedTeam = script:GetCustomProperty("ProgressedTeam")
-    result.owningTeam = owningTeam
+    result.owningTeam = script:GetCustomProperty("OwningTeam")
     result.captureProgress = GetCaptureProgress()
     result.captureThreshold = CAPTURE_THRESHOLD
     result.friendliesPresent = script:GetCustomProperty("FriendliesPresent")
@@ -183,24 +184,10 @@ end
 -- int WhichTeamShouldProgressPoint()
 -- Tells you which team should start progressing the point at 0.0 progress. Returns 0 if contested or no one is there.
 function WhichTeamShouldProgressPoint()
-    local teams = {}
-
-    for _, player in pairs(GetRelevantPlayersOnPoint()) do
-        teams[player.team] = true       -- Find which teams have players present
-    end
-
     local team = 0
-
-    for i = 1, 4 do
-        if teams[i] then
-            if team ~= 0 then
-                return 0                -- Multiple teams are present
-            else
-                team = i
-            end
-        end
-    end
-
+	if capturePlayer and Object.IsValid(capturePlayer) then
+		team = capturePlayer.team
+	end
     return team
 end
 
@@ -241,7 +228,8 @@ end
 -- changes)
 function UpdateReplicatedProgress()
     local newCaptureProgress = GetCaptureProgress()
-
+	print("Last Captured Progress: "..tostring(newCaptureProgress))
+	
     script:SetNetworkedCustomProperty("FriendliesPresent", GetFriendliesPresent())
     script:SetNetworkedCustomProperty("EnemiesPresent", GetEnemiesPresent())
     script:SetNetworkedCustomProperty("LastCaptureProgress", newCaptureProgress)
@@ -276,12 +264,56 @@ function OnRoundEnd()
     SetEnabled(false)
 end
 
+function UpdateCapturePlayer()
+	-- check if the capturePlayer has left or is dead or has left the zone trigger
+	if not Object.IsValid(capturePlayer) or capturePlayer.isDead or not IsPlayerPresent(capturePlayer) then
+		ResetCapturePlayer()
+	else
+		print("Capture Player: "..capturePlayer.name)
+	end
+end
+
+function ResetCapturePlayer()
+	UpdateReplicatedProgress()
+	if capturePlayer then
+		print("RESETTING CAPTURE PLAYER")
+		capturePlayer = nil		
+	end
+	if damageEvent then
+		damageEvent:Disconnect()
+		damageEvent = nil
+	end
+end
+
+function OnCapturePlayerDamaged(player, damage)
+	ResetCapturePlayer()	
+end
+
+function OnInteractedEvent(thisTrigger, player)
+	-- update capturePlayer
+	if capturePlayer == nil or not IsPlayerPresent(capturePlayer) then
+		if damageEvent then
+			damageEvent:Disconnect()
+			damageEvent = nil
+		end
+		capturePlayer = player
+		damageEvent = capturePlayer.damagedEvent:Connect( OnCapturePlayerDamaged )
+		capturePlayer:ResetVelocity()
+	elseif player == capturePlayer then
+		ResetCapturePlayer()
+	end
+end
+
+CAPTURE_TRIGGER.interactedEvent:Connect( OnInteractedEvent )
+
 -- nil Tick(float)
 -- Handles owner changing, player count changing, and 0.0 progress state.
 function Tick(deltaTime)
+	UpdateCapturePlayer()
     -- Handle changing owner at 0.0 progress
     if GetCaptureProgress() == 0.0 then
         local newProgressTeam = WhichTeamShouldProgressPoint()
+        print("newProgressTeam: "..newProgressTeam)
         if newProgressTeam ~= script:GetCustomProperty("ProgressedTeam") then
             -- This depends on the old team so must be first
             UpdateReplicatedProgress()
@@ -290,9 +322,12 @@ function Tick(deltaTime)
         end
     end
 
-	--print("== Capture progress: "..tostring(GetCaptureProgress()))
+	print("~ Capture progress: "..tostring(GetCaptureProgress()))
+	print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
+
     -- Check for owner changed
     local newOwner = 0
+	local owningTeam = script:GetCustomProperty("OwningTeam")
 
     if GetCaptureProgress() >= CAPTURE_THRESHOLD then
         newOwner = script:GetCustomProperty("ProgressedTeam")
@@ -301,7 +336,7 @@ function Tick(deltaTime)
     if newOwner ~= owningTeam then
         Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
         owningTeam = newOwner
-
+		script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
         -- Disable if DisableOnCapture
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
@@ -341,3 +376,45 @@ functionTable.Reset = Reset
 functionTable.SetEnabled = SetEnabled
 
 ABCP.RegisterCapturePoint(COMPONENT_ROOT.id, functionTable)
+
+
+--[[function OnBindingPressed (player, binding)
+
+end
+
+function OnBindingReleased (player, binding)
+
+end
+
+function OnBeginOverlap(thisTrigger, other)
+	if other:IsA("Player") and not other.isDead then
+		bindingEvents[other] = {}
+		bindingEvents[other].pressedEvent = other.bindingPressedEvent:Connect( OnBindingPressed )
+		bindingEvents[other].releasedEvent = other.bindingReleasedEvent:Connect( OnBindingReleased )
+	end
+end
+
+function OnEndOverlap(thisTrigger, other)
+	if other:IsA("Player") then
+		if bindingEvents[other].pressedEvent then
+			bindingEvents[other].pressedEvent:Disconnect()
+			bindingEvents[other].pressedEvent = nil
+		end
+		
+		if bindingEvents[other].releasedEvent then
+			bindingEvents[other].releasedEvent:Disconnect()
+			bindingEvents[other].releasedEvent = nil
+		end
+		
+		bindingEvents[other] = {}
+		
+		if other == capturePlayer then
+			capturePlayer = nil
+		end	
+	end
+end
+
+
+--ZONE_TRIGGER.beginOverlapEvent:Connect( OnBeginOverlap )
+--ZONE_TRIGGER.endOverlapEvent:Connect( OnEndOverlap )
+]]

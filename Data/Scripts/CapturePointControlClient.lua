@@ -100,7 +100,7 @@ end
 function GetCaptureProgress()
     if not Object.IsValid(SERVER_SCRIPT) then return end
     local timeElapsed = math.max(0.0, time() - SERVER_SCRIPT:GetCustomProperty("LastUpdateTime"))
-    local captureProgress = SERVER_SCRIPT:GetCustomProperty("LastCaptureProgress") + timeElapsed * GetCaptureSpeed()
+    local captureProgress = SERVER_SCRIPT:GetCustomProperty("LastCaptureProgress") + timeElapsed * SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed")
     return CoreMath.Clamp(captureProgress, 0.0, 1.0)
 end
 
@@ -120,7 +120,7 @@ function GetState()
     result.shortName = SHORT_NAME
     result.worldPosition = COMPONENT_ROOT:GetWorldPosition()
     result.progressedTeam = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
-    result.owningTeam = owningTeam
+    result.owningTeam = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
     result.captureProgress = GetCaptureProgress()
     result.captureThreshold = CAPTURE_THRESHOLD
     result.friendliesPresent = SERVER_SCRIPT:GetCustomProperty("FriendliesPresent")
@@ -185,22 +185,22 @@ function CategorizeVisualGeometry()
     end
 end
 
+function OnNetworkedPropertyChanged(thisObject, name)
+	if name == "OwningTeam" then
+		newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
+		if newOwner ~= owningTeam then
+	        Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
+	        owningTeam = newOwner
+	        SetGeometryTeam(owningTeam)
+	    end
+	end
+end
+
+SERVER_SCRIPT.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+
 -- nil Tick(float)
 -- Handles firing events and changing the visual state
 function Tick(deltaTime)
-    -- Check for owner changed
-    local newOwner = 0
-
-    if GetCaptureProgress() >= CAPTURE_THRESHOLD then
-        newOwner = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
-    end
-
-    if newOwner ~= owningTeam then
-        Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
-        owningTeam = newOwner
-        SetGeometryTeam(owningTeam)
-    end
-
     -- Check for enabled state changed
     if CHANGE_COLOR_WHEN_DISABLED then
         local isEnabled = SERVER_SCRIPT:GetCustomProperty("IsEnabled")

@@ -13101,9 +13101,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: 10126.4219
-      Y: -12664.8389
-      Z: 5790.78711
+      X: -20165.2539
+      Y: -15719.8398
+      Z: 3290
     }
     Rotation {
     }
@@ -13118,7 +13118,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

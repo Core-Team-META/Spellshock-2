@@ -7,7 +7,7 @@
       RootId: 18304474188253320742
       Objects {
         Id: 18304474188253320742
-        Name: "Helper_Effect_Telegraph_Volley"
+        Name: "RainOfArrows_FX"
         Transform {
           Scale {
             X: 1
@@ -2326,6 +2326,7 @@
         Name: "Projectile Fire Arrow 01 SFX"
         Transform {
           Location {
+            Z: 80
           }
           Rotation {
           }
@@ -2347,9 +2348,9 @@
             Id: 2721088161473172859
           }
           AutoPlay: true
-          Volume: 0.778796
-          Falloff: 1300
-          Radius: 3050
+          Volume: 1.5
+          Falloff: 2500
+          Radius: 1000
           IsAttenuationEnabled: true
         }
       }

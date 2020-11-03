@@ -1089,10 +1089,11 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 6896745742610861950
+  ChildIds: 13394692366127408497
   ChildIds: 9666154360724432599
-  ChildIds: 1117841902434570665
   ChildIds: 15742096495686500615
+  ChildIds: 7549488398130673151
+  ChildIds: 6273441793160561480
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -1215,6 +1216,96 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
+  }
+}
+Objects {
+  Id: 6273441793160561480
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+      Y: 0.0009765625
+      Z: -353.031494
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 139.080627
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 11.9000053
+      Y: 11.9000053
+      Z: 11.9000053
+    }
+  }
+  ParentId: 4559935034785672696
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 7549488398130673151
+  Name: "CaptureTrigger"
+  Transform {
+    Location {
+      Y: 0.0009765625
+      Z: -153.031494
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 139.080627
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 3.5
+      Y: 3.5
+      Z: 7.39999723
+    }
+  }
+  ParentId: 4559935034785672696
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "Capture"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
   }
 }
 Objects {
@@ -1357,82 +1448,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 1117841902434570665
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      Z: -194.049805
-    }
-    Rotation {
-    }
-    Scale {
-      X: 56.6868172
-      Y: 56.6868172
-      Z: 34.1170883
-    }
-  }
-  ParentId: 4559935034785672696
-  ChildIds: 17842198777960786693
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 17842198777960786693
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1117841902434570665
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
     }
   }
 }
@@ -1851,7 +1866,7 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 1117841902434570665
+        SelfId: 6273441793160561480
       }
     }
     Overrides {
@@ -1863,7 +1878,7 @@ Objects {
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 6896745742610861950
+        SelfId: 13394692366127408497
       }
     }
   }
@@ -1886,13 +1901,13 @@ Objects {
   }
 }
 Objects {
-  Id: 6896745742610861950
-  Name: "CapturePointControlServer"
+  Id: 13394692366127408497
+  Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      Z: -0.000122070313
     }
     Rotation {
+      Yaw: 139.11441
     }
     Scale {
       X: 1
@@ -1917,11 +1932,27 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 1117841902434570665
+        SelfId: 6273441793160561480
+      }
+    }
+    Overrides {
+      Name: "cs:CaptureTrigger"
+      ObjectReference {
+        SelfId: 7549488398130673151
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 15742096495686500615
       }
     }
     Overrides {
       Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:OwningTeam"
       Int: 0
     }
     Overrides {
@@ -1941,14 +1972,12 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
+      Name: "cs:LastCaptureSpeed"
+      Float: 0
     }
     Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 15742096495686500615
-      }
+      Name: "cs:IsEnabled"
+      Bool: true
     }
     Overrides {
       Name: "cs:FriendliesPresent:isrep"
@@ -1974,6 +2003,14 @@ Objects {
       Name: "cs:IsEnabled:isrep"
       Bool: true
     }
+    Overrides {
+      Name: "cs:OwningTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
   }
   WantsNetworking: true
   Collidable_v2 {
@@ -1984,7 +2021,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8171380333325991621
+      Id: 9327174051263869639
     }
   }
   InstanceHistory {
@@ -2013,10 +2050,11 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 5975281328721219987
+  ChildIds: 14137148640322767699
   ChildIds: 6431342082131964287
-  ChildIds: 15775325265298528751
   ChildIds: 5510827948355619499
+  ChildIds: 9242516721126693964
+  ChildIds: 11317896455743199327
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -2139,6 +2177,98 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
+  }
+}
+Objects {
+  Id: 11317896455743199327
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+      X: 0.00042309906
+      Y: -0.000243733055
+      Z: -1051.16504
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 19.1358566
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 11.9000053
+      Y: 11.9000053
+      Z: 11.9000053
+    }
+  }
+  ParentId: 16313267587009276285
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 9242516721126693964
+  Name: "CaptureTrigger"
+  Transform {
+    Location {
+      X: 0.00042309906
+      Y: -0.000243733055
+      Z: -876.165039
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 19.1358528
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 3.5
+      Y: 3.5
+      Z: 7.39999723
+    }
+  }
+  ParentId: 16313267587009276285
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "Capture"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
   }
 }
 Objects {
@@ -2282,87 +2412,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 15775325265298528751
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      X: -11.3549013
-      Y: -1.2036438
-      Z: -981.580566
-    }
-    Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
-    }
-    Scale {
-      X: 34.7024574
-      Y: 34.7024574
-      Z: 34.7024574
-    }
-  }
-  ParentId: 16313267587009276285
-  ChildIds: 12060964096389232765
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 12060964096389232765
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15775325265298528751
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
     }
   }
 }
@@ -2726,7 +2775,7 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 15775325265298528751
+        SelfId: 11317896455743199327
       }
     }
     Overrides {
@@ -2738,7 +2787,7 @@ Objects {
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 5975281328721219987
+        SelfId: 14137148640322767699
       }
     }
   }
@@ -2761,13 +2810,13 @@ Objects {
   }
 }
 Objects {
-  Id: 5975281328721219987
-  Name: "CapturePointControlServer"
+  Id: 14137148640322767699
+  Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      Z: -0.000122070313
     }
     Rotation {
+      Yaw: 19.1696262
     }
     Scale {
       X: 1
@@ -2792,11 +2841,27 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 15775325265298528751
+        SelfId: 11317896455743199327
+      }
+    }
+    Overrides {
+      Name: "cs:CaptureTrigger"
+      ObjectReference {
+        SelfId: 9242516721126693964
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 5510827948355619499
       }
     }
     Overrides {
       Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:OwningTeam"
       Int: 0
     }
     Overrides {
@@ -2816,14 +2881,12 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
+      Name: "cs:LastCaptureSpeed"
+      Float: 0
     }
     Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 5510827948355619499
-      }
+      Name: "cs:IsEnabled"
+      Bool: true
     }
     Overrides {
       Name: "cs:FriendliesPresent:isrep"
@@ -2849,6 +2912,14 @@ Objects {
       Name: "cs:IsEnabled:isrep"
       Bool: true
     }
+    Overrides {
+      Name: "cs:OwningTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
   }
   WantsNetworking: true
   Collidable_v2 {
@@ -2859,7 +2930,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8171380333325991621
+      Id: 9327174051263869639
     }
   }
   InstanceHistory {
@@ -2887,11 +2958,12 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 2018684502075439693
+  ChildIds: 12990434528164511129
   ChildIds: 1519700623663251019
-  ChildIds: 4110916740205972427
   ChildIds: 5572050519626383569
   ChildIds: 5615551507275436675
+  ChildIds: 2026418025268728063
+  ChildIds: 17464991356364958773
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -3014,6 +3086,94 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
+  }
+}
+Objects {
+  Id: 17464991356364958773
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 139.080627
+      Roll: -0.0062255403
+    }
+    Scale {
+      X: 11.9000053
+      Y: 11.9000053
+      Z: 11.9000053
+    }
+  }
+  ParentId: 17910728817571265557
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 2026418025268728063
+  Name: "CaptureTrigger"
+  Transform {
+    Location {
+      Y: -0.00048828125
+      Z: 215.99585
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 139.080627
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 3.5
+      Y: 3.5
+      Z: 7.39999723
+    }
+  }
+  ParentId: 17910728817571265557
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "Capture"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
   }
 }
 Objects {
@@ -3197,87 +3357,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 4110916740205972427
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      X: -0.903808594
-      Y: -1.17480469
-      Z: 36.9123535
-    }
-    Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
-    }
-    Scale {
-      X: 35.0679092
-      Y: 35.0679092
-      Z: 35.0679092
-    }
-  }
-  ParentId: 17910728817571265557
-  ChildIds: 5712673075091161703
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 5712673075091161703
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4110916740205972427
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
     }
   }
 }
@@ -3670,7 +3749,7 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 4110916740205972427
+        SelfId: 17464991356364958773
       }
     }
     Overrides {
@@ -3682,7 +3761,7 @@ Objects {
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 2018684502075439693
+        SelfId: 12990434528164511129
       }
     }
   }
@@ -3705,13 +3784,13 @@ Objects {
   }
 }
 Objects {
-  Id: 2018684502075439693
-  Name: "CapturePointControlServer"
+  Id: 12990434528164511129
+  Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      Z: -0.000122070313
     }
     Rotation {
+      Yaw: 139.11441
     }
     Scale {
       X: 1
@@ -3736,11 +3815,27 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 4110916740205972427
+        SelfId: 17464991356364958773
+      }
+    }
+    Overrides {
+      Name: "cs:CaptureTrigger"
+      ObjectReference {
+        SelfId: 2026418025268728063
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 5615551507275436675
       }
     }
     Overrides {
       Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:OwningTeam"
       Int: 0
     }
     Overrides {
@@ -3760,14 +3855,12 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
+      Name: "cs:LastCaptureSpeed"
+      Float: 0
     }
     Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 5615551507275436675
-      }
+      Name: "cs:IsEnabled"
+      Bool: true
     }
     Overrides {
       Name: "cs:FriendliesPresent:isrep"
@@ -3793,6 +3886,14 @@ Objects {
       Name: "cs:IsEnabled:isrep"
       Bool: true
     }
+    Overrides {
+      Name: "cs:OwningTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
   }
   WantsNetworking: true
   Collidable_v2 {
@@ -3803,7 +3904,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8171380333325991621
+      Id: 9327174051263869639
     }
   }
   InstanceHistory {
@@ -3832,10 +3933,11 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 13776159642541525489
+  ChildIds: 4898803792315971395
   ChildIds: 754991252659707758
-  ChildIds: 910755362034130703
   ChildIds: 18269206194719203306
+  ChildIds: 15826219985647527030
+  ChildIds: 8013590791146080375
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -3958,6 +4060,93 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
+  }
+}
+Objects {
+  Id: 8013590791146080375
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 51.7297516
+      Roll: -0.0062255403
+    }
+    Scale {
+      X: 11.9000053
+      Y: 11.9000053
+      Z: 11.9000053
+    }
+  }
+  ParentId: 16321515820500395030
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 15826219985647527030
+  Name: "CaptureTrigger"
+  Transform {
+    Location {
+      Z: 106.492188
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: 51.7297516
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 3.5
+      Y: 3.5
+      Z: 7.39999723
+    }
+  }
+  ParentId: 16321515820500395030
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "Capture"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
   }
 }
 Objects {
@@ -4101,87 +4290,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 910755362034130703
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      X: -11.3549538
-      Y: -1.20334816
-      Z: -50
-    }
-    Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
-    }
-    Scale {
-      X: 34.4459038
-      Y: 34.4459038
-      Z: 34.4459038
-    }
-  }
-  ParentId: 16321515820500395030
-  ChildIds: 7466301329744946637
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 7466301329744946637
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 910755362034130703
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
     }
   }
 }
@@ -4544,7 +4652,7 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 910755362034130703
+        SelfId: 8013590791146080375
       }
     }
     Overrides {
@@ -4556,7 +4664,7 @@ Objects {
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 13776159642541525489
+        SelfId: 4898803792315971395
       }
     }
   }
@@ -4579,13 +4687,16 @@ Objects {
   }
 }
 Objects {
-  Id: 13776159642541525489
-  Name: "CapturePointControlServer"
+  Id: 4898803792315971395
+  Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      Z: -0.000122070313
+      X: -4009.07617
+      Y: 26346.2793
+      Z: -2823.50781
     }
     Rotation {
+      Yaw: 51.7635307
     }
     Scale {
       X: 1
@@ -4610,11 +4721,27 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 910755362034130703
+        SelfId: 8013590791146080375
+      }
+    }
+    Overrides {
+      Name: "cs:CaptureTrigger"
+      ObjectReference {
+        SelfId: 15826219985647527030
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 18269206194719203306
       }
     }
     Overrides {
       Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:OwningTeam"
       Int: 0
     }
     Overrides {
@@ -4634,14 +4761,12 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
+      Name: "cs:LastCaptureSpeed"
+      Float: 0
     }
     Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 18269206194719203306
-      }
+      Name: "cs:IsEnabled"
+      Bool: true
     }
     Overrides {
       Name: "cs:FriendliesPresent:isrep"
@@ -4667,6 +4792,14 @@ Objects {
       Name: "cs:IsEnabled:isrep"
       Bool: true
     }
+    Overrides {
+      Name: "cs:OwningTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
   }
   WantsNetworking: true
   Collidable_v2 {
@@ -4677,7 +4810,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8171380333325991621
+      Id: 9327174051263869639
     }
   }
   InstanceHistory {
@@ -4706,10 +4839,11 @@ Objects {
     }
   }
   ParentId: 11072925829585333935
-  ChildIds: 11189476031660639139
+  ChildIds: 5953359566833506459
   ChildIds: 4208566297764116835
-  ChildIds: 16314171741228489821
   ChildIds: 14713109632114477840
+  ChildIds: 10364658126334003004
+  ChildIds: 831199929353696706
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -4832,6 +4966,93 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
+  }
+}
+Objects {
+  Id: 831199929353696706
+  Name: "ZoneTrigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: -0.0337524414
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 11.9000053
+      Y: 11.9000053
+      Z: 11.9000053
+    }
+  }
+  ParentId: 13392592636105101133
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 10364658126334003004
+  Name: "CaptureTrigger"
+  Transform {
+    Location {
+      Z: 237.091064
+    }
+    Rotation {
+      Pitch: 0.719020784
+      Yaw: -0.033782959
+      Roll: -0.00622558594
+    }
+    Scale {
+      X: 3.5
+      Y: 3.5
+      Z: 7.39999723
+    }
+  }
+  ParentId: 13392592636105101133
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "Capture"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 18046769517518908290
+    SubobjectId: 8816479717398223779
+    InstanceId: 18445319250524073173
+    TemplateId: 4321580044226111979
   }
 }
 Objects {
@@ -4975,87 +5196,6 @@ Objects {
     StaticMesh {
       Physics {
       }
-    }
-  }
-}
-Objects {
-  Id: 16314171741228489821
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      X: -11.3539982
-      Y: -1.20275688
-      Z: 178.130371
-    }
-    Rotation {
-      Pitch: 0.719020784
-      Yaw: -0.0337219238
-      Roll: -0.00622558594
-    }
-    Scale {
-      X: 34.5380363
-      Y: 34.5380363
-      Z: 34.5380363
-    }
-  }
-  ParentId: 13392592636105101133
-  ChildIds: 6498596544747344427
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-  InstanceHistory {
-    SelfId: 18046769517518908290
-    SubobjectId: 8816479717398223779
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 6498596544747344427
-  Name: "Mounted Volume"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16314171741228489821
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-    MountedVolume {
     }
   }
 }
@@ -5481,7 +5621,7 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 16314171741228489821
+        SelfId: 831199929353696706
       }
     }
     Overrides {
@@ -5493,7 +5633,7 @@ Objects {
     Overrides {
       Name: "cs:ServerScript"
       ObjectReference {
-        SelfId: 11189476031660639139
+        SelfId: 5953359566833506459
       }
     }
   }
@@ -5516,11 +5656,13 @@ Objects {
   }
 }
 Objects {
-  Id: 11189476031660639139
-  Name: "CapturePointControlServer"
+  Id: 5953359566833506459
+  Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      Z: -0.000122070313
+      X: 4411.2251
+      Y: 2288.63794
+      Z: -102.908936
     }
     Rotation {
     }
@@ -5547,11 +5689,27 @@ Objects {
     Overrides {
       Name: "cs:ZoneTrigger"
       ObjectReference {
-        SelfId: 16314171741228489821
+        SelfId: 831199929353696706
+      }
+    }
+    Overrides {
+      Name: "cs:CaptureTrigger"
+      ObjectReference {
+        SelfId: 10364658126334003004
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPoints"
+      ObjectReference {
+        SelfId: 14713109632114477840
       }
     }
     Overrides {
       Name: "cs:ProgressedTeam"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:OwningTeam"
       Int: 0
     }
     Overrides {
@@ -5571,14 +5729,12 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "cs:IsEnabled"
-      Bool: true
+      Name: "cs:LastCaptureSpeed"
+      Float: 0
     }
     Overrides {
-      Name: "cs:SpawnPoints"
-      ObjectReference {
-        SelfId: 14713109632114477840
-      }
+      Name: "cs:IsEnabled"
+      Bool: true
     }
     Overrides {
       Name: "cs:FriendliesPresent:isrep"
@@ -5604,6 +5760,14 @@ Objects {
       Name: "cs:IsEnabled:isrep"
       Bool: true
     }
+    Overrides {
+      Name: "cs:OwningTeam:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
   }
   WantsNetworking: true
   Collidable_v2 {
@@ -5614,7 +5778,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8171380333325991621
+      Id: 9327174051263869639
     }
   }
   InstanceHistory {
