@@ -156,15 +156,16 @@ function SetGeometryTeam(team)
         	object:SetColor(_G.TeamColors[team])
         else
         	object:SetColor(Color.WHITE)
-        end
-        
-        local FlagBeamsList = FLAG_BEAMS:GetChildren()
-        for _, beam in ipairs(FlagBeamsList) do
-        	beam.visibility = Visibility.FORCE_OFF
-        end
-        
-        FlagBeamsList[team+1].visibility = Visibility.INHERIT
+        end        
     end
+    
+    local FlagBeamsList = FLAG_BEAMS:GetChildren()
+    for _, beam in ipairs(FlagBeamsList) do
+    	beam.visibility = Visibility.FORCE_OFF
+    end
+    
+    FlagBeamsList[team+1].visibility = Visibility.INHERIT
+    print(">> "..NAME.." : "..team)
 end
 
 -- nil SetGeometryEnabledColor(bool)
@@ -197,11 +198,11 @@ function CategorizeVisualGeometry()
     GetAncestors(VISUAL_GEOMETRY, objects)
 
     for _, object in pairs(objects) do
-        if object.isTeamColorUsed then
+        --if object.isTeamColorUsed then
             table.insert(teamColoredGeometry, object)
-        elseif object.ResetColor then               -- We only support changing the color of things we can reset
-            table.insert(otherGeometry, object)
-        end
+        --elseif object.ResetColor then               -- We only support changing the color of things we can reset
+            --table.insert(otherGeometry, object)
+       -- end
     end
 end
 
