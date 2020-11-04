@@ -170,15 +170,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17237692812658431496
-  Name: "Fantasy Staff Head 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_head_staff_001"
-  }
-}
-Assets {
   Id: 17182007171222709614
   Name: "P"
   PlatformAssetType: 1
@@ -626,15 +617,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_001"
-  }
-}
-Assets {
-  Id: 14643090495247569259
-  Name: "Dirt 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "dirt_001"
   }
 }
 Assets {

@@ -216,8 +216,8 @@ Objects {
       DistanceBetweenInstances: 2500
       SpawnDistance: 28800
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -267,8 +267,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -317,8 +317,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 10000
-        Max: 25600
+        Min: 8000
+        Max: 10000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -367,8 +367,8 @@ Objects {
       MaterialChannel: 2
       SpawnDistance: 28800
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -417,8 +417,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 8000
+        Max: 10000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -467,8 +467,8 @@ Objects {
       DistanceBetweenInstances: 1000
       SpawnDistance: 24000
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -517,8 +517,8 @@ Objects {
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -566,8 +566,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -616,8 +616,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -666,8 +666,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -717,8 +717,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -768,8 +768,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 12800
-        Max: 25600
+        Min: 5000
+        Max: 5000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -814,17 +814,17 @@ Objects {
       Asset {
         Id: 15128280182623405640
       }
-      DistanceBetweenInstances: 600
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 20000
+        Min: 8000
+        Max: 10000
       }
       CastShadow: true
       ReceivesDecals: true
       GroundSlopeAngle {
-        Max: 90
+        Max: 45
       }
       Scaling {
         Scaling: LockXY
@@ -870,8 +870,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 17000
+        Min: 5000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -918,12 +918,12 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 17000
+        Min: 5000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
-        Max: 90
+        Max: 45
       }
       Scaling {
         ScaleX {
@@ -962,12 +962,12 @@ Objects {
       Asset {
         Id: 4044214825842439722
       }
-      DistanceBetweenInstances: 150
+      DistanceBetweenInstances: 100
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 10000
-        Max: 17000
+        Min: 5000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1014,8 +1014,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 10000
-        Max: 15000
+        Min: 5000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1065,7 +1065,7 @@ Objects {
       SpawnDistance: 38400
       CullDistance {
         Min: 200000
-        Max: 300000
+        Max: 200000
       }
       ReceivesDecals: true
       GroundSlopeAngle {

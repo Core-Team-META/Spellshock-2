@@ -466,8 +466,8 @@
             Id: 11892494746123028781
           }
           Teams {
-            UseTeamColor: true
             IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
           StaticMesh {
