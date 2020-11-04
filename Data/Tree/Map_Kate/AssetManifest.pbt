@@ -170,15 +170,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17305162923160277584
-  Name: "Craftsman Stairs 01 150cm"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_stairs_001_150cm"
-  }
-}
-Assets {
   Id: 17237692812658431496
   Name: "Fantasy Staff Head 01"
   PlatformAssetType: 1
@@ -1706,6 +1697,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_guard_sword_002"
+  }
+}
+Assets {
+  Id: 9530988119924675948
+  Name: "Cube - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_002"
   }
 }
 Assets {

@@ -15,7 +15,7 @@
             Z: 1.37566304
           }
         }
-        ParentId: 1551213308783341965
+        ParentId: 3728874800817007101
         ChildIds: 14959081437812059297
         ChildIds: 17476655053811340237
         ChildIds: 5328438734998330084
@@ -259,7 +259,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -299,7 +299,7 @@
       }
       Objects {
         Id: 14428480299841392896
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -345,7 +345,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -357,7 +357,7 @@
       }
       Objects {
         Id: 16518445294252354991
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -402,7 +402,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -414,7 +414,7 @@
       }
       Objects {
         Id: 8691956194016781886
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -461,7 +461,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -473,7 +473,7 @@
       }
       Objects {
         Id: 3807242915003626981
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -520,7 +520,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -532,7 +532,7 @@
       }
       Objects {
         Id: 14831724297013919076
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -580,7 +580,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -592,7 +592,7 @@
       }
       Objects {
         Id: 1372188244496322683
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -640,7 +640,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -652,7 +652,7 @@
       }
       Objects {
         Id: 5887430811596543511
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -700,7 +700,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -712,7 +712,7 @@
       }
       Objects {
         Id: 5061589117456833660
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -760,7 +760,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -960,7 +960,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -1000,7 +1000,7 @@
       }
       Objects {
         Id: 4479366197167717317
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1046,7 +1046,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1058,7 +1058,7 @@
       }
       Objects {
         Id: 7091060883836833438
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1103,7 +1103,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1115,7 +1115,7 @@
       }
       Objects {
         Id: 11340966239282921693
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -1162,7 +1162,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1174,7 +1174,7 @@
       }
       Objects {
         Id: 16627766434524489121
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -1221,7 +1221,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1233,7 +1233,7 @@
       }
       Objects {
         Id: 4109823260642639624
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -1281,7 +1281,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1293,7 +1293,7 @@
       }
       Objects {
         Id: 9232210635345791870
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -1341,7 +1341,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1353,7 +1353,7 @@
       }
       Objects {
         Id: 4617974665599581693
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -1401,7 +1401,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1413,7 +1413,7 @@
       }
       Objects {
         Id: 559934133878724549
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -1461,7 +1461,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1661,7 +1661,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -1701,7 +1701,7 @@
       }
       Objects {
         Id: 17052179751822100383
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1747,7 +1747,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1759,7 +1759,7 @@
       }
       Objects {
         Id: 8447525558797325413
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1804,7 +1804,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1816,7 +1816,7 @@
       }
       Objects {
         Id: 12420171301829984897
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -1863,7 +1863,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1875,7 +1875,7 @@
       }
       Objects {
         Id: 7431909120714340141
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -1922,7 +1922,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1934,7 +1934,7 @@
       }
       Objects {
         Id: 5055071524022765534
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -1982,7 +1982,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1994,7 +1994,7 @@
       }
       Objects {
         Id: 4283986777351224607
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -2042,7 +2042,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2054,7 +2054,7 @@
       }
       Objects {
         Id: 10254059980420073335
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -2102,7 +2102,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2114,7 +2114,7 @@
       }
       Objects {
         Id: 7578345288568816563
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -2162,7 +2162,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2362,7 +2362,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -2402,7 +2402,7 @@
       }
       Objects {
         Id: 1868406042816263757
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -2448,7 +2448,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2460,7 +2460,7 @@
       }
       Objects {
         Id: 12880974115178067883
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -2505,7 +2505,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2517,7 +2517,7 @@
       }
       Objects {
         Id: 7034048111790633005
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -2564,7 +2564,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2576,7 +2576,7 @@
       }
       Objects {
         Id: 2033282626767579776
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -2623,7 +2623,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2635,7 +2635,7 @@
       }
       Objects {
         Id: 8500884703065988540
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -2683,7 +2683,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2695,7 +2695,7 @@
       }
       Objects {
         Id: 12238478100505135727
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -2743,7 +2743,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2755,7 +2755,7 @@
       }
       Objects {
         Id: 14864046447401567618
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -2803,7 +2803,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2815,7 +2815,7 @@
       }
       Objects {
         Id: 13805202738578603924
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -2863,7 +2863,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -3345,17 +3345,11 @@
         ChildIds: 14832740568359622477
         ChildIds: 7762047373641057002
         ChildIds: 10964900541361203976
-        ChildIds: 6404527088856393544
-        ChildIds: 14136318480151742759
-        ChildIds: 14199378632484768082
         ChildIds: 7133693198867719526
         ChildIds: 144218626384512867
-        ChildIds: 10786267796496185578
         ChildIds: 8362390525248656447
-        ChildIds: 9770586556251059353
         ChildIds: 7398561706532006235
         ChildIds: 4789422262558172635
-        ChildIds: 17256908059067173099
         ChildIds: 10560975959807552999
         ChildIds: 14423063634076802279
         ChildIds: 12574833945806188
@@ -3364,10 +3358,8 @@
         ChildIds: 3535705513668454409
         ChildIds: 15427609451645005147
         ChildIds: 13800744520358328270
-        ChildIds: 13674832730418931730
         ChildIds: 10936463400867349501
         ChildIds: 12064151006527062503
-        ChildIds: 58076752783478469
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3685,213 +3677,6 @@
         }
       }
       Objects {
-        Id: 6404527088856393544
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: -1.20214844
-            Y: -157.745117
-            Z: 68.4621582
-          }
-          Rotation {
-            Pitch: -58.9135132
-            Yaw: -87.0618515
-            Roll: 179.101913
-          }
-          Scale {
-            X: 0.621848
-            Y: 0.741826952
-            Z: 0.719582558
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14136318480151742759
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: -1.58789063
-            Y: -147.947266
-            Z: 62.5109863
-          }
-          Rotation {
-            Pitch: -41.8203735
-            Yaw: -30.750555
-            Roll: 133.849335
-          }
-          Scale {
-            X: 0.621848
-            Y: 0.741826952
-            Z: 0.719582558
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14199378632484768082
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: -2.03417969
-            Y: -135.144531
-            Z: 54.7844238
-          }
-          Rotation {
-            Pitch: -41.8203773
-            Yaw: -30.750555
-            Roll: 133.849411
-          }
-          Scale {
-            X: 0.621848
-            Y: 0.741826952
-            Z: 0.719582558
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 7133693198867719526
         Name: "Helix - 0.25"
         Transform {
@@ -4030,75 +3815,6 @@
         }
       }
       Objects {
-        Id: 10786267796496185578
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: -0.0966796875
-            Y: -191.915039
-            Z: 89.0539551
-          }
-          Rotation {
-            Pitch: -58.9134865
-            Yaw: -87.0618744
-            Roll: 179.10199
-          }
-          Scale {
-            X: 0.621848
-            Y: 0.741826952
-            Z: 0.719582558
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 8362390525248656447
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
@@ -4157,82 +3873,13 @@
         }
       }
       Objects {
-        Id: 9770586556251059353
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: 169.787109
-            Y: -261.219421
-            Z: -84.2044067
-          }
-          Rotation {
-            Pitch: -0.459228516
-            Yaw: -11.5817566
-            Roll: 91.8464355
-          }
-          Scale {
-            X: 0.428761274
-            Y: 0.581513166
-            Z: 0.719578505
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 7398561706532006235
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: 170.78418
-            Y: -249.633865
-            Z: -84.6963501
+            X: 169.458893
+            Y: -256.116058
+            Z: -84.4824524
           }
           Rotation {
             Pitch: -0.459228516
@@ -4299,83 +3946,14 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: 171.652344
-            Y: -239.573944
-            Z: -85.1234436
+            X: 170.327103
+            Y: -246.055939
+            Z: -84.9097137
           }
           Rotation {
             Pitch: -0.459228516
             Yaw: -11.5817261
             Roll: 91.8463211
-          }
-          Scale {
-            X: 0.428761274
-            Y: 0.581513166
-            Z: 0.719578505
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17256908059067173099
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: -169.617188
-            Y: -239.767807
-            Z: -84.7762451
-          }
-          Rotation {
-            Pitch: -1.09066772
-            Yaw: 9.42491436
-            Roll: 91.5587692
           }
           Scale {
             X: 0.428761274
@@ -4793,7 +4371,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 12905923173550510229
+            Id: 13950225922132296555
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -5225,78 +4803,9 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: 16.9697266
-            Y: -534.569458
-            Z: -13.4763031
-          }
-          Rotation {
-            Pitch: 46.1902428
-            Yaw: -93.1943359
-            Roll: 88.9149933
-          }
-          Scale {
-            X: 0.526307583
-            Y: 0.579717934
-            Z: 0.758526325
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.51053238
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13674832730418931730
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: 3.03808594
-            Y: -534.569458
-            Z: -13.4763031
+            X: 11.9402199
+            Y: -534.356445
+            Z: -13.5420752
           }
           Rotation {
             Pitch: 46.1902428
@@ -5363,9 +4872,9 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: -9.48828125
-            Y: -534.569458
-            Z: -13.4763031
+            X: -5.21816444
+            Y: -534.748169
+            Z: -13.4195757
           }
           Rotation {
             Pitch: 46.1902428
@@ -5432,9 +4941,9 @@
         Name: "Helix - 0.25"
         Transform {
           Location {
-            X: 3.91503906
-            Y: -507.784973
-            Z: 0.349479675
+            X: 3.98207736
+            Y: -506.06604
+            Z: 0.750614583
           }
           Rotation {
             Pitch: -1.25860596
@@ -5442,9 +4951,9 @@
             Roll: 103.090523
           }
           Scale {
-            X: 0.231555969
-            Y: 0.255067497
-            Z: 0.483772188
+            X: 0.126942679
+            Y: 0.13983205
+            Z: 0.265211582
           }
         }
         ParentId: 15209513526728561712
@@ -5485,76 +4994,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7585887110500972880
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 58076752783478469
-        Name: "Helix - 0.25"
-        Transform {
-          Location {
-            X: 4.26367188
-            Y: -498.853516
-            Z: 2.42711639
-          }
-          Rotation {
-            Pitch: -1.25860596
-            Yaw: 177.477341
-            Roll: 103.090515
-          }
-          Scale {
-            X: 0.21049203
-            Y: 0.231864795
-            Z: 0.439764917
-          }
-        }
-        ParentId: 15209513526728561712
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6693051322045641436
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.6875
-              G: 0.6875
-              B: 0.6875
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.84368634
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7585887110500972880
+            Id: 6239692794259041880
           }
           Teams {
           }
@@ -6940,7 +6380,6 @@
         }
         ParentId: 9215270179763888927
         ChildIds: 18377712668104931676
-        ChildIds: 14611013600699232847
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7030,6 +6469,15 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.270833343
+              G: 0.270833343
+              B: 0.270833343
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7049,52 +6497,6 @@
           StaticMesh {
             Physics {
             }
-          }
-        }
-      }
-      Objects {
-        Id: 14611013600699232847
-        Name: "Decal Spray Manticore 01"
-        Transform {
-          Location {
-            X: 0.0956420898
-            Y: 1.90625
-            Z: 2.50907898
-          }
-          Rotation {
-            Pitch: 1.38618684
-            Yaw: 1.30874765
-            Roll: 77.4629288
-          }
-          Scale {
-            X: 0.0476506501
-            Y: 0.0476506501
-            Z: 0.0476506501
-          }
-        }
-        ParentId: 8228414575966711324
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.230000019
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 16964117855639857004
-          }
-          TeamSettings {
-          }
-          DecalBP {
           }
         }
       }
@@ -8953,7 +8355,6 @@
         }
         ParentId: 11611935791228445355
         ChildIds: 6991395860425304723
-        ChildIds: 5124207021277843484
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -9043,6 +8444,15 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.270833343
+              G: 0.270833343
+              B: 0.270833343
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9062,52 +8472,6 @@
           StaticMesh {
             Physics {
             }
-          }
-        }
-      }
-      Objects {
-        Id: 5124207021277843484
-        Name: "Decal Spray Manticore 01"
-        Transform {
-          Location {
-            X: 0.0956420898
-            Y: 1.90625
-            Z: 2.50907898
-          }
-          Rotation {
-            Pitch: 1.38618684
-            Yaw: 1.30874765
-            Roll: 77.4629288
-          }
-          Scale {
-            X: 0.0476506501
-            Y: 0.0476506501
-            Z: 0.0476506501
-          }
-        }
-        ParentId: 4257040321707595652
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.230000019
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 16964117855639857004
-          }
-          TeamSettings {
-          }
-          DecalBP {
           }
         }
       }
@@ -9634,7 +8998,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 12905923173550510229
+            Id: 13950225922132296555
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -9694,7 +9058,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 12905923173550510229
+            Id: 13950225922132296555
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -9754,12 +9118,12 @@
       }
     }
     Assets {
-      Id: 5061372286056644297
-      Name: "Sphere"
+      Id: 6641170506571814994
+      Name: "Pyramid - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
+        AssetId: "sm_pyramid_hq_001"
       }
     }
     Assets {
@@ -9889,6 +9253,24 @@
       }
     }
     Assets {
+      Id: 13950225922132296555
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 6239692794259041880
+      Name: "Donut"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_001"
+      }
+    }
+    Assets {
       Id: 10413465125058823580
       Name: "Horn"
       PlatformAssetType: 1
@@ -9913,15 +9295,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_001"
-      }
-    }
-    Assets {
-      Id: 16964117855639857004
-      Name: "Decal Spray Manticore 01"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_spray_manticore_001"
       }
     }
     Assets {

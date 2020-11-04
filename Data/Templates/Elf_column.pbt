@@ -65,7 +65,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15380009543243484126
+              Id: 1626097446304398136
             }
           }
           Overrides {
@@ -75,9 +75,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.854166687
-              G: 0.854166687
-              B: 0.854166687
+              R: 0.760416687
+              G: 0.760416687
+              B: 0.760416687
               A: 1
             }
           }
@@ -143,7 +143,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -374,9 +373,8 @@
             Id: 1471773936938775611
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -424,7 +422,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -469,10 +466,10 @@
             Id: 11892494746123028781
           }
           Teams {
+            UseTeamColor: true
             IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -752,9 +749,8 @@
             Id: 1471773936938775611
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -868,6 +864,15 @@
       }
     }
     Assets {
+      Id: 1626097446304398136
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
       Id: 10184847056121543272
       Name: "Basic Material"
       PlatformAssetType: 2
@@ -883,15 +888,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_ellipsoid_truncated_001"
-      }
-    }
-    Assets {
-      Id: 1626097446304398136
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {

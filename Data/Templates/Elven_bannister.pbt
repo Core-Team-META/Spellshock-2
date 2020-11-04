@@ -94,9 +94,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.744791687
+              G: 0.744791687
+              B: 0.623449266
               A: 1
             }
           }
@@ -118,10 +118,7 @@
             Id: 7676573587134565567
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -147,9 +144,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.8125
-              G: 0.787272
-              B: 0.73447
+              R: 0.723958313
+              G: 0.723958313
+              B: 0.606010079
               A: 1
             }
           }
@@ -171,10 +168,7 @@
             Id: 4693264132494587556
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -212,7 +206,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 11337413471323694429
             }
           }
         }
@@ -266,7 +260,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 11337413471323694429
             }
           }
         }
@@ -322,7 +316,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 11337413471323694429
             }
           }
         }
@@ -378,7 +372,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1626097446304398136
+              Id: 11337413471323694429
             }
           }
         }
@@ -445,6 +439,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_arch_fancy_ogive_6m_001"
+      }
+    }
+    Assets {
+      Id: 11337413471323694429
+      Name: "Metal Gold 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_gold_001"
       }
     }
     PrimaryAssetId {

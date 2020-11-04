@@ -21,11 +21,11 @@ Objects {
   ChildIds: 728687643111351772
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
-  ChildIds: 1352836353958948428
   ChildIds: 1551213308783341965
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
+  ChildIds: 12626000991766525324
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +35,37 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 12626000991766525324
+  Name: "Terrain"
+  Transform {
+    Location {
+      Z: -10963.4805
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Terrain {
+    Material {
+      Id: 13795170071507932677
+    }
+    VoxelSize: 900
+    OctreeDepth: 5
+    GeneratorID: "DEPRECATED"
   }
 }
 Objects {
@@ -150,38 +181,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1352836353958948428
-  Name: "Terrain"
-  Transform {
-    Location {
-      Z: -14041.0469
-    }
-    Rotation {
-      Yaw: 1.74744964
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Terrain {
-    Material {
-      Id: 12775742126801417230
-    }
-    VoxelSize: 800
-    OctreeDepth: 5
-    GeneratorID: "DEPRECATED"
-  }
-}
-Objects {
   Id: 880106829888079510
   Name: "Terrain"
   Transform {
@@ -264,7 +263,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 400
+      DistanceBetweenInstances: 500
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
@@ -314,7 +313,7 @@ Objects {
       Asset {
         Id: 16388825162191980240
       }
-      DistanceBetweenInstances: 1000
+      DistanceBetweenInstances: 1500
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -414,7 +413,7 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 1500
+      DistanceBetweenInstances: 2000
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -514,7 +513,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 600
+      DistanceBetweenInstances: 700
       MaterialChannel: 2
       SpawnDistance: 24000
       CullDistance {
@@ -563,7 +562,7 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 500
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -867,12 +866,12 @@ Objects {
       Asset {
         Id: 11228299035028749551
       }
-      DistanceBetweenInstances: 200
+      DistanceBetweenInstances: 300
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 17000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -915,12 +914,12 @@ Objects {
       Asset {
         Id: 84254442598276906
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 17000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -963,12 +962,12 @@ Objects {
       Asset {
         Id: 4044214825842439722
       }
-      DistanceBetweenInstances: 100
+      DistanceBetweenInstances: 150
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 17000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1011,12 +1010,12 @@ Objects {
       Asset {
         Id: 8553298544017934648
       }
-      DistanceBetweenInstances: 200
+      DistanceBetweenInstances: 250
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
         Min: 10000
-        Max: 20000
+        Max: 15000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1420,6 +1419,14 @@ Objects {
         Overrides {
           Name: "bp:Intensity"
           Float: 3.2
+        }
+        Overrides {
+          Name: "bp:Dynamic Shadow Distance"
+          Float: 2.5
+        }
+        Overrides {
+          Name: "bp:Shadow Cascade Count"
+          Int: 2
         }
       }
     }

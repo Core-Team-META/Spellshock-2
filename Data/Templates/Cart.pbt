@@ -10,12 +10,12 @@
         Name: "Cart"
         Transform {
           Scale {
-            X: 0.747035861
-            Y: 0.747035861
-            Z: 0.747035861
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 3728874800817007101
         ChildIds: 8399472772007105778
         ChildIds: 1185094513198328420
         ChildIds: 12918825098344470115
@@ -30,9 +30,7 @@
         ChildIds: 18129462205816876575
         ChildIds: 10267598129828930579
         ChildIds: 13556228600579515226
-        ChildIds: 7767116068216954479
         ChildIds: 14341378670874480437
-        ChildIds: 5547347922771707951
         ChildIds: 8993816728901697784
         ChildIds: 10720301858098957404
         ChildIds: 13247569406982741521
@@ -274,7 +272,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -351,7 +349,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -408,7 +406,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -467,7 +465,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -526,7 +524,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -586,7 +584,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -646,7 +644,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -706,7 +704,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -766,7 +764,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -960,7 +958,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -1037,7 +1035,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1094,7 +1092,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1153,7 +1151,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1212,7 +1210,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1272,7 +1270,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1332,7 +1330,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1392,7 +1390,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1452,7 +1450,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1646,7 +1644,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -1669,6 +1667,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1723,7 +1722,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1780,7 +1779,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1839,7 +1838,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1898,7 +1897,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -1958,7 +1957,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2018,7 +2017,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2078,7 +2077,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2138,7 +2137,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2332,7 +2331,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -2355,6 +2354,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2363,20 +2363,20 @@
       }
       Objects {
         Id: 16553286580209074000
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
-            X: -2.54151
-            Y: -0.279345542
-            Z: 169.568481
+            X: -2.54190731
+            Y: -0.279162824
+            Z: 169.56839
           }
           Rotation {
             Pitch: 90
           }
           Scale {
-            X: 0.137027562
-            Y: 0.137027562
-            Z: 0.137027562
+            X: 0.170840636
+            Y: 0.170857325
+            Z: 0.123430505
           }
         }
         ParentId: 10291863532201367824
@@ -2409,7 +2409,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2421,7 +2421,7 @@
       }
       Objects {
         Id: 8967107428652012370
-        Name: "Lens - Half"
+        Name: "Sphere"
         Transform {
           Location {
             X: -2.54151
@@ -2466,7 +2466,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2478,7 +2478,7 @@
       }
       Objects {
         Id: 14866541051954798021
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -2525,7 +2525,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2537,7 +2537,7 @@
       }
       Objects {
         Id: 5380861958290591714
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -2584,7 +2584,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2596,7 +2596,7 @@
       }
       Objects {
         Id: 18316736346365262168
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -2644,7 +2644,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2656,7 +2656,7 @@
       }
       Objects {
         Id: 14466558410791458871
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -2704,7 +2704,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2716,7 +2716,7 @@
       }
       Objects {
         Id: 7475748354095333516
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -2764,7 +2764,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2776,7 +2776,7 @@
       }
       Objects {
         Id: 1377879875709058592
-        Name: "Lens - Half"
+        Name: "Pyramid - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -2824,7 +2824,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 6641170506571814994
           }
           Teams {
           }
@@ -2856,18 +2856,9 @@
         ChildIds: 9945895892705970138
         ChildIds: 3204884780667172337
         ChildIds: 14479550921942652707
-        ChildIds: 5616517612027293206
-        ChildIds: 9278884247538374539
-        ChildIds: 10887330184306978368
-        ChildIds: 9770777490386171299
-        ChildIds: 13102182407394989245
-        ChildIds: 8071001962255633726
         ChildIds: 18024885226314705899
-        ChildIds: 1412133006316133423
         ChildIds: 12376937182900408364
-        ChildIds: 11868872246391676581
         ChildIds: 1606035891505869451
-        ChildIds: 11948588666866960340
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3025,228 +3016,6 @@
         }
       }
       Objects {
-        Id: 5616517612027293206
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 189.472412
-            Y: -354.044464
-            Z: 116.656441
-          }
-          Rotation {
-            Pitch: 4.09711599
-            Yaw: -176.295654
-            Roll: 90.4089
-          }
-          Scale {
-            X: 0.415919393
-            Y: 0.383689463
-            Z: 0.0661595
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 9278884247538374539
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 172.294128
-            Y: -320.426483
-            Z: 3.45387268
-          }
-          Rotation {
-            Pitch: 6.60489511
-            Yaw: -176.277618
-            Roll: 90.4105835
-          }
-          Scale {
-            X: 0.278404921
-            Y: 0.383973449
-            Z: 0.209309682
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 10887330184306978368
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -166.249695
-            Y: -324.253876
-            Z: 4.07312775
-          }
-          Rotation {
-            Pitch: -9.83972
-            Yaw: 178.25415
-            Roll: 90.1942673
-          }
-          Scale {
-            X: 0.284821957
-            Y: 0.374690384
-            Z: 0.284822613
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 9770777490386171299
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -190.118347
-            Y: -354.422211
-            Z: 118.670387
-          }
-          Rotation {
-            Pitch: -7.77157307
-            Yaw: 176.429276
-            Roll: 90.4550552
-          }
-          Scale {
-            X: 0.366006911
-            Y: 0.376981884
-            Z: 0.332357079
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 13102182407394989245
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -195.590881
-            Y: 179.178467
-            Z: 122.01429
-          }
-          Rotation {
-            Pitch: -8.77987289
-            Yaw: 89.9995
-            Roll: 89.9998779
-          }
-          Scale {
-            X: 0.232346922
-            Y: 0.29452467
-            Z: 0.232351989
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 8071001962255633726
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -189.514954
-            Y: 162.671646
-            Z: 0.258209229
-          }
-          Rotation {
-            Pitch: -13.9629211
-            Yaw: 89.9993896
-            Roll: 89.9998
-          }
-          Scale {
-            X: 0.28368479
-            Y: 0.361750543
-            Z: 0.232351989
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
         Id: 18024885226314705899
         Name: "Decal Wood Ends Variations"
         Transform {
@@ -3264,43 +3033,6 @@
             X: 0.279399782
             Y: 0.307667673
             Z: 0.279401481
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 1412133006316133423
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -150.822693
-            Y: 200.146484
-            Z: 6.9806366
-          }
-          Rotation {
-            Pitch: 6.05260611
-            Yaw: -1.73281896
-            Roll: 89.8069916
-          }
-          Scale {
-            X: 0.223431662
-            Y: 0.295303226
-            Z: 0.244095549
           }
         }
         ParentId: 1185094513198328420
@@ -3358,42 +3090,6 @@
         }
       }
       Objects {
-        Id: 11868872246391676581
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 180.821655
-            Y: 162.13797
-          }
-          Rotation {
-            Pitch: 10.8428288
-            Yaw: -90.0002899
-            Roll: 89.9998093
-          }
-          Scale {
-            X: 0.237813801
-            Y: 0.328676164
-            Z: 0.178364471
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
         Id: 1606035891505869451
         Name: "Decal Wood Ends Variations"
         Transform {
@@ -3411,43 +3107,6 @@
             X: 0.290518492
             Y: 0.291230708
             Z: 0.220579222
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 11948588666866960340
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 145.903931
-            Y: 200.146362
-            Z: 6.96514893
-          }
-          Rotation {
-            Pitch: -5.45614624
-            Yaw: 2.94154644
-            Roll: 89.6882935
-          }
-          Scale {
-            X: 0.23717612
-            Y: 0.307290822
-            Z: 0.173519984
           }
         }
         ParentId: 1185094513198328420
@@ -3516,7 +3175,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3576,7 +3238,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3632,7 +3297,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3744,7 +3412,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3800,7 +3471,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3860,7 +3534,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4036,7 +3713,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4092,7 +3772,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4156,82 +3839,21 @@
         }
       }
       Objects {
-        Id: 7767116068216954479
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: -164.876587
-            Y: 172.126801
-            Z: 87.7226105
-          }
-          Rotation {
-            Pitch: 90
-            Roll: -179.999924
-          }
-          Scale {
-            X: 0.1
-            Y: 1.7
-            Z: 0.6
-          }
-        }
-        ParentId: 17276108741514373437
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 7613660189645541274
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 1
-              G: 0.71291393
-              B: 0.49
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 2.2934711
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 14341378670874480437
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 147.018311
-            Y: 6.67216492
-            Z: 87.7226105
+            X: 147.01857
+            Y: 35.6828194
+            Z: 87.7226563
           }
           Rotation {
             Pitch: 90
-            Yaw: -2.53049326
-            Roll: -2.53048706
           }
           Scale {
-            X: 0.0999993905
-            Y: 3.13594151
-            Z: 0.644714415
+            X: 0.267068356
+            Y: 6.30958128
+            Z: 0.644693911
           }
         }
         ParentId: 17276108741514373437
@@ -4245,15 +3867,15 @@
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 1
-              G: 0.71291393
-              B: 0.49
+              R: 0.71875
+              G: 0.512406826
+              B: 0.352187514
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
-            Float: 2.2934711
+            Float: 5.23761415
           }
         }
         Collidable_v2 {
@@ -4267,66 +3889,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5547347922771707951
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: -165.680176
-            Y: -149.101593
-            Z: 87.7226105
-          }
-          Rotation {
-            Pitch: 90
-            Roll: -179.999924
-          }
-          Scale {
-            X: 0.100000449
-            Y: 1.34567058
-            Z: 0.652434289
-          }
-        }
-        ParentId: 17276108741514373437
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 7613660189645541274
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 1
-              G: 0.71291393
-              B: 0.49
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 2.2934711
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-          }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4338,9 +3904,9 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: 164.471741
-            Y: -219.227905
-            Z: 119.908661
+            X: 164.472198
+            Y: -219.227432
+            Z: 119.908691
           }
           Rotation {
             Pitch: -6.9593811
@@ -4348,9 +3914,9 @@
             Roll: -4.02587891
           }
           Scale {
-            X: 0.328906655
-            Y: 0.310946435
-            Z: 0.14030838
+            X: 0.522777498
+            Y: 0.49423033
+            Z: 0.223011702
           }
         }
         ParentId: 17276108741514373437
@@ -4363,7 +3929,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4378,7 +3944,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 16718390130615866986
+            Id: 11162297399913732681
           }
           Teams {
           }
@@ -4393,9 +3959,9 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -183.49176
-            Y: -211.902893
-            Z: 120.230026
+            X: -183.491119
+            Y: -211.903076
+            Z: 120.22998
           }
           Rotation {
             Pitch: 8.61866665
@@ -4403,9 +3969,9 @@
             Roll: -2.48803711
           }
           Scale {
-            X: 0.328906655
-            Y: 0.310946435
-            Z: 0.14030838
+            X: 0.522777498
+            Y: 0.49423033
+            Z: 0.223011702
           }
         }
         ParentId: 17276108741514373437
@@ -4418,7 +3984,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4433,7 +3999,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 16718390130615866986
+            Id: 11162297399913732681
           }
           Teams {
           }
@@ -4448,17 +4014,17 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -161.292053
-            Y: 238.75676
-            Z: 116.674469
+            X: -161.29129
+            Y: 238.757065
+            Z: 116.674561
           }
           Rotation {
             Roll: -0.338500977
           }
           Scale {
-            X: 0.328906655
-            Y: 0.310946435
-            Z: 0.14030838
+            X: 0.443862796
+            Y: 0.419625342
+            Z: 0.189347565
           }
         }
         ParentId: 17276108741514373437
@@ -4471,7 +4037,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4486,7 +4052,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 16718390130615866986
+            Id: 11162297399913732681
           }
           Teams {
           }
@@ -4501,17 +4067,17 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: 138.128906
-            Y: 239.351501
-            Z: 119.576111
+            X: 138.12973
+            Y: 239.351715
+            Z: 119.576172
           }
           Rotation {
             Roll: 0.374846309
           }
           Scale {
-            X: 0.328906655
-            Y: 0.310946435
-            Z: 0.14030838
+            X: 0.479984909
+            Y: 0.453774869
+            Z: 0.204756886
           }
         }
         ParentId: 17276108741514373437
@@ -4524,7 +4090,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4539,7 +4105,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 16718390130615866986
+            Id: 11162297399913732681
           }
           Teams {
           }
@@ -4930,7 +4496,10 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -5369,12 +4938,12 @@
       }
     }
     Assets {
-      Id: 5061372286056644297
-      Name: "Sphere"
+      Id: 6641170506571814994
+      Name: "Pyramid - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
+        AssetId: "sm_pyramid_hq_001"
       }
     }
     Assets {
@@ -5393,6 +4962,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_urb_sub_craftsman_stairs_001_pillar"
+      }
+    }
+    Assets {
+      Id: 11162297399913732681
+      Name: "Cube - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_hq_test_001"
       }
     }
     Assets {

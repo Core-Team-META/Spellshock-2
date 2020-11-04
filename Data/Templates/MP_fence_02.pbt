@@ -795,6 +795,8 @@
           }
           Teams {
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -922,6 +924,8 @@
           }
           Teams {
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1051,6 +1055,8 @@
           }
           Teams {
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1177,6 +1183,8 @@
           }
           Teams {
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1303,6 +1311,8 @@
           }
           Teams {
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }

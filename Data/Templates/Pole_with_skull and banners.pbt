@@ -2747,6 +2747,15 @@
               Id: 13555409310507388924
             }
           }
+          Overrides {
+            Name: "ma:Prop_Cloth:color"
+            Color {
+              R: 0.802083313
+              G: 0.0704361796
+              B: 0.0145354159
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2996,6 +3005,15 @@
             Name: "ma:Prop_Cloth:id"
             AssetReference {
               Id: 13555409310507388924
+            }
+          }
+          Overrides {
+            Name: "ma:Prop_Cloth:color"
+            Color {
+              R: 0.802083313
+              G: 0.0704361796
+              B: 0.0145354159
+              A: 1
             }
           }
         }
@@ -3249,6 +3267,15 @@
               Id: 13555409310507388924
             }
           }
+          Overrides {
+            Name: "ma:Prop_Cloth:color"
+            Color {
+              R: 0.802083313
+              G: 0.0704361796
+              B: 0.0145354159
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3498,6 +3525,15 @@
             Name: "ma:Prop_Cloth:id"
             AssetReference {
               Id: 13555409310507388924
+            }
+          }
+          Overrides {
+            Name: "ma:Prop_Cloth:color"
+            Color {
+              R: 0.802083313
+              G: 0.0704361796
+              B: 0.0145354159
+              A: 1
             }
           }
         }

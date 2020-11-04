@@ -15,7 +15,7 @@
             Z: 0.480833977
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 7183471705418217801
         ChildIds: 16288016639616168729
         ChildIds: 14791299909526739295
         ChildIds: 1516166720981538048
@@ -416,10 +416,10 @@
             Id: 15100497118567945550
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -558,10 +558,10 @@
             Id: 18141993204830915813
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -601,10 +601,7 @@
             Id: 10542250655788089163
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -804,7 +801,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -813,7 +809,7 @@
       }
       Objects {
         Id: 16178884787372008409
-        Name: "Fantasy Castle Accessory Roof 01 "
+        Name: "Fantasy Pommel 01"
         Transform {
           Location {
             X: 0.0131554129
@@ -928,7 +924,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -984,10 +979,10 @@
             Id: 12167237750251133404
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -996,7 +991,7 @@
       }
       Objects {
         Id: 3683039747836026602
-        Name: "Pyramid - 8-Sided Truncated Polished"
+        Name: "Cone - Truncated Concave"
         Transform {
           Location {
             X: 0.0131554129
@@ -1050,10 +1045,7 @@
             Id: 9889561244489589632
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1114,7 +1106,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1206,10 +1197,7 @@
             Id: 11892494746123028781
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1254,9 +1242,9 @@
             Id: 1471773936938775611
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1284,7 +1272,6 @@
         ChildIds: 18136936266971859185
         ChildIds: 11679352533154562918
         ChildIds: 4005506813621150745
-        ChildIds: 6404145130437124636
         ChildIds: 6812053147987184090
         ChildIds: 14690576106929655043
         Collidable_v2 {
@@ -1333,10 +1320,9 @@
             Id: 11892494746123028781
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1382,7 +1368,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1428,51 +1413,8 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6404145130437124636
-        Name: "Ellipsoid - Truncated"
-        Transform {
-          Location {
-            Z: 88.263
-          }
-          Rotation {
-            Yaw: 1.31783395e-06
-          }
-          Scale {
-            X: 2.21003699
-            Y: 2.21003699
-            Z: 0.292821139
-          }
-        }
-        ParentId: 14038412116305476658
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 11337413471323694429
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1471773936938775611
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1623,10 +1565,9 @@
             Id: 11892494746123028781
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -1674,7 +1615,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1742,7 +1682,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1896,10 +1835,10 @@
             Id: 4755534378174475627
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1956,10 +1895,7 @@
             Id: 34823057115098118
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -2047,10 +1983,10 @@
             Id: 4755534378174475627
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2107,10 +2043,7 @@
             Id: 34823057115098118
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -2169,10 +2102,7 @@
             Id: 865869904938673548
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -2294,10 +2224,10 @@
             Id: 4755534378174475627
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2354,10 +2284,7 @@
             Id: 34823057115098118
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -2416,10 +2343,7 @@
             Id: 865869904938673548
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -2507,10 +2431,10 @@
             Id: 4755534378174475627
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2567,10 +2491,7 @@
             Id: 34823057115098118
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }

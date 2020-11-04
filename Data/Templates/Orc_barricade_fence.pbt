@@ -16,6 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 12365980154537868796
         ChildIds: 13682832890392378478
         ChildIds: 9869327263021226270
         ChildIds: 14592931183304787260
@@ -27,7 +28,6 @@
         ChildIds: 17210801349257906921
         ChildIds: 5037101529035864194
         ChildIds: 1813640713683193354
-        ChildIds: 969701132719516360
         ChildIds: 9342505883389155833
         ChildIds: 7946815554650061454
         ChildIds: 17150166842926661170
@@ -40,6 +40,77 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12365980154537868796
+        Name: "Cube"
+        Transform {
+          Location {
+            X: 95.2761459
+            Y: -49.0411758
+            Z: 236.19606
+          }
+          Rotation {
+            Pitch: 18.6117668
+            Yaw: 5.52695608
+            Roll: -0.359649658
+          }
+          Scale {
+            X: 0.0962562114
+            Y: 2.82983351
+            Z: 3.55478668
+          }
+        }
+        ParentId: 16363053763795069413
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 7613660189645541274
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.692708313
+              G: 0.663845479
+              B: 0.663845479
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.67771107
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.870542884
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
         }
       }
       Objects {
@@ -1226,14 +1297,14 @@
         Name: "Stone Block Long"
         Transform {
           Location {
-            X: 62.4234428
-            Y: -40.0921021
-            Z: 329.634674
+            X: 63.5797615
+            Y: -39.9661674
+            Z: 330.10025
           }
           Rotation {
-            Pitch: 0.00408445299
-            Yaw: -83.7811279
-            Roll: 68.1707
+            Pitch: -0.312164307
+            Yaw: -84.5705261
+            Roll: 68.1728821
           }
           Scale {
             X: 2.54332352
@@ -1308,10 +1379,8 @@
             Id: 8993869571187819051
           }
           Teams {
-            IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1640,56 +1709,6 @@
         }
       }
       Objects {
-        Id: 969701132719516360
-        Name: "Door Large"
-        Transform {
-          Location {
-            X: 139.068893
-            Y: 95.1989059
-            Z: 70.398735
-          }
-          Rotation {
-            Pitch: 18.2587757
-            Yaw: 5.14015865
-            Roll: 0.164722532
-          }
-          Scale {
-            X: 0.481219113
-            Y: 0.941610932
-            Z: 0.671288133
-          }
-        }
-        ParentId: 16363053763795069413
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12889861000896994476
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 3487921759055330973
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 9342505883389155833
         Name: "Cylinder - Chamfered"
         Transform {
@@ -1823,10 +1842,8 @@
             Id: 8993869571187819051
           }
           Teams {
-            IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1879,6 +1896,24 @@
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 7613660189645541274
+      Name: "Wood Planks"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_planks_001_uv"
       }
     }
     Assets {
@@ -1951,24 +1986,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_chamfer"
-      }
-    }
-    Assets {
-      Id: 3487921759055330973
-      Name: "Door Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_door_3x6_001"
-      }
-    }
-    Assets {
-      Id: 12889861000896994476
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {
