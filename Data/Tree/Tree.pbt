@@ -26,6 +26,7 @@ Objects {
   ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
   ChildIds: 12626000991766525324
+  ChildIds: 16227534043720893935
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +36,32 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 16227534043720893935
+  Name: "For BEN"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "For BEN"
   }
 }
 Objects {
@@ -1014,8 +1041,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 5000
-        Max: 8000
+        Min: 8000
+        Max: 10000
       }
       ReceivesDecals: true
       GroundSlopeAngle {

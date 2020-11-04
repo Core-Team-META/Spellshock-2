@@ -26,6 +26,7 @@
         ChildIds: 17147813527372249738
         ChildIds: 887185170638684401
         ChildIds: 16021980467172891957
+        ChildIds: 11366209989367437759
         ChildIds: 13646235458351247452
         ChildIds: 8611165912306747432
         ChildIds: 17482592696516241271
@@ -476,23 +477,171 @@
         }
       }
       Objects {
+        Id: 11366209989367437759
+        Name: "Group"
+        Transform {
+          Location {
+            X: 8.81640625
+            Y: -11.7792969
+            Z: 1007.33374
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.5999999
+            Y: 1.5999999
+            Z: 1.5999999
+          }
+        }
+        ParentId: 16063818355390569732
+        ChildIds: 7292696434604847301
+        ChildIds: 767330546264303633
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7292696434604847301
+        Name: "Fantasy Staff Head 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 8.5
+            Y: 8.5
+            Z: 9.79999828
+          }
+        }
+        ParentId: 11366209989367437759
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 17118136979191323600
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 17118136979191323600
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.734375
+              G: 0.573603034
+              B: 0.36336264
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11720425356942439633
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 767330546264303633
+        Name: "Fantasy Staff Head 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 89.9999924
+          }
+          Scale {
+            X: 8.5
+            Y: 8.5
+            Z: 9.79999828
+          }
+        }
+        ParentId: 11366209989367437759
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 17118136979191323600
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 17118136979191323600
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.734375
+              G: 0.573603034
+              B: 0.36336264
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 11720425356942439633
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 13646235458351247452
         Name: "Scifi Ship Engine 01"
         Transform {
           Location {
             X: 9.10742188
             Y: -7.3125
-            Z: 1036.23511
+            Z: 1072.33374
           }
           Rotation {
-            Pitch: 88.9825821
-            Yaw: -179.999756
-            Roll: -179.999756
+            Pitch: 90
+            Roll: 180
           }
           Scale {
-            X: 2.35670543
-            Y: 2.46292806
-            Z: 2.46293521
+            X: 1.89999986
+            Y: 1.9
+            Z: 1.9
           }
         }
         ParentId: 16063818355390569732
@@ -510,6 +659,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 17118136979191323600
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.09375
+              G: 0.09375
+              B: 0.09375
+              A: 1
             }
           }
         }
@@ -1793,6 +1951,14 @@
               Id: 7142068506126400895
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 1
+              B: 0.450000048
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1939,12 +2105,12 @@
       }
     }
     Assets {
-      Id: 6789604014209716330
-      Name: "Scifi Ship Engine 01"
+      Id: 11720425356942439633
+      Name: "Fantasy Staff Head 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_scf_ship_engine_001_ref"
+        AssetId: "sm_weap_fan_head_staff_001"
       }
     }
     Assets {
@@ -1954,6 +2120,15 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 6789604014209716330
+      Name: "Scifi Ship Engine 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_scf_ship_engine_001_ref"
       }
     }
     Assets {
