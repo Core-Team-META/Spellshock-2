@@ -1014,8 +1014,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 5000
-        Max: 8000
+        Min: 8000
+        Max: 10000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
