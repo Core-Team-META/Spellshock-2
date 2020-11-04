@@ -21,6 +21,7 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 local VISUAL_GEOMETRY = script:GetCustomProperty("VisualGeometry"):WaitForObject()
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
+local FLAG_BEAMS = script:GetCustomProperty("AnimatedFlagBeams"):WaitForObject()
 local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
@@ -156,6 +157,13 @@ function SetGeometryTeam(team)
         else
         	object:SetColor(Color.WHITE)
         end
+        
+        local FlagBeamsList = FLAG_BEAMS:GetChildren()
+        for _, beam in ipairs(FlagBeamsList) do
+        	beam.visibility = Visibility.FORCE_OFF
+        end
+        
+        FlagBeamsList[team+1].visibility = Visibility.INHERIT
     end
 end
 
@@ -227,7 +235,7 @@ function Tick(deltaTime)
 end
 
 CategorizeVisualGeometry()
-SetGeometryTeam(0)
+SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
 
 local functionTable = {}
 functionTable.GetState = GetState

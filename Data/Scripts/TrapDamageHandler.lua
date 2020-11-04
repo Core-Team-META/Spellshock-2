@@ -45,7 +45,10 @@ function OnNetworkPropertyChanged(thisObject, name)
 	for _, other in pairs(Trigger:GetOverlappingObjects()) do
 		DoDamage(other)
 	end
-	OverlapEvent = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
+	
+	if Object.IsValid(Trigger) then
+		OverlapEvent = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
+	end
 end
 
 Root.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChanged )

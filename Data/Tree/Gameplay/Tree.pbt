@@ -1470,6 +1470,7 @@ Objects {
   ParentId: 4559935034785672696
   ChildIds: 10184263260861828745
   ChildIds: 4883590113462174898
+  ChildIds: 9900852765586297625
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1488,6 +1489,60 @@ Objects {
   }
 }
 Objects {
+  Id: 9900852765586297625
+  Name: "Animated Flag Beams"
+  Transform {
+    Location {
+      X: -13752.0039
+      Y: -18352.1191
+      Z: 3255
+    }
+    Rotation {
+      Yaw: 139.11441
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9666154360724432599
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11072540670243696428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Animated Flag Beams"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -163.03125
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17347292399839852453
+    }
+  }
+}
+Objects {
   Id: 4883590113462174898
   Name: "GeoVisual"
   Transform {
@@ -1502,7 +1557,6 @@ Objects {
     }
   }
   ParentId: 9666154360724432599
-  ChildIds: 3463963719083692016
   ChildIds: 12224005881596937350
   UnregisteredParameters {
   }
@@ -1775,68 +1829,6 @@ Objects {
   }
 }
 Objects {
-  Id: 3463963719083692016
-  Name: "Big Outline"
-  Transform {
-    Location {
-      Z: -212.977783
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.44975877
-      Y: 2.44975877
-      Z: 83.4626694
-    }
-  }
-  ParentId: 4883590113462174898
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
   Id: 10184263260861828745
   Name: "FlagCaptureControlClient"
   Transform {
@@ -1880,6 +1872,15 @@ Objects {
       Name: "cs:ServerScript"
       ObjectReference {
         SelfId: 13394692366127408497
+      }
+    }
+    Overrides {
+      Name: "cs:AnimatedFlagBeams"
+      ObjectReference {
+        SelfId: 13519386113752828430
+        SubObjectId: 11072540670243696428
+        InstanceId: 9900852765586297625
+        TemplateId: 17347292399839852453
       }
     }
   }
@@ -2443,6 +2444,7 @@ Objects {
   ParentId: 16313267587009276285
   ChildIds: 13672439033265604827
   ChildIds: 18420993525149121261
+  ChildIds: 959209788916723848
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2461,6 +2463,60 @@ Objects {
   }
 }
 Objects {
+  Id: 959209788916723848
+  Name: "Animated Flag Beams"
+  Transform {
+    Location {
+      X: -13752.0039
+      Y: -18352.1191
+      Z: 3255
+    }
+    Rotation {
+      Yaw: 139.11441
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6431342082131964287
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11072540670243696428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Animated Flag Beams"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -886.164917
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17347292399839852453
+    }
+  }
+}
+Objects {
   Id: 18420993525149121261
   Name: "GeoVisual"
   Transform {
@@ -2476,7 +2532,6 @@ Objects {
     }
   }
   ParentId: 6431342082131964287
-  ChildIds: 13854471375568204005
   ChildIds: 17139857510279352535
   UnregisteredParameters {
   }
@@ -2693,68 +2748,6 @@ Objects {
   }
 }
 Objects {
-  Id: 13854471375568204005
-  Name: "Big Outline"
-  Transform {
-    Location {
-      Z: -1258.04504
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.45056486
-      Y: 2.45056486
-      Z: 83
-    }
-  }
-  ParentId: 18420993525149121261
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
   Id: 13672439033265604827
   Name: "FlagCaptureControlClient"
   Transform {
@@ -2798,6 +2791,15 @@ Objects {
       Name: "cs:ServerScript"
       ObjectReference {
         SelfId: 14137148640322767699
+      }
+    }
+    Overrides {
+      Name: "cs:AnimatedFlagBeams"
+      ObjectReference {
+        SelfId: 1503324432272139028
+        SubObjectId: 11072540670243696428
+        InstanceId: 959209788916723848
+        TemplateId: 17347292399839852453
       }
     }
   }
@@ -3397,6 +3399,7 @@ Objects {
   ParentId: 17910728817571265557
   ChildIds: 4155419250277775108
   ChildIds: 1884088731692444921
+  ChildIds: 5158024847140816063
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3415,6 +3418,60 @@ Objects {
   }
 }
 Objects {
+  Id: 5158024847140816063
+  Name: "Animated Flag Beams"
+  Transform {
+    Location {
+      X: -13752.0039
+      Y: -18352.1191
+      Z: 3255
+    }
+    Rotation {
+      Yaw: 139.11441
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1519700623663251019
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11072540670243696428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Animated Flag Beams"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 210
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17347292399839852453
+    }
+  }
+}
+Objects {
   Id: 1884088731692444921
   Name: "GeoVisual"
   Transform {
@@ -3430,7 +3487,6 @@ Objects {
     }
   }
   ParentId: 1519700623663251019
-  ChildIds: 8295567833852119741
   ChildIds: 12789043710512726505
   UnregisteredParameters {
   }
@@ -3646,98 +3702,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8295567833852119741
-  Name: "Big Outline"
-  Transform {
-    Location {
-      Z: -86.3798828
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.42199755
-      Y: 2.42199755
-      Z: 83
-    }
-  }
-  ParentId: 1884088731692444921
-  ChildIds: 11222951716624920120
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
-  Id: 11222951716624920120
-  Name: "NewFolder"
-  Transform {
-    Location {
-      Z: 2.67018819
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8295567833852119741
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "NewFolder"
-  }
-}
-Objects {
   Id: 4155419250277775108
   Name: "FlagCaptureControlClient"
   Transform {
@@ -3781,6 +3745,15 @@ Objects {
       Name: "cs:ServerScript"
       ObjectReference {
         SelfId: 12990434528164511129
+      }
+    }
+    Overrides {
+      Name: "cs:AnimatedFlagBeams"
+      ObjectReference {
+        SelfId: 13681396548177761129
+        SubObjectId: 11072540670243696428
+        InstanceId: 5158024847140816063
+        TemplateId: 17347292399839852453
       }
     }
   }
@@ -4339,6 +4312,7 @@ Objects {
   ParentId: 16321515820500395030
   ChildIds: 3266274084411309890
   ChildIds: 9001953783686175703
+  ChildIds: 13929498503776834734
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -4357,6 +4331,60 @@ Objects {
   }
 }
 Objects {
+  Id: 13929498503776834734
+  Name: "Animated Flag Beams"
+  Transform {
+    Location {
+      X: -13752.0039
+      Y: -18352.1191
+      Z: 3255
+    }
+    Rotation {
+      Yaw: 139.11441
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 754991252659707758
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11072540670243696428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Animated Flag Beams"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 106.492188
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17347292399839852453
+    }
+  }
+}
+Objects {
   Id: 9001953783686175703
   Name: "GeoVisual"
   Transform {
@@ -4372,7 +4400,6 @@ Objects {
     }
   }
   ParentId: 754991252659707758
-  ChildIds: 11038912078856122676
   ChildIds: 13152761450086118744
   UnregisteredParameters {
   }
@@ -4588,68 +4615,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11038912078856122676
-  Name: "Big Outline"
-  Transform {
-    Location {
-      Z: -227.160156
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.44814515
-      Y: 2.44814515
-      Z: 83
-    }
-  }
-  ParentId: 9001953783686175703
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
-  }
-}
-Objects {
   Id: 3266274084411309890
   Name: "FlagCaptureControlClient"
   Transform {
@@ -4693,6 +4658,15 @@ Objects {
       Name: "cs:ServerScript"
       ObjectReference {
         SelfId: 4898803792315971395
+      }
+    }
+    Overrides {
+      Name: "cs:AnimatedFlagBeams"
+      ObjectReference {
+        SelfId: 17392204386591009338
+        SubObjectId: 11072540670243696428
+        InstanceId: 13929498503776834734
+        TemplateId: 17347292399839852453
       }
     }
   }
@@ -5253,6 +5227,7 @@ Objects {
   }
   ParentId: 13392592636105101133
   ChildIds: 715224953526643395
+  ChildIds: 15381680925168707964
   ChildIds: 7817820503045406307
   UnregisteredParameters {
   }
@@ -5286,7 +5261,6 @@ Objects {
     }
   }
   ParentId: 4208566297764116835
-  ChildIds: 4485848568877990483
   ChildIds: 14312433245467608491
   UnregisteredParameters {
   }
@@ -5566,65 +5540,76 @@ Objects {
   }
 }
 Objects {
-  Id: 4485848568877990483
-  Name: "Big Outline"
+  Id: 15381680925168707964
+  Name: "Animated Flag Beams"
   Transform {
     Location {
-      Z: 163.873779
+      X: -14515
+      Y: -19090
+      Z: 3045
     }
     Rotation {
     }
     Scale {
-      X: 2.45210028
-      Y: 2.45210028
-      Z: 89.9148788
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 7817820503045406307
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16945204928432289310
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 0.634
-      }
-    }
-  }
+  ParentId: 4208566297764116835
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 14017539756736382852
-    }
-    Teams {
-      UseTeamColor: true
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7470839878895222971
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "bp:Charge Up Duration"
+          Float: 10
+        }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 3906627555187087444
-    SubobjectId: 13123011876186695797
-    InstanceId: 18445319250524073173
-    TemplateId: 4321580044226111979
+    ParameterOverrideMap {
+      key: 11072540670243696428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Animated Flag Beams"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 210
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17347292399839852453
+    }
   }
 }
 Objects {
@@ -5671,6 +5656,15 @@ Objects {
       Name: "cs:ServerScript"
       ObjectReference {
         SelfId: 5953359566833506459
+      }
+    }
+    Overrides {
+      Name: "cs:AnimatedFlagBeams"
+      ObjectReference {
+        SelfId: 15041099646544271970
+        SubObjectId: 11072540670243696428
+        InstanceId: 15381680925168707964
+        TemplateId: 17347292399839852453
       }
     }
   }

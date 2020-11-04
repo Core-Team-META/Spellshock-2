@@ -358,7 +358,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Legend of Light"
+      Label: "Legion of Light"
       Color {
         R: 1
         G: 1
