@@ -50,8 +50,8 @@
         Control {
           Width: 55
           Height: 55
-          UIX: 1034.28918
-          UIY: 509.646027
+          UIX: 1395
+          UIY: 560
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -201,13 +201,11 @@
               Id: 4569484101736324280
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.5
+              G: 0.580000043
+              B: 0.361059815
+              A: 1
             }
             TeamSettings {
-              UseTeamColor: true
               TeamInt: 1
             }
           }
@@ -263,13 +261,11 @@
               Id: 14263746284030313578
             }
             Color {
-              R: 1
-              G: 0.110000014
-              B: 0.110000014
-              A: 0.7
+              G: 0.580000043
+              B: 0.361059815
+              A: 1
             }
             TeamSettings {
-              UseTeamColor: true
               TeamInt: 1
             }
           }
