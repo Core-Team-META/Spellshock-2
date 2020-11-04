@@ -89,7 +89,7 @@ function Tick(deltaTime)
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 				
 				local dmg = Damage.New()
-				dmg.amount = 1--DamageAmount
+				dmg.amount = DamageAmount
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = Ability.owner
 				dmg.sourceAbility = Ability

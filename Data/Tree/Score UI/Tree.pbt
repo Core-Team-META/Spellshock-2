@@ -214,6 +214,7 @@ Objects {
   ParentId: 14740410748717342126
   ChildIds: 13614785118818462902
   ChildIds: 2847257353089099037
+  ChildIds: 12302019559159999778
   ChildIds: 15072110362254543645
   ChildIds: 1177090930307686588
   UnregisteredParameters {
@@ -357,7 +358,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Glade"
+      Label: "Legend of Light"
       Color {
         R: 1
         G: 1
@@ -386,6 +387,72 @@ Objects {
   InstanceHistory {
     SelfId: 2514143308883088417
     SubobjectId: 5886080550476808348
+    InstanceId: 17503051649458603799
+    TemplateId: 1370765236601592822
+  }
+}
+Objects {
+  Id: 12302019559159999778
+  Name: "BackgroundImage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7994942679763895015
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 300
+    Height: 44
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 16532880832873788683
+      }
+      Color {
+        G: 0.580000043
+        B: 0.361059964
+        A: 0.13
+      }
+      TeamSettings {
+        TeamInt: 2
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 18388737138932289674
+    SubobjectId: 10122521962685187127
     InstanceId: 17503051649458603799
     TemplateId: 1370765236601592822
   }
@@ -429,13 +496,11 @@ Objects {
         Id: 7446390700290884681
       }
       Color {
-        R: 0.205078766
-        G: 0.205078766
-        B: 0.205078766
+        G: 0.580000043
+        B: 0.361059964
         A: 0.5
       }
       TeamSettings {
-        UseTeamColor: true
         TeamInt: 2
       }
     }
@@ -497,13 +562,11 @@ Objects {
         Id: 15962831889536321118
       }
       Color {
-        R: 0.205078766
-        G: 0.205078766
-        B: 0.205078766
+        G: 0.580000043
+        B: 0.361059964
         A: 0.5
       }
       TeamSettings {
-        UseTeamColor: true
         TeamInt: 2
       }
     }
@@ -744,6 +807,7 @@ Objects {
   ParentId: 6219306252041450638
   ChildIds: 3452706455344915735
   ChildIds: 3208657543234007132
+  ChildIds: 16280145682626163928
   ChildIds: 17002465728617934700
   ChildIds: 9140715495828409059
   UnregisteredParameters {
@@ -887,7 +951,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Blight"
+      Label: "Dark Devout"
       Color {
         R: 1
         G: 1
@@ -916,6 +980,72 @@ Objects {
   InstanceHistory {
     SelfId: 2514143308883088417
     SubobjectId: 5886080550476808348
+    InstanceId: 17503051649458603799
+    TemplateId: 1370765236601592822
+  }
+}
+Objects {
+  Id: 16280145682626163928
+  Name: "BackgroundImage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6517462999574307678
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 300
+    Height: 44
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 16532880832873788683
+      }
+      Color {
+        R: 0.72
+        G: 0.0715231895
+        A: 0.13
+      }
+      TeamSettings {
+        TeamInt: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 18388737138932289674
+    SubobjectId: 10122521962685187127
     InstanceId: 17503051649458603799
     TemplateId: 1370765236601592822
   }
@@ -959,13 +1089,11 @@ Objects {
         Id: 7446390700290884681
       }
       Color {
-        R: 0.205078766
-        G: 0.205078766
-        B: 0.205078766
+        R: 0.72
+        G: 0.0715231895
         A: 0.5
       }
       TeamSettings {
-        UseTeamColor: true
         TeamInt: 1
       }
     }
@@ -1027,13 +1155,11 @@ Objects {
         Id: 15962831889536321118
       }
       Color {
-        R: 0.205078766
-        G: 0.205078766
-        B: 0.205078766
+        R: 0.72
+        G: 0.0715231895
         A: 0.5
       }
       TeamSettings {
-        UseTeamColor: true
         TeamInt: 1
       }
     }

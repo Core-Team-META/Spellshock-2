@@ -40,6 +40,11 @@ local ENEMY_COLOR = COMPONENT_ROOT:GetCustomProperty("EnemyColor")
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 -- Player GetViewedPlayer()
 -- Returns which player the local player is spectating (or themselves if not spectating)
 function GetViewedPlayer()
@@ -86,6 +91,22 @@ function Tick(deltaTime)
     -- Update name
     if SHOW_POINT_NAME then
         NAME_TEXT.text = capturePointState.name
+        NAME_TEXT:SetColor(Color.WHITE)
+    end
+    
+    if capturePointState.capturePlayer ~= "" then
+    	if LOCAL_PLAYER.id == capturePointState.capturePlayer then
+    		NAME_TEXT.text = NAME_TEXT.text.." | Capturing"
+    		NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
+    	else -- see if Local Player is on the same team as capturePlayer
+    		for _, otherPlayer in pairs(Game.GetPlayers({includeTeams = LOCAL_PLAYER.team, ignoreDead = true})) do
+    			if otherPlayer.id == capturePointState.capturePlayer then
+    				NAME_TEXT.text = NAME_TEXT.text.." | Assisting"
+    				NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
+    				break
+    			end
+    		end
+    	end
     end
 
     -- Handle points with an attackingTeam set
@@ -100,14 +121,14 @@ function Tick(deltaTime)
         -- Set progress
         RIGHT_PROGRESS_BAR.progress = capturePointState.captureProgress
 
-        -- Set color
+        --[[ Set color
         if capturePointState.owningTeam == LOCAL_PLAYER.team then
             RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
         elseif capturePointState.owningTeam ~= 0 then
             RIGHT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
         else
             RIGHT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
-        end
+        end ]]
     else
         LEFT_PROGRESS_BAR.isVisible = true
         LEFT_THRESHOLD_MARKER.isVisible = SHOW_THRESHOLD_MARKERS
@@ -122,15 +143,27 @@ function Tick(deltaTime)
             RIGHT_PROGRESS_BAR.progress = 0.0
         end
 
-        -- Update colors
+        --[[ Update colors
         if capturePointState.owningTeam ~= 0 then
             LEFT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
             RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
         else
             LEFT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
             RIGHT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
-        end
+        end]]
     end
+
+	--[[ Set progress bar colors
+	if LOCAL_PLAYER.team == 1 then -- Orcs
+		LEFT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
+        RIGHT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
+	else -- Elf
+		LEFT_PROGRESS_BAR:SetFillColor(ENEMY_COLOR)
+        RIGHT_PROGRESS_BAR:SetFillColor(FRIENDLY_COLOR)
+	end]]
+	
+	LEFT_PROGRESS_BAR:SetFillColor(_G.TeamColors[3-LOCAL_PLAYER.team])
+    RIGHT_PROGRESS_BAR:SetFillColor(_G.TeamColors[LOCAL_PLAYER.team])
 
     -- Show threshold markers
     if SHOW_THRESHOLD_MARKERS then

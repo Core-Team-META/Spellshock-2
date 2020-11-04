@@ -37,6 +37,10 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:ContestedMessage"
+          String: "ENEMIES PRESENT"
+        }
       }
     }
     ParameterOverrideMap {
@@ -45,10 +49,8 @@ Objects {
         Overrides {
           Name: "Color"
           Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 0.8
+            R: 0.789999962
+            A: 1
           }
         }
       }
@@ -64,6 +66,10 @@ Objects {
             B: 1
             A: 0.8
           }
+        }
+        Overrides {
+          Name: "Width"
+          Int: 600
         }
       }
     }
@@ -364,6 +370,15 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 2747140211805712411
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FlagCaptureControlClient"
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 11698519804033821645
       value {

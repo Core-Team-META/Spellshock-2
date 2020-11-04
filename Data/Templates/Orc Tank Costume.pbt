@@ -16,12 +16,17 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 11488385501918957488
+        ChildIds: 663106011853446856
+        ChildIds: 6554761548996135774
+        ChildIds: 5225501985908408860
+        ChildIds: 11803615119917471119
+        ChildIds: 6341736912483745348
+        ChildIds: 7616838460166271230
         UnregisteredParameters {
           Overrides {
             Name: "cs:root"
             ObjectReference {
-              SubObjectId: 11093120070975162950
+              SelfId: 8455933018276108565
             }
           }
           Overrides {
@@ -33,31 +38,31 @@
           Overrides {
             Name: "cs:neck"
             ObjectReference {
-              SubObjectId: 6880475457281595102
+              SelfId: 12958954340985537933
             }
           }
           Overrides {
             Name: "cs:left_clavicle"
             ObjectReference {
-              SubObjectId: 11751815487434715418
+              SelfId: 5746023874350932553
             }
           }
           Overrides {
             Name: "cs:left_shoulder"
             ObjectReference {
-              SubObjectId: 15449342832203203268
+              SelfId: 4236823861377634711
             }
           }
           Overrides {
             Name: "cs:left_elbow"
             ObjectReference {
-              SubObjectId: 9591323712439905683
+              SelfId: 7615610817188331200
             }
           }
           Overrides {
             Name: "cs:left_wrist"
             ObjectReference {
-              SubObjectId: 6271036494026646619
+              SelfId: 13523216621750662920
             }
           }
           Overrides {
@@ -75,13 +80,13 @@
           Overrides {
             Name: "cs:right_elbow"
             ObjectReference {
-              SubObjectId: 878934006851154773
+              SelfId: 16184167377959428102
             }
           }
           Overrides {
             Name: "cs:right_wrist"
             ObjectReference {
-              SubObjectId: 15947351473319546431
+              SelfId: 3601595493997649260
             }
           }
           Overrides {
@@ -93,49 +98,49 @@
           Overrides {
             Name: "cs:lower_spine"
             ObjectReference {
-              SubObjectId: 7170151140091430483
+              SelfId: 10316147850725037312
             }
           }
           Overrides {
             Name: "cs:pelvis"
             ObjectReference {
-              SubObjectId: 7842268274506680830
+              SelfId: 9258972965350562477
             }
           }
           Overrides {
             Name: "cs:left_hip"
             ObjectReference {
-              SubObjectId: 8365650221574590277
+              SelfId: 11003399056624720918
             }
           }
           Overrides {
             Name: "cs:left_knee"
             ObjectReference {
-              SubObjectId: 15488663013353095356
+              SelfId: 4204646108028703727
             }
           }
           Overrides {
             Name: "cs:left_ankle"
             ObjectReference {
-              SubObjectId: 7596266095497832717
+              SelfId: 9637831216063248990
             }
           }
           Overrides {
             Name: "cs:right_hip"
             ObjectReference {
-              SubObjectId: 49616716629187113
+              SelfId: 17013308071742114170
             }
           }
           Overrides {
             Name: "cs:right_knee"
             ObjectReference {
-              SubObjectId: 5527905055679526294
+              SelfId: 11537166667926611653
             }
           }
           Overrides {
             Name: "cs:right_ankle"
             ObjectReference {
-              SubObjectId: 13451133047604708491
+              SelfId: 6198969129057916888
             }
           }
         }
@@ -150,89 +155,13 @@
         }
       }
       Objects {
-        Id: 11488385501918957488
-        Name: "CostumePieces"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16746169157331005309
-        ChildIds: 11093120070975162950
-        ChildIds: 663106011853446856
-        ChildIds: 6880475457281595102
-        ChildIds: 11751815487434715418
-        ChildIds: 15449342832203203268
-        ChildIds: 9591323712439905683
-        ChildIds: 6554761548996135774
-        ChildIds: 6271036494026646619
-        ChildIds: 5225501985908408860
-        ChildIds: 11803615119917471119
-        ChildIds: 878934006851154773
-        ChildIds: 15947351473319546431
-        ChildIds: 6341736912483745348
-        ChildIds: 7170151140091430483
-        ChildIds: 7842268274506680830
-        ChildIds: 8365650221574590277
-        ChildIds: 15488663013353095356
-        ChildIds: 7596266095497832717
-        ChildIds: 49616716629187113
-        ChildIds: 5527905055679526294
-        ChildIds: 13451133047604708491
-        ChildIds: 7616838460166271230
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 11093120070975162950
-        Name: "root"
-        Transform {
-          Location {
-            X: -2.28881836e-05
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 663106011853446856
         Name: "head"
         Transform {
           Location {
-            X: -3.804
-            Y: 0.0620152578
-            Z: 190.154
+            X: -3.8046875
+            Y: 0.0625
+            Z: 190.153809
           }
           Rotation {
             Pitch: -9.93500137
@@ -244,7 +173,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 10065361472037010048
         UnregisteredParameters {
         }
@@ -2073,143 +2002,18 @@
         }
       }
       Objects {
-        Id: 6880475457281595102
-        Name: "neck"
-        Transform {
-          Location {
-            X: -5.3269
-            Y: -2.30669975e-05
-            Z: 181.107193
-          }
-          Rotation {
-            Pitch: -9.93500137
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 11751815487434715418
-        Name: "left_clavicle"
-        Transform {
-          Location {
-            X: -3.12302399
-            Y: -4.72302389
-            Z: 172.333
-          }
-          Rotation {
-            Yaw: -8.82603359
-            Roll: 79.6859512
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 15449342832203203268
-        Name: "left_shoulder"
-        Transform {
-          Location {
-            X: -6.05730057
-            Y: -23.6190186
-            Z: 168.666
-          }
-          Rotation {
-            Pitch: -1.64798117
-            Yaw: -3.05700946
-            Roll: 30.1110306
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 9591323712439905683
-        Name: "left_elbow"
-        Transform {
-          Location {
-            X: -7.69059944
-            Y: -39.4377441
-            Z: 141.289
-          }
-          Rotation {
-            Pitch: 18.4199886
-            Yaw: 9.0280571
-            Roll: 31.9080696
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 6554761548996135774
         Name: "left_arm_prop"
         Transform {
           Location {
-            X: -7.69055176
-            Y: -39.4377441
-            Z: 141.289
+            X: -7.69140625
+            Y: -39.4375
+            Z: 141.289063
           }
           Rotation {
             Pitch: 3.50642776
-            Yaw: -177.397858
-            Roll: 4.28746462
+            Yaw: -177.397842
+            Roll: 4.28746557
           }
           Scale {
             X: 1
@@ -2217,7 +2021,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 10505421049768857384
         UnregisteredParameters {
         }
@@ -4277,49 +4081,17 @@
         }
       }
       Objects {
-        Id: 6271036494026646619
-        Name: "left_wrist"
-        Transform {
-          Location {
-            X: 1.93770027
-            Y: -52.7219238
-            Z: 118.995
-          }
-          Rotation {
-            Pitch: 13.9379902
-            Yaw: 10.1970701
-            Roll: 27.3249207
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 5225501985908408860
         Name: "right_clavicle"
         Transform {
           Location {
-            X: -3.12302399
-            Y: 4.72297573
-            Z: 172.333
+            X: -3.12304688
+            Y: 4.72265625
+            Z: 172.333008
           }
           Rotation {
-            Yaw: 8.82603264
-            Roll: -79.6859512
+            Yaw: 8.82604408
+            Roll: -79.6859436
           }
           Scale {
             X: 1
@@ -4327,7 +4099,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 13945571376836737595
         UnregisteredParameters {
         }
@@ -5936,14 +5708,14 @@
         Name: "right_shoulder"
         Transform {
           Location {
-            X: -6.05730057
-            Y: 23.6190186
-            Z: 168.666
+            X: -6.05664063
+            Y: 23.6191406
+            Z: 168.666016
           }
           Rotation {
             Pitch: 1.64699757
-            Yaw: 3.05700231
-            Roll: -30.1110172
+            Yaw: 3.05700278
+            Roll: -30.1110249
           }
           Scale {
             X: 1
@@ -5951,7 +5723,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 9035425946209532798
         UnregisteredParameters {
         }
@@ -7515,77 +7287,12 @@
         }
       }
       Objects {
-        Id: 878934006851154773
-        Name: "right_elbow"
-        Transform {
-          Location {
-            X: -7.69059944
-            Y: 41.7456055
-            Z: 141.289
-          }
-          Rotation {
-            Pitch: 18.419981
-            Yaw: -9.02807713
-            Roll: -31.9080696
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 15947351473319546431
-        Name: "right_wrist"
-        Transform {
-          Location {
-            X: 1.93770027
-            Y: 52.7219238
-            Z: 118.995697
-          }
-          Rotation {
-            Pitch: 13.9379902
-            Yaw: -10.1970615
-            Roll: -27.3249302
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 6341736912483745348
         Name: "upper_spine"
         Transform {
           Location {
-            X: -0.51
-            Y: -2.25305557e-05
-            Z: 161.986893
+            X: -0.509765625
+            Z: 161.986816
           }
           Rotation {
             Pitch: 7.51320767e-05
@@ -7597,7 +7304,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 7172556150694783290
         UnregisteredParameters {
         }
@@ -7948,260 +7655,6 @@
         }
       }
       Objects {
-        Id: 7170151140091430483
-        Name: "lower_spine"
-        Transform {
-          Location {
-            X: -0.51
-            Y: -2.25305557e-05
-            Z: 133.728897
-          }
-          Rotation {
-            Pitch: 7.51320767e-05
-            Yaw: 7.17169532e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 7842268274506680830
-        Name: "pelvis"
-        Transform {
-          Location {
-            X: -0.51
-            Y: -2.25305557e-05
-            Z: 120.268
-          }
-          Rotation {
-            Pitch: 7.51320767e-05
-            Yaw: 7.17169532e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 8365650221574590277
-        Name: "left_hip"
-        Transform {
-          Location {
-            X: -1.89601898
-            Y: -10.491024
-            Z: 109.635
-          }
-          Rotation {
-            Pitch: 3.17944598
-            Yaw: 0.34948042
-            Roll: 4.47926855
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 15488663013353095356
-        Name: "left_knee"
-        Transform {
-          Location {
-            X: -1.5118
-            Y: -16.8809853
-            Z: 59.698
-          }
-          Rotation {
-            Pitch: -3.90987325
-            Yaw: -3.62918591
-            Roll: 4.2833643
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 7596266095497832717
-        Name: "left_ankle"
-        Transform {
-          Location {
-            X: -8.11602
-            Y: -23.0543842
-            Z: 11.4560013
-          }
-          Rotation {
-            Pitch: -7.46754789
-            Yaw: 0.615756929
-            Roll: 1.07542038
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 49616716629187113
-        Name: "right_hip"
-        Transform {
-          Location {
-            X: -1.89602661
-            Y: 10.4909782
-            Z: 109.635
-          }
-          Rotation {
-            Pitch: 3.17958951
-            Yaw: -0.349424213
-            Roll: -4.47896099
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 5527905055679526294
-        Name: "right_knee"
-        Transform {
-          Location {
-            X: -1.5118
-            Y: 16.8810158
-            Z: 59.698
-          }
-          Rotation {
-            Pitch: -3.90996885
-            Yaw: 3.62911868
-            Roll: -4.28349257
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 13451133047604708491
-        Name: "right_ankle"
-        Transform {
-          Location {
-            X: -8.11602783
-            Y: 23.0544147
-            Z: 11.4560013
-          }
-          Rotation {
-            Pitch: -7.46794415
-            Yaw: -0.616062105
-            Roll: -1.07538509
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11488385501918957488
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 7616838460166271230
         Name: "right_prop"
         Transform {
@@ -8212,8 +7665,8 @@
           }
           Rotation {
             Pitch: 13.9379902
-            Yaw: -10.197217
-            Roll: 17.675209
+            Yaw: -10.1972332
+            Roll: 17.6752167
           }
           Scale {
             X: 1
@@ -8221,7 +7674,7 @@
             Z: 1
           }
         }
-        ParentId: 11488385501918957488
+        ParentId: 16746169157331005309
         ChildIds: 9712425162279216532
         UnregisteredParameters {
         }
@@ -10291,146 +9744,39 @@
       }
     }
     Assets {
-      Id: 16242947141551458551
-      Name: "Pyramid - 7-Sided Truncated"
+      Id: 10696576532019313521
+      Name: "Fantasy Shield 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_7_sided_truncated_001"
+        AssetId: "sm_weap_fan_shield_003"
       }
     }
     Assets {
-      Id: 11279883391063370210
-      Name: "Additive Soft Edge"
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
+        AssetId: "mi_metal_iron_001"
       }
     }
     Assets {
-      Id: 11392267178736274211
-      Name: "Lens - Half"
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 14653709633606201813
+      Name: "Fantasy Gauntlet Arm 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_half_lense_001"
-      }
-    }
-    Assets {
-      Id: 11312867989431867200
-      Name: "Bone Human Jaw 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_jaw_01_ref"
-      }
-    }
-    Assets {
-      Id: 14298941920366970956
-      Name: "Thruster Flame VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_thruster_flame"
-      }
-    }
-    Assets {
-      Id: 9351047318754679555
-      Name: "Stone Block Big Broken"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fantasy_block_broken_04"
-      }
-    }
-    Assets {
-      Id: 7185380311906960862
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 9675776263369201294
-      Name: "Fantasy Pommel 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_003"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 10914354925542967262
-      Name: "Fantasy Castle Pillar 02 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_pillar_002_mid"
-      }
-    }
-    Assets {
-      Id: 4438523867532045845
-      Name: "Fantasy Shield 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_001"
-      }
-    }
-    Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 16936111728464854852
-      Name: "WolfFur"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 12357757896131286157
-        ParameterOverrides {
-          Overrides {
-            Name: "roughness"
-            Float: 0.741118729
-          }
-          Overrides {
-            Name: "specular"
-            Float: 0.606109202
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.204000011
-              G: 0.204000011
-              B: 0.204000011
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0.926756859
-          }
-        }
+        AssetId: "sm_weap_fan_gauntlet_arm_001"
       }
     }
     Assets {
@@ -10443,213 +9789,66 @@
       }
     }
     Assets {
-      Id: 6073374154520949901
-      Name: "Custom Grass from Grass Tall"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8599686871907610035
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.492
-              G: 0.317356318
-              B: 0.228288
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "color_roots"
-            Color {
-              R: 0.168000013
-              G: 0.108365551
-              B: 0.077952005
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "dist_rotation"
-            Float: 0
-          }
-          Overrides {
-            Name: "dist_radius"
-            Float: 0
-          }
-          Overrides {
-            Name: "wind_intensity"
-            Float: 0
-          }
-          Overrides {
-            Name: "wind_weight"
-            Float: 0.05
-          }
-          Overrides {
-            Name: "wind_speed"
-            Float: 0
-          }
-        }
+      Id: 11335953511869648588
+      Name: "Fantasy Gauntlet Hand 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_gauntlet_hand_001"
       }
     }
     Assets {
-      Id: 8599686871907610035
-      Name: "Grass (default)"
+      Id: 12510064410993333055
+      Name: "Fantasy Pommel 04"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_004"
+      }
+    }
+    Assets {
+      Id: 7554193605105798964
+      Name: "Sphere - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hemisphere_001"
+      }
+    }
+    Assets {
+      Id: 1475529297417005978
+      Name: "Pyramid - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_eighsided_001"
+      }
+    }
+    Assets {
+      Id: 18186703465705438416
+      Name: "Pyramid - 8-Sided Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_eighsided_truncated_001"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_dynamic_001_uv"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {
-      Id: 2970711086579668885
-      Name: "Pyramid - 3-Sided"
+      Id: 11717866009290414342
+      Name: "Pipe - 45-Degree Long Thin"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_threesided_001"
-      }
-    }
-    Assets {
-      Id: 7647569689338897125
-      Name: "Pyramid - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_hq_001"
-      }
-    }
-    Assets {
-      Id: 1687528788148422459
-      Name: "Prism - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_octagon_001"
-      }
-    }
-    Assets {
-      Id: 1693462740089859892
-      Name: "Pyramid - 6-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_sixsided_001"
-      }
-    }
-    Assets {
-      Id: 1562276358413043561
-      Name: "Fantasy Shield Strap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_strap_001"
-      }
-    }
-    Assets {
-      Id: 2367714287426564257
-      Name: "Custom Cliff 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 10487907976569797598
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 1
-              G: 0.944185495
-              B: 0.828
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.450000018
-              G: 0.29475
-              B: 0.24615
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0.111113176
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 1
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 10487907976569797598
-      Name: "Cliff 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_cliff_001_uv"
-      }
-    }
-    Assets {
-      Id: 14574603696978491411
-      Name: "Rock Flat 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_004"
-      }
-    }
-    Assets {
-      Id: 16628730901845472849
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 93328804870534166
-      Name: "Custom Bark Dead 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 7663308268157147922
-        ParameterOverrides {
-          Overrides {
-            Name: "color_accent"
-            Color {
-              R: 1
-              G: 0.639072835
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.661
-              G: 0.48008737
-              B: 0.327856
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0.168373272
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0.659174085
-          }
-          Overrides {
-            Name: "color_damage"
-            Color {
-              R: 0.625
-              G: 0.578504
-              B: 0.403837
-              A: 1
-            }
-          }
-        }
+        AssetId: "sm_pipe_curve45_005"
       }
     }
     Assets {
@@ -10671,102 +9870,174 @@
       }
     }
     Assets {
-      Id: 11717866009290414342
-      Name: "Pipe - 45-Degree Long Thin"
+      Id: 16628730901845472849
+      Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_005"
+        AssetId: "sm_cylinder_002"
       }
     }
     Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
+      Id: 14574603696978491411
+      Name: "Rock Flat 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_004"
+      }
+    }
+    Assets {
+      Id: 1562276358413043561
+      Name: "Fantasy Shield Strap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 1693462740089859892
+      Name: "Pyramid - 6-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_sixsided_001"
+      }
+    }
+    Assets {
+      Id: 1687528788148422459
+      Name: "Prism - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_001"
+      }
+    }
+    Assets {
+      Id: 7647569689338897125
+      Name: "Pyramid - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_hq_001"
+      }
+    }
+    Assets {
+      Id: 2970711086579668885
+      Name: "Pyramid - 3-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_threesided_001"
+      }
+    }
+    Assets {
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 4438523867532045845
+      Name: "Fantasy Shield 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_001"
+      }
+    }
+    Assets {
+      Id: 10914354925542967262
+      Name: "Fantasy Castle Pillar 02 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_pillar_002_mid"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 9675776263369201294
+      Name: "Fantasy Pommel 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_pommel_003"
+      }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 9351047318754679555
+      Name: "Stone Block Big Broken"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_fantasy_block_broken_04"
+      }
+    }
+    Assets {
+      Id: 14298941920366970956
+      Name: "Thruster Flame VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_flame"
+      }
+    }
+    Assets {
+      Id: 11312867989431867200
+      Name: "Bone Human Jaw 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_jaw_01_ref"
+      }
+    }
+    Assets {
+      Id: 11392267178736274211
+      Name: "Lens - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_half_lense_001"
+      }
+    }
+    Assets {
+      Id: 11279883391063370210
+      Name: "Additive Soft Edge"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
+        AssetId: "fxma_additive_edgefade"
       }
     }
     Assets {
-      Id: 18186703465705438416
-      Name: "Pyramid - 8-Sided Truncated"
+      Id: 16242947141551458551
+      Name: "Pyramid - 7-Sided Truncated"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_eighsided_truncated_001"
-      }
-    }
-    Assets {
-      Id: 1475529297417005978
-      Name: "Pyramid - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_eighsided_001"
-      }
-    }
-    Assets {
-      Id: 7554193605105798964
-      Name: "Sphere - Half"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_hemisphere_001"
-      }
-    }
-    Assets {
-      Id: 12510064410993333055
-      Name: "Fantasy Pommel 04"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_pommel_004"
-      }
-    }
-    Assets {
-      Id: 11335953511869648588
-      Name: "Fantasy Gauntlet Hand 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_gauntlet_hand_001"
-      }
-    }
-    Assets {
-      Id: 14653709633606201813
-      Name: "Fantasy Gauntlet Arm 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_gauntlet_arm_001"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 10696576532019313521
-      Name: "Fantasy Shield 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_003"
+        AssetId: "sm_pyramid_7_sided_truncated_001"
       }
     }
     PrimaryAssetId {
@@ -10776,4 +10047,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

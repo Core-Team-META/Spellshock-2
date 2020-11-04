@@ -4028,7 +4028,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MaxDistanceOnEnemies"
-      Float: 2000
+      Float: 0
     }
     Overrides {
       Name: "cs:ShowOnDeadPlayers"
@@ -4036,7 +4036,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Scale"
-      Float: 1
+      Float: 1.5
     }
     Overrides {
       Name: "cs:ShowNumbers"
@@ -5073,7 +5073,6 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
-  ChildIds: 4643899168817388177
   ChildIds: 14630094839131329020
   ChildIds: 6519160214726546040
   ChildIds: 10014706379529750765
@@ -11111,6 +11110,7 @@ Objects {
   ChildIds: 2259724930909106553
   ChildIds: 16490851105429790798
   ChildIds: 6148028069000916610
+  ChildIds: 17239236756630246519
   ChildIds: 16242997972117519037
   UnregisteredParameters {
   }
@@ -11283,7 +11283,7 @@ Objects {
   Control {
     Width: 200
     Height: 30
-    UIX: 49
+    UIX: 200
     UIY: 34
     RenderTransformPivot {
       Anchor {
@@ -11312,7 +11312,7 @@ Objects {
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomleft"
         }
       }
     }
@@ -11492,6 +11492,215 @@ Objects {
   Script {
     ScriptAsset {
       Id: 17537045942174717849
+    }
+  }
+}
+Objects {
+  Id: 17239236756630246519
+  Name: "Player Team Display"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14630094839131329020
+  ChildIds: 5256271215962835576
+  ChildIds: 5295045870385778444
+  ChildIds: 5133085686965788981
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 165
+    Height: 40
+    UIX: 111.853783
+    UIY: -70.9000854
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5133085686965788981
+  Name: "UI Image"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17239236756630246519
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 3
+    Height: 30
+    UIX: 30
+    UIY: 4
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5295045870385778444
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -5246.56787
+      Y: 3206.55591
+      Z: -6331.99756
+    }
+    Rotation {
+      Yaw: -92.4131851
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17239236756630246519
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 105
+    Height: 35
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Blight Orc"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5256271215962835576
+  Name: "WhatTeamClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17239236756630246519
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:TeamBox"
+      ObjectReference {
+        SelfId: 5295045870385778444
+      }
+    }
+    Overrides {
+      Name: "cs:BadGuyTemplate"
+      AssetReference {
+        Id: 7901618729158363093
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5615073054222006303
     }
   }
 }
@@ -12804,206 +13013,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4643899168817388177
-  Name: "Team UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11779606438790525955
-  ChildIds: 3865523519146332151
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 3865523519146332151
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4643899168817388177
-  ChildIds: 751805717183696301
-  ChildIds: 5256271215962835576
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 5256271215962835576
-  Name: "WhatTeamClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3865523519146332151
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TeamBox"
-      ObjectReference {
-        SelfId: 5295045870385778444
-      }
-    }
-    Overrides {
-      Name: "cs:BadGuyTemplate"
-      AssetReference {
-        Id: 7901618729158363093
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5615073054222006303
-    }
-  }
-}
-Objects {
-  Id: 751805717183696301
-  Name: "UI Container"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3865523519146332151
-  ChildIds: 5295045870385778444
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Canvas {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 5295045870385778444
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -5246.56787
-      Y: 3206.55591
-      Z: -6331.99756
-    }
-    Rotation {
-      Yaw: -92.4131851
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 751805717183696301
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 37
-    Height: 35
-    UIX: 111.853783
-    UIY: -70.9000854
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "Elf"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 8580441486447164758
   Name: "Damage Feedback"
   Transform {
@@ -13097,13 +13106,153 @@ Objects {
   }
 }
 Objects {
+  Id: 14627895278568143676
+  Name: "Team Colors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 14584701404703053389
+  ChildIds: 18184784424705387062
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Orc"
+      Color {
+        R: 0.72
+        G: 0.0715231895
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:Elf"
+      Color {
+        G: 0.580000043
+        B: 0.361059815
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18184784424705387062
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14627895278568143676
+  ChildIds: 7992205345288076574
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 7992205345288076574
+  Name: "InitializeTeamColors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18184784424705387062
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 14627895278568143676
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11088639787073807518
+    }
+  }
+}
+Objects {
+  Id: 14584701404703053389
+  Name: "InitializeTeamColors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14627895278568143676
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 14627895278568143676
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11088639787073807518
+    }
+  }
+}
+Objects {
   Id: 9738099254667150138
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -20165.2539
-      Y: -15719.8398
-      Z: 3290
+      X: -15679.7344
+      Y: -16100.4346
+      Z: 3445.77783
     }
     Rotation {
     }
@@ -13118,7 +13267,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

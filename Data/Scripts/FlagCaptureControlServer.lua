@@ -72,8 +72,8 @@ end
 -- broadcast events and change colors.
 
 local capturePlayer = nil
-local damageEvent = nil
-local bindingEvents = {}
+local capturePlayerSettings = {}
+local capturePlayerEvents = {}
 local lastTeamScoreAwardTime = time()
 
 -- nil Reset()
@@ -92,6 +92,8 @@ function Reset()
     script:SetNetworkedCustomProperty("LastCaptureProgress", 0.0)
     script:SetNetworkedCustomProperty("LastUpdateTime", time())
     script:SetNetworkedCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
+    
+    ResetCapturePlayer()
 end
 
 -- float GetCaptureSpeed()
@@ -160,6 +162,7 @@ function GetState()
     result.friendliesPresent = script:GetCustomProperty("FriendliesPresent")
     result.enemiesPresent = script:GetCustomProperty("EnemiesPresent")
     result.isEnabled = script:GetCustomProperty("IsEnabled")
+    result.capturePlayer = script:GetCustomProperty("CapturePlayerID")
     result.attackingTeam = 0
     result.order = ORDER
     result.spawnPoints = SpawnPoints
@@ -228,7 +231,7 @@ end
 -- changes)
 function UpdateReplicatedProgress()
     local newCaptureProgress = GetCaptureProgress()
-	print("Last Captured Progress: "..tostring(newCaptureProgress))
+	--print("Last Captured Progress: "..tostring(newCaptureProgress))
 	
     script:SetNetworkedCustomProperty("FriendliesPresent", GetFriendliesPresent())
     script:SetNetworkedCustomProperty("EnemiesPresent", GetEnemiesPresent())
@@ -269,7 +272,8 @@ function UpdateCapturePlayer()
 	if not Object.IsValid(capturePlayer) or capturePlayer.isDead or not IsPlayerPresent(capturePlayer) then
 		ResetCapturePlayer()
 	else
-		print("Capture Player: "..capturePlayer.name)
+		--print("Capture Player: "..capturePlayer.name)
+		CAPTURE_TRIGGER.isInteractable = false
 	end
 end
 
@@ -277,30 +281,43 @@ function ResetCapturePlayer()
 	UpdateReplicatedProgress()
 	if capturePlayer then
 		print("RESETTING CAPTURE PLAYER")
+		--capturePlayer.movementControlMode = capturePlayerSettings.movementControlMode
+		--capturePlayer.maxJumpCount = capturePlayerSettings.maxJumpCount
 		capturePlayer = nil		
-	end
-	if damageEvent then
-		damageEvent:Disconnect()
-		damageEvent = nil
+		for _, event in pairs(capturePlayerEvents) do
+			event:Disconnect()
+		end
+		capturePlayerEvents = {}
+		CAPTURE_TRIGGER.isInteractable = true
+		script:SetNetworkedCustomProperty("CapturePlayerID", "")
 	end
 end
 
 function OnCapturePlayerDamaged(player, damage)
-	ResetCapturePlayer()	
+	if player == capturePlayer then
+		ResetCapturePlayer()	
+	end
+end
+
+function OnBindingPressed(player, binding)
+	if player == capturePlayer then
+		ResetCapturePlayer()
+	end
 end
 
 function OnInteractedEvent(thisTrigger, player)
 	-- update capturePlayer
-	if capturePlayer == nil or not IsPlayerPresent(capturePlayer) then
-		if damageEvent then
-			damageEvent:Disconnect()
-			damageEvent = nil
-		end
+	if capturePlayer == nil then
 		capturePlayer = player
-		damageEvent = capturePlayer.damagedEvent:Connect( OnCapturePlayerDamaged )
+		table.insert(capturePlayerSettings, capturePlayer.damagedEvent:Connect( OnCapturePlayerDamaged ))
+		table.insert(capturePlayerSettings, capturePlayer.bindingPressedEvent:Connect( OnBindingPressed ))
+		--capturePlayerSettings.movementControlMode = capturePlayer.movementControlMode
+		--capturePlayerSettings.maxJumpCount = capturePlayer.maxJumpCount
+		
+		--capturePlayer.movementControlMode = MovementControlMode.NONE
+		--capturePlayer.maxJumpCount = 0
 		capturePlayer:ResetVelocity()
-	elseif player == capturePlayer then
-		ResetCapturePlayer()
+		script:SetNetworkedCustomProperty("CapturePlayerID", capturePlayer.id)
 	end
 end
 
@@ -310,10 +327,11 @@ CAPTURE_TRIGGER.interactedEvent:Connect( OnInteractedEvent )
 -- Handles owner changing, player count changing, and 0.0 progress state.
 function Tick(deltaTime)
 	UpdateCapturePlayer()
+	
     -- Handle changing owner at 0.0 progress
     if GetCaptureProgress() == 0.0 then
         local newProgressTeam = WhichTeamShouldProgressPoint()
-        print("newProgressTeam: "..newProgressTeam)
+        --print("newProgressTeam: "..newProgressTeam)
         if newProgressTeam ~= script:GetCustomProperty("ProgressedTeam") then
             -- This depends on the old team so must be first
             UpdateReplicatedProgress()
@@ -322,8 +340,8 @@ function Tick(deltaTime)
         end
     end
 
-	print("~ Capture progress: "..tostring(GetCaptureProgress()))
-	print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
+	--print("~ Capture progress: "..tostring(GetCaptureProgress()))
+	--print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
 
     -- Check for owner changed
     local newOwner = 0
@@ -341,6 +359,8 @@ function Tick(deltaTime)
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
         end
+        -- release the capture player
+        ResetCapturePlayer()
     end
 
     -- Award teamscore every five seconds

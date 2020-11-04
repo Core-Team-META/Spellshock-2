@@ -47,6 +47,11 @@ if DECAY_SPEED < 0.0 then
     DECAY_SPEED = 0.0
 end
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 -- Variables
 -- This can be derived from other values, so doesn't need to be replicated. However, we care when it changes to
 -- broadcast events and change colors.
@@ -126,6 +131,7 @@ function GetState()
     result.friendliesPresent = SERVER_SCRIPT:GetCustomProperty("FriendliesPresent")
     result.enemiesPresent = SERVER_SCRIPT:GetCustomProperty("EnemiesPresent")
     result.isEnabled = SERVER_SCRIPT:GetCustomProperty("IsEnabled")
+    result.capturePlayer = SERVER_SCRIPT:GetCustomProperty("CapturePlayerID")
     result.attackingTeam = 0
     result.order = ORDER
     result.spawnPoints = SpawnPoints
@@ -137,13 +143,19 @@ end
 -- Sets the geometry to match the team color, including a neutral state
 function SetGeometryTeam(team)
     for _, object in pairs(teamColoredGeometry) do
-        if team == 0 then
+        --[[if team == 0 then
             object.isTeamColorUsed = false
         else
             object.isTeamColorUsed = true
         end
 
-        object.team = team
+        object.team = team]]
+        
+        if team ~= 0 then
+        	object:SetColor(_G.TeamColors[team])
+        else
+        	object:SetColor(Color.WHITE)
+        end
     end
 end
 

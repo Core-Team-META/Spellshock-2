@@ -30,6 +30,11 @@ local DISABLED_COLOR = COMPONENT_ROOT:GetCustomProperty("DisabledColor")
 -- Variables
 local indicators = {}
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 -- bool CompareStates(table, table)
 -- Helpers to sort capture point states by their order property
 function CompareStates(state1, state2)
@@ -72,20 +77,16 @@ function Tick(DeltaTime)
 			if capturePointState.isEnabled then
 				-- Set icon image to represent current progressing team
 				if capturePointState.progressedTeam == 0 then
-					iconImage.isTeamColorUsed = false
 					iconImage:SetColor(NEUTRAL_COLOR)
 				else
-					iconImage.isTeamColorUsed = true
-					iconImage.team = capturePointState.progressedTeam
+					iconImage:SetColor(_G.TeamColors[capturePointState.progressedTeam])
 				end
 
 				-- Set icon background to represent current owner team
 				if capturePointState.owningTeam == 0 then
-					iconBackground.isTeamColorUsed = false
 					iconBackground:SetColor(NEUTRAL_COLOR)
 				else
-					iconBackground.isTeamColorUsed = true
-					iconBackground.team = capturePointState.owningTeam
+					iconBackground:SetColor(_G.TeamColors[capturePointState.owningTeam])
 				end
 			else
 				iconImage.isTeamColorUsed = false
