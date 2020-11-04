@@ -1,6 +1,261 @@
 ﻿Name: "For BEN"
 RootId: 16227534043720893935
 Objects {
+  Id: 17417064048651013341
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 7913.0376
+            Y: -14402.208
+            Z: 4638.28564
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -11.551796
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 12419766084897398505
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -15257.8477
+            Y: 4314.07275
+            Z: -597.465515
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 12117967644652967285
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6255.72803
+            Y: -4195.54492
+            Z: 2397.41602
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 32.9798355
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 10847475115936183263
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -13753.8164
+            Y: -18343.2207
+            Z: 2042.66626
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
+  Id: 10925421981391100152
+  Name: "Capture_Point_Area"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16063818355390569732
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Capture_Point_Area"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6674.26367
+            Y: 7609.61621
+            Z: 1997.78882
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10298965103520888440
+    }
+  }
+}
+Objects {
   Id: 10603941771791736659
   Name: "Seafoam"
   Transform {
