@@ -1284,6 +1284,7 @@ Objects {
   ParentId: 4559935034785672696
   UnregisteredParameters {
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1837,7 +1838,7 @@ Objects {
 }
 Objects {
   Id: 10184263260861828745
-  Name: "CapturePointControlClient"
+  Name: "FlagCaptureControlClient"
   Transform {
     Location {
     }
@@ -1976,6 +1977,10 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:CapturePlayerID"
+      String: ""
+    }
+    Overrides {
       Name: "cs:IsEnabled"
       Bool: true
     }
@@ -2009,6 +2014,10 @@ Objects {
     }
     Overrides {
       Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CapturePlayerID:isrep"
       Bool: true
     }
   }
@@ -2247,6 +2256,7 @@ Objects {
   ParentId: 16313267587009276285
   UnregisteredParameters {
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2746,7 +2756,7 @@ Objects {
 }
 Objects {
   Id: 13672439033265604827
-  Name: "CapturePointControlClient"
+  Name: "FlagCaptureControlClient"
   Transform {
     Location {
     }
@@ -2885,6 +2895,10 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:CapturePlayerID"
+      String: ""
+    }
+    Overrides {
       Name: "cs:IsEnabled"
       Bool: true
     }
@@ -2918,6 +2932,10 @@ Objects {
     }
     Overrides {
       Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CapturePlayerID:isrep"
       Bool: true
     }
   }
@@ -3152,6 +3170,7 @@ Objects {
   ParentId: 17910728817571265557
   UnregisteredParameters {
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3720,7 +3739,7 @@ Objects {
 }
 Objects {
   Id: 4155419250277775108
-  Name: "CapturePointControlClient"
+  Name: "FlagCaptureControlClient"
   Transform {
     Location {
     }
@@ -3859,6 +3878,10 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:CapturePlayerID"
+      String: ""
+    }
+    Overrides {
       Name: "cs:IsEnabled"
       Bool: true
     }
@@ -3892,6 +3915,10 @@ Objects {
     }
     Overrides {
       Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CapturePlayerID:isrep"
       Bool: true
     }
   }
@@ -4125,6 +4152,7 @@ Objects {
   ParentId: 16321515820500395030
   UnregisteredParameters {
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4623,7 +4651,7 @@ Objects {
 }
 Objects {
   Id: 3266274084411309890
-  Name: "CapturePointControlClient"
+  Name: "FlagCaptureControlClient"
   Transform {
     Location {
     }
@@ -4765,6 +4793,10 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:CapturePlayerID"
+      String: ""
+    }
+    Overrides {
       Name: "cs:IsEnabled"
       Bool: true
     }
@@ -4798,6 +4830,10 @@ Objects {
     }
     Overrides {
       Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CapturePlayerID:isrep"
       Bool: true
     }
   }
@@ -5031,6 +5067,7 @@ Objects {
   ParentId: 13392592636105101133
   UnregisteredParameters {
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5592,7 +5629,7 @@ Objects {
 }
 Objects {
   Id: 715224953526643395
-  Name: "CapturePointControlClient"
+  Name: "FlagCaptureControlClient"
   Transform {
     Location {
     }
@@ -5733,6 +5770,10 @@ Objects {
       Float: 0
     }
     Overrides {
+      Name: "cs:CapturePlayerID"
+      String: ""
+    }
+    Overrides {
       Name: "cs:IsEnabled"
       Bool: true
     }
@@ -5766,6 +5807,10 @@ Objects {
     }
     Overrides {
       Name: "cs:LastCaptureSpeed:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CapturePlayerID:isrep"
       Bool: true
     }
   }

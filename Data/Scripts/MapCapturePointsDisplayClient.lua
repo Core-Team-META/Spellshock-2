@@ -28,6 +28,11 @@ local BaseButton = nil
 
 RESPAWN_TIMER_PANEL.isVisible = false
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 function CheckRespawnTimer()
 	if CurrentButton.clientUserData.stateID then -- the current button is a capture point
 		-- Check that the capture point still belongs to the player's team
@@ -90,8 +95,6 @@ function Tick(DeltaTime)
 		PANEL.visibility = Visibility.INHERIT
 		
 		if AS.IsRespawning() and RespawnTimer == -1 then
-			UI.SetCursorVisible(true)
-			UI.SetCanCursorInteractWithUI(true)
 			RespawnTimer = RespawnDelay -- activate timer
 			RESPAWN_TIMER_PANEL.isVisible = true
 			TIMER.text = tostring(RespawnDelay)
@@ -102,8 +105,6 @@ function Tick(DeltaTime)
 		
 		if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
 			print("Disabling cursor")
-			UI.SetCursorVisible(false)
-			UI.SetCanCursorInteractWithUI(false)
 		end
 	end
 		
@@ -131,8 +132,9 @@ function Tick(DeltaTime)
 			local iconBackground = baseIndicators[locationTable.root]:GetCustomProperty("IconBackground"):WaitForObject()
 			
 			selectedIcon.isVisible = false
-			iconImage.team = locationTable.team
-			iconBackground.team = locationTable.team
+			iconImage:SetColor(_G.TeamColors[locationTable.team])
+			iconBackground:SetColor(_G.TeamColors[locationTable.team])
+			
 			
 			iconButton.pressedEvent:Connect(OnButtonPressed)
         end
@@ -188,20 +190,16 @@ function Tick(DeltaTime)
 			if capturePointState.isEnabled then
 				-- Set icon image to represent current progressing team
 				if capturePointState.progressedTeam == 0 then
-					iconImage.isTeamColorUsed = false
 					iconImage:SetColor(NEUTRAL_COLOR)
 				else
-					iconImage.isTeamColorUsed = true
-					iconImage.team = capturePointState.progressedTeam
+					iconImage:SetColor(_G.TeamColors[capturePointState.progressedTeam])
 				end
 
 				-- Set icon background to represent current owner team
 				if capturePointState.owningTeam == 0 then
-					iconBackground.isTeamColorUsed = false
 					iconBackground:SetColor(NEUTRAL_COLOR)
 				else
-					iconBackground.isTeamColorUsed = true
-					iconBackground.team = capturePointState.owningTeam
+					iconBackground:SetColor(_G.TeamColors[capturePointState.owningTeam])
 				end
 			else
 				iconImage.isTeamColorUsed = false

@@ -37,6 +37,11 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local FRIENDLY_COLOR = Color.New(0.0, 0.25, 1.0)
 local ENEMY_COLOR = Color.New(1.0, 0.0, 0.0)
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 -- Variables
 local headerLine = nil
 local playerLines = {}
@@ -104,6 +109,13 @@ function ComparePlayers(player1, player2)
     return player1.name < player2.name
 end
 
+playerLines = {}
+for _, player in pairs(Game.GetPlayers()) do
+	local newLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
+    newLine.y = newLine.height * (#playerLines + 1)
+    table.insert(playerLines, newLine)
+end
+
 -- nil Tick(float)
 -- Update visibility and displayed information
 function Tick(deltaTime)
@@ -118,16 +130,16 @@ function Tick(deltaTime)
         table.sort(players, ComparePlayers)
 
         for i, player in ipairs(players) do
-            local teamColor = FRIENDLY_COLOR
+            --local teamColor = FRIENDLY_COLOR
 
-            if player ~= LOCAL_PLAYER and Teams.AreTeamsEnemies(player.team, LOCAL_PLAYER.team) then
-                teamColor = ENEMY_COLOR
-            end
+            --if player ~= LOCAL_PLAYER and Teams.AreTeamsEnemies(player.team, LOCAL_PLAYER.team) then
+                --teamColor = ENEMY_COLOR
+            --end
 
             local line = playerLines[i]
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
             line:GetCustomProperty("Name"):WaitForObject().text = player.name
-            line:GetCustomProperty("Name"):WaitForObject():SetColor(teamColor)
+            line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
             line:GetCustomProperty("KillsText"):WaitForObject().text = tostring(player.kills)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
         end

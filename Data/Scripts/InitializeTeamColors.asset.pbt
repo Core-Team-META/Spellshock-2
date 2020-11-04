@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 3021211325381086942
-  Name: "CapturePointControlClient"
+  Id: 11088639787073807518
+  Name: "InitializeTeamColors"
   PlatformAssetType: 3
   TextAsset {
   }

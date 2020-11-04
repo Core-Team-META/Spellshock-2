@@ -68,6 +68,11 @@ if CHANGE_ANIMATION_TIME <= 0.0 then
     CHANGE_ANIMATION_TIME = 1.0
 end
 
+-- Wait for team colors
+while not _G.TeamColors do
+	Task.Wait()
+end
+
 --Constants
 -- In units of scale
 local BORDER_WIDTH = 0.02
@@ -405,20 +410,9 @@ function Tick(deltaTime)
 				end
 
 				-- Update name and health color based on teams
-				if SHOW_NAMES then
-					local nameColor = nil
-					local healthColor = nil
-
-					if player == LOCAL_PLAYER or Teams.AreTeamsFriendly(player.team, LOCAL_PLAYER.team) then
-						nameColor = FRIENDLY_NAME_COLOR
-						healthColor = FRIENDLY_HEALTH_COLOR
-					else
-						nameColor = ENEMY_NAME_COLOR
-						healthColor = ENEMY_HEALTH_COLOR
-					end
-
-					nameplate.nameText:SetColor(nameColor)
-					nameplate.healthPiece:SetColor(healthColor)
+				if SHOW_NAMES then					
+					nameplate.nameText:SetColor(_G.TeamColors[player.team])
+					nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 				end
 			end
 		end

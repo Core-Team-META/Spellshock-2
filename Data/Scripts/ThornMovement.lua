@@ -1,5 +1,4 @@
-﻿local Root = script:GetCustomProperty("Root"):WaitForObject()
-local CenterThorns = script:GetCustomProperty("CenterThorns"):WaitForObject()
+﻿local CenterThorns = script:GetCustomProperty("CenterThorns"):WaitForObject()
 local FrontThorns = script:GetCustomProperty("FrontThorns"):WaitForObject()
 local FrontLeftThorns = script:GetCustomProperty("FrontLeftThorns"):WaitForObject()
 local FrontRightThorns = script:GetCustomProperty("FrontRightThorns"):WaitForObject()

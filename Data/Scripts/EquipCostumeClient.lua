@@ -1,4 +1,5 @@
-﻿local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
+﻿--if true then return end
+local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 
 local Orc_Costume = ParentEquipment:GetCustomProperty("Orc_Costume")
 local Elf_Costume = ParentEquipment:GetCustomProperty("Elf_Costume")
@@ -16,6 +17,7 @@ function AttachCostume(player)
 		table.insert(PlayerAttachments, attachment)
 	end
 	player.clientUserData.PlayerCostume = PlayerAttachments
+	CostumeObject:Destroy()
 end
 
 function DestroyCostume(player)

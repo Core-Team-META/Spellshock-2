@@ -1582,6 +1582,7 @@
           }
         }
         ParentId: 4708996743668767698
+        ChildIds: 1004186579194125424
         ChildIds: 6153533861077595712
         ChildIds: 13141893348608307507
         ChildIds: 4620336145958381494
@@ -1688,6 +1689,64 @@
         }
       }
       Objects {
+        Id: 1004186579194125424
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: -202.230469
+            Y: 775.154297
+            Z: -221.194336
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 1
+          }
+        }
+        ParentId: 18270922159998676275
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6703712560572080575
+          }
+        }
+      }
+      Objects {
         Id: 6153533861077595712
         Name: "Server Context"
         Transform {
@@ -1703,7 +1762,6 @@
         }
         ParentId: 18270922159998676275
         ChildIds: 1405880425944066164
-        ChildIds: 1004186579194125424
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1770,63 +1828,6 @@
         Script {
           ScriptAsset {
             Id: 7702565210062601240
-          }
-        }
-      }
-      Objects {
-        Id: 1004186579194125424
-        Name: "WeaponAimServer"
-        Transform {
-          Location {
-            X: -202.22998
-            Y: 775.155151
-            Z: -221.19458
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 6153533861077595712
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:AimBinding"
-            String: "ability_secondary"
-          }
-          Overrides {
-            Name: "cs:AimWalkSpeedPercentage"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:AimActiveStance"
-            String: "unarmed_carry_object_heavy"
-          }
-          Overrides {
-            Name: "cs:AimZoomDistance"
-            Float: 150
-          }
-          Overrides {
-            Name: "cs:SpreadZoom"
-            Float: -2
-          }
-          Overrides {
-            Name: "cs:ZoomSpeed"
-            Float: 1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6703712560572080575
           }
         }
       }
