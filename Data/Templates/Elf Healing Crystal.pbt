@@ -17,6 +17,7 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 13456818510793891884
+        ChildIds: 16505450175508250673
         ChildIds: 7617712226939637063
         UnregisteredParameters {
           Overrides {
@@ -66,6 +67,51 @@
           }
           TriggerShape_v2 {
             Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 16505450175508250673
+        Name: "EndingFX Handler"
+        Transform {
+          Location {
+            X: 23196.7891
+            Y: 31735.3184
+            Z: -6378.61475
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7776502408687889212
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:FX_Template"
+            AssetReference {
+              Id: 4979767360953327811
+            }
+          }
+          Overrides {
+            Name: "cs:ParentObject"
+            ObjectReference {
+              SubObjectId: 7776502408687889212
+            }
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3510445028560269500
           }
         }
       }

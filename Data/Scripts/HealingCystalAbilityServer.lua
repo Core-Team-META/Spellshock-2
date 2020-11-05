@@ -44,11 +44,11 @@ function OnSpecialAbilityReady(thisAbility)
 	isPlacing = false
 end
 
-function OnCrystalDestroyed(thisObject)
+--[[function OnCrystalDestroyed(thisObject)
 	print("Crystal being destroyed")
 	World.SpawnAsset(EndingFX, {position = thisObject:GetWorldPosition()})
 	DestroyedEventListener:Disconnect()
-end
+end]]
 
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
@@ -72,7 +72,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = LifeSpan
-		DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
+		--DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
 	end
 end
 

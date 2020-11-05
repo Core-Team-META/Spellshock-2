@@ -16,6 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 12752184528749010219
         ChildIds: 1665329369951968663
         ChildIds: 10283313243638550976
         UnregisteredParameters {
@@ -35,6 +36,51 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12752184528749010219
+        Name: "EndingFX Handler"
+        Transform {
+          Location {
+            X: 22999.0898
+            Y: 31449.4297
+            Z: -6353.19287
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13337984380730729146
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:FX_Template"
+            AssetReference {
+              Id: 15004923690597365431
+            }
+          }
+          Overrides {
+            Name: "cs:ParentObject"
+            ObjectReference {
+              SubObjectId: 13337984380730729146
+            }
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1897143244213311680
+          }
         }
       }
       Objects {
