@@ -422,15 +422,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15240646233324917545
-  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
-  }
-}
-Assets {
   Id: 15223421943927964872
   Name: "Cube - Arched"
   PlatformAssetType: 1
@@ -1376,15 +1367,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10727817675464078874
-  Name: "Arch Fancy 3m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_arch_fancy_3m_001"
-  }
-}
-Assets {
   Id: 10634098119816284342
   Name: "Wood Planks Dark"
   PlatformAssetType: 2
@@ -1400,15 +1382,6 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_fan_ground_bones_002"
-  }
-}
-Assets {
-  Id: 10577491396371571795
-  Name: "Depth of Field Post Process"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_post_process_DOF"
   }
 }
 Assets {
