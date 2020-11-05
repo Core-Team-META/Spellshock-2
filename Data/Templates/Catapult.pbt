@@ -16,6 +16,9 @@
           }
         }
         ParentId: 3728874800817007101
+        ChildIds: 504148520516056242
+        ChildIds: 15364101570719107862
+        ChildIds: 3426165122757130519
         ChildIds: 14959081437812059297
         ChildIds: 17476655053811340237
         ChildIds: 5328438734998330084
@@ -35,6 +38,129 @@
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 504148520516056242
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: 92.3417435
+            Y: -414.452606
+            Z: 110.409996
+          }
+          Rotation {
+            Yaw: 159.234207
+          }
+          Scale {
+            X: 1.04317939
+            Y: 1.04317939
+            Z: 1.04317939
+          }
+        }
+        ParentId: 11611935791228445355
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4489563712437375651
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15364101570719107862
+        Name: "Bone Human Humerus 01"
+        Transform {
+          Location {
+            X: 67.7801208
+            Y: -415.713501
+            Z: 103.095169
+          }
+          Rotation {
+            Pitch: -38.9340172
+            Yaw: 159.234207
+          }
+          Scale {
+            X: 0.877669036
+            Y: 0.877669036
+            Z: 0.877669036
+          }
+        }
+        ParentId: 11611935791228445355
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 482873605194865923
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3426165122757130519
+        Name: "Bone Human Femur 01"
+        Transform {
+          Location {
+            X: -50.8875465
+            Y: -409.877472
+            Z: 94.5701599
+          }
+          Rotation {
+            Pitch: -54.2521172
+            Yaw: -20.7657776
+            Roll: 180
+          }
+          Scale {
+            X: 0.726922154
+            Y: 0.726922154
+            Z: 0.726922154
+          }
+        }
+        ParentId: 11611935791228445355
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4074048108565904374
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
         }
       }
       Objects {
@@ -192,7 +318,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 7613660189645541274
             }
           }
           Overrides {
@@ -206,9 +332,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
+              R: 0.755208313
+              G: 0.755208313
+              B: 0.755208313
               A: 1
             }
           }
@@ -893,7 +1019,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 7613660189645541274
             }
           }
           Overrides {
@@ -907,9 +1033,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
+              R: 0.755208313
+              G: 0.755208313
+              B: 0.755208313
               A: 1
             }
           }
@@ -1594,7 +1720,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 7613660189645541274
             }
           }
           Overrides {
@@ -1608,9 +1734,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
+              R: 0.755208313
+              G: 0.755208313
+              B: 0.755208313
               A: 1
             }
           }
@@ -2295,7 +2421,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5318852982404395572
+              Id: 7613660189645541274
             }
           }
           Overrides {
@@ -2309,9 +2435,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
+              R: 0.755208313
+              G: 0.755208313
+              B: 0.755208313
               A: 1
             }
           }
@@ -2891,10 +3017,9 @@
           }
         }
         ParentId: 11611935791228445355
-        ChildIds: 4280461636973451713
-        ChildIds: 14833056140783691826
         ChildIds: 4185271129566550262
         ChildIds: 2707117225510976913
+        ChildIds: 10562407303023809306
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2905,132 +3030,23 @@
         }
       }
       Objects {
-        Id: 4280461636973451713
-        Name: "Short Banner Fleur-de-lis"
-        Transform {
-          Location {
-            X: -6.31207275
-            Y: 8.69958496
-            Z: 3.30383301
-          }
-          Rotation {
-            Pitch: -8.15423584
-            Yaw: 11.0984354
-            Roll: 4.85152611e-07
-          }
-          Scale {
-            X: 0.535402775
-            Y: 0.629419208
-            Z: 0.629419208
-          }
-        }
-        ParentId: 17476655053811340237
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Prop_Pole:id"
-            AssetReference {
-              Id: 11534525569341258104
-            }
-          }
-          Overrides {
-            Name: "ma:Prop_Cloth:id"
-            AssetReference {
-              Id: 5846483764795651725
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17853943551029294903
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14833056140783691826
-        Name: "Short Banner Fleur-de-lis"
-        Transform {
-          Location {
-            X: 46.8374634
-            Y: 12.9234009
-          }
-          Rotation {
-            Pitch: -0.030456543
-            Yaw: 3.4259994
-            Roll: -4.31323242
-          }
-          Scale {
-            X: 0.53540343
-            Y: 0.629418135
-            Z: 0.424885511
-          }
-        }
-        ParentId: 17476655053811340237
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Prop_Pole:id"
-            AssetReference {
-              Id: 11534525569341258104
-            }
-          }
-          Overrides {
-            Name: "ma:Prop_Cloth:id"
-            AssetReference {
-              Id: 5846483764795651725
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17853943551029294903
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 4185271129566550262
         Name: "Short Banner Fleur-de-lis"
         Transform {
           Location {
-            X: 99.0234375
-            Y: 11.3599243
-            Z: 7.04614258
+            X: 21.2363319
+            Y: -1.20970905
+            Z: -63.9780235
           }
           Rotation {
-            Pitch: 18.4065247
-            Yaw: -1.88018799
-            Roll: -2.00341797
+            Pitch: 0.00816207565
+            Yaw: -2.20596313
+            Roll: -1.75378418
           }
           Scale {
-            X: 0.535402775
-            Y: 0.629419208
-            Z: 0.629419208
+            X: 0.535403907
+            Y: 0.629428
+            Z: 0.416594565
           }
         }
         ParentId: 17476655053811340237
@@ -3101,19 +3117,19 @@
         Name: "Street Light Pole Extension 02"
         Transform {
           Location {
-            X: 459.090088
-            Y: 15.1003418
-            Z: 59.4346313
+            X: 452.726624
+            Y: 40.4988441
+            Z: 56.8550377
           }
           Rotation {
-            Pitch: 36.7689934
-            Yaw: -151.80864
-            Roll: -144.260193
+            Pitch: 32.6353035
+            Yaw: 177.018585
+            Roll: 177.482681
           }
           Scale {
             X: 0.843002915
-            Y: 0.335243225
-            Z: 1.18913651
+            Y: 0.335243165
+            Z: 1.18913639
           }
         }
         ParentId: 2707117225510976913
@@ -3148,6 +3164,61 @@
         CoreMesh {
           MeshAsset {
             Id: 5509123564555821808
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10562407303023809306
+        Name: "Short Banner Fleur-de-lis"
+        Transform {
+          Location {
+            X: 26.3839645
+            Y: 21.2878323
+            Z: -63.450222
+          }
+          Rotation {
+            Pitch: 0.00505433977
+            Yaw: 177.365845
+            Roll: 1.75343108
+          }
+          Scale {
+            X: 0.535403907
+            Y: 0.629428
+            Z: 0.416594565
+          }
+        }
+        ParentId: 17476655053811340237
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Prop_Pole:id"
+            AssetReference {
+              Id: 11534525569341258104
+            }
+          }
+          Overrides {
+            Name: "ma:Prop_Cloth:id"
+            AssetReference {
+              Id: 5846483764795651725
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17853943551029294903
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4327,9 +4398,9 @@
         Name: "Cylinder - Polished"
         Transform {
           Location {
-            X: 35.8115234
-            Y: -19.1181602
-            Z: -0.00012588501
+            X: 35.8116
+            Y: -19.1182976
+            Z: -9.74878549e-06
           }
           Rotation {
             Pitch: 29.6127472
@@ -4337,9 +4408,9 @@
             Roll: 33.3115959
           }
           Scale {
-            X: 0.120430276
-            Y: 0.120435171
-            Z: 2.28018045
+            X: 0.0903159231
+            Y: 0.0903271958
+            Z: 2.18096328
           }
         }
         ParentId: 8905447303636899688
@@ -5107,19 +5178,19 @@
         Name: "Horn"
         Transform {
           Location {
-            X: -145.032837
-            Y: -327.60083
-            Z: 0.8334198
+            X: -145.032867
+            Y: -327.600647
+            Z: 0.833404899
           }
           Rotation {
-            Pitch: -3.73530722
+            Pitch: -3.73532104
             Yaw: 159.173889
             Roll: 22.2338314
           }
           Scale {
-            X: 0.379465163
-            Y: 0.379464179
-            Z: 1.668769
+            X: 0.379482538
+            Y: 0.379474759
+            Z: 1.37504387
           }
         }
         ParentId: 8587987126793391050
@@ -5173,19 +5244,19 @@
         Name: "Horn"
         Transform {
           Location {
-            X: 177.71582
-            Y: 329.062
-            Z: -9.09814453
+            X: 180.141373
+            Y: 329.346191
+            Z: -9.21892071
           }
           Rotation {
-            Pitch: -87.1436157
-            Yaw: -179.99913
-            Roll: -90.0012207
+            Pitch: -87.1392517
+            Yaw: 179.999924
+            Roll: -83.2936096
           }
           Scale {
-            X: 0.632818401
-            Y: 0.465881467
-            Z: 1.60883081
+            X: 0.632819057
+            Y: 0.465894699
+            Z: 1.46633697
           }
         }
         ParentId: 8587987126793391050
@@ -5239,19 +5310,19 @@
         Name: "Horn"
         Transform {
           Location {
-            X: -177.533203
-            Y: 329.062
-            Z: -9.09814453
+            X: -180.705597
+            Y: 329.382111
+            Z: -8.93993568
           }
           Rotation {
-            Pitch: 87.1433563
-            Yaw: -0.00137329102
-            Roll: 89.9982147
+            Pitch: 87.14048
+            Yaw: -0.00228881836
+            Roll: 95.7426758
           }
           Scale {
             X: 0.632818401
-            Y: 0.465881467
-            Z: 1.60883081
+            Y: 0.465868056
+            Z: 1.24126422
           }
         }
         ParentId: 8587987126793391050
@@ -6365,17 +6436,18 @@
         Name: "Shield"
         Transform {
           Location {
-            X: 348.720978
-            Y: 107.875862
-            Z: 131.247864
+            X: 348.72049
+            Y: 107.875839
+            Z: 131.247787
           }
           Rotation {
             Yaw: -2.7925415
+            Roll: -3.86218262
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 0.999999881
           }
         }
         ParentId: 9215270179763888927
@@ -6505,19 +6577,19 @@
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 346.243866
-            Y: 176.642776
-            Z: 1.7651062
+            X: 343.547882
+            Y: 176.673401
+            Z: 1.79529893
           }
           Rotation {
             Pitch: -0.640655518
-            Yaw: -0.661529541
-            Roll: -36.8475952
+            Yaw: -0.661590576
+            Roll: -39.1049805
           }
           Scale {
-            X: 0.351401061
-            Y: 0.521256864
-            Z: 0.654595196
+            X: 0.496887952
+            Y: 0.521240473
+            Z: 0.654608369
           }
         }
         ParentId: 9215270179763888927
@@ -8856,13 +8928,12 @@
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.525000036
-              G: 0.345387369
-              B: 0.194250017
-              A: 1
-            }
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.67771107
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.946321487
           }
         }
         Collidable_v2 {
@@ -8954,19 +9025,19 @@
         Name: "Cylinder - Polished"
         Transform {
           Location {
-            X: 126.864258
-            Y: -157.187012
-            Z: 256.557129
+            X: 126.864311
+            Y: -157.187103
+            Z: 256.557037
           }
           Rotation {
             Pitch: 35.6898079
-            Yaw: -9.89045525
-            Roll: -24.0275974
+            Yaw: -9.89044189
+            Roll: -24.0275879
           }
           Scale {
-            X: 0.120430276
-            Y: 0.120435171
-            Z: 2.28018045
+            X: 0.0966566429
+            Y: 0.0966190547
+            Z: 2.31797934
           }
         }
         ParentId: 11611935791228445355
@@ -9016,17 +9087,17 @@
         Name: "Cylinder - Polished"
         Transform {
           Location {
-            X: 43.5830078
-            Y: -280.05127
-            Z: 165.774902
+            X: 43.5827408
+            Y: -280.050964
+            Z: 165.774811
           }
           Rotation {
             Roll: 29.1584
           }
           Scale {
-            X: 0.120430276
-            Y: 0.120428257
-            Z: 3.57392502
+            X: 0.0981056765
+            Y: 0.0980996
+            Z: 3.48436427
           }
         }
         ParentId: 11611935791228445355
@@ -9073,6 +9144,33 @@
       }
     }
     Assets {
+      Id: 4489563712437375651
+      Name: "Bone Human Ulna 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_ulna_01_ref"
+      }
+    }
+    Assets {
+      Id: 482873605194865923
+      Name: "Bone Human Humerus 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_humerus_01_ref"
+      }
+    }
+    Assets {
+      Id: 4074048108565904374
+      Name: "Bone Human Femur 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_femur_01_ref"
+      }
+    }
+    Assets {
       Id: 326849343922180961
       Name: "Chain Ceiling Anchor"
       PlatformAssetType: 1
@@ -9100,12 +9198,12 @@
       }
     }
     Assets {
-      Id: 5318852982404395572
-      Name: "Bark Redwood 01"
+      Id: 7613660189645541274
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_redwood_001_uv"
+        AssetId: "mi_wood_planks_001_uv"
       }
     }
     Assets {
@@ -9286,6 +9384,15 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_bone_raw_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 5318852982404395572
+      Name: "Bark Redwood 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_redwood_001_uv"
       }
     }
     Assets {

@@ -70,7 +70,7 @@
       Overrides {
         Name: "cmp:Material4"
         AssetReference {
-          Id: 9222070773466988839
+          Id: 2148407408977013770
         }
       }
       Overrides {
@@ -81,7 +81,7 @@
       }
       Overrides {
         Name: "material4_scale"
-        Float: 1.2
+        Float: 0.7
       }
       Overrides {
         Name: "material4side_scale"
@@ -156,9 +156,9 @@
       Overrides {
         Name: "cmpc:Material4"
         Color {
-          R: 0.947916687
-          G: 0.947916687
-          B: 0.947916687
+          R: 0.734375
+          G: 0.67390269
+          B: 0.596467376
           A: 1
         }
       }
@@ -227,12 +227,12 @@
       }
     }
     Assets {
-      Id: 9222070773466988839
-      Name: "Grass Basic"
+      Id: 2148407408977013770
+      Name: "Grass Clumps"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_001_uv"
+        AssetId: "mi_grass_002_uv"
       }
     }
     Assets {

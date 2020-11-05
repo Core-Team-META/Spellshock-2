@@ -69,7 +69,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -10963.4805
+      Z: -7683.25342
     }
     Rotation {
     }
@@ -90,7 +90,7 @@ Objects {
     Material {
       Id: 13795170071507932677
     }
-    VoxelSize: 900
+    VoxelSize: 1000
     OctreeDepth: 5
     GeneratorID: "DEPRECATED"
   }
@@ -244,7 +244,7 @@ Objects {
       SpawnDistance: 28800
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -295,7 +295,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -395,7 +395,7 @@ Objects {
       SpawnDistance: 28800
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -495,7 +495,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -545,7 +545,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -594,7 +594,7 @@ Objects {
       SpawnDistance: 28800
       CullDistance {
         Min: 5000
-        Max: 5000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -643,8 +643,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 5000
-        Max: 5000
+        Min: 4000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -693,8 +693,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 5000
-        Max: 5000
+        Min: 4000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -744,8 +744,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 5000
-        Max: 5000
+        Min: 4000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -795,8 +795,8 @@ Objects {
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
-        Min: 5000
-        Max: 5000
+        Min: 4000
+        Max: 6000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1449,7 +1449,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Dynamic Shadow Distance"
-          Float: 2.5
+          Float: 3
         }
         Overrides {
           Name: "bp:Shadow Cascade Count"

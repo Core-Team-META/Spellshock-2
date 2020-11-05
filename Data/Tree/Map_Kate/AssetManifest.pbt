@@ -89,15 +89,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17838077166380846502
-  Name: "Pyramid - Corner"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pyramid_corner_001"
-  }
-}
-Assets {
   Id: 17786706417721973926
   Name: "Decal Bullet Damage Wood"
   PlatformAssetType: 14
@@ -296,30 +287,12 @@ Assets {
   }
 }
 Assets {
-  Id: 16263323653671506076
-  Name: "Metal Steel Brushed"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_stainless-steel_001_uv"
-  }
-}
-Assets {
   Id: 16244414786145463704
   Name: "Underwater Post Process"
   PlatformAssetType: 20
   PrimaryAsset {
     AssetType: "BlueprintAssetRef"
     AssetId: "fxbp_post_process_water"
-  }
-}
-Assets {
-  Id: 16152265427655869427
-  Name: "Trash Can - Urban 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_trash_public_001"
   }
 }
 Assets {
@@ -419,15 +392,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_capsule_001"
-  }
-}
-Assets {
-  Id: 15611201305513171321
-  Name: "Nature Wind Intense Gusty Howling Whistle 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_nature_wind_gusty_howling_intense_01_Cue_ref"
   }
 }
 Assets {
@@ -800,15 +764,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13679826982890139451
-  Name: "Modern Weapon - Gas Cylinder 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_modern_gas_cylinder_001"
-  }
-}
-Assets {
   Id: 13633382478652610944
   Name: "Decal Stone Cracks Variants 01"
   PlatformAssetType: 14
@@ -851,15 +806,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_large_beam_round_6m"
-  }
-}
-Assets {
-  Id: 13344989660629515923
-  Name: "Plane"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_4m_001"
   }
 }
 Assets {
@@ -908,15 +854,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12939754084561806759
-  Name: "Pipe - 4-Sided Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_4_sided_thin_001"
-  }
-}
-Assets {
   Id: 12905923173550510229
   Name: "Cylinder - Polished"
   PlatformAssetType: 1
@@ -959,15 +896,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_grass_003_uv"
-  }
-}
-Assets {
-  Id: 12739202304109677144
-  Name: "Craftsman Part - Doorway"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_part_doorway_001"
   }
 }
 Assets {
@@ -1988,15 +1916,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8212176680984131479
-  Name: "Wedge"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_wedge_001"
-  }
-}
-Assets {
   Id: 8197503148267063602
   Name: "Fantasy Castle Wall 02"
   PlatformAssetType: 1
@@ -2555,15 +2474,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5134217229496170183
-  Name: "Sci-Fi Gear Large 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sf_gen_gear_large_01"
-  }
-}
-Assets {
   Id: 5061372286056644297
   Name: "Sphere"
   PlatformAssetType: 1
@@ -2948,15 +2858,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_planks_white_001_uv"
-  }
-}
-Assets {
-  Id: 3263408764700054627
-  Name: "Cylinder - Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_hq_test_001"
   }
 }
 Assets {
