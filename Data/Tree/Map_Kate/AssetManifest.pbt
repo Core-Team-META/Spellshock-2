@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15946579520938017950
+  Name: "Motion Blur Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_advanced_motion_blur"
+  }
+}
+Assets {
   Id: 15818682822090430829
   Name: "Pipe - Thin"
   PlatformAssetType: 1
