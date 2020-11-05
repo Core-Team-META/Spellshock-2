@@ -134,12 +134,14 @@ function Tick(deltaTime)
         LEFT_THRESHOLD_MARKER.isVisible = SHOW_THRESHOLD_MARKERS
         BAR_PANEL.x = 0.0
 
+		--print("CAPTURE PROGRESS: "..CoreMath.Round(capturePointState.captureProgress, 2))
+
         -- Update progress
         if capturePointState.progressedTeam == GetViewedPlayer().team then
             LEFT_PROGRESS_BAR.progress = 0.0
-            RIGHT_PROGRESS_BAR.progress = capturePointState.captureProgress
+            RIGHT_PROGRESS_BAR.progress = CoreMath.Round(capturePointState.captureProgress, 2)
         else
-            LEFT_PROGRESS_BAR.progress = capturePointState.captureProgress
+            LEFT_PROGRESS_BAR.progress = CoreMath.Round(capturePointState.captureProgress, 2)
             RIGHT_PROGRESS_BAR.progress = 0.0
         end
 

@@ -107,6 +107,12 @@ function GetCaptureProgress()
     if not Object.IsValid(SERVER_SCRIPT) then return end
     local timeElapsed = math.max(0.0, time() - SERVER_SCRIPT:GetCustomProperty("LastUpdateTime"))
     local captureProgress = SERVER_SCRIPT:GetCustomProperty("LastCaptureProgress") + timeElapsed * SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed")
+    --[[if NAME == "War Camp" then
+	    print("Last Update Time: "..SERVER_SCRIPT:GetCustomProperty("LastUpdateTime"))
+	    print("Last Capture Progress: "..SERVER_SCRIPT:GetCustomProperty("LastCaptureProgress"))
+	    print("Last Capture Speed: "..SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed"))
+	    print("Capture Progress: "..CoreMath.Clamp(captureProgress, 0.0, 1.0))
+	end]]
     return CoreMath.Clamp(captureProgress, 0.0, 1.0)
 end
 
@@ -165,7 +171,7 @@ function SetGeometryTeam(team)
     end
     
     FlagBeamsList[team+1].visibility = Visibility.INHERIT
-    print(">> "..NAME.." : "..team)
+    --print(">> "..NAME.." : "..team)
 end
 
 -- nil SetGeometryEnabledColor(bool)
@@ -233,6 +239,11 @@ function Tick(deltaTime)
             previousEnabledState = isEnabled
         end
     end
+    
+    if NAME == "War Camp" then
+		--print("~ Capture progress: "..tostring(GetCaptureProgress()))
+		--print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
+	end
 end
 
 CategorizeVisualGeometry()

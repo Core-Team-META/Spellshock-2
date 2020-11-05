@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:Orc_Costume"
             AssetReference {
-              Id: 2113972422834919410
+              Id: 10938749002355594751
             }
           }
           Overrides {

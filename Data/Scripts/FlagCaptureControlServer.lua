@@ -279,17 +279,17 @@ end
 
 function ResetCapturePlayer()
 	UpdateReplicatedProgress()
-	if capturePlayer then
+	if capturePlayer and Object.IsValid(capturePlayer) then
 		print("RESETTING CAPTURE PLAYER")
 		--capturePlayer.movementControlMode = capturePlayerSettings.movementControlMode
 		--capturePlayer.maxJumpCount = capturePlayerSettings.maxJumpCount
-		capturePlayer = nil		
 		for _, event in pairs(capturePlayerEvents) do
 			event:Disconnect()
 		end
 		capturePlayerEvents = {}
 		CAPTURE_TRIGGER.isInteractable = true
 		script:SetNetworkedCustomProperty("CapturePlayerID", "")
+		capturePlayer = nil
 	end
 end
 
@@ -339,16 +339,20 @@ function Tick(deltaTime)
             script:SetNetworkedCustomProperty("ProgressedTeam", newProgressTeam)
         end
     end
-
-	--print("~ Capture progress: "..tostring(GetCaptureProgress()))
-	--print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
-
+	
+	--if NAME == "War Camp" then
+		--print("~ Capture progress: "..tostring(GetCaptureProgress()))
+		--print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
+	--end
+	
     -- Check for owner changed
-    local newOwner = 0
 	local owningTeam = script:GetCustomProperty("OwningTeam")
-
+	local newOwner = owningTeam--0
+	
     if GetCaptureProgress() >= CAPTURE_THRESHOLD then
         newOwner = script:GetCustomProperty("ProgressedTeam")
+    elseif GetCaptureProgress() == 0.0 then
+    	newOwner = 0
     end
 
     if newOwner ~= owningTeam then
@@ -359,8 +363,11 @@ function Tick(deltaTime)
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
         end
+        
         -- release the capture player
-        ResetCapturePlayer()
+        if GetCaptureProgress() == 1.0 then
+        	ResetCapturePlayer()
+        end
     end
 
     -- Award teamscore every five seconds
