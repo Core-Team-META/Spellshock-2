@@ -137,9 +137,7 @@
         ChildIds: 2830362047824519857
         ChildIds: 13930854083690938965
         ChildIds: 9259147873303931585
-        ChildIds: 7221376842994175769
         ChildIds: 11324026064676985050
-        ChildIds: 16672024286660409778
         ChildIds: 1169570412139159107
         ChildIds: 10596618733153380459
         ChildIds: 17718812258309137570
@@ -190,7 +188,6 @@
         ChildIds: 11435452582791708491
         ChildIds: 13812563138564888675
         ChildIds: 5719033010220317563
-        ChildIds: 18372452926610121243
         ChildIds: 13735061998772846094
         ChildIds: 1094849459838016389
         ChildIds: 7307600046591482063
@@ -2000,19 +1997,19 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 13.0214233
-            Y: -1.11706543
-            Z: 20.5729523
+            X: 13.0214214
+            Y: -1.11706936
+            Z: 20.5729599
           }
           Rotation {
             Pitch: 26.1262226
             Yaw: 91.1497879
-            Roll: -2.01422763
+            Roll: -2.01422119
           }
           Scale {
-            X: 0.0556233041
-            Y: -0.0153900953
-            Z: 0.0428881086
+            X: 0.0737074912
+            Y: -0.0203937106
+            Z: 0.0568318181
           }
         }
         ParentId: 1188751488653000025
@@ -2063,9 +2060,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 10.7522888
-            Y: -4.40216064
-            Z: 22.4817963
+            X: 10.4855347
+            Y: -3.69656372
+            Z: 23.1331177
           }
           Rotation {
             Pitch: 40.8073387
@@ -2073,9 +2070,9 @@
             Roll: 25.0150795
           }
           Scale {
-            X: 0.0639322624
+            X: 0.095324181
             Y: -0.0153900608
-            Z: 0.0428879485
+            Z: 0.0428874269
           }
         }
         ParentId: 1188751488653000025
@@ -2882,12 +2879,12 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 5.57484436
+            X: 5.00569153
             Y: -0.461730957
-            Z: 27.6554413
+            Z: 27.2740936
           }
           Rotation {
-            Pitch: -2.1391809
+            Pitch: -2.13919067
             Yaw: 88.565361
             Roll: 33.8529816
           }
@@ -2895,69 +2892,6 @@
             X: 0.0763122663
             Y: -0.0236526895
             Z: 0.0487515479
-          }
-        }
-        ParentId: 1188751488653000025
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.068
-              G: 0.068
-              B: 0.068
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7221376842994175769
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: 11.173172
-            Y: -1.46875
-            Z: 22.9373169
-          }
-          Rotation {
-            Pitch: 16.3562393
-            Yaw: 95.9745789
-            Roll: 4.07228231
-          }
-          Scale {
-            X: 0.0829058141
-            Y: -0.0236526243
-            Z: 0.0487512462
           }
         }
         ParentId: 1188751488653000025
@@ -3021,69 +2955,6 @@
             X: 0.0824829
             Y: -0.0199304279
             Z: 0.0555408113
-          }
-        }
-        ParentId: 1188751488653000025
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.068
-              G: 0.068
-              B: 0.068
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16672024286660409778
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: 1.46537781
-            Y: -2.2598877
-            Z: 28.4805603
-          }
-          Rotation {
-            Pitch: 17.7264843
-            Yaw: 87.7511292
-            Roll: 37.7336349
-          }
-          Scale {
-            X: 0.0490006208
-            Y: -0.0174442213
-            Z: 0.0486122966
           }
         }
         ParentId: 1188751488653000025
@@ -5150,19 +5021,19 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 13.0213976
-            Y: 1.11730564
-            Z: 20.5729408
+            X: 12.3840494
+            Y: 1.14001215
+            Z: 20.5931
           }
           Rotation {
             Pitch: 26.1262989
-            Yaw: -91.1513138
+            Yaw: -91.1513062
             Roll: 2.01626062
           }
           Scale {
-            X: 0.0556233041
-            Y: 0.0153920818
-            Z: 0.0428881086
+            X: 0.0728946328
+            Y: 0.0201714
+            Z: 0.0562050901
           }
         }
         ParentId: 1188751488653000025
@@ -5213,19 +5084,19 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 10.752284
-            Y: 4.40274048
-            Z: 22.4817715
+            X: 10.2734327
+            Y: 3.13690233
+            Z: 23.6502724
           }
           Rotation {
             Pitch: 40.8066788
             Yaw: -110.720413
-            Roll: -25.0131149
+            Roll: -25.0131226
           }
           Scale {
-            X: 0.0639322475
-            Y: 0.0153920483
-            Z: 0.042887941
+            X: 0.0778823
+            Y: 0.015392079
+            Z: 0.0428879336
           }
         }
         ParentId: 1188751488653000025
@@ -6032,19 +5903,19 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.63896441
-            Y: 0.165541932
-            Z: 28.8887291
+            X: 1.75962305
+            Y: 0.24235642
+            Z: 29.0499954
           }
           Rotation {
             Pitch: 4.1890707
-            Yaw: -94.2264328
+            Yaw: -94.2264404
             Roll: -37.9588318
           }
           Scale {
-            X: 0.0664401129
-            Y: 0.0236557014
-            Z: 0.0487515889
+            X: 0.0816280842
+            Y: 0.0236559212
+            Z: 0.0487514548
           }
         }
         ParentId: 1188751488653000025
@@ -6158,19 +6029,19 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 11.1731815
-            Y: 1.46899319
-            Z: 22.9373493
+            X: 11.4059734
+            Y: -0.0702833459
+            Z: 22.8233833
           }
           Rotation {
-            Pitch: 16.3561916
-            Yaw: -95.9753494
-            Roll: -4.07035732
+            Pitch: -4.74688721
+            Yaw: -92.0739746
+            Roll: -2.58651733
           }
           Scale {
-            X: 0.0829058
-            Y: 0.0236556772
-            Z: 0.0487512462
+            X: 0.0997494906
+            Y: 0.0236555859
+            Z: 0.0487510897
           }
         }
         ParentId: 1188751488653000025
@@ -6234,69 +6105,6 @@
             X: 0.0824829
             Y: 0.0199329983
             Z: 0.0555408038
-          }
-        }
-        ParentId: 1188751488653000025
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.068
-              G: 0.068
-              B: 0.068
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18372452926610121243
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: 1.46536672
-            Y: 2.26027107
-            Z: 28.4805565
-          }
-          Rotation {
-            Pitch: 17.7263279
-            Yaw: -87.7509766
-            Roll: -37.7320709
-          }
-          Scale {
-            X: 0.0490006208
-            Y: 0.0174464732
-            Z: 0.0486122966
           }
         }
         ParentId: 1188751488653000025
@@ -7284,6 +7092,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -7373,6 +7182,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -7595,6 +7405,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -7655,6 +7466,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -7715,6 +7527,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -7775,6 +7588,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -11116,7 +10930,6 @@
         ChildIds: 17385398259958508205
         ChildIds: 14427242488389989996
         ChildIds: 6196235525625036462
-        ChildIds: 1238769033078861133
         ChildIds: 14636836119303669256
         ChildIds: 8539202718620186120
         ChildIds: 10164892408901063614
@@ -11146,9 +10959,9 @@
             Roll: -135.233536
           }
           Scale {
-            X: 0.139767557
-            Y: 0.0712133422
-            Z: 0.203973472
+            X: 0.139767617
+            Y: 0.0712132528
+            Z: 0.0349225141
           }
         }
         ParentId: 13436551032212755132
@@ -11165,11 +10978,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.24166799
+            Float: 3.61954522
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 2.63884258
+            Float: 0.305415362
           }
         }
         Collidable_v2 {
@@ -11180,7 +10993,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 11582207148866167210
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -11719,9 +11532,9 @@
             Roll: -135.231506
           }
           Scale {
-            X: 0.139767557
-            Y: 0.0712133422
-            Z: 0.203973472
+            X: 0.139767617
+            Y: 0.0712132528
+            Z: 0.0349225141
           }
         }
         ParentId: 13436551032212755132
@@ -11738,11 +11551,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.24166799
+            Float: 3.61954522
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 2.63884258
+            Float: 0.305415362
           }
         }
         Collidable_v2 {
@@ -11753,7 +11566,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 11582207148866167210
+            Id: 1687528788148422459
           }
           Teams {
           }
@@ -13641,14 +13454,14 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: -20.8555279
-            Y: -12.6430407
-            Z: -9.35333538
+            X: -20.9105988
+            Y: -16.056736
+            Z: -7.37984
           }
           Rotation {
-            Pitch: 52.0788918
-            Yaw: 79.1112213
-            Roll: 170.565826
+            Pitch: -59.2125244
+            Yaw: -76.8884888
+            Roll: -12.1206665
           }
           Scale {
             X: 0.175442114
@@ -13685,7 +13498,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7605493991257760329
+            Id: 12115992092291607111
           }
           Teams {
           }
@@ -14378,75 +14191,6 @@
         CoreMesh {
           MeshAsset {
             Id: 11594524757616528940
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1238769033078861133
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: -20.7298355
-            Y: -1.0608871
-            Z: -16.2041664
-          }
-          Rotation {
-            Pitch: 61.7039795
-            Yaw: 78.8381882
-            Roll: 170.89473
-          }
-          Scale {
-            X: 0.15733014
-            Y: 0.15732719
-            Z: 0.30772531
-          }
-        }
-        ParentId: 13436551032212755132
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4247430867898109902
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0920000076
-              G: 0.0199333373
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.24166799
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 2.63884258
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7605493991257760329
           }
           Teams {
           }
@@ -15467,6 +15211,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -15820,6 +15565,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -16527,6 +16273,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -16601,6 +16348,7 @@
           }
           Teams {
           }
+          DisableCastShadows: true
           DisableReceiveDecals: true
           StaticMesh {
             Physics {
@@ -17828,6 +17576,15 @@
       }
     }
     Assets {
+      Id: 11582207148866167210
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
       Id: 14105471954471642787
       Name: "Custom Fabric Burlap Old 01"
       PlatformAssetType: 13
@@ -17897,12 +17654,12 @@
       }
     }
     Assets {
-      Id: 7605493991257760329
-      Name: "Cylinder - Rounded"
+      Id: 12115992092291607111
+      Name: "Plane Hexagon - One Sided"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_002"
+        AssetId: "sm_plane_hexagon_001"
       }
     }
     Assets {
@@ -18010,15 +17767,6 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_rope_001"
-      }
-    }
-    Assets {
-      Id: 11582207148866167210
-      Name: "Ring - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_005"
       }
     }
     Assets {
