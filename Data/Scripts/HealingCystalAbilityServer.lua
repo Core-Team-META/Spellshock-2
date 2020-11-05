@@ -7,7 +7,8 @@ local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject(
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
+local OrcCrystalTemplate = script:GetCustomProperty("OrcCrystalTemplate")
+local ElfCrystalTemplate = script:GetCustomProperty("ElfCrystalTemplate")
 local EndingFX = script:GetCustomProperty("EndingFX")
 local EventName = script:GetCustomProperty("EventName")
 local HealAmount = script:GetCustomProperty("HealAmount")
@@ -63,6 +64,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
+		local ObjectTemplate = OrcCrystalTemplate
+		if thisPlayer.team == 2 then
+			ObjectTemplate = ElfCrystalTemplate
+		end
 		
 		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()

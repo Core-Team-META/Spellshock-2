@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 925672138032122417
-  Name: "Elf Healing Crystal Aura"
+  Id: 2781121172395306561
+  Name: "Primer Healing Crystal Aura"
   PlatformAssetType: 13
   SerializationVersion: 65
   CustomMaterialAsset {
@@ -17,8 +17,9 @@
       Overrides {
         Name: "noise color"
         Color {
-          G: 0.39200002
-          B: 0.243675783
+          R: 1
+          G: 1
+          B: 1
           A: 0.242000014
         }
       }

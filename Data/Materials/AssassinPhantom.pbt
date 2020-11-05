@@ -23,25 +23,28 @@
       Overrides {
         Name: "plasma inner color"
         Color {
-          R: 0.909999967
-          G: 0.0903973579
+          R: 1
+          G: 1
+          B: 1
           A: 1
         }
       }
       Overrides {
         Name: "plasma outer color"
         Color {
-          R: 0.99
-          G: 0.255695343
+          R: 1
+          G: 1
+          B: 1
           A: 1
         }
       }
       Overrides {
         Name: "inner color"
         Color {
-          R: 0.72
-          G: 0.386225194
-          A: 1
+          R: 0.467
+          G: 0.467
+          B: 0.467
+          A: 0.535
         }
       }
     }

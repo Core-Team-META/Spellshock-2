@@ -1112,9 +1112,9 @@
             }
           }
           Overrides {
-            Name: "cs:ObjectTemplate"
+            Name: "cs:OrcCrystalTemplate"
             AssetReference {
-              Id: 12922134233902895912
+              Id: 8415357861376842630
             }
           }
           Overrides {
@@ -1156,6 +1156,12 @@
           Overrides {
             Name: "cs:isPreviewing"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:ElfCrystalTemplate"
+            AssetReference {
+              Id: 9656965676697602122
+            }
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
