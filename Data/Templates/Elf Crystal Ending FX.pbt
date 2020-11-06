@@ -140,21 +140,21 @@
       }
     }
     Assets {
-      Id: 1070990391264695100
-      Name: "Magic Beam Sparkle Swift Whoosh 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_beam_sparkle_swift_whoosh_01_Cue_ref"
-      }
-    }
-    Assets {
       Id: 3816918904715199575
       Name: "Treasure Ray Burst"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Treasure_Rays"
+      }
+    }
+    Assets {
+      Id: 1070990391264695100
+      Name: "Magic Beam Sparkle Swift Whoosh 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_beam_sparkle_swift_whoosh_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -164,4 +164,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

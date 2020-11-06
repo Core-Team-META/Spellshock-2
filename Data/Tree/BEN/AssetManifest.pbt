@@ -62,6 +62,24 @@ Assets {
   }
 }
 Assets {
+  Id: 12453764925454488386
+  Name: "Sci-fi Energy Charge Up Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_energy_scifi_chargeup_ref"
+  }
+}
+Assets {
+  Id: 12094062971685651363
+  Name: "Sci-fi Barrier Energy Shield Small Impact Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_scifi_barrier_energy_shield_small_impact_loop_01_Cue_ref"
+  }
+}
+Assets {
   Id: 11595486818978203444
   Name: "Icon Hand"
   PlatformAssetType: 9
