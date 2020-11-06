@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 18322083209027112941
+  Name: "Plasma Charge Up Hold VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_ChargeUp_Hold"
+  }
+}
+Assets {
   Id: 18198612390204212876
   Name: "Bricks Cobblestone Floor Arches 001"
   PlatformAssetType: 2
@@ -71,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12022824903258480392
+  Name: "Plasma Laser"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_plasma_laser"
+  }
+}
+Assets {
   Id: 11720425356942439633
   Name: "Fantasy Staff Head 01"
   PlatformAssetType: 1
@@ -116,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6928819903191470852
+  Name: "Sci-fi Barrier Energy Shield Large Impact Loop 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_scifi_barrier_energy_shield_large_impact_loop_02_Cue_ref"
+  }
+}
+Assets {
   Id: 6789604014209716330
   Name: "Scifi Ship Engine 01"
   PlatformAssetType: 1
@@ -149,6 +176,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "wireframe_glow_001"
+  }
+}
+Assets {
+  Id: 3164364020326874740
+  Name: "Plasma Charge Up Start VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_ChargeUp"
   }
 }
 Assets {

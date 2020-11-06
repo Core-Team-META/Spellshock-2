@@ -1,6 +1,91 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 5200267349669145468
+  Name: "Sci-fi Barrier Energy Shield Small Impact Loop 01 SFX"
+  Transform {
+    Location {
+      X: -13986.5469
+      Y: -18038.6309
+      Z: 3059.55322
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 12094062971685651363
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 5054849888665027219
+  Name: "Sci-fi Energy Charge Up Set 01 SFX"
+  Transform {
+    Location {
+      X: -13721.0957
+      Y: -17718.0273
+      Z: 3044.94043
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_scifi_energy_chargeup:12"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 12453764925454488386
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
   Id: 2644148728258825907
   Name: "RespawnPlayerServer"
   Transform {
@@ -13267,7 +13352,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

@@ -340,10 +340,10 @@ function Tick(deltaTime)
         end
     end
 	
-	--if NAME == "War Camp" then
+	if NAME == "War Camp" then
 		--print("~ Capture progress: "..tostring(GetCaptureProgress()))
 		--print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
-	--end
+	end
 	
     -- Check for owner changed
 	local owningTeam = script:GetCustomProperty("OwningTeam")

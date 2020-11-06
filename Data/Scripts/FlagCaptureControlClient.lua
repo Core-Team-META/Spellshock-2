@@ -22,6 +22,7 @@ local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 local VISUAL_GEOMETRY = script:GetCustomProperty("VisualGeometry"):WaitForObject()
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 local FLAG_BEAMS = script:GetCustomProperty("AnimatedFlagBeams"):WaitForObject()
+local CAPTURE_ANIMATIONS = script:GetCustomProperty("CaptureAnimations"):WaitForObject()
 local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
@@ -220,6 +221,58 @@ function OnNetworkedPropertyChanged(thisObject, name)
 	        owningTeam = newOwner
 	        SetGeometryTeam(owningTeam)
 	    end
+	elseif name == "ProgressedTeam" then
+		for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
+			vfx.visibility = Visibility.FORCE_OFF
+			vfx:Stop()
+		end
+		
+		while SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed") == 0.0 do
+			Task.Wait()
+		end
+		
+		local progressedTeam = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
+		local playerID = SERVER_SCRIPT:GetCustomProperty("CapturePlayerID")
+		
+		print("Progress team: "..SERVER_SCRIPT:GetCustomProperty("ProgressedTeam"))
+		print("Player id: "..SERVER_SCRIPT:GetCustomProperty("CapturePlayerID"))
+		
+		if playerID ~= "" and progressedTeam ~= 0 then
+			print("ANIMATING")
+			local capturePlayer 
+			for _, player in pairs(Game.GetPlayers()) do
+				if player.id == playerID then
+					capturePlayer = player 
+					break
+				end
+			end
+			
+			if not capturePlayer then return end
+
+			local progressLeft 
+			print("Capture progress: "..GetCaptureProgress())
+			if capturePlayer.team == progressedTeam then
+				progressLeft = 1 - GetCaptureProgress()
+			else
+				progressLeft = 1 + GetCaptureProgress()
+			end
+			
+			print("Progress left: "..progressLeft)
+			print("Capture speed: "..math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed")))
+			
+			local timeBeforeCapture = progressLeft / math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed"))
+			timeBeforeCapture = timeBeforeCapture - 0.1
+			if timeBeforeCapture < 0 then
+				timeBeforeCapture = 0
+			end
+			
+			print("timeBeforeCapture: "..timeBeforeCapture)
+			
+			local targetVFX = CAPTURE_ANIMATIONS:GetChildren()[capturePlayer.team]
+			targetVFX:SetSmartProperty("Charge Up Duration", timeBeforeCapture)
+			targetVFX.visibility = Visibility.INHERIT
+			targetVFX:Play()
+		end
 	end
 end
 
