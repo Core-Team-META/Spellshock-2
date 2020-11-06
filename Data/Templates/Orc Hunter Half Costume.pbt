@@ -6248,23 +6248,15 @@
         ChildIds: 12491551332824307931
         ChildIds: 4608427549245560977
         ChildIds: 13441021339666027677
-        ChildIds: 9434223290447907932
-        ChildIds: 16664372330728496807
-        ChildIds: 11159417860584252362
-        ChildIds: 9670277587313904340
         ChildIds: 14018847835460002421
         ChildIds: 10168757776932880160
         ChildIds: 16376822336764530906
         ChildIds: 8796739825159852705
         ChildIds: 52937674409377894
         ChildIds: 15502520874521318229
-        ChildIds: 5054447177103319598
-        ChildIds: 18079579609322905778
-        ChildIds: 1734240228936274857
-        ChildIds: 11419379253463681532
-        ChildIds: 4661542900582622373
         ChildIds: 6211621512132436666
         ChildIds: 18256587700789656739
+        ChildIds: 2644465654214520992
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -6780,9 +6772,9 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 47.6446762
-            Y: 59.0034142
-            Z: 17.4550228
+            X: 47.6446877
+            Y: 59.0034
+            Z: 15.8947334
           }
           Rotation {
             Pitch: 7.51320767e-05
@@ -6846,324 +6838,13 @@
         }
       }
       Objects {
-        Id: 9434223290447907932
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: 47.8765564
-            Y: 58.0162354
-            Z: 15.8090668
-          }
-          Rotation {
-            Pitch: -4.78113216e-05
-            Yaw: 43.1374817
-            Roll: -90
-          }
-          Scale {
-            X: -0.0408107601
-            Y: 0.108522862
-            Z: 0.0376763
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12357757896131286157
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.12443638
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.637389183
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17091160006555877630
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16664372330728496807
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: 61.2545166
-            Y: 37.4750061
-            Z: 15.4602661
-          }
-          Rotation {
-            Pitch: -6.83018879e-05
-            Yaw: 33.7499924
-            Roll: -89.9999619
-          }
-          Scale {
-            X: -0.0408107601
-            Y: 0.108522862
-            Z: 0.0376763
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12357757896131286157
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.12443638
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.637389183
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17091160006555877630
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11159417860584252362
-        Name: "Fantasy Crossbow Bow 01"
-        Transform {
-          Location {
-            X: 68.030632
-            Y: 18.0518322
-            Z: 15.7384577
-          }
-          Rotation {
-            Pitch: -6.14717e-05
-            Yaw: -161.249954
-            Roll: 90.0000763
-          }
-          Scale {
-            X: 0.5206936
-            Y: 1.39151251
-            Z: 0.751309752
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 3.9598403
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 7.38093805
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 4.67512655
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 9.0835638
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 18423898048047861963
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9670277587313904340
-        Name: "Road Ramp Bottom Edge"
-        Transform {
-          Location {
-            X: 63.4721375
-            Y: 3.99337769
-            Z: 11.3894196
-          }
-          Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: 59.9998627
-            Roll: 89.9999466
-          }
-          Scale {
-            X: 0.0496008061
-            Y: -0.0283783842
-            Z: 0.220468685
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Street_EdgeStripe:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Street_EdgeStripe:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.517916858
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.34562933
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7983931894419878278
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 14018847835460002421
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 47.022274
-            Y: 57.1656609
-            Z: 17.4553204
+            X: 47.0222778
+            Y: 57.1656151
+            Z: 15.8950214
           }
           Rotation {
             Pitch: 7.51320767e-05
@@ -7402,9 +7083,9 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 47.0222473
-            Y: -57.1655045
-            Z: 17.455164
+            X: 47.0222549
+            Y: -57.165554
+            Z: 15.8948774
           }
           Rotation {
             Pitch: 2.04905664e-05
@@ -7472,14 +7153,14 @@
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 47.645031
-            Y: -59.0002899
-            Z: 17.4552937
+            X: 47.6450233
+            Y: -59.0002823
+            Z: 15.8950195
           }
           Rotation {
             Pitch: 2.73207552e-05
             Yaw: -161.250885
-            Roll: -89.9994888
+            Roll: -89.9994812
           }
           Scale {
             X: 0.0205349326
@@ -7526,387 +7207,6 @@
         CoreMesh {
           MeshAsset {
             Id: 14136476971165319361
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5054447177103319598
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: 47.4494324
-            Y: -57.604248
-            Z: 15.9562225
-          }
-          Rotation {
-            Pitch: 2.04924107
-            Yaw: -41.1842117
-            Roll: 88.4623871
-          }
-          Scale {
-            X: -0.0408107601
-            Y: 0.108522862
-            Z: 0.0376763
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12357757896131286157
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.12443638
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.637389183
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17091160006555877630
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18079579609322905778
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: 61.2544861
-            Y: -37.4752808
-            Z: 15.8087616
-          }
-          Rotation {
-            Pitch: -0.000136603776
-            Yaw: -33.7500381
-            Roll: 89.999649
-          }
-          Scale {
-            X: -0.0408107601
-            Y: 0.108522862
-            Z: 0.0376763
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12357757896131286157
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.12443638
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.637389183
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17091160006555877630
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1734240228936274857
-        Name: "Cylinder - Rounded"
-        Transform {
-          Location {
-            X: 59.3480835
-            Y: -40.6764832
-            Z: 15.8087463
-          }
-          Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: -19.0725193
-            Roll: 84.3350525
-          }
-          Scale {
-            X: -0.0408107601
-            Y: 0.108522862
-            Z: 0.0376763
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 12357757896131286157
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2.12443638
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.637389183
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17091160006555877630
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11419379253463681532
-        Name: "Fantasy Crossbow Bow 01"
-        Transform {
-          Location {
-            X: 68.030632
-            Y: -18.0519257
-            Z: 15.7384377
-          }
-          Rotation {
-            Pitch: 8.19622655e-05
-            Yaw: 161.249924
-            Roll: -89.9998856
-          }
-          Scale {
-            X: 0.520693839
-            Y: 1.39151371
-            Z: 0.751309752
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 3.9598403
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 7.38093805
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 4.67512655
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 9.0835638
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 18423898048047861963
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4661542900582622373
-        Name: "Road Ramp Bottom Edge"
-        Transform {
-          Location {
-            X: 63.4721642
-            Y: -3.9934268
-            Z: 11.389411
-          }
-          Rotation {
-            Pitch: -6.83018879e-06
-            Yaw: -59.9999084
-            Roll: -90.0000229
-          }
-          Scale {
-            X: 0.0496008061
-            Y: 0.0286657102
-            Z: 0.220468685
-          }
-        }
-        ParentId: 5808808817160766521
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Street_EdgeStripe:id"
-            AssetReference {
-              Id: 15592158619972675004
-            }
-          }
-          Overrides {
-            Name: "ma:Street_EdgeStripe:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.517916858
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.34562933
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7983931894419878278
           }
           Teams {
           }
@@ -8082,6 +7382,79 @@
         }
       }
       Objects {
+        Id: 2644465654214520992
+        Name: "Fantasy Crossbow Foregrip 01"
+        Transform {
+          Location {
+            X: 71.051857
+            Y: -3.43322754e-05
+            Z: 13.6118279
+          }
+          Rotation {
+            Roll: 4.01273574e-05
+          }
+          Scale {
+            X: 1.1421808
+            Y: 0.78828913
+            Z: 0.788288593
+          }
+        }
+        ParentId: 5808808817160766521
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 15592158619972675004
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 6.2516675
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.186
+              G: 0.114709027
+              B: 0.0677039921
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12875975218361332960
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 18007082044953221463
         Name: "left_prop"
         Transform {
@@ -8112,6 +7485,15 @@
         }
         NetworkContext {
         }
+      }
+    }
+    Assets {
+      Id: 12875975218361332960
+      Name: "Fantasy Crossbow Bow 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_bow_cross_001"
       }
     }
     Assets {
@@ -8210,24 +7592,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pyramid_fivesided_truncated_001"
-      }
-    }
-    Assets {
-      Id: 7983931894419878278
-      Name: "Road Ramp Bottom Edge"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_urb_road_ramp_edge_bot_001"
-      }
-    }
-    Assets {
-      Id: 17091160006555877630
-      Name: "Cube - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_002"
       }
     }
     Assets {
