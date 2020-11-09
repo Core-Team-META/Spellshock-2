@@ -3742,6 +3742,8 @@ Objects {
   ChildIds: 4883590113462174898
   ChildIds: 11594646407891593009
   ChildIds: 13322267599521344060
+  ChildIds: 11761171528098533873
+  ChildIds: 16622640729930683731
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3757,6 +3759,275 @@ Objects {
     SubobjectId: 15575868879628088677
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 16622640729930683731
+  Name: "Audio"
+  Transform {
+    Location {
+      Z: -36
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9666154360724432599
+  ChildIds: 3658691764577084215
+  ChildIds: 4541055943675555290
+  ChildIds: 7792918869711912171
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ChargeUpSFX"
+      ObjectReference {
+        SelfId: 3658691764577084215
+      }
+    }
+    Overrides {
+      Name: "cs:CapturedSFX"
+      ObjectReference {
+        SelfId: 4541055943675555290
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7792918869711912171
+  Name: "Ambient Background Loop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16622640729930683731
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 6928819903191470852
+    }
+    AutoPlay: true
+    Pitch: -100
+    Volume: 0.5
+    Falloff: 2500
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 4541055943675555290
+  Name: "Captured SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16622640729930683731
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 2587567105337529696
+    }
+    Pitch: 200
+    Volume: 2
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 3658691764577084215
+  Name: "Charge Up SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16622640729930683731
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16367751924804927766
+    }
+    Repeat: true
+    Volume: 1.5
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 11761171528098533873
+  Name: "Point Captured VFX"
+  Transform {
+    Location {
+      Z: -85.1916504
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9666154360724432599
+  ChildIds: 473478424220906431
+  ChildIds: 8133323283127997373
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8133323283127997373
+  Name: "Elf Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11761171528098533873
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 473478424220906431
+  Name: "Orc Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11761171528098533873
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
   }
 }
 Objects {
@@ -4347,6 +4618,18 @@ Objects {
       Name: "cs:CaptureAnimations"
       ObjectReference {
         SelfId: 13322267599521344060
+      }
+    }
+    Overrides {
+      Name: "cs:PointCapturedVFX"
+      ObjectReference {
+        SelfId: 11761171528098533873
+      }
+    }
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 16622640729930683731
       }
     }
   }
@@ -7183,6 +7466,8 @@ Objects {
   ChildIds: 18420993525149121261
   ChildIds: 3255783478444624758
   ChildIds: 12072902869498196819
+  ChildIds: 4287058476791695570
+  ChildIds: 4023265588194358083
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -7198,6 +7483,275 @@ Objects {
     SubobjectId: 15575868879628088677
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 4023265588194358083
+  Name: "Audio"
+  Transform {
+    Location {
+      Z: -727
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6431342082131964287
+  ChildIds: 1307997473579416241
+  ChildIds: 7465137840442556420
+  ChildIds: 221131087427915214
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ChargeUpSFX"
+      ObjectReference {
+        SelfId: 1307997473579416241
+      }
+    }
+    Overrides {
+      Name: "cs:CapturedSFX"
+      ObjectReference {
+        SelfId: 7465137840442556420
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 221131087427915214
+  Name: "Ambient Background Loop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4023265588194358083
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 6928819903191470852
+    }
+    AutoPlay: true
+    Pitch: -100
+    Volume: 0.5
+    Falloff: 2500
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 7465137840442556420
+  Name: "Captured SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4023265588194358083
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 2587567105337529696
+    }
+    Pitch: 200
+    Volume: 2
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 1307997473579416241
+  Name: "Charge Up SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4023265588194358083
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16367751924804927766
+    }
+    Repeat: true
+    Volume: 1.5
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 4287058476791695570
+  Name: "Point Captured VFX"
+  Transform {
+    Location {
+      Z: -798.806824
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6431342082131964287
+  ChildIds: 2052073284817637370
+  ChildIds: 16134326239970535335
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16134326239970535335
+  Name: "Elf Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4287058476791695570
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 2052073284817637370
+  Name: "Orc Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4287058476791695570
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
   }
 }
 Objects {
@@ -7791,6 +8345,18 @@ Objects {
         SelfId: 12072902869498196819
       }
     }
+    Overrides {
+      Name: "cs:PointCapturedVFX"
+      ObjectReference {
+        SelfId: 4287058476791695570
+      }
+    }
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 4023265588194358083
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7969,7 +8535,6 @@ Objects {
   ParentId: 11072925829585333935
   ChildIds: 12990434528164511129
   ChildIds: 1519700623663251019
-  ChildIds: 5572050519626383569
   ChildIds: 5615551507275436675
   ChildIds: 11950777538992666202
   ChildIds: 2026418025268728063
@@ -10601,47 +11166,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5572050519626383569
-  Name: "Rock Hexagonal"
-  Transform {
-    Location {
-      X: -3.82910156
-      Y: -20.4794922
-      Z: -91.6459961
-    }
-    Rotation {
-    }
-    Scale {
-      X: 4.12090969
-      Y: 4.12090969
-      Z: 1.03180981
-    }
-  }
-  ParentId: 17910728817571265557
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8978661562815925692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
   Id: 1519700623663251019
   Name: "ClientContext"
   Transform {
@@ -10661,6 +11185,8 @@ Objects {
   ChildIds: 1884088731692444921
   ChildIds: 11592636008207873974
   ChildIds: 11770804800146932475
+  ChildIds: 16640435004365765667
+  ChildIds: 807881377902285432
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -10676,6 +11202,275 @@ Objects {
     SubobjectId: 15575868879628088677
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 807881377902285432
+  Name: "Audio"
+  Transform {
+    Location {
+      Z: 367
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1519700623663251019
+  ChildIds: 16042301624539948500
+  ChildIds: 13875341478676699518
+  ChildIds: 8974042995739565474
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ChargeUpSFX"
+      ObjectReference {
+        SelfId: 16042301624539948500
+      }
+    }
+    Overrides {
+      Name: "cs:CapturedSFX"
+      ObjectReference {
+        SelfId: 13875341478676699518
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8974042995739565474
+  Name: "Ambient Background Loop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807881377902285432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 6928819903191470852
+    }
+    AutoPlay: true
+    Pitch: -100
+    Volume: 0.5
+    Falloff: 2500
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 13875341478676699518
+  Name: "Captured SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807881377902285432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 2587567105337529696
+    }
+    Pitch: 200
+    Volume: 2
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 16042301624539948500
+  Name: "Charge Up SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807881377902285432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16367751924804927766
+    }
+    Repeat: true
+    Volume: 1.5
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 16640435004365765667
+  Name: "Point Captured VFX"
+  Transform {
+    Location {
+      Z: 304.098389
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1519700623663251019
+  ChildIds: 9411200070932923624
+  ChildIds: 5219648624346496366
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5219648624346496366
+  Name: "Elf Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16640435004365765667
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 9411200070932923624
+  Name: "Orc Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16640435004365765667
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
   }
 }
 Objects {
@@ -11268,6 +12063,18 @@ Objects {
       Name: "cs:CaptureAnimations"
       ObjectReference {
         SelfId: 11770804800146932475
+      }
+    }
+    Overrides {
+      Name: "cs:PointCapturedVFX"
+      ObjectReference {
+        SelfId: 16640435004365765667
+      }
+    }
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 807881377902285432
       }
     }
   }
@@ -14099,6 +14906,8 @@ Objects {
   ChildIds: 9001953783686175703
   ChildIds: 13704395491356741213
   ChildIds: 4286792855308359567
+  ChildIds: 7943154496082794090
+  ChildIds: 4814135798230992702
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -14114,6 +14923,275 @@ Objects {
     SubobjectId: 15575868879628088677
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 4814135798230992702
+  Name: "Audio"
+  Transform {
+    Location {
+      Z: 286
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 754991252659707758
+  ChildIds: 17817804913204643173
+  ChildIds: 8615638783963777410
+  ChildIds: 12022876560513412854
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ChargeUpSFX"
+      ObjectReference {
+        SelfId: 17817804913204643173
+      }
+    }
+    Overrides {
+      Name: "cs:CapturedSFX"
+      ObjectReference {
+        SelfId: 8615638783963777410
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12022876560513412854
+  Name: "Ambient Background Loop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4814135798230992702
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 6928819903191470852
+    }
+    AutoPlay: true
+    Pitch: -100
+    Volume: 0.5
+    Falloff: 2500
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 8615638783963777410
+  Name: "Captured SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4814135798230992702
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 2587567105337529696
+    }
+    Pitch: 200
+    Volume: 2
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 17817804913204643173
+  Name: "Charge Up SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4814135798230992702
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16367751924804927766
+    }
+    Repeat: true
+    Volume: 1.5
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 7943154496082794090
+  Name: "Point Captured VFX"
+  Transform {
+    Location {
+      Z: 201.770508
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 754991252659707758
+  ChildIds: 4031760325178478924
+  ChildIds: 2342855594612563950
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2342855594612563950
+  Name: "Elf Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7943154496082794090
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 4031760325178478924
+  Name: "Orc Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7943154496082794090
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
   }
 }
 Objects {
@@ -14708,6 +15786,18 @@ Objects {
         SelfId: 4286792855308359567
       }
     }
+    Overrides {
+      Name: "cs:PointCapturedVFX"
+      ObjectReference {
+        SelfId: 7943154496082794090
+      }
+    }
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 4814135798230992702
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -14894,7 +15984,6 @@ Objects {
   ChildIds: 11361973214402946081
   ChildIds: 10364658126334003004
   ChildIds: 831199929353696706
-  ChildIds: 2000368293015010262
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
@@ -15017,67 +16106,6 @@ Objects {
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
     WasRoot: true
-  }
-}
-Objects {
-  Id: 2000368293015010262
-  Name: "Audio"
-  Transform {
-    Location {
-      Z: 264.024902
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13392592636105101133
-  ChildIds: 8849355441066560612
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8849355441066560612
-  Name: "Sci-fi Barrier Energy Shield Large Impact Loop 03 SFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2000368293015010262
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  AudioInstance {
-    AudioAsset {
-      Id: 6928819903191470852
-    }
-    AutoPlay: true
-    Pitch: -100
-    Volume: 0.5
-    Falloff: 2500
-    Radius: -1
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
   }
 }
 Objects {
@@ -17599,9 +18627,11 @@ Objects {
   }
   ParentId: 13392592636105101133
   ChildIds: 715224953526643395
-  ChildIds: 104147130380062008
   ChildIds: 15041099646544271970
   ChildIds: 7817820503045406307
+  ChildIds: 104147130380062008
+  ChildIds: 13388104631069369026
+  ChildIds: 2000368293015010262
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -17617,6 +18647,495 @@ Objects {
     SubobjectId: 15575868879628088677
     InstanceId: 18445319250524073173
     TemplateId: 4321580044226111979
+  }
+}
+Objects {
+  Id: 2000368293015010262
+  Name: "Audio"
+  Transform {
+    Location {
+      Z: 264.025146
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4208566297764116835
+  ChildIds: 14265420058102997229
+  ChildIds: 13840726149595026330
+  ChildIds: 8849355441066560612
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ChargeUpSFX"
+      ObjectReference {
+        SelfId: 14265420058102997229
+      }
+    }
+    Overrides {
+      Name: "cs:CapturedSFX"
+      ObjectReference {
+        SelfId: 13840726149595026330
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8849355441066560612
+  Name: "Ambient Background Loop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2000368293015010262
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 6928819903191470852
+    }
+    AutoPlay: true
+    Pitch: -100
+    Volume: 0.5
+    Falloff: 2500
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 13840726149595026330
+  Name: "Captured SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2000368293015010262
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 2587567105337529696
+    }
+    Pitch: 200
+    Volume: 2
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 14265420058102997229
+  Name: "Charge Up SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2000368293015010262
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16367751924804927766
+    }
+    Repeat: true
+    Volume: 1.5
+    Falloff: 2500
+    Radius: 500
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 13388104631069369026
+  Name: "Point Captured VFX"
+  Transform {
+    Location {
+      Z: 319.776367
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4208566297764116835
+  ChildIds: 2154368983182112870
+  ChildIds: 5740646753529226825
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5740646753529226825
+  Name: "Elf Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13388104631069369026
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 2154368983182112870
+  Name: "Orc Capture VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13388104631069369026
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 2.5
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 15862839354445934362
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+}
+Objects {
+  Id: 104147130380062008
+  Name: "Capture Animation VFX"
+  Transform {
+    Location {
+      Z: 210
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4208566297764116835
+  ChildIds: 3366696037772817909
+  ChildIds: 8703590086033231662
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8703590086033231662
+  Name: "Elf Charge Up VFX"
+  Transform {
+    Location {
+      X: -6.10277843
+      Y: -5.28370667
+      Z: 101.459
+    }
+    Rotation {
+    }
+    Scale {
+      X: 5.80972767
+      Y: 5.80972767
+      Z: 5.80972767
+    }
+  }
+  ParentId: 104147130380062008
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        G: 0.429999948
+        B: 0.250596046
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Inner Core Color"
+      Color {
+        G: 0.220000029
+        B: 0.115099408
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 11.8366699
+    }
+    Overrides {
+      Name: "bp:Large Charge Ring Size"
+      Float: 0.346505702
+    }
+    Overrides {
+      Name: "bp:Arc Size"
+      Float: 0.346505702
+    }
+    Overrides {
+      Name: "bp:Arc Density"
+      Float: 4.34064293
+    }
+    Overrides {
+      Name: "bp:Outer Core Color"
+      Color {
+        G: 0.690000057
+        B: 0.580331206
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Arc Color"
+      Color {
+        G: 0.340000033
+        B: 0.110331178
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Hot Spot Color"
+      Color {
+        G: 0.340000033
+        B: 0.150860965
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3164364020326874740
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+  InstanceHistory {
+    SelfId: 8703590086033231662
+    SubobjectId: 3592874614267181664
+    InstanceId: 15381680925168707964
+    TemplateId: 17347292399839852453
+  }
+}
+Objects {
+  Id: 3366696037772817909
+  Name: "Orc Charge Up VFX"
+  Transform {
+    Location {
+      X: -6.10277843
+      Y: -5.28370667
+      Z: 101.459
+    }
+    Rotation {
+    }
+    Scale {
+      X: 5.80972767
+      Y: 5.80972767
+      Z: 5.80972767
+    }
+  }
+  ParentId: 104147130380062008
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:color"
+      Color {
+        R: 0.75
+        G: 0.342715234
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Inner Core Color"
+      Color {
+        R: 0.580000043
+        G: 0.09218546
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 11.8366699
+    }
+    Overrides {
+      Name: "bp:Large Charge Ring Size"
+      Float: 0.346505702
+    }
+    Overrides {
+      Name: "bp:Arc Size"
+      Float: 0.346505702
+    }
+    Overrides {
+      Name: "bp:Arc Density"
+      Float: 4.34064293
+    }
+    Overrides {
+      Name: "bp:Outer Core Color"
+      Color {
+        R: 0.72
+        G: 0.286092758
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Arc Color"
+      Color {
+        R: 0.409999967
+        G: 0.122185431
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Charge Up Duration"
+      Float: 8
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3164364020326874740
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+  InstanceHistory {
+    SelfId: 3366696037772817909
+    SubobjectId: 7470839878895222971
+    InstanceId: 15381680925168707964
+    TemplateId: 17347292399839852453
   }
 }
 Objects {
@@ -18501,226 +20020,6 @@ Objects {
   }
 }
 Objects {
-  Id: 104147130380062008
-  Name: "Capture Animations"
-  Transform {
-    Location {
-      Z: 210
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4208566297764116835
-  ChildIds: 3366696037772817909
-  ChildIds: 8703590086033231662
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8703590086033231662
-  Name: "Elf Charge Up VFX"
-  Transform {
-    Location {
-      X: -6.10277843
-      Y: -5.28370667
-      Z: 101.459
-    }
-    Rotation {
-    }
-    Scale {
-      X: 5.80972767
-      Y: 5.80972767
-      Z: 5.80972767
-    }
-  }
-  ParentId: 104147130380062008
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:color"
-      Color {
-        G: 0.429999948
-        B: 0.250596046
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Inner Core Color"
-      Color {
-        G: 0.220000029
-        B: 0.115099408
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Emissive Boost"
-      Float: 11.8366699
-    }
-    Overrides {
-      Name: "bp:Large Charge Ring Size"
-      Float: 0.346505702
-    }
-    Overrides {
-      Name: "bp:Arc Size"
-      Float: 0.346505702
-    }
-    Overrides {
-      Name: "bp:Arc Density"
-      Float: 4.34064293
-    }
-    Overrides {
-      Name: "bp:Outer Core Color"
-      Color {
-        G: 0.690000057
-        B: 0.580331206
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Arc Color"
-      Color {
-        G: 0.340000033
-        B: 0.110331178
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Hot Spot Color"
-      Color {
-        G: 0.340000033
-        B: 0.150860965
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 3164364020326874740
-    }
-    TeamSettings {
-    }
-    Vfx {
-    }
-  }
-  InstanceHistory {
-    SelfId: 8703590086033231662
-    SubobjectId: 3592874614267181664
-    InstanceId: 15381680925168707964
-    TemplateId: 17347292399839852453
-  }
-}
-Objects {
-  Id: 3366696037772817909
-  Name: "Orc Charge Up VFX"
-  Transform {
-    Location {
-      X: -6.10277843
-      Y: -5.28370667
-      Z: 101.459
-    }
-    Rotation {
-    }
-    Scale {
-      X: 5.80972767
-      Y: 5.80972767
-      Z: 5.80972767
-    }
-  }
-  ParentId: 104147130380062008
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:color"
-      Color {
-        R: 0.75
-        G: 0.342715234
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Inner Core Color"
-      Color {
-        R: 0.580000043
-        G: 0.09218546
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Emissive Boost"
-      Float: 11.8366699
-    }
-    Overrides {
-      Name: "bp:Large Charge Ring Size"
-      Float: 0.346505702
-    }
-    Overrides {
-      Name: "bp:Arc Size"
-      Float: 0.346505702
-    }
-    Overrides {
-      Name: "bp:Arc Density"
-      Float: 4.34064293
-    }
-    Overrides {
-      Name: "bp:Outer Core Color"
-      Color {
-        R: 0.72
-        G: 0.286092758
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Arc Color"
-      Color {
-        R: 0.409999967
-        G: 0.122185431
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Charge Up Duration"
-      Float: 8
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 3164364020326874740
-    }
-    TeamSettings {
-    }
-    Vfx {
-    }
-  }
-  InstanceHistory {
-    SelfId: 3366696037772817909
-    SubobjectId: 7470839878895222971
-    InstanceId: 15381680925168707964
-    TemplateId: 17347292399839852453
-  }
-}
-Objects {
   Id: 715224953526643395
   Name: "FlagCaptureControlClient"
   Transform {
@@ -18781,6 +20080,18 @@ Objects {
         SelfId: 104147130380062008
       }
     }
+    Overrides {
+      Name: "cs:PointCapturedVFX"
+      ObjectReference {
+        SelfId: 13388104631069369026
+      }
+    }
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 2000368293015010262
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18805,9 +20116,6 @@ Objects {
   Name: "FlagCaptureControlServer"
   Transform {
     Location {
-      X: 4411.2251
-      Y: 2288.63794
-      Z: -102.908936
     }
     Rotation {
     }

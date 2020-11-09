@@ -26,6 +26,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16367751924804927766
+  Name: "Sci-fi Low Pulse Humming Drone Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_scfi_low_pulse_humming_drone_loop_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 15862839354445934362
+  Name: "Plasma Impact VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_plasma_impact"
+  }
+}
+Assets {
   Id: 15683169359350375517
   Name: "Capsule"
   PlatformAssetType: 1
@@ -95,15 +113,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_head_staff_001"
-  }
-}
-Assets {
-  Id: 8978661562815925692
-  Name: "Rock Hexagonal"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_008"
   }
 }
 Assets {
@@ -194,6 +203,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_sphere_inverted_001"
+  }
+}
+Assets {
+  Id: 2587567105337529696
+  Name: "Sci-fi Barrier Energy Shield Large Impact Shutdown 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_scifi_barrier_energy_shield_large_impact_shutdown_02a_Cue_ref"
   }
 }
 Assets {

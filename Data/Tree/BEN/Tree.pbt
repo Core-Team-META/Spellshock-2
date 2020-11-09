@@ -75,7 +75,7 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
+      Pitch: 478.447754
       Volume: 1
       Falloff: 3600
       Radius: 400
