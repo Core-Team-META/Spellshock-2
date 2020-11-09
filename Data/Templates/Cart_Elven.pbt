@@ -309,6 +309,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -1004,6 +1006,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -1699,6 +1703,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2394,6 +2400,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3439,6 +3447,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3499,6 +3509,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3667,6 +3679,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3783,6 +3797,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3959,6 +3975,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -4015,6 +4033,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -4130,6 +4150,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -4190,6 +4212,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -4249,6 +4273,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -4853,6 +4879,8 @@
             Id: 16701925266063006038
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
