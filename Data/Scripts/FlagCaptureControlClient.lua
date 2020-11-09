@@ -23,6 +23,11 @@ local VISUAL_GEOMETRY = script:GetCustomProperty("VisualGeometry"):WaitForObject
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 local FLAG_BEAMS = script:GetCustomProperty("AnimatedFlagBeams"):WaitForObject()
 local CAPTURE_ANIMATIONS = script:GetCustomProperty("CaptureAnimations"):WaitForObject()
+local POINT_CAPTURED_VFX = script:GetCustomProperty("PointCapturedVFX"):WaitForObject()
+local AUDIO = script:GetCustomProperty("Audio"):WaitForObject()
+
+local ChargeUpSFX = AUDIO:GetCustomProperty("ChargeUpSFX"):WaitForObject()
+local CapturedSFX = AUDIO:GetCustomProperty("CapturedSFX"):WaitForObject()
 local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
 
 -- User exposed properties
@@ -35,6 +40,8 @@ local MULTIPLY_WITH_PLAYERS = COMPONENT_ROOT:GetCustomProperty("MultiplyWithPlay
 local CHANGE_COLOR_WHEN_DISABLED = COMPONENT_ROOT:GetCustomProperty("ChangeColorWhenDisabled")
 local DISABLED_COLOR = COMPONENT_ROOT:GetCustomProperty("DisabledColor")
 local ORDER = COMPONENT_ROOT:GetCustomProperty("Order")
+
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -- Check user properties
 if CAPTURE_THRESHOLD < 0.0 or CAPTURE_THRESHOLD > 1.0 then
@@ -220,59 +227,77 @@ function OnNetworkedPropertyChanged(thisObject, name)
 	        Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
 	        owningTeam = newOwner
 	        SetGeometryTeam(owningTeam)
+	        ChargeUpSFX:Stop()
+	        if owningTeam ~= 0 then
+	        	CapturedSFX:Play()
+	        	POINT_CAPTURED_VFX:GetChildren()[owningTeam]:Play()
+	        end
 	    end
-	elseif name == "ProgressedTeam" then
+	elseif name == "ProgressedTeam" or name == "CapturePlayerID" then
 		for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
 			vfx.visibility = Visibility.FORCE_OFF
 			vfx:Stop()
+		end
+		
+		local progressedTeam = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
+		local playerID = SERVER_SCRIPT:GetCustomProperty("CapturePlayerID")
+		
+		if playerID == "" or progressedTeam == 0 then 
+			if LOCAL_PLAYER.name == "Bot1" then
+				print("STOPPING")
+			end
+			ChargeUpSFX:Stop()
+			return 
 		end
 		
 		while SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed") == 0.0 do
 			Task.Wait()
 		end
 		
-		local progressedTeam = SERVER_SCRIPT:GetCustomProperty("ProgressedTeam")
-		local playerID = SERVER_SCRIPT:GetCustomProperty("CapturePlayerID")
+		--print("Progress team: "..SERVER_SCRIPT:GetCustomProperty("ProgressedTeam"))
+		--print("Player id: "..SERVER_SCRIPT:GetCustomProperty("CapturePlayerID"))
 		
-		print("Progress team: "..SERVER_SCRIPT:GetCustomProperty("ProgressedTeam"))
-		print("Player id: "..SERVER_SCRIPT:GetCustomProperty("CapturePlayerID"))
 		
-		if playerID ~= "" and progressedTeam ~= 0 then
+		if LOCAL_PLAYER.name == "Bot1" then
 			print("ANIMATING")
-			local capturePlayer 
-			for _, player in pairs(Game.GetPlayers()) do
-				if player.id == playerID then
-					capturePlayer = player 
-					break
-				end
-			end
-			
-			if not capturePlayer then return end
-
-			local progressLeft 
-			print("Capture progress: "..GetCaptureProgress())
-			if capturePlayer.team == progressedTeam then
-				progressLeft = 1 - GetCaptureProgress()
-			else
-				progressLeft = 1 + GetCaptureProgress()
-			end
-			
-			print("Progress left: "..progressLeft)
-			print("Capture speed: "..math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed")))
-			
-			local timeBeforeCapture = progressLeft / math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed"))
-			timeBeforeCapture = timeBeforeCapture - 0.1
-			if timeBeforeCapture < 0 then
-				timeBeforeCapture = 0
-			end
-			
-			print("timeBeforeCapture: "..timeBeforeCapture)
-			
-			local targetVFX = CAPTURE_ANIMATIONS:GetChildren()[capturePlayer.team]
-			targetVFX:SetSmartProperty("Charge Up Duration", timeBeforeCapture)
-			targetVFX.visibility = Visibility.INHERIT
-			targetVFX:Play()
 		end
+		
+		local capturePlayer 
+		for _, player in pairs(Game.GetPlayers()) do
+			if player.id == playerID then
+				capturePlayer = player 
+				break
+			end
+		end
+		
+		if not capturePlayer or capturePlayer.team ~= progressedTeam then return end
+
+		local progressLeft 
+		--print("Capture progress: "..GetCaptureProgress())
+		if capturePlayer.team == progressedTeam then
+			progressLeft = 1 - GetCaptureProgress()
+		else
+			progressLeft = 1 + GetCaptureProgress()
+		end
+		
+		--print("Progress left: "..progressLeft)
+		--print("Capture speed: "..math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed")))
+		
+		local timeBeforeCapture = progressLeft / math.abs(SERVER_SCRIPT:GetCustomProperty("LastCaptureSpeed"))
+		timeBeforeCapture = timeBeforeCapture - 0.1
+		if timeBeforeCapture < 0 then
+			timeBeforeCapture = 0
+		end
+		
+		--print("timeBeforeCapture: "..timeBeforeCapture)
+		
+		local targetVFX = CAPTURE_ANIMATIONS:GetChildren()[capturePlayer.team]
+		targetVFX:SetSmartProperty("Charge Up Duration", timeBeforeCapture)
+		targetVFX.visibility = Visibility.INHERIT
+		targetVFX:Play()
+		ChargeUpSFX:Stop()
+		Task.Wait()
+		ChargeUpSFX:Play()
 	end
 end
 
@@ -292,6 +317,10 @@ function Tick(deltaTime)
             previousEnabledState = isEnabled
         end
     end
+    
+    -- Update pitch of ChargeUpSFX
+    ChargeUpSFX.pitch = GetCaptureProgress() * 1000
+    
     
     if NAME == "War Camp" then
 		--print("~ Capture progress: "..tostring(GetCaptureProgress()))

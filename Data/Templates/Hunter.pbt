@@ -24,13 +24,13 @@
           Overrides {
             Name: "cs:Orc_Costume"
             AssetReference {
-              Id: 10938749002355594751
+              Id: 4930263866677536490
             }
           }
           Overrides {
             Name: "cs:Elf_Costume"
             AssetReference {
-              Id: 2396177475694108592
+              Id: 1453546943157492303
             }
           }
           Overrides {

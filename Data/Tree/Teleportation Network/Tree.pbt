@@ -5,11 +5,12 @@ Objects {
   Name: "Base 2"
   Transform {
     Location {
-      X: 640.992188
-      Y: -1801.35156
+      X: 184.253906
+      Y: 176.857422
       Z: -248.221191
     }
     Rotation {
+      Yaw: 164.628494
     }
     Scale {
       X: 1
@@ -35,8 +36,8 @@ Objects {
   Name: "Teleporter Back to Hub"
   Transform {
     Location {
-      X: -62.3164063
-      Y: 218.824219
+      X: -68.4499893
+      Y: 380.068848
     }
     Rotation {
     }
@@ -123,8 +124,9 @@ Objects {
   Name: "Teleporter to Destination"
   Transform {
     Location {
-      X: 78.2246094
-      Y: -197.574219
+      X: 105.971153
+      Y: -374.738831
+      Z: -2.95556641
     }
     Rotation {
       Yaw: -160.482224
@@ -322,14 +324,14 @@ Objects {
   Name: "Base 1"
   Transform {
     Location {
-      X: -43410.5313
-      Y: -54778.4766
-      Z: -1035.24658
+      X: -44186
+      Y: -53291.9414
+      Z: -1015.35352
     }
     Rotation {
-      Pitch: 3.25975537
-      Yaw: -114.626663
-      Roll: -1.4932251
+      Pitch: -2.56762695
+      Yaw: -146.521774
+      Roll: -5.34573364
     }
     Scale {
       X: 1
@@ -357,9 +359,9 @@ Objects {
   Name: "Teleporter Back to Hub"
   Transform {
     Location {
-      X: 224.520233
-      Y: 318.76355
-      Z: -50.9942551
+      X: 335.886444
+      Y: 487.226135
+      Z: -64.489975
     }
     Rotation {
     }
@@ -446,14 +448,14 @@ Objects {
   Name: "Teleporter to Destination"
   Transform {
     Location {
-      X: -0.651189804
-      Y: -0.297963977
-      Z: -24.6729393
+      X: -2.60798383
+      Y: -1.19356048
+      Z: -59.0201378
     }
     Rotation {
-      Pitch: -4.081604
-      Yaw: -172.112335
-      Roll: -3.89465332
+      Pitch: -5.72360229
+      Yaw: 144.730301
+      Roll: -5.98303223
     }
     Scale {
       X: 1
