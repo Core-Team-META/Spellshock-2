@@ -76,6 +76,13 @@ function OnThrowAbilityRecovery(thisAbility)
 	ThrowAbility.isEnabled = false
 end
 
+function OnInterrupted(thisAbility)
+	if Object.IsValid(PickupObject) then
+		PickupObject:Destroy()
+		PickupObject = nil
+	end
+end
+
 function OnEquip(equipment, player)
 	
 end
@@ -93,6 +100,8 @@ PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
+ThrowAbility.interruptedEvent:Connect(OnInterrupted)
+PickupAbility.interruptedEvent:Connect(OnInterrupted)
 
 function Tick(dTime)
 	if Timer > 0 then

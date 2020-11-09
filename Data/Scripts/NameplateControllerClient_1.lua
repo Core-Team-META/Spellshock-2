@@ -411,8 +411,15 @@ function Tick(deltaTime)
 
 				-- Update name and health color based on teams
 				if SHOW_NAMES then					
-					nameplate.nameText:SetColor(_G.TeamColors[player.team])
-					nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
+					if player.team == LOCAL_PLAYER.team then
+						nameplate.nameText:SetColor(FRIENDLY_NAME_COLOR)
+						nameplate.healthPiece:SetColor(FRIENDLY_HEALTH_COLOR)
+					else
+						nameplate.nameText:SetColor(ENEMY_NAME_COLOR)
+						nameplate.healthPiece:SetColor(ENEMY_HEALTH_COLOR)
+					end
+					--nameplate.nameText:SetColor(_G.TeamColors[player.team])
+					--nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 				end
 			end
 		end

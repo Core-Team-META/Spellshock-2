@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:Orc_Costume"
             AssetReference {
-              Id: 4930263866677536490
+              Id: 10938749002355594751
             }
           }
           Overrides {
@@ -301,7 +301,7 @@
           Overrides {
             Name: "cs:HeroKitEquipment"
             ObjectReference {
-              SubObjectId: 5242507662312205528
+              SelfId: 17941773821023995002
             }
           }
         }
@@ -854,41 +854,14 @@
           }
         }
         ParentId: 2069545901692075652
-        ChildIds: 8738223765773217925
-        ChildIds: 5242507662312205528
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8738223765773217925
-        Name: "Abilities"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 406380117814010332
         ChildIds: 6922611339924357768
         ChildIds: 10679331535669617236
         ChildIds: 1433284731599134094
         ChildIds: 16077949688686323587
         ChildIds: 12322270892486371816
+        ChildIds: 13944462686745880869
+        UnregisteredParameters {
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -915,7 +888,7 @@
             Z: 1
           }
         }
-        ParentId: 8738223765773217925
+        ParentId: 406380117814010332
         ChildIds: 2412895844582348789
         UnregisteredParameters {
           Overrides {
@@ -1074,7 +1047,7 @@
           Scale {
           }
         }
-        ParentId: 8738223765773217925
+        ParentId: 406380117814010332
         ChildIds: 2760011268594344962
         UnregisteredParameters {
           Overrides {
@@ -1204,7 +1177,7 @@
           Scale {
           }
         }
-        ParentId: 8738223765773217925
+        ParentId: 406380117814010332
         ChildIds: 11108734766873830573
         ChildIds: 13372907053990075206
         UnregisteredParameters {
@@ -1413,7 +1386,7 @@
       Objects {
         Id: 16077949688686323587
         Name: "Hawk"
-        ParentId: 8738223765773217925
+        ParentId: 406380117814010332
         ChildIds: 12133106933323690470
         UnregisteredParameters {
         }
@@ -1550,7 +1523,7 @@
           Scale {
           }
         }
-        ParentId: 8738223765773217925
+        ParentId: 406380117814010332
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1614,33 +1587,6 @@
         }
       }
       Objects {
-        Id: 5242507662312205528
-        Name: "Equipment"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 406380117814010332
-        ChildIds: 13944462686745880869
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 13944462686745880869
         Name: "Crossbow"
         Transform {
@@ -1654,7 +1600,7 @@
             Z: 1
           }
         }
-        ParentId: 5242507662312205528
+        ParentId: 406380117814010332
         ChildIds: 9326815864443726021
         ChildIds: 12722603230700067105
         ChildIds: 13500843537647582575
@@ -1824,6 +1770,7 @@
         ParentId: 13944462686745880869
         ChildIds: 9444411452001214971
         ChildIds: 11537850216701276195
+        ChildIds: 2726600085118415138
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1942,6 +1889,194 @@
         Script {
           ScriptAsset {
             Id: 11565410270089156903
+          }
+        }
+      }
+      Objects {
+        Id: 2726600085118415138
+        Name: "Reticle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 13500843537647582575
+        ChildIds: 12352649972463341139
+        ChildIds: 7473047414501785762
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:InRangeColor"
+            Color {
+              R: 0.89
+              G: 0.795695364
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12352649972463341139
+        Name: "ReticleHandler"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2726600085118415138
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Reticle"
+            ObjectReference {
+              SubObjectId: 5403914542473257579
+            }
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 2726600085118415138
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1665784526678537401
+          }
+        }
+      }
+      Objects {
+        Id: 7473047414501785762
+        Name: "UI Container"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2726600085118415138
+        ChildIds: 5403914542473257579
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Canvas {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5403914542473257579
+        Name: "ReticleImage"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7473047414501785762
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        Control {
+          Width: 50
+          Height: 50
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 16762591826162227996
+            }
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
           }
         }
       }
@@ -2468,6 +2603,15 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Crossbow_002"
+      }
+    }
+    Assets {
+      Id: 16762591826162227996
+      Name: "Crosshair 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Crosshair_007"
       }
     }
     Assets {
