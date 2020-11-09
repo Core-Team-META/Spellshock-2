@@ -416,6 +416,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -1117,6 +1119,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -1818,6 +1822,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2519,6 +2525,8 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -5098,6 +5106,8 @@
         ChildIds: 5261563659355098135
         ChildIds: 4878163078293745357
         ChildIds: 4931417633923758275
+        ChildIds: 13384604108575149960
+        ChildIds: 9197161162077565643
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5360,6 +5370,138 @@
         CoreMesh {
           MeshAsset {
             Id: 10413465125058823580
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13384604108575149960
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -177.848267
+            Y: 357.824951
+            Z: -9.08262253
+          }
+          Rotation {
+            Pitch: 87.1363754
+            Yaw: -0.00247192383
+            Roll: 95.7389526
+          }
+          Scale {
+            X: 0.687316239
+            Y: 0.50598377
+            Z: 0.197006509
+          }
+        }
+        ParentId: 8587987126793391050
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.216104671
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.520833313
+              G: 0.520833313
+              B: 0.520833313
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9197161162077565643
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 177.474701
+            Y: 352.058472
+            Z: -9.08564
+          }
+          Rotation {
+            Pitch: -87.1389771
+            Yaw: 179.999786
+            Roll: -83.293335
+          }
+          Scale {
+            X: 0.698423564
+            Y: 0.514191568
+            Z: 0.326256573
+          }
+        }
+        ParentId: 8587987126793391050
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.216104671
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.578125
+              G: 0.578125
+              B: 0.578125
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -6855,6 +6997,11 @@
         ChildIds: 12605509116202142147
         ChildIds: 4884754534417576562
         ChildIds: 9453663034208747586
+        ChildIds: 6402435267562975607
+        ChildIds: 6257249077284436835
+        ChildIds: 8976568953946889491
+        ChildIds: 6747750937914031540
+        ChildIds: 17158081273186673347
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7691,9 +7838,9 @@
         Name: "Diamond - Polished"
         Transform {
           Location {
-            X: 160.557617
-            Y: 255.634277
-            Z: -0.171875
+            X: 160.557632
+            Y: 255.634262
+            Z: -6.29561424
           }
           Rotation {
             Pitch: -3.05175781e-05
@@ -8401,6 +8548,346 @@
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6402435267562975607
+        Name: "Diamond - Polished"
+        Transform {
+          Location {
+            X: 107.692757
+            Y: 258.025085
+            Z: -6.15008783
+          }
+          Rotation {
+            Pitch: 15.9285192
+            Yaw: -179.999969
+            Roll: -89.9997864
+          }
+          Scale {
+            X: 0.426776
+            Y: 0.450184
+            Z: 0.250298828
+          }
+        }
+        ParentId: 15247058043952720077
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.483
+              G: 0.483
+              B: 0.483
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.143297344
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6257249077284436835
+        Name: "Diamond - Polished"
+        Transform {
+          Location {
+            X: 57.7036095
+            Y: 255.634201
+            Z: -6.15008783
+          }
+          Rotation {
+            Pitch: 65.4639435
+            Yaw: -179.999603
+            Roll: -90.0014
+          }
+          Scale {
+            X: 0.339341909
+            Y: 0.357966214
+            Z: 0.289531648
+          }
+        }
+        ParentId: 15247058043952720077
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.483
+              G: 0.483
+              B: 0.483
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.143297344
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8976568953946889491
+        Name: "Diamond - Polished"
+        Transform {
+          Location {
+            X: 160.557632
+            Y: 255.634262
+            Z: -3.96364236
+          }
+          Rotation {
+            Pitch: -3.05175781e-05
+            Yaw: -179.999969
+            Roll: -89.9999084
+          }
+          Scale {
+            X: 0.485131413
+            Y: 0.511725
+            Z: 0.353280693
+          }
+        }
+        ParentId: 15247058043952720077
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.483
+              G: 0.483
+              B: 0.483
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.143297344
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6747750937914031540
+        Name: "Diamond - Polished"
+        Transform {
+          Location {
+            X: 217.181808
+            Y: 256.778625
+            Z: -6.15008783
+          }
+          Rotation {
+            Pitch: -21.196106
+            Yaw: -179.999969
+            Roll: -89.9997864
+          }
+          Scale {
+            X: 0.411824107
+            Y: 0.434407771
+            Z: 0.295866817
+          }
+        }
+        ParentId: 15247058043952720077
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.483
+              G: 0.483
+              B: 0.483
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.143297344
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17158081273186673347
+        Name: "Diamond - Polished"
+        Transform {
+          Location {
+            X: 269.697479
+            Y: 256.71048
+            Z: -6.15008783
+          }
+          Rotation {
+            Pitch: -36.3695374
+            Yaw: -179.999969
+            Roll: -89.9997864
+          }
+          Scale {
+            X: 0.33050248
+            Y: 0.348621815
+            Z: 0.307522565
+          }
+        }
+        ParentId: 15247058043952720077
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10378479423839914021
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.483
+              G: 0.483
+              B: 0.483
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.143297344
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12905923173550510229
+          }
+          Teams {
           }
           StaticMesh {
             Physics {

@@ -350,15 +350,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15818682822090430829
-  Name: "Pipe - Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_003"
-  }
-}
-Assets {
   Id: 15796848555389387332
   Name: "Torch Holder Metal"
   PlatformAssetType: 1
@@ -1220,15 +1211,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_pole_002"
-  }
-}
-Assets {
-  Id: 11535495265175524988
-  Name: "Ring - Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_003"
   }
 }
 Assets {
