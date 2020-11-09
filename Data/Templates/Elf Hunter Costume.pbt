@@ -5605,7 +5605,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3090596827184957478
+              Id: 12357757896131286157
             }
           }
           Overrides {
@@ -5619,6 +5619,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 2.63884258
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.19600001
+              G: 0.089866
+              B: 0.0284199864
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -5666,7 +5675,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3090596827184957478
+              Id: 12357757896131286157
             }
           }
           Overrides {
@@ -5680,6 +5689,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 2.63884258
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.19600001
+              G: 0.089866
+              B: 0.0284199864
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6387,7 +6405,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3090596827184957478
+              Id: 12357757896131286157
             }
           }
           Overrides {
@@ -6401,6 +6419,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 2.63884258
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.19600001
+              G: 0.089866
+              B: 0.0284199864
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6611,7 +6638,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3090596827184957478
+              Id: 12357757896131286157
             }
           }
           Overrides {
@@ -6625,6 +6652,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 2.63884258
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.19600001
+              G: 0.089866
+              B: 0.0284199864
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8551,12 +8587,12 @@
       }
     }
     Assets {
-      Id: 3090596827184957478
-      Name: "Rope"
+      Id: 12357757896131286157
+      Name: "Basic Material"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_rope_001"
+        AssetId: "mi_basic_pbr_material_001"
       }
     }
     Assets {
