@@ -766,5 +766,5 @@
       AssetId: "Basic_Shotgun"
     }
   }
-  SerializationVersion: 65
+  SerializationVersion: 68
 }

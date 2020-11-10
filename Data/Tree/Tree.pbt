@@ -1781,6 +1781,9 @@ Objects {
       }
       AppearanceChannelingTime: 2
       FlipOnMultiJump: true
+      CanMoveUp: true
+      CanMoveDown: true
+      IsMountEnabled: true
     }
   }
   InstanceHistory {

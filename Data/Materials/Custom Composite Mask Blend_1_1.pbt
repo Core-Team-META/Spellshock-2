@@ -2,7 +2,7 @@
   Id: 10012368966551796006
   Name: "Custom Composite Mask Blend_1"
   PlatformAssetType: 13
-  SerializationVersion: 65
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 2868304604294957594
     ParameterOverrides {

@@ -1007,7 +1007,7 @@
       }
       Objects {
         Id: 1109302873163087110
-        Name: "Venom Bomb"
+        Name: "Animorph Potion"
         Transform {
           Location {
             X: -8690.86621
@@ -1032,18 +1032,18 @@
             }
           }
           Overrides {
-            Name: "cs:Damage"
-            Float: 20
-          }
-          Overrides {
-            Name: "cs:Radius"
-            Float: 500
-          }
-          Overrides {
             Name: "cs:ImpactFX"
             AssetReference {
               Id: 5202994091235663908
             }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Float: 500
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -1112,7 +1112,7 @@
       }
       Objects {
         Id: 17761841803757750491
-        Name: "Assassin_PoisonGrenadeAbility"
+        Name: "AnimorphAbilityServer"
         Transform {
           Location {
           }
@@ -1148,7 +1148,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 10868725130796666737
+            Id: 13912794404632874264
           }
         }
       }
@@ -2292,5 +2292,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 65
+  SerializationVersion: 68
 }

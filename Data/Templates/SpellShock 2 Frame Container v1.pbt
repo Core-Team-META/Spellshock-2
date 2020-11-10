@@ -28014,273 +28014,12 @@
       }
     }
     Assets {
-      Id: 2286364455446697578
-      Name: "Frame Beveled 006"
+      Id: 13866138569005125525
+      Name: "BG Gradient 001"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameSolid8px__015"
-      }
-    }
-    Assets {
-      Id: 1667500729624021287
-      Name: "Fantasy Frame 002"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Frame_002"
-      }
-    }
-    Assets {
-      Id: 1068154868120136734
-      Name: "Frame Highlighted 011"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameHighlighted_028"
-      }
-    }
-    Assets {
-      Id: 2136605185994819080
-      Name: "Icon Core"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Core"
-      }
-    }
-    Assets {
-      Id: 10082862946335964633
-      Name: "Fantasy Shield 002"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Shield_002"
-      }
-    }
-    Assets {
-      Id: 15289181932311617399
-      Name: "Fantasy Ability Blue 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_001"
-      }
-    }
-    Assets {
-      Id: 4367859479593647968
-      Name: "Fantasy Frame 009"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Frame_009"
-      }
-    }
-    Assets {
-      Id: 2562562495929064540
-      Name: "Daggers"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_icon_Daggers"
-      }
-    }
-    Assets {
-      Id: 18158866839585449760
-      Name: "Fantasy Gear Shoulder 024"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Gear_Puldron_024"
-      }
-    }
-    Assets {
-      Id: 7981051448714721800
-      Name: "Fantasy Spell Ingredient 027"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ingredient_027"
-      }
-    }
-    Assets {
-      Id: 16818488692636991522
-      Name: "Fantasy Wood 007"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Equip_Wood_007"
-      }
-    }
-    Assets {
-      Id: 14763790915239200001
-      Name: "Fantasy Spell Ingredient 026"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ingredient_026"
-      }
-    }
-    Assets {
-      Id: 4800330832634368749
-      Name: "Frame Outlined Thick 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameFlat_020"
-      }
-    }
-    Assets {
-      Id: 8975273285240916744
-      Name: "Fantasy Ability Yellow 004"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_004"
-      }
-    }
-    Assets {
-      Id: 3481758651789323561
-      Name: "Frame Outline Thin 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameOutline_020"
-      }
-    }
-    Assets {
-      Id: 10304004596054394633
-      Name: "Frame Highlighted 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameHighlighted_020"
-      }
-    }
-    Assets {
-      Id: 15490536406170208496
-      Name: "Fantasy Gear Head 018"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Gear_Head_018"
-      }
-    }
-    Assets {
-      Id: 13798822526295884020
-      Name: "Icon Weapon Crossbow"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_WeaponCrossbow"
-      }
-    }
-    Assets {
-      Id: 6488609383494304708
-      Name: "Fantasy Frame 003"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Frame_003"
-      }
-    }
-    Assets {
-      Id: 3838621033641543050
-      Name: "Frame Outlined 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameSolid4px_020"
-      }
-    }
-    Assets {
-      Id: 13673358037856315902
-      Name: "Fantasy Frame 007"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Frame_007"
-      }
-    }
-    Assets {
-      Id: 12289747022974899819
-      Name: "Fantasy Shield 003"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Shield_003"
-      }
-    }
-    Assets {
-      Id: 15700576236624769931
-      Name: "Frame Beveled 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameSolid8px_020"
-      }
-    }
-    Assets {
-      Id: 9141236182452299158
-      Name: "Fantasy Bracers 009"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Gear_Bracers_009"
-      }
-    }
-    Assets {
-      Id: 48307754774318265
-      Name: "UI Gradient Rectangular 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Basic_Shape_002"
-      }
-    }
-    Assets {
-      Id: 11636672077374519341
-      Name: "BG Flat 006"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundNoOutline_015"
-      }
-    }
-    Assets {
-      Id: 9860965537374795587
-      Name: "Bat"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_icon_Bat"
-      }
-    }
-    Assets {
-      Id: 16480950935343531382
-      Name: "Fantasy Banner 008"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Equip_Banner_008"
-      }
-    }
-    Assets {
-      Id: 3774657568957881846
-      Name: "BG Flat 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundNoOutline_020"
-      }
-    }
-    Assets {
-      Id: 2646267805459946823
-      Name: "Fantasy Banner 005"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Equip_Banner_005"
+        AssetId: "BackgroundFlat_020"
       }
     }
     Assets {
@@ -28293,12 +28032,273 @@
       }
     }
     Assets {
-      Id: 13866138569005125525
-      Name: "BG Gradient 001"
+      Id: 2646267805459946823
+      Name: "Fantasy Banner 005"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundFlat_020"
+        AssetId: "UI_Fantasy_Equip_Banner_005"
+      }
+    }
+    Assets {
+      Id: 3774657568957881846
+      Name: "BG Flat 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_020"
+      }
+    }
+    Assets {
+      Id: 16480950935343531382
+      Name: "Fantasy Banner 008"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Equip_Banner_008"
+      }
+    }
+    Assets {
+      Id: 9860965537374795587
+      Name: "Bat"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_icon_Bat"
+      }
+    }
+    Assets {
+      Id: 11636672077374519341
+      Name: "BG Flat 006"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_015"
+      }
+    }
+    Assets {
+      Id: 48307754774318265
+      Name: "UI Gradient Rectangular 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Basic_Shape_002"
+      }
+    }
+    Assets {
+      Id: 9141236182452299158
+      Name: "Fantasy Bracers 009"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Gear_Bracers_009"
+      }
+    }
+    Assets {
+      Id: 15700576236624769931
+      Name: "Frame Beveled 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameSolid8px_020"
+      }
+    }
+    Assets {
+      Id: 12289747022974899819
+      Name: "Fantasy Shield 003"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Shield_003"
+      }
+    }
+    Assets {
+      Id: 13673358037856315902
+      Name: "Fantasy Frame 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Frame_007"
+      }
+    }
+    Assets {
+      Id: 3838621033641543050
+      Name: "Frame Outlined 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameSolid4px_020"
+      }
+    }
+    Assets {
+      Id: 6488609383494304708
+      Name: "Fantasy Frame 003"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Frame_003"
+      }
+    }
+    Assets {
+      Id: 13798822526295884020
+      Name: "Icon Weapon Crossbow"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_WeaponCrossbow"
+      }
+    }
+    Assets {
+      Id: 15490536406170208496
+      Name: "Fantasy Gear Head 018"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Gear_Head_018"
+      }
+    }
+    Assets {
+      Id: 10304004596054394633
+      Name: "Frame Highlighted 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameHighlighted_020"
+      }
+    }
+    Assets {
+      Id: 3481758651789323561
+      Name: "Frame Outline Thin 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameOutline_020"
+      }
+    }
+    Assets {
+      Id: 8975273285240916744
+      Name: "Fantasy Ability Yellow 004"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Yellow_004"
+      }
+    }
+    Assets {
+      Id: 4800330832634368749
+      Name: "Frame Outlined Thick 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameFlat_020"
+      }
+    }
+    Assets {
+      Id: 14763790915239200001
+      Name: "Fantasy Spell Ingredient 026"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ingredient_026"
+      }
+    }
+    Assets {
+      Id: 16818488692636991522
+      Name: "Fantasy Wood 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Equip_Wood_007"
+      }
+    }
+    Assets {
+      Id: 7981051448714721800
+      Name: "Fantasy Spell Ingredient 027"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ingredient_027"
+      }
+    }
+    Assets {
+      Id: 18158866839585449760
+      Name: "Fantasy Gear Shoulder 024"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Gear_Puldron_024"
+      }
+    }
+    Assets {
+      Id: 2562562495929064540
+      Name: "Daggers"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_icon_Daggers"
+      }
+    }
+    Assets {
+      Id: 4367859479593647968
+      Name: "Fantasy Frame 009"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Frame_009"
+      }
+    }
+    Assets {
+      Id: 15289181932311617399
+      Name: "Fantasy Ability Blue 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Blue_001"
+      }
+    }
+    Assets {
+      Id: 10082862946335964633
+      Name: "Fantasy Shield 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Shield_002"
+      }
+    }
+    Assets {
+      Id: 2136605185994819080
+      Name: "Icon Core"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Core"
+      }
+    }
+    Assets {
+      Id: 1068154868120136734
+      Name: "Frame Highlighted 011"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameHighlighted_028"
+      }
+    }
+    Assets {
+      Id: 1667500729624021287
+      Name: "Fantasy Frame 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Frame_002"
+      }
+    }
+    Assets {
+      Id: 2286364455446697578
+      Name: "Frame Beveled 006"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "FrameSolid8px__015"
       }
     }
     PrimaryAssetId {
@@ -28306,6 +28306,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 65
+  SerializationVersion: 68
 }
-IncludesAllDependencies: true

@@ -8,6 +8,17 @@ function OnBindingPressed(whichPlayer, binding)
 		whichPlayer.hitPoints = 50
 	elseif binding == "ability_extra_57" then
 		whichPlayer.team = 3-whichPlayer.team
+	elseif binding == "ability_extra_38" then
+		for _, equipment in pairs(whichPlayer:GetEquipment()) do
+			if Object.IsValid(equipment) then
+				equipment:Unequip()
+			end
+			Task.Wait()
+			if Object.IsValid(equipment) then
+				equipment:Destroy()
+			end
+		end
+		whichPlayer.animationStance = "unarmed_stance"
 	end
 end
 

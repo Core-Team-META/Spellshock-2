@@ -40,5 +40,5 @@
     Version: "1.4.0"
     Description: "You are the chicken! Simply drag out GiveChicken into your hierarchy and your players will be made invisible at spawn, and a chicken will be in their place. The chicken has variable run animation speeds, cluck frequency, and more which you can configure on the \"ChickenContext\" object. Should work right out of the box!"
   }
-  SerializationVersion: 65
+  SerializationVersion: 68
 }

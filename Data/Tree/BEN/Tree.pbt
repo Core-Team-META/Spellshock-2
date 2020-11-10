@@ -1115,12 +1115,6 @@ Objects {
   }
   ParentId: 12935185397369316502
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:SpawnPoint"
-      ObjectReference {
-        SelfId: 12981020213512828508
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1792,12 +1786,12 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
-        Id: 84492020368917091
+        Id: 7047570860712842217
       }
     }
     Overrides {
