@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 7827469757850190083
-  Name: "Tornado Ability Orc Mage"
+  Id: 3760287097131009270
+  Name: "Elf Mage Tornado FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12597983505510063666
+      RootId: 18396550010636760668
       Objects {
-        Id: 12597983505510063666
-        Name: "Tornado Ability Orc Mage"
+        Id: 18396550010636760668
+        Name: "Elf Mage Tornado FX"
         Transform {
           Scale {
             X: 1
@@ -16,11 +16,21 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 9592652887879133899
-        ChildIds: 12474481072207634037
-        ChildIds: 13211947406657820910
-        ChildIds: 9049248418557605272
-        ChildIds: 2329305905851159841
+        ChildIds: 10772566095877105579
+        ChildIds: 4545488589136616139
+        ChildIds: 13769895600965817982
+        ChildIds: 15254269424615828586
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:LifeSpan"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:LifeSpan:isrep"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -31,8 +41,52 @@
         }
       }
       Objects {
-        Id: 9592652887879133899
-        Name: "Tornado VFX"
+        Id: 10772566095877105579
+        Name: "TornadoFadeOut"
+        Transform {
+          Location {
+            X: 17799.6777
+            Y: 16830.7012
+            Z: -3081.37646
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18396550010636760668
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Visual"
+            ObjectReference {
+              SubObjectId: 4545488589136616139
+            }
+          }
+          Overrides {
+            Name: "cs:Audio"
+            ObjectReference {
+              SubObjectId: 13769895600965817982
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2855777477313207764
+          }
+        }
+      }
+      Objects {
+        Id: 4545488589136616139
+        Name: "VFX"
         Transform {
           Location {
           }
@@ -44,7 +98,36 @@
             Z: 1
           }
         }
-        ParentId: 12597983505510063666
+        ParentId: 18396550010636760668
+        ChildIds: 12274350895697227030
+        ChildIds: 13919270022095110263
+        ChildIds: 13027836158761203257
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12274350895697227030
+        Name: "Tornado VFX"
+        Transform {
+          Location {
+            Z: -54.6896973
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4545488589136616139
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color B"
@@ -73,6 +156,10 @@
               A: 0.389000028
             }
           }
+          Overrides {
+            Name: "bp:Wiggle Offset Amount"
+            Float: 1.3
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -89,13 +176,11 @@
         }
       }
       Objects {
-        Id: 12474481072207634037
+        Id: 13919270022095110263
         Name: "Swirling Dust VFX"
         Transform {
           Location {
-            X: 19.8745117
-            Y: -71.9328613
-            Z: -0.000244140625
+            Z: -54.6896973
           }
           Rotation {
           }
@@ -105,7 +190,7 @@
             Z: 1
           }
         }
-        ParentId: 12597983505510063666
+        ParentId: 4545488589136616139
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -124,13 +209,11 @@
         }
       }
       Objects {
-        Id: 13211947406657820910
+        Id: 13027836158761203257
         Name: "Multicast Beam VFX"
         Transform {
           Location {
-            X: 15.5700684
-            Y: -31.2683105
-            Z: 1060.93286
+            Z: 1006.24268
           }
           Rotation {
             Pitch: -90
@@ -141,7 +224,7 @@
             Z: 1
           }
         }
-        ParentId: 12597983505510063666
+        ParentId: 4545488589136616139
         UnregisteredParameters {
           Overrides {
             Name: "bp:Max Cone Angle"
@@ -172,16 +255,16 @@
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882609
+              G: 0.580392182
+              B: 0.360784471
               A: 0.5
             }
           }
           Overrides {
             Name: "bp:Tertiary Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882609
+              G: 0.580392182
+              B: 0.360784471
               A: 0.5
             }
           }
@@ -208,10 +291,11 @@
         }
       }
       Objects {
-        Id: 9049248418557605272
+        Id: 13769895600965817982
         Name: "Nature Wind Steady 01 SFX"
         Transform {
           Location {
+            Z: 511.916016
           }
           Rotation {
           }
@@ -221,7 +305,7 @@
             Z: 1
           }
         }
-        ParentId: 12597983505510063666
+        ParentId: 18396550010636760668
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -236,15 +320,17 @@
           Volume: 1
           Falloff: -1
           Radius: 400
+          FadeInTime: 1
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
       Objects {
-        Id: 2329305905851159841
+        Id: 15254269424615828586
         Name: "Magic Wind Blast Long 01 SFX"
         Transform {
           Location {
+            Z: 511.916016
           }
           Rotation {
           }
@@ -254,7 +340,7 @@
             Z: 1
           }
         }
-        ParentId: 12597983505510063666
+        ParentId: 18396550010636760668
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -275,30 +361,12 @@
       }
     }
     Assets {
-      Id: 12201794874341329756
-      Name: "Magic Wind Blast Long 01 SFX"
-      PlatformAssetType: 7
+      Id: 7897514575113664858
+      Name: "Tornado VFX"
+      PlatformAssetType: 6
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_wind_blast_long_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 1720777226465397474
-      Name: "Nature Wind Steady 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_nature_wind_steady_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 3870889675061657431
-      Name: "Multicast Beam VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_MulticastBeam"
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_tornado"
       }
     }
     Assets {
@@ -311,12 +379,30 @@
       }
     }
     Assets {
-      Id: 7897514575113664858
-      Name: "Tornado VFX"
-      PlatformAssetType: 6
+      Id: 3870889675061657431
+      Name: "Multicast Beam VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_tornado"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_MulticastBeam"
+      }
+    }
+    Assets {
+      Id: 1720777226465397474
+      Name: "Nature Wind Steady 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_nature_wind_steady_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 12201794874341329756
+      Name: "Magic Wind Blast Long 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_wind_blast_long_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -326,4 +412,3 @@
   }
   SerializationVersion: 65
 }
-IncludesAllDependencies: true

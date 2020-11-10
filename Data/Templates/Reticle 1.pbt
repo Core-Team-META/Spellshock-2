@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 2561260553194061753
-  Name: "Recticle 1"
+  Name: "Reticle 1"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

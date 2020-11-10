@@ -143,7 +143,7 @@
           }
           Overrides {
             Name: "cs:JumpCount"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:MaxHealth"
@@ -301,7 +301,7 @@
           Overrides {
             Name: "cs:HeroKitEquipment"
             ObjectReference {
-              SelfId: 17941773821023995002
+              SubObjectId: 406380117814010332
             }
           }
         }
@@ -1664,7 +1664,7 @@
               Id: 14373757464648078715
             }
             ReticleType {
-              Value: "mc:ereticletype:crosshair"
+              Value: "mc:ereticletype:none"
             }
             MaxAmmo: 10
             AmmoType: "rounds"
@@ -1908,12 +1908,17 @@
         }
         ParentId: 13500843537647582575
         ChildIds: 12352649972463341139
-        ChildIds: 7473047414501785762
         UnregisteredParameters {
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 13944462686745880869
+            }
+          }
+          Overrides {
+            Name: "cs:ReticleTemplate"
+            AssetReference {
+              Id: 10414967070514943464
             }
           }
           Overrides {
@@ -1925,6 +1930,15 @@
             Color {
               R: 0.89
               G: 0.795695364
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:DefaultColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
           }
@@ -1956,12 +1970,6 @@
         ParentId: 2726600085118415138
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Reticle"
-            ObjectReference {
-              SubObjectId: 5403914542473257579
-            }
-          }
-          Overrides {
             Name: "cs:Root"
             ObjectReference {
               SubObjectId: 2726600085118415138
@@ -1977,106 +1985,6 @@
         Script {
           ScriptAsset {
             Id: 1665784526678537401
-          }
-        }
-      }
-      Objects {
-        Id: 7473047414501785762
-        Name: "UI Container"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2726600085118415138
-        ChildIds: 5403914542473257579
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Canvas {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5403914542473257579
-        Name: "ReticleImage"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7473047414501785762
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Control {
-          Width: 50
-          Height: 50
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 16762591826162227996
-            }
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
           }
         }
       }
@@ -2603,15 +2511,6 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Crossbow_002"
-      }
-    }
-    Assets {
-      Id: 16762591826162227996
-      Name: "Crosshair 007"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Crosshair_007"
       }
     }
     Assets {

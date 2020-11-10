@@ -271,6 +271,20 @@ function API.RemoveStatusEffect(player, index)
 	error(string.format("Failed to remove status effect index: %d on player %s (they don't have it)", index, player.name))
 end
 
+function API.DoesPlayerHaveStatusEffect(player, name)
+	local tracker = API.GetStateTracker(player)
+	for i = 1, API.MAX_STATUS_EFFECTS do
+		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
+		if id ~= 0 then
+			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
+			if(statusEffectData.name == name) then
+				return true
+			end
+		end
+	end
+	return false
+end
+
 -- Server only
 function API.RemoveStatusEffectByName(player, name)
 	local tracker = API.GetStateTracker(player)
