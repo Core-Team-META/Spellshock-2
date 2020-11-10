@@ -16,16 +16,7 @@
           }
         }
         ParentId: 10244168996742092131
-        ChildIds: 9613479980395910736
-        ChildIds: 17154823365054782725
-        ChildIds: 3543387375531192385
-        ChildIds: 16843624771007642312
-        ChildIds: 3092915387151823220
-        ChildIds: 15546090973377883990
-        ChildIds: 15485437232167841648
-        ChildIds: 7290922432007056901
-        ChildIds: 10754745941956579897
-        ChildIds: 17452731714441386960
+        ChildIds: 8991748924205406921
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -39,24 +30,63 @@
         }
       }
       Objects {
+        Id: 8991748924205406921
+        Name: "MergedModel"
+        Transform {
+          Location {
+            X: 27.8171597
+            Y: -53.1885376
+            Z: -165.077744
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15201103344788230150
+        ChildIds: 9613479980395910736
+        ChildIds: 17154823365054782725
+        ChildIds: 3543387375531192385
+        ChildIds: 16843624771007642312
+        ChildIds: 3092915387151823220
+        ChildIds: 15546090973377883990
+        ChildIds: 15485437232167841648
+        ChildIds: 7290922432007056901
+        ChildIds: 10754745941956579897
+        ChildIds: 17452731714441386960
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          Model {
+          }
+        }
+      }
+      Objects {
         Id: 9613479980395910736
         Name: "Elven_Fence_for_bridge"
         Transform {
           Location {
-            X: 10.5435867
-            Y: 158.563507
-            Z: 6.62807131
+            X: -17.2735176
+            Y: 211.752106
+            Z: 171.705856
           }
           Rotation {
-            Yaw: -0.35867089
+            Yaw: -0.358667493
           }
           Scale {
-            X: 0.999995887
-            Y: 0.999995887
-            Z: 0.999995887
+            X: 0.999995828
+            Y: 0.999995828
+            Z: 0.999995828
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 1234715987911626249
         ChildIds: 17184109069052908363
         ChildIds: 16088397042580259293
@@ -2525,20 +2555,20 @@
         Name: "Elven_Fence_for_bridge"
         Transform {
           Location {
-            X: -3.50335479
-            Y: -195.936
-            Z: 6.62807131
+            X: -31.3204689
+            Y: -142.747406
+            Z: 171.705856
           }
           Rotation {
-            Yaw: -0.358660668
+            Yaw: -0.358653843
           }
           Scale {
-            X: 0.999995887
-            Y: 0.999995887
-            Z: 0.999995887
+            X: 0.999995828
+            Y: 0.999995828
+            Z: 0.999995828
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 14822152082371576
         ChildIds: 16346474293429865117
         ChildIds: 16963286826309478290
@@ -5007,18 +5037,19 @@
         Name: "BridgePlanks"
         Transform {
           Location {
-            X: -1.47607422
-            Y: -65.4306641
+            X: -29.2932339
+            Y: -12.2418947
+            Z: 165.077774
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 0.99999994
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 11209199137566873171
         ChildIds: 7332502061626304233
         ChildIds: 12019849644807986673
@@ -6510,19 +6541,19 @@
         Name: "EndPieces"
         Transform {
           Location {
-            X: -25
-            Y: 25
-            Z: -65
+            X: -52.8171272
+            Y: 78.1886444
+            Z: 100.077805
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 0.99999994
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 9132517807693921250
         ChildIds: 8671906009476412761
         ChildIds: 17383912088804722131
@@ -7205,19 +7236,19 @@
         Name: "BridgeBase"
         Transform {
           Location {
-            X: 26.9291954
-            Y: -216.530762
-            Z: -88.1222076
+            X: -0.887874722
+            Y: -163.342255
+            Z: 76.9556046
           }
           Rotation {
           }
           Scale {
-            X: 0.209848315
-            Y: 0.209848315
-            Z: 0.209848315
+            X: 0.2098483
+            Y: 0.2098483
+            Z: 0.2098483
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 1852212539441436682
         ChildIds: 7596565850315189471
         UnregisteredParameters {
@@ -7349,19 +7380,19 @@
         Name: "Ivy"
         Transform {
           Location {
-            X: 24.0431728
-            Y: -30.4024162
-            Z: -37.6927032
+            X: -3.77399683
+            Y: 22.7859879
+            Z: 127.385078
           }
           Rotation {
           }
           Scale {
-            X: 0.384702802
-            Y: 0.384702802
-            Z: 0.384702802
+            X: 0.384702772
+            Y: 0.384702772
+            Z: 0.384702772
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         ChildIds: 9284155374036112165
         ChildIds: 15652271390130100187
         ChildIds: 4486121362606286293
@@ -7910,19 +7941,19 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: -356.701172
-            Y: 190.640854
-            Z: -78.2259674
+            X: -384.51828
+            Y: 243.829697
+            Z: 86.8518829
           }
           Rotation {
           }
           Scale {
-            X: 0.679402411
-            Y: 0.869922578
-            Z: 0.772048175
+            X: 0.679402351
+            Y: 0.869922519
+            Z: 0.772048116
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -7957,22 +7988,22 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: 343.30722
-            Y: 203.126526
-            Z: -137.694092
+            X: 315.490112
+            Y: 256.315033
+            Z: 27.3836975
           }
           Rotation {
             Pitch: 68.1828537
-            Yaw: -11.1472664
-            Roll: -11.9831457
+            Yaw: -11.1472797
+            Roll: -11.98316
           }
           Scale {
-            X: 0.679402411
-            Y: 0.869922578
-            Z: 0.772048175
+            X: 0.679402351
+            Y: 0.869922519
+            Z: 0.772048116
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -8007,22 +8038,22 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: 567.664856
-            Y: -318.030396
-            Z: -153.658676
+            X: 539.847595
+            Y: -264.841827
+            Z: 11.4191389
           }
           Rotation {
             Pitch: 75.5214386
-            Yaw: -21.5788765
-            Roll: -5.80524938e-05
+            Yaw: -21.5788651
+            Roll: -5.46376286e-05
           }
           Scale {
-            X: 0.679402411
-            Y: 1.46487463
+            X: 0.679402351
+            Y: 1.46487451
             Z: 1.39994752
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -8057,20 +8088,19 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: -307.635834
-            Y: -282.886047
-            Z: -165.077744
+            X: -335.45285
+            Y: -229.697601
           }
           Rotation {
-            Roll: -126.498253
+            Roll: -126.498222
           }
           Scale {
-            X: 0.679402411
-            Y: 0.869922578
-            Z: 0.772048175
+            X: 0.679402351
+            Y: 0.869922519
+            Z: 0.772048116
           }
         }
-        ParentId: 15201103344788230150
+        ParentId: 8991748924205406921
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
