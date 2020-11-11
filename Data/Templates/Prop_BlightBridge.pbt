@@ -7,15 +7,45 @@
       RootId: 8285323738425409877
       Objects {
         Id: 8285323738425409877
-        Name: "Prop_OrcBridge"
+        Name: "Prop_BlightBridge"
         Transform {
           Scale {
-            X: 1.36767423
-            Y: 1.36767423
-            Z: 1.36767423
+            X: 2.12412453
+            Y: 2.12412453
+            Z: 2.12412453
           }
         }
-        ParentId: 12886320629481969192
+        ParentId: 10244168996742092131
+        ChildIds: 15790505671579877808
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15790505671579877808
+        Name: "MergedModel"
+        Transform {
+          Location {
+            X: 0.753040433
+            Y: 8.59341145
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8285323738425409877
         ChildIds: 6880643080220020931
         ChildIds: 16669796388378804873
         ChildIds: 18067242730532014278
@@ -70,8 +100,6 @@
         ChildIds: 13125322220361713309
         ChildIds: 17191377944772181588
         ChildIds: 11991419097140172369
-        UnregisteredParameters {
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -79,7 +107,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Folder {
-          IsGroup: true
+          Model {
+          }
         }
       }
       Objects {
@@ -87,12 +116,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: 620.006348
-            Z: 65
+            X: 344.485901
+            Y: 611.412537
+            Z: 65.0000687
           }
           Rotation {
             Yaw: 89.9999313
+            Roll: -9.43314316e-09
           }
           Scale {
             X: 1.75
@@ -100,7 +130,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -129,12 +159,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: 75.0063477
-            Z: 65
+            X: 344.485901
+            Y: 66.4126587
+            Z: 65.0000763
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -142,7 +173,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -171,12 +202,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: 220.006348
-            Z: 65
+            X: 344.486
+            Y: 211.412491
+            Z: 65.0000763
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -184,7 +216,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -213,12 +245,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 359.364746
-            Y: 345.006348
-            Z: 65
+            X: 358.611328
+            Y: 336.412842
+            Z: 64.9999847
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -226,7 +259,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -255,12 +288,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: 470.006348
-            Z: 65
+            X: 344.485901
+            Y: 461.412781
+            Z: 65.0000458
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -268,7 +302,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -297,9 +331,9 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 347.134155
-            Y: 468.218414
-            Z: 119.153252
+            X: 346.38092
+            Y: 459.624573
+            Z: 119.153313
           }
           Rotation {
             Pitch: 1.36603776e-05
@@ -312,7 +346,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -341,14 +375,14 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 344.468262
-            Y: 346.699707
-            Z: 125
+            X: 343.715
+            Y: 338.106049
+            Z: 125.000038
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999313
-            Roll: 179.999802
+            Yaw: -89.999939
+            Roll: 179.999786
           }
           Scale {
             X: 1.65348923
@@ -356,7 +390,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -385,14 +419,14 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 346.602539
-            Y: 225.651367
-            Z: 123.154236
+            X: 345.849243
+            Y: 217.057785
+            Z: 123.154282
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999313
-            Roll: 179.999802
+            Yaw: -89.999939
+            Roll: 179.999786
           }
           Scale {
             X: 1.6064775
@@ -400,7 +434,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -429,12 +463,13 @@
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
-            X: 88.6381836
-            Y: 304.251953
-            Z: 43.7019043
+            X: 87.8848267
+            Y: 295.658447
+            Z: 43.7018852
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 0.796915174
@@ -442,7 +477,7 @@
             Z: 0.0640526786
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -464,12 +499,13 @@
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
-            X: -134.562988
-            Y: 304.251953
-            Z: 43.7019043
+            X: -135.31636
+            Y: 295.65802
+            Z: 43.7019386
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 89.9999847
+            Roll: -9.43296463e-09
           }
           Scale {
             X: 0.796915174
@@ -477,7 +513,7 @@
             Z: 0.0640526786
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -499,12 +535,13 @@
         Name: "Stone Block Long Broken"
         Transform {
           Location {
-            X: 335.825684
-            Y: 259.548828
-            Z: 163.294556
+            X: 335.072327
+            Y: 250.955032
+            Z: 163.294601
           }
           Rotation {
-            Yaw: -94.367363
+            Yaw: -94.3673782
+            Roll: -7.46899929e-08
           }
           Scale {
             X: 1
@@ -512,7 +549,7 @@
             Z: 1
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -541,13 +578,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: 350.099609
-            Y: 575.216675
+            X: 349.346405
+            Y: 566.622681
             Z: 139.226639
           }
           Rotation {
             Pitch: 4.09811328e-05
-            Yaw: -47.7988892
+            Yaw: -47.7988701
+            Roll: 5.31393809e-08
           }
           Scale {
             X: 0.411037982
@@ -555,7 +593,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 17627700443030467721
         ChildIds: 9097484965953903939
         ChildIds: 10048280137808511165
@@ -1201,14 +1239,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: 350.099609
-            Y: 110.524902
-            Z: 139.226624
+            X: 349.346313
+            Y: 101.931122
+            Z: 139.226654
           }
           Rotation {
             Pitch: -3.4150944e-05
             Yaw: 179.429
-            Roll: 4.08398733e-07
+            Roll: 4.32232866e-07
           }
           Scale {
             X: 0.411037982
@@ -1216,7 +1254,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 4635157764642740277
         ChildIds: 15295962742303890276
         ChildIds: 15837621972411722220
@@ -1862,12 +1900,13 @@
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
-            X: -134.562988
-            Y: -371.720703
-            Z: 43.7019043
+            X: -135.316391
+            Y: -380.314362
+            Z: 43.701889
           }
           Rotation {
-            Yaw: 89.9999847
+            Yaw: 89.9999771
+            Roll: -1.69793196e-07
           }
           Scale {
             X: 0.796915174
@@ -1875,7 +1914,7 @@
             Z: 0.0640526786
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1897,12 +1936,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: -55.9663086
-            Z: 65
+            X: 344.485962
+            Y: -64.5598602
+            Z: 65.0000076
           }
           Rotation {
             Yaw: 89.9999313
+            Roll: -9.43314316e-09
           }
           Scale {
             X: 1.75
@@ -1910,7 +1950,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1939,12 +1979,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: -600.966309
-            Z: 65
+            X: 344.485931
+            Y: -609.560181
+            Z: 65.000061
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -1952,7 +1993,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1981,12 +2022,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: -455.966309
-            Z: 65
+            X: 344.485962
+            Y: -464.559906
+            Z: 65.0000153
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -1994,7 +2036,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2023,12 +2065,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 359.364746
-            Y: -330.966309
-            Z: 65
+            X: 358.611481
+            Y: -339.560059
+            Z: 64.9999695
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2036,7 +2079,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2065,12 +2108,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 345.239258
-            Y: -205.966309
-            Z: 65
+            X: 344.485931
+            Y: -214.560089
+            Z: 65.0000305
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2078,7 +2122,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2107,9 +2151,9 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 347.745117
-            Y: -199.675781
-            Z: 119.153259
+            X: 346.991821
+            Y: -208.26944
+            Z: 119.153313
           }
           Rotation {
             Pitch: 1.36603776e-05
@@ -2122,7 +2166,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2151,13 +2195,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 344.468262
-            Y: -329.272949
-            Z: 125
+            X: 343.714844
+            Y: -337.866852
+            Z: 125.000015
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2166,7 +2210,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2195,13 +2239,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 346.602539
-            Y: -450.321289
-            Z: 123.154236
+            X: 345.849243
+            Y: -458.915039
+            Z: 123.154251
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2210,7 +2254,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2239,12 +2283,13 @@
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
-            X: 88.6381836
-            Y: -371.720703
-            Z: 43.7019043
+            X: 87.8849487
+            Y: -380.314423
+            Z: 43.7018661
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 0.796915174
@@ -2252,7 +2297,7 @@
             Z: 0.0640526786
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2274,12 +2319,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: -55.9663086
+            X: -362.120575
+            Y: -64.5602264
             Z: 65
           }
           Rotation {
             Yaw: 89.9999313
+            Roll: -9.43314316e-09
           }
           Scale {
             X: 1.75
@@ -2287,7 +2333,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2316,12 +2362,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: -600.966309
-            Z: 65
+            X: -362.120422
+            Y: -609.56012
+            Z: 65.0000153
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2329,7 +2376,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2358,12 +2405,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: -455.966309
-            Z: 65
+            X: -362.120422
+            Y: -464.559845
+            Z: 64.9999847
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2371,7 +2419,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2400,12 +2448,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -347.241699
-            Y: -330.966309
-            Z: 65
+            X: -347.994904
+            Y: -339.559967
+            Z: 65.0000534
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2413,7 +2462,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2442,12 +2491,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: -205.966309
-            Z: 65
+            X: -362.120544
+            Y: -214.560013
+            Z: 64.9999847
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2455,7 +2505,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2484,9 +2534,9 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -358.861328
-            Y: -199.675781
-            Z: 119.153259
+            X: -359.614746
+            Y: -208.269333
+            Z: 119.153282
           }
           Rotation {
             Pitch: 1.36603776e-05
@@ -2499,7 +2549,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2528,13 +2578,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -362.138184
-            Y: -329.272949
-            Z: 125
+            X: -362.89151
+            Y: -337.866791
+            Z: 124.999985
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2543,7 +2593,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2572,13 +2622,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -360.003906
-            Y: -450.321289
-            Z: 123.154236
+            X: -360.757233
+            Y: -458.915
+            Z: 123.154228
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2587,7 +2637,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2616,12 +2666,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: 608.71582
+            X: -362.120514
+            Y: 600.122131
             Z: 65
           }
           Rotation {
             Yaw: 89.9999313
+            Roll: -9.43314316e-09
           }
           Scale {
             X: 1.75
@@ -2629,7 +2680,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2659,12 +2710,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: 63.7158203
-            Z: 65
+            X: -362.120605
+            Y: 55.1221886
+            Z: 65.0000229
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2672,7 +2724,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2701,12 +2753,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: 208.71582
-            Z: 65
+            X: -362.120636
+            Y: 200.122055
+            Z: 65.0000153
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2714,7 +2767,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2743,12 +2796,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -347.241699
-            Y: 333.71582
-            Z: 65
+            X: -347.994843
+            Y: 325.122314
+            Z: 65.0000534
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2756,7 +2810,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2786,12 +2840,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -361.367188
-            Y: 458.71582
+            X: -362.120483
+            Y: 450.122284
             Z: 65
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -89.9999771
+            Roll: -2.54444361e-14
           }
           Scale {
             X: 1.75
@@ -2799,7 +2854,7 @@
             Z: 1.5
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2829,9 +2884,9 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -358.861328
-            Y: 465.006348
-            Z: 119.153259
+            X: -359.614746
+            Y: 456.412537
+            Z: 119.153305
           }
           Rotation {
             Pitch: 1.36603776e-05
@@ -2844,7 +2899,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2874,13 +2929,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -362.138184
-            Y: 335.40918
-            Z: 125
+            X: -362.891418
+            Y: 326.815552
+            Z: 124.999985
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2889,7 +2944,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2919,13 +2974,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -360.003906
-            Y: 214.36084
-            Z: 123.154236
+            X: -360.757172
+            Y: 205.767303
+            Z: 123.154228
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
+            Yaw: -89.9999542
             Roll: 179.999802
           }
           Scale {
@@ -2934,7 +2989,7 @@
             Z: 1.41727066
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2963,14 +3018,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: -359.654297
-            Y: 110.524902
-            Z: 139.226624
+            X: -360.407715
+            Y: 101.93103
+            Z: 139.226639
           }
           Rotation {
             Pitch: -3.4150944e-05
             Yaw: 179.429
-            Roll: 4.08398733e-07
+            Roll: 4.32232866e-07
           }
           Scale {
             X: 0.411037982
@@ -2978,7 +3033,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 1113862372282833249
         ChildIds: 15254300548906246956
         ChildIds: 2158265992369768649
@@ -3624,13 +3679,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: -359.65448
-            Y: 575.216797
-            Z: 139.226639
+            X: -360.407745
+            Y: 566.623169
+            Z: 139.226593
           }
           Rotation {
             Pitch: 4.09811328e-05
-            Yaw: 37.5819168
+            Yaw: 37.5818977
+            Roll: -3.81761e-07
           }
           Scale {
             X: 0.411037982
@@ -3638,7 +3694,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 15355579583950674200
         ChildIds: 11111098267385147364
         ChildIds: 9129538565334525813
@@ -4284,14 +4340,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: -359.654297
-            Y: -553.637207
-            Z: 139.226624
+            X: -360.407501
+            Y: -562.23114
+            Z: 139.226608
           }
           Rotation {
             Pitch: -3.4150944e-05
             Yaw: 179.429
-            Roll: 4.08398733e-07
+            Roll: 4.32232866e-07
           }
           Scale {
             X: 0.411037982
@@ -4299,7 +4355,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 9629031392948625739
         ChildIds: 735102420540536032
         ChildIds: 12625405960216828990
@@ -4945,12 +5001,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: -359.654297
-            Y: -88.9453125
-            Z: 139.226624
+            X: -360.407593
+            Y: -97.5390396
+            Z: 139.226685
           }
           Rotation {
             Pitch: 4.09811328e-05
+            Yaw: -4.23411306e-14
+            Roll: -1.18394382e-07
           }
           Scale {
             X: 0.411037982
@@ -4958,7 +5016,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 8413560913731726395
         ChildIds: 8875763133128422529
         ChildIds: 13803953674810665461
@@ -5604,14 +5662,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: 350.099609
-            Y: -542.177246
+            X: 349.346283
+            Y: -550.771057
             Z: 139.226624
           }
           Rotation {
             Pitch: -3.4150944e-05
             Yaw: 179.429
-            Roll: 4.08398733e-07
+            Roll: 4.32232866e-07
           }
           Scale {
             X: 0.411037982
@@ -5619,7 +5677,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 17557765757137649835
         ChildIds: 5502352203679254913
         ChildIds: 5871230206164749579
@@ -6265,12 +6323,14 @@
         Name: "Prop_LargeBoneHorn"
         Transform {
           Location {
-            X: 350.099609
-            Y: -77.4853516
-            Z: 139.226624
+            X: 349.346283
+            Y: -86.07901
+            Z: 139.226578
           }
           Rotation {
             Pitch: 4.09811328e-05
+            Yaw: -4.23411306e-14
+            Roll: -1.18394382e-07
           }
           Scale {
             X: 0.411037982
@@ -6278,7 +6338,7 @@
             Z: 0.411037982
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 14659610711746982733
         ChildIds: 16168227746995055149
         ChildIds: 14618167149018402817
@@ -6924,8 +6984,9 @@
         Name: "Group"
         Transform {
           Location {
-            X: 2.20410156
-            Y: -400.361572
+            X: 1.45072782
+            Y: -408.955444
+            Z: 1.82816148e-05
           }
           Rotation {
           }
@@ -6935,7 +6996,7 @@
             Z: 1
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 4298456636079618010
         ChildIds: 10811214656590855499
         ChildIds: 9869244970910985556
@@ -7741,14 +7802,14 @@
         Name: "Decal Stains Round 01"
         Transform {
           Location {
-            X: 0.0942382813
-            Y: 11.097168
+            X: -0.659117639
+            Y: 2.50328851
             Z: 10.932251
           }
           Rotation {
             Pitch: 0.513999045
-            Yaw: 0.795582712
-            Roll: 0.926848
+            Yaw: 0.795583427
+            Roll: 0.926847756
           }
           Scale {
             X: 1.11464155
@@ -7756,7 +7817,7 @@
             Z: 0.398001939
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7778,11 +7839,12 @@
         Name: "Cube"
         Transform {
           Location {
-            X: -9.44921875
-            Y: 336.672852
-            Z: 8.31860352
+            X: -10.2025452
+            Y: 328.079346
+            Z: 8.31858349
           }
           Rotation {
+            Yaw: 8.53752454e-07
             Roll: 2.10000014
           }
           Scale {
@@ -7791,7 +7853,7 @@
             Z: 1.00000048
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7820,11 +7882,12 @@
         Name: "Cube"
         Transform {
           Location {
-            X: -9.44921875
-            Y: -390.09082
-            Z: 6.23260498
+            X: -10.2024899
+            Y: -398.684326
+            Z: 6.23254347
           }
           Rotation {
+            Yaw: -4.65637612e-10
             Roll: -1.99999988
           }
           Scale {
@@ -7833,7 +7896,7 @@
             Z: 1
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7862,8 +7925,9 @@
         Name: "Group"
         Transform {
           Location {
-            X: 2.73925781
-            Y: 337.228516
+            X: 1.98599946
+            Y: 328.634583
+            Z: -2.57878801e-05
           }
           Rotation {
           }
@@ -7873,7 +7937,7 @@
             Z: 1
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         ChildIds: 11848837959756492577
         ChildIds: 15546228674172888819
         ChildIds: 7604949373374722219
@@ -8683,12 +8747,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -415.705231
-            Y: -257.149109
-            Z: 15.007782
+            X: -416.458649
+            Y: -265.742859
+            Z: 15.0078154
           }
           Rotation {
-            Yaw: -179.165131
+            Yaw: -179.165115
+            Roll: 2.43063653e-07
           }
           Scale {
             X: 1.75716686
@@ -8696,7 +8761,7 @@
             Z: 3.51433372
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -8730,12 +8795,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 443.266
-            Y: -244.632568
-            Z: 15.007782
+            X: 442.512695
+            Y: -253.226074
+            Z: 15.0078125
           }
           Rotation {
-            Yaw: -179.165146
+            Yaw: -179.165161
+            Roll: -7.29050498e-07
           }
           Scale {
             X: -1.84877825
@@ -8743,7 +8809,7 @@
             Z: 3.51433372
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -8777,12 +8843,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: 434.970825
-            Y: 324.59668
-            Z: 15.007782
+            X: 434.217529
+            Y: 316.00293
+            Z: 15.0078125
           }
           Rotation {
-            Yaw: -179.165146
+            Yaw: -179.165161
+            Roll: -7.29050498e-07
           }
           Scale {
             X: -1.84877825
@@ -8790,7 +8857,7 @@
             Z: 3.51433372
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -8824,12 +8891,13 @@
         Name: "Stone Block Big Broken"
         Transform {
           Location {
-            X: -424.000519
-            Y: 312.080017
-            Z: 15.007782
+            X: -424.753876
+            Y: 303.486328
+            Z: 15.0077486
           }
           Rotation {
-            Yaw: -179.165131
+            Yaw: -179.165115
+            Roll: 2.43063653e-07
           }
           Scale {
             X: 1.75716686
@@ -8837,7 +8905,7 @@
             Z: 3.51433372
           }
         }
-        ParentId: 8285323738425409877
+        ParentId: 15790505671579877808
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
