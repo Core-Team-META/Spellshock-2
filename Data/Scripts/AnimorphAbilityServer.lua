@@ -11,11 +11,14 @@ local ProjectileGravity = ABILITY:GetCustomProperty("ProjectileGravity")
 local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
 local ImpactFX = ABILITY:GetCustomProperty("ImpactFX")
 local RADIUS = ABILITY:GetCustomProperty("Radius")
+local AnimalCostumeTemplate = ABILITY:GetCustomProperty("AnimalCostumeTemplate")
+local Duration = ABILITY:GetCustomProperty("Duration")
 
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and ABILITY.owner then
         --Play ImpactFX
-        local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition()})
+        local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
+        local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
         
         -- init dmg object
         local dmg = Damage.New(DAMAGE)
@@ -35,6 +38,11 @@ function OnProjectileImpacted(projectile, other, hitResult)
           	if DAMAGE ~= 0 then
             	COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
             end
+            
+            -- equip animal costume
+            local newCostume = World.SpawnAsset(AnimalCostumeTemplate)
+            newCostume:SetNetworkedCustomProperty("Duration", Duration)
+            newCostume:Equip(enemy)
         end
         
     end

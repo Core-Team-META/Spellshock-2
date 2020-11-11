@@ -18,6 +18,22 @@
         ParentId: 4781671109827199097
         ChildIds: 3489544933825731862
         ChildIds: 974737202130747963
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:FX_Template"
+            AssetReference {
+              Id: 13713238088668800394
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Duration:isrep"
+            Bool: true
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

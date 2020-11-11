@@ -32,7 +32,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
         end
         
         --Play ImpactFX
-        local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition()})
+        local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
+        local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
 
         Task.Wait(.1)
 

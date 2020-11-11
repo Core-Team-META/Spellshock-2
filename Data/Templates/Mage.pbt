@@ -578,7 +578,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SelfId: 8923291356079711613
+              SubObjectId: 1109302873163087110
             }
           }
           Overrides {
@@ -590,7 +590,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 15169274932824598981
+              Id: 1221213810114228531
             }
           }
           Overrides {
@@ -805,6 +805,7 @@
         ParentId: 10663446143340725464
         ChildIds: 17789038938063754529
         ChildIds: 1109302873163087110
+        ChildIds: 3870953613855714336
         ChildIds: 15734559279447809237
         WantsNetworking: true
         Collidable_v2 {
@@ -849,7 +850,7 @@
         Ability {
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1028,13 +1029,13 @@
           Overrides {
             Name: "cs:ProjectileTemplate"
             AssetReference {
-              Id: 6481751857886768330
+              Id: 2945782094965142153
             }
           }
           Overrides {
             Name: "cs:ImpactFX"
             AssetReference {
-              Id: 5202994091235663908
+              Id: 12582858560613182221
             }
           }
           Overrides {
@@ -1052,6 +1053,16 @@
           Overrides {
             Name: "cs:ProjectileGravity"
             Float: 1.5
+          }
+          Overrides {
+            Name: "cs:AnimalCostumeTemplate"
+            AssetReference {
+              Id: 7047570860712842217
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
           }
         }
         WantsNetworking: true
@@ -1106,7 +1117,7 @@
           Animation: "unarmed_throw"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_31"
+            Value: "mc:egameaction:extraaction_32"
           }
         }
       }
@@ -1149,6 +1160,177 @@
         Script {
           ScriptAsset {
             Id: 13912794404632874264
+          }
+        }
+      }
+      Objects {
+        Id: 3870953613855714336
+        Name: "Ice Cube"
+        Transform {
+          Location {
+            X: -8690.86523
+            Y: -9812.94727
+            Z: -2950.03613
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4710130442374076997
+        ChildIds: 16029334459249137091
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 2945782094965142153
+            }
+          }
+          Overrides {
+            Name: "cs:ImpactFX"
+            AssetReference {
+              Id: 12582858560613182221
+            }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Float: 500
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:ProjectileGravity"
+            Float: 1.5
+          }
+          Overrides {
+            Name: "cs:AnimalCostumeTemplate"
+            AssetReference {
+              Id: 7047570860712842217
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_33"
+          }
+        }
+      }
+      Objects {
+        Id: 16029334459249137091
+        Name: "IceCubeAbilityServer"
+        Transform {
+          Location {
+            X: 32813.5469
+            Y: 40761.5703
+            Z: -3426.4375
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3870953613855714336
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 3870953613855714336
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
+          }
+          Overrides {
+            Name: "cs:DOT"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 500
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4499242035548803852
           }
         }
       }
@@ -1372,7 +1554,6 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SelfId: 6687059587936488895
           }
           Weapon {
             ProjectileAssetRef {
@@ -2243,12 +2424,12 @@
       }
     }
     Assets {
-      Id: 15169274932824598981
-      Name: "Fantasy Ability Purple 022"
+      Id: 1221213810114228531
+      Name: "Fantasy Ability Yellow 023"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Purple_022"
+        AssetId: "UI_Fantasy_Ability_Yellow_023"
       }
     }
     Assets {
