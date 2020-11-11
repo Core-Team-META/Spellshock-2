@@ -377,7 +377,7 @@
         ChildIds: 793892097041256598
         ChildIds: 1660676645019909115
         ChildIds: 3981296022251942220
-        ChildIds: 15540843134272266616
+        ChildIds: 1297799432452933319
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -637,7 +637,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SelfId: 5672320102252354566
+              SubObjectId: 3870953613855714336
             }
           }
           Overrides {
@@ -649,7 +649,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 549876127927703467
+              Id: 4051655398668448529
             }
           }
           Overrides {
@@ -695,7 +695,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 15734559279447809237
+              SubObjectId: 2988604534664961180
             }
           }
           Overrides {
@@ -724,25 +724,89 @@
         }
       }
       Objects {
+        Id: 1297799432452933319
+        Name: "Abilities"
+        Transform {
+          Location {
+            X: 13534.7744
+            Y: 14815.2598
+            Z: -16.4165039
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11747234676183721272
+        ChildIds: 15540843134272266616
+        ChildIds: 354566938322484678
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 15540843134272266616
         Name: "TornadoAbilityClient"
         Transform {
           Location {
-            X: 26181.9102
-            Y: 30007.4707
-            Z: 10375.2793
+            X: 12647.1357
+            Y: 15192.2109
+            Z: 10391.6963
           }
           Rotation {
           }
           Scale {
           }
         }
-        ParentId: 11747234676183721272
+        ParentId: 1297799432452933319
         UnregisteredParameters {
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 18032262405802815309
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 354566938322484678
+        Name: "TeleportAbilityClient"
+        Transform {
+          Location {
+            X: -12647.1357
+            Y: -15192.2109
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 8228187279433582210
             }
           }
         }
@@ -806,7 +870,7 @@
         ChildIds: 17789038938063754529
         ChildIds: 1109302873163087110
         ChildIds: 3870953613855714336
-        ChildIds: 15734559279447809237
+        ChildIds: 2988604534664961180
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1297,6 +1361,12 @@
         ParentId: 3870953613855714336
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
             Name: "cs:SpecialAbility"
             ObjectReference {
               SubObjectId: 3870953613855714336
@@ -1308,11 +1378,23 @@
           }
           Overrides {
             Name: "cs:DOT"
-            Int: 5
+            Int: 10
           }
           Overrides {
             Name: "cs:DamageRadius"
             Int: 500
+          }
+          Overrides {
+            Name: "cs:IceCubeTemplate"
+            AssetReference {
+              Id: 10750937685288866590
+            }
+          }
+          Overrides {
+            Name: "cs:IceCubeBreakFX"
+            AssetReference {
+              Id: 12874348109318974616
+            }
           }
           Overrides {
             Name: "cs:ModuleManager"
@@ -1335,10 +1417,13 @@
         }
       }
       Objects {
-        Id: 15734559279447809237
+        Id: 2988604534664961180
         Name: "Teleport"
         Transform {
           Location {
+            X: 587.869141
+            Y: -136.902344
+            Z: -14.0048828
           }
           Rotation {
           }
@@ -1346,7 +1431,7 @@
           }
         }
         ParentId: 4710130442374076997
-        ChildIds: 1337039124476993763
+        ChildIds: 8228187279433582210
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1410,7 +1495,7 @@
         }
       }
       Objects {
-        Id: 1337039124476993763
+        Id: 8228187279433582210
         Name: "TeleportAbilityServer"
         Transform {
           Location {
@@ -1420,7 +1505,7 @@
           Scale {
           }
         }
-        ParentId: 15734559279447809237
+        ParentId: 2988604534664961180
         UnregisteredParameters {
           Overrides {
             Name: "cs:Equipment"
@@ -1431,7 +1516,7 @@
           Overrides {
             Name: "cs:SpecialAbility"
             ObjectReference {
-              SubObjectId: 15734559279447809237
+              SubObjectId: 2988604534664961180
             }
           }
           Overrides {
@@ -2433,12 +2518,12 @@
       }
     }
     Assets {
-      Id: 549876127927703467
-      Name: "Fantasy Ability Red 015"
+      Id: 4051655398668448529
+      Name: "Fantasy Ability Blue 004"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_015"
+        AssetId: "UI_Fantasy_Ability_Blue_004"
       }
     }
     Assets {

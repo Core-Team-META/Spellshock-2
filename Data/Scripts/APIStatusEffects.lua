@@ -212,8 +212,7 @@ end
 
 -- Server only
 function API.ApplyStatusEffect(player, id)
-	if player.isDead then
-		warn(string.format("Trying to apply status effect id: %d to player %s who is dead", id, player.name))
+	if player.isDead or player.serverUserData.DamageImmunity then
 		return
 	end
 

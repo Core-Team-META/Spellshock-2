@@ -41,8 +41,9 @@ end
 
 -- ApplyDamage()
 function wrapper.ApplyDamage(player, dmg, sourceObject, pos, rot)
-	player:ApplyDamage(dmg)
-
+	if not player.serverUserData.DamageImmunity then
+		player:ApplyDamage(dmg)
+	end
 	-- This allows UI to show damage direction
 	Events.BroadcastToAllPlayers("PlayerDamage", dmg.amount, pos, player, nil)
 end
