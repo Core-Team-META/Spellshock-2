@@ -347,9 +347,7 @@
             Z: 6.94859648
           }
           Rotation {
-            Pitch: -85.2409058
-            Yaw: 179.999237
-            Roll: -179.999237
+            Pitch: 55.8950539
           }
           Scale {
             X: 0.282116145
@@ -370,7 +368,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6419995403362959337
+              Id: 230872137319562526
             }
           }
         }
@@ -1911,6 +1909,21 @@
         ChildIds: 2465322812795048000
         ChildIds: 8950973611970170310
         ChildIds: 17459928374603810740
+        ChildIds: 15219518528737661152
+        ChildIds: 590007227934091491
+        ChildIds: 10170325691515393424
+        ChildIds: 8948020487949641214
+        ChildIds: 2270135754330826935
+        ChildIds: 11448990061762572611
+        ChildIds: 16158562083759725188
+        ChildIds: 884921260001140836
+        ChildIds: 14581189038404569708
+        ChildIds: 1000344355700352561
+        ChildIds: 3632957107190803568
+        ChildIds: 12716115855320869097
+        ChildIds: 5282107626163252147
+        ChildIds: 14170115336685535053
+        ChildIds: 8196635084796878540
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2126,6 +2139,966 @@
         }
       }
       Objects {
+        Id: 15219518528737661152
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -4.26074219
+            Y: 8.94934082
+            Z: -2.00524902
+          }
+          Rotation {
+            Pitch: -37.335289
+            Yaw: -132.817215
+            Roll: -15.5431204
+          }
+          Scale {
+            X: 0.16451636
+            Y: -0.069361344
+            Z: 0.159783721
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 590007227934091491
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.00146484375
+            Y: 10.8017578
+            Z: -2.82446289
+          }
+          Rotation {
+            Pitch: -6.83018879e-05
+            Yaw: 179.999817
+            Roll: -23.8510475
+          }
+          Scale {
+            X: 0.118912749
+            Y: -0.069373183
+            Z: 0.184992239
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10170325691515393424
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 4.52441406
+            Y: 9.86529541
+            Z: -2.41040039
+          }
+          Rotation {
+            Pitch: 14.595499
+            Yaw: 138.158401
+            Roll: -20.2371159
+          }
+          Scale {
+            X: 0.119304508
+            Y: -0.0693742409
+            Z: 0.159784794
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8948020487949641214
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 4.23901367
+            Y: 10.3313599
+            Z: -4.8878479
+          }
+          Rotation {
+            Pitch: 76.7983932
+            Yaw: 108.836357
+            Roll: -18.2036495
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2270135754330826935
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 2.6496582
+            Y: 8.68328857
+            Z: -6.38934326
+          }
+          Rotation {
+            Pitch: 85.5035
+            Yaw: 12.0284071
+            Roll: -114.49456
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11448990061762572611
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 3.47705078
+            Y: 10.8204346
+            Z: -9.36236572
+          }
+          Rotation {
+            Pitch: 78.5626068
+            Yaw: -32.7078629
+            Roll: -158.915985
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16158562083759725188
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 2.05883789
+            Y: 10.4411621
+            Z: -12.1583252
+          }
+          Rotation {
+            Pitch: 71.081749
+            Yaw: -41.3639717
+            Roll: -167.289261
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 884921260001140836
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 3.92651367
+            Y: 10.0481567
+            Z: -16.5266113
+          }
+          Rotation {
+            Pitch: 66.0391312
+            Yaw: -40.354847
+            Roll: -169.76506
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14581189038404569708
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 1.63793945
+            Y: 9.9630127
+            Z: -19.6436768
+          }
+          Rotation {
+            Pitch: 55.8985
+            Yaw: -43.5904808
+            Roll: 179.766312
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1000344355700352561
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 2.90527344
+            Y: 9.28717
+            Z: -19.1831055
+          }
+          Rotation {
+            Pitch: 22.5299854
+            Yaw: -63.7013245
+            Roll: 169.396118
+          }
+          Scale {
+            X: 0.091572538
+            Y: -0.0577689596
+            Z: 0.182937309
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3632957107190803568
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.00122070313
+            Y: 9.2824707
+            Z: -21.5226135
+          }
+          Rotation {
+            Pitch: 0.000204905664
+            Yaw: -0.000224391755
+            Roll: 179.177292
+          }
+          Scale {
+            X: 0.113195375
+            Y: -0.0375364684
+            Z: 0.135800958
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12716115855320869097
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -3.52929688
+            Y: 7.93280029
+            Z: -19.9508667
+          }
+          Rotation {
+            Pitch: -17.300705
+            Yaw: 50.4654198
+            Roll: 172.530167
+          }
+          Scale {
+            X: 0.0809657797
+            Y: -0.0305051319
+            Z: 0.182937175
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5282107626163252147
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -2.68579102
+            Y: 8.55352783
+            Z: -18.1749268
+          }
+          Rotation {
+            Pitch: -56.8833237
+            Yaw: 30.1641
+            Roll: -175.290619
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14170115336685535053
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -3.41503906
+            Y: 8.57977295
+            Z: -15.2598267
+          }
+          Rotation {
+            Pitch: -80.9843369
+            Yaw: 17.6672249
+            Roll: -153.43396
+          }
+          Scale {
+            X: 0.113193914
+            Y: -0.0577657521
+            Z: 0.182937905
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8196635084796878540
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -4.28979492
+            Y: 8.30108643
+            Z: -9.46585083
+          }
+          Rotation {
+            Pitch: -83.297226
+            Yaw: -99.3156204
+            Roll: -46.1890602
+          }
+          Scale {
+            X: 0.113194592
+            Y: -0.0577657521
+            Z: 0.156852648
+          }
+        }
+        ParentId: 4560146498352130113
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 11364262374797660679
         Name: "left_elbow"
         Transform {
@@ -2179,6 +3152,15 @@
         ChildIds: 9658263751149984765
         ChildIds: 634639594978153862
         ChildIds: 7226598110320120607
+        ChildIds: 12189983925010788070
+        ChildIds: 6249311811241557230
+        ChildIds: 14047667158392749019
+        ChildIds: 12709886631109148606
+        ChildIds: 15606936340793630234
+        ChildIds: 6404361556994319869
+        ChildIds: 15821704692499647798
+        ChildIds: 1420156542473543349
+        ChildIds: 16414556892169890272
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -3443,6 +4425,582 @@
         }
       }
       Objects {
+        Id: 12189983925010788070
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 8.96008301
+            Y: 4.39312744
+            Z: -2.50592041
+          }
+          Rotation {
+            Pitch: 74.0715256
+            Yaw: 61.4195709
+            Roll: -83.5595245
+          }
+          Scale {
+            X: 0.0867188498
+            Y: -0.0327739269
+            Z: 0.111278273
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6249311811241557230
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 8.24963379
+            Y: 3.66949463
+            Z: -6.52810669
+          }
+          Rotation {
+            Pitch: 74.0145721
+            Yaw: 46.3929749
+            Roll: -98.0130692
+          }
+          Scale {
+            X: 0.0867188498
+            Y: -0.0327739269
+            Z: 0.111278273
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14047667158392749019
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 6.64110088
+            Y: 3.15624905
+            Z: -12.7307835
+          }
+          Rotation {
+            Pitch: -67.4522
+            Yaw: -87.2399902
+            Roll: 39.3742065
+          }
+          Scale {
+            X: 0.11206954
+            Y: 0.0256958567
+            Z: 0.114328183
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12709886631109148606
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 7.34362173
+            Y: 0.764658
+            Z: -16.7028351
+          }
+          Rotation {
+            Pitch: -75.8552322
+            Yaw: -134.439667
+            Roll: 84.5292892
+          }
+          Scale {
+            X: 0.11206954
+            Y: 0.0256958567
+            Z: 0.114328183
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15606936340793630234
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -6.16714764
+            Y: 1.19246244
+            Z: -15.5021505
+          }
+          Rotation {
+            Pitch: 81.5245
+            Yaw: 110.532249
+            Roll: 69.6262741
+          }
+          Scale {
+            X: 0.171339199
+            Y: 0.0247754157
+            Z: 0.110230066
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6404361556994319869
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.72924805
+            Y: 4.92468262
+            Z: -6.26803589
+          }
+          Rotation {
+            Pitch: -76.7939835
+            Yaw: -54.9227715
+            Roll: -84.776535
+          }
+          Scale {
+            X: 0.137511358
+            Y: -0.0372937806
+            Z: 0.112811506
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15821704692499647798
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 5.11950684
+            Y: 6.37536621
+            Z: -0.520263672
+          }
+          Rotation {
+            Pitch: 5.80743647
+            Yaw: 136.445923
+            Roll: -26.6701851
+          }
+          Scale {
+            X: 0.155366629
+            Y: -0.0427043699
+            Z: 0.115274593
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1420156542473543349
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.833374
+            Y: 9.49969482
+            Z: -0.590881348
+          }
+          Rotation {
+            Pitch: -2.04905664e-05
+            Yaw: 179.999863
+            Roll: -25.5433922
+          }
+          Scale {
+            X: 0.11375118
+            Y: -0.0580505729
+            Z: 0.0929362774
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16414556892169890272
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -4.72412109
+            Y: 6.79138184
+            Z: -0.977020264
+          }
+          Rotation {
+            Pitch: -6.15507936
+            Yaw: -141.554321
+            Roll: -9.32329273
+          }
+          Scale {
+            X: 0.139725342
+            Y: -0.0461301133
+            Z: 0.124516055
+          }
+        }
+        ParentId: 11966819713913973841
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 13653358968619443493
         Name: "left_arm_prop"
         Transform {
@@ -3526,6 +5084,14 @@
         }
         ParentId: 12912549532246161410
         ChildIds: 2785592238196965444
+        ChildIds: 8692908528614711924
+        ChildIds: 7937892154976876112
+        ChildIds: 16877344730295124526
+        ChildIds: 9715635541160649370
+        ChildIds: 18315147860961676722
+        ChildIds: 191083071096922705
+        ChildIds: 6133285487224382015
+        ChildIds: 7373769021432783625
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -3648,6 +5214,518 @@
         }
       }
       Objects {
+        Id: 8692908528614711924
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 7.45723057
+            Y: 2.7740593
+            Z: -4.35918665
+          }
+          Rotation {
+            Pitch: -77.9780121
+            Yaw: 117.91626
+            Roll: -149.080353
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7937892154976876112
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 5.05222178
+            Y: 3.65613651
+            Z: -10.8383074
+          }
+          Rotation {
+            Pitch: -63.8388634
+            Yaw: 135.619949
+            Roll: -149.637146
+          }
+          Scale {
+            X: 0.0989908576
+            Y: 0.0198827311
+            Z: 0.0884660482
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16877344730295124526
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 1.54370117
+            Y: 3.94085693
+            Z: -11.5117188
+          }
+          Rotation {
+            Pitch: 37.3571281
+            Yaw: -6.53139162
+            Roll: 163.966629
+          }
+          Scale {
+            X: 0.0989928618
+            Y: -0.0390657596
+            Z: 0.122125491
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9715635541160649370
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.245849609
+            Y: 4.05218506
+            Z: -12.7969971
+          }
+          Rotation {
+            Pitch: -5.24014807
+            Yaw: 1.70035708
+            Roll: 162.770416
+          }
+          Scale {
+            X: 0.0989928618
+            Y: -0.0390657596
+            Z: 0.122125491
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18315147860961676722
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -1.046875
+            Y: 3.78607178
+            Z: -11.4930725
+          }
+          Rotation {
+            Pitch: -33.9539871
+            Yaw: 12.0751801
+            Roll: 164.652786
+          }
+          Scale {
+            X: 0.0989928618
+            Y: -0.0390657596
+            Z: 0.122125491
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 191083071096922705
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.27482605
+            Y: 3.00450516
+            Z: -10.8982477
+          }
+          Rotation {
+            Pitch: 52.1232147
+            Yaw: -136.333481
+            Roll: -149.612869
+          }
+          Scale {
+            X: 0.0989908576
+            Y: 0.0198827311
+            Z: 0.0884660482
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6133285487224382015
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 7.96909666
+            Y: 1.75754404
+            Z: 0.992781758
+          }
+          Rotation {
+            Pitch: -50.5233269
+            Yaw: 97.7269058
+            Roll: -136.428085
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7373769021432783625
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -7.6689949
+            Y: 2.51108694
+            Z: -3.58063459
+          }
+          Rotation {
+            Pitch: 76.6326675
+            Yaw: -13.4053659
+            Roll: -45.455368
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 7536750980988775511
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 15547563168585557823
         Name: "right_clavicle"
         Transform {
@@ -3726,36 +5804,6 @@
           }
         }
         ParentId: 1627454940477691155
-        ChildIds: 6133285487224382015
-        ChildIds: 1420156542473543349
-        ChildIds: 15606936340793630234
-        ChildIds: 12709886631109148606
-        ChildIds: 6404361556994319869
-        ChildIds: 6249311811241557230
-        ChildIds: 16414556892169890272
-        ChildIds: 15821704692499647798
-        ChildIds: 7309177396630870012
-        ChildIds: 12921433864668884392
-        ChildIds: 6438972839177987314
-        ChildIds: 6281093945503006111
-        ChildIds: 829795495687454974
-        ChildIds: 9715635541160649370
-        ChildIds: 8692908528614711924
-        ChildIds: 7373769021432783625
-        ChildIds: 191083071096922705
-        ChildIds: 7937892154976876112
-        ChildIds: 884921260001140836
-        ChildIds: 5282107626163252147
-        ChildIds: 590007227934091491
-        ChildIds: 10170325691515393424
-        ChildIds: 15219518528737661152
-        ChildIds: 3632957107190803568
-        ChildIds: 1000344355700352561
-        ChildIds: 12716115855320869097
-        ChildIds: 14170115336685535053
-        ChildIds: 8196635084796878540
-        ChildIds: 11448990061762572611
-        ChildIds: 8948020487949641214
         ChildIds: 18096154350011006597
         ChildIds: 11098387679724995220
         ChildIds: 222155382083255821
@@ -3775,15 +5823,6 @@
         ChildIds: 2016577928480550629
         ChildIds: 1073899681246408691
         ChildIds: 12295445002150069213
-        ChildIds: 2270135754330826935
-        ChildIds: 16158562083759725188
-        ChildIds: 14581189038404569708
-        ChildIds: 12189983925010788070
-        ChildIds: 14047667158392749019
-        ChildIds: 17900781164246186293
-        ChildIds: 14925445281656724287
-        ChildIds: 18315147860961676722
-        ChildIds: 16877344730295124526
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -3791,1926 +5830,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 6133285487224382015
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -5.46240234
-            Y: -93.1294861
-            Z: -3.57678223
-          }
-          Rotation {
-            Pitch: 6.98543215
-            Yaw: -73.607605
-            Roll: -137.034836
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1420156542473543349
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -6.99755859
-            Y: -73.4204102
-            Z: 15.8053589
-          }
-          Rotation {
-            Pitch: 11.5517683
-            Yaw: 13.5907621
-            Roll: 36.8043785
-          }
-          Scale {
-            X: 0.11375118
-            Y: -0.0580505729
-            Z: 0.0929362774
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15606936340793630234
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 4.64604187
-            Y: -80.2275848
-            Z: 3.21772671
-          }
-          Rotation {
-            Pitch: 35.4414139
-            Yaw: 108.220436
-            Roll: -118.619919
-          }
-          Scale {
-            X: 0.171339199
-            Y: 0.0247754157
-            Z: 0.110230066
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12709886631109148606
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -7.83491611
-            Y: -84.1348419
-            Z: -0.405044556
-          }
-          Rotation {
-            Pitch: -33.9226379
-            Yaw: -56.0489807
-            Roll: -160.235641
-          }
-          Scale {
-            X: 0.11206954
-            Y: 0.0256958567
-            Z: 0.114328183
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6404361556994319869
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 1.23625791
-            Y: -74.419
-            Z: 10.5677357
-          }
-          Rotation {
-            Pitch: -39.1402283
-            Yaw: -76.7774658
-            Roll: 120.800621
-          }
-          Scale {
-            X: 0.137511358
-            Y: -0.0372937806
-            Z: 0.112811506
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6249311811241557230
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -11.9187613
-            Y: -77.2369614
-            Z: 6.56091404
-          }
-          Rotation {
-            Pitch: 34.8994789
-            Yaw: 125.860191
-            Roll: 147.026779
-          }
-          Scale {
-            X: 0.0867188498
-            Y: -0.0327739269
-            Z: 0.111278273
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16414556892169890272
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -1.41846955
-            Y: -71.1303558
-            Z: 14.3923664
-          }
-          Rotation {
-            Pitch: -25.4237061
-            Yaw: 25.860302
-            Roll: 53.6043205
-          }
-          Scale {
-            X: 0.139725342
-            Y: -0.0461301133
-            Z: 0.124516055
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15821704692499647798
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -10.9024935
-            Y: -72.8082886
-            Z: 12.2677345
-          }
-          Rotation {
-            Pitch: 51.7481956
-            Yaw: -8.06918335
-            Roll: 25.7968845
-          }
-          Scale {
-            X: 0.155366629
-            Y: -0.0427043699
-            Z: 0.115274593
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7309177396630870012
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 12.4725094
-            Y: 2.53608847
-            Z: -69.9320908
-          }
-          Rotation {
-            Pitch: 11.8964405
-            Yaw: -3.75576782
-            Roll: 167.017059
-          }
-          Scale {
-            X: 0.137510553
-            Y: -0.0305293202
-            Z: 0.122128464
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12921433864668884392
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 16.7556152
-            Y: 1.43624878
-            Z: -59.6731262
-          }
-          Rotation {
-            Pitch: -76.5710754
-            Yaw: 25.5292168
-            Roll: -60.9797668
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6438972839177987314
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 2.11523438
-            Y: 2.53817749
-            Z: -63.3979492
-          }
-          Rotation {
-            Pitch: 85.7045364
-            Yaw: 166.117523
-            Roll: 139.727402
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6281093945503006111
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 6.55761719
-            Y: 2.14382935
-            Z: -69.6929
-          }
-          Rotation {
-            Pitch: 40.3556328
-            Yaw: -156.049057
-            Roll: -168.823532
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 829795495687454974
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 16.435791
-            Y: 1.9147644
-            Z: -66.6153564
-          }
-          Rotation {
-            Pitch: -75.5484314
-            Yaw: 91.6376114
-            Roll: -109.220047
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9715635541160649370
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 5.42822266
-            Y: -103.894653
-            Z: -8.11279297
-          }
-          Rotation {
-            Pitch: -8.49060059
-            Yaw: -162.324463
-            Roll: 104.88916
-          }
-          Scale {
-            X: 0.0989928618
-            Y: -0.0390657596
-            Z: 0.122125491
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8692908528614711924
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -3.64379883
-            Y: -97.9021
-            Z: -5.53997803
-          }
-          Rotation {
-            Pitch: -21.0829468
-            Yaw: -68.8821106
-            Roll: -131.538757
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7373769021432783625
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 10.8279638
-            Y: -93.9330521
-            Z: -3.4683485
-          }
-          Rotation {
-            Pitch: 26.7447453
-            Yaw: 120.753761
-            Roll: -106.703552
-          }
-          Scale {
-            X: 0.137512147
-            Y: 0.0198840424
-            Z: 0.0884674564
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 191083071096922705
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 10.3024902
-            Y: -100.618164
-            Z: -7.28363037
-          }
-          Rotation {
-            Pitch: 7.19626665
-            Yaw: 76.483696
-            Roll: -105.624603
-          }
-          Scale {
-            X: 0.0989908576
-            Y: 0.0198827311
-            Z: 0.0884660482
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7937892154976876112
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 0.284004211
-            Y: -103.110542
-            Z: -7.986413
-          }
-          Rotation {
-            Pitch: -10.7079163
-            Yaw: -57.4170837
-            Roll: -118.387802
-          }
-          Scale {
-            X: 0.0989908576
-            Y: 0.0198827311
-            Z: 0.0884660482
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 884921260001140836
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -8.75440693
-            Y: -59.4873962
-            Z: 24.2212334
-          }
-          Rotation {
-            Pitch: 12.9808826
-            Yaw: 101.629791
-            Roll: 147.692978
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5282107626163252147
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -2.26573205
-            Y: -60.9703217
-            Z: 22.1304874
-          }
-          Rotation {
-            Pitch: -10.3521729
-            Yaw: -125.592987
-            Roll: 134.829575
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 590007227934091491
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -3.49462891
-            Y: -48.5259094
-            Z: 31.6980591
-          }
-          Rotation {
-            Pitch: 0.219665706
-            Yaw: -6.94134521
-            Roll: 36.3576279
-          }
-          Scale {
-            X: 0.118912749
-            Y: -0.069373183
-            Z: 0.184992239
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10170325691515393424
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -7.88232422
-            Y: -47.1609802
-            Z: 31.0737305
-          }
-          Rotation {
-            Pitch: 43.4869957
-            Yaw: -15.0265503
-            Roll: 42.3348312
-          }
-          Scale {
-            X: 0.119304508
-            Y: -0.0693742409
-            Z: 0.159784794
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15219518528737661152
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 0.937988281
-            Y: -47.4221802
-            Z: 30.513855
-          }
-          Rotation {
-            Pitch: -53.6484375
-            Yaw: -30.4624329
-            Roll: 73.4375916
-          }
-          Scale {
-            X: 0.16451636
-            Y: -0.069361344
-            Z: 0.159783721
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3632957107190803568
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -5.32373619
-            Y: -63.8896446
-            Z: 21.089613
-          }
-          Rotation {
-            Pitch: -0.21963501
-            Yaw: 173.058517
-            Roll: 118.968582
-          }
-          Scale {
-            X: 0.113195375
-            Y: -0.0375364684
-            Z: 0.135800958
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1000344355700352561
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -7.96599627
-            Y: -61.5249672
-            Z: 22.244894
-          }
-          Rotation {
-            Pitch: -31.9938354
-            Yaw: 111.753372
-            Roll: 142.696884
-          }
-          Scale {
-            X: 0.091572538
-            Y: -0.0577689596
-            Z: 0.182937309
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12716115855320869097
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -1.57199848
-            Y: -62.2967415
-            Z: 20.7127628
-          }
-          Rotation {
-            Pitch: 29.271307
-            Yaw: -141.276566
-            Roll: 132.986755
-          }
-          Scale {
-            X: 0.0809657499
-            Y: 0.0309818536
-            Z: 0.182937548
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14170115336685535053
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -1.24307597
-            Y: -58.5594559
-            Z: 23.6045132
-          }
-          Rotation {
-            Pitch: -26.7437134
-            Yaw: -106.454056
-            Roll: 138.554962
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8196635084796878540
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 0.239843965
-            Y: -53.5350914
-            Z: 26.244545
-          }
-          Rotation {
-            Pitch: -36.3934326
-            Yaw: -95.4343872
-            Roll: 123.486969
-          }
-          Scale {
-            X: 0.113194592
-            Y: -0.0577657521
-            Z: 0.156852648
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11448990061762572611
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -7.61916733
-            Y: -53.7488403
-            Z: 28.4526386
-          }
-          Rotation {
-            Pitch: 23.162735
-            Yaw: 93.6105576
-            Roll: 148.711273
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8948020487949641214
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -7.88371468
-            Y: -49.5599785
-            Z: 30.2483349
-          }
-          Rotation {
-            Pitch: 42.1884041
-            Yaw: 77.5474091
-            Roll: 139.879166
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -6879,582 +6998,6 @@
         }
       }
       Objects {
-        Id: 2270135754330826935
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -6.35620117
-            Y: -50.2337646
-            Z: 28.0782471
-          }
-          Rotation {
-            Pitch: 30.6101742
-            Yaw: 88.3005447
-            Roll: 146.304825
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16158562083759725188
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -6.47509766
-            Y: -56.1426392
-            Z: 26.7397766
-          }
-          Rotation {
-            Pitch: 16.4470406
-            Yaw: 97.8234634
-            Roll: 150.141418
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14581189038404569708
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -6.79834
-            Y: -62.4079895
-            Z: 22.6074219
-          }
-          Rotation {
-            Pitch: 4.26479053
-            Yaw: 107.106384
-            Roll: 140.88887
-          }
-          Scale {
-            X: 0.113193914
-            Y: -0.0577657521
-            Z: 0.182937905
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12189983925010788070
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -13.8415527
-            Y: -74.381958
-            Z: 8.87561
-          }
-          Rotation {
-            Pitch: 38.3233833
-            Yaw: 123.003029
-            Roll: 145.321503
-          }
-          Scale {
-            X: 0.0867188498
-            Y: -0.0327739269
-            Z: 0.111278273
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14047667158392749019
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -8.50299931
-            Y: -81.8185577
-            Z: 3.61725473
-          }
-          Rotation {
-            Pitch: -49.1156921
-            Yaw: -64.4453735
-            Roll: -154.615341
-          }
-          Scale {
-            X: 0.11206954
-            Y: 0.0256958567
-            Z: 0.114328183
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17900781164246186293
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 10.9753418
-            Y: 2.4942627
-            Z: -69.6344
-          }
-          Rotation {
-            Pitch: -8.02609253
-            Yaw: 0.969421387
-            Roll: 170.149979
-          }
-          Scale {
-            X: 0.11729525
-            Y: -0.0305299554
-            Z: 0.122129038
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14925445281656724287
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 14.5749512
-            Y: 2.09204102
-            Z: -68.1429749
-          }
-          Rotation {
-            Pitch: 38.6414185
-            Yaw: -11.4148254
-            Roll: 163.651382
-          }
-          Scale {
-            X: 0.11729525
-            Y: -0.0305299554
-            Z: 0.122129038
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18315147860961676722
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 6.35913086
-            Y: -102.422241
-            Z: -7.4744873
-          }
-          Rotation {
-            Pitch: -14.8123779
-            Yaw: -132.051025
-            Roll: 104.108528
-          }
-          Scale {
-            X: 0.0989928618
-            Y: -0.0390657596
-            Z: 0.122125491
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16877344730295124526
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 3.85400391
-            Y: -103.069885
-            Z: -7.67605591
-          }
-          Rotation {
-            Pitch: 8.78383446
-            Yaw: 157.836121
-            Roll: 108.42572
-          }
-          Scale {
-            X: 0.0989928618
-            Y: -0.0390657596
-            Z: 0.122125491
-          }
-        }
-        ParentId: 1790631991494313577
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 16934265084698719239
         Name: "right_elbow"
         Transform {
@@ -7504,17 +7047,17 @@
         ParentId: 16934265084698719239
         ChildIds: 14993194633143516725
         ChildIds: 5793848495448836303
-        ChildIds: 14394311997986455745
-        ChildIds: 3471218616951275000
-        ChildIds: 7112934821607265791
-        ChildIds: 15290982559165528791
         ChildIds: 6941051331611111520
         ChildIds: 5931430504778290104
         ChildIds: 8879877179599090920
         ChildIds: 14454739941356332237
-        ChildIds: 12797956812953657149
-        ChildIds: 17391611856252192943
         ChildIds: 12368800027501188935
+        ChildIds: 12797956812953657149
+        ChildIds: 7112934821607265791
+        ChildIds: 17391611856252192943
+        ChildIds: 14394311997986455745
+        ChildIds: 15290982559165528791
+        ChildIds: 3471218616951275000
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -7653,262 +7196,6 @@
             X: 0.155365914
             Y: 0.0337676145
             Z: 0.115274638
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14394311997986455745
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -6.16710901
-            Y: 1.19236147
-            Z: -15.5020704
-          }
-          Rotation {
-            Pitch: 81.5245285
-            Yaw: 110.532295
-            Roll: 69.6263
-          }
-          Scale {
-            X: 0.111594446
-            Y: 0.0247755218
-            Z: 0.110230014
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3471218616951275000
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 7.34265137
-            Y: 0.764434814
-            Z: -16.7025146
-          }
-          Rotation {
-            Pitch: -75.8553162
-            Yaw: -134.439606
-            Roll: 84.5292
-          }
-          Scale {
-            X: 0.177712038
-            Y: 0.025696896
-            Z: 0.114329889
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7112934821607265791
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -5.72888184
-            Y: 4.92440796
-            Z: -6.26733398
-          }
-          Rotation {
-            Pitch: -76.7939758
-            Yaw: -54.9227
-            Roll: -84.7766724
-          }
-          Scale {
-            X: 0.0895618275
-            Y: -0.0577442944
-            Z: 0.112811513
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15290982559165528791
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: 8.24978256
-            Y: 3.66951585
-            Z: -6.52816296
-          }
-          Rotation {
-            Pitch: 74.0145721
-            Yaw: 46.3929405
-            Roll: -98.0130615
-          }
-          Scale {
-            X: 0.137510896
-            Y: -0.0314316
-            Z: 0.111280568
           }
         }
         ParentId: 10368994408394458668
@@ -8283,134 +7570,6 @@
         CoreMesh {
           MeshAsset {
             Id: 3682206342183528038
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12797956812953657149
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -5.95275879
-            Y: 5.52288818
-            Z: -1.9720459
-          }
-          Rotation {
-            Pitch: -76.7939453
-            Yaw: -54.9226379
-            Roll: -84.7767
-          }
-          Scale {
-            X: 0.0895630792
-            Y: -0.0483965
-            Z: 0.11280977
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17391611856252192943
-        Name: "Grass Tall"
-        Transform {
-          Location {
-            X: -5.04175806
-            Y: 2.95261478
-            Z: -11.2998905
-          }
-          Rotation {
-            Pitch: 72.4472
-            Yaw: 67.2858124
-            Roll: 27.2704182
-          }
-          Scale {
-            X: 0.111594446
-            Y: 0.0247755218
-            Z: 0.110230014
-          }
-        }
-        ParentId: 10368994408394458668
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Nature_Grass:id"
-            AssetReference {
-              Id: 6073374154520949901
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16936111728464854852
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.399000019
-              G: 0.178931743
-              B: 0.0454859883
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2970711086579668885
           }
           Teams {
           }
@@ -9355,6 +8514,390 @@
         }
       }
       Objects {
+        Id: 12797956812953657149
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.95275879
+            Y: 5.52288818
+            Z: -1.9720459
+          }
+          Rotation {
+            Pitch: -76.7939453
+            Yaw: -54.9226379
+            Roll: -84.7767
+          }
+          Scale {
+            X: 0.0895630792
+            Y: -0.0483965
+            Z: 0.11280977
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7112934821607265791
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.72888184
+            Y: 4.92440796
+            Z: -6.26733398
+          }
+          Rotation {
+            Pitch: -76.7939758
+            Yaw: -54.9227
+            Roll: -84.7766724
+          }
+          Scale {
+            X: 0.0895618275
+            Y: -0.0577442944
+            Z: 0.112811513
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17391611856252192943
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.04175806
+            Y: 2.95261478
+            Z: -11.2998905
+          }
+          Rotation {
+            Pitch: 72.4472
+            Yaw: 67.2858124
+            Roll: 27.2704182
+          }
+          Scale {
+            X: 0.111594446
+            Y: 0.0247755218
+            Z: 0.110230014
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14394311997986455745
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -6.16710901
+            Y: 1.19236147
+            Z: -15.5020704
+          }
+          Rotation {
+            Pitch: 81.5245285
+            Yaw: 110.532295
+            Roll: 69.6263
+          }
+          Scale {
+            X: 0.111594446
+            Y: 0.0247755218
+            Z: 0.110230014
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15290982559165528791
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 8.24978256
+            Y: 3.66951585
+            Z: -6.52816296
+          }
+          Rotation {
+            Pitch: 74.0145721
+            Yaw: 46.3929405
+            Roll: -98.0130615
+          }
+          Scale {
+            X: 0.137510896
+            Y: -0.0314316
+            Z: 0.111280568
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3471218616951275000
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 7.34265137
+            Y: 0.764434814
+            Z: -16.7025146
+          }
+          Rotation {
+            Pitch: -75.8553162
+            Yaw: -134.439606
+            Roll: 84.5292
+          }
+          Scale {
+            X: 0.177712038
+            Y: 0.025696896
+            Z: 0.114329889
+          }
+        }
+        ParentId: 10368994408394458668
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 9993641205478667842
         Name: "right_wrist"
         Transform {
@@ -9403,6 +8946,13 @@
         }
         ParentId: 9993641205478667842
         ChildIds: 1693098479445644022
+        ChildIds: 6438972839177987314
+        ChildIds: 6281093945503006111
+        ChildIds: 17900781164246186293
+        ChildIds: 14925445281656724287
+        ChildIds: 7309177396630870012
+        ChildIds: 829795495687454974
+        ChildIds: 12921433864668884392
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -9513,6 +9063,454 @@
         CoreMesh {
           MeshAsset {
             Id: 14653709633606201813
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6438972839177987314
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -7.66937494
+            Y: 2.5110023
+            Z: -3.58069754
+          }
+          Rotation {
+            Pitch: 76.6326675
+            Yaw: -13.4053488
+            Roll: -45.4552956
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6281093945503006111
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -5.27611828
+            Y: 3.00418782
+            Z: -10.8980923
+          }
+          Rotation {
+            Pitch: 52.1232681
+            Yaw: -136.333481
+            Roll: -149.612885
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17900781164246186293
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -1.08618164
+            Y: 3.82891846
+            Z: -12.0849
+          }
+          Rotation {
+            Pitch: -24.6613121
+            Yaw: 8.43194866
+            Roll: 163.977386
+          }
+          Scale {
+            X: 0.11729525
+            Y: -0.0305299554
+            Z: 0.122129038
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14925445281656724287
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 2.81420898
+            Y: 3.72662354
+            Z: -11.7399292
+          }
+          Rotation {
+            Pitch: 21.0831261
+            Yaw: -6.75801754
+            Roll: 161.57
+          }
+          Scale {
+            X: 0.11729525
+            Y: -0.0305299554
+            Z: 0.122129038
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7309177396630870012
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.24609375
+            Y: 4.05230713
+            Z: -12.7967529
+          }
+          Rotation {
+            Pitch: -5.24014807
+            Yaw: 1.70033169
+            Roll: 162.770386
+          }
+          Scale {
+            X: 0.137510553
+            Y: -0.0305293202
+            Z: 0.122128464
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 829795495687454974
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 5.05221558
+            Y: 3.65598416
+            Z: -10.8377838
+          }
+          Rotation {
+            Pitch: -63.8389397
+            Yaw: 135.619934
+            Roll: -149.637177
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12921433864668884392
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 7.45512438
+            Y: 2.77393651
+            Z: -4.35906506
+          }
+          Rotation {
+            Pitch: -77.978157
+            Yaw: 117.916405
+            Roll: -149.080505
+          }
+          Scale {
+            X: 0.137512147
+            Y: 0.0198840424
+            Z: 0.0884674564
+          }
+        }
+        ParentId: 13383988962390342063
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
           }
           Teams {
           }
@@ -9808,138 +9806,12 @@
       }
     }
     Assets {
-      Id: 4080200756085571976
-      Name: "Bone Human Pelvis Half 01"
+      Id: 14653709633606201813
+      Name: "Fantasy Gauntlet Arm 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
-      }
-    }
-    Assets {
-      Id: 11312867989431867200
-      Name: "Bone Human Jaw 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_jaw_01_ref"
-      }
-    }
-    Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 6293838519925911015
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 1687528788148422459
-      Name: "Prism - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_octagon_001"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 11717866009290414342
-      Name: "Pipe - 45-Degree Long Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_005"
-      }
-    }
-    Assets {
-      Id: 7663308268157147922
-      Name: "Bark Dead 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_dead_001_uv"
-      }
-    }
-    Assets {
-      Id: 10696576532019313521
-      Name: "Fantasy Shield 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_003"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 3575562120921027951
-      Name: "Bone Human Scapula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_scap_01_ref"
+        AssetId: "sm_weap_fan_gauntlet_arm_001"
       }
     }
     Assets {
@@ -9952,12 +9824,122 @@
       }
     }
     Assets {
-      Id: 14653709633606201813
-      Name: "Fantasy Gauntlet Arm 01"
+      Id: 3575562120921027951
+      Name: "Bone Human Scapula 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_gauntlet_arm_001"
+        AssetId: "sm_bones_human_scap_01_ref"
+      }
+    }
+    Assets {
+      Id: 17567893295837774896
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 16936111728464854852
+      Name: "WolfFur"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 12357757896131286157
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0.741118729
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0.606109202
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.204000011
+              G: 0.204000011
+              B: 0.204000011
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.926756859
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 12357757896131286157
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 6073374154520949901
+      Name: "Custom Grass from Grass Tall"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 8599686871907610035
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.492
+              G: 0.317356318
+              B: 0.228288
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_roots"
+            Color {
+              R: 0.168000013
+              G: 0.108365551
+              B: 0.077952005
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "dist_rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "dist_radius"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_intensity"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_weight"
+            Float: 0.05
+          }
+          Overrides {
+            Name: "wind_speed"
+            Float: 0
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 8599686871907610035
+      Name: "Grass (default)"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_dynamic_001_uv"
       }
     }
     Assets {
@@ -9969,6 +9951,225 @@
         AssetId: "sm_pyramid_threesided_001"
       }
     }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 10696576532019313521
+      Name: "Fantasy Shield 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_003"
+      }
+    }
+    Assets {
+      Id: 7663308268157147922
+      Name: "Bark Dead 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_dead_001_uv"
+      }
+    }
+    Assets {
+      Id: 11717866009290414342
+      Name: "Pipe - 45-Degree Long Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_005"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 1687528788148422459
+      Name: "Prism - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_001"
+      }
+    }
+    Assets {
+      Id: 93328804870534166
+      Name: "Custom Bark Dead 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 7663308268157147922
+        ParameterOverrides {
+          Overrides {
+            Name: "color_accent"
+            Color {
+              R: 1
+              G: 0.639072835
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.661
+              G: 0.48008737
+              B: 0.327856
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.168373272
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.659174085
+          }
+          Overrides {
+            Name: "color_damage"
+            Color {
+              R: 0.625
+              G: 0.578504
+              B: 0.403837
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 6293838519925911015
+      Name: "Horn"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 230872137319562526
+      Name: "Orc Mage Face"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 58872637069711017
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 5
+              G: 2.86666679
+              B: 0.99999994
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "glass color"
+            Color {
+              R: 1
+              G: 0.0794702172
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color b"
+            Color {
+              R: 0.995000064
+              G: 0.177914068
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color c"
+            Color {
+              R: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "direction"
+            Vector {
+              Z: -2
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 58872637069711017
+      Name: "Magic Glass"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_magic_glass"
+      }
+    }
+    Assets {
+      Id: 15339827692159902109
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 11312867989431867200
+      Name: "Bone Human Jaw 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_jaw_01_ref"
+      }
+    }
+    Assets {
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 4080200756085571976
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
@@ -9976,3 +10177,4 @@
   }
   SerializationVersion: 68
 }
+IncludesAllDependencies: true
