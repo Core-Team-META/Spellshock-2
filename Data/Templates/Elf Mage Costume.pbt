@@ -28,6 +28,7 @@
         ChildIds: 15831157515337773276
         ChildIds: 12583733004955647415
         ChildIds: 1833892232921987346
+        ChildIds: 8483108873309472174
         ChildIds: 13176220500446627169
         ChildIds: 17060102861233957069
         ChildIds: 16098898052177772957
@@ -1375,9 +1376,7 @@
             Z: 6.94859648
           }
           Rotation {
-            Pitch: -85.2403564
-            Yaw: 179.999252
-            Roll: -179.999252
+            Pitch: 55.8950539
           }
           Scale {
             X: 0.282116145
@@ -1398,7 +1397,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6419995403362959337
+              Id: 16854156078097555186
             }
           }
         }
@@ -5022,6 +5021,1075 @@
         }
       }
       Objects {
+        Id: 8483108873309472174
+        Name: "right_prop"
+        Transform {
+          Location {
+            X: 1.93774414
+            Y: 81.0248718
+            Z: 118.995697
+          }
+          Rotation {
+            Pitch: 13.9379902
+            Yaw: -10.1972351
+            Roll: 17.6752167
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5941776289668064836
+        ChildIds: 16577160931856229040
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 16577160931856229040
+        Name: "Geo"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.7
+            Y: 0.7
+            Z: 0.7
+          }
+        }
+        ParentId: 8483108873309472174
+        ChildIds: 8606128464723496212
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8606128464723496212
+        Name: "Group"
+        Transform {
+          Location {
+            X: -0.312601179
+            Y: 1.29852992e-06
+            Z: 22.1936493
+          }
+          Rotation {
+            Roll: -90
+          }
+          Scale {
+            X: 1.59932482
+            Y: 1.59932482
+            Z: 1.59932482
+          }
+        }
+        ParentId: 16577160931856229040
+        ChildIds: 568715485999521989
+        ChildIds: 5533393511477464468
+        ChildIds: 16721786593526671737
+        ChildIds: 11598811907990149210
+        ChildIds: 7627364165918923644
+        ChildIds: 6714807897498850161
+        ChildIds: 10854875524328721863
+        ChildIds: 7059588503838345322
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 568715485999521989
+        Name: "Fantasy Shield 03"
+        Transform {
+          Location {
+            X: -0.478920639
+            Y: 2.10804653
+            Z: -0.483096
+          }
+          Rotation {
+            Pitch: -4.20047
+            Yaw: -11.9210205
+            Roll: 169.520157
+          }
+          Scale {
+            X: 0.033609502
+            Y: 0.0388768166
+            Z: 0.0343002304
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 4247430867898109902
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 17.3090725
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 9.16647053
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.385416657
+              G: 0.039061062
+              B: 0.0260958895
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 15592158619972675004
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 27
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 7
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16312281148657110259
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5533393511477464468
+        Name: "Fantasy Sword Guard 01"
+        Transform {
+          Location {
+            X: -3.83035876e-05
+            Y: -6.98910475
+            Z: 8.36885156e-05
+          }
+          Rotation {
+            Pitch: -60.0004501
+            Yaw: 1.70757212e-05
+            Roll: 89.9998322
+          }
+          Scale {
+            X: 0.411277354
+            Y: 0.450118929
+            Z: 0.676003814
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1920010878601219178
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16721786593526671737
+        Name: "Fantasy Sword Guard 01"
+        Transform {
+          Location {
+            X: -3.83035876e-05
+            Y: -6.98910475
+            Z: 8.36885156e-05
+          }
+          Rotation {
+            Pitch: 0.000546415104
+            Yaw: 179.999893
+            Roll: -89.9999542
+          }
+          Scale {
+            X: 0.411277503
+            Y: 0.450119346
+            Z: 0.676003814
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1920010878601219178
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11598811907990149210
+        Name: "Fantasy Sword Guard 01"
+        Transform {
+          Location {
+            X: -1.84275668e-05
+            Y: -6.98910904
+            Z: 8.30447534e-05
+          }
+          Rotation {
+            Pitch: -59.9994774
+            Yaw: -179.999893
+            Roll: -89.9998932
+          }
+          Scale {
+            X: 0.411277503
+            Y: 0.450119346
+            Z: 0.676003814
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1920010878601219178
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7627364165918923644
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -0.000305175781
+            Yaw: -6.10351563e-05
+            Roll: -89.9999695
+          }
+          Scale {
+            X: 1.49829793
+            Y: 1.49829507
+            Z: 0.699061811
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 4247430867898109902
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.199999988
+              G: 1
+              B: 0.427814662
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 25.1128387
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 36.1982269
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 24.6008816
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 23.6005154
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 3682206342183528038
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6714807897498850161
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -0.487862617
+            Y: -1.21338117
+            Z: -0.106720746
+          }
+          Rotation {
+            Roll: 90
+          }
+          Scale {
+            X: 0.060647279
+            Y: 0.0651512519
+            Z: 0.627804577
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.566671848
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8106462835096310727
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10854875524328721863
+        Name: "Group"
+        Transform {
+          Location {
+            X: -0.487862974
+            Y: 24.965044
+            Z: -0.106716909
+          }
+          Rotation {
+            Pitch: -90
+            Yaw: -7.96670532
+            Roll: 7.96671867
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 0.999999881
+          }
+        }
+        ParentId: 8606128464723496212
+        ChildIds: 6157695660727725460
+        ChildIds: 4402197312081560196
+        ChildIds: 11947826332196398774
+        ChildIds: 4331246135284281653
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6157695660727725460
+        Name: "Horn"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Roll: 89.9999771
+          }
+          Scale {
+            X: 0.122757398
+            Y: 0.131873935
+            Z: 0.0630018488
+          }
+        }
+        ParentId: 10854875524328721863
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.566671848
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8106462835096310727
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4402197312081560196
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 7.50619268
+            Y: 1.26437
+            Z: 0.749156952
+          }
+          Rotation {
+            Yaw: 90.8350449
+            Roll: 90.0014
+          }
+          Scale {
+            X: 0.0977189
+            Y: 0.0621676743
+            Z: 0.0977195948
+          }
+        }
+        ParentId: 10854875524328721863
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.566671848
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Faces:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Sides:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13721711714512983609
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11947826332196398774
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -0.749158263
+            Y: 1.2643677
+            Z: 7.50619411
+          }
+          Rotation {
+            Pitch: -0.834587574
+            Yaw: 90.0000076
+            Roll: -179.998871
+          }
+          Scale {
+            X: 0.0977189168
+            Y: 0.0621676855
+            Z: 0.0977196097
+          }
+        }
+        ParentId: 10854875524328721863
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.566671848
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Faces:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Sides:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Font.Bevel:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Font.Sides:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13721711714512983609
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4331246135284281653
+        Name: "Energy Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 0.461009324
+            Y: 10.7377844
+            Z: -0.302186877
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.454114556
+            Y: 0.454114556
+            Z: 0.454114556
+          }
+        }
+        ParentId: 10854875524328721863
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Inner Core Color"
+            Color {
+              G: 0.120000005
+              B: 0.105695404
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Hot Spot Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Ring Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Outer Core Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Outer Core Edge Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 40393214500296759
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 7059588503838345322
+        Name: "Fantasy Shield 03"
+        Transform {
+          Location {
+            X: -0.478925318
+            Y: -23.6408253
+            Z: -0.483122408
+          }
+          Rotation {
+            Pitch: -5.54226685
+            Yaw: 1.54897654
+            Roll: -174.891663
+          }
+          Scale {
+            X: 0.0497387424
+            Y: 0.0405770242
+            Z: 0.0507604107
+          }
+        }
+        ParentId: 8606128464723496212
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 4247430867898109902
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 17.3090725
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 9.16647053
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.385416657
+              G: 0.039061062
+              B: 0.0260958895
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 15592158619972675004
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 27
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 7
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16312281148657110259
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7185380311906960862
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 13176220500446627169
         Name: "upper_spine"
         Transform {
@@ -5305,6 +6373,60 @@
       }
     }
     Assets {
+      Id: 40393214500296759
+      Name: "Energy Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold_Var1"
+      }
+    }
+    Assets {
+      Id: 13721711714512983609
+      Name: "Text 04: C"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F7_Text_002"
+      }
+    }
+    Assets {
+      Id: 8106462835096310727
+      Name: "Pyramid - 8-Sided Truncated Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_eighsided_truncated_hq_001"
+      }
+    }
+    Assets {
+      Id: 1920010878601219178
+      Name: "Fantasy Sword Guard 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_guard_sword_001"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 7185380311906960862
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
       Id: 10668876076437224532
       Name: "Custom Flame from Candle Flame VFX"
       PlatformAssetType: 13
@@ -5476,6 +6598,64 @@
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 16854156078097555186
+      Name: "Elf Mage Face"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 58872637069711017
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.99999994
+              G: 5
+              B: 4.13333416
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color b"
+            Color {
+              G: 0.799999952
+              B: 0.402649105
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color c"
+            Color {
+              G: 0.0732449591
+              B: 0.139999986
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "glass color"
+            Color {
+              G: 0.546026468
+              B: 0.97
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "direction"
+            Vector {
+              Z: -2
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 58872637069711017
+      Name: "Magic Glass"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_magic_glass"
       }
     }
     Assets {

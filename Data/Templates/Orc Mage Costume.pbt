@@ -28,6 +28,7 @@
         ChildIds: 1627454940477691155
         ChildIds: 16934265084698719239
         ChildIds: 9993641205478667842
+        ChildIds: 8886145685874210638
         ChildIds: 3422852935925109875
         ChildIds: 4643452810109118478
         ChildIds: 2654941684656438488
@@ -9523,6 +9524,1882 @@
         }
       }
       Objects {
+        Id: 8886145685874210638
+        Name: "right_prop"
+        Transform {
+          Location {
+            X: 1.93774414
+            Y: 73.6174622
+            Z: 118.995697
+          }
+          Rotation {
+            Pitch: 13.9379902
+            Yaw: -10.197217
+            Roll: 17.675209
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 827510651135112473
+        ChildIds: 3514623677646691370
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 3514623677646691370
+        Name: "Group"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Roll: 180
+          }
+          Scale {
+            X: 0.700000048
+            Y: 0.700000048
+            Z: 0.700000048
+          }
+        }
+        ParentId: 8886145685874210638
+        ChildIds: 15236165673785088749
+        ChildIds: 14292804254258173636
+        ChildIds: 6797326568047964353
+        ChildIds: 5339119272845777308
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15236165673785088749
+        Name: "Group"
+        Transform {
+          Location {
+            X: 0.764378667
+            Y: -0.319598079
+            Z: 4.49235868
+          }
+          Rotation {
+            Pitch: -3.13314819
+            Yaw: 162.187241
+            Roll: -179.508789
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3514623677646691370
+        ChildIds: 15541612057803111948
+        ChildIds: 10543704925419620346
+        ChildIds: 14622937611042455924
+        ChildIds: 13850443063725805140
+        ChildIds: 11077772531588494350
+        ChildIds: 10060023093971869060
+        ChildIds: 14293530119190320661
+        ChildIds: 301918415435195789
+        ChildIds: 11173169971752912035
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15541612057803111948
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.629150391
+            Y: -0.524353
+            Z: 1.23132324
+          }
+          Rotation {
+            Pitch: -2.99487305
+            Yaw: -1.14233398
+            Roll: -60.2527466
+          }
+          Scale {
+            X: 0.136309311
+            Y: -0.0353458896
+            Z: 0.149922326
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10543704925419620346
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 1.44750977
+            Y: -2.25100708
+            Z: 0.583099365
+          }
+          Rotation {
+            Pitch: -11.3805542
+            Yaw: 27.4567947
+            Roll: -52.1698608
+          }
+          Scale {
+            X: 0.122998163
+            Y: -0.0386306
+            Z: 0.149923638
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14622937611042455924
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -0.621337891
+            Y: -0.462524414
+            Z: 1.13865662
+          }
+          Rotation {
+            Pitch: -8.9050293
+            Yaw: -45.7088928
+            Roll: -45.4642029
+          }
+          Scale {
+            X: 0.13630867
+            Y: -0.0353457183
+            Z: 0.149921522
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13850443063725805140
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -0.400878906
+            Y: 0.35345459
+          }
+          Rotation {
+            Pitch: 2.48474765
+            Yaw: -114.600266
+            Roll: -40.8899536
+          }
+          Scale {
+            X: 0.110984854
+            Y: -0.0444928333
+            Z: 0.149922848
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11077772531588494350
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 0.561523438
+            Y: 0.64630127
+            Z: 0.182037354
+          }
+          Rotation {
+            Pitch: 10.7656279
+            Yaw: 172.829742
+            Roll: -56.7280273
+          }
+          Scale {
+            X: 0.130983114
+            Y: -0.0444246978
+            Z: 0.149922848
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10060023093971869060
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: 3.17651367
+            Y: 0.976654053
+            Z: 0.332244873
+          }
+          Rotation {
+            Pitch: 7.00232315
+            Yaw: 102.470436
+            Roll: -59.6883545
+          }
+          Scale {
+            X: 0.13097775
+            Y: -0.0478562824
+            Z: 0.149922326
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14293530119190320661
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -0.0334472656
+            Y: 0.267150879
+            Z: 0.257507324
+          }
+          Rotation {
+            Pitch: 7.32833481
+            Yaw: -144.328125
+            Roll: -50.5921021
+          }
+          Scale {
+            X: 0.130983695
+            Y: -0.0444249474
+            Z: 0.149923742
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 301918415435195789
+        Name: "Grass Tall"
+        Transform {
+          Location {
+            X: -3.66894531
+            Y: -0.0547790527
+            Z: 2.7906189
+          }
+          Rotation {
+            Pitch: -8.42236328
+            Yaw: -85.2814941
+            Roll: -45.967865
+          }
+          Scale {
+            X: 0.110986143
+            Y: -0.0444933027
+            Z: 0.0902559757
+          }
+        }
+        ParentId: 15236165673785088749
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Nature_Grass:id"
+            AssetReference {
+              Id: 6073374154520949901
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16936111728464854852
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.399000019
+              G: 0.178931743
+              B: 0.0454859883
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2970711086579668885
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11173169971752912035
+        Name: "Group"
+        Transform {
+          Location {
+            X: 1.52653074
+            Y: -0.252130687
+            Z: 4.46446037
+          }
+          Rotation {
+            Pitch: 32.0265
+            Yaw: -124.274742
+            Roll: -97.0603104
+          }
+          Scale {
+            X: 1.20881
+            Y: 1.20881
+            Z: 1.20881
+          }
+        }
+        ParentId: 15236165673785088749
+        ChildIds: 14173756819483192270
+        ChildIds: 4064804434826647238
+        ChildIds: 4317746543709179254
+        ChildIds: 11370569479053381791
+        ChildIds: 10103405938908343659
+        ChildIds: 1326570132188581165
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14173756819483192270
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 9.07695198
+            Y: 14.2454233
+            Z: -3.65990782
+          }
+          Rotation {
+            Pitch: 15.6506128
+            Yaw: 144.708908
+            Roll: -103.036072
+          }
+          Scale {
+            X: 1.43279326
+            Y: 1.53924489
+            Z: 0.917548478
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 93328804870534166
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 16.9728947
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 11.4074049
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8269588534607695232
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4064804434826647238
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -4.25408173
+            Y: -7.66739511
+            Z: 2.68564796
+          }
+          Rotation {
+            Pitch: 15.65133
+            Yaw: 144.710373
+            Roll: 76.4700851
+          }
+          Scale {
+            X: 1.33523607
+            Y: 1.43443954
+            Z: 0.542381227
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 93328804870534166
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 16.9728947
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 11.4074049
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8269588534607695232
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4317746543709179254
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 17.8300838
+            Y: 28.2293148
+            Z: -7.62388277
+          }
+          Rotation {
+            Pitch: 15.651309
+            Yaw: 144.710358
+            Roll: 76.4700317
+          }
+          Scale {
+            X: 0.152817324
+            Y: 0.164171457
+            Z: 0.0180556979
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.434796035
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.292224407
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10293907404001327825
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11370569479053381791
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 16.6063042
+            Y: 25.8008423
+            Z: -6.41047621
+          }
+          Rotation {
+            Pitch: 15.6511593
+            Yaw: 144.710159
+            Roll: 61.6856613
+          }
+          Scale {
+            X: 0.130464554
+            Y: 0.155866832
+            Z: 0.017142754
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.434796035
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.292224407
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10293907404001327825
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10103405938908343659
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 15.3220453
+            Y: 24.0729218
+            Z: -5.67833853
+          }
+          Rotation {
+            Pitch: 15.6510773
+            Yaw: 144.709976
+            Roll: 71.7271194
+          }
+          Scale {
+            X: 0.108715527
+            Y: 0.136640221
+            Z: 0.0150280697
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3090596827184957478
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.434796035
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.292224407
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10293907404001327825
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1326570132188581165
+        Name: "Energy Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 27.7997112
+            Y: 45.355072
+            Z: -9.36418438
+          }
+          Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: -1.152594e-05
+            Roll: 8.53773236e-06
+          }
+          Scale {
+            X: 1.18179977
+            Y: 1.18179977
+            Z: 1.18179977
+          }
+        }
+        ParentId: 11173169971752912035
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Rings"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Inner Core Color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Outer Core Color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Hot Spot Color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Outer Core Edge Color"
+            Color {
+              R: 1
+              G: 0.84602654
+              B: 0.0699999928
+              A: 0.5
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 25
+          }
+          Overrides {
+            Name: "bp:Ring Color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 0.5
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 40393214500296759
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 14292804254258173636
+        Name: "Blade"
+        Transform {
+          Location {
+            X: 1.24476171
+            Y: -0.0537790619
+            Z: 19.5099277
+          }
+          Rotation {
+            Pitch: -0.706234694
+            Yaw: 104.561531
+            Roll: -0.378171921
+          }
+          Scale {
+            X: 0.92239517
+            Y: 0.92239517
+            Z: 0.92239517
+          }
+        }
+        ParentId: 3514623677646691370
+        ChildIds: 131466881173221633
+        ChildIds: 13598006808027545787
+        ChildIds: 17717291964830378630
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 131466881173221633
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -0.315413654
+            Y: 3.85908175
+            Z: -64.7664
+          }
+          Rotation {
+            Pitch: 1.24296463
+            Yaw: 83.3273087
+            Roll: 152.139511
+          }
+          Scale {
+            X: 0.0984713957
+            Y: 0.105788417
+            Z: 0.161026493
+          }
+        }
+        ParentId: 14292804254258173636
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 93328804870534166
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.263513058
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.648490429
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6293838519925911015
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13598006808027545787
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 1.91361368
+            Y: 5.66804171
+            Z: -65.2648773
+          }
+          Rotation {
+            Pitch: -1.59899902
+            Yaw: -32.7527466
+            Roll: 157.163635
+          }
+          Scale {
+            X: 0.0984713957
+            Y: 0.105788417
+            Z: 0.161026493
+          }
+        }
+        ParentId: 14292804254258173636
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 93328804870534166
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.263513058
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.648490429
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6293838519925911015
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17717291964830378630
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 0.231838599
+            Y: 2.52596807
+            Z: -65.1295776
+          }
+          Rotation {
+            Pitch: -1.50357056
+            Yaw: -158.706589
+            Roll: 151.27623
+          }
+          Scale {
+            X: 0.0984713957
+            Y: 0.105788417
+            Z: 0.161026493
+          }
+        }
+        ParentId: 14292804254258173636
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 93328804870534166
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.263513058
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.648490429
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6293838519925911015
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6797326568047964353
+        Name: "Fantasy Sword Grip 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -4.35958862
+            Yaw: 13.6007318
+            Roll: 7.1175873e-06
+          }
+          Scale {
+            X: 1.96012294
+            Y: 1.68630779
+            Z: 0.729257405
+          }
+        }
+        ParentId: 3514623677646691370
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 4247430867898109902
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.385416657
+              G: 0.039061062
+              B: 0.0260958895
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 25.1128387
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 36.1982269
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2754963224534021958
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 32.6075439
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 30.9480743
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 3682206342183528038
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5339119272845777308
+        Name: "eg"
+        Transform {
+          Location {
+            X: 1.6529237
+            Y: -0.253165096
+            Z: 32.5765648
+          }
+          Rotation {
+            Pitch: -1.36603776e-05
+            Yaw: -44.9999771
+            Roll: 179.999985
+          }
+          Scale {
+            X: 0.597254932
+            Y: 0.597254932
+            Z: 0.597254932
+          }
+        }
+        ParentId: 3514623677646691370
+        ChildIds: 8483350667607689787
+        ChildIds: 15842890200439287639
+        ChildIds: 13867267744792539098
+        ChildIds: 13981533708806974161
+        ChildIds: 8041124262704594296
+        ChildIds: 16278129138335948387
+        ChildIds: 17747051142455643705
+        ChildIds: 3021460582905194136
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8483350667607689787
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: 0.671735585
+            Y: -7.41033792
+          }
+          Rotation {
+            Pitch: 27.7745399
+            Yaw: -90
+            Roll: -6.11703491
+          }
+          Scale {
+            X: 0.0189777762
+            Y: 0.139438897
+            Z: 0.494564533
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15842890200439287639
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: 6.76441193
+            Y: 0.812890291
+          }
+          Rotation {
+            Pitch: 29.3691292
+            Roll: -5.08840942
+          }
+          Scale {
+            X: 0.0189777594
+            Y: 0.139438763
+            Z: 0.494564
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13867267744792539098
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -1.07091987
+            Y: 7.84042025
+          }
+          Rotation {
+            Pitch: -27.031311
+            Yaw: -90
+            Roll: -6.09439087
+          }
+          Scale {
+            X: 0.0189777743
+            Y: 0.139438882
+            Z: 0.494564474
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13981533708806974161
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -6.36557531
+            Y: -1.24301589
+          }
+          Rotation {
+            Pitch: -37.1536865
+            Roll: 7.34007263
+          }
+          Scale {
+            X: 0.0189777575
+            Y: 0.139438748
+            Z: 0.494563967
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8041124262704594296
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: 7.23413181
+            Y: -5.68198299
+            Z: 5.87951326
+          }
+          Rotation {
+            Pitch: 11.2500038
+            Yaw: -45
+            Roll: -4.75222778
+          }
+          Scale {
+            X: 0.0256231166
+            Y: 0.188265428
+            Z: 0.667743266
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16278129138335948387
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -7.26400375
+            Y: 4.89056301
+            Z: 5.87951326
+          }
+          Rotation {
+            Pitch: -17.3587646
+            Yaw: -45
+            Roll: 9.75695133
+          }
+          Scale {
+            X: 0.0256231669
+            Y: 0.18826583
+            Z: 0.667744339
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17747051142455643705
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: 5.53037119
+            Y: 7.2289896
+            Z: 5.87951612
+          }
+          Rotation {
+            Pitch: -11.2499695
+            Yaw: -135
+            Roll: -9.44265747
+          }
+          Scale {
+            X: 0.0256231558
+            Y: 0.188265726
+            Z: 0.667744279
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3021460582905194136
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -6.43341637
+            Y: -7.71604156
+            Z: 5.87951326
+          }
+          Rotation {
+            Pitch: 11.2500038
+            Yaw: -135
+            Roll: 4.79816484
+          }
+          Scale {
+            X: 0.025623152
+            Y: 0.188265696
+            Z: 0.667744219
+          }
+        }
+        ParentId: 5339119272845777308
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8911288174540730015
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 3422852935925109875
         Name: "upper_spine"
         Transform {
@@ -9803,6 +11680,122 @@
         }
         NetworkContext {
         }
+      }
+    }
+    Assets {
+      Id: 8911288174540730015
+      Name: "YellowFeatherBottom"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 1781535275264321496
+        ParameterOverrides {
+          Overrides {
+            Name: "rotate_material"
+            Float: 180
+          }
+          Overrides {
+            Name: "color_secondary"
+            Color {
+              R: 0.115
+              G: 0.0812966377
+              B: 0.06831
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 1
+              G: 0.607417226
+              B: 0.220000029
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_direction"
+            Vector {
+              Z: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.0238804743
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.985823572
+          }
+          Overrides {
+            Name: "u_offset"
+            Float: 0
+          }
+          Overrides {
+            Name: "v_offset"
+            Float: 0.0323175415
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.74
+              G: 0.132317901
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 1781535275264321496
+      Name: "Wallpaper Chevron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_gen_wallpaper_004"
+      }
+    }
+    Assets {
+      Id: 2635330027741249494
+      Name: "Diamond - 6-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_diamond_6_sided_001"
+      }
+    }
+    Assets {
+      Id: 40393214500296759
+      Name: "Energy Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold_Var1"
+      }
+    }
+    Assets {
+      Id: 3090596827184957478
+      Name: "Rope"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_rope_001"
+      }
+    }
+    Assets {
+      Id: 10293907404001327825
+      Name: "Prism - 8-Sided Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_hq_001"
+      }
+    }
+    Assets {
+      Id: 8269588534607695232
+      Name: "Bone Human Ulna 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_ulna_01_ref"
       }
     }
     Assets {
