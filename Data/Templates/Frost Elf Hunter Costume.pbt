@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 1453546943157492303
-  Name: "Elf Hunter Costume"
+  Id: 3941906157023332887
+  Name: "Frost Elf Hunter Costume"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 3034491456635791044
+      RootId: 10438043655291834065
       Objects {
-        Id: 3034491456635791044
-        Name: "Elf Hunter Costume"
+        Id: 10438043655291834065
+        Name: "Frost Elf Hunter Costume"
         Transform {
           Scale {
             X: 1
@@ -16,29 +16,29 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 8417214998985590988
-        ChildIds: 3680776146331818315
-        ChildIds: 2116468658165444302
-        ChildIds: 12439563845360983200
-        ChildIds: 1371569771348507365
-        ChildIds: 16559174768524599308
-        ChildIds: 11557426123844419376
-        ChildIds: 15757684967516840622
-        ChildIds: 1910910771545905323
-        ChildIds: 10627009916478428175
-        ChildIds: 6415322287143740554
-        ChildIds: 14391263208077275872
-        ChildIds: 14337932744279649245
-        ChildIds: 14118097539289885387
-        ChildIds: 1724305966063305058
-        ChildIds: 8364193265457863014
-        ChildIds: 3764511148291225344
-        ChildIds: 9618872261946556282
-        ChildIds: 18369239889581426253
-        ChildIds: 3328168233435629991
-        ChildIds: 14389492983294872543
-        ChildIds: 544634201250009821
-        ChildIds: 13208010419408185754
+        ChildIds: 13482291788696953759
+        ChildIds: 7775484286046702800
+        ChildIds: 5047691531203064862
+        ChildIds: 1174667785116139997
+        ChildIds: 13858639934764676325
+        ChildIds: 10751735965806202513
+        ChildIds: 7782072480466914175
+        ChildIds: 3400629527602080478
+        ChildIds: 7681726834696670689
+        ChildIds: 11423605522365470867
+        ChildIds: 6661768426498869601
+        ChildIds: 13112313855398710419
+        ChildIds: 8634480748621374626
+        ChildIds: 4475329009938012097
+        ChildIds: 16980332199712982892
+        ChildIds: 10345245511110697989
+        ChildIds: 10937074006067535999
+        ChildIds: 16806937562648010487
+        ChildIds: 16923089042423909142
+        ChildIds: 14937438566813441738
+        ChildIds: 4111778091161230498
+        ChildIds: 17380754276271215790
+        ChildIds: 1459695018873815457
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -49,7 +49,7 @@
         }
       }
       Objects {
-        Id: 8417214998985590988
+        Id: 13482291788696953759
         Name: "root"
         Transform {
           Location {
@@ -62,7 +62,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -75,7 +75,7 @@
         }
       }
       Objects {
-        Id: 3680776146331818315
+        Id: 7775484286046702800
         Name: "head"
         Transform {
           Location {
@@ -93,8 +93,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 852416903127627150
+        ParentId: 10438043655291834065
+        ChildIds: 10031178275152735648
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -107,7 +107,7 @@
         }
       }
       Objects {
-        Id: 852416903127627150
+        Id: 10031178275152735648
         Name: "GEO_head"
         Transform {
           Location {
@@ -120,20 +120,20 @@
             Z: 1
           }
         }
-        ParentId: 3680776146331818315
-        ChildIds: 14597730524323635463
-        ChildIds: 2952299158478910776
-        ChildIds: 4373138379566340066
-        ChildIds: 9108419784188660339
-        ChildIds: 12475986903447472393
-        ChildIds: 9623664211049964792
-        ChildIds: 7457933310729002240
-        ChildIds: 10993157883822698785
-        ChildIds: 2305705250935744900
-        ChildIds: 8109721890087869038
-        ChildIds: 10001373393293589758
-        ChildIds: 8100796129585604631
-        ChildIds: 1714798428455760091
+        ParentId: 7775484286046702800
+        ChildIds: 9136801800736028903
+        ChildIds: 13407355001048848046
+        ChildIds: 3226206050720433233
+        ChildIds: 7015753675065173183
+        ChildIds: 6087560780739206912
+        ChildIds: 4923282661299012285
+        ChildIds: 5052930481338191495
+        ChildIds: 8497299343674185699
+        ChildIds: 14491003849815189294
+        ChildIds: 14458930499028486456
+        ChildIds: 381189801090365597
+        ChildIds: 15615523411683675901
+        ChildIds: 9249636179161124165
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -144,7 +144,7 @@
         }
       }
       Objects {
-        Id: 14597730524323635463
+        Id: 9136801800736028903
         Name: "Bone Human Jaw 01"
         Transform {
           Location {
@@ -163,7 +163,7 @@
             Z: 1.47994244
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -182,9 +182,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -210,7 +210,7 @@
         }
       }
       Objects {
-        Id: 2952299158478910776
+        Id: 13407355001048848046
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -229,7 +229,7 @@
             Z: -0.517671764
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -248,9 +248,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -276,7 +276,7 @@
         }
       }
       Objects {
-        Id: 4373138379566340066
+        Id: 3226206050720433233
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -295,7 +295,7 @@
             Z: 0.579078734
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -314,9 +314,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -342,7 +342,7 @@
         }
       }
       Objects {
-        Id: 9108419784188660339
+        Id: 7015753675065173183
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -361,7 +361,7 @@
             Z: 0.487321883
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -380,9 +380,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -408,7 +408,7 @@
         }
       }
       Objects {
-        Id: 12475986903447472393
+        Id: 6087560780739206912
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -427,7 +427,7 @@
             Z: 0.578708827
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -446,9 +446,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -474,7 +474,7 @@
         }
       }
       Objects {
-        Id: 9623664211049964792
+        Id: 4923282661299012285
         Name: "Bone Human Skull 01"
         Transform {
           Location {
@@ -493,7 +493,7 @@
             Z: 1.5155865
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -516,9 +516,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -544,7 +544,7 @@
         }
       }
       Objects {
-        Id: 7457933310729002240
+        Id: 5052930481338191495
         Name: "Group"
         Transform {
           Location {
@@ -563,9 +563,9 @@
             Z: 0.523726344
           }
         }
-        ParentId: 852416903127627150
-        ChildIds: 6546465463265472161
-        ChildIds: 333262187069982179
+        ParentId: 10031178275152735648
+        ChildIds: 14176985990304101926
+        ChildIds: 10026478681505291584
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -577,7 +577,7 @@
         }
       }
       Objects {
-        Id: 6546465463265472161
+        Id: 14176985990304101926
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -596,12 +596,12 @@
             Z: 0.382933319
           }
         }
-        ParentId: 7457933310729002240
+        ParentId: 5052930481338191495
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -629,16 +629,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -675,9 +675,9 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              R: 0.0411512554
-              G: 0.179063499
-              B: 0.213541672
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -703,7 +703,7 @@
         }
       }
       Objects {
-        Id: 333262187069982179
+        Id: 10026478681505291584
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -722,12 +722,12 @@
             Z: 0.382933319
           }
         }
-        ParentId: 7457933310729002240
+        ParentId: 5052930481338191495
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -755,16 +755,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -801,9 +801,9 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              R: 0.0411512554
-              G: 0.179063499
-              B: 0.213541672
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -829,7 +829,7 @@
         }
       }
       Objects {
-        Id: 10993157883822698785
+        Id: 8497299343674185699
         Name: "Group"
         Transform {
           Location {
@@ -848,9 +848,9 @@
             Z: 0.680359602
           }
         }
-        ParentId: 852416903127627150
-        ChildIds: 12419487100288116251
-        ChildIds: 9798635045917303088
+        ParentId: 10031178275152735648
+        ChildIds: 4142041102809092055
+        ChildIds: 1375171816385662123
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -862,7 +862,7 @@
         }
       }
       Objects {
-        Id: 12419487100288116251
+        Id: 4142041102809092055
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -881,12 +881,12 @@
             Z: 0.38293311
           }
         }
-        ParentId: 10993157883822698785
+        ParentId: 8497299343674185699
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -914,16 +914,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -960,9 +960,9 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              R: 0.0411512554
-              G: 0.179063499
-              B: 0.213541672
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -988,7 +988,7 @@
         }
       }
       Objects {
-        Id: 9798635045917303088
+        Id: 1375171816385662123
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -1007,12 +1007,12 @@
             Z: 0.38293311
           }
         }
-        ParentId: 10993157883822698785
+        ParentId: 8497299343674185699
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1040,16 +1040,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1086,9 +1086,9 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              R: 0.0411512554
-              G: 0.179063499
-              B: 0.213541672
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -1114,7 +1114,7 @@
         }
       }
       Objects {
-        Id: 2305705250935744900
+        Id: 14491003849815189294
         Name: "Bone Human Skull 01"
         Transform {
           Location {
@@ -1133,7 +1133,7 @@
             Z: 1.91015351
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -1165,19 +1165,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1253,7 +1253,7 @@
         }
       }
       Objects {
-        Id: 8109721890087869038
+        Id: 14458930499028486456
         Name: "Group"
         Transform {
           Location {
@@ -1272,9 +1272,9 @@
             Z: 0.678953171
           }
         }
-        ParentId: 852416903127627150
-        ChildIds: 10110695673192922367
-        ChildIds: 1929893042996077638
+        ParentId: 10031178275152735648
+        ChildIds: 6424096320301351933
+        ChildIds: 3723261548447634756
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1286,7 +1286,7 @@
         }
       }
       Objects {
-        Id: 10110695673192922367
+        Id: 6424096320301351933
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -1305,7 +1305,7 @@
             Z: 0.407701164
           }
         }
-        ParentId: 8109721890087869038
+        ParentId: 14458930499028486456
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1333,19 +1333,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1406,7 +1406,7 @@
         }
       }
       Objects {
-        Id: 1929893042996077638
+        Id: 3723261548447634756
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -1425,7 +1425,7 @@
             Z: 0.407701164
           }
         }
-        ParentId: 8109721890087869038
+        ParentId: 14458930499028486456
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1453,19 +1453,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1526,7 +1526,7 @@
         }
       }
       Objects {
-        Id: 10001373393293589758
+        Id: 381189801090365597
         Name: "Group"
         Transform {
           Location {
@@ -1545,9 +1545,9 @@
             Z: 0.238997146
           }
         }
-        ParentId: 852416903127627150
-        ChildIds: 8953299492498475050
-        ChildIds: 11664514144766407849
+        ParentId: 10031178275152735648
+        ChildIds: 5981642179323306653
+        ChildIds: 7289167893483361729
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1559,7 +1559,7 @@
         }
       }
       Objects {
-        Id: 8953299492498475050
+        Id: 5981642179323306653
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -1578,7 +1578,7 @@
             Z: 0.869228184
           }
         }
-        ParentId: 10001373393293589758
+        ParentId: 381189801090365597
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1606,19 +1606,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1679,7 +1679,7 @@
         }
       }
       Objects {
-        Id: 11664514144766407849
+        Id: 7289167893483361729
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -1698,7 +1698,7 @@
             Z: 0.869228125
           }
         }
-        ParentId: 10001373393293589758
+        ParentId: 381189801090365597
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1726,19 +1726,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1799,7 +1799,7 @@
         }
       }
       Objects {
-        Id: 8100796129585604631
+        Id: 15615523411683675901
         Name: "Fantasy Shield 01"
         Transform {
           Location {
@@ -1818,12 +1818,12 @@
             Z: 0.225832403
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1854,7 +1854,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
@@ -1868,7 +1868,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1882,16 +1882,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
-              A: 1
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1925,7 +1916,7 @@
         }
       }
       Objects {
-        Id: 1714798428455760091
+        Id: 9249636179161124165
         Name: "Fantasy Shield 01"
         Transform {
           Location {
@@ -1943,12 +1934,12 @@
             Z: 0.225832403
           }
         }
-        ParentId: 852416903127627150
+        ParentId: 10031178275152735648
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -1979,7 +1970,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
@@ -1993,7 +1984,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2007,16 +1998,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
-              A: 1
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2050,7 +2032,7 @@
         }
       }
       Objects {
-        Id: 2116468658165444302
+        Id: 5047691531203064862
         Name: "neck"
         Transform {
           Location {
@@ -2066,7 +2048,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2079,7 +2061,7 @@
         }
       }
       Objects {
-        Id: 12439563845360983200
+        Id: 1174667785116139997
         Name: "left_clavicle"
         Transform {
           Location {
@@ -2097,7 +2079,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2110,7 +2092,7 @@
         }
       }
       Objects {
-        Id: 1371569771348507365
+        Id: 13858639934764676325
         Name: "left_shoulder"
         Transform {
           Location {
@@ -2129,7 +2111,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2142,7 +2124,7 @@
         }
       }
       Objects {
-        Id: 16559174768524599308
+        Id: 10751735965806202513
         Name: "left_elbow"
         Transform {
           Location {
@@ -2161,7 +2143,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2174,7 +2156,7 @@
         }
       }
       Objects {
-        Id: 11557426123844419376
+        Id: 7782072480466914175
         Name: "left_arm_prop"
         Transform {
           Location {
@@ -2193,7 +2175,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2206,7 +2188,7 @@
         }
       }
       Objects {
-        Id: 15757684967516840622
+        Id: 3400629527602080478
         Name: "left_wrist"
         Transform {
           Location {
@@ -2225,7 +2207,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2238,7 +2220,7 @@
         }
       }
       Objects {
-        Id: 1910910771545905323
+        Id: 7681726834696670689
         Name: "right_clavicle"
         Transform {
           Location {
@@ -2256,8 +2238,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 174940453480107627
+        ParentId: 10438043655291834065
+        ChildIds: 11097422191427172717
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2270,7 +2252,7 @@
         }
       }
       Objects {
-        Id: 174940453480107627
+        Id: 11097422191427172717
         Name: "GEO_right_clavicle"
         Transform {
           Location {
@@ -2283,8 +2265,8 @@
             Z: 1
           }
         }
-        ParentId: 1910910771545905323
-        ChildIds: 16050979430538877573
+        ParentId: 7681726834696670689
+        ChildIds: 7440176074405038735
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2295,7 +2277,7 @@
         }
       }
       Objects {
-        Id: 16050979430538877573
+        Id: 7440176074405038735
         Name: "GEO_right_clavicle"
         Transform {
           Location {
@@ -2308,9 +2290,9 @@
             Z: 0.925702095
           }
         }
-        ParentId: 174940453480107627
-        ChildIds: 9330979394276047005
-        ChildIds: 12838870153624470580
+        ParentId: 11097422191427172717
+        ChildIds: 9580930249721997011
+        ChildIds: 11182221703369797151
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2321,7 +2303,7 @@
         }
       }
       Objects {
-        Id: 9330979394276047005
+        Id: 9580930249721997011
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2340,12 +2322,12 @@
             Z: 0.255317718
           }
         }
-        ParentId: 16050979430538877573
+        ParentId: 7440176074405038735
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2359,7 +2341,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2382,7 +2364,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2405,7 +2387,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2447,7 +2429,7 @@
         }
       }
       Objects {
-        Id: 12838870153624470580
+        Id: 11182221703369797151
         Name: "Group"
         Transform {
           Location {
@@ -2466,9 +2448,9 @@
             Z: 1.15206206
           }
         }
-        ParentId: 16050979430538877573
-        ChildIds: 4931296619164712274
-        ChildIds: 10949645648654903001
+        ParentId: 7440176074405038735
+        ChildIds: 624787494595812948
+        ChildIds: 2806990473922416469
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2480,7 +2462,7 @@
         }
       }
       Objects {
-        Id: 4931296619164712274
+        Id: 624787494595812948
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2499,12 +2481,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 12838870153624470580
+        ParentId: 11182221703369797151
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2518,7 +2500,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2541,7 +2523,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2564,7 +2546,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2606,7 +2588,7 @@
         }
       }
       Objects {
-        Id: 10949645648654903001
+        Id: 2806990473922416469
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2625,12 +2607,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 12838870153624470580
+        ParentId: 11182221703369797151
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2644,7 +2626,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2667,7 +2649,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2690,7 +2672,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2732,7 +2714,7 @@
         }
       }
       Objects {
-        Id: 10627009916478428175
+        Id: 11423605522365470867
         Name: "right_shoulder"
         Transform {
           Location {
@@ -2751,8 +2733,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 10785215489120167699
+        ParentId: 10438043655291834065
+        ChildIds: 161736762263655793
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2765,7 +2747,7 @@
         }
       }
       Objects {
-        Id: 10785215489120167699
+        Id: 161736762263655793
         Name: "GEO_right_shoulder"
         Transform {
           Location {
@@ -2778,9 +2760,9 @@
             Z: 1
           }
         }
-        ParentId: 10627009916478428175
-        ChildIds: 3958375351202561380
-        ChildIds: 10087350717644201357
+        ParentId: 11423605522365470867
+        ChildIds: 3407439496728240842
+        ChildIds: 5346288368062816218
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2791,7 +2773,7 @@
         }
       }
       Objects {
-        Id: 3958375351202561380
+        Id: 3407439496728240842
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2810,12 +2792,12 @@
             Z: 0.29153192
           }
         }
-        ParentId: 10785215489120167699
+        ParentId: 161736762263655793
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2829,7 +2811,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2852,7 +2834,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2875,7 +2857,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2908,7 +2890,7 @@
         }
       }
       Objects {
-        Id: 10087350717644201357
+        Id: 5346288368062816218
         Name: "Group"
         Transform {
           Location {
@@ -2926,9 +2908,9 @@
             Z: 0.772135079
           }
         }
-        ParentId: 10785215489120167699
-        ChildIds: 12938320636694908928
-        ChildIds: 7141894446261318239
+        ParentId: 161736762263655793
+        ChildIds: 5001148672304901176
+        ChildIds: 7061507011720533747
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2940,7 +2922,7 @@
         }
       }
       Objects {
-        Id: 12938320636694908928
+        Id: 5001148672304901176
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2959,12 +2941,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 10087350717644201357
+        ParentId: 5346288368062816218
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2978,7 +2960,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -2992,7 +2974,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3015,7 +2997,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3066,7 +3048,7 @@
         }
       }
       Objects {
-        Id: 7141894446261318239
+        Id: 7061507011720533747
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -3085,12 +3067,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 10087350717644201357
+        ParentId: 5346288368062816218
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3104,7 +3086,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3118,7 +3100,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3141,7 +3123,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -3192,7 +3174,7 @@
         }
       }
       Objects {
-        Id: 6415322287143740554
+        Id: 6661768426498869601
         Name: "right_elbow"
         Transform {
           Location {
@@ -3211,7 +3193,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3224,7 +3206,7 @@
         }
       }
       Objects {
-        Id: 14391263208077275872
+        Id: 13112313855398710419
         Name: "right_wrist"
         Transform {
           Location {
@@ -3243,7 +3225,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3256,7 +3238,7 @@
         }
       }
       Objects {
-        Id: 14337932744279649245
+        Id: 8634480748621374626
         Name: "upper_spine"
         Transform {
           Location {
@@ -3273,8 +3255,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 16630321663275243436
+        ParentId: 10438043655291834065
+        ChildIds: 15820661189463822490
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3287,7 +3269,7 @@
         }
       }
       Objects {
-        Id: 16630321663275243436
+        Id: 15820661189463822490
         Name: "Belt"
         Transform {
           Location {
@@ -3306,9 +3288,9 @@
             Z: 1.3813504
           }
         }
-        ParentId: 14337932744279649245
-        ChildIds: 2804762444845314488
-        ChildIds: 10617623358803468622
+        ParentId: 8634480748621374626
+        ChildIds: 5852751077076341922
+        ChildIds: 3806140515812320821
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3320,7 +3302,7 @@
         }
       }
       Objects {
-        Id: 2804762444845314488
+        Id: 5852751077076341922
         Name: "Fantasy Shield Strap 01"
         Transform {
           Location {
@@ -3339,7 +3321,7 @@
             Z: 0.775002122
           }
         }
-        ParentId: 16630321663275243436
+        ParentId: 15820661189463822490
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3364,9 +3346,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.618000031
-              G: 0.392475188
-              B: 0.202703983
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -3392,7 +3374,7 @@
         }
       }
       Objects {
-        Id: 10617623358803468622
+        Id: 3806140515812320821
         Name: "Fantasy Shield Strap 01"
         Transform {
           Location {
@@ -3411,7 +3393,7 @@
             Z: 0.77500242
           }
         }
-        ParentId: 16630321663275243436
+        ParentId: 15820661189463822490
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3436,9 +3418,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.618000031
-              G: 0.392475188
-              B: 0.202703983
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -3464,7 +3446,7 @@
         }
       }
       Objects {
-        Id: 14118097539289885387
+        Id: 4475329009938012097
         Name: "lower_spine"
         Transform {
           Location {
@@ -3481,8 +3463,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 5504951924519695751
+        ParentId: 10438043655291834065
+        ChildIds: 9035257333075665758
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3495,7 +3477,7 @@
         }
       }
       Objects {
-        Id: 5504951924519695751
+        Id: 9035257333075665758
         Name: "Belt"
         Transform {
           Location {
@@ -3514,12 +3496,12 @@
             Z: 1.37200952
           }
         }
-        ParentId: 14118097539289885387
-        ChildIds: 2696599474233889027
-        ChildIds: 4445845390626440665
-        ChildIds: 212275484455252700
-        ChildIds: 10265041142877110443
-        ChildIds: 8464432922321465483
+        ParentId: 4475329009938012097
+        ChildIds: 2902135750690289382
+        ChildIds: 18152475367783789197
+        ChildIds: 14986659487742063200
+        ChildIds: 12764676796326035854
+        ChildIds: 17360783651980896746
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3531,7 +3513,7 @@
         }
       }
       Objects {
-        Id: 2696599474233889027
+        Id: 2902135750690289382
         Name: "Fantasy Shield Strap 01"
         Transform {
           Location {
@@ -3550,7 +3532,7 @@
             Z: 0.775004148
           }
         }
-        ParentId: 5504951924519695751
+        ParentId: 9035257333075665758
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3575,9 +3557,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.618000031
-              G: 0.392475188
-              B: 0.202703983
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -3603,7 +3585,7 @@
         }
       }
       Objects {
-        Id: 4445845390626440665
+        Id: 18152475367783789197
         Name: "Fantasy Shield Strap 01"
         Transform {
           Location {
@@ -3622,7 +3604,7 @@
             Z: 0.775004447
           }
         }
-        ParentId: 5504951924519695751
+        ParentId: 9035257333075665758
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3647,9 +3629,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.618000031
-              G: 0.392475188
-              B: 0.202703983
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -3675,7 +3657,7 @@
         }
       }
       Objects {
-        Id: 212275484455252700
+        Id: 14986659487742063200
         Name: "Quiver"
         Transform {
           Location {
@@ -3694,9 +3676,9 @@
             Z: 2.70507336
           }
         }
-        ParentId: 5504951924519695751
-        ChildIds: 6940541618174792754
-        ChildIds: 2826548659151283845
+        ParentId: 9035257333075665758
+        ChildIds: 1578431694539650855
+        ChildIds: 10512746146235568286
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3708,7 +3690,7 @@
         }
       }
       Objects {
-        Id: 6940541618174792754
+        Id: 1578431694539650855
         Name: "Group"
         Transform {
           Location {
@@ -3727,17 +3709,17 @@
             Z: 1
           }
         }
-        ParentId: 212275484455252700
-        ChildIds: 13847053198164026437
-        ChildIds: 17910240600141565468
-        ChildIds: 8105221553464200651
-        ChildIds: 15443764049610415432
-        ChildIds: 3395595766939554827
-        ChildIds: 8650282420843051931
-        ChildIds: 7551621376932484991
-        ChildIds: 11021133720231828897
-        ChildIds: 2137201854326932374
-        ChildIds: 5154427722710231608
+        ParentId: 14986659487742063200
+        ChildIds: 4451596201967625948
+        ChildIds: 2906695924260534283
+        ChildIds: 3776272686420283593
+        ChildIds: 3310714657601800995
+        ChildIds: 1618272728907875951
+        ChildIds: 16804183755651231029
+        ChildIds: 9969017475858697877
+        ChildIds: 12762901849360251476
+        ChildIds: 3443636114470704324
+        ChildIds: 15906586634276199638
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3749,7 +3731,7 @@
         }
       }
       Objects {
-        Id: 13847053198164026437
+        Id: 4451596201967625948
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -3768,12 +3750,12 @@
             Z: 0.22119157
           }
         }
-        ParentId: 6940541618174792754
+        ParentId: 1578431694539650855
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5475761223416488121
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -3810,7 +3792,7 @@
         }
       }
       Objects {
-        Id: 17910240600141565468
+        Id: 2906695924260534283
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -3829,12 +3811,12 @@
             Z: 0.168005824
           }
         }
-        ParentId: 6940541618174792754
+        ParentId: 1578431694539650855
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5475761223416488121
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -3871,7 +3853,7 @@
         }
       }
       Objects {
-        Id: 8105221553464200651
+        Id: 3776272686420283593
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -3890,7 +3872,7 @@
             Z: 0.0160265174
           }
         }
-        ParentId: 6940541618174792754
+        ParentId: 1578431694539650855
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3941,7 +3923,7 @@
         }
       }
       Objects {
-        Id: 15443764049610415432
+        Id: 3310714657601800995
         Name: "Bolt"
         Transform {
           Location {
@@ -3960,9 +3942,9 @@
             Z: 1
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 506478173958228695
-        ChildIds: 7081326294246904648
+        ParentId: 1578431694539650855
+        ChildIds: 800867899959667642
+        ChildIds: 1126213230854949900
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3974,7 +3956,7 @@
         }
       }
       Objects {
-        Id: 506478173958228695
+        Id: 800867899959667642
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -3991,12 +3973,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 15443764049610415432
+        ParentId: 3310714657601800995
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -4010,6 +3992,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4033,7 +4024,7 @@
         }
       }
       Objects {
-        Id: 7081326294246904648
+        Id: 1126213230854949900
         Name: "Feather"
         Transform {
           Location {
@@ -4046,8 +4037,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 15443764049610415432
-        ChildIds: 10479002788538695034
+        ParentId: 3310714657601800995
+        ChildIds: 9094800856105921420
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4059,7 +4050,7 @@
         }
       }
       Objects {
-        Id: 10479002788538695034
+        Id: 9094800856105921420
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -4077,12 +4068,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 7081326294246904648
+        ParentId: 1126213230854949900
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -4100,9 +4091,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -4128,7 +4119,7 @@
         }
       }
       Objects {
-        Id: 3395595766939554827
+        Id: 1618272728907875951
         Name: "Bolt"
         Transform {
           Location {
@@ -4147,9 +4138,9 @@
             Z: 1
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 4779329785852601286
-        ChildIds: 14676112463256298378
+        ParentId: 1578431694539650855
+        ChildIds: 12801079432680799182
+        ChildIds: 2710804544186810655
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4161,7 +4152,7 @@
         }
       }
       Objects {
-        Id: 4779329785852601286
+        Id: 12801079432680799182
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -4178,12 +4169,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 3395595766939554827
+        ParentId: 1618272728907875951
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -4197,6 +4188,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4220,7 +4220,7 @@
         }
       }
       Objects {
-        Id: 14676112463256298378
+        Id: 2710804544186810655
         Name: "Feather"
         Transform {
           Location {
@@ -4233,8 +4233,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 3395595766939554827
-        ChildIds: 12758570749459017656
+        ParentId: 1618272728907875951
+        ChildIds: 14835920509339586328
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4246,7 +4246,7 @@
         }
       }
       Objects {
-        Id: 12758570749459017656
+        Id: 14835920509339586328
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -4264,12 +4264,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 14676112463256298378
+        ParentId: 2710804544186810655
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -4287,9 +4287,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -4315,7 +4315,7 @@
         }
       }
       Objects {
-        Id: 8650282420843051931
+        Id: 16804183755651231029
         Name: "Bolt"
         Transform {
           Location {
@@ -4334,9 +4334,9 @@
             Z: 1
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 6519698093136411058
-        ChildIds: 11931310676423461720
+        ParentId: 1578431694539650855
+        ChildIds: 8504682464049185221
+        ChildIds: 13092988516481944544
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4348,7 +4348,7 @@
         }
       }
       Objects {
-        Id: 6519698093136411058
+        Id: 8504682464049185221
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -4365,12 +4365,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 8650282420843051931
+        ParentId: 16804183755651231029
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -4384,6 +4384,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4407,7 +4416,7 @@
         }
       }
       Objects {
-        Id: 11931310676423461720
+        Id: 13092988516481944544
         Name: "Feather"
         Transform {
           Location {
@@ -4420,8 +4429,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 8650282420843051931
-        ChildIds: 16346701774167698108
+        ParentId: 16804183755651231029
+        ChildIds: 137804146672137143
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4433,7 +4442,7 @@
         }
       }
       Objects {
-        Id: 16346701774167698108
+        Id: 137804146672137143
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -4451,12 +4460,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 11931310676423461720
+        ParentId: 13092988516481944544
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -4474,9 +4483,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -4502,7 +4511,7 @@
         }
       }
       Objects {
-        Id: 7551621376932484991
+        Id: 9969017475858697877
         Name: "Group"
         Transform {
           Location {
@@ -4521,9 +4530,9 @@
             Z: 0.208044916
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 12996704894555940228
-        ChildIds: 13321204235831646495
+        ParentId: 1578431694539650855
+        ChildIds: 11258048193950468722
+        ChildIds: 439568332129935173
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4535,7 +4544,7 @@
         }
       }
       Objects {
-        Id: 12996704894555940228
+        Id: 11258048193950468722
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -4554,12 +4563,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 7551621376932484991
+        ParentId: 9969017475858697877
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4573,7 +4582,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4587,7 +4596,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4610,7 +4619,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4652,7 +4661,7 @@
         }
       }
       Objects {
-        Id: 13321204235831646495
+        Id: 439568332129935173
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -4671,12 +4680,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 7551621376932484991
+        ParentId: 9969017475858697877
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4690,7 +4699,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4704,7 +4713,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4727,7 +4736,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4769,7 +4778,7 @@
         }
       }
       Objects {
-        Id: 11021133720231828897
+        Id: 12762901849360251476
         Name: "Group"
         Transform {
           Location {
@@ -4788,9 +4797,9 @@
             Z: 0.182546154
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 16252802421632439664
-        ChildIds: 16655405389095734883
+        ParentId: 1578431694539650855
+        ChildIds: 18420260242817252951
+        ChildIds: 1082764929624656468
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4802,7 +4811,7 @@
         }
       }
       Objects {
-        Id: 16252802421632439664
+        Id: 18420260242817252951
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -4821,12 +4830,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 11021133720231828897
+        ParentId: 12762901849360251476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4840,7 +4849,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4854,7 +4863,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4877,7 +4886,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4919,7 +4928,7 @@
         }
       }
       Objects {
-        Id: 16655405389095734883
+        Id: 1082764929624656468
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -4938,12 +4947,12 @@
             Z: 0.302101701
           }
         }
-        ParentId: 11021133720231828897
+        ParentId: 12762901849360251476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4957,7 +4966,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4971,7 +4980,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -4994,7 +5003,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -5036,7 +5045,7 @@
         }
       }
       Objects {
-        Id: 2137201854326932374
+        Id: 3443636114470704324
         Name: "Bolt"
         Transform {
           Location {
@@ -5055,9 +5064,9 @@
             Z: 1
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 8544232262536090226
-        ChildIds: 12528200464016581937
+        ParentId: 1578431694539650855
+        ChildIds: 5277977799846213997
+        ChildIds: 8534620543262179805
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5069,7 +5078,7 @@
         }
       }
       Objects {
-        Id: 8544232262536090226
+        Id: 5277977799846213997
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -5086,12 +5095,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 2137201854326932374
+        ParentId: 3443636114470704324
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -5105,6 +5114,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -5128,7 +5146,7 @@
         }
       }
       Objects {
-        Id: 12528200464016581937
+        Id: 8534620543262179805
         Name: "Feather"
         Transform {
           Location {
@@ -5141,8 +5159,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 2137201854326932374
-        ChildIds: 11129817181686409106
+        ParentId: 3443636114470704324
+        ChildIds: 12014399766841819520
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5154,7 +5172,7 @@
         }
       }
       Objects {
-        Id: 11129817181686409106
+        Id: 12014399766841819520
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -5172,12 +5190,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 12528200464016581937
+        ParentId: 8534620543262179805
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -5195,9 +5213,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -5223,7 +5241,7 @@
         }
       }
       Objects {
-        Id: 5154427722710231608
+        Id: 15906586634276199638
         Name: "Bolt"
         Transform {
           Location {
@@ -5242,9 +5260,9 @@
             Z: 1
           }
         }
-        ParentId: 6940541618174792754
-        ChildIds: 13400076382054022760
-        ChildIds: 14342809664025009393
+        ParentId: 1578431694539650855
+        ChildIds: 16460609174207544591
+        ChildIds: 16534980695524984935
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5256,7 +5274,7 @@
         }
       }
       Objects {
-        Id: 13400076382054022760
+        Id: 16460609174207544591
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -5273,12 +5291,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 5154427722710231608
+        ParentId: 15906586634276199638
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -5292,6 +5310,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -5315,7 +5342,7 @@
         }
       }
       Objects {
-        Id: 14342809664025009393
+        Id: 16534980695524984935
         Name: "Feather"
         Transform {
           Location {
@@ -5328,8 +5355,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 5154427722710231608
-        ChildIds: 17953125853309592992
+        ParentId: 15906586634276199638
+        ChildIds: 11580526199499116216
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5341,7 +5368,7 @@
         }
       }
       Objects {
-        Id: 17953125853309592992
+        Id: 11580526199499116216
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -5359,12 +5386,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 14342809664025009393
+        ParentId: 16534980695524984935
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -5382,9 +5409,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -5410,7 +5437,7 @@
         }
       }
       Objects {
-        Id: 2826548659151283845
+        Id: 10512746146235568286
         Name: "Group"
         Transform {
           Location {
@@ -5429,9 +5456,9 @@
             Z: 0.937606752
           }
         }
-        ParentId: 212275484455252700
-        ChildIds: 12958337566757077894
-        ChildIds: 673059981225930995
+        ParentId: 14986659487742063200
+        ChildIds: 9335316091083551283
+        ChildIds: 4833766674850852623
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5443,7 +5470,7 @@
         }
       }
       Objects {
-        Id: 12958337566757077894
+        Id: 9335316091083551283
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -5459,12 +5486,12 @@
             Z: 0.0673910156
           }
         }
-        ParentId: 2826548659151283845
+        ParentId: 10512746146235568286
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5475761223416488121
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -5501,7 +5528,7 @@
         }
       }
       Objects {
-        Id: 673059981225930995
+        Id: 4833766674850852623
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -5520,7 +5547,7 @@
             Z: 0.293815
           }
         }
-        ParentId: 2826548659151283845
+        ParentId: 10512746146235568286
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5531,9 +5558,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -5581,13 +5608,13 @@
         }
       }
       Objects {
-        Id: 10265041142877110443
+        Id: 12764676796326035854
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: -4.64359856
+            X: -4.64359808
             Y: -9.39618397
-            Z: 1.47194934
+            Z: 1.47195172
           }
           Rotation {
             Pitch: 80.8804779
@@ -5595,12 +5622,12 @@
             Roll: 142.929138
           }
           Scale {
-            X: 0.101870686
-            Y: 0.0519044101
-            Z: 0.148667678
+            X: 0.101871066
+            Y: 0.0519032963
+            Z: 0.0208159816
           }
         }
-        ParentId: 5504951924519695751
+        ParentId: 9035257333075665758
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5623,9 +5650,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
               A: 1
             }
           }
@@ -5638,7 +5665,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 11582207148866167210
+            Id: 10293907404001327825
           }
           Teams {
           }
@@ -5651,13 +5678,13 @@
         }
       }
       Objects {
-        Id: 8464432922321465483
+        Id: 17360783651980896746
         Name: "Cylinder - Rounded"
         Transform {
           Location {
-            X: 2.82484674
-            Y: -9.97955799
-            Z: 2.04368949
+            X: 2.82485485
+            Y: -9.97956657
+            Z: 2.04368567
           }
           Rotation {
             Pitch: 88.5838928
@@ -5665,12 +5692,12 @@
             Roll: -15.950592
           }
           Scale {
-            X: 0.101870686
-            Y: 0.0519044101
-            Z: 0.148667678
+            X: 0.101871066
+            Y: 0.0519032963
+            Z: 0.0208159816
           }
         }
-        ParentId: 5504951924519695751
+        ParentId: 9035257333075665758
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5693,9 +5720,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
               A: 1
             }
           }
@@ -5708,7 +5735,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 11582207148866167210
+            Id: 10293907404001327825
           }
           Teams {
           }
@@ -5721,7 +5748,7 @@
         }
       }
       Objects {
-        Id: 1724305966063305058
+        Id: 16980332199712982892
         Name: "pelvis"
         Transform {
           Location {
@@ -5738,7 +5765,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5751,7 +5778,7 @@
         }
       }
       Objects {
-        Id: 8364193265457863014
+        Id: 10345245511110697989
         Name: "left_hip"
         Transform {
           Location {
@@ -5770,7 +5797,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5783,7 +5810,7 @@
         }
       }
       Objects {
-        Id: 3764511148291225344
+        Id: 10937074006067535999
         Name: "left_knee"
         Transform {
           Location {
@@ -5802,7 +5829,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5815,7 +5842,7 @@
         }
       }
       Objects {
-        Id: 9618872261946556282
+        Id: 16806937562648010487
         Name: "left_ankle"
         Transform {
           Location {
@@ -5834,7 +5861,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5847,7 +5874,7 @@
         }
       }
       Objects {
-        Id: 18369239889581426253
+        Id: 16923089042423909142
         Name: "right_hip"
         Transform {
           Location {
@@ -5866,7 +5893,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5879,7 +5906,7 @@
         }
       }
       Objects {
-        Id: 3328168233435629991
+        Id: 14937438566813441738
         Name: "right_knee"
         Transform {
           Location {
@@ -5898,7 +5925,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5911,7 +5938,7 @@
         }
       }
       Objects {
-        Id: 14389492983294872543
+        Id: 4111778091161230498
         Name: "right_ankle"
         Transform {
           Location {
@@ -5930,7 +5957,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5943,7 +5970,7 @@
         }
       }
       Objects {
-        Id: 544634201250009821
+        Id: 17380754276271215790
         Name: "right_prop"
         Transform {
           Location {
@@ -5962,8 +5989,8 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
-        ChildIds: 14554429365840272142
+        ParentId: 10438043655291834065
+        ChildIds: 14470162375505867450
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5976,7 +6003,7 @@
         }
       }
       Objects {
-        Id: 14554429365840272142
+        Id: 14470162375505867450
         Name: "Geo"
         Transform {
           Location {
@@ -5989,25 +6016,25 @@
             Z: 0.788288355
           }
         }
-        ParentId: 544634201250009821
-        ChildIds: 14253847206560380409
-        ChildIds: 5651918822902650215
-        ChildIds: 9956309229458587250
-        ChildIds: 3987460420167475547
-        ChildIds: 15081872786795265429
-        ChildIds: 9815202753501555619
-        ChildIds: 17778839708964129963
-        ChildIds: 10365931091782637570
-        ChildIds: 8651222919250396334
-        ChildIds: 2112289660411013926
-        ChildIds: 14519176496152084633
-        ChildIds: 7101737911923234736
-        ChildIds: 17820767505920893461
-        ChildIds: 10200259041548223289
-        ChildIds: 3158834840814634464
-        ChildIds: 15812400773486312543
-        ChildIds: 1346003145899872641
-        ChildIds: 13708588881394464050
+        ParentId: 17380754276271215790
+        ChildIds: 7011782612933241825
+        ChildIds: 7922744860871387831
+        ChildIds: 13149087852221683660
+        ChildIds: 16636275575267039652
+        ChildIds: 13522933634252828477
+        ChildIds: 12723146215797155420
+        ChildIds: 10254683400670037161
+        ChildIds: 11955913005902952477
+        ChildIds: 5116095562850261687
+        ChildIds: 4885165978161479951
+        ChildIds: 4594542515926280565
+        ChildIds: 13893905185519127935
+        ChildIds: 6722101668314653323
+        ChildIds: 10643383685019180432
+        ChildIds: 17387071690128994050
+        ChildIds: 16599247268530551787
+        ChildIds: 10609020387970000376
+        ChildIds: 13981096646720581482
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -6021,7 +6048,7 @@
         }
       }
       Objects {
-        Id: 14253847206560380409
+        Id: 7011782612933241825
         Name: "Bolt"
         Transform {
           Location {
@@ -6040,10 +6067,10 @@
             Z: 4.70815849
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 5545153560704348317
-        ChildIds: 7929908492844150792
-        ChildIds: 14801826872575873898
+        ParentId: 14470162375505867450
+        ChildIds: 4173107907665092179
+        ChildIds: 17349226343935862387
+        ChildIds: 15882592973715936650
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6055,7 +6082,7 @@
         }
       }
       Objects {
-        Id: 5545153560704348317
+        Id: 4173107907665092179
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -6072,12 +6099,12 @@
             Z: 0.146385849
           }
         }
-        ParentId: 14253847206560380409
+        ParentId: 7011782612933241825
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7663308268157147922
+              Id: 4247430867898109902
             }
           }
           Overrides {
@@ -6091,6 +6118,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
             Float: 0.168841392
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6114,7 +6150,7 @@
         }
       }
       Objects {
-        Id: 7929908492844150792
+        Id: 17349226343935862387
         Name: "Feather"
         Transform {
           Location {
@@ -6127,8 +6163,8 @@
             Z: 0.0252365638
           }
         }
-        ParentId: 14253847206560380409
-        ChildIds: 3581562256198387883
+        ParentId: 7011782612933241825
+        ChildIds: 3928699512835440212
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6140,7 +6176,7 @@
         }
       }
       Objects {
-        Id: 3581562256198387883
+        Id: 3928699512835440212
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -6158,12 +6194,12 @@
             Z: 3.78494072
           }
         }
-        ParentId: 7929908492844150792
+        ParentId: 17349226343935862387
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 244066850900665391
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -6181,9 +6217,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.561000049
-              G: 0.561000049
-              B: 0.561000049
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -6209,7 +6245,7 @@
         }
       }
       Objects {
-        Id: 14801826872575873898
+        Id: 15882592973715936650
         Name: "Fantasy Staff Head 01"
         Transform {
           Location {
@@ -6228,12 +6264,12 @@
             Z: 0.113967411
           }
         }
-        ParentId: 14253847206560380409
+        ParentId: 7011782612933241825
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6247,13 +6283,13 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6263,6 +6299,24 @@
           Overrides {
             Name: "ma:Shared_Trim:vtile"
             Float: 19.1768303
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6286,7 +6340,7 @@
         }
       }
       Objects {
-        Id: 5651918822902650215
+        Id: 7922744860871387831
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -6301,12 +6355,12 @@
             Z: 1
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6325,6 +6379,21 @@
           Overrides {
             Name: "ma:Shared_Trim:vtile"
             Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1048538791053821221
+            }
           }
         }
         Collidable_v2 {
@@ -6349,7 +6418,7 @@
         }
       }
       Objects {
-        Id: 9956309229458587250
+        Id: 13149087852221683660
         Name: "RightCBArm"
         Transform {
           Location {
@@ -6368,8 +6437,8 @@
             Z: 1
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 3681422642920501292
+        ParentId: 14470162375505867450
+        ChildIds: 5727755335330099013
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6381,7 +6450,7 @@
         }
       }
       Objects {
-        Id: 3681422642920501292
+        Id: 5727755335330099013
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -6400,12 +6469,12 @@
             Z: 1.56614244
           }
         }
-        ParentId: 9956309229458587250
+        ParentId: 13149087852221683660
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12357757896131286157
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -6423,9 +6492,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -6451,7 +6520,7 @@
         }
       }
       Objects {
-        Id: 3987460420167475547
+        Id: 16636275575267039652
         Name: "LeftCBArm"
         Transform {
           Location {
@@ -6470,9 +6539,9 @@
             Z: 1
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 9443002584408037987
-        ChildIds: 15416230512682401018
+        ParentId: 14470162375505867450
+        ChildIds: 8586336327761424856
+        ChildIds: 8244345432010957946
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6484,7 +6553,7 @@
         }
       }
       Objects {
-        Id: 9443002584408037987
+        Id: 8586336327761424856
         Name: "Road Ramp Bottom Edge"
         Transform {
           Location {
@@ -6503,7 +6572,7 @@
             Z: 0.87533623
           }
         }
-        ParentId: 3987460420167475547
+        ParentId: 16636275575267039652
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -6541,13 +6610,13 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6561,21 +6630,12 @@
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
             Name: "ma:Font.Sides:smart"
             Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
           }
           Overrides {
             Name: "ma:Font.Sides:utile"
@@ -6614,7 +6674,7 @@
         }
       }
       Objects {
-        Id: 15416230512682401018
+        Id: 8244345432010957946
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -6633,12 +6693,12 @@
             Z: 1.56614244
           }
         }
-        ParentId: 3987460420167475547
+        ParentId: 16636275575267039652
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12357757896131286157
+              Id: 1009636138000564291
             }
           }
           Overrides {
@@ -6656,9 +6716,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.19600001
-              G: 0.089866
-              B: 0.0284199864
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -6684,7 +6744,7 @@
         }
       }
       Objects {
-        Id: 15081872786795265429
+        Id: 13522933634252828477
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -6702,12 +6762,12 @@
             Z: 0.986968815
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6726,6 +6786,21 @@
           Overrides {
             Name: "ma:Shared_Trim:vtile"
             Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1048538791053821221
+            }
           }
         }
         Collidable_v2 {
@@ -6750,7 +6825,7 @@
         }
       }
       Objects {
-        Id: 9815202753501555619
+        Id: 12723146215797155420
         Name: "Group"
         Transform {
           Location {
@@ -6766,8 +6841,8 @@
             Z: 1.2111901
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 4151701799810138357
+        ParentId: 14470162375505867450
+        ChildIds: 15781420636475263836
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6779,7 +6854,7 @@
         }
       }
       Objects {
-        Id: 4151701799810138357
+        Id: 15781420636475263836
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -6795,7 +6870,7 @@
             Z: 0.870290577
           }
         }
-        ParentId: 9815202753501555619
+        ParentId: 12723146215797155420
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -6806,9 +6881,9 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0411512554
-              G: 0.179063499
-              B: 0.213541672
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
@@ -6823,7 +6898,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6865,7 +6940,7 @@
         }
       }
       Objects {
-        Id: 17778839708964129963
+        Id: 10254683400670037161
         Name: "LeftCBArm"
         Transform {
           Location {
@@ -6884,8 +6959,8 @@
             Z: 1
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 17875307740958284491
+        ParentId: 14470162375505867450
+        ChildIds: 6926279105595598313
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6897,7 +6972,7 @@
         }
       }
       Objects {
-        Id: 17875307740958284491
+        Id: 6926279105595598313
         Name: "Road Ramp Bottom Edge"
         Transform {
           Location {
@@ -6916,7 +6991,7 @@
             Z: 0.87533623
           }
         }
-        ParentId: 17778839708964129963
+        ParentId: 10254683400670037161
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -6954,13 +7029,13 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -6974,21 +7049,12 @@
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
             Name: "ma:Font.Sides:smart"
             Bool: false
-          }
-          Overrides {
-            Name: "ma:Font.Sides:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
           }
           Overrides {
             Name: "ma:Font.Sides:utile"
@@ -7027,7 +7093,7 @@
         }
       }
       Objects {
-        Id: 10365931091782637570
+        Id: 11955913005902952477
         Name: "Group"
         Transform {
           Location {
@@ -7045,11 +7111,11 @@
             Z: 1.17968273
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 4575742552951336776
-        ChildIds: 1339373519728581096
-        ChildIds: 5477794047321410705
-        ChildIds: 5104450213810644866
+        ParentId: 14470162375505867450
+        ChildIds: 12714098165074482096
+        ChildIds: 2132756931838415738
+        ChildIds: 16435984946311940537
+        ChildIds: 13822344528516212025
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7061,7 +7127,7 @@
         }
       }
       Objects {
-        Id: 4575742552951336776
+        Id: 12714098165074482096
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -7080,7 +7146,7 @@
             Z: 0.252135873
           }
         }
-        ParentId: 10365931091782637570
+        ParentId: 11955913005902952477
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -7108,19 +7174,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7181,7 +7247,7 @@
         }
       }
       Objects {
-        Id: 1339373519728581096
+        Id: 2132756931838415738
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -7200,7 +7266,7 @@
             Z: 0.252135873
           }
         }
-        ParentId: 10365931091782637570
+        ParentId: 11955913005902952477
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -7228,19 +7294,19 @@
           Overrides {
             Name: "ma:Font.Bevel:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7301,7 +7367,7 @@
         }
       }
       Objects {
-        Id: 5477794047321410705
+        Id: 16435984946311940537
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -7320,7 +7386,7 @@
             Z: 0.187811866
           }
         }
-        ParentId: 10365931091782637570
+        ParentId: 11955913005902952477
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -7402,7 +7468,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
@@ -7439,7 +7505,7 @@
         }
       }
       Objects {
-        Id: 5104450213810644866
+        Id: 13822344528516212025
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -7458,7 +7524,7 @@
             Z: 0.187811866
           }
         }
-        ParentId: 10365931091782637570
+        ParentId: 11955913005902952477
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -7540,7 +7606,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
@@ -7577,7 +7643,7 @@
         }
       }
       Objects {
-        Id: 8651222919250396334
+        Id: 5116095562850261687
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
@@ -7595,12 +7661,12 @@
             Z: 0.875064671
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7619,6 +7685,21 @@
           Overrides {
             Name: "ma:Shared_Trim:vtile"
             Float: 8.35984898
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1048538791053821221
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0411512554
+              G: 0.179063499
+              B: 0.213541672
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7643,7 +7724,7 @@
         }
       }
       Objects {
-        Id: 2112289660411013926
+        Id: 4885165978161479951
         Name: "Group"
         Transform {
           Location {
@@ -7661,7 +7742,7 @@
             Z: 0.7
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7673,7 +7754,7 @@
         }
       }
       Objects {
-        Id: 14519176496152084633
+        Id: 4594542515926280565
         Name: "Group"
         Transform {
           Location {
@@ -7692,9 +7773,9 @@
             Z: 1.13228595
           }
         }
-        ParentId: 14554429365840272142
-        ChildIds: 5339173814073308531
-        ChildIds: 11393621123783656619
+        ParentId: 14470162375505867450
+        ChildIds: 3199294799584134998
+        ChildIds: 11340412570059547500
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7706,7 +7787,7 @@
         }
       }
       Objects {
-        Id: 5339173814073308531
+        Id: 3199294799584134998
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -7725,12 +7806,12 @@
             Z: 0.30210048
           }
         }
-        ParentId: 14519176496152084633
+        ParentId: 4594542515926280565
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7744,7 +7825,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7758,7 +7839,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7781,7 +7862,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7823,7 +7904,7 @@
         }
       }
       Objects {
-        Id: 11393621123783656619
+        Id: 11340412570059547500
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -7842,12 +7923,12 @@
             Z: 0.30210042
           }
         }
-        ParentId: 14519176496152084633
+        ParentId: 4594542515926280565
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7861,7 +7942,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7875,7 +7956,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7898,7 +7979,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -7940,7 +8021,7 @@
         }
       }
       Objects {
-        Id: 7101737911923234736
+        Id: 13893905185519127935
         Name: "Group"
         Transform {
           Location {
@@ -7958,7 +8039,7 @@
             Z: 1.13228595
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7970,7 +8051,7 @@
         }
       }
       Objects {
-        Id: 17820767505920893461
+        Id: 6722101668314653323
         Name: "Group"
         Transform {
           Location {
@@ -7988,7 +8069,7 @@
             Z: 1.13228595
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8000,7 +8081,7 @@
         }
       }
       Objects {
-        Id: 10200259041548223289
+        Id: 10643383685019180432
         Name: "Fantasy Gauntlet Arm 01"
         Transform {
           Location {
@@ -8019,7 +8100,7 @@
             Z: 0.37480545
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -8052,16 +8133,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
+              R: 0.36
+              G: 0.821986556
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8126,7 +8207,7 @@
         }
       }
       Objects {
-        Id: 3158834840814634464
+        Id: 17387071690128994050
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -8144,12 +8225,12 @@
             Z: 0.296760648
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8163,7 +8244,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8177,7 +8258,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8200,7 +8281,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8242,7 +8323,7 @@
         }
       }
       Objects {
-        Id: 15812400773486312543
+        Id: 16599247268530551787
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -8261,12 +8342,12 @@
             Z: 0.296760648
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8280,7 +8361,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15769318737476800682
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8294,7 +8375,7 @@
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8317,7 +8398,7 @@
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 14629909211943041809
+              Id: 14212988502358508072
             }
           }
           Overrides {
@@ -8359,7 +8440,7 @@
         }
       }
       Objects {
-        Id: 1346003145899872641
+        Id: 10609020387970000376
         Name: "Group"
         Transform {
           Location {
@@ -8376,7 +8457,7 @@
             Z: 2.19999981
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8388,7 +8469,7 @@
         }
       }
       Objects {
-        Id: 13708588881394464050
+        Id: 13981096646720581482
         Name: "Fantasy Castle Pillar 02 - Mid"
         Transform {
           Location {
@@ -8407,12 +8488,12 @@
             Z: 0.0496395975
           }
         }
-        ParentId: 14554429365840272142
+        ParentId: 14470162375505867450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16312281148657110259
+              Id: 2984351661227581568
             }
           }
           Overrides {
@@ -8500,7 +8581,7 @@
         }
       }
       Objects {
-        Id: 13208010419408185754
+        Id: 1459695018873815457
         Name: "left_prop"
         Transform {
           Location {
@@ -8519,7 +8600,7 @@
             Z: 1
           }
         }
-        ParentId: 3034491456635791044
+        ParentId: 10438043655291834065
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -8569,6 +8650,15 @@
       }
     }
     Assets {
+      Id: 1048538791053821221
+      Name: "Wood Raw White"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_white_001_uv"
+      }
+    }
+    Assets {
       Id: 15312805567995783140
       Name: "Fantasy Crossbow Foregrip 01"
       PlatformAssetType: 1
@@ -8596,6 +8686,15 @@
       }
     }
     Assets {
+      Id: 10293907404001327825
+      Name: "Prism - 8-Sided Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_hq_001"
+      }
+    }
+    Assets {
       Id: 3682206342183528038
       Name: "Fantasy Sword Grip 01"
       PlatformAssetType: 1
@@ -8605,64 +8704,34 @@
       }
     }
     Assets {
-      Id: 244066850900665391
-      Name: "RedFeatherBottom"
+      Id: 1009636138000564291
+      Name: "Core Glow"
       PlatformAssetType: 13
       CustomMaterialAsset {
-        BaseMaterialId: 1781535275264321496
+        BaseMaterialId: 675563715440209277
         ParameterOverrides {
-          Overrides {
-            Name: "rotate_material"
-            Float: 180
-          }
-          Overrides {
-            Name: "color_secondary"
-            Color {
-              R: 0.0220000017
-              G: 0.00480794627
-              A: 1
-            }
-          }
           Overrides {
             Name: "color"
             Color {
-              R: 0.2
+              R: 0.770833313
+              G: 0.418311417
               A: 1
             }
           }
           Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.303
-              G: 0.303
-              B: 0.303
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 1
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              Z: -1
-            }
+            Name: "emissive_boost"
+            Float: 8.01551151
           }
         }
       }
     }
     Assets {
-      Id: 1781535275264321496
-      Name: "Wallpaper Chevron 01"
+      Id: 675563715440209277
+      Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_wallpaper_004"
+        AssetId: "mi_basic_emissive_001"
       }
     }
     Assets {
@@ -8672,15 +8741,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_diamond_6_sided_001"
-      }
-    }
-    Assets {
-      Id: 7663308268157147922
-      Name: "Bark Dead 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_dead_001_uv"
       }
     }
     Assets {
@@ -8744,15 +8804,6 @@
       }
     }
     Assets {
-      Id: 5475761223416488121
-      Name: "Fabric Burlap New 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fan_fabric_burlap_002_uv"
-      }
-    }
-    Assets {
       Id: 2754963224534021958
       Name: "Invisible"
       PlatformAssetType: 2
@@ -8771,76 +8822,54 @@
       }
     }
     Assets {
-      Id: 16312281148657110259
-      Name: "Gemstone"
+      Id: 2984351661227581568
+      Name: "Faux Ice"
       PlatformAssetType: 13
       CustomMaterialAsset {
         BaseMaterialId: 6631081666212622438
         ParameterOverrides {
           Overrides {
-            Name: "roughness"
-            Float: 0.260147184
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 1.19138467
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 1.07233322
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0.234832898
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0.800185382
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.120000005
-              G: 1
-              B: 0.702781498
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              Z: -1
-            }
-          }
-          Overrides {
             Name: "color"
             Color {
-              G: 0.730039418
-              B: 0.868000031
-              A: 1
+              R: 0.524150074
+              G: 0.850757539
+              B: 0.953000069
+              A: 0.504
             }
           }
           Overrides {
             Name: "color_secondary"
             Color {
-              R: 0.170000017
-              G: 1
-              B: 0.653708696
-              A: 1
+              R: 0.422808021
+              G: 0.822788537
+              B: 0.948000073
+              A: 0.504
             }
           }
           Overrides {
             Name: "color_accent"
             Color {
-              R: 0.32
-              G: 0.851390362
-              B: 1
-              A: 1
+              R: 0.54162
+              G: 0.803134501
+              B: 0.88500005
+              A: 0.504
             }
           }
           Overrides {
+            Name: "roughness"
+            Float: 0.395692915
+          }
+          Overrides {
             Name: "metallic"
-            Float: 0.926756859
+            Float: 0.278826147
+          }
+          Overrides {
+            Name: "u_tiles"
+            Float: 10.6747026
+          }
+          Overrides {
+            Name: "v_tiles"
+            Float: 11.8464327
           }
         }
       }
@@ -8861,6 +8890,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_001"
+      }
+    }
+    Assets {
+      Id: 14629909211943041809
+      Name: "Metal Gold 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_gold_001"
       }
     }
     Assets {
@@ -8932,12 +8970,12 @@
       }
     }
     Assets {
-      Id: 14629909211943041809
-      Name: "Metal Gold 01"
+      Id: 14212988502358508072
+      Name: "Metal Basic Steel"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_gold_001"
+        AssetId: "steel_001"
       }
     }
     Assets {
