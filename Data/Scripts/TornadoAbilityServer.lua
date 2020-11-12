@@ -78,7 +78,7 @@ function PlaceObject(thisPlayer, position, rotation)
 			dmg.sourceAbility = SpecialAbility
 					
 			COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
-			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
 		end	
 		
 		Timer = 1

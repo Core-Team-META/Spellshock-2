@@ -1791,7 +1791,7 @@ Objects {
     Overrides {
       Name: "cs:TemplateToSpawn"
       AssetReference {
-        Id: 7047570860712842217
+        Id: 84492020368917091
       }
     }
     Overrides {
@@ -2984,7 +2984,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -13346,7 +13346,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

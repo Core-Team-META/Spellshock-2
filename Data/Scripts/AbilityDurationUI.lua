@@ -1,10 +1,10 @@
 ﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local DisplayTemplate = script:GetCustomProperty("DisplayTemplate")
+local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local Duration = ServerScript:GetCustomProperty("Duration")
 local MainAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 
+local DisplayTemplate = script:GetCustomProperty("DisplayTemplate")
 local FillColor = script:GetCustomProperty("FillColor")
 local BackgroundColor = script:GetCustomProperty("BackgroundColor")
 local Position = script:GetCustomProperty("Position")
@@ -78,5 +78,3 @@ function Tick(deltaTime)
 		AbilityProgressBar.progress = Timer / Duration
 	end
 end
-
-print("COMPILED")

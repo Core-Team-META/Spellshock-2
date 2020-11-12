@@ -9,6 +9,7 @@ end
 
 function OnPickupAbilityRecovery(thisAbility)
 	if PickupAbility.owner == Game.GetLocalPlayer() then
+		Task.Wait()
 		ThrowAbility:Activate()
 	end
 end

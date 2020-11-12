@@ -40,7 +40,7 @@
           Settings {
             IsEnabled: true
             OverrideMass: true
-            Mass: 1000
+            Mass: 2000
             LinearDamping: 0.1
             AngularDamping: 0.5
           }

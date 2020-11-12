@@ -301,7 +301,7 @@
           Overrides {
             Name: "cs:HeroKitEquipment"
             ObjectReference {
-              SubObjectId: 11342787225566943680
+              SubObjectId: 10663446143340725464
             }
           }
         }
@@ -743,6 +743,7 @@
         ParentId: 11747234676183721272
         ChildIds: 15540843134272266616
         ChildIds: 354566938322484678
+        ChildIds: 16032349741446648766
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -823,6 +824,67 @@
         }
       }
       Objects {
+        Id: 16032349741446648766
+        Name: "AbilityDurationUI"
+        Transform {
+          Location {
+            X: -13534.7744
+            Y: -14815.2598
+            Z: 16.4165039
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:BackgroundColor"
+            Color {
+              G: 0.124503106
+              B: 0.470000029
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:FillColor"
+            Color {
+              G: 0.417218238
+              B: 0.9
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Position"
+            Vector2 {
+              X: -370
+              Y: 18
+            }
+          }
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 16029334459249137091
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9094472670648911279
+          }
+        }
+      }
+      Objects {
         Id: 10663446143340725464
         Name: "Load Out"
         Transform {
@@ -837,40 +899,13 @@
           }
         }
         ParentId: 12470675891570633924
-        ChildIds: 4710130442374076997
-        ChildIds: 11342787225566943680
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4710130442374076997
-        Name: "Abilities"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10663446143340725464
         ChildIds: 17789038938063754529
         ChildIds: 1109302873163087110
         ChildIds: 3870953613855714336
         ChildIds: 2988604534664961180
+        ChildIds: 14738406619974674146
+        UnregisteredParameters {
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -896,7 +931,7 @@
             Z: 1
           }
         }
-        ParentId: 4710130442374076997
+        ParentId: 10663446143340725464
         ChildIds: 18032262405802815309
         UnregisteredParameters {
           Overrides {
@@ -1075,8 +1110,8 @@
         Name: "Animorph Potion"
         Transform {
           Location {
-            X: -8690.86621
-            Y: -9812.94727
+            X: -8690.86719
+            Y: -9812.94531
             Z: -2950.03613
           }
           Rotation {
@@ -1087,7 +1122,7 @@
             Z: 1
           }
         }
-        ParentId: 4710130442374076997
+        ParentId: 10663446143340725464
         ChildIds: 17761841803757750491
         UnregisteredParameters {
           Overrides {
@@ -1229,11 +1264,11 @@
       }
       Objects {
         Id: 3870953613855714336
-        Name: "Ice Cube"
+        Name: "Iceberg"
         Transform {
           Location {
             X: -8690.86523
-            Y: -9812.94727
+            Y: -9812.94531
             Z: -2950.03613
           }
           Rotation {
@@ -1244,7 +1279,7 @@
             Z: 1
           }
         }
-        ParentId: 4710130442374076997
+        ParentId: 10663446143340725464
         ChildIds: 16029334459249137091
         UnregisteredParameters {
           Overrides {
@@ -1343,7 +1378,7 @@
       }
       Objects {
         Id: 16029334459249137091
-        Name: "IceCubeAbilityServer"
+        Name: "IcebergAbilityServer"
         Transform {
           Location {
             X: 32813.5469
@@ -1430,7 +1465,7 @@
           Scale {
           }
         }
-        ParentId: 4710130442374076997
+        ParentId: 10663446143340725464
         ChildIds: 8228187279433582210
         UnregisteredParameters {
           Overrides {
@@ -1568,33 +1603,6 @@
         }
       }
       Objects {
-        Id: 11342787225566943680
-        Name: "Equipment"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10663446143340725464
-        ChildIds: 14738406619974674146
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 14738406619974674146
         Name: "Gauntlets (Lightning)"
         Transform {
@@ -1608,7 +1616,7 @@
             Z: 1
           }
         }
-        ParentId: 11342787225566943680
+        ParentId: 10663446143340725464
         ChildIds: 3773820494088276868
         ChildIds: 17813391468696532630
         ChildIds: 9116467217606116052

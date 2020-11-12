@@ -27,6 +27,11 @@
           Id: 7156155829847915259
         }
       }
+      Overrides {
+        Name: "cs:ServerScript"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 68

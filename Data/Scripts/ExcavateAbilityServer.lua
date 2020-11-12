@@ -34,8 +34,8 @@ function OnPickupExecute(thisAbility)
 end
 
 function OnBeginOverlap(thisTrigger, other)
-	if not Object.IsValid(PickupAbility) then return end
-	if other == PickupAbility.owner then return end
+	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
+	or other == PickupAbility.owner then return end
 	
 	if COMBAT().IsDead(other) then return end
 	
@@ -60,12 +60,15 @@ function OnThrowExecute(thisAbility)
 	end
 	
 	local directionVector = PickupAbility.owner:GetWorldRotation() * Vector3.FORWARD
+	local angularVelocityDirection = (PickupAbility.owner:GetWorldRotation() + Rotation.New(0, 0, 90)) * Vector3.FORWARD
+	local angularVelocity = angularVelocityDirection * 200
 	local positionOffset = directionVector * 200
 	positionOffset.z = positionOffset.z + 150
 	local spawnPosition = PickupAbility.owner:GetWorldPosition() + positionOffset
 	local velocityVector = directionVector * ProjectileSpeed
 	
 	CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position = spawnPosition})
+	CurrentProjectile:SetAngularVelocity(angularVelocity)
 	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("Trigger"):WaitForObject()
 	ProjectileTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	CurrentProjectile:SetVelocity(velocityVector)
@@ -78,6 +81,7 @@ end
 
 function OnInterrupted(thisAbility)
 	if Object.IsValid(PickupObject) then
+		print("Interupted: "..thisAbility.name)
 		PickupObject:Destroy()
 		PickupObject = nil
 	end
@@ -101,7 +105,7 @@ PickupAbility.executeEvent:Connect(OnPickupExecute)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
 ThrowAbility.interruptedEvent:Connect(OnInterrupted)
-PickupAbility.interruptedEvent:Connect(OnInterrupted)
+--PickupAbility.interruptedEvent:Connect(OnInterrupted)
 
 function Tick(dTime)
 	if Timer > 0 then

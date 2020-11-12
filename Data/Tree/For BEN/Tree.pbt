@@ -1,16 +1,271 @@
 ﻿Name: "For BEN"
 RootId: 16227534043720893935
 Objects {
-  Id: 12868024918956283430
-  Name: "Orc_gate"
+  Id: 2450592768795792909
+  Name: "Group"
   Transform {
     Location {
-      X: -22820.0625
-      Y: -29672.9258
+      X: -6685
+      Y: -9330
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  ChildIds: 17644292196257017936
+  ChildIds: 10505394200489241392
+  ChildIds: 8217724171443529518
+  ChildIds: 12868024918956283430
+  ChildIds: 584950173788901337
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 584950173788901337
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 3005
+      Y: 3725
+      Z: 5565
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2450592768795792909
+  ChildIds: 16877977979735346816
+  ChildIds: 11141944313546747678
+  ChildIds: 9795943750057415602
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 9795943750057415602
+  Name: "Audio"
+  Transform {
+    Location {
+      X: -2.33740234
+      Y: 2.00097656
+      Z: 0.326171875
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 584950173788901337
+  ChildIds: 10369797205618147404
+  ChildIds: 11072501783310280235
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11072501783310280235
+  Name: "Vehicle Tank Engine Interior Deep Rumble Loop 01 SFX"
+  Transform {
+    Location {
+      X: 18626.4141
+      Y: 24383.0352
+      Z: -475.326172
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9795943750057415602
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 13709271160462591208
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: 806.1875
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 10369797205618147404
+  Name: "Metal Door Hatch Slide 01 SFX"
+  Transform {
+    Location {
+      X: -18610.1484
+      Y: -24326.3516
+      Z: 929.365234
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9795943750057415602
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 9250698553260974321
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 11141944313546747678
+  Name: "Elf Bridge End"
+  Transform {
+    Location {
+      X: 18630
+      Y: 24375
+      Z: -455
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 584950173788901337
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_cinematic_boomy_impacts_01:10"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 1316376324599490360
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Pitch: -500
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16877977979735346816
+  Name: "Gate Audio Handler"
+  Transform {
+    Location {
+      X: 3680
+      Y: 5605
+      Z: -5565
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 584950173788901337
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Audio"
+      ObjectReference {
+        SelfId: 9795943750057415602
+      }
+    }
+    Overrides {
+      Name: "cs:ElfBridgeEnd"
+      ObjectReference {
+        SelfId: 11141944313546747678
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5336971825443968389
+    }
+  }
+}
+Objects {
+  Id: 12868024918956283430
+  Name: "Orc Gate Right"
+  Transform {
+    Location {
+      X: -16135.0625
+      Y: -20342.9258
       Z: 6195.46045
     }
     Rotation {
-      Yaw: 64.8668747
+      Yaw: -25.319313
     }
     Scale {
       X: 0.9
@@ -18,9 +273,10 @@ Objects {
       Z: 0.9
     }
   }
-  ParentId: 16227534043720893935
+  ParentId: 2450592768795792909
   ChildIds: 8656445734106906709
   ChildIds: 17880156378111053684
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -71,6 +327,7 @@ Objects {
   ChildIds: 17522349337762062822
   ChildIds: 6754204422790710278
   ChildIds: 5785008895067471306
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -1475,6 +1732,7 @@ Objects {
     }
   }
   ParentId: 12868024918956283430
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1506,15 +1764,15 @@ Objects {
 }
 Objects {
   Id: 8217724171443529518
-  Name: "Orc_Gate"
+  Name: "Orc Gate Left"
   Transform {
     Location {
-      X: -21859.6875
-      Y: -30143.6738
+      X: -15174.6875
+      Y: -20813.6738
       Z: 6283.1958
     }
     Rotation {
-      Yaw: 71.2682877
+      Yaw: 152.458237
     }
     Scale {
       X: 0.9
@@ -1522,9 +1780,10 @@ Objects {
       Z: 0.9
     }
   }
-  ParentId: 16227534043720893935
+  ParentId: 2450592768795792909
   ChildIds: 7086410682005525320
   ChildIds: 11163457401654873350
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1575,6 +1834,7 @@ Objects {
   ChildIds: 6987961002559184766
   ChildIds: 4463528470763881143
   ChildIds: 15249249896325634357
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -2982,6 +3242,7 @@ Objects {
     }
   }
   ParentId: 8217724171443529518
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3013,15 +3274,15 @@ Objects {
 }
 Objects {
   Id: 10505394200489241392
-  Name: "Rotating_part_Elven_bridge"
+  Name: "Elven Bridge"
   Transform {
     Location {
-      X: 14946.3477
-      Y: 18779.1914
+      X: 21631.3477
+      Y: 28109.1914
       Z: 5086.14453
     }
     Rotation {
-      Yaw: -173.71138
+      Yaw: 89.9999924
     }
     Scale {
       X: 0.422740787
@@ -3029,21 +3290,9 @@ Objects {
       Z: 0.422740787
     }
   }
-  ParentId: 16227534043720893935
-  ChildIds: 4569889889318511770
-  ChildIds: 9437946792556109196
-  ChildIds: 14697157752218804838
-  ChildIds: 9557047502685272825
-  ChildIds: 286306528438107077
-  ChildIds: 2840261777267681982
-  ChildIds: 6773960688229063285
-  ChildIds: 11735756649187593406
-  ChildIds: 4858090718335448773
-  ChildIds: 10483552732437162753
-  ChildIds: 4081822806341811740
-  ChildIds: 13671284273415983427
-  ChildIds: 7718568551427512001
-  ChildIds: 9217056826464283178
+  ParentId: 2450592768795792909
+  ChildIds: 9332962590063961445
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3062,13 +3311,55 @@ Objects {
   }
 }
 Objects {
+  Id: 9332962590063961445
+  Name: "StaticContext"
+  Transform {
+    Location {
+      X: 136.443878
+      Y: 187.673248
+      Z: -675.461
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10505394200489241392
+  ChildIds: 4569889889318511770
+  ChildIds: 9437946792556109196
+  ChildIds: 14697157752218804838
+  ChildIds: 9557047502685272825
+  ChildIds: 286306528438107077
+  ChildIds: 2840261777267681982
+  ChildIds: 6773960688229063285
+  ChildIds: 11735756649187593406
+  ChildIds: 4858090718335448773
+  ChildIds: 10483552732437162753
+  ChildIds: 4081822806341811740
+  ChildIds: 13671284273415983427
+  ChildIds: 7718568551427512001
+  ChildIds: 9217056826464283178
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
   Id: 9217056826464283178
   Name: "rotating_bridge"
   Transform {
     Location {
-      X: 26.6490135
-      Y: -54.3329391
-      Z: -675.461
+      X: -109.795273
+      Y: -242.009735
     }
     Rotation {
       Yaw: 175.119
@@ -3079,7 +3370,7 @@ Objects {
       Z: 2.36551571
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   ChildIds: 12271545225754577259
   ChildIds: 244634895810129506
   ChildIds: 4491122906629112796
@@ -4189,22 +4480,22 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 382.298767
-      Y: 1345.34082
-      Z: 985.746643
+      X: 245.855423
+      Y: 1157.66687
+      Z: 1661.20764
     }
     Rotation {
-      Pitch: -3.27468872
-      Yaw: 163.492172
+      Pitch: -3.2746861
+      Yaw: 163.492157
       Roll: 0.00546138315
     }
     Scale {
-      X: 0.315347463
-      Y: 0.865867674
+      X: 0.315347433
+      Y: 0.865867615
       Z: 1.01801
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4237,19 +4528,19 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: -7.43150806
-      Y: -4.77723312
-      Z: -104.038803
+      X: -143.875854
+      Y: -192.454636
+      Z: 571.42218
     }
     Rotation {
     }
     Scale {
-      X: 0.468236
-      Y: 0.468236
-      Z: 0.468236
+      X: 0.46823597
+      Y: 0.46823597
+      Z: 0.46823597
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   ChildIds: 3490654164813558816
   ChildIds: 10338664219519392280
   ChildIds: 5787986911031990677
@@ -4635,19 +4926,19 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 7.43164063
-      Y: 4.77685547
-      Z: 136.294434
+      X: -129.011887
+      Y: -182.900696
+      Z: 811.755371
     }
     Rotation {
     }
     Scale {
-      X: 0.843224764
-      Y: 0.843224764
-      Z: 0.843224764
+      X: 0.843224704
+      Y: 0.843224704
+      Z: 0.843224704
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   ChildIds: 7022765070984752006
   ChildIds: 17381550271733179722
   ChildIds: 15877430874285717494
@@ -6730,12 +7021,12 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 1288.1665
-      Y: 107.302933
-      Z: 993.823853
+      X: 1151.72119
+      Y: -80.3721466
+      Z: 1669.28479
     }
     Rotation {
-      Yaw: 90.9730911
+      Yaw: 90.9730682
     }
     Scale {
       X: 0.763919055
@@ -6743,7 +7034,7 @@ Objects {
       Z: 1.1440171
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6776,20 +7067,20 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: -1274.36609
-      Y: -82.8115311
-      Z: 989.322632
+      X: -1410.80859
+      Y: -270.485657
+      Z: 1664.78369
     }
     Rotation {
-      Yaw: 13.3284683
+      Yaw: 13.3284855
     }
     Scale {
       X: 0.398745716
-      Y: 0.865859568
+      Y: 0.865859509
       Z: 1.27812326
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6822,14 +7113,14 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 1354.46802
-      Y: 61.886879
-      Z: 975.664368
+      X: 1218.02368
+      Y: -125.789719
+      Z: 1651.12537
     }
     Rotation {
-      Pitch: -1.30709839
+      Pitch: -1.30709326
       Yaw: -96.3741455
-      Roll: 6.58635426
+      Roll: 6.5863595
     }
     Scale {
       X: 0.315347433
@@ -6837,7 +7128,7 @@ Objects {
       Z: 1.01801
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6870,9 +7161,9 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 883.344543
-      Y: -935.760132
-      Z: 995.783936
+      X: 746.901306
+      Y: -1123.43323
+      Z: 1671.24487
     }
     Rotation {
       Yaw: -49.6264038
@@ -6883,7 +7174,7 @@ Objects {
       Z: 1.16130185
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6916,20 +7207,20 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -382.053711
-      Y: 589.351563
-      Z: 639.863525
+      X: -518.497925
+      Y: 401.675659
+      Z: 1315.32495
     }
     Rotation {
-      Yaw: 36.7540321
+      Yaw: 36.7540169
     }
     Scale {
       X: 1.67297912
-      Y: 1.80917501
-      Z: 3.56713986
+      Y: 1.8091749
+      Z: 3.56713963
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -6959,20 +7250,20 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -895.204102
-      Y: -612.888672
-      Z: 784.577637
+      X: -1031.64795
+      Y: -800.562195
+      Z: 1460.03833
     }
     Rotation {
-      Yaw: -2.12173486
+      Yaw: -2.12173462
     }
     Scale {
       X: 1.89491236
-      Y: 1.66313744
+      Y: 1.66313732
       Z: 2.15063238
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -7002,20 +7293,20 @@ Objects {
   Name: "Decal Stains Round 01"
   Transform {
     Location {
-      X: -415.833923
-      Y: 1379.35901
-      Z: 1003.88538
+      X: -552.277405
+      Y: 1191.6825
+      Z: 1679.34631
     }
     Rotation {
-      Yaw: 48.0816917
+      Yaw: 48.0816689
     }
     Scale {
-      X: 0.764612436
-      Y: 0.764612436
-      Z: 0.764612436
+      X: 0.764612377
+      Y: 0.764612377
+      Z: 0.764612377
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -7045,14 +7336,14 @@ Objects {
   Name: "Grass Tall"
   Transform {
     Location {
-      X: 937.582764
-      Y: 863.708923
-      Z: 1009.95044
+      X: 801.138062
+      Y: 676.032837
+      Z: 1685.4115
     }
     Rotation {
-      Pitch: 0.451017857
-      Yaw: 44.071331
-      Roll: 6.69960928
+      Pitch: 0.451011032
+      Yaw: 44.0713043
+      Roll: 6.69961309
     }
     Scale {
       X: 0.315347433
@@ -7060,7 +7351,7 @@ Objects {
       Z: 1.01801
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7093,12 +7384,12 @@ Objects {
   Name: "players collision"
   Transform {
     Location {
-      X: -66.0590363
-      Y: 255.650085
-      Z: 1002.05811
+      X: -202.501068
+      Y: 67.9762344
+      Z: 1677.51904
     }
     Rotation {
-      Yaw: 56.2279053
+      Yaw: 62.0395889
     }
     Scale {
       X: 41.3965263
@@ -7106,7 +7397,7 @@ Objects {
       Z: 136.811356
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7135,9 +7426,9 @@ Objects {
   Name: "players collision"
   Transform {
     Location {
-      X: 71.2213135
-      Y: -289.381165
-      Z: 1002.05811
+      X: -65.2215195
+      Y: -477.05835
+      Z: 1677.51904
     }
     Rotation {
       Yaw: -119.411728
@@ -7148,7 +7439,7 @@ Objects {
       Z: 136.811356
     }
   }
-  ParentId: 10505394200489241392
+  ParentId: 9332962590063961445
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7169,6 +7460,61 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 17644292196257017936
+  Name: "Base Gates Handler"
+  Transform {
+    Location {
+      X: 6685
+      Y: 9330
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2450592768795792909
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ElvenBridge"
+      ObjectReference {
+        SelfId: 10505394200489241392
+      }
+    }
+    Overrides {
+      Name: "cs:OrcGateLeft"
+      ObjectReference {
+        SelfId: 8217724171443529518
+      }
+    }
+    Overrides {
+      Name: "cs:OrcGateRight"
+      ObjectReference {
+        SelfId: 12868024918956283430
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14138177962761407593
     }
   }
 }

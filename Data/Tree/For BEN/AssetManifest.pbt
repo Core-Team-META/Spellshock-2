@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13709271160462591208
+  Name: "Vehicle Tank Engine Interior Deep Rumble Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_vehicle_tank_engine_interior_deep_rumble_loop_01_Cue_ref"
+  }
+}
+Assets {
   Id: 13598645306353249799
   Name: "Fantasy Castle Wall Foundation 01 - Curved"
   PlatformAssetType: 1
@@ -143,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9250698553260974321
+  Name: "Metal Door Hatch Slide 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_metal_door_hatch_slide_01a_Cue_ref"
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -212,6 +230,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxmi_amethyst"
+  }
+}
+Assets {
+  Id: 1316376324599490360
+  Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
   }
 }
 Assets {

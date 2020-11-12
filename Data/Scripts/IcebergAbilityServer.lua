@@ -13,18 +13,30 @@ local IceCubeBreakFX = script:GetCustomProperty("IceCubeBreakFX")
 local ActiveAbilities = {}
 local PlayerSettings = {}
 local EventListeners = {}
+local BindingPressedEvent = nil
 local Timer = -1
 local damageTimer = -1
 local CurrentIceCube
 
+local CancelBindings = {
+	ability_extra_20 = true, 
+	ability_extra_22 = true, 
+	ability_extra_23 = true, 
+	ability_extra_24 = true, 
+	ability_primary = true,
+	ability_secondary = true,
+	ability_extra_12 = true,
+	ability_extra_17 = true
+}
+
 function OnSpecialAbilityExecute(thisAbility)
-	-- disable all active abilities
+	--[[ disable all active abilities
 	for _, playerAbility in pairs(thisAbility.owner:GetAbilities()) do
 		if playerAbility.isEnabled then
 			playerAbility.isEnabled = false
 			table.insert(ActiveAbilities, playerAbility)
 		end
-	end
+	end]]
 	
 	PlayerSettings.movementControlMode = thisAbility.owner.movementControlMode
 	PlayerSettings.maxJumpCount = thisAbility.owner.maxJumpCount
@@ -40,11 +52,23 @@ function OnSpecialAbilityExecute(thisAbility)
 	CurrentIceCube = World.SpawnAsset(IceCubeTemplate, {position = spawnPosition})
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")
 	
+	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
+
+	
 	Timer = Duration
 	damageTimer = 0
 end
 
+function OnBindingPressed(thisPlayer, binding)
+	if CancelBindings[binding] then
+		BreakIceCube(thisPlayer)
+	end
+end
+
 function BreakIceCube(player)
+	Timer = -1
+	BindingPressedEvent:Disconnect()
+	BindingPressedEvent = nil
 	World.SpawnAsset(IceCubeBreakFX, {position = player:GetWorldPosition()})
 		
 	CurrentIceCube:Detach()
@@ -55,21 +79,20 @@ function BreakIceCube(player)
 	player.maxJumpCount = PlayerSettings.maxJumpCount
 	player.serverUserData.DamageImmunity = false
 	
+	--[[
 	for _, playerAbility in pairs(ActiveAbilities) do
 		playerAbility.isEnabled = true
-	end
+	end]]
 end
 
 function OnPlayerDied(player, _)
 	if Timer > 0 then
-		Timer = -1
 		BreakIceCube(player)
 	end
 end
 
 function OnPlayerRespawn(player)
 	if Timer > 0 then
-		Timer = -1
 		BreakIceCube(player)
 	end
 end
@@ -85,7 +108,6 @@ function OnUnequip(equipment, player)
 	end
 	EventListeners = {}
 	if Timer > 0 then
-		Timer = -1
 		BreakIceCube(player)
 	end
 end
