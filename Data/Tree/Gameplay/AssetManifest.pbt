@@ -161,15 +161,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6186751883754370952
-  Name: "Edgeline Wavy Object Fade Advanced"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_add_edgeline_local"
-  }
-}
-Assets {
   Id: 5646704112327633341
   Name: "Hemisphere"
   PlatformAssetType: 1
@@ -194,15 +185,6 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_ChargeUp"
-  }
-}
-Assets {
-  Id: 2767529123553199145
-  Name: "Sphere - inverted"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_inverted_001"
   }
 }
 Assets {

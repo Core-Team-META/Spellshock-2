@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 14811229842374036418
-  Name: "LightningGauntlet_Trail"
+  Name: "Mage Wand Trail"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 11861313653374629684
       Objects {
         Id: 11861313653374629684
-        Name: "LightningGauntlet_Trail"
+        Name: "Mage Wand Trail"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,11 @@
             Z: 1
           }
         }
-        ParentId: 15778795352663330980
+        ParentId: 4781671109827199097
         ChildIds: 7612796010948397410
         UnregisteredParameters {
         }
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -80,14 +81,15 @@
           Overrides {
             Name: "bp:color"
             Color {
+              R: 1
               G: 1
-              B: 6
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.3
+            Float: 0.5
           }
           Overrides {
             Name: "bp:Spawn Radius"
@@ -148,8 +150,9 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 1
-              B: 6
+              R: 1
+              G: 0.934304655
+              B: 0.68
               A: 1
             }
           }
@@ -216,8 +219,9 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 1
-              B: 6
+              R: 1
+              G: 0.934304655
+              B: 0.68
               A: 1
             }
           }

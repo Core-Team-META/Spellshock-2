@@ -63,7 +63,7 @@ function Tick(deltaTime)
         -- Checks when the weapon has empty ammo to reload
         if WEAPON.currentAmmo == 0
         and not autoReloaded then
-            SpawnReloadingAudio()
+            --SpawnReloadingAudio()
             RELOAD_ABILITY:Activate()
             autoReloaded = true
             Task.Wait(RELOAD_ABILITY.castPhaseSettings.duration)
