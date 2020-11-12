@@ -11683,147 +11683,128 @@
       }
     }
     Assets {
-      Id: 4080200756085571976
-      Name: "Bone Human Pelvis Half 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
+      Id: 8911288174540730015
+      Name: "YellowFeatherBottom"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 1781535275264321496
+        ParameterOverrides {
+          Overrides {
+            Name: "rotate_material"
+            Float: 180
+          }
+          Overrides {
+            Name: "color_secondary"
+            Color {
+              R: 0.115
+              G: 0.0812966377
+              B: 0.06831
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 1
+              G: 0.607417226
+              B: 0.220000029
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_direction"
+            Vector {
+              Z: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.0238804743
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.985823572
+          }
+          Overrides {
+            Name: "u_offset"
+            Float: 0
+          }
+          Overrides {
+            Name: "v_offset"
+            Float: 0.0323175415
+          }
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.74
+              G: 0.132317901
+              A: 1
+            }
+          }
+        }
       }
     }
     Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
+      Id: 1781535275264321496
+      Name: "Wallpaper Chevron 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
+        AssetId: "mi_gen_wallpaper_004"
       }
     }
     Assets {
-      Id: 11312867989431867200
-      Name: "Bone Human Jaw 01"
+      Id: 2635330027741249494
+      Name: "Diamond - 6-Sided"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_jaw_01_ref"
+        AssetId: "sm_diamond_6_sided_001"
       }
     }
     Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
+      Id: 40393214500296759
+      Name: "Energy Charge Up Hold VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold_Var1"
       }
     }
     Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 6293838519925911015
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 1687528788148422459
-      Name: "Prism - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_octagon_001"
-      }
-    }
-    Assets {
-      Id: 3682206342183528038
-      Name: "Fantasy Sword Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_sword_001"
-      }
-    }
-    Assets {
-      Id: 2754963224534021958
-      Name: "Invisible"
+      Id: 3090596827184957478
+      Name: "Rope"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
+        AssetId: "mi_rope_001"
       }
     }
     Assets {
-      Id: 11717866009290414342
-      Name: "Pipe - 45-Degree Long Thin"
+      Id: 10293907404001327825
+      Name: "Prism - 8-Sided Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_005"
+        AssetId: "sm_prism_octagon_hq_001"
       }
     }
     Assets {
-      Id: 7663308268157147922
-      Name: "Bark Dead 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_dead_001_uv"
-      }
-    }
-    Assets {
-      Id: 10696576532019313521
-      Name: "Fantasy Shield 03"
+      Id: 8269588534607695232
+      Name: "Bone Human Ulna 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_shield_003"
+        AssetId: "sm_bones_human_ulna_01_ref"
       }
     }
     Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 2970711086579668885
-      Name: "Pyramid - 3-Sided"
+      Id: 14653709633606201813
+      Name: "Fantasy Gauntlet Arm 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_threesided_001"
-      }
-    }
-    Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 3575562120921027951
-      Name: "Bone Human Scapula 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_scap_01_ref"
+        AssetId: "sm_weap_fan_gauntlet_arm_001"
       }
     }
     Assets {
@@ -11836,12 +11817,350 @@
       }
     }
     Assets {
-      Id: 14653709633606201813
-      Name: "Fantasy Gauntlet Arm 01"
+      Id: 3575562120921027951
+      Name: "Bone Human Scapula 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_gauntlet_arm_001"
+        AssetId: "sm_bones_human_scap_01_ref"
+      }
+    }
+    Assets {
+      Id: 17567893295837774896
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 16936111728464854852
+      Name: "WolfFur"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 12357757896131286157
+        ParameterOverrides {
+          Overrides {
+            Name: "roughness"
+            Float: 0.741118729
+          }
+          Overrides {
+            Name: "specular"
+            Float: 0.606109202
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.204000011
+              G: 0.204000011
+              B: 0.204000011
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.926756859
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 12357757896131286157
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 6073374154520949901
+      Name: "Custom Grass from Grass Tall"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 8599686871907610035
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 0.492
+              G: 0.317356318
+              B: 0.228288
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color_roots"
+            Color {
+              R: 0.168000013
+              G: 0.108365551
+              B: 0.077952005
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "dist_rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "dist_radius"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_intensity"
+            Float: 0
+          }
+          Overrides {
+            Name: "wind_weight"
+            Float: 0.05
+          }
+          Overrides {
+            Name: "wind_speed"
+            Float: 0
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 8599686871907610035
+      Name: "Grass (default)"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_dynamic_001_uv"
+      }
+    }
+    Assets {
+      Id: 2970711086579668885
+      Name: "Pyramid - 3-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_threesided_001"
+      }
+    }
+    Assets {
+      Id: 15592158619972675004
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 10696576532019313521
+      Name: "Fantasy Shield 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_shield_003"
+      }
+    }
+    Assets {
+      Id: 7663308268157147922
+      Name: "Bark Dead 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bark_dead_001_uv"
+      }
+    }
+    Assets {
+      Id: 11717866009290414342
+      Name: "Pipe - 45-Degree Long Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_005"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 3682206342183528038
+      Name: "Fantasy Sword Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_sword_001"
+      }
+    }
+    Assets {
+      Id: 1687528788148422459
+      Name: "Prism - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_001"
+      }
+    }
+    Assets {
+      Id: 93328804870534166
+      Name: "Custom Bark Dead 01"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 7663308268157147922
+        ParameterOverrides {
+          Overrides {
+            Name: "color_accent"
+            Color {
+              R: 1
+              G: 0.639072835
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_color"
+            Color {
+              R: 0.661
+              G: 0.48008737
+              B: 0.327856
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "gradient_shift"
+            Float: 0.168373272
+          }
+          Overrides {
+            Name: "gradient_falloff"
+            Float: 0.659174085
+          }
+          Overrides {
+            Name: "color_damage"
+            Color {
+              R: 0.625
+              G: 0.578504
+              B: 0.403837
+              A: 1
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 6293838519925911015
+      Name: "Horn"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 11594524757616528940
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 230872137319562526
+      Name: "Orc Mage Face"
+      PlatformAssetType: 13
+      CustomMaterialAsset {
+        BaseMaterialId: 58872637069711017
+        ParameterOverrides {
+          Overrides {
+            Name: "color"
+            Color {
+              R: 5
+              G: 2.86666679
+              B: 0.99999994
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "glass color"
+            Color {
+              R: 1
+              G: 0.0794702172
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color b"
+            Color {
+              R: 0.995000064
+              G: 0.177914068
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "color c"
+            Color {
+              R: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "direction"
+            Vector {
+              Z: -2
+            }
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 58872637069711017
+      Name: "Magic Glass"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_magic_glass"
+      }
+    }
+    Assets {
+      Id: 15339827692159902109
+      Name: "Heart - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 11312867989431867200
+      Name: "Bone Human Jaw 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_jaw_01_ref"
+      }
+    }
+    Assets {
+      Id: 4247430867898109902
+      Name: "Stucco Tintable"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_stucco_tint_001_uv"
+      }
+    }
+    Assets {
+      Id: 4080200756085571976
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
       }
     }
     PrimaryAssetId {
@@ -11851,3 +12170,4 @@
   }
   SerializationVersion: 68
 }
+IncludesAllDependencies: true
