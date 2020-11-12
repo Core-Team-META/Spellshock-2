@@ -2,7 +2,7 @@
 RootId: 16227534043720893935
 Objects {
   Id: 2450592768795792909
-  Name: "Group"
+  Name: "Base Gates"
   Transform {
     Location {
       X: -6685

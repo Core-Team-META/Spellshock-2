@@ -3679,7 +3679,6 @@ Objects {
   ChildIds: 15362819445114274588
   ChildIds: 1071398161754346909
   ChildIds: 12789809754890541052
-  ChildIds: 1316134894148134373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3688,41 +3687,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 1316134894148134373
-  Name: "TestStatusEffects"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11699221570276180837
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:APIStatusEffects"
-      AssetReference {
-        Id: 6140123420589022677
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 18279934150475705807
-    }
   }
 }
 Objects {
@@ -3743,9 +3707,6 @@ Objects {
   ChildIds: 192196767897936600
   ChildIds: 1413418345763159432
   ChildIds: 6792929514908446286
-  ChildIds: 6182776549053801868
-  ChildIds: 16200683512916593704
-  ChildIds: 10730537915646402251
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3754,176 +3715,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 10730537915646402251
-  Name: "StatusEffectDefinitions_StaticContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12789809754890541052
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: RuntimeStatic
-  }
-}
-Objects {
-  Id: 16200683512916593704
-  Name: "ServerStatusEffectDefinitions"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12789809754890541052
-  ChildIds: 15799036941956396758
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: Server
-  }
-}
-Objects {
-  Id: 15799036941956396758
-  Name: "StatusEffect_ExampleDot"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16200683512916593704
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:APIStatusEffects"
-      AssetReference {
-        Id: 6140123420589022677
-      }
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8509829824645761235
-      }
-    }
-    Overrides {
-      Name: "cs:EffectTemplate"
-      AssetReference {
-        Id: 11322991377758087402
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15831442556029285759
-    }
-  }
-}
-Objects {
-  Id: 6182776549053801868
-  Name: "ClientStatusEffectDefinitions"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12789809754890541052
-  ChildIds: 4492044632691600576
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 4492044632691600576
-  Name: "StatusEffect_ExampleDot"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6182776549053801868
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:APIStatusEffects"
-      AssetReference {
-        Id: 6140123420589022677
-      }
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8509829824645761235
-      }
-    }
-    Overrides {
-      Name: "cs:EffectTemplate"
-      AssetReference {
-        Id: 11322991377758087402
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15831442556029285759
-    }
   }
 }
 Objects {
@@ -4561,7 +4352,7 @@ Objects {
 }
 Objects {
   Id: 18140035493979906422
-  Name: "Status Effects Initializer"
+  Name: "Status Effects Definitions"
   Transform {
     Location {
     }
@@ -13169,7 +12960,7 @@ Objects {
     }
     Overrides {
       Name: "cs:SameTeam"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

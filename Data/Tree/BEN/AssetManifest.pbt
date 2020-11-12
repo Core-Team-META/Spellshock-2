@@ -98,15 +98,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8509829824645761235
-  Name: "Icon Damage"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Damage"
-  }
-}
-Assets {
   Id: 7468938898826778178
   Name: "Icon Profile"
   PlatformAssetType: 9

@@ -69,9 +69,9 @@ if CHANGE_ANIMATION_TIME <= 0.0 then
 end
 
 -- Wait for team colors
-while not _G.TeamColors do
-	Task.Wait()
-end
+--while not _G.TeamColors do
+--	Task.Wait()
+--end
 
 --Constants
 -- In units of scale
@@ -260,7 +260,7 @@ function Tick(deltaTime)
 
 				-- Update cast bar
 				nameplate.castBarGroup.visibility = Visibility.FORCE_OFF
-
+				--[[
 			    if nameplate.interruptTime then
 					nameplate.castBarGroup.visibility = Visibility.INHERIT
 
@@ -295,7 +295,7 @@ function Tick(deltaTime)
 			                end
 			            end
 			        end
-			    end
+			    end]]
 
 			    -- Update status effects
 				local nameplatePosition = nameplate.templateRoot:GetWorldPosition()

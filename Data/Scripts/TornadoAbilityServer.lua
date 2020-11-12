@@ -142,8 +142,8 @@ function Tick(deltaTime)
 						
 				COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
 				
-				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Stun") then
-					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Slow") then
+					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
 				end
 			end	
 			Timer = 1
