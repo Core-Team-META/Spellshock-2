@@ -25,6 +25,10 @@
         ChildIds: 17080520268291749606
         ChildIds: 10267598129828930579
         ChildIds: 12918825098344470115
+        ChildIds: 6662185868305497936
+        ChildIds: 16174780183904494540
+        ChildIds: 18129462205816876575
+        ChildIds: 14341378670874480437
         ChildIds: 15267675063839883686
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -632,7 +636,7 @@
           }
           Rotation {
             Pitch: 2.04905664e-05
-            Yaw: -3.06427828e-05
+            Yaw: -3.05175781e-05
             Roll: 103.84687
           }
           Scale {
@@ -799,6 +803,261 @@
         }
       }
       Objects {
+        Id: 6662185868305497936
+        Name: "Craftsman Stairs 01 Pillar"
+        Transform {
+          Location {
+            X: -158.033905
+            Y: 244.151337
+            Z: 149.128418
+          }
+          Rotation {
+            Pitch: 8.02554
+            Yaw: -4.12124777
+            Roll: -90.3496399
+          }
+          Scale {
+            X: 0.122060448
+            Y: 1.71095335
+            Z: 0.913766742
+          }
+        }
+        ParentId: 17276108741514373437
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 7613660189645541274
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1
+              G: 0.828874171
+              B: 0.659999967
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2.97759485
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16701925266063006038
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16174780183904494540
+        Name: "Craftsman Stairs 01 Pillar"
+        Transform {
+          Location {
+            X: 139.420135
+            Y: 244.151367
+            Z: 149.128418
+          }
+          Rotation {
+            Pitch: -9.43706
+            Yaw: 3.84853935
+            Roll: -90.6319275
+          }
+          Scale {
+            X: 0.122060448
+            Y: 1.71095335
+            Z: 0.913766742
+          }
+        }
+        ParentId: 17276108741514373437
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 7613660189645541274
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1
+              G: 0.828874171
+              B: 0.659999967
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2.97759485
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16701925266063006038
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18129462205816876575
+        Name: "Craftsman Stairs 01 Pillar"
+        Transform {
+          Location {
+            X: -164.877182
+            Y: 244.150955
+            Z: 149.128418
+          }
+          Rotation {
+            Pitch: -13.7592239
+            Yaw: 89.9999084
+            Roll: -89.9999466
+          }
+          Scale {
+            X: 0.1
+            Y: 1.7
+            Z: 0.6
+          }
+        }
+        ParentId: 17276108741514373437
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 7613660189645541274
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1
+              G: 0.828874171
+              B: 0.659999967
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2.97759485
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 0.569955111
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16701925266063006038
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14341378670874480437
+        Name: "Craftsman Stairs 01 Pillar"
+        Transform {
+          Location {
+            X: 147.01857
+            Y: 35.6828194
+            Z: 87.7226563
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: -3.55739e-08
+          }
+          Scale {
+            X: 0.267068356
+            Y: 6.30958128
+            Z: 0.644693911
+          }
+        }
+        ParentId: 17276108741514373437
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 12484798020569700940
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.71875
+              G: 0.512406826
+              B: 0.352187514
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 5.23761415
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16701925266063006038
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 15267675063839883686
         Name: "MergedModel"
         Transform {
@@ -817,16 +1076,12 @@
         }
         ParentId: 17276108741514373437
         ChildIds: 8399472772007105778
-        ChildIds: 6662185868305497936
         ChildIds: 1381023154966153294
         ChildIds: 10209696745396884614
         ChildIds: 6336722103519359053
-        ChildIds: 16174780183904494540
         ChildIds: 7868024010125054181
         ChildIds: 6952582155420392629
-        ChildIds: 18129462205816876575
         ChildIds: 13556228600579515226
-        ChildIds: 14341378670874480437
         ChildIds: 8993816728901697784
         ChildIds: 10720301858098957404
         ChildIds: 13247569406982741521
@@ -3559,69 +3814,6 @@
         }
       }
       Objects {
-        Id: 6662185868305497936
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: -149.797455
-            Y: 80.7514343
-            Z: 138.920166
-          }
-          Rotation {
-            Pitch: 8.02554
-            Yaw: -4.12124681
-            Roll: -90.3496399
-          }
-          Scale {
-            X: 0.122060448
-            Y: 1.71095335
-            Z: 0.913766742
-          }
-        }
-        ParentId: 15267675063839883686
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 7613660189645541274
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 1
-              G: 0.828874171
-              B: 0.659999967
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 2.97759485
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 1381023154966153294
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
@@ -3664,7 +3856,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3723,7 +3915,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3786,70 +3978,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16174780183904494540
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: 147.656647
-            Y: 80.7514801
-            Z: 138.920166
-          }
-          Rotation {
-            Pitch: -9.43706703
-            Yaw: 3.84853983
-            Roll: -90.6319427
-          }
-          Scale {
-            X: 0.122060448
-            Y: 1.71095335
-            Z: 0.913766742
-          }
-        }
-        ParentId: 15267675063839883686
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 7613660189645541274
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 1
-              G: 0.828874171
-              B: 0.659999967
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 2.97759485
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3908,7 +4037,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3967,74 +4096,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 18129462205816876575
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: -156.640671
-            Y: 80.751091
-            Z: 138.920166
-          }
-          Rotation {
-            Pitch: -13.7592306
-            Yaw: 89.9999084
-            Roll: -89.9999542
-          }
-          Scale {
-            X: 0.1
-            Y: 1.7
-            Z: 0.6
-          }
-        }
-        ParentId: 15267675063839883686
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 7613660189645541274
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 1
-              G: 0.828874171
-              B: 0.659999967
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 2.97759485
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:vtile"
-            Float: 0.569955111
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -4090,68 +4152,6 @@
               B: 0.250139982
               A: 1
             }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 16701925266063006038
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14341378670874480437
-        Name: "Craftsman Stairs 01 Pillar"
-        Transform {
-          Location {
-            X: 155.255081
-            Y: -127.717056
-            Z: 77.5144043
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -3.55739e-08
-          }
-          Scale {
-            X: 0.267068356
-            Y: 6.30958128
-            Z: 0.644693911
-          }
-        }
-        ParentId: 15267675063839883686
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12484798020569700940
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.71875
-              G: 0.512406826
-              B: 0.352187514
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 5.23761415
           }
         }
         Collidable_v2 {
@@ -5085,7 +5085,7 @@
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -3.04893874e-05
+            Yaw: -3.05175781e-05
             Roll: 12.6024418
           }
           Scale {

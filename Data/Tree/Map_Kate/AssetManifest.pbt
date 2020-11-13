@@ -1916,15 +1916,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8075281776410522047
-  Name: "Curtains Straight"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_curtain_02"
-  }
-}
-Assets {
   Id: 8038363684942859132
   Name: "Decal Hay Patch 01"
   PlatformAssetType: 14

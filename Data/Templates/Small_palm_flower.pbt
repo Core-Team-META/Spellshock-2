@@ -15,8 +15,39 @@
             Z: 1
           }
         }
-        ParentId: 15778795352663330980
-        ChildIds: 13003087129602449834
+        ParentId: 4781671109827199097
+        ChildIds: 16360890759096581534
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16360890759096581534
+        Name: "MergedModel"
+        Transform {
+          Location {
+            X: 13.2805433
+            Y: -4.65046072
+            Z: 37.2797852
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4137738316238168700
+        ChildIds: 17212955378837482682
+        ChildIds: 9338269498777302214
+        ChildIds: 5207518042932427826
         ChildIds: 9592143972325852580
         ChildIds: 17165211897140797991
         ChildIds: 7098276047549943934
@@ -28,39 +59,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 13003087129602449834
-        Name: "Plant_part_02"
-        Transform {
-          Location {
-            X: 27.1132813
-            Y: -11.9179688
-            Z: 287.188965
+          Model {
           }
-          Rotation {
-            Pitch: -7.78485107
-          }
-          Scale {
-            X: 1.43351364
-            Y: 1.43351364
-            Z: 1.43351364
-          }
-        }
-        ParentId: 4137738316238168700
-        ChildIds: 17212955378837482682
-        ChildIds: 9338269498777302214
-        ChildIds: 5207518042932427826
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
         }
       }
       Objects {
@@ -68,21 +68,22 @@
         Name: "Coral Table 02"
         Transform {
           Location {
-            X: -0.291015625
-            Y: 1.11132813
+            X: 13.4194336
+            Y: -5.67431641
+            Z: 249.965576
           }
           Rotation {
-            Pitch: -9.50164604
-            Yaw: -4.50369549
-            Roll: -14.2630844
+            Pitch: -17.2617321
+            Yaw: -4.65173817
+            Roll: -13.6249542
           }
           Scale {
-            X: 0.19532384
-            Y: 0.19532384
-            Z: 0.744195163
+            X: 0.279999375
+            Y: 0.279999375
+            Z: 1.06681395
           }
         }
-        ParentId: 13003087129602449834
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -110,9 +111,10 @@
             Id: 13161146325196931920
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -124,22 +126,22 @@
         Name: "Coral Tubes Small"
         Transform {
           Location {
-            X: 0.799241722
-            Y: -1.83661485
-            Z: 3.48285985
+            X: 15.6442871
+            Y: -9.90039063
+            Z: 254.700684
           }
           Rotation {
-            Pitch: 2.75285983
-            Yaw: 30.3989334
-            Roll: -15.5359192
+            Pitch: -3.96297121
+            Yaw: 30.4406414
+            Roll: -19.4756012
           }
           Scale {
-            X: 0.194210961
-            Y: 0.194210961
-            Z: 0.37800464
+            X: 0.278404057
+            Y: 0.278404057
+            Z: 0.541874826
           }
         }
-        ParentId: 13003087129602449834
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -159,9 +161,10 @@
             Id: 14281826121533999733
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -173,22 +176,22 @@
         Name: "Coral Table 02"
         Transform {
           Location {
-            X: -0.217055246
-            Y: 0.730286
-            Z: 0.0889320895
+            X: 13.541748
+            Y: -6.22070313
+            Z: 250.077637
           }
           Rotation {
-            Pitch: 0.82514143
-            Yaw: 30.4888878
-            Roll: -17.5620422
+            Pitch: -5.87991142
+            Yaw: 30.6639652
+            Roll: -21.5236664
           }
           Scale {
-            X: 0.165388197
-            Y: 0.165415034
-            Z: 0.9022246
+            X: 0.237086236
+            Y: 0.237124711
+            Z: 1.29335129
           }
         }
-        ParentId: 13003087129602449834
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -208,9 +211,10 @@
             Id: 13161146325196931920
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -222,12 +226,12 @@
         Name: "Kelp Bush 02"
         Transform {
           Location {
-            X: -1.09960938
-            Y: 2.02929688
-            Z: 140.101563
+            X: -14.380127
+            Y: 6.6796875
+            Z: 102.821777
           }
           Rotation {
-            Yaw: -62.9769
+            Yaw: -62.9769096
           }
           Scale {
             X: 1.13787818
@@ -235,7 +239,7 @@
             Z: 1.81429
           }
         }
-        ParentId: 4137738316238168700
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:color"
@@ -264,9 +268,10 @@
             Id: 1984553197323830660
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -278,9 +283,9 @@
         Name: "Kelp Bush 01"
         Transform {
           Location {
-            X: -0.967599094
-            Y: -2.99023438
-            Z: 132.50209
+            X: -14.2480469
+            Y: 1.66015625
+            Z: 95.2224121
           }
           Rotation {
           }
@@ -290,7 +295,7 @@
             Z: 1
           }
         }
-        ParentId: 4137738316238168700
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -318,9 +323,10 @@
             Id: 12416815806534727809
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -332,9 +338,8 @@
         Name: "Tree Oak Stump 01"
         Transform {
           Location {
-            X: -3.69921875
-            Y: -3.80078125
-            Z: 37.2797852
+            X: -16.9797363
+            Y: 0.849609375
           }
           Rotation {
           }
@@ -344,7 +349,7 @@
             Z: 0.321707785
           }
         }
-        ParentId: 4137738316238168700
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Trunk:id"
@@ -387,14 +392,14 @@
         Name: "Kelp Bush 02"
         Transform {
           Location {
-            X: 16.2832031
-            Y: 7.95507813
-            Z: 161.948242
+            X: 3.00268555
+            Y: 12.6054688
+            Z: 124.668457
           }
           Rotation {
             Pitch: 0.927935779
-            Yaw: 18.824234
-            Roll: -12.5432739
+            Yaw: 18.8242378
+            Roll: -12.5432911
           }
           Scale {
             X: 0.657793
@@ -402,7 +407,7 @@
             Z: 1.68840849
           }
         }
-        ParentId: 4137738316238168700
+        ParentId: 16360890759096581534
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:color"
@@ -431,9 +436,10 @@
             Id: 1984553197323830660
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }

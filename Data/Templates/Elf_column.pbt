@@ -15,7 +15,7 @@
             Z: 1.03729403
           }
         }
-        ParentId: 7412299776738695677
+        ParentId: 4781671109827199097
         ChildIds: 10903975137501348580
         ChildIds: 17029349964781473353
         ChildIds: 17601174314427792089
@@ -45,7 +45,7 @@
       }
       Objects {
         Id: 10903975137501348580
-        Name: "Ellipsoid - Truncated"
+        Name: "Cone - Truncated Concave"
         Transform {
           Location {
             X: -0.001953125
@@ -96,6 +96,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -104,7 +105,7 @@
       }
       Objects {
         Id: 17029349964781473353
-        Name: "Ellipsoid - Truncated"
+        Name: "Cone - Truncated Concave"
         Transform {
           Location {
             X: -0.001953125
@@ -143,6 +144,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -189,6 +191,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -235,6 +238,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -243,7 +247,7 @@
       }
       Objects {
         Id: 11990023407897065158
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -282,6 +286,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -290,7 +295,7 @@
       }
       Objects {
         Id: 9577406271061975406
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -329,6 +334,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -373,8 +379,10 @@
             Id: 1471773936938775611
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -383,7 +391,7 @@
       }
       Objects {
         Id: 11236240792514106571
-        Name: "Ellipsoid - Truncated"
+        Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
             X: -0.001953125
@@ -422,6 +430,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -430,7 +439,7 @@
       }
       Objects {
         Id: 5020244901233994253
-        Name: "Ellipsoid - Truncated"
+        Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
             X: -0.001953125
@@ -469,7 +478,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -478,7 +487,7 @@
       }
       Objects {
         Id: 12664518514096419953
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -517,6 +526,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -525,7 +535,7 @@
       }
       Objects {
         Id: 4665460184897816916
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -564,6 +574,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -572,7 +583,7 @@
       }
       Objects {
         Id: 15530557103067096821
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -611,6 +622,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -619,7 +631,7 @@
       }
       Objects {
         Id: 9306839694617463602
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -658,6 +670,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -666,7 +679,7 @@
       }
       Objects {
         Id: 2687176109397299431
-        Name: "Ellipsoid - Truncated"
+        Name: "Pipe-spiral"
         Transform {
           Location {
             X: -0.001953125
@@ -705,6 +718,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -749,8 +763,10 @@
             Id: 1471773936938775611
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -759,7 +775,7 @@
       }
       Objects {
         Id: 5614398028808439931
-        Name: "Ellipsoid - Truncated"
+        Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
             X: -0.001953125
@@ -807,7 +823,7 @@
       }
       Objects {
         Id: 9974431282339358421
-        Name: "Ellipsoid - Truncated"
+        Name: "Cylinder - Chamfered Polished"
         Transform {
           Location {
             X: -0.001953125
