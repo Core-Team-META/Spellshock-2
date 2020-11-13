@@ -40,19 +40,19 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -1.10347235
-            Y: -0.184347302
-            Z: -21.41366
+            X: -0.529037178
+            Y: 0.511589289
+            Z: -56.9384575
           }
           Rotation {
             Pitch: -0.917511
-            Yaw: -112.965378
+            Yaw: -112.965332
             Roll: -177.155365
           }
           Scale {
-            X: 1.42223322
-            Y: 1.57604611
-            Z: 0.565342784
+            X: 1.42224514
+            Y: 1.57601261
+            Z: 0.827773213
           }
         }
         ParentId: 5141720849105701977
@@ -87,7 +87,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -240,6 +240,8 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -299,6 +301,8 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -358,6 +362,8 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -408,7 +414,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -467,7 +473,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -520,7 +526,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }

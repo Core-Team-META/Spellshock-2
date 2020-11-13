@@ -70,11 +70,19 @@
           }
         }
         ParentId: 15007661289914600826
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12889861000896994476
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -728,7 +736,10 @@
             Id: 13352595166498895188
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -794,9 +805,10 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -857,7 +869,10 @@
             Id: 13352595166498895188
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -923,9 +938,10 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -986,7 +1002,10 @@
             Id: 13352595166498895188
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1054,9 +1073,10 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1116,7 +1136,10 @@
             Id: 13352595166498895188
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1182,9 +1205,10 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1244,7 +1268,10 @@
             Id: 13352595166498895188
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1310,9 +1337,10 @@
             Id: 4607775144269372543
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1359,7 +1387,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1406,7 +1437,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1453,7 +1487,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1500,7 +1537,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1547,7 +1587,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1594,7 +1637,10 @@
             Id: 11162297399913732681
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -1609,6 +1655,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 12889861000896994476
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {
@@ -1672,15 +1727,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_prop_fantasy_bottle_003"
-      }
-    }
-    Assets {
-      Id: 12889861000896994476
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
       }
     }
     Assets {
