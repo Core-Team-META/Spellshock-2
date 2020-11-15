@@ -40,19 +40,19 @@
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -0.105631687
-            Y: -0.715472043
-            Z: -31.9281
+            X: -0.183260739
+            Y: 1.63498616
+            Z: -45.8109131
           }
           Rotation {
             Pitch: -0.917511
-            Yaw: -112.965332
+            Yaw: -112.965286
             Roll: -177.155365
           }
           Scale {
-            X: 1.4222331
-            Y: 1.57604158
-            Z: 0.405413091
+            X: 1.47544146
+            Y: 1.6350106
+            Z: 1.167045
           }
         }
         ParentId: 5395131134347800283
@@ -87,7 +87,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -408,7 +408,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -467,7 +467,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -520,7 +520,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }

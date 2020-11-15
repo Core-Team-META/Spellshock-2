@@ -467,6 +467,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15074527860404380375
+  Name: "Pipe - Quarter"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_001"
+  }
+}
+Assets {
   Id: 15036333363326735768
   Name: "Fantasy Castle Stairs Spiral Wall 01 - Large"
   PlatformAssetType: 1
@@ -1904,15 +1913,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_gear_small_001"
-  }
-}
-Assets {
-  Id: 8075281776410522047
-  Name: "Curtains Straight"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_curtain_02"
   }
 }
 Assets {
