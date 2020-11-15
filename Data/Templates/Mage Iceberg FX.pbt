@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 10750937685288866590
-  Name: "Mage Ice Cube"
+  Name: "Mage Iceberg FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -652,78 +652,12 @@
       }
     }
     Assets {
-      Id: 8368756853707329605
-      Name: "Explosion Kit Dust Ring VFX"
-      PlatformAssetType: 8
+      Id: 3834487395638995980
+      Name: "Decal Snow Patch"
+      PlatformAssetType: 14
       PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
-      }
-    }
-    Assets {
-      Id: 6093444816407687955
-      Name: "Ice Spikes Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_ice_spike_volume"
-      }
-    }
-    Assets {
-      Id: 2590787292447476024
-      Name: "Snow Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_snow_volume"
-      }
-    }
-    Assets {
-      Id: 8219149701339939263
-      Name: "Custom Transparent Bubble Glass"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 18348694118958495716
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.120000005
-              G: 0.860132098
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "Inner Opacity"
-            Float: 0.562645376
-          }
-          Overrides {
-            Name: "Metallic"
-            Float: 0.888202786
-          }
-          Overrides {
-            Name: "Outer Opacity"
-            Float: 0.93828851
-          }
-          Overrides {
-            Name: "Roughness"
-            Float: 0.103526033
-          }
-          Overrides {
-            Name: "Specular"
-            Float: 1
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 18348694118958495716
-      Name: "Transparent Bubble Glass"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_transparent_bubble_glass"
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "bp_decal_snow_patch_001"
       }
     }
     Assets {
@@ -736,12 +670,30 @@
       }
     }
     Assets {
-      Id: 3834487395638995980
-      Name: "Decal Snow Patch"
-      PlatformAssetType: 14
+      Id: 2590787292447476024
+      Name: "Snow Volume VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_snow_patch_001"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_snow_volume"
+      }
+    }
+    Assets {
+      Id: 6093444816407687955
+      Name: "Ice Spikes Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ice_spike_volume"
+      }
+    }
+    Assets {
+      Id: 8368756853707329605
+      Name: "Explosion Kit Dust Ring VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
       }
     }
     PrimaryAssetId {
@@ -751,4 +703,3 @@
   }
   SerializationVersion: 68
 }
-IncludesAllDependencies: true

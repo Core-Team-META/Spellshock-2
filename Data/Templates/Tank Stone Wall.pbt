@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 8766393355139966205
-  Name: "StoneWallWitcher"
+  Name: "Tank Stone Wall"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 11650929185820647296
-  Name: "Boomerang Normal Impact"
+  Name: "Assassin Slasher Normal Impact"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

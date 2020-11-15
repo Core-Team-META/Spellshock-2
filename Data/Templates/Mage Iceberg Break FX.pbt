@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 12874348109318974616
-  Name: "IceCubeBreak FX"
+  Name: "Mage Iceberg Break FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

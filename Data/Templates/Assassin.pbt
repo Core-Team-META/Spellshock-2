@@ -1328,7 +1328,7 @@
       }
       Objects {
         Id: 7787036789120996490
-        Name: "R Special"
+        Name: "Slasher"
         Transform {
           Location {
           }
@@ -1377,21 +1377,15 @@
             Float: 0.75
           }
           Overrides {
-            Name: "cs:BoomerangTemplate"
+            Name: "cs:BeginningFX"
             AssetReference {
-              Id: 14161552992450762216
+              Id: 3260618482035830264
             }
           }
           Overrides {
             Name: "cs:PlayerImpactFX"
             AssetReference {
               Id: 6697248670123946068
-            }
-          }
-          Overrides {
-            Name: "cs:BeginningFX"
-            AssetReference {
-              Id: 3260618482035830264
             }
           }
           Overrides {

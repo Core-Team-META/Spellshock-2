@@ -1,5 +1,5 @@
 ﻿Assets {
-  Id: 10938749002355594751
+  Id: 10716214664751823333
   Name: "Orc Hunter Costume"
   PlatformAssetType: 5
   TemplateAsset {
@@ -7,7 +7,7 @@
       RootId: 1323306296619649623
       Objects {
         Id: 1323306296619649623
-        Name: "Orc Hunter Costume"
+        Name: "Orc Hunter Half Costume"
         Transform {
           Scale {
             X: 1
@@ -193,14 +193,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.32617188
-            Y: -4.23242188
-            Z: 40.0412598
+            X: 1.75939941
+            Y: -4.23236084
+            Z: 29.6466675
           }
           Rotation {
-            Pitch: 29.0891666
-            Yaw: 98.0167847
-            Roll: 33.3868904
+            Pitch: 29.0891724
+            Yaw: 98.0167694
+            Roll: 33.3869209
           }
           Scale {
             X: 0.0670837536
@@ -256,9 +256,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 1.38476563
-            Y: -13.65625
-            Z: 19.8476563
+            X: -1.18188477
+            Y: -13.656189
+            Z: 9.45309448
           }
           Rotation {
             Pitch: -17.3532276
@@ -319,9 +319,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -4.54882813
-            Y: -14.5742188
-            Z: 17.661377
+            X: -7.11547852
+            Y: -14.5741577
+            Z: 7.2668
           }
           Rotation {
             Pitch: -9.93251514
@@ -382,14 +382,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -13.8613281
-            Y: -10.6796875
-            Z: 18.1533203
+            X: -16.4279785
+            Y: -10.6795044
+            Z: 7.75874329
           }
           Rotation {
             Pitch: -7.10376501
-            Yaw: 135.381012
-            Roll: 123.028351
+            Yaw: 135.381042
+            Roll: 123.028366
           }
           Scale {
             X: 0.132911399
@@ -445,9 +445,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -18.9023438
-            Y: -0.056640625
-            Z: 18.4609375
+            X: -21.4691162
+            Y: -0.0565795898
+            Z: 8.06634521
           }
           Rotation {
             Pitch: 3.67741466
@@ -508,14 +508,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.90625
-            Y: -12.5019531
-            Z: 23.2841797
+            X: 4.33947754
+            Y: -12.5018921
+            Z: 12.8896027
           }
           Rotation {
-            Pitch: -6.5278573
-            Yaw: -164.424927
-            Roll: 125.074005
+            Pitch: -6.52785063
+            Yaw: -164.424866
+            Roll: 125.074
           }
           Scale {
             X: 0.0742146
@@ -571,9 +571,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.1113281
-            Y: -12.734375
-            Z: 20.9921875
+            X: -12.6779785
+            Y: -12.7342529
+            Z: 10.5976257
           }
           Rotation {
             Pitch: -8.99721
@@ -634,14 +634,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17.8320313
-            Y: -5.3359375
-            Z: 20.0461426
+            X: -20.3986816
+            Y: -5.33575439
+            Z: 9.65155
           }
           Rotation {
-            Pitch: -3.86202097
-            Yaw: 112.682
-            Roll: 129.018066
+            Pitch: -3.86200738
+            Yaw: 112.681969
+            Roll: 129.018021
           }
           Scale {
             X: 0.120156772
@@ -697,14 +697,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.14453125
-            Y: -14.46875
-            Z: 24.9179688
+            X: -0.42199707
+            Y: -14.468689
+            Z: 14.5233917
           }
           Rotation {
-            Pitch: -17.3527431
-            Yaw: -171.136398
-            Roll: 138.421982
+            Pitch: -17.3527298
+            Yaw: -171.136383
+            Roll: 138.421951
           }
           Scale {
             X: 0.130777985
@@ -760,13 +760,13 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.53125
-            Y: -14.765625
-            Z: 23.2973633
+            X: -8.09777832
+            Y: -14.765564
+            Z: 12.9028168
           }
           Rotation {
             Pitch: -9.74386501
-            Yaw: 168.663925
+            Yaw: 168.663895
             Roll: 136.354172
           }
           Scale {
@@ -823,13 +823,13 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -15.1152344
-            Y: -10.2734375
-            Z: 22.894043
+            X: -17.6820068
+            Y: -10.2732544
+            Z: 12.4994659
           }
           Rotation {
             Pitch: -6.6349206
-            Yaw: 131.628586
+            Yaw: 131.628632
             Roll: 139.54158
           }
           Scale {
@@ -886,14 +886,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -18.4550781
-            Y: -2.4453125
-            Z: 25.4804688
+            X: -21.0218506
+            Y: -2.44512939
+            Z: 15.085907
           }
           Rotation {
-            Pitch: -7.59373569
-            Yaw: 105.024628
-            Roll: 126.391304
+            Pitch: -7.59372187
+            Yaw: 105.024651
+            Roll: 126.391266
           }
           Scale {
             X: 0.130421698
@@ -949,12 +949,12 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17.0644531
-            Y: -7.73828125
-            Z: 24.5
+            X: -19.6311035
+            Y: -7.73809814
+            Z: 14.1054382
           }
           Rotation {
-            Pitch: -5.415452
+            Pitch: -5.41545868
             Yaw: 119.326759
             Roll: 132.88028
           }
@@ -1012,9 +1012,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.3574219
-            Y: -12.5644531
-            Z: 25.717041
+            X: -12.9240723
+            Y: -12.5643311
+            Z: 15.322464
           }
           Rotation {
             Pitch: -7.78752184
@@ -1075,14 +1075,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -2.04882813
-            Y: -14.0839844
-            Z: 27.4387207
+            X: -4.61535645
+            Y: -14.0839233
+            Z: 17.0441132
           }
           Rotation {
-            Pitch: -14.8779411
+            Pitch: -14.8779335
             Yaw: 178.066788
-            Roll: 134.489563
+            Roll: 134.489532
           }
           Scale {
             X: 0.121136054
@@ -1138,14 +1138,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 8.109375
-            Y: -10.9355469
-            Z: 28.3901367
+            X: 5.54260254
+            Y: -10.9354858
+            Z: 17.9955444
           }
           Rotation {
             Pitch: -7.14258814
-            Yaw: -162.070908
-            Roll: 111.672249
+            Yaw: -162.070877
+            Roll: 111.672203
           }
           Scale {
             X: 0.105067901
@@ -1201,14 +1201,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -16.3945313
-            Y: -6.5078125
-            Z: 28.2756348
+            X: -18.9611816
+            Y: -6.50762939
+            Z: 17.8810425
           }
           Rotation {
             Pitch: -9.41138554
             Yaw: 122.66642
-            Roll: 126.258987
+            Roll: 126.25898
           }
           Scale {
             X: 0.110332787
@@ -1264,14 +1264,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -13.1953125
-            Y: -10.2246094
-            Z: 27.5461426
+            X: -15.7619629
+            Y: -10.2244263
+            Z: 17.1515503
           }
           Rotation {
-            Pitch: -6.72089195
-            Yaw: 141.299561
-            Roll: 129.608078
+            Pitch: -6.72088528
+            Yaw: 141.299606
+            Roll: 129.608017
           }
           Scale {
             X: 0.124965161
@@ -1327,14 +1327,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.24414063
-            Y: -13.6972656
-            Z: 28.8527832
+            X: -7.81079102
+            Y: -13.6972046
+            Z: 18.4582062
           }
           Rotation {
             Pitch: -10.485815
-            Yaw: 173.572784
-            Roll: 121.611359
+            Yaw: 173.572754
+            Roll: 121.611374
           }
           Scale {
             X: 0.128607646
@@ -1390,14 +1390,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.19726563
-            Y: -12.2011719
-            Z: 30.760498
+            X: 1.63061523
+            Y: -12.2011108
+            Z: 20.365921
           }
           Rotation {
             Pitch: -6.25779152
-            Yaw: -165.191452
-            Roll: 114.160202
+            Yaw: -165.191391
+            Roll: 114.160141
           }
           Scale {
             X: 0.1038628
@@ -1453,14 +1453,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17
-            Y: -2.703125
-            Z: 30.5390625
+            X: -19.5666504
+            Y: -2.70294189
+            Z: 20.1445
           }
           Rotation {
-            Pitch: -5.97761726
-            Yaw: 105.810074
-            Roll: 118.663811
+            Pitch: -5.97761059
+            Yaw: 105.810104
+            Roll: 118.663795
           }
           Scale {
             X: 0.115866877
@@ -1516,9 +1516,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.5976563
-            Y: -11.171875
-            Z: 30.9282227
+            X: -13.1643066
+            Y: -11.1717529
+            Z: 20.5336761
           }
           Rotation {
             Pitch: -13.2506685
@@ -1579,14 +1579,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -3.42773438
-            Y: -12.9785156
-            Z: 32.2216797
+            X: -5.9942627
+            Y: -12.9784546
+            Z: 21.8271027
           }
           Rotation {
-            Pitch: -19.5061722
-            Yaw: -177.365067
-            Roll: 111.83316
+            Pitch: -19.5061588
+            Yaw: -177.365051
+            Roll: 111.833138
           }
           Scale {
             X: 0.112316065
@@ -1642,14 +1642,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -11.9082031
-            Y: -6.59375
-            Z: 33.3537598
+            X: -14.4749756
+            Y: -6.59362793
+            Z: 22.9591675
           }
           Rotation {
             Pitch: -5.74842358
             Yaw: 137.127
-            Roll: 108.943741
+            Roll: 108.943756
           }
           Scale {
             X: 0.11301893
@@ -1705,9 +1705,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -6.5546875
-            Y: -8.703125
-            Z: 34.5205078
+            X: -9.12121582
+            Y: -8.70306396
+            Z: 24.1259308
           }
           Rotation {
             Pitch: -9.51332569
@@ -1768,14 +1768,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 3.30078125
-            Y: -12.1503906
-            Z: 34.8330078
+            X: 0.73425293
+            Y: -12.1503296
+            Z: 24.4384155
           }
           Rotation {
             Pitch: 22.2053528
             Yaw: 169.110916
-            Roll: 112.535599
+            Roll: 112.535591
           }
           Scale {
             X: 0.10668084
@@ -1831,9 +1831,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -12.1953125
-            Y: -2.15234375
-            Z: 34.9301758
+            X: -14.7618408
+            Y: -2.15222168
+            Z: 24.5356293
           }
           Rotation {
             Pitch: 0.312262565
@@ -1894,14 +1894,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 15.5019531
-            Y: -0.056640625
-            Z: 31.1503906
+            X: 12.9351807
+            Y: -0.0564575195
+            Z: 20.7557983
           }
           Rotation {
             Pitch: -0.11871551
             Yaw: 90.0124664
-            Roll: -6.008
+            Roll: -6.00800419
           }
           Scale {
             X: 0.0498965718
@@ -1957,14 +1957,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 14.1933594
-            Y: -1.17382813
-            Z: 32.8164063
+            X: 11.6265869
+            Y: -1.17364502
+            Z: 22.421814
           }
           Rotation {
-            Pitch: 26.1262169
-            Yaw: 91.149765
-            Roll: -2.01422572
+            Pitch: 26.1262035
+            Yaw: 91.1497116
+            Roll: -2.0142262
           }
           Scale {
             X: 0.0556233041
@@ -2020,14 +2020,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 11.9257813
-            Y: -4.45898438
-            Z: 34.7248535
+            X: 9.35913086
+            Y: -4.45880127
+            Z: 24.3302765
           }
           Rotation {
-            Pitch: 40.8073196
-            Yaw: 110.71785
-            Roll: 25.0150318
+            Pitch: 40.8073082
+            Yaw: 110.717804
+            Roll: 25.0149765
           }
           Scale {
             X: 0.0639322624
@@ -2083,14 +2083,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 9.85351563
-            Y: -3.86132813
-            Z: 36.871582
+            X: 7.28686523
+            Y: -3.86114502
+            Z: 26.4770203
           }
           Rotation {
             Pitch: 33.7948875
-            Yaw: 106.679382
-            Roll: 25.7809563
+            Yaw: 106.679367
+            Roll: 25.7808952
           }
           Scale {
             X: 0.0793766901
@@ -2146,14 +2146,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 9.41601563
-            Y: -6.64648438
-            Z: 35.9553223
+            X: 6.8494873
+            Y: -6.64630127
+            Z: 25.5607758
           }
           Rotation {
-            Pitch: 35.9309616
-            Yaw: 117.761009
-            Roll: 37.2912598
+            Pitch: 35.9309502
+            Yaw: 117.760979
+            Roll: 37.2912331
           }
           Scale {
             X: 0.0694365054
@@ -2209,14 +2209,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.96289063
-            Y: -6.21289063
-            Z: 38.4606934
+            X: 4.39624
+            Y: -6.21282959
+            Z: 28.0661163
           }
           Rotation {
-            Pitch: 34.9112434
-            Yaw: 102.929535
-            Roll: 28.7046299
+            Pitch: 34.9112244
+            Yaw: 102.929543
+            Roll: 28.704607
           }
           Scale {
             X: 0.0822143704
@@ -2272,14 +2272,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.19335938
-            Y: -9.3125
-            Z: 36.7709961
+            X: 3.62658691
+            Y: -9.31243896
+            Z: 26.3764191
           }
           Rotation {
-            Pitch: 42.268898
-            Yaw: 108.450943
-            Roll: 43.0498199
+            Pitch: 42.2688942
+            Yaw: 108.450966
+            Roll: 43.0498734
           }
           Scale {
             X: 0.0750447586
@@ -2335,14 +2335,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.6484375
-            Y: -8.3046875
-            Z: 38.7529297
+            X: 0.0819091797
+            Y: -8.30462646
+            Z: 28.3583832
           }
           Rotation {
-            Pitch: 39.6316757
-            Yaw: 85.9415207
-            Roll: 43.0275192
+            Pitch: 39.6316605
+            Yaw: 85.9415283
+            Roll: 43.0275459
           }
           Scale {
             X: 0.0592355356
@@ -2398,14 +2398,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.2617188
-            Y: -0.01171875
-            Z: 36.2741699
+            X: -12.8284912
+            Y: -0.0115966797
+            Z: 25.8796082
           }
           Rotation {
             Pitch: 3.0038693
-            Yaw: 105.962219
-            Roll: 79.6218719
+            Yaw: 105.962227
+            Roll: 79.6218185
           }
           Scale {
             X: 0.107587941
@@ -2461,9 +2461,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -8.14648438
-            Y: -5.77734375
-            Z: 36.060791
+            X: -10.7131348
+            Y: -5.77728271
+            Z: 25.6662292
           }
           Rotation {
             Pitch: -9.21719646
@@ -2524,14 +2524,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 0.794921875
-            Y: -11.4257813
-            Z: 36.5148926
+            X: -1.77185059
+            Y: -11.4257202
+            Z: 26.1203156
           }
           Rotation {
-            Pitch: 39.7653389
-            Yaw: 88.0514755
-            Roll: 35.9762192
+            Pitch: 39.765316
+            Yaw: 88.051445
+            Roll: 35.9762077
           }
           Scale {
             X: 0.0635435209
@@ -2587,14 +2587,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -2.140625
-            Y: -6.66992188
-            Z: 38.8813477
+            X: -4.70739746
+            Y: -6.66986084
+            Z: 28.4867706
           }
           Rotation {
-            Pitch: 22.0472355
-            Yaw: 108.880875
-            Roll: 56.2342682
+            Pitch: 22.0472412
+            Yaw: 108.880821
+            Roll: 56.2342
           }
           Scale {
             X: 0.083774209
@@ -2650,14 +2650,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -7.3046875
-            Y: -3.296875
-            Z: 37.7436523
+            X: -9.87133789
+            Y: -3.29681396
+            Z: 27.3490601
           }
           Rotation {
             Pitch: 1.75807011
-            Yaw: 114.3871
-            Roll: 78.1073761
+            Yaw: 114.387047
+            Roll: 78.1073227
           }
           Scale {
             X: 0.0987523794
@@ -2713,14 +2713,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.39648438
-            Y: -4.14257813
-            Z: 39.0830078
+            X: -7.96325684
+            Y: -4.14251709
+            Z: 28.6884
           }
           Rotation {
-            Pitch: 9.49905109
-            Yaw: 118.957344
-            Roll: 73.5903931
+            Pitch: 9.49905777
+            Yaw: 118.957329
+            Roll: 73.5903625
           }
           Scale {
             X: 0.0986366794
@@ -2776,14 +2776,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -0.7265625
-            Y: -0.62890625
-            Z: 41.1906738
+            X: -3.29333496
+            Y: -0.628845215
+            Z: 30.7960663
           }
           Rotation {
             Pitch: 8.03761578
-            Yaw: 102.706856
-            Roll: 42.1552582
+            Yaw: 102.706833
+            Roll: 42.1552773
           }
           Scale {
             X: 0.0900124833
@@ -2839,14 +2839,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.74804688
-            Y: -0.517578125
-            Z: 39.8986816
+            X: 4.18127441
+            Y: -0.51751709
+            Z: 29.5040894
           }
           Rotation {
             Pitch: -2.1391809
-            Yaw: 88.5653534
-            Roll: 33.8530045
+            Yaw: 88.565361
+            Roll: 33.8530273
           }
           Scale {
             X: 0.0763122663
@@ -2902,14 +2902,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 12.34375
-            Y: -1.52539063
-            Z: 35.1806641
+            X: 9.77697754
+            Y: -1.52520752
+            Z: 24.786087
           }
           Rotation {
-            Pitch: 16.356226
-            Yaw: 95.974556
-            Roll: 4.07228565
+            Pitch: 16.3562183
+            Yaw: 95.9745102
+            Roll: 4.07228661
           }
           Scale {
             X: 0.0829058141
@@ -2965,14 +2965,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 8.61523438
-            Y: -2.05664063
-            Z: 38.5883789
+            X: 6.04858398
+            Y: -2.05645752
+            Z: 28.1937714
           }
           Rotation {
-            Pitch: 16.9492168
-            Yaw: 95.1840515
-            Roll: 34.1100502
+            Pitch: 16.9492092
+            Yaw: 95.1840134
+            Roll: 34.1100769
           }
           Scale {
             X: 0.0824829
@@ -3028,14 +3028,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.63671875
-            Y: -2.31640625
-            Z: 40.7233887
+            X: 0.0699462891
+            Y: -2.31634521
+            Z: 30.3288269
           }
           Rotation {
-            Pitch: 17.7264843
-            Yaw: 87.7511139
-            Roll: 37.7335892
+            Pitch: 17.7264786
+            Yaw: 87.7510681
+            Roll: 37.7335358
           }
           Scale {
             X: 0.0490006208
@@ -3091,14 +3091,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -0.083984375
-            Y: -5.44921875
-            Z: 40.3112793
+            X: -2.65063477
+            Y: -5.44915771
+            Z: 29.9167023
           }
           Rotation {
-            Pitch: 34.0578232
-            Yaw: 78.5675735
-            Roll: 43.5592194
+            Pitch: 34.0578156
+            Yaw: 78.5674896
+            Roll: 43.5591812
           }
           Scale {
             X: 0.0706090108
@@ -3154,14 +3154,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -0.0849808902
-            Y: 5.33787632
-            Z: 40.3105354
+            X: -2.65173411
+            Y: 5.3378849
+            Z: 29.9159145
           }
           Rotation {
-            Pitch: 34.0576248
-            Yaw: -78.5669174
-            Roll: -43.5569763
+            Pitch: 34.0575905
+            Yaw: -78.5668564
+            Roll: -43.5569496
           }
           Scale {
             X: 0.0706090108
@@ -3217,14 +3217,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.32654476
-            Y: 4.11911678
-            Z: 40.0407562
+            X: 1.7597909
+            Y: 4.11912632
+            Z: 29.6461372
           }
           Rotation {
             Pitch: 29.0887146
             Yaw: -98.0171127
-            Roll: -33.3842049
+            Roll: -33.3842354
           }
           Scale {
             X: 0.0670837536
@@ -3280,14 +3280,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 1.38360095
-            Y: 13.5449123
-            Z: 19.8473778
+            X: -1.18315244
+            Y: 13.5449209
+            Z: 9.45275879
           }
           Rotation {
             Pitch: -17.3527431
-            Yaw: 171.136444
-            Roll: -112.16423
+            Yaw: 171.136398
+            Roll: -112.164207
           }
           Scale {
             X: 0.132911369
@@ -3343,14 +3343,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -4.54678345
-            Y: 14.4628935
-            Z: 17.6605511
+            X: -7.11353683
+            Y: 14.462903
+            Z: 7.26593161
           }
           Rotation {
             Pitch: -9.93290424
-            Yaw: 178.810516
-            Roll: -115.861664
+            Yaw: 178.810486
+            Roll: -115.861588
           }
           Scale {
             X: 0.132911369
@@ -3406,14 +3406,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -13.8612242
-            Y: 10.5664282
-            Z: 18.1526985
+            X: -16.4279785
+            Y: 10.5664368
+            Z: 7.75808048
           }
           Rotation {
             Pitch: -7.10654497
             Yaw: -135.38002
-            Roll: -123.028076
+            Roll: -123.028107
           }
           Scale {
             X: 0.132911369
@@ -3469,14 +3469,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.90679502
-            Y: 12.388649
-            Z: 23.2834682
+            X: 4.34004211
+            Y: 12.3886585
+            Z: 12.8888483
           }
           Rotation {
             Pitch: -6.52765226
-            Yaw: 164.424561
-            Roll: -125.073517
+            Yaw: 164.424515
+            Roll: -125.07354
           }
           Scale {
             X: 0.0742145851
@@ -3532,9 +3532,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.1112032
-            Y: 12.6211071
-            Z: 20.9916821
+            X: -12.6779566
+            Y: 12.6211166
+            Z: 10.5970621
           }
           Rotation {
             Pitch: -8.99891
@@ -3595,14 +3595,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17.8313961
-            Y: 5.22268581
-            Z: 20.0459175
+            X: -20.3981476
+            Y: 5.22269535
+            Z: 9.65129852
           }
           Rotation {
             Pitch: -3.86384463
-            Yaw: -112.681328
-            Roll: -129.017487
+            Yaw: -112.681282
+            Roll: -129.01741
           }
           Scale {
             X: 0.120156772
@@ -3658,14 +3658,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.14525247
-            Y: 14.3554544
-            Z: 24.9176121
+            X: -0.421500891
+            Y: 14.3554649
+            Z: 14.5229921
           }
           Rotation {
-            Pitch: -17.3527298
+            Pitch: -17.3527088
             Yaw: 171.136383
-            Roll: -138.42189
+            Roll: -138.421814
           }
           Scale {
             X: 0.130777955
@@ -3721,13 +3721,13 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.53010178
-            Y: 14.6543007
-            Z: 23.297102
+            X: -8.09685516
+            Y: 14.6543093
+            Z: 12.9024839
           }
           Rotation {
-            Pitch: -9.74482155
-            Yaw: -168.663391
+            Pitch: -9.74481487
+            Yaw: -168.663361
             Roll: -136.354477
           }
           Scale {
@@ -3784,9 +3784,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -15.1139431
-            Y: 10.1601791
-            Z: 22.8934
+            X: -17.6806965
+            Y: 10.1601877
+            Z: 12.4987812
           }
           Rotation {
             Pitch: -6.63662815
@@ -3847,14 +3847,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -18.7324829
-            Y: 0.195342913
-            Z: 23.0507469
+            X: -21.2992382
+            Y: 0.195352
+            Z: 12.6561279
           }
           Rotation {
-            Pitch: -3.6289134
-            Yaw: -102.953484
-            Roll: -131.268326
+            Pitch: -3.6288929
+            Yaw: -102.953529
+            Roll: -131.268341
           }
           Scale {
             X: 0.12838468
@@ -3910,14 +3910,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -18.4540558
-            Y: 2.33206
-            Z: 25.4799385
+            X: -21.0208092
+            Y: 2.33206916
+            Z: 15.0853195
           }
           Rotation {
-            Pitch: -7.59520388
-            Yaw: -105.023705
-            Roll: -126.390076
+            Pitch: -7.5951972
+            Yaw: -105.023712
+            Roll: -126.390022
           }
           Scale {
             X: 0.130421698
@@ -3973,9 +3973,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17.0648117
-            Y: 7.6250267
-            Z: 24.4993534
+            X: -19.631567
+            Y: 7.62503529
+            Z: 14.1047354
           }
           Rotation {
             Pitch: -5.41738462
@@ -4036,14 +4036,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.3577747
-            Y: 12.4511833
-            Z: 25.71628
+            X: -12.9245281
+            Y: 12.4511929
+            Z: 15.3216591
           }
           Rotation {
             Pitch: -7.78868961
             Yaw: -160.915359
-            Roll: -139.111786
+            Roll: -139.111755
           }
           Scale {
             X: 0.128630817
@@ -4099,14 +4099,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -2.04787397
-            Y: 13.9726505
-            Z: 27.4385147
+            X: -4.61462784
+            Y: 13.9726591
+            Z: 17.0438938
           }
           Rotation {
             Pitch: -14.8783712
             Yaw: -178.066544
-            Roll: -134.48967
+            Roll: -134.489594
           }
           Scale {
             X: 0.121136054
@@ -4162,14 +4162,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 8.11030579
-            Y: 10.824192
-            Z: 28.3894558
+            X: 5.54355192
+            Y: 10.8242006
+            Z: 17.9948368
           }
           Rotation {
             Pitch: -7.14163876
-            Yaw: 162.070419
-            Roll: -111.671631
+            Yaw: 162.070374
+            Roll: -111.671608
           }
           Scale {
             X: 0.105067901
@@ -4225,14 +4225,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -17.3422699
-            Y: -0.0585679449
-            Z: 27.8379765
+            X: -19.9090233
+            Y: -0.0585588664
+            Z: 17.4433556
           }
           Rotation {
             Pitch: -0.0513835102
-            Yaw: -87.537178
-            Roll: -114.987732
+            Yaw: -87.5371704
+            Roll: -114.987648
           }
           Scale {
             X: 0.135041133
@@ -4288,9 +4288,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -16.393713
-            Y: 6.39455509
-            Z: 28.2752781
+            X: -18.9604683
+            Y: 6.39456367
+            Z: 17.8806591
           }
           Rotation {
             Pitch: -9.41383743
@@ -4351,14 +4351,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -13.1944838
-            Y: 10.1132984
-            Z: 27.5457973
+            X: -15.7612352
+            Y: 10.113308
+            Z: 17.1511784
           }
           Rotation {
             Pitch: -6.72318029
-            Yaw: -141.298416
-            Roll: -129.608047
+            Yaw: -141.298447
+            Roll: -129.608
           }
           Scale {
             X: 0.124965161
@@ -4414,14 +4414,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.24399281
-            Y: 13.5859385
-            Z: 28.8521309
+            X: -7.81074619
+            Y: 13.585947
+            Z: 18.4575119
           }
           Rotation {
-            Pitch: -10.4867506
+            Pitch: -10.4867373
             Yaw: -173.572601
-            Roll: -121.611443
+            Roll: -121.611427
           }
           Scale {
             X: 0.128607646
@@ -4477,14 +4477,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 4.197299
-            Y: 12.0898237
-            Z: 30.7601471
+            X: 1.63054574
+            Y: 12.0898333
+            Z: 20.3655281
           }
           Rotation {
             Pitch: -6.25721788
-            Yaw: 165.191055
-            Roll: -114.159714
+            Yaw: 165.190979
+            Roll: -114.15963
           }
           Scale {
             X: 0.1038628
@@ -4540,9 +4540,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -16.9984093
-            Y: 2.58986783
-            Z: 30.5388794
+            X: -19.5651627
+            Y: 2.58987713
+            Z: 20.1442604
           }
           Rotation {
             Pitch: -5.97935915
@@ -4603,9 +4603,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -10.5964031
-            Y: 11.0605574
-            Z: 30.9275723
+            X: -13.1631556
+            Y: 11.0605659
+            Z: 20.5329533
           }
           Rotation {
             Pitch: -13.2524176
@@ -4666,14 +4666,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -3.42697692
-            Y: 12.8652296
-            Z: 32.2215195
+            X: -5.99373
+            Y: 12.8652382
+            Z: 21.8269024
           }
           Rotation {
-            Pitch: -19.5061111
-            Yaw: 177.36496
-            Roll: -111.833115
+            Pitch: -19.5060978
+            Yaw: 177.364929
+            Roll: -111.833046
           }
           Scale {
             X: 0.112316065
@@ -4729,14 +4729,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -14.9025831
-            Y: -0.0585747547
-            Z: 32.6900558
+            X: -17.4693375
+            Y: -0.0585656725
+            Z: 22.2954388
           }
           Rotation {
-            Pitch: -6.86470175
-            Yaw: -98.6509933
-            Roll: -102.166725
+            Pitch: -6.86468124
+            Yaw: -98.6510162
+            Roll: -102.16674
           }
           Scale {
             X: 0.115724891
@@ -4792,14 +4792,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -11.9076595
-            Y: 6.48048115
-            Z: 33.3534393
+            X: -14.4744129
+            Y: 6.48049
+            Z: 22.9588203
           }
           Rotation {
             Pitch: -5.75196838
             Yaw: -137.126343
-            Roll: -108.943275
+            Roll: -108.943291
           }
           Scale {
             X: 0.11301893
@@ -4855,9 +4855,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -6.55397892
-            Y: 8.5898447
-            Z: 34.5197
+            X: -9.12073231
+            Y: 8.58985424
+            Z: 24.1250839
           }
           Rotation {
             Pitch: -9.51482868
@@ -4918,14 +4918,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 3.30154
-            Y: 12.0390425
-            Z: 34.8326874
+            X: 0.73478663
+            Y: 12.039052
+            Z: 24.4380684
           }
           Rotation {
-            Pitch: 22.2029705
-            Yaw: -169.110931
-            Roll: -112.536156
+            Pitch: 22.2029552
+            Yaw: -169.110901
+            Roll: -112.536087
           }
           Scale {
             X: 0.10668084
@@ -4981,14 +4981,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -12.1936913
-            Y: 2.03907514
-            Z: 34.9297791
+            X: -14.7604446
+            Y: 2.0390842
+            Z: 24.5351601
           }
           Rotation {
-            Pitch: 0.321196467
-            Yaw: -120.515388
-            Roll: -89.8656616
+            Pitch: 0.321182787
+            Yaw: -120.515373
+            Roll: -89.8656311
           }
           Scale {
             X: 0.100362241
@@ -5044,14 +5044,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 15.5026522
-            Y: -0.058637131
-            Z: 31.1501102
+            X: 12.9358988
+            Y: -0.0586280525
+            Z: 20.7554913
           }
           Rotation {
             Pitch: -0.118688188
             Yaw: -90.0124893
-            Roll: 6.00799417
+            Roll: 6.00800228
           }
           Scale {
             X: 0.0498965718
@@ -5107,9 +5107,9 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 14.1956711
-            Y: 1.06050563
-            Z: 32.8158073
+            X: 11.6289177
+            Y: 1.06051469
+            Z: 22.4211864
           }
           Rotation {
             Pitch: 26.1262913
@@ -5170,14 +5170,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 11.9261122
-            Y: 4.34566593
-            Z: 34.7243423
+            X: 9.35936
+            Y: 4.34567499
+            Z: 24.3297215
           }
           Rotation {
-            Pitch: 40.8066483
-            Yaw: -110.720375
-            Roll: -25.0130577
+            Pitch: 40.806633
+            Yaw: -110.720337
+            Roll: -25.01301
           }
           Scale {
             X: 0.0639322475
@@ -5233,14 +5233,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 9.85470581
-            Y: 3.74801302
-            Z: 36.8713226
+            X: 7.28795242
+            Y: 3.74802208
+            Z: 26.4767036
           }
           Rotation {
-            Pitch: 33.794323
+            Pitch: 33.7943039
             Yaw: -106.680977
-            Roll: -25.7783375
+            Roll: -25.778286
           }
           Scale {
             X: 0.0793766901
@@ -5296,14 +5296,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 9.41843
-            Y: 6.53317
-            Z: 35.95467
+            X: 6.85167646
+            Y: 6.53317976
+            Z: 25.560051
           }
           Rotation {
-            Pitch: 35.9301414
-            Yaw: -117.762779
-            Roll: -37.2885666
+            Pitch: 35.93013
+            Yaw: -117.762726
+            Roll: -37.2885284
           }
           Scale {
             X: 0.0694365054
@@ -5359,14 +5359,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.96299744
-            Y: 6.09958076
-            Z: 38.4602051
+            X: 4.39624405
+            Y: 6.0995903
+            Z: 28.065588
           }
           Rotation {
             Pitch: 34.9106
-            Yaw: -102.930664
-            Roll: -28.7019806
+            Yaw: -102.930672
+            Roll: -28.7019653
           }
           Scale {
             X: 0.0822143704
@@ -5422,14 +5422,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 6.19417524
-            Y: 9.19919205
-            Z: 36.7704811
+            X: 3.62742209
+            Y: 9.19920158
+            Z: 26.375864
           }
           Rotation {
-            Pitch: 42.2681274
-            Yaw: -108.451294
-            Roll: -43.0466232
+            Pitch: 42.2681236
+            Yaw: -108.451324
+            Roll: -43.0466576
           }
           Scale {
             X: 0.0750447437
@@ -5485,14 +5485,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.64866304
-            Y: 8.19334
-            Z: 38.7524567
+            X: 0.0819097385
+            Y: 8.19334888
+            Z: 28.3578396
           }
           Rotation {
-            Pitch: 39.6314163
+            Pitch: 39.6313934
             Yaw: -85.9407578
-            Roll: -43.0246162
+            Roll: -43.0246315
           }
           Scale {
             X: 0.0592355356
@@ -5548,14 +5548,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -8.14644146
-            Y: 5.66406631
-            Z: 36.0605392
+            X: -10.7131958
+            Y: 5.66407537
+            Z: 25.6659222
           }
           Rotation {
-            Pitch: -9.21436214
-            Yaw: -138.8936
-            Roll: -87.2267838
+            Pitch: -9.21434784
+            Yaw: -138.89357
+            Roll: -87.2267609
           }
           Scale {
             X: 0.103654236
@@ -5611,14 +5611,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 0.796067178
-            Y: 11.3124857
-            Z: 36.5145
+            X: -1.77068615
+            Y: 11.3124943
+            Z: 26.1198845
           }
           Rotation {
-            Pitch: 39.7648735
-            Yaw: -88.051178
-            Roll: -35.973465
+            Pitch: 39.7648582
+            Yaw: -88.0511627
+            Roll: -35.9734573
           }
           Scale {
             X: 0.0635435134
@@ -5674,14 +5674,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -2.14060211
-            Y: 6.55663109
-            Z: 38.880722
+            X: -4.7073555
+            Y: 6.55664
+            Z: 28.4861031
           }
           Rotation {
-            Pitch: 22.0470505
-            Yaw: -108.8806
-            Roll: -56.2308159
+            Pitch: 22.0470161
+            Yaw: -108.880608
+            Roll: -56.2307739
           }
           Scale {
             X: 0.083774209
@@ -5737,14 +5737,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -7.30499125
-            Y: 3.18359518
-            Z: 37.7431564
+            X: -9.87174416
+            Y: 3.18360424
+            Z: 27.3485355
           }
           Rotation {
             Pitch: 1.75973666
-            Yaw: -114.386826
-            Roll: -78.1093903
+            Yaw: -114.386734
+            Roll: -78.1093292
           }
           Scale {
             X: 0.0987523794
@@ -5800,14 +5800,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -7.7285471
-            Y: -0.0585918799
-            Z: 38.9612961
+            X: -10.2953005
+            Y: -0.0585827976
+            Z: 28.5666771
           }
           Rotation {
             Pitch: 0.585770667
-            Yaw: -93.0711823
-            Roll: -79.2097168
+            Yaw: -93.0712
+            Roll: -79.2096558
           }
           Scale {
             X: 0.0912712514
@@ -5863,14 +5863,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -5.39608383
-            Y: 4.02929401
-            Z: 39.0823288
+            X: -7.96283722
+            Y: 4.0293026
+            Z: 28.6877098
           }
           Rotation {
             Pitch: 9.50098419
             Yaw: -118.956833
-            Roll: -73.5929794
+            Roll: -73.5929565
           }
           Scale {
             X: 0.0986366794
@@ -5926,14 +5926,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: -4.58069944
-            Y: 0.75585413
-            Z: 40.7326202
+            X: -7.14745283
+            Y: 0.75586319
+            Z: 30.338
           }
           Rotation {
-            Pitch: 9.70131302
-            Yaw: -99.2163849
-            Roll: -71.1441956
+            Pitch: 9.7013
+            Yaw: -99.2163925
+            Roll: -71.1441574
           }
           Scale {
             X: 0.0903081149
@@ -5989,14 +5989,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 3.81228256
-            Y: 0.107399069
-            Z: 41.1314735
+            X: 1.24552929
+            Y: 0.107408158
+            Z: 30.7368526
           }
           Rotation {
             Pitch: 4.18906403
-            Yaw: -94.2264404
-            Roll: -37.9587936
+            Yaw: -94.2264328
+            Roll: -37.9587479
           }
           Scale {
             X: 0.0664401129
@@ -6052,14 +6052,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 10.18297
-            Y: 0.298793286
-            Z: 37.9291763
+            X: 7.61621523
+            Y: 0.298802406
+            Z: 27.5345535
           }
           Rotation {
             Pitch: 7.47706938
-            Yaw: -92.6671066
-            Roll: -11.4558287
+            Yaw: -92.6670761
+            Roll: -11.4558611
           }
           Scale {
             X: 0.0811280906
@@ -6115,14 +6115,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 12.3459606
-            Y: 1.41207111
-            Z: 35.1800766
+            X: 9.77920818
+            Y: 1.41208017
+            Z: 24.7854576
           }
           Rotation {
-            Pitch: 16.3561783
-            Yaw: -95.9753265
-            Roll: -4.07035828
+            Pitch: 16.3561649
+            Yaw: -95.9753113
+            Roll: -4.07036209
           }
           Scale {
             X: 0.0829058
@@ -6178,14 +6178,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 8.61617756
-            Y: 1.94332755
-            Z: 38.5876732
+            X: 6.04942465
+            Y: 1.94333661
+            Z: 28.1930561
           }
           Rotation {
-            Pitch: 16.9490318
-            Yaw: -95.1841278
-            Roll: -34.1080551
+            Pitch: 16.9490185
+            Yaw: -95.1841125
+            Roll: -34.108078
           }
           Scale {
             X: 0.0824829
@@ -6241,14 +6241,14 @@
         Name: "Plane Kite - One Sided"
         Transform {
           Location {
-            X: 2.63857341
-            Y: 2.20310497
-            Z: 40.7231407
+            X: 0.071820192
+            Y: 2.20311379
+            Z: 30.3285236
           }
           Rotation {
             Pitch: 17.7263279
-            Yaw: -87.7509766
-            Roll: -37.732029
+            Yaw: -87.7509537
+            Roll: -37.7319794
           }
           Scale {
             X: 0.0490006208
@@ -6304,13 +6304,13 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: 20.1269112
-            Y: -0.0547372252
-            Z: 22.2396088
+            X: 17.5601578
+            Y: -0.0547281429
+            Z: 11.8449907
           }
           Rotation {
-            Pitch: -69.6533432
-            Yaw: -0.0235024411
+            Pitch: -69.6532745
+            Yaw: -0.023502402
             Roll: 179.99826
           }
           Scale {
@@ -6371,13 +6371,13 @@
         Name: "Diamond"
         Transform {
           Location {
-            X: 24.751749
-            Y: 3.71478558
-            Z: 18.9521046
+            X: 22.1849976
+            Y: 3.71479464
+            Z: 8.55748558
           }
           Rotation {
             Pitch: -9.4773035
-            Yaw: -83.9101639
+            Yaw: -83.910141
             Roll: 158.901169
           }
           Scale {
@@ -6424,13 +6424,13 @@
         Name: "Diamond"
         Transform {
           Location {
-            X: 24.7877789
-            Y: -3.48052692
-            Z: 18.8934765
+            X: 22.2210274
+            Y: -3.48051786
+            Z: 8.49885845
           }
           Rotation {
-            Pitch: 9.4774065
-            Yaw: -96.0898
+            Pitch: 9.47741318
+            Yaw: -96.0897903
             Roll: 158.901291
           }
           Scale {
@@ -6477,9 +6477,9 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 16.1107807
-            Y: 3.86324096
-            Z: 19.3237801
+            X: 13.5440273
+            Y: 3.86325
+            Z: 8.92915916
           }
           Rotation {
             Pitch: -16.4447174
@@ -6538,14 +6538,14 @@
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 15.4032888
-            Y: -0.0371479504
-            Z: 18.4498405
+            X: 12.8365345
+            Y: -0.0371388644
+            Z: 8.0552206
           }
           Rotation {
             Pitch: 0.0349500775
-            Yaw: -90.0057
-            Roll: 11.9413548
+            Yaw: -90.0056839
+            Roll: 11.9413862
           }
           Scale {
             X: 0.141228244
@@ -6599,13 +6599,13 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 27.4541988
-            Y: 0.898374081
-            Z: 18.2060013
+            X: 24.8874454
+            Y: 0.8983832
+            Z: 7.81138134
           }
           Rotation {
             Pitch: -3.16532111
-            Yaw: -64.5693
+            Yaw: -64.5693283
             Roll: 159.133423
           }
           Scale {
@@ -6660,13 +6660,13 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 27.7661572
-            Y: -1.15436077
-            Z: 17.9418983
+            X: 25.1994038
+            Y: -1.15435183
+            Z: 7.54727888
           }
           Rotation {
             Pitch: -1.08182681
-            Yaw: -97.4239807
+            Yaw: -97.4239655
             Roll: 155.725952
           }
           Scale {
@@ -6721,13 +6721,13 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 21.669199
-            Y: -3.93169212
-            Z: 18.3814392
+            X: 19.1024475
+            Y: -3.93168306
+            Z: 7.98682
           }
           Rotation {
             Pitch: 15.8003035
-            Yaw: -78.3065491
+            Yaw: -78.3065109
             Roll: 177.47934
           }
           Scale {
@@ -6782,9 +6782,9 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 21.721981
-            Y: 3.86322975
-            Z: 18.0575638
+            X: 19.1552258
+            Y: 3.86323881
+            Z: 7.66294479
           }
           Rotation {
             Pitch: -7.7986412
@@ -6843,9 +6843,9 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 18.6364231
-            Y: -3.93168592
-            Z: 18.5229111
+            X: 16.0696678
+            Y: -3.93167686
+            Z: 8.12829113
           }
           Rotation {
             Pitch: 7.91044474
@@ -6904,13 +6904,13 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 18.6362705
-            Y: 3.86323595
-            Z: 18.5238762
+            X: 16.0695152
+            Y: 3.86324501
+            Z: 8.12925625
           }
           Rotation {
             Pitch: -7.79864788
-            Yaw: -91.5620804
+            Yaw: -91.5620651
             Roll: -169.623672
           }
           Scale {
@@ -6965,13 +6965,13 @@
         Name: "Thorn"
         Transform {
           Location {
-            X: 16.1109333
-            Y: -3.93168092
-            Z: 19.3228149
+            X: 13.544179
+            Y: -3.93167186
+            Z: 8.928195
           }
           Rotation {
             Pitch: 6.82714272
-            Yaw: -66.7502594
+            Yaw: -66.7503128
             Roll: -175.37442
           }
           Scale {
@@ -7026,14 +7026,14 @@
         Name: "Sphere"
         Transform {
           Location {
-            X: 8.417799
-            Y: 5.89255047
-            Z: 28.9772015
+            X: 5.85104513
+            Y: 5.89255905
+            Z: 18.5825825
           }
           Rotation {
             Pitch: 1.94143331
-            Yaw: -4.66155205e-11
-            Roll: 1.11158952e-05
+            Yaw: -5.97905822e-11
+            Roll: 1.11158861e-05
           }
           Scale {
             X: 0.090950653
@@ -7095,14 +7095,14 @@
         Name: "Sphere"
         Transform {
           Location {
-            X: 8.4177742
-            Y: -6.00784
-            Z: 28.9771976
+            X: 5.85102081
+            Y: -6.00783157
+            Z: 18.5825787
           }
           Rotation {
             Pitch: 1.94143331
-            Yaw: -4.66155205e-11
-            Roll: 1.11158952e-05
+            Yaw: -5.97905822e-11
+            Roll: 1.11158861e-05
           }
           Scale {
             X: 0.090950653
@@ -7164,14 +7164,14 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: -3.16601563
-            Y: -5.91796875
-            Z: 36.083252
+            X: -5.73254395
+            Y: -5.91790771
+            Z: 25.6886902
           }
           Rotation {
             Pitch: -8.49024582
-            Yaw: 82.5915756
-            Roll: 41.3685112
+            Yaw: 82.591568
+            Roll: 41.3685417
           }
           Scale {
             X: 0.459281981
@@ -7253,14 +7253,14 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: -3.171875
-            Y: 5.80664063
-            Z: 35.9907227
+            X: -5.73864746
+            Y: 5.80670166
+            Z: 25.5961304
           }
           Rotation {
             Pitch: -8.49032116
-            Yaw: -82.5920105
-            Roll: -41.3685799
+            Yaw: -82.5919876
+            Roll: -41.3685875
           }
           Scale {
             X: 0.459281981
@@ -7342,9 +7342,9 @@
         Name: "Fantasy Axe Blade 01"
         Transform {
           Location {
-            X: 0.90234375
-            Y: -0.05078125
-            Z: 29.9543457
+            X: -1.66442871
+            Y: -0.0507202148
+            Z: 19.5597687
           }
           Rotation {
             Pitch: -10.2335148
@@ -7423,9 +7423,9 @@
         Name: "Fantasy Axe Blade 01"
         Transform {
           Location {
-            X: 0.90234375
-            Y: -0.05078125
-            Z: 29.9543457
+            X: -1.66442871
+            Y: -0.0507202148
+            Z: 19.5597687
           }
           Rotation {
             Pitch: -10.2335281
@@ -7504,14 +7504,14 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: 18.2533627
-            Y: -0.0527815819
-            Z: 25.9852295
+            X: 15.6866083
+            Y: -0.0527724959
+            Z: 15.5906096
           }
           Rotation {
-            Pitch: -0.000184415097
-            Yaw: 90.0001297
-            Roll: -110.884041
+            Pitch: -0.000177584909
+            Yaw: 90.0001068
+            Roll: -110.884
           }
           Scale {
             X: 0.111155719
@@ -7564,14 +7564,14 @@
         Name: "head_Capsule"
         Transform {
           Location {
-            X: 18.621769
-            Y: -4.51957846
-            Z: 23.5196285
+            X: 16.0550156
+            Y: -4.5195694
+            Z: 13.1250095
           }
           Rotation {
             Pitch: 16.5605373
-            Yaw: -154.993576
-            Roll: 164.20549
+            Yaw: -154.993607
+            Roll: 164.205444
           }
           Scale {
             X: 0.276595742
@@ -7624,14 +7624,14 @@
         Name: "head_Capsule"
         Transform {
           Location {
-            X: 18.621788
-            Y: 4.40424967
-            Z: 23.5196323
+            X: 16.0550346
+            Y: 4.40425873
+            Z: 13.1250134
           }
           Rotation {
             Pitch: -16.5604286
-            Yaw: -25.0060596
-            Roll: 164.205475
+            Yaw: -25.0060158
+            Roll: 164.205429
           }
           Scale {
             X: 0.276595742
@@ -7684,14 +7684,14 @@
         Name: "Sphere"
         Transform {
           Location {
-            X: -3.27765226
-            Y: -0.0585956313
-            Z: 23.8973598
+            X: -5.84440565
+            Y: -0.058586549
+            Z: 13.502739
           }
           Rotation {
-            Pitch: -6.83018879e-05
-            Yaw: -89.999733
-            Roll: 72.6201324
+            Pitch: -6.14717e-05
+            Yaw: -89.9996948
+            Roll: 72.6200867
           }
           Scale {
             X: 0.326830924
@@ -7744,14 +7744,14 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: 2.21763444
-            Y: -0.0527517
-            Z: 35.1340866
+            X: -0.349118859
+            Y: -0.0527426228
+            Z: 24.7394657
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -89.9999466
-            Roll: -167.32724
+            Yaw: -89.9999
+            Roll: -167.327194
           }
           Scale {
             X: 0.310554475
@@ -7804,14 +7804,14 @@
         Name: "Heart - Polished"
         Transform {
           Location {
-            X: 6.38726044
-            Y: -0.119163059
-            Z: 25.4003811
+            X: 3.82050729
+            Y: -0.119153976
+            Z: 15.0057621
           }
           Rotation {
-            Pitch: -0.075309664
-            Yaw: -92.2230911
-            Roll: 79.5628357
+            Pitch: -0.0752891675
+            Yaw: -92.2230835
+            Roll: 79.5627823
           }
           Scale {
             X: 0.274869651
@@ -7864,9 +7864,9 @@
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -17.7465439
-            Y: -1.04683828
-            Z: -0.000307656825
+            X: -20.3132954
+            Y: -1.0468291
+            Z: -10.394927
           }
           Rotation {
             Pitch: -31.6644554
@@ -7921,14 +7921,14 @@
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -3.34691286
-            Y: 10.5175781
-            Z: 19.4024754
+            X: -5.91366577
+            Y: 10.5175867
+            Z: 9.00785732
           }
           Rotation {
-            Pitch: -28.3516693
-            Yaw: 76.1329346
-            Roll: -155.12178
+            Pitch: -28.3516636
+            Yaw: 76.1329
+            Roll: -155.121811
           }
           Scale {
             X: 1.06816733
@@ -7978,14 +7978,14 @@
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -5.44921875
-            Y: -9.30078125
-            Z: 19.9101563
+            X: -8.01586914
+            Y: -9.30072
+            Z: 9.51554871
           }
           Rotation {
-            Pitch: -18.3577652
-            Yaw: 98.7182846
-            Roll: 54.1168785
+            Pitch: -18.3577576
+            Yaw: 98.7182922
+            Roll: 54.1168709
           }
           Scale {
             X: -0.903511047
@@ -8035,13 +8035,13 @@
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -11.7714844
-            Y: 1.80859375
-            Z: 11.1252441
+            X: -14.3381348
+            Y: 1.80877686
+            Z: 0.730651855
           }
           Rotation {
             Pitch: 22.203455
-            Yaw: -46.6149406
+            Yaw: -46.6149178
             Roll: 161.927582
           }
           Scale {
@@ -8092,14 +8092,14 @@
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
-            X: -9.50016785
-            Y: 4.03907776
-            Z: 12.5560532
+            X: -12.0669212
+            Y: 4.03908682
+            Z: 2.1614337
           }
           Rotation {
             Pitch: -10.5188189
-            Yaw: 124.645226
-            Roll: -164.379181
+            Yaw: 124.645233
+            Roll: -164.37915
           }
           Scale {
             X: 1.56017721
@@ -14596,9 +14596,9 @@
             Z: 15.8095703
           }
           Rotation {
-            Pitch: -4.09811328e-05
+            Pitch: -3.05175781e-05
             Yaw: 43.1374702
-            Roll: -90.0000229
+            Roll: -90.0000305
           }
           Scale {
             X: -0.0408107601

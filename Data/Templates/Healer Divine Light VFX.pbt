@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 9583554867605228300
-  Name: "Healer Stun VFX"
+  Name: "Healer Divine Light VFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

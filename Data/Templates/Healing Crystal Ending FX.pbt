@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 16966857285875434478
-  Name: "Healing Cystal Ending FX"
+  Name: "Healing Crystal Ending FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

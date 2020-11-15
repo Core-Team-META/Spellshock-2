@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 5202994091235663908
-  Name: "PoisonBombVFX"
+  Name: "Assassin Venom Bomb Impact VFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

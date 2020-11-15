@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 11324149636644572705
-  Name: "Excavate Projectile"
+  Name: "Tank Excavate Projectile"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

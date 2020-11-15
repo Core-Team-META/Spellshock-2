@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:Orc_Costume"
             AssetReference {
-              Id: 10938749002355594751
+              Id: 10716214664751823333
             }
           }
           Overrides {
@@ -875,7 +875,7 @@
       }
       Objects {
         Id: 6922611339924357768
-        Name: "Multishoot"
+        Name: "Rain of Arrows"
         Transform {
           Location {
             Y: 250.623047
@@ -1038,7 +1038,7 @@
       }
       Objects {
         Id: 10679331535669617236
-        Name: "E Special"
+        Name: "Leap"
         Transform {
           Location {
           }
@@ -1166,7 +1166,7 @@
       }
       Objects {
         Id: 1433284731599134094
-        Name: "R Special"
+        Name: "Bear Trap"
         Transform {
           Location {
             X: -273.006714
@@ -1619,7 +1619,6 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SelfId: 14041977020221580370
           }
           Weapon {
             ProjectileAssetRef {

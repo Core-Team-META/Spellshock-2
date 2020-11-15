@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 13331124737271784681
-  Name: "Rock Strike Projectile"
+  Name: "Tank Rock Strike Projectile"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

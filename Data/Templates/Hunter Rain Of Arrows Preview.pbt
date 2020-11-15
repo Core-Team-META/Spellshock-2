@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 1490966563412810811
-  Name: "RainOfArrows_Preview"
+  Name: "Hunter Rain Of Arrows Preview"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

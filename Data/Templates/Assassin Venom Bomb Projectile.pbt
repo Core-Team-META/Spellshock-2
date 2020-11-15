@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 6481751857886768330
-  Name: "PoisonBombProjectile"
+  Name: "Assassin Venom Bomb Projectile"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

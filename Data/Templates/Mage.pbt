@@ -902,6 +902,7 @@
         ChildIds: 17789038938063754529
         ChildIds: 1109302873163087110
         ChildIds: 3870953613855714336
+        ChildIds: 9844938775364500632
         ChildIds: 2988604534664961180
         ChildIds: 14738406619974674146
         UnregisteredParameters {
@@ -1448,6 +1449,206 @@
         Script {
           ScriptAsset {
             Id: 4499242035548803852
+          }
+        }
+      }
+      Objects {
+        Id: 9844938775364500632
+        Name: "Pyroblast"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10663446143340725464
+        ChildIds: 17441912587668400096
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 2945782094965142153
+            }
+          }
+          Overrides {
+            Name: "cs:ImpactFX"
+            AssetReference {
+              Id: 12582858560613182221
+            }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Float: 500
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:ProjectileGravity"
+            Float: 1.5
+          }
+          Overrides {
+            Name: "cs:AnimalCostumeTemplate"
+            AssetReference {
+              Id: 7047570860712842217
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 10
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "unarmed_magic_bolt"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_34"
+          }
+        }
+      }
+      Objects {
+        Id: 17441912587668400096
+        Name: "Pyroblast Ability Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9844938775364500632
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 9844938775364500632
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileTemplate"
+            AssetReference {
+              Id: 13667023393242254669
+            }
+          }
+          Overrides {
+            Name: "cs:TargetTemplate"
+            AssetReference {
+              Id: 13272352193882752730
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 10
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:ImpactFX"
+            AssetReference {
+              Id: 313465437675986879
+            }
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 500
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1983184682940115493
           }
         }
       }

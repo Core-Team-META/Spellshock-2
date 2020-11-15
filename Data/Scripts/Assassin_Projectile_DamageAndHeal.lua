@@ -5,7 +5,6 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
-local BoomerangTemplate = ABILITY:GetCustomProperty("BoomerangTemplate")
 local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
 local SPEED = ABILITY:GetCustomProperty("ProjectileSpeed") or 1500
 local PROJECTILE_RANGE = ABILITY:GetCustomProperty("ProjectileRange") or 2000
@@ -51,23 +50,14 @@ function OnProjectileImpact(projectile, other, hitresult)
     heal.sourcePlayer = ABILITY.owner
     heal.sourceAbility = ABILITY
     COMBAT().ApplyDamage(ABILITY.owner, heal, ABILITY.owner)
-
-    -- Play impact VFX
-
-
 end
 
 function OnAbilityCast(thisAbility)
-	CurrentBoomerange = World.SpawnAsset(BoomerangTemplate, {position = thisAbility.owner:GetWorldPosition()})
-	CurrentBoomerange:AttachToPlayer(thisAbility.owner, "right_prop")
 end
 
 function OnAbilityExecute(thisAbility)
-	--Task.Wait(0.35)
 	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
-	--CurrentBoomerange:Destroy()
-	--CurrentBoomerange = nil
-	
+		
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
     local lookPosition = thisAbility.owner:GetViewWorldPosition()
 	local lookQuaternion = Quaternion.New(lookRotation)
@@ -100,5 +90,4 @@ function OnAbilityExecute(thisAbility)
     projectile.impactEvent:Connect(OnProjectileImpact)
 end
 
---ABILITY.castEvent:Connect( OnAbilityCast )
 ABILITY.executeEvent:Connect( OnAbilityExecute )

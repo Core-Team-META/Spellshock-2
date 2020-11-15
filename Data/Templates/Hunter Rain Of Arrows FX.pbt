@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 10719404219839224023
-  Name: "RainOfArrows_FX"
+  Name: "Hunter Rain Of Arrows FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

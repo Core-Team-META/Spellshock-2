@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 8213125305841566245
-  Name: "Shield Dash FX"
+  Name: "Tank Shield Dash FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

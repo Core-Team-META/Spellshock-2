@@ -1112,15 +1112,27 @@
             }
           }
           Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 2309478069929941983
+            }
+          }
+          Overrides {
             Name: "cs:OrcCrystalTemplate"
             AssetReference {
               Id: 8415357861376842630
             }
           }
           Overrides {
-            Name: "cs:PrimerObjectTemplate"
+            Name: "cs:ElfCrystalTemplate"
             AssetReference {
-              Id: 2309478069929941983
+              Id: 9656965676697602122
+            }
+          }
+          Overrides {
+            Name: "cs:EndingFX"
+            AssetReference {
+              Id: 16966857285875434478
             }
           }
           Overrides {
@@ -1132,12 +1144,12 @@
             Int: 3
           }
           Overrides {
-            Name: "cs:DamageAmount"
-            Int: 3
-          }
-          Overrides {
             Name: "cs:DelayBetweenHeals"
             Float: 0.5
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 3
           }
           Overrides {
             Name: "cs:Duration"
@@ -1148,20 +1160,8 @@
             Int: 3000
           }
           Overrides {
-            Name: "cs:EndingFX"
-            AssetReference {
-              Id: 16966857285875434478
-            }
-          }
-          Overrides {
             Name: "cs:isPreviewing"
             Bool: false
-          }
-          Overrides {
-            Name: "cs:ElfCrystalTemplate"
-            AssetReference {
-              Id: 9656965676697602122
-            }
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1183,7 +1183,7 @@
       }
       Objects {
         Id: 12861631058086445073
-        Name: "Light Wave"
+        Name: "Divine Light"
         Transform {
           Location {
             X: -747.46167

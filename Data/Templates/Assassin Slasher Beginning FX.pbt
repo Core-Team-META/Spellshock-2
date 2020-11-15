@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 3260618482035830264
-  Name: "Boomerang Beginning FX"
+  Name: "Assassin Slasher Beginning FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

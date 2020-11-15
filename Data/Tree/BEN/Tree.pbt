@@ -12960,7 +12960,7 @@ Objects {
     }
     Overrides {
       Name: "cs:SameTeam"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -13120,9 +13120,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -23465.2246
-      Y: -30792.0859
-      Z: 6468.56689
+      X: -21115
+      Y: -27620
+      Z: 5225
     }
     Rotation {
     }
