@@ -841,12 +841,12 @@ Objects {
       Asset {
         Id: 15128280182623405640
       }
-      DistanceBetweenInstances: 700
+      DistanceBetweenInstances: 1000
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 8000
-        Max: 10000
+        Min: 6000
+        Max: 8000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -898,7 +898,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -946,7 +946,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -994,7 +994,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1041,8 +1041,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 8000
-        Max: 10000
+        Min: 6000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1148,8 +1148,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 7000
+        Max: 10000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -1205,8 +1205,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 7000
+        Max: 10000
       }
       CastShadow: true
       ReceivesDecals: true

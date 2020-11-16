@@ -3401,6 +3401,15 @@ Assets {
   }
 }
 Assets {
+  Id: 207164075973335940
+  Name: "Chromatic Aberration Post Process Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_chromatic_abberation"
+  }
+}
+Assets {
   Id: 198353679974341757
   Name: "Cube - Bottom-Aligned"
   PlatformAssetType: 1
