@@ -50,11 +50,19 @@
           }
         }
         ParentId: 12959015206063195225
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12889861000896994476
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -118,7 +126,10 @@
             Id: 7676573587134565567
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -168,7 +179,10 @@
             Id: 4693264132494587556
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -221,8 +235,10 @@
             Id: 7142781972612396783
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -275,8 +291,10 @@
             Id: 7142781972612396783
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -331,8 +349,10 @@
             Id: 7142781972612396783
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -387,8 +407,10 @@
             Id: 7142781972612396783
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
+          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -403,6 +425,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 12889861000896994476
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

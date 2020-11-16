@@ -1709,15 +1709,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8967718814469894689
-  Name: "Fantasy Castle Accessory Tower 01 - 12m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_acc_tower_001_12m"
-  }
-}
-Assets {
   Id: 8933537604162373856
   Name: "Plane 1m - One Sided"
   PlatformAssetType: 1
@@ -2534,6 +2525,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ivy_generic_001"
+  }
+}
+Assets {
+  Id: 4542959667302136808
+  Name: "Portcullis"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_portcullis_001"
   }
 }
 Assets {
