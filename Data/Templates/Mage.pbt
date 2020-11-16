@@ -486,6 +486,7 @@
         ChildIds: 3651362449464797999
         ChildIds: 467991210720303434
         ChildIds: 6507087611232739841
+        ChildIds: 10408874551619150327
         ChildIds: 17002085600729582046
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -659,6 +660,55 @@
               G: 1
               B: 1
               A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 10408874551619150327
+        Name: "SetAbilityIconClientOptimized"
+        Transform {
+          Location {
+            X: -6344.92188
+            Y: -7551.27539
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3981296022251942220
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 9844938775364500632
+            }
+          }
+          Overrides {
+            Name: "cs:API"
+            AssetReference {
+              Id: 7445855579671141283
+            }
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 4990637989068521051
             }
           }
         }
@@ -2591,6 +2641,15 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Blue_004"
+      }
+    }
+    Assets {
+      Id: 4990637989068521051
+      Name: "Fantasy Ability Red 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Red_007"
       }
     }
     Assets {
