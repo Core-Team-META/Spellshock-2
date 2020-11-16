@@ -20,6 +20,14 @@
           Z: -1
         }
       }
+      Overrides {
+        Name: "u_tiles"
+        Float: 1
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 1
+      }
     }
     Assets {
       Id: 934355235590210955
