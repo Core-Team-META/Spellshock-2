@@ -69,7 +69,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -7683.25342
+      Z: -20090.2129
     }
     Rotation {
     }
@@ -1357,11 +1357,11 @@ Objects {
       value {
         Overrides {
           Name: "bp:Horizon Falloff"
-          Float: 6
+          Float: 10
         }
         Overrides {
           Name: "bp:Haze Falloff"
-          Float: 15
+          Float: 7
         }
         Overrides {
           Name: "bp:Cloud Color"
@@ -1470,18 +1470,14 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 0.609780073
-        }
-        Overrides {
-          Name: "bp:Layered Fog Falloff"
-          Float: 0.133485734
+          Float: 2.07475519
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.176052496
-            G: 0.344494373
-            B: 0.614583313
+            R: 0.173068568
+            G: 0.374316484
+            B: 0.572916687
             A: 1
           }
         }
@@ -1500,6 +1496,10 @@ Objects {
         Overrides {
           Name: "bp:Beam View Direction"
           Float: 0.216638148
+        }
+        Overrides {
+          Name: "bp:Layered Fog Falloff"
+          Float: 0.05
         }
       }
     }
