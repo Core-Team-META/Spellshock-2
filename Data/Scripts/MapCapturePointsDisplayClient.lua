@@ -76,7 +76,7 @@ function OnButtonPressed(thisButton)
 		selectedIcon.isVisible = false
 	end
 	
-	print("Changing CurrentButton")
+	--print("Changing CurrentButton")
 	CurrentButton = thisButton
 	local selectedIcon = CurrentButton:GetCustomProperty("SelectedIcon"):WaitForObject()
 	selectedIcon.isVisible = true	

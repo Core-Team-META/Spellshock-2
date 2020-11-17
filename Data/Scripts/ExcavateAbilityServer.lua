@@ -16,6 +16,7 @@ local LifeSpan = script:GetCustomProperty("LifeSpan")
 local PickupObject = nil
 local CurrentProjectile = nil
 local Timer = 0
+local PlayerVFX = nil
 
 function OnPickupCast(thisAbility)
 	if not thisAbility.owner.isGrounded then
@@ -27,7 +28,8 @@ function OnPickupExecute(thisAbility)
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
 		CurrentProjectile:Destroy()
 	end
-	PickupObject = World.SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
+
+	PickupObject = World.SpawnAsset(PlayerVFX[thisAbility.owner.team][PickupAbility.name]["Pickup"], {position = PickupAbility.owner:GetWorldPosition()})
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
 	--PickupAbility.owner.animationStance = "unarmed_carry_score_card"
 	ThrowAbility.isEnabled = true
@@ -66,8 +68,8 @@ function OnThrowExecute(thisAbility)
 	positionOffset.z = positionOffset.z + 150
 	local spawnPosition = PickupAbility.owner:GetWorldPosition() + positionOffset
 	local velocityVector = directionVector * ProjectileSpeed
-	
-	CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position = spawnPosition})
+	--PlayerVFX[thisAbility.owner.team][PickupAbility.name]["Projectile"]
+	CurrentProjectile = World.SpawnAsset(PlayerVFX[thisAbility.owner.team][PickupAbility.name]["Projectile"], {position = spawnPosition})
 	CurrentProjectile:SetAngularVelocity(angularVelocity)
 	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("Trigger"):WaitForObject()
 	ProjectileTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
@@ -88,7 +90,8 @@ function OnInterrupted(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX["Tank"]
 end
 
 function OnUnequip(equipment, player)
@@ -98,7 +101,7 @@ function OnUnequip(equipment, player)
 	end
 end
 
---Equipment.equippedEvent:Connect(OnEquip)
+Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
