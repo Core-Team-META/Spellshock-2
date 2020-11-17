@@ -16,7 +16,9 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 10084327460925223975
+        ChildIds: 10143524279940654328
+        ChildIds: 17624963925719290447
+        ChildIds: 4182307201867080222
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -28,48 +30,16 @@
         }
       }
       Objects {
-        Id: 10084327460925223975
-        Name: "MergedModel"
-        Transform {
-          Location {
-            X: 1.86783862
-            Y: -0.699869812
-            Z: 25.9023438
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16295755683547083001
-        ChildIds: 10143524279940654328
-        ChildIds: 17624963925719290447
-        ChildIds: 4182307201867080222
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          Model {
-          }
-        }
-      }
-      Objects {
         Id: 10143524279940654328
         Name: "Kelp Bush 01"
         Transform {
           Location {
-            X: -2.8347168
-            Y: 2.47119141
-            Z: 95.9873047
+            X: -0.966796875
+            Y: 1.77148438
+            Z: 121.889648
           }
           Rotation {
-            Yaw: -5.32648
+            Yaw: -5.32648325
           }
           Scale {
             X: 1.12164593
@@ -77,7 +47,7 @@
             Z: 1.12164593
           }
         }
-        ParentId: 10084327460925223975
+        ParentId: 16295755683547083001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -121,8 +91,9 @@
         Name: "Tree Oak Stump 01"
         Transform {
           Location {
-            X: 0.200439453
-            Y: -3.10107422
+            X: 2.06835938
+            Y: -3.80078125
+            Z: 25.9023438
           }
           Rotation {
           }
@@ -132,7 +103,7 @@
             Z: 0.385304868
           }
         }
-        ParentId: 10084327460925223975
+        ParentId: 16295755683547083001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Trunk:id"
@@ -180,12 +151,12 @@
         Name: "Kelp Bush 01"
         Transform {
           Location {
-            X: 2.6340332
-            Y: 0.629394531
-            Z: 113.56543
+            X: 4.50195313
+            Y: -0.0703125
+            Z: 139.467773
           }
           Rotation {
-            Yaw: 115.510101
+            Yaw: 115.510078
           }
           Scale {
             X: 0.976167738
@@ -193,7 +164,7 @@
             Z: 1.89688194
           }
         }
-        ParentId: 10084327460925223975
+        ParentId: 16295755683547083001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"

@@ -40,6 +40,7 @@
         ChildIds: 4339441860811118742
         ChildIds: 1674292532985593835
         ChildIds: 9061980013304302361
+        ChildIds: 1443394751041151927
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -14937,6 +14938,66 @@
           TeamSettings {
           }
           DecalBP {
+          }
+        }
+      }
+      Objects {
+        Id: 1443394751041151927
+        Name: "Fantasy Castle Accessory Tower 01 - 12m"
+        Transform {
+          Location {
+            X: 10.1322956
+            Y: -20.792902
+            Z: 1467.70605
+          }
+          Rotation {
+            Yaw: 2.04905664e-05
+          }
+          Scale {
+            X: 7.44217968
+            Y: 7.44217968
+            Z: 0.834490299
+          }
+        }
+        ParentId: 569351046798328147
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 12889861000896994476
+            }
+          }
+          Overrides {
+            Name: "ma:Building_WallOuter:id"
+            AssetReference {
+              Id: 571020486784087161
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12650985443469059164
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13950225922132296555
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
           }
         }
       }
