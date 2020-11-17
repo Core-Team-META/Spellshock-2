@@ -3113,15 +3113,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1519656491527866223
-  Name: "Frosted Glass No Distortion"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_frosted_glass_nodistortion"
-  }
-}
-Assets {
   Id: 1471773936938775611
   Name: "Ellipsoid - Truncated"
   PlatformAssetType: 1
@@ -3398,6 +3389,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_wedge_002"
+  }
+}
+Assets {
+  Id: 207164075973335940
+  Name: "Chromatic Aberration Post Process Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_chromatic_abberation"
   }
 }
 Assets {

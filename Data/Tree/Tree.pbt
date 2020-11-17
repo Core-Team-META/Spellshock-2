@@ -69,7 +69,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -7683.25342
+      Z: -20090.2129
     }
     Rotation {
     }
@@ -841,12 +841,12 @@ Objects {
       Asset {
         Id: 15128280182623405640
       }
-      DistanceBetweenInstances: 700
+      DistanceBetweenInstances: 1000
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 8000
-        Max: 10000
+        Min: 6000
+        Max: 8000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -898,7 +898,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -946,7 +946,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -994,7 +994,7 @@ Objects {
       SpawnDistance: 24000
       CullDistance {
         Min: 5000
-        Max: 8000
+        Max: 7000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1041,8 +1041,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
-        Min: 8000
-        Max: 10000
+        Min: 6000
+        Max: 8000
       }
       ReceivesDecals: true
       GroundSlopeAngle {
@@ -1148,8 +1148,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 7000
+        Max: 10000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -1205,8 +1205,8 @@ Objects {
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
-        Min: 15000
-        Max: 25000
+        Min: 7000
+        Max: 10000
       }
       CastShadow: true
       ReceivesDecals: true
@@ -1357,11 +1357,11 @@ Objects {
       value {
         Overrides {
           Name: "bp:Horizon Falloff"
-          Float: 6
+          Float: 10
         }
         Overrides {
           Name: "bp:Haze Falloff"
-          Float: 15
+          Float: 7
         }
         Overrides {
           Name: "bp:Cloud Color"
@@ -1470,18 +1470,14 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 0.609780073
-        }
-        Overrides {
-          Name: "bp:Layered Fog Falloff"
-          Float: 0.133485734
+          Float: 2.07475519
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.176052496
-            G: 0.344494373
-            B: 0.614583313
+            R: 0.173068568
+            G: 0.374316484
+            B: 0.572916687
             A: 1
           }
         }
@@ -1500,6 +1496,10 @@ Objects {
         Overrides {
           Name: "bp:Beam View Direction"
           Float: 0.216638148
+        }
+        Overrides {
+          Name: "bp:Layered Fog Falloff"
+          Float: 0.05
         }
       }
     }
