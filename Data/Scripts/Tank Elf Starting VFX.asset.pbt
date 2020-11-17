@@ -43,13 +43,13 @@
       Overrides {
         Name: "cs:Boulder_Throw_0_Pickup"
         AssetReference {
-          Id: 11318441308667137252
+          Id: 13597461145019088703
         }
       }
       Overrides {
         Name: "cs:Boulder_Throw_0_Projectile"
         AssetReference {
-          Id: 11324149636644572705
+          Id: 8873727555978059131
         }
       }
     }
