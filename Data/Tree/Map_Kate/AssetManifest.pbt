@@ -3113,15 +3113,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1519656491527866223
-  Name: "Frosted Glass No Distortion"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_frosted_glass_nodistortion"
-  }
-}
-Assets {
   Id: 1471773936938775611
   Name: "Ellipsoid - Truncated"
   PlatformAssetType: 1
