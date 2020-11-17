@@ -1767,8 +1767,7 @@
           }
         }
         ParentId: 13944462686745880869
-        ChildIds: 9444411452001214971
-        ChildIds: 11537850216701276195
+        ChildIds: 2695547812234798459
         ChildIds: 2726600085118415138
         UnregisteredParameters {
         }
@@ -1783,8 +1782,8 @@
         }
       }
       Objects {
-        Id: 9444411452001214971
-        Name: "Scripts"
+        Id: 2695547812234798459
+        Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
           }
@@ -1797,35 +1796,6 @@
           }
         }
         ParentId: 13500843537647582575
-        ChildIds: 2695547812234798459
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsFilePartition: true
-          FilePartitionName: "Scripts_2"
-        }
-      }
-      Objects {
-        Id: 2695547812234798459
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1
-          }
-        }
-        ParentId: 9444411452001214971
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1849,45 +1819,6 @@
         Script {
           ScriptAsset {
             Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 11537850216701276195
-        Name: "RangeIndicatorHandler"
-        Transform {
-          Location {
-            X: -22819.2461
-            Y: -13815.6084
-            Z: -7300
-          }
-          Rotation {
-            Yaw: -16.3261738
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13500843537647582575
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 13944462686745880869
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11565410270089156903
           }
         }
       }
@@ -1927,8 +1858,8 @@
           Overrides {
             Name: "cs:InRangeColor"
             Color {
-              R: 0.89
-              G: 0.795695364
+              R: 0.919999957
+              G: 0.091390729
               A: 1
             }
           }

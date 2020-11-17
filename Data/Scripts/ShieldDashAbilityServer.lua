@@ -12,6 +12,7 @@ local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
 local EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
 local DamageAmount = Equipment:GetCustomProperty("DamageAmount")
 
+local PlayerVFX = nil
 local DashImpulseVector = nil
 local originalPlayerSettings = {}
 local isDashing = false
@@ -57,7 +58,7 @@ function ToggleDash(mode)
 		local directionVector = Ability.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
 		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
-		AttachedFX = World.SpawnAsset(DashFX, {position = Ability.owner:GetWorldPosition()})
+		AttachedFX = World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Attachment"], {position = Ability.owner:GetWorldPosition()})
 		AttachedFX:AttachToPlayer(Ability.owner, "root")
 	else
 		TriggerEventConnection:Disconnect()
@@ -82,7 +83,7 @@ end
 
 function OnAbilityCooldown(thisAbility)
 	ToggleDash(false)
-	World.SpawnAsset(EndingFX, {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Bash"], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
 	
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), Radius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
@@ -90,6 +91,12 @@ function OnAbilityCooldown(thisAbility)
 	end
 end
 
+function OnEquip(equipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX["Tank"]
+end
+
+Equipment.equippedEvent:Connect(OnEquip)
 Ability.castEvent:Connect(OnAbilityCast)
 Ability.executeEvent:Connect(OnAbilityExecute)
 Ability.cooldownEvent:Connect(OnAbilityCooldown)

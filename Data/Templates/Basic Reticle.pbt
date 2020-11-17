@@ -84,7 +84,7 @@
           }
           Image {
             Brush {
-              Id: 16762591826162227996
+              Id: 4948247749987491170
             }
             Color {
               R: 1
@@ -111,12 +111,12 @@
       }
     }
     Assets {
-      Id: 16762591826162227996
-      Name: "Crosshair 007"
+      Id: 4948247749987491170
+      Name: "Crosshair 020"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "Crosshair_007"
+        AssetId: "Crosshair_020"
       }
     }
     PrimaryAssetId {

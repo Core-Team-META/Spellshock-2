@@ -11,6 +11,7 @@ local EventListeners = {}
 
 local isPreviewing = false
 local isPlacing = false
+local PlayerVFX = nil
 
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
@@ -47,7 +48,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-		local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
+		local newObject = World.SpawnAsset(PlayerVFX[SpecialAbility.owner.team][SpecialAbility.name]["Placement"], {position = position, rotation = rotation})
 		newObject.lifeSpan = Duration
 		if newObject:GetCustomProperty("Team") ~= nil then
 			Task.Wait()
@@ -84,6 +85,10 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX["Tank"]
+	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[player.team][SpecialAbility.name]["Preview"])
 	
 	Task.Wait()
 	SpecialAbility.isEnabled = false

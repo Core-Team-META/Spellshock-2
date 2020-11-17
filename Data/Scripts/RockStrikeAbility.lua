@@ -2,6 +2,7 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 
@@ -11,6 +12,7 @@ local LIFE_SPAN = script:GetCustomProperty("LifeSpan")
 local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
 local IMPULSE_AMOUNT = script:GetCustomProperty("ImpulseAmount")
 
+local PlayerVFX = nil
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
 
@@ -80,7 +82,7 @@ function OnAbilityExecute(thisAbility)
 	spawnPosition.z = spawnPosition.z + 200
 	
 	--local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	local RockProjectile = World.SpawnAsset(ProjectileTemplate, {position=spawnPosition})
+	local RockProjectile = World.SpawnAsset(PlayerVFX[thisAbility.owner.team][thisAbility.name]["Projectile"], {position=spawnPosition})
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
@@ -95,6 +97,11 @@ function OnAbilityExecute(thisAbility)
 		OverlapEvent:Disconnect()
 		RockProjectile:StopMove()
 	end, MOVE_DURATION)
+end
+
+function OnEquip(equipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX["Tank"]
 end
 
 function Tick(deltaTime)
@@ -114,5 +121,6 @@ function Tick(deltaTime)
 	end
 end
 
+Equipment.equippedEvent:Connect(OnEquip)
 ABILITY.castEvent:Connect( OnAbilityCast )
 ABILITY.executeEvent:Connect( OnAbilityExecute )

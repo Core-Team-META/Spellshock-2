@@ -7,7 +7,7 @@
       RootId: 15193641405411111252
       Objects {
         Id: 15193641405411111252
-        Name: "Mage Ice Cube"
+        Name: "Mage Iceberg FX"
         Transform {
           Scale {
             X: 1
@@ -16,12 +16,8 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 2432187839687489478
-        ChildIds: 6562739356095277590
-        ChildIds: 18205455230759866824
-        ChildIds: 9682008244369998129
-        ChildIds: 16689675706804914910
-        ChildIds: 10610170175374576494
+        ChildIds: 16521302198778403157
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -33,23 +29,126 @@
         }
       }
       Objects {
-        Id: 2432187839687489478
-        Name: "Decal Snow Patch"
+        Id: 16521302198778403157
+        Name: "ClientContext"
         Transform {
           Location {
-            X: -11.28125
-            Y: 8.48730469
-            Z: 1.00863647
+            X: -20
+            Y: 5
+            Z: -15
           }
           Rotation {
           }
           Scale {
-            X: 1.55174363
-            Y: 1.21438658
-            Z: 0.57433027
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 15193641405411111252
+        ChildIds: 14565290609417335973
+        ChildIds: 10501048423193444252
+        ChildIds: 2432187839687489478
+        ChildIds: 6562739356095277590
+        ChildIds: 9682008244369998129
+        ChildIds: 16689675706804914910
+        ChildIds: 18205455230759866824
+        ChildIds: 10610170175374576494
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 14565290609417335973
+        Name: "Ice Cracking Melting Loop 01 SFX"
+        Transform {
+          Location {
+            X: 20
+            Y: -5
+            Z: 170
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16521302198778403157
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7241023699057474115
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 10501048423193444252
+        Name: "Ice Frost Attack Whoosh Impact 01 SFX"
+        Transform {
+          Location {
+            Z: 130
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16521302198778403157
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 17039004499830472759
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: 5000
+          Radius: 500
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 2432187839687489478
+        Name: "Decal Snow Patch"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2.9
+            Y: 2.4
+            Z: 1.60000026
+          }
+        }
+        ParentId: 16521302198778403157
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -71,9 +170,9 @@
         Name: "Stone Block Standard Broken"
         Transform {
           Location {
-            X: -5.05224609
-            Y: 42.3457031
-            Z: 126.895218
+            X: 20
+            Y: -5
+            Z: 141.89502
           }
           Rotation {
           }
@@ -83,7 +182,7 @@
             Z: 1.57122171
           }
         }
-        ParentId: 15193641405411111252
+        ParentId: 16521302198778403157
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -124,68 +223,16 @@
         }
       }
       Objects {
-        Id: 18205455230759866824
-        Name: "Snow Volume VFX"
-        Transform {
-          Location {
-            X: -15.6228027
-            Y: 2.71118164
-            Z: -14.769989
-          }
-          Rotation {
-          }
-          Scale {
-            X: 2.65098596
-            Y: 2.65098596
-            Z: 2.65098596
-          }
-        }
-        ParentId: 15193641405411111252
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Density"
-            Float: 4.74073553
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-              X: 10
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 3.85536265
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 2590787292447476024
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
         Id: 9682008244369998129
         Name: "Group"
         Transform {
           Location {
-            X: 4.28564453
-            Y: 7.64697266
-            Z: 23.2429123
+            X: 20
+            Y: -5
+            Z: 38.2426758
           }
           Rotation {
-            Yaw: -44.9999962
+            Yaw: -44.9999924
           }
           Scale {
             X: 1.2
@@ -193,7 +240,7 @@
             Z: 1.2
           }
         }
-        ParentId: 15193641405411111252
+        ParentId: 16521302198778403157
         ChildIds: 1772014874408960346
         ChildIds: 8845828347626398176
         ChildIds: 1399428268218237682
@@ -397,9 +444,9 @@
         Name: "Group"
         Transform {
           Location {
-            X: 4.28564453
-            Y: 7.64697266
-            Z: 23.2429123
+            X: 20
+            Y: -5
+            Z: 38.2426758
           }
           Rotation {
           }
@@ -409,7 +456,7 @@
             Z: 1
           }
         }
-        ParentId: 15193641405411111252
+        ParentId: 16521302198778403157
         ChildIds: 6915784669548575514
         ChildIds: 2313593730616449939
         ChildIds: 7542473880452776737
@@ -605,13 +652,71 @@
         }
       }
       Objects {
+        Id: 18205455230759866824
+        Name: "Snow Volume VFX"
+        Transform {
+          Location {
+            Z: 0.229980469
+          }
+          Rotation {
+          }
+          Scale {
+            X: 10
+            Y: 10
+            Z: 10
+          }
+        }
+        ParentId: 16521302198778403157
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 6
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+              X: 10
+              Z: 50
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 3.85536265
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 1.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2590787292447476024
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
         Id: 10610170175374576494
         Name: "Explosion Kit Dust Ring VFX"
         Transform {
           Location {
-            X: -98.6030273
-            Y: 25.6687012
-            Z: 31.006134
+            Z: 46.0063477
           }
           Rotation {
           }
@@ -621,7 +726,7 @@
             Z: 1
           }
         }
-        ParentId: 15193641405411111252
+        ParentId: 16521302198778403157
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
@@ -652,6 +757,24 @@
       }
     }
     Assets {
+      Id: 7241023699057474115
+      Name: "Ice Cracking Melting Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_ice_cracking_melting_loop_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 17039004499830472759
+      Name: "Ice Frost Attack Whoosh Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_ice_frost_attack_whoosh_impact_01a_Cue_ref"
+      }
+    }
+    Assets {
       Id: 3834487395638995980
       Name: "Decal Snow Patch"
       PlatformAssetType: 14
@@ -670,21 +793,21 @@
       }
     }
     Assets {
-      Id: 2590787292447476024
-      Name: "Snow Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_snow_volume"
-      }
-    }
-    Assets {
       Id: 6093444816407687955
       Name: "Ice Spikes Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_ice_spike_volume"
+      }
+    }
+    Assets {
+      Id: 2590787292447476024
+      Name: "Snow Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_snow_volume"
       }
     }
     Assets {

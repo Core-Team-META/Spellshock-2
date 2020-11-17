@@ -895,6 +895,12 @@
             Name: "cs:ImpulseAmount"
             Int: 150000
           }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1050,7 +1056,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }

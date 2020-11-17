@@ -33,7 +33,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
 		if isPreviewing then
-			objectHalogram = World.SpawnAsset(ObjectTemplate)
+			objectHalogram = World.SpawnAsset(ServerScript:GetCustomProperty("PreviewObjectTemplate"))
 			AllHalograms[objectHalogram.id] = objectHalogram
 		else
 			if objectHalogram and Object.IsValid(objectHalogram) then

@@ -7,7 +7,7 @@
       RootId: 11320169441651447689
       Objects {
         Id: 11320169441651447689
-        Name: "IceCubeBreak FX"
+        Name: "Mage Iceberg Break FX"
         Transform {
           Scale {
             X: 1
