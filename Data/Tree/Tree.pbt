@@ -1449,7 +1449,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Dynamic Shadow Distance"
-          Float: 3
+          Float: 4.5
         }
         Overrides {
           Name: "bp:Shadow Cascade Count"
@@ -1470,13 +1470,13 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 2.07475519
+          Float: 1.57037377
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
             R: 0.173068568
-            G: 0.374316484
+            G: 0.33967188
             B: 0.572916687
             A: 1
           }

@@ -10,9 +10,9 @@
         Name: "Prop_GladeBridge"
         Transform {
           Scale {
-            X: 1.93903315
-            Y: 1.93903315
-            Z: 1.93903315
+            X: 2.04358506
+            Y: 2.04358506
+            Z: 2.04358506
           }
         }
         ParentId: 10244168996742092131
@@ -5558,7 +5558,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -5628,7 +5627,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -5698,7 +5696,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -6320,7 +6317,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -6528,7 +6524,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -6964,7 +6959,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableReceiveDecals: true
           EnableCameraCollision: true
           StaticMesh {
             Physics {
@@ -7941,16 +7935,19 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: -384.51828
-            Y: 243.829697
-            Z: 86.8518829
+            X: -338.216034
+            Y: 152.028427
+            Z: -156.391373
           }
           Rotation {
+            Pitch: 28.3441696
+            Yaw: 0.456927717
+            Roll: 28.4396858
           }
           Scale {
-            X: 0.679402351
-            Y: 0.869922519
-            Z: 0.772048116
+            X: 0.679402411
+            Y: 0.869922578
+            Z: 0.772048175
           }
         }
         ParentId: 8991748924205406921
@@ -7959,6 +7956,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14789907036896094035
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.635416687
+              G: 0.591556251
+              B: 0.506347656
+              A: 1
             }
           }
         }
@@ -8009,6 +8015,15 @@
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14789907036896094035
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.635416687
+              G: 0.591556251
+              B: 0.506347656
+              A: 1
             }
           }
         }
@@ -8088,16 +8103,19 @@
         Name: "Rock 01"
         Transform {
           Location {
-            X: -335.45285
-            Y: -229.697601
+            X: -219.529678
+            Y: -442.984863
+            Z: -471.15329
           }
           Rotation {
-            Roll: -126.498222
+            Pitch: -33.4987183
+            Yaw: -140.712982
+            Roll: -138.034012
           }
           Scale {
-            X: 0.679402351
-            Y: 0.869922519
-            Z: 0.772048116
+            X: 0.93720454
+            Y: 1.93764567
+            Z: 0.957146883
           }
         }
         ParentId: 8991748924205406921
@@ -8105,7 +8123,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14789907036896094035
+              Id: 8772095799891222028
             }
           }
         }
