@@ -350,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15897705887741699672
+  Name: "Urban Pipe Straight"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_pipes_straight_001_ref"
+  }
+}
+Assets {
   Id: 15796848555389387332
   Name: "Torch Holder Metal"
   PlatformAssetType: 1
@@ -365,15 +374,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_scf_crate_lid_001_ref"
-  }
-}
-Assets {
-  Id: 15761460511220986007
-  Name: "Emissive Glow Transparent"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_emissive_001"
   }
 }
 Assets {
@@ -410,6 +410,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crescent_002"
+  }
+}
+Assets {
+  Id: 15312805567995783140
+  Name: "Fantasy Crossbow Foregrip 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_foregrip_cross_001"
   }
 }
 Assets {
@@ -881,6 +890,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12875975218361332960
+  Name: "Fantasy Crossbow Bow 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_bow_cross_001"
+  }
+}
+Assets {
   Id: 12806717230968640779
   Name: "Pipe - Half Thin"
   PlatformAssetType: 1
@@ -926,6 +944,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12632251234297570874
+  Name: "Urban Pipe Cap 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_pipes_acc_cap_003_ref"
+  }
+}
+Assets {
   Id: 12568857689836871904
   Name: "Ceramic Terracotta Pots 01"
   PlatformAssetType: 2
@@ -959,15 +986,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_raw_001_uv"
-  }
-}
-Assets {
-  Id: 12476654224073211161
-  Name: "Rock Hexagonal"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_008"
   }
 }
 Assets {
@@ -1076,6 +1094,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crate_narrow_open_simple_160cm_001"
+  }
+}
+Assets {
+  Id: 12005207196880329049
+  Name: "Plane 4m - Two Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_4m_002"
   }
 }
 Assets {
@@ -1772,15 +1799,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8751406400362347694
-  Name: "Pipe - 90-Degree Long Thick"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_curve90_005"
-  }
-}
-Assets {
   Id: 8626697804450090273
   Name: "Stone Arch (doorway) 001"
   PlatformAssetType: 1
@@ -2039,6 +2057,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_panel_1x3m_angledR_001"
+  }
+}
+Assets {
+  Id: 7530389532923440633
+  Name: "Shield 06"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_shield_006"
   }
 }
 Assets {
@@ -2393,6 +2420,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5386842465317264650
+  Name: "Fantasy Crossbow Stock 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_stock_cross_001"
+  }
+}
+Assets {
   Id: 5351428073291024820
   Name: "Opaque Emissive"
   PlatformAssetType: 2
@@ -2429,12 +2465,12 @@ Assets {
   }
 }
 Assets {
-  Id: 5061372286056644297
-  Name: "Sphere"
+  Id: 5117326109845707677
+  Name: "Plane"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
+    AssetId: "sm_plane_4m_001"
   }
 }
 Assets {
@@ -2624,15 +2660,6 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_wood_wheel_turning_movement_loop_01_Cue_ref"
-  }
-}
-Assets {
-  Id: 4322675021483384603
-  Name: "Fantasy Shield 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_shield_002"
   }
 }
 Assets {

@@ -10,12 +10,12 @@
         Name: "Arrow Launcher"
         Transform {
           Scale {
-            X: 2.63147545
-            Y: 2.63147545
-            Z: 2.63147545
+            X: 1.13111663
+            Y: 1.13111663
+            Z: 1.13111663
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 7183471705418217801
         ChildIds: 2481768135747736245
         ChildIds: 9366111979859741671
         ChildIds: 12170207110019579762
@@ -70,17 +70,17 @@
         Name: "Wheel"
         Transform {
           Location {
-            X: 369.864899
-            Y: 208.995529
-            Z: 1.61140451e-05
+            X: 370.627441
+            Y: 208.914063
+            Z: -29.2568016
           }
           Rotation {
             Yaw: -179.999954
           }
           Scale {
-            X: 0.804956734
-            Y: 0.804956734
-            Z: 0.804956734
+            X: 1.06341302
+            Y: 1.06341302
+            Z: 1.06341302
           }
         }
         ParentId: 2481768135747736245
@@ -158,6 +158,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -222,6 +223,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -278,7 +280,10 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -287,7 +292,7 @@
       }
       Objects {
         Id: 3056353311169002382
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -324,7 +329,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -336,7 +341,7 @@
       }
       Objects {
         Id: 8177424233195199000
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -372,7 +377,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -384,7 +389,7 @@
       }
       Objects {
         Id: 4189232631044785752
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -422,7 +427,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -434,7 +439,7 @@
       }
       Objects {
         Id: 16706400453958382891
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -472,7 +477,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -484,7 +489,7 @@
       }
       Objects {
         Id: 575542179941476265
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -523,7 +528,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -535,7 +540,7 @@
       }
       Objects {
         Id: 5096852438318625285
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -574,7 +579,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -586,7 +591,7 @@
       }
       Objects {
         Id: 9452919767446260259
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -625,7 +630,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -637,7 +642,7 @@
       }
       Objects {
         Id: 4760475942959275646
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -676,7 +681,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -781,6 +786,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -845,6 +851,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -853,7 +860,7 @@
       }
       Objects {
         Id: 15991428889842902213
-        Name: "Pipe - Thick"
+        Name: "Pipe"
         Transform {
           Location {
             X: 21.0604
@@ -901,7 +908,10 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -910,7 +920,7 @@
       }
       Objects {
         Id: 13844026005878160673
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -956,7 +966,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -968,7 +978,7 @@
       }
       Objects {
         Id: 2600261301413843052
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1013,7 +1023,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1025,7 +1035,7 @@
       }
       Objects {
         Id: 8248036006141095414
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -1072,7 +1082,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1084,7 +1094,7 @@
       }
       Objects {
         Id: 3855231048624671828
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -1131,7 +1141,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1143,7 +1153,7 @@
       }
       Objects {
         Id: 15377367892994013599
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -1191,7 +1201,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1203,7 +1213,7 @@
       }
       Objects {
         Id: 17168050315395082001
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -1251,7 +1261,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1263,7 +1273,7 @@
       }
       Objects {
         Id: 18094419626510548128
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -1302,7 +1312,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1314,7 +1324,7 @@
       }
       Objects {
         Id: 12608885235577981526
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -1362,7 +1372,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1467,6 +1477,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1531,6 +1542,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1539,7 +1551,7 @@
       }
       Objects {
         Id: 1949907745981262553
-        Name: "Pipe - Thick"
+        Name: "Pipe"
         Transform {
           Location {
             X: 21.0604
@@ -1587,7 +1599,10 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1596,7 +1611,7 @@
       }
       Objects {
         Id: 10541904075011443049
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1633,7 +1648,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1645,7 +1660,7 @@
       }
       Objects {
         Id: 10992357997470850511
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -1681,7 +1696,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1693,7 +1708,7 @@
       }
       Objects {
         Id: 12823536165269240596
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -1731,7 +1746,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1743,7 +1758,7 @@
       }
       Objects {
         Id: 10233398574833800478
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -1781,7 +1796,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1793,7 +1808,7 @@
       }
       Objects {
         Id: 13712663508777191363
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -1832,7 +1847,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1844,7 +1859,7 @@
       }
       Objects {
         Id: 2516036322368779885
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -1883,7 +1898,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1895,7 +1910,7 @@
       }
       Objects {
         Id: 17522865871873667417
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -1934,7 +1949,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -1946,7 +1961,7 @@
       }
       Objects {
         Id: 10944982710943252054
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -1985,7 +2000,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2000,17 +2015,17 @@
         Name: "Wheel"
         Transform {
           Location {
-            X: -257.755157
-            Y: 210.760178
-            Z: -0.000143965124
+            X: -256.991455
+            Y: 210.680344
+            Z: -29.256937
           }
           Rotation {
             Yaw: 5.80565866e-05
           }
           Scale {
-            X: 0.804956734
-            Y: 0.804956734
-            Z: 0.804956734
+            X: 1.06341302
+            Y: 1.06341302
+            Z: 1.06341302
           }
         }
         ParentId: 2481768135747736245
@@ -2088,6 +2103,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2152,6 +2168,7 @@
           }
           Teams {
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2160,7 +2177,7 @@
       }
       Objects {
         Id: 12525273069401854833
-        Name: "Pipe - Thick"
+        Name: "Pipe"
         Transform {
           Location {
             X: 21.0604
@@ -2208,7 +2225,10 @@
             Id: 14746711894802914664
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -2217,7 +2237,7 @@
       }
       Objects {
         Id: 10219586518172174956
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -2254,7 +2274,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2266,7 +2286,7 @@
       }
       Objects {
         Id: 3679897594007272411
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54151
@@ -2302,7 +2322,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2314,7 +2334,7 @@
       }
       Objects {
         Id: 15861499003726880978
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150581
@@ -2352,7 +2372,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2364,7 +2384,7 @@
       }
       Objects {
         Id: 6764627884514377336
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149532
@@ -2402,7 +2422,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2414,7 +2434,7 @@
       }
       Objects {
         Id: 10464333561962986439
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150152
@@ -2453,7 +2473,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2465,7 +2485,7 @@
       }
       Objects {
         Id: 17481676992046846518
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149961
@@ -2504,7 +2524,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2516,7 +2536,7 @@
       }
       Objects {
         Id: 14654790693345182138
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54149866
@@ -2555,7 +2575,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -2567,7 +2587,7 @@
       }
       Objects {
         Id: 15634610237155001782
-        Name: "Lens - Half"
+        Name: "Cylinder - Polished"
         Transform {
           Location {
             X: -2.54150128
@@ -2606,7 +2626,7 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 5061372286056644297
+            Id: 12905923173550510229
           }
           Teams {
           }
@@ -3926,7 +3946,6 @@
         ChildIds: 6276797398994966866
         ChildIds: 1882940268871413649
         ChildIds: 7428316630685759350
-        ChildIds: 1237995366221666145
         ChildIds: 14980030081696937385
         ChildIds: 18110044927613710154
         ChildIds: 12621335464573495084
@@ -3995,7 +4014,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4058,6 +4077,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4120,6 +4140,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4181,7 +4202,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4238,6 +4259,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4249,9 +4271,9 @@
         Name: "Column Base 02"
         Transform {
           Location {
-            X: -28.58354
-            Y: 279.765594
-            Z: 0.371889949
+            X: -28.5831165
+            Y: 279.765564
+            Z: 0.371871859
           }
           Rotation {
             Pitch: 3.4150944e-05
@@ -4259,9 +4281,9 @@
             Roll: 89.9997635
           }
           Scale {
-            X: 0.470686495
-            Y: 0.470716089
-            Z: 0.269333571
+            X: 0.610354
+            Y: 0.610392392
+            Z: 0.349253237
           }
         }
         ParentId: 4122558023101430484
@@ -4288,6 +4310,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4336,7 +4359,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4385,7 +4408,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4445,6 +4468,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4523,7 +4547,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4582,6 +4606,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4661,6 +4686,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4714,6 +4740,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4770,6 +4797,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4841,56 +4869,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1237995366221666145
-        Name: "Ellipsoid - Truncated"
-        Transform {
-          Location {
-            X: 802.270691
-            Y: -1022.50012
-            Z: 103.069122
-          }
-          Rotation {
-            Pitch: -1.34077287
-            Yaw: -158.656128
-            Roll: -0.44968608
-          }
-          Scale {
-            X: 0.603854537
-            Y: 0.603854537
-            Z: 1.70638013
-          }
-        }
-        ParentId: 4122558023101430484
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10184847056121543272
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1471773936938775611
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -4962,6 +4941,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -5040,7 +5020,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -5052,18 +5032,18 @@
         Name: "Column Base 02"
         Transform {
           Location {
-            X: 445.373413
-            Y: 271.06958
-            Z: 0.371535957
+            X: 445.373962
+            Y: 265.376
+            Z: 4.32649612
           }
           Rotation {
             Yaw: 2.05261022e-05
             Roll: 89.9999161
           }
           Scale {
-            X: 0.470686495
-            Y: 0.470716089
-            Z: 0.269333571
+            X: 0.612849116
+            Y: 0.612888038
+            Z: 0.350681365
           }
         }
         ParentId: 4122558023101430484
@@ -5090,6 +5070,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -5170,7 +5151,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -5220,7 +5200,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -5270,7 +5249,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
           StaticMesh {
             Physics {
             }
@@ -6753,15 +6731,6 @@
       }
     }
     Assets {
-      Id: 5061372286056644297
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
       Id: 12476654224073211161
       Name: "Rock Hexagonal"
       PlatformAssetType: 1
@@ -6912,24 +6881,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_large_beam_round_6m"
-      }
-    }
-    Assets {
-      Id: 1471773936938775611
-      Name: "Ellipsoid - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ellipsoid_truncated_001"
-      }
-    }
-    Assets {
-      Id: 10184847056121543272
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
       }
     }
     Assets {
