@@ -161,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17262393803512971106
+  Name: "Plane Pentagon - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_pentagon_001"
+  }
+}
+Assets {
   Id: 17182007171222709614
   Name: "P"
   PlatformAssetType: 1
@@ -1067,6 +1076,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_eightsided_002"
+  }
+}
+Assets {
+  Id: 12115992092291607111
+  Name: "Plane Hexagon - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_hexagon_001"
   }
 }
 Assets {
