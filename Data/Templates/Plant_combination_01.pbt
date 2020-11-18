@@ -15,44 +15,25 @@
             Z: 1
           }
         }
-        ParentId: 15778795352663330980
-        ChildIds: 16526657693585432705
-        ChildIds: 11878108104895526633
-        ChildIds: 2631302951566386400
-        ChildIds: 8119790326133774224
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 16526657693585432705
-        Name: "Plant_03"
-        Transform {
-          Location {
-            X: 32.2285156
-            Y: 14.8828125
-          }
-          Rotation {
-            Pitch: -9.82467365
-            Yaw: 106.988441
-            Roll: -13.1434813
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9562506397257196928
+        ParentId: 4781671109827199097
         ChildIds: 8245537017999103446
         ChildIds: 2149800723307196466
         ChildIds: 5875858477256937173
+        ChildIds: 5939308492999997086
+        ChildIds: 6776809278570984639
+        ChildIds: 12753248867342999859
+        ChildIds: 12419226906618571282
+        ChildIds: 2881813505385863516
+        ChildIds: 4718702107245913361
+        ChildIds: 12993480912049032430
+        ChildIds: 76390248016756106
+        ChildIds: 15352420069079440202
+        ChildIds: 6171765647516843478
+        ChildIds: 14965215411901697872
+        ChildIds: 2585128379467360364
+        ChildIds: 12974854548510827954
+        ChildIds: 5646715369843582927
+        ChildIds: 15192674435628036955
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -68,8 +49,13 @@
         Name: "Leafy Patch 02"
         Transform {
           Location {
+            X: 32.2285156
+            Y: 14.8828125
           }
           Rotation {
+            Pitch: -9.82467365
+            Yaw: 106.988449
+            Roll: -13.1435
           }
           Scale {
             X: 1
@@ -77,7 +63,7 @@
             Z: 6.85103941
           }
         }
-        ParentId: 16526657693585432705
+        ParentId: 9562506397257196928
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -97,10 +83,7 @@
             Id: 14315854223117231103
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -112,8 +95,13 @@
         Name: "Leafy Patch 02"
         Transform {
           Location {
+            X: 32.2285156
+            Y: 14.8828125
           }
           Rotation {
+            Pitch: -9.82467365
+            Yaw: 106.988449
+            Roll: -13.1435
           }
           Scale {
             X: 1
@@ -121,7 +109,7 @@
             Z: 5.41561222
           }
         }
-        ParentId: 16526657693585432705
+        ParentId: 9562506397257196928
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -141,10 +129,7 @@
             Id: 14315854223117231103
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -156,8 +141,13 @@
         Name: "Leafy Patch 02"
         Transform {
           Location {
+            X: 32.2285156
+            Y: 14.8828125
           }
           Rotation {
+            Pitch: -9.82467365
+            Yaw: 106.988449
+            Roll: -13.1435
           }
           Scale {
             X: 1
@@ -165,7 +155,7 @@
             Z: 3.22878599
           }
         }
-        ParentId: 16526657693585432705
+        ParentId: 9562506397257196928
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:color"
@@ -194,10 +184,7 @@
             Id: 14315854223117231103
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -205,58 +192,26 @@
         }
       }
       Objects {
-        Id: 11878108104895526633
-        Name: "plant_part_01"
-        Transform {
-          Location {
-            X: -23.9921875
-            Y: -106.480087
-            Z: 111.627663
-          }
-          Rotation {
-            Pitch: -2.93017578
-            Yaw: -21.2669678
-            Roll: 14.1610708
-          }
-          Scale {
-            X: 0.308600217
-            Y: 0.308600217
-            Z: 0.308600217
-          }
-        }
-        ParentId: 9562506397257196928
-        ChildIds: 5939308492999997086
-        ChildIds: 6776809278570984639
-        ChildIds: 12753248867342999859
-        ChildIds: 12419226906618571282
-        ChildIds: 2881813505385863516
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 5939308492999997086
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
+            X: -23.9914551
+            Y: -106.479492
+            Z: 111.627441
           }
           Rotation {
+            Pitch: -2.93017149
+            Yaw: -21.2669582
+            Roll: 14.161088
           }
           Scale {
-            X: 0.950714529
-            Y: 0.950714529
-            Z: 1.00358558
+            X: 0.293390721
+            Y: 0.293390721
+            Z: 0.309706718
           }
         }
-        ParentId: 11878108104895526633
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -268,10 +223,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -283,20 +235,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 27.0454102
+            X: -22.8652344
+            Y: -104.727051
+            Z: 119.709473
           }
           Rotation {
-            Yaw: -25.2970638
+            Pitch: 3.33578229
+            Yaw: -45.7881546
+            Roll: 14.0728111
           }
           Scale {
-            X: 0.726650596
-            Y: 0.726650596
-            Z: 0.982696056
+            X: 0.224244535
+            Y: 0.224244535
+            Z: 0.303260207
           }
         }
-        ParentId: 11878108104895526633
+        ParentId: 9562506397257196928
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -310,10 +264,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -325,20 +276,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 55.2900391
+            X: -21.689209
+            Y: -102.896484
+            Z: 128.149902
           }
           Rotation {
-            Yaw: -25.2970066
+            Pitch: 3.33577538
+            Yaw: -45.7881
+            Roll: 14.072814
           }
           Scale {
-            X: 0.419140935
-            Y: 0.419140935
-            Z: 0.697426915
+            X: 0.129346982
+            Y: 0.129346982
+            Z: 0.215226099
           }
         }
-        ParentId: 11878108104895526633
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -350,10 +303,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -365,22 +315,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00918215793
-            Y: 0.00129648705
-            Z: -23.1100941
+            X: -24.9516602
+            Y: -107.978516
+            Z: 104.721436
           }
           Rotation {
-            Pitch: 2.04905664e-05
-            Yaw: 1.0761596
-            Roll: 8.32132137e-05
+            Pitch: -3.19293571
+            Yaw: -20.22188
+            Roll: 14.1053534
           }
           Scale {
-            X: 0.731716752
-            Y: 0.731716752
-            Z: 0.772408843
+            X: 0.22580795
+            Y: 0.22580795
+            Z: 0.238365531
           }
         }
-        ParentId: 11878108104895526633
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -392,10 +342,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -407,22 +354,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00971107464
-            Y: 0.00617176108
-            Z: -49.8286362
+            X: -26.0634766
+            Y: -109.708496
+            Z: 96.7368164
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 1.07617831
-            Roll: 9.71595873e-05
+            Pitch: -3.19292879
+            Yaw: -20.2218609
+            Roll: 14.1053667
           }
           Scale {
-            X: 0.582772672
-            Y: 0.582763314
-            Z: 0.991701484
+            X: 0.179843768
+            Y: 0.179840893
+            Z: 0.306039304
           }
         }
-        ParentId: 11878108104895526633
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -434,10 +381,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -445,58 +389,26 @@
         }
       }
       Objects {
-        Id: 2631302951566386400
-        Name: "plant_part_01"
-        Transform {
-          Location {
-            X: 82.6308594
-            Y: 18.7011719
-            Z: 65.8232422
-          }
-          Rotation {
-            Pitch: -2.93019891
-            Yaw: -21.2671089
-            Roll: 18.1578903
-          }
-          Scale {
-            X: 0.334777057
-            Y: 0.334777057
-            Z: 0.334777057
-          }
-        }
-        ParentId: 9562506397257196928
-        ChildIds: 4718702107245913361
-        ChildIds: 12993480912049032430
-        ChildIds: 76390248016756106
-        ChildIds: 15352420069079440202
-        ChildIds: 6171765647516843478
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 4718702107245913361
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
+            X: 82.6315918
+            Y: 18.7016602
+            Z: 65.823
           }
           Rotation {
+            Pitch: -2.93019199
+            Yaw: -21.2671
+            Roll: 18.1578979
           }
           Scale {
-            X: 0.950714529
-            Y: 0.950714529
-            Z: 1.00358558
+            X: 0.318277419
+            Y: 0.318277419
+            Z: 0.335977435
           }
         }
-        ParentId: 2631302951566386400
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -508,10 +420,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -523,20 +432,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 27.0454102
+            X: 84.0649414
+            Y: 21.1713867
+            Z: 74.4150391
           }
           Rotation {
-            Yaw: -25.2970638
+            Pitch: 4.97808075
+            Yaw: -45.319355
+            Roll: 17.7206173
           }
           Scale {
-            X: 0.726650596
-            Y: 0.726650596
-            Z: 0.982696056
+            X: 0.243265942
+            Y: 0.243265942
+            Z: 0.328984082
           }
         }
-        ParentId: 2631302951566386400
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -548,10 +459,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -563,20 +471,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 55.2900391
+            X: 85.5617676
+            Y: 23.7509766
+            Z: 83.3881836
           }
           Rotation {
-            Yaw: -25.2970066
+            Pitch: 4.97805309
+            Yaw: -45.3193
+            Roll: 17.7206192
           }
           Scale {
-            X: 0.419140935
-            Y: 0.419140935
-            Z: 0.697426915
+            X: 0.140318766
+            Y: 0.140318766
+            Z: 0.233482525
           }
         }
-        ParentId: 2631302951566386400
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -588,10 +498,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -603,22 +510,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00918215793
-            Y: 0.00129648705
-            Z: -23.1100941
+            X: 81.4091797
+            Y: 16.5898438
+            Z: 58.4812
           }
           Rotation {
-            Pitch: 2.04905664e-05
-            Yaw: 1.0761596
-            Roll: 8.32132137e-05
+            Pitch: -3.26506257
+            Yaw: -20.2428722
+            Roll: 18.1026325
           }
           Scale {
-            X: 0.731716752
-            Y: 0.731716752
-            Z: 0.772408843
+            X: 0.244961977
+            Y: 0.244961977
+            Z: 0.258584768
           }
         }
-        ParentId: 2631302951566386400
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -630,10 +537,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -645,22 +549,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00971107464
-            Y: 0.00617176108
-            Z: -49.8286362
+            X: 79.9939
+            Y: 14.1513672
+            Z: 49.9924316
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 1.07617831
-            Roll: 9.71595873e-05
+            Pitch: -3.26506257
+            Yaw: -20.2428513
+            Roll: 18.102644
           }
           Scale {
-            X: 0.582772672
-            Y: 0.582763314
-            Z: 0.991701484
+            X: 0.195098922
+            Y: 0.195095792
+            Z: 0.331998914
           }
         }
-        ParentId: 2631302951566386400
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -672,10 +576,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -683,8 +584,8 @@
         }
       }
       Objects {
-        Id: 8119790326133774224
-        Name: "plant_part_01"
+        Id: 14965215411901697872
+        Name: "Coral Spikes Small"
         Transform {
           Location {
             X: -90.6953125
@@ -692,47 +593,17 @@
             Z: 77.2729492
           }
           Rotation {
-            Pitch: -2.93019891
-            Yaw: -21.2670784
-            Roll: 18.1579
+            Pitch: -2.93019199
+            Yaw: -21.267067
+            Roll: 18.1579037
           }
           Scale {
-            X: 0.334777057
-            Y: 0.334777057
-            Z: 0.334777057
+            X: 0.289461225
+            Y: 0.289465338
+            Z: 0.347940892
           }
         }
         ParentId: 9562506397257196928
-        ChildIds: 14965215411901697872
-        ChildIds: 2585128379467360364
-        ChildIds: 12974854548510827954
-        ChildIds: 5646715369843582927
-        ChildIds: 15192674435628036955
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 14965215411901697872
-        Name: "Coral Spikes Small"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.864638805
-            Y: 0.864651
-            Z: 1.03932118
-          }
-        }
-        ParentId: 8119790326133774224
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -744,10 +615,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -759,21 +627,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.000491665211
-            Y: 0.00162909157
-            Z: 27.0448399
+            X: -89.2617188
+            Y: 74.7280273
+            Z: 85.8647461
           }
           Rotation {
-            Yaw: -25.2969971
-            Roll: 8.90447893e-07
+            Pitch: 4.97806692
+            Yaw: -45.3192673
+            Roll: 17.7206326
           }
           Scale {
-            X: 0.624534547
-            Y: 0.624537289
-            Z: 0.900725245
+            X: 0.209079832
+            Y: 0.209080756
+            Z: 0.301542133
           }
         }
-        ParentId: 8119790326133774224
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -785,10 +654,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -800,20 +666,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 55.2900391
+            X: -87.7644043
+            Y: 77.3076172
+            Z: 94.8378906
           }
           Rotation {
-            Yaw: -25.2970066
+            Pitch: 4.97806692
+            Yaw: -45.3192711
+            Roll: 17.7206268
           }
           Scale {
-            X: 0.419140935
-            Y: 0.419140935
-            Z: 0.697426915
+            X: 0.140318766
+            Y: 0.140318766
+            Z: 0.233482525
           }
         }
-        ParentId: 8119790326133774224
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -825,10 +693,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -840,22 +705,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00669538835
-            Y: 0.000379587233
-            Z: -23.1110153
+            X: -91.9179688
+            Y: 70.1464844
+            Z: 69.9306641
           }
           Rotation {
-            Pitch: 2.04905664e-05
-            Yaw: 1.07616
-            Roll: 8.32242513e-05
+            Pitch: -3.26506257
+            Yaw: -20.2428379
+            Roll: 18.1026402
           }
           Scale {
-            X: 0.731739342
-            Y: 0.731725097
-            Z: 0.855663598
+            X: 0.244969547
+            Y: 0.244964778
+            Z: 0.286456555
           }
         }
-        ParentId: 8119790326133774224
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -867,10 +732,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -882,22 +744,22 @@
         Name: "Coral Spikes Small"
         Transform {
           Location {
-            X: 0.00971107464
-            Y: 0.00617176108
-            Z: -49.8286362
+            X: -93.3322754
+            Y: 67.7080078
+            Z: 61.4421387
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 1.07617831
-            Roll: 9.71595873e-05
+            Pitch: -3.26506257
+            Yaw: -20.2428207
+            Roll: 18.1026516
           }
           Scale {
-            X: 0.582772672
-            Y: 0.582763314
-            Z: 0.991701484
+            X: 0.195098922
+            Y: 0.195095792
+            Z: 0.331998914
           }
         }
-        ParentId: 8119790326133774224
+        ParentId: 9562506397257196928
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -909,10 +771,7 @@
             Id: 3337400245629441568
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
