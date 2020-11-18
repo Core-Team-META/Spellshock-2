@@ -16,35 +16,6 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 16360890759096581534
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 16360890759096581534
-        Name: "MergedModel"
-        Transform {
-          Location {
-            X: 13.2805433
-            Y: -4.65046072
-            Z: 37.2797852
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4137738316238168700
         ChildIds: 17212955378837482682
         ChildIds: 9338269498777302214
         ChildIds: 5207518042932427826
@@ -59,8 +30,7 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Folder {
-          Model {
-          }
+          IsGroup: true
         }
       }
       Objects {
@@ -68,14 +38,14 @@
         Name: "Coral Table 02"
         Transform {
           Location {
-            X: 13.4194336
-            Y: -5.67431641
-            Z: 249.965576
+            X: 26.7001953
+            Y: -10.3242188
+            Z: 287.245117
           }
           Rotation {
-            Pitch: -17.2617321
-            Yaw: -4.65173817
-            Roll: -13.6249542
+            Pitch: -17.2617245
+            Yaw: -4.65174103
+            Roll: -13.6249733
           }
           Scale {
             X: 0.279999375
@@ -83,7 +53,7 @@
             Z: 1.06681395
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -126,13 +96,13 @@
         Name: "Coral Tubes Small"
         Transform {
           Location {
-            X: 15.6442871
-            Y: -9.90039063
-            Z: 254.700684
+            X: 28.925293
+            Y: -14.5507813
+            Z: 291.980469
           }
           Rotation {
             Pitch: -3.96297121
-            Yaw: 30.4406414
+            Yaw: 30.440649
             Roll: -19.4756012
           }
           Scale {
@@ -141,7 +111,7 @@
             Z: 0.541874826
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -176,14 +146,14 @@
         Name: "Coral Table 02"
         Transform {
           Location {
-            X: 13.541748
-            Y: -6.22070313
-            Z: 250.077637
+            X: 26.8227539
+            Y: -10.8710938
+            Z: 287.357422
           }
           Rotation {
             Pitch: -5.87991142
-            Yaw: 30.6639652
-            Roll: -21.5236664
+            Yaw: 30.663969
+            Roll: -21.523653
           }
           Scale {
             X: 0.237086236
@@ -191,7 +161,7 @@
             Z: 1.29335129
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -226,12 +196,12 @@
         Name: "Kelp Bush 02"
         Transform {
           Location {
-            X: -14.380127
-            Y: 6.6796875
-            Z: 102.821777
+            X: -1.09912109
+            Y: 2.02929688
+            Z: 140.101563
           }
           Rotation {
-            Yaw: -62.9769096
+            Yaw: -62.9769211
           }
           Scale {
             X: 1.13787818
@@ -239,7 +209,7 @@
             Z: 1.81429
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:color"
@@ -283,9 +253,9 @@
         Name: "Kelp Bush 01"
         Transform {
           Location {
-            X: -14.2480469
-            Y: 1.66015625
-            Z: 95.2224121
+            X: -0.967285156
+            Y: -2.99023438
+            Z: 132.501953
           }
           Rotation {
           }
@@ -295,7 +265,7 @@
             Z: 1
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -338,8 +308,9 @@
         Name: "Tree Oak Stump 01"
         Transform {
           Location {
-            X: -16.9797363
-            Y: 0.849609375
+            X: -3.69873047
+            Y: -3.80078125
+            Z: 37.2797852
           }
           Rotation {
           }
@@ -349,7 +320,7 @@
             Z: 0.321707785
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Trunk:id"
@@ -393,14 +364,14 @@
         Name: "Kelp Bush 02"
         Transform {
           Location {
-            X: 3.00268555
-            Y: 12.6054688
-            Z: 124.668457
+            X: 16.2836914
+            Y: 7.95507813
+            Z: 161.948242
           }
           Rotation {
             Pitch: 0.927935779
-            Yaw: 18.8242378
-            Roll: -12.5432911
+            Yaw: 18.8242416
+            Roll: -12.5433092
           }
           Scale {
             X: 0.657793
@@ -408,7 +379,7 @@
             Z: 1.68840849
           }
         }
-        ParentId: 16360890759096581534
+        ParentId: 4137738316238168700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:color"
