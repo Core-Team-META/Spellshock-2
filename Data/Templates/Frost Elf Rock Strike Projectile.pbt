@@ -96,17 +96,17 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.51
-              G: 1
-              B: 0.834503353
-              A: 1
+              R: 0.19
+              G: 0.903443396
+              B: 1
+              A: 0.248000011
             }
           }
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 1
-              G: 1
+              R: 0.56
+              G: 0.90384084
               B: 1
               A: 1
             }
@@ -114,8 +114,8 @@
           Overrides {
             Name: "bp:Ground Frost Color"
             Color {
-              R: 1
-              G: 1
+              R: 0.75
+              G: 0.960264802
               B: 1
               A: 0.8
             }
@@ -123,9 +123,9 @@
           Overrides {
             Name: "bp:Vapor Color"
             Color {
-              R: 0.69
+              R: 0.491999984
               G: 1
-              B: 0.987682104
+              B: 0.979814589
               A: 0.113725
             }
           }
@@ -277,12 +277,12 @@
       }
     }
     Assets {
-      Id: 5975046637337968167
-      Name: "Ice Spikes Trail VFX"
-      PlatformAssetType: 8
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_ice_spikes_line"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     Assets {
@@ -295,12 +295,12 @@
       }
     }
     Assets {
-      Id: 5081948203355976238
-      Name: "Single Rock Ground Impact 01 SFX"
-      PlatformAssetType: 7
+      Id: 5975046637337968167
+      Name: "Ice Spikes Trail VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ice_spikes_line"
       }
     }
     PrimaryAssetId {
@@ -310,3 +310,4 @@
   }
   SerializationVersion: 68
 }
+IncludesAllDependencies: true
