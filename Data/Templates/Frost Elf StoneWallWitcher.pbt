@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 10048110780674465143
-  Name: "Frost Elf Shield Dash FX"
+  Id: 3361009821012354788
+  Name: "Frost Elf StoneWallWitcher"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1507013899359661841
+      RootId: 8068909457519025944
       Objects {
-        Id: 1507013899359661841
-        Name: "Frost Elf Shield Dash FX"
+        Id: 8068909457519025944
+        Name: "Frost Elf StoneWallWitcher"
         Transform {
           Scale {
             X: 1
@@ -16,336 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 494076635044884788
-        ChildIds: 4446658573848886422
-        ChildIds: 12346172048002251562
-        ChildIds: 9486453657489061012
-        ChildIds: 12282700675432287099
-        ChildIds: 18112287027515925633
-        ChildIds: 5428661667357491072
-        ChildIds: 1515683130127361766
+        ChildIds: 3975608240059173400
+        ChildIds: 9589034832241578871
+        ChildIds: 12282107619167272356
         WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 494076635044884788
-        Name: "DashFXMovement"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1507013899359661841
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ease3D"
-            AssetReference {
-              Id: 16050147283496351669
-            }
-          }
-          Overrides {
-            Name: "cs:LeftRock"
-            ObjectReference {
-              SubObjectId: 7499876404091215125
-            }
-          }
-          Overrides {
-            Name: "cs:RightRock"
-            ObjectReference {
-              SubObjectId: 7633660164969344039
-            }
-          }
-          Overrides {
-            Name: "cs:MidRock"
-            ObjectReference {
-              SubObjectId: 9801736053697317363
-            }
-          }
-          Overrides {
-            Name: "cs:FarLeftRock"
-            ObjectReference {
-              SubObjectId: 11060026159312895651
-            }
-          }
-          Overrides {
-            Name: "cs:FarRightRock"
-            ObjectReference {
-              SubObjectId: 15908527409048401031
-            }
-          }
-          Overrides {
-            Name: "cs:Timer"
-            Float: 0.7
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10840253447457176980
-          }
-        }
-      }
-      Objects {
-        Id: 4446658573848886422
-        Name: "Nature Earthquake Rumble Shake Set 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1507013899359661841
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:esfx_nature_earthquake:15"
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8422301979726308077
-          }
-          TeamSettings {
-          }
-          AudioBP {
-            AutoPlay: true
-            Volume: 1
-            Falloff: 3600
-            Radius: 400
-            EnableOcclusion: true
-            IsSpatializationEnabled: true
-            IsAttenuationEnabled: true
-          }
-        }
-      }
-      Objects {
-        Id: 12346172048002251562
-        Name: "Smooth Indent Trail VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1507013899359661841
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Indent Shape"
-            Enum {
-              Value: "mc:esmoothindenttype:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 1
-              G: 0.439536452
-              B: 0.0699999928
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 17866381123847056640
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 9486453657489061012
-        Name: "Curling Dust VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.414204091
-          }
-        }
-        ParentId: 1507013899359661841
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Debris Color"
-            Color {
-              R: 0.72
-              G: 0.95549655
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.68
-              G: 0.828344285
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Burst"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Enable Debris"
-            Bool: true
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11024015077305183813
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 12282700675432287099
-        Name: "Curling Dust VFX"
-        Transform {
-          Location {
-            X: 230.053711
-            Y: 13.9658203
-            Z: -0.132080078
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.412446409
-          }
-        }
-        ParentId: 1507013899359661841
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Enable Debris"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.7
-              G: 0.952317774
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Debris Color"
-            Color {
-              R: 0.26
-              G: 0.603046119
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11024015077305183813
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 18112287027515925633
-        Name: "Rocks"
-        Transform {
-          Location {
-            X: 165
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1507013899359661841
-        ChildIds: 11060026159312895651
-        ChildIds: 15908527409048401031
-        ChildIds: 7499876404091215125
-        ChildIds: 7633660164969344039
-        ChildIds: 9801736053697317363
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -357,57 +31,39 @@
         }
       }
       Objects {
-        Id: 11060026159312895651
-        Name: "FarLeftRock"
+        Id: 3975608240059173400
+        Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
         Transform {
           Location {
-            X: -190
-            Y: -9
-            Z: -130
+            X: -664.555359
+            Z: -253.461914
           }
           Rotation {
-            Pitch: -41.4007568
-            Yaw: 115.846901
-            Roll: 134.389633
+            Pitch: 1.99999535
+            Yaw: 135
+            Roll: -2
           }
           Scale {
-            X: 0.232898235
-            Y: 0.172506824
-            Z: 0.517547131
+            X: 2
+            Y: 2
+            Z: 2.2
           }
         }
-        ParentId: 18112287027515925633
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2984351661227581568
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.518779695
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.592251241
-          }
-        }
+        ParentId: 8068909457519025944
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
-            Id: 1197983536016875073
+            Id: 8386322457426737957
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
@@ -418,57 +74,39 @@
         }
       }
       Objects {
-        Id: 15908527409048401031
-        Name: "FarRightRock"
+        Id: 9589034832241578871
+        Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
         Transform {
           Location {
-            X: -190
-            Y: 30
-            Z: -130
+            X: -662.257629
+            Z: -253.461914
           }
           Rotation {
-            Pitch: -46.0680542
-            Yaw: -120.382233
-            Roll: -117.582306
+            Pitch: 1.99999535
+            Yaw: 135
+            Roll: -2
           }
           Scale {
-            X: 0.232898235
-            Y: 0.172506824
-            Z: 0.517547131
+            X: 2.2
+            Y: 2.2
+            Z: 2.2
           }
         }
-        ParentId: 18112287027515925633
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2984351661227581568
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.518779695
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.592251241
-          }
-        }
+        ParentId: 8068909457519025944
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
-            Id: 1197983536016875073
+            Id: 8386322457426737957
           }
           Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
@@ -479,166 +117,98 @@
         }
       }
       Objects {
-        Id: 7499876404091215125
-        Name: "LeftRock"
+        Id: 12282107619167272356
+        Name: "ClientContext"
         Transform {
           Location {
-            X: -120
-            Y: -15
-            Z: -145
+            X: 101.597656
+            Y: 37.3310547
+            Z: 60.0163574
           }
           Rotation {
-            Pitch: -51.1052856
-            Yaw: 132.923523
-            Roll: 11.2400331
           }
           Scale {
-            X: 0.27
-            Y: 0.199987963
-            Z: 0.599994779
-          }
-        }
-        ParentId: 18112287027515925633
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2984351661227581568
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.518779695
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.592251241
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1197983536016875073
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7633660164969344039
-        Name: "RightRock"
-        Transform {
-          Location {
-            X: -140
-            Y: -14
-            Z: -150
-          }
-          Rotation {
-            Pitch: -49.2194214
-            Yaw: -131.0354
-            Roll: 160.302872
-          }
-          Scale {
-            X: 0.27
-            Y: 0.199987963
-            Z: 0.599994779
-          }
-        }
-        ParentId: 18112287027515925633
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2984351661227581568
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.518779695
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.592251241
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1197983536016875073
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9801736053697317363
-        Name: "MidRock"
-        Transform {
-          Location {
-            X: -119
-            Y: 7
-            Z: -177
-          }
-          Rotation {
-            Pitch: -49.016449
-            Yaw: 177.690521
-            Roll: -170.03862
-          }
-          Scale {
-            X: 0.4
-            Y: 0.3
+            X: 1
+            Y: 1
             Z: 1
           }
         }
-        ParentId: 18112287027515925633
+        ParentId: 8068909457519025944
+        ChildIds: 6336322579520515978
+        ChildIds: 15082562150684120477
+        ChildIds: 5354923531572599818
+        ChildIds: 6859550982607753997
+        ChildIds: 12060355301405018719
+        ChildIds: 284743115214389952
+        ChildIds: 11606127829669771461
+        ChildIds: 1850682993391372983
+        ChildIds: 3719577260698589282
+        ChildIds: 14829325544659426694
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 6336322579520515978
+        Name: "StoneWallMovement"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
+            Name: "cs:Ease3D"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 16050147283496351669
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Name: "cs:RockWall"
+            ObjectReference {
+              SubObjectId: 15082562150684120477
+            }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.518779695
+            Name: "cs:Center"
+            ObjectReference {
+              SubObjectId: 3910932211359458902
+            }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.592251241
+            Name: "cs:Mid"
+            ObjectReference {
+              SubObjectId: 14971956592548086189
+            }
+          }
+          Overrides {
+            Name: "cs:Outer"
+            ObjectReference {
+              SubObjectId: 8246252010621451192
+            }
+          }
+          Overrides {
+            Name: "cs:GravelSFX"
+            ObjectReference {
+              SubObjectId: 3719577260698589282
+            }
+          }
+          Overrides {
+            Name: "cs:Timer"
+            Float: 6
           }
         }
         Collidable_v2 {
@@ -647,9 +217,122 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
+        Script {
+          ScriptAsset {
+            Id: 2030853132610666942
+          }
+        }
+      }
+      Objects {
+        Id: 15082562150684120477
+        Name: "RockWall"
+        Transform {
+          Location {
+            X: -0.00048828125
+            Z: -500
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
+        ChildIds: 3910932211359458902
+        ChildIds: 14971956592548086189
+        ChildIds: 8246252010621451192
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3910932211359458902
+        Name: "Center"
+        Transform {
+          Location {
+            X: 95
+            Y: 12
+            Z: -25
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
+          }
+        }
+        ParentId: 15082562150684120477
+        ChildIds: 6465906667584047566
+        ChildIds: 3715145521387193458
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6465906667584047566
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: -53.8816757
+            Y: -148.021896
+            Z: -32.8287354
+          }
+          Rotation {
+            Pitch: -73.7551
+            Yaw: 89.7269287
+            Roll: 153.442871
+          }
+          Scale {
+            X: 1.57190204
+            Y: 0.616050601
+            Z: 1.00000024
+          }
+        }
+        ParentId: 3910932211359458902
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8219149701339939263
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.434796035
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.292224407
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
         CoreMesh {
           MeshAsset {
-            Id: 4842806961858489681
+            Id: 16830154065229832196
           }
           Teams {
           }
@@ -662,48 +345,60 @@
         }
       }
       Objects {
-        Id: 5428661667357491072
-        Name: "Waterfall Straight"
+        Id: 3715145521387193458
+        Name: "Rock 03"
         Transform {
           Location {
-            X: 95.0537109
-            Z: 31.3649902
+            X: -4.8213706
+            Y: 161.744431
+            Z: -51.958252
           }
           Rotation {
-            Pitch: -3.05175781e-05
-            Yaw: -89.9999695
-            Roll: 89.9999695
+            Pitch: 2.62154245
+            Yaw: -156.110962
+            Roll: -87.4246826
           }
           Scale {
-            X: 0.3
-            Y: 0.3
-            Z: 1.5
+            X: 0.611332774
+            Y: 2.43794966
+            Z: 1.49371278
           }
         }
-        ParentId: 1507013899359661841
+        ParentId: 3910932211359458902
         UnregisteredParameters {
           Overrides {
-            Name: "ma:waterfall:id"
+            Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8694155043609989744
+              Id: 8219149701339939263
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.364408255
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.434796035
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
-            Id: 8179760419682545374
+            Id: 6981536508008379085
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -711,31 +406,335 @@
         }
       }
       Objects {
-        Id: 1515683130127361766
-        Name: "Waterfall Straight"
+        Id: 14971956592548086189
+        Name: "Mid"
         Transform {
           Location {
-            X: 95.0537109
-            Z: 151.36499
+            X: 10
+            Y: 1
+            Z: -50
           }
           Rotation {
-            Pitch: -3.05175781e-05
-            Yaw: 89.9999466
-            Roll: -89.999939
           }
           Scale {
-            X: 0.3
-            Y: 0.3
-            Z: 1.5
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
-        ParentId: 1507013899359661841
+        ParentId: 15082562150684120477
+        ChildIds: 7349968948971638030
+        ChildIds: 14411049966467269396
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7349968948971638030
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: -5.67675781
+            Y: -341.807983
+            Z: -27.1427422
+          }
+          Rotation {
+            Pitch: 11.622386
+            Yaw: 57.2594872
+            Roll: -96.9325562
+          }
+          Scale {
+            X: 1.22204757
+            Y: 1.92840552
+            Z: 0.683571219
+          }
+        }
+        ParentId: 14971956592548086189
         UnregisteredParameters {
           Overrides {
-            Name: "ma:waterfall:id"
+            Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8694155043609989744
+              Id: 8219149701339939263
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.224217981
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.234339118
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14411049966467269396
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: 5.67675781
+            Y: 350.898438
+            Z: -17.9208584
+          }
+          Rotation {
+            Pitch: -0.638702393
+            Yaw: 128.643158
+            Roll: -96.0233765
+          }
+          Scale {
+            X: 1.25920451
+            Y: 2.2142303
+            Z: 0.582107186
+          }
+        }
+        ParentId: 14971956592548086189
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8219149701339939263
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.380857527
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8246252010621451192
+        Name: "Outer"
+        Transform {
+          Location {
+            X: -105
+            Y: -9
+            Z: -75
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
+          }
+        }
+        ParentId: 15082562150684120477
+        ChildIds: 9925083992057010394
+        ChildIds: 453593126846322289
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9925083992057010394
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: 42.015789
+            Y: -478.463379
+            Z: -16.5120449
+          }
+          Rotation {
+            Pitch: -74.6200256
+            Yaw: 107.925461
+            Roll: -46.9902039
+          }
+          Scale {
+            X: 1.11178052
+            Y: 0.605498731
+            Z: 0.556096435
+          }
+        }
+        ParentId: 8246252010621451192
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8219149701339939263
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.267527133
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.187920034
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16830154065229832196
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 453593126846322289
+        Name: "Rock 03"
+        Transform {
+          Location {
+            X: 13.838623
+            Y: 527.620605
+            Z: -1.46110034
+          }
+          Rotation {
+            Pitch: -6.50338745
+            Yaw: 39.3478699
+            Roll: 8.78338814
+          }
+          Scale {
+            X: 0.611593306
+            Y: 1.00041533
+            Z: 2.03970814
+          }
+        }
+        ParentId: 8246252010621451192
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8219149701339939263
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.24491711
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5354923531572599818
+        Name: "Gun Impact Small VFX"
+        Transform {
+          Location {
+            X: -222.360352
+            Y: -594.245117
+            Z: -82.902832
+          }
+          Rotation {
+          }
+          Scale {
+            X: 6.89345
+            Y: 6.89345
+            Z: 6.89345
+          }
+        }
+        ParentId: 12282107619167272356
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -744,206 +743,401 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        CoreMesh {
-          MeshAsset {
-            Id: 8179760419682545374
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
           }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
+          TeamSettings {
           }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
+          Vfx {
+            AutoPlay: true
           }
+        }
+      }
+      Objects {
+        Id: 6859550982607753997
+        Name: "Gun Impact Small VFX"
+        Transform {
+          Location {
+            X: -157.834961
+            Y: 593.494141
+            Z: -82.902832
+          }
+          Rotation {
+            Yaw: 44.9970169
+          }
+          Scale {
+            X: 6.89345
+            Y: 6.89345
+            Z: 6.89345
+          }
+        }
+        ParentId: 12282107619167272356
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 12060355301405018719
+        Name: "Gun Impact Small VFX"
+        Transform {
+          Location {
+            X: 6.37988281
+            Y: 249.662109
+            Z: -82.902832
+          }
+          Rotation {
+            Yaw: 71.9687347
+          }
+          Scale {
+            X: 6.89345
+            Y: 6.89345
+            Z: 6.89345
+          }
+        }
+        ParentId: 12282107619167272356
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 284743115214389952
+        Name: "Gun Impact Small VFX"
+        Transform {
+          Location {
+            X: -1.02441406
+            Y: -266.499023
+            Z: -82.902832
+          }
+          Rotation {
+            Yaw: 65.9223633
+          }
+          Scale {
+            X: 6.89345
+            Y: 6.89345
+            Z: 6.89345
+          }
+        }
+        ParentId: 12282107619167272356
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 11606127829669771461
+        Name: "Creature Giant Monster Crunchy Footstep 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 2857265776108627199
+          }
+          AutoPlay: true
+          Pitch: -1600
+          Volume: 2
+          Falloff: 6300
+          Radius: 1050
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 1850682993391372983
+        Name: "Rock Boulder Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7781372639348645855
+          }
+          AutoPlay: true
+          Pitch: -1200
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 3719577260698589282
+        Name: "Dirt Soil Gravel Toss Throw 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5328464418326360599
+          }
+          AutoPlay: true
+          Pitch: -2400
+          Volume: 1
+          Falloff: 6300
+          Radius: 1050
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 14829325544659426694
+        Name: "Single Rock Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12282107619167272356
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 5081948203355976238
+          }
+          AutoPlay: true
+          Pitch: -800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
     }
     Assets {
-      Id: 8694155043609989744
-      Name: "Custom Waterfall from Waterfall Straight_1"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 6459285655483969711
-        ParameterOverrides {
-          Overrides {
-            Name: "deep color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.131000012
-            }
-          }
-          Overrides {
-            Name: "foam color"
-            Color {
-              R: 0.947917
-              G: 1
-              B: 0.969151
-              A: 0.117000006
-            }
-          }
-          Overrides {
-            Name: "shallow color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.46
-            }
-          }
-          Overrides {
-            Name: "edge foam brightness"
-            Float: 0
-          }
-          Overrides {
-            Name: "scrollspeedy"
-            Float: 1
-          }
-          Overrides {
-            Name: "arc"
-            Float: 1
-          }
-          Overrides {
-            Name: "startfadeoffset"
-            Float: 0
-          }
-          Overrides {
-            Name: "startfadesoftness"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "waterfallheightoffset"
-            Float: 0.322426826
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 6459285655483969711
-      Name: "Waterfall"
-      PlatformAssetType: 2
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_waterfall"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     Assets {
-      Id: 8179760419682545374
-      Name: "Waterfall Straight"
+      Id: 5328464418326360599
+      Name: "Dirt Soil Gravel Toss Throw 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_dirt_soil_gravel_toss_throw_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 7781372639348645855
+      Name: "Rock Boulder Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_rock_boulder_ground_impact_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 2857265776108627199
+      Name: "Creature Giant Monster Crunchy Footstep 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_monster_giant_creature_crunchy_footstep_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 3902609303942155418
+      Name: "Gun Impact Small VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_gun_impact_dirt_sm"
+      }
+    }
+    Assets {
+      Id: 6981536508008379085
+      Name: "Rock 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "fxsm_waterfall_straight"
+        AssetId: "sm_rock_generic_003"
       }
     }
     Assets {
-      Id: 4842806961858489681
-      Name: "Rock Flat 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_004"
-      }
-    }
-    Assets {
-      Id: 2984351661227581568
-      Name: "Faux Ice"
+      Id: 8219149701339939263
+      Name: "Custom Transparent Bubble Glass"
       PlatformAssetType: 13
       CustomMaterialAsset {
-        BaseMaterialId: 6631081666212622438
+        BaseMaterialId: 18348694118958495716
         ParameterOverrides {
           Overrides {
             Name: "color"
             Color {
-              R: 0.524150074
-              G: 0.850757539
-              B: 0.953000069
-              A: 0.504
+              R: 0.120000005
+              G: 0.860132098
+              B: 1
+              A: 1
             }
           }
           Overrides {
-            Name: "color_secondary"
-            Color {
-              R: 0.422808021
-              G: 0.822788537
-              B: 0.948000073
-              A: 0.504
-            }
+            Name: "Inner Opacity"
+            Float: 0.562645376
           }
           Overrides {
-            Name: "color_accent"
-            Color {
-              R: 0.54162
-              G: 0.803134501
-              B: 0.88500005
-              A: 0.504
-            }
+            Name: "Metallic"
+            Float: 0.888202786
           }
           Overrides {
-            Name: "roughness"
-            Float: 0.395692915
+            Name: "Outer Opacity"
+            Float: 0.93828851
           }
           Overrides {
-            Name: "metallic"
-            Float: 0.278826147
+            Name: "Roughness"
+            Float: 0.103526033
           }
           Overrides {
-            Name: "u_tiles"
-            Float: 10.6747026
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 11.8464327
+            Name: "Specular"
+            Float: 1
           }
         }
       }
     }
     Assets {
-      Id: 6631081666212622438
-      Name: "Camouflage - Splinter"
+      Id: 18348694118958495716
+      Name: "Transparent Bubble Glass"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "camo_splinter_001"
+        AssetId: "fxmi_transparent_bubble_glass"
       }
     }
     Assets {
-      Id: 1197983536016875073
-      Name: "Rock Flat 02"
+      Id: 16830154065229832196
+      Name: "Rock 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_005"
-      }
-    }
-    Assets {
-      Id: 11024015077305183813
-      Name: "Curling Dust VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_base_curl"
-      }
-    }
-    Assets {
-      Id: 17866381123847056640
-      Name: "Smooth Indent Trail VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_smooth_indent_trail"
-      }
-    }
-    Assets {
-      Id: 8422301979726308077
-      Name: "Nature Earthquake Rumble Shake Set 01 SFX"
-      PlatformAssetType: 10
-      PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_nature_earthquake_loops_ref"
+        AssetId: "sm_rock_generic_001"
       }
     }
     Assets {
@@ -974,11 +1168,20 @@
       }
     }
     Assets {
-      Id: 10840253447457176980
-      Name: "DashFXMovement"
+      Id: 2030853132610666942
+      Name: "StoneWallMovement"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local LeftRock = script:GetCustomProperty(\"LeftRock\"):WaitForObject()\r\nlocal FarLeftRock = script:GetCustomProperty(\"FarLeftRock\"):WaitForObject()\r\nlocal RightRock = script:GetCustomProperty(\"RightRock\"):WaitForObject()\r\nlocal FarRightRock = script:GetCustomProperty(\"FarRightRock\"):WaitForObject()\r\nlocal MidRock = script:GetCustomProperty(\"MidRock\"):WaitForObject()\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\nlocal Timer = script:GetCustomProperty(\"Timer\")\r\n\r\nlocal task = Task.Spawn(function()\r\n\r\n\tTask.Wait(0) --play when the ability is spawned\r\n\tEase3D.EasePosition(FarLeftRock, Vector3.New(-123, -149, 9), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(0.02)\r\n\tEase3D.EasePosition(FarRightRock, Vector3.New(-123, 149, 9), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(0.02)\r\n\tEase3D.EasePosition(LeftRock, Vector3.New(-36, -106, 9), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(0.02)\r\n\tEase3D.EasePosition(RightRock, Vector3.New(-50, 89, 9), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(0.02)\r\n\tEase3D.EasePosition(MidRock, Vector3.New(30, 1, -6), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(Timer) --play 1 sec before the ability is destroyed\r\n\tEase3D.EasePosition(FarLeftRock, Vector3.New(-190, -9, -130), 0.5, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(0.1)\r\n\tEase3D.EasePosition(FarRightRock, Vector3.New(-190, 30, -130), 0.5, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(0.1)\r\n\tEase3D.EasePosition(LeftRock, Vector3.New(-120, -15, -145), 0.5, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(0.1)\r\n\tEase3D.EasePosition(RightRock, Vector3.New(-140, -14, -150), 0.5, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(0.1)\r\n\tEase3D.EasePosition(MidRock, Vector3.New(-119, 7, -177), 0.5, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(3)\r\n    \r\nend)\r\ntask.repeatCount = -1\r\ntask.repeatInterval = -1"
+        Text: "local RockWall = script:GetCustomProperty(\"RockWall\"):WaitForObject()\r\nlocal Center = script:GetCustomProperty(\"Center\"):WaitForObject()\r\nlocal Mid = script:GetCustomProperty(\"Mid\"):WaitForObject()\r\nlocal Outer = script:GetCustomProperty(\"Outer\"):WaitForObject()\r\nlocal GravelSFX = script:GetCustomProperty(\"GravelSFX\"):WaitForObject()\r\nlocal Ease3D = require(script:GetCustomProperty(\"Ease3D\"))\r\nlocal Timer = script:GetCustomProperty(\"Timer\")\r\n\r\nlocal task = Task.Spawn(function()\r\n\r\n\tTask.Wait(0) --play when the ability is spawned\r\n\tEase3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EasePosition(Center, Vector3.New(95, 12, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EasePosition(Mid, Vector3.New(10, 1, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EasePosition(Outer, Vector3.New(-105, -9, 0), .2, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)\r\n\tTask.Wait(Timer) --play 1 sec before the ability is destroyed\r\n\tif Object.IsValid(GravelSFX) then\r\n\t\tGravelSFX:Play()\r\n\tend\r\n\tEase3D.EasePosition(RockWall, Vector3.New(0, 0, -500), 1, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n\tEase3D.EasePosition(Center, Vector3.New(95, 12, -25), 1, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EasePosition(Mid, Vector3.New(10, 1, -50), 1, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EasePosition(Outer, Vector3.New(-105, -9, -75), 1, Ease3D.EasingEquation.QUINTIC, Ease3D.EasingDirection.OUT)\r\n\tEase3D.EaseScale(Center, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n\tEase3D.EaseScale(Mid, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n\tEase3D.EaseScale(Outer, Vector3.New(.9), .6, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.IN)\r\n\tTask.Wait(3)\r\n    \r\nend)\r\ntask.repeatCount = -1\r\ntask.repeatInterval = -1"
+      }
+    }
+    Assets {
+      Id: 8386322457426737957
+      Name: "Fantasy Castle Stairs Spiral Wall 01 - Small"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_stairs_spiral_wall_001_sm"
       }
     }
     PrimaryAssetId {
