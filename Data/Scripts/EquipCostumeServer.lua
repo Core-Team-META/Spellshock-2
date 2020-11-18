@@ -2,6 +2,9 @@
 local HidePlayer = script:GetCustomProperty("HidePlayer")
 
 function OnEquipped(thisEquipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	ParentEquipment:SetNetworkedCustomProperty("CostumeTemplate", PlayerStorage.VFX[ParentEquipment.name][player.team]["Costume"])
+	
 	if HidePlayer then
 		player:SetVisibility(false, false)
 	end

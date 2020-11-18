@@ -7,7 +7,7 @@
       RootId: 14594014689050906518
       Objects {
         Id: 14594014689050906518
-        Name: "Shield Dash Ending FX"
+        Name: "Tank Shield Dash Ending FX"
         Transform {
           Scale {
             X: 1

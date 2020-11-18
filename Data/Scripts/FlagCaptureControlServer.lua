@@ -32,6 +32,7 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 local CAPTURE_TRIGGER = script:GetCustomProperty("CaptureTrigger"):WaitForObject()
 local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
+local AnimationAbilityTemplate = script:GetCustomProperty("AnimationAbilityTemplate")
 
 -- User exposed properties
 local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
@@ -72,7 +73,7 @@ end
 -- broadcast events and change colors.
 
 local capturePlayer = nil
-local capturePlayerSettings = {}
+local capturePlayerAnimation = nil
 local capturePlayerEvents = {}
 local lastTeamScoreAwardTime = time()
 
@@ -281,8 +282,11 @@ function ResetCapturePlayer()
 	UpdateReplicatedProgress()
 	if capturePlayer and Object.IsValid(capturePlayer) then
 		print("RESETTING CAPTURE PLAYER")
-		--capturePlayer.movementControlMode = capturePlayerSettings.movementControlMode
-		--capturePlayer.maxJumpCount = capturePlayerSettings.maxJumpCount
+		if Object.IsValid(capturePlayerAnimation) then
+			capturePlayerAnimation.owner = nil
+			capturePlayerAnimation:Destroy()
+			capturePlayerAnimation = nil
+		end
 		for _, event in pairs(capturePlayerEvents) do
 			event:Disconnect()
 		end
@@ -309,15 +313,13 @@ function OnInteractedEvent(thisTrigger, player)
 	-- update capturePlayer
 	if capturePlayer == nil then
 		capturePlayer = player
-		table.insert(capturePlayerSettings, capturePlayer.damagedEvent:Connect( OnCapturePlayerDamaged ))
-		table.insert(capturePlayerSettings, capturePlayer.bindingPressedEvent:Connect( OnBindingPressed ))
-		--capturePlayerSettings.movementControlMode = capturePlayer.movementControlMode
-		--capturePlayerSettings.maxJumpCount = capturePlayer.maxJumpCount
-		
-		--capturePlayer.movementControlMode = MovementControlMode.NONE
-		--capturePlayer.maxJumpCount = 0
+		table.insert(capturePlayerEvents, capturePlayer.damagedEvent:Connect( OnCapturePlayerDamaged ))
+		table.insert(capturePlayerEvents, capturePlayer.bindingPressedEvent:Connect( OnBindingPressed ))
 		capturePlayer:ResetVelocity()
 		script:SetNetworkedCustomProperty("CapturePlayerID", capturePlayer.id)
+		capturePlayer:SetMounted(false)
+		capturePlayerAnimation = World.SpawnAsset(AnimationAbilityTemplate)
+		capturePlayerAnimation.owner = capturePlayer
 	end
 end
 

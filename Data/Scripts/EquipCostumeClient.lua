@@ -5,9 +5,14 @@ local Orc_Costume = ParentEquipment:GetCustomProperty("Orc_Costume")
 local Elf_Costume = ParentEquipment:GetCustomProperty("Elf_Costume")
 
 function AttachCostume(player)
+	Task.Wait()
 	local CostumeTemplate = Orc_Costume
 	if player.team == 2 then
 		CostumeTemplate = Elf_Costume
+	end
+	
+	if ParentEquipment:GetCustomProperty("CostumeTemplate") then
+		CostumeTemplate = ParentEquipment:GetCustomProperty("CostumeTemplate")
 	end
 	
 	local PlayerAttachments = {}

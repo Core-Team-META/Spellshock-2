@@ -1659,8 +1659,7 @@ Objects {
   Camera {
     UseAsDefault: true
     AttachToLocalPlayer: true
-    InitialDistance: 600
-    IsDistanceAdjustable: true
+    InitialDistance: 650
     MinDistance: 400
     MaxDistance: 800
     PositionOffset {

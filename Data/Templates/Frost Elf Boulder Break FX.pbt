@@ -116,21 +116,21 @@
       }
     }
     Assets {
-      Id: 5081948203355976238
-      Name: "Single Rock Ground Impact 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
-      }
-    }
-    Assets {
       Id: 3902609303942155418
       Name: "Gun Impact Small VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_gun_impact_dirt_sm"
+      }
+    }
+    Assets {
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -140,4 +140,3 @@
   }
   SerializationVersion: 68
 }
-IncludesAllDependencies: true

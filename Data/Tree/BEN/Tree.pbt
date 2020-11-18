@@ -12982,13 +12982,13 @@ Objects {
     Overrides {
       Name: "cs:Costume"
       AssetReference {
-        Id: 7483364902131033518
+        Id: 2587376687102126928
       }
     }
     Overrides {
       Name: "cs:Rock_Strike_0_Projectile"
       AssetReference {
-        Id: 13331124737271784681
+        Id: 17816880227317936423
       }
     }
     Overrides {
@@ -13000,13 +13000,13 @@ Objects {
     Overrides {
       Name: "cs:Stone_Wall_0_Placement"
       AssetReference {
-        Id: 8766393355139966205
+        Id: 3361009821012354788
       }
     }
     Overrides {
       Name: "cs:Shield_Dash_0_Attachment"
       AssetReference {
-        Id: 8213125305841566245
+        Id: 10048110780674465143
       }
     }
     Overrides {
@@ -13018,13 +13018,13 @@ Objects {
     Overrides {
       Name: "cs:Boulder_Throw_0_Pickup"
       AssetReference {
-        Id: 15867696918606394905
+        Id: 8952580800435141697
       }
     }
     Overrides {
       Name: "cs:Boulder_Throw_0_Projectile"
       AssetReference {
-        Id: 4152617433700755742
+        Id: 1273489800256864344
       }
     }
   }
@@ -13063,7 +13063,7 @@ Objects {
     Overrides {
       Name: "cs:Rock_Strike_0_Projectile"
       AssetReference {
-        Id: 13331124737271784681
+        Id: 12063658360155247816
       }
     }
     Overrides {
@@ -13075,13 +13075,13 @@ Objects {
     Overrides {
       Name: "cs:Stone_Wall_0_Placement"
       AssetReference {
-        Id: 8766393355139966205
+        Id: 5934541114304810566
       }
     }
     Overrides {
       Name: "cs:Shield_Dash_0_Attachment"
       AssetReference {
-        Id: 8213125305841566245
+        Id: 9263635835765326391
       }
     }
     Overrides {
@@ -13093,13 +13093,13 @@ Objects {
     Overrides {
       Name: "cs:Boulder_Throw_0_Pickup"
       AssetReference {
-        Id: 15867696918606394905
+        Id: 8677730548454533978
       }
     }
     Overrides {
       Name: "cs:Boulder_Throw_0_Projectile"
       AssetReference {
-        Id: 4152617433700755742
+        Id: 2607136788901765941
       }
     }
   }
@@ -13128,6 +13128,20 @@ Objects {
     }
   }
   ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tank_Orc"
+      ObjectReference {
+        SelfId: 764331394051848749
+      }
+    }
+    Overrides {
+      Name: "cs:Tank_Elf"
+      ObjectReference {
+        SelfId: 5216073423554532332
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13387,9 +13401,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -21115
-      Y: -27620
-      Z: 5225
+      X: -14775
+      Y: -16730
+      Z: 3190
     }
     Rotation {
     }
@@ -13404,7 +13418,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

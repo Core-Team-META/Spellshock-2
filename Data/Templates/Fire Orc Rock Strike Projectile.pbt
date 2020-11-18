@@ -272,12 +272,12 @@
       }
     }
     Assets {
-      Id: 5081948203355976238
-      Name: "Single Rock Ground Impact 01 SFX"
-      PlatformAssetType: 7
+      Id: 5975046637337968167
+      Name: "Ice Spikes Trail VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ice_spikes_line"
       }
     }
     Assets {
@@ -290,12 +290,12 @@
       }
     }
     Assets {
-      Id: 5975046637337968167
-      Name: "Ice Spikes Trail VFX"
-      PlatformAssetType: 8
+      Id: 5081948203355976238
+      Name: "Single Rock Ground Impact 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_ice_spikes_line"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_single_rock_ground_impact_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -305,4 +305,3 @@
   }
   SerializationVersion: 68
 }
-IncludesAllDependencies: true

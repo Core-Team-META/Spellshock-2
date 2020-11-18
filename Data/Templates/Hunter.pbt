@@ -1846,6 +1846,10 @@
             }
           }
           Overrides {
+            Name: "cs:MuzzleToLookTarget"
+            Bool: true
+          }
+          Overrides {
             Name: "cs:ReticleTemplate"
             AssetReference {
               Id: 10414967070514943464

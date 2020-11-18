@@ -7,7 +7,7 @@ local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 
 -- Exposed variables --
 local AIM_BINDING = SERVER_SCRIPT:GetCustomProperty("AimBinding")
-local ZOOM_DISTANCE = SERVER_SCRIPT:GetCustomProperty("AimZoomDistance")
+local ZOOM_DISTANCE = 350 --SERVER_SCRIPT:GetCustomProperty("AimZoomDistance")
 local SPREAD_ZOOM = SERVER_SCRIPT:GetCustomProperty("SpreadZoom")
 local ZOOM_SPEED = SERVER_SCRIPT:GetCustomProperty("ZoomSpeed")
 

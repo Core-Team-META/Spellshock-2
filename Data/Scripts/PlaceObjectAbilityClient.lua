@@ -27,9 +27,6 @@ local CancelBindings = {
 	ability_extra_12 = true
 }
 
-if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
-	ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
-end
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isPreviewing" then
@@ -37,6 +34,10 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
 		if isPreviewing then
+			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
+				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
+			end
+		
 			objectHalogram = World.SpawnAsset(ObjectTemplate)
 			AllHalograms[objectHalogram.id] = objectHalogram
 		else

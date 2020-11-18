@@ -4285,6 +4285,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:AnimationAbilityTemplate"
+      AssetReference {
+        Id: 16997134585340290467
+      }
+    }
+    Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 4559935034785672696
@@ -8010,6 +8016,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:AnimationAbilityTemplate"
+      AssetReference {
+        Id: 16997134585340290467
+      }
+    }
+    Overrides {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 16313267587009276285
@@ -11727,6 +11739,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:AnimationAbilityTemplate"
+      AssetReference {
+        Id: 16997134585340290467
       }
     }
     Overrides {
@@ -15451,6 +15469,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:AnimationAbilityTemplate"
+      AssetReference {
+        Id: 16997134585340290467
       }
     }
     Overrides {
@@ -19741,6 +19765,12 @@ Objects {
       Name: "cs:API"
       AssetReference {
         Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:AnimationAbilityTemplate"
+      AssetReference {
+        Id: 16997134585340290467
       }
     }
     Overrides {
