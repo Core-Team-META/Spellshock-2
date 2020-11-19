@@ -55,10 +55,6 @@
         Float: 0.2
       }
       Overrides {
-        Name: "roughness"
-        Float: 0.1
-      }
-      Overrides {
         Name: "colordepthblend"
         Float: 57.5908
       }
@@ -87,6 +83,10 @@
           B: 0.238132641
           A: 0.46
         }
+      }
+      Overrides {
+        Name: "roughness"
+        Float: 1
       }
     }
     Assets {
