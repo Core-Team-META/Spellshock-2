@@ -161,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17360974861920272938
+  Name: "Decal Hay Patch 02"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_fan_hay_002"
+  }
+}
+Assets {
   Id: 17262393803512971106
   Name: "Plane Pentagon - One Sided"
   PlatformAssetType: 1

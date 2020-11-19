@@ -74,7 +74,7 @@
       }
       Overrides {
         Name: "opacity"
-        Float: 0.817700744
+        Float: 0.900817037
       }
       Overrides {
         Name: "u_tiles"
@@ -83,6 +83,56 @@
       Overrides {
         Name: "v_tiles"
         Float: 0.3
+      }
+      Overrides {
+        Name: "deep color"
+        Color {
+          R: 0.0210781284
+          G: 0.0569999851
+          B: 0.0570000038
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "shallow color"
+        Color {
+          G: 0.0458333269
+          B: 0.05
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "emissive"
+        Float: 0
+      }
+      Overrides {
+        Name: "foam color"
+        Color {
+          R: 0.843403161
+          G: 1
+          B: 0.990045488
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "edge foam brightness"
+        Float: 0.25
+      }
+      Overrides {
+        Name: "foam shape"
+        Float: 2.22902632
+      }
+      Overrides {
+        Name: "foam shape max"
+        Float: 0.560795903
+      }
+      Overrides {
+        Name: "foam shape min"
+        Float: 0.243442893
+      }
+      Overrides {
+        Name: "foam tightness"
+        Float: 6.68230438
       }
     }
     Assets {
