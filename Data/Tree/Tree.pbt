@@ -1507,7 +1507,7 @@ Objects {
       value {
         Overrides {
           Name: "bp:Fog Density"
-          Float: 6
+          Float: 4.59666252
         }
         Overrides {
           Name: "bp:Layered Fog Density"
@@ -1516,9 +1516,9 @@ Objects {
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.0483398438
-            G: 0.205891863
-            B: 0.34375
+            R: 0.0334201343
+            G: 0.137818187
+            B: 0.229166672
             A: 1
           }
         }
