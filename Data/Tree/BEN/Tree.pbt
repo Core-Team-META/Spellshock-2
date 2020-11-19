@@ -13211,7 +13211,7 @@ Objects {
   }
 }
 Objects {
-  Id: 821529884850704368
+  Id: 10158789212256738296
   Name: "Ability VFX Initializer"
   Transform {
     Location {
@@ -13225,8 +13225,6 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
-  ChildIds: 15420239875188292982
-  ChildIds: 14354752370619220121
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13234,127 +13232,8 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 14354752370619220121
-  Name: "Starting VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 821529884850704368
-  ChildIds: 18376379497129849724
-  ChildIds: 1907482510054459063
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 1907482510054459063
-  Name: "Tank_Elf"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14354752370619220121
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8308231682525855788
-    }
-  }
-}
-Objects {
-  Id: 18376379497129849724
-  Name: "Tank_Orc"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14354752370619220121
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 17951190285812977083
-    }
-  }
-}
-Objects {
-  Id: 15420239875188292982
-  Name: "Ability VFX Initializer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 821529884850704368
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:CurrentVersion"
-      String: "1.0"
-    }
-    Overrides {
-      Name: "cs:StartingVFX"
-      ObjectReference {
-        SelfId: 14354752370619220121
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8610888116667161291
-    }
+    IsFilePartition: true
+    FilePartitionName: "Ability VFX Initializer"
   }
 }
 Objects {
@@ -13418,7 +13297,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

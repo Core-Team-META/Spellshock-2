@@ -36,7 +36,7 @@ end
 		
 		
 function OnBindngPressed(player, binding)
-	if binding == "ability_extra_1" then
+	if binding == "ability_extra_2" then
 		local PlayerStorage = Storage.GetPlayerData(player)
 		local PlayerVFX = PlayerStorage.VFX
 				

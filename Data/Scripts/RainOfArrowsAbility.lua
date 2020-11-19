@@ -47,7 +47,6 @@ function PlaceObject(thisPlayer, position, rotation)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
 			return

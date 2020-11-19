@@ -1919,7 +1919,7 @@
                 Z: 46.8156166
               }
             }
-            AnimationSet: "2hand_staff_readys"
+            AnimationSet: "2hand_staff_ready"
             OutOfAmmoSfxAssetRef {
               Id: 841534158063459245
             }

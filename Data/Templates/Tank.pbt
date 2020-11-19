@@ -863,12 +863,6 @@
             }
           }
           Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 13331124737271784681
-            }
-          }
-          Overrides {
             Name: "cs:ProjectileSpeed"
             Int: 4000
           }
@@ -1021,18 +1015,6 @@
             Name: "cs:PrimaryAbility"
             ObjectReference {
               SubObjectId: 13977688717675933557
-            }
-          }
-          Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 8766393355139966205
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 17438938420799065589
             }
           }
           Overrides {
@@ -1260,18 +1242,6 @@
             Name: "cs:ThrowAbility"
             ObjectReference {
               SubObjectId: 17603482927302860847
-            }
-          }
-          Overrides {
-            Name: "cs:PickupTemplate"
-            AssetReference {
-              Id: 11318441308667137252
-            }
-          }
-          Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 11324149636644572705
             }
           }
           Overrides {
@@ -2109,18 +2079,6 @@
         ChildIds: 15328715113681216029
         ChildIds: 274493358176543512
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:DashFX"
-            AssetReference {
-              Id: 8213125305841566245
-            }
-          }
-          Overrides {
-            Name: "cs:EndingFX"
-            AssetReference {
-              Id: 3001366697168823164
-            }
-          }
           Overrides {
             Name: "cs:EndingRadius"
             Int: 400
