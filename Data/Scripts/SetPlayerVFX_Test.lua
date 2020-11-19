@@ -49,17 +49,11 @@ function OnBindngPressed(player, binding)
 			
 			local VFX_Settings = value:WaitForObject()
 			
-			for name, value in pairs(VFX_Settings:GetCustomProperties()) do
-				if name == "Costume" then
-					PlayerVFX[ Class ][ Team ][name] = value
-				else
-					local Names = GetAbilityAndVFXNames(name)
-					print(string.format("	%s / %d / %s / %s", Class, Team, Names[1], Names[2]))
-					PlayerVFX[ Class ][ Team ][ Names[1] ][ Names[2] ] = value
-					-- Class / Team / Ability Name / VFX Name
-					
-					print("	"..value)
-				end
+			for vfx_name, template in pairs(VFX_Settings:GetCustomProperties()) do
+				local vfxKey
+				vfxKey = string.format("%s_%d_%s", Class, Team, vfx_name)
+				PlayerVFX[vfxKey] = template
+				print("	"..vfxKey)
 			end
 		end	
 		--print(StartingVFX_Table["Tank"][1]["Boulder Throw"]["Projectile"])

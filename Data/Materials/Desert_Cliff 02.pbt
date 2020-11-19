@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 4729541953461097043
-  Name: "Desert_Cliff 01"
+  Id: 8619008964759729738
+  Name: "Desert_Cliff 02"
   PlatformAssetType: 13
   SerializationVersion: 68
   CustomMaterialAsset {
@@ -13,15 +13,15 @@
       Overrides {
         Name: "gradient_color"
         Color {
-          R: 1
-          G: 1
-          B: 1
+          R: 0.833333313
+          G: 0.463173568
+          B: 0.238715261
           A: 1
         }
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.379451811
+        Float: 0.712223709
       }
       Overrides {
         Name: "gradient_direction"
@@ -35,18 +35,14 @@
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0
-      }
-      Overrides {
-        Name: "rotate_material"
-        Float: 90
+        Float: 0.13010253
       }
       Overrides {
         Name: "color"
         Color {
-          R: 0.9375
-          G: 0.600100696
-          B: 0.395507813
+          R: 1
+          G: 0.897947
+          B: 0.77
           A: 1
         }
       }

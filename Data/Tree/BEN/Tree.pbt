@@ -12986,43 +12986,43 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Rock_Strike_0_Projectile"
+      Name: "cs:Rock_Strike_Projectile"
       AssetReference {
         Id: 17816880227317936423
       }
     }
     Overrides {
-      Name: "cs:Stone_Wall_0_Preview"
+      Name: "cs:Stone_Wall_Preview"
       AssetReference {
         Id: 17438938420799065589
       }
     }
     Overrides {
-      Name: "cs:Stone_Wall_0_Placement"
+      Name: "cs:Stone_Wall_Placement"
       AssetReference {
         Id: 3361009821012354788
       }
     }
     Overrides {
-      Name: "cs:Shield_Dash_0_Attachment"
+      Name: "cs:Shield_Dash_Attachment"
       AssetReference {
         Id: 10048110780674465143
       }
     }
     Overrides {
-      Name: "cs:Shield_Dash_0_Bash"
+      Name: "cs:Shield_Dash_Bash"
       AssetReference {
         Id: 3001366697168823164
       }
     }
     Overrides {
-      Name: "cs:Boulder_Throw_0_Pickup"
+      Name: "cs:Boulder_Throw_Pickup"
       AssetReference {
         Id: 8952580800435141697
       }
     }
     Overrides {
-      Name: "cs:Boulder_Throw_0_Projectile"
+      Name: "cs:Boulder_Throw_Projectile"
       AssetReference {
         Id: 1273489800256864344
       }
@@ -13061,43 +13061,43 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Rock_Strike_0_Projectile"
+      Name: "cs:Rock_Strike_Projectile"
       AssetReference {
         Id: 12063658360155247816
       }
     }
     Overrides {
-      Name: "cs:Stone_Wall_0_Preview"
+      Name: "cs:Stone_Wall_Preview"
       AssetReference {
         Id: 17438938420799065589
       }
     }
     Overrides {
-      Name: "cs:Stone_Wall_0_Placement"
+      Name: "cs:Stone_Wall_Placement"
       AssetReference {
         Id: 5934541114304810566
       }
     }
     Overrides {
-      Name: "cs:Shield_Dash_0_Attachment"
+      Name: "cs:Shield_Dash_Attachment"
       AssetReference {
         Id: 9263635835765326391
       }
     }
     Overrides {
-      Name: "cs:Shield_Dash_0_Bash"
+      Name: "cs:Shield_Dash_Bash"
       AssetReference {
         Id: 3001366697168823164
       }
     }
     Overrides {
-      Name: "cs:Boulder_Throw_0_Pickup"
+      Name: "cs:Boulder_Throw_Pickup"
       AssetReference {
         Id: 8677730548454533978
       }
     }
     Overrides {
-      Name: "cs:Boulder_Throw_0_Projectile"
+      Name: "cs:Boulder_Throw_Projectile"
       AssetReference {
         Id: 2607136788901765941
       }
