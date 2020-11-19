@@ -123,7 +123,7 @@
             Id: 15950041323673501915
           }
           AutoPlay: true
-          Volume: 0.8
+          Volume: 1
           Falloff: 3000
           Radius: 200
           IsSpatializationEnabled: true
@@ -231,9 +231,9 @@
           Rotation {
           }
           Scale {
-            X: 0.767311096
-            Y: 0.767311096
-            Z: 0.767311096
+            X: 2.91335797
+            Y: 2.91335797
+            Z: 2.91335797
           }
         }
         ParentId: 3637276016891827027
@@ -293,16 +293,16 @@
           Rotation {
           }
           Scale {
-            X: 0.214819938
-            Y: 0.214819938
-            Z: 0.214819938
+            X: 0.339856058
+            Y: 0.339856058
+            Z: 0.339856058
           }
         }
         ParentId: 3637276016891827027
         UnregisteredParameters {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.331876189
+            Float: 0.922481298
           }
           Overrides {
             Name: "bp:density"
@@ -379,7 +379,7 @@
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 1.5
+            Float: 2.5479126
           }
           Overrides {
             Name: "bp:Secondary Color"
@@ -407,39 +407,12 @@
       }
     }
     Assets {
-      Id: 7165087681498963828
-      Name: "Magic Fire Blast Attack 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_fire_blast_attack_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 15950041323673501915
-      Name: "Ambient Firey Volcano Lava Burning Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_ambience_firey_volcano_lava_burning_loop_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 10118144510199222253
-      Name: "Fire and Flame Burning Loop Set 01 SFX"
-      PlatformAssetType: 10
-      PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_nature_fireloops_ref"
-      }
-    }
-    Assets {
-      Id: 6100814957947705535
-      Name: "Plasma Charge Up Hold VFX"
+      Id: 9919395327939304349
+      Name: "Magic Projectile VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_ChargeUp_Hold"
+        AssetId: "fxbp_magic_projectile"
       }
     }
     Assets {
@@ -452,12 +425,39 @@
       }
     }
     Assets {
-      Id: 9919395327939304349
-      Name: "Magic Projectile VFX"
+      Id: 6100814957947705535
+      Name: "Plasma Charge Up Hold VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_magic_projectile"
+        AssetId: "fxbp_ChargeUp_Hold"
+      }
+    }
+    Assets {
+      Id: 10118144510199222253
+      Name: "Fire and Flame Burning Loop Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_nature_fireloops_ref"
+      }
+    }
+    Assets {
+      Id: 15950041323673501915
+      Name: "Ambient Firey Volcano Lava Burning Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_ambience_firey_volcano_lava_burning_loop_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 7165087681498963828
+      Name: "Magic Fire Blast Attack 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_fire_blast_attack_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -467,3 +467,4 @@
   }
   SerializationVersion: 68
 }
+IncludesAllDependencies: true

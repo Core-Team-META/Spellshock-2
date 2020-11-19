@@ -40,7 +40,7 @@
       }
       Overrides {
         Name: "startfadesoftness"
-        Float: 0.1
+        Float: 0.243442893
       }
       Overrides {
         Name: "startfadeoffset"
@@ -87,6 +87,10 @@
       Overrides {
         Name: "roughness"
         Float: 1
+      }
+      Overrides {
+        Name: "arc"
+        Float: 0.60613209
       }
     }
     Assets {

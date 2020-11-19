@@ -69,7 +69,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -20090.2129
+      Z: -15091.9482
     }
     Rotation {
     }
@@ -1357,11 +1357,7 @@ Objects {
       value {
         Overrides {
           Name: "bp:Horizon Falloff"
-          Float: 10
-        }
-        Overrides {
-          Name: "bp:Haze Falloff"
-          Float: 7
+          Float: 4.71156788
         }
         Overrides {
           Name: "bp:Cloud Color"
@@ -1373,12 +1369,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "bp:Cloud Lighting Brightness"
-          Float: 10
-        }
-        Overrides {
           Name: "bp:Cloud Opacity"
-          Float: 0.531870544
+          Float: 0.405922711
         }
         Overrides {
           Name: "bp:Cloud Ambient Color"
@@ -1395,7 +1387,52 @@ Objects {
         }
         Overrides {
           Name: "bp:Brightness"
-          Float: 1.92576838
+          Float: 2.5
+        }
+        Overrides {
+          Name: "bp:Cloud Shape"
+          Enum {
+            Value: "mc:ecloudshapes:1"
+          }
+        }
+        Overrides {
+          Name: "bp:Zenith Color"
+          Color {
+            G: 0.192666471
+            B: 0.679999948
+            A: 0.6
+          }
+        }
+        Overrides {
+          Name: "bp:Horizon Color"
+          Color {
+            R: 1
+            G: 0.963300169
+            B: 0.708333373
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Overall Tint"
+          Color {
+            R: 0.75
+            G: 0.900662184
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Haze Color"
+          Color {
+            R: 0.21875
+            G: 0.534353793
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Cloud Lighting Brightness"
+          Float: 3.69786572
         }
       }
     }
@@ -1455,6 +1492,14 @@ Objects {
           Name: "bp:Shadow Cascade Count"
           Int: 2
         }
+        Overrides {
+          Name: "bp:Size"
+          Float: 6.91438866
+        }
+        Overrides {
+          Name: "bp:Light Shaft Bloom Scale"
+          Float: 0.05
+        }
       }
     }
     ParameterOverrideMap {
@@ -1462,32 +1507,24 @@ Objects {
       value {
         Overrides {
           Name: "bp:Fog Density"
-          Float: 5.11931133
-        }
-        Overrides {
-          Name: "bp:Falloff"
-          Float: 0.268444896
+          Float: 6
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 1.57037377
+          Float: 8
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.173068568
-            G: 0.33967188
-            B: 0.572916687
+            R: 0.0483398438
+            G: 0.205891863
+            B: 0.34375
             A: 1
           }
         }
         Overrides {
-          Name: "bp:Start"
-          Float: 0
-        }
-        Overrides {
           Name: "bp:Light Absorption Amount"
-          Float: 0.768384278
+          Float: 0.1
         }
         Overrides {
           Name: "bp:View Distance"
@@ -1500,6 +1537,40 @@ Objects {
         Overrides {
           Name: "bp:Layered Fog Falloff"
           Float: 0.05
+        }
+        Overrides {
+          Name: "bp:color"
+          Color {
+            R: 0.447000027
+            G: 0.741933227
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Layered Fog Offset Height"
+          Float: 0
+        }
+        Overrides {
+          Name: "bp:Directional Inscattering Exponent"
+          Float: 4.43959856
+        }
+        Overrides {
+          Name: "bp:Falloff"
+          Float: 0.711650312
+        }
+        Overrides {
+          Name: "bp:Albedo"
+          Color {
+            R: 0.69
+            G: 0.948333323
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Start"
+          Float: 800
         }
       }
     }
