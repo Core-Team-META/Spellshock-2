@@ -27,6 +27,7 @@ Objects {
   ChildIds: 14162296025304194376
   ChildIds: 12626000991766525324
   ChildIds: 16227534043720893935
+  ChildIds: 8983380287600545020
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -36,6 +37,32 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 8983380287600545020
+  Name: "KONZ"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "KONZ"
   }
 }
 Objects {
@@ -1511,14 +1538,14 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 8
+          Float: 7
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.0334201343
-            G: 0.137818187
-            B: 0.229166672
+            R: 0.052408848
+            G: 0.216123894
+            B: 0.359375
             A: 1
           }
         }
@@ -1536,7 +1563,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Falloff"
-          Float: 0.05
+          Float: 0.066882655
         }
         Overrides {
           Name: "bp:color"
@@ -1550,10 +1577,6 @@ Objects {
         Overrides {
           Name: "bp:Layered Fog Offset Height"
           Float: 0
-        }
-        Overrides {
-          Name: "bp:Directional Inscattering Exponent"
-          Float: 4.43959856
         }
         Overrides {
           Name: "bp:Falloff"
@@ -1571,6 +1594,10 @@ Objects {
         Overrides {
           Name: "bp:Start"
           Float: 800
+        }
+        Overrides {
+          Name: "bp:Directional Inscattering Exponent"
+          Float: 2
         }
       }
     }
