@@ -4,7 +4,7 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
-local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
+--local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 
 local SPEED = script:GetCustomProperty("ProjectileSpeed")
 local MOVE_DURATION = script:GetCustomProperty("MoveDuration")
@@ -15,6 +15,7 @@ local IMPULSE_AMOUNT = script:GetCustomProperty("ImpulseAmount")
 local PlayerVFX = nil
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
+local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY) then return end
@@ -82,7 +83,20 @@ function OnAbilityExecute(thisAbility)
 	spawnPosition.z = spawnPosition.z + 200
 	
 	--local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	local RockProjectile = World.SpawnAsset(PlayerVFX[thisAbility.owner.team][thisAbility.name]["Projectile"], {position=spawnPosition})
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
+	local success, RockProjectile = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position=spawnPosition})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(player)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(player, PlayerStorage)
+		RockProjectile = World.SpawnAsset(_G.VFX[vfxKey], {position=spawnPosition})
+	end
+	
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
@@ -101,7 +115,7 @@ end
 
 function OnEquip(equipment, player)
 	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX["Tank"]
+	PlayerVFX = PlayerStorage.VFX
 end
 
 function Tick(deltaTime)

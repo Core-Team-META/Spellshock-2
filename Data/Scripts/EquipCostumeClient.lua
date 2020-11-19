@@ -16,7 +16,17 @@ function AttachCostume(player)
 	end
 	
 	local PlayerAttachments = {}
-	local CostumeObject = World.SpawnAsset(CostumeTemplate)
+	--local CostumeObject = World.SpawnAsset(CostumeTemplate)
+	
+	local success, CostumeObject = pcall(function()
+	    return World.SpawnAsset(CostumeTemplate)
+	end)
+	
+	if not success then	
+		Events.BroadcastToServer("EquipCostumeFailed")
+		return
+	end
+		
 	for _, attachment in ipairs(CostumeObject:GetChildren()) do
 		attachment:AttachToPlayer(player, attachment.name)
 		table.insert(PlayerAttachments, attachment)
@@ -35,7 +45,14 @@ function DestroyCostume(player)
 	end
 end
 
+function OnNetworkPropertyChange(_, name)
+	if name == "CostumeTemplate" then
+		AttachCostume(Game.GetLocalPlayer())
+	end
+end
+
 function OnEquipped(thisEquipment, player)
+	ParentEquipment.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChange )
 	AttachCostume(player)
 end
 

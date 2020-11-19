@@ -3,7 +3,7 @@ local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject(
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
+--local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EventName = script:GetCustomProperty("EventName")
 local Duration = script:GetCustomProperty("Duration")
 
@@ -12,6 +12,7 @@ local EventListeners = {}
 local isPreviewing = false
 local isPlacing = false
 local PlayerVFX = nil
+local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
@@ -46,14 +47,47 @@ function PlaceObject(thisPlayer, position, rotation)
 		if position == nil then
 			return
 		end
-		
 		isPlacing = true
-		local newObject = World.SpawnAsset(PlayerVFX[SpecialAbility.owner.team][SpecialAbility.name]["Placement"], {position = position, rotation = rotation})
+		
+		local newObject
+		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
+		--PlayerVFX[vfxKey] = "ajshgdfasgf"
+		local success, newObject = pcall(function()
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation})
+		end)
+		
+		if not success then
+			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+			local PlayerStorage = Storage.GetPlayerData(thisPlayer)
+			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+			PlayerVFX = PlayerStorage.VFX
+			Storage.SetPlayerData(thisPlayer, PlayerStorage)
+			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
+		end
+		
 		newObject.lifeSpan = Duration
 		if newObject:GetCustomProperty("Team") ~= nil then
 			Task.Wait()
 			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
 		end
+	end
+end
+
+function Client_VFX_Failed(thisPlayer)
+	print("Failure receaved")
+	if thisPlayer == Equipment.owner then
+		Task.Wait()
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Preview")
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		Storage.SetPlayerData(thisPlayer, PlayerStorage)
+		script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerStorage.VFX[vfxKey])
 	end
 end
 
@@ -75,11 +109,9 @@ function OnEquip(equipment, player)
 	isPreviewing = false
 	isPlacing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-	
-	if(EventName) then
-		table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	end
-		
+
+	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
+	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
@@ -87,8 +119,10 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	
 	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX["Tank"]
-	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[player.team][SpecialAbility.name]["Preview"])
+	PlayerVFX = PlayerStorage.VFX
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Preview")
+	--PlayerVFX[vfxKey] = "asdfkjhasf"
+	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[vfxKey])
 	
 	Task.Wait()
 	SpecialAbility.isEnabled = false

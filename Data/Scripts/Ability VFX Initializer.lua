@@ -46,41 +46,40 @@ for _, child in ipairs(StartingVFX_Parents:GetChildren()) do
 	local Class_Team = SplitString(child.name, "_")
 	local Class = Class_Team[1]
 	local Team = Teams[Class_Team[2]]
-	if StartingVFX_Table[ Class ] == nil then
-		StartingVFX_Table[ Class ] = {}
-	end
-	if StartingVFX_Table[ Class ][ Team ] == nil then
-		StartingVFX_Table[ Class ][ Team ] = {}
-	end
-	for name, value in pairs(child:GetCustomProperties()) do
-		if name == "Costume" then
-			StartingVFX_Table[ Class ][ Team ][name] = value
-		else
-			local Names = GetAbilityAndVFXNames(name)
-			if StartingVFX_Table[ Class ][ Team ][ Names[1] ] == nil then
-				StartingVFX_Table[ Class ][ Team ][ Names[1] ] = {}
-			end
-			StartingVFX_Table[ Class ][ Team ][ Names[1] ][ Names[2] ] = value
-			-- Class / Team / Ability Name / VFX Name
-			print(string.format("	%s / %d / %s / %s", Class, Team, Names[1], Names[2]))
-		end
+	
+	for name, value in pairs(child:GetCustomProperties()) do		
+		local key = Class.."_"..Team.."_"..name
+		print("	"..key)
+		StartingVFX_Table[key] = value
 	end
 end	
-print(StartingVFX_Table["Tank"][1]["Boulder Throw"]["Projectile"])
+--print(StartingVFX_Table["Tank"][1]["Boulder Throw"]["Projectile"])
+_G.VFX = StartingVFX_Table
 print("----------------------------\n")
 --====================================================================================================
+
+function OnBindngPressed(player, binding)
+	if binding == "ability_extra_1" then
+		local PlayerStorage = Storage.GetPlayerData(player)
+		PlayerStorage.VFX = StartingVFX_Table
+		Storage.SetPlayerData(player, PlayerStorage)
+	end
+end
 
 function OnPlayerJoined(player)
 	Task.Wait()
 	local PlayerStorage = Storage.GetPlayerData(player)
 	
-	if not PlayerStorage.VFX or not PlayerStorage.VFX.version or PlayerStorage.VFX.version ~= CurrentVersion then
+	--if not PlayerStorage.VFX or not PlayerStorage.VFX.version or PlayerStorage.VFX.version ~= CurrentVersion then
 		PlayerStorage.VFX = StartingVFX_Table
-		PlayerStorage.VFX.version = CurrentVersion
-	end
-	print(PlayerStorage.VFX["Tank"][1]["Boulder Throw"]["Projectile"])	
-	print(PlayerStorage.VFX["Tank"][1]["Boulder Throw"]["Pickup"])	
+		--PlayerStorage.VFX.version = CurrentVersion
+	--end
+	--print(PlayerStorage.VFX["Tank"][1]["Boulder Throw"]["Projectile"])	
+	--PlayerStorage.VFX["Tank_1_Boulder_Throw_Projectile"]
+	--print(PlayerStorage.VFX["Tank"][1]["Boulder Throw"]["Pickup"])	
 	Storage.SetPlayerData(player, PlayerStorage)
+	
+	player.bindingPressedEvent:Connect( OnBindngPressed )
 end
 
 Game.playerJoinedEvent:Connect( OnPlayerJoined )

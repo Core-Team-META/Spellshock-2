@@ -49,7 +49,9 @@ function PlaceObject(thisPlayer, position, rotation)
 		if #ActiveTraps == MaxTraps then
 			-- remove the oldest trap
 			local oldTrap = table.remove(ActiveTraps, 1)
-			oldTrap:Destroy()
+			if Object.IsValid(oldTrap) then
+				oldTrap:Destroy()
+			end
 		end
 		
 		isPlacing = true

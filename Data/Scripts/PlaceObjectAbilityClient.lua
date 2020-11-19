@@ -27,7 +27,6 @@ local CancelBindings = {
 	ability_extra_12 = true
 }
 
-
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isPreviewing" then
 		if SpecialAbility.owner ~= LOCAL_PLAYER then return end
@@ -37,9 +36,23 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
 				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
 			end
-		
-			objectHalogram = World.SpawnAsset(ObjectTemplate)
-			AllHalograms[objectHalogram.id] = objectHalogram
+			local newObject
+			local success, newObject = pcall(function()
+			    return World.SpawnAsset(ObjectTemplate)
+			end)
+			
+			if not success then
+				objectHalogram = nil
+				Task.Wait()
+				print("Broadcasting failure")
+				while Events.BroadcastToServer(EventName.."FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+					Task.Wait()
+				end
+				return
+			else
+				objectHalogram = newObject
+				AllHalograms[objectHalogram.id] = objectHalogram
+			end			
 		else
 			if objectHalogram and Object.IsValid(objectHalogram) then
 				AllHalograms[objectHalogram.id] = nil
@@ -61,8 +74,8 @@ end
 
 function OnSpecialAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
-		local targetPosition = CalculatePlacement()
-		if targetPosition and EventName then
+		local targetPosition, _, targetIsVisible = CalculatePlacement()
+		if targetPosition and targetIsVisible and EventName then
 			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 				Task.Wait()
 			end
@@ -95,14 +108,14 @@ function CalculatePlacement()
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
 	if hr ~= nil then
-		return hr:GetImpactPosition(), hr:GetImpactNormal()
+		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000,
 			{ignorePlayers = true})
 		if hr ~= nil then
-			return hr:GetImpactPosition(), hr:GetImpactNormal()
+			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
 			return nil
 		end
@@ -133,8 +146,8 @@ function Tick()
 		end
 		
 		-- calculate placement:
-		local impactPosition, impactNormal = CalculatePlacement()
-		if impactPosition ~= nil then
+		local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
+		if impactPosition ~= nil and targetIsVisible then
 			objectHalogram:SetWorldPosition(impactPosition)
 			objectHalogram.visibility = Visibility.INHERIT
 			

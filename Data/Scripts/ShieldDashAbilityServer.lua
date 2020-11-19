@@ -5,14 +5,15 @@ local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
-local DashFX = Equipment:GetCustomProperty("DashFX")
-local EndingFX = Equipment:GetCustomProperty("EndingFX")
+--local DashFX = Equipment:GetCustomProperty("DashFX")
+--local EndingFX = Equipment:GetCustomProperty("EndingFX")
 local Radius = Equipment:GetCustomProperty("EndingRadius")
 local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
 local EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
 local DamageAmount = Equipment:GetCustomProperty("DamageAmount")
 
 local PlayerVFX = nil
+local abilityName = string.gsub(Ability.name, " ", "_")
 local DashImpulseVector = nil
 local originalPlayerSettings = {}
 local isDashing = false
@@ -58,11 +59,31 @@ function ToggleDash(mode)
 		local directionVector = Ability.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
 		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
-		AttachedFX = World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Attachment"], {position = Ability.owner:GetWorldPosition()})
+		--AttachedFX = World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Attachment"], {position = Ability.owner:GetWorldPosition()})
+		
+		local newAsset
+		local vfxKey = string.format("%s_%d_%s_%s", "Tank", Ability.owner.team, abilityName, "Attachment")
+		print(vfxKey)
+		--PlayerVFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
+		local success, newAsset = pcall(function()
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+		end)
+		
+		if success then
+			AttachedFX = newAsset	
+		else
+			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+			local PlayerStorage = Storage.GetPlayerData(Ability.owner)
+			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+			PlayerVFX = PlayerStorage.VFX
+			Storage.SetPlayerData(Ability.owner, PlayerStorage)
+			AttachedFX = World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+		end
+		
 		AttachedFX:AttachToPlayer(Ability.owner, "root")
 	else
-		TriggerEventConnection:Disconnect()
-		AttachedFX:Destroy()
+		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
+		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
 		Ability.owner.movementControlMode = originalPlayerSettings.MovementMode
 		Ability.owner.animationStance = originalPlayerSettings.AnimationStance
 		Ability.owner.groundFriction = originalPlayerSettings.GroundFriction
@@ -83,7 +104,22 @@ end
 
 function OnAbilityCooldown(thisAbility)
 	ToggleDash(false)
-	World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Bash"], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	--World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Bash"], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", "Tank", Ability.owner.team, abilityName, "Bash")
+	--PlayerVFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
+	local success, newAsset = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(Ability.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(Ability.owner, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	end
 	
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), Radius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
@@ -93,7 +129,7 @@ end
 
 function OnEquip(equipment, player)
 	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX["Tank"]
+	PlayerVFX = PlayerStorage.VFX
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
