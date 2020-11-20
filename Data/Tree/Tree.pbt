@@ -1384,27 +1384,27 @@ Objects {
       value {
         Overrides {
           Name: "bp:Horizon Falloff"
-          Float: 4.71156788
+          Float: 4.65958929
         }
         Overrides {
           Name: "bp:Cloud Color"
           Color {
-            R: 1
-            G: 1
+            R: 0.87
+            G: 0.974172175
             B: 1
             A: 1
           }
         }
         Overrides {
           Name: "bp:Cloud Opacity"
-          Float: 0.405922711
+          Float: 0.561859548
         }
         Overrides {
           Name: "bp:Cloud Ambient Color"
           Color {
-            R: 1
-            G: 0.654732347
-            B: 0.427083313
+            R: 0.989801347
+            G: 1
+            B: 0.86
             A: 1
           }
         }
@@ -1414,19 +1414,19 @@ Objects {
         }
         Overrides {
           Name: "bp:Brightness"
-          Float: 2.5
+          Float: 2
         }
         Overrides {
           Name: "bp:Cloud Shape"
           Enum {
-            Value: "mc:ecloudshapes:1"
+            Value: "mc:ecloudshapes:3"
           }
         }
         Overrides {
           Name: "bp:Zenith Color"
           Color {
-            G: 0.192666471
-            B: 0.679999948
+            G: 0.0721701682
+            B: 0.494791657
             A: 0.6
           }
         }
@@ -1436,15 +1436,6 @@ Objects {
             R: 1
             G: 0.963300169
             B: 0.708333373
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Overall Tint"
-          Color {
-            R: 0.75
-            G: 0.900662184
-            B: 1
             A: 1
           }
         }
@@ -1459,7 +1450,84 @@ Objects {
         }
         Overrides {
           Name: "bp:Cloud Lighting Brightness"
-          Float: 3.69786572
+          Float: 2.38106537
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -6.90527344
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -200
+            Y: -300
+            Z: 100
+          }
+        }
+        Overrides {
+          Name: "bp:Cloud Ambient Brightness"
+          Float: 5
+        }
+        Overrides {
+          Name: "bp:Disable Cloud Mask"
+          Bool: false
+        }
+        Overrides {
+          Name: "bp:Cloud Rim Color"
+          Color {
+            R: 0.882847786
+            G: 0.39
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Sky Influence On Clouds"
+          Float: 0.414585888
+        }
+        Overrides {
+          Name: "bp:Cloud Rim Brightness"
+          Float: 5
+        }
+        Overrides {
+          Name: "bp:High Cloud Opacity"
+          Float: 0.102712154
+        }
+        Overrides {
+          Name: "bp:High Cloud Color"
+          Color {
+            R: 0.915827751
+            G: 0.69
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:High Cloud Brightness"
+          Float: 0.544533253
+        }
+        Overrides {
+          Name: "bp:Cloud Wisp Opacity"
+          Float: 0.405922711
+        }
+        Overrides {
+          Name: "bp:Cloud Wisp Color"
+          Color {
+            R: 0.99
+            G: 0.995231807
+            B: 1
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "bp:Cloud Wisp Speed"
+          Float: 0.2
+        }
+        Overrides {
+          Name: "bp:Haze Falloff"
+          Float: 3.40088272
         }
       }
     }
@@ -1538,14 +1606,14 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Density"
-          Float: 7
+          Float: 10
         }
         Overrides {
           Name: "bp:Directional Inscattering Color"
           Color {
-            R: 0.052408848
-            G: 0.216123894
-            B: 0.359375
+            R: 0.0352104977
+            G: 0.180319861
+            B: 0.307291657
             A: 1
           }
         }
@@ -1555,7 +1623,7 @@ Objects {
         }
         Overrides {
           Name: "bp:View Distance"
-          Float: 1349.46814
+          Float: 5000
         }
         Overrides {
           Name: "bp:Beam View Direction"
@@ -1563,7 +1631,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Layered Fog Falloff"
-          Float: 0.066882655
+          Float: 0.07
         }
         Overrides {
           Name: "bp:color"
@@ -1593,11 +1661,11 @@ Objects {
         }
         Overrides {
           Name: "bp:Start"
-          Float: 800
+          Float: 0
         }
         Overrides {
           Name: "bp:Directional Inscattering Exponent"
-          Float: 2
+          Float: 4
         }
       }
     }
