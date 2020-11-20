@@ -7,7 +7,7 @@
       RootId: 12597983505510063666
       Objects {
         Id: 12597983505510063666
-        Name: "Orc Mage Tornado FX"
+        Name: "Mage Orc Tornado Active Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 865622591006778875
         ChildIds: 7109949033584959669
         ChildIds: 9049248418557605272
@@ -132,10 +132,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.131
-              G: 0.0895349905
-              B: 0.0517449975
-              A: 1
+              R: 0.873
+              G: 0.16005
+              A: 0.995000064
             }
           }
           Overrides {
@@ -148,17 +147,32 @@
             }
           }
           Overrides {
-            Name: "bp:Color A"
+            Name: "bp:Wiggle Offset Amount"
+            Float: 1.3
+          }
+          Overrides {
+            Name: "bp:Wiggle Speed"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Body Fade"
+            Float: 0.247263923
+          }
+          Overrides {
+            Name: "bp:color c"
             Color {
-              R: 0.455
-              G: 0.401967049
-              B: 0.3094
-              A: 0.389000028
+              R: 0.721568644
+              G: 0.0705882609
+              A: 1
             }
           }
           Overrides {
-            Name: "bp:Wiggle Offset Amount"
-            Float: 1.3
+            Name: "bp:Color A"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 1
+            }
           }
         }
         Collidable_v2 {
