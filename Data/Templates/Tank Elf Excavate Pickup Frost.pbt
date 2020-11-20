@@ -7,7 +7,7 @@
       RootId: 2799309084415734705
       Objects {
         Id: 2799309084415734705
-        Name: "Frost Elf ExcavatePickup"
+        Name: "Tank Elf Excavate Pickup Frost"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 9063692935374466722
         ChildIds: 16078465803850313000
         ChildIds: 9454595683614550360
@@ -87,7 +87,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1523214900353875295
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -169,15 +169,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
-      Id: 1523214900353875295
-      Name: "Snow 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {

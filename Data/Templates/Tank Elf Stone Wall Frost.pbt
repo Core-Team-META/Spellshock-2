@@ -7,7 +7,7 @@
       RootId: 8068909457519025944
       Objects {
         Id: 8068909457519025944
-        Name: "Frost Elf StoneWallWitcher"
+        Name: "Tank Elf Stone Wall Frost"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 3975608240059173400
         ChildIds: 9589034832241578871
         ChildIds: 12282107619167272356
@@ -308,7 +308,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -369,7 +369,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -460,7 +460,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -521,7 +521,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -612,7 +612,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -673,7 +673,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -1045,15 +1045,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_001"
-      }
-    }
-    Assets {
-      Id: 6024748366808673382
-      Name: "Terrain - Snow"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_terrain_rock-snow_001_wa"
       }
     }
     Assets {
