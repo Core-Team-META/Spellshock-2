@@ -1371,11 +1371,31 @@ Objects {
         Overrides {
           Name: "bp:Tint Color"
           Color {
-            R: 0.78
-            G: 0.845999897
-            B: 1
+            R: 1
+            G: 0.939072847
+            B: 0.92
             A: 1
           }
+        }
+        Overrides {
+          Name: "bp:Intensity"
+          Float: 1
+        }
+        Overrides {
+          Name: "bp:Blend Target Image"
+          Enum {
+            Value: "mc:eambientcubemapssmall:17"
+          }
+        }
+        Overrides {
+          Name: "bp:Ambient Image"
+          Enum {
+            Value: "mc:eambientcubemapssmall:0"
+          }
+        }
+        Overrides {
+          Name: "bp:Blend Amount"
+          Float: 0.06
         }
       }
     }
