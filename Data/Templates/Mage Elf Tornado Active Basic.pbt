@@ -7,7 +7,7 @@
       RootId: 18396550010636760668
       Objects {
         Id: 18396550010636760668
-        Name: "Elf Mage Tornado FX"
+        Name: "Mage Elf Tornado Active Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 10772566095877105579
         ChildIds: 4545488589136616139
         ChildIds: 13769895600965817982
@@ -130,15 +130,6 @@
         ParentId: 4545488589136616139
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Color B"
-            Color {
-              R: 0.131
-              G: 0.0895349905
-              B: 0.0517449975
-              A: 1
-            }
-          }
-          Overrides {
             Name: "bp:Color C"
             Color {
               R: 0.099
@@ -150,15 +141,70 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.455
-              G: 0.401967049
-              B: 0.3094
-              A: 0.389000028
+              G: 0.580392182
+              B: 0.360784471
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Wiggle Offset Amount"
             Float: 1.3
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.857000053
+              B: 0.271383911
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:color c"
+            Color {
+              G: 0.708
+              B: 0.440108269
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Body Fade"
+            Float: 0.247263923
+          }
+          Overrides {
+            Name: "bp:Bottom Fade"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Edge Shredding"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Fade Length Top"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Pin Top Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Pin Bottom Amount"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Enable Shadows"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Wiggle Speed"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Color By Height"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Cross Section Width"
+            Float: 0
           }
         }
         Collidable_v2 {
