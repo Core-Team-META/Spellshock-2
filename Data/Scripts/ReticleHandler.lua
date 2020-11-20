@@ -56,7 +56,7 @@ function FromWeaponToTarget()
 	
 	startPoint = viewPosition
 	endPoint = ((viewRotation * Vector3.FORWARD) * (Range + 2000)) + startPoint -- DIFFRENT RANGE
-	local hitResult = World.Raycast(startPoint, endPoint, {ignoreTeams = LOCAL_PLAYER.team, ignoreDead = true})
+	local hitResult = World.Raycast(startPoint, endPoint, {ignoreTeams = LOCAL_PLAYER.team})
 	if hitResult and hitResult.other:IsA("Player") then
 		local differenceVector = hitResult:GetImpactPosition() - Equipment:GetWorldPosition()
 		if CurrentColor ~= InRangeColor and differenceVector.size <= Range then
