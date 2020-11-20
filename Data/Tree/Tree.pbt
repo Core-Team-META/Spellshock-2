@@ -1369,17 +1369,8 @@ Objects {
       key: 3013977707158365793
       value {
         Overrides {
-          Name: "bp:Tint Color"
-          Color {
-            R: 1
-            G: 0.939072847
-            B: 0.92
-            A: 1
-          }
-        }
-        Overrides {
           Name: "bp:Intensity"
-          Float: 0.9
+          Float: 1
         }
         Overrides {
           Name: "bp:Blend Target Image"
@@ -1390,12 +1381,12 @@ Objects {
         Overrides {
           Name: "bp:Ambient Image"
           Enum {
-            Value: "mc:eambientcubemapssmall:0"
+            Value: "mc:eambientcubemapssmall:14"
           }
         }
         Overrides {
           Name: "bp:Blend Amount"
-          Float: 0.06
+          Float: 0.257913679
         }
       }
     }
@@ -1639,11 +1630,11 @@ Objects {
         }
         Overrides {
           Name: "bp:Light Absorption Amount"
-          Float: 0.1
+          Float: 0.15
         }
         Overrides {
           Name: "bp:View Distance"
-          Float: 5000
+          Float: 3001.78174
         }
         Overrides {
           Name: "bp:Beam View Direction"
@@ -1673,9 +1664,9 @@ Objects {
         Overrides {
           Name: "bp:Albedo"
           Color {
-            R: 0.69
-            G: 0.948333323
-            B: 1
+            R: 1
+            G: 0.911721826
+            B: 0.69
             A: 1
           }
         }
