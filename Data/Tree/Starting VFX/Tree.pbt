@@ -15,6 +15,14 @@ Objects {
     }
   }
   ParentId: 3515396752692620142
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Placement"
+      AssetReference {
+        Id: 1939393386208935566
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -42,6 +50,14 @@ Objects {
     }
   }
   ParentId: 3515396752692620142
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Placement"
+      AssetReference {
+        Id: 9619618021631241089
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

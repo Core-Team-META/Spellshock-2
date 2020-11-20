@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 4481013209671994049
-  Name: "Orc Crossbow Projectile"
+  Id: 3765999754692721073
+  Name: "Hunter Orc Crossbow Projectile Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12056185412118184830
+      RootId: 11990236603190766262
       Objects {
-        Id: 12056185412118184830
-        Name: "Orc Crossbow Projectile"
+        Id: 11990236603190766262
+        Name: "Fire Orc Crossbow Projectile"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 11859366769323054737
-        ChildIds: 7524348379923499835
+        ChildIds: 2609080772977482178
+        ChildIds: 7496486220800097125
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -31,7 +31,7 @@
         }
       }
       Objects {
-        Id: 11859366769323054737
+        Id: 2609080772977482178
         Name: "Group"
         Transform {
           Location {
@@ -46,10 +46,10 @@
             Z: 1
           }
         }
-        ParentId: 12056185412118184830
-        ChildIds: 14534569563144462424
-        ChildIds: 8689043996698562789
-        ChildIds: 13806602755148624262
+        ParentId: 11990236603190766262
+        ChildIds: 8881112585405621759
+        ChildIds: 12061702936157713555
+        ChildIds: 8581022143484869012
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -61,7 +61,7 @@
         }
       }
       Objects {
-        Id: 14534569563144462424
+        Id: 8881112585405621759
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -75,12 +75,12 @@
             Z: 0.439144075
           }
         }
-        ParentId: 11859366769323054737
+        ParentId: 2609080772977482178
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15003152280729680734
+              Id: 14793205094176453575
             }
           }
           Overrides {
@@ -93,7 +93,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.318303674
           }
         }
         Collidable_v2 {
@@ -117,7 +117,7 @@
         }
       }
       Objects {
-        Id: 8689043996698562789
+        Id: 12061702936157713555
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -136,7 +136,7 @@
             Z: 0.354507536
           }
         }
-        ParentId: 11859366769323054737
+        ParentId: 2609080772977482178
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -144,16 +144,16 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.255391032
+            Float: 0.23219423
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.553629398
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8911288174540730015
+              Id: 17763375775449008280
             }
           }
         }
@@ -178,7 +178,7 @@
         }
       }
       Objects {
-        Id: 13806602755148624262
+        Id: 8581022143484869012
         Name: "Thorn - Wide"
         Transform {
           Location {
@@ -196,7 +196,7 @@
             Z: 0.121841826
           }
         }
-        ParentId: 11859366769323054737
+        ParentId: 2609080772977482178
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -204,24 +204,22 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.137256965
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.209020078
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 1009636138000564291
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
+              R: 0.73
               A: 1
             }
           }
@@ -247,7 +245,7 @@
         }
       }
       Objects {
-        Id: 7524348379923499835
+        Id: 7496486220800097125
         Name: "BulletClient"
         Transform {
           Location {
@@ -260,12 +258,12 @@
             Z: 1
           }
         }
-        ParentId: 12056185412118184830
+        ParentId: 11990236603190766262
         UnregisteredParameters {
           Overrides {
             Name: "cs:ComponentRoot"
             ObjectReference {
-              SubObjectId: 12056185412118184830
+              SubObjectId: 11990236603190766262
             }
           }
           Overrides {
@@ -302,12 +300,12 @@
       }
     }
     Assets {
-      Id: 15003152280729680734
-      Name: "Bark Redwood 01"
+      Id: 14793205094176453575
+      Name: "Rock Obsidian 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_bark_redwood_001_uv"
+        AssetId: "mi_fresnel_rock_obsidian_001_uv"
       }
     }
     Assets {
@@ -317,15 +315,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_diamond_6_sided_001"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
       }
     }
     PrimaryAssetId {

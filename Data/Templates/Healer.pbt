@@ -1130,12 +1130,6 @@
             }
           }
           Overrides {
-            Name: "cs:EndingFX"
-            AssetReference {
-              Id: 16966857285875434478
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Place Crystal"
           }
@@ -1621,7 +1615,6 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SelfId: 15595857217313887378
           }
           Weapon {
             ProjectileAssetRef {
