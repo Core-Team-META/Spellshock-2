@@ -2,9 +2,7 @@
 local HawkRoot = script:GetCustomProperty("HawkRoot"):WaitForObject()
 local AnimationStance = HawkRoot:GetCustomProperty("AnimationStance")
 local AttackSound = script:GetCustomProperty("AttackSound"):WaitForObject()
-
-local ElfTemplate = HawkRoot:GetCustomProperty("ElfTemplate")
-local OrcTemplate = HawkRoot:GetCustomProperty("OrcTemplate")
+local Costume = script:GetCustomProperty("Costume"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -15,17 +13,9 @@ function OnNetworkPropertyChanged(thisObject, name)
 			AnimatedMesh:PlayAnimation("unarmed_slash", {playbackRate = 0.8})
 			AttackSound:Play()
 		end
-	elseif name == "Team" then
-		print("HERE")
-		local Team = thisObject:GetCustomProperty(name)
+	elseif name == "Owner" then
 		local OwnerID = thisObject:GetCustomProperty("Owner")
-		
-		local hawkTemplate = OrcTemplate
-		if Team == 2 then
-			hawkTemplate = ElfTemplate
-		end
-		
-		local HawkCostume = World.SpawnAsset(hawkTemplate, {parent = AnimatedMesh})
+		local HawkCostume = Costume
 		
 		-- attach costume
 		for _, attachment in ipairs(HawkCostume:GetChildren()) do
