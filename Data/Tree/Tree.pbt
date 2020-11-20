@@ -1379,7 +1379,7 @@ Objects {
         }
         Overrides {
           Name: "bp:Intensity"
-          Float: 1
+          Float: 0.9
         }
         Overrides {
           Name: "bp:Blend Target Image"
