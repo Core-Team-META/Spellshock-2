@@ -97,17 +97,18 @@ Objects {
         ChatMode {
         }
         ChatPosition {
-          X: 40
+          X: 15
+          Y: -111
         }
         ChatSize {
           X: 450
-          Y: 400
+          Y: 200
         }
         ChatHorizontalAlignment {
           Value: "mc:ecorehorizontalalign:left"
         }
         ChatVerticalAlignment {
-          Value: "mc:ecorehorizontalalign:center"
+          Value: "mc:ecoreverticalalign:bottom"
         }
       }
     }

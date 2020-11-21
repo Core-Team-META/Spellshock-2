@@ -28,6 +28,7 @@ Objects {
   ChildIds: 12626000991766525324
   ChildIds: 16227534043720893935
   ChildIds: 8983380287600545020
+  ChildIds: 13099473548876010514
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,6 +38,51 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 13099473548876010514
+  Name: "Human Guy 1"
+  Transform {
+    Location {
+      X: -6377.37646
+      Y: -3765.12329
+      Z: 3504.69092
+    }
+    Rotation {
+      Yaw: 153.681992
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18159075010969902837
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStancePlaybackRate: 1
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        PlaybackRate: 1
+      }
+    }
   }
 }
 Objects {
