@@ -49,9 +49,8 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		isPlacing = true
 		
-		local newObject
 		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
-		--PlayerVFX[vfxKey] = "ajshgdfasgf"
+		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
 		local success, newObject = pcall(function()
 		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation})
 		end)
@@ -121,7 +120,7 @@ function OnEquip(equipment, player)
 	local PlayerStorage = Storage.GetPlayerData(player)
 	PlayerVFX = PlayerStorage.VFX
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Preview")
-	--PlayerVFX[vfxKey] = "asdfkjhasf"
+	--PlayerVFX[vfxKey] = "asdfkjhasf" -- JUST FOR TESTING
 	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[vfxKey])
 	
 	Task.Wait()

@@ -17,8 +17,8 @@ Objects {
   ChildIds: 755867795888381768
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
-  ChildIds: 7854617941785706132
   ChildIds: 728687643111351772
+  ChildIds: 7332626658021963653
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
@@ -1357,6 +1357,32 @@ Objects {
   }
 }
 Objects {
+  Id: 7332626658021963653
+  Name: "Environment_v8"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2690972611223122670
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Environment_v8"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12982727639299389883
+    }
+  }
+}
+Objects {
   Id: 728687643111351772
   Name: "Fall Damage"
   Transform {
@@ -1396,259 +1422,6 @@ Objects {
     }
     TemplateAsset {
       Id: 5929315923558538615
-    }
-  }
-}
-Objects {
-  Id: 7854617941785706132
-  Name: "Environment_v3"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3013977707158365793
-      value {
-        Overrides {
-          Name: "bp:Tint Color"
-          Color {
-            R: 0.78
-            G: 0.845999897
-            B: 1
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9859930587159095033
-      value {
-        Overrides {
-          Name: "bp:Horizon Falloff"
-          Float: 4.71156788
-        }
-        Overrides {
-          Name: "bp:Cloud Color"
-          Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Opacity"
-          Float: 0.405922711
-        }
-        Overrides {
-          Name: "bp:Cloud Ambient Color"
-          Color {
-            R: 1
-            G: 0.654732347
-            B: 0.427083313
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Clouds"
-          Bool: true
-        }
-        Overrides {
-          Name: "bp:Brightness"
-          Float: 2.5
-        }
-        Overrides {
-          Name: "bp:Cloud Shape"
-          Enum {
-            Value: "mc:ecloudshapes:1"
-          }
-        }
-        Overrides {
-          Name: "bp:Zenith Color"
-          Color {
-            G: 0.192666471
-            B: 0.679999948
-            A: 0.6
-          }
-        }
-        Overrides {
-          Name: "bp:Horizon Color"
-          Color {
-            R: 1
-            G: 0.963300169
-            B: 0.708333373
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Overall Tint"
-          Color {
-            R: 0.75
-            G: 0.900662184
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Haze Color"
-          Color {
-            R: 0.21875
-            G: 0.534353793
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Lighting Brightness"
-          Float: 3.69786572
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10284309483680957982
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Environment_v3"
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10996667072626111982
-      value {
-        Overrides {
-          Name: "bp:Color Saturation"
-          Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Color Contrast"
-          Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Scene Tint"
-          Color {
-            R: 0.996514797
-            G: 1.07451749
-            B: 1.2
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12813456790253805465
-      value {
-        Overrides {
-          Name: "bp:Intensity"
-          Float: 3.2
-        }
-        Overrides {
-          Name: "bp:Dynamic Shadow Distance"
-          Float: 4.5
-        }
-        Overrides {
-          Name: "bp:Shadow Cascade Count"
-          Int: 2
-        }
-        Overrides {
-          Name: "bp:Size"
-          Float: 6.91438866
-        }
-        Overrides {
-          Name: "bp:Light Shaft Bloom Scale"
-          Float: 0.05
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 13018181793327756467
-      value {
-        Overrides {
-          Name: "bp:Fog Density"
-          Float: 4.59666252
-        }
-        Overrides {
-          Name: "bp:Layered Fog Density"
-          Float: 7
-        }
-        Overrides {
-          Name: "bp:Directional Inscattering Color"
-          Color {
-            R: 0.052408848
-            G: 0.216123894
-            B: 0.359375
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Light Absorption Amount"
-          Float: 0.1
-        }
-        Overrides {
-          Name: "bp:View Distance"
-          Float: 1349.46814
-        }
-        Overrides {
-          Name: "bp:Beam View Direction"
-          Float: 0.216638148
-        }
-        Overrides {
-          Name: "bp:Layered Fog Falloff"
-          Float: 0.066882655
-        }
-        Overrides {
-          Name: "bp:color"
-          Color {
-            R: 0.447000027
-            G: 0.741933227
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Layered Fog Offset Height"
-          Float: 0
-        }
-        Overrides {
-          Name: "bp:Falloff"
-          Float: 0.711650312
-        }
-        Overrides {
-          Name: "bp:Albedo"
-          Color {
-            R: 0.69
-            G: 0.948333323
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Start"
-          Float: 800
-        }
-        Overrides {
-          Name: "bp:Directional Inscattering Exponent"
-          Float: 2
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15600583839331343652
     }
   }
 }

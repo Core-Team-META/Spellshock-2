@@ -6,7 +6,6 @@ local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 
-local HawkTemplate = script:GetCustomProperty("HawkTemplate")
 local HawkSpeed = script:GetCustomProperty("HawkSpeed")
 local HawkRange = script:GetCustomProperty("HawkRange")
 local DamageAmount = script:GetCustomProperty("DamageAmount")
@@ -18,6 +17,8 @@ local CurrentHawk = nil
 local HawkTarget = nil
 local PreviousTarget = nil
 local Timer = 0
+local PlayerVFX = nil
+local abilityName = string.gsub(Ability.name, " ", "_")
 
 function OnAbilityExecute(thisAbility)
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
@@ -26,11 +27,27 @@ function OnAbilityExecute(thisAbility)
 	HitPlayers = {}
 	PreviousTarget = nil
 	HawkTarget = nil
-	CurrentHawk = World.SpawnAsset(HawkTemplate, {position = startingPosition, rotation = startingRotation})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Template")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = startingPosition, rotation = startingRotation})
+	end)
+	
+	if success then
+		CurrentHawk = newObject
+	else
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
+		CurrentHawk = World.SpawnAsset(_G.VFX[vfxKey], {position = startingPosition, rotation = startingRotation})
+	end
+	
 	Task.Wait()
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
-	CurrentHawk:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	Task.Wait(1)
 	CurrentHawk.lifeSpan = LifeSpan + 5
 	Timer = LifeSpan
@@ -48,6 +65,8 @@ end
 
 function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
 end
 
 function OnUnequip(thisEquipment, player)
@@ -60,6 +79,7 @@ function OnUnequip(thisEquipment, player)
 	end
 end
 
+Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 Ability.executeEvent:Connect(OnAbilityExecute)
 
@@ -114,7 +134,7 @@ function Tick(deltaTime)
 			HawkTarget = nil
 			if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
 			-- Check for enemies in the area
-			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), HawkRange, {ignoreTeams=Ability.owner.team, ingoreDead = true})
+			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), HawkRange, {ignoreTeams=Ability.owner.team, ignoreDead = true})
 			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})
 			for _, enemy in pairs(neabyEnemies) do
 				-- check if the enemy was already hit

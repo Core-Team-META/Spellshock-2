@@ -9,7 +9,6 @@ local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local OrcCrystalTemplate = script:GetCustomProperty("OrcCrystalTemplate")
 local ElfCrystalTemplate = script:GetCustomProperty("ElfCrystalTemplate")
-local EndingFX = script:GetCustomProperty("EndingFX")
 local EventName = script:GetCustomProperty("EventName")
 local HealAmount = script:GetCustomProperty("HealAmount")
 local DamageAmount = script:GetCustomProperty("DamageAmount")

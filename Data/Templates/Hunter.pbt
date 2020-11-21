@@ -22,18 +22,6 @@
         ChildIds: 6389840870498740253
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Orc_Costume"
-            AssetReference {
-              Id: 10716214664751823333
-            }
-          }
-          Overrides {
-            Name: "cs:Elf_Costume"
-            AssetReference {
-              Id: 1453546943157492303
-            }
-          }
-          Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
               Id: 8744665518178580042
@@ -50,6 +38,14 @@
           }
           Overrides {
             Name: "cs:enableUI"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate"
+            String: ""
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
         }
@@ -983,18 +979,6 @@
             }
           }
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 10719404219839224023
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 1490966563412810811
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Rain of Arrows"
           }
@@ -1019,7 +1003,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
@@ -1123,19 +1115,19 @@
         ParentId: 10679331535669617236
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
+            }
+          }
+          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 10679331535669617236
             }
           }
           Overrides {
-            Name: "cs:TrapTemplate"
-            AssetReference {
-              Id: 3018525531227009304
-            }
-          }
-          Overrides {
-            Name: "cs:TrapLifeSpan"
+            Name: "cs:ThornLifeSpan"
             Float: 10
           }
           Overrides {
@@ -1276,18 +1268,6 @@
             }
           }
           Overrides {
-            Name: "cs:ObjectTemplate"
-            AssetReference {
-              Id: 16410313391671534621
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 15863781025588256896
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Place Thorns"
           }
@@ -1308,7 +1288,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
@@ -1471,12 +1459,6 @@
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:HawkTemplate"
-            AssetReference {
-              Id: 2969735918098534603
             }
           }
           Overrides {
