@@ -173,9 +173,9 @@ Objects {
   Name: "Witcher"
   Transform {
     Location {
-      X: -23068.9922
-      Y: -31700
-      Z: 6550
+      X: -22944.1172
+      Y: -31676.127
+      Z: 6397.41357
     }
     Rotation {
     }
