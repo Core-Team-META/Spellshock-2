@@ -17,8 +17,8 @@ Objects {
   ChildIds: 755867795888381768
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
-  ChildIds: 7854617941785706132
   ChildIds: 728687643111351772
+  ChildIds: 7332626658021963653
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
@@ -28,6 +28,7 @@ Objects {
   ChildIds: 12626000991766525324
   ChildIds: 16227534043720893935
   ChildIds: 8983380287600545020
+  ChildIds: 13099473548876010514
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,6 +38,51 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 13099473548876010514
+  Name: "Human Guy 1"
+  Transform {
+    Location {
+      X: -6377.37646
+      Y: -3765.12329
+      Z: 3504.69092
+    }
+    Rotation {
+      Yaw: 153.681992
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18159075010969902837
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    AnimatedMesh {
+      AnimationStance: "unarmed_idle_relaxed"
+      AnimationStancePlaybackRate: 1
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        PlaybackRate: 1
+      }
+    }
   }
 }
 Objects {
@@ -1311,6 +1357,32 @@ Objects {
   }
 }
 Objects {
+  Id: 7332626658021963653
+  Name: "Environment_v8"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2690972611223122670
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Environment_v8"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12982727639299389883
+    }
+  }
+}
+Objects {
   Id: 728687643111351772
   Name: "Fall Damage"
   Transform {
@@ -1350,338 +1422,6 @@ Objects {
     }
     TemplateAsset {
       Id: 5929315923558538615
-    }
-  }
-}
-Objects {
-  Id: 7854617941785706132
-  Name: "Environment_v3"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3013977707158365793
-      value {
-        Overrides {
-          Name: "bp:Intensity"
-          Float: 1
-        }
-        Overrides {
-          Name: "bp:Blend Target Image"
-          Enum {
-            Value: "mc:eambientcubemapssmall:17"
-          }
-        }
-        Overrides {
-          Name: "bp:Ambient Image"
-          Enum {
-            Value: "mc:eambientcubemapssmall:14"
-          }
-        }
-        Overrides {
-          Name: "bp:Blend Amount"
-          Float: 0.257913679
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9859930587159095033
-      value {
-        Overrides {
-          Name: "bp:Horizon Falloff"
-          Float: 4.65958929
-        }
-        Overrides {
-          Name: "bp:Cloud Color"
-          Color {
-            R: 0.87
-            G: 0.974172175
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Opacity"
-          Float: 0.561859548
-        }
-        Overrides {
-          Name: "bp:Cloud Ambient Color"
-          Color {
-            R: 0.989801347
-            G: 1
-            B: 0.86
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Clouds"
-          Bool: true
-        }
-        Overrides {
-          Name: "bp:Brightness"
-          Float: 2
-        }
-        Overrides {
-          Name: "bp:Cloud Shape"
-          Enum {
-            Value: "mc:ecloudshapes:3"
-          }
-        }
-        Overrides {
-          Name: "bp:Zenith Color"
-          Color {
-            G: 0.0721701682
-            B: 0.494791657
-            A: 0.6
-          }
-        }
-        Overrides {
-          Name: "bp:Horizon Color"
-          Color {
-            R: 1
-            G: 0.963300169
-            B: 0.708333373
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Haze Color"
-          Color {
-            R: 0.21875
-            G: 0.534353793
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Lighting Brightness"
-          Float: 2.38106537
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -6.90527344
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -200
-            Y: -300
-            Z: 100
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Ambient Brightness"
-          Float: 5
-        }
-        Overrides {
-          Name: "bp:Disable Cloud Mask"
-          Bool: false
-        }
-        Overrides {
-          Name: "bp:Cloud Rim Color"
-          Color {
-            R: 0.882847786
-            G: 0.39
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Sky Influence On Clouds"
-          Float: 0.414585888
-        }
-        Overrides {
-          Name: "bp:Cloud Rim Brightness"
-          Float: 5
-        }
-        Overrides {
-          Name: "bp:High Cloud Opacity"
-          Float: 0.102712154
-        }
-        Overrides {
-          Name: "bp:High Cloud Color"
-          Color {
-            R: 0.915827751
-            G: 0.69
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:High Cloud Brightness"
-          Float: 0.544533253
-        }
-        Overrides {
-          Name: "bp:Cloud Wisp Opacity"
-          Float: 0.405922711
-        }
-        Overrides {
-          Name: "bp:Cloud Wisp Color"
-          Color {
-            R: 0.99
-            G: 0.995231807
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Cloud Wisp Speed"
-          Float: 0.2
-        }
-        Overrides {
-          Name: "bp:Haze Falloff"
-          Float: 3.40088272
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10284309483680957982
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Environment_v3"
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10996667072626111982
-      value {
-        Overrides {
-          Name: "bp:Color Saturation"
-          Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Color Contrast"
-          Color {
-            R: 1
-            G: 1
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Scene Tint"
-          Color {
-            R: 0.996514797
-            G: 1.07451749
-            B: 1.2
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12813456790253805465
-      value {
-        Overrides {
-          Name: "bp:Intensity"
-          Float: 3.2
-        }
-        Overrides {
-          Name: "bp:Dynamic Shadow Distance"
-          Float: 4.5
-        }
-        Overrides {
-          Name: "bp:Shadow Cascade Count"
-          Int: 2
-        }
-        Overrides {
-          Name: "bp:Size"
-          Float: 6.91438866
-        }
-        Overrides {
-          Name: "bp:Light Shaft Bloom Scale"
-          Float: 0.05
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 13018181793327756467
-      value {
-        Overrides {
-          Name: "bp:Fog Density"
-          Float: 4.59666252
-        }
-        Overrides {
-          Name: "bp:Layered Fog Density"
-          Float: 10
-        }
-        Overrides {
-          Name: "bp:Directional Inscattering Color"
-          Color {
-            R: 0.0352104977
-            G: 0.180319861
-            B: 0.307291657
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Light Absorption Amount"
-          Float: 0.15
-        }
-        Overrides {
-          Name: "bp:View Distance"
-          Float: 3001.78174
-        }
-        Overrides {
-          Name: "bp:Beam View Direction"
-          Float: 0.216638148
-        }
-        Overrides {
-          Name: "bp:Layered Fog Falloff"
-          Float: 0.07
-        }
-        Overrides {
-          Name: "bp:color"
-          Color {
-            R: 0.447000027
-            G: 0.741933227
-            B: 1
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Layered Fog Offset Height"
-          Float: 0
-        }
-        Overrides {
-          Name: "bp:Falloff"
-          Float: 0.711650312
-        }
-        Overrides {
-          Name: "bp:Albedo"
-          Color {
-            R: 1
-            G: 0.911721826
-            B: 0.69
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "bp:Start"
-          Float: 0
-        }
-        Overrides {
-          Name: "bp:Directional Inscattering Exponent"
-          Float: 4
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15600583839331343652
     }
   }
 }

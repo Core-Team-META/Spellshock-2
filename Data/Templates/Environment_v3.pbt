@@ -630,6 +630,10 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:View Distance"
+            Float: 3190.92456
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
