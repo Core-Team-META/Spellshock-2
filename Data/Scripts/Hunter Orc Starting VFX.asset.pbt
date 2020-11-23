@@ -19,7 +19,7 @@
       Overrides {
         Name: "cs:Rain_of_Arrows_Placement"
         AssetReference {
-          Id: 10719404219839224023
+          Id: 9619618021631241089
         }
       }
       Overrides {

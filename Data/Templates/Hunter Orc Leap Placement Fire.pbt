@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 939651685836620573
-  Name: "Hunter Elf Thorn Placement Frost"
+  Id: 9787452031526615739
+  Name: "Hunter Orc Leap Placement Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5934131807584201202
+      RootId: 18107941882090185186
       Objects {
-        Id: 5934131807584201202
-        Name: "Frost Elf Hunter Thorn Placement"
+        Id: 18107941882090185186
+        Name: "Hunter Orc Leap Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,17 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 6181856616277222318
+        ChildIds: 2613800000831717780
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Team"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:Team:isrep"
+            Bool: true
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -29,7 +39,7 @@
         }
       }
       Objects {
-        Id: 6181856616277222318
+        Id: 2613800000831717780
         Name: "GEO"
         Transform {
           Location {
@@ -42,17 +52,17 @@
             Z: 1
           }
         }
-        ParentId: 5934131807584201202
-        ChildIds: 17288412821549654887
-        ChildIds: 13587558500379397735
-        ChildIds: 10885629239564905098
-        ChildIds: 17859350382615714051
-        ChildIds: 8200979731370393297
-        ChildIds: 3858858470956973901
-        ChildIds: 5188091636054780253
-        ChildIds: 4264614933846803799
-        ChildIds: 15834744251393663494
-        ChildIds: 6126586299760436131
+        ParentId: 18107941882090185186
+        ChildIds: 11508484762764049684
+        ChildIds: 14628251987447793528
+        ChildIds: 5366218026051344405
+        ChildIds: 17870076745090766089
+        ChildIds: 15669714723857204363
+        ChildIds: 529157589413724279
+        ChildIds: 11323694505657142979
+        ChildIds: 421293832643520100
+        ChildIds: 13410635037305515620
+        ChildIds: 15416972154981933026
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -64,7 +74,7 @@
         }
       }
       Objects {
-        Id: 17288412821549654887
+        Id: 11508484762764049684
         Name: "CenterThorns"
         Transform {
           Location {
@@ -83,8 +93,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 12629087229266747699
+        ParentId: 2613800000831717780
+        ChildIds: 16903940344269076645
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -96,7 +106,7 @@
         }
       }
       Objects {
-        Id: 12629087229266747699
+        Id: 16903940344269076645
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -110,7 +120,7 @@
             Z: 0.207599074
           }
         }
-        ParentId: 17288412821549654887
+        ParentId: 11508484762764049684
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -121,16 +131,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -153,7 +164,7 @@
         }
       }
       Objects {
-        Id: 13587558500379397735
+        Id: 14628251987447793528
         Name: "FrontThorns"
         Transform {
           Location {
@@ -172,8 +183,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 10380952343216724825
+        ParentId: 2613800000831717780
+        ChildIds: 10117038198955279790
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -185,7 +196,7 @@
         }
       }
       Objects {
-        Id: 10380952343216724825
+        Id: 10117038198955279790
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -200,7 +211,7 @@
             Z: 0.207599074
           }
         }
-        ParentId: 13587558500379397735
+        ParentId: 14628251987447793528
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -211,16 +222,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -243,7 +255,7 @@
         }
       }
       Objects {
-        Id: 10885629239564905098
+        Id: 5366218026051344405
         Name: "FrontLeftThorns"
         Transform {
           Location {
@@ -262,8 +274,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 6197322374604887316
+        ParentId: 2613800000831717780
+        ChildIds: 16617812077955167979
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -275,7 +287,7 @@
         }
       }
       Objects {
-        Id: 6197322374604887316
+        Id: 16617812077955167979
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -288,7 +300,7 @@
             Z: 0.188120842
           }
         }
-        ParentId: 10885629239564905098
+        ParentId: 5366218026051344405
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -299,16 +311,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -331,7 +344,7 @@
         }
       }
       Objects {
-        Id: 17859350382615714051
+        Id: 17870076745090766089
         Name: "FrontRightThorns"
         Transform {
           Location {
@@ -350,8 +363,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 7312652800558531533
+        ParentId: 2613800000831717780
+        ChildIds: 6193668153757774095
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -363,7 +376,7 @@
         }
       }
       Objects {
-        Id: 7312652800558531533
+        Id: 6193668153757774095
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -376,7 +389,7 @@
             Z: 0.188120842
           }
         }
-        ParentId: 17859350382615714051
+        ParentId: 17870076745090766089
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -387,16 +400,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -419,7 +433,7 @@
         }
       }
       Objects {
-        Id: 8200979731370393297
+        Id: 15669714723857204363
         Name: "BackLeftThorns"
         Transform {
           Location {
@@ -438,8 +452,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 15945120879464722617
+        ParentId: 2613800000831717780
+        ChildIds: 13997743770287799556
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -451,7 +465,7 @@
         }
       }
       Objects {
-        Id: 15945120879464722617
+        Id: 13997743770287799556
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -464,7 +478,7 @@
             Z: 0.188120842
           }
         }
-        ParentId: 8200979731370393297
+        ParentId: 15669714723857204363
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -475,16 +489,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -507,7 +522,7 @@
         }
       }
       Objects {
-        Id: 3858858470956973901
+        Id: 529157589413724279
         Name: "BackRightThorns"
         Transform {
           Location {
@@ -526,8 +541,8 @@
             Z: 0.1
           }
         }
-        ParentId: 6181856616277222318
-        ChildIds: 1647934166518951398
+        ParentId: 2613800000831717780
+        ChildIds: 14334262794934840284
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -539,7 +554,7 @@
         }
       }
       Objects {
-        Id: 1647934166518951398
+        Id: 14334262794934840284
         Name: "Tree Birch Bare 02"
         Transform {
           Location {
@@ -552,7 +567,7 @@
             Z: 0.188120842
           }
         }
-        ParentId: 3858858470956973901
+        ParentId: 529157589413724279
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Leaves:id"
@@ -563,16 +578,17 @@
           Overrides {
             Name: "ma:Nature_Trunk:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
-            Name: "ma:Nature_Trunk:utile"
-            Float: 0.183642432
-          }
-          Overrides {
-            Name: "ma:Nature_Trunk:vtile"
-            Float: 0.358157426
+            Name: "ma:Nature_Trunk:color"
+            Color {
+              R: 0.204000011
+              G: 0.189261
+              B: 0.151980013
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -595,7 +611,7 @@
         }
       }
       Objects {
-        Id: 5188091636054780253
+        Id: 11323694505657142979
         Name: "CrunchSFX"
         Transform {
           Location {
@@ -608,7 +624,7 @@
             Z: 1
           }
         }
-        ParentId: 6181856616277222318
+        ParentId: 2613800000831717780
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -628,7 +644,7 @@
         }
       }
       Objects {
-        Id: 4264614933846803799
+        Id: 421293832643520100
         Name: "RumbleSFX"
         Transform {
           Location {
@@ -642,7 +658,7 @@
             Z: 1
           }
         }
-        ParentId: 6181856616277222318
+        ParentId: 2613800000831717780
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
@@ -676,7 +692,7 @@
         }
       }
       Objects {
-        Id: 15834744251393663494
+        Id: 13410635037305515620
         Name: "DustVFX"
         Transform {
           Location {
@@ -690,7 +706,7 @@
             Z: 1.30000007
           }
         }
-        ParentId: 6181856616277222318
+        ParentId: 2613800000831717780
         UnregisteredParameters {
           Overrides {
             Name: "bp:Density"
@@ -703,9 +719,9 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.75
-              G: 0.895695269
-              B: 1
+              R: 0.054
+              G: 0.0311183035
+              B: 0.026136
               A: 1
             }
           }
@@ -727,7 +743,7 @@
         }
       }
       Objects {
-        Id: 6126586299760436131
+        Id: 15416972154981933026
         Name: "ThornMovement"
         Transform {
           Location {
@@ -740,7 +756,7 @@
             Z: 1
           }
         }
-        ParentId: 6181856616277222318
+        ParentId: 2613800000831717780
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ease3D"
@@ -755,55 +771,55 @@
           Overrides {
             Name: "cs:CenterThorns"
             ObjectReference {
-              SubObjectId: 17288412821549654887
+              SubObjectId: 11508484762764049684
             }
           }
           Overrides {
             Name: "cs:FrontThorns"
             ObjectReference {
-              SubObjectId: 13587558500379397735
+              SubObjectId: 14628251987447793528
             }
           }
           Overrides {
             Name: "cs:FrontLeftThorns"
             ObjectReference {
-              SubObjectId: 10885629239564905098
+              SubObjectId: 5366218026051344405
             }
           }
           Overrides {
             Name: "cs:FrontRightThorns"
             ObjectReference {
-              SubObjectId: 17859350382615714051
+              SubObjectId: 17870076745090766089
             }
           }
           Overrides {
             Name: "cs:BackLeftThorns"
             ObjectReference {
-              SubObjectId: 8200979731370393297
+              SubObjectId: 15669714723857204363
             }
           }
           Overrides {
             Name: "cs:BackRightThorns"
             ObjectReference {
-              SubObjectId: 3858858470956973901
+              SubObjectId: 529157589413724279
             }
           }
           Overrides {
             Name: "cs:DustVFX"
             ObjectReference {
-              SubObjectId: 15834744251393663494
+              SubObjectId: 13410635037305515620
             }
           }
           Overrides {
             Name: "cs:CrunchSFX"
             ObjectReference {
-              SubObjectId: 5188091636054780253
+              SubObjectId: 11323694505657142979
             }
           }
           Overrides {
             Name: "cs:RumbleSFX"
             ObjectReference {
-              SubObjectId: 4264614933846803799
+              SubObjectId: 421293832643520100
             }
           }
         }

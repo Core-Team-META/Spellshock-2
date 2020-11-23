@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 3018525531227009304
-  Name: "Hunter Thorn Placement Basic"
+  Name: "Hunter Leap Placement Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

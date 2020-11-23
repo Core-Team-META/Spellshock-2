@@ -7,7 +7,7 @@
       RootId: 8240870268234537937
       Objects {
         Id: 8240870268234537937
-        Name: "Frost Elf Hunter Trap Placement"
+        Name: "Hunter Elf Bear Trap Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -2456,7 +2456,7 @@
           Overrides {
             Name: "cs:TrapActivationTemplate"
             AssetReference {
-              Id: 3107346622540214285
+              Id: 4665091050441408463
             }
           }
         }

@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 13272352193882752730
-  Name: "Mage Pyroblast Homing Target Basic"
+  Name: "Mage Pyroblast Target Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

@@ -7,7 +7,7 @@
       RootId: 17419346950944615411
       Objects {
         Id: 17419346950944615411
-        Name: "Fire Orc Hunter Trap Placement"
+        Name: "Hunter Orc Bear Trap Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -2447,7 +2447,7 @@
           Overrides {
             Name: "cs:TrapActivationTemplate"
             AssetReference {
-              Id: 3107346622540214285
+              Id: 17967033697158490853
             }
           }
         }

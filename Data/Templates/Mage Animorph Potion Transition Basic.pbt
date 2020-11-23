@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 13713238088668800394
-  Name: "Animorph FX"
+  Name: "Mage Animorph Potion Transition Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

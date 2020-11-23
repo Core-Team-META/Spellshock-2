@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 14378502203219747314
-  Name: "Hunter Elf Hawk Active Fost"
+  Name: "Hunter Elf Hawk Active Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

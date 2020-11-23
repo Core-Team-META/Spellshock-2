@@ -12936,6 +12936,62 @@ Objects {
   }
 }
 Objects {
+  Id: 1060733293873182918
+  Name: "KillPlayer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11136575513709345767
+    }
+  }
+}
+Objects {
+  Id: 2644148728258825907
+  Name: "RespawnPlayerServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13105738520187544040
+    }
+  }
+}
+Objects {
   Id: 17754552131578999419
   Name: "Set Player VFX TEST"
   Transform {
@@ -12953,6 +13009,146 @@ Objects {
   ChildIds: 5174269616599104979
   ChildIds: 764331394051848749
   ChildIds: 5216073423554532332
+  ChildIds: 12168195679989690006
+  ChildIds: 2278542936991994878
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2278542936991994878
+  Name: "Hunter Elf Frost"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 3941906157023332887
+      }
+    }
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Preview"
+      AssetReference {
+        Id: 1490966563412810811
+      }
+    }
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Placement"
+      AssetReference {
+        Id: 18370148347094241027
+      }
+    }
+    Overrides {
+      Name: "cs:Leap_Placement"
+      AssetReference {
+        Id: 939651685836620573
+      }
+    }
+    Overrides {
+      Name: "cs:Bear_Trap_Preview"
+      AssetReference {
+        Id: 15863781025588256896
+      }
+    }
+    Overrides {
+      Name: "cs:Bear_Trap_Placement"
+      AssetReference {
+        Id: 10788932069430149450
+      }
+    }
+    Overrides {
+      Name: "cs:Hawk_Template"
+      AssetReference {
+        Id: 14378502203219747314
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12168195679989690006
+  Name: "Hunter Orc Fire"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 6576685640446495568
+      }
+    }
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Preview"
+      AssetReference {
+        Id: 1490966563412810811
+      }
+    }
+    Overrides {
+      Name: "cs:Rain_of_Arrows_Placement"
+      AssetReference {
+        Id: 14477423852380848897
+      }
+    }
+    Overrides {
+      Name: "cs:Leap_Placement"
+      AssetReference {
+        Id: 9787452031526615739
+      }
+    }
+    Overrides {
+      Name: "cs:Bear_Trap_Preview"
+      AssetReference {
+        Id: 15863781025588256896
+      }
+    }
+    Overrides {
+      Name: "cs:Bear_Trap_Placement"
+      AssetReference {
+        Id: 6584251115473192762
+      }
+    }
+    Overrides {
+      Name: "cs:Hawk_Template"
+      AssetReference {
+        Id: 16346447748011586810
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13141,6 +13337,18 @@ Objects {
         SelfId: 5216073423554532332
       }
     }
+    Overrides {
+      Name: "cs:Hunter_Orc"
+      ObjectReference {
+        SelfId: 12168195679989690006
+      }
+    }
+    Overrides {
+      Name: "cs:Hunter_Elf"
+      ObjectReference {
+        SelfId: 2278542936991994878
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -13151,62 +13359,6 @@ Objects {
   Script {
     ScriptAsset {
       Id: 18404002033183799069
-    }
-  }
-}
-Objects {
-  Id: 1060733293873182918
-  Name: "KillPlayer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11136575513709345767
-    }
-  }
-}
-Objects {
-  Id: 2644148728258825907
-  Name: "RespawnPlayerServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 13105738520187544040
     }
   }
 }
