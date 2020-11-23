@@ -826,34 +826,6 @@
         ParentId: 15969373231472315619
         ChildIds: 18378548991232479363
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 6481751857886768330
-            }
-          }
-          Overrides {
-            Name: "cs:Damage"
-            Float: 20
-          }
-          Overrides {
-            Name: "cs:Radius"
-            Float: 500
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 5202994091235663908
-            }
-          }
-          Overrides {
-            Name: "cs:ProjectileSpeed"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:ProjectileGravity"
-            Float: 1.5
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -939,6 +911,28 @@
               Id: 9770511928359673738
             }
           }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            Float: 20
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Int: 500
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:ProjectileGravity"
+            Float: 1.5
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -955,7 +949,7 @@
       }
       Objects {
         Id: 10946969989301189966
-        Name: "Death\'s Shadow"
+        Name: "Deaths Shadow"
         Transform {
           Location {
           }
@@ -1343,61 +1337,6 @@
         ParentId: 15969373231472315619
         ChildIds: 6077411007921151374
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 17990456245832998922
-            }
-          }
-          Overrides {
-            Name: "cs:ProjectileSpeed"
-            Float: 6000
-          }
-          Overrides {
-            Name: "cs:ProjectileRange"
-            Float: 8000
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 20
-              Y: 30
-            }
-          }
-          Overrides {
-            Name: "cs:BaseDamageModifier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:BonusDamageModifier"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "cs:BonusHealingModifier"
-            Float: 0.75
-          }
-          Overrides {
-            Name: "cs:BeginningFX"
-            AssetReference {
-              Id: 3260618482035830264
-            }
-          }
-          Overrides {
-            Name: "cs:PlayerImpactFX"
-            AssetReference {
-              Id: 6697248670123946068
-            }
-          }
-          Overrides {
-            Name: "cs:NormalImpactFX"
-            AssetReference {
-              Id: 11650929185820647296
-            }
-          }
-          Overrides {
-            Name: "cs:BonusDamageModifier:tooltip"
-            String: "This ability deals bonus damage based on the enemy\'s max hitpoints."
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1476,6 +1415,39 @@
             ObjectReference {
               SubObjectId: 7787036789120996490
             }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Float: 6000
+          }
+          Overrides {
+            Name: "cs:ProjectileRange"
+            Float: 8000
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 20
+              Y: 30
+            }
+          }
+          Overrides {
+            Name: "cs:BaseDamageModifier"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:BonusDamageModifier"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "cs:BonusHealingModifier"
+            Float: 0.75
           }
         }
         WantsNetworking: true
@@ -1660,7 +1632,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }

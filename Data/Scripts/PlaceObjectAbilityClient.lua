@@ -36,7 +36,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
 				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
 			end
-			local newObject
+	
 			local success, newObject = pcall(function()
 			    return World.SpawnAsset(ObjectTemplate)
 			end)
