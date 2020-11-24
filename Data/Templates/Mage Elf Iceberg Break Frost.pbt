@@ -1,12 +1,12 @@
 ﻿Assets {
-  Id: 12874348109318974616
-  Name: "Mage Iceberg Break Basic"
+  Id: 8929882190614343836
+  Name: "Mage Elf Iceberg Break Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11320169441651447689
+      RootId: 15120764869716279147
       Objects {
-        Id: 11320169441651447689
+        Id: 15120764869716279147
         Name: "Mage Iceberg Break Basic"
         Transform {
           Scale {
@@ -15,9 +15,9 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 13859167513145534675
-        ChildIds: 8540915350510818825
+        ParentId: 14162296025304194376
+        ChildIds: 757272148181671888
+        ChildIds: 14234868800795625835
         Lifespan: 2.3
         WantsNetworking: true
         Collidable_v2 {
@@ -30,7 +30,7 @@
         }
       }
       Objects {
-        Id: 13859167513145534675
+        Id: 757272148181671888
         Name: "Ice Break Hit Impact 01 SFX"
         Transform {
           Location {
@@ -43,7 +43,7 @@
             Z: 1
           }
         }
-        ParentId: 11320169441651447689
+        ParentId: 15120764869716279147
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -63,7 +63,7 @@
         }
       }
       Objects {
-        Id: 8540915350510818825
+        Id: 14234868800795625835
         Name: "Glass Explosion Volume VFX"
         Transform {
           Location {
@@ -76,13 +76,13 @@
             Z: 2.85930729
           }
         }
-        ParentId: 11320169441651447689
+        ParentId: 15120764869716279147
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.120000005
-              G: 0.860132098
+              R: 0.32
+              G: 0.891920269
               B: 1
               A: 1
             }
