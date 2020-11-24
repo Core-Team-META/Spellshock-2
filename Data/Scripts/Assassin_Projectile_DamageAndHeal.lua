@@ -4,34 +4,47 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
-local SPEED = ABILITY:GetCustomProperty("ProjectileSpeed") or 1500
-local PROJECTILE_RANGE = ABILITY:GetCustomProperty("ProjectileRange") or 2000
-local DAMAGE_RANGE = ABILITY:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
-local BASE_DAMAGE_MOD = ABILITY:GetCustomProperty("BaseDamageModifier") or 0.6
-local BONUS_DAMAGE_MOD = ABILITY:GetCustomProperty("BonusDamageModifier") or 0.1
-local HEAL_MOD = ABILITY:GetCustomProperty("BonusHealingModifier") or 0.75
-local PlayerImpactFX = ABILITY:GetCustomProperty("PlayerImpactFX")
-local NormalImpactFX = ABILITY:GetCustomProperty("NormalImpactFX")
-local BeginningFX = ABILITY:GetCustomProperty("BeginningFX")
+local SPEED = script:GetCustomProperty("ProjectileSpeed") or 1500
+local PROJECTILE_RANGE = script:GetCustomProperty("ProjectileRange") or 2000
+local DAMAGE_RANGE = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
+local BASE_DAMAGE_MOD = script:GetCustomProperty("BaseDamageModifier") or 0.6
+local BONUS_DAMAGE_MOD = script:GetCustomProperty("BonusDamageModifier") or 0.1
+local HEAL_MOD = script:GetCustomProperty("BonusHealingModifier") or 0.75
 
-local CurrentBoomerange = nil
+local PlayerVFX = nil
+local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnProjectileImpact(projectile, other, hitresult)
 	print("-- Boomerang Hit")
 	if not Object.IsValid(ABILITY.owner) then return end
     if other == ABILITY.owner then return end
-	if not other:IsA("Player") then 
-		World.SpawnAsset(NormalImpactFX, {position = hitresult:GetImpactPosition()})
-		return 
+	
+	local vfxKey
+	if other:IsA("Player") then
+		vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Player_Impact")
+	else
+		vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Normal_Impact")
 	end
-	if COMBAT().IsDead(other) then return end
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = hitresult:GetImpactPosition()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey], {position = hitresult:GetImpactPosition()})
+	end
+	
+	if not other:IsA("Player") or COMBAT().IsDead(other) then return end
 	
 	local otherTeam = COMBAT().GetTeam(other)
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
-    
-    World.SpawnAsset(PlayerImpactFX, {position = hitresult:GetImpactPosition()})
     
     local damageAmount = (math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y) * BASE_DAMAGE_MOD) + (other.maxHitPoints * BONUS_DAMAGE_MOD)
     local dmg = Damage.New()
@@ -56,8 +69,23 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
-		
+	--World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Beginning")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
+	end
+	
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
     local lookPosition = thisAbility.owner:GetViewWorldPosition()
 	local lookQuaternion = Quaternion.New(lookRotation)
@@ -78,8 +106,23 @@ function OnAbilityExecute(thisAbility)
     directionVector = directionVector:GetNormalized()
     
     -- Spawn projectile
-    local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, spawnPosition, directionVector)
-    print("-- Spawned")
+    --local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, spawnPosition, directionVector)
+    
+    local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, projectile = pcall(function()
+	    return Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
+		projectile = Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
+	end
+    
     projectile.owner = ABILITY.owner
     projectile.capsuleLength = 130
     projectile.capsuleRadius =  projectile.capsuleLength/2
@@ -90,4 +133,18 @@ function OnAbilityExecute(thisAbility)
     projectile.impactEvent:Connect(OnProjectileImpact)
 end
 
+function OnEquip(equipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
+end
+
+function OnUnequip(equipment, player)
+	--[[for _, listener in ipairs(EventListeners) do
+		listener:Disconnect()
+	end]]
+	
+end
+
+Equipment.equippedEvent:Connect(OnEquip)
+--Equipment.unequippedEvent:Connect(OnUnequip)
 ABILITY.executeEvent:Connect( OnAbilityExecute )

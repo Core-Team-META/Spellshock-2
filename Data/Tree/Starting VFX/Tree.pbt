@@ -1,6 +1,60 @@
 ﻿Name: "Starting VFX"
 RootId: 3515396752692620142
 Objects {
+  Id: 12567150600568558656
+  Name: "Assassin_Elf"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3515396752692620142
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6665958889220481136
+    }
+  }
+}
+Objects {
+  Id: 14233123506105687232
+  Name: "Assassin_Orc"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3515396752692620142
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 9293650821442732191
+    }
+  }
+}
+Objects {
   Id: 4451202918293768850
   Name: "Mage_Elf"
   Transform {

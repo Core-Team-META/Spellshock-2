@@ -1123,8 +1123,10 @@
             Int: 10
           }
           Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
           }
           Overrides {
             Name: "cs:ModuleManager"
@@ -1133,13 +1135,19 @@
             }
           }
           Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
@@ -1176,44 +1184,6 @@
         ParentId: 10663446143340725464
         ChildIds: 17761841803757750491
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 2945782094965142153
-            }
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 12582858560613182221
-            }
-          }
-          Overrides {
-            Name: "cs:Damage"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:Radius"
-            Float: 500
-          }
-          Overrides {
-            Name: "cs:ProjectileSpeed"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:ProjectileGravity"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "cs:AnimalCostumeTemplate"
-            AssetReference {
-              Id: 7047570860712842217
-            }
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 8
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1288,6 +1258,12 @@
         ParentId: 1109302873163087110
         UnregisteredParameters {
           Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
@@ -1298,6 +1274,26 @@
             AssetReference {
               Id: 9770511928359673738
             }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Int: 500
+          }
+          Overrides {
+            Name: "cs:ProjectileSpeed"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:ProjectileGravity"
+            Float: 1.5
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
           }
         }
         WantsNetworking: true

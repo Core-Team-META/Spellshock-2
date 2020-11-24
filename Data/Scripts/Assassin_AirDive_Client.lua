@@ -41,10 +41,31 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
 		if isPreviewing then
-			objectHalogram = World.SpawnAsset(ObjectTemplate)
-			AllHalograms[objectHalogram.id] = objectHalogram
-			flyingTimer = FLYING_DURATION
+			--objectHalogram = World.SpawnAsset(ObjectTemplate)
+			--AllHalograms[objectHalogram.id] = objectHalogram
 			
+			
+			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
+				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
+			end
+	
+			local success, newObject = pcall(function()
+			    return World.SpawnAsset(ObjectTemplate)
+			end)
+			
+			if not success then
+				objectHalogram = nil
+				Task.Wait()
+				print("Broadcasting failure")
+				while Events.BroadcastToServer(EventName.."FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+					Task.Wait()
+				end
+				return
+			else
+				objectHalogram = newObject
+				AllHalograms[objectHalogram.id] = objectHalogram
+				flyingTimer = FLYING_DURATION
+			end
 		else
 			flyingTimer = -1
 			if objectHalogram and Object.IsValid(objectHalogram) then

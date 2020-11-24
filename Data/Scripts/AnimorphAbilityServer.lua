@@ -3,22 +3,38 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script.parent
 
-local DAMAGE = ABILITY:GetCustomProperty("Damage")
-local ProjectileSpeed = ABILITY:GetCustomProperty("ProjectileSpeed")
-local ProjectileGravity = ABILITY:GetCustomProperty("ProjectileGravity")
-local PROJECTILE_TEMPLATE = ABILITY:GetCustomProperty("ProjectileTemplate")
-local ImpactFX = ABILITY:GetCustomProperty("ImpactFX")
-local RADIUS = ABILITY:GetCustomProperty("Radius")
-local AnimalCostumeTemplate = ABILITY:GetCustomProperty("AnimalCostumeTemplate")
-local Duration = ABILITY:GetCustomProperty("Duration")
+local DAMAGE = script:GetCustomProperty("Damage")
+local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
+local RADIUS = script:GetCustomProperty("Radius")
+local Duration = script:GetCustomProperty("Duration")
+
+local PlayerVFX = nil
+local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and ABILITY.owner then
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
-        local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+       -- local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+        
+        local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Impact")
+		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+		local success, newObject = pcall(function()
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = projectile:GetWorldPosition(), rotation = impactRotation})
+		end)
+		
+		if not success then
+			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+			local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+			PlayerVFX = PlayerStorage.VFX
+			Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+			World.SpawnAsset(_G.VFX[vfxKey], {position = projectile:GetWorldPosition(), rotation = impactRotation})
+		end
         
         -- init dmg object
         local dmg = Damage.New(DAMAGE)
@@ -40,7 +56,23 @@ function OnProjectileImpacted(projectile, other, hitResult)
             end
             
             -- equip animal costume
-            local newCostume = World.SpawnAsset(AnimalCostumeTemplate)
+            --local newCostume = World.SpawnAsset(AnimalCostumeTemplate)
+            
+            local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Attachment")
+			--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+			local success, newCostume = pcall(function()
+			    return World.SpawnAsset(PlayerVFX[vfxKey])
+			end)
+			
+			if not success then
+				warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+				local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+				PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+				PlayerVFX = PlayerStorage.VFX
+				Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+				newCostume = World.SpawnAsset(_G.VFX[vfxKey])
+			end
+            
             newCostume:SetNetworkedCustomProperty("Duration", Duration)
             newCostume:Equip(enemy)
         end
@@ -60,7 +92,23 @@ function OnAbilityExecute(thisAbility)
 	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*20)
 	worldPosition.z = worldPosition.z + 50
 
-    local grenadeProjectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
+    --local grenadeProjectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
+    
+    local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, grenadeProjectile = pcall(function()
+	    return Projectile.Spawn(PlayerVFX[vfxKey], worldPosition, forwardVector)
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
+		grenadeProjectile = Projectile.Spawn(PlayerVFX[vfxKey], worldPosition, forwardVector)
+	end
+    
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
     grenadeProjectile.speed = ProjectileSpeed
@@ -69,4 +117,18 @@ function OnAbilityExecute(thisAbility)
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end
 
+function OnEquip(equipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
+end
+
+function OnUnequip(equipment, player)
+	--[[for _, listener in ipairs(EventListeners) do
+		listener:Disconnect()
+	end]]
+	
+end
+
+Equipment.equippedEvent:Connect(OnEquip)
+--Equipment.unequippedEvent:Connect(OnUnequip)
 ABILITY.executeEvent:Connect( OnAbilityExecute )

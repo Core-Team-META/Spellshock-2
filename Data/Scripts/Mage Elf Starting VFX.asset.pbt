@@ -11,7 +11,13 @@
         }
       }
       Overrides {
-        Name: "cs:Tornado_Active"
+        Name: "cs:Tornado_Preview"
+        AssetReference {
+          Id: 1490966563412810811
+        }
+      }
+      Overrides {
+        Name: "cs:Tornado_Placement"
         AssetReference {
           Id: 3760287097131009270
         }

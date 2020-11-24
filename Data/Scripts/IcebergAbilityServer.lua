@@ -17,6 +17,8 @@ local BindingPressedEvent = nil
 local Timer = -1
 local damageTimer = -1
 local CurrentIceCube
+local PlayerVFX = nil
+local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 local CancelBindings = {
 	ability_extra_20 = true, 
@@ -49,7 +51,25 @@ function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn vfx
 	local spawnPosition = thisAbility.owner:GetWorldPosition()
 	spawnPosition.z = spawnPosition.z - 50
-	CurrentIceCube = World.SpawnAsset(IceCubeTemplate, {position = spawnPosition})
+	--CurrentIceCube = World.SpawnAsset(IceCubeTemplate, {position = spawnPosition})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Attachment")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey],  {position = spawnPosition})
+	end)
+	
+	if success then
+		CurrentIceCube = newObject
+	else
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
+		CurrentIceCube = World.SpawnAsset(_G.VFX[vfxKey],  {position = spawnPosition})
+	end
+	
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")
 	
 	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
@@ -69,7 +89,22 @@ function BreakIceCube(player)
 	Timer = -1
 	BindingPressedEvent:Disconnect()
 	BindingPressedEvent = nil
-	World.SpawnAsset(IceCubeBreakFX, {position = player:GetWorldPosition()})
+	--World.SpawnAsset(IceCubeBreakFX, {position = player:GetWorldPosition()})
+		
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Break")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey],  {position = player:GetWorldPosition()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(player)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(player, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey],  {position = player:GetWorldPosition()})
+	end	
 		
 	CurrentIceCube:Detach()
 	CurrentIceCube:Destroy()
@@ -100,6 +135,8 @@ end
 function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
 end
 
 function OnUnequip(equipment, player)

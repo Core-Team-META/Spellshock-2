@@ -7,11 +7,17 @@
       Overrides {
         Name: "cs:Costume"
         AssetReference {
-          Id: 6576685640446495568
+          Id: 13686905645483775050
         }
       }
       Overrides {
-        Name: "cs:Tornado_Active"
+        Name: "cs:Tornado_Preview"
+        AssetReference {
+          Id: 1490966563412810811
+        }
+      }
+      Overrides {
+        Name: "cs:Tornado_Placement"
         AssetReference {
           Id: 7827469757850190083
         }
