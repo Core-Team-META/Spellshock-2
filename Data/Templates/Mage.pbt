@@ -1684,6 +1684,10 @@
             Name: "cs:DamageRadius"
             Int: 500
           }
+          Overrides {
+            Name: "cs:TargetingRange"
+            Int: 8000
+          }
         }
         WantsNetworking: true
         Collidable_v2 {

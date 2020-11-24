@@ -1,6 +1,6 @@
 ﻿-- table of info for each mesh
 local myMesh = script.parent
-local costumeGEO = script:GetCustomProperty("Costume")
+local CostumeGeo = script:GetCustomProperty("Costume"):WaitForObject()
 local retargetTable = {}
 local PELVISZOFFSET = script:GetCustomProperty("PelvisZOffset")
 local SCALE = script:GetCustomProperty("CostumeScale") or 1
@@ -12,12 +12,10 @@ function AttachSourceObjects(sourceObject)
 end
 
 function InitCostume()
-	-- spawn the costume for this mesh
-	local GEO = World.SpawnAsset(costumeGEO, {scale = Vector3.New(SCALE, SCALE, SCALE)})
 	-- store the Animated Mesh on the costume template so we can clean up the costume when the mesh is no longer valid.
-	GEO.clientUserData.myMesh = myMesh
+	CostumeGeo.clientUserData.myMesh = myMesh
 	-- various parts of the model we want to manipulate or track
-	local propertyTable = GEO:GetCustomProperties()
+	local propertyTable = CostumeGeo:GetCustomProperties()
 	-- fill the retarget table with the target pivots and the source pivots for use later in the script.
 	for name, value in pairs(propertyTable) do
 		if string.match(name, "Source")  ~= nil then
@@ -25,13 +23,13 @@ function InitCostume()
 			if retargetTable[sourceString] == nil then
 				retargetTable[sourceString] ={}
 			end
-			retargetTable[sourceString]["SOURCE"] = GEO:GetCustomProperty(name):WaitForObject()
+			retargetTable[sourceString]["SOURCE"] = CostumeGeo:GetCustomProperty(name):WaitForObject()
 		elseif string.match(name, "Target") ~= nil then
 			local targetString,_ = string.gsub(name, "Target", "")
 			if retargetTable[targetString] == nil then
 				retargetTable[targetString] = {}
 			end
-			retargetTable[targetString]["TARGET"] = GEO:GetCustomProperty(name):WaitForObject()
+			retargetTable[targetString]["TARGET"] = CostumeGeo:GetCustomProperty(name):WaitForObject()
 		end
 	end
 	-- attach the source pivot objects to their corresponding sockets in the animated mesh

@@ -12,6 +12,7 @@ local Duration = script:GetCustomProperty("Duration")
 local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
 local DamageAmount = script:GetCustomProperty("DamageAmount")
 local DamageRadius = script:GetCustomProperty("DamageRadius")
+local TargetingRange = script:GetCustomProperty("TargetingRange")
 
 local EventListeners = {}
 local ProjectileImpactEvent = nil
@@ -116,15 +117,17 @@ function OnSpecialAbilityExecute(thisAbility)
 		CurrentProjectile = Projectile.Spawn(_G.VFX[vfxKey], spawnPosition, directionVector)
 	end
 	
+	local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
+	
 	CurrentProjectile.owner = thisAbility.owner
     CurrentProjectile.speed = ProjectileSpeed
-    CurrentProjectile.lifeSpan = Duration
+    CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 0.5
     CurrentProjectile.capsuleLength = 50
     CurrentProjectile.capsuleRadius = 50
     CurrentProjectile.gravityScale = 0
-    --CurrentProjectile.homingTarget = CurrentTarget
-	--CurrentProjectile.homingAcceleration = HOMING_ACCELERATION
-    --CurrentProjectile.drag = 0.5
+    CurrentProjectile.homingTarget = CurrentTarget
+	CurrentProjectile.homingAcceleration = 5000
+    CurrentProjectile.drag = 0.5
     EventListeners["impactEvent"] = CurrentProjectile.impactEvent:Connect(OnProjectileImpact)
     EventListeners["bindingPressedEvent"] = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
     EventListeners["bindingReleasedEvent"] = thisAbility.owner.bindingReleasedEvent:Connect( OnBindingReleased )
@@ -195,20 +198,25 @@ Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 
 function Tick(deltaTime)
-	if MoveTarget and Object.IsValid(CurrentTarget) and Object.IsValid(CurrentProjectile) then
-		local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
-		local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
-		local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * 10000)
-		local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = CurrentProjectile.owner.team})
+	if Object.IsValid(CurrentTarget) and Object.IsValid(CurrentProjectile) then
 		
-		if hitResult then
-			endPoint = hitResult:GetImpactPosition()
-		end	
 		
-		--CurrentTarget:SetWorldPosition(endPoint)
 		
-		local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
-		CurrentProjectile:SetVelocity(newVelocity)
+		if MoveTarget then
+			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
+			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
+			local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * 10000)
+			local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = CurrentProjectile.owner.team})
+			
+			if hitResult then
+				endPoint = hitResult:GetImpactPosition()
+			end	
+			CurrentTarget:SetWorldPosition(endPoint)
+			local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
+			CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 0.5
+			--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
+			--CurrentProjectile:SetVelocity(newVelocity)
+		end
 	end
 end	
 SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute)
