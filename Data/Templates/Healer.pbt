@@ -951,12 +951,6 @@
             }
           }
           Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 17277006247643650522
-            }
-          }
-          Overrides {
             Name: "cs:Speed"
             Int: 2000
           }
@@ -976,9 +970,9 @@
             }
           }
           Overrides {
-            Name: "cs:EndingFX"
-            AssetReference {
-              Id: 16417575589097358380
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
             }
           }
         }
@@ -1112,24 +1106,6 @@
             }
           }
           Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 2309478069929941983
-            }
-          }
-          Overrides {
-            Name: "cs:OrcCrystalTemplate"
-            AssetReference {
-              Id: 8415357861376842630
-            }
-          }
-          Overrides {
-            Name: "cs:ElfCrystalTemplate"
-            AssetReference {
-              Id: 9656965676697602122
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Place Crystal"
           }
@@ -1158,7 +1134,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:PreviewObjectTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
@@ -1285,6 +1269,12 @@
           Overrides {
             Name: "cs:ImpulseAmount"
             Int: 150000
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
           }
         }
         WantsNetworking: true

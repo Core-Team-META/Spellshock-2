@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 2985282815979522936
-  Name: "Healer Orc Healing Crystal Fire Active"
+  Id: 8415357861376842630
+  Name: "Healer Orc Healing Crystal Placement Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11172685615042812500
+      RootId: 13337984380730729146
       Objects {
-        Id: 11172685615042812500
-        Name: "Healer Orc Healing Crystal Active"
+        Id: 13337984380730729146
+        Name: "Orc Healing Crystal"
         Transform {
           Scale {
             X: 1
@@ -15,15 +15,15 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
-        ChildIds: 12199219953687951013
-        ChildIds: 1666943446492465538
-        ChildIds: 14656971931477630914
+        ParentId: 4781671109827199097
+        ChildIds: 12752184528749010219
+        ChildIds: 1665329369951968663
+        ChildIds: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "cs:Trigger"
             ObjectReference {
-              SubObjectId: 1666943446492465538
+              SubObjectId: 1665329369951968663
             }
           }
         }
@@ -39,7 +39,7 @@
         }
       }
       Objects {
-        Id: 12199219953687951013
+        Id: 12752184528749010219
         Name: "EndingFX Handler"
         Transform {
           Location {
@@ -55,7 +55,7 @@
             Z: 1
           }
         }
-        ParentId: 11172685615042812500
+        ParentId: 13337984380730729146
         UnregisteredParameters {
           Overrides {
             Name: "cs:FX_Template"
@@ -66,7 +66,7 @@
           Overrides {
             Name: "cs:ParentObject"
             ObjectReference {
-              SubObjectId: 11172685615042812500
+              SubObjectId: 13337984380730729146
             }
           }
         }
@@ -84,7 +84,7 @@
         }
       }
       Objects {
-        Id: 1666943446492465538
+        Id: 1665329369951968663
         Name: "Trigger"
         Transform {
           Location {
@@ -97,7 +97,7 @@
             Z: 10
           }
         }
-        ParentId: 11172685615042812500
+        ParentId: 13337984380730729146
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -116,7 +116,7 @@
         }
       }
       Objects {
-        Id: 14656971931477630914
+        Id: 10283313243638550976
         Name: "ClientContext"
         Transform {
           Location {
@@ -129,16 +129,14 @@
             Z: 1
           }
         }
-        ParentId: 11172685615042812500
-        ChildIds: 7461757412127831187
-        ChildIds: 13967963506008078106
-        ChildIds: 9156258554173431838
-        ChildIds: 8920893570709017329
-        ChildIds: 1001136455450007072
-        ChildIds: 11744071138644921593
-        ChildIds: 9294205447189209761
-        ChildIds: 18429771567700039227
-        ChildIds: 8280903550124755406
+        ParentId: 13337984380730729146
+        ChildIds: 16432315237619284568
+        ChildIds: 1713979061760944798
+        ChildIds: 1939102587789416430
+        ChildIds: 16618254050326274081
+        ChildIds: 4715659499605094587
+        ChildIds: 11217819200979034443
+        ChildIds: 17636691393051374968
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -150,11 +148,11 @@
         }
       }
       Objects {
-        Id: 7461757412127831187
+        Id: 16432315237619284568
         Name: "Treasure Ray Burst"
         Transform {
           Location {
-            Z: -0.00048828125
+            Z: -0.000244140625
           }
           Rotation {
           }
@@ -164,7 +162,7 @@
             Z: 5.49999952
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
@@ -191,8 +189,8 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.61
-              G: 0.0848344341
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
@@ -215,11 +213,11 @@
         }
       }
       Objects {
-        Id: 13967963506008078106
+        Id: 1713979061760944798
         Name: "Beam Down Teleport VFX"
         Transform {
           Location {
-            Z: 2.53027344
+            Z: 2.53032303
           }
           Rotation {
           }
@@ -229,36 +227,37 @@
             Z: 1
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.450000048
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Color"
             Color {
-              R: 0.840000033
-              G: 0.250331163
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Color"
             Color {
-              R: 0.73
-              G: 0.0580132604
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Ground Element Color"
             Color {
-              R: 0.799999952
-              G: 0.17483443
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
@@ -285,7 +284,7 @@
         }
       }
       Objects {
-        Id: 9156258554173431838
+        Id: 1939102587789416430
         Name: "Resurrection VFX"
         Transform {
           Location {
@@ -298,7 +297,7 @@
             Z: 1
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "bp:Life"
@@ -331,11 +330,11 @@
         }
       }
       Objects {
-        Id: 8920893570709017329
+        Id: 16618254050326274081
         Name: "Cast Burst Ring VFX"
         Transform {
           Location {
-            Z: -19.2827148
+            Z: -19.2828178
           }
           Rotation {
           }
@@ -345,7 +344,7 @@
             Z: 1
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "bp:Life Min"
@@ -362,8 +361,8 @@
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 0.710000038
-              G: 0.0705298111
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
@@ -404,8 +403,8 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.470000029
-              G: 0.130728468
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
@@ -428,7 +427,7 @@
         }
       }
       Objects {
-        Id: 1001136455450007072
+        Id: 4715659499605094587
         Name: "Sphere"
         Transform {
           Location {
@@ -441,7 +440,7 @@
             Z: 10
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -452,8 +451,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.39
-              G: 0.00774834026
+              R: 0.721568644
+              G: 0.0705882385
               A: 1
             }
           }
@@ -482,122 +481,7 @@
         }
       }
       Objects {
-        Id: 11744071138644921593
-        Name: "Decal Stone Cracks Variants 01"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.01540184
-            Y: 1.01540184
-            Z: 0.778938651
-          }
-        }
-        ParentId: 14656971931477630914
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 2
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Color Emissive"
-            Color {
-              R: 0.669999957
-              G: 0.0399337932
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.52
-              G: 0.222119182
-              B: 0.070199959
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 16699070101455136403
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 9294205447189209761
-        Name: "Fire Volume VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 5.02192307
-            Y: 5.02192307
-            Z: 0.859361649
-          }
-        }
-        ParentId: 14656971931477630914
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 0.536813736
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 3.97001648
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-              X: 50
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.6
-              G: 0.0715231821
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 413457027974115672
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 18429771567700039227
+        Id: 11217819200979034443
         Name: "RingVFX"
         Transform {
           Location {
@@ -608,7 +492,7 @@
           Scale {
           }
         }
-        ParentId: 14656971931477630914
+        ParentId: 10283313243638550976
         UnregisteredParameters {
           Overrides {
             Name: "bp:Edge Color"
@@ -667,7 +551,7 @@
         }
       }
       Objects {
-        Id: 8280903550124755406
+        Id: 17636691393051374968
         Name: "Crystal"
         Transform {
           Location {
@@ -678,19 +562,19 @@
           Scale {
           }
         }
-        ParentId: 14656971931477630914
-        ChildIds: 10318629086592937708
-        ChildIds: 16129689944979985855
-        ChildIds: 2050306308771168298
-        ChildIds: 9723882086645139641
-        ChildIds: 13610481234826170558
-        ChildIds: 9939139648020588931
-        ChildIds: 1244542645260999532
-        ChildIds: 4021128372951349121
-        ChildIds: 3987155363989575682
-        ChildIds: 11242346293059582528
-        ChildIds: 7024573613546007685
-        ChildIds: 9968568358504199509
+        ParentId: 10283313243638550976
+        ChildIds: 5307357124675076118
+        ChildIds: 13906467052981759652
+        ChildIds: 9744230344432773575
+        ChildIds: 12638675081714029899
+        ChildIds: 9463528006844039623
+        ChildIds: 384569898442189575
+        ChildIds: 5493412625984522297
+        ChildIds: 8307989530399844229
+        ChildIds: 13654366160765636959
+        ChildIds: 16386113064139900370
+        ChildIds: 16015123854201092394
+        ChildIds: 3993994153692215803
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -702,7 +586,7 @@
         }
       }
       Objects {
-        Id: 10318629086592937708
+        Id: 5307357124675076118
         Name: "Rock 03"
         Transform {
           Location {
@@ -715,19 +599,19 @@
             Z: 0.342097
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7535229294616165836
+              Id: 1292801991992378833
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.49
-              G: 0.0486755
+              R: 0.710000038
+              G: 0.239801347
               A: 1
             }
           }
@@ -755,7 +639,7 @@
         }
       }
       Objects {
-        Id: 16129689944979985855
+        Id: 13906467052981759652
         Name: "HealingStoneMovement"
         Transform {
           Location {
@@ -765,12 +649,12 @@
           Scale {
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "cs:Crystal"
             ObjectReference {
-              SubObjectId: 8280903550124755406
+              SubObjectId: 17636691393051374968
             }
           }
           Overrides {
@@ -797,7 +681,7 @@
         }
       }
       Objects {
-        Id: 2050306308771168298
+        Id: 9744230344432773575
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -815,7 +699,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -845,16 +729,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -868,7 +752,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -885,14 +769,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -913,7 +789,7 @@
         }
       }
       Objects {
-        Id: 9723882086645139641
+        Id: 12638675081714029899
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -931,7 +807,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -961,16 +837,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -984,7 +860,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -1001,14 +877,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -1029,7 +897,7 @@
         }
       }
       Objects {
-        Id: 13610481234826170558
+        Id: 9463528006844039623
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -1045,7 +913,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -1075,16 +943,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -1098,7 +966,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -1115,14 +983,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -1143,7 +1003,7 @@
         }
       }
       Objects {
-        Id: 9939139648020588931
+        Id: 384569898442189575
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -1161,7 +1021,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -1191,16 +1051,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -1214,7 +1074,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -1231,14 +1091,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -1259,7 +1111,7 @@
         }
       }
       Objects {
-        Id: 1244542645260999532
+        Id: 5493412625984522297
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -1277,7 +1129,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -1307,16 +1159,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -1330,7 +1182,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -1347,14 +1199,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -1375,7 +1219,7 @@
         }
       }
       Objects {
-        Id: 4021128372951349121
+        Id: 8307989530399844229
         Name: "Flare Ray VFX"
         Transform {
           Location {
@@ -1394,7 +1238,7 @@
             Z: 1
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "bp:Ray Color Method"
@@ -1424,16 +1268,16 @@
             Name: "bp:color"
             Color {
               R: 1
-              G: 0.383708656
-              B: 0.00999999
+              G: 0.942317903
+              B: 0.87
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.820000052
-              G: 0.293245047
+              R: 1
+              G: 0.635761619
               A: 1
             }
           }
@@ -1447,7 +1291,7 @@
           }
           Overrides {
             Name: "bp:Ray Height"
-            Float: 6.94341564
+            Float: 2
           }
           Overrides {
             Name: "bp:Ray Density"
@@ -1464,14 +1308,6 @@
           Overrides {
             Name: "bp:Color Offset B"
             Float: 0.25
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              R: 0.5
-              G: 0.0198675394
-              A: 1
-            }
           }
         }
         Collidable_v2 {
@@ -1492,7 +1328,7 @@
         }
       }
       Objects {
-        Id: 3987155363989575682
+        Id: 13654366160765636959
         Name: "Rock 03"
         Transform {
           Location {
@@ -1506,7 +1342,7 @@
             Z: 0.18563579
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1517,8 +1353,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.78
-              G: 0.13947022
+              R: 0.25
+              G: 0.0546357632
               A: 1
             }
           }
@@ -1546,7 +1382,7 @@
         }
       }
       Objects {
-        Id: 11242346293059582528
+        Id: 16386113064139900370
         Name: "Rock 03"
         Transform {
           Location {
@@ -1559,19 +1395,19 @@
             Z: 0.293821633
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7535229294616165836
+              Id: 1292801991992378833
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.960000038
-              G: 0.34331128
+              R: 0.710000038
+              G: 0.239801347
               A: 1
             }
           }
@@ -1599,7 +1435,7 @@
         }
       }
       Objects {
-        Id: 7024573613546007685
+        Id: 16015123854201092394
         Name: "Magic Bright Light Spell Loop 01 SFX"
         Transform {
           Location {
@@ -1609,7 +1445,7 @@
           Scale {
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1631,7 +1467,7 @@
         }
       }
       Objects {
-        Id: 9968568358504199509
+        Id: 3993994153692215803
         Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
         Transform {
           Location {
@@ -1641,7 +1477,7 @@
           Scale {
           }
         }
-        ParentId: 8280903550124755406
+        ParentId: 17636691393051374968
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1706,24 +1542,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 16699070101455136403
-      Name: "Decal Stone Cracks Variants 01"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_stone_cracks_001"
-      }
-    }
-    Assets {
-      Id: 413457027974115672
-      Name: "Fire Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_fire_volume_vfx"
       }
     }
     Assets {

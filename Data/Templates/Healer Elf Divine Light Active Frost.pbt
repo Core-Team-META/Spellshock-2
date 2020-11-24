@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 14361516424257808637
-  Name: "Healer Elf Divine Light Frost Active"
+  Name: "Healer Elf Divine Light Active Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

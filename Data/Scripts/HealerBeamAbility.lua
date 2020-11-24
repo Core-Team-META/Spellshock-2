@@ -2,9 +2,8 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
-local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
-local EndingFX = script:GetCustomProperty("EndingFX")
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local SPEED = script:GetCustomProperty("Speed")
 local RANGE = script:GetCustomProperty("Range")
@@ -14,9 +13,10 @@ local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
 local MOVE_DURATION = RANGE / SPEED
 local LIFE_SPAN = MOVE_DURATION + 5
 
-
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
+local PlayerVFX = nil
+local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY) then return end
@@ -54,7 +54,25 @@ function OnAbilityExecute(thisAbility)
 	ProjectileVelocity = VelocityVector
 	
 	local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
+	--CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Projectile")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position=WorldPosition})
+	end)
+	
+	if success then
+		CurrentProjectile = newObject
+	else
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+		CurrentProjectile = World.SpawnAsset(_G.VFX[vfxKey], {position=WorldPosition})
+	end
+	
 	local DamageTrigger = CurrentProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
@@ -67,7 +85,23 @@ function OnAbilityExecute(thisAbility)
 	Task.Spawn(function ()
 		OverlapEvent:Disconnect()
 		CurrentProjectile:StopMove()
-		World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
+		--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
+		
+		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Ending")
+		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+		local success, newObject = pcall(function()
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = CurrentProjectile:GetWorldPosition()})
+		end)
+		
+		if not success then
+			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+			local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+			PlayerVFX = PlayerStorage.VFX
+			Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+			World.SpawnAsset(_G.VFX[vfxKey], {position = CurrentProjectile:GetWorldPosition()})
+		end
+		
 		CurrentProjectile.lifeSpan = 0.1
 		CurrentProjectile = nil
 	end, MOVE_DURATION)
@@ -90,4 +124,17 @@ function Tick(deltaTime)
 	end
 end
 
+function OnEquip(thisEquipment, player)
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
+end
+
+function OnUnequip(thisEquipment, player)
+	if Object.IsValid(CurrentProjectile) then
+		CurrentProjectile:Destroy()
+	end	
+end
+
+Equipment.equippedEvent:Connect(OnEquip)
+Equipment.unequippedEvent:Connect(OnUnequip)
 ABILITY.executeEvent:Connect( OnAbilityExecute )
