@@ -35,12 +35,6 @@
         }
       }
       Overrides {
-        Name: "cs:Deaths_Shadow_Active"
-        AssetReference {
-          Id: 15482014499059417987
-        }
-      }
-      Overrides {
         Name: "cs:Deaths_Shadow_Ending"
         AssetReference {
           Id: 1429104248892819753

@@ -1149,24 +1149,6 @@
             }
           }
           Overrides {
-            Name: "cs:BeginningFX"
-            AssetReference {
-              Id: 15761765853344411097
-            }
-          }
-          Overrides {
-            Name: "cs:EndingFX"
-            AssetReference {
-              Id: 1429104248892819753
-            }
-          }
-          Overrides {
-            Name: "cs:InvisibleCostumeTemplate"
-            AssetReference {
-              Id: 14330017190000743294
-            }
-          }
-          Overrides {
             Name: "cs:InvisibilityActiveTemplate"
             AssetReference {
               Id: 15482014499059417987
@@ -1193,7 +1175,15 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:CostumeTemplate"
+            String: ""
+          }
+          Overrides {
             Name: "cs:isInvisible:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
         }

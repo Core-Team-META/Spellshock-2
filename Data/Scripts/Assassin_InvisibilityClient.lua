@@ -3,7 +3,7 @@ local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local AudioFX = script:GetCustomProperty("AudioFX"):WaitForObject()
 local TimerUI_Template = script:GetCustomProperty("TimerUI_Template")
 
-local InvisibleCostumeTemplate = ServerScript:GetCustomProperty("InvisibleCostumeTemplate")
+local InvisibleCostumeTemplate
 local InvisibilityActiveTemplate = ServerScript:GetCustomProperty("InvisibilityActiveTemplate")
 local AttackAbility = ServerScript:GetCustomProperty("AttackAbility"):WaitForObject()
 local Duration = ServerScript:GetCustomProperty("Duration")
@@ -53,11 +53,29 @@ function OnNetworkedPropertyChanged(thisObject, name)
 				end
 			end
 		end
+	elseif name == "CostumeTemplate" then
+		print("Costume")
+		InvisibleCostumeTemplate = ServerScript:GetCustomProperty("CostumeTemplate") 
+		AttachCostume(Equipment.owner)
 	end
 end
 
 function AttachCostume(player)	
-	local InvisibleCostume = World.SpawnAsset(InvisibleCostumeTemplate)
+	--local InvisibleCostume = World.SpawnAsset(InvisibleCostumeTemplate)
+	
+	local success, InvisibleCostume = pcall(function()
+	    return World.SpawnAsset(InvisibleCostumeTemplate)
+	end)
+	
+	if not success then
+		Task.Wait()
+		print("Broadcasting failure")
+		while Events.BroadcastToServer("Invisibiliy FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+			Task.Wait()
+		end
+		return
+	end
+	
 	for _, attachment in ipairs(InvisibleCostume:GetChildren()) do
 		attachment:AttachToPlayer(player, attachment.name)
 		attachment.visibility = Visibility.FORCE_OFF
@@ -87,8 +105,10 @@ end
 
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
-	AttachCostume(player)
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+	InvisibleCostumeTemplate = ServerScript:GetCustomProperty("CostumeTemplate")
+	ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+	AttachCostume(player)
 	
 	-- Spawn timer UI
 	TimerUI.root = World.SpawnAsset(TimerUI_Template)
@@ -115,7 +135,6 @@ if Equipment.owner then
 	OnEquip(Equipment, Equipment.owner)
 end
 
-ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 

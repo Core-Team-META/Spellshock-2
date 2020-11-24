@@ -18,6 +18,8 @@ local EventListeners = {}
 local Timer = -1
 local isInvisible = false
 local OriginalWalkSpeed
+local PlayerVFX = nil
+local abilityName = string.gsub(Ability.name, " ", "_")
 
 local CancelKeys = {
 	ability_extra_20 = true, 
@@ -67,7 +69,22 @@ end
 
 function OnAbilityExecute(thisAbility)
 	WeaponAbility.isEnabled = false
-	World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
+	--World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Beginning")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
+	end
+	
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
 	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + SpeedBoost
@@ -78,12 +95,40 @@ end
 function DisableInvisility()
 	if isInvisible then
 		print("Disable Invis")
-		World.SpawnAsset(EndingFX, {position = Ability.owner:GetWorldPosition()})
+		--World.SpawnAsset(EndingFX, {position = Ability.owner:GetWorldPosition()})
+		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, Ability.owner.team, abilityName, "Ending")
+		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+		local success, newObject = pcall(function()
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+		end)
+		
+		if not success then
+			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+			local PlayerStorage = Storage.GetPlayerData(Ability.owner)
+			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+			PlayerVFX = PlayerStorage.VFX
+			Storage.SetPlayerData(Ability.owner, PlayerStorage)
+			World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+		end
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
 		Ability.owner.maxWalkSpeed = OriginalWalkSpeed
 		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
 		WeaponAbility.isEnabled = true
+	end
+end
+
+function Client_VFX_Failed(thisPlayer)
+	print("Failure receaved")
+	if thisPlayer == Equipment.owner then
+		Task.Wait()
+		--DisableInvisility()
+		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Costume")
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		Storage.SetPlayerData(thisPlayer, PlayerStorage)
+		script:SetNetworkedCustomProperty("CostumeTemplate", PlayerStorage.VFX[vfxKey])
 	end
 end
 
@@ -103,6 +148,12 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, Events.ConnectForPlayer("Invisibiliy FAILED", Client_VFX_Failed))
+	local PlayerStorage = Storage.GetPlayerData(player)
+	PlayerVFX = PlayerStorage.VFX
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Costume")
+	--PlayerVFX[vfxKey] = "asdfkjhasf" -- JUST FOR TESTING
+	script:SetNetworkedCustomProperty("CostumeTemplate", PlayerVFX[vfxKey])
 end
 
 function OnUnequip(thisEquipment, player)
