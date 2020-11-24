@@ -1377,6 +1377,15 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 6849253983036855207
+      value {
+        Overrides {
+          Name: "bp:Light Absorption Amount"
+          Float: 1.2
+        }
+      }
+    }
     TemplateAsset {
       Id: 12982727639299389883
     }
