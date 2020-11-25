@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 14710497818239345955
-  Name: "Healer Elf Supernova Charge Basic"
+  Id: 12008153979794448805
+  Name: "Healer Orc Supernova Charge Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1399706273806213912
+      RootId: 13479471622875459881
       Objects {
-        Id: 1399706273806213912
-        Name: "Healer Elf Supernova Charge Basic"
+        Id: 13479471622875459881
+        Name: "Healer Orc Supernova Charge Fire"
         Transform {
           Scale {
             X: 1
@@ -16,20 +16,20 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 8508286562146101290
-        ChildIds: 8335233729232407897
-        ChildIds: 4487642456453824028
+        ChildIds: 14423042955222836458
+        ChildIds: 7273690014738125003
+        ChildIds: 6046750809983618204
         UnregisteredParameters {
           Overrides {
             Name: "cs:InnerSphere"
             ObjectReference {
-              SubObjectId: 8508286562146101290
+              SubObjectId: 14423042955222836458
             }
           }
           Overrides {
             Name: "cs:OuterSphere"
             ObjectReference {
-              SubObjectId: 8335233729232407897
+              SubObjectId: 7273690014738125003
             }
           }
         }
@@ -45,7 +45,7 @@
         }
       }
       Objects {
-        Id: 8508286562146101290
+        Id: 14423042955222836458
         Name: "Inner Sphere"
         Transform {
           Location {
@@ -56,19 +56,19 @@
           Scale {
           }
         }
-        ParentId: 1399706273806213912
+        ParentId: 13479471622875459881
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 925672138032122417
+              Id: 7535229294616165836
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 0.39
+              G: 0.00774834026
               A: 1
             }
           }
@@ -98,7 +98,7 @@
         }
       }
       Objects {
-        Id: 8335233729232407897
+        Id: 7273690014738125003
         Name: "Outer Sphere"
         Transform {
           Location {
@@ -112,20 +112,20 @@
             Z: 50
           }
         }
-        ParentId: 1399706273806213912
+        ParentId: 13479471622875459881
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 925672138032122417
+              Id: 7535229294616165836
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.580392182
-              B: 0.360784471
-              A: 0.3
+              R: 0.39
+              G: 0.00774834026
+              A: 1
             }
           }
         }
@@ -154,7 +154,7 @@
         }
       }
       Objects {
-        Id: 4487642456453824028
+        Id: 6046750809983618204
         Name: "Beam Down Teleport VFX"
         Transform {
           Location {
@@ -168,7 +168,7 @@
             Z: 3.84553862
           }
         }
-        ParentId: 1399706273806213912
+        ParentId: 13479471622875459881
         UnregisteredParameters {
           Overrides {
             Name: "bp:Teleport Duration"
@@ -181,32 +181,32 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 0.39
+              G: 0.00774834026
               A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 0.39
+              G: 0.00774834026
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 0.39
+              G: 0.00774834026
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Ground Element Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 0.39
+              G: 0.00774834026
               A: 1
             }
           }

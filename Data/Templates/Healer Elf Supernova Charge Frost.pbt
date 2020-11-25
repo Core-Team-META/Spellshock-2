@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 14710497818239345955
-  Name: "Healer Elf Supernova Charge Basic"
+  Id: 3018006546627770720
+  Name: "Healer Elf Supernova Charge Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1399706273806213912
+      RootId: 4469706587667728417
       Objects {
-        Id: 1399706273806213912
-        Name: "Healer Elf Supernova Charge Basic"
+        Id: 4469706587667728417
+        Name: "Healer Elf Supernova Charge Frost"
         Transform {
           Scale {
             X: 1
@@ -16,20 +16,20 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 8508286562146101290
-        ChildIds: 8335233729232407897
-        ChildIds: 4487642456453824028
+        ChildIds: 108863172695148376
+        ChildIds: 7222068000501318392
+        ChildIds: 6853052884687956120
         UnregisteredParameters {
           Overrides {
             Name: "cs:InnerSphere"
             ObjectReference {
-              SubObjectId: 8508286562146101290
+              SubObjectId: 108863172695148376
             }
           }
           Overrides {
             Name: "cs:OuterSphere"
             ObjectReference {
-              SubObjectId: 8335233729232407897
+              SubObjectId: 7222068000501318392
             }
           }
         }
@@ -45,7 +45,7 @@
         }
       }
       Objects {
-        Id: 8508286562146101290
+        Id: 108863172695148376
         Name: "Inner Sphere"
         Transform {
           Location {
@@ -56,7 +56,7 @@
           Scale {
           }
         }
-        ParentId: 1399706273806213912
+        ParentId: 4469706587667728417
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -67,64 +67,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6585207450897081622
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8335233729232407897
-        Name: "Outer Sphere"
-        Transform {
-          Location {
-            Z: 100
-          }
-          Rotation {
-          }
-          Scale {
-            X: 50
-            Y: 50
-            Z: 50
-          }
-        }
-        ParentId: 1399706273806213912
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 925672138032122417
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784471
+              G: 0.484105945
+              B: 0.86
               A: 0.3
             }
           }
@@ -154,7 +98,63 @@
         }
       }
       Objects {
-        Id: 4487642456453824028
+        Id: 7222068000501318392
+        Name: "Outer Sphere"
+        Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+          }
+          Scale {
+            X: 50
+            Y: 50
+            Z: 50
+          }
+        }
+        ParentId: 4469706587667728417
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 925672138032122417
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.484105945
+              B: 0.86
+              A: 0.3
+            }
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6585207450897081622
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6853052884687956120
         Name: "Beam Down Teleport VFX"
         Transform {
           Location {
@@ -168,7 +168,7 @@
             Z: 3.84553862
           }
         }
-        ParentId: 1399706273806213912
+        ParentId: 4469706587667728417
         UnregisteredParameters {
           Overrides {
             Name: "bp:Teleport Duration"
@@ -181,33 +181,33 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              G: 0.484105945
+              B: 0.86
+              A: 0.3
             }
           }
           Overrides {
             Name: "bp:Particle Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              G: 0.484105945
+              B: 0.86
+              A: 0.3
             }
           }
           Overrides {
             Name: "bp:Spiral Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              G: 0.484105945
+              B: 0.86
+              A: 0.3
             }
           }
           Overrides {
             Name: "bp:Spiral Ground Element Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              G: 0.484105945
+              B: 0.86
+              A: 0.3
             }
           }
           Overrides {
