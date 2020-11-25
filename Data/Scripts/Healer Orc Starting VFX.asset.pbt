@@ -41,9 +41,15 @@
         }
       }
       Overrides {
-        Name: "cs:T_Special_Active"
+        Name: "cs:Supernova_Charge"
         AssetReference {
-          Id: 8381065170024406029
+          Id: 1259958909182382340
+        }
+      }
+      Overrides {
+        Name: "cs:Supernova_Ending"
+        AssetReference {
+          Id: 4247196307060116089
         }
       }
     }

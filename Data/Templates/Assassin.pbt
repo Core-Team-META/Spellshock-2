@@ -22,18 +22,6 @@
         ChildIds: 2814372295396067417
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Orc_Costume"
-            AssetReference {
-              Id: 15182184640494259521
-            }
-          }
-          Overrides {
-            Name: "cs:Elf_Costume"
-            AssetReference {
-              Id: 13654207909089287810
-            }
-          }
-          Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
               Id: 12302547594047116782
@@ -50,6 +38,14 @@
           }
           Overrides {
             Name: "cs:enableUI"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate"
+            String: ""
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
         }

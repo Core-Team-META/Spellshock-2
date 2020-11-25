@@ -40,7 +40,7 @@ function OnBindngPressed(player, binding)
 		local PlayerStorage = Storage.GetPlayerData(player)
 		local PlayerVFX = PlayerStorage.VFX
 				
-		print("SETTING VFX TABLE")
+		print("SETTING VARIANT VFX TABLE")
 		for name, value in pairs(script:GetCustomProperties()) do 
 			print("----------------------------")
 			local Class_Team = SplitString(name, "_")

@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 15036493725738216348
-  Name: "Mage Elf Tornado Active Frost"
+  Name: "Mage Elf Tornado Placement Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

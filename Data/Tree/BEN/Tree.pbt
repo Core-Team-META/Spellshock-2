@@ -13070,6 +13070,558 @@ Objects {
   ChildIds: 5216073423554532332
   ChildIds: 12168195679989690006
   ChildIds: 2278542936991994878
+  ChildIds: 8588442674296888896
+  ChildIds: 8210085818776465948
+  ChildIds: 10643231216254477025
+  ChildIds: 18389482408981344420
+  ChildIds: 6152123222652196749
+  ChildIds: 17634942262048531339
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17634942262048531339
+  Name: "Assassin Elf Frost"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 5394791983193798307
+      }
+    }
+    Overrides {
+      Name: "cs:Venom_Bomb_Projectile"
+      AssetReference {
+        Id: 2104224913586788579
+      }
+    }
+    Overrides {
+      Name: "cs:Venom_Bomb_Impact"
+      AssetReference {
+        Id: 9392791916696762581
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Costume"
+      AssetReference {
+        Id: 17966040025736251861
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Beginning"
+      AssetReference {
+        Id: 15761765853344411097
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Ending"
+      AssetReference {
+        Id: 1429104248892819753
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Projectile"
+      AssetReference {
+        Id: 5432023853122515340
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Beginning"
+      AssetReference {
+        Id: 3260618482035830264
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Normal_Impact"
+      AssetReference {
+        Id: 12510419486879215421
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Player_Impact"
+      AssetReference {
+        Id: 6697248670123946068
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Preview"
+      AssetReference {
+        Id: 17869001443527042596
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Launch"
+      AssetReference {
+        Id: 13247852012678535360
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Impact"
+      AssetReference {
+        Id: 6738937092225821013
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6152123222652196749
+  Name: "Assassin Orc Fire"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 391006820139421947
+      }
+    }
+    Overrides {
+      Name: "cs:Venom_Bomb_Projectile"
+      AssetReference {
+        Id: 17801137391214202879
+      }
+    }
+    Overrides {
+      Name: "cs:Venom_Bomb_Impact"
+      AssetReference {
+        Id: 7601839425209033086
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Costume"
+      AssetReference {
+        Id: 9553951876314605743
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Beginning"
+      AssetReference {
+        Id: 15761765853344411097
+      }
+    }
+    Overrides {
+      Name: "cs:Deaths_Shadow_Ending"
+      AssetReference {
+        Id: 1429104248892819753
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Projectile"
+      AssetReference {
+        Id: 6523977272442773925
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Beginning"
+      AssetReference {
+        Id: 3260618482035830264
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Normal_Impact"
+      AssetReference {
+        Id: 15345620429388998215
+      }
+    }
+    Overrides {
+      Name: "cs:Slasher_Player_Impact"
+      AssetReference {
+        Id: 6697248670123946068
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Preview"
+      AssetReference {
+        Id: 17869001443527042596
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Launch"
+      AssetReference {
+        Id: 13247852012678535360
+      }
+    }
+    Overrides {
+      Name: "cs:T_Special_Impact"
+      AssetReference {
+        Id: 11395878667126256154
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18389482408981344420
+  Name: "Healer Elf Frost"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 3711299298965877483
+      }
+    }
+    Overrides {
+      Name: "cs:Sun_Beam_Projectile"
+      AssetReference {
+        Id: 17972774475744623316
+      }
+    }
+    Overrides {
+      Name: "cs:Sun_Beam_Ending"
+      AssetReference {
+        Id: 526721940899255177
+      }
+    }
+    Overrides {
+      Name: "cs:Healing_Crystal_Preview"
+      AssetReference {
+        Id: 2309478069929941983
+      }
+    }
+    Overrides {
+      Name: "cs:Healing_Crystal_Placement"
+      AssetReference {
+        Id: 8480354754001927698
+      }
+    }
+    Overrides {
+      Name: "cs:Divine_Light_Active"
+      AssetReference {
+        Id: 14361516424257808637
+      }
+    }
+    Overrides {
+      Name: "cs:Supernova_Charge"
+      AssetReference {
+        Id: 3018006546627770720
+      }
+    }
+    Overrides {
+      Name: "cs:Supernova_Ending"
+      AssetReference {
+        Id: 10361163652299667815
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 10643231216254477025
+  Name: "Healer Orc Fire"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 4608858167394329527
+      }
+    }
+    Overrides {
+      Name: "cs:Sun_Beam_Projectile"
+      AssetReference {
+        Id: 12886882762364699151
+      }
+    }
+    Overrides {
+      Name: "cs:Sun_Beam_Ending"
+      AssetReference {
+        Id: 129666070119651245
+      }
+    }
+    Overrides {
+      Name: "cs:Healing_Crystal_Preview"
+      AssetReference {
+        Id: 2309478069929941983
+      }
+    }
+    Overrides {
+      Name: "cs:Healing_Crystal_Placement"
+      AssetReference {
+        Id: 2985282815979522936
+      }
+    }
+    Overrides {
+      Name: "cs:Divine_Light_Active"
+      AssetReference {
+        Id: 14393575782714755705
+      }
+    }
+    Overrides {
+      Name: "cs:Supernova_Charge"
+      AssetReference {
+        Id: 12008153979794448805
+      }
+    }
+    Overrides {
+      Name: "cs:Supernova_Ending"
+      AssetReference {
+        Id: 1535993576978115928
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8210085818776465948
+  Name: "Mage Elf Frost"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 8043111153345216687
+      }
+    }
+    Overrides {
+      Name: "cs:Tornado_Preview"
+      AssetReference {
+        Id: 1490966563412810811
+      }
+    }
+    Overrides {
+      Name: "cs:Tornado_Placement"
+      AssetReference {
+        Id: 15036493725738216348
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Projectile"
+      AssetReference {
+        Id: 2945782094965142153
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Impact"
+      AssetReference {
+        Id: 12582858560613182221
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Attachment"
+      AssetReference {
+        Id: 9363043525726820220
+      }
+    }
+    Overrides {
+      Name: "cs:Iceberg_Attachment"
+      AssetReference {
+        Id: 7156613417916661940
+      }
+    }
+    Overrides {
+      Name: "cs:Iceberg_Break"
+      AssetReference {
+        Id: 8929882190614343836
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Projectile"
+      AssetReference {
+        Id: 190311559756997868
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Target"
+      AssetReference {
+        Id: 13272352193882752730
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Impact"
+      AssetReference {
+        Id: 7677382368845934921
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8588442674296888896
+  Name: "Mage Orc Fire"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17754552131578999419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      AssetReference {
+        Id: 13527897414884290774
+      }
+    }
+    Overrides {
+      Name: "cs:Tornado_Preview"
+      AssetReference {
+        Id: 1490966563412810811
+      }
+    }
+    Overrides {
+      Name: "cs:Tornado_Placement"
+      AssetReference {
+        Id: 17488736841778857887
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Projectile"
+      AssetReference {
+        Id: 2945782094965142153
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Impact"
+      AssetReference {
+        Id: 12582858560613182221
+      }
+    }
+    Overrides {
+      Name: "cs:Animorph_Potion_Attachment"
+      AssetReference {
+        Id: 17464056591119542564
+      }
+    }
+    Overrides {
+      Name: "cs:Iceberg_Attachment"
+      AssetReference {
+        Id: 8863279680582417533
+      }
+    }
+    Overrides {
+      Name: "cs:Iceberg_Break"
+      AssetReference {
+        Id: 493810947062000790
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Target"
+      AssetReference {
+        Id: 13272352193882752730
+      }
+    }
+    Overrides {
+      Name: "cs:Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13406,6 +13958,42 @@ Objects {
       Name: "cs:Hunter_Elf"
       ObjectReference {
         SelfId: 2278542936991994878
+      }
+    }
+    Overrides {
+      Name: "cs:Mage_Orc"
+      ObjectReference {
+        SelfId: 8588442674296888896
+      }
+    }
+    Overrides {
+      Name: "cs:Mage_Elf"
+      ObjectReference {
+        SelfId: 8210085818776465948
+      }
+    }
+    Overrides {
+      Name: "cs:Healer_Orc"
+      ObjectReference {
+        SelfId: 10643231216254477025
+      }
+    }
+    Overrides {
+      Name: "cs:Healer_Elf"
+      ObjectReference {
+        SelfId: 18389482408981344420
+      }
+    }
+    Overrides {
+      Name: "cs:Assassin_Orc"
+      ObjectReference {
+        SelfId: 6152123222652196749
+      }
+    }
+    Overrides {
+      Name: "cs:Assassin_Elf"
+      ObjectReference {
+        SelfId: 17634942262048531339
       }
     }
   }

@@ -15,10 +15,11 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 14423042955222836458
         ChildIds: 7273690014738125003
         ChildIds: 6046750809983618204
+        ChildIds: 8229005583099676793
         UnregisteredParameters {
           Overrides {
             Name: "cs:InnerSphere"
@@ -32,7 +33,14 @@
               SubObjectId: 7273690014738125003
             }
           }
+          Overrides {
+            Name: "cs:Beam"
+            ObjectReference {
+              SubObjectId: 6046750809983618204
+            }
+          }
         }
+        Lifespan: 10
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -75,7 +83,7 @@
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -131,7 +139,7 @@
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -233,6 +241,113 @@
           }
         }
       }
+      Objects {
+        Id: 8229005583099676793
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13479471622875459881
+        ChildIds: 12026541710312720559
+        ChildIds: 215261635352151569
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 12026541710312720559
+        Name: "Supernova Chargup SFX Handler"
+        Transform {
+          Location {
+            X: -18511.8477
+            Y: -19743.5566
+            Z: -7270.2793
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8229005583099676793
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Loop_SFX"
+            ObjectReference {
+              SubObjectId: 215261635352151569
+            }
+          }
+          Overrides {
+            Name: "cs:InnerSphere"
+            ObjectReference {
+              SubObjectId: 14423042955222836458
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1887020573235501099
+          }
+        }
+      }
+      Objects {
+        Id: 215261635352151569
+        Name: "Magic Spell Cast Beam Loop 01 SFX"
+        Transform {
+          Location {
+            Z: 149.019287
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8229005583099676793
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 10275684307032384058
+          }
+          AutoPlay: true
+          Pitch: 1029.06738
+          Volume: 1
+          Falloff: 2500
+          Radius: 1000
+          FadeInTime: 0.5
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 6585207450897081622
@@ -250,6 +365,15 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Teleporter_BeamDown"
+      }
+    }
+    Assets {
+      Id: 10275684307032384058
+      Name: "Magic Spell Cast Beam Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_spell_cast_beam_loop_01_Cue_ref"
       }
     }
     PrimaryAssetId {

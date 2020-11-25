@@ -17,12 +17,26 @@ local PlayerVFX = nil
 local abilityName = string.gsub(Ability.name, " ", "_")
 local EventListeners = {}
 
-function OnAbilityCast(thisAbility)
-	
-end
-
 function OnAbilityExecute(thisAbility)
-	CurrentChargeUp = World.SpawnAsset(VFX_Chargeup, {position = Ability.owner:GetWorldPosition()})
+	--CurrentChargeUp = World.SpawnAsset(VFX_Chargeup, {position = Ability.owner:GetWorldPosition()})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, Ability.owner.team, abilityName, "Charge")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+	end)
+	
+	if success then
+		CurrentChargeUp = newObject
+	else
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(Ability.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(Ability.owner, PlayerStorage)
+		CurrentChargeUp = World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+	end
+
 	CurrentChargeUp:AttachToPlayer(Ability.owner, "root")
 	local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
 	local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
@@ -35,7 +49,23 @@ end
 
 function OnAbilityRecovery(thisAbility)
 	if not thisAbility.owner or not Object.IsValid(thisAbility.owner) or thisAbility.owner.isDead then return end
-	World.SpawnAsset(VFX_Ending, {position = Ability.owner:GetWorldPosition()})
+	--World.SpawnAsset(VFX_Ending, {position = Ability.owner:GetWorldPosition()})
+	
+	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, Ability.owner.team, abilityName, "Ending")
+	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+	local success, newObject = pcall(function()
+	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+	end)
+	
+	if not success then
+		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+		local PlayerStorage = Storage.GetPlayerData(Ability.owner)
+		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+		PlayerVFX = PlayerStorage.VFX
+		Storage.SetPlayerData(Ability.owner, PlayerStorage)
+		World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
+	end
+	
 	CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
 	CurrentChargeUp:Destroy()
 	
@@ -92,4 +122,3 @@ Equipment.unequippedEvent:Connect(OnUnequip)
 
 Ability.recoveryEvent:Connect(OnAbilityRecovery)
 Ability.executeEvent:Connect(OnAbilityExecute)
---Ability.castEvent:Connect(OnAbilityCast)

@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 3760287097131009270
-  Name: "Mage Elf Tornado Active Basic"
+  Id: 7827469757850190083
+  Name: "Mage Orc Tornado Placement Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 18396550010636760668
+      RootId: 12597983505510063666
       Objects {
-        Id: 18396550010636760668
-        Name: "Mage Elf Tornado Active Basic"
+        Id: 12597983505510063666
+        Name: "Mage Orc Tornado Active Basic"
         Transform {
           Scale {
             X: 1
@@ -16,11 +16,11 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 6270308689058147762
-        ChildIds: 10772566095877105579
-        ChildIds: 4545488589136616139
-        ChildIds: 13769895600965817982
-        ChildIds: 15254269424615828586
+        ChildIds: 9322174965092246613
+        ChildIds: 865622591006778875
+        ChildIds: 7109949033584959669
+        ChildIds: 9049248418557605272
+        ChildIds: 2329305905851159841
         UnregisteredParameters {
           Overrides {
             Name: "cs:LifeSpan"
@@ -42,7 +42,7 @@
         }
       }
       Objects {
-        Id: 6270308689058147762
+        Id: 9322174965092246613
         Name: "2D Basic Shapes Decal"
         Transform {
           Location {
@@ -55,7 +55,7 @@
             Z: 2.53371763
           }
         }
-        ParentId: 18396550010636760668
+        ParentId: 12597983505510063666
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sides"
@@ -81,16 +81,16 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 0.580392182
-              B: 0.360784471
+              R: 0.721568644
+              G: 0.0705882609
               A: 0.5
             }
           }
           Overrides {
             Name: "bp:Stroke Color"
             Color {
-              G: 0.87500006
-              B: 0.543919146
+              R: 0.941000044
+              G: 0.0920543894
               A: 0.5
             }
           }
@@ -132,13 +132,13 @@
         }
       }
       Objects {
-        Id: 10772566095877105579
+        Id: 865622591006778875
         Name: "TornadoFadeOut"
         Transform {
           Location {
-            X: 17799.6777
-            Y: 16830.7012
-            Z: -3081.37646
+            X: 17363.5547
+            Y: 17436.3633
+            Z: -3087.84668
           }
           Rotation {
           }
@@ -148,18 +148,18 @@
             Z: 1
           }
         }
-        ParentId: 18396550010636760668
+        ParentId: 12597983505510063666
         UnregisteredParameters {
           Overrides {
             Name: "cs:Visual"
             ObjectReference {
-              SubObjectId: 4545488589136616139
+              SubObjectId: 7109949033584959669
             }
           }
           Overrides {
             Name: "cs:Audio"
             ObjectReference {
-              SubObjectId: 13769895600965817982
+              SubObjectId: 9049248418557605272
             }
           }
         }
@@ -176,7 +176,7 @@
         }
       }
       Objects {
-        Id: 4545488589136616139
+        Id: 7109949033584959669
         Name: "VFX"
         Transform {
           Location {
@@ -189,10 +189,10 @@
             Z: 1
           }
         }
-        ParentId: 18396550010636760668
-        ChildIds: 12274350895697227030
-        ChildIds: 13919270022095110263
-        ChildIds: 13027836158761203257
+        ParentId: 12597983505510063666
+        ChildIds: 9592652887879133899
+        ChildIds: 12474481072207634037
+        ChildIds: 13211947406657820910
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -204,11 +204,11 @@
         }
       }
       Objects {
-        Id: 12274350895697227030
+        Id: 9592652887879133899
         Name: "Tornado VFX"
         Transform {
           Location {
-            Z: -54.6896973
+            Z: -57.0175781
           }
           Rotation {
           }
@@ -218,8 +218,16 @@
             Z: 1
           }
         }
-        ParentId: 4545488589136616139
+        ParentId: 7109949033584959669
         UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              R: 0.873
+              G: 0.16005
+              A: 0.995000064
+            }
+          }
           Overrides {
             Name: "bp:Color C"
             Color {
@@ -230,72 +238,32 @@
             }
           }
           Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.580392182
-              B: 0.360784471
-              A: 1
-            }
-          }
-          Overrides {
             Name: "bp:Wiggle Offset Amount"
             Float: 1.3
-          }
-          Overrides {
-            Name: "bp:Color B"
-            Color {
-              G: 0.857000053
-              B: 0.271383911
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              G: 0.708
-              B: 0.440108269
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Body Fade"
-            Float: 0.247263923
-          }
-          Overrides {
-            Name: "bp:Bottom Fade"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Edge Shredding"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Fade Length Top"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Pin Top Amount"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Pin Bottom Amount"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Enable Shadows"
-            Bool: true
           }
           Overrides {
             Name: "bp:Wiggle Speed"
             Float: 0.1
           }
           Overrides {
-            Name: "bp:Color By Height"
-            Float: 0
+            Name: "bp:Body Fade"
+            Float: 0.247263923
           }
           Overrides {
-            Name: "bp:Cross Section Width"
-            Float: 0
+            Name: "bp:color c"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -313,11 +281,13 @@
         }
       }
       Objects {
-        Id: 13919270022095110263
+        Id: 12474481072207634037
         Name: "Swirling Dust VFX"
         Transform {
           Location {
-            Z: -54.6896973
+            X: 19.875
+            Y: -71.9335938
+            Z: -57.0178223
           }
           Rotation {
           }
@@ -327,7 +297,7 @@
             Z: 1
           }
         }
-        ParentId: 4545488589136616139
+        ParentId: 7109949033584959669
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -346,11 +316,13 @@
         }
       }
       Objects {
-        Id: 13027836158761203257
+        Id: 13211947406657820910
         Name: "Multicast Beam VFX"
         Transform {
           Location {
-            Z: 1006.24268
+            X: 15.5703125
+            Y: -31.2695313
+            Z: 1003.91382
           }
           Rotation {
             Pitch: -90
@@ -361,7 +333,7 @@
             Z: 1
           }
         }
-        ParentId: 4545488589136616139
+        ParentId: 7109949033584959669
         UnregisteredParameters {
           Overrides {
             Name: "bp:Max Cone Angle"
@@ -392,16 +364,16 @@
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              G: 0.580392182
-              B: 0.360784471
+              R: 0.721568644
+              G: 0.0705882609
               A: 0.5
             }
           }
           Overrides {
             Name: "bp:Tertiary Color"
             Color {
-              G: 0.580392182
-              B: 0.360784471
+              R: 0.721568644
+              G: 0.0705882609
               A: 0.5
             }
           }
@@ -428,11 +400,11 @@
         }
       }
       Objects {
-        Id: 13769895600965817982
+        Id: 9049248418557605272
         Name: "Nature Wind Steady 01 SFX"
         Transform {
           Location {
-            Z: 511.916016
+            Z: 540.092285
           }
           Rotation {
           }
@@ -442,7 +414,7 @@
             Z: 1
           }
         }
-        ParentId: 18396550010636760668
+        ParentId: 12597983505510063666
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -463,11 +435,11 @@
         }
       }
       Objects {
-        Id: 15254269424615828586
+        Id: 2329305905851159841
         Name: "Magic Wind Blast Long 01 SFX"
         Transform {
           Location {
-            Z: 511.916016
+            Z: 540.092285
           }
           Rotation {
           }
@@ -477,7 +449,7 @@
             Z: 1
           }
         }
-        ParentId: 18396550010636760668
+        ParentId: 12597983505510063666
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

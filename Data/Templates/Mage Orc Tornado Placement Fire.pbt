@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 17488736841778857887
-  Name: "Mage Orc Tornado Active Fire"
+  Name: "Mage Orc Tornado Placement Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

@@ -19,6 +19,7 @@
         ChildIds: 13607513598029812625
         ChildIds: 1301716873999578464
         ChildIds: 7149992754697328216
+        ChildIds: 7693950874931266148
         UnregisteredParameters {
           Overrides {
             Name: "cs:InnerSphere"
@@ -39,6 +40,7 @@
             }
           }
         }
+        Lifespan: 10
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -81,7 +83,7 @@
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -137,7 +139,7 @@
         }
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -239,6 +241,113 @@
           }
         }
       }
+      Objects {
+        Id: 7693950874931266148
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14926885404023727839
+        ChildIds: 15017059856662288470
+        ChildIds: 14489262638619288795
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 15017059856662288470
+        Name: "Supernova Chargup SFX Handler"
+        Transform {
+          Location {
+            X: -18511.8477
+            Y: -19743.5566
+            Z: -7270.2793
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7693950874931266148
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Loop_SFX"
+            ObjectReference {
+              SubObjectId: 14489262638619288795
+            }
+          }
+          Overrides {
+            Name: "cs:InnerSphere"
+            ObjectReference {
+              SubObjectId: 13607513598029812625
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1887020573235501099
+          }
+        }
+      }
+      Objects {
+        Id: 14489262638619288795
+        Name: "Magic Spell Cast Beam Loop 01 SFX"
+        Transform {
+          Location {
+            Z: 149.019287
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7693950874931266148
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 10275684307032384058
+          }
+          AutoPlay: true
+          Pitch: 1029.06738
+          Volume: 1
+          Falloff: 2500
+          Radius: 1000
+          FadeInTime: 0.5
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 6585207450897081622
@@ -256,6 +365,15 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Teleporter_BeamDown"
+      }
+    }
+    Assets {
+      Id: 10275684307032384058
+      Name: "Magic Spell Cast Beam Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_spell_cast_beam_loop_01_Cue_ref"
       }
     }
     PrimaryAssetId {

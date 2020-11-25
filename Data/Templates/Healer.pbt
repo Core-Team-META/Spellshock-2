@@ -22,18 +22,6 @@
         ChildIds: 8885717294518384202
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Orc_Costume"
-            AssetReference {
-              Id: 2362225133279161332
-            }
-          }
-          Overrides {
-            Name: "cs:Elf_Costume"
-            AssetReference {
-              Id: 1553787859656583436
-            }
-          }
-          Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
               Id: 14246948317552596484
@@ -50,6 +38,14 @@
           }
           Overrides {
             Name: "cs:enableUI"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate"
+            String: ""
+          }
+          Overrides {
+            Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
         }
@@ -753,7 +749,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 11078237971098002608
+              Id: 13468123306975365733
             }
           }
         }
@@ -2283,12 +2279,12 @@
       }
     }
     Assets {
-      Id: 11078237971098002608
-      Name: "Fantasy Ability Yellow 032"
+      Id: 13468123306975365733
+      Name: "Fantasy Ability Yellow 002"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_032"
+        AssetId: "UI_Fantasy_Ability_Yellow_002"
       }
     }
     Assets {
