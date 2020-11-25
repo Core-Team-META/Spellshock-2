@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 13607513598029812625
         ChildIds: 1301716873999578464
         ChildIds: 7149992754697328216
@@ -30,6 +30,12 @@
             Name: "cs:OuterSphere"
             ObjectReference {
               SubObjectId: 1301716873999578464
+            }
+          }
+          Overrides {
+            Name: "cs:Beam"
+            ObjectReference {
+              SubObjectId: 7149992754697328216
             }
           }
         }

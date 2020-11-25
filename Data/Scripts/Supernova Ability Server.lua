@@ -26,13 +26,17 @@ function OnAbilityExecute(thisAbility)
 	CurrentChargeUp:AttachToPlayer(Ability.owner, "root")
 	local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
 	local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
+	local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
 	InnerSphere:ScaleTo(OuterSphere:GetWorldScale(), scaleDuration)
-	EffectRadius = OuterSphere:GetWorldScale().x * 100
+	EffectRadius = OuterSphere:GetWorldScale().x * 50
+	Beam:SetSmartProperty("Teleport Duration", scaleDuration)
+	Beam:Play()
 end
 
 function OnAbilityRecovery(thisAbility)
 	if not thisAbility.owner or not Object.IsValid(thisAbility.owner) or thisAbility.owner.isDead then return end
 	World.SpawnAsset(VFX_Ending, {position = Ability.owner:GetWorldPosition()})
+	CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
 	CurrentChargeUp:Destroy()
 	
 	local dmg = Damage.New(-HealAmount) 
@@ -40,7 +44,6 @@ function OnAbilityRecovery(thisAbility)
 	dmg.sourceAbility = Ability
 
     local enemiesInRange = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), EffectRadius, {ignoreDead = true, ignorePlayers = Ability.owner})
-    CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
 
     for _, otherPlayer in ipairs(enemiesInRange) do
 		if otherPlayer.team == Ability.owner.team then
