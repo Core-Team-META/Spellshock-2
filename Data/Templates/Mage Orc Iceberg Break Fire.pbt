@@ -1,12 +1,12 @@
 ﻿Assets {
-  Id: 12874348109318974616
-  Name: "Mage Iceberg Break Basic"
+  Id: 493810947062000790
+  Name: "Mage Orc Iceberg Break Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11320169441651447689
+      RootId: 9867356007109041613
       Objects {
-        Id: 11320169441651447689
+        Id: 9867356007109041613
         Name: "Mage Iceberg Break Basic"
         Transform {
           Scale {
@@ -15,9 +15,9 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 13859167513145534675
-        ChildIds: 8540915350510818825
+        ParentId: 14162296025304194376
+        ChildIds: 14089145746450822218
+        ChildIds: 17452247779314188913
         Lifespan: 2.3
         WantsNetworking: true
         Collidable_v2 {
@@ -30,8 +30,8 @@
         }
       }
       Objects {
-        Id: 13859167513145534675
-        Name: "Ice Break Hit Impact 01 SFX"
+        Id: 14089145746450822218
+        Name: "Magic Fireball Small Impact 01 SFX"
         Transform {
           Location {
           }
@@ -43,7 +43,7 @@
             Z: 1
           }
         }
-        ParentId: 11320169441651447689
+        ParentId: 9867356007109041613
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -52,7 +52,7 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 6499280909429149265
+            Id: 11737394181739799059
           }
           AutoPlay: true
           Volume: 1
@@ -63,7 +63,7 @@
         }
       }
       Objects {
-        Id: 8540915350510818825
+        Id: 17452247779314188913
         Name: "Glass Explosion Volume VFX"
         Transform {
           Location {
@@ -76,14 +76,11 @@
             Z: 2.85930729
           }
         }
-        ParentId: 11320169441651447689
+        ParentId: 9867356007109041613
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.120000005
-              G: 0.860132098
-              B: 1
               A: 1
             }
           }
@@ -123,12 +120,12 @@
       }
     }
     Assets {
-      Id: 6499280909429149265
-      Name: "Ice Break Hit Impact 01 SFX"
+      Id: 11737394181739799059
+      Name: "Magic Fireball Small Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_ice_break_hit_impact_01a_Cue_ref"
+        AssetId: "sfx_magic_fireball_small_impact_01a_Cue_ref"
       }
     }
     Assets {
