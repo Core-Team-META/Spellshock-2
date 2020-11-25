@@ -4734,7 +4734,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6858324616617803421
+  Id: 12748560869714805148
   Name: "Combat Dependencies"
   Transform {
     Location {
@@ -4748,42 +4748,101 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
+  ChildIds: 16244664534678771598
+  ChildIds: 439444680642893809
+  ChildIds: 17441489261436982010
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 8014650375856875642
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Combat Dependencies"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17441489261436982010
+  Name: "CrossContextCaller"
+  Transform {
+    Location {
     }
-    TemplateAsset {
-      Id: 7646593255349821538
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12748560869714805148
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 18385032540627613436
+    }
+  }
+}
+Objects {
+  Id: 439444680642893809
+  Name: "PlayerHomingTargets"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12748560869714805148
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17582663939420860597
+    }
+  }
+}
+Objects {
+  Id: 16244664534678771598
+  Name: "CombatWrapAPI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12748560869714805148
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5584249133191833858
     }
   }
 }

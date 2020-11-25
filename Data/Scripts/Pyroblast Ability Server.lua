@@ -57,6 +57,10 @@ function OnProjectileImpact(projectile, other, hitResult)
 	end	
 end
 
+function OnLifespanEnded(thisProjectile)
+	Reset()
+end
+
 function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn a new target object where the camera is looking
 	local viewRotation = thisAbility.owner:GetViewWorldRotation()
@@ -121,7 +125,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	
 	CurrentProjectile.owner = thisAbility.owner
     CurrentProjectile.speed = ProjectileSpeed
-    CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 0.5
+    CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 1.5
     CurrentProjectile.capsuleLength = 50
     CurrentProjectile.capsuleRadius = 50
     CurrentProjectile.gravityScale = 0
@@ -131,6 +135,7 @@ function OnSpecialAbilityExecute(thisAbility)
     EventListeners["impactEvent"] = CurrentProjectile.impactEvent:Connect(OnProjectileImpact)
     EventListeners["bindingPressedEvent"] = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
     EventListeners["bindingReleasedEvent"] = thisAbility.owner.bindingReleasedEvent:Connect( OnBindingReleased )
+    EventListeners["lifeSpanEndedEvent"] = CurrentProjectile.lifeSpanEndedEvent:Connect(OnLifespanEnded)
 end
 
 function OnBindingPressed(player, binding)
@@ -159,6 +164,11 @@ function Reset(hardReset)
 	if EventListeners["bindingReleasedEvent"] then
 		EventListeners["bindingReleasedEvent"]:Disconnect()
 		EventListeners["bindingReleasedEvent"] = nil
+	end
+	
+	if EventListeners["lifeSpanEndedEvent"] then
+		EventListeners["lifeSpanEndedEvent"]:Disconnect()
+		EventListeners["lifeSpanEndedEvent"] = nil
 	end
 	
 	if Object.IsValid(CurrentProjectile) and hardReset then
@@ -213,7 +223,7 @@ function Tick(deltaTime)
 			end	
 			CurrentTarget:SetWorldPosition(endPoint)
 			local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
-			CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 0.5
+			CurrentProjectile.lifeSpan = distanceVector.size/ProjectileSpeed + 1.5
 			--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
 			--CurrentProjectile:SetVelocity(newVelocity)
 		end

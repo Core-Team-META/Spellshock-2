@@ -1292,7 +1292,7 @@
       }
       Objects {
         Id: 9970096027225536454
-        Name: "T Special"
+        Name: "Supernova"
         Transform {
           Location {
           }
@@ -1320,14 +1320,6 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 1.5
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
             Duration: 0.5
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -1335,8 +1327,16 @@
               Value: "mc:eabilitysetfacing:aim"
             }
           }
+          ExecutePhaseSettings {
+            Duration: 3
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
           RecoveryPhaseSettings {
-            Duration: 1
+            Duration: 0.3
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1349,7 +1349,8 @@
             CanRotate: true
             IsTargetDataUpdated: true
           }
-          Animation: "2hand_staff_magic_bolt"
+          Animation: "unarmed_magic_up"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_34"
           }
@@ -1357,7 +1358,7 @@
       }
       Objects {
         Id: 9559338655160658381
-        Name: "UltimateAbility"
+        Name: "Supernova Ability Server"
         Transform {
           Location {
           }
@@ -1369,21 +1370,27 @@
         ParentId: 9970096027225536454
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
             Name: "cs:Ability"
             ObjectReference {
               SubObjectId: 9970096027225536454
             }
           }
           Overrides {
-            Name: "cs:VFX_Template"
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
             AssetReference {
-              Id: 8381065170024406029
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
             }
           }
           Overrides {
