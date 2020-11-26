@@ -30,6 +30,7 @@ Objects {
   ChildIds: 8983380287600545020
   ChildIds: 13099473548876010514
   ChildIds: 14912206820478233249
+  ChildIds: 15102524278383080176
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -39,6 +40,42 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 15102524278383080176
+  Name: "GOLDEN_UI_ BETTER_compromise"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 512238047770973974
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GOLDEN_UI_ BETTER_compromise"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16312255697338676201
+    }
   }
 }
 Objects {
