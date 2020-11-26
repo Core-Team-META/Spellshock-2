@@ -1,12 +1,12 @@
 ﻿Assets {
-  Id: 3219672101883223829
-  Name: "Assassin_Ability4_ImpactVFX"
+  Id: 11395878667126256154
+  Name: "Assassin Orc Wraith Strike Impact Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 9920646406956792753
+      RootId: 16345032910267213676
       Objects {
-        Id: 9920646406956792753
+        Id: 16345032910267213676
         Name: "Assassin_Ability4_ImpactVFX"
         Transform {
           Scale {
@@ -15,10 +15,10 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 13937885711976035671
-        ChildIds: 8517956683451046750
-        ChildIds: 573350595605253564
+        ParentId: 14162296025304194376
+        ChildIds: 598313155620922309
+        ChildIds: 8427804964253704270
+        ChildIds: 3975853450910287937
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -31,7 +31,7 @@
         }
       }
       Objects {
-        Id: 13937885711976035671
+        Id: 598313155620922309
         Name: "Sharp Rezzer Impact Hit 01 SFX"
         Transform {
           Location {
@@ -44,7 +44,7 @@
             Z: 1
           }
         }
-        ParentId: 9920646406956792753
+        ParentId: 16345032910267213676
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -65,7 +65,7 @@
         }
       }
       Objects {
-        Id: 8517956683451046750
+        Id: 8427804964253704270
         Name: "Basic Explosion VFX"
         Transform {
           Location {
@@ -78,7 +78,7 @@
             Z: 2.10000014
           }
         }
-        ParentId: 9920646406956792753
+        ParentId: 16345032910267213676
         UnregisteredParameters {
           Overrides {
             Name: "bp:Enable Flash"
@@ -91,9 +91,9 @@
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.301987231
-              G: 0.0899999142
-              B: 3
+              R: 3
+              G: 0.575
+              B: 0.0899999142
               A: 1
             }
           }
@@ -120,7 +120,7 @@
         }
       }
       Objects {
-        Id: 573350595605253564
+        Id: 3975853450910287937
         Name: "Cast Burst Ring VFX"
         Transform {
           Location {
@@ -134,14 +134,14 @@
             Z: 1
           }
         }
-        ParentId: 9920646406956792753
+        ParentId: 16345032910267213676
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
             Color {
-              R: 0.301987231
-              G: 0.0899999142
-              B: 3
+              R: 3
+              G: 0.575
+              B: 0.0899999142
               A: 1
             }
           }
@@ -160,9 +160,9 @@
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 0.301987231
-              G: 0.0899999142
-              B: 3
+              R: 3
+              G: 0.575
+              B: 0.0899999142
               A: 1
             }
           }

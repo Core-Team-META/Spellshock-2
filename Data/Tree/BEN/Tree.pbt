@@ -13163,19 +13163,19 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:T_Special_Preview"
+      Name: "cs:Wraith_Strike_Preview"
       AssetReference {
         Id: 17869001443527042596
       }
     }
     Overrides {
-      Name: "cs:T_Special_Launch"
+      Name: "cs:Wraith_Strike_Launch"
       AssetReference {
         Id: 13247852012678535360
       }
     }
     Overrides {
-      Name: "cs:T_Special_Impact"
+      Name: "cs:Wraith_Strike_Impact"
       AssetReference {
         Id: 6738937092225821013
       }
@@ -13268,19 +13268,19 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:T_Special_Preview"
+      Name: "cs:Wraith_Strike_Preview"
       AssetReference {
         Id: 17869001443527042596
       }
     }
     Overrides {
-      Name: "cs:T_Special_Launch"
+      Name: "cs:Wraith_Strike_Launch"
       AssetReference {
         Id: 13247852012678535360
       }
     }
     Overrides {
-      Name: "cs:T_Special_Impact"
+      Name: "cs:Wraith_Strike_Impact"
       AssetReference {
         Id: 11395878667126256154
       }

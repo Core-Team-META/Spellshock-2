@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 13247852012678535360
-  Name: "Assassin_LaunchFX"
+  Name: "Assassin Wraith Strike Launch Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

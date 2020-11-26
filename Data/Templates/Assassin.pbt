@@ -1451,7 +1451,7 @@
       }
       Objects {
         Id: 87249608989476396
-        Name: "T Special"
+        Name: "Wraith Strike"
         Transform {
           Location {
           }

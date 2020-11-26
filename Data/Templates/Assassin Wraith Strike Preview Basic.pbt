@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 17869001443527042596
-  Name: "Assassin_Ability4_AttackPreview"
+  Name: "Assassin Wraith Strike Preview Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
