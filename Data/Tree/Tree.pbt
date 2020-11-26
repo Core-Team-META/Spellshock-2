@@ -29,6 +29,7 @@ Objects {
   ChildIds: 16227534043720893935
   ChildIds: 8983380287600545020
   ChildIds: 13099473548876010514
+  ChildIds: 14912206820478233249
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,6 +39,36 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 14912206820478233249
+  Name: "GOLDEN_UI_Kate"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14010153348978605566
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GOLDEN_UI_Kate"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15834726106847442933
+    }
   }
 }
 Objects {
