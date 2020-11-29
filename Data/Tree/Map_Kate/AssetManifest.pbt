@@ -2627,6 +2627,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4551349097788688761
+  Name: "Waterfall 90 Inner Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "waterfall_90ic"
+  }
+}
+Assets {
   Id: 4545713430863939559
   Name: "Ivy 01"
   PlatformAssetType: 1

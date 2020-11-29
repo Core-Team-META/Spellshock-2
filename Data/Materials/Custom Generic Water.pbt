@@ -74,7 +74,7 @@
       }
       Overrides {
         Name: "opacity"
-        Float: 0.900817037
+        Float: 0.968821228
       }
       Overrides {
         Name: "u_tiles"
