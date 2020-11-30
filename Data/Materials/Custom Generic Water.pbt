@@ -96,8 +96,8 @@
       Overrides {
         Name: "shallow color"
         Color {
-          G: 0.0458333269
-          B: 0.05
+          G: 0.0788333192
+          B: 0.086
           A: 1
         }
       }

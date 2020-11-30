@@ -6756,15 +6756,15 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 2.57644558
+      Float: 2
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 2.37013221
+      Float: 2
     }
   }
   Collidable_v2 {

@@ -15,8 +15,25 @@
             Z: 1.14624619
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 161859192426028659
+        ParentId: 3728874800817007101
+        ChildIds: 3365506035008932093
+        ChildIds: 7141442431167797790
+        ChildIds: 1678567825399453685
+        ChildIds: 15030849141310203345
+        ChildIds: 4547018286861999949
+        ChildIds: 11791267246764186152
+        ChildIds: 7660955131361534328
+        ChildIds: 5262440504810240026
+        ChildIds: 13647638439594722532
+        ChildIds: 6055462956517267218
+        ChildIds: 9379944642311773602
+        ChildIds: 3524418335202398892
+        ChildIds: 7789029722160841521
+        ChildIds: 1700571318535433979
+        ChildIds: 14821371214160584220
+        ChildIds: 7416521960343265021
+        ChildIds: 6867758639072877403
+        ChildIds: 15765307988434763863
         ChildIds: 5359270380482578269
         ChildIds: 12678648299907193719
         ChildIds: 10645817517020093458
@@ -40,58 +57,13 @@
         }
       }
       Objects {
-        Id: 161859192426028659
-        Name: "Pole_decor_client"
-        Transform {
-          Location {
-            X: 45.3632813
-            Y: 22.5292969
-            Z: -144.87207
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16963435698510783957
-        ChildIds: 3365506035008932093
-        ChildIds: 7141442431167797790
-        ChildIds: 1678567825399453685
-        ChildIds: 15030849141310203345
-        ChildIds: 4547018286861999949
-        ChildIds: 11791267246764186152
-        ChildIds: 7660955131361534328
-        ChildIds: 5262440504810240026
-        ChildIds: 13647638439594722532
-        ChildIds: 6055462956517267218
-        ChildIds: 9379944642311773602
-        ChildIds: 3524418335202398892
-        ChildIds: 7789029722160841521
-        ChildIds: 1700571318535433979
-        ChildIds: 14821371214160584220
-        ChildIds: 7416521960343265021
-        ChildIds: 6867758639072877403
-        ChildIds: 15765307988434763863
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 3365506035008932093
         Name: "Group"
         Transform {
           Location {
-            X: -22.8535156
-            Y: -28.21875
-            Z: 837.794434
+            X: 22.5086346
+            Y: -5.68961525
+            Z: 692.922241
           }
           Rotation {
             Pitch: 4.89850903
@@ -102,7 +74,7 @@
             Z: 1.48334432
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         ChildIds: 16927886714175066601
         ChildIds: 17637161623037055015
         ChildIds: 10533886730690579151
@@ -805,21 +777,21 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 837.794434
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 692.922241
           }
           Rotation {
             Yaw: -150.717972
             Roll: -179.999954
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -847,8 +819,6 @@
             Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -861,21 +831,21 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 833.69873
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 688.826416
           }
           Rotation {
             Yaw: -150.717972
             Roll: -179.999954
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -903,8 +873,6 @@
             Id: 7585887110500972880
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -917,9 +885,9 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 828.480469
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 683.608154
           }
           Rotation {
             Pitch: 17.0163975
@@ -927,12 +895,12 @@
             Roll: -179.999954
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -974,9 +942,9 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 795.927246
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 651.055
           }
           Rotation {
             Yaw: -150.717972
@@ -988,7 +956,7 @@
             Z: 0.235351682
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1030,9 +998,9 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 792.358887
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 647.486938
           }
           Rotation {
             Yaw: -150.717972
@@ -1044,7 +1012,7 @@
             Z: 0.235995397
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1086,21 +1054,21 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 788.263184
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 643.391113
           }
           Rotation {
             Yaw: -150.717972
             Roll: -179.999954
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1142,21 +1110,21 @@
         Name: "rope"
         Transform {
           Location {
-            X: -42.6992188
-            Y: -32.3258972
-            Z: 799.885742
+            X: 2.66278148
+            Y: -9.79611111
+            Z: 655.013611
           }
           Rotation {
-            Yaw: -150.717987
+            Yaw: -150.717972
             Roll: -172.757446
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1198,22 +1166,22 @@
         Name: "rope"
         Transform {
           Location {
-            X: -40.7539063
-            Y: -35.0898438
-            Z: 846.470215
+            X: 4.60909891
+            Y: -12.5612364
+            Z: 701.598267
           }
           Rotation {
-            Pitch: -45.5519714
+            Pitch: -45.5519638
             Yaw: -150.717819
-            Roll: -3.05175781e-05
+            Roll: -3.29189497e-05
           }
           Scale {
             X: 0.489017
-            Y: 0.467243701
+            Y: 0.467243731
             Z: 0.363161772
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1255,13 +1223,13 @@
         Name: "rope"
         Transform {
           Location {
-            X: -38.9765625
-            Y: -35.8222656
-            Z: 852.80127
+            X: 6.38600397
+            Y: -13.2933741
+            Z: 707.929199
           }
           Rotation {
-            Pitch: -47.9343262
-            Yaw: 29.2820778
+            Pitch: -47.9343338
+            Yaw: 29.2820892
             Roll: -179.999893
           }
           Scale {
@@ -1270,7 +1238,7 @@
             Z: 0.369991362
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1312,12 +1280,12 @@
         Name: "Cow_skull"
         Transform {
           Location {
-            X: -64.609375
-            Y: -60.1914063
-            Z: 846.46582
+            X: -19.2470608
+            Y: -37.6622849
+            Z: 701.593567
           }
           Rotation {
-            Pitch: -2.2406311
+            Pitch: -2.24063659
             Yaw: -175.681
             Roll: 54.8385277
           }
@@ -1327,7 +1295,7 @@
             Z: 1
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         ChildIds: 2678420409942827675
         ChildIds: 7594153999716110645
         ChildIds: 14401359352797314560
@@ -2263,13 +2231,13 @@
         Name: "Bone Human Ribcage 01"
         Transform {
           Location {
-            X: -19.2949219
-            Y: -51.9726563
-            Z: 817.557617
+            X: 26.0672855
+            Y: -29.4433765
+            Z: 672.685547
           }
           Rotation {
             Pitch: -27.3208923
-            Yaw: -109.465698
+            Yaw: -109.465714
             Roll: 179.398
           }
           Scale {
@@ -2278,7 +2246,7 @@
             Z: 1.08553684
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -2319,8 +2287,6 @@
             Id: 11893514062468969040
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2333,12 +2299,12 @@
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -19.8339844
-            Y: -25.8925781
-            Z: 856.155762
+            X: 25.5284138
+            Y: -3.3629849
+            Z: 711.283813
           }
           Rotation {
-            Yaw: -132.581909
+            Yaw: -132.581924
           }
           Scale {
             X: 1.11268413
@@ -2346,7 +2312,7 @@
             Z: 1.11268413
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -2387,8 +2353,6 @@
             Id: 11594524757616528940
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2401,14 +2365,14 @@
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -135.755859
-            Y: -88.6738281
-            Z: 854.145508
+            X: -90.3935852
+            Y: -66.1446075
+            Z: 709.273621
           }
           Rotation {
             Pitch: 0.697020769
             Yaw: -177.041443
-            Roll: -13.2408752
+            Roll: -13.2408943
           }
           Scale {
             X: 1.05313647
@@ -2416,7 +2380,7 @@
             Z: 1.05313647
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2453,8 +2417,6 @@
             Id: 11594524757616528940
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2467,22 +2429,22 @@
         Name: "rope"
         Transform {
           Location {
-            X: -43.027359
-            Y: -31.6131382
-            Z: 582.850098
+            X: 2.33562493
+            Y: -9.08455276
+            Z: 437.977905
           }
           Rotation {
             Pitch: 16.4119606
-            Yaw: 113.761108
+            Yaw: 113.761086
             Roll: -172.447098
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2524,13 +2486,13 @@
         Name: "rope"
         Transform {
           Location {
-            X: -43.027359
-            Y: -31.6132
-            Z: 578.891602
+            X: 2.33562493
+            Y: -9.08455276
+            Z: 434.01947
           }
           Rotation {
             Pitch: 4.09811328e-05
-            Yaw: 111.615364
+            Yaw: 111.615356
             Roll: -179.999893
           }
           Scale {
@@ -2539,7 +2501,7 @@
             Z: 0.235351682
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2581,13 +2543,13 @@
         Name: "rope"
         Transform {
           Location {
-            X: -43.027359
-            Y: -31.6132
-            Z: 575.323242
+            X: 2.33562493
+            Y: -9.08455276
+            Z: 430.451233
           }
           Rotation {
             Pitch: 4.09811328e-05
-            Yaw: 111.615364
+            Yaw: 111.615356
             Roll: -179.999893
           }
           Scale {
@@ -2596,7 +2558,7 @@
             Z: 0.235995397
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2638,22 +2600,22 @@
         Name: "rope"
         Transform {
           Location {
-            X: -43.027359
-            Y: -31.6132
-            Z: 568.989258
+            X: 2.33562493
+            Y: -9.08455276
+            Z: 424.117279
           }
           Rotation {
             Pitch: 4.09811328e-05
-            Yaw: 111.615364
+            Yaw: 111.615356
             Roll: -179.999893
           }
           Scale {
-            X: 0.220040575
-            Y: 0.220040575
-            Z: 0.220040575
+            X: 0.22004056
+            Y: 0.22004056
+            Z: 0.22004056
           }
         }
-        ParentId: 161859192426028659
+        ParentId: 16963435698510783957
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2771,7 +2733,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3031,7 +2992,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3291,7 +3251,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3551,7 +3510,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3790,7 +3748,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3857,7 +3814,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -3974,7 +3930,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4025,7 +3980,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -4078,7 +4032,6 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
