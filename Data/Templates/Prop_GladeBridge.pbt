@@ -31,6 +31,10 @@
         ChildIds: 14912027991794873819
         ChildIds: 13369951079340739976
         ChildIds: 8991748924205406921
+        ChildIds: 14512959225770305446
+        ChildIds: 9906116472703405929
+        ChildIds: 16444287347997174050
+        ChildIds: 16996556762990048274
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -792,14 +796,14 @@
         Name: "Crescent - 03"
         Transform {
           Location {
-            X: 155.57637
-            Y: -23.1891537
+            X: 153.437439
+            Y: -23.1044064
             Z: -102.869186
           }
           Rotation {
-            Pitch: -18.1711102
-            Yaw: 179.755096
-            Roll: 90.1255722
+            Pitch: -13.559021
+            Yaw: 179.70929
+            Roll: 90.2929077
           }
           Scale {
             X: 2.56863451
@@ -6678,6 +6682,258 @@
         CoreMesh {
           MeshAsset {
             Id: 4545713430863939559
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14512959225770305446
+        Name: "Craftsman Roof 01 Beam"
+        Transform {
+          Location {
+            X: 146.986038
+            Y: -197.913193
+            Z: -264.004364
+          }
+          Rotation {
+            Pitch: 89.0776062
+            Yaw: 163.195419
+            Roll: -11.9041748
+          }
+          Scale {
+            X: 0.165321469
+            Y: 0.85340625
+            Z: 0.841533184
+          }
+        }
+        ParentId: 15201103344788230150
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.19373785
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.598958313
+              G: 0.448677659
+              B: 0.377468556
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12484798020569700940
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 334539200272576528
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9906116472703405929
+        Name: "Craftsman Roof 01 Beam"
+        Transform {
+          Location {
+            X: -146.048691
+            Y: -205.870026
+            Z: -264.004364
+          }
+          Rotation {
+            Pitch: 89.0786667
+            Yaw: 174.574982
+            Roll: -11.9000549
+          }
+          Scale {
+            X: 0.165321469
+            Y: 0.85340625
+            Z: 0.841533184
+          }
+        }
+        ParentId: 15201103344788230150
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.19373785
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.598958313
+              G: 0.448677659
+              B: 0.377468556
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12484798020569700940
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 334539200272576528
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16444287347997174050
+        Name: "Craftsman Roof 01 Beam"
+        Transform {
+          Location {
+            X: 161.228149
+            Y: 161.510315
+            Z: -264.004364
+          }
+          Rotation {
+            Pitch: 89.0719
+            Yaw: 175.723145
+            Roll: -11.907135
+          }
+          Scale {
+            X: 0.165321469
+            Y: 0.85340625
+            Z: 0.841533184
+          }
+        }
+        ParentId: 15201103344788230150
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.19373785
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.598958313
+              G: 0.448677659
+              B: 0.377468556
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12484798020569700940
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 334539200272576528
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16996556762990048274
+        Name: "Craftsman Roof 01 Beam"
+        Transform {
+          Location {
+            X: -131.773529
+            Y: 154.388153
+            Z: -264.004364
+          }
+          Rotation {
+            Pitch: 89.0759048
+            Yaw: 161.152588
+            Roll: -11.8990479
+          }
+          Scale {
+            X: 0.165321469
+            Y: 0.85340625
+            Z: 0.841533184
+          }
+        }
+        ParentId: 15201103344788230150
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.19373785
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.598958313
+              G: 0.448677659
+              B: 0.377468556
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12484798020569700940
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 334539200272576528
           }
           Teams {
             IsTeamCollisionEnabled: true
