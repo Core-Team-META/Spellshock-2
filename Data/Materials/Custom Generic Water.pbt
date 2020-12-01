@@ -134,6 +134,10 @@
         Name: "foam tightness"
         Float: 6.68230438
       }
+      Overrides {
+        Name: "speed"
+        Float: -0.1
+      }
     }
     Assets {
       Id: 6279993523772827179

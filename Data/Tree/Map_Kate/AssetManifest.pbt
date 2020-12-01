@@ -467,12 +467,12 @@ Assets {
   }
 }
 Assets {
-  Id: 15185972134383323690
-  Name: "Ambience Nature Insects Buzzing Set 01 SFX"
+  Id: 15172180549504871240
+  Name: "Ambience Nature Forest Birds Set 01 SFX"
   PlatformAssetType: 10
   PrimaryAsset {
     AssetType: "AudioBlueprintAssetRef"
-    AssetId: "sfxabp_insectsbuzz_ref"
+    AssetId: "sfxabp_forestbirds_ref"
   }
 }
 Assets {
@@ -2735,15 +2735,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4325401643181295799
-  Name: "Wood Wheel Turning Movement 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_wood_wheel_turning_movement_loop_01_Cue_ref"
-  }
-}
-Assets {
   Id: 4320885659990681021
   Name: "Curved Wedge - Concave"
   PlatformAssetType: 1
@@ -2840,6 +2831,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_planks_001_uv"
+  }
+}
+Assets {
+  Id: 3799856779660246222
+  Name: "Falling Leaves Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_falling_leaves_volume_vfx"
   }
 }
 Assets {
@@ -3443,6 +3443,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torch_001"
+  }
+}
+Assets {
+  Id: 370132569225143281
+  Name: "Ambience Desert Day 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ambience_desert_day_01_Cue_ref"
   }
 }
 Assets {
