@@ -52,6 +52,7 @@
         ChildIds: 9000324836391290739
         ChildIds: 6119527231635581116
         ChildIds: 11690786483213176280
+        ChildIds: 6907068650606407925
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -259,6 +260,50 @@
             Id: 4488444258523261897
           }
           TeamSettings {
+          }
+        }
+      }
+      Objects {
+        Id: 6907068650606407925
+        Name: "Fire and Flame Burning Loop Set 01 SFX"
+        Transform {
+          Location {
+            X: -1.26178992
+            Y: 0.731737792
+            Z: -7.07472181
+          }
+          Rotation {
+            Pitch: 0.703775823
+            Yaw: -64.9221039
+            Roll: -1.42165518
+          }
+          Scale {
+            X: 0.172825471
+            Y: 0.172825471
+            Z: 0.172825471
+          }
+        }
+        ParentId: 6121023374250248780
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 10118144510199222253
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Repeat: true
+            Volume: 0.7
+            Falloff: 331.727905
+            Radius: 169.794373
+            EnableOcclusion: true
+            IsAttenuationEnabled: true
           }
         }
       }
@@ -1971,6 +2016,15 @@
       PrimaryAsset {
         AssetType: "BlueprintAssetRef"
         AssetId: "fxbp_flare_object"
+      }
+    }
+    Assets {
+      Id: 10118144510199222253
+      Name: "Fire and Flame Burning Loop Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_nature_fireloops_ref"
       }
     }
     Assets {

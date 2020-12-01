@@ -19,6 +19,14 @@ Objects {
     }
   }
   ParentId: 8501837111167630165
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_fireloops_01:9"
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

@@ -2069,6 +2069,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7724989921381923917
+  Name: "Ambience Nature Wind and Trees Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_windytrees_ref"
+  }
+}
+Assets {
   Id: 7700976009969522757
   Name: "Fantasy Castle Accessory Roof 02"
   PlatformAssetType: 1
