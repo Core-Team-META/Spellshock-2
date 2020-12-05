@@ -28,8 +28,7 @@ Objects {
   ChildIds: 12626000991766525324
   ChildIds: 16227534043720893935
   ChildIds: 8983380287600545020
-  ChildIds: 14912206820478233249
-  ChildIds: 15102524278383080176
+  ChildIds: 6356897330857931981
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -42,52 +41,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15102524278383080176
-  Name: "GOLDEN_UI_ BETTER_compromise"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 512238047770973974
-      value {
-        Overrides {
-          Name: "Name"
-          String: "GOLDEN_UI_ BETTER_compromise"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 16312255697338676201
-    }
-  }
-}
-Objects {
-  Id: 14912206820478233249
-  Name: "GOLDEN_UI_Kate"
+  Id: 6356897330857931981
+  Name: "NewFolder"
   Transform {
     Location {
+      X: -24860.375
+      Y: -31514.3418
+      Z: 6432.0249
     }
     Rotation {
     }
@@ -98,25 +58,15 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14010153348978605566
-      value {
-        Overrides {
-          Name: "Name"
-          String: "GOLDEN_UI_Kate"
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15834726106847442933
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "NewFolder"
   }
 }
 Objects {
