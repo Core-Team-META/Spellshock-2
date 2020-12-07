@@ -7,20 +7,21 @@
     BaseMaterialId: 16814107545177638090
     ParameterOverrides {
       Overrides {
-        Name: "color"
-        Color {
-          R: 0.179999948
-          G: 0.0250331033
-          A: 1
-        }
-      }
-      Overrides {
         Name: "u_tiles"
         Float: 2.12167645
       }
       Overrides {
         Name: "v_tiles"
         Float: 0.35220626
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.517361343
+          G: 0.122273698
+          B: 0.0323350839
+          A: 1
+        }
       }
     }
     Assets {

@@ -215,15 +215,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7663308268157147922
-  Name: "Bark Dead 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_dead_001_uv"
-  }
-}
-Assets {
   Id: 7585887110500972880
   Name: "Ring - Thick"
   PlatformAssetType: 1
