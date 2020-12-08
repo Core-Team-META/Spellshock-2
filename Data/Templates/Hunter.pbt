@@ -1584,7 +1584,6 @@
         }
         ParentId: 406380117814010332
         ChildIds: 9326815864443726021
-        ChildIds: 12722603230700067105
         ChildIds: 13500843537647582575
         ChildIds: 10839953769775855596
         ChildIds: 10540071309458970955
@@ -1636,8 +1635,8 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 10
-            BurstDuration: 2
+            BurstCount: 1000
+            BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
             Range: 7000
@@ -1647,7 +1646,7 @@
             ReticleType {
               Value: "mc:ereticletype:none"
             }
-            MaxAmmo: 10
+            MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
             ProjectileSpeed: 25000
@@ -1663,7 +1662,6 @@
               SubObjectId: 10839953769775855596
             }
             ReloadAbility {
-              SubObjectId: 10540071309458970955
             }
           }
         }
@@ -1704,34 +1702,6 @@
           ScriptAsset {
             Id: 18154052875178810801
           }
-        }
-      }
-      Objects {
-        Id: 12722603230700067105
-        Name: "Server Context"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13944462686745880869
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-          Type: Server
         }
       }
       Objects {
@@ -1975,7 +1945,6 @@
           Value: "mc:evisibilitysetting:forceoff"
         }
         Ability {
-          IsEnabled: true
           KeyBinding: "ability_ult"
           CastPhaseSettings {
             Duration: 1.5
@@ -2001,7 +1970,6 @@
             CanJump: true
             CanRotate: true
           }
-          Animation: "2hand_rifle_reload_magazine"
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_19"
           }

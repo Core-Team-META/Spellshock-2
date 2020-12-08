@@ -1,12 +1,25 @@
-﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+﻿-- Module dependencies
+local MODULE = require( script:GetCustomProperty("ModuleManager") )
+function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local EFFECT_ICON = script:GetCustomProperty("EffectIcon")
 local EFFECT_TEMPLATE = script:GetCustomProperty("EffectTemplate")
 
-local DAMAGE_PER_SECOND = script:GetCustomProperty("DPS")
+local dmg = Damage.New()
+dmg.amount = script:GetCustomProperty("DPS")		
+dmg.reason = DamageReason.COMBAT
 
 function BleedTick(player)
-    player:ApplyDamage(Damage.New(DAMAGE_PER_SECOND))
+    local attackData = {
+		object = player,
+		damage = dmg,
+		source = nil,
+		position = nil,
+		rotation = nil,
+		tags = {}
+	}
+	COMBAT().ApplyDamage(attackData)
 end
 
 local data = {}

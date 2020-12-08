@@ -4313,6 +4313,12 @@ Objects {
       Name: "cs:DPS"
       Float: 10
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4373,6 +4379,12 @@ Objects {
       Name: "cs:DPS"
       Float: 5
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4423,6 +4435,12 @@ Objects {
     Overrides {
       Name: "cs:DPS"
       Int: 2
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
     }
   }
   Collidable_v2 {
@@ -4562,6 +4580,12 @@ Objects {
       Name: "cs:DPS"
       Float: 10
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4622,6 +4646,12 @@ Objects {
       Name: "cs:DPS"
       Float: 5
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4672,6 +4702,12 @@ Objects {
     Overrides {
       Name: "cs:DPS"
       Int: 2
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
     }
   }
   Collidable_v2 {
@@ -12801,7 +12837,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8580441486447164758
+  Id: 6492356358097797580
   Name: "Damage Feedback"
   Transform {
     Location {
@@ -12815,42 +12851,378 @@ Objects {
     }
   }
   ParentId: 12935185397369316502
+  ChildIds: 2256514868972739688
+  ChildIds: 5066563935745592128
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DamageTextDuration"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:TargetDamageTextColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:SelfDamageTextColor"
+      Color {
+        R: 0.85
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:HealTextColor"
+      Color {
+        G: 0.53
+        B: 0.0245695431
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:ShowFlyUpText"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:DisplayBigText"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ShowHitFeedback"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ShowHealthChangeEffect"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:HitFeedbackSound"
+      ObjectReference {
+        SelfId: 9269435777650464739
+      }
+    }
+    Overrides {
+      Name: "cs:DamageTextDuration:tooltip"
+      String: "Duration of the damage fly up text."
+    }
+    Overrides {
+      Name: "cs:TargetDamageTextColor:tooltip"
+      String: "Fly up damage text color on target player / npc."
+    }
+    Overrides {
+      Name: "cs:DisplayBigText:tooltip"
+      String: "If true, the fly up damage text will appear bigger."
+    }
+    Overrides {
+      Name: "cs:ShowHitFeedback:tooltip"
+      String: "Show the hit indicator when the local player hits an enemy player."
+    }
+    Overrides {
+      Name: "cs:HitFeedbackSound:tooltip"
+      String: "A sound played when the local player hits an enemy player. Tick \"Disable Spatial\" to make it work with local player."
+    }
+    Overrides {
+      Name: "cs:ShowHealthChangeEffect:tooltip"
+      String: "Show post proccess effect on player\'s health change."
+    }
+    Overrides {
+      Name: "cs:SelfDamageTextColor:tooltip"
+      String: "Fly up text color when local player gets damaged."
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5020465629018774494
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Damage Feedback"
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5066563935745592128
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6492356358097797580
+  ChildIds: 16901046076366655066
+  ChildIds: 491111023687374572
+  ChildIds: 9269435777650464739
+  ChildIds: 10024768069640497749
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 10024768069640497749
+  Name: "Container"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5066563935745592128
+  ChildIds: 2261876079641480085
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+    }
+  }
+}
+Objects {
+  Id: 2261876079641480085
+  Name: "Hit Indicator"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10024768069640497749
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 4948247749987491170
+      }
+      Color {
+        R: 0.85
+        A: 0.5
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
-    TemplateAsset {
-      Id: 14985877915950573545
+  }
+}
+Objects {
+  Id: 9269435777650464739
+  Name: "Hit Feedback Sound"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5066563935745592128
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 7302246634419215840
+    }
+    Volume: 0.8
+    Falloff: 3600
+    Radius: 400
+  }
+}
+Objects {
+  Id: 491111023687374572
+  Name: "Radial Blur Post Process"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5066563935745592128
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Tint C"
+      Color {
+        R: 0.789999962
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Effect Strength"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Blend Weight"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:High Quality"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Ragged Mask"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 17589500154826526248
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 16901046076366655066
+  Name: "DamageFeedbackClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5066563935745592128
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 6492356358097797580
+      }
+    }
+    Overrides {
+      Name: "cs:HitIndicator"
+      ObjectReference {
+        SelfId: 2261876079641480085
+      }
+    }
+    Overrides {
+      Name: "cs:HealthChangePostProcess"
+      ObjectReference {
+        SelfId: 491111023687374572
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16611100544884292500
+    }
+  }
+}
+Objects {
+  Id: 2256514868972739688
+  Name: "DamageFeedbackServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6492356358097797580
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 9296353934202218331
     }
   }
 }

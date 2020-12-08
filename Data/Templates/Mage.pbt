@@ -1929,7 +1929,7 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 999
+            BurstCount: 1000
             BurstDuration: 1
             BurstStopsWithRelease: true
             Range: 2500
@@ -1939,7 +1939,7 @@
             ReticleType {
               Value: "mc:ereticletype:crosshair"
             }
-            MaxAmmo: 20
+            MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
             ProjectileSpeed: 5000
@@ -1984,7 +1984,7 @@
           }
           Overrides {
             Name: "cs:DamageToPlayers"
-            Int: 15
+            Int: 20
           }
         }
         WantsNetworking: true
@@ -2255,7 +2255,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
-          IsEnabled: true
           KeyBinding: "ability_ult"
           CastPhaseSettings {
             Duration: 1.2
@@ -2299,7 +2298,7 @@
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_staff_magic_up"
+          Animation: "0"
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_19"
           }

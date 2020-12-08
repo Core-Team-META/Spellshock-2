@@ -21,7 +21,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     Additionally it plays the reload sound at the beginning of cast phase and
         interrupts the reload ability when the ability is in different state.
  ]]
-
+if true then return end
 -- Internal custom properties
 local WEAPON = script:FindAncestorByType('Weapon')
 if not WEAPON:IsA('Weapon') then

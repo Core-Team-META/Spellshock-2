@@ -145,31 +145,26 @@ function Tick(dTime)
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
 			if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
+				local dmg = Damage.New()
+				
 				if thisObject.team == SpecialAbility.owner.team then
-					local newHealth = thisObject.hitPoints + HealAmount
-					if newHealth > thisObject.maxHitPoints then
-						thisObject.hitPoints = thisObject.maxHitPoints
-					else
-						thisObject.hitPoints = newHealth
-					end
+					dmg.amount = -HealAmount
 				else
-					local dmg = Damage.New()
 					dmg.amount = DamageAmount
-					dmg.reason = DamageReason.COMBAT
-					dmg.sourcePlayer = SpecialAbility.owner
-					dmg.sourceAbility = SpecialAbility
-
-					local attackData = {
-						object = thisObject,
-						damage = dmg,
-						source = dmg.sourcePlayer,
-						position = nil,
-						rotation = nil,
-						tags = {id = "Mage_E"}
-					}
-					COMBAT().ApplyDamage(attackData)
-	
 				end
+				dmg.reason = DamageReason.COMBAT
+				dmg.sourcePlayer = SpecialAbility.owner
+				dmg.sourceAbility = SpecialAbility
+
+				local attackData = {
+					object = thisObject,
+					damage = dmg,
+					source = dmg.sourcePlayer,
+					position = nil,
+					rotation = nil,
+					tags = {id = "Mage_E"}
+				}
+				COMBAT().ApplyDamage(attackData)			
 			end
 		end
 		Timer = Delay

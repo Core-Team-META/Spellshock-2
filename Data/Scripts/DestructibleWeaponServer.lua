@@ -52,7 +52,7 @@ function OnTargetImpact(theWeapon, impactData)
 	}
 	COMBAT().ApplyDamage(attackData)
 	
-	COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
+	--COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
 	
 	--BroadcastDamageFeedback(dmg.amount, pos)
 end
@@ -62,7 +62,7 @@ WEAPON.targetImpactedEvent:Connect(OnTargetImpact)
 
 function OnObjectDamaged(id, prevHealth, dmgAmount, impactPosition, impactRotation, sourceObject)
 	if sourceObject == WEAPON.owner then
-		BroadcastDamageFeedback(dmgAmount, impactPosition)
+		--BroadcastDamageFeedback(dmgAmount, impactPosition)
 	end
 end
 local damagedListener = Events.Connect("ObjectDamaged", OnObjectDamaged)
