@@ -69,7 +69,7 @@ Objects {
 }
 Objects {
   Id: 6356897330857931981
-  Name: "NewFolder"
+  Name: "NPC"
   Transform {
     Location {
       X: -24860.375
@@ -93,7 +93,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "NewFolder"
+    FilePartitionName: "NPC"
   }
 }
 Objects {
