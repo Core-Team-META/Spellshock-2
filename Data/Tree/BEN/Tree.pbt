@@ -4313,6 +4313,12 @@ Objects {
       Name: "cs:DPS"
       Float: 10
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4373,6 +4379,12 @@ Objects {
       Name: "cs:DPS"
       Float: 5
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4423,6 +4435,12 @@ Objects {
     Overrides {
       Name: "cs:DPS"
       Int: 2
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
     }
   }
   Collidable_v2 {
@@ -4562,6 +4580,12 @@ Objects {
       Name: "cs:DPS"
       Float: 10
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4622,6 +4646,12 @@ Objects {
       Name: "cs:DPS"
       Float: 5
     }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4672,6 +4702,12 @@ Objects {
     Overrides {
       Name: "cs:DPS"
       Int: 2
+    }
+    Overrides {
+      Name: "cs:ModuleManager"
+      AssetReference {
+        Id: 9770511928359673738
+      }
     }
   }
   Collidable_v2 {
@@ -14395,7 +14431,7 @@ Objects {
     }
     Overrides {
       Name: "cs:SameTeam"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
