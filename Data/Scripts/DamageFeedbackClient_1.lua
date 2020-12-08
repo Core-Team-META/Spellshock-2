@@ -24,6 +24,7 @@ local HEALTH_CHANGE_POST_PROCESS = script:GetCustomProperty("HealthChangePostPro
 local DAMAGE_TEXT_DURATION = COMPONENT_ROOT:GetCustomProperty("DamageTextDuration")
 local TARGET_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("TargetDamageTextColor")
 local SELF_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("SelfDamageTextColor")
+local HEAL_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("HealTextColor")
 local SHOW_FLY_UP_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowFlyUpText")
 local IS_BIG_TEXT = COMPONENT_ROOT:GetCustomProperty("DisplayBigText")
 local SHOW_HIT_FEEDBACK = COMPONENT_ROOT:GetCustomProperty("ShowHitFeedback")
@@ -107,14 +108,22 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
     if sourcePlayer == LOCAL_PLAYER then
         if position ~= Vector3.ZERO then
             -- Show fly up damage text at the specified position
-            ShowFlyUpText(damage, position, TARGET_DAMAGE_TEXT_COLOR)
+            ShowFlyUpText(math.abs(damage), position, TARGET_DAMAGE_TEXT_COLOR)
         end
-
-        -- Play the damage feedback sound to the source player
-        if HIT_FEEDBACK_SOUND then
-            HIT_FEEDBACK_SOUND:Play()
-        end
-
+		
+		-- Show text on targetPlayer
+		if Object.IsValid(targetPlayer) then
+			if damage > 0 then
+				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition(), SELF_DAMAGE_TEXT_COLOR)
+				-- Play the damage feedback sound to the source player
+		        if HIT_FEEDBACK_SOUND then
+		            HIT_FEEDBACK_SOUND:Play()
+		        end
+			else
+				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition(), HEAL_TEXT_COLOR)
+			end
+		end
+        
         -- Show the hit indicator feedback for this damage
         if SHOW_HIT_FEEDBACK then
             TriggerHitIndicator()
@@ -123,12 +132,11 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
         if damage > 0 then
             if Object.IsValid(sourcePlayer) then
                 UI.ShowDamageDirection(sourcePlayer)
-                ShowFlyUpText(damage, position, SELF_DAMAGE_TEXT_COLOR)
             elseif position and position ~= Vector3.ZERO then
                 UI.ShowDamageDirection(position)
-                ShowFlyUpText(damage, position, SELF_DAMAGE_TEXT_COLOR)
+                --ShowFlyUpText(damage, position, SELF_DAMAGE_TEXT_COLOR)
             end
-
+			ShowFlyUpText(damage, LOCAL_PLAYER:GetWorldPosition(), SELF_DAMAGE_TEXT_COLOR)
             if SHOW_HEALTH_CHANGE_EFFECT then
                 TriggerHitPostProcess(Color.RED)
             end
@@ -140,7 +148,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
         else
             if SHOW_HEALTH_CHANGE_EFFECT then
                 TriggerHitPostProcess(Color.GREEN)
-                ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), Color.GREEN)
+                ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), HEAL_TEXT_COLOR)
             end
         end
     end

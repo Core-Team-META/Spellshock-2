@@ -19,36 +19,29 @@ local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBeginOverlap(thisTrigger, other)
-	if not Object.IsValid(ABILITY) then return end
-	if other == ABILITY.owner then return end
+	if not Object.IsValid(ABILITY) or not Object.IsValid(ABILITY.owner) or other == ABILITY.owner then return end
 	if not other:IsA("Player") or COMBAT().IsDead(other) then return end
 	
-	local otherTeam = COMBAT().GetTeam(other)
-	if not Object.IsValid(ABILITY.owner) then return end
-	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then 
-		local newHealth = other.hitPoints + 30
-		if newHealth > other.maxHitPoints then
-			other.hitPoints = other.maxHitPoints
-		else
-			other.hitPoints = newHealth
-		end
-	else	
-		local dmg = Damage.New()
-		dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = ABILITY.owner
-		dmg.sourceAbility = ABILITY
-
-		local attackData = {
-			object = other,
-			damage = dmg,
-			source = ABILITY.owner,
-			position = nil,
-			rotation = nil,
-			tags = {id = "Mage_Q"}
-		}
-		COMBAT().ApplyDamage(attackData)
+	local otherTeam = COMBAT().GetTeam(other)	
+	local dmg = Damage.New()
+	dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
+	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then
+		dmg.amount = -dmg.amount
 	end
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = ABILITY.owner
+	dmg.sourceAbility = ABILITY
+
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = ABILITY.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Mage_Q"}
+	}
+	COMBAT().ApplyDamage(attackData)
+	
 end
 
 function OnAbilityExecute(thisAbility)

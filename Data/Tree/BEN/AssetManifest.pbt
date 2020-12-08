@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 17589500154826526248
+  Name: "Radial Blur Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_ppm_radial_blur"
+  }
+}
+Assets {
   Id: 17587880652047825598
   Name: "Cylinder - Bottom-Aligned"
   PlatformAssetType: 1
@@ -89,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7302246634419215840
+  Name: "Bullet Body Flesh 02 Impact SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_bullet_impact_body_flesh_02_Cue_ref"
+  }
+}
+Assets {
   Id: 6724534832103276994
   Name: "BG Flat 006"
   PlatformAssetType: 9
@@ -122,6 +140,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "wireframe_glow_001"
+  }
+}
+Assets {
+  Id: 4948247749987491170
+  Name: "Crosshair 020"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_020"
   }
 }
 Assets {

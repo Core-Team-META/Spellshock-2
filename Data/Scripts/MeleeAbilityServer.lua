@@ -86,8 +86,6 @@ function MeleeAttack(other)
 		if other:IsA("Player") then
 			Events.BroadcastToAllPlayers("MeleeImpact", ABILITY.id, pos, rot)
 		end
-
-		BroadcastDamageFeedback(dmg.amount, pos)
 	end
 end
 

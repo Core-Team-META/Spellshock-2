@@ -342,58 +342,6 @@ Objects {
   }
 }
 Objects {
-  Id: 15588130973349411797
-  Name: "DamageFeedback"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1202107626836939879
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5020465629018774494
-      value {
-        Overrides {
-          Name: "Name"
-          String: "DamageFeedback"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12984678018063706940
-    }
-  }
-}
-Objects {
   Id: 16548503064085864612
   Name: "Kill Feed"
   Transform {

@@ -1576,7 +1576,7 @@
         }
         ParentId: 4708996743668767698
         ChildIds: 1004186579194125424
-        ChildIds: 6153533861077595712
+        ChildIds: 14112328780250061073
         ChildIds: 13141893348608307507
         ChildIds: 4620336145958381494
         ChildIds: 1241678562242881738
@@ -1644,8 +1644,8 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 10
-            BurstDuration: 1.5
+            BurstCount: 1000
+            BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
             Range: 7000
@@ -1655,7 +1655,7 @@
             ReticleType {
               Value: "mc:ereticletype:crosshair"
             }
-            MaxAmmo: 10
+            MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
             ProjectileSpeed: 8000
@@ -1739,22 +1739,32 @@
         }
       }
       Objects {
-        Id: 6153533861077595712
-        Name: "Server Context"
+        Id: 14112328780250061073
+        Name: "DestructibleWeaponServer"
         Transform {
           Location {
+            X: 18265.5586
+            Y: 19703.8203
+            Z: 7226.83594
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
+            X: 0.99999994
+            Y: 0.99999994
             Z: 1
           }
         }
         ParentId: 18270922159998676275
-        ChildIds: 1405880425944066164
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:DamageToObjects"
+            Int: 129
+          }
+          Overrides {
+            Name: "cs:DamageToPlayers"
+            Int: 20
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1763,63 +1773,9 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
-          Type: Server
-        }
-      }
-      Objects {
-        Id: 1405880425944066164
-        Name: "DestructibleWeaponAOE"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6153533861077595712
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:AttackAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:BlastDamageRange"
-            Vector2 {
-              X: 15
-              Y: 20
-            }
-          }
-          Overrides {
-            Name: "cs:BlastRadius"
-            Float: 150
-          }
-          Overrides {
-            Name: "cs:BlastKnockbackSpeed"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:BlastImpactTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
         Script {
           ScriptAsset {
-            Id: 7702565210062601240
+            Id: 18154052875178810801
           }
         }
       }
