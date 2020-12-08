@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15671591457305353788
+  Name: "Chain Link 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_mil_chainlink_001_uv_ref"
+  }
+}
+Assets {
   Id: 15592158619972675004
   Name: "Metal Iron 01"
   PlatformAssetType: 2
@@ -53,12 +62,30 @@ Assets {
   }
 }
 Assets {
+  Id: 14834300160033285312
+  Name: "Long Banner Manticore"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_001"
+  }
+}
+Assets {
   Id: 14653709633606201813
   Name: "Fantasy Gauntlet Arm 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_gauntlet_arm_001"
+  }
+}
+Assets {
+  Id: 14629909211943041809
+  Name: "Metal Gold 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_001"
   }
 }
 Assets {
@@ -86,6 +113,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter_torus_004"
+  }
+}
+Assets {
+  Id: 13216359817293934512
+  Name: "Human Gal 2"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_gal_basic_002_ref"
   }
 }
 Assets {
@@ -197,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9377227685447941950
+  Name: "2D Basic Shapes Decal"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "dcl_basicShapes"
+  }
+}
+Assets {
   Id: 8539981025625262831
   Name: "Decal Painted Lines 01"
   PlatformAssetType: 14
@@ -212,6 +257,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_curtain_02"
+  }
+}
+Assets {
+  Id: 7663308268157147922
+  Name: "Bark Dead 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_bark_dead_001_uv"
   }
 }
 Assets {
@@ -320,6 +374,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_fabric_burlap_002_uv"
+  }
+}
+Assets {
+  Id: 5351428073291024820
+  Name: "Opaque Emissive"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_opaque_emissive"
   }
 }
 Assets {
