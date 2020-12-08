@@ -69,8 +69,17 @@ function OnBeginOverlap(thisTrigger, other)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = PickupAbility.owner
 	dmg.sourceAbility = PickupAbility
-			
-	COMBAT().ApplyDamage(other, dmg, PickupAbility.owner)
+
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = PickupAbility.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Unknown"}
+	}
+	COMBAT().ApplyDamage(attackData)
+
 end
 
 function OnThrowExecute(thisAbility)

@@ -41,6 +41,16 @@ function OnTargetImpact(theWeapon, impactData)
 	local meleePos = WEAPON.owner:GetWorldPosition()
 	local pos = (otherPos + meleePos) / 2
 	local rot = Rotation.New(otherPos - meleePos, Vector3.UP)
+
+	local attackData = {
+		object = impactData.targetObject,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "BasicAttack", weapon = WEAPON}
+	}
+	COMBAT().ApplyDamage(attackData)
 	
 	COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
 	

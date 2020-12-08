@@ -32,8 +32,16 @@ function OnBeginOverlap(thisTrigger, other)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = ABILITY.owner
 	dmg.sourceAbility = ABILITY
-			
-	COMBAT().ApplyDamage(other, dmg, ABILITY.owner)
+
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = ABILITY.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Tank_T"}
+	}
+	COMBAT().ApplyDamage(attackData)
 	
 	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
 	directionVector = -directionVector

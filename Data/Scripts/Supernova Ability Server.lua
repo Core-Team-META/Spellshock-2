@@ -77,8 +77,17 @@ function OnAbilityRecovery(thisAbility)
 
     for _, otherPlayer in ipairs(enemiesInRange) do
 		if otherPlayer.team == Ability.owner.team then
-		   -- Heal
-		   COMBAT().ApplyDamage(otherPlayer, dmg, Ability.owner)
+			local attackData = {
+				object = otherPlayer,
+				damage = dmg,
+				source = Ability.owner,
+				position = nil,
+				rotation = nil,
+				tags = {id = "Unknown Ability"}
+			}
+			-- Heal
+			COMBAT().ApplyDamage(attackData)
+	
 		else
 		   -- Stun
 		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)

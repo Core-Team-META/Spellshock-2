@@ -15,8 +15,16 @@ function OnImpact(thisProjectile, other, hitResult)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = Ability.owner
 		dmg.sourceAbility = Ability
-		
-		COMBAT().ApplyDamage(other, dmg, dmg.sourcePlayer)
+
+		local attackData = {
+			object = other,
+			damage = dmg,
+			source = dmg.sourcePlayer,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Unknown Ability"}
+		}
+		COMBAT().ApplyDamage(attackData)
 	else
 		thisProjectile:Destroy()
 	end

@@ -45,7 +45,16 @@ function Attack()
 		dmg.sourcePlayer = Ability.owner
 		dmg.sourceAbility = Ability
 				
-		COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
+		local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = dmg.sourcePlayer,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Assassin_E"}
+			}
+		COMBAT().ApplyDamage(attackData)
+
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
 		return
 	end	

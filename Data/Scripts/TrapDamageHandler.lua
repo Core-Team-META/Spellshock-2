@@ -29,7 +29,16 @@ function DoDamage(other)
 		--dmg.sourcePlayer = SpecialAbility.owner
 		--dmg.sourceAbility = SpecialAbility
 				
-		COMBAT().ApplyDamage(other, dmg) --, dmg.sourcePlayer)
+
+		local attackData = {
+			object = other,
+			damage = dmg,
+			source = nil,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Hunter_R"}
+		}
+		COMBAT().ApplyDamage(attackData)
 		Root:Destroy()
 	end
 end

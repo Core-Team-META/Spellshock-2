@@ -26,8 +26,16 @@ function OnTargetImpact(theWeapon, impactData)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = theWeapon.owner
 	dmg.sourceAbility = theWeapon:GetAbilities()[1]
-		
-	COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
+
+	local attackData = {
+		object = impactData.targetObject,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Unknown Ability"}
+	}
+	COMBAT().ApplyDamage(attackData)
 	
 	--BroadcastDamageFeedback(dmg.amount, pos)
 end

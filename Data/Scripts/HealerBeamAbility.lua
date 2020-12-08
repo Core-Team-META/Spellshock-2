@@ -38,8 +38,16 @@ function OnBeginOverlap(thisTrigger, other)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
-				
-		COMBAT().ApplyDamage(other, dmg, ABILITY.owner)
+
+		local attackData = {
+			object = other,
+			damage = dmg,
+			source = ABILITY.owner,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Mage_Q"}
+		}
+		COMBAT().ApplyDamage(attackData)
 	end
 end
 

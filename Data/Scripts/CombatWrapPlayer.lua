@@ -1,6 +1,6 @@
 ﻿--[[
 	Combat Wrap - Player
-	v0.9.0
+	v0.11.0
 	by: standardcombo
 	
 	Provides an interface of combat functions that operate on a Player object.
@@ -12,6 +12,8 @@
 	- GetMaxHitPoints()
 	- ApplyDamage()
 	- IsDead()
+	- IsHeadshot()
+	- IsValidObject()
 	- AddImpulse()
 	- FindInSphere()
 --]]
@@ -40,12 +42,8 @@ function wrapper.GetMaxHitPoints(player)
 end
 
 -- ApplyDamage()
-function wrapper.ApplyDamage(player, dmg, sourceObject, pos, rot)
-	if not player.serverUserData.DamageImmunity then
-		player:ApplyDamage(dmg)
-	end
-	-- This allows UI to show damage direction
-	Events.BroadcastToAllPlayers("PlayerDamage", dmg.amount, pos, player, nil)
+function wrapper.ApplyDamage(attackData)
+	attackData.object:ApplyDamage(attackData.damage)
 end
 
 -- AddImpulse()
@@ -53,9 +51,30 @@ function wrapper.AddImpulse(player, direction)
 	player:AddImpulse(direction)
 end
 
---IsDead
+-- IsDead()
 function wrapper.IsDead(player)
 	return player.isDead
+end
+
+-- IsHeadshot()
+function wrapper.IsHeadshot(player, hitResult, position)
+	if hitResult then
+		return hitResult.socketName == "head"
+	end
+	local playerPos = player:GetWorldPosition()
+	local playerScale = player:GetWorldScale()
+	
+	local headMinZ = 65
+	if player.isCrouching then
+		headMinZ = 30
+	end
+	headMinZ = playerPos.z + headMinZ * playerScale.z
+	return position.z > headMinZ
+end
+
+-- IsValidObject()
+function wrapper.IsValidObject(player)
+	return Object.IsValid(player) and player:IsA("Player")
 end
 
 -- FindInSphere()

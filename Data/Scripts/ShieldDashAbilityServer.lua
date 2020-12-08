@@ -34,8 +34,17 @@ function AddImpulseToPlayer(player)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = Ability.owner
 	dmg.sourceAbility = Ability
+
+	local attackData = {
+		object = player,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Tank_E"}
+	}
+	COMBAT().ApplyDamage(attackData)
 	
-	COMBAT().ApplyDamage(player, dmg, dmg.sourcePlayer)
 end
 
 function OnBeginOverlap(thisTrigger, other)

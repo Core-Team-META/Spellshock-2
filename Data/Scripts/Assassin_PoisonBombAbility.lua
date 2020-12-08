@@ -28,9 +28,17 @@ function OnProjectileImpacted(projectile, other, hitResult)
         for _, enemy in ipairs(enemiesInRange) do
             -- Poison
             API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
-            
-            -- Damage
-            COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
+			
+			local attackData = {
+				object = enemy,
+				damage = dmg,
+				source = ABILITY.owner,
+				position = nil,
+				rotation = nil,
+				tags = {id = "Assassin_Q"}
+				}
+			COMBAT().ApplyDamage(attackData)	
+
         end
         
         --Play ImpactFX

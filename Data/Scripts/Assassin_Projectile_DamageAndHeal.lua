@@ -51,9 +51,18 @@ function OnProjectileImpact(projectile, other, hitresult)
     dmg.amount = damageAmount
     dmg.reason = DamageReason.COMBAT
     dmg.sourcePlayer = ABILITY.owner
-    dmg.sourceAbility = ABILITY
-    
-    COMBAT().ApplyDamage(other, dmg, ABILITY.owner)
+	dmg.sourceAbility = ABILITY
+	
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = ABILITY.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Assassin_R"}
+		}
+	COMBAT().ApplyDamage(attackData)	
+
     API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
     
     local healAmount = damageAmount * HEAL_MOD
@@ -61,8 +70,17 @@ function OnProjectileImpact(projectile, other, hitresult)
     heal.amount = -healAmount
     heal.reason = DamageReason.COMBAT
     heal.sourcePlayer = ABILITY.owner
-    heal.sourceAbility = ABILITY
-    COMBAT().ApplyDamage(ABILITY.owner, heal, ABILITY.owner)
+	heal.sourceAbility = ABILITY
+	
+	local attackData = {
+		object = ABILITY.owner,
+		damage = heal,
+		source = ABILITY.owner,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Assassin_R"}
+		}
+	COMBAT().ApplyDamage(attackData)
 end
 
 function OnAbilityCast(thisAbility)

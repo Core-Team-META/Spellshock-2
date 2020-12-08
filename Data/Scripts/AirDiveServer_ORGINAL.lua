@@ -101,9 +101,17 @@ function DamageInArea(targetPos, localPlayer)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = ABILITY.owner
         dmg.sourceAbility = ABILITY
-        
+
+        local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = ABILITY.owner,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Assassin_T"}
+			}
         print("Deal damage")
-        COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
+		COMBAT().ApplyDamage(attackData)
         
 
     end

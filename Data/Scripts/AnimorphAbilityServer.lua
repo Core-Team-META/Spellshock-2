@@ -51,8 +51,17 @@ function OnProjectileImpacted(projectile, other, hitResult)
             --API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
             
             -- Damage
-          	if DAMAGE ~= 0 then
-            	COMBAT().ApplyDamage(enemy, dmg, ABILITY.owner)
+			  if DAMAGE ~= 0 then
+				local attackData = {
+					object = enemy,
+					damage = dmg,
+					source = ABILITY.owner,
+					position = nil,
+					rotation = nil,
+					tags = {id = "Mage_E"}
+					}
+				COMBAT().ApplyDamage(attackData)
+
             end
             
             -- equip animal costume

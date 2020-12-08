@@ -21,8 +21,18 @@ function DoDamage(other)
 	local meleePos = Ability.owner:GetWorldPosition()
 	local pos = (otherPos + meleePos) / 2
 	local rot = Rotation.New(otherPos - meleePos, Vector3.UP)
+
+
+	local attackData = {
+		object = other,
+		damage = dmg,
+		source = Ability.owner,
+		position = pos,
+		rotation = rot,
+		tags = {id = "Unknown Ability", ability = Ability}
+	}
+	COMBAT().ApplyDamage(attackData)
 	
-	COMBAT().ApplyDamage(other, dmg, Ability.owner, pos, rot)
 	
 	BroadcastDamageFeedback(dmg.amount, pos)
 end

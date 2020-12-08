@@ -92,8 +92,17 @@ function PlaceObject(thisPlayer, position, rotation)
 			dmg.reason = DamageReason.COMBAT
 			dmg.sourcePlayer = SpecialAbility.owner
 			dmg.sourceAbility = SpecialAbility
+
+			local attackData = {
+				object = enemy,
+				damage = dmg,
+				source = dmg.sourcePlayer,
+				position = nil,
+				rotation = nil,
+				tags = {id = "Mage_Q"}
+			}
+			COMBAT().ApplyDamage(attackData)
 					
-			COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
 			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
 		end	
 		
@@ -177,8 +186,17 @@ function Tick(deltaTime)
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
+
+				local attackData = {
+					object = enemy,
+					damage = dmg,
+					source = dmg.sourcePlayer,
+					position = nil,
+					rotation = nil,
+					tags = {id = "Mage_Q"}
+				}
+				COMBAT().ApplyDamage(attackData)
 						
-				COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
 				
 				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Slow") then
 					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)

@@ -158,8 +158,17 @@ function Tick(dTime)
 					dmg.reason = DamageReason.COMBAT
 					dmg.sourcePlayer = SpecialAbility.owner
 					dmg.sourceAbility = SpecialAbility
-							
-					COMBAT().ApplyDamage(thisObject, dmg, dmg.sourcePlayer)
+
+					local attackData = {
+						object = thisObject,
+						damage = dmg,
+						source = dmg.sourcePlayer,
+						position = nil,
+						rotation = nil,
+						tags = {id = "Mage_E"}
+					}
+					COMBAT().ApplyDamage(attackData)
+	
 				end
 			end
 		end

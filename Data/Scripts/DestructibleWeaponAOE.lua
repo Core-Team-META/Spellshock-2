@@ -57,9 +57,18 @@ local function OnTargetImpact(theWeapon, impactData)
 			dmg.reason = DamageReason.COMBAT
 			dmg.sourcePlayer = impactData.weaponOwner
 			dmg.sourceAbility = ATTACK_ABILITY
+
+
+			local attackData = {
+				object = enemy,
+				damage = dmg,
+				source = dmg.sourcePlayer,
+				position = enemyPos,
+				rotation = nil,
+				tags = {id = "BasicAttack", weapon = WEAPON}
+			}
+			COMBAT().ApplyDamage(attackData)
 			
-			-- Apply damage to enemy
-			COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer, enemyPos)
 			
 			BroadcastDamageFeedback(dmg.amount, enemyPos)
 		end

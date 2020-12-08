@@ -113,8 +113,17 @@ function Tick(deltaTime)
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = Ability.owner
 				dmg.sourceAbility = Ability
-						
-				COMBAT().ApplyDamage(HawkTarget, dmg, Ability.owner)
+
+				local attackData = {
+					object = HawkTarget,
+					damage = dmg,
+					source = Ability.owner,
+					position = nil,
+					rotation = nil,
+					tags = {id = "Hunter_T"}
+				}
+				COMBAT().ApplyDamage(attackData)
+		
 				
 				Task.Wait(0.5)
 				if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
