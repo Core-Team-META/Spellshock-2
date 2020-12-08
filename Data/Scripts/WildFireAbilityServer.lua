@@ -29,7 +29,7 @@ function DoDamage(other)
 		source = Ability.owner,
 		position = pos,
 		rotation = rot,
-		tags = {id = "Unknown Ability", ability = Ability}
+		tags = {id = "Didnt Make It", ability = Ability}
 	}
 	COMBAT().ApplyDamage(attackData)
 	

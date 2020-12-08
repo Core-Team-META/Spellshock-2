@@ -76,7 +76,7 @@ function OnBeginOverlap(thisTrigger, other)
 		source = PickupAbility.owner,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Unknown"}
+		tags = {id = "Tank_T"}
 	}
 	COMBAT().ApplyDamage(attackData)
 

@@ -43,8 +43,18 @@ function Tick(deltaTime)
 					dmg.reason = DamageReason.COMBAT
 					dmg.sourcePlayer = Ability.owner
 					dmg.sourceAbility = Ability
-							
-					COMBAT().ApplyDamage(other, dmg, dmg.sourceAbility)
+
+					local attackData = {
+						object = other,
+						damage = dmg,
+						source = dmg.sourceAbility,
+						position = nil,
+						rotation = nil,
+						tags = {id = "Didnt Make It", ability = Ability}
+					}
+					COMBAT().ApplyDamage(attackData)
+				
+
 				end
 			end
 			Timer = TimeBetweenDamage

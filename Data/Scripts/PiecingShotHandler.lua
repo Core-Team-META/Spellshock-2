@@ -22,7 +22,7 @@ function OnImpact(thisProjectile, other, hitResult)
 			source = dmg.sourcePlayer,
 			position = nil,
 			rotation = nil,
-			tags = {id = "Unknown Ability"}
+			tags = {id = "Didnt Make It"}
 		}
 		COMBAT().ApplyDamage(attackData)
 	else

@@ -33,7 +33,7 @@ function OnTargetImpact(theWeapon, impactData)
 		source = dmg.sourcePlayer,
 		position = nil,
 		rotation = nil,
-		tags = {id = "Unknown Ability"}
+		tags = {id = "Didnt Make It"}
 	}
 	COMBAT().ApplyDamage(attackData)
 	

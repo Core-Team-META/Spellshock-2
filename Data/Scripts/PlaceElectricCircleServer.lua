@@ -38,8 +38,17 @@ function DoDamage(other)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = MainAbility.owner
 		dmg.sourceAbility = MainAbility
-				
-		COMBAT().ApplyDamage(other, dmg, dmg.sourcePlayer)
+
+		local attackData = {
+			object = other,
+			damage = dmg,
+			source = dmg.sourcePlayer,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Didnt Make It"}
+		}
+		COMBAT().ApplyDamage(attackData)
+
 	end
 end
 

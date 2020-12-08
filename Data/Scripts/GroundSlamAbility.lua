@@ -16,8 +16,17 @@ function OnAbilityExecute(thisAbility)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = thisAbility.owner
 		dmg.sourceAbility = thisAbility
-		
-		COMBAT().ApplyDamage(enemy, dmg, dmg.sourcePlayer)
+
+		local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = dmg.sourcePlayer,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Didnt Make It"}
+		}
+		COMBAT().ApplyDamage(attackData)
+	
 	end
 end
 

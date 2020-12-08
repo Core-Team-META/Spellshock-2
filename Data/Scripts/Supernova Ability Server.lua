@@ -83,7 +83,7 @@ function OnAbilityRecovery(thisAbility)
 				source = Ability.owner,
 				position = nil,
 				rotation = nil,
-				tags = {id = "Unknown Ability"}
+				tags = {id = "Mage_T"}
 			}
 			-- Heal
 			COMBAT().ApplyDamage(attackData)
