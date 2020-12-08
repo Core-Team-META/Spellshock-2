@@ -8,6 +8,15 @@
   }
 }
 Assets {
+  Id: 17160283160308691459
+  Name: "Text 05: ~"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F6_Text_036"
+  }
+}
+Assets {
   Id: 16372496464315477095
   Name: "Ring Beveled (thick)"
   PlatformAssetType: 1
@@ -98,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13888119501670323283
+  Name: "Fantasy Sword Blade 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_blade_sword_004_ref"
+  }
+}
+Assets {
   Id: 13812233672819790707
   Name: "Fantasy Human Guy 1"
   PlatformAssetType: 17
@@ -158,15 +176,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crate_narrow_open_simple_160cm_001"
-  }
-}
-Assets {
-  Id: 11594524757616528940
-  Name: "Bone Human Skull 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bones_human_skull_01_ref"
   }
 }
 Assets {
@@ -296,6 +305,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7185380311906960862
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
   Id: 7147607578013694397
   Name: "Hemishpere (thin)"
   PlatformAssetType: 1
@@ -386,12 +404,30 @@ Assets {
   }
 }
 Assets {
+  Id: 5026846565116306924
+  Name: "Pipe - Half Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_003"
+  }
+}
+Assets {
   Id: 4438523867532045845
   Name: "Fantasy Shield 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_shield_001"
+  }
+}
+Assets {
+  Id: 4322675021483384603
+  Name: "Fantasy Shield 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_shield_002"
   }
 }
 Assets {
@@ -455,6 +491,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_invisible_001"
+  }
+}
+Assets {
+  Id: 1920010878601219178
+  Name: "Fantasy Sword Guard 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_guard_sword_001"
   }
 }
 Assets {
