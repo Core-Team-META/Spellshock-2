@@ -55,8 +55,6 @@ function TablePrint(tbl, indent)
     end
 end
 
-
-
 --@param object player
 --@param string skillName
 --@param int skillLevel
@@ -67,6 +65,17 @@ function ApplySkillStats(player, class, bind, bindLevel)
     for name, value in pairs(data[class][bind][bindLevel]) do
         player.serverUserData["bind"][bind][name] = value
     end
+    TablePrint(player.serverUserData["bind"])
+end
+
+function OnResourceChanged(player, resName, resAmount)
+    if resName == "CLASS_MAP" then
+        META_AP().ChangeClass(player, player:GetResource(resName))
+    end
+end
+
+function OnPlayerJoined(player)
+    player.resourceChangedEvent:Connect(OnResourceChanged)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

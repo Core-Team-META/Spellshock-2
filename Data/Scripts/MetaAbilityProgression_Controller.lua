@@ -87,7 +87,8 @@ end
 --@return int (xp required  to level)
 local function GetReqBindXp(player, class, bind)
     --local requiredXp, requiredXpScale = SKILLS.FindXpByBindName(bindName)
-    return 150--SKILLS.Calculate(requiredXpScale, GetBindLevel(player, class, bind), requiredXp)
+    return 150
+ --SKILLS.Calculate(requiredXpScale, GetBindLevel(player, class, bind), requiredXp)
 end
 
 --#TODO Looks like a mess but works for now
@@ -128,7 +129,6 @@ local function BuildBindLevelTable(player, data)
     --UTIL.TablePrint(playerProgression[player])
 end
 
-
 --##FIXME Required XP not cal
 --@param object player
 --@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
@@ -163,8 +163,6 @@ local function AddBindXp(player, class, bind, ammount)
         end
     end
 end
-
-
 
 local function ConvertToString(tbl)
     local str = ""
@@ -211,12 +209,7 @@ function OnPlayerJoined(player)
         progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
     end
     BuildBindLevelTable(player, progression)
-    
-    Task.Wait(5)
-    --TESTING
-    BindLevelUp(player, API.TANK, API.Q, 100)
-    --API.AddBindXp(player, API.TANK, API.TANK, 100)
-    UTIL.TablePrint(player.serverUserData["bind"][API.Q])
+    ADAPTOR.context.OnPlayerJoined(player)
 end
 
 function OnPlayerLeft(player)
@@ -236,6 +229,12 @@ end
 --@param int xp
 function API.AddBindXp(player, class, bind, ammount)
     AddBindXp(player, class, bind, ammount)
+end
+
+function API.ChangeClass(player, class)
+    for _, bind in pairs(CONST.BIND) do
+        Events.Broadcast("META_AP.ApplyStats", player, class, bind, playerProgression[player][class][bind][API.LEVEL])
+    end
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- Listeners
