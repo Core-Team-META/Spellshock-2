@@ -2,14 +2,13 @@
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/09/2020
--- Version 0.0.1
+-- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
-local SKILLS = require(script:GetCustomProperty("API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
-local ADAPTOR = script:GetCustomProperty("Skills_Adaptor"):WaitForObject()
+local ADAPTOR = script:GetCustomProperty("Adaptor"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
@@ -20,11 +19,12 @@ _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
 local playerListeners = {}
 local playerProgression = {}
---local skillsTable = SKILLS.BuildTable(SKILLS_LIST)
-local allSkills = SKILLS.BuildSkillName()
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
+
+API.NAMESPACE = CONST.NAMESPACE
+
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
 for class, key in pairs(CONST.CLASS) do
@@ -47,52 +47,68 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int skillLevel
-local function GetSkillLevel(player, skillName)
-    return playerProgression[player][skillName][SKILLS.LEVEL]
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@return int bindLevel
+local function GetBindLevel(player, class, bind)
+    return playerProgression[player][class][bind][API.LEVEL]
+end
+
+--#TODO Player Resource Cleaned Up
+--@param object player
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param int bindLevel
+local function SetBindLevel(player, class, bind, level)
+    playerProgression[player][class][bind][API.LEVEL] = level
+    -- C1B1PROG
+    local resName = "C" .. tostring(class) .. "B" .. tostring(bind) .. "LEVEL"
+    player:SetResource(resName, level)
 end
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int skillLevel
-local function SetSkillLevel(player, skillName, skillLevel)
-    playerProgression[player][skillName][SKILLS.LEVEL] = skillLevel
-    player:SetResource(skillName, skillLevel)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@return int bindXp
+local function GetBindXp(player, class, bind)
+    return playerProgression[player][class][bind][API.XP]
 end
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int skillXp
-local function GetSkillXp(player, class, bind)
-    return playerProgression[player][class][bind][CONST.PROGRESS]
-end
-
---@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@param int ammount
-local function SetSkillXp(player, skillName, ammount)
-    local _, _, xpResName = SKILLS.FindXpBySkillName(skillName)
-    playerProgression[player][skillName][SKILLS.XP] = ammount
-    player:SetResource(xpResName, CoreMath.Round(ammount))
+local function SetBindXp(player, class, bind, ammount)
+    playerProgression[player][class][bind][API.XP] = ammount
+    local resName = "C" .. tostring(class) .. "B" .. tostring(bind) .. "XP"
+    player:SetResource(resName, CoreMath.Round(ammount))
 end
 
+--#FIXME
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@return int (xp required  to level)
-local function GetReqSkillXp(player, skillName)
-    local requiredXp, requiredXpScale = SKILLS.FindXpBySkillName(skillName)
-    return SKILLS.Calculate(requiredXpScale, GetSkillLevel(player, skillName), requiredXp)
+local function GetReqBindXp(player, class, bind)
+    --local requiredXp, requiredXpScale = SKILLS.FindXpByBindName(bindName)
+    return 150--SKILLS.Calculate(requiredXpScale, GetBindLevel(player, class, bind), requiredXp)
 end
 
---##TODO Looks like a mess but works for now
+--#TODO Looks like a mess but works for now
 --@param object player
 --@param table data
-local function BuildSkillLevelTable(player, data)
+local function BuildBindLevelTable(player, data)
     playerProgression[player] = {}
 
     if data ~= nil then
-        playerProgression[player] = data
+        for class, classes in pairs(data) do
+            playerProgression[player][class] = {}
+            for bind, binds in pairs(classes) do
+                playerProgression[player][class][bind] = {}
+                for progressId, progress in pairs(binds) do
+                    if progressId == API.LEVEL then
+                        SetBindLevel(player, class, bind, progress)
+                    elseif progressId == API.XP then
+                        SetBindXp(player, class, bind, progress)
+                    end
+                end
+            end
+        end
     else
         for _, class in pairs(CONST.CLASS) do
             playerProgression[player][class] = {}
@@ -100,9 +116,9 @@ local function BuildSkillLevelTable(player, data)
                 playerProgression[player][class][bind] = {}
                 for string, progress in pairs(CONST.PROGRESS) do
                     if string == "LEVEL" then
-                        playerProgression[player][class][bind][progress] = CONST.STARTING_LEVEL
-                    else
-                        playerProgression[player][class][bind][progress] = 0
+                        SetBindLevel(player, class, bind, CONST.STARTING_LEVEL)
+                    elseif string == "XP" then
+                        SetBindXp(player, class, bind, 0)
                     end
                 end
             end
@@ -111,36 +127,36 @@ local function BuildSkillLevelTable(player, data)
 end
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int skillXp
-local function SkillLevelUp(player, skillName, skillXp)
-    if GetSkillLevel(player, skillName) < SKILLS.MAX_LEVEL then
-        local skillLevel = GetSkillLevel(player, skillName)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param int bindXp
+local function BindLevelUp(player, class, bind, xp)
+    if GetBindLevel(player, bind) < CONST.MAX_LEVEL then
+        local bindLevel = GetBindLevel(player, class, bind)
 
-        if skillLevel < SKILLS.MAX_LEVEL then
-            skillLevel = CoreMath.Round(skillLevel + 1)
+        if bindLevel < CONST.MAX_LEVEL then
+            bindLevel = CoreMath.Round(bindLevel + 1)
         end
-        SetSkillLevel(player, skillName, skillLevel)
-        skillXp = 0
-        SetSkillXp(player, skillName, skillXp)
-        Events.Broadcast("PlayerSkills.ApplySkillStats", player, skillName, skillLevel)
+        SetBindLevel(player, class, bind, bindLevel)
+        xp = 0
+        SetBindXp(player, bind, xp)
+        Events.Broadcast("PlayerBinds.ApplyBindStats", player, bind, bindLevel)
     end
 end
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@param int xp
-local function AddSkillXp(player, skillName, xp)
-    if GetSkillLevel(player, skillName) < SKILLS.MAX_LEVEL then
-        local reqXp = GetReqSkillXp(player, skillName)
-        local currentSkillXp = GetSkillXp(player, skillName)
-        if xp then
-            currentSkillXp = currentSkillXp + xp
+local function AddBindXp(player, class, bind, ammount)
+    if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
+        local reqXp = GetReqBindXp(player, class, bind)
+        local currentBindXp = GetBindXp(player, class, bind)
+        if ammount then
+            currentBindXp = currentBindXp + ammount
         end
-        if currentSkillXp >= reqXp then
-            SkillLevelUp(player, skillName, currentSkillXp)
+        if currentBindXp >= reqXp then
+            BindLevelUp(player, class, bind, currentBindXp)
         else
-            SetSkillXp(player, skillName, currentSkillXp)
+            SetBindXp(player, class, bind, currentBindXp)
         end
     end
 end
@@ -158,7 +174,6 @@ local function ConvertToString(tbl)
 
     return str
 end
-
 
 local function ConvertToTable(str)
     local finalTbl = {}
@@ -189,9 +204,8 @@ function OnPlayerJoined(player)
     if data.META_ABILITY_PROGRESSION then
         progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
     end
-    Task.Wait(3)
-    UTIL.TablePrint(progression)
-    BuildSkillLevelTable(player, progression)
+    BuildBindLevelTable(player, progression)
+    API.AddBindXp(player, API.TANK, API.Q, 100)
 end
 
 function OnPlayerLeft(player)
@@ -208,28 +222,28 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
-function API.GetSkillXp(player, skillName)
-    local requiredXp, requiredXpScale, xp = SKILLS.FindXpBySkillName(skillName)
-    return player:GetResource(xp), SKILLS.Calculate(requiredXpScale, player:GetResource(skillName), requiredXp)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
+function API.GetBindXp(player, class, bind)
+    local requiredXp, requiredXpScale, xp = SKILLS.FindXpByBindName(bindName)
+    return player:GetResource(xp), SKILLS.Calculate(requiredXpScale, player:GetResource(bindName), requiredXp)
 end
 
-function API.GetSkillLevel(player, skillName)
-    return GetSkillLevel(player, skillName)
+function API.GetBindLevel(player, class, bind)
+    return GetBindLevel(player, class, bind)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
 --@param object player
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
+--@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@param int xp
-function API.AddSkillXp(player, skillName, xp)
-    AddSkillXp(player, skillName, xp)
+function API.AddBindXp(player, class, bind, ammount)
+    AddBindXp(player, class, bind, ammount)
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- Listeners
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Events.Connect("PlayerSkills.AddSkillXp", AddSkillXp)
+Events.Connect("PlayerBinds.AddBindXp", AddBindXp)

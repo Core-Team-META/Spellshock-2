@@ -1,5 +1,5 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
--- Skills API
+-- Meta Ability Progression System API
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 11/14/2020
 -- Version 1.1.0
@@ -22,18 +22,37 @@ end
 
 
 local API = {}
-API.skillTable = {}
--------------------------------------------------------------------------------
--- Constants
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+-- CONSTANTS
+------------------------------------------------------------------------------------------------------------------------
+
+-- CLASS KEYS
+API.CLASS = {
+    TANK = 1,
+    MAGE = 2,
+    HUNTER = 3,
+    HEALER = 4,
+    ASSASSIN = 5
+}
+
+-- BINDING KEYS
+API.BIND = {
+    Q = 1,
+    E = 2,
+    R = 3,
+    T = 4,
+    SHIFT = 5,
+    LMB = 6,
+    RMB = 7
+}
+
+API.PROGRESS = {
+    LEVEL = 1,
+    PROGRESS = 2
+}
+
 API.STARTING_LEVEL = 1
-API.MAX_LEVEL = 4
-
-API.DEFAULT_MAX_WALKSPEED = 510
-API.WALKSPEED_FACTOR = 1.05
-
-API.LEVEL = "Level"
-API.XP = "XP"
+API.MAX_LEVEL = 10
 -------------------------------------------------------------------------------
 -- Public API
 -------------------------------------------------------------------------------
@@ -97,15 +116,6 @@ function API.BuildSkillName()
     return tempTbl
 end
 
---@param string skillName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int requiredSkillXp, float requiredSkillXpScale, string skillXp
-function API.FindXpBySkillName(skillName)
-    for i, skill in pairs(API.skillTable) do
-        if skill.name == skillName then
-            return skill.reqxp, skill.xpScale, skill.xpKey
-        end
-    end
-end
 
 function API.GetSkillTable()
     return API.skillTable

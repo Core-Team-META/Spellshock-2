@@ -2,7 +2,7 @@
 -- Meta Ability Progression UTIL API
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/09/2020
--- Version 0.0.1
+-- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -92,7 +92,7 @@ function API.TablePrint(tbl, indent)
         lua_type = type(v)
         if lua_type == "table" then
             print(formatting)
-            TablePrint(v, indent + 1)
+            API.TablePrint(v, indent + 1)
         elseif lua_type == "boolean" then
             print(formatting .. tostring(v))
         elseif lua_type == "function" then

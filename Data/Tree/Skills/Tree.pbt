@@ -125,7 +125,7 @@ Objects {
   ParentId: 9767354080694964109
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Skills_Adaptor"
+      Name: "cs:Adaptor"
       ObjectReference {
         SelfId: 2530536913188181770
       }
