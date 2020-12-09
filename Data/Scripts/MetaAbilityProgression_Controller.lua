@@ -50,6 +50,7 @@ end
 --@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@return int bindLevel
 local function GetBindLevel(player, class, bind)
+    UTIL.TablePrint(playerProgression[player][class][bind])
     return playerProgression[player][class][bind][API.LEVEL]
 end
 
@@ -124,22 +125,24 @@ local function BuildBindLevelTable(player, data)
             end
         end
     end
+    --UTIL.TablePrint(playerProgression[player])
 end
 
+
+--##FIXME Required XP not cal
 --@param object player
 --@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
 --@param int bindXp
 local function BindLevelUp(player, class, bind, xp)
-    if GetBindLevel(player, bind) < CONST.MAX_LEVEL then
-        local bindLevel = GetBindLevel(player, class, bind)
-
+    local bindLevel = GetBindLevel(player, class, bind)
+    if bindLevel < CONST.MAX_LEVEL then
         if bindLevel < CONST.MAX_LEVEL then
             bindLevel = CoreMath.Round(bindLevel + 1)
         end
         SetBindLevel(player, class, bind, bindLevel)
         xp = 0
-        SetBindXp(player, bind, xp)
-        Events.Broadcast("PlayerBinds.ApplyBindStats", player, bind, bindLevel)
+        SetBindXp(player, class, bind, xp)
+        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 end
 
@@ -160,6 +163,8 @@ local function AddBindXp(player, class, bind, ammount)
         end
     end
 end
+
+
 
 local function ConvertToString(tbl)
     local str = ""
@@ -187,7 +192,8 @@ local function ConvertToTable(str)
         for k, s1 in ipairs(t1) do
             if k > 1 then
                 local t3 = UTIL.StringSplit("~", s1)
-                finalTbl[index][t3[1]] = UTIL.ConvertStringToTable(t3[2], ",", "=")
+                local i = UTIL.IsNumeric(t3[1]) and tonumber(t3[1]) or t3[1]
+                finalTbl[index][i] = UTIL.ConvertStringToTable(t3[2], ",", "=")
             end
         end
     end
@@ -205,7 +211,12 @@ function OnPlayerJoined(player)
         progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
     end
     BuildBindLevelTable(player, progression)
-    API.AddBindXp(player, API.TANK, API.Q, 100)
+    
+    Task.Wait(5)
+    --TESTING
+    BindLevelUp(player, API.TANK, API.Q, 100)
+    --API.AddBindXp(player, API.TANK, API.TANK, 100)
+    UTIL.TablePrint(player.serverUserData["bind"][API.Q])
 end
 
 function OnPlayerLeft(player)
@@ -215,21 +226,6 @@ function OnPlayerLeft(player)
     Storage.SetPlayerData(player, playerData)
 
     playerProgression[player] = nil
-end
-
-------------------------------------------------------------------------------------------------------------------------
--- Public API
-------------------------------------------------------------------------------------------------------------------------
-
---@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
-function API.GetBindXp(player, class, bind)
-    local requiredXp, requiredXpScale, xp = SKILLS.FindXpByBindName(bindName)
-    return player:GetResource(xp), SKILLS.Calculate(requiredXpScale, player:GetResource(bindName), requiredXp)
-end
-
-function API.GetBindLevel(player, class, bind)
-    return GetBindLevel(player, class, bind)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -246,4 +242,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Events.Connect("PlayerBinds.AddBindXp", AddBindXp)
+Events.Connect("META_AP.AddBindXp", AddBindXp)

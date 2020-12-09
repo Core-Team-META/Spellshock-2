@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 14014501421890204527
-  Name: "MetaAbilityProgression_API"
+  Name: "MetaAbilityProgression_DATA"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
