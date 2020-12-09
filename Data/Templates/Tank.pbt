@@ -867,14 +867,6 @@
             Int: 4000
           }
           Overrides {
-            Name: "cs:MoveDuration"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LifeSpan"
-            Float: 6
-          }
-          Overrides {
             Name: "cs:DamageRange"
             Vector2 {
               X: 20
@@ -890,6 +882,10 @@
             ObjectReference {
               SubObjectId: 7855160156328725233
             }
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 3000
           }
         }
         WantsNetworking: true

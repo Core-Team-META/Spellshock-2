@@ -7,7 +7,7 @@
       RootId: 10188985343697969424
       Objects {
         Id: 10188985343697969424
-        Name: "Hunter Thorn Placement"
+        Name: "Hunter Leap Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -17,10 +17,17 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 17410147614733323988
+        ChildIds: 5645634967697484925
         UnregisteredParameters {
           Overrides {
             Name: "cs:Team"
             Int: 0
+          }
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+              SubObjectId: 5645634967697484925
+            }
           }
           Overrides {
             Name: "cs:Team:isrep"
@@ -823,6 +830,39 @@
         Script {
           ScriptAsset {
             Id: 16721457538699335289
+          }
+        }
+      }
+      Objects {
+        Id: 5645634967697484925
+        Name: "Trigger"
+        Transform {
+          Location {
+            Z: 60
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.5
+            Y: 3.5
+            Z: 2
+          }
+        }
+        ParentId: 10188985343697969424
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
           }
         }
       }

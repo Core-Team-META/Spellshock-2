@@ -1142,6 +1142,12 @@
             Name: "cs:ImpulseRadius"
             Int: 700
           }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1269,7 +1275,7 @@
           }
           Overrides {
             Name: "cs:EventName"
-            String: "Place Thorns"
+            String: "Place Bear Trap"
           }
           Overrides {
             Name: "cs:MaxPlacementRange"

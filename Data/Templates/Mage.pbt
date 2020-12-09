@@ -1511,44 +1511,6 @@
         ParentId: 10663446143340725464
         ChildIds: 17441912587668400096
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProjectileTemplate"
-            AssetReference {
-              Id: 2945782094965142153
-            }
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 12582858560613182221
-            }
-          }
-          Overrides {
-            Name: "cs:Damage"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:Radius"
-            Float: 500
-          }
-          Overrides {
-            Name: "cs:ProjectileSpeed"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:ProjectileGravity"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "cs:AnimalCostumeTemplate"
-            AssetReference {
-              Id: 7047570860712842217
-            }
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 8
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1574,6 +1536,8 @@
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1600,7 +1564,6 @@
             IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_bolt"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_34"
           }
@@ -1659,18 +1622,18 @@
             }
           }
           Overrides {
+            Name: "cs:ImpactFX"
+            AssetReference {
+              Id: 313465437675986879
+            }
+          }
+          Overrides {
             Name: "cs:Duration"
             Float: 10
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
             Int: 3000
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 313465437675986879
-            }
           }
           Overrides {
             Name: "cs:DamageAmount"
@@ -2184,7 +2147,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2195,7 +2157,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2206,7 +2167,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
@@ -2217,7 +2177,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"

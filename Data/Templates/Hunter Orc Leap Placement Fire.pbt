@@ -17,10 +17,17 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 2613800000831717780
+        ChildIds: 12101234210578387238
         UnregisteredParameters {
           Overrides {
             Name: "cs:Team"
             Int: 0
+          }
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+              SubObjectId: 12101234210578387238
+            }
           }
           Overrides {
             Name: "cs:Team:isrep"
@@ -832,6 +839,39 @@
         Script {
           ScriptAsset {
             Id: 16721457538699335289
+          }
+        }
+      }
+      Objects {
+        Id: 12101234210578387238
+        Name: "Trigger"
+        Transform {
+          Location {
+            Z: 60
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.5
+            Y: 3.5
+            Z: 2
+          }
+        }
+        ParentId: 18107941882090185186
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
           }
         }
       }

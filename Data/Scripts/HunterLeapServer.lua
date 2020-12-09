@@ -1,4 +1,6 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 local ThornLifeSpan = script:GetCustomProperty("ThornLifeSpan")
 local OwnerImpulseMultiplier = script:GetCustomProperty("OwnerImpulse")
@@ -7,6 +9,7 @@ local ImpulseRadius = script:GetCustomProperty("ImpulseRadius")
 
 local PlayerVFX = nil
 local abilityName = string.gsub(Ability.name, " ", "_")
+local OverlapEvent = nil
 
 function AddImpulse(player)
 	local impulseVector
@@ -65,8 +68,22 @@ function OnAbilityExecute(thisAbility)
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulse(enemy)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
 	end
+	
 	AddImpulse(Ability.owner)
+	
+	local trapTrigger = newTrap:GetCustomProperty("Trigger"):WaitForObject()
+	if OverlapEvent then
+		OverlapEvent:Disconnect()
+	end
+	OverlapEvent = trapTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
+end
+
+function OnBeginOverlap(thisTrigger, other)
+	if Object.IsValid(other) and other:IsA("Player") and other.team ~= Ability.team then
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
+	end
 end
 
 function OnEquip(equipment, player)
@@ -78,10 +95,13 @@ function OnUnequip(equipment, player)
 	--[[for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end]]
-	
+	if OverlapEvent then
+		OverlapEvent:Disconnect()
+		OverlapEvent = nil
+	end
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
---Equipment.unequippedEvent:Connect(OnUnequip)
+Equipment.unequippedEvent:Connect(OnUnequip)
 Ability.executeEvent:Connect(OnAbilityExecute)
 Ability.castEvent:Connect(OnAbilityCast)

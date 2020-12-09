@@ -7,10 +7,14 @@ local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 --local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 
 local SPEED = script:GetCustomProperty("ProjectileSpeed")
-local MOVE_DURATION = script:GetCustomProperty("MoveDuration")
-local LIFE_SPAN = script:GetCustomProperty("LifeSpan")
+--local MOVE_DURATION = script:GetCustomProperty("MoveDuration")
+--local LIFE_SPAN = script:GetCustomProperty("LifeSpan")
 local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
 local IMPULSE_AMOUNT = script:GetCustomProperty("ImpulseAmount")
+local RANGE = script:GetCustomProperty("Range")
+
+local MOVE_DURATION = CoreMath.Round(RANGE / SPEED, 3)
+local LIFE_SPAN = MOVE_DURATION + 5
 
 local PlayerVFX = nil
 local CurrentProjectile = nil

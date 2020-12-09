@@ -25,7 +25,6 @@ local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnProjectileImpact(projectile, other, hitResult)
 	Reset(false)
-	--World.SpawnAsset(PlayerVFX[vfxKey], {position = projectile:GetWorldPosition()})
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, SpecialAbility.owner.team, abilityName, "Impact")
@@ -66,10 +65,11 @@ function OnProjectileImpact(projectile, other, hitResult)
 end
 
 function OnLifespanEnded(thisProjectile)
-	Reset()
+	Reset(false)
 end
 
 function OnSpecialAbilityExecute(thisAbility)
+	Reset(true)
 	-- Spawn a new target object where the camera is looking
 	local viewRotation = thisAbility.owner:GetViewWorldRotation()
 	local viewPosition = thisAbility.owner:GetViewWorldPosition()
