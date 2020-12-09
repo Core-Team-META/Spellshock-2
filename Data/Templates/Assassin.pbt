@@ -1569,24 +1569,6 @@
             String: "Air Dive"
           }
           Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 17869001443527042596
-            }
-          }
-          Overrides {
-            Name: "cs:ImpactVFX"
-            AssetReference {
-              Id: 3219672101883223829
-            }
-          }
-          Overrides {
-            Name: "cs:LaunchFX"
-            AssetReference {
-              Id: 13247852012678535360
-            }
-          }
-          Overrides {
             Name: "cs:DamageRange"
             Vector2 {
               X: 50
@@ -1600,10 +1582,6 @@
           Overrides {
             Name: "cs:ImpactRadius"
             Float: 600
-          }
-          Overrides {
-            Name: "cs:HeightOffset"
-            Float: 2000
           }
           Overrides {
             Name: "cs:FlyingDuration"

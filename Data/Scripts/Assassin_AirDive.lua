@@ -12,8 +12,6 @@ local DAMAGE_RANGE = script:GetCustomProperty("DamageRange") or Vector2.New(20, 
 local BASE_DAMAGE_MOD = script:GetCustomProperty("BaseDamageModifier") or 1
 local IMPACT_RADIUS = script:GetCustomProperty("ImpactRadius") or 500
 local LAUNCH_FORCE = script:GetCustomProperty("LaunchForce") or 40
-local ImpactVFX = script:GetCustomProperty("ImpactVFX")
-local LaunchFX = script:GetCustomProperty("LaunchFX")
 local EventName = script:GetCustomProperty("EventName")
 
 local EventListeners = {}
@@ -47,8 +45,6 @@ function OnBindingPressed(player, binding)
 	    player.maxJumpCount = 0
 	    isFlying = true
 	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
-	    
-	    --World.SpawnAsset(LaunchFX, {position = player:GetWorldPosition()})
 	    
 	    local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Launch")
 		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
@@ -143,7 +139,6 @@ function OnTargetChosen(player, targetPos)
 	    player:ActivateWalking()
 	    player.gravityScale = DefaultPlayerSetttings.gravityScale
 	    isFlying = false
-	    --World.SpawnAsset(ImpactVFX, {position = player:GetWorldPosition() - Vector3.UP * 50})
 		
 		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Impact")
 		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING

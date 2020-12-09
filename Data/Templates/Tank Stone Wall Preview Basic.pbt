@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 17438938420799065589
-  Name: "Tank Stone Wall Primer Basic"
+  Name: "Tank Stone Wall Preview Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

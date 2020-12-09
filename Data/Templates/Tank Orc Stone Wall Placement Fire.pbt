@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 5934541114304810566
-  Name: "Tank Orc Stone Wall Fire"
+  Name: "Tank Orc Stone Wall Placement Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

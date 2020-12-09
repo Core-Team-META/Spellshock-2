@@ -38,7 +38,6 @@ function OnAbilityExecute(thisAbility)
 	
 	local hitResult = World.Raycast(targetPosition, targetPosition - Vector3.New(0,0,5000), {ignorePlayers = true})
 	if hitResult then
-		print("got a hit")
 		targetPosition = hitResult:GetImpactPosition()
 		targetRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
 	else
