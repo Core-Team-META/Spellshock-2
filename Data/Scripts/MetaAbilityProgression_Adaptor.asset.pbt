@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 9329183117425341503
-  Name: "Skills_Adaptor"
+  Name: "MetaAbilityProgression_Adaptor"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

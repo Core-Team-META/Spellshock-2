@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 9301077352130015688
-  Name: "Skills_System"
+  Id: 14014501421890204527
+  Name: "MetaAbilityProgression_API"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:API"
+        Name: "cs:MetaAbilityProgressionConstants_API"
         AssetReference {
-          Id: 12976677599746882774
+          Id: 15718075383189814537
         }
       }
     }

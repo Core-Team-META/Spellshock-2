@@ -43,6 +43,7 @@ Objects {
   ParentId: 11452141803278496636
   ChildIds: 721227566397514987
   ChildIds: 2530536913188181770
+  ChildIds: 928112827619960533
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -54,8 +55,35 @@ Objects {
   }
 }
 Objects {
+  Id: 928112827619960533
+  Name: "MetaAbilityProgression_StorageControlller"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9767354080694964109
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2269572116006940077
+    }
+  }
+}
+Objects {
   Id: 2530536913188181770
-  Name: "Skills_Adaptor"
+  Name: "MetaAbilityProgression_Adaptor"
   Transform {
     Location {
     }
@@ -82,7 +110,7 @@ Objects {
 }
 Objects {
   Id: 721227566397514987
-  Name: "Skills_System"
+  Name: "MetaAbilityProgression_Controller"
   Transform {
     Location {
     }
