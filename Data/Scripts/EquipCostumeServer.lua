@@ -12,6 +12,7 @@ function OnEquipped(thisEquipment, player)
 	if HidePlayer then
 		player:SetVisibility(false, false)
 	end
+	player:SetResource("CLASS_MAP", 1)
 end
 
 function OnUnequipped(thisEquipment, player)
