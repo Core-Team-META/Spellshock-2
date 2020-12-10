@@ -8,9 +8,12 @@
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local DATA = require(script:GetCustomProperty("DATA"))
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
+local modTable = DATA.GetClassTable()
+
 local API = {}
 _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
@@ -36,6 +39,11 @@ end
 for progress, key in pairs(CONST.PROGRESS) do
     API[progress] = key
 end
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
 ------------------------------------------------------------------------------------------------------------------------
 -- PUBLIC CLIENT API
 ------------------------------------------------------------------------------------------------------------------------
@@ -83,4 +91,17 @@ end
 --@param int ammount => amount of XP to add
 function API.AddBindXp(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.AddBindXp", player, class, bind, ammount)
+end
+
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@param bool plus => true adds + 1 level
+function API.GetBindMods(player, class, bind, plus)
+    local bindLevel = API.GetBindLevel(player, bind, class)
+    if plus then
+        bindLevel = bindLevel + 1
+    end
+    return modTable[class][bind][bindLevel]        
 end
