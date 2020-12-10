@@ -217,7 +217,7 @@ end
 function OnPlayerLeft(player)
     local playerData = Storage.GetPlayerData(player)
     playerData.META_ABILITY_PROGRESSION = ConvertToString(playerProgression[player])
-
+    --player.META_ABILITY_VERSION = {VERSION = 1}
     Storage.SetPlayerData(player, playerData)
 
     playerProgression[player] = nil

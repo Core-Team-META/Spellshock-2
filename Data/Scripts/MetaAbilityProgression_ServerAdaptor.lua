@@ -66,6 +66,7 @@ function ApplySkillStats(player, class, bind, bindLevel)
     player.serverUserData["bind"][bind] = {}
     for name, value in pairs(data[class][bind][bindLevel]) do
         player.serverUserData["bind"][bind][name] = value
+    TablePrint(player.serverUserData["bind"])
     end
     TablePrint(player.serverUserData["bind"])
 end

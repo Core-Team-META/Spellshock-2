@@ -50,11 +50,13 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-function API.GetBindLevel(player, class, bind)
+function API.GetBindLevel(player, bind, class)
+    if not class then
+        class = player:GetResource(CONST.CLASS_RES)
+    end
     local resName = UTIL.GetLevelString(class, bind)
     return player:GetResource(resName)
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -68,8 +70,9 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
---@return int => XP of Class Bind 
-function API.GetBindXp(player, class, bind)
+--@return int => XP of Class Bind
+function API.GetBindXp(player, bind)
+    local class = player:GetResource(CONST.CLASS_RES)
     local resName = UTIL.GetXpString(class, bind)
     return player:GetResource(resName)
 end
@@ -81,5 +84,3 @@ end
 function API.AddBindXp(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.AddBindXp", player, class, bind, ammount)
 end
-
-
