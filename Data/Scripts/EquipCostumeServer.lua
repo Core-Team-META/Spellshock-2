@@ -1,5 +1,6 @@
 ﻿local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local HidePlayer = script:GetCustomProperty("HidePlayer")
+local CLASS_ID = ParentEquipment:GetCustomProperty("ClassID")
 
 function OnEquipped(thisEquipment, player)
 	if ParentEquipment:GetCustomProperty("CostumeTemplate") then
@@ -12,7 +13,7 @@ function OnEquipped(thisEquipment, player)
 	if HidePlayer then
 		player:SetVisibility(false, false)
 	end
-	player:SetResource("CLASS_MAP", 1)
+	player:SetResource("CLASS_MAP", CLASS_ID)
 end
 
 function OnUnequipped(thisEquipment, player)

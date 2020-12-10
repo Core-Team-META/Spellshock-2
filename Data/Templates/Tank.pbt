@@ -45,6 +45,10 @@
             String: ""
           }
           Overrides {
+            Name: "cs:ClassID"
+            Int: 1
+          }
+          Overrides {
             Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
