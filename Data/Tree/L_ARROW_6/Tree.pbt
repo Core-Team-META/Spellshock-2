@@ -1,7 +1,7 @@
 ﻿Name: "L_ARROW_6"
-RootId: 12103318728277059521
+RootId: 1619971523942970000
 Objects {
-  Id: 10767668910353973585
+  Id: 13809740797458896972
   Name: "ARROW_L_OVERLAY"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -60,15 +60,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 10767668910353973585
-    SubobjectId: 12112932196445671599
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 10476635028566149060
+  Id: 12650900170768264977
   Name: "L_CENTER_OVERLAY_DARK"
   Transform {
     Location {
@@ -81,7 +75,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -122,15 +116,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 10476635028566149060
-    SubobjectId: 12399476823849326138
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 9327744712442844993
+  Id: 6974898779380263804
   Name: "ARROW_1"
   Transform {
     Location {
@@ -143,7 +131,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -188,15 +176,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 9327744712442844993
-    SubobjectId: 13548367072274990783
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 5482038652944604794
+  Id: 2460328863520090170
   Name: "L_ORANGE_ARROW_OVERLAY"
   Transform {
     Location {
@@ -209,7 +191,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -250,15 +232,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 5482038652944604794
-    SubobjectId: 8170562615376514948
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 4581054202990660077
+  Id: 10614088100981781700
   Name: "L_ORANGE_ARROWS"
   Transform {
     Location {
@@ -271,7 +247,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -316,15 +292,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 4581054202990660077
-    SubobjectId: 208461848737110035
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 4619527272286795099
+  Id: 10180498735220260529
   Name: "SHADOW_FADE_BORDER_L"
   Transform {
     Location {
@@ -337,7 +307,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -379,15 +349,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 4619527272286795099
-    SubobjectId: 9037719365222524069
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 7258880930523900273
+  Id: 18160969980240389311
   Name: "ARROW_BIG_R"
   Transform {
     Location {
@@ -400,7 +364,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -446,15 +410,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 7258880930523900273
-    SubobjectId: 6470282656811071631
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 10220078720981092042
+  Id: 5521738262108912832
   Name: "ARROW_BIG_R_SHADOW"
   Transform {
     Location {
@@ -467,7 +425,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -513,15 +471,9 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 10220078720981092042
-    SubobjectId: 12727934534641293108
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
-  }
 }
 Objects {
-  Id: 10837229508047041654
+  Id: 4546506526254817939
   Name: "ARROW_1_SHADOW"
   Transform {
     Location {
@@ -534,7 +486,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12103318728277059521
+  ParentId: 1619971523942970000
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -578,11 +530,5 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 10837229508047041654
-    SubobjectId: 12326955421450741128
-    InstanceId: 15646580420298389108
-    TemplateId: 7102528775270530899
   }
 }

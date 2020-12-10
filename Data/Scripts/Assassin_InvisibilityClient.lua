@@ -12,6 +12,7 @@ local PlayerAttachments = {}
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local InvisibilityActiveFX = nil
 local BindingPressedConnection = nil
+local NetworkPropertyConnection = nil
 local isInvisible = false
 
 local timerUI_position = Vector2.New(-485, 18)
@@ -29,10 +30,11 @@ end
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isInvisible" then
-		if not Equipment.owner then return end
-		
 		isInvisible = thisObject:GetCustomProperty("isInvisible")
 		Equipment.owner.clientUserData.isInvisible = isInvisible
+		
+		if not Equipment.owner then return end
+		
 		if Equipment.owner == LOCAL_PLAYER then
 			if isInvisible then
 				Timer = Duration
@@ -104,10 +106,10 @@ function DetachCostume(player)
 end
 
 function OnEquip(equipment, player)
+	NetworkPropertyConnection = ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 	if player ~= LOCAL_PLAYER then return end
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 	InvisibleCostumeTemplate = ServerScript:GetCustomProperty("CostumeTemplate")
-	ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 	AttachCostume(player)
 	
 	-- Spawn timer UI
@@ -123,10 +125,13 @@ function OnEquip(equipment, player)
 end
 
 function OnUnequip(equipment, player)
+	player.clientUserData.isInvisible = false
 	if player ~= LOCAL_PLAYER then return end
 	DetachCostume(player)
 	BindingPressedConnection:Disconnect()
 	BindingPressedConnection = nil
+	NetworkPropertyConnection:Disconnect()
+	NetworkPropertyConnection = nil
 	TimerUI.root:Destroy()
 	TimerUI = {}
 end
