@@ -48,12 +48,13 @@ end
 -- DATA
 ------------------------------------------------------------------------------------------------------------------------
 
---#TODO Perhaps make this heirarchy built? (5 Classes would be 400 objects in heirarchy...)
+--#TODO Perhaps make this heirarchy built? (5 Classes would be > 400 objects in heirarchy...)
 classTable = {
     -- Tank
     [CONST.CLASS.TANK] = {
         --Rock Strike
         [CONST.BIND.Q] = {
+            --#EX => mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
             [1] = {mod1 = 1, mod2 = 1, mod3 = 1, mod4 = 1, mod5 = 1},
             [2] = {mod1 = 1, mod2 = 1, mod3 = 0, mod4 = 0, mod5 = 1},
             [3] = {mod1 = 1, mod2 = 1, mod3 = 1, mod4 = 0, mod5 = 1},
