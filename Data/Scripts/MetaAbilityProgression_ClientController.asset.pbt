@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 8559393718562157757
-  Name: "MetaAbilityProgression_Controller"
+  Id: 14558409130098572612
+  Name: "MetaAbilityProgression_ClientController"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

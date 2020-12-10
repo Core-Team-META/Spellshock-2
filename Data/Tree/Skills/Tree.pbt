@@ -16,6 +16,7 @@ Objects {
   }
   ParentId: 16629351977808918313
   ChildIds: 9767354080694964109
+  ChildIds: 6739354859151800629
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -24,6 +25,58 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 6739354859151800629
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11452141803278496636
+  ChildIds: 9759415146145953269
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 9759415146145953269
+  Name: "MetaAbilityProgression_ClientController"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6739354859151800629
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14558409130098572612
+    }
   }
 }
 Objects {
@@ -43,7 +96,6 @@ Objects {
   ParentId: 11452141803278496636
   ChildIds: 721227566397514987
   ChildIds: 2530536913188181770
-  ChildIds: 928112827619960533
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -52,33 +104,6 @@ Objects {
   }
   NetworkContext {
     Type: Server
-  }
-}
-Objects {
-  Id: 928112827619960533
-  Name: "MetaAbilityProgression_StorageControlller"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9767354080694964109
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 2269572116006940077
-    }
   }
 }
 Objects {
@@ -110,7 +135,7 @@ Objects {
 }
 Objects {
   Id: 721227566397514987
-  Name: "MetaAbilityProgression_Controller"
+  Name: "MetaAbilityProgression_ServerController"
   Transform {
     Location {
     }

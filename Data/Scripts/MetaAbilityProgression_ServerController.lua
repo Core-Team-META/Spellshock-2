@@ -47,54 +47,52 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int bindLevel
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 local function GetBindLevel(player, class, bind)
     UTIL.TablePrint(playerProgression[player][class][bind])
     return playerProgression[player][class][bind][API.LEVEL]
 end
 
---#TODO Player Resource Cleaned Up
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int bindLevel
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+
 local function SetBindLevel(player, class, bind, level)
     playerProgression[player][class][bind][API.LEVEL] = level
     -- C1B1PROG
-    local resName = "C" .. tostring(class) .. "B" .. tostring(bind) .. "LEVEL"
+    local resName = UTIL.GetLevelString(class, bind)
     player:SetResource(resName, level)
 end
 
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int bindXp
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 local function GetBindXp(player, class, bind)
     return playerProgression[player][class][bind][API.XP]
 end
 
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int ammount
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 local function SetBindXp(player, class, bind, ammount)
     playerProgression[player][class][bind][API.XP] = ammount
-    local resName = "C" .. tostring(class) .. "B" .. tostring(bind) .. "XP"
+    local resName = UTIL.GetXpString(class, bind)
     player:SetResource(resName, CoreMath.Round(ammount))
 end
 
 --#FIXME
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@return int (xp required  to level)
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return int reqXp
 local function GetReqBindXp(player, class, bind)
-    --local requiredXp, requiredXpScale = SKILLS.FindXpByBindName(bindName)
     return 150
- --SKILLS.Calculate(requiredXpScale, GetBindLevel(player, class, bind), requiredXp)
 end
 
---#TODO Looks like a mess but works for now
 --@param object player
 --@param table data
-local function BuildBindLevelTable(player, data)
+local function BuildBindDataTable(player, data)
     playerProgression[player] = {}
 
     if data ~= nil then
@@ -131,8 +129,8 @@ end
 
 --##FIXME Required XP not cal
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int bindXp
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 local function BindLevelUp(player, class, bind, xp)
     local bindLevel = GetBindLevel(player, class, bind)
     if bindLevel < CONST.MAX_LEVEL then
@@ -140,6 +138,7 @@ local function BindLevelUp(player, class, bind, xp)
             bindLevel = CoreMath.Round(bindLevel + 1)
         end
         SetBindLevel(player, class, bind, bindLevel)
+        --##FIXME currently setting XP to 0 on level up
         xp = 0
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
@@ -147,8 +146,8 @@ local function BindLevelUp(player, class, bind, xp)
 end
 
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int xp
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 local function AddBindXp(player, class, bind, ammount)
     if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
         local reqXp = GetReqBindXp(player, class, bind)
@@ -164,6 +163,8 @@ local function AddBindXp(player, class, bind, ammount)
     end
 end
 
+--@param table tbl => player data to be stored
+--@return string str => string of compressed data
 local function ConvertToString(tbl)
     local str = ""
     for key, values in ipairs(tbl) do
@@ -178,10 +179,11 @@ local function ConvertToString(tbl)
     return str
 end
 
+--@param string str => string of compressed data
+--@return table finalTbl => player data
 local function ConvertToTable(str)
     local finalTbl = {}
     local tbl = UTIL.StringSplit("|", str)
-
     for _, s in ipairs(tbl) do
         local t1 = UTIL.StringSplit("^", s)
         local index = UTIL.IsNumeric(t1[1]) and tonumber(t1[1]) or t1[1]
@@ -208,7 +210,7 @@ function OnPlayerJoined(player)
     if data.META_ABILITY_PROGRESSION then
         progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
     end
-    BuildBindLevelTable(player, progression)
+    BuildBindDataTable(player, progression)
     ADAPTOR.context.OnPlayerJoined(player)
 end
 
@@ -225,15 +227,25 @@ end
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
 --@param object player
---@param string bindName (API.STR, API.DEX, API.CON, API.INT, etc)
---@param int xp
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
 function API.AddBindXp(player, class, bind, ammount)
     AddBindXp(player, class, bind, ammount)
 end
 
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
 function API.ChangeClass(player, class)
     for _, bind in pairs(CONST.BIND) do
-        Events.Broadcast("META_AP.ApplyStats", player, class, bind, playerProgression[player][class][bind][API.LEVEL])
+        if playerProgression[player][class][bind][API.LEVEL] ~= nil then
+            Events.Broadcast(
+                "META_AP.ApplyStats",
+                player,
+                class,
+                bind,
+                playerProgression[player][class][bind][API.LEVEL]
+            )
+        end
     end
 end
 ------------------------------------------------------------------------------------------------------------------------

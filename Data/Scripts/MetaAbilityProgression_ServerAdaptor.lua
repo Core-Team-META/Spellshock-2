@@ -8,6 +8,7 @@
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
 local DATA = require(script:GetCustomProperty("DATA"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL TABLE ACCESS
 ------------------------------------------------------------------------------------------------------------------------
@@ -18,6 +19,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+--#TODO TEMP
 function TablePrint(tbl, indent)
     local formatting, lua_type
     if tbl == nil then
@@ -69,7 +71,7 @@ function ApplySkillStats(player, class, bind, bindLevel)
 end
 
 function OnResourceChanged(player, resName, resAmount)
-    if resName == "CLASS_MAP" then
+    if resName == CONST.CLASS_RES then
         META_AP().ChangeClass(player, player:GetResource(resName))
     end
 end

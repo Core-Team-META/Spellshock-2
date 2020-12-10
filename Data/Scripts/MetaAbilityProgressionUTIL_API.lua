@@ -106,5 +106,14 @@ function API.TablePrint(tbl, indent)
 end
 
 
+function API.GetLevelString(class, bind)
+    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "LEVEL"
+end
+
+function API.GetXpString(class, bind)
+    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "XP"
+end
+
+
 ------------------------------------------------------------------------------------------------------------------------
 return API
