@@ -45,6 +45,12 @@
               SubObjectId: 4671574801466575888
             }
           }
+          Overrides {
+            Name: "cs:Button"
+            ObjectReference {
+              SubObjectId: 8219552282474343122
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -504,7 +510,7 @@
           Width: 200
           Height: 37
           UIX: 109
-          UIY: 22
+          UIY: 21
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -550,6 +556,14 @@
           }
         }
         ParentId: 12830788641118181426
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Shadow"
+            ObjectReference {
+              SubObjectId: 3613824447293185359
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -560,7 +574,7 @@
           Width: 200
           Height: 37
           UIX: 106.030624
-          UIY: 20
+          UIY: 19
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -618,7 +632,7 @@
           Width: 200
           Height: 37
           UIX: 108
-          UIY: 52
+          UIY: 53
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -664,6 +678,14 @@
           }
         }
         ParentId: 12830788641118181426
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Shadow"
+            ObjectReference {
+              SubObjectId: 4734332782893972578
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -674,7 +696,7 @@
           Width: 200
           Height: 37
           UIX: 106.030624
-          UIY: 50.042511
+          UIY: 51
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2016,7 +2038,6 @@
           Width: 60
           Height: 60
           UIX: 3
-          RotationAngle: 90
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2024,7 +2045,7 @@
           }
           Image {
             Brush {
-              Id: 15749907625168626132
+              Id: 1031800327856440791
             }
             Color {
               R: 0.351532698
@@ -2063,6 +2084,14 @@
           }
         }
         ParentId: 10883028269652704608
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Shadow"
+            ObjectReference {
+              SubObjectId: 17948428400938109522
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2074,7 +2103,6 @@
           Height: 60
           UIX: 1
           UIY: -3.00000191
-          RotationAngle: 90
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2082,7 +2110,7 @@
           }
           Image {
             Brush {
-              Id: 15749907625168626132
+              Id: 1031800327856440791
             }
             Color {
               R: 1
@@ -2813,7 +2841,7 @@
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
           Width: 100
@@ -2834,7 +2862,6 @@
               R: 1
               G: 1
               B: 1
-              A: 1
             }
             HoveredColor {
               R: 1
@@ -2858,6 +2885,7 @@
               Id: 841534158063459245
             }
             IsButtonEnabled: true
+            OnlyUseMainColor: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
             }
@@ -2995,12 +3023,12 @@
       }
     }
     Assets {
-      Id: 15749907625168626132
-      Name: "Fantasy Staff 024"
+      Id: 1031800327856440791
+      Name: "Fantasy Hammer 005"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Staff_024"
+        AssetId: "UI_Fantasy_Weapon_Hammer_005"
       }
     }
     Assets {

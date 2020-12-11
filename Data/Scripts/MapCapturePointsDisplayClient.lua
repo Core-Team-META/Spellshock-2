@@ -103,9 +103,9 @@ function Tick(DeltaTime)
 	else
 		PANEL.visibility = Visibility.FORCE_OFF
 		
-		if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
-			print("Disabling cursor")
-		end
+		--if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
+			--print("Disabling cursor")
+		--end
 	end
 		
 	-- Add indicators for new points

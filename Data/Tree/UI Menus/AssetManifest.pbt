@@ -179,24 +179,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11339806440610756200
-  Name: "Fantasy Ability Yellow 020"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_020"
-  }
-}
-Assets {
-  Id: 11056002907096024542
-  Name: "Fantasy Ability Yellow 012"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_012"
-  }
-}
-Assets {
   Id: 11051940373171549903
   Name: "Frame Highlighted 007"
   PlatformAssetType: 9
@@ -320,15 +302,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
-  Id: 6262345458031684017
-  Name: "Fantasy Ability Yellow 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_006"
   }
 }
 Assets {

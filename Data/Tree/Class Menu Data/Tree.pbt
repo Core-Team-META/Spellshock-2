@@ -26,7 +26,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 2439865559819884120
+        Id: 17824683867460661746
       }
     }
     Overrides {
@@ -36,6 +36,10 @@ Objects {
     Overrides {
       Name: "cs:Skillset"
       String: "Skillset goes here"
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "This is the Mage Class"
     }
   }
   Collidable_v2 {
@@ -344,6 +348,10 @@ Objects {
       Name: "cs:Skillset"
       String: "Skillset goes here"
     }
+    Overrides {
+      Name: "cs:Description"
+      String: "This is the Hunter Class"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -650,6 +658,10 @@ Objects {
     Overrides {
       Name: "cs:Skillset"
       String: "Skillset goes here"
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "This is the Tank Class"
     }
   }
   Collidable_v2 {
