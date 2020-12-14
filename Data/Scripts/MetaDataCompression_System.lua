@@ -1,4 +1,6 @@
-﻿local UTIL = script:GetCustomProperty("MetaAbilityProgressionUTIL_API")
+﻿local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local propStartingVFX = script:GetCustomProperty("StartingVFX"):WaitForObject()
+local abilityTable = {}
 
 local API = {}
 
@@ -34,8 +36,6 @@ local function ConvertToString(tbl)
     return str
 end
 
-
-
 --@param string str => string of compressed data
 --@return table finalTbl => player data
 local function ConvertToTable(str)
@@ -53,43 +53,48 @@ local function ConvertToTable(str)
     return finalTbl
 end
 
+010202 =1 
+
+local function Split(s, delimiter)
+    local result = {}
+    for match in (s .. delimiter):gmatch("(.-)" .. delimiter) do
+        table.insert(result, match)
+    end
+    return result
+end
 
 --LIST == Starting VFX
 function API.BuildTable(list)
     --@param table list
     local tempTable = {}
-    if not next(API.skillTable) then
+    if not next(abilityTable) then
         for _, class in ipairs(list:GetChildren()) do
             local id = class:GetCustomProperty("ID")
             tempTable[id] = {}
             for _, team in ipairs(class:GetChildren()) do
                 local teamId = team:GetCustomProperty("ID")
                 tempTable[id][teamId] = {}
-
                 for _, skin in ipairs(team:GetChildren()) do
                     local skinId = skin:GetCustomProperty("ID")
                     tempTable[id][teamId][skinId] = {}
-                    local tempSkin = {}
                     local tempVFX = {}
                     --#TODO Fix this nonsense
                     for key, value in pairs(skin:GetCustomProperties()) do
-                        local skinId
-                        if tonumber(key:sub(1, 2)) then
-                            skinId = tonumber(key:sub(1, 2))
-                        else
-                            skinId = tonumber(key:sub(1, 1))
+                        if key ~= "Costume" and key ~= "ID" then
+                            local vfxName = Split(key, "_")
+                            local skinId = tonumber(vfxName[1])
+                            tempVFX[tostring(vfxName[3])] = value
                         end
-                        local fullString = "Tornadow_Placment"
-                        local vfxName = "Placment"
-
-                        tempSkin[skinId][vfxName] = value
-                        tempSkin[skinId].Placment
                     end
+                    tempTable[id][teamId][skinId] = tempVFX
                 end
             end
         end
     end
-    return API.skillTable
+    --tempTable[ClassId][TeamId][SkinId].VFX
+    print(tempTable[1][1][1].Projectile)
 end
+
+API.BuildTable(propStartingVFX)
 
 return API

@@ -74,6 +74,12 @@ Objects {
         Id: 2269572116006940077
       }
     }
+    Overrides {
+      Name: "cs:StartingVFX"
+      ObjectReference {
+        SelfId: 12460670136840116142
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
