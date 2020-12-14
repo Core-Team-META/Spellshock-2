@@ -23,7 +23,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Starting VFX"
+    FilePartitionName: "Starting VFX_1"
   }
 }
 Objects {

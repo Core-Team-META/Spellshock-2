@@ -1,8 +1,8 @@
-﻿Name: "Brent"
-RootId: 3612684566017260609
+﻿Name: "DataCompression"
+RootId: 17488980775249185677
 Objects {
-  Id: 5736101228469849702
-  Name: "StorageTest"
+  Id: 12717217448641396824
+  Name: "ServerContext"
   Transform {
     Location {
     }
@@ -14,7 +14,67 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3612684566017260609
+  ParentId: 17488980775249185677
+  ChildIds: 12460670136840116142
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: Server
+  }
+}
+Objects {
+  Id: 12460670136840116142
+  Name: "Starting VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12717217448641396824
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Starting VFX"
+  }
+}
+Objects {
+  Id: 15829483586618238438
+  Name: "MetaDataCompression_System"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17488980775249185677
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:MetaAbilityProgressionUTIL_API"
+      AssetReference {
+        Id: 2269572116006940077
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -23,59 +83,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 16710408555258235694
+      Id: 5450760892472525542
     }
-  }
-}
-Objects {
-  Id: 17488980775249185677
-  Name: "DataCompression"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "DataCompression"
-  }
-}
-Objects {
-  Id: 16629351977808918313
-  Name: "Meta Ability Progression"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Skills"
   }
 }

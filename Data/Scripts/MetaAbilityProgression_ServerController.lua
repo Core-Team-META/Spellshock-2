@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/09/2020
@@ -81,7 +81,7 @@ local function SetBindXp(player, class, bind, ammount)
     player:SetResource(resName, CoreMath.Round(ammount))
 end
 
---#FIXME
+--#FIXME Need required xp calculation
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -109,9 +109,10 @@ local function BuildBindDataTable(player, data)
                 end
             end
         end
-    else
-        for _, class in pairs(CONST.CLASS) do
-            playerProgression[player][class] = {}
+    end
+    for _, class in pairs(CONST.CLASS) do
+        playerProgression[player][class] = playerProgression[player][class] or {}
+        if not next(playerProgression[player][class]) then
             for _, bind in pairs(CONST.BIND) do
                 playerProgression[player][class][bind] = {}
                 for string, progress in pairs(CONST.PROGRESS) do
@@ -124,6 +125,7 @@ local function BuildBindDataTable(player, data)
             end
         end
     end
+
     --UTIL.TablePrint(playerProgression[player])
 end
 
@@ -162,6 +164,7 @@ local function AddBindXp(player, class, bind, ammount)
         end
     end
 end
+
 
 --@param table tbl => player data to be stored
 --@return string str => string of compressed data
