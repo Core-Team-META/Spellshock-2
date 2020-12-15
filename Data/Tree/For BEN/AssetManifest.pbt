@@ -8,12 +8,48 @@
   }
 }
 Assets {
+  Id: 18198612390204212876
+  Name: "Bricks Cobblestone Floor Arches 001"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_cobblestone_floor_arch_001"
+  }
+}
+Assets {
+  Id: 17853943551029294903
+  Name: "Short Banner Fleur-de-lis"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_003"
+  }
+}
+Assets {
+  Id: 17409295383154929877
+  Name: "Wood Planks Beveled Painted 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_bevel_planks_white_001_uv"
+  }
+}
+Assets {
   Id: 16933361490793048899
   Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_003"
+  }
+}
+Assets {
+  Id: 15977747936357021178
+  Name: "Ivy 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_003"
   }
 }
 Assets {
@@ -26,12 +62,30 @@ Assets {
   }
 }
 Assets {
+  Id: 14281826121533999733
+  Name: "Coral Tubes Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_tube_small_01"
+  }
+}
+Assets {
   Id: 13950225922132296555
   Name: "Cylinder"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
+  Id: 13812233672819790707
+  Name: "Fantasy Human Guy 1"
+  PlatformAssetType: 17
+  PrimaryAsset {
+    AssetType: "AnimatedMeshAssetRef"
+    AssetId: "npc_human_guy_fantasy_001_ref"
   }
 }
 Assets {
@@ -62,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13161146325196931920
+  Name: "Coral Table 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_table_02"
+  }
+}
+Assets {
   Id: 12889861000896994476
   Name: "Invisible"
   PlatformAssetType: 2
@@ -80,12 +143,30 @@ Assets {
   }
 }
 Assets {
+  Id: 12416815806534727809
+  Name: "Kelp Bush 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_kelp_bush_01"
+  }
+}
+Assets {
   Id: 12385794193739794509
   Name: "Decal Stains Round 01"
   PlatformAssetType: 14
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_stain_round_001"
+  }
+}
+Assets {
+  Id: 12371872750459640945
+  Name: "Pipe"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_001"
   }
 }
 Assets {
@@ -107,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11521250418432815603
+  Name: "Ivy 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_005"
+  }
+}
+Assets {
   Id: 11337413471323694429
   Name: "Metal Gold 01"
   PlatformAssetType: 2
@@ -122,6 +212,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_hq_test_001"
+  }
+}
+Assets {
+  Id: 10777523509111713302
+  Name: "Prism - 6-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_hexagon_hq_001"
   }
 }
 Assets {
@@ -161,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9241339813623090261
+  Name: "Ivy 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ivy_generic_004"
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -176,6 +284,33 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_gen_concrete_001"
+  }
+}
+Assets {
+  Id: 7754470856388882901
+  Name: "Wood Raw"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_wood_raw_001_uv"
+  }
+}
+Assets {
+  Id: 7700976009969522757
+  Name: "Fantasy Castle Accessory Roof 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_acc_roof_002"
+  }
+}
+Assets {
+  Id: 7147607578013694397
+  Name: "Hemishpere (thin)"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_002"
   }
 }
 Assets {
@@ -197,6 +332,24 @@ Assets {
   }
 }
 Assets {
+  Id: 5512000712628422335
+  Name: "Bark Dead 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_bark_dead_001_uv"
+  }
+}
+Assets {
+  Id: 4842806961858489681
+  Name: "Rock Flat 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_004"
+  }
+}
+Assets {
   Id: 4607775144269372543
   Name: "Bottle 03"
   PlatformAssetType: 1
@@ -206,12 +359,57 @@ Assets {
   }
 }
 Assets {
+  Id: 3702365963781758101
+  Name: "Teardrop - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_truncated_teardrop_001"
+  }
+}
+Assets {
+  Id: 3179843506183788979
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
   Id: 2536231208558228393
   Name: "Fantasy Castle Stairs Spiral Trim 01 - Large"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_lg"
+  }
+}
+Assets {
+  Id: 2406204288165372094
+  Name: "Decal Vines End 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_liane_002"
+  }
+}
+Assets {
+  Id: 1984553197323830660
+  Name: "Kelp Bush 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_kelp_bush_02"
+  }
+}
+Assets {
+  Id: 1964254608213071037
+  Name: "Bark Redwood 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_bark_redwood_001_uv"
   }
 }
 Assets {
@@ -242,11 +440,29 @@ Assets {
   }
 }
 Assets {
+  Id: 901541979513849367
+  Name: "Bush Green 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
   Id: 692942829504898313
   Name: "Rock Block 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_006"
+  }
+}
+Assets {
+  Id: 114278397929005302
+  Name: "Horn"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_horn_001"
   }
 }
