@@ -131,15 +131,15 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-local function BindLevelUp(player, class, bind, xp)
+local function BindLevelUp(player, class, bind, level)--xp)
     local bindLevel = GetBindLevel(player, class, bind)
     if bindLevel < CONST.MAX_LEVEL then
         if bindLevel < CONST.MAX_LEVEL then
-            bindLevel = CoreMath.Round(bindLevel + 1)
+            bindLevel = CoreMath.Round(bindLevel + level)
         end
         SetBindLevel(player, class, bind, bindLevel)
         --##FIXME currently setting XP to 0 on level up
-        xp = 0
+         local xp = 0
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
@@ -254,3 +254,4 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Events.Connect("META_AP.AddBindXp", AddBindXp)
+Events.Connect("META_AP.ChangeBindLevel", BindLevelUp)
