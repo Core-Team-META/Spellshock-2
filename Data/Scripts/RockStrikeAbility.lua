@@ -34,8 +34,9 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
 	
-	local dmgMin = ABILITY.owner.serverUserData["bind"][1]["mod3"].min
-	local dmgMax = ABILITY.owner.serverUserData["bind"][1]["mod3"].dmgMax
+	local damageRangeTable = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod3"]
+	local dmgMin = damageRangeTable.min
+	local dmgMax = damageRangeTable.max
 	local dmg = Damage.New()
 	dmg.amount = math.random(dmgMin, dmgMax) --DAMAGE_RANGE.x, DAMAGE_RANGE.y)
 	dmg.reason = DamageReason.COMBAT
@@ -55,7 +56,7 @@ function OnBeginOverlap(thisTrigger, other)
 	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
 	directionVector = -directionVector
 	directionVector.z = 1
-	local impulseVector = directionVector * IMPULSE_AMOUNT
+	local impulseVector = directionVector * ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod4"]--IMPULSE_AMOUNT
 	other:AddImpulse(impulseVector)
 end
 
@@ -67,9 +68,9 @@ end
 
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
-	print(ABILITY.owner.serverUserData["bind"])
-	print(ABILITY.owner.serverUserData["bind"]["1"])
-	local ProjectileSpeed = ABILITY.owner.serverUserData["bind"][1]["mod1"]
+	--print(ABILITY.owner.serverUserData["bind"])
+	--print(ABILITY.owner.serverUserData["bind"]["META_AP().Q"])
+	local ProjectileSpeed = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod1"]
 
 	-- Get the velocity vecotr based on the player's forward vector
 	local PlayerRotation = player:GetWorldRotation()
@@ -127,7 +128,7 @@ function OnAbilityExecute(thisAbility)
 	RockProjectile:MoveContinuous(VelocityVector)
 	CurrentProjectile = RockProjectile
 	
-	local ProjectileRange = ABILITY.owner.serverUserData["bind"][1]["mod2"]
+	local ProjectileRange = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod2"]
 	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)
 	
 	Task.Spawn(function ()

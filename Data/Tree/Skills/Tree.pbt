@@ -43,6 +43,7 @@ Objects {
   }
   ParentId: 11452141803278496636
   ChildIds: 9759415146145953269
+  ChildIds: 13586112428959553654
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -50,6 +51,33 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 13586112428959553654
+  Name: "TEST_LevelUpScript"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6739354859151800629
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8006503496035433827
+    }
   }
 }
 Objects {
