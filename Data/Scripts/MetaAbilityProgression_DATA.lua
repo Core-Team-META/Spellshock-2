@@ -55,7 +55,7 @@ classTable = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --#EX => mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-            [1] = {mod1 = 1, mod2 = 1, mod3 = 1, mod4 = 1, mod5 = 1},
+            [1] = {mod1 = 4000, mod2 = 3000, mod3 = {min=20, max=30}, mod4 = 150000, mod5 = 1},
             [2] = {mod1 = 1, mod2 = 1, mod3 = 0, mod4 = 0, mod5 = 1},
             [3] = {mod1 = 1, mod2 = 1, mod3 = 1, mod4 = 0, mod5 = 1},
             [4] = {mod1 = 2, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 1},

@@ -1,6 +1,9 @@
 ﻿-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
@@ -30,9 +33,11 @@ function OnBeginOverlap(thisTrigger, other)
 	local otherTeam = COMBAT().GetTeam(other)
 	if not Object.IsValid(ABILITY.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
-			
+	
+	local dmgMin = ABILITY.owner.serverUserData["bind"][1]["mod3"].min
+	local dmgMax = ABILITY.owner.serverUserData["bind"][1]["mod3"].dmgMax
 	local dmg = Damage.New()
-	dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
+	dmg.amount = math.random(dmgMin, dmgMax) --DAMAGE_RANGE.x, DAMAGE_RANGE.y)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = ABILITY.owner
 	dmg.sourceAbility = ABILITY
@@ -62,13 +67,16 @@ end
 
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
-	
+	print(ABILITY.owner.serverUserData["bind"])
+	print(ABILITY.owner.serverUserData["bind"]["1"])
+	local ProjectileSpeed = ABILITY.owner.serverUserData["bind"][1]["mod1"]
+
 	-- Get the velocity vecotr based on the player's forward vector
 	local PlayerRotation = player:GetWorldRotation()
 	local LookQuaternion = Quaternion.New(PlayerRotation)
 	local ForwardVector = LookQuaternion:GetForwardVector()
 	ForwardVector.z = 0
-	local VelocityVector = ForwardVector * SPEED
+	local VelocityVector = ForwardVector * ProjectileSpeed
 	ProjectileVelocity = VelocityVector
 	
 	local spawnPosition
@@ -118,11 +126,15 @@ function OnAbilityExecute(thisAbility)
 	RockProjectile.lifeSpan = LIFE_SPAN
 	RockProjectile:MoveContinuous(VelocityVector)
 	CurrentProjectile = RockProjectile
+	
+	local ProjectileRange = ABILITY.owner.serverUserData["bind"][1]["mod2"]
+	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)
+	
 	Task.Spawn(function ()
 		CurrentProjectile = nil
 		OverlapEvent:Disconnect()
 		RockProjectile:StopMove()
-	end, MOVE_DURATION)
+	end, MoveDuration)
 end
 
 function OnEquip(equipment, player)

@@ -1334,7 +1334,7 @@
     }
     Assets {
       Id: 16372496464315477095
-      Name: "Ring Beveled (thick)"
+      Name: "Ring - Beveled Thick"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -1469,7 +1469,7 @@
     }
     Assets {
       Id: 4519163911553529386
-      Name: "Railing 01 Post Mainstreet"
+      Name: "Main Street Railing 01 - Post"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -1478,7 +1478,7 @@
     }
     Assets {
       Id: 18056288482274170153
-      Name: "Part - Awning Bracket Mainstreet"
+      Name: "Main Street Awning Bracket"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -1490,5 +1490,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

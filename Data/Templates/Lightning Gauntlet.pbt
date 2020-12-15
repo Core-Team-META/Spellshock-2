@@ -6218,7 +6218,7 @@
     }
     Assets {
       Id: 1588037931977530754
-      Name: "Manticore Gold"
+      Name: "Manticore Logo"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -6293,5 +6293,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

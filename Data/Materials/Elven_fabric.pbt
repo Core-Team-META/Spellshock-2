@@ -2,7 +2,7 @@
   Id: 8613109037402662340
   Name: "Elven_fabric"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 10187971005274467568
     ParameterOverrides {

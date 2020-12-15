@@ -54,7 +54,7 @@ Assets {
 }
 Assets {
   Id: 13352595166498895188
-  Name: "Large Round Wood Beam 6m"
+  Name: "Large Round Wood Beam 8m"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"

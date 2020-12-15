@@ -305,23 +305,6 @@
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:Color Secondary"
-            Color {
-              R: 0.026041666
-              G: 0.026041666
-              B: 0.026041666
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Patterns Metallic"
-            Bool: true
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Rotate 90"
-            Bool: false
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.1
           }
@@ -394,23 +377,6 @@
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:Color Secondary"
-            Color {
-              R: 0.026041666
-              G: 0.026041666
-              B: 0.026041666
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Patterns Metallic"
-            Bool: true
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Rotate 90"
-            Bool: false
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 1
           }
@@ -478,50 +444,6 @@
               B: 1
               A: 0.297000021
             }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Refraction"
-            Float: 0
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Object Normal Strength"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Opacity"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Bubble Size"
-            Float: 55
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Bubble Normal Strength"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Metallic"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Outer Opacity"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Inner Opacity"
-            Float: 0.058
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Inner Refraction"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Outer Refraction"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Smooth Glaze"
-            Float: 1
           }
         }
         WantsNetworking: true
@@ -892,23 +814,6 @@
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:Color Secondary"
-            Color {
-              R: 0.026041666
-              G: 0.026041666
-              B: 0.026041666
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Patterns Metallic"
-            Bool: true
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:Rotate 90"
-            Bool: false
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 1
           }
@@ -1003,7 +908,7 @@
     }
     Assets {
       Id: 2920556432021751741
-      Name: "Vingette Grain Post Process"
+      Name: "Vignette Grain Post Process"
       PlatformAssetType: 6
       PrimaryAsset {
         AssetType: "BlueprintAssetRef"
@@ -1069,5 +974,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

@@ -2,7 +2,7 @@
   Id: 230872137319562526
   Name: "Orc Mage Face"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 58872637069711017
     ParameterOverrides {
