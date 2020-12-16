@@ -8,7 +8,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-function UpdateUI()
+function UpdateUI(class)
     for _, panel in ipairs(UIContainer:GetChildren()) do
         local bind = panel.name
         for _, info in ipairs(panel:GetChildren()) do

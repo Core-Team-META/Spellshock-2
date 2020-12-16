@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/10/2020
--- Version 0.1.0
+-- Date: 12/16/2020
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -114,4 +114,25 @@ function API.GetBindMods(player, class, bind, plus)
         bindLevel = bindLevel + 1
     end
     return modTable[class][bind][bindLevel]        
+end
+
+
+--@param object player
+--@param int class
+--@param int bind
+--@param string mod
+--@param *various* defaultValue
+--@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
+function API.GetAbilityMod(player, class, bind, mod, defaultValue, source)
+    local bindLevel = API.GetBindLevel(player, bind, class)
+    print("Current level: "..tostring(bindLevel))
+    local success, result = pcall(function()
+        return modTable[class][bind][bindLevel][mod]
+    end)
+    
+    if not success then 
+        result = defaultValue 
+        warn("META_AP => failed to access "..source.." mod")
+    end
+    return result
 end
