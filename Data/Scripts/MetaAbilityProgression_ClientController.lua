@@ -85,12 +85,22 @@ function API.GetBindXp(player, bind)
     return player:GetResource(resName)
 end
 
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int ammount => amount of XP to add
 function API.AddBindXp(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.AddBindXp", player, class, bind, ammount)
+end
+
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@param int ammount => amount of XP to add
+function API.ChangeBindLevel(player, class, bind, ammount)
+    Events.BroadcastToServer("META_AP.ChangeBindLevel", player, class, bind, ammount)
 end
 
 
