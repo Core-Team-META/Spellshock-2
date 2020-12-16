@@ -98,16 +98,19 @@ end
 --@param *various* defaultValue
 --@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
 function API.GetAbilityMod(player, binding, mod, defaultValue, source)
-    local success, result = pcall(function()
-        return player.serverUserData["bind"][binding][mod]
-    end)
-    
-    if not success then 
-        result = defaultValue 
-        warn("META_AP => failed to access "..source.." mod")
+    local success, result =
+        pcall(
+        function()
+            return player.serverUserData["bind"][binding][mod]
+        end
+    )
+
+    if not success then
+        result = defaultValue
+        warn("META_AP => failed to access " .. source .. " mod")
     end
     return result
-end 
+end
 
 --@param object player
 --@param table data
@@ -128,9 +131,10 @@ local function BuildBindDataTable(player, data)
                 end
             end
         end
-    else
-        for _, class in pairs(CONST.CLASS) do
-            playerProgression[player][class] = {}
+    end
+    for _, class in pairs(CONST.CLASS) do
+        playerProgression[player][class] = playerProgression[player][class] or {}
+        if not next(playerProgression[player][class]) then
             for _, bind in pairs(CONST.BIND) do
                 playerProgression[player][class][bind] = {}
                 for string, progress in pairs(CONST.PROGRESS) do
@@ -143,6 +147,7 @@ local function BuildBindDataTable(player, data)
             end
         end
     end
+
     --UTIL.TablePrint(playerProgression[player])
 end
 
@@ -260,7 +265,6 @@ if DEBUG then
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 end
-
 
 function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
