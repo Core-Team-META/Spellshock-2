@@ -1,14 +1,18 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/09/2020
--- Version 0.1.0
+-- Date: 12/16/2020
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ADAPTOR = script:GetCustomProperty("Adaptor"):WaitForObject()
+
+---DEV--
+local DEBUG = true
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
@@ -50,7 +54,6 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 local function GetBindLevel(player, class, bind)
-    UTIL.TablePrint(playerProgression[player][class][bind])
     return playerProgression[player][class][bind][API.LEVEL]
 end
 
@@ -60,7 +63,6 @@ end
 
 local function SetBindLevel(player, class, bind, level)
     playerProgression[player][class][bind][API.LEVEL] = level
-    -- C1B1PROG
     local resName = UTIL.GetLevelString(class, bind)
     player:SetResource(resName, level)
 end
@@ -91,6 +93,26 @@ local function GetReqBindXp(player, class, bind)
 end
 
 --@param object player
+--@param int binding
+--@param string mod
+--@param *various* defaultValue
+--@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
+function API.GetAbilityMod(player, binding, mod, defaultValue, source)
+    local success, result =
+        pcall(
+        function()
+            return player.serverUserData["bind"][binding][mod]
+        end
+    )
+
+    if not success then
+        result = defaultValue
+        warn("META_AP => failed to access " .. source .. " mod")
+    end
+    return result
+end
+
+--@param object player
 --@param table data
 local function BuildBindDataTable(player, data)
     playerProgression[player] = {}
@@ -109,9 +131,10 @@ local function BuildBindDataTable(player, data)
                 end
             end
         end
-    else
-        for _, class in pairs(CONST.CLASS) do
-            playerProgression[player][class] = {}
+    end
+    for _, class in pairs(CONST.CLASS) do
+        playerProgression[player][class] = playerProgression[player][class] or {}
+        if not next(playerProgression[player][class]) then
             for _, bind in pairs(CONST.BIND) do
                 playerProgression[player][class][bind] = {}
                 for string, progress in pairs(CONST.PROGRESS) do
@@ -124,6 +147,7 @@ local function BuildBindDataTable(player, data)
             end
         end
     end
+
     --UTIL.TablePrint(playerProgression[player])
 end
 
@@ -131,15 +155,15 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-local function BindLevelUp(player, class, bind, level)--xp)
+local function BindLevelUp(player, class, bind, xp)
     local bindLevel = GetBindLevel(player, class, bind)
     if bindLevel < CONST.MAX_LEVEL then
         if bindLevel < CONST.MAX_LEVEL then
-            bindLevel = CoreMath.Round(bindLevel + level)
+            bindLevel = CoreMath.Round(bindLevel + 1)
         end
         SetBindLevel(player, class, bind, bindLevel)
         --##FIXME currently setting XP to 0 on level up
-         local xp = 0
+        xp = 0
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
@@ -204,6 +228,44 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
+if DEBUG then
+    --##FIXME Temp Function
+    --@param object player
+    --@param int class => id of class (API.TANK, API.MAGE)
+    --@param int bind => id of bind (API.Q, API.E)
+    function ForceBindLevelUp(player, class, bind, level)
+        local bindLevel = GetBindLevel(player, class, bind)
+        if level > 0 and bindLevel < CONST.MAX_LEVEL and bindLevel > 0 then
+            bindLevel = CoreMath.Round(bindLevel + level)
+        elseif level < 0 and bindLevel > CONST.STARTING_LEVEL and bindLevel > 0 then
+            bindLevel = CoreMath.Round(bindLevel + level)
+        end
+        SetBindLevel(player, class, bind, bindLevel)
+        --##FIXME currently setting XP to 0 on level up
+        local xp = 0
+        SetBindXp(player, class, bind, xp)
+        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
+    end
+
+    --##FIXME Temp Function
+    --@param object player
+    --@param int class => id of class (API.TANK, API.MAGE)
+    --@param int bind => id of bind (API.Q, API.E)
+    function ForceBindChangeLevel(player, class, bind, bool)
+        local bindLevel = GetBindLevel(player, class, bind)
+        if bool then
+            bindLevel = CONST.MAX_LEVEL
+        else
+            bindLevel = CONST.STARTING_LEVEL
+        end
+        SetBindLevel(player, class, bind, bindLevel)
+        --##FIXME currently setting XP to 0 on level up
+        local xp = 0
+        SetBindXp(player, class, bind, xp)
+        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
+    end
+end
+
 function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     local progression
@@ -254,4 +316,7 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Events.Connect("META_AP.AddBindXp", AddBindXp)
-Events.Connect("META_AP.ChangeBindLevel", BindLevelUp)
+if DEBUG then
+    Events.Connect("META_AP.ChangeBindLevel", ForceBindLevelUp)
+    Events.Connect("META_AP.CBLMM", ForceBindChangeLevel)
+end
