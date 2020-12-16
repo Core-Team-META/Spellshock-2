@@ -1206,7 +1206,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1430,7 +1430,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1653,7 +1653,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1877,7 +1877,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2359,7 +2359,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2583,7 +2583,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2806,7 +2806,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3030,7 +3030,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"

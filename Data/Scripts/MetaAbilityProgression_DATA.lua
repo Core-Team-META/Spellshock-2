@@ -82,29 +82,31 @@ classTable = {
         },
         --Shield Dash
         [CONST.BIND.R] = {
-            [1] = {mod1 = 0, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
+            -- mod1 = Ending Radius, mod2 = Enemy Impulse, mod3 = Damage Amount
+            [1] = {mod1 = 400, mod2 = 150000, mod3 = 10, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 450, mod2 = 160000, mod3 = 20, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 500, mod2 = 170000, mod3 = 30, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 550, mod2 = 180000, mod3 = 40, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 650, mod2 = 190000, mod3 = 50, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 700, mod2 = 200000, mod3 = 60, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 750, mod2 = 210000, mod3 = 70, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 800, mod2 = 220000, mod3 = 80, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 850, mod2 = 230000, mod3 = 90, mod4 = 0, mod5 = 0},
+            [10] = {mod1 = 900, mod2 = 240000, mod3 = 100, mod4 = 0, mod5 = 0}
         },
-        --Boulder Throw | mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
+        --Boulder Throw 
         [CONST.BIND.T] = {
-            [1] = {mod1 = 0, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
+            -- mod1 = Damage Amount, mod2 = Lifespan, mod3 = Projectile Speed, mod4 = Projectile Scale
+            [1] = {mod1 = 50, mod2 = 5, mod3 = 2500, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 60, mod2 = 6, mod3 = 2600, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 70, mod2 = 7, mod3 = 2700, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 80, mod2 = 8, mod3 = 2800, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 90, mod2 = 9, mod3 = 2900, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 100, mod2 = 10, mod3 = 3000, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 110, mod2 = 10, mod3 = 3100, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 120, mod2 = 10, mod3 = 3200, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 130, mod2 = 10, mod3 = 3300, mod4 = 0, mod5 = 0},
+            [10] = {mod1 = 140, mod2 = 10, mod3 = 3400, mod4 = 0, mod5 = 0}
         },
         --Roll
         [CONST.BIND.SHIFT] = {

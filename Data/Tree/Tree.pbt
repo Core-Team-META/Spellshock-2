@@ -30,6 +30,7 @@ Objects {
   ChildIds: 8983380287600545020
   ChildIds: 6356897330857931981
   ChildIds: 3612684566017260609
+  ChildIds: 10374051910039095490
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -39,6 +40,41 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 10374051910039095490
+  Name: "Tank"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7855160156328725233
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Tank"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 8268.94531
+            Y: 16649.2031
+            Z: 4385.57178
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17020530466204675231
+    }
   }
 }
 Objects {
