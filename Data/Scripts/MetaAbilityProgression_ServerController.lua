@@ -8,6 +8,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local COST_TABLE = require(script:GetCustomProperty("MetaAbilityProgressionUpgradeCosts_DATA"))
 local ADAPTOR = script:GetCustomProperty("Adaptor"):WaitForObject()
 
 ---DEV--
@@ -87,9 +88,11 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
---@return int reqXp
+--@return int reqXP, int reqGold
 local function GetReqBindXp(player, class, bind)
-    return 150
+    local currentLevel = GetBindLevel(player, class, bind)
+    local costTable = COST_TABLE[currentLevel]
+    return costTable.reqXP, costTable.reqGold
 end
 
 --@param object player
@@ -293,6 +296,15 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 function API.AddBindXp(player, class, bind, ammount)
     AddBindXp(player, class, bind, ammount)
+end
+
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return int reqXP, int reqGold
+function API.GetReqBindXp(player, class, bind)
+    return GetReqBindXp(player, class, bind)
 end
 
 --@param object player
