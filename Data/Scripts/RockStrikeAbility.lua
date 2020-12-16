@@ -7,17 +7,15 @@ end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
---local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 
-local SPEED = script:GetCustomProperty("ProjectileSpeed")
---local MOVE_DURATION = script:GetCustomProperty("MoveDuration")
---local LIFE_SPAN = script:GetCustomProperty("LifeSpan")
-local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
-local IMPULSE_AMOUNT = script:GetCustomProperty("ImpulseAmount")
-local RANGE = script:GetCustomProperty("Range")
+-- Default values
+local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local DEFAULT_DamageRange = script:GetCustomProperty("DamageRange")
+local DEFAULT_ImpulseAmount = script:GetCustomProperty("ImpulseAmount")
+local DEFAULT_Range = script:GetCustomProperty("Range")
 
-local MOVE_DURATION = CoreMath.Round(RANGE / SPEED, 3)
-local LIFE_SPAN = MOVE_DURATION + 5
+--local DEFAULT_MoveDuration = CoreMath.Round(DEFAULT_Range / DEFAULT_ProjectileSpeed, 3)
+--local DEFAULT_LifeSpan = DEFAULT_MoveDuration + 5
 
 local PlayerVFX = nil
 local CurrentProjectile = nil
@@ -34,7 +32,7 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
 	
-	local damageRangeTable = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod3"]
+	local damageRangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
 	local dmgMin = damageRangeTable.min
 	local dmgMax = damageRangeTable.max
 	local dmg = Damage.New()
@@ -56,7 +54,7 @@ function OnBeginOverlap(thisTrigger, other)
 	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
 	directionVector = -directionVector
 	directionVector.z = 1
-	local impulseVector = directionVector * ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod4"]--IMPULSE_AMOUNT
+	local impulseVector = directionVector * META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", DEFAULT_ImpulseAmount, ABILITY.name..": Impulse Amount")
 	other:AddImpulse(impulseVector)
 end
 
@@ -70,7 +68,7 @@ function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 	--print(ABILITY.owner.serverUserData["bind"])
 	--print(ABILITY.owner.serverUserData["bind"]["META_AP().Q"])
-	local ProjectileSpeed = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod1"]
+	local ProjectileSpeed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod1", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
 
 	-- Get the velocity vecotr based on the player's forward vector
 	local PlayerRotation = player:GetWorldRotation()
@@ -118,18 +116,19 @@ function OnAbilityExecute(thisAbility)
 		RockProjectile = World.SpawnAsset(_G.VFX[vfxKey], {position=spawnPosition})
 	end
 	
+	local ProjectileRange = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_Range, ABILITY.name..": Range")
+	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)
+	local LifeSpan = MoveDuration + 5
+
 	local DamageTrigger = RockProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
 	ViewRotation.x = 0
 	ViewRotation.y = 0
 	RockProjectile:SetWorldRotation(ViewRotation)
-	RockProjectile.lifeSpan = LIFE_SPAN
+	RockProjectile.lifeSpan = LifeSpan
 	RockProjectile:MoveContinuous(VelocityVector)
 	CurrentProjectile = RockProjectile
-	
-	local ProjectileRange = ABILITY.owner.serverUserData["bind"][META_AP().Q]["mod2"]
-	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)
 	
 	Task.Spawn(function ()
 		CurrentProjectile = nil

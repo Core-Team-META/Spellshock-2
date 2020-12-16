@@ -1,11 +1,15 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+﻿local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 --local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
 local EventName = script:GetCustomProperty("EventName")
-local Duration = script:GetCustomProperty("Duration")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
 
 local EventListeners = {}
 
@@ -64,7 +68,7 @@ function PlaceObject(thisPlayer, position, rotation)
 			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
 		end
 		
-		newObject.lifeSpan = Duration
+		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 		if newObject:GetCustomProperty("Team") ~= nil then
 			Task.Wait()
 			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)

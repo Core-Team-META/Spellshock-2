@@ -54,7 +54,7 @@ classTable = {
     [CONST.CLASS.TANK] = {
         --Rock Strike
         [CONST.BIND.Q] = {
-            --#EX => mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
+            --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
             [1] = {mod1 = 4000, mod2 = 3000, mod3 = {min=10, max=20}, mod4 = 150000, mod5 = 1},
             [2] = {mod1 = 4000, mod2 = 4000, mod3 = {min=10, max=20}, mod4 = 160000, mod5 = 1},
             [3] = {mod1 = 4000, mod2 = 5000, mod3 = {min=21, max=30}, mod4 = 170000, mod5 = 1},
@@ -68,16 +68,17 @@ classTable = {
         },
         --Stone Wall
         [CONST.BIND.E] = {
-            [1] = {mod1 = 0, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
+            --mod1 = Placement Range, mod2 = Duration
+            [1] = {mod1 = 1000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 2000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 3000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 4000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 5000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 6000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 7000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 8000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 9000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
+            [10] = {mod1 = 1000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0}
         },
         --Shield Dash
         [CONST.BIND.R] = {
@@ -92,7 +93,7 @@ classTable = {
             [9] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [10] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
         },
-        --Boulder Throw
+        --Boulder Throw | mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
         [CONST.BIND.T] = {
             [1] = {mod1 = 0, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
