@@ -5,10 +5,18 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-local function OnXpChange(player, class, bind, xp)
-    META_AP().ChangeBindLevel(player, class, bind, xp)
+local function OnLevelChange(player, class, bind, ammount)
+    Events.BroadcastToServer("META_AP.ChangeBindLevel", player, class, bind, ammount)
+    --META_AP().ChangeBindLevel(player, class, bind, ammount)
     Task.Wait(1)
-    UI.PrintToScreen("New Level: " .. tostring(META_AP().GetBindLevel(player, class, bind)))
+    Events.Broadcast("META_AP.UpdateTempUI")
+end
+
+local function ForceBindChangeLevel(player, class, bind, bool)
+    Events.BroadcastToServer("META_AP.CBLMM", player, class, bind, bool)
+    --META_AP().ChangeBindLevel(player, class, bind, ammount)
+    Task.Wait(1)
+    Events.Broadcast("META_AP.UpdateTempUI")
 end
 
 local function FindKeyByBind(key)
@@ -37,12 +45,25 @@ function OnBindingPress(player, key)
     if player.clientUserData.lastKeyBind then
         bind = FindKeyByBind(player.clientUserData.lastKeyBind)
     end
-    if player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_46" then
-        OnXpChange(player, class, bind, xp)
-    elseif player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_47" then
-        OnXpChange(player, class, bind, (xp * -1))
+    --Up Arrow
+    if player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_46" then --Up Arrow
+        OnLevelChange(player, class, bind, xp)
+    elseif player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_47" then --Down Arrow
+        OnLevelChange(player, class, bind, (xp * -1))
     end
-    player.clientUserData.lastKeyBind = key
+    --Right Arrow
+    if player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_49" then --Right Arrow
+        ForceBindChangeLevel(player, class, bind, true)
+    elseif player == LOCAL_PLAYER and bind and class > 0 and key == "ability_extra_48" then --Left Arrow
+        ForceBindChangeLevel(player, class, bind, false)
+    end
+
+    if
+        key ~= "ability_extra_46" and key ~= "ability_extra_47" and key ~= "ability_extra_49" and
+            key ~= "ability_extra_48"
+     then
+        player.clientUserData.lastKeyBind = key
+    end
 end
 
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPress)

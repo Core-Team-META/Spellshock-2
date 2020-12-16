@@ -94,7 +94,6 @@ function API.AddBindXp(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.AddBindXp", player, class, bind, ammount)
 end
 
-
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -108,9 +107,10 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param bool plus => true adds + 1 level
+--@return table bindLevel table
 function API.GetBindMods(player, class, bind, plus)
     local bindLevel = API.GetBindLevel(player, bind, class)
-    if plus then
+    if plus and CONST.MAX_LEVEL > bindLevel then
         bindLevel = bindLevel + 1
     end
     return modTable[class][bind][bindLevel]        
