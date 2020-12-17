@@ -17,7 +17,7 @@ local DEBUG = true
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
-local API = {}
+local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Variables
@@ -61,7 +61,6 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-
 local function SetBindLevel(player, class, bind, level)
     playerProgression[player][class][bind][API.LEVEL] = level
     local resName = UTIL.GetLevelString(class, bind)
@@ -93,65 +92,6 @@ local function GetReqBindXp(player, class, bind)
     local currentLevel = GetBindLevel(player, class, bind)
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
-end
-
---@param object player
---@param int binding
---@param string mod
---@param *various* defaultValue
---@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
-function API.GetAbilityMod(player, binding, mod, defaultValue, source)
-    local success, result =
-        pcall(
-        function()
-            return player.serverUserData["bind"][binding][mod]
-        end
-    )
-
-    if not success then
-        result = defaultValue
-        warn("META_AP => failed to access " .. source .. " mod")
-    end
-    return result
-end
-
---@param object player
---@param table data
-local function BuildBindDataTable(player, data)
-    playerProgression[player] = {}
-
-    if data ~= nil then
-        for class, classes in pairs(data) do
-            playerProgression[player][class] = {}
-            for bind, binds in pairs(classes) do
-                playerProgression[player][class][bind] = {}
-                for progressId, progress in pairs(binds) do
-                    if progressId == API.LEVEL then
-                        SetBindLevel(player, class, bind, progress)
-                    elseif progressId == API.XP then
-                        SetBindXp(player, class, bind, progress)
-                    end
-                end
-            end
-        end
-    end
-    for _, class in pairs(CONST.CLASS) do
-        playerProgression[player][class] = playerProgression[player][class] or {}
-        if not next(playerProgression[player][class]) then
-            for _, bind in pairs(CONST.BIND) do
-                playerProgression[player][class][bind] = {}
-                for string, progress in pairs(CONST.PROGRESS) do
-                    if string == "LEVEL" then
-                        SetBindLevel(player, class, bind, CONST.STARTING_LEVEL)
-                    elseif string == "XP" then
-                        SetBindXp(player, class, bind, 0)
-                    end
-                end
-            end
-        end
-    end
-
-    --UTIL.TablePrint(playerProgression[player])
 end
 
 --##FIXME Required XP not cal
@@ -188,44 +128,6 @@ local function AddBindXp(player, class, bind, ammount)
             SetBindXp(player, class, bind, currentBindXp)
         end
     end
-end
-
---@param table tbl => player data to be stored
---@return string str => string of compressed data
-local function ConvertToString(tbl)
-    local str = ""
-    for key, values in ipairs(tbl) do
-        str = str .. key .. "^"
-        for k, v in pairs(values) do
-            str = str .. k .. "~" .. UTIL.ConvertTableToString(v, ",", "=")
-            str = next(values, k) and str .. "^" or str
-        end
-        str = next(tbl, key) and str .. "|" or str
-    end
-
-    return str
-end
-
---@param string str => string of compressed data
---@return table finalTbl => player data
-local function ConvertToTable(str)
-    local finalTbl = {}
-    local tbl = UTIL.StringSplit("|", str)
-    for _, s in ipairs(tbl) do
-        local t1 = UTIL.StringSplit("^", s)
-        local index = UTIL.IsNumeric(t1[1]) and tonumber(t1[1]) or t1[1]
-        finalTbl[index] = finalTbl[index] or {}
-
-        for k, s1 in ipairs(t1) do
-            if k > 1 then
-                local t3 = UTIL.StringSplit("~", s1)
-                local i = UTIL.IsNumeric(t3[1]) and tonumber(t3[1]) or t3[1]
-                finalTbl[index][i] = UTIL.ConvertStringToTable(t3[2], ",", "=")
-            end
-        end
-    end
-
-    return finalTbl
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -269,35 +171,66 @@ if DEBUG then
     end
 end
 
-function OnPlayerJoined(player)
-    local data = Storage.GetPlayerData(player)
-    local progression
-    if data.META_ABILITY_PROGRESSION then
-        progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
+--@param object player
+--@param table data
+function BuildBindDataTable(player, data)
+    playerProgression[player] = {}
+
+    if data ~= nil then
+        for class, classes in pairs(data) do
+            playerProgression[player][class] = {}
+            for bind, binds in pairs(classes) do
+                playerProgression[player][class][bind] = {}
+                for progressId, progress in pairs(binds) do
+                    if progressId == API.LEVEL then
+                        SetBindLevel(player, class, bind, progress)
+                    elseif progressId == API.XP then
+                        SetBindXp(player, class, bind, progress)
+                    end
+                end
+            end
+        end
     end
-    BuildBindDataTable(player, progression)
-    ADAPTOR.context.OnPlayerJoined(player)
+    for _, class in pairs(CONST.CLASS) do
+        playerProgression[player][class] = playerProgression[player][class] or {}
+        if not next(playerProgression[player][class]) then
+            for _, bind in pairs(CONST.BIND) do
+                playerProgression[player][class][bind] = {}
+                for string, progress in pairs(CONST.PROGRESS) do
+                    if string == "LEVEL" then
+                        SetBindLevel(player, class, bind, CONST.STARTING_LEVEL)
+                    elseif string == "XP" then
+                        SetBindXp(player, class, bind, 0)
+                    end
+                end
+            end
+        end
+    end
+
+    --UTIL.TablePrint(playerProgression[player])
 end
 
-function OnPlayerLeft(player)
-    local playerData = Storage.GetPlayerData(player)
-    playerData.META_ABILITY_PROGRESSION = ConvertToString(playerProgression[player])
-    --player.META_ABILITY_VERSION = {VERSION = 1}
-    Storage.SetPlayerData(player, playerData)
+--@param object player
+--@param table playerProgression
+function GetPlayerProgression(player)
+    return playerProgression[player]
+end
 
+--@param object player
+function OnPlayerLeft(player)
     playerProgression[player] = nil
 end
 
 ------------------------------------------------------------------------------------------------------------------------
--- Public Server API
+-- PUBLIC SERVER API
 ------------------------------------------------------------------------------------------------------------------------
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.AddBindXp(player, class, bind, ammount)
     AddBindXp(player, class, bind, ammount)
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -322,11 +255,30 @@ function API.ChangeClass(player, class)
         end
     end
 end
+
+--@param object player
+--@param int binding
+--@param string mod
+--@param *various* defaultValue
+--@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
+function API.GetAbilityMod(player, binding, mod, defaultValue, source)
+    local success, result =
+        pcall(
+        function()
+            return player.serverUserData["bind"][binding][mod]
+        end
+    )
+
+    if not success then
+        result = defaultValue
+        warn("META_AP => failed to access " .. source .. " mod")
+    end
+    return result
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Listeners
 ------------------------------------------------------------------------------------------------------------------------
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
 Events.Connect("META_AP.AddBindXp", AddBindXp)
 if DEBUG then
     Events.Connect("META_AP.ChangeBindLevel", ForceBindLevelUp)

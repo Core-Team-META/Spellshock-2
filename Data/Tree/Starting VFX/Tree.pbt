@@ -1,8 +1,8 @@
 ﻿Name: "Starting VFX"
-RootId: 3515396752692620142
+RootId: 5874015840417789592
 Objects {
-  Id: 4903992845828906587
-  Name: "Healer_Elf"
+  Id: 4048957817673989693
+  Name: "Tank"
   Transform {
     Location {
     }
@@ -14,175 +14,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4287529334157423026
-    }
-  }
-}
-Objects {
-  Id: 13650172477468138301
-  Name: "Healer_Orc"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 16070017289157504481
-    }
-  }
-}
-Objects {
-  Id: 12567150600568558656
-  Name: "Assassin_Elf"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 6665958889220481136
-    }
-  }
-}
-Objects {
-  Id: 14233123506105687232
-  Name: "Assassin_Orc"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 9293650821442732191
-    }
-  }
-}
-Objects {
-  Id: 4451202918293768850
-  Name: "Mage_Elf"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1083974979704324912
-    }
-  }
-}
-Objects {
-  Id: 15449865024181855443
-  Name: "Mage_Orc"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15748669819301712087
-    }
-  }
-}
-Objects {
-  Id: 12275943819038522592
-  Name: "Hunter_Elf"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3515396752692620142
+  ParentId: 5874015840417789592
+  ChildIds: 8274554278962242689
+  ChildIds: 1909557250613290468
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Rain_of_Arrows_Placement"
-      AssetReference {
-        Id: 1939393386208935566
-      }
+      Name: "cs:ID"
+      Int: 1
     }
   }
   Collidable_v2 {
@@ -191,15 +29,19 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Script {
-    ScriptAsset {
-      Id: 13263787292238581681
-    }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 4048957817673989693
+    SubobjectId: 8571351707591859209
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
   }
 }
 Objects {
-  Id: 11739789804399049523
-  Name: "Hunter_Orc"
+  Id: 1909557250613290468
+  Name: "Elf_Team"
   Transform {
     Location {
     }
@@ -211,13 +53,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3515396752692620142
+  ParentId: 4048957817673989693
+  ChildIds: 15023700050194966386
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Rain_of_Arrows_Placement"
-      AssetReference {
-        Id: 9619618021631241089
-      }
+      Name: "cs:ID"
+      Int: 2
     }
   }
   Collidable_v2 {
@@ -226,14 +67,18 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Script {
-    ScriptAsset {
-      Id: 17952693581840529841
-    }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 1909557250613290468
+    SubobjectId: 6071797233955588048
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
   }
 }
 Objects {
-  Id: 1907482510054459063
+  Id: 15023700050194966386
   Name: "Tank_Elf"
   Transform {
     Location {
@@ -246,7 +91,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3515396752692620142
+  ParentId: 1909557250613290468
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 1
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -258,9 +109,54 @@ Objects {
       Id: 8308231682525855788
     }
   }
+  InstanceHistory {
+    SelfId: 15023700050194966386
+    SubobjectId: 11438475381006353734
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
+  }
 }
 Objects {
-  Id: 18376379497129849724
+  Id: 8274554278962242689
+  Name: "Orc_Team"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4048957817673989693
+  ChildIds: 11511678337778933379
+  ChildIds: 14884099342341238663
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 8274554278962242689
+    SubobjectId: 4329744983662216885
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 14884099342341238663
   Name: "Tank_Orc"
   Transform {
     Location {
@@ -273,7 +169,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3515396752692620142
+  ParentId: 8274554278962242689
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 2
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -284,5 +186,50 @@ Objects {
     ScriptAsset {
       Id: 17951190285812977083
     }
+  }
+  InstanceHistory {
+    SelfId: 14884099342341238663
+    SubobjectId: 9245245892084305331
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
+  }
+}
+Objects {
+  Id: 11511678337778933379
+  Name: "Tank_Orc"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8274554278962242689
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17951190285812977083
+    }
+  }
+  InstanceHistory {
+    SelfId: 11511678337778933379
+    SubobjectId: 15060869678388985015
+    InstanceId: 16072469884466055001
+    TemplateId: 12098153250026619541
   }
 }
