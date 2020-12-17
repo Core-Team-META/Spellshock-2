@@ -14,9 +14,13 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 -- Internal custom properties
 local EQUIPMENT = script:FindAncestorByType('Equipment')
+
 if not EQUIPMENT then
     error(script.name .. " should be part of Equipment object hierarchy.")
 end
@@ -25,7 +29,7 @@ local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 -- User exposed variables
 local EQUIPMENT_STANCE = EQUIPMENT:GetCustomProperty("EquipmentStance")
 local ABILITY_ANIMATION_STANCE = script:GetCustomProperty("AbilityAnimationStance")
-local BLOCK_PERCENTAGE = script:GetCustomProperty("BlockPercentage")
+local DEFAULT_BLOCK_PERCENTAGE = script:GetCustomProperty("BlockPercentage")
 
 -- Internal variables
 local released = false
@@ -33,9 +37,14 @@ local releasedHandle = nil
 local goingToTakeDamageListener = nil
 
 -- nil OnGoingToTakeDamage(Character taking damage, Damage object, Character dealing the damage)
-function OnGoingToTakeDamage(object, dmg, source)
-	if object == EQUIPMENT.owner then
-        dmg.amount = dmg.amount - (dmg.amount * BLOCK_PERCENTAGE)
+function OnGoingToTakeDamage(attackData)
+    if attackData.tags and attackData.tags.id and attackData.tags.id == "StatusEffect" then
+        return
+    end
+
+    if attackData.object == EQUIPMENT.owner then
+        local BlockPercentage = META_AP().GetAbilityMod(ABILITY.owner, META_AP().RMB, "mod1", DEFAULT_BLOCK_PERCENTAGE, ABILITY.name..": Block %")
+        attackData.damage.amount = attackData.damage.amount - (attackData.damage.amount * BlockPercentage)
 	end
 end
 
@@ -57,7 +66,7 @@ function OnAbilityExecute(ability)
     local owner = ability.owner
     owner.animationStance = ABILITY_ANIMATION_STANCE
     releasedHandle = owner.bindingReleasedEvent:Connect(OnShieldReleased)
-    goingToTakeDamageListener = Events.Connect("GoingToTakeDamage", OnGoingToTakeDamage)
+    goingToTakeDamageListener = Events.Connect("CombatWrapAPI.GoingToTakeDamage", OnGoingToTakeDamage)
 end
 
 
@@ -112,5 +121,4 @@ ABILITY.executeEvent:Connect(OnAbilityExecute)
 ABILITY.cooldownEvent:Connect(OnAbilityCooldown)
 --ABILITY.interruptedEvent:Connect(OnAbilityInterrupted)
 ABILITY.tickEvent:Connect(OnAbilityTick)
-
 EQUIPMENT.unequippedEvent:Connect(ClearReleasedHandle)

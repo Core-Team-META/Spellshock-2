@@ -136,16 +136,16 @@ classTable = {
         },
         --Block
         [CONST.BIND.RMB] = {
-            [1] = {mod1 = 0, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 1, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
+            [1] = {mod1 = 0.04, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 0.08, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 0.12, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 0.16, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 0.20, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 0.24, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 0.28, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 0.32, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 0.36, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [10] = {mod1 = 0.4, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0}
         }
     },
     -- Mage

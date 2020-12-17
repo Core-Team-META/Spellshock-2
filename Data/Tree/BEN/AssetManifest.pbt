@@ -1,13 +1,4 @@
 ﻿Assets {
-  Id: 17752702521577453302
-  Name: "Fantasy Ability Yellow 027"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_027"
-  }
-}
-Assets {
   Id: 17589500154826526248
   Name: "Radial Blur Post Process"
   PlatformAssetType: 20
@@ -23,15 +14,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
-  Id: 17370828256945431127
-  Name: "Fantasy Ability Yellow 026"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_026"
   }
 }
 Assets {
@@ -89,24 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13163109526252587430
-  Name: "Fantasy Ability Yellow 034"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_034"
-  }
-}
-Assets {
-  Id: 12289747022974899819
-  Name: "Fantasy Shield 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Shield_003"
-  }
-}
-Assets {
   Id: 11595486818978203444
   Name: "Icon Hand"
   PlatformAssetType: 9
@@ -116,30 +80,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10965229460380713944
-  Name: "Fantasy Club 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Club_008"
-  }
-}
-Assets {
   Id: 10769838940944209875
   Name: "Score Tick Tally Single 01 SFX"
   PlatformAssetType: 7
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_score_tick_count_tally_single_01_Cue_ref"
-  }
-}
-Assets {
-  Id: 8277485499354448455
-  Name: "Fantasy Ability Yellow 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_005"
   }
 }
 Assets {
@@ -167,24 +113,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
-  Id: 6482451050534705929
-  Name: "Fantasy Ability Yellow 020"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_021"
-  }
-}
-Assets {
-  Id: 5808222625397640473
-  Name: "Fantasy Ability Yellow 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_004"
   }
 }
 Assets {
@@ -284,15 +212,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Close"
-  }
-}
-Assets {
-  Id: 1031800327856440791
-  Name: "Fantasy Hammer 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Hammer_005"
   }
 }
 Assets {
