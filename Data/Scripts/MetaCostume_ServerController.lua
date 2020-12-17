@@ -17,7 +17,6 @@ local VFX_LIST = script:GetCustomProperty("VFX_LIST"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"]["VFX"] = API
-
 local costumeTable = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -38,8 +37,8 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
---@param string string => "projectile"
-local function GetBindVfx(player, class, skin, bind, string)
+--@param string string => "Projectile"
+local function GetBindVfx(player, class, bind, skin, string)
     return costumeTable[class][player.team][skin][bind][string]
 end
 
