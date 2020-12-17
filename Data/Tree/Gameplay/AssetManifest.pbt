@@ -153,7 +153,7 @@ Assets {
 }
 Assets {
   Id: 6789604014209716330
-  Name: "Scifi Ship Engine 01"
+  Name: "Sci-fi Ship Engine 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -162,7 +162,7 @@ Assets {
 }
 Assets {
   Id: 5646704112327633341
-  Name: "Hemisphere"
+  Name: "Sphere - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"

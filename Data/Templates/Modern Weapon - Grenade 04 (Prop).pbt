@@ -118,7 +118,7 @@
     }
     Assets {
       Id: 6855348992067761797
-      Name: "Grenade Canister 04"
+      Name: "Modern Weapon - Grenade Canister 04"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -127,7 +127,7 @@
     }
     Assets {
       Id: 5544820850613172301
-      Name: "Grenade Handle 01"
+      Name: "Modern Weapon - Grenade Handle 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -139,5 +139,5 @@
       AssetId: "Grenade_04"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

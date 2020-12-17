@@ -5,10 +5,15 @@ local Outer = script:GetCustomProperty("Outer"):WaitForObject()
 local GravelSFX = script:GetCustomProperty("GravelSFX"):WaitForObject()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 local Timer = script:GetCustomProperty("Timer")
+local Root = script:GetCustomProperty("Root"):WaitForObject()
+
+while Root:GetCustomProperty("lifeSpan") == 0 do
+	Task.Wait()
+end
 
 local task = Task.Spawn(function()
 
-	Task.Wait(0) --play when the ability is spawned
+	--Task.Wait(0) --play when the ability is spawned
 	Ease3D.EasePosition(RockWall, Vector3.New(0, 0, 0), .2, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
 	Ease3D.EasePosition(Center, Vector3.New(95, 12, 0), .6, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
 	Ease3D.EasePosition(Mid, Vector3.New(10, 1, 0), .4, Ease3D.EasingEquation.BOUNCE, Ease3D.EasingDirection.OUT)
@@ -16,7 +21,8 @@ local task = Task.Spawn(function()
 	Ease3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
-	Task.Wait(Timer) --play 1 sec before the ability is destroyed
+	Task.Wait(Root:GetCustomProperty("lifeSpan")) --play 1 sec before the ability is destroyed
+	
 	if Object.IsValid(GravelSFX) then
 		GravelSFX:Play()
 	end
@@ -30,5 +36,5 @@ local task = Task.Spawn(function()
 	Task.Wait(3)
     
 end)
-task.repeatCount = -1
-task.repeatInterval = -1
+--task.repeatCount = -1
+--task.repeatInterval = -1

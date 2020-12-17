@@ -17,7 +17,7 @@ function EffectTick(player)
 		source = nil,
 		position = nil,
 		rotation = nil,
-		tags = {}
+		tags = {id = "StatusEffect"}
 	}
 	COMBAT().ApplyDamage(attackData)		
 end

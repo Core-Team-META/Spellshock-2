@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 1273489800256864344
-  Name: "Tank Elf Excavate Projectile Frost"
+  Name: "Tank Elf Boulder Throw Projectile Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -259,5 +259,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

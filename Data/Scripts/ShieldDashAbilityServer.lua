@@ -1,5 +1,8 @@
 ﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
@@ -7,10 +10,10 @@ local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
 --local DashFX = Equipment:GetCustomProperty("DashFX")
 --local EndingFX = Equipment:GetCustomProperty("EndingFX")
-local Radius = Equipment:GetCustomProperty("EndingRadius")
+local DEFAULT_Radius = Equipment:GetCustomProperty("EndingRadius")
 local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
-local EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
-local DamageAmount = Equipment:GetCustomProperty("DamageAmount")
+local DEFAULT_EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
+local DEFAULT_DamageAmount = Equipment:GetCustomProperty("DamageAmount")
 
 local PlayerVFX = nil
 local abilityName = string.gsub(Ability.name, " ", "_")
@@ -24,13 +27,14 @@ function AddImpulseToPlayer(player)
 	local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
 	directionVector = directionVector/directionVector.size
 	directionVector.z = 0.5
-	local impulseVector = directionVector * EnemyImpulseAmount
+	local impulseVector = directionVector * META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_EnemyImpulseAmount, Ability.name..": Enemy Impulse")
 
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
 	
 	-- Do damage
-	local dmg = Damage.New(DamageAmount)
+	local dmgAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, Ability.name..": Damage")
+	local dmg = Damage.New(dmgAmount)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = Ability.owner
 	dmg.sourceAbility = Ability
@@ -130,7 +134,8 @@ function OnAbilityCooldown(thisAbility)
 		World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
 	end
 	
-	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), Radius, {ignoreTeams = thisAbility.owner.team})
+	local sphereRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_Radius, Ability.name..": Radius")
+	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulseToPlayer(enemy)
 	end

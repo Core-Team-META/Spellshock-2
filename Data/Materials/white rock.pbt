@@ -2,7 +2,7 @@
   Id: 15710974556442677409
   Name: "white rock"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 9782114571514030326
     ParameterOverrides {

@@ -593,7 +593,7 @@
     }
     Assets {
       Id: 12130383381846444979
-      Name: "SciFi Energy Airy Powerup 01 SFX"
+      Name: "Sci-fi Energy Airy Powerup 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
@@ -623,5 +623,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

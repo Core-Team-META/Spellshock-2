@@ -2,7 +2,7 @@
   Id: 10356370741248709980
   Name: "Hay Grass from Grass Tall"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 10665935622760157020
     ParameterOverrides {
