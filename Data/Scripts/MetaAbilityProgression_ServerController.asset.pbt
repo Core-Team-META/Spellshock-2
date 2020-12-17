@@ -16,13 +16,7 @@
           Id: 2269572116006940077
         }
       }
-      Overrides {
-        Name: "cs:MetaAbilityProgressionUpgradeCosts_DATA"
-        AssetReference {
-          Id: 3686805858911968991
-        }
-      }
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

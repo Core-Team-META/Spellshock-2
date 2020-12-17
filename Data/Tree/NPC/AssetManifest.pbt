@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 16372496464315477095
-  Name: "Ring - Beveled Thick"
+  Name: "Ring Beveled (thick)"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -126,7 +126,7 @@ Assets {
 }
 Assets {
   Id: 13221172065708950507
-  Name: "Ring - Quarter Extra Thick"
+  Name: "Quarter-Donut"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -153,7 +153,7 @@ Assets {
 }
 Assets {
   Id: 12610149741243116648
-  Name: "Urban Pipe Wrap 01"
+  Name: "Urban Pipe Coupling 05"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -315,7 +315,7 @@ Assets {
 }
 Assets {
   Id: 7147607578013694397
-  Name: "Sphere - Half Thin"
+  Name: "Hemishpere (thin)"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -378,7 +378,7 @@ Assets {
 }
 Assets {
   Id: 5836430349218932838
-  Name: "Pipe - Thin"
+  Name: "Pipe (thin)"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -396,7 +396,7 @@ Assets {
 }
 Assets {
   Id: 5351428073291024820
-  Name: "Emissive Glow Opaque"
+  Name: "Opaque Emissive"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"

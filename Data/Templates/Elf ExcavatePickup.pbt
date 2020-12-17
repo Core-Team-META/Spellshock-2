@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 4152617433700755742
-  Name: "Tank Orc Boulder Throw Projectile Basic"
+  Id: 13597461145019088703
+  Name: "Elf ExcavatePickup"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11505666779171707469
+      RootId: 17666739317002180979
       Objects {
-        Id: 11505666779171707469
-        Name: "Orc Excavate Projectile"
+        Id: 17666739317002180979
+        Name: "Elf ExcavatePickup"
         Transform {
           Scale {
             X: 1
@@ -16,56 +16,9 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 14182206178707156308
-        ChildIds: 2566810676855196869
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 2566810676855196869
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        PhysicsObject {
-          PhysicsShape {
-            Value: "mc:ephysicsshape:sphere"
-          }
-          Settings {
-            IsEnabled: true
-            OverrideMass: true
-            Mass: 2000
-            LinearDamping: 0.1
-            AngularDamping: 0.5
-          }
-          Radius: 180
-          Length: 200
-        }
-      }
-      Objects {
-        Id: 14182206178707156308
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11505666779171707469
-        ChildIds: 13414360101649384300
-        ChildIds: 14256219835201485047
-        ChildIds: 5914423432301324697
+        ChildIds: 10401052584630691944
+        ChildIds: 6476730550929530250
+        ChildIds: 8220988803279777573
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -77,35 +30,24 @@
         }
       }
       Objects {
-        Id: 13414360101649384300
-        Name: "BoulderBreakHandler"
+        Id: 10401052584630691944
+        Name: "Gun Impact Small VFX"
         Transform {
           Location {
-            X: -4985
-            Y: -10250
-            Z: -3205
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.89999986
+            Y: 2.89999986
+            Z: 2.89999986
           }
         }
-        ParentId: 14182206178707156308
+        ParentId: 17666739317002180979
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Root"
-            ObjectReference {
-              SubObjectId: 11505666779171707469
-            }
-          }
-          Overrides {
-            Name: "cs:FX_Template"
-            AssetReference {
-              Id: 13459923181472021410
-            }
+            Name: "bp:Gravity"
+            Float: -9
           }
         }
         Collidable_v2 {
@@ -114,17 +56,23 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 9712108430952180404
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
       Objects {
-        Id: 14256219835201485047
+        Id: 6476730550929530250
         Name: "Rock 03"
         Transform {
           Location {
+            Z: 195
           }
           Rotation {
           }
@@ -134,8 +82,8 @@
             Z: 1.7
           }
         }
-        ParentId: 14182206178707156308
-        ChildIds: 155236431077683504
+        ParentId: 17666739317002180979
+        ChildIds: 10201393563338987174
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -170,7 +118,7 @@
         }
       }
       Objects {
-        Id: 155236431077683504
+        Id: 10201393563338987174
         Name: "Gems"
         Transform {
           Location {
@@ -178,22 +126,22 @@
           Rotation {
           }
           Scale {
-            X: 0.999999881
-            Y: 0.999999881
-            Z: 0.999999881
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 14256219835201485047
-        ChildIds: 18278599351896640415
-        ChildIds: 1195332812031904834
-        ChildIds: 10096114985171176699
-        ChildIds: 18434546192522160699
-        ChildIds: 16416147783453484030
-        ChildIds: 13111685984310275787
-        ChildIds: 14873189094463515111
-        ChildIds: 11023849047158956882
-        ChildIds: 15878240947487223937
-        ChildIds: 4568753672041910387
+        ParentId: 6476730550929530250
+        ChildIds: 14621025135099929193
+        ChildIds: 17621215444779070618
+        ChildIds: 7669662275662513772
+        ChildIds: 431342622335591231
+        ChildIds: 15517946915909297347
+        ChildIds: 4679200883203945691
+        ChildIds: 3880813982616556995
+        ChildIds: 4656905489838615284
+        ChildIds: 9660672986700971268
+        ChildIds: 912362803182108959
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -205,7 +153,7 @@
         }
       }
       Objects {
-        Id: 18278599351896640415
+        Id: 14621025135099929193
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -224,17 +172,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -259,7 +207,7 @@
         }
       }
       Objects {
-        Id: 1195332812031904834
+        Id: 17621215444779070618
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -278,17 +226,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -313,7 +261,7 @@
         }
       }
       Objects {
-        Id: 10096114985171176699
+        Id: 7669662275662513772
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -332,17 +280,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -367,7 +315,7 @@
         }
       }
       Objects {
-        Id: 18434546192522160699
+        Id: 431342622335591231
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -386,17 +334,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -421,7 +369,7 @@
         }
       }
       Objects {
-        Id: 16416147783453484030
+        Id: 15517946915909297347
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -440,17 +388,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -475,7 +423,7 @@
         }
       }
       Objects {
-        Id: 13111685984310275787
+        Id: 4679200883203945691
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -494,17 +442,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -529,7 +477,7 @@
         }
       }
       Objects {
-        Id: 14873189094463515111
+        Id: 3880813982616556995
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -548,17 +496,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -583,7 +531,7 @@
         }
       }
       Objects {
-        Id: 11023849047158956882
+        Id: 4656905489838615284
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -602,17 +550,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -637,7 +585,7 @@
         }
       }
       Objects {
-        Id: 15878240947487223937
+        Id: 9660672986700971268
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -656,17 +604,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -691,7 +639,7 @@
         }
       }
       Objects {
-        Id: 4568753672041910387
+        Id: 912362803182108959
         Name: "Rock Pile 001"
         Transform {
           Location {
@@ -710,17 +658,17 @@
             Z: 0.588235199
           }
         }
-        ParentId: 155236431077683504
+        ParentId: 10201393563338987174
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8216873922047098167
+              Id: 16312281148657110259
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -745,10 +693,12 @@
         }
       }
       Objects {
-        Id: 5914423432301324697
-        Name: "Nature Rocks Debris Falling Heavy 01 SFX"
+        Id: 8220988803279777573
+        Name: "Heavy Ground Rocky Impact 01 SFX"
         Transform {
           Location {
+            X: 160
+            Z: 255
           }
           Rotation {
           }
@@ -758,7 +708,7 @@
             Z: 1
           }
         }
-        ParentId: 14182206178707156308
+        ParentId: 17666739317002180979
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -767,10 +717,9 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 358916433543470531
+            Id: 888725854457039636
           }
           AutoPlay: true
-          Repeat: true
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -779,37 +728,14 @@
           IsAttenuationEnabled: true
         }
       }
-      Objects {
-        Id: 2566810676855196869
-        Name: "Trigger"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 4.80000114
-            Y: 4.80000114
-            Z: 4.80000114
-          }
-        }
-        ParentId: 11505666779171707469
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
-        }
+    }
+    Assets {
+      Id: 3902609303942155418
+      Name: "Gun Impact Small VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_gun_impact_dirt_sm"
       }
     }
     Assets {
@@ -831,12 +757,12 @@
       }
     }
     Assets {
-      Id: 358916433543470531
-      Name: "Nature Rocks Debris Falling Heavy 01 SFX"
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_nature_rocks_debris_falling_heavy_01_Cue_ref"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -844,5 +770,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

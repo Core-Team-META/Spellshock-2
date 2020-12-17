@@ -1,8 +1,8 @@
 ﻿Assets {
   Id: 343876453884158946
-  Name: "BoulderThrowAbilityClient"
+  Name: "ExcavateAbilityClient"
   PlatformAssetType: 3
   TextAsset {
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

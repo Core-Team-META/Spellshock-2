@@ -15112,7 +15112,7 @@
     }
     Assets {
       Id: 13352595166498895188
-      Name: "Large Round Wood Beam 8m"
+      Name: "Large Round Wood Beam 6m"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -15229,7 +15229,7 @@
     }
     Assets {
       Id: 5646704112327633341
-      Name: "Sphere - Half"
+      Name: "Hemisphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -15286,5 +15286,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

@@ -993,7 +993,7 @@
     }
     Assets {
       Id: 901541979513849367
-      Name: "Bush 01"
+      Name: "Bush Green 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -1077,5 +1077,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

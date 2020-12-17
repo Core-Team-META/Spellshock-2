@@ -17,7 +17,7 @@ function BleedTick(player)
 		source = nil,
 		position = nil,
 		rotation = nil,
-		tags = {id = "StatusEffect"}
+		tags = {}
 	}
 	COMBAT().ApplyDamage(attackData)
 end

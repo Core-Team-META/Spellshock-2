@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 13459923181472021410
-  Name: "Tank Boulder Throw Break Basic"
+  Name: "Boulder Break FX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -129,5 +129,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

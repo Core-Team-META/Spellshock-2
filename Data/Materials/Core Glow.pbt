@@ -2,7 +2,7 @@
   Id: 1009636138000564291
   Name: "Core Glow"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 675563715440209277
     ParameterOverrides {

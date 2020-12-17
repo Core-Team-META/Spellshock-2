@@ -1990,7 +1990,7 @@
     }
     Assets {
       Id: 13515470150110763774
-      Name: "Ring - Extra Thick"
+      Name: "Donut 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2011,5 +2011,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

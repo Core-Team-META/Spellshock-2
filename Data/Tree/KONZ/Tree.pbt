@@ -37,12 +37,6 @@ Objects {
             Z: 1
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:inheritfromparent"
-          }
-        }
       }
     }
     TemplateAsset {

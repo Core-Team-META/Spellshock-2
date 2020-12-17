@@ -215,7 +215,7 @@
     }
     Assets {
       Id: 860140904207434054
-      Name: "Sword Swipe Half Circle"
+      Name: "Sword Swipe Half Circle VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
@@ -236,5 +236,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

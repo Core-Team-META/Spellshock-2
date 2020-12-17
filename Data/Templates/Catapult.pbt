@@ -10254,7 +10254,7 @@
     }
     Assets {
       Id: 7147607578013694397
-      Name: "Sphere - Half Thin"
+      Name: "Hemishpere (thin)"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -10284,5 +10284,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

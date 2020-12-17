@@ -1,15 +1,11 @@
-﻿local function META_AP()
-    return _G["Meta.Ability.Progression"]
-end
-
-local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
+﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local ObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
+local MAX_PLACEMENT_RANGE = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local EventName = ServerScript:GetCustomProperty("EventName")
 
@@ -108,9 +104,7 @@ end
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
-	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
-	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().TANK, META_AP().E, "mod1", DEFAULT_Range, SpecialAbility.name..": Placement Range")
-	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)--MAX_PLACEMENT_RANGE)
+	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
 	if hr ~= nil then

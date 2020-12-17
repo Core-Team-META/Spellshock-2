@@ -4300,7 +4300,7 @@
     }
     Assets {
       Id: 11758131120494169132
-      Name: "Sphere - Half Slice"
+      Name: "Hemisphere-wedge"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4318,7 +4318,7 @@
     }
     Assets {
       Id: 14017539756736382852
-      Name: "Cylinder - Bottom-Aligned"
+      Name: "Cylinder - bottom aligned"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4327,7 +4327,7 @@
     }
     Assets {
       Id: 7147607578013694397
-      Name: "Sphere - Half Thin"
+      Name: "Hemishpere (thin)"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4336,7 +4336,7 @@
     }
     Assets {
       Id: 2615820326670724915
-      Name: "Pipe - Half"
+      Name: "Half-pipe"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4345,7 +4345,7 @@
     }
     Assets {
       Id: 1588037931977530754
-      Name: "Manticore Logo"
+      Name: "Manticore Gold"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4435,7 +4435,7 @@
     }
     Assets {
       Id: 13515470150110763774
-      Name: "Ring - Extra Thick"
+      Name: "Donut 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4453,7 +4453,7 @@
     }
     Assets {
       Id: 13221172065708950507
-      Name: "Ring - Quarter Extra Thick"
+      Name: "Quarter-Donut"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4480,7 +4480,7 @@
     }
     Assets {
       Id: 10733938494793341403
-      Name: "Wedge - Curved"
+      Name: "Curved Wedge"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4492,5 +4492,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

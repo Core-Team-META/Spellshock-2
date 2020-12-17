@@ -907,7 +907,7 @@
     }
     Assets {
       Id: 10733938494793341403
-      Name: "Wedge - Curved"
+      Name: "Curved Wedge"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -919,5 +919,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

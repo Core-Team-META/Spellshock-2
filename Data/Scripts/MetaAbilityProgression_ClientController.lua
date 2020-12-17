@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/16/2020
--- Version 0.1.2
+-- Date: 12/10/2020
+-- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -39,6 +39,10 @@ end
 for progress, key in pairs(CONST.PROGRESS) do
     API[progress] = key
 end
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------------------------
 -- PUBLIC CLIENT API
@@ -81,7 +85,6 @@ function API.GetBindXp(player, bind)
     return player:GetResource(resName)
 end
 
-
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -90,45 +93,15 @@ function API.AddBindXp(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.AddBindXp", player, class, bind, ammount)
 end
 
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
---@param int ammount => amount of XP to add
-function API.ChangeBindLevel(player, class, bind, ammount)
-    Events.BroadcastToServer("META_AP.ChangeBindLevel", player, class, bind, ammount)
-end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param bool plus => true adds + 1 level
---@return table bindLevel table
 function API.GetBindMods(player, class, bind, plus)
     local bindLevel = API.GetBindLevel(player, bind, class)
-    if plus and CONST.MAX_LEVEL > bindLevel then
+    if plus then
         bindLevel = bindLevel + 1
     end
     return modTable[class][bind][bindLevel]        
-end
-
-
---@param object player
---@param int class
---@param int bind
---@param string mod
---@param *various* defaultValue
---@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
-function API.GetAbilityMod(player, class, bind, mod, defaultValue, source)
-    local bindLevel = API.GetBindLevel(player, bind, class)
-    print("Current level: "..tostring(bindLevel))
-    local success, result = pcall(function()
-        return modTable[class][bind][bindLevel][mod]
-    end)
-    
-    if not success then 
-        result = defaultValue 
-        warn("META_AP => failed to access "..source.." mod")
-    end
-    return result
 end

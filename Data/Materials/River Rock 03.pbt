@@ -2,7 +2,7 @@
   Id: 6134759234770482337
   Name: "River Rock 03"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 16227013351969660987
     ParameterOverrides {

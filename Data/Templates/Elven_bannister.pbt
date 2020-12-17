@@ -456,7 +456,7 @@
     }
     Assets {
       Id: 4693264132494587556
-      Name: "Sci-fi Trim 01"
+      Name: "SciFi Trim 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -486,5 +486,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

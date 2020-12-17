@@ -1,23 +1,18 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/16/2020
--- Version 0.1.2
+-- Date: 12/09/2020
+-- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
-local COST_TABLE = require(script:GetCustomProperty("MetaAbilityProgressionUpgradeCosts_DATA"))
 local ADAPTOR = script:GetCustomProperty("Adaptor"):WaitForObject()
-
----DEV--
-local DEBUG = true
-
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
-local API = _G["Meta.Ability.Progression"] or {}
+local API = {}
 _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Variables
@@ -55,14 +50,17 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 local function GetBindLevel(player, class, bind)
+    UTIL.TablePrint(playerProgression[player][class][bind])
     return playerProgression[player][class][bind][API.LEVEL]
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
+
 local function SetBindLevel(player, class, bind, level)
     playerProgression[player][class][bind][API.LEVEL] = level
+    -- C1B1PROG
     local resName = UTIL.GetLevelString(class, bind)
     player:SetResource(resName, level)
 end
@@ -83,15 +81,52 @@ local function SetBindXp(player, class, bind, ammount)
     player:SetResource(resName, CoreMath.Round(ammount))
 end
 
---#FIXME
+--#FIXME Need required xp calculation
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
---@return int reqXP, int reqGold
+--@return int reqXp
 local function GetReqBindXp(player, class, bind)
-    local currentLevel = GetBindLevel(player, class, bind)
-    local costTable = COST_TABLE[currentLevel]
-    return costTable.reqXP, costTable.reqGold
+    return 150
+end
+
+--@param object player
+--@param table data
+local function BuildBindDataTable(player, data)
+    playerProgression[player] = {}
+
+    if data ~= nil then
+        for class, classes in pairs(data) do
+            playerProgression[player][class] = {}
+            for bind, binds in pairs(classes) do
+                playerProgression[player][class][bind] = {}
+                for progressId, progress in pairs(binds) do
+                    if progressId == API.LEVEL then
+                        SetBindLevel(player, class, bind, progress)
+                    elseif progressId == API.XP then
+                        SetBindXp(player, class, bind, progress)
+                    end
+                end
+            end
+        end
+    end
+    for _, class in pairs(CONST.CLASS) do
+        playerProgression[player][class] = playerProgression[player][class] or {}
+        if not next(playerProgression[player][class]) then
+            for _, bind in pairs(CONST.BIND) do
+                playerProgression[player][class][bind] = {}
+                for string, progress in pairs(CONST.PROGRESS) do
+                    if string == "LEVEL" then
+                        SetBindLevel(player, class, bind, CONST.STARTING_LEVEL)
+                    elseif string == "XP" then
+                        SetBindXp(player, class, bind, 0)
+                    end
+                end
+            end
+        end
+    end
+
+    --UTIL.TablePrint(playerProgression[player])
 end
 
 --##FIXME Required XP not cal
@@ -130,114 +165,75 @@ local function AddBindXp(player, class, bind, ammount)
     end
 end
 
+
+--@param table tbl => player data to be stored
+--@return string str => string of compressed data
+local function ConvertToString(tbl)
+    local str = ""
+    for key, values in ipairs(tbl) do
+        str = str .. key .. "^"
+        for k, v in pairs(values) do
+            str = str .. k .. "~" .. UTIL.ConvertTableToString(v, ",", "=")
+            str = next(values, k) and str .. "^" or str
+        end
+        str = next(tbl, key) and str .. "|" or str
+    end
+
+    return str
+end
+
+--@param string str => string of compressed data
+--@return table finalTbl => player data
+local function ConvertToTable(str)
+    local finalTbl = {}
+    local tbl = UTIL.StringSplit("|", str)
+    for _, s in ipairs(tbl) do
+        local t1 = UTIL.StringSplit("^", s)
+        local index = UTIL.IsNumeric(t1[1]) and tonumber(t1[1]) or t1[1]
+        finalTbl[index] = finalTbl[index] or {}
+
+        for k, s1 in ipairs(t1) do
+            if k > 1 then
+                local t3 = UTIL.StringSplit("~", s1)
+                local i = UTIL.IsNumeric(t3[1]) and tonumber(t3[1]) or t3[1]
+                finalTbl[index][i] = UTIL.ConvertStringToTable(t3[2], ",", "=")
+            end
+        end
+    end
+
+    return finalTbl
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
-if DEBUG then
-    --##FIXME Temp Function
-    --@param object player
-    --@param int class => id of class (API.TANK, API.MAGE)
-    --@param int bind => id of bind (API.Q, API.E)
-    function ForceBindLevelUp(player, class, bind, level)
-        local bindLevel = GetBindLevel(player, class, bind)
-        if level > 0 and bindLevel < CONST.MAX_LEVEL and bindLevel > 0 then
-            bindLevel = CoreMath.Round(bindLevel + level)
-        elseif level < 0 and bindLevel > CONST.STARTING_LEVEL and bindLevel > 0 then
-            bindLevel = CoreMath.Round(bindLevel + level)
-        end
-        SetBindLevel(player, class, bind, bindLevel)
-        --##FIXME currently setting XP to 0 on level up
-        local xp = 0
-        SetBindXp(player, class, bind, xp)
-        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
+function OnPlayerJoined(player)
+    local data = Storage.GetPlayerData(player)
+    local progression
+    if data.META_ABILITY_PROGRESSION then
+        progression = ConvertToTable(data.META_ABILITY_PROGRESSION)
     end
-
-    --##FIXME Temp Function
-    --@param object player
-    --@param int class => id of class (API.TANK, API.MAGE)
-    --@param int bind => id of bind (API.Q, API.E)
-    function ForceBindChangeLevel(player, class, bind, bool)
-        local bindLevel = GetBindLevel(player, class, bind)
-        if bool then
-            bindLevel = CONST.MAX_LEVEL
-        else
-            bindLevel = CONST.STARTING_LEVEL
-        end
-        SetBindLevel(player, class, bind, bindLevel)
-        --##FIXME currently setting XP to 0 on level up
-        local xp = 0
-        SetBindXp(player, class, bind, xp)
-        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
-    end
+    BuildBindDataTable(player, progression)
+    ADAPTOR.context.OnPlayerJoined(player)
 end
 
---@param object player
---@param table data
-function BuildBindDataTable(player, data)
-    playerProgression[player] = {}
-
-    if data ~= nil then
-        for class, classes in pairs(data) do
-            playerProgression[player][class] = {}
-            for bind, binds in pairs(classes) do
-                playerProgression[player][class][bind] = {}
-                for progressId, progress in pairs(binds) do
-                    if progressId == API.LEVEL then
-                        SetBindLevel(player, class, bind, progress)
-                    elseif progressId == API.XP then
-                        SetBindXp(player, class, bind, progress)
-                    end
-                end
-            end
-        end
-    end
-    for _, class in pairs(CONST.CLASS) do
-        playerProgression[player][class] = playerProgression[player][class] or {}
-        if not next(playerProgression[player][class]) then
-            for _, bind in pairs(CONST.BIND) do
-                playerProgression[player][class][bind] = {}
-                for string, progress in pairs(CONST.PROGRESS) do
-                    if string == "LEVEL" then
-                        SetBindLevel(player, class, bind, CONST.STARTING_LEVEL)
-                    elseif string == "XP" then
-                        SetBindXp(player, class, bind, 0)
-                    end
-                end
-            end
-        end
-    end
-
-    --UTIL.TablePrint(playerProgression[player])
-end
-
---@param object player
---@param table playerProgression
-function GetPlayerProgression(player)
-    return playerProgression[player]
-end
-
---@param object player
 function OnPlayerLeft(player)
+    local playerData = Storage.GetPlayerData(player)
+    playerData.META_ABILITY_PROGRESSION = ConvertToString(playerProgression[player])
+    --player.META_ABILITY_VERSION = {VERSION = 1}
+    Storage.SetPlayerData(player, playerData)
+
     playerProgression[player] = nil
 end
 
 ------------------------------------------------------------------------------------------------------------------------
--- PUBLIC SERVER API
+-- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
-
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.AddBindXp(player, class, bind, ammount)
     AddBindXp(player, class, bind, ammount)
-end
-
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
---@return int reqXP, int reqGold
-function API.GetReqBindXp(player, class, bind)
-    return GetReqBindXp(player, class, bind)
 end
 
 --@param object player
@@ -255,32 +251,9 @@ function API.ChangeClass(player, class)
         end
     end
 end
-
---@param object player
---@param int binding
---@param string mod
---@param *various* defaultValue
---@param string source => provides info about what ability script is trying to call this function. Ex: "Rock Strike: Range"
-function API.GetAbilityMod(player, binding, mod, defaultValue, source)
-    local success, result =
-        pcall(
-        function()
-            return player.serverUserData["bind"][binding][mod]
-        end
-    )
-
-    if not success then
-        result = defaultValue
-        warn("META_AP => failed to access " .. source .. " mod")
-    end
-    return result
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- Listeners
 ------------------------------------------------------------------------------------------------------------------------
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
 Events.Connect("META_AP.AddBindXp", AddBindXp)
-if DEBUG then
-    Events.Connect("META_AP.ChangeBindLevel", ForceBindLevelUp)
-    Events.Connect("META_AP.CBLMM", ForceBindChangeLevel)
-end

@@ -2,9 +2,6 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
-local function META_AP()
-    return _G["Meta.Ability.Progression"]
-end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PickupAbility = script:GetCustomProperty("PickupAbility"):WaitForObject()
@@ -12,9 +9,9 @@ local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 
 --local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
 --local PickupTemplate = script:GetCustomProperty("PickupTemplate")
-local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
-local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
-local DEFAULT_LifeSpan = script:GetCustomProperty("LifeSpan")
+local DamageAmount = script:GetCustomProperty("DamageAmount")
+local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local LifeSpan = script:GetCustomProperty("LifeSpan")
 
 local PickupObject = nil
 local CurrentProjectile = nil
@@ -56,7 +53,6 @@ function OnPickupExecute(thisAbility)
 end
 
 function OnBeginOverlap(thisTrigger, other)
-	print("OVERLAPPING")
 	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
 	or other == PickupAbility.owner then return end
 	
@@ -69,7 +65,7 @@ function OnBeginOverlap(thisTrigger, other)
 	Events.BroadcastToPlayer(other, "Camera Shake", 2, 90, 5)
 			
 	local dmg = Damage.New()
-	dmg.amount = DEFAULT_DamageAmount --META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
+	dmg.amount = DamageAmount
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = PickupAbility.owner
 	dmg.sourceAbility = PickupAbility
@@ -97,7 +93,7 @@ function OnThrowExecute(thisAbility)
 	local positionOffset = directionVector * 200
 	positionOffset.z = positionOffset.z + 150
 	local spawnPosition = PickupAbility.owner:GetWorldPosition() + positionOffset
-	local velocityVector = directionVector * META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod3", DEFAULT_ProjectileSpeed, PickupAbility.name..": Projectile Speed")
+	local velocityVector = directionVector * ProjectileSpeed
 	
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
 	--PlayerVFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
@@ -120,7 +116,7 @@ function OnThrowExecute(thisAbility)
 	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("Trigger"):WaitForObject()
 	ProjectileTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
 	CurrentProjectile:SetVelocity(velocityVector)
-	Timer = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, PickupAbility.name..": Lifespan")
+	Timer = LifeSpan
 end
 
 function OnThrowAbilityRecovery(thisAbility)

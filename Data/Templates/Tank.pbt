@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -835,6 +835,7 @@
             IsTargetDataUpdated: true
           }
           Animation: "1hand_melee_rm_combo_closer_uppercut"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
           }
@@ -979,6 +980,7 @@
             IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
           }
@@ -1559,8 +1561,8 @@
           Overrides {
             Name: "cs:DamageRange"
             Vector2 {
-              X: 20
-              Y: 20
+              X: 18
+              Y: 25
             }
           }
           Overrides {
@@ -1612,7 +1614,7 @@
           }
           Overrides {
             Name: "cs:BlockPercentage"
-            Float: 0.1
+            Float: 0.3
           }
         }
         Collidable_v2 {
@@ -1623,7 +1625,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 17883032561719865561
+            Id: 15248574229477717252
           }
         }
       }
@@ -1642,10 +1644,7 @@
           }
         }
         ParentId: 13709554481697835406
-        ChildIds: 12141073967094505460
-        ChildIds: 11057856131540664296
-        ChildIds: 14358940177883270596
-        ChildIds: 8138751453774018183
+        ChildIds: 8735413319329702798
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1659,15 +1658,12 @@
         }
       }
       Objects {
-        Id: 12141073967094505460
-        Name: "MeleeAbilityClient"
+        Id: 8735413319329702798
+        Name: "AbilityScripts"
         Transform {
           Location {
           }
           Rotation {
-            Pitch: 90
-            Yaw: -90
-            Roll: 179.999893
           }
           Scale {
             X: 1
@@ -1676,6 +1672,38 @@
           }
         }
         ParentId: 8995388716193119271
+        ChildIds: 12141073967094505460
+        ChildIds: 11057856131540664296
+        ChildIds: 14358940177883270596
+        ChildIds: 8138751453774018183
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12141073967094505460
+        Name: "MeleeAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: 116.565025
+            Roll: 26.5649261
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8735413319329702798
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1746,7 +1774,7 @@
             Z: 1
           }
         }
-        ParentId: 8995388716193119271
+        ParentId: 8735413319329702798
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1763,7 +1791,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 10117957785966738228
+            Id: 15810894035057021327
           }
         }
       }
@@ -1781,7 +1809,7 @@
             Z: 1
           }
         }
-        ParentId: 8995388716193119271
+        ParentId: 8735413319329702798
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1828,7 +1856,7 @@
             Z: 1
           }
         }
-        ParentId: 8995388716193119271
+        ParentId: 8735413319329702798
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1960,17 +1988,6 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
             Duration: 5
             CanMove: true
             CanJump: true
@@ -1981,23 +1998,27 @@
               Value: "mc:eabilitysetfacing:aim"
             }
           }
-          RecoveryPhaseSettings {
+          ExecutePhaseSettings {
+            Duration: 0.05
             CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
             CanMove: true
             CanJump: true
             CanRotate: true
             IsTargetDataUpdated: true
           }
+          Animation: "1hand_melee_shield_bash"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:secondaryaction"
@@ -2557,5 +2578,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

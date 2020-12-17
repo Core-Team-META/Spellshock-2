@@ -917,7 +917,7 @@
     }
     Assets {
       Id: 11803454095962429961
-      Name: "Pipe - Spiral"
+      Name: "Pipe-spiral"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -938,5 +938,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

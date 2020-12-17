@@ -191,5 +191,5 @@
       AssetId: "Ambience_Nature_Calm_Forest_Kit_01_SFX"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

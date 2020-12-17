@@ -6994,7 +6994,7 @@
     }
     Assets {
       Id: 3255814708276840062
-      Name: "Cone - Truncated"
+      Name: "Truncated Cone"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -7012,7 +7012,7 @@
     }
     Assets {
       Id: 4093061049435782625
-      Name: "Teardrop - Truncated"
+      Name: "Truncated Teardrop"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -7039,7 +7039,7 @@
     }
     Assets {
       Id: 2064017466518942736
-      Name: "Cube - Chamfered Large"
+      Name: "Chamfered Cube"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -7066,7 +7066,7 @@
     }
     Assets {
       Id: 16967182821200846753
-      Name: "Pipe - Quarter Thick"
+      Name: "Quarter-pipe (thick)"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -7096,5 +7096,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

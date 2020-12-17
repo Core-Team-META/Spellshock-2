@@ -2,7 +2,7 @@
   Id: 14145557248396292035
   Name: "Yellow Leaves from Flower"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 1038542525159105843
     ParameterOverrides {

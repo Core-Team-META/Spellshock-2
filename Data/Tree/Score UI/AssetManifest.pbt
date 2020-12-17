@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 7446390700290884681
-  Name: "Frame Outline Thin 002"
+  Name: "Frame Outline 002"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"

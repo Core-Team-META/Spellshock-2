@@ -1,8 +1,8 @@
 ﻿Assets {
   Id: 14161684854126715918
-  Name: "BoulderThrowAbilityServer"
+  Name: "ExcavateAbilityServer"
   PlatformAssetType: 3
   TextAsset {
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

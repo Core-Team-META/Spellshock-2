@@ -2,7 +2,7 @@
   Id: 14162988344218746234
   Name: "Sand Grass Tall"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 10665935622760157020
     ParameterOverrides {

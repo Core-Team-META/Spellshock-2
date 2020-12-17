@@ -3666,7 +3666,7 @@
     }
     Assets {
       Id: 15883191008616550447
-      Name: "Sphere - Half"
+      Name: "Hemisphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -3714,5 +3714,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

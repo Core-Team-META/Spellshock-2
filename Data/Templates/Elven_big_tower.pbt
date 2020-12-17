@@ -2420,7 +2420,7 @@
     }
     Assets {
       Id: 4320885659990681021
-      Name: "Wedge - Concave"
+      Name: "Curved Wedge - Concave"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2441,5 +2441,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

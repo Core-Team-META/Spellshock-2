@@ -11408,7 +11408,7 @@
     }
     Assets {
       Id: 17485881147669499682
-      Name: "Cube - Rounded Bottom-Aligned"
+      Name: "Cube - Rounded - bottom aligned"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -11462,7 +11462,7 @@
     }
     Assets {
       Id: 5489775416547967874
-      Name: "Sphere - Half"
+      Name: "Hemisphere"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -11591,5 +11591,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

@@ -111,10 +111,6 @@ Objects {
           Value: "mc:ecoreverticalalign:bottom"
         }
       }
-      PhysicsSettings {
-        MinContactOffset: 2
-        MaxContactOffset: 8
-      }
     }
   }
 }

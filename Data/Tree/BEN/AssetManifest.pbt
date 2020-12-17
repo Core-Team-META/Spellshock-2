@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 16806313330175629846
-  Name: "Frame Outlined Thick 001"
+  Name: "Frame Flat 020"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
@@ -126,7 +126,7 @@ Assets {
 }
 Assets {
   Id: 5196377603841433560
-  Name: "BG Gradient 001"
+  Name: "Background Flat 020"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"

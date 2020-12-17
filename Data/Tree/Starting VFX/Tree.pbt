@@ -1,7 +1,7 @@
 ﻿Name: "Starting VFX"
-RootId: 5874015840417789592
+RootId: 12460670136840116142
 Objects {
-  Id: 4048957817673989693
+  Id: 1170127040920357257
   Name: "Tank"
   Transform {
     Location {
@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5874015840417789592
-  ChildIds: 8274554278962242689
-  ChildIds: 1909557250613290468
+  ParentId: 12460670136840116142
+  ChildIds: 17922252848594757834
+  ChildIds: 3576161715997472365
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -32,15 +32,9 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 4048957817673989693
-    SubobjectId: 8571351707591859209
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
-  }
 }
 Objects {
-  Id: 1909557250613290468
+  Id: 3576161715997472365
   Name: "Elf_Team"
   Transform {
     Location {
@@ -53,8 +47,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4048957817673989693
-  ChildIds: 15023700050194966386
+  ParentId: 1170127040920357257
+  ChildIds: 12678240460053163834
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -70,15 +64,9 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 1909557250613290468
-    SubobjectId: 6071797233955588048
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
-  }
 }
 Objects {
-  Id: 15023700050194966386
+  Id: 12678240460053163834
   Name: "Tank_Elf"
   Transform {
     Location {
@@ -91,7 +79,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1909557250613290468
+  ParentId: 3576161715997472365
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -109,15 +97,9 @@ Objects {
       Id: 8308231682525855788
     }
   }
-  InstanceHistory {
-    SelfId: 15023700050194966386
-    SubobjectId: 11438475381006353734
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
-  }
 }
 Objects {
-  Id: 8274554278962242689
+  Id: 17922252848594757834
   Name: "Orc_Team"
   Transform {
     Location {
@@ -130,9 +112,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4048957817673989693
-  ChildIds: 11511678337778933379
-  ChildIds: 14884099342341238663
+  ParentId: 1170127040920357257
+  ChildIds: 13170723642976493308
+  ChildIds: 10483941802701234555
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -148,15 +130,9 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8274554278962242689
-    SubobjectId: 4329744983662216885
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
-  }
 }
 Objects {
-  Id: 14884099342341238663
+  Id: 10483941802701234555
   Name: "Tank_Orc"
   Transform {
     Location {
@@ -169,7 +145,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8274554278962242689
+  ParentId: 17922252848594757834
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -187,15 +163,9 @@ Objects {
       Id: 17951190285812977083
     }
   }
-  InstanceHistory {
-    SelfId: 14884099342341238663
-    SubobjectId: 9245245892084305331
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
-  }
 }
 Objects {
-  Id: 11511678337778933379
+  Id: 13170723642976493308
   Name: "Tank_Orc"
   Transform {
     Location {
@@ -208,7 +178,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8274554278962242689
+  ParentId: 17922252848594757834
   UnregisteredParameters {
     Overrides {
       Name: "cs:ID"
@@ -225,11 +195,5 @@ Objects {
     ScriptAsset {
       Id: 17951190285812977083
     }
-  }
-  InstanceHistory {
-    SelfId: 11511678337778933379
-    SubobjectId: 15060869678388985015
-    InstanceId: 16072469884466055001
-    TemplateId: 12098153250026619541
   }
 }

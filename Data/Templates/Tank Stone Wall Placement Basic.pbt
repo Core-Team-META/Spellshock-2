@@ -7,7 +7,7 @@
       RootId: 13710811239096943882
       Objects {
         Id: 13710811239096943882
-        Name: "Tank Stone Wall Placement Basic"
+        Name: "StoneWallWitcher"
         Transform {
           Scale {
             X: 1
@@ -19,16 +19,6 @@
         ChildIds: 7430722513666021256
         ChildIds: 15469572666479234443
         ChildIds: 2720851433633226448
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:lifeSpan"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:lifeSpan:isrep"
-            Bool: true
-          }
-        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -219,12 +209,6 @@
           Overrides {
             Name: "cs:Timer"
             Float: 6
-          }
-          Overrides {
-            Name: "cs:Root"
-            ObjectReference {
-              SubObjectId: 13710811239096943882
-            }
           }
         }
         Collidable_v2 {
@@ -1122,5 +1106,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

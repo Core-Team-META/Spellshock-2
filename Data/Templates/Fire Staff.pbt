@@ -2089,7 +2089,7 @@
     }
     Assets {
       Id: 3255814708276840062
-      Name: "Cone - Truncated"
+      Name: "Truncated Cone"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2125,7 +2125,7 @@
     }
     Assets {
       Id: 13515470150110763774
-      Name: "Ring - Extra Thick"
+      Name: "Donut 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2134,7 +2134,7 @@
     }
     Assets {
       Id: 11758131120494169132
-      Name: "Sphere - Half Slice"
+      Name: "Hemisphere-wedge"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2143,7 +2143,7 @@
     }
     Assets {
       Id: 11803454095962429961
-      Name: "Pipe - Spiral"
+      Name: "Pipe-spiral"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2152,7 +2152,7 @@
     }
     Assets {
       Id: 1588037931977530754
-      Name: "Manticore Logo"
+      Name: "Manticore Gold"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2170,7 +2170,7 @@
     }
     Assets {
       Id: 16372496464315477095
-      Name: "Ring - Beveled Thick"
+      Name: "Ring Beveled (thick)"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -2182,5 +2182,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 68
 }

@@ -2,7 +2,7 @@
   Id: 1292801991992378833
   Name: "HealerAura2"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 68
   CustomMaterialAsset {
     BaseMaterialId: 4373914948280322111
     ParameterOverrides {
