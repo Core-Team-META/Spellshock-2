@@ -56,6 +56,7 @@ function OnPickupExecute(thisAbility)
 end
 
 function OnBeginOverlap(thisTrigger, other)
+	print("OVERLAPPING")
 	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
 	or other == PickupAbility.owner then return end
 	
@@ -68,7 +69,7 @@ function OnBeginOverlap(thisTrigger, other)
 	Events.BroadcastToPlayer(other, "Camera Shake", 2, 90, 5)
 			
 	local dmg = Damage.New()
-	dmg.amount = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
+	dmg.amount = DEFAULT_DamageAmount --META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = PickupAbility.owner
 	dmg.sourceAbility = PickupAbility

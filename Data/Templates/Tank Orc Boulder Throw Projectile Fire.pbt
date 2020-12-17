@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 1273489800256864344
-  Name: "Tank Elf Excavate Projectile Frost"
+  Id: 2607136788901765941
+  Name: "Tank Orc Boulder Throw Projectile Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17968971115415289618
+      RootId: 17329163543160996106
       Objects {
-        Id: 17968971115415289618
-        Name: "Frost Elf Excavate Projectile"
+        Id: 17329163543160996106
+        Name: "Fire Orc Excavate Projectile"
         Transform {
           Scale {
             X: 1
@@ -16,13 +16,13 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 5424718886741495836
-        ChildIds: 14853174319662868618
+        ChildIds: 18276119877813040374
+        ChildIds: 6179197344430865666
         UnregisteredParameters {
           Overrides {
             Name: "cs:Trigger"
             ObjectReference {
-              SubObjectId: 14853174319662868618
+              SubObjectId: 6179197344430865666
             }
           }
         }
@@ -49,7 +49,7 @@
         }
       }
       Objects {
-        Id: 5424718886741495836
+        Id: 18276119877813040374
         Name: "ClientContext"
         Transform {
           Location {
@@ -62,10 +62,10 @@
             Z: 1
           }
         }
-        ParentId: 17968971115415289618
-        ChildIds: 420313505405170710
-        ChildIds: 4520719702499940583
-        ChildIds: 5403923402681144658
+        ParentId: 17329163543160996106
+        ChildIds: 14888332939115980236
+        ChildIds: 377651736605542809
+        ChildIds: 3367906542017440709
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -77,7 +77,7 @@
         }
       }
       Objects {
-        Id: 420313505405170710
+        Id: 14888332939115980236
         Name: "BoulderBreakHandler"
         Transform {
           Location {
@@ -93,18 +93,18 @@
             Z: 1
           }
         }
-        ParentId: 5424718886741495836
+        ParentId: 18276119877813040374
         UnregisteredParameters {
           Overrides {
             Name: "cs:Root"
             ObjectReference {
-              SubObjectId: 17968971115415289618
+              SubObjectId: 17329163543160996106
             }
           }
           Overrides {
             Name: "cs:FX_Template"
             AssetReference {
-              Id: 7996876791036096152
+              Id: 9651045591463097405
             }
           }
         }
@@ -121,7 +121,7 @@
         }
       }
       Objects {
-        Id: 4520719702499940583
+        Id: 377651736605542809
         Name: "Rock 03"
         Transform {
           Location {
@@ -134,12 +134,12 @@
             Z: 1.7
           }
         }
-        ParentId: 5424718886741495836
+        ParentId: 18276119877813040374
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 17763375775449008280
             }
           }
           Overrides {
@@ -151,7 +151,7 @@
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -169,7 +169,7 @@
         }
       }
       Objects {
-        Id: 5403923402681144658
+        Id: 3367906542017440709
         Name: "Nature Rocks Debris Falling Heavy 01 SFX"
         Transform {
           Location {
@@ -182,7 +182,7 @@
             Z: 1
           }
         }
-        ParentId: 5424718886741495836
+        ParentId: 18276119877813040374
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -204,7 +204,7 @@
         }
       }
       Objects {
-        Id: 14853174319662868618
+        Id: 6179197344430865666
         Name: "Trigger"
         Transform {
           Location {
@@ -217,7 +217,7 @@
             Z: 4.80000114
           }
         }
-        ParentId: 17968971115415289618
+        ParentId: 17329163543160996106
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

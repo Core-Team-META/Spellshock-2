@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 9651045591463097405
-  Name: "Tank Orc Excavate Boulder Break Fire"
+  Name: "Tank Orc Boulder Throw Break Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

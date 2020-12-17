@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 8677730548454533978
-  Name: "Tank Orc Excavate Pickup Fire"
+  Id: 8952580800435141697
+  Name: "Tank Elf Boulder Throw Pickup Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13443002092362923387
+      RootId: 2799309084415734705
       Objects {
-        Id: 13443002092362923387
-        Name: "Fire Orc ExcavatePickup"
+        Id: 2799309084415734705
+        Name: "Tank Elf Excavate Pickup Frost"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,10 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 17824617888131527228
-        ChildIds: 18075576082980084591
-        ChildIds: 8088008634514459634
+        ParentId: 14162296025304194376
+        ChildIds: 9063692935374466722
+        ChildIds: 16078465803850313000
+        ChildIds: 9454595683614550360
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -30,7 +30,7 @@
         }
       }
       Objects {
-        Id: 17824617888131527228
+        Id: 9063692935374466722
         Name: "Gun Impact Small VFX"
         Transform {
           Location {
@@ -43,7 +43,7 @@
             Z: 2.89999986
           }
         }
-        ParentId: 13443002092362923387
+        ParentId: 2799309084415734705
         UnregisteredParameters {
           Overrides {
             Name: "bp:Gravity"
@@ -68,7 +68,7 @@
         }
       }
       Objects {
-        Id: 18075576082980084591
+        Id: 16078465803850313000
         Name: "Rock 03"
         Transform {
           Location {
@@ -82,12 +82,12 @@
             Z: 1.7
           }
         }
-        ParentId: 13443002092362923387
+        ParentId: 2799309084415734705
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 1007126261426868767
             }
           }
           Overrides {
@@ -117,7 +117,7 @@
         }
       }
       Objects {
-        Id: 8088008634514459634
+        Id: 9454595683614550360
         Name: "Heavy Ground Rocky Impact 01 SFX"
         Transform {
           Location {
@@ -132,7 +132,7 @@
             Z: 1
           }
         }
-        ParentId: 13443002092362923387
+        ParentId: 2799309084415734705
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

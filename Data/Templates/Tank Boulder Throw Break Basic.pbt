@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 7996876791036096152
-  Name: "Tank Elf Boulder Break Frost"
+  Id: 13459923181472021410
+  Name: "Tank Boulder Throw Break Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 7030485081946316771
+      RootId: 14906872731711980010
       Objects {
-        Id: 7030485081946316771
-        Name: "Frost Elf Boulder Break FX"
+        Id: 14906872731711980010
+        Name: "Boulder Break FX"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 1780493829221047713
-        ChildIds: 12752889820517732500
+        ChildIds: 11206038007579275473
+        ChildIds: 1957655719083352279
         Lifespan: 1.3
         WantsNetworking: true
         Collidable_v2 {
@@ -30,7 +30,7 @@
         }
       }
       Objects {
-        Id: 1780493829221047713
+        Id: 11206038007579275473
         Name: "Gun Impact Small VFX"
         Transform {
           Location {
@@ -43,7 +43,7 @@
             Z: 7.8999958
           }
         }
-        ParentId: 7030485081946316771
+        ParentId: 14906872731711980010
         UnregisteredParameters {
           Overrides {
             Name: "bp:Enable Sparks"
@@ -52,15 +52,6 @@
           Overrides {
             Name: "bp:Enable Dust"
             Bool: true
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.470000029
-              G: 0.736754894
-              B: 1
-              A: 0.75
-            }
           }
         }
         Collidable_v2 {
@@ -81,7 +72,7 @@
         }
       }
       Objects {
-        Id: 12752889820517732500
+        Id: 1957655719083352279
         Name: "Single Rock Ground Impact 01 SFX"
         Transform {
           Location {
@@ -94,7 +85,7 @@
             Z: 1
           }
         }
-        ParentId: 7030485081946316771
+        ParentId: 14906872731711980010
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

@@ -78,7 +78,7 @@ classTable = {
             [7] = {mod1 = 7000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
             [8] = {mod1 = 8000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
             [9] = {mod1 = 9000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 1000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0}
+            [10] = {mod1 = 10000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0}
         },
         --Shield Dash
         [CONST.BIND.R] = {
