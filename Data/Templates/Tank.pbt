@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
@@ -433,7 +433,7 @@
       }
       Objects {
         Id: 7161437949086862621
-        Name: "PlaceObjectAbilityClient"
+        Name: "PlaceStoneWallClient"
         Transform {
           Location {
             X: 8105
@@ -468,7 +468,7 @@
       }
       Objects {
         Id: 285787547396984869
-        Name: "ExcavateAbilityClient"
+        Name: "BoulderThrowAbilityClient"
         Transform {
           Location {
           }
@@ -986,7 +986,7 @@
       }
       Objects {
         Id: 12132287434350879122
-        Name: "PlaceObjectAbilityServer"
+        Name: "PlaceStoneWallAbilityServer"
         Transform {
           Location {
           }
@@ -1034,6 +1034,18 @@
           Overrides {
             Name: "cs:PreviewObjectTemplate"
             String: ""
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "TANK"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1253,6 +1265,10 @@
           Overrides {
             Name: "cs:LifeSpan"
             Float: 7
+          }
+          Overrides {
+            Name: "cs:ProjectileScale"
+            Float: 0.6
           }
         }
         WantsNetworking: true
@@ -1570,6 +1586,14 @@
           Overrides {
             Name: "cs:VerticalImpulse"
             Float: 0
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         Collidable_v2 {

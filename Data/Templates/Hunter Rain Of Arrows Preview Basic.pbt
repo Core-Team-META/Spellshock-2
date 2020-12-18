@@ -7,7 +7,7 @@
       RootId: 6222731793826828374
       Objects {
         Id: 6222731793826828374
-        Name: "RainOfArrows_Preview"
+        Name: "Hunter Rain Of Arrows Preview Basic"
         Transform {
           Scale {
             X: 1
@@ -37,7 +37,7 @@
           Scale {
             X: 5
             Y: 5
-            Z: 2.53371763
+            Z: 5
           }
         }
         ParentId: 6222731793826828374
@@ -96,6 +96,14 @@
           Overrides {
             Name: "bp:Fade Time"
             Float: 0
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.539999962
+              G: 0.0643708557
+              A: 0.279
+            }
           }
         }
         Collidable_v2 {

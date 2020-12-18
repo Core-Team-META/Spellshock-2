@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12935185397369316502
         ChildIds: 7137406222810709920
         ChildIds: 5361708159967945625
         ChildIds: 406380117814010332
@@ -1009,6 +1009,18 @@
           Overrides {
             Name: "cs:PreviewObjectTemplate"
             String: ""
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "Q"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod3"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"

@@ -21,7 +21,7 @@ local task = Task.Spawn(function()
 	Ease3D.EaseScale(Center, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Mid, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
 	Ease3D.EaseScale(Outer, Vector3.New(1), .4, Ease3D.EasingEquation.EXPONENTIAL, Ease3D.EasingDirection.OUT)
-	Task.Wait(Root:GetCustomProperty("lifeSpan")) --play 1 sec before the ability is destroyed
+	Task.Wait(Root:GetCustomProperty("lifeSpan")-1.1) --play 1 sec before the ability is destroyed
 	
 	if Object.IsValid(GravelSFX) then
 		GravelSFX:Play()

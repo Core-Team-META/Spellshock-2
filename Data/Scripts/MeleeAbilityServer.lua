@@ -11,6 +11,10 @@ function COMBAT()
 	return MODULE:Get("standardcombo.Combat.Wrap")
 end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local EQUIPMENT = script:FindAncestorByType("Equipment")
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
@@ -18,6 +22,11 @@ local HIT_BOX = script:GetCustomProperty("HitBox"):WaitForObject()
 local DAMAGE_RANGE = script:GetCustomProperty("DamageRange")
 local ATTACK_IMPULSE = script:GetCustomProperty("AttackImpulse") or 50000
 local VERTICAL_IMPULSE = script:GetCustomProperty("VerticalImpulse") or 20000
+
+local DEFAULT_DamageRange = {min=DAMAGE_RANGE.x, max=DAMAGE_RANGE.y}
+
+local BindingName = script:GetCustomProperty("BindingName")
+local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 local ignoreList = {}
 local currentSwipe = nil
@@ -63,7 +72,8 @@ function MeleeAttack(other)
 		ignoreList[other] = 1
 
 		local dmg = Damage.New()
-		dmg.amount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y)
+		local rangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
+		dmg.amount = math.random(rangeTable.min, rangeTable.max)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
