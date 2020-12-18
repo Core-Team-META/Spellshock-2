@@ -306,7 +306,7 @@ Assets {
 }
 Assets {
   Id: 7147607578013694397
-  Name: "Hemishpere (thin)"
+  Name: "Sphere - Half Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -441,7 +441,7 @@ Assets {
 }
 Assets {
   Id: 901541979513849367
-  Name: "Bush Green 01"
+  Name: "Bush 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
