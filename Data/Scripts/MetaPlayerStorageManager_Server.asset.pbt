@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 5450760892472525542
-  Name: "MetaDataCompression_API"
+  Id: 10419913492106103170
+  Name: "MetaPlayerStorageManager_Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,9 +11,20 @@
         }
       }
       Overrides {
-        Name: "cs:HEIRARCHY_VFX"
+        Name: "cs:VFX_LIST"
         ObjectReference {
-          SelfId: 12460670136840116142
+        }
+      }
+      Overrides {
+        Name: "cs:MetaAbilityProgression_Adaptor"
+        ObjectReference {
+          SelfId: 2530536913188181770
+        }
+      }
+      Overrides {
+        Name: "cs:MetaAbilityProgression_ServerController"
+        ObjectReference {
+          SelfId: 721227566397514987
         }
       }
     }

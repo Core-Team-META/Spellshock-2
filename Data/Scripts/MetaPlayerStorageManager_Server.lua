@@ -1,6 +1,6 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
--- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/16/2020
 -- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerControlle
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
 ------------------------------------------------------------------------------------------------------------------------
--- ## UPDATE ON PLAYER STORAGE CHANGES ##
+-- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
 local progressionVersion = 1
 local cosmeticVersion = 1
 ------------------------------------------------------------------------------------------------------------------------
