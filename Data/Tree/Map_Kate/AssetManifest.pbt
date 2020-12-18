@@ -72,7 +72,7 @@ Assets {
 }
 Assets {
   Id: 17925863108097959649
-  Name: "I"
+  Name: "Text 03: I"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -180,7 +180,7 @@ Assets {
 }
 Assets {
   Id: 17182007171222709614
-  Name: "P"
+  Name: "Text 03: P"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -297,7 +297,7 @@ Assets {
 }
 Assets {
   Id: 16372496464315477095
-  Name: "Ring Beveled (thick)"
+  Name: "Ring - Beveled Thick"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -324,7 +324,7 @@ Assets {
 }
 Assets {
   Id: 16140765210995074301
-  Name: "O"
+  Name: "Text 03: O"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -477,7 +477,7 @@ Assets {
 }
 Assets {
   Id: 15156283657915966751
-  Name: "A"
+  Name: "Text 03: A"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -630,7 +630,7 @@ Assets {
 }
 Assets {
   Id: 14580885173560146840
-  Name: "Quarter hemisphere"
+  Name: "Sphere - Half Quarter"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -720,7 +720,7 @@ Assets {
 }
 Assets {
   Id: 14017539756736382852
-  Name: "Cylinder - bottom aligned"
+  Name: "Cylinder - Bottom-Aligned"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -747,7 +747,7 @@ Assets {
 }
 Assets {
   Id: 13874502513103367460
-  Name: "Awning 01 Mainstreet"
+  Name: "Main Street Awning 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -765,7 +765,7 @@ Assets {
 }
 Assets {
   Id: 13800436588944964225
-  Name: "Bush Green 02"
+  Name: "Bush 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -855,7 +855,7 @@ Assets {
 }
 Assets {
   Id: 13352595166498895188
-  Name: "Large Round Wood Beam 6m"
+  Name: "Large Round Wood Beam 8m"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1035,7 +1035,7 @@ Assets {
 }
 Assets {
   Id: 12456021343966508143
-  Name: "Scifi Panel 1x4m"
+  Name: "Sci-fi Panel 1x4m"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1197,7 +1197,7 @@ Assets {
 }
 Assets {
   Id: 11864859600732561954
-  Name: "Thin Parallelepiped"
+  Name: "Parallelepiped - Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1242,7 +1242,7 @@ Assets {
 }
 Assets {
   Id: 11758131120494169132
-  Name: "Hemisphere-wedge"
+  Name: "Sphere - Half Slice"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1269,7 +1269,7 @@ Assets {
 }
 Assets {
   Id: 11688883060434924445
-  Name: "Lense - Quarter"
+  Name: "Lens - Quarter"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1395,7 +1395,7 @@ Assets {
 }
 Assets {
   Id: 10845622112326945799
-  Name: "Hills 01"
+  Name: "Hill 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1548,7 +1548,7 @@ Assets {
 }
 Assets {
   Id: 10222256584730616192
-  Name: "Pipe Curved 90"
+  Name: "Pipe - 90-Degree Short"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1620,7 +1620,7 @@ Assets {
 }
 Assets {
   Id: 9679522123063662323
-  Name: "E"
+  Name: "Text 03: E"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1665,7 +1665,7 @@ Assets {
 }
 Assets {
   Id: 9530988119924675948
-  Name: "Cube - Polished"
+  Name: "Cube - Chamfered Large Polished"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1701,7 +1701,7 @@ Assets {
 }
 Assets {
   Id: 9242571079105582533
-  Name: "Pipe Curved 90 Large"
+  Name: "Pipe - 90-Degree Long"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -1737,7 +1737,7 @@ Assets {
 }
 Assets {
   Id: 9117384065423546074
-  Name: "Modern Weapon - Sight Rear 01"
+  Name: "Modern Weapon - Sight Rear 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2115,7 +2115,7 @@ Assets {
 }
 Assets {
   Id: 7576601744876530806
-  Name: "Scifi Panel 1x3m Angled Right"
+  Name: "Sci-fi Panel 1x3m Angled Right"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2151,7 +2151,7 @@ Assets {
 }
 Assets {
   Id: 7147607578013694397
-  Name: "Hemishpere (thin)"
+  Name: "Sphere - Half Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2223,7 +2223,7 @@ Assets {
 }
 Assets {
   Id: 6867951902525383572
-  Name: "SciFi Trim 01 S bend"
+  Name: "Sci-fi Trim 01 S bend"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2259,7 +2259,7 @@ Assets {
 }
 Assets {
   Id: 6605877126919597985
-  Name: "Scifi Panel 1x3m Angled Left"
+  Name: "Sci-fi Panel 1x3m Angled Left"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2313,7 +2313,7 @@ Assets {
 }
 Assets {
   Id: 6367527662954153739
-  Name: "Ring"
+  Name: "Ring 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2430,7 +2430,7 @@ Assets {
 }
 Assets {
   Id: 5873583730053480493
-  Name: "Pyramid - 4-Sided Truncated Hollow Thick"
+  Name: "Pyramid - 4-Sided Truncated Hollow Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2448,7 +2448,7 @@ Assets {
 }
 Assets {
   Id: 5646704112327633341
-  Name: "Hemisphere"
+  Name: "Sphere - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2475,7 +2475,7 @@ Assets {
 }
 Assets {
   Id: 5489775416547967874
-  Name: "Hemisphere"
+  Name: "Sphere - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2493,7 +2493,7 @@ Assets {
 }
 Assets {
   Id: 5351428073291024820
-  Name: "Opaque Emissive"
+  Name: "Emissive Glow Opaque"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
@@ -2529,7 +2529,7 @@ Assets {
 }
 Assets {
   Id: 5117326109845707677
-  Name: "Plane"
+  Name: "Plane 4m - One Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2592,7 +2592,7 @@ Assets {
 }
 Assets {
   Id: 4693264132494587556
-  Name: "SciFi Trim 01"
+  Name: "Sci-fi Trim 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2682,7 +2682,7 @@ Assets {
 }
 Assets {
   Id: 4462181857482711382
-  Name: "L"
+  Name: "Text 03: L"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2727,7 +2727,7 @@ Assets {
 }
 Assets {
   Id: 4320885659990681021
-  Name: "Curved Wedge - Concave"
+  Name: "Wedge - Concave"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2772,7 +2772,7 @@ Assets {
 }
 Assets {
   Id: 4093061049435782625
-  Name: "Truncated Teardrop"
+  Name: "Teardrop - Truncated"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -2925,7 +2925,7 @@ Assets {
 }
 Assets {
   Id: 3255814708276840062
-  Name: "Truncated Cone"
+  Name: "Cone - Truncated"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3006,7 +3006,7 @@ Assets {
 }
 Assets {
   Id: 2615820326670724915
-  Name: "Half-pipe"
+  Name: "Pipe - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3015,7 +3015,7 @@ Assets {
 }
 Assets {
   Id: 2560696021019413069
-  Name: "SciFi Trim 01 End"
+  Name: "Sci-fi Trim 01 End"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3096,7 +3096,7 @@ Assets {
 }
 Assets {
   Id: 2140913818093261140
-  Name: "SciFi Trim 01 bend 90"
+  Name: "Sci-fi Trim 01 bend 90"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3105,7 +3105,7 @@ Assets {
 }
 Assets {
   Id: 2064017466518942736
-  Name: "Chamfered Cube"
+  Name: "Cube - Chamfered Large"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3186,7 +3186,7 @@ Assets {
 }
 Assets {
   Id: 1656941489564950181
-  Name: "H"
+  Name: "Text 03: H"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -3348,7 +3348,7 @@ Assets {
 }
 Assets {
   Id: 901541979513849367
-  Name: "Bush Green 01"
+  Name: "Bush 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"

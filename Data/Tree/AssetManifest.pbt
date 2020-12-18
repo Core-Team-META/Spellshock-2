@@ -27,7 +27,7 @@ Assets {
 }
 Assets {
   Id: 13800436588944964225
-  Name: "Bush Green 02"
+  Name: "Bush 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
@@ -90,7 +90,7 @@ Assets {
 }
 Assets {
   Id: 901541979513849367
-  Name: "Bush Green 01"
+  Name: "Bush 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"

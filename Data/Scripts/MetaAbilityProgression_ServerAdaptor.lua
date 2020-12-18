@@ -62,8 +62,8 @@ end
 --@param int skillLevel
 function ApplySkillStats(player, class, bind, bindLevel)
     local data = DATA.GetClassTable()
-    player.serverUserData["bind"] = {}
-    player.serverUserData["bind"][bind] = {}
+    player.serverUserData["bind"] = player.serverUserData["bind"] or {}
+    player.serverUserData["bind"][bind] = player.serverUserData["bind"][bind] or {}
     for name, value in pairs(data[class][bind][bindLevel]) do
         player.serverUserData["bind"][bind][name] = value
     end

@@ -2,7 +2,7 @@
   Id: 4389956694410970039
   Name: "Custom Edgefoam"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 16572069779463765629
     ParameterOverrides {

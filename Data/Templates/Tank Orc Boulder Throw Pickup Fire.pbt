@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 8677730548454533978
-  Name: "Tank Orc Excavate Pickup Fire"
+  Name: "Tank Orc Boulder Throw Pickup Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -185,5 +185,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 68
+  SerializationVersion: 70
 }

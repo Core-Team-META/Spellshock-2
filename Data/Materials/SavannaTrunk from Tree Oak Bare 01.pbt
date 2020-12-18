@@ -2,7 +2,7 @@
   Id: 9650217245010659427
   Name: "SavannaTrunk from Tree Oak Bare 01"
   PlatformAssetType: 13
-  SerializationVersion: 68
+  SerializationVersion: 70
   CustomMaterialAsset {
     BaseMaterialId: 13883833602544944364
     ParameterOverrides {
