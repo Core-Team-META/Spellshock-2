@@ -7,6 +7,7 @@
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -19,48 +20,12 @@ local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):W
 -- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
 local progressionVersion = 1
 local cosmeticVersion = 1
+--Used for version control of data
+local versionControl = {P = progressionVersion, V = cosmeticVersion}
 ------------------------------------------------------------------------------------------------------------------------
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 local COSMETIC = {}
-
---#TODO TEMP
-function TablePrint(tbl, indent)
-    local formatting, lua_type
-    if tbl == nil then
-        print("Table was nil")
-        return
-    end
-    if type(tbl) ~= "table" then
-        print("Table is not a table, it is a " .. type(tbl))
-        return
-    end
-    if next(tbl) == nil then
-        print("Table is empty")
-        return
-    end
-    if not indent then
-        indent = 0
-    end
-    -- type(v) returns nil, number, string, function, CFunction, userdata, and table.
-    -- type(v) returns string, number, function, boolean, table or nil
-    for k, v in pairs(tbl) do
-        formatting = string.rep("  ", indent) .. k .. ": "
-        lua_type = type(v)
-        if lua_type == "table" then
-            print(formatting)
-            TablePrint(v, indent + 1)
-        elseif lua_type == "boolean" then
-            print(formatting .. tostring(v))
-        elseif lua_type == "function" then
-            print(formatting .. "function")
-        elseif lua_type == "userdata" then
-            print(formatting .. "userdata")
-        else
-            print(formatting .. v)
-        end
-    end
-end
 
 --@param int num
 --@return string num => always set to a 2 digit string
@@ -75,20 +40,22 @@ function COSMETIC.ConvertToString(tbl)
     for classId, skins in pairs(tbl) do
         local cId = tostring(classId)
         for skinId, abilities in pairs(skins) do
-            local sId = COSMETIC.NumConverter(skinId)
-            for abilityId, ability in pairs(abilities) do
-                -- use this if the muid with int prefix is passed in
-                -- local aId = string.match(NumConverter(ability), "^(d+)_")
-                -- str = str .. cId .. sId .. aId
-                -- str = next(abilities, abilityId) and str .. "," or str
+            if skinId ~= CONST.DEFAULT_SKIN then
+                local sId = COSMETIC.NumConverter(skinId)
+                for abilityId, ability in pairs(abilities) do
+                    -- use this if the muid with int prefix is passed in
+                    -- local aId = string.match(NumConverter(ability), "^(d+)_")
+                    -- str = str .. cId .. sId .. aId
+                    -- str = next(abilities, abilityId) and str .. "," or str
 
-                -- use this if either a 0 or 1 int passed in giving status
-                if ability > 0 then
-                    str = str .. cId .. sId .. tostring(abilityId)
-                    str = next(abilities, abilityId) and str .. "," or str
+                    -- use this if either a 0 or 1 int passed in giving status
+                    if ability > 0 then
+                        str = str .. cId .. sId .. tostring(abilityId)
+                        str = next(abilities, abilityId) and str .. "," or str
+                    end
                 end
+                str = next(skins, skinId) and str .. "," or str
             end
-            str = next(skins, skinId) and str .. "," or str
         end
         str = next(tbl, classId) and str .. "," or str
     end
@@ -96,7 +63,7 @@ function COSMETIC.ConvertToString(tbl)
     return str
 end
 
---#TODO EX=> 010201,020101,030201
+--#TODO EX=> 1021,2011,3021
 --@param string str => string of compressed data
 --@return table finalTbl => player data
 function COSMETIC.ConvertToTable(str)
@@ -167,16 +134,16 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 local function DataVersionCheck(data)
-    return (data.DATA_VERSION.PROGRESSION == progressionVersion and data.DATA_VERSION.VFX == cosmeticVersion) or
-        data == nil
+    local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
+    return (tbl.P == progressionVersion and tbl.V == cosmeticVersion) or data == nil
 end
 
 --@param object player
 --@param table data
 local function OnLoadProgressionData(player, data)
     local progression
-    if data.AP then
-        progression = ABILITY_PROGRESSION.ConvertToTable(data.AP)
+    if data[CONST.STORAGE.PROGRESSION] then
+        progression = ABILITY_PROGRESSION.ConvertToTable(data[CONST.STORAGE.PROGRESSION])
     end
     META_AP.context.BuildBindDataTable(player, progression)
     ADAPTOR.context.OnPlayerJoined(player)
@@ -186,15 +153,15 @@ end
 --@param table data
 local function OnSaveProgressionData(player, data)
     local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data.AP = ABILITY_PROGRESSION.ConvertToString(playerProgression)
+    data[CONST.STORAGE.PROGRESSION] = ABILITY_PROGRESSION.ConvertToString(playerProgression)
 end
 
 --@param object player
 --@param table data
 local function OnLoadCostumeData(player, data)
     local cosmetic
-    if data.AC then
-        cosmetic = COSMETIC.ConvertToTable(data.AC)
+    if data[CONST.STORAGE.COSMETIC] then
+        cosmetic = COSMETIC.ConvertToTable(data[CONST.STORAGE.COSMETIC])
     end
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
 end
@@ -203,7 +170,7 @@ end
 --@param table data
 local function OnSaveCostumeData(player, data)
     local playerCosmetics = META_COSMETIC.context.GetPlayerCosmetic(player)
-    data.AC = next(playerCosmetics) ~= nil and COSMETIC.ConvertToString(playerCosmetics) or ""
+    data[CONST.STORAGE.COSMETIC] = next(playerCosmetics) ~= nil and COSMETIC.ConvertToString(playerCosmetics) or ""
 end
 
 --@param object player
@@ -213,6 +180,7 @@ local function OnPlayerJoined(player)
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
     end
+    --#TODO DATA BUILD TEST
     for c = 1, 5 do
         for s = 1, 80 do
             for b = 1, 5 do
@@ -228,7 +196,7 @@ local function OnPlayerLeft(player)
     data = {}
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
-    data.V = {P = progressionVersion, V = cosmeticVersion}
+    data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
     Storage.SetPlayerData(player, data)
 
     --Nil out data tables

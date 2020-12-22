@@ -1,6 +1,6 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
--- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/22/2020
 -- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
@@ -89,7 +89,8 @@ function API.GetCurrentCosmetic(player, bind, class)
     if class == nil then
         class = player:GetResource(CONST.CLASS_RES)
     end
-    local skinId = 1-- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = 1
+    -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     return cosmeticTable[class][player.team][skinId][bind]
 end
 
@@ -97,13 +98,17 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCostume(player, class)
-    if class == nil then
-        class = player:GetResource(CONST.CLASS_RES)
+    local skinId = 1
+    -- #TODO Swap this to this need a function that sets this on server
+    -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    if not UTIL.IsTableSafe(cosmeticTable, class, skinId, player.team, CONST.COSTUME_ID) then
+        --Cosmetic test failed, return starter set
+        return cosmeticTable[class][player.team][CONST.DEFAULT_SKIN][CONST.COSTUME_ID]
     end
-    local skinId = 1-- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    return cosmeticTable[class][player.team][skinId][CONST.COSTUME]
+    return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
 
 Int()
 Task.Wait(10)
-UTIL.TablePrint(API.GetCurrentCosmetic(LOCAL_PLAYER, 1, 1))
+
+UTIL.TablePrint(LOCAL_PLAYER:GetResources())
