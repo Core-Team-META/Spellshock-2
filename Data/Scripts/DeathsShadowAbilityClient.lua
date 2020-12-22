@@ -1,4 +1,8 @@
-﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
+﻿local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local AudioFX = script:GetCustomProperty("AudioFX"):WaitForObject()
 local TimerUI_Template = script:GetCustomProperty("TimerUI_Template")
@@ -6,7 +10,8 @@ local TimerUI_Template = script:GetCustomProperty("TimerUI_Template")
 local InvisibleCostumeTemplate
 local InvisibilityActiveTemplate = ServerScript:GetCustomProperty("InvisibilityActiveTemplate")
 local AttackAbility = ServerScript:GetCustomProperty("AttackAbility"):WaitForObject()
-local Duration = ServerScript:GetCustomProperty("Duration")
+local DEFAULT_Duration = ServerScript:GetCustomProperty("Duration")
+local Duration = DEFAULT_Duration
 
 local PlayerAttachments = {}
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -37,6 +42,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		
 		if Equipment.owner == LOCAL_PLAYER then
 			if isInvisible then
+				Duration = META_AP().GetAbilityMod(Equipment.owner, META_AP().ASSASSIN, META_AP().E, "mod3", DEFAULT_Duration, "Death's Shadow: Duration")
 				Timer = Duration
 				for _, attachment in ipairs(PlayerAttachments) do
 					attachment.visibility = Visibility.INHERIT

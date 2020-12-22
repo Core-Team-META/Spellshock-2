@@ -1,4 +1,8 @@
-﻿local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
+﻿local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local ConfirmSound = script:GetCustomProperty("ConfirmSound"):WaitForObject()
 local TimerUI_Template = script:GetCustomProperty("TimerUI_Template")
 
@@ -7,8 +11,9 @@ local ObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local FLYING_DURATION = ServerScript:GetCustomProperty("FlyingDuration")
-local MAX_PLACEMENT_RANGE = ServerScript:GetCustomProperty("MaxPlacementRange")
+local DEFAULT_FlyingDuration = ServerScript:GetCustomProperty("FlyingDuration")
+local FlyingDuration = DEFAULT_FlyingDuration
+local DEFAULT_PlacementRange = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local EventName = ServerScript:GetCustomProperty("EventName")
 
@@ -64,7 +69,8 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			else
 				objectHalogram = newObject
 				AllHalograms[objectHalogram.id] = objectHalogram
-				flyingTimer = FLYING_DURATION
+				FlyingDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod4", DEFAULT_FlyingDuration, SpecialAbility.name..": Fly Duration")
+				flyingTimer = FlyingDuration
 			end
 		else
 			flyingTimer = -1
@@ -135,7 +141,8 @@ end
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
-	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * MAX_PLACEMENT_RANGE)
+	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod2", DEFAULT_PlacementRange, SpecialAbility.name..": Placement Range")
+	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
 	if hr ~= nil then
@@ -196,7 +203,7 @@ function Tick(deltaTime)
 		flyingTimer = flyingTimer - deltaTime
 		if TimerUI.root and Object.IsValid(TimerUI.root) then
 			TimerUI.panel.visibility = Visibility.INHERIT
-			TimerUI.progressBar.progress = flyingTimer / FLYING_DURATION
+			TimerUI.progressBar.progress = flyingTimer / FlyingDuration
 		end
 		if flyingTimer < 0 and isPreviewing then
 			SpecialAbility:Activate()

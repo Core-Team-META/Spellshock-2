@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 11848089031478388226
-  Name: "Assassin_InvisibilityClient"
+  Id: 2585631326682394561
+  Name: "WraithStrikeAbilityClient"
   PlatformAssetType: 3
   TextAsset {
   }

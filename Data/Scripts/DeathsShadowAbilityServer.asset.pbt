@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 15436478629864918866
-  Name: "Assassin_AirDive"
+  Id: 6553233916944605564
+  Name: "DeathsShadowAbilityServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -13,7 +13,7 @@
       Overrides {
         Name: "cs:APIStatusEffects"
         AssetReference {
-          Id: 14748071004312265457
+          Id: 6140123420589022677
         }
       }
     }

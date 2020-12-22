@@ -2,16 +2,18 @@
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local SPEED = script:GetCustomProperty("ProjectileSpeed") or 1500
-local PROJECTILE_RANGE = script:GetCustomProperty("ProjectileRange") or 2000
-local DAMAGE_RANGE = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
-local BASE_DAMAGE_MOD = script:GetCustomProperty("BaseDamageModifier") or 0.6
-local BONUS_DAMAGE_MOD = script:GetCustomProperty("BonusDamageModifier") or 0.1
-local HEAL_MOD = script:GetCustomProperty("BonusHealingModifier") or 0.75
+local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed") or 1500
+local DEFAULT_ProjectileRange = script:GetCustomProperty("ProjectileRange") or 2000
+local DamageRange = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
+local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
+local DEFAULT_HealPercentage = script:GetCustomProperty("HealPercentage") or 0.75
 
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
@@ -46,9 +48,9 @@ function OnProjectileImpact(projectile, other, hitresult)
 	local otherTeam = COMBAT().GetTeam(other)
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then return end
     
-    local damageAmount = (math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y) * BASE_DAMAGE_MOD) + (other.maxHitPoints * BONUS_DAMAGE_MOD)
+    local damageTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
     local dmg = Damage.New()
-    dmg.amount = damageAmount
+    dmg.amount = math.random(damageTable.min, damageTable.max)
     dmg.reason = DamageReason.COMBAT
     dmg.sourcePlayer = ABILITY.owner
 	dmg.sourceAbility = ABILITY
@@ -65,7 +67,7 @@ function OnProjectileImpact(projectile, other, hitresult)
 
     API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
     
-    local healAmount = damageAmount * HEAL_MOD
+    local healAmount = dmg.amount * META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod3", DEFAULT_HealPercentage, ABILITY.name..": Heal %")
     local heal = Damage.New()
     heal.amount = -healAmount
     heal.reason = DamageReason.COMBAT
@@ -104,11 +106,13 @@ function OnAbilityExecute(thisAbility)
 		World.SpawnAsset(_G.VFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
 	end
 	
+	local Range = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod2", DEFAULT_ProjectileRange, ABILITY.name..": Projectile Range")
+
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
     local lookPosition = thisAbility.owner:GetViewWorldPosition()
 	local lookQuaternion = Quaternion.New(lookRotation)
     local forwardVector = lookRotation * Vector3.FORWARD
-    local rangePosition = lookPosition + (forwardVector * PROJECTILE_RANGE)
+    local rangePosition = lookPosition + (forwardVector * Range)
 	local worldPosition = thisAbility.owner:GetWorldPosition()
 	local spawnPosition = worldPosition + (forwardVector*20)
 	spawnPosition.z = spawnPosition.z + 50
@@ -140,12 +144,12 @@ function OnAbilityExecute(thisAbility)
 		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
 		projectile = Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
 	end
-    
+
     projectile.owner = ABILITY.owner
     projectile.capsuleLength = 130
     projectile.capsuleRadius =  projectile.capsuleLength/2
-    projectile.lifeSpan = PROJECTILE_RANGE / SPEED
-    projectile.speed = SPEED
+    projectile.lifeSpan = Range / DEFAULT_ProjectileSpeed
+    projectile.speed = DEFAULT_ProjectileSpeed
     projectile.gravityScale = 0
     projectile.shouldDieOnImpact = true
     projectile.impactEvent:Connect(OnProjectileImpact)
