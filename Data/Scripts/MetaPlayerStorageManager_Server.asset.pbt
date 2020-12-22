@@ -27,6 +27,12 @@
           SelfId: 721227566397514987
         }
       }
+      Overrides {
+        Name: "cs:MetaCostume_ServerController"
+        ObjectReference {
+          SelfId: 1497945562687454520
+        }
+      }
     }
   }
   SerializationVersion: 70

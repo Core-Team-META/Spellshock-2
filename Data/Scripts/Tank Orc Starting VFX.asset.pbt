@@ -5,7 +5,7 @@
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Costume"
+        Name: "cs:08_Costume"
         AssetReference {
           Id: 7483364902131033518
         }

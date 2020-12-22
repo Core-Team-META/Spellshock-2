@@ -24,6 +24,8 @@ API.BIND = {
     LMB = 6,
     RMB = 7
 }
+API.COSTUME = 8
+API.COSTUME_STRING = "08_Costume"
 
 -- PROGRESS KEYS
 API.PROGRESS = {
@@ -33,6 +35,7 @@ API.PROGRESS = {
 
 
 API.CLASS_RES = "CLASS_MAP"
+API.SKIN_RES = "SKIN_MAP"
 
 ------------------------------------------------------------------------------------------------------------------------
 return API

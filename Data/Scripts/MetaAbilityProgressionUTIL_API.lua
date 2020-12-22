@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression UTIL API
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/09/2020
--- Version 0.1.0
+-- Date: 12/22/2020
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -112,6 +112,10 @@ end
 
 function API.GetXpString(class, bind)
     return "C" .. tostring(class) .. "B" .. tostring(bind) .. "XP"
+end
+
+function API.GetSkinString(class, team, bind)
+    return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
 
 
