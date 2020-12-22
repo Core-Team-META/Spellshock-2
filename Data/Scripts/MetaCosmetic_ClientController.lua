@@ -99,18 +99,17 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCostume(player, class)
     local skinId = 1
+    print(player.team)
     -- #TODO Swap this to this need a function that sets this on server
     -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    if not UTIL.IsTableSafe(cosmeticTable, class, skinId, player.team, CONST.COSTUME_ID) then
+    if not UTIL.IsTableValid(cosmeticTable, class, player.team, skinId, CONST.COSTUME_ID) then
         --Cosmetic test failed, return starter set
         return cosmeticTable[class][player.team][CONST.DEFAULT_SKIN][CONST.COSTUME_ID]
     end
     return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
 
-
 ------------------------------------------------------------------------------------------------------------------------
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
 Int()
-

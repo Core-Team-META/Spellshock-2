@@ -154,6 +154,12 @@ Objects {
         SelfId: 5874015840417789592
       }
     }
+    Overrides {
+      Name: "cs:Base64"
+      AssetReference {
+        Id: 14568273880639568162
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

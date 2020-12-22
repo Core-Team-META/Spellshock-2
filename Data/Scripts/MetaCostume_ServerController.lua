@@ -115,11 +115,11 @@ function Int()
                     local tempVFX = {}
                     for key, value in pairs(skin:GetCustomProperties()) do
                         if key ~= CONST.COSTUME_STRING and key ~= "ID" then
-                            local vfxName = Split(key, "_")
+                           local vfxName = Split(key, "_")
                             local abilityId = tonumber(vfxName[1])
                             cosmeticTable[id][teamId][skinId][abilityId] =
                                 cosmeticTable[id][teamId][skinId][abilityId] or {}
-                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value
+                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value 
                         elseif key == CONST.COSTUME_STRING then
                             local vfxName = Split(key, "_")
                             local abilityId = tonumber(vfxName[1])

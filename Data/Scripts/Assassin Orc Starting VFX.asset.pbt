@@ -5,82 +5,86 @@
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Costume"
+        Name: "cs:08_Costume"
         AssetReference {
           Id: 15182184640494259521
         }
       }
       Overrides {
-        Name: "cs:Venom_Bomb_Projectile"
+        Name: "cs:01_VenomBomb_Projectile"
         AssetReference {
           Id: 6481751857886768330
         }
       }
       Overrides {
-        Name: "cs:Venom_Bomb_Impact"
+        Name: "cs:01_VenomBomb_Impact"
         AssetReference {
           Id: 5202994091235663908
         }
       }
       Overrides {
-        Name: "cs:Deaths_Shadow_Costume"
+        Name: "cs:02_DeathsShadow_Costume"
         AssetReference {
           Id: 14330017190000743294
         }
       }
       Overrides {
-        Name: "cs:Deaths_Shadow_Beginning"
+        Name: "cs:02_DeathsShadow_Beginning"
         AssetReference {
           Id: 15761765853344411097
         }
       }
       Overrides {
-        Name: "cs:Deaths_Shadow_Ending"
+        Name: "cs:02_DeathsShadow_Ending"
         AssetReference {
           Id: 1429104248892819753
         }
       }
       Overrides {
-        Name: "cs:Slasher_Projectile"
+        Name: "cs:03_Slasher_Projectile"
         AssetReference {
           Id: 17990456245832998922
         }
       }
       Overrides {
-        Name: "cs:Slasher_Beginning"
+        Name: "cs:03_Slasher_Beginning"
         AssetReference {
           Id: 3260618482035830264
         }
       }
       Overrides {
-        Name: "cs:Slasher_Normal_Impact"
+        Name: "cs:03_Slasher_NormalImpact"
         AssetReference {
           Id: 11650929185820647296
         }
       }
       Overrides {
-        Name: "cs:Slasher_Player_Impact"
+        Name: "cs:03_Slasher_PlayerImpact"
         AssetReference {
           Id: 6697248670123946068
         }
       }
       Overrides {
-        Name: "cs:Wraith_Strike_Preview"
+        Name: "cs:04_WraithStrike_Preview"
         AssetReference {
           Id: 17869001443527042596
         }
       }
       Overrides {
-        Name: "cs:Wraith_Strike_Launch"
+        Name: "cs:04_WraithStrike_Launch"
         AssetReference {
           Id: 13247852012678535360
         }
       }
       Overrides {
-        Name: "cs:Wraith_Strike_Impact"
+        Name: "cs:04_WraithStrike_Impact"
         AssetReference {
           Id: 3219672101883223829
         }
+      }
+      Overrides {
+        Name: "cs:ID"
+        Int: 1
       }
     }
   }

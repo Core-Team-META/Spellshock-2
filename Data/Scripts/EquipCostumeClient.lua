@@ -1,9 +1,15 @@
 ﻿--if true then return end
 local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
+local ClassID = ParentEquipment:GetCustomProperty("ClassID")
+
+local function META_VFX()
+	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
 
 function AttachCostume(player)
 	Task.Wait()
-	local CostumeTemplate = ParentEquipment:GetCustomProperty("CostumeTemplate")
+	local CostumeTemplate =   META_VFX().GetCurrentCostume(player, ClassID) --ParentEquipment:GetCustomProperty("CostumeTemplate")
 	local PlayerAttachments = {}
 	--local CostumeObject = World.SpawnAsset(CostumeTemplate)
 	
