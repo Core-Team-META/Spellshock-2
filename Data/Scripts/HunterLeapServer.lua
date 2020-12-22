@@ -1,11 +1,15 @@
 ﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
-local ThornLifeSpan = script:GetCustomProperty("ThornLifeSpan")
-local OwnerImpulseMultiplier = script:GetCustomProperty("OwnerImpulse")
-local EnemyImpulseMultiplier = script:GetCustomProperty("EnemyImpulse")
-local ImpulseRadius = script:GetCustomProperty("ImpulseRadius")
+local DEFAULT_ThornLifeSpan = script:GetCustomProperty("ThornLifeSpan")
+local DEFAULT_OwnerImpulse = script:GetCustomProperty("OwnerImpulse")
+local DEFAULT_EnemyImpulse = script:GetCustomProperty("EnemyImpulse")
+local DEFAULT_ImpulseRadius = script:GetCustomProperty("ImpulseRadius")
 
 local PlayerVFX = nil
 local abilityName = string.gsub(Ability.name, " ", "_")
@@ -18,12 +22,12 @@ function AddImpulse(player)
 		local forwardVector = player:GetWorldRotation() * Vector3.FORWARD
 		local oppositeVector = -forwardVector
 		oppositeVector.z = 1
-		impulseVector = oppositeVector * OwnerImpulseMultiplier
+		impulseVector = oppositeVector * META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_OwnerImpulse, Ability.name..": Owner Impulse")
 	else
 		local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
 		directionVector = directionVector/directionVector.size
 		directionVector.z = 0.7
-		impulseVector = directionVector * EnemyImpulseMultiplier
+		impulseVector = directionVector * META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_EnemyImpulse, Ability.name..": Enemy Impulse")
 	end
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
@@ -62,9 +66,10 @@ function OnAbilityExecute(thisAbility)
 		newTrap = World.SpawnAsset(_G.VFX[vfxKey], {position = targetPosition, rotation = targetRotation})
 	end
 	
-	newTrap.lifeSpan = ThornLifeSpan
+	newTrap.lifeSpan = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, Ability.name..": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
 	
+	local ImpulseRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, Ability.name..": Impulse Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulse(enemy)
@@ -82,7 +87,7 @@ end
 
 function OnBeginOverlap(thisTrigger, other)
 	if Object.IsValid(other) and other:IsA("Player") and other.team ~= Ability.team then
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id) -- ##TODO Add variable bleed based on ability level
 	end
 end
 

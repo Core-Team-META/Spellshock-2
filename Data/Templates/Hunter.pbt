@@ -1011,6 +1011,18 @@
             String: ""
           }
           Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "Q"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod3"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -1291,7 +1303,7 @@
           }
           Overrides {
             Name: "cs:MaxTraps"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:isPreviewing"
@@ -1300,6 +1312,18 @@
           Overrides {
             Name: "cs:PreviewObjectTemplate"
             String: ""
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "R"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1699,6 +1723,14 @@
           Overrides {
             Name: "cs:DamageToPlayers"
             Int: 20
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         WantsNetworking: true

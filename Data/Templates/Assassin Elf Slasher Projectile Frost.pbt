@@ -7,7 +7,7 @@
       RootId: 11449134712271713588
       Objects {
         Id: 11449134712271713588
-        Name: "Assassin Slasher Projectile Basic"
+        Name: "Assassin Elf Slasher Projectile Frost"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,11 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 16446813860282667535
         ChildIds: 3201804528004713932
         ChildIds: 1880733879350824076
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -91,6 +92,7 @@
             String: "Smoothly rotates the object over time by the given angular velocity."
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -120,6 +122,7 @@
         ParentId: 11449134712271713588
         ChildIds: 13879160216918188313
         ChildIds: 12080904754283744737
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -155,6 +158,7 @@
         ChildIds: 5610973156372032532
         UnregisteredParameters {
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -188,6 +192,7 @@
         ParentId: 13879160216918188313
         ChildIds: 16540528351503084092
         ChildIds: 4793368406201958935
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -317,6 +322,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -393,6 +399,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -436,6 +443,7 @@
         ParentId: 13879160216918188313
         ChildIds: 10491157301780501406
         ChildIds: 6950028639868920063
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -499,6 +507,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -576,6 +585,7 @@
             Float: 23.6005154
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -621,6 +631,7 @@
         ChildIds: 484431908991136517
         UnregisteredParameters {
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -654,6 +665,7 @@
         ParentId: 12080904754283744737
         ChildIds: 1081246172798134004
         ChildIds: 4262549320907324889
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -783,6 +795,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -859,6 +872,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -903,6 +917,7 @@
         ChildIds: 3648770069452560926
         ChildIds: 15145350263039499855
         ChildIds: 8313214923013106509
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -966,6 +981,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1039,6 +1055,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1116,6 +1133,7 @@
             Float: 23.6005154
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1170,6 +1188,7 @@
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

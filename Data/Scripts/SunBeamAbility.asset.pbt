@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 10868725130796666737
-  Name: "Assassin_PoisonBombAbility"
+  Id: 3643779854759022285
+  Name: "SunBeamAbility"
   PlatformAssetType: 3
   TextAsset {
   }

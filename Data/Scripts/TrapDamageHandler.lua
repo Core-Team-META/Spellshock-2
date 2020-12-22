@@ -6,13 +6,35 @@ local Root = script.parent
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local TrapActivationTemplate = script:GetCustomProperty("TrapActivationTemplate")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
 
-local OwnerTeam = 0
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+while Root:GetCustomProperty("OwnerID") == "" do
+	Task.Wait()
+end
+
+local ownerID = Root:GetCustomProperty("OwnerID")
+local TrapOwner
+for _, player in pairs(Game.GetPlayers()) do
+	if player.id == ownerID then
+		TrapOwner = player
+		break
+	end
+end
+
+if not TrapOwner then
+	Root:Destroy()
+	return
+end
+
 local OverlapEvent 
 
 function DoDamage(other)
-	if other:IsA("Player") and other.team ~= OwnerTeam and not other.isDead then
+	if other:IsA("Player") and other.team ~= TrapOwner.team and not other.isDead then
+		print(other.name)
 		if OverlapEvent then
 			OverlapEvent:Disconnect()
 			OverlapEvent = nil
@@ -24,16 +46,16 @@ function DoDamage(other)
 		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
 		
 		local dmg = Damage.New()
-		dmg.amount = DamageAmount
+		dmg.amount = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod3", DEFAULT_DamageAmount, "Bear Trap : Damage Amount")
 		dmg.reason = DamageReason.COMBAT
-		--dmg.sourcePlayer = SpecialAbility.owner
+		dmg.sourcePlayer = TrapOwner
 		--dmg.sourceAbility = SpecialAbility
 				
 
 		local attackData = {
 			object = other,
 			damage = dmg,
-			source = nil,
+			source = dmg.sourcePlayer,
 			position = nil,
 			rotation = nil,
 			tags = {id = "Hunter_R"}
@@ -47,19 +69,15 @@ function OnBeginOverlap(thisTrigger, other)
 	DoDamage(other)
 end
 
-function OnNetworkPropertyChanged(thisObject, name)
-	OwnerTeam = thisObject:GetCustomProperty("Team")
-	Task.Wait(1)
-	
-	for _, other in pairs(Trigger:GetOverlappingObjects()) do
-		DoDamage(other)
-	end
-	
-	if Object.IsValid(Trigger) then
-		OverlapEvent = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
-	end
+Task.Wait(1)
+for _, other in pairs(Trigger:GetOverlappingObjects()) do
+	DoDamage(other)
 end
 
-Root.networkedPropertyChangedEvent:Connect( OnNetworkPropertyChanged )
+if Object.IsValid(Trigger) then
+	OverlapEvent = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
+end
+
+
 
 

@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 10907208932040528762
-  Name: "AreaStunAbilityServer"
+  Name: "DivineLightAbilityServer"
   PlatformAssetType: 3
   TextAsset {
   }

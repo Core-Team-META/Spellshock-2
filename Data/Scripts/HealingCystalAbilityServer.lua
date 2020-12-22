@@ -2,16 +2,19 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local EventName = script:GetCustomProperty("EventName")
-local HealAmount = script:GetCustomProperty("HealAmount")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local LifeSpan = script:GetCustomProperty("Duration")
-local Delay = script:GetCustomProperty("DelayBetweenHeals")
+local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
+local DEFAULT_Delay = script:GetCustomProperty("DelayBetweenHeals")
 
 local Timer = 0
 local HealTrigger = nil
@@ -76,7 +79,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
-		newObject.lifeSpan = LifeSpan
+		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 		--DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
 	end
 end
@@ -146,11 +149,11 @@ function Tick(dTime)
 		for _, thisObject in pairs(OverlappingObjects) do
 			if Object.IsValid(thisObject) and thisObject:IsA("Player") and not thisObject.isDead then
 				local dmg = Damage.New()
-				
+				local HealAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_HealAmount, SpecialAbility.name..": Heal Amount")
 				if thisObject.team == SpecialAbility.owner.team then
 					dmg.amount = -HealAmount
 				else
-					dmg.amount = DamageAmount
+					dmg.amount = HealAmount
 				end
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
@@ -167,7 +170,7 @@ function Tick(dTime)
 				COMBAT().ApplyDamage(attackData)			
 			end
 		end
-		Timer = Delay
+		Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_Delay, SpecialAbility.name..": Delay")
 	end
 end
 

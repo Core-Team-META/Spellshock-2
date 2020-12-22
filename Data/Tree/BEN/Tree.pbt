@@ -1,61 +1,6 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 4867751803983790644
-  Name: "Tank"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7855160156328725233
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Tank"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -23661.2129
-            Y: -31947.3184
-            Z: 6397.44092
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 8962058382446678117
-      value {
-        Overrides {
-          Name: "cs:BlockPercentage"
-          Float: 0.04
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 17020530466204675231
-    }
-  }
-}
-Objects {
   Id: 9068468455938458046
   Name: "UI Menus"
   Transform {
@@ -1261,7 +1206,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1485,7 +1430,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1708,7 +1653,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1932,7 +1877,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2414,7 +2359,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2638,7 +2583,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2861,7 +2806,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3085,7 +3030,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:TemplateToSpawn"

@@ -3,14 +3,18 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local EventName = script:GetCustomProperty("EventName")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local DamageRadius = script:GetCustomProperty("DamageRadius")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
 
 local EventListeners = {}
 
@@ -71,15 +75,15 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		-- Damage enemies
-		local nearbyEnemies = Game.FindPlayersInSphere(position, DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
-		
+		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+		local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
+		--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
 		for _, enemy in pairs(nearbyEnemies) do
 			local dmg = Damage.New()
-			dmg.amount = DamageAmount
+			dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
 			dmg.reason = DamageReason.COMBAT
 			dmg.sourcePlayer = SpecialAbility.owner
 			dmg.sourceAbility = SpecialAbility
-
 
 			local attackData = {
 				object = enemy,

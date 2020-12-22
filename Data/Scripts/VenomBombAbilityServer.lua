@@ -2,28 +2,34 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local ABILITY = script.parent
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
-local DAMAGE = script:GetCustomProperty("Damage")
-local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
-local ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
-local RADIUS = script:GetCustomProperty("Radius")
+local DEFAULT_DamageAmount = script:GetCustomProperty("Damage")
+local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local DEFAULT_ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
+local DEFAULT_DamageRadius = script:GetCustomProperty("Radius")
 
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and ABILITY.owner then
-        local dmg = Damage.New(DAMAGE)
+		local dmg = Damage.New()
+		dmg.amount = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod1", DEFAULT_DamageAmount, ABILITY.name..": Damage Amount")
         dmg:SetHitResult(hitResult)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
 
-        local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), RADIUS, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
-        CoreDebug.DrawSphere(projectile:GetWorldPosition(), RADIUS, {duration = 5})
+		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, ABILITY.name..": Radius")
+        local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
+        --CoreDebug.DrawSphere(projectile:GetWorldPosition(), radius, {duration = 5})
 
         for _, enemy in ipairs(enemiesInRange) do
             -- Poison
@@ -99,8 +105,8 @@ function OnAbilityExecute(thisAbility)
     
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
-    grenadeProjectile.speed = ProjectileSpeed
-    grenadeProjectile.gravityScale = ProjectileGravity
+    grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
+    grenadeProjectile.gravityScale = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", DEFAULT_ProjectileGravity, ABILITY.name..": Projectile Gravity")
     grenadeProjectile.shouldDieOnImpact = true
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end

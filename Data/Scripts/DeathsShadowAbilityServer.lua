@@ -3,16 +3,18 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("MainAbility"):WaitForObject()
 local WeaponAbility = script:GetCustomProperty("WeaponAbility"):WaitForObject()
 
-local BeginningFX = script:GetCustomProperty("BeginningFX")
-local EndingFX = script:GetCustomProperty("EndingFX")
-local Duration = script:GetCustomProperty("Duration")
-local AttackRadius = script:GetCustomProperty("AttackRadius")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local SpeedBoost = script:GetCustomProperty("SpeedBoost")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
+local DEFAULT_AttackRadius = script:GetCustomProperty("AttackRadius")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_SpeedBoost = script:GetCustomProperty("SpeedBoost")
 
 local EventListeners = {}
 local Timer = -1
@@ -35,12 +37,13 @@ function Attack()
 	
 	local playerFacingDirection = Ability.owner:GetWorldRotation() * Vector3.FORWARD
 	local spherePosition = Ability.owner:GetWorldPosition() + (playerFacingDirection * 100)
+	local AttackRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, Ability.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = Ability.owner.team, ignoreDead = true})
-	CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
+	--CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
 	
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
-		dmg.amount = DamageAmount
+		dmg.amount = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_DamageAmount, Ability.name..": Damage Amount")
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = Ability.owner
 		dmg.sourceAbility = Ability
@@ -78,7 +81,7 @@ end
 
 function OnAbilityExecute(thisAbility)
 	WeaponAbility.isEnabled = false
-	--World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
+	
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Beginning")
 	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
 	local success, newObject = pcall(function()
@@ -96,8 +99,8 @@ function OnAbilityExecute(thisAbility)
 	
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
-	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + SpeedBoost
-	Timer = Duration
+	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, Ability.name..": Speed Boost")
+	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_Duration, Ability.name..": Duration")
 	script:SetNetworkedCustomProperty("isInvisible", isInvisible)
 end
 

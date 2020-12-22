@@ -15,6 +15,7 @@ local ThrowAbility = script:GetCustomProperty("ThrowAbility"):WaitForObject()
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
 local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
 local DEFAULT_LifeSpan = script:GetCustomProperty("LifeSpan")
+local DEFAULT_ProjectileScale = script:GetCustomProperty("ProjectileScale")
 
 local PickupObject = nil
 local CurrentProjectile = nil
@@ -50,7 +51,8 @@ function OnPickupExecute(thisAbility)
 		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
 		PickupObject = World.SpawnAsset(_G.VFX[vfxKey], {position = PickupAbility.owner:GetWorldPosition()})
 	end
-	
+	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
+	PickupObject:SetWorldScale(newScale)
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
 	ThrowAbility.isEnabled = true
 end
@@ -115,7 +117,8 @@ function OnThrowExecute(thisAbility)
 		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
 		CurrentProjectile = World.SpawnAsset(_G.VFX[vfxKey], {position = spawnPosition})
 	end
-	
+	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
+	CurrentProjectile:SetWorldScale(newScale)
 	CurrentProjectile:SetAngularVelocity(angularVelocity)
 	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("Trigger"):WaitForObject()
 	ProjectileTrigger.beginOverlapEvent:Connect( OnBeginOverlap )

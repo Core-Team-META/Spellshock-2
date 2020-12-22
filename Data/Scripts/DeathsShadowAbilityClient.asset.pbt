@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 3643779854759022285
-  Name: "HealerBeamAbility"
+  Id: 11848089031478388226
+  Name: "DeathsShadowAbilityClient"
   PlatformAssetType: 3
   TextAsset {
   }

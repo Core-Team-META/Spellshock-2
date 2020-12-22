@@ -7,7 +7,7 @@
       RootId: 8068909457519025944
       Objects {
         Id: 8068909457519025944
-        Name: "Tank Elf Stone Wall Frost"
+        Name: "Tank Elf Stone Wall Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,20 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 3975608240059173400
         ChildIds: 9589034832241578871
         ChildIds: 12282107619167272356
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:lifeSpan"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:lifeSpan:isrep"
+            Bool: true
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -209,6 +219,12 @@
           Overrides {
             Name: "cs:Timer"
             Float: 6
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 8068909457519025944
+            }
           }
         }
         Collidable_v2 {

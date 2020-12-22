@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 11448023727438118213
-  Name: "Assassin_Projectile_DamageAndHeal"
+  Id: 15436478629864918866
+  Name: "WraithStrikeAbilityServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -13,7 +13,7 @@
       Overrides {
         Name: "cs:APIStatusEffects"
         AssetReference {
-          Id: 6140123420589022677
+          Id: 14748071004312265457
         }
       }
     }

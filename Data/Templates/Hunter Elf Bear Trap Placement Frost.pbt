@@ -21,12 +21,8 @@
         ChildIds: 6502312860662146164
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Team"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:Team:isrep"
-            Bool: true
+            Name: "cs:OwnerID"
+            String: ""
           }
         }
         WantsNetworking: true

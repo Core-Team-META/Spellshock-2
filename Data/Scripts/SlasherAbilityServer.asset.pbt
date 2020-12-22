@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 6553233916944605564
-  Name: "Assassin_InvisibilityServer"
+  Id: 11448023727438118213
+  Name: "SlasherAbilityServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

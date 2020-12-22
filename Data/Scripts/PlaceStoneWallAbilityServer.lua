@@ -67,8 +67,9 @@ function PlaceObject(thisPlayer, position, rotation)
 			Storage.SetPlayerData(thisPlayer, PlayerStorage)
 			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
 		end
-		
-		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		local newLifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		newObject.lifeSpan = newLifeSpan
+		newObject:SetNetworkedCustomProperty("lifeSpan", newLifeSpan)
 		if newObject:GetCustomProperty("Team") ~= nil then
 			Task.Wait()
 			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)

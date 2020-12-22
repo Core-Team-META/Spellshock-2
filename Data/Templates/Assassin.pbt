@@ -885,7 +885,7 @@
       }
       Objects {
         Id: 18378548991232479363
-        Name: "Assassin_PoisonGrenadeAbility"
+        Name: "VenomBombAbilityServer"
         Transform {
           Location {
           }
@@ -1107,7 +1107,7 @@
       }
       Objects {
         Id: 11411700836215041466
-        Name: "Assassin_InvisibilityServer"
+        Name: "DeathsShadowAbilityServer"
         Transform {
           Location {
             X: -8020
@@ -1229,7 +1229,7 @@
       }
       Objects {
         Id: 5815969532402457262
-        Name: "Assassin_InvisibilityClient"
+        Name: "DeathsShadowAbilityClient"
         Transform {
           Location {
             X: -8020
@@ -1386,7 +1386,7 @@
       }
       Objects {
         Id: 6077411007921151374
-        Name: "Assassin_Projectile_DamageAndHeal"
+        Name: "SlasherAbilityServer"
         Transform {
           Location {
           }
@@ -1428,16 +1428,12 @@
             }
           }
           Overrides {
-            Name: "cs:BaseDamageModifier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:BonusDamageModifier"
+            Name: "cs:HealPercentage"
             Float: 0.1
           }
           Overrides {
-            Name: "cs:BonusHealingModifier"
-            Float: 0.75
+            Name: "cs:HealPercentage:tooltip"
+            String: "DamageAmount * HealPercentage = HealAmount"
           }
         }
         WantsNetworking: true
@@ -1532,7 +1528,7 @@
       }
       Objects {
         Id: 1302420456206572084
-        Name: "Assassin_AirDive"
+        Name: "WraithStrikeAbilityServer"
         Transform {
           Location {
           }
@@ -1580,11 +1576,7 @@
             }
           }
           Overrides {
-            Name: "cs:BaseDamageModifier"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:ImpactRadius"
+            Name: "cs:DamageRadius"
             Float: 600
           }
           Overrides {
@@ -1654,7 +1646,7 @@
       }
       Objects {
         Id: 14022298515563068289
-        Name: "Assassin_AirDive_Client"
+        Name: "WraithStrikeAbilityClient"
         Transform {
           Location {
             X: -7995.12695
@@ -1961,6 +1953,14 @@
           Overrides {
             Name: "cs:VerticalImpulse"
             Float: 0
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         Collidable_v2 {

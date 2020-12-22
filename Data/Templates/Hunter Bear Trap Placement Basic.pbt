@@ -7,7 +7,7 @@
       RootId: 14117470721527006186
       Objects {
         Id: 14117470721527006186
-        Name: "Hunter Trap Placement"
+        Name: "Hunter Bear Trap Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -21,11 +21,11 @@
         ChildIds: 16851607959482328423
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Team"
-            Int: 0
+            Name: "cs:OwnerID"
+            String: ""
           }
           Overrides {
-            Name: "cs:Team:isrep"
+            Name: "cs:OwnerID:isrep"
             Bool: true
           }
         }

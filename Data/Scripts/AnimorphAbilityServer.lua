@@ -2,15 +2,19 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script.parent
 
-local DAMAGE = script:GetCustomProperty("Damage")
-local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
-local ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
-local RADIUS = script:GetCustomProperty("Radius")
-local Duration = script:GetCustomProperty("Duration")
+local DEFAULT_DamageAmount = script:GetCustomProperty("Damage")
+local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
+local DEFAULT_ProjectileGravity = script:GetCustomProperty("ProjectileGravity")
+local DEFAULT_Radius = script:GetCustomProperty("Radius")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
 
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
@@ -36,22 +40,24 @@ function OnProjectileImpacted(projectile, other, hitResult)
 			World.SpawnAsset(_G.VFX[vfxKey], {position = projectile:GetWorldPosition(), rotation = impactRotation})
 		end
         
-        -- init dmg object
-        local dmg = Damage.New(DAMAGE)
+		-- init dmg object
+		local DamageAmount = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod2", DEFAULT_DamageAmount, ABILITY.name..": Damage Amount")
+        local dmg = Damage.New(DamageAmount)
         dmg:SetHitResult(hitResult)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
 
-        local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), RADIUS, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
-        CoreDebug.DrawSphere(projectile:GetWorldPosition(), RADIUS, {duration = 5})
+		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod1", DEFAULT_Radius, ABILITY.name..": Radius")
+        local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
+        --CoreDebug.DrawSphere(projectile:GetWorldPosition(), RADIUS, {duration = 5})
 
         for _, enemy in ipairs(enemiesInRange) do
             -- apply status effect
             --API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
             
             -- Damage
-			  if DAMAGE ~= 0 then
+			  if DamageAmount ~= 0 then
 				local attackData = {
 					object = enemy,
 					damage = dmg,
@@ -61,29 +67,32 @@ function OnProjectileImpacted(projectile, other, hitResult)
 					tags = {id = "Mage_E"}
 					}
 				COMBAT().ApplyDamage(attackData)
-
+				Task.Wait()
             end
             
             -- equip animal costume
             --local newCostume = World.SpawnAsset(AnimalCostumeTemplate)
-            
-            local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Attachment")
-			--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-			local success, newCostume = pcall(function()
-			    return World.SpawnAsset(PlayerVFX[vfxKey])
-			end)
 			
-			if not success then
-				warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-				local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
-				PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-				PlayerVFX = PlayerStorage.VFX
-				Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
-				newCostume = World.SpawnAsset(_G.VFX[vfxKey])
+			if not enemy.isDead then
+				local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Attachment")
+				--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
+				local success, newCostume = pcall(function()
+					return World.SpawnAsset(PlayerVFX[vfxKey])
+				end)
+				
+				if not success then
+					warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
+					local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
+					PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
+					PlayerVFX = PlayerStorage.VFX
+					Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
+					newCostume = World.SpawnAsset(_G.VFX[vfxKey])
+				end
+				
+				local Duration = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod5", DEFAULT_Duration, ABILITY.name..": Duration")
+				newCostume:SetNetworkedCustomProperty("Duration", Duration)
+				newCostume:Equip(enemy)
 			end
-            
-            newCostume:SetNetworkedCustomProperty("Duration", Duration)
-            newCostume:Equip(enemy)
         end
         
     end
@@ -120,8 +129,8 @@ function OnAbilityExecute(thisAbility)
     
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
-    grenadeProjectile.speed = ProjectileSpeed
-    grenadeProjectile.gravityScale = ProjectileGravity
+    grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
+    grenadeProjectile.gravityScale = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod4", DEFAULT_ProjectileGravity, ABILITY.name..": Projectile Gravity")
     grenadeProjectile.shouldDieOnImpact = true
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end

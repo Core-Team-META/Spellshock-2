@@ -1,10 +1,14 @@
-﻿local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+﻿local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
 local EventName = script:GetCustomProperty("EventName")
-local MaxTraps = script:GetCustomProperty("MaxTraps")
+local DEFAULT_MaxTraps = script:GetCustomProperty("MaxTraps")
 
 local EventListeners = {}
 local ActiveTraps = {}
@@ -47,6 +51,7 @@ function PlaceObject(thisPlayer, position, rotation)
 			return
 		end
 		
+		local MaxTraps = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_MaxTraps, SpecialAbility.name..": Max Traps")
 		if #ActiveTraps == MaxTraps then
 			-- remove the oldest trap
 			local oldTrap = table.remove(ActiveTraps, 1)
@@ -72,10 +77,8 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		table.insert(ActiveTraps, newObject)
-		if newObject:GetCustomProperty("Team") ~= nil then
-			Task.Wait()
-			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
-		end
+		Task.Wait()
+		newObject:SetNetworkedCustomProperty("OwnerID", SpecialAbility.owner.id)
 	end
 end
 

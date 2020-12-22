@@ -34,7 +34,7 @@ local goingToTakeDamageListener = nil
 
 -- nil OnGoingToTakeDamage(Character taking damage, Damage object, Character dealing the damage)
 function OnGoingToTakeDamage(object, dmg, source)
-	if object == EQUIPMENT.owner then
+	if object == EQUIPMENT.owner and dmg.amount > 0 then
         dmg.amount = dmg.amount - (dmg.amount * BLOCK_PERCENTAGE)
 	end
 end

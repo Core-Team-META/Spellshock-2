@@ -17,7 +17,7 @@ local VFX_LIST = script:GetCustomProperty("VFX_LIST"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"]["VFX"] = API
-local costumeTable = {}
+local cosmeticTable = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -39,29 +39,29 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param string string => "Projectile"
 local function GetBindVfx(player, class, bind, skin, string)
-    return costumeTable[class][player.team][skin][bind][string]
+    return cosmeticTable[class][player.team][skin][bind][string]
 end
 
 --#TODO MESS
---Builds the costumeTable based on the heirarchy
+--Builds the cosmeticTable based on the heirarchy
 function Int()
-    if not next(costumeTable) then
+    if not next(cosmeticTable) then
         for _, class in ipairs(VFX_LIST:GetChildren()) do
             local id = class:GetCustomProperty("ID")
-            costumeTable[id] = {}
+            cosmeticTable[id] = {}
             for _, team in ipairs(class:GetChildren()) do
                 local teamId = team:GetCustomProperty("ID")
-                costumeTable[id][teamId] = {}
+                cosmeticTable[id][teamId] = {}
                 for _, skin in ipairs(team:GetChildren()) do
                     local skinId = skin:GetCustomProperty("ID")
-                    costumeTable[id][teamId][skinId] = {}
+                    cosmeticTable[id][teamId][skinId] = {}
                     local tempVFX = {}
                     for key, value in pairs(skin:GetCustomProperties()) do
                         if key ~= "Costume" and key ~= "ID" then
                             local vfxName = Split(key, "_")
                             local abilityId = tonumber(vfxName[1])
                             tempVFX[tostring(vfxName[3])] = value
-                            costumeTable[id][teamId][skinId][abilityId] = tempVFX
+                            cosmeticTable[id][teamId][skinId][abilityId] = tempVFX
                         end
                     end
                 end
@@ -85,4 +85,4 @@ end
 
 
 Int()
-UTIL.TablePrint(costumeTable)
+UTIL.TablePrint(cosmeticTable)

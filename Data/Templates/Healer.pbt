@@ -959,14 +959,17 @@
             Int: 4000
           }
           Overrides {
-            Name: "cs:HealingAmount"
-            Int: 30
-          }
-          Overrides {
             Name: "cs:DamageRange"
             Vector2 {
               X: 30
               Y: 50
+            }
+          }
+          Overrides {
+            Name: "cs:HealRange"
+            Vector2 {
+              X: 30
+              Y: 40
             }
           }
           Overrides {
@@ -1115,11 +1118,7 @@
           }
           Overrides {
             Name: "cs:DelayBetweenHeals"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 3
+            Float: 1
           }
           Overrides {
             Name: "cs:Duration"
@@ -1136,6 +1135,18 @@
           Overrides {
             Name: "cs:PreviewObjectTemplate"
             String: ""
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1546,6 +1557,18 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "SHIFT"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -1670,8 +1693,6 @@
             SpreadMin: 0.2
             SpreadMax: 4
             SpreadDecreaseSpeed: 6
-            SpreadIncreasePerShot: 0.5
-            SpreadPenaltyPerShot: 0.4
             DefaultAbility {
               SubObjectId: 4620336145958381494
             }
@@ -1768,6 +1789,14 @@
           Overrides {
             Name: "cs:DamageToPlayers"
             Int: 20
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         WantsNetworking: true

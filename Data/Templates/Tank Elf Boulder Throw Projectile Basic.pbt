@@ -7,7 +7,7 @@
       RootId: 7797778233693850985
       Objects {
         Id: 7797778233693850985
-        Name: "Elf Excavate Projectile"
+        Name: "Tank Elf Boulder Throw Projectile Basic"
         Transform {
           Scale {
             X: 1
@@ -796,7 +796,7 @@
         ParentId: 7797778233693850985
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceon"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"

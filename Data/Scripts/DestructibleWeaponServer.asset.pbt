@@ -11,12 +11,15 @@
         }
       }
       Overrides {
-        Name: "cs:DamageToPlayers"
+        Name: "cs:DamageToObjects"
         Int: 1
       }
       Overrides {
-        Name: "cs:DamageToObjects"
-        Int: 1
+        Name: "cs:DamageRange"
+        Vector2 {
+          X: 15
+          Y: 20
+        }
       }
     }
   }

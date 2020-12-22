@@ -1143,6 +1143,18 @@
             String: ""
           }
           Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "Q"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -1467,16 +1479,8 @@
             Int: 500
           }
           Overrides {
-            Name: "cs:IceCubeTemplate"
-            AssetReference {
-              Id: 10750937685288866590
-            }
-          }
-          Overrides {
-            Name: "cs:IceCubeBreakFX"
-            AssetReference {
-              Id: 12874348109318974616
-            }
+            Name: "cs:BlockPercentage"
+            Float: 0.5
           }
           Overrides {
             Name: "cs:ModuleManager"
@@ -1618,22 +1622,6 @@
             AssetReference {
               Id: 13667023393242254669
             }
-          }
-          Overrides {
-            Name: "cs:TargetTemplate"
-            AssetReference {
-              Id: 13272352193882752730
-            }
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 313465437675986879
-            }
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 10
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -1799,6 +1787,18 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "SHIFT"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -1866,7 +1866,7 @@
           }
           Weapon {
             ProjectileAssetRef {
-              Id: 7121020137274095914
+              Id: 15211008498432540868
             }
             MuzzleFlashAssetRef {
               Id: 2580083533563872171
@@ -1892,14 +1892,13 @@
             ImpactProjectileAssetRef {
               Id: 841534158063459245
             }
-            IsHitscan: true
             BeamAssetRef {
               Id: 841534158063459245
             }
             BurstCount: 1000
             BurstDuration: 1
             BurstStopsWithRelease: true
-            Range: 2500
+            Range: 7000
             ImpactPlayerAssetRef {
               Id: 7162940562527151262
             }
@@ -1909,15 +1908,15 @@
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 5000
+            ProjectileSpeed: 8000
             ProjectileLifeSpan: 10
             ProjectileGravity: 0.5
             ProjectileLength: 50
-            ProjectileRadius: 20
-            SpreadMin: 2
-            SpreadMax: 5
+            ProjectileRadius: 30
+            ProjectileDrag: -0.1
+            SpreadMin: 0.2
+            SpreadMax: 4
             SpreadDecreaseSpeed: 6
-            SpreadPenaltyPerShot: 0.6
             DefaultAbility {
               SubObjectId: 1254248059045754243
             }
@@ -1950,8 +1949,12 @@
             Int: 129
           }
           Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 20
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         WantsNetworking: true

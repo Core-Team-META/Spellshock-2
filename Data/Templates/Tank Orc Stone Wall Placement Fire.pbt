@@ -7,7 +7,7 @@
       RootId: 9289715967586358971
       Objects {
         Id: 9289715967586358971
-        Name: "Fire Orc StoneWallWitcher"
+        Name: "Tank Orc Stone Wall Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -19,6 +19,16 @@
         ChildIds: 9017956915291025978
         ChildIds: 4701689901440671354
         ChildIds: 15482608348644610495
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:lifeSpan"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:lifeSpan:isrep"
+            Bool: true
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -209,6 +219,12 @@
           Overrides {
             Name: "cs:Timer"
             Float: 6
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 9289715967586358971
+            }
           }
         }
         Collidable_v2 {

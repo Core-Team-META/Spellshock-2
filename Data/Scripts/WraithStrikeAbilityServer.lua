@@ -3,14 +3,18 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = ABILITY:GetCustomProperty("Binding")
 
-local KILL_THRESHOLD = script:GetCustomProperty("KillThreshold") or .25
-local DAMAGE_RANGE = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
-local BASE_DAMAGE_MOD = script:GetCustomProperty("BaseDamageModifier") or 1
-local IMPACT_RADIUS = script:GetCustomProperty("ImpactRadius") or 500
+local DamageRange = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
+local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
+local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius") or 500
+
 local LAUNCH_FORCE = script:GetCustomProperty("LaunchForce") or 40
 local EventName = script:GetCustomProperty("EventName")
 
@@ -125,9 +129,9 @@ function OnTargetChosen(player, targetPos)
 	    end
 	    local reachedMaxTime = false
 	    Task.Spawn(function() Task.Wait(1) reachedMaxTime = true end)
-		
+		local DamageRadius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, ABILITY.name..": Radius")
 	    while(player.isGrounded == false and player.isDead == false and reachedMaxTime == false) do
-	        local players = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
+	        local players = COMBAT().FindInSphere(targetPos, DamageRadius, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
 	        if(players == player) then break end
 	        Task.Wait()
 	    end
@@ -162,21 +166,16 @@ function OnTargetChosen(player, targetPos)
 end
 
 function DamageInArea(targetPos, localPlayer)
-    -- Get enemies in a sphere
-    local enemiesInRange = COMBAT().FindInSphere(targetPos, IMPACT_RADIUS, {ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)})
-	CoreDebug.DrawSphere(targetPos, IMPACT_RADIUS, {duration = 5})
+	-- Get enemies in a sphere
+	local DamageRadius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, ABILITY.name..": Radius")
+    local enemiesInRange = COMBAT().FindInSphere(targetPos, DamageRadius, {ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)})
+	local damageTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
+	--CoreDebug.DrawSphere(targetPos, DamageRadius, {duration = 5})
     for _, enemy in ipairs(enemiesInRange) do
         API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
-
-        -- Smack
-        local damageAmount = math.random(DAMAGE_RANGE.x, DAMAGE_RANGE.y) * BASE_DAMAGE_MOD
-        local enemyHP = (enemy.hitPoints / enemy.maxHitPoints)
-        if(enemyHP <= .5) then
-            damageAmount = enemy.hitPoints
-        end
         
-        local dmg = Damage.New(damageAmount)
-        dmg.amount = damageAmount
+        local dmg = Damage.New()
+        dmg.amount = math.random(damageTable.min, damageTable.max)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = ABILITY.owner
         dmg.sourceAbility = ABILITY

@@ -3,16 +3,16 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
-local TargetTemplate = script:GetCustomProperty("TargetTemplate")
-local ProjectileTemplate = script:GetCustomProperty("ProjectileTemplate")
-local ImpactFX = script:GetCustomProperty("ImpactFX")
-local Duration = script:GetCustomProperty("Duration")
 local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local DamageRadius = script:GetCustomProperty("DamageRadius")
-local TargetingRange = script:GetCustomProperty("TargetingRange")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
+local DEFAULT_TargetingRange = script:GetCustomProperty("TargetingRange")
 
 local EventListeners = {}
 local ProjectileImpactEvent = nil
@@ -43,11 +43,12 @@ function OnProjectileImpact(projectile, other, hitResult)
 	end
 	
 	-- Damage enemies
+	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(projectile:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
-	CoreDebug.DrawSphere(projectile:GetWorldPosition(), DamageRadius, {duration = 5})
+	--CoreDebug.DrawSphere(projectile:GetWorldPosition(), DamageRadius, {duration = 5})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
-		dmg.amount = DamageAmount
+		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = SpecialAbility.owner
 		dmg.sourceAbility = SpecialAbility
@@ -73,7 +74,8 @@ function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn a new target object where the camera is looking
 	local viewRotation = thisAbility.owner:GetViewWorldRotation()
 	local viewPosition = thisAbility.owner:GetViewWorldPosition()
-	local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * 10000)
+	local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_TargetingRange, SpecialAbility.name..": Targeting Range")
+	local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 	local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = thisAbility.owner.team})
 	
 	if hitResult then
@@ -107,8 +109,6 @@ function OnSpecialAbilityExecute(thisAbility)
 	
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
-	
-	--CurrentProjectile = Projectile.Spawn(ProjectileTemplate, spawnPosition, directionVector)
 	
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
 	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
@@ -223,7 +223,8 @@ function Tick(deltaTime)
 		if MoveTarget then
 			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
 			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
-			local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * 10000)
+			local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_TargetingRange, SpecialAbility.name..": Targeting Range")
+			local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 			local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = CurrentProjectile.owner.team})
 			
 			if hitResult then

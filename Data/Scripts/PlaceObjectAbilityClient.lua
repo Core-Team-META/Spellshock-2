@@ -13,6 +13,10 @@ local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local EventName = ServerScript:GetCustomProperty("EventName")
 
+local Class = ServerScript:GetCustomProperty("Class")
+local BindingName = ServerScript:GetCustomProperty("BindingName")
+local AbilityMod = ServerScript:GetCustomProperty("AbilityMod")
+
 local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -109,7 +113,8 @@ function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
-	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().TANK, META_AP().E, "mod1", DEFAULT_Range, SpecialAbility.name..": Placement Range")
+	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], AbilityMod, DEFAULT_Range, SpecialAbility.name..": Placement Range")
+	print("PlacementRange: "..PlacementRange)
 	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	
