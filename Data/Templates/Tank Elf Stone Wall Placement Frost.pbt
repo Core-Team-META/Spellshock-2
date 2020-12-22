@@ -220,6 +220,12 @@
             Name: "cs:Timer"
             Float: 6
           }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 8068909457519025944
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

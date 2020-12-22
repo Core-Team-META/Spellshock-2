@@ -7,7 +7,7 @@
       RootId: 17329163543160996106
       Objects {
         Id: 17329163543160996106
-        Name: "Fire Orc Excavate Projectile"
+        Name: "Tank Orc Boulder Throw Projectile Fire"
         Transform {
           Scale {
             X: 1
@@ -220,7 +220,7 @@
         ParentId: 17329163543160996106
         WantsNetworking: true
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceon"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
