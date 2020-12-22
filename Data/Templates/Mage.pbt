@@ -1143,6 +1143,18 @@
             String: ""
           }
           Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "Q"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -1467,16 +1479,8 @@
             Int: 500
           }
           Overrides {
-            Name: "cs:IceCubeTemplate"
-            AssetReference {
-              Id: 10750937685288866590
-            }
-          }
-          Overrides {
-            Name: "cs:IceCubeBreakFX"
-            AssetReference {
-              Id: 12874348109318974616
-            }
+            Name: "cs:BlockPercentage"
+            Float: 0.5
           }
           Overrides {
             Name: "cs:ModuleManager"
@@ -1618,22 +1622,6 @@
             AssetReference {
               Id: 13667023393242254669
             }
-          }
-          Overrides {
-            Name: "cs:TargetTemplate"
-            AssetReference {
-              Id: 13272352193882752730
-            }
-          }
-          Overrides {
-            Name: "cs:ImpactFX"
-            AssetReference {
-              Id: 313465437675986879
-            }
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 10
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -1950,8 +1938,12 @@
             Int: 129
           }
           Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 20
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         WantsNetworking: true

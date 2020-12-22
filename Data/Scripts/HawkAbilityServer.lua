@@ -3,13 +3,17 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 
-local HawkSpeed = script:GetCustomProperty("HawkSpeed")
-local HawkRange = script:GetCustomProperty("HawkRange")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local LifeSpan = script:GetCustomProperty("LifeSpan")
+local DEFAULT_HawkSpeed = script:GetCustomProperty("HawkSpeed")
+local DEFAULT_HawkRange = script:GetCustomProperty("HawkRange")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_LifeSpan = script:GetCustomProperty("LifeSpan")
 
 local EventListeners = {}
 local HitPlayers = {}
@@ -49,8 +53,8 @@ function OnAbilityExecute(thisAbility)
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	Task.Wait(1)
-	CurrentHawk.lifeSpan = LifeSpan + 5
-	Timer = LifeSpan
+	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name..": LifeSpan")
+	CurrentHawk.lifeSpan = Timer + 5
 end
 
 function OnPlayerRespawn(player)
@@ -109,7 +113,7 @@ function Tick(deltaTime)
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 				
 				local dmg = Damage.New()
-				dmg.amount = DamageAmount
+				dmg.amount = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod3", DEFAULT_DamageAmount, Ability.name..": Damage Amount")
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = Ability.owner
 				dmg.sourceAbility = Ability
@@ -135,6 +139,7 @@ function Tick(deltaTime)
 				PreviousTarget = HawkTarget
 				HawkTarget = nil
 			else
+				local HawkSpeed = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, Ability.name..": Speed")
 				CurrentHawk:MoveTo(HawkTarget:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
 				--local velocityVector = (DistanceVector/DistanceVector.size) * HawkSpeed
 				--CurrentHawk:MoveContinuous(velocityVector)
@@ -143,6 +148,7 @@ function Tick(deltaTime)
 			HawkTarget = nil
 			if not CurrentHawk or not Object.IsValid(CurrentHawk) then return end
 			-- Check for enemies in the area
+			local HawkRange = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod4", DEFAULT_HawkRange, Ability.name..": Range")
 			local neabyEnemies = Game.FindPlayersInSphere(CurrentHawk:GetWorldPosition(), HawkRange, {ignoreTeams=Ability.owner.team, ignoreDead = true})
 			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})
 			for _, enemy in pairs(neabyEnemies) do

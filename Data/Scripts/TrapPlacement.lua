@@ -7,10 +7,19 @@ local PlacementFX = script:GetCustomProperty("PlacementFX"):WaitForObject()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local OwnerTeam
 
 function OnNetworkPropertyChanged(thisObject, name)
-	OwnerTeam = thisObject:GetCustomProperty("Team")
+	Task.Wait()
+	local ownerID = Root:GetCustomProperty("OwnerID")
+	local TrapOwner
+	for _, player in pairs(Game.GetPlayers()) do
+		if player.id == ownerID then
+			TrapOwner = player
+			break
+		end
+	end
+	local OwnerTeam = TrapOwner.team
+	
 	if LOCAL_PLAYER.team == OwnerTeam then
 		Trap.visibility = Visibility.INHERIT
 	end

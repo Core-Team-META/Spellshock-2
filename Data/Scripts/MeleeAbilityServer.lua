@@ -72,7 +72,7 @@ function MeleeAttack(other)
 		ignoreList[other] = 1
 
 		local dmg = Damage.New()
-		local rangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
+		local rangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, ABILITY.name..": Damage Range")
 		dmg.amount = math.random(rangeTable.min, rangeTable.max)
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = ABILITY.owner

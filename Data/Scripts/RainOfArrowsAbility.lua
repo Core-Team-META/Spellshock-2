@@ -75,7 +75,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		-- Damage enemies
-		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
 		for _, enemy in pairs(nearbyEnemies) do

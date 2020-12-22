@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 12935185397369316502
+        ParentId: 4781671109827199097
         ChildIds: 7137406222810709920
         ChildIds: 5361708159967945625
         ChildIds: 406380117814010332
@@ -1303,7 +1303,7 @@
           }
           Overrides {
             Name: "cs:MaxTraps"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:isPreviewing"
@@ -1312,6 +1312,18 @@
           Overrides {
             Name: "cs:PreviewObjectTemplate"
             String: ""
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "R"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1711,6 +1723,14 @@
           Overrides {
             Name: "cs:DamageToPlayers"
             Int: 20
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
           }
         }
         WantsNetworking: true

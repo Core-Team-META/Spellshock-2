@@ -3,6 +3,10 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
@@ -11,10 +15,10 @@ local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 local OrcObjectTemplate = script:GetCustomProperty("OrcObjectTemplate")
 local ElfObjectTemplate = script:GetCustomProperty("ElfObjectTemplate")
 local EventName = script:GetCustomProperty("EventName")
-local DamageAmount = script:GetCustomProperty("DamageAmount")
-local DamageRadius = script:GetCustomProperty("DamageRadius")
-local DOT = script:GetCustomProperty("DOT")
-local Duration = script:GetCustomProperty("Duration")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
+local DEFAULT_DOT = script:GetCustomProperty("DOT")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
 
 local EventListeners = {}
 
@@ -54,7 +58,6 @@ function PlaceObject(thisPlayer, position, rotation)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
 			return
@@ -80,15 +83,16 @@ function PlaceObject(thisPlayer, position, rotation)
 			CurrentTornado = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
 		end
 		
-		CurrentTornado.lifeSpan = Duration
+		CurrentTornado.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
 		Task.Wait()
 		CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 		
 		-- Damage enemies
+		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		local nearbyEnemies = Game.FindPlayersInSphere(position, DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		for _, enemy in pairs(nearbyEnemies) do
 			local dmg = Damage.New()
-			dmg.amount = DamageAmount
+			dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
 			dmg.reason = DamageReason.COMBAT
 			dmg.sourcePlayer = SpecialAbility.owner
 			dmg.sourceAbility = SpecialAbility
@@ -178,11 +182,12 @@ function Tick(deltaTime)
 	if Timer > 0 and Object.IsValid(CurrentTornado) then
 		Timer = Timer - deltaTime
 		if Timer < 0 and Object.IsValid(SpecialAbility.owner) then
+			local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 			local nearbyEnemies = Game.FindPlayersInSphere(CurrentTornado:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
-				dmg.amount = DOT
+				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", DEFAULT_DOT, SpecialAbility.name..": DOT")
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility

@@ -2,13 +2,16 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
-local Duration = script:GetCustomProperty("Duration")
-local DOT = script:GetCustomProperty("DOT")
-local DamageRadius = script:GetCustomProperty("DamageRadius")
-local IceCubeTemplate = script:GetCustomProperty("IceCubeTemplate")
-local IceCubeBreakFX = script:GetCustomProperty("IceCubeBreakFX")
+local DEFAULT_Duration = script:GetCustomProperty("Duration")
+local DEFAULT_DOT = script:GetCustomProperty("DOT")
+local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
+local DEFAULT_BlockPercentage = script:GetCustomProperty("BlockPercentage")
 
 local ActiveAbilities = {}
 local PlayerSettings = {}
@@ -51,7 +54,6 @@ function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn vfx
 	local spawnPosition = thisAbility.owner:GetWorldPosition()
 	spawnPosition.z = spawnPosition.z - 50
-	--CurrentIceCube = World.SpawnAsset(IceCubeTemplate, {position = spawnPosition})
 	
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Attachment")
 	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
@@ -75,7 +77,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
 
 	
-	Timer = Duration
+	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
 end
 
@@ -165,11 +167,12 @@ function Tick(deltaTime)
 		-- do damage every second
 		if damageTimer < 0 then
 			-- Damage enemies
+			local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 			local nearbyEnemies = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
-			CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 1})
+			--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 1})
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
-				dmg.amount = DOT
+				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_DOT, SpecialAbility.name..": DOT")
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility

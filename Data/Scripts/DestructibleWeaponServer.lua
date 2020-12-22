@@ -14,21 +14,27 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 local WEAPON = script.parent
 
-local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageToPlayers")
+local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageRange")
+local DEFAULT_DamageRange = {min=DAMAGE_TO_PLAYERS.x, max=DAMAGE_TO_PLAYERS.y}
 local DAMAGE_TO_OBJECTS = script:GetCustomProperty("DamageToObjects")
 
+local BindingName = script:GetCustomProperty("BindingName")
+local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 function OnTargetImpact(theWeapon, impactData)
 	local amount = DAMAGE_TO_OBJECTS
 	if Object.IsValid(impactData.targetObject) and impactData.targetObject:IsA("Player") then
-		amount = DAMAGE_TO_PLAYERS
+		local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
+		amount = math.random(rangeTable.min, rangeTable.max)
 	else 
 		return
 	end
-	
 	
 	local dmg = Damage.New(amount)
 		
