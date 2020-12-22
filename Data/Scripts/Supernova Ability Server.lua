@@ -3,9 +3,14 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
-local HealAmount = script:GetCustomProperty("HealAmount")
+local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
+local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
 
 local VFX_Chargeup = "CC262FD37D50A523:Healer Elf Supernova Charge Basic"
 local VFX_Ending = "0061AD3DB266FDE2:Healer Elf Supernova Ending Basic"
@@ -66,17 +71,16 @@ function OnAbilityRecovery(thisAbility)
 		World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
 	end
 	
-	CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
+	--CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
 	CurrentChargeUp:Destroy()
-	
-	local dmg = Damage.New(-HealAmount) 
-    dmg.sourcePlayer = Ability.owner
-	dmg.sourceAbility = Ability
 
-    local enemiesInRange = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), EffectRadius, {ignoreDead = true, ignorePlayers = Ability.owner})
-
-    for _, otherPlayer in ipairs(enemiesInRange) do
+    local playersInRange = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), EffectRadius, {ignoreDead = true, ignorePlayers = Ability.owner})
+    for _, otherPlayer in ipairs(playersInRange) do
 		if otherPlayer.team == Ability.owner.team then
+			local dmg = Damage.New() 
+			dmg.amount = -META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HealAmount, Ability.name..": Heal Amount")
+			dmg.sourcePlayer = Ability.owner
+			dmg.sourceAbility = Ability
 			local attackData = {
 				object = otherPlayer,
 				damage = dmg,
@@ -89,6 +93,19 @@ function OnAbilityRecovery(thisAbility)
 			COMBAT().ApplyDamage(attackData)
 	
 		else
+			local dmg = Damage.New() 
+			dmg.amount = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_DamageAmount, Ability.name..": Damage Amount")
+			dmg.sourcePlayer = Ability.owner
+			dmg.sourceAbility = Ability
+			local attackData = {
+				object = otherPlayer,
+				damage = dmg,
+				source = Ability.owner,
+				position = nil,
+				rotation = nil,
+				tags = {id = "Mage_T"}
+			}
+			COMBAT().ApplyDamage(attackData)
 		   -- Stun
 		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
 		end
