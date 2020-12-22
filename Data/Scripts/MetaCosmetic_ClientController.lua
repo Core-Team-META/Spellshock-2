@@ -108,7 +108,9 @@ function API.GetCurrentCostume(player, class)
     return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
 
-Int()
-Task.Wait(10)
 
-UTIL.TablePrint(LOCAL_PLAYER:GetResources())
+------------------------------------------------------------------------------------------------------------------------
+-- INITIALIZE
+------------------------------------------------------------------------------------------------------------------------
+Int()
+

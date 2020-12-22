@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+﻿-----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/22/2020
@@ -98,21 +98,6 @@ end
 --@param table data
 function BuildCosmeticDataTable(player, data)
     playerCosmetic[player] = data or {}
-
-    --#TODO make method that unlocks a cosmetic
-
-    --[[for _, class in pairs(cosmeticTable) do
-        playerCosmetic[player][class] = playerCosmetic[player][class] or {}
-        for _, team in pairs(class) do
-            for _, skin in pairs(team) do
-                playerCosmetic[player][class][skin] = playerCosmetic[player][class][skin] or {}
-                for _, ability in pairs(skin) do
-                    playerCosmetic[player][class][skin][ability] = playerCosmetic[player][class][skin][ability] or 1
-                end
-            end
-        end
-    end]]
-    --
 end
 
 --Builds the cosmeticTable based on the heirarchy
@@ -207,7 +192,7 @@ end
 function API.GetCurrentCostume(player, class)
     local skinId = 1
     -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    if not UTIL.IsTableSafe(cosmeticTable, class, skinId, player.team, CONST.COSTUME_ID) then
+    if not UTIL.IsTableValid(cosmeticTable, class, skinId, player.team, CONST.COSTUME_ID) then
         --Cosmetic test failed, return starter set
         return cosmeticTable[class][player.team][CONST.DEFAULT_SKIN][CONST.COSTUME_ID]
     end
@@ -216,4 +201,4 @@ end
 
 
 Int()
-UTIL.TablePrint(cosmeticTable)
+

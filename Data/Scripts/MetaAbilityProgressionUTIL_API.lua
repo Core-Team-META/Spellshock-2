@@ -106,7 +106,7 @@ function API.TablePrint(tbl, indent)
 end
 
 
-function API.IsTableSafe(cosmeticTable, class, team, skin, bind)
+function API.IsTableValid(cosmeticTable, class, team, skin, bind)
     if cosmeticTable[class] == nil then
         error(string.format("Unknown value of '%s' (%s) passed to cosmeticTable[class]", class, type(class)))
         return false

@@ -8,6 +8,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local BASE = require(script:GetCustomProperty("Base64"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -49,8 +50,15 @@ function COSMETIC.ConvertToString(tbl)
                     -- str = next(abilities, abilityId) and str .. "," or str
 
                     -- use this if either a 0 or 1 int passed in giving status
+
                     if ability > 0 then
-                        str = str .. cId .. sId .. tostring(abilityId)
+                        local num = tonumber(cId .. sId .. tostring(abilityId))
+                        if type(tonumber(num)) == "number" and num < 4032 then
+                            num = BASE.Encode12(num)
+                        else
+                            num = cId .. sId .. tostring(abilityId)
+                        end
+                        str = str .. num
                         str = next(abilities, abilityId) and str .. "," or str
                     end
                 end
@@ -74,6 +82,9 @@ function COSMETIC.ConvertToTable(str)
     local tbl = UTIL.StringSplit(",", str)
     if next(tbl) then
         for _, s in ipairs(tbl) do
+            if type(s) ~= "number" then
+                s = BASE.Decode12(s)
+            end
             s = tostring(s)
             local cId = tonumber(s:sub(1))
             local sId = tonumber(s:sub(2, 3))
@@ -163,6 +174,7 @@ local function OnLoadCostumeData(player, data)
     if data[CONST.STORAGE.COSMETIC] then
         cosmetic = COSMETIC.ConvertToTable(data[CONST.STORAGE.COSMETIC])
     end
+    UTIL.TablePrint(cosmetic)
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
 end
 
@@ -182,7 +194,7 @@ local function OnPlayerJoined(player)
     end
     --#TODO DATA BUILD TEST
     for c = 1, 5 do
-        for s = 1, 80 do
+        for s = 1, 99 do
             for b = 1, 5 do
                 _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, s, b)
             end
