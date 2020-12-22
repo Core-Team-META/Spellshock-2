@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
--- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/16/2020
--- Version 0.1.2
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Date: 12/22/2020
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -13,8 +13,7 @@ local DATA = require(script:GetCustomProperty("DATA"))
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
 local modTable = DATA.GetClassTable()
-
-local API = {}
+local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS

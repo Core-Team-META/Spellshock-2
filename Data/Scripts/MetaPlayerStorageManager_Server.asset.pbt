@@ -27,6 +27,18 @@
           SelfId: 721227566397514987
         }
       }
+      Overrides {
+        Name: "cs:MetaCostume_ServerController"
+        ObjectReference {
+          SelfId: 1497945562687454520
+        }
+      }
+      Overrides {
+        Name: "cs:MetaAbilityProgressionConstants_API"
+        AssetReference {
+          Id: 15718075383189814537
+        }
+      }
     }
   }
   SerializationVersion: 70

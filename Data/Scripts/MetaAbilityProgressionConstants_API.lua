@@ -1,3 +1,9 @@
+------------------------------------------------------------------------------------------------------------------------
+-- Meta Ability Progressioni Constants
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Date: 12/22/2020
+-- Version 0.1.0
+------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
@@ -25,6 +31,13 @@ API.BIND = {
     RMB = 7
 }
 
+-- DEFAULT SKIN (USED AS FAIL OVER)
+API.DEFAULT_SKIN = 1
+
+-- COSTUME KEYS
+API.COSTUME_ID = 8
+API.COSTUME_STRING = "08_Costume"
+
 -- PROGRESS KEYS
 API.PROGRESS = {
     LEVEL = 1,
@@ -32,7 +45,15 @@ API.PROGRESS = {
 }
 
 
+-- STORAGE KEYS -- DO NOT EDIT
+API.STORAGE = {
+    VERSION = 1,
+    PROGRESSION = 2,
+    COSMETIC = 3
+}
+
 API.CLASS_RES = "CLASS_MAP"
+API.SKIN_RES = "SKIN_MAP"
 
 ------------------------------------------------------------------------------------------------------------------------
 return API

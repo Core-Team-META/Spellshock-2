@@ -1,23 +1,28 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/16/2020
--- Version 0.1.0
+-- Date: 12/22/2020
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local BASE = require(script:GetCustomProperty("Base64"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local ADAPTOR = script:GetCustomProperty("MetaAbilityProgression_Adaptor"):WaitForObject()
 local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerController"):WaitForObject()
+local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
 ------------------------------------------------------------------------------------------------------------------------
 -- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
 local progressionVersion = 1
 local cosmeticVersion = 1
+--Used for version control of data
+local versionControl = {P = progressionVersion, V = cosmeticVersion}
 ------------------------------------------------------------------------------------------------------------------------
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -34,22 +39,31 @@ end
 function COSMETIC.ConvertToString(tbl)
     local str = ""
     for classId, skins in pairs(tbl) do
-        local cId = COSMETIC.NumConverter(classId)
+        local cId = tostring(classId)
         for skinId, abilities in pairs(skins) do
-            local sId = COSMETIC.NumConverter(skinId)
-            for abilityId, ability in pairs(abilities) do
-                -- use this if the muid with int prefix is passed in
-                -- local aId = string.match(NumConverter(ability), "^(d+)_")
-                -- str = str .. cId .. sId .. aId
-                -- str = next(abilities, abilityId) and str .. "," or str
+            if skinId ~= CONST.DEFAULT_SKIN then
+                local sId = COSMETIC.NumConverter(skinId)
+                for abilityId, ability in pairs(abilities) do
+                    -- use this if the muid with int prefix is passed in
+                    -- local aId = string.match(NumConverter(ability), "^(d+)_")
+                    -- str = str .. cId .. sId .. aId
+                    -- str = next(abilities, abilityId) and str .. "," or str
 
-                -- use this if either a 0 or 1 int passed in giving status
-                if ability > 0 then
-                    str = str .. cId .. sId .. COSMETIC.NumConverter(abilityId)
-                    str = next(abilities, abilityId) and str .. "," or str
+                    -- use this if either a 0 or 1 int passed in giving status
+
+                    if ability > 0 then
+                        local num = tonumber(cId .. sId .. tostring(abilityId))
+                        if type(tonumber(num)) == "number" and num < 4032 then
+                            num = BASE.Encode12(num)
+                        else
+                            num = cId .. sId .. tostring(abilityId)
+                        end
+                        str = str .. num
+                        str = next(abilities, abilityId) and str .. "," or str
+                    end
                 end
+                str = next(skins, skinId) and str .. "," or str
             end
-            str = next(skins, skinId) and str .. "," or str
         end
         str = next(tbl, classId) and str .. "," or str
     end
@@ -57,23 +71,31 @@ function COSMETIC.ConvertToString(tbl)
     return str
 end
 
+--#TODO EX=> 1021,2011,3021
 --@param string str => string of compressed data
 --@return table finalTbl => player data
 function COSMETIC.ConvertToTable(str)
+    if str == nil or str == "" then
+        return {}
+    end
     local finalTbl = {}
     local tbl = UTIL.StringSplit(",", str)
-    for _, s in ipairs(tbl) do
-        s = tostring(s)
-        local cId = tonumber(s:sub(1, 2))
-        local sId = tonumber(s:sub(3, 4))
-        local aId = tonumber(s:sub(5, 6))
-        finalTbl[cId] = finalTbl[cId] or {}
-        finalTbl[cId][sId] = finalTbl[cId][sId] or {}
-        finalTbl[cId][sId][aId] = 1
+    if next(tbl) then
+        for _, s in ipairs(tbl) do
+            if type(s) ~= "number" then
+                s = BASE.Decode12(s)
+            end
+            s = tostring(s)
+            local cId = tonumber(s:sub(1))
+            local sId = tonumber(s:sub(2, 3))
+            local aId = tonumber(s:sub(4))
+            finalTbl[cId] = finalTbl[cId] or {}
+            finalTbl[cId][sId] = finalTbl[cId][sId] or {}
+            finalTbl[cId][sId][aId] = 1
+        end
     end
     return finalTbl
 end
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- ABILITY PROGRESSION DATA FUNCTIONS
@@ -118,17 +140,21 @@ function ABILITY_PROGRESSION.ConvertToString(tbl)
     return str
 end
 
-
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+
+local function DataVersionCheck(data)
+    local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
+    return (tbl.P == progressionVersion and tbl.V == cosmeticVersion) or data == nil
+end
 
 --@param object player
 --@param table data
 local function OnLoadProgressionData(player, data)
     local progression
-    if data.META_ABILITY_PROGRESSION then
-        progression = ABILITY_PROGRESSION.ConvertToTable(data.META_ABILITY_PROGRESSION)
+    if data[CONST.STORAGE.PROGRESSION] then
+        progression = ABILITY_PROGRESSION.ConvertToTable(data[CONST.STORAGE.PROGRESSION])
     end
     META_AP.context.BuildBindDataTable(player, progression)
     ADAPTOR.context.OnPlayerJoined(player)
@@ -138,26 +164,56 @@ end
 --@param table data
 local function OnSaveProgressionData(player, data)
     local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data.META_ABILITY_PROGRESSION = ABILITY_PROGRESSION.ConvertToString(playerProgression)
+    data[CONST.STORAGE.PROGRESSION] = ABILITY_PROGRESSION.ConvertToString(playerProgression)
 end
 
+--@param object player
+--@param table data
+local function OnLoadCostumeData(player, data)
+    local cosmetic
+    if data[CONST.STORAGE.COSMETIC] then
+        cosmetic = COSMETIC.ConvertToTable(data[CONST.STORAGE.COSMETIC])
+    end
+    UTIL.TablePrint(cosmetic)
+    META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
+end
+
+--@param object player
+--@param table data
+local function OnSaveCostumeData(player, data)
+    local playerCosmetics = META_COSMETIC.context.GetPlayerCosmetic(player)
+    data[CONST.STORAGE.COSMETIC] = next(playerCosmetics) ~= nil and COSMETIC.ConvertToString(playerCosmetics) or ""
+end
 
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    OnLoadProgressionData(player, data)
+    if true then --DataVersionCheck(data) then --#TODO turned off for now
+        OnLoadProgressionData(player, data)
+        OnLoadCostumeData(player, data)
+    end
+    --#TODO DATA BUILD TEST
+    for c = 1, 5 do
+        for s = 1, 99 do
+            for b = 1, 5 do
+                _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, s, b)
+            end
+        end
+    end
 end
 
 --@param object player
 local function OnPlayerLeft(player)
     local data = Storage.GetPlayerData(player)
+    data = {}
     OnSaveProgressionData(player, data)
-
-    data.DATA_VERSION = {PROGRESSION = progressionVersion, VFX = cosmeticVersion}
+    OnSaveCostumeData(player, data)
+    data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
     Storage.SetPlayerData(player, data)
 
     --Nil out data tables
     META_AP.context.OnPlayerLeft(player)
+    META_COSMETIC.context.OnPlayerLeft(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

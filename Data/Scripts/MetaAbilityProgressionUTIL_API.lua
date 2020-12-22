@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression UTIL API
--- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/09/2020
--- Version 0.1.0
+-- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
+-- Date: 12/22/2020
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -106,12 +106,37 @@ function API.TablePrint(tbl, indent)
 end
 
 
+function API.IsTableValid(cosmeticTable, class, team, skin, bind)
+    if cosmeticTable[class] == nil then
+        error(string.format("Unknown value of '%s' (%s) passed to cosmeticTable[class]", class, type(class)))
+        return false
+    end
+    if cosmeticTable[class][team] == nil then
+        error(string.format("Unknown value of '%s' (%s) passed to cosmeticTable[class][player.team]", team, type(team)))
+        return false
+    end
+    if cosmeticTable[class][team][skin] == nil then
+        error(string.format("Unknown value of '%s' (%s) passed to cosmeticTable[class][player.team][skin]", skin, type(skin)))
+        return false
+    end
+    if cosmeticTable[class][team][skin][bind] == nil then
+        error(string.format("Unknown value of '%s' (%s) passed to cosmeticTable[class][player.team][skin][bind]", bind, type(bind)))
+        return false
+    end
+    return true
+end
+
+
 function API.GetLevelString(class, bind)
-    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "LEVEL"
+    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "L"
 end
 
 function API.GetXpString(class, bind)
-    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "XP"
+    return "C" .. tostring(class) .. "B" .. tostring(bind) .. "X"
+end
+
+function API.GetSkinString(class, team, bind)
+    return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
 
 
