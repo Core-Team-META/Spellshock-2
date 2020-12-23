@@ -2,7 +2,7 @@
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/22/2020
--- Version 0.1.3
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -34,29 +34,16 @@ local function Split(s, delimiter)
     return result
 end
 
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
---@param string string => "Projectile"
-local function GetBindVfx(player, bind, string)
-    local class = player:GetResource(CONST.CLASS_RES)
-    local skin = player:GetResource(CONST.SKIN_RES) or 1
-    if player.team > 0 then
-        return cosmeticTable[class][player.team][skin][bind][string]
-    end
-end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
-local function CreateNewCosmeticTable(player, class, skin, bind)
-    if playerCosmetic[player][class] == nil then
-        playerCosmetic[player][class] = {}
-    end
-    if playerCosmetic[player][class][skin] == nil then
-        playerCosmetic[player][class][skin] = {}
-    end
+local function CreateNewCosmeticTable(player, class, team, skin, bind)
+    playerCosmetic[player][class] = playerCosmetic[player][class] or {}
+    playerCosmetic[player][class][team] = playerCosmetic[player][class][team] or {}
+    playerCosmetic[player][class][team][skin] = playerCosmetic[player][class][team][skin] or {}
+    playerCosmetic[player][class][team][skin][bind] = playerCosmetic[player][class][team][skin][bind] or {}
 end
 
 --@param object player
@@ -65,21 +52,22 @@ end
 --@param bool => true/false
 local function IsCosmeticUnlocked(player, skin, bind)
     local class = player:GetResource(CONST.CLASS_RES)
+    local team = player.team
 
-    return playerCosmetic[player][class] ~= nil and playerCosmetic[player][class][skin] ~= nil and
-        playerCosmetic[player][class][skin][bind] ~= nil
+    return playerCosmetic[player][class] ~= nil and playerCosmetic[player][class][team] ~= nil and
+        playerCosmetic[player][class][team][skin] ~= nil and
+        playerCosmetic[player][class][team][skin][bind] ~= nil
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
-local function UnlockCosmetic(player, class, skin, bind)
-    if class == nil then
-        class = player:GetResource(CONST.CLASS_RES)
-    end
-    CreateNewCosmeticTable(player, class, skin, bind)
-    playerCosmetic[player][class][skin][bind] = 1
+local function UnlockCosmetic(player, class, team, skin, bind)
+    class = class or player:GetResource(CONST.CLASS_RES)
+    team = team or player.team
+    CreateNewCosmeticTable(player, class, team, skin, bind)
+    playerCosmetic[player][class][team][skin][bind] = 1
 end
 
 --@param object player
@@ -115,11 +103,11 @@ function Int()
                     local tempVFX = {}
                     for key, value in pairs(skin:GetCustomProperties()) do
                         if key ~= CONST.COSTUME_STRING and key ~= "ID" then
-                           local vfxName = Split(key, "_")
+                            local vfxName = Split(key, "_")
                             local abilityId = tonumber(vfxName[1])
                             cosmeticTable[id][teamId][skinId][abilityId] =
                                 cosmeticTable[id][teamId][skinId][abilityId] or {}
-                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value 
+                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value
                         elseif key == CONST.COSTUME_STRING then
                             local vfxName = Split(key, "_")
                             local abilityId = tonumber(vfxName[1])
@@ -135,13 +123,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
---@param string string => "projectile"
-function API.GetBindVfx(player, bind, string)
-    return GetBindVfx(player, bind, string)
-end
 
 --@param object player
 --@param int skin
@@ -154,19 +135,17 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
-function API.UnlockCosmetic(player, class, skin, bind)
-    UnlockCosmetic(player, class, skin, bind)
+function API.UnlockCosmetic(player, class, team, skin, bind)
+    UnlockCosmetic(player, class, team, skin, bind)
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
 function API.SetCurrentCosmetic(player, class, skin, bind)
-    player:SetResource(UTIL.GetSkinString(class, player.team, bind), skin)
+    player:SetResource(UTIL.GetSkinString(class, player.team, bind, skin))
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -182,7 +161,8 @@ function API.GetCurrentCosmetic(player, bind, class)
     if not class then
         class = player:GetResource(CONST.CLASS_RES)
     end
-    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = 1
+    --player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     return cosmeticTable[class][player.team][skinId][skinId]
 end
 
@@ -198,6 +178,5 @@ function API.GetCurrentCostume(player, class)
     end
     return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
-
 
 Int()

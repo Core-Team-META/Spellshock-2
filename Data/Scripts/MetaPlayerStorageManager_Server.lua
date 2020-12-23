@@ -2,7 +2,7 @@
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/22/2020
--- Version 0.1.3
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -38,32 +38,36 @@ end
 --@return string str => string of compressed data
 function COSMETIC.ConvertToString(tbl)
     local str = ""
-    for classId, skins in pairs(tbl) do
+    for classId, teams in pairs(tbl) do
         local cId = tostring(classId)
-        for skinId, abilities in pairs(skins) do
-            if skinId ~= CONST.DEFAULT_SKIN then
-                local sId = COSMETIC.NumConverter(skinId)
-                for abilityId, ability in pairs(abilities) do
-                    -- use this if the muid with int prefix is passed in
-                    -- local aId = string.match(NumConverter(ability), "^(d+)_")
-                    -- str = str .. cId .. sId .. aId
-                    -- str = next(abilities, abilityId) and str .. "," or str
+        for teamId, skins in pairs(teams) do
+            local tId = tostring(teamId)
+            for skinId, abilities in pairs(skins) do
+                if skinId ~= CONST.DEFAULT_SKIN then
+                    local sId = COSMETIC.NumConverter(skinId)
+                    for abilityId, ability in pairs(abilities) do
+                        -- use this if the muid with int prefix is passed in
+                        -- local aId = string.match(NumConverter(ability), "^(d+)_")
+                        -- str = str .. cId .. tId .. sId .. aId
+                        -- str = next(abilities, abilityId) and str .. "," or str
 
-                    -- use this if either a 0 or 1 int passed in giving status
+                        -- use this if either a 0 or 1 int passed in giving status
 
-                    if ability > 0 then
-                        local num = tonumber(cId .. sId .. tostring(abilityId))
-                        if type(tonumber(num)) == "number" and num < 4032 then
-                            num = BASE.Encode12(num)
-                        else
-                            num = cId .. sId .. tostring(abilityId)
+                        if ability > 0 then
+                            local num = tonumber(cId .. tId .. sId .. tostring(abilityId))
+                            if type(tonumber(num)) == "number" then
+                                num = BASE.Encode24(num)
+                            else
+                                num = cId .. tId .. sId .. tostring(abilityId)
+                            end
+                            str = str .. num
+                            str = next(abilities, abilityId) and str .. "," or str
                         end
-                        str = str .. num
-                        str = next(abilities, abilityId) and str .. "," or str
                     end
+                    str = next(skins, skinId) and str .. "," or str
                 end
-                str = next(skins, skinId) and str .. "," or str
             end
+            str = next(teams, teamId) and str .. "," or str
         end
         str = next(tbl, classId) and str .. "," or str
     end
@@ -82,16 +86,16 @@ function COSMETIC.ConvertToTable(str)
     local tbl = UTIL.StringSplit(",", str)
     if next(tbl) then
         for _, s in ipairs(tbl) do
-            if type(s) ~= "number" then
-                s = BASE.Decode12(s)
-            end
+            s = BASE.Decode24(s)
             s = tostring(s)
             local cId = tonumber(s:sub(1))
-            local sId = tonumber(s:sub(2, 3))
-            local aId = tonumber(s:sub(4))
+            local tId = tonumber(s:sub(2))
+            local sId = tonumber(s:sub(3, 4))
+            local aId = tonumber(s:sub(5))
             finalTbl[cId] = finalTbl[cId] or {}
-            finalTbl[cId][sId] = finalTbl[cId][sId] or {}
-            finalTbl[cId][sId][aId] = 1
+            finalTbl[cId][tId] = finalTbl[cId][tId] or {}
+            finalTbl[cId][tId][sId] = finalTbl[cId][tId][sId] or {}
+            finalTbl[cId][tId][sId][aId] = 1
         end
     end
     return finalTbl
@@ -194,9 +198,11 @@ local function OnPlayerJoined(player)
     end
     --#TODO DATA BUILD TEST
     for c = 1, 5 do
-        for s = 1, 99 do
-            for b = 1, 5 do
-                _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, s, b)
+        for t = 1, 2 do
+            for s = 1, 25 do
+                for b = 1, 5 do
+                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                end
             end
         end
     end
