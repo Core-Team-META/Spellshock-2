@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 2269572116006940077
-  Name: "MetaAbilityProgressionUTIL_API"
+  Id: 14775487138945020345
+  Name: "META_Combat_Helper"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,9 +11,9 @@
         }
       }
       Overrides {
-        Name: "cs:Base64"
+        Name: "cs:MetaAbilityProgressionUTIL_API"
         AssetReference {
-          Id: 14568273880639568162
+          Id: 2269572116006940077
         }
       }
     }

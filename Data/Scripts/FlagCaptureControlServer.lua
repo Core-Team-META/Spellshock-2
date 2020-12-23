@@ -360,7 +360,8 @@ function Tick(deltaTime)
     if newOwner ~= owningTeam then
         Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
         owningTeam = newOwner
-		script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
+        script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
+        Events.Broadcast("Stats.Helper.CapturePoint", script:GetCustomProperty("CapturePlayerID"))
         -- Disable if DisableOnCapture
         if newOwner ~= 0 and DISABLE_ON_CAPTURE then
             SetEnabled(false)
