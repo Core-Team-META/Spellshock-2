@@ -7,7 +7,7 @@
       RootId: 12597983505510063666
       Objects {
         Id: 12597983505510063666
-        Name: "Mage Orc Tornado Active Basic"
+        Name: "Mage Orc Tornado Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 9322174965092246613
         ChildIds: 865622591006778875
         ChildIds: 7109949033584959669
@@ -27,7 +27,15 @@
             Float: 0
           }
           Overrides {
+            Name: "cs:DecalScale"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:LifeSpan:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:DecalScale:isrep"
             Bool: true
           }
         }

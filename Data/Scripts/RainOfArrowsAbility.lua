@@ -58,11 +58,13 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-		
+		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+		local vfxScale = Vector3.New(CoreMath.Round(radius / DEFAULT_DamageRadius, 3))
+
 		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
 		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
 		local success, newObject = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation})
+		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation, scale = vfxScale})
 		end)
 		
 		if not success then
@@ -71,11 +73,10 @@ function PlaceObject(thisPlayer, position, rotation)
 			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
 			PlayerVFX = PlayerStorage.VFX
 			Storage.SetPlayerData(thisPlayer, PlayerStorage)
-			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
+			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation, scale = vfxScale})
 		end
 		
 		-- Damage enemies
-		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
 		for _, enemy in pairs(nearbyEnemies) do

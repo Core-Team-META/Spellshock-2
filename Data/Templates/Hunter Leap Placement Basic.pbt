@@ -20,8 +20,8 @@
         ChildIds: 5645634967697484925
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Team"
-            Int: 0
+            Name: "cs:lifeSpan"
+            Float: 0
           }
           Overrides {
             Name: "cs:Trigger"
@@ -30,7 +30,7 @@
             }
           }
           Overrides {
-            Name: "cs:Team:isrep"
+            Name: "cs:lifeSpan:isrep"
             Bool: true
           }
         }
@@ -818,6 +818,12 @@
             Name: "cs:RumbleSFX"
             ObjectReference {
               SubObjectId: 15576190583115512874
+            }
+          }
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 10188985343697969424
             }
           }
         }

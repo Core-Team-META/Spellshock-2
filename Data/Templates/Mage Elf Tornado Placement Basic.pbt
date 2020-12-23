@@ -7,7 +7,7 @@
       RootId: 18396550010636760668
       Objects {
         Id: 18396550010636760668
-        Name: "Mage Elf Tornado Active Basic"
+        Name: "Mage Elf Tornado Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 6270308689058147762
         ChildIds: 10772566095877105579
         ChildIds: 4545488589136616139
@@ -27,7 +27,15 @@
             Float: 0
           }
           Overrides {
+            Name: "cs:DecalScale"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:LifeSpan:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:DecalScale:isrep"
             Bool: true
           }
         }
@@ -50,8 +58,8 @@
           Rotation {
           }
           Scale {
-            X: 5
-            Y: 5
+            X: 1
+            Y: 1
             Z: 2.53371763
           }
         }
@@ -160,6 +168,12 @@
             Name: "cs:Audio"
             ObjectReference {
               SubObjectId: 13769895600965817982
+            }
+          }
+          Overrides {
+            Name: "cs:Decal"
+            ObjectReference {
+              SubObjectId: 6270308689058147762
             }
           }
         }

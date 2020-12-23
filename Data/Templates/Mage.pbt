@@ -1112,7 +1112,7 @@
           }
           Overrides {
             Name: "cs:DamageRadius"
-            Int: 650
+            Int: 600
           }
           Overrides {
             Name: "cs:DOT"
@@ -1153,6 +1153,10 @@
           Overrides {
             Name: "cs:BindingName"
             String: "Q"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod3"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"

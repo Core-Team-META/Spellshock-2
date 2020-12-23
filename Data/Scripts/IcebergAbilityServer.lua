@@ -22,6 +22,7 @@ local damageTimer = -1
 local CurrentIceCube
 local PlayerVFX = nil
 local abilityName = string.gsub(SpecialAbility.name, " ", "_")
+local goingToTakeDamageListener = nil
 
 local CancelBindings = {
 	ability_extra_20 = true, 
@@ -34,15 +35,18 @@ local CancelBindings = {
 	ability_extra_17 = true
 }
 
+function OnGoingToTakeDamage(attackData)
+    if attackData.tags and attackData.tags.id and attackData.tags.id == "StatusEffect" then
+        return
+    end
+
+    if attackData.object == Equipment.owner then
+        local BlockPercentage = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_BlockPercentage, SpecialAbility.name..": Block %")
+        attackData.damage.amount = attackData.damage.amount - (attackData.damage.amount * BlockPercentage)
+	end
+end
+
 function OnSpecialAbilityExecute(thisAbility)
-	--[[ disable all active abilities
-	for _, playerAbility in pairs(thisAbility.owner:GetAbilities()) do
-		if playerAbility.isEnabled then
-			playerAbility.isEnabled = false
-			table.insert(ActiveAbilities, playerAbility)
-		end
-	end]]
-	
 	PlayerSettings.movementControlMode = thisAbility.owner.movementControlMode
 	PlayerSettings.maxJumpCount = thisAbility.owner.maxJumpCount
 	
@@ -72,11 +76,12 @@ function OnSpecialAbilityExecute(thisAbility)
 		CurrentIceCube = World.SpawnAsset(_G.VFX[vfxKey],  {position = spawnPosition})
 	end
 	
-	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")
-	
+	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
+	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	
+	goingToTakeDamageListener = Events.Connect("CombatWrapAPI.GoingToTakeDamage", OnGoingToTakeDamage)
 	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
 
-	
 	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
 end
@@ -89,9 +94,15 @@ end
 
 function BreakIceCube(player)
 	Timer = -1
-	BindingPressedEvent:Disconnect()
-	BindingPressedEvent = nil
-	--World.SpawnAsset(IceCubeBreakFX, {position = player:GetWorldPosition()})
+	if BindingPressedEvent then
+		BindingPressedEvent:Disconnect()
+		BindingPressedEvent = nil
+	end
+
+	if goingToTakeDamageListener then
+    	goingToTakeDamageListener:Disconnect()
+    	goingToTakeDamageListener = nil
+    end
 		
 	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Break")
 	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
@@ -115,11 +126,6 @@ function BreakIceCube(player)
 	player.movementControlMode = PlayerSettings.movementControlMode
 	player.maxJumpCount = PlayerSettings.maxJumpCount
 	player.serverUserData.DamageImmunity = false
-	
-	--[[
-	for _, playerAbility in pairs(ActiveAbilities) do
-		playerAbility.isEnabled = true
-	end]]
 end
 
 function OnPlayerDied(player, _)

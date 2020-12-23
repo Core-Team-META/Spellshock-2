@@ -164,7 +164,7 @@ classTable = {
             [7] = {mod1 = 4400, mod2 = 14, mod3 = 500, mod4 = 10, mod5 = 4},
             [8] = {mod1 = 4600, mod2 = 16, mod3 = 500, mod4 = 10, mod5 = 5},
             [9] = {mod1 = 4800, mod2 = 18, mod3 = 500, mod4 = 11, mod5 = 6},
-           [10] = {mod1 = 5000, mod2 = 20, mod3 = 500, mod4 = 11, mod5 = 7}
+           [10] = {mod1 = 5000, mod2 = 20, mod3 = 1000, mod4 = 11, mod5 = 7}
         },
         --Animorph Potion
         [CONST.BIND.E] = {
@@ -183,16 +183,16 @@ classTable = {
         --Iceberg
         [CONST.BIND.R] = {
             -- mod1 = Damage Radius, mod2 = DOT, mod3 = Duration, mod4 = Block Percentage
-            [1] = {mod1 = 425, mod2 = 5, mod3 = 6, mod4 = 0.5, mod5 = 0},
-            [2] = {mod1 = 450, mod2 = 6, mod3 = 6, mod4 = 0.6, mod5 = 0},
-            [3] = {mod1 = 475, mod2 = 7, mod3 = 7, mod4 = 0.6, mod5 = 0},
-            [4] = {mod1 = 500, mod2 = 8, mod3 = 7, mod4 = 0.7, mod5 = 0},
-            [5] = {mod1 = 525, mod2 = 9, mod3 = 8, mod4 = 0.7, mod5 = 0},
-            [6] = {mod1 = 550, mod2 = 10, mod3 = 8, mod4 = 0.8, mod5 = 0},
-            [7] = {mod1 = 575, mod2 = 11, mod3 = 9, mod4 = 0.8, mod5 = 0},
-            [8] = {mod1 = 600, mod2 = 12, mod3 = 9, mod4 = 0.9, mod5 = 0},
+            [1] = {mod1 = 400, mod2 = 5, mod3 = 6, mod4 = 0.5, mod5 = 0.5},
+            [2] = {mod1 = 450, mod2 = 6, mod3 = 6, mod4 = 0.6, mod5 = 0.5},
+            [3] = {mod1 = 475, mod2 = 7, mod3 = 7, mod4 = 0.6, mod5 = 0.5},
+            [4] = {mod1 = 500, mod2 = 8, mod3 = 7, mod4 = 0.7, mod5 = 0.5},
+            [5] = {mod1 = 525, mod2 = 9, mod3 = 8, mod4 = 0.7, mod5 = 0.5},
+            [6] = {mod1 = 550, mod2 = 10, mod3 = 8, mod4 = 0.8, mod5 = 0.5},
+            [7] = {mod1 = 575, mod2 = 11, mod3 = 9, mod4 = 0.8, mod5 = 0.5},
+            [8] = {mod1 = 600, mod2 = 12, mod3 = 9, mod4 = 0.9, mod5 = 0.5},
             [9] = {mod1 = 625, mod2 = 13, mod3 = 10, mod4 = 0.9, mod5 = 0},
-           [10] = {mod1 = 650, mod2 = 15, mod3 = 10, mod4 = 1, mod5 = 0}
+           [10] = {mod1 = 650, mod2 = 15, mod3 = 10, mod4 = 1, mod5 = 1}
         },
         --Pyroblast
         [CONST.BIND.T] = {
@@ -367,7 +367,7 @@ classTable = {
         --Healing Crystal
         [CONST.BIND.E] = {
             -- mod1 = Heal Amount, mod2 = Duration, mod3 = Delay Between Heals, mod4 = Placement Range, mod5 = Radius
-            [1] = {mod1 = 1, mod2 = 5, mod3 = 1, mod4 = 2000, mod5 = 0},
+            [1] = {mod1 = 1, mod2 = 5, mod3 = 1, mod4 = 2000, mod5 = 500},
             [2] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [3] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [4] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
@@ -376,35 +376,35 @@ classTable = {
             [7] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [8] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [9] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
-           [10] = {mod1 = 3, mod2 = 10, mod3 = 0.5, mod4 = 4000, mod5 = 0}
+           [10] = {mod1 = 3, mod2 = 10, mod3 = 0.5, mod4 = 4000, mod5 = 1000}
         },
         --Divine Light
         [CONST.BIND.R] = {
             -- mod1 = Impluse Amount, mod2 = Radius, mod3 = Stun Duration
-            [1] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 150000, mod2 = 700, mod3 = 0, mod4 = 0, mod5 = 0},
-           [10] = {mod1 = 200000, mod2 = 1000, mod3 = 0, mod4 = 0, mod5 = 0}
+            [1] = {mod1 = 150000, mod2 = 700, mod3 = 500, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 150000, mod2 = 700, mod3 = 2000, mod4 = 0, mod5 = 0},
+           [10] = {mod1 = 200000, mod2 = 1000, mod3 = 2000, mod4 = 0, mod5 = 0}
         },
         --Supernova
         [CONST.BIND.T] = {
             -- mod1 = Heal Amount, mod2 = Damage Amount, mod3 = Radius, mod4 = Placement Range
-            [1] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 50, mod2 = 50, mod3 = 0, mod4 = 0, mod5 = 0},
-           [10] = {mod1 = 100, mod2 = 100, mod3 = 0, mod4 = 0, mod5 = 0}
+            [1] = {mod1 = 50, mod2 = 50, mod3 = 500, mod4 = 0, mod5 = 0},
+            [2] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [3] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [4] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [5] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [6] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [7] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [8] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+            [9] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
+           [10] = {mod1 = 100, mod2 = 100, mod3 = 2000, mod4 = 0, mod5 = 0}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {

@@ -15,6 +15,7 @@ local EventName = script:GetCustomProperty("EventName")
 local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
 local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local DEFAULT_Delay = script:GetCustomProperty("DelayBetweenHeals")
+local DEFAULT_Radius = script:GetCustomProperty("DamageRadius")
 
 local Timer = 0
 local HealTrigger = nil
@@ -77,7 +78,8 @@ function PlaceObject(thisPlayer, position, rotation)
 			Storage.SetPlayerData(thisPlayer, PlayerStorage)
 			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
 		end
-		
+		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
+		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 		--DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
@@ -167,7 +169,12 @@ function Tick(dTime)
 					rotation = nil,
 					tags = {id = "Mage_E"}
 				}
-				COMBAT().ApplyDamage(attackData)			
+
+				if dmg.amount < 0 and thisObject.hitPoints < thisObject.maxHitPoints then
+					COMBAT().ApplyDamage(attackData)	
+				elseif dmg.amount > 0 then
+					COMBAT().ApplyDamage(attackData)
+				end
 			end
 		end
 		Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_Delay, SpecialAbility.name..": Delay")

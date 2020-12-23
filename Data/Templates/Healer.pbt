@@ -1129,6 +1129,10 @@
             Int: 3000
           }
           Overrides {
+            Name: "cs:DamageRadius"
+            Int: 500
+          }
+          Overrides {
             Name: "cs:isPreviewing"
             Bool: false
           }
@@ -1147,6 +1151,10 @@
           Overrides {
             Name: "cs:AbilityMod"
             String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod5"
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
@@ -1411,6 +1419,10 @@
           Overrides {
             Name: "cs:DamageAmount"
             Int: 50
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Int: 2000
           }
         }
         WantsNetworking: true

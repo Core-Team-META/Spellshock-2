@@ -1023,6 +1023,10 @@
             String: "mod3"
           }
           Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod2"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
