@@ -123,6 +123,14 @@ Objects {
     }
   }
   ParentId: 3515396752692620142
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 15136798516269130110
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -150,6 +158,14 @@ Objects {
     }
   }
   ParentId: 3515396752692620142
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 16431236309358610064
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
