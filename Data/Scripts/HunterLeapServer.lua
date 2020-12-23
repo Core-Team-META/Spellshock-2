@@ -67,7 +67,8 @@ function OnAbilityExecute(thisAbility)
 	end
 	
 	newTrap.lifeSpan = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, Ability.name..": LifeSpan")
-	newTrap:SetNetworkedCustomProperty("Team", thisAbility.owner.team)
+	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
+	
 	
 	local ImpulseRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, Ability.name..": Impulse Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
@@ -86,7 +87,7 @@ function OnAbilityExecute(thisAbility)
 end
 
 function OnBeginOverlap(thisTrigger, other)
-	if Object.IsValid(other) and other:IsA("Player") and other.team ~= Ability.team then
+	if Object.IsValid(other) and other:IsA("Player") and other.team ~= Ability.owner.team then
 		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id) -- ##TODO Add variable bleed based on ability level
 	end
 end

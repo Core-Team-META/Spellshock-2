@@ -11,13 +11,14 @@ local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local Ability = script:GetCustomProperty("Ability"):WaitForObject()
 local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
+local DEFAULT_Radius = script:GetCustomProperty("Radius")
 
 local VFX_Chargeup = "CC262FD37D50A523:Healer Elf Supernova Charge Basic"
 local VFX_Ending = "0061AD3DB266FDE2:Healer Elf Supernova Ending Basic"
 
 local scaleDuration = Ability.executePhaseSettings.duration
 local CurrentChargeUp = nil
-local EffectRadius = nil
+local EffectRadius = DEFAULT_Radius
 local PlayerVFX = nil
 local abilityName = string.gsub(Ability.name, " ", "_")
 local EventListeners = {}
@@ -42,12 +43,15 @@ function OnAbilityExecute(thisAbility)
 		CurrentChargeUp = World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
 	end
 
+	EffectRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod3", DEFAULT_Radius, Ability.name..": Radius")
+	print("Radius: "..EffectRadius)
 	CurrentChargeUp:AttachToPlayer(Ability.owner, "root")
 	local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
 	local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
 	local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
-	InnerSphere:ScaleTo(OuterSphere:GetWorldScale(), scaleDuration)
-	EffectRadius = OuterSphere:GetWorldScale().x * 50
+	local scale = Vector3.New( CoreMath.Round(EffectRadius / 50, 3) )
+	OuterSphere:SetWorldScale(scale)
+	InnerSphere:ScaleTo(scale, scaleDuration)
 	Beam:SetSmartProperty("Teleport Duration", scaleDuration)
 	Beam:Play()
 end

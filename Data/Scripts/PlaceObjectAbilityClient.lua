@@ -16,6 +16,7 @@ local EventName = ServerScript:GetCustomProperty("EventName")
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
 local AbilityMod = ServerScript:GetCustomProperty("AbilityMod")
+local RadiusMod = ServerScript:GetCustomProperty("RadiusMod")
 
 local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -41,12 +42,17 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
 		if isPreviewing then
-			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
-				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
+			ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
+			
+			local previewScale = Vector3.ONE
+			if RadiusMod then
+				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
+				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name..": Radius")
+				previewScale = Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 			end
-	
+
 			local success, newObject = pcall(function()
-			    return World.SpawnAsset(ObjectTemplate)
+			    return World.SpawnAsset(ObjectTemplate, {scale = previewScale})
 			end)
 			
 			if not success then
@@ -114,7 +120,7 @@ function CalculatePlacement()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
 	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], AbilityMod, DEFAULT_Range, SpecialAbility.name..": Placement Range")
-	print("PlacementRange: "..PlacementRange)
+	--print("PlacementRange: "..PlacementRange)
 	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 	

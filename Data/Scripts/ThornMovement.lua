@@ -7,8 +7,14 @@ local BackRightThorns = script:GetCustomProperty("BackRightThorns"):WaitForObjec
 local DustVFX = script:GetCustomProperty("DustVFX"):WaitForObject()
 local RumbleSFX = script:GetCustomProperty("RumbleSFX"):WaitForObject()
 local CrunchSFX = script:GetCustomProperty("CrunchSFX"):WaitForObject()
+local Root = script:GetCustomProperty("Root"):WaitForObject()
+
 local Timer = script:GetCustomProperty("Timer")
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
+
+while Root:GetCustomProperty("lifeSpan") == 0 do
+	Task.Wait()
+end
 
 Task.Wait(.1)
 Ease3D.EaseWorldScale(CenterThorns, Vector3.New(1), .7, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
@@ -27,7 +33,7 @@ CrunchSFX:Play()
 DustVFX:Play()
 Task.Wait(.6)
 RumbleSFX:Stop()
-Task.Wait(Timer)
+Task.Wait(Root:GetCustomProperty("lifeSpan")-1.8)
 Ease3D.EaseWorldScale(CenterThorns, Vector3.New(.1), 1.7, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontThorns, Vector3.New(.1), 1.5, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontLeftThorns, Vector3.New(.1), 1.45, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)

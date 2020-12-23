@@ -52,7 +52,7 @@ end
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		Task.Wait()
-		--CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
+		
 		isPreviewing = false
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 		SpecialAbility.isEnabled = false
@@ -65,7 +65,6 @@ function PlaceObject(thisPlayer, position, rotation)
 		
 		isPlacing = true
 		--CurrentTornado = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
-		
 		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
 		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
 		local success, newObject = pcall(function()
@@ -82,13 +81,15 @@ function PlaceObject(thisPlayer, position, rotation)
 			Storage.SetPlayerData(thisPlayer, PlayerStorage)
 			CurrentTornado = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
 		end
-		
+
+		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+		CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
+		local decalScale = CoreMath.Round(DamageRadius / 125, 3)
 		CurrentTornado.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
-		Task.Wait()
+		CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
 		CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 		
 		-- Damage enemies
-		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		local nearbyEnemies = Game.FindPlayersInSphere(position, DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		for _, enemy in pairs(nearbyEnemies) do
 			local dmg = Damage.New()
