@@ -1,17 +1,19 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/22/2020
--- Version 0.1.1
+-- Date: 12/23/2020
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local BASE = require(script:GetCustomProperty("Base64"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local VFX_LIST = script:GetCustomProperty("StartingVFX"):WaitForObject()
+local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
@@ -24,17 +26,6 @@ local playerCosmetic = {}
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
---@param string s
---@param string delimiter
---@return table result
-local function Split(s, delimiter)
-    local result = {}
-    for match in (s .. delimiter):gmatch("(.-)" .. delimiter) do
-        table.insert(result, match)
-    end
-    return result
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -42,38 +33,34 @@ end
 --Builds the cosmeticTable based on the heirarchy
 function Int()
     if not next(cosmeticTable) then
-        for _, class in ipairs(VFX_LIST:GetChildren()) do
-            local id = class:GetCustomProperty("ID")
-            cosmeticTable[id] = cosmeticTable[id] or {}
-            for _, team in ipairs(class:GetChildren()) do
-                local teamId = team:GetCustomProperty("ID")
-                cosmeticTable[id][teamId] = cosmeticTable[id][teamId] or {}
-                for _, skin in ipairs(team:GetChildren()) do
-                    local skinId = skin:GetCustomProperty("ID")
-                    cosmeticTable[id][teamId][skinId] = cosmeticTable[id][teamId][skinId] or {}
-                    local tempVFX = {}
-                    for key, value in pairs(skin:GetCustomProperties()) do
-                        if key ~= CONST.COSTUME_STRING and key ~= "ID" then
-                            local vfxName = Split(key, "_")
-                            local abilityId = tonumber(vfxName[1])
-                            cosmeticTable[id][teamId][skinId][abilityId] =
-                                cosmeticTable[id][teamId][skinId][abilityId] or {}
-                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value
-                        elseif key == CONST.COSTUME_STRING then
-                            local vfxName = Split(key, "_")
-                            local abilityId = tonumber(vfxName[1])
-                            cosmeticTable[id][teamId][skinId][abilityId] = value
-                        end
-                    end
-                end
+        cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
+    end
+    repeat
+        Task.Wait()
+        for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
+            if child.name == LOCAL_PLAYER.id then
+                local dataStr = child:GetCustomProperty("data")
+                playerCosmetic = UTIL.CosmeticConvertToTable(dataStr)
             end
         end
-    end
+    until playerCosmetic
+    Events.BroadcastToServer("OnDestroyPlayerDataObject")
+    UTIL.TablePrint(playerCosmetic)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
+
+
+--@param int team
+--@param int skin
+--@param int bind => id of bind (API.Q, API.E)
+--@return bool true / false
+function API.IsCosmeticOwned(class, team, skin, bind)
+    return UTIL.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
+end
+
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -113,3 +100,6 @@ end
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
 Int()
+Task.Wait(10)
+print(API.IsCosmeticOwned(6, 1, 2, 1))
+print(API.IsCosmeticOwned(5, 1, 2, 1))

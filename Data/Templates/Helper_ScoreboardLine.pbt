@@ -15,12 +15,17 @@
             Z: 1
           }
         }
-        ParentId: 15778795352663330980
+        ParentId: 8445789955444278387
         ChildIds: 15574431451992460765
         ChildIds: 16690130693437400001
         ChildIds: 5748389925553274148
         ChildIds: 5611923143272407215
         ChildIds: 15894122926016324975
+        ChildIds: 15319641687036921557
+        ChildIds: 15359465575184839979
+        ChildIds: 5395237448605977525
+        ChildIds: 12822992162958118319
+        ChildIds: 5069508001469646867
         UnregisteredParameters {
           Overrides {
             Name: "cs:PlayerImage"
@@ -44,6 +49,36 @@
             Name: "cs:DeathsText"
             ObjectReference {
               SubObjectId: 15894122926016324975
+            }
+          }
+          Overrides {
+            Name: "cs:UltKills"
+            ObjectReference {
+              SubObjectId: 15319641687036921557
+            }
+          }
+          Overrides {
+            Name: "cs:CapturePoints"
+            ObjectReference {
+              SubObjectId: 15359465575184839979
+            }
+          }
+          Overrides {
+            Name: "cs:Damage"
+            ObjectReference {
+              SubObjectId: 5395237448605977525
+            }
+          }
+          Overrides {
+            Name: "cs:Healing"
+            ObjectReference {
+              SubObjectId: 12822992162958118319
+            }
+          }
+          Overrides {
+            Name: "cs:Killstreak"
+            ObjectReference {
+              SubObjectId: 5069508001469646867
             }
           }
         }
@@ -224,7 +259,6 @@
             }
           }
           Text {
-            Label: "0"
             Color {
               R: 1
               G: 1
@@ -278,7 +312,7 @@
         Control {
           Width: 200
           Height: 30
-          UIX: -250
+          UIX: 250
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -294,7 +328,7 @@
             }
             Size: 14
             Justification {
-              Value: "mc:etextjustify:right"
+              Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
             ClipTextToSize: true
@@ -302,12 +336,12 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middleleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middleleft"
               }
             }
           }
@@ -339,7 +373,7 @@
         Control {
           Width: 200
           Height: 30
-          UIX: -50
+          UIX: 325
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -355,7 +389,7 @@
             }
             Size: 14
             Justification {
-              Value: "mc:etextjustify:right"
+              Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
             ClipTextToSize: true
@@ -363,12 +397,317 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middleleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleright"
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15319641687036921557
+        Name: "UltKills"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 30
+          UIX: 400
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "0"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15359465575184839979
+        Name: "CapturePoints"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 30
+          UIX: 475
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "0"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5395237448605977525
+        Name: "Damage"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 30
+          UIX: 550
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "0"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12822992162958118319
+        Name: "Healing "
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 30
+          UIX: 625
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "0"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5069508001469646867
+        Name: "Killstreak"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1821961222434728885
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 30
+          UIX: 700
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "0"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 14
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            ClipTextToSize: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
               }
             }
           }

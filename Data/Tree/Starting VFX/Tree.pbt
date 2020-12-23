@@ -844,7 +844,7 @@ Objects {
 }
 Objects {
   Id: 11511678337778933379
-  Name: "Tank_Orc"
+  Name: "Default_Skin"
   Transform {
     Location {
     }

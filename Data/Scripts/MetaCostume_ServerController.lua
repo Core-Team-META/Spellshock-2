@@ -1,8 +1,8 @@
 ﻿-----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/22/2020
--- Version 0.1.4
+-- Date: 12/23/2020
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -91,32 +91,7 @@ end
 --Builds the cosmeticTable based on the heirarchy
 function Int()
     if not next(cosmeticTable) then
-        for _, class in ipairs(VFX_LIST:GetChildren()) do
-            local id = class:GetCustomProperty("ID")
-            cosmeticTable[id] = cosmeticTable[id] or {}
-            for _, team in ipairs(class:GetChildren()) do
-                local teamId = team:GetCustomProperty("ID")
-                cosmeticTable[id][teamId] = cosmeticTable[id][teamId] or {}
-                for _, skin in ipairs(team:GetChildren()) do
-                    local skinId = skin:GetCustomProperty("ID")
-                    cosmeticTable[id][teamId][skinId] = cosmeticTable[id][teamId][skinId] or {}
-                    local tempVFX = {}
-                    for key, value in pairs(skin:GetCustomProperties()) do
-                        if key ~= CONST.COSTUME_STRING and key ~= "ID" then
-                            local vfxName = Split(key, "_")
-                            local abilityId = tonumber(vfxName[1])
-                            cosmeticTable[id][teamId][skinId][abilityId] =
-                                cosmeticTable[id][teamId][skinId][abilityId] or {}
-                            cosmeticTable[id][teamId][skinId][abilityId][vfxName[3]] = value
-                        elseif key == CONST.COSTUME_STRING then
-                            local vfxName = Split(key, "_")
-                            local abilityId = tonumber(vfxName[1])
-                            cosmeticTable[id][teamId][skinId][abilityId] = value
-                        end
-                    end
-                end
-            end
-        end
+        cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
 end
 
@@ -124,11 +99,13 @@ end
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
 
---@param object player
+--param object player
+--@param int team
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
-function API.IsCosmeticUnlocked(player, skin, bind)
-    return IsCosmeticUnlocked(player, skin, bind)
+--@return bool true / false
+function API.IsCosmeticOwned(player, class, team, skin, bind)
+    return UTIL.IsCosmeticOwned(playerCosmetic[player], class, team, skin, bind)
 end
 
 --@param object player
