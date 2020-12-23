@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/22/2020
--- Version 0.1.4
+-- Date: 12/23/2020
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -26,17 +26,17 @@ local versionControl = {P = progressionVersion, V = cosmeticVersion}
 ------------------------------------------------------------------------------------------------------------------------
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
-local COSMETIC = {}
+local COSMETIC_STORAGE = {}
 
 --@param int num
 --@return string num => always set to a 2 digit string
-function COSMETIC.NumConverter(num)
+function COSMETIC_STORAGE.NumConverter(num)
     return num >= 10 and tostring(num) or "0" .. tostring(num)
 end
 
 --@param table tbl => player data to be stored
 --@return string str => string of compressed data
-function COSMETIC.ConvertToString(tbl)
+function COSMETIC_STORAGE.ConvertToString(tbl)
     local str = ""
     for classId, teams in pairs(tbl) do
         local cId = tostring(classId)
@@ -44,7 +44,7 @@ function COSMETIC.ConvertToString(tbl)
             local tId = tostring(teamId)
             for skinId, abilities in pairs(skins) do
                 if skinId ~= CONST.DEFAULT_SKIN then
-                    local sId = COSMETIC.NumConverter(skinId)
+                    local sId = COSMETIC_STORAGE.NumConverter(skinId)
                     for abilityId, ability in pairs(abilities) do
                         -- use this if the muid with int prefix is passed in
                         -- local aId = string.match(NumConverter(ability), "^(d+)_")
@@ -78,7 +78,7 @@ end
 --#TODO EX=> 1021,2011,3021
 --@param string str => string of compressed data
 --@return table finalTbl => player data
-function COSMETIC.ConvertToTable(str)
+function COSMETIC_STORAGE.ConvertToTable(str)
     if str == nil or str == "" then
         return {}
     end
@@ -88,10 +88,10 @@ function COSMETIC.ConvertToTable(str)
         for _, s in ipairs(tbl) do
             s = BASE.Decode24(s)
             s = tostring(s)
-            local cId = tonumber(s:sub(1))
-            local tId = tonumber(s:sub(2))
+            local cId = tonumber(s:sub(1, 1))
+            local tId = tonumber(s:sub(2, 2))
             local sId = tonumber(s:sub(3, 4))
-            local aId = tonumber(s:sub(5))
+            local aId = tonumber(s:sub(5, 5))
             finalTbl[cId] = finalTbl[cId] or {}
             finalTbl[cId][tId] = finalTbl[cId][tId] or {}
             finalTbl[cId][tId][sId] = finalTbl[cId][tId][sId] or {}
@@ -104,11 +104,11 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- ABILITY PROGRESSION DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
-local ABILITY_PROGRESSION = {}
+local ABILITY_STORAGE = {}
 
 --@param string str => string of compressed data
 --@return table finalTbl => player data
-function ABILITY_PROGRESSION.ConvertToTable(str)
+function ABILITY_STORAGE.ConvertToTable(str)
     local finalTbl = {}
     local tbl = UTIL.StringSplit("|", str)
     for _, s in ipairs(tbl) do
@@ -130,7 +130,7 @@ end
 
 --@param table tbl => player data to be stored
 --@return string str => string of compressed data
-function ABILITY_PROGRESSION.ConvertToString(tbl)
+function ABILITY_STORAGE.ConvertToString(tbl)
     local str = ""
     for key, values in ipairs(tbl) do
         str = str .. key .. "^"
@@ -153,53 +153,11 @@ local function DataVersionCheck(data)
     return (tbl.P == progressionVersion and tbl.V == cosmeticVersion) or data == nil
 end
 
---@param object player
---@param table data
-local function OnLoadProgressionData(player, data)
-    local progression
-    if data[CONST.STORAGE.PROGRESSION] then
-        progression = ABILITY_PROGRESSION.ConvertToTable(data[CONST.STORAGE.PROGRESSION])
-    end
-    META_AP.context.BuildBindDataTable(player, progression)
-    ADAPTOR.context.OnPlayerJoined(player)
-end
-
---@param object player
---@param table data
-local function OnSaveProgressionData(player, data)
-    local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data[CONST.STORAGE.PROGRESSION] = ABILITY_PROGRESSION.ConvertToString(playerProgression)
-end
-
---@param object player
---@param table data
-local function OnLoadCostumeData(player, data)
-    local cosmetic
-    if data[CONST.STORAGE.COSMETIC] then
-        cosmetic = COSMETIC.ConvertToTable(data[CONST.STORAGE.COSMETIC])
-    end
-    UTIL.TablePrint(cosmetic)
-    META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
-end
-
---@param object player
---@param table data
-local function OnSaveCostumeData(player, data)
-    local playerCosmetics = META_COSMETIC.context.GetPlayerCosmetic(player)
-    data[CONST.STORAGE.COSMETIC] = next(playerCosmetics) ~= nil and COSMETIC.ConvertToString(playerCosmetics) or ""
-end
-
---@param object player
-local function OnPlayerJoined(player)
-    local data = Storage.GetPlayerData(player)
-    if true then --DataVersionCheck(data) then --#TODO turned off for now
-        OnLoadProgressionData(player, data)
-        OnLoadCostumeData(player, data)
-    end
+local function AddDefaultCosmetics(player)
     --#TODO DATA BUILD TEST
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 25 do
+            for s = 1, 20 do
                 for b = 1, 5 do
                     _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
                 end
@@ -209,11 +167,99 @@ local function OnPlayerJoined(player)
 end
 
 --@param object player
+--@param table data
+local function OnLoadProgressionData(player, data)
+    local progression
+    if data[CONST.STORAGE.PROGRESSION] then
+        progression = ABILITY_STORAGE.ConvertToTable(data[CONST.STORAGE.PROGRESSION])
+    end
+    META_AP.context.BuildBindDataTable(player, progression)
+    ADAPTOR.context.OnPlayerJoined(player)
+end
+
+--@param object player
+--@param table data
+local function OnSaveProgressionData(player, data)
+    local playerProgression = META_AP.context.GetPlayerProgression(player)
+    data[CONST.STORAGE.PROGRESSION] = ABILITY_STORAGE.ConvertToString(playerProgression)
+end
+
+--@param object player
+--@param table data
+local function OnLoadCostumeData(player, data)
+    local cosmetic
+    if data[CONST.STORAGE.COSMETIC] then
+        cosmetic = COSMETIC_STORAGE.ConvertToTable(data[CONST.STORAGE.COSMETIC])
+    end
+    META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
+end
+
+--@param object player
+--@param table data
+local function OnSaveCostumeData(player, data)
+    local playerCosmetics = META_COSMETIC.context.GetPlayerCosmetic(player)
+    UTIL.TablePrint(playerCosmetics)
+    data[CONST.STORAGE.COSMETIC] =
+        next(playerCosmetics) ~= nil and COSMETIC_STORAGE.ConvertToString(playerCosmetics) or ""
+end
+
+--#TODO REMOVE TESTING FOR LOOPS
+--@param object player
+--@param table data
+local function OnLoadCurrencyData(player, data)
+    local currency
+    if data[CONST.STORAGE.CURRENCY] then
+        currency = UTIL.ConvertStringToTable(data[CONST.STORAGE.CURRENCY], ",", "=")
+        for key, value in pairs(currency) do
+            if CONST.CURRENCY[key] then
+                player:SetResource(CONST.CURRENCY[key], value + 10000)
+            end
+        end
+    else
+        for k, name in ipairs(CONST.CURRENCY) do
+            player:SetResource(name, 10000)
+        end
+    end
+
+    for _, resName in ipairs(CONST.CURRENCY) do
+       warn(tostring(player:GetResource(resName)))
+    end
+end
+
+--@param object player
+--@param table data
+local function OnSaveCurrencyData(player, data)
+    local playerCurrency = {}
+    for key, value in pairs(player:GetResources()) do
+        for index, k in ipairs(CONST.CURRENCY) do
+            if k == key then
+                playerCurrency[index] = value
+            end
+        end
+    end
+    data[CONST.STORAGE.CURRENCY] =
+        next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
+end
+
+--@param object player
+local function OnPlayerJoined(player)
+    local data = Storage.GetPlayerData(player)
+    if true then --DataVersionCheck(data) then --#TODO turned off for now
+        OnLoadProgressionData(player, data)
+        OnLoadCostumeData(player, data)
+        OnLoadCurrencyData(player, data)
+        AddDefaultCosmetics(player)
+    end
+end
+
+--@param object player
 local function OnPlayerLeft(player)
     local data = Storage.GetPlayerData(player)
-    data = {}
+    data = {} --For testing
+    Storage.SetPlayerData(player, data)
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
+    OnSaveCurrencyData(player, data)
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
     Storage.SetPlayerData(player, data)
 
