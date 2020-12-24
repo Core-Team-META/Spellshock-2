@@ -140,7 +140,7 @@ function API.GetCurrentCosmetic(player, bind, class)
     end
     local skinId = 1
     --player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    return cosmeticTable[class][player.team][skinId][skinId]
+    return cosmeticTable[class][player.team][skinId][bind]
 end
 
 --@param object player
