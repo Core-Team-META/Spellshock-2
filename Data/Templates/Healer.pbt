@@ -41,16 +41,8 @@
             Bool: true
           }
           Overrides {
-            Name: "cs:CostumeTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:ClassID"
             Int: 4
-          }
-          Overrides {
-            Name: "cs:CostumeTemplate:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -1137,10 +1129,6 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:PreviewObjectTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:Class"
             String: "HEALER"
           }
@@ -1158,10 +1146,6 @@
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }

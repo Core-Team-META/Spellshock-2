@@ -41,16 +41,8 @@
             Bool: true
           }
           Overrides {
-            Name: "cs:CostumeTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:ClassID"
             Int: 5
-          }
-          Overrides {
-            Name: "cs:CostumeTemplate:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -347,6 +339,7 @@
         ChildIds: 1286326275560935440
         ChildIds: 4051678230221737164
         ChildIds: 10043064803718761066
+        ChildIds: 7355506324767663929
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -773,6 +766,121 @@
         }
       }
       Objects {
+        Id: 7355506324767663929
+        Name: "Deaths Shadow"
+        Transform {
+          Location {
+            X: -4010
+            Y: -5110
+            Z: -3060
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 5815969532402457262
+        ChildIds: 10153399237310665229
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5815969532402457262
+        Name: "DeathsShadowAbilityClient"
+        Transform {
+          Location {
+            X: -4010
+            Y: -5110
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7355506324767663929
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 11411700836215041466
+            }
+          }
+          Overrides {
+            Name: "cs:AudioFX"
+            ObjectReference {
+              SubObjectId: 10153399237310665229
+            }
+          }
+          Overrides {
+            Name: "cs:TimerUI_Template"
+            AssetReference {
+              Id: 7156155829847915259
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11848089031478388226
+          }
+        }
+      }
+      Objects {
+        Id: 10153399237310665229
+        Name: "Magic Dark Beam Breathy Loop 01 SFX"
+        Transform {
+          Location {
+            X: 4010
+            Y: 5110
+            Z: 3060
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7355506324767663929
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 15728915025310165628
+          }
+          Volume: 0.8
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
         Id: 15969373231472315619
         Name: "Load Out"
         Transform {
@@ -964,7 +1072,6 @@
         ParentId: 15969373231472315619
         ChildIds: 15582202196448252345
         ChildIds: 11411700836215041466
-        ChildIds: 6960798327974289137
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1175,15 +1282,7 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:CostumeTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:isInvisible:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CostumeTemplate:isrep"
             Bool: true
           }
         }
@@ -1198,116 +1297,6 @@
           ScriptAsset {
             Id: 6553233916944605564
           }
-        }
-      }
-      Objects {
-        Id: 6960798327974289137
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10946969989301189966
-        ChildIds: 5815969532402457262
-        ChildIds: 10153399237310665229
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 5815969532402457262
-        Name: "DeathsShadowAbilityClient"
-        Transform {
-          Location {
-            X: -8020
-            Y: -10220
-            Z: -3060
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6960798327974289137
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 11411700836215041466
-            }
-          }
-          Overrides {
-            Name: "cs:AudioFX"
-            ObjectReference {
-              SubObjectId: 10153399237310665229
-            }
-          }
-          Overrides {
-            Name: "cs:TimerUI_Template"
-            AssetReference {
-              Id: 7156155829847915259
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11848089031478388226
-          }
-        }
-      }
-      Objects {
-        Id: 10153399237310665229
-        Name: "Magic Dark Beam Breathy Loop 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6960798327974289137
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 15728915025310165628
-          }
-          Volume: 0.8
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -1592,15 +1581,7 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:PreviewObjectTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
