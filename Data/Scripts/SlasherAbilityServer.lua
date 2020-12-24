@@ -25,24 +25,14 @@ function OnProjectileImpact(projectile, other, hitresult)
 	
 	local vfxKey
 	if other:IsA("Player") then
-		vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Player_Impact")
+		vfxKey = "PlayerImpact"
 	else
-		vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Normal_Impact")
+		vfxKey = "NormalImpact"
 	end
 	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = hitresult:GetImpactPosition()})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
-		World.SpawnAsset(_G.VFX[vfxKey], {position = hitresult:GetImpactPosition()})
-	end
-	
+	local newObject = World.SpawnAsset(PlayerVFX[vfxKey], {position = hitresult:GetImpactPosition()})
+
+
 	if not other:IsA("Player") or COMBAT().IsDead(other) then return end
 	
 	local otherTeam = COMBAT().GetTeam(other)
@@ -89,23 +79,8 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	--World.SpawnAsset(BeginningFX, {position = thisAbility.owner:GetWorldPosition()})
-	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Beginning")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
-		World.SpawnAsset(_G.VFX[vfxKey], {position = thisAbility.owner:GetWorldPosition()})
-	end
-	
+	local newObject = World.SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
+
 	local Range = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod2", DEFAULT_ProjectileRange, ABILITY.name..": Projectile Range")
 
     local lookRotation = thisAbility.owner:GetViewWorldRotation()
@@ -127,24 +102,7 @@ function OnAbilityExecute(thisAbility)
     local directionVector = targetPosition - worldPosition
     directionVector = directionVector:GetNormalized()
     
-    -- Spawn projectile
-    --local projectile = Projectile.Spawn(PROJECTILE_TEMPLATE, spawnPosition, directionVector)
-    
-    local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, projectile = pcall(function()
-	    return Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		projectile = Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
-	end
-
+	local projectile =  Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
     projectile.owner = ABILITY.owner
     projectile.capsuleLength = 130
     projectile.capsuleRadius =  projectile.capsuleLength/2
@@ -156,8 +114,7 @@ function OnAbilityExecute(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R, META_AP().ASSASSIN)
 end
 
 function OnUnequip(equipment, player)

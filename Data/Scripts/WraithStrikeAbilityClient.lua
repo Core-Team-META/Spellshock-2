@@ -1,5 +1,5 @@
 ﻿local function META_AP()
-    return _G["Meta.Ability.Progression"]
+	return _G["Meta.Ability.Progression"]
 end
 
 local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
@@ -32,63 +32,57 @@ local TimerUI = {}
 local objectHalogram = nil
 local EventListeners = {}
 local CancelBindings = {
-	ability_extra_20 = true, 
-	ability_extra_22 = true, 
-	ability_extra_23 = true, 
-	ability_extra_24 = true, 
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "isPreviewing" then
-		if SpecialAbility.owner ~= LOCAL_PLAYER then return end
+		if SpecialAbility.owner ~= LOCAL_PLAYER then
+			return
+		end
 		isPreviewing = ServerScript:GetCustomProperty(name)
-		
+
 		if isPreviewing then
 			--objectHalogram = World.SpawnAsset(ObjectTemplate)
 			--AllHalograms[objectHalogram.id] = objectHalogram
-			
-			
-			if ServerScript:GetCustomProperty("PreviewObjectTemplate") then
-				ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
-			end
-	
-			local success, newObject = pcall(function()
-			    return World.SpawnAsset(ObjectTemplate)
-			end)
-			
-			if not success then
-				objectHalogram = nil
-				Task.Wait()
-				print("Broadcasting failure")
-				while Events.BroadcastToServer(EventName.."FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
-					Task.Wait()
-				end
-				return
-			else
-				objectHalogram = newObject
-				AllHalograms[objectHalogram.id] = objectHalogram
-				FlyingDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod4", DEFAULT_FlyingDuration, SpecialAbility.name..": Fly Duration")
-				flyingTimer = FlyingDuration
-			end
+
+			local PlayerVFX = META_AP().VFX.GetCurrentCosmetic(LOCAL_PLAYER, META_AP().T, META_AP().ASSASSIN)
+			local newObject = World.SpawnAsset(PlayerVFX.Preview)
+
+			objectHalogram = newObject
+			AllHalograms[objectHalogram.id] = objectHalogram
+			FlyingDuration =
+				META_AP().GetAbilityMod(
+				SpecialAbility.owner,
+				META_AP().ASSASSIN,
+				META_AP().T,
+				"mod4",
+				DEFAULT_FlyingDuration,
+				SpecialAbility.name .. ": Fly Duration"
+			)
+			flyingTimer = FlyingDuration
 		else
 			flyingTimer = -1
 			if objectHalogram and Object.IsValid(objectHalogram) then
 				AllHalograms[objectHalogram.id] = nil
 				objectHalogram:Destroy()
-				objectHalogram = nil				
+				objectHalogram = nil
 			end
 			ConfirmSound:Play()
 		end
 	end
 end
 
-function OnBindingPressed(player, binding)		
+function OnBindingPressed(player, binding)
 	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 		--print("Canceling: "..binding)
 		flyingTimer = -1
-		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 			Task.Wait()
 		end
 	end
@@ -99,41 +93,46 @@ function OnSpecialAbilityExecute(thisAbility)
 		flyingTimer = -1
 		local targetPosition = CalculatePlacement()
 		if EventName then
-			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) ==
+				BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 				Task.Wait()
 			end
-			--print("~ Executing placement ~")
+		--print("~ Executing placement ~")
 		end
 	end
 end
 
 function OnEquip(equipment, player)
-	if player ~= LOCAL_PLAYER then return end
-	table.insert(EventListeners, SpecialAbility.executeEvent:Connect( OnSpecialAbilityExecute ))
-	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
-	
+	if player ~= LOCAL_PLAYER then
+		return
+	end
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
+	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+
 	-- Spawn timer UI
 	TimerUI.root = World.SpawnAsset(TimerUI_Template)
 	TimerUI.panel = TimerUI.root:GetCustomProperty("UIPanel"):WaitForObject()
 	TimerUI.panel.visibility = Visibility.FORCE_OFF
 	TimerUI.panel.x = timerUI_position.x
 	TimerUI.panel.y = timerUI_position.y
-	
+
 	TimerUI.progressBar = TimerUI.root:GetCustomProperty("AbilityProgressBar"):WaitForObject()
 	TimerUI.progressBar:SetFillColor(timerUI_fillColor)
 	TimerUI.progressBar:SetBackgroundColor(timerUI_backgroundColor)
 end
 
 function OnUnequip(equipment, player)
-	if player ~= LOCAL_PLAYER then return end
+	if player ~= LOCAL_PLAYER then
+		return
+	end
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	
+
 	if objectHalogram and Object.IsValid(objectHalogram) then
 		objectHalogram:Destroy()
 	end
-	
+
 	TimerUI.root:Destroy()
 	TimerUI = {}
 end
@@ -141,17 +140,24 @@ end
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
-	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod2", DEFAULT_PlacementRange, SpecialAbility.name..": Placement Range")
+	local PlacementRange =
+		META_AP().GetAbilityMod(
+		SpecialAbility.owner,
+		META_AP().ASSASSIN,
+		META_AP().T,
+		"mod2",
+		DEFAULT_PlacementRange,
+		SpecialAbility.name .. ": Placement Range"
+	)
 	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
-	
+
 	if hr ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
-		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000,
-			{ignorePlayers = true})
+		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
 		if hr ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal()
 		else
@@ -175,22 +181,22 @@ function Tick(deltaTime)
 			objectHalogram = nil
 			return
 		end
-		
+
 		local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-		if(MatchPlayerRotation) then
+		if (MatchPlayerRotation) then
 			objectHalogram:SetWorldRotation(playerViewRotation)
 		else
 			objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
 		end
-		
+
 		-- calculate placement:
 		local impactPosition, impactNormal = CalculatePlacement()
 		if impactPosition ~= nil then
 			objectHalogram:SetWorldPosition(impactPosition)
 			objectHalogram.visibility = Visibility.INHERIT
-			
+
 			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
-			if MatchNormal then		
+			if MatchNormal then
 				local quat = Quaternion.New(Vector3.UP, impactNormal)
 				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
 			end
@@ -198,7 +204,7 @@ function Tick(deltaTime)
 			objectHalogram.visibility = Visibility.FORCE_OFF
 		end
 	end
-	
+
 	if flyingTimer > 0 then
 		flyingTimer = flyingTimer - deltaTime
 		if TimerUI.root and Object.IsValid(TimerUI.root) then
@@ -219,4 +225,4 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+ServerScript.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)

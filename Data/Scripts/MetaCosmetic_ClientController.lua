@@ -70,8 +70,8 @@ function API.GetCurrentCosmeticId(player, class, bind)
 end
 
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
+--@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
     if class == nil then
         class = player:GetResource(CONST.CLASS_RES)

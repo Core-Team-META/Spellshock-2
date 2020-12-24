@@ -63,26 +63,15 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		end
 	elseif name == "CostumeTemplate" then
 		print("Costume")
-		InvisibleCostumeTemplate = ServerScript:GetCustomProperty("CostumeTemplate") 
 		AttachCostume(Equipment.owner)
 	end
 end
 
 function AttachCostume(player)	
 	--local InvisibleCostume = World.SpawnAsset(InvisibleCostumeTemplate)
-	
-	local success, InvisibleCostume = pcall(function()
-	    return World.SpawnAsset(InvisibleCostumeTemplate)
-	end)
-	
-	if not success then
-		Task.Wait()
-		print("Broadcasting failure")
-		while Events.BroadcastToServer("Invisibiliy FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
-			Task.Wait()
-		end
-		return
-	end
+	local PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().ASSASSIN)
+	local InvisibleCostume = World.SpawnAsset(PlayerVFX.Costume)
+
 	
 	for _, attachment in ipairs(InvisibleCostume:GetChildren()) do
 		attachment:AttachToPlayer(player, attachment.name)
@@ -115,7 +104,6 @@ function OnEquip(equipment, player)
 	NetworkPropertyConnection = ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 	if player ~= LOCAL_PLAYER then return end
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
-	InvisibleCostumeTemplate = ServerScript:GetCustomProperty("CostumeTemplate")
 	AttachCostume(player)
 	
 	-- Spawn timer UI

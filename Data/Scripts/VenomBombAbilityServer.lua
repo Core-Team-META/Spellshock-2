@@ -50,22 +50,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
         --local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
-
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, ABILITY.owner.team, abilityName, "Impact")
-		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-		local success, newObject = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = projectile:GetWorldPosition(), rotation = impactRotation})
-		end)
-		
-		if not success then
-			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-			local PlayerStorage = Storage.GetPlayerData(ABILITY.owner)
-			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-			PlayerVFX = PlayerStorage.VFX
-			Storage.SetPlayerData(ABILITY.owner, PlayerStorage)
-			World.SpawnAsset(_G.VFX[vfxKey], {position = projectile:GetWorldPosition(), rotation = impactRotation})
-		end
-
+		World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
         Task.Wait(.1)
 
         -- Teleport
@@ -85,24 +70,7 @@ function OnAbilityExecute(thisAbility)
     forwardVector.z = forwardVector.z + 0.2
 	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*20)
 	worldPosition.z = worldPosition.z + 50
-
-    --local grenadeProjectile = Projectile.Spawn(PROJECTILE_TEMPLATE, worldPosition, forwardVector)
-    
-    local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, grenadeProjectile = pcall(function()
-	    return Projectile.Spawn(PlayerVFX[vfxKey], worldPosition, forwardVector)
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		grenadeProjectile = Projectile.Spawn(PlayerVFX[vfxKey], worldPosition, forwardVector)
-	end
-    
+    local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
     grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
@@ -112,8 +80,7 @@ function OnAbilityExecute(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q, META_AP().ASSASSIN)
 end
 
 function OnUnequip(equipment, player)
