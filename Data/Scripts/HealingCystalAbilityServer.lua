@@ -62,22 +62,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		
 		isPlacing = true
 				
-		--local newObject = World.SpawnAsset(ObjectTemplate, {position = position, rotation = rotation})
+	
+		local newObject = World.SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+	
 		
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
-		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-		local success, newObject = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation})
-		end)
-		
-		if not success then
-			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-			local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-			PlayerVFX = PlayerStorage.VFX
-			Storage.SetPlayerData(thisPlayer, PlayerStorage)
-			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
-		end
 		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
 		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
@@ -94,13 +82,6 @@ function Client_VFX_Failed(thisPlayer)
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
-		
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Preview")
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		Storage.SetPlayerData(thisPlayer, PlayerStorage)
-		script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerStorage.VFX[vfxKey])
 	end
 end
 
@@ -129,12 +110,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
-	
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Preview")
-	--PlayerVFX[vfxKey] = "asdfkjhasf" -- JUST FOR TESTING
-	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[vfxKey])
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HEALER)
 end
 
 function OnUnequip(equipment, player)
