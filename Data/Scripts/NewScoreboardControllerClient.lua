@@ -111,12 +111,6 @@ function ComparePlayers(player1, player2)
     return player1.name < player2.name
 end
 
-playerLines = {}
-for _, player in pairs(Game.GetPlayers()) do
-	local newLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
-    newLine.y = newLine.height * (#playerLines + 1)
-    table.insert(playerLines, newLine)
-end
 
 -- nil Tick(float)
 -- Update visibility and displayed information
