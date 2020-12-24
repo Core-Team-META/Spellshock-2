@@ -82,4 +82,4 @@ function OnPlayerJoined(player)
 	player.bindingPressedEvent:Connect( OnBindngPressed )
 end
 
-Game.playerJoinedEvent:Connect( OnPlayerJoined )
+--Game.playerJoinedEvent:Connect( OnPlayerJoined )

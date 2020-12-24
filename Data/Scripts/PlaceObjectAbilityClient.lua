@@ -6,26 +6,25 @@ local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
+local PreviewObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 
 local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
+local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
 local EventName = ServerScript:GetCustomProperty("EventName")
+local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
 
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
 local AbilityMod = ServerScript:GetCustomProperty("AbilityMod")
 local RadiusMod = ServerScript:GetCustomProperty("RadiusMod")
 
-local MatchPlayerRotation = script:GetCustomProperty("MatchPlayerRotation")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-
-local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
-
 local PlayerVFX = nil
 local AllHalograms = {}
-
 local objectHalogram = nil
 local EventListeners = {}
+
 local CancelBindings = {
 	ability_extra_20 = true, 
 	ability_extra_22 = true, 
@@ -48,7 +47,13 @@ function OnNetworkedPropertyChanged(thisObject, name)
 				previewScale = Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 			end
 
-			local ObjectTemplate = PlayerVFX.Preview
+			local ObjectTemplate
+			if PreviewObjectTemplate then
+				ObjectTemplate = PreviewObjectTemplate
+			else
+				ObjectTemplate = PlayerVFX.Preview
+			end
+			
 			local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
 			
 			objectHalogram = newObject
@@ -65,7 +70,7 @@ end
 
 function OnBindingPressed(player, binding)		
 	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-		print("Canceling: "..binding)
+		--print("Canceling: "..binding)
 		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
 			Task.Wait()
 		end
@@ -79,15 +84,16 @@ function OnSpecialAbilityExecute(thisAbility)
 			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 				Task.Wait()
 			end
-			print("~ Executing placement ~")
+			--print("~ Executing placement ~")
 		end
 	end
 end
 
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
-	print(tostring(PlayerVFX))
+	if not PreviewObjectTemplate then
+		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+	end
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect( OnSpecialAbilityExecute ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
 end

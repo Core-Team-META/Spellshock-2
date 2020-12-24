@@ -41,16 +41,8 @@
             Bool: true
           }
           Overrides {
-            Name: "cs:CostumeTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:ClassID"
             Int: 2
-          }
-          Overrides {
-            Name: "cs:CostumeTemplate:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -1139,10 +1131,6 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:PreviewObjectTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:AbilityMod"
             String: "mod1"
           }
@@ -1160,10 +1148,6 @@
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }

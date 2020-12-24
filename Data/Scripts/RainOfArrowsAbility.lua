@@ -21,7 +21,6 @@ local EventListeners = {}
 local isPreviewing = false
 local isPlacing = false
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
@@ -60,22 +59,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		isPlacing = true
 		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		local vfxScale = Vector3.New(CoreMath.Round(radius / DEFAULT_DamageRadius, 3))
+		
+		local placementTemplate = PlayerVFX.Placement
+		World.SpawnAsset(placementTemplate, {position = position, rotation = rotation, scale = vfxScale})
 
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
-		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-		local success, newObject = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation, scale = vfxScale})
-		end)
-		
-		if not success then
-			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-			local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-			PlayerVFX = PlayerStorage.VFX
-			Storage.SetPlayerData(thisPlayer, PlayerStorage)
-			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation, scale = vfxScale})
-		end
-		
 		-- Damage enemies
 		local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 		--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})
@@ -100,24 +87,6 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Preview")
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		Storage.SetPlayerData(thisPlayer, PlayerStorage)
-		script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerStorage.VFX[vfxKey])
-	end
-end
-
 function OnPlayerDied(player, _)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
@@ -137,20 +106,15 @@ function OnEquip(equipment, player)
 	isPlacing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))		
+	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))		
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Preview")
-	--PlayerVFX[vfxKey] = "asdfkjhasf" -- JUST FOR TESTING
-	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[vfxKey])
-	
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q,  META_AP().HUNTER)
+
 	Task.Wait()
 	SpecialAbility.isEnabled = false
 end

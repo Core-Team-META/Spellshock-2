@@ -17,7 +17,6 @@ local DEFAULT_Range = script:GetCustomProperty("Range")
 local PlayerVFX = nil 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
-local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(ABILITY) then return end
