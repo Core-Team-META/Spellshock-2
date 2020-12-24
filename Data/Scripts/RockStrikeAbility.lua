@@ -14,10 +14,7 @@ local DEFAULT_DamageRange = script:GetCustomProperty("DamageRange")
 local DEFAULT_ImpulseAmount = script:GetCustomProperty("ImpulseAmount")
 local DEFAULT_Range = script:GetCustomProperty("Range")
 
---local DEFAULT_MoveDuration = CoreMath.Round(DEFAULT_Range / DEFAULT_ProjectileSpeed, 3)
---local DEFAULT_LifeSpan = DEFAULT_MoveDuration + 5
-
-local PlayerVFX = nil
+local PlayerVFX = nil 
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
@@ -66,8 +63,6 @@ end
 
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
-	--print(ABILITY.owner.serverUserData["bind"])
-	--print(ABILITY.owner.serverUserData["bind"]["META_AP().Q"])
 	local ProjectileSpeed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod1", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
 
 	-- Get the velocity vecotr based on the player's forward vector
@@ -79,7 +74,6 @@ function OnAbilityExecute(thisAbility)
 	ProjectileVelocity = VelocityVector
 	
 	local spawnPosition
-	
 	local PlayerPosition = player:GetWorldPosition()
 	local forwardRange = PlayerPosition + (ForwardVector * 200)
 	local forwardHitResult = World.Raycast(PlayerPosition, forwardRange, {ignorePlayers = true})
@@ -100,22 +94,8 @@ function OnAbilityExecute(thisAbility)
 	end
 	
 	spawnPosition.z = spawnPosition.z + 200
-	
-	--local WorldPosition = player:GetWorldPosition() + (ForwardVector*200)
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
-	local success, RockProjectile = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position=spawnPosition})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(player)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(player, PlayerStorage)
-		RockProjectile = World.SpawnAsset(_G.VFX[vfxKey], {position=spawnPosition})
-	end
-	
+	local RockProjectile = World.SpawnAsset(PlayerVFX.Projectile, {position=spawnPosition})
+
 	local ProjectileRange = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_Range, ABILITY.name..": Range")
 	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)
 	local LifeSpan = MoveDuration + 5
@@ -138,8 +118,7 @@ function OnAbilityExecute(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q,  META_AP().TANK)
 end
 
 function Tick(deltaTime)

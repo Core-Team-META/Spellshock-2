@@ -3,9 +3,7 @@
 end
 
 local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
-
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
-local ObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
@@ -23,6 +21,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
 
+local PlayerVFX = nil
 local AllHalograms = {}
 
 local objectHalogram = nil
@@ -41,9 +40,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		if SpecialAbility.owner ~= LOCAL_PLAYER then return end
 		isPreviewing = ServerScript:GetCustomProperty(name)
 		
-		if isPreviewing then
-			ObjectTemplate = ServerScript:GetCustomProperty("PreviewObjectTemplate")
-			
+		if isPreviewing then	
 			local previewScale = Vector3.ONE
 			if RadiusMod then
 				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
@@ -51,22 +48,11 @@ function OnNetworkedPropertyChanged(thisObject, name)
 				previewScale = Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 			end
 
-			local success, newObject = pcall(function()
-			    return World.SpawnAsset(ObjectTemplate, {scale = previewScale})
-			end)
+			local ObjectTemplate = PlayerVFX.Preview
+			local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
 			
-			if not success then
-				objectHalogram = nil
-				Task.Wait()
-				print("Broadcasting failure")
-				while Events.BroadcastToServer(EventName.."FAILED") == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
-					Task.Wait()
-				end
-				return
-			else
-				objectHalogram = newObject
-				AllHalograms[objectHalogram.id] = objectHalogram
-			end			
+			objectHalogram = newObject
+			AllHalograms[objectHalogram.id] = objectHalogram			
 		else
 			if objectHalogram and Object.IsValid(objectHalogram) then
 				AllHalograms[objectHalogram.id] = nil
@@ -100,6 +86,8 @@ end
 
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+	print(tostring(PlayerVFX))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect( OnSpecialAbilityExecute ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
 end

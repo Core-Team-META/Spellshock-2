@@ -46,27 +46,13 @@ function PlaceObject(thisPlayer, position, rotation)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil then
 			return
 		end
 		isPlacing = true
-		
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Placement")
-		--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-		local success, newObject = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = position, rotation = rotation})
-		end)
-		
-		if not success then
-			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-			local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-			PlayerVFX = PlayerStorage.VFX
-			Storage.SetPlayerData(thisPlayer, PlayerStorage)
-			newObject = World.SpawnAsset(_G.VFX[vfxKey], {position = position, rotation = rotation})
-		end
+
+		local newObject = World.SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
 		local newLifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 		newObject.lifeSpan = newLifeSpan
 		newObject:SetNetworkedCustomProperty("lifeSpan", newLifeSpan)
@@ -74,24 +60,6 @@ function PlaceObject(thisPlayer, position, rotation)
 			Task.Wait()
 			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
 		end
-	end
-end
-
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Preview")
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		Storage.SetPlayerData(thisPlayer, PlayerStorage)
-		script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerStorage.VFX[vfxKey])
 	end
 end
 
@@ -115,18 +83,13 @@ function OnEquip(equipment, player)
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Preview")
-	--PlayerVFX[vfxKey] = "asdfkjhasf" -- JUST FOR TESTING
-	script:SetNetworkedCustomProperty("PreviewObjectTemplate", PlayerVFX[vfxKey])
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E,  META_AP().TANK)
 	
 	Task.Wait()
 	SpecialAbility.isEnabled = false
