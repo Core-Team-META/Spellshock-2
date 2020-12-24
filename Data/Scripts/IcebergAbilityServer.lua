@@ -21,7 +21,6 @@ local Timer = -1
 local damageTimer = -1
 local CurrentIceCube
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 local goingToTakeDamageListener = nil
 
 local CancelBindings = {
@@ -58,24 +57,9 @@ function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn vfx
 	local spawnPosition = thisAbility.owner:GetWorldPosition()
 	spawnPosition.z = spawnPosition.z - 50
-	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Attachment")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey],  {position = spawnPosition})
-	end)
-	
-	if success then
-		CurrentIceCube = newObject
-	else
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		CurrentIceCube = World.SpawnAsset(_G.VFX[vfxKey],  {position = spawnPosition})
-	end
-	
+	local attachmentTemplate = PlayerVFX.Attachment
+	CurrentIceCube = World.SpawnAsset(attachmentTemplate,  {position = spawnPosition})
+
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	
@@ -104,24 +88,16 @@ function BreakIceCube(player)
     	goingToTakeDamageListener = nil
     end
 		
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, player.team, abilityName, "Break")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey],  {position = player:GetWorldPosition()})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(player)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(player, PlayerStorage)
-		World.SpawnAsset(_G.VFX[vfxKey],  {position = player:GetWorldPosition()})
-	end	
-		
-	CurrentIceCube:Detach()
-	CurrentIceCube:Destroy()
-	CurrentIceCube = nil
+	-- Spawn break vfx
+	local breakTemplate = PlayerVFX.Break
+	World.SpawnAsset(breakTemplate,  {position = player:GetWorldPosition()})
+
+	-- Destroy attached iceberg
+	if CurrentIceCube and Object.IsValid(CurrentIceCube) then
+		CurrentIceCube:Detach()
+		CurrentIceCube:Destroy()
+		CurrentIceCube = nil
+	end
 	
 	player.movementControlMode = PlayerSettings.movementControlMode
 	player.maxJumpCount = PlayerSettings.maxJumpCount
@@ -143,8 +119,7 @@ end
 function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().MAGE)
 end
 
 function OnUnequip(equipment, player)

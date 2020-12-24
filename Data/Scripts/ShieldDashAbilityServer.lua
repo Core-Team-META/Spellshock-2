@@ -72,27 +72,9 @@ function ToggleDash(mode)
 		local directionVector = Ability.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
 		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
-		--AttachedFX = World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Attachment"], {position = Ability.owner:GetWorldPosition()})
 		
-		local newAsset
-		local vfxKey = string.format("%s_%d_%s_%s", "Tank", Ability.owner.team, abilityName, "Attachment")
-		print(vfxKey)
-		--PlayerVFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
-		local success, newAsset = pcall(function()
-		    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
-		end)
-		
-		if success then
-			AttachedFX = newAsset	
-		else
-			warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-			local PlayerStorage = Storage.GetPlayerData(Ability.owner)
-			PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-			PlayerVFX = PlayerStorage.VFX
-			Storage.SetPlayerData(Ability.owner, PlayerStorage)
-			AttachedFX = World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition()})
-		end
-		
+		local attachmentTemplate = PlayerVFX.Attachment
+		AttachedFX = World.SpawnAsset(attachmentTemplate, {position = Ability.owner:GetWorldPosition()})
 		AttachedFX:AttachToPlayer(Ability.owner, "root")
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
@@ -117,23 +99,10 @@ end
 
 function OnAbilityCooldown(thisAbility)
 	ToggleDash(false)
-	--World.SpawnAsset(PlayerVFX[Ability.owner.team][Ability.name]["Bash"], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
-	
-	local vfxKey = string.format("%s_%d_%s_%s", "Tank", Ability.owner.team, abilityName, "Bash")
-	--PlayerVFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
-	local success, newAsset = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(Ability.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(Ability.owner, PlayerStorage)
-		World.SpawnAsset(_G.VFX[vfxKey], {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
-	end
-	
+
+	local bashTemplate = PlayerVFX.Bash
+	World.SpawnAsset(bashTemplate, {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+
 	local sphereRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_Radius, Ability.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
@@ -142,8 +111,7 @@ function OnAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().TANK)
 end
 
 Equipment.equippedEvent:Connect(OnEquip)

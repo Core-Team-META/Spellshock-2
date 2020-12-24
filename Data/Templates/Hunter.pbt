@@ -41,16 +41,8 @@
             Bool: true
           }
           Overrides {
-            Name: "cs:CostumeTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:ClassID"
             Int: 3
-          }
-          Overrides {
-            Name: "cs:CostumeTemplate:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -378,6 +370,7 @@
         ChildIds: 8056306599204561674
         ChildIds: 10631699742497799838
         ChildIds: 3683594478347275263
+        ChildIds: 11619508425871329849
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -840,6 +833,40 @@
         }
       }
       Objects {
+        Id: 11619508425871329849
+        Name: "PlaceTrapAbilityClient"
+        Transform {
+          Location {
+            X: -273.006836
+            Y: -475
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 11108734766873830573
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
         Id: 406380117814010332
         Name: "Load Out"
         Transform {
@@ -1007,10 +1034,6 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:PreviewObjectTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:Class"
             String: "HUNTER"
           }
@@ -1028,10 +1051,6 @@
           }
           Overrides {
             Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:PreviewObjectTemplate:isrep"
             Bool: true
           }
         }
@@ -1197,7 +1216,6 @@
         }
         ParentId: 406380117814010332
         ChildIds: 11108734766873830573
-        ChildIds: 13372907053990075206
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1314,10 +1332,6 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:PreviewObjectTemplate"
-            String: ""
-          }
-          Overrides {
             Name: "cs:Class"
             String: "HUNTER"
           }
@@ -1333,10 +1347,6 @@
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
-          Overrides {
-            Name: "cs:PreviewObjectTemplate:isrep"
-            Bool: true
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1348,64 +1358,6 @@
         Script {
           ScriptAsset {
             Id: 15428462289765350781
-          }
-        }
-      }
-      Objects {
-        Id: 13372907053990075206
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1433284731599134094
-        ChildIds: 11619508425871329849
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 11619508425871329849
-        Name: "PlaceObjectAbilityClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 13372907053990075206
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 11108734766873830573
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 17529172217946308633
           }
         }
       }

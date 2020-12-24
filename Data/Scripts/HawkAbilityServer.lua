@@ -22,7 +22,6 @@ local HawkTarget = nil
 local PreviousTarget = nil
 local Timer = 0
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 
 function OnAbilityExecute(thisAbility)
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
@@ -32,23 +31,9 @@ function OnAbilityExecute(thisAbility)
 	PreviousTarget = nil
 	HawkTarget = nil
 	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Template")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = startingPosition, rotation = startingRotation})
-	end)
-	
-	if success then
-		CurrentHawk = newObject
-	else
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		CurrentHawk = World.SpawnAsset(_G.VFX[vfxKey], {position = startingPosition, rotation = startingRotation})
-	end
-	
+	local hawkTemplate = PlayerVFX.Template
+	CurrentHawk = World.SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
+
 	Task.Wait()
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
@@ -69,8 +54,7 @@ end
 
 function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().HUNTER)
 end
 
 function OnUnequip(thisEquipment, player)

@@ -21,27 +21,13 @@ local CurrentTarget = nil
 local CurrentProjectile = nil
 local MoveTarget = false
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnProjectileImpact(projectile, other, hitResult)
 	Reset(false)
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, SpecialAbility.owner.team, abilityName, "Impact")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = projectile:GetWorldPosition()})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(SpecialAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(SpecialAbility.owner, PlayerStorage)
-		World.SpawnAsset(PlayerVFX[vfxKey], {position = projectile:GetWorldPosition()})
-	end
-	
+	World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition()})
+
 	-- Damage enemies
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(projectile:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
@@ -81,25 +67,9 @@ function OnSpecialAbilityExecute(thisAbility)
 	if hitResult then
 		endPoint = hitResult:GetImpactPosition()
 	end	
-	--CurrentTarget = World.SpawnAsset(TargetTemplate, {position = endPoint})
 	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Target")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newTarget= pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = endPoint})
-	end)
-	
-	if success then
-		CurrentTarget = newTarget
-	else
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		CurrentTarget = World.SpawnAsset(_G.VFX[vfxKey], {position = endPoint})
-	end
-	
+	CurrentTarget = World.SpawnAsset(PlayerVFX.Target, {position = endPoint})
+
 	-- Spawn a new projectile and set its homingTarget to CurrentTarget
 	local playerPosition = thisAbility.owner:GetWorldPosition()
 	local playerRotation = thisAbility.owner:GetLookWorldRotation()
@@ -110,25 +80,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
 	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Projectile")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newObject = pcall(function()
-	    return Projectile.Spawn(PlayerVFX[vfxKey], spawnPosition, directionVector)
-	end)
-	
-	if newObject ~= nil then
-		print(tostring(newObject))
-		CurrentProjectile = newObject
-	else
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		print(_G.VFX[vfxKey])
-		CurrentProjectile = Projectile.Spawn(_G.VFX[vfxKey], spawnPosition, directionVector)
-	end
-	
+	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
 	local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 	
 	CurrentProjectile.owner = thisAbility.owner
@@ -200,8 +152,7 @@ end
 function OnEquip(equipment, player)
 	EventListeners["diedEvent"] = player.diedEvent:Connect( OnPlayerDied )
 	EventListeners["respawnedEvent"] = player.respawnedEvent:Connect( OnPlayerRespawn )
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().MAGE)
 end
 
 function OnUnequip(equipment, player)

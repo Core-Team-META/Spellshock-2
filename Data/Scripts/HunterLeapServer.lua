@@ -12,7 +12,6 @@ local DEFAULT_EnemyImpulse = script:GetCustomProperty("EnemyImpulse")
 local DEFAULT_ImpulseRadius = script:GetCustomProperty("ImpulseRadius")
 
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 local OverlapEvent = nil
 
 function AddImpulse(player)
@@ -51,24 +50,10 @@ function OnAbilityExecute(thisAbility)
 		targetPosition.z = targetPosition.z - 100
 	end
 	
-	local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisAbility.owner.team, abilityName, "Placement")
-	--PlayerVFX[vfxKey] = "ajshgdfasgf" -- JUST FOR TESTING
-	local success, newTrap = pcall(function()
-	    return World.SpawnAsset(PlayerVFX[vfxKey], {position = targetPosition, rotation = targetRotation})
-	end)
-	
-	if not success then
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisAbility.owner)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(thisAbility.owner, PlayerStorage)
-		newTrap = World.SpawnAsset(_G.VFX[vfxKey], {position = targetPosition, rotation = targetRotation})
-	end
-	
+	local trapTemplate = PlayerVFX.Placement
+	newTrap = World.SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation})
 	newTrap.lifeSpan = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, Ability.name..": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
-	
 	
 	local ImpulseRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, Ability.name..": Impulse Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
@@ -93,8 +78,7 @@ function OnBeginOverlap(thisTrigger, other)
 end
 
 function OnEquip(equipment, player)
-	local PlayerStorage = Storage.GetPlayerData(player)
-	PlayerVFX = PlayerStorage.VFX
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E,  META_AP().HUNTER)
 end
 
 function OnUnequip(equipment, player)
