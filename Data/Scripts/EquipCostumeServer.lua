@@ -2,14 +2,7 @@
 local HidePlayer = script:GetCustomProperty("HidePlayer")
 local CLASS_ID = ParentEquipment:GetCustomProperty("ClassID")
 
-function OnEquipped(thisEquipment, player)
-	if ParentEquipment:GetCustomProperty("CostumeTemplate") then
-		local PlayerStorage = Storage.GetPlayerData(player)
-		local vfxKey = string.format("%s_%d_%s", ParentEquipment.name, player.team, "Costume")
-		--PlayerStorage.VFX[vfxKey] = "asdfasf" -- ONLY FOR TESTING TRY_CATCH
-		ParentEquipment:SetNetworkedCustomProperty("CostumeTemplate", PlayerStorage.VFX[vfxKey])
-	end
-	
+function OnEquipped(thisEquipment, player)	
 	if HidePlayer then
 		player:SetVisibility(false, false)
 	end
@@ -22,19 +15,6 @@ function OnUnequipped(thisEquipment, player)
 	end
 end
 
-function EquipCostumeFailed(player)
-	if player == ParentEquipment.owner then
-		local PlayerStorage = Storage.GetPlayerData(player)
-		local vfxKey = string.format("%s_%d_%s", ParentEquipment.name, player.team, "Costume")
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerStorage.VFX[vfxKey])
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		PlayerVFX = PlayerStorage.VFX
-		Storage.SetPlayerData(player, PlayerStorage)
-		ParentEquipment:SetNetworkedCustomProperty("CostumeTemplate", PlayerStorage.VFX[vfxKey])
-	end
-end
-
-Events.ConnectForPlayer("EquipCostumeFailed", EquipCostumeFailed)
 ParentEquipment.equippedEvent:Connect( OnEquipped )
 ParentEquipment.unequippedEvent:Connect( OnUnequipped )
 
