@@ -234,6 +234,49 @@ function API.AbilityConvertToString(tbl)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
+-- REWARDS DATA FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+
+--@param string str => string of compressed data
+--@return table finalTbl => player data
+function API.RewardConvertToTable(str)
+    local finalTbl = {}
+    local tbl = API.StringSplit("|", str)
+    for _, s in ipairs(tbl) do
+        local t1 = API.StringSplit("^", s)
+        local index = API.IsNumeric(t1[1]) and tonumber(t1[1]) or t1[1]
+        finalTbl[index] = finalTbl[index] or {}
+
+        for k, s1 in ipairs(t1) do
+            if k > 1 then
+                local t3 = API.StringSplit("~", s1)
+                local i = API.IsNumeric(t3[1]) and tonumber(t3[1]) or t3[1]
+                finalTbl[index][i] = API.ConvertStringToTable(t3[2], ",", "=")
+            end
+        end
+    end
+
+    return finalTbl
+end
+
+--@param table tbl => player data to be stored
+--@return string str => string of compressed data
+function API.RewardConvertToString(tbl)
+    local str = ""
+    for key, values in pairs(tbl) do
+        str = str .. key .. "^"
+        for k, v in pairs(values) do
+            str = str .. k .. "~" .. API.ConvertTableToString(v, ",", "=")
+            str = next(values, k) and str .. "^" or str
+        end
+        str = next(tbl, key) and str .. "|" or str
+    end
+
+    return str
+end
+
+------------------------------------------------------------------------------------------------------------------------
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 

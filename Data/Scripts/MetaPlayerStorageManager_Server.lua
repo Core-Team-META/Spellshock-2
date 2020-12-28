@@ -112,11 +112,8 @@ local function OnLoadCurrencyData(player, data)
     else
         for k, name in ipairs(CONST.CURRENCY) do
             player:SetResource(name, 10000)
+            warn(tostring(player:GetResource(name)))
         end
-    end
-
-    for _, resName in ipairs(CONST.CURRENCY) do
-        warn(tostring(player:GetResource(resName)))
     end
 end
 
