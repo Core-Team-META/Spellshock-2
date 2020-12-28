@@ -60,6 +60,15 @@ Objects {
         SelfId: 9019563002044163780
       }
     }
+    Overrides {
+      Name: "cs:BasicGameStateManagerServer"
+      ObjectReference {
+        SelfId: 8656291602532955231
+        SubObjectId: 17454989556266754053
+        InstanceId: 2468698662337628124
+        TemplateId: 5453172935682938064
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
