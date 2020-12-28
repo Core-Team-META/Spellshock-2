@@ -45,7 +45,6 @@ function Int()
         end
     until playerCosmetic
     Events.BroadcastToServer("OnDestroyPlayerDataObject")
-    UTIL.TablePrint(playerCosmetic)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -100,6 +99,5 @@ end
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
 Int()
-Task.Wait(10)
-print(API.IsCosmeticOwned(6, 1, 2, 1))
-print(API.IsCosmeticOwned(5, 1, 2, 1))
+
+

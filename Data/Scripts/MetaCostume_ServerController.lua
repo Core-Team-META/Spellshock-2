@@ -18,6 +18,7 @@ local VFX_LIST = script:GetCustomProperty("VFX_LIST"):WaitForObject()
 local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"]["VFX"] = API
 local cosmeticTable = {}
+local cosmeticNames = {}
 local playerCosmetic = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -93,6 +94,8 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
+    cosmeticNames = UTIL.BuildOutfitNameTable(VFX_LIST)
+    UTIL.TablePrint(cosmeticNames)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
