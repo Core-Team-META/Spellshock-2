@@ -28,32 +28,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5874015840417789592
-  Name: "Starting VFX"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15057716785033630782
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Starting VFX"
-  }
-}
-Objects {
   Id: 11860357414841839945
   Name: "ClientContext"
   Transform {

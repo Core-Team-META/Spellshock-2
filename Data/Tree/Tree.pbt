@@ -29,6 +29,7 @@ Objects {
   ChildIds: 16227534043720893935
   ChildIds: 8983380287600545020
   ChildIds: 6356897330857931981
+  ChildIds: 5874015840417789592
   ChildIds: 3612684566017260609
   UnregisteredParameters {
   }
@@ -65,6 +66,32 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Brent"
+  }
+}
+Objects {
+  Id: 5874015840417789592
+  Name: "Starting VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Starting VFX"
   }
 }
 Objects {
