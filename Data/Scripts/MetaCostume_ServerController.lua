@@ -1,4 +1,6 @@
-﻿-----------------------------------------------------------------------------------------------------------------------
+﻿---DEV--
+local DEBUG = true
+-----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/23/2020
@@ -35,7 +37,6 @@ local function Split(s, delimiter)
     return result
 end
 
-
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
@@ -71,6 +72,14 @@ local function UnlockCosmetic(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin][bind] = 1
 end
 
+
+local function SetCurrentCosmetic(player, skinId)
+    local class = player:GetResource(CONST.CLASS_RES)
+    player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
+    print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
+end
+
+
 --@param object player
 --@param table playerCosmetic
 function GetPlayerCosmetic(player)
@@ -95,7 +104,7 @@ function Int()
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
     cosmeticNames = UTIL.BuildOutfitNameTable(VFX_LIST)
-    UTIL.TablePrint(cosmeticNames)
+    UTIL.TablePrint(cosmeticTable)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -121,10 +130,10 @@ end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
---@param int skin
 --@param int bind => id of bind (API.Q, API.E)
-function API.SetCurrentCosmetic(player, class, skin, bind)
-    player:SetResource(UTIL.GetSkinString(class, player.team, bind, skin))
+--@param int skinId
+function API.SetCurrentCosmetic(player, class, bind, skinId)
+    SetCurrentCosmetic(player, class, bind, skinId)
 end
 
 --@param object player
@@ -138,17 +147,22 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
-    local skinId = 1
-    --player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    if skinId == 0 then
+        skinId = 1
+    end
     return cosmeticTable[class][player.team][skinId][bind]
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
-    local skinId = 1
-    -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    if not UTIL.IsTableValid(cosmeticTable, class, skinId, player.team, CONST.COSTUME_ID) then
+    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    if skinId == 0 then
+        skinId = 1
+    end
+    if not UTIL.IsTableValid(cosmeticTable, class, player.team, skinId, CONST.COSTUME_ID) then
+        warn("TABLE FAIL")
         --Cosmetic test failed, return starter set
         return cosmeticTable[class][player.team][CONST.DEFAULT_SKIN][CONST.COSTUME_ID]
     end
@@ -156,3 +170,7 @@ function API.GetCurrentCostume(player, class)
 end
 
 Int()
+if DEBUG then
+    Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
+   
+end

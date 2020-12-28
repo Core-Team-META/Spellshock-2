@@ -1,6 +1,6 @@
 ﻿local LOCAL_PLAYER = Game.GetLocalPlayer()
 local xp = 1
-
+local skinId = 1
 local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
@@ -39,6 +39,10 @@ local function FindKeyByBind(key)
     end
 end
 
+function GetSkinId()
+    return skinId
+end
+
 function OnBindingPress(player, key)
     local bind
     local class = LOCAL_PLAYER:GetResource("CLASS_MAP")
@@ -63,6 +67,15 @@ function OnBindingPress(player, key)
             key ~= "ability_extra_48"
      then
         player.clientUserData.lastKeyBind = key
+    end
+    if key == "ability_extra_64" then
+        skinId = skinId + 1
+        Events.BroadcastToServer("META_AP.ChangeCosmetic", skinId)
+        print(skinId)
+    elseif key == "ability_extra_65" then
+        skinId = skinId - 1
+        Events.BroadcastToServer("META_AP.ChangeCosmetic", skinId)
+        print(skinId)
     end
 end
 

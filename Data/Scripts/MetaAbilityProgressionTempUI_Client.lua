@@ -1,8 +1,11 @@
 ﻿local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 
+
+local TEST = script:GetCustomProperty("TEST_LevelUpScript"):WaitForObject()
 local UIContainer = script:GetCustomProperty("UIContainer"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 
 local function META_AP()
     return _G["Meta.Ability.Progression"]
@@ -12,7 +15,12 @@ function UpdateUI(class)
     for _, panel in ipairs(UIContainer:GetChildren()) do
         local bind = panel.name
         for _, info in ipairs(panel:GetChildren()) do
+            if bind ~= "Skin" then
             info.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[bind], class))
+            elseif bind == "Skin" then
+                info.text = tostring(TEST.context.GetSkinId())
+            end
+
         end
     end
 end

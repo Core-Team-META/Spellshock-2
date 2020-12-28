@@ -72,23 +72,22 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
-    if class == nil then
-        class = player:GetResource(CONST.CLASS_RES)
+    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    if skinId == 0 then
+        skinId = 1
     end
-    local skinId = 1
-    -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     return cosmeticTable[class][player.team][skinId][bind]
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCostume(player, class)
-    local skinId = 1
-    print(player.team)
-    -- #TODO Swap this to this need a function that sets this on server
-    -- player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    if skinId == 0 then
+        skinId = 1
+    end
     if not UTIL.IsTableValid(cosmeticTable, class, player.team, skinId, CONST.COSTUME_ID) then
+        warn("TABLE FAIL")
         --Cosmetic test failed, return starter set
         return cosmeticTable[class][player.team][CONST.DEFAULT_SKIN][CONST.COSTUME_ID]
     end
