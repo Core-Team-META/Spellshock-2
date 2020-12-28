@@ -24,11 +24,12 @@ local ActiveAbilities = {}
 local isPreviewing = false
 local isExecuting = false
 local isFlying = false
+local isEnabled = true
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and not isPreviewing 
+	if binding == AbilityBinding and isEnabled and not isPreviewing 
 	and not isExecuting and not player.isDead and player.isGrounded then
 		--PrimaryAbility.isEnabled = false
 		--print("STARTING AIR DIVE")
@@ -196,18 +197,6 @@ function PrintAbilities(player)
 		print("\n")
 	end
 end  
-
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		--ABILITY.isEnabled = false
-		--PrimaryAbility.isEnabled = true
-		DisableFlying(thisPlayer)
-	end
-end
   
 function OnPlayerDied(player, _)
 	Task.Wait()
@@ -218,18 +207,36 @@ function OnPlayerRespawn(player)
 	DisableFlying(player)
 end
   
+function OnAbilityToggled(thisAbility, mode)
+	if thisAbility == ABILITY or thisAbility == "ALL" then
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		ABILITY.isEnabled = false
+		isEnabled = mode
+		if thisAbility == ABILITY then
+			-- reactive other abilities
+			for _, playerAbility in pairs(ActiveAbilities) do
+				playerAbility.isEnabled = true
+			end
+			ActiveAbilities = {}
+		end
+	end
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isExecuting = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, OnTargetChosen))
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))
 	table.insert(EventListeners, ABILITY.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, ABILITY.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
+	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
+
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
 	Task.Wait()
 	ABILITY.isEnabled = false

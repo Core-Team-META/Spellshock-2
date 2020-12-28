@@ -24,11 +24,12 @@ local DestroyedEventListener = nil
 
 local isPreviewing = false
 local isPlacing = false
+local isEnabled = true
 local PlayerVFX = nil
 local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
+	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 		PrimaryAbility.isEnabled = false
@@ -61,11 +62,8 @@ function PlaceObject(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-				
-	
+			
 		local newObject = World.SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
-	
-		
 		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
 		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
@@ -99,6 +97,18 @@ function OnPlayerRespawn(player)
 	SpecialAbility.isEnabled = false
 end
 
+function OnAbilityToggled(thisAbility, mode)
+	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		isEnabled = mode
+		if thisAbility == PrimaryAbility then
+			PrimaryAbility.isEnabled = true
+		end
+	end
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
@@ -110,6 +120,9 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
+	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
+
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HEALER)
 end
 

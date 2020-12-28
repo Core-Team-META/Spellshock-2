@@ -340,6 +340,7 @@
         ChildIds: 4051678230221737164
         ChildIds: 10043064803718761066
         ChildIds: 7355506324767663929
+        ChildIds: 14326137833624201234
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -878,6 +879,113 @@
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 14326137833624201234
+        Name: "Wraith Strike"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 14022298515563068289
+        ChildIds: 11309600053152836331
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14022298515563068289
+        Name: "WraithStrikeAbilityClient"
+        Transform {
+          Location {
+            X: -7995.12695
+            Y: -10268.625
+            Z: -3040.23633
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14326137833624201234
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 1302420456206572084
+            }
+          }
+          Overrides {
+            Name: "cs:ConfirmSound"
+            ObjectReference {
+              SubObjectId: 11309600053152836331
+            }
+          }
+          Overrides {
+            Name: "cs:TimerUI_Template"
+            AssetReference {
+              Id: 7156155829847915259
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2585631326682394561
+          }
+        }
+      }
+      Objects {
+        Id: 11309600053152836331
+        Name: "ConfirmSound"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14326137833624201234
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 4433167291023742498
+          }
+          Volume: 1
+          Falloff: -1
+          Radius: -1
         }
       }
       Objects {
@@ -1454,7 +1562,6 @@
         }
         ParentId: 15969373231472315619
         ChildIds: 1302420456206572084
-        ChildIds: 2319229106837867255
         UnregisteredParameters {
           Overrides {
             Name: "cs:Binding"
@@ -1596,113 +1703,6 @@
           ScriptAsset {
             Id: 15436478629864918866
           }
-        }
-      }
-      Objects {
-        Id: 2319229106837867255
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 87249608989476396
-        ChildIds: 14022298515563068289
-        ChildIds: 11309600053152836331
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 14022298515563068289
-        Name: "WraithStrikeAbilityClient"
-        Transform {
-          Location {
-            X: -7995.12695
-            Y: -10268.626
-            Z: -3040.23633
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2319229106837867255
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 1302420456206572084
-            }
-          }
-          Overrides {
-            Name: "cs:ConfirmSound"
-            ObjectReference {
-              SubObjectId: 11309600053152836331
-            }
-          }
-          Overrides {
-            Name: "cs:TimerUI_Template"
-            AssetReference {
-              Id: 7156155829847915259
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2585631326682394561
-          }
-        }
-      }
-      Objects {
-        Id: 11309600053152836331
-        Name: "ConfirmSound"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2319229106837867255
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 4433167291023742498
-          }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
         }
       }
       Objects {
