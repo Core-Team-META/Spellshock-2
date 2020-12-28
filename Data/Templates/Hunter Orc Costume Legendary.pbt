@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 10716214664751823333
-  Name: "Hunter Orc Costume Basic"
+  Name: "Hunter Orc Costume Legendary"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
