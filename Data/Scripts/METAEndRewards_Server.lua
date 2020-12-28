@@ -45,12 +45,14 @@ playerRewards = {
 }
 
 
+#TODO
 
+1) Need a table of all card names / icons
 
 
 ]] --
 
-local NAMESPACE = "METAER"
+local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
@@ -61,14 +63,17 @@ local NAMESPACE = "METAER"
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
+local GAME_STATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
-
+local playerRewards = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL API CONNECTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -112,6 +117,16 @@ local function GetRandomBind()
     return math.random(1, 7)
 end
 
+local function GetRandomClass()
+    return math.random(1, 5)
+end
+
+--Sets networked custom property to replicate to clients
+--@param string str
+local function ReplicateRewards(str)
+    NETWORKED:SetNetworkedCustomProperty("rewards", str)
+end
+
 --@param object player
 --@return bool
 local function IsTeamWinner(player)
@@ -126,12 +141,16 @@ local function IsTeamWinner(player)
     end
 end
 
+
+--#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local tempTable = {}
     tempTable[1] = {[15] = GetSkillLargeAmmount()}
     tempTable[2] = {G = GetGoldLargeAmmount()}
-    tempTable[3] = {C = GetCostumeTokenAmmount()}
+    if IsTeamWinner(player) then
+        tempTable[3] = {C = GetCostumeTokenAmmount()}
+    end
     return tempTable
 end
 
@@ -140,19 +159,45 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function CalculateRewards()
-    local rewards = {}
     for _, player in ipairs(Game.GetPlayers()) do
-        rewards[player.id] = GetPlayerRewards(player)
+        playerRewards[player.id] = GetPlayerRewards(player)
     end
-    NETWORKED:SetNetworkedCustomProperty("rewards", UTIL.RewardConvertToString(rewards))
+    ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
 end
 
-function OnRoundEnd()
+--@param object player
+--@param int rewardId
+function OnRewardSelect(player, rewardId)
+    if playerRewards[player.id] and playerRewards[player.id][rewardId] then
+        for key, value in pairs(playerRewards[player.id][rewardId]) do
+            if type(key) == "number" then
+                local class = tonumber(key:sub(1, 1))
+                local bind = tonumber(key:sub(2, 2))
+                META_AP().AddBindXp(player, class, bind, value)
+            elseif key == "G" then
+                player:AddResource(CONST.GOLD, value)
+            elseif key == "C" then
+                player:AddResource(CONST.COSMETIC_TOKEN, value)
+            end
+        end
+        playerRewards[player.id] = nil
+    end
+end
+
+function OnGameStateChanged(object, string)
+    if string == "State" then
+        local state = object:GetCustomProperty(string)
+        if state == GAME_STATE_API.GAME_STATE_REWARDS then
+            CalculateRewards()
+        end
+    end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-Game.roundEndEvent:Connect(OnRoundEnd)
+GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
+Events.ConnectForPlayer(NAMESPACE .. "RewardSelect", OnRewardSelect)
+
 Task.Wait(3)
 CalculateRewards()

@@ -16,6 +16,12 @@
           Id: 15718075383189814537
         }
       }
+      Overrides {
+        Name: "cs:APIBasicGameState"
+        AssetReference {
+          Id: 11974742996071064388
+        }
+      }
     }
   }
   SerializationVersion: 70
