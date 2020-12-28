@@ -62,6 +62,16 @@ function Tick(deltaTime)
             STATE_NAME_TEXT.text = "Round End"
             UpdateTimeRemaining(remainingTime)
         end
+
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+            STATE_NAME_TEXT.text = "Showcase"
+            UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_REWARDS then
+            STATE_NAME_TEXT.text = "Rewards"
+            UpdateTimeRemaining(remainingTime)
+        end
     end
 end
 
