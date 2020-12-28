@@ -15,11 +15,12 @@ local EventListeners = {}
 
 local isPreviewing = false
 local isPlacing = false
+local isEnabled = true
 local PlayerVFX = nil
 local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
+	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
 		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 		PrimaryAbility.isEnabled = false
@@ -77,6 +78,18 @@ function OnPlayerRespawn(player)
 	SpecialAbility.isEnabled = false
 end
 
+function OnAbilityToggled(thisAbility, mode)
+	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		isEnabled = mode
+		if thisAbility == PrimaryAbility then
+			PrimaryAbility.isEnabled = true
+		end
+	end
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isPlacing = false
@@ -88,7 +101,9 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
-	
+	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
+	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
+
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E,  META_AP().TANK)
 	
 	Task.Wait()
