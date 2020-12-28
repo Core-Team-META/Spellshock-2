@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 601593399694631930
-  Name: "Mage Elf Costume Basic"
+  Name: "Mage Elf Costume Legendary"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 5941776289668064836
       Objects {
         Id: 5941776289668064836
-        Name: "Mage Elf Costume Basic"
+        Name: "Mage Elf Costume Legendary"
         Transform {
           Scale {
             X: 1
@@ -16,56 +16,16 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 12622715983385567644
         ChildIds: 11239067626276079422
-        ChildIds: 2632754790283115648
-        ChildIds: 14552418886837005061
         ChildIds: 18051036051698455678
-        ChildIds: 11004875143488256330
-        ChildIds: 4621891581898564607
+        ChildIds: 1902738555334143659
         ChildIds: 159717699219856923
-        ChildIds: 4683453648091407916
         ChildIds: 15831157515337773276
-        ChildIds: 12583733004955647415
+        ChildIds: 17906173684759937580
         ChildIds: 1833892232921987346
         ChildIds: 8483108873309472174
-        ChildIds: 13176220500446627169
-        ChildIds: 17060102861233957069
-        ChildIds: 16098898052177772957
-        ChildIds: 1386421848404553813
-        ChildIds: 2942307283961943350
-        ChildIds: 14708314174701535212
-        ChildIds: 16116724741486906532
-        ChildIds: 4788146236384205311
-        ChildIds: 17235866854403934204
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 12622715983385567644
-        Name: "root"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1515,66 +1475,6 @@
         }
       }
       Objects {
-        Id: 2632754790283115648
-        Name: "neck"
-        Transform {
-          Location {
-            X: -5.3269043
-            Z: 181.107208
-          }
-          Rotation {
-            Pitch: -9.93500137
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 14552418886837005061
-        Name: "left_clavicle"
-        Transform {
-          Location {
-            X: -3.12304688
-            Y: -4.72302246
-            Z: 172.333008
-          }
-          Rotation {
-            Yaw: -8.82604408
-            Roll: 79.6859436
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 18051036051698455678
         Name: "left_shoulder"
         Transform {
@@ -1977,18 +1877,18 @@
         }
       }
       Objects {
-        Id: 11004875143488256330
+        Id: 1902738555334143659
         Name: "left_elbow"
         Transform {
           Location {
-            X: -7.69055176
-            Y: -39.4377441
-            Z: 141.289
+            X: -7.69140625
+            Y: -39.4375
+            Z: 141.289063
           }
           Rotation {
             Pitch: 18.4199886
-            Yaw: 9.02806854
-            Roll: 31.9080849
+            Yaw: 9.02809048
+            Roll: 31.9081154
           }
           Scale {
             X: 1
@@ -1997,7 +1897,7 @@
           }
         }
         ParentId: 5941776289668064836
-        ChildIds: 14325176930905844841
+        ChildIds: 8766453107247557656
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2010,10 +1910,13 @@
         }
       }
       Objects {
-        Id: 14325176930905844841
+        Id: 8766453107247557656
         Name: "GEO_right_elbow"
         Transform {
           Location {
+            X: 0.32844618
+            Y: -2.91701245
+            Z: 0.30680567
           }
           Rotation {
             Yaw: -179.999939
@@ -2025,11 +1928,11 @@
             Z: 1
           }
         }
-        ParentId: 11004875143488256330
-        ChildIds: 11085235071676218609
-        ChildIds: 3776058507414454247
-        ChildIds: 17292918333984699015
-        ChildIds: 5355185542564512679
+        ParentId: 1902738555334143659
+        ChildIds: 7035948193574917894
+        ChildIds: 11386212825055475970
+        ChildIds: 53754102726177614
+        ChildIds: 9938996434829964150
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2040,7 +1943,7 @@
         }
       }
       Objects {
-        Id: 11085235071676218609
+        Id: 7035948193574917894
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2059,7 +1962,7 @@
             Z: 0.180319831
           }
         }
-        ParentId: 14325176930905844841
+        ParentId: 8766453107247557656
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2158,7 +2061,7 @@
         }
       }
       Objects {
-        Id: 3776058507414454247
+        Id: 11386212825055475970
         Name: "Fantasy Gauntlet Arm 01"
         Transform {
           Location {
@@ -2177,7 +2080,7 @@
             Z: 0.195216194
           }
         }
-        ParentId: 14325176930905844841
+        ParentId: 8766453107247557656
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2276,7 +2179,7 @@
         }
       }
       Objects {
-        Id: 17292918333984699015
+        Id: 53754102726177614
         Name: "Group"
         Transform {
           Location {
@@ -2295,9 +2198,9 @@
             Z: 7.65569162
           }
         }
-        ParentId: 14325176930905844841
-        ChildIds: 18067407860930714713
-        ChildIds: 9686079373942558463
+        ParentId: 8766453107247557656
+        ChildIds: 2632732216600812310
+        ChildIds: 8121766999712187451
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2309,7 +2212,7 @@
         }
       }
       Objects {
-        Id: 18067407860930714713
+        Id: 2632732216600812310
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -2328,7 +2231,7 @@
             Z: 0.0274145156
           }
         }
-        ParentId: 17292918333984699015
+        ParentId: 53754102726177614
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2379,7 +2282,7 @@
         }
       }
       Objects {
-        Id: 9686079373942558463
+        Id: 8121766999712187451
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -2396,7 +2299,7 @@
             Z: 0.113923028
           }
         }
-        ParentId: 17292918333984699015
+        ParentId: 53754102726177614
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -2457,7 +2360,7 @@
         }
       }
       Objects {
-        Id: 5355185542564512679
+        Id: 9938996434829964150
         Name: "Group"
         Transform {
           Location {
@@ -2476,12 +2379,12 @@
             Z: 1.15206206
           }
         }
-        ParentId: 14325176930905844841
-        ChildIds: 11042941046143603726
-        ChildIds: 16455292563347303342
-        ChildIds: 10267214477470764629
-        ChildIds: 3376091208636774953
-        ChildIds: 5770590178343682346
+        ParentId: 8766453107247557656
+        ChildIds: 2742578573828809529
+        ChildIds: 18222152490364487781
+        ChildIds: 5145569062421128256
+        ChildIds: 4088828461034744095
+        ChildIds: 4464154372835377638
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -2493,7 +2396,7 @@
         }
       }
       Objects {
-        Id: 11042941046143603726
+        Id: 2742578573828809529
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2512,7 +2415,7 @@
             Z: 0.30210048
           }
         }
-        ParentId: 5355185542564512679
+        ParentId: 9938996434829964150
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2619,7 +2522,7 @@
         }
       }
       Objects {
-        Id: 16455292563347303342
+        Id: 18222152490364487781
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2638,7 +2541,7 @@
             Z: 0.30210048
           }
         }
-        ParentId: 5355185542564512679
+        ParentId: 9938996434829964150
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2745,7 +2648,7 @@
         }
       }
       Objects {
-        Id: 10267214477470764629
+        Id: 5145569062421128256
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -2764,7 +2667,7 @@
             Z: 0.186762035
           }
         }
-        ParentId: 5355185542564512679
+        ParentId: 9938996434829964150
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2847,7 +2750,7 @@
         }
       }
       Objects {
-        Id: 3376091208636774953
+        Id: 4088828461034744095
         Name: "Candle Flame VFX"
         Transform {
           Location {
@@ -2866,7 +2769,7 @@
             Z: 3.04638171
           }
         }
-        ParentId: 5355185542564512679
+        ParentId: 9938996434829964150
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:id"
@@ -2903,7 +2806,7 @@
         }
       }
       Objects {
-        Id: 5770590178343682346
+        Id: 4464154372835377638
         Name: "Candle Flame VFX"
         Transform {
           Location {
@@ -2922,7 +2825,7 @@
             Z: 3.04635882
           }
         }
-        ParentId: 5355185542564512679
+        ParentId: 9938996434829964150
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:id"
@@ -2956,38 +2859,6 @@
             Physics {
             }
           }
-        }
-      }
-      Objects {
-        Id: 4621891581898564607
-        Name: "left_arm_prop"
-        Transform {
-          Location {
-            X: -7.69055176
-            Y: -39.4377441
-            Z: 141.289
-          }
-          Rotation {
-            Pitch: 3.50642776
-            Yaw: -177.397842
-            Roll: 4.28746557
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
         }
       }
       Objects {
@@ -3167,37 +3038,6 @@
             Physics {
             }
           }
-        }
-      }
-      Objects {
-        Id: 4683453648091407916
-        Name: "right_clavicle"
-        Transform {
-          Location {
-            X: -3.12304688
-            Y: 4.72296143
-            Z: 172.333008
-          }
-          Rotation {
-            Yaw: 8.82604408
-            Roll: -79.6859436
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
         }
       }
       Objects {
@@ -4015,18 +3855,18 @@
         }
       }
       Objects {
-        Id: 12583733004955647415
+        Id: 17906173684759937580
         Name: "right_elbow"
         Transform {
           Location {
-            X: -7.69055176
-            Y: 41.7456055
-            Z: 141.289
+            X: -7.69140625
+            Y: 41.7460938
+            Z: 141.289063
           }
           Rotation {
             Pitch: 18.419981
-            Yaw: -9.02808762
-            Roll: -31.9080811
+            Yaw: -9.02811
+            Roll: -31.9081078
           }
           Scale {
             X: 1
@@ -4035,7 +3875,7 @@
           }
         }
         ParentId: 5941776289668064836
-        ChildIds: 1289063172890361938
+        ChildIds: 17930317402099692688
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -4048,10 +3888,13 @@
         }
       }
       Objects {
-        Id: 1289063172890361938
+        Id: 17930317402099692688
         Name: "GEO_right_elbow"
         Transform {
           Location {
+            X: 0.328621566
+            Y: 2.917
+            Z: 0.306747645
           }
           Rotation {
           }
@@ -4061,10 +3904,10 @@
             Z: 1
           }
         }
-        ParentId: 12583733004955647415
-        ChildIds: 12254139029708295236
-        ChildIds: 15823522055728695316
-        ChildIds: 1779386280394070604
+        ParentId: 17906173684759937580
+        ChildIds: 14076659766798251853
+        ChildIds: 3847930161385525267
+        ChildIds: 2738326721194852773
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -4075,7 +3918,7 @@
         }
       }
       Objects {
-        Id: 12254139029708295236
+        Id: 14076659766798251853
         Name: "Fantasy Shield 03"
         Transform {
           Location {
@@ -4094,7 +3937,7 @@
             Z: 0.180319831
           }
         }
-        ParentId: 1289063172890361938
+        ParentId: 17930317402099692688
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4193,7 +4036,7 @@
         }
       }
       Objects {
-        Id: 15823522055728695316
+        Id: 3847930161385525267
         Name: "Fantasy Gauntlet Arm 01"
         Transform {
           Location {
@@ -4212,7 +4055,7 @@
             Z: 0.195216194
           }
         }
-        ParentId: 1289063172890361938
+        ParentId: 17930317402099692688
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4311,7 +4154,7 @@
         }
       }
       Objects {
-        Id: 1779386280394070604
+        Id: 2738326721194852773
         Name: "Group"
         Transform {
           Location {
@@ -4330,9 +4173,9 @@
             Z: 7.65569162
           }
         }
-        ParentId: 1289063172890361938
-        ChildIds: 3046484785258375500
-        ChildIds: 8442877158019426653
+        ParentId: 17930317402099692688
+        ChildIds: 3831944346441166312
+        ChildIds: 14210871057844772747
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4344,7 +4187,7 @@
         }
       }
       Objects {
-        Id: 3046484785258375500
+        Id: 3831944346441166312
         Name: "Cylinder - Rounded"
         Transform {
           Location {
@@ -4363,7 +4206,7 @@
             Z: 0.0273233224
           }
         }
-        ParentId: 1779386280394070604
+        ParentId: 2738326721194852773
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4414,7 +4257,7 @@
         }
       }
       Objects {
-        Id: 8442877158019426653
+        Id: 14210871057844772747
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -4431,7 +4274,7 @@
             Z: 0.113923028
           }
         }
-        ParentId: 1779386280394070604
+        ParentId: 2738326721194852773
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5734,288 +5577,6 @@
             Physics {
             }
           }
-        }
-      }
-      Objects {
-        Id: 13176220500446627169
-        Name: "upper_spine"
-        Transform {
-          Location {
-            X: -0.510009766
-            Z: 161.986908
-          }
-          Rotation {
-            Pitch: 7.51320767e-05
-            Yaw: 7.17169532e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 17060102861233957069
-        Name: "lower_spine"
-        Transform {
-          Location {
-            X: -0.510009766
-            Z: 133.728912
-          }
-          Rotation {
-            Pitch: 7.51320767e-05
-            Yaw: 7.17169532e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 16098898052177772957
-        Name: "pelvis"
-        Transform {
-          Location {
-            X: -0.510009766
-            Z: 120.268
-          }
-          Rotation {
-            Pitch: 7.51320767e-05
-            Yaw: 7.17169532e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 1386421848404553813
-        Name: "left_hip"
-        Transform {
-          Location {
-            X: -1.89599609
-            Y: -10.4910278
-            Z: 109.635
-          }
-          Rotation {
-            Pitch: 3.17944598
-            Yaw: 0.34948042
-            Roll: 4.47927046
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 2942307283961943350
-        Name: "left_knee"
-        Transform {
-          Location {
-            X: -1.51184082
-            Y: -16.8809814
-            Z: 59.698
-          }
-          Rotation {
-            Pitch: -3.90987325
-            Yaw: -3.62918758
-            Roll: 4.28336573
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 14708314174701535212
-        Name: "left_ankle"
-        Transform {
-          Location {
-            X: -8.1159668
-            Y: -23.0543823
-            Z: 11.4560013
-          }
-          Rotation {
-            Pitch: -7.46754789
-            Yaw: 0.615756929
-            Roll: 1.0754205
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 16116724741486906532
-        Name: "right_hip"
-        Transform {
-          Location {
-            X: -1.89599609
-            Y: 10.4909668
-            Z: 109.635
-          }
-          Rotation {
-            Pitch: 3.17958951
-            Yaw: -0.349424213
-            Roll: -4.47896242
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 4788146236384205311
-        Name: "right_knee"
-        Transform {
-          Location {
-            X: -1.51184082
-            Y: 16.8810425
-            Z: 59.698
-          }
-          Rotation {
-            Pitch: -3.90996885
-            Yaw: 3.62911963
-            Roll: -4.283494
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 17235866854403934204
-        Name: "right_ankle"
-        Transform {
-          Location {
-            X: -8.11608887
-            Y: 23.0544434
-            Z: 11.4560013
-          }
-          Rotation {
-            Pitch: -7.46794415
-            Yaw: -0.616062105
-            Roll: -1.07538521
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5941776289668064836
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
         }
       }
     }
