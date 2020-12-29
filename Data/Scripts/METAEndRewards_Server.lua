@@ -54,7 +54,7 @@ playerRewards = {
 
 local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
--- Meta End Rewards Controller
+-- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/28/2020
 -- Version 0.1.0
@@ -141,16 +141,14 @@ local function IsTeamWinner(player)
     end
 end
 
-
 --#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local tempTable = {}
     tempTable[1] = {[15] = GetSkillLargeAmmount()}
     tempTable[2] = {G = GetGoldLargeAmmount()}
-    if IsTeamWinner(player) then
-        tempTable[3] = {C = GetCostumeTokenAmmount()}
-    end
+    tempTable[3] = {C = GetCostumeTokenAmmount()}
+
     return tempTable
 end
 
