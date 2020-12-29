@@ -94,42 +94,6 @@ local function GetReqBindXp(player, class, bind)
     return costTable.reqXP, costTable.reqGold
 end
 
---##FIXME Required XP not cal
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
-local function BindLevelUp(player, class, bind, xp)
-    local bindLevel = GetBindLevel(player, class, bind)
-    if bindLevel < CONST.MAX_LEVEL then
-        if bindLevel < CONST.MAX_LEVEL then
-            bindLevel = CoreMath.Round(bindLevel + 1)
-        end
-        SetBindLevel(player, class, bind, bindLevel)
-        --##FIXME currently setting XP to 0 on level up
-        xp = 0
-        SetBindXp(player, class, bind, xp)
-        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
-    end
-end
-
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
---@param int bind => id of bind (API.Q, API.E)
-local function AddBindXp(player, class, bind, ammount)
-    if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
-        local reqXp = GetReqBindXp(player, class, bind)
-        local currentBindXp = GetBindXp(player, class, bind)
-        if ammount then
-            currentBindXp = currentBindXp + ammount
-        end
-        if currentBindXp >= reqXp then
-            BindLevelUp(player, class, bind, currentBindXp)
-        else
-            SetBindXp(player, class, bind, currentBindXp)
-        end
-    end
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
@@ -170,6 +134,49 @@ if DEBUG then
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 end
+
+
+--##FIXME Required XP not cal
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+function BindLevelUp(player, class, bind, xp)
+    local bindLevel = GetBindLevel(player, class, bind)
+    local reqXp = GetReqBindXp(player, class, bind)
+    if bindLevel < CONST.MAX_LEVEL then
+        if bindLevel < CONST.MAX_LEVEL then
+            bindLevel = CoreMath.Round(bindLevel + 1)
+        end
+        warn("XP: ".. tostring(xp) .. " REQXP: " .. tostring(reqXp))
+        SetBindLevel(player, class, bind, bindLevel)
+        xp = xp - reqXp
+        warn("XP: ".. tostring(xp) .. " REQXP: " .. tostring(reqXp))
+        AddBindXp(player, class, bind, xp)
+        Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
+    end
+end
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+function AddBindXp(player, class, bind, ammount)
+    if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
+        local reqXp = GetReqBindXp(player, class, bind)
+        local currentBindXp = GetBindXp(player, class, bind)
+        warn(tostring(currentBindXp))
+        if ammount then
+            currentBindXp = currentBindXp + ammount
+        end
+        warn(tostring(currentBindXp))
+        warn("reqXP" .. tostring(reqXp))
+        if currentBindXp >= reqXp then
+            BindLevelUp(player, class, bind, currentBindXp)
+        else
+            SetBindXp(player, class, bind, currentBindXp)
+        end
+    end
+end
+
 
 --@param object player
 --@param table data

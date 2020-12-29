@@ -1,58 +1,4 @@
-﻿--[[
-
-
-Determine percentages for class.
-Determine final slot and ranges.
-
-
-Which class determines ranges for shards? Last one played? Amount of time played?
-
-
-1 class played: 62% chance of getting skill for class played in slot1, 9% for each of the rest, 2 for costume shards.
-2 classes played: then 31 for each of those and 9% for each of the rest, 2 for costume.
-3 classes played: then 23% for each of those and 6% for each of the rest, 3 for costume
-4 classes played then 24% for each of those and 3% for the rest, 2 for costume
-if player plays all 5 then 19.5% each. 2 for costume.
-Of course the question comes up, what to do in the event of adding more classes? Open to ideas.
-
-initial values for ranges
-Gold Small (random range, 100-200)
-Gold Big (random range, 800-1000)
-Ability Skill Small (random amount, 3-4)
-Ability Skill Medium (random amount, 6-7)
-Ability Skill Large (random amount, 15-20)
-Match Rewards = 1-3 Cosmetic Tokens
-
-
-
-Use networked custom properties to pass to client.
-
-Need to create a fuction to build ability to give a card.
-
-
-
-
-playerRewards = {
-    [1] = {
-        15 = 3
-    },
-    [2] = {
-        G = 600
-    },
-    [3] = {
-        C = 2
-    }
-}
-
-
-#TODO
-
-1) Need a table of all card names / icons
-
-
-]] --
-
-local NAMESPACE = "METAER."
+﻿local NAMESPACE = "METAER."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
@@ -69,7 +15,6 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 local GAME_STATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitForObject()
-
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +39,7 @@ local function GetGoldSmallAmmount()
 end
 
 local function GetGoldLargeAmmount()
-    return math.random(200, 1000)
+    return math.random(800, 1000)
 end
 
 local function GetAbilitySmallAmmount()
@@ -113,6 +58,7 @@ local function GetCostumeTokenAmmount()
     return math.random(1, 3)
 end
 
+--#TODO Currently Turned off RMB
 local function GetRandomBind()
     return math.random(1, 6)
 end
@@ -141,29 +87,51 @@ local function IsTeamWinner(player)
     end
 end
 
+--@param object player
+--@return table tempTbl
+local function CalculateSlot1(player)local tempTbl = {}
+    local classesPlayedCount = 0
+    local randomChance = math.random(1, 100)
+    local classTable = {}
+    for classId, _ in pairs(player.serverUserData.ClassesPlayed) do
+        classesPlayedCount = classesPlayedCount + 1
+        classTable[classesPlayedCount] = classId
+    end
+    if randomChance < 50 then
+        local randomClass = math.random(1, #classTable)
+        local bindId = tonumber(tostring(classTable[randomClass]) .. tostring(GetRandomBind()))
+        tempTbl = {[bindId] = GetSkillLargeAmmount()}
+    elseif randomChance > 50 and randomChance < 98 then
+        local bindId = tonumber(tostring(GetRandomClass()) .. tostring(GetRandomBind()))
+        tempTbl = {[bindId] = GetSkillLargeAmmount()}
+    else
+        tempTbl = {C = GetCostumeTokenAmmount()}
+    end
+    return tempTbl
+end
+
 --#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local tempTable = {}
-    local random = 2--math.random(1, 4)
-    if random == 1 then
-        local classBind = tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))
-        tempTable[1] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetSkillLargeAmmount()}
+    tempTable[1] = CalculateSlot1(player)
+
+    if IsTeamWinner(player) then
+        --If winning team give large gold ammount
         tempTable[2] = {G = GetGoldLargeAmmount()}
-        tempTable[3] = {C = GetCostumeTokenAmmount()}
-    elseif random == 2 then
-        local classBind = tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 7)))
-        tempTable[1] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetSkillLargeAmmount()}
-        tempTable[2] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetAbilityMediumAmmount()}
-        tempTable[3] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetAbilityMediumAmmount()}
-    elseif random == 3 then
-        tempTable[1] = {G = GetGoldLargeAmmount()}
+
+        --Random to determine slot 3 reward
+        local random = math.random(1, 100)
+        --90% chance to be a random class bind shards
+        if random >= 10 then
+            tempTable[3] = {
+                [tonumber(tostring(GetRandomClass()) .. tostring(GetRandomBind()))] = GetSkillLargeAmmount()
+            }
+        else -- 10% chance to be costume tokens
+            tempTable[3] = {C = GetCostumeTokenAmmount()}
+        end
+    else --Losing team only gets slot 1 and 2, slot 2 == Small gold amount.
         tempTable[2] = {G = GetGoldSmallAmmount()}
-        tempTable[3] = {G = GetGoldLargeAmmount()}
-    elseif random == 4 then
-        tempTable[1] = {C = GetCostumeTokenAmmount()}
-        tempTable[2] = {C = GetCostumeTokenAmmount()}
-        tempTable[3] = {C = GetCostumeTokenAmmount()}
     end
 
     return tempTable
@@ -175,7 +143,10 @@ end
 
 function CalculateRewards()
     for _, player in ipairs(Game.GetPlayers()) do
-        playerRewards[player.id] = GetPlayerRewards(player)
+        if player.serverUserData.ClassesPlayed then
+            playerRewards[player.id] = GetPlayerRewards(player)
+        -- player.serverUserData.ClassesPlayed = nil
+        end
     end
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
 end
@@ -186,8 +157,9 @@ function OnRewardSelect(player, rewardId)
     if playerRewards[player.id] and playerRewards[player.id][rewardId] then
         for key, value in pairs(playerRewards[player.id][rewardId]) do
             if type(key) == "number" then
-                local class = tonumber(key:sub(1, 1))
-                local bind = tonumber(key:sub(2, 2))
+                local bindId = tostring(key)
+                local class = tonumber(bindId:sub(1, 1))
+                local bind = tonumber(bindId:sub(2, 2))
                 META_AP().AddBindXp(player, class, bind, value)
             elseif key == "G" then
                 player:AddResource(CONST.GOLD, value)
@@ -213,4 +185,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "RewardSelect", OnRewardSelect)
-
+Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)

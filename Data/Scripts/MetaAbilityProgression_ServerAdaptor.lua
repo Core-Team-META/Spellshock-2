@@ -35,6 +35,10 @@ end
 function OnResourceChanged(player, resName, resAmount)
     if resName == CONST.CLASS_RES then
         META_AP().ChangeClass(player, player:GetResource(resName))
+
+        --Used for determining rewards
+        player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
+        player.serverUserData.ClassesPlayed[player:GetResource(resName)] = true
     end
 end
 

@@ -106,12 +106,12 @@ local function OnLoadCurrencyData(player, data)
         currency = UTIL.ConvertStringToTable(data[CONST.STORAGE.CURRENCY], ",", "=")
         for key, value in pairs(currency) do
             if CONST.CURRENCY[key] then
-                player:SetResource(CONST.CURRENCY[key], value + 10000)
+                player:SetResource(CONST.CURRENCY[key], value)
             end
         end
     else
         for k, name in ipairs(CONST.CURRENCY) do
-            player:SetResource(name, 10000)
+            player:SetResource(name, 0)
             warn(tostring(player:GetResource(name)))
         end
     end
