@@ -71,6 +71,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14108921733462450899
+  Name: "Fantasy Rune 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Rune_002"
+  }
+}
+Assets {
   Id: 13671275783079149728
   Name: "Crosshair 004"
   PlatformAssetType: 9
@@ -248,15 +257,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Blue_023"
-  }
-}
-Assets {
-  Id: 1886334352774514662
-  Name: "Fantasy Coins 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_007"
   }
 }
 Assets {
