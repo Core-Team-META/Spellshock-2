@@ -24,11 +24,31 @@ local REWARD_PARENT_UI = script:GetCustomProperty("RoundEndRewardUI"):WaitForObj
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
+local listeners = {}
+local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
 REWARD_PARENT_UI.isEnabled = false
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+--Used for spam prevention
+--@return bool
+local function isAllowed(time)
+    local timeNow = os.clock()
+    if spamPrevent ~= nil and (timeNow - spamPrevent) < time then
+        return false
+    end
+    spamPrevent = timeNow
+    return true
+end
+
+local function DisconnectListeners()
+    for _, listener in ipairs(listeners) do
+        if listener and listener.isConnected then
+            listener:Disconnect()
+        end
+    end
+end
 
 local function GetBindInfo(value)
     local class, bind
@@ -90,6 +110,10 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                                 object.text = tostring(reward)
                             end
                         end
+                    end
+                    if child.name == "CollectButton" then
+                        child.clientUserData.id = slotId
+                        listeners[#listeners + 1] = child.clickedEvent:Connect(OnRewardSelected)
                     end
                 end
             end
@@ -153,6 +177,18 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
+function OnRewardSelected(button)
+    local result, message
+    repeat
+        result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
+        Task.Wait(0.1)
+    until result == BroadcastEventResultCode.SUCCESS
+
+    DisconnectListeners()
+    Task.Wait()
+    REWARD_PARENT_UI.isEnabled = false
+end
+
 function OnRewardsChanged(object, string)
     if string == "rewards" then
         local str = object:GetCustomProperty(string)
@@ -160,9 +196,17 @@ function OnRewardsChanged(object, string)
     end
 end
 
+--#TODO TEMP FUNCTIONS
+function OnTriggerReward(player, keybind)
+    if keybind == "ability_extra_63" then
+        Events.BroadcastToServer(NAMESPACE .. "TriggerReward")
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
+LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward)
 
 UTIL.TablePrint(rewardAssets)
