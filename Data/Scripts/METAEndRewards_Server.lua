@@ -197,5 +197,5 @@ end
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "RewardSelect", OnRewardSelect)
 
-Task.Wait(3)
+Task.Wait(5)
 CalculateRewards()

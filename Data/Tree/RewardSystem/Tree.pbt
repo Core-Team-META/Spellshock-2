@@ -47,6 +47,18 @@ Objects {
         SelfId: 9019563002044163780
       }
     }
+    Overrides {
+      Name: "cs:Reward_Icons"
+      ObjectReference {
+        SelfId: 12153954283957030340
+      }
+    }
+    Overrides {
+      Name: "cs:RoundEndRewardUI"
+      ObjectReference {
+        SelfId: 11379000256257509839
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

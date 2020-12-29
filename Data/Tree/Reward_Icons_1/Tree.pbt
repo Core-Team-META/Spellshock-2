@@ -26,6 +26,14 @@ Objects {
         Id: 1886334352774514662
       }
     }
+    Overrides {
+      Name: "cs:ID"
+      Int: 3
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -69,6 +77,14 @@ Objects {
       Name: "cs:Bind"
       Int: 2
     }
+    Overrides {
+      Name: "cs:ID"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -108,6 +124,14 @@ Objects {
         Id: 7585529932942736913
       }
     }
+    Overrides {
+      Name: "cs:ID"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -141,6 +165,16 @@ Objects {
   ChildIds: 223582529662484824
   ChildIds: 3655032186689650039
   ChildIds: 13613330360046239521
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ID"
+      Int: 1
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

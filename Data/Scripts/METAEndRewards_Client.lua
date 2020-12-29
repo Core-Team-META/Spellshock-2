@@ -15,10 +15,18 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
+local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- UI OBJECTS
+------------------------------------------------------------------------------------------------------------------------
+local REWARD_PARENT_UI = script:GetCustomProperty("RoundEndRewardUI"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
+local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
+REWARD_PARENT_UI.isEnabled = false
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -53,12 +61,22 @@ local function GetRewardType(tbl)
     for key, value in pairs(tbl) do
         for rewardType, rewards in pairs(value) do
             if type(rewardType) == "number" then
-               GetBindInfo(value)
+                GetBindInfo(value)
             elseif rewardType == "G" then
                 GetGoldInfo(value)
             elseif rewardType == "C" then
                 print("Cosmetic")
             end
+        end
+    end
+end
+
+local function DisabledThirdSlot()
+    for _, panel in ipairs(REWARD_PARENT_UI:GetChildren()) do
+        if panel.name == "RewardSlot3" then
+            panel.isEnabled = false
+        elseif panel.name == "RewardSlot3-Loss" then
+            panel.isEnabled = true
         end
     end
 end
@@ -69,11 +87,12 @@ end
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
         if playerId == LOCAL_PLAYER.id then
+            DisabledThirdSlot()
             GetRewardType(rewards)
             playerRewards = rewards
+            REWARD_PARENT_UI.isEnabled = true
         end
     end
-    UTIL.TablePrint(playerRewards)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -91,3 +110,5 @@ end
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
+
+UTIL.TablePrint(rewardAssets)

@@ -237,7 +237,6 @@ end
 -- REWARDS DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-
 --@param string str => string of compressed data
 --@return table finalTbl => player data
 function API.RewardConvertToTable(str)
@@ -274,6 +273,44 @@ function API.RewardConvertToString(tbl)
     end
 
     return str
+end
+
+local function GetRewardInfo(tempTable, list)
+    local bindId = list:GetCustomProperty("Bind")
+    local name = list:GetCustomProperty("Name")
+    local image = list:GetCustomProperty("Image")
+    tempTable[bindId] = tempTable[bindId] or {}
+    tempTable[bindId].Name = name
+    tempTable[bindId].Image = image
+    return tempTable
+end
+
+--@param object list => VFX object
+--@return table cosmeticTable
+function API.BuildRewardsTable(list)
+    local tempTable = {}
+    for _, rewardType in ipairs(list:GetChildren()) do
+        if rewardType.name == "Shards" then
+            tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
+            for classId, class in ipairs(rewardType:GetChildren()) do
+                tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
+                for _, bind in ipairs(class:GetChildren()) do
+                    tempTable[CONST.REWARDS.SHARDS][classId] =
+                        GetRewardInfo(tempTable[CONST.REWARDS.SHARDS][classId], bind)
+                end
+            end
+        elseif rewardType.name == "Small Gold" then
+            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
+            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
+        elseif rewardType.name == "Big Gold" then
+            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
+            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
+        elseif rewardType.name == "Cosmetic" then
+            tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
+            tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
+        end
+    end
+    return tempTable
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -399,18 +436,17 @@ function API.BuildOutfitNameTable(list)
     return tempTable
 end
 
-
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int team
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
 --@return bool true / false
 function API.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
-    return playerCosmetic[class] ~= nil and playerCosmetic[class][team] ~= nil and playerCosmetic[class][team][skin] ~= nil and
+    return playerCosmetic[class] ~= nil and playerCosmetic[class][team] ~= nil and
+        playerCosmetic[class][team][skin] ~= nil and
         playerCosmetic[class][team][skin][bind] ~= nil and
         playerCosmetic[class][team][skin][bind] == 1
 end
-
 
 ------------------------------------------------------------------------------------------------------------------------
 return API

@@ -47,6 +47,13 @@ API.PROGRESS = {
     XP = 2
 }
 
+-- REWARD KEYS
+API.REWARDS = {
+    SHARDS = 1,
+    GOLD = 2,
+    COSMETIC = 3
+}
+
 API.COSTUME_ID = 8
 
 API.STARTING_LEVEL = 1
