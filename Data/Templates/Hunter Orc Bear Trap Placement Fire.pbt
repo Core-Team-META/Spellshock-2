@@ -24,6 +24,10 @@
             Name: "cs:OwnerID"
             String: ""
           }
+          Overrides {
+            Name: "cs:OwnerID:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {

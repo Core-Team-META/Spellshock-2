@@ -30,7 +30,6 @@ function Tick()
     else
         UIContainer.visibility = Visibility.FORCE_OFF
     end
-    Task.Wait()
 end
 
 function OnResourceChanged(player, resName, resAmt)

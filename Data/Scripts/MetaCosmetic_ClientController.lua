@@ -65,7 +65,7 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind)
-    return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    return 2--player:GetResource(UTIL.GetSkinString(class, player.team, bind))
 end
 
 --@param object player
@@ -74,7 +74,7 @@ end
 function API.GetCurrentCosmetic(player, bind, class)
     local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     if skinId == 0 then
-        skinId = 1
+        skinId = 5
     end
     return cosmeticTable[class][player.team][skinId][bind]
 end

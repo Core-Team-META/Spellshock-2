@@ -42,7 +42,7 @@ local function AddDefaultCosmetics(player)
     for c = 1, 5 do
         for t = 1, 2 do
             for s = 1, 20 do
-                for b = 1, 5 do
+                for b = 1, 4 do
                     _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
                 end
             end

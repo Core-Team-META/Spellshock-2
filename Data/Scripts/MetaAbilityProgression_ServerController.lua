@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/16/2020
--- Version 0.1.2
+-- Date: 12/29/2020
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +29,7 @@ local playerProgression = {}
 ------------------------------------------------------------------------------------------------------------------------
 
 API.NAMESPACE = CONST.NAMESPACE
+API.PLAYER_LEVEL = CONST.PLAYER_LEVEL
 
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
@@ -135,8 +136,7 @@ if DEBUG then
     end
 end
 
-
---##FIXME Required XP not cal
+--##FIXME Should not auto level up on shard gain
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -146,11 +146,10 @@ function BindLevelUp(player, class, bind, xp)
     if bindLevel < CONST.MAX_LEVEL then
         if bindLevel < CONST.MAX_LEVEL then
             bindLevel = CoreMath.Round(bindLevel + 1)
+            xp = xp - reqXp
+            player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
         end
-        warn("XP: ".. tostring(xp) .. " REQXP: " .. tostring(reqXp))
         SetBindLevel(player, class, bind, bindLevel)
-        xp = xp - reqXp
-        warn("XP: ".. tostring(xp) .. " REQXP: " .. tostring(reqXp))
         AddBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
@@ -163,12 +162,9 @@ function AddBindXp(player, class, bind, ammount)
     if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
         local reqXp = GetReqBindXp(player, class, bind)
         local currentBindXp = GetBindXp(player, class, bind)
-        warn(tostring(currentBindXp))
         if ammount then
             currentBindXp = currentBindXp + ammount
         end
-        warn(tostring(currentBindXp))
-        warn("reqXP" .. tostring(reqXp))
         if currentBindXp >= reqXp then
             BindLevelUp(player, class, bind, currentBindXp)
         else
@@ -177,12 +173,10 @@ function AddBindXp(player, class, bind, ammount)
     end
 end
 
-
 --@param object player
 --@param table data
 function BuildBindDataTable(player, data)
     playerProgression[player] = {}
-
     if data ~= nil then
         for class, classes in pairs(data) do
             playerProgression[player][class] = {}
@@ -213,8 +207,6 @@ function BuildBindDataTable(player, data)
             end
         end
     end
-
-    --UTIL.TablePrint(playerProgression[player])
 end
 
 --@param object player
@@ -250,6 +242,7 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.ChangeClass(player, class)
+    local playerLevel = 0
     for _, bind in pairs(CONST.BIND) do
         if playerProgression[player][class][bind][API.LEVEL] ~= nil then
             Events.Broadcast(
@@ -259,8 +252,11 @@ function API.ChangeClass(player, class)
                 bind,
                 playerProgression[player][class][bind][API.LEVEL]
             )
+            playerLevel = playerLevel + playerProgression[player][class][bind][API.LEVEL]
         end
     end
+    playerLevel = playerLevel - 6
+    player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
 end
 
 --@param object player

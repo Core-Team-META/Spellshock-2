@@ -66,7 +66,7 @@ API.DEFAULT_SKIN = 1
 -- RESOURCE NAMES
 ------------------------------------------------------------------------------------------------------------------------
 API.COSTUME_STRING = "08_Costume"
-
+API.PLAYER_LEVEL = "P_LEVEL"
 API.CLASS_RES = "CLASS_MAP"
 API.SKIN_RES = "SKIN_MAP"
 

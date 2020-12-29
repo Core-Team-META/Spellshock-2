@@ -50,6 +50,17 @@ local function DisconnectListeners()
     end
 end
 
+local function ToggleUI(isTrue)
+    UI.SetCursorVisible(isTrue)
+    UI.SetCanCursorInteractWithUI(isTrue)
+    UI.SetCursorLockedToViewport(isTrue)
+    if isTrue then
+        REWARD_PARENT_UI.isEnabled = true
+    else
+        REWARD_PARENT_UI.isEnabled = false
+    end
+end
+
 local function GetBindInfo(value)
     local class, bind
     for shardId, reward in pairs(value) do
@@ -113,7 +124,9 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                     end
                     if child.name == "CollectButton" then
                         child.clientUserData.id = slotId
+                        if #listeners < 3 then
                         listeners[#listeners + 1] = child.clickedEvent:Connect(OnRewardSelected)
+                        end
                     end
                 end
             end
@@ -154,7 +167,7 @@ local function BuildRewardSlots(tbl)
             end
         end
         BuildSlotInfo(slot, id, class, bind, reward)
-        if math.random(1, 2) == 1 then
+        if slot == 3 then
             ThirdSlotEnabled(true)
         end
     end
@@ -168,7 +181,7 @@ local function GetPlayerRewards(tbl)
         if playerId == LOCAL_PLAYER.id then
             ThirdSlotEnabled(false)
             BuildRewardSlots(rewards)
-            REWARD_PARENT_UI.isEnabled = true
+            ToggleUI(true)
         end
     end
 end
@@ -184,9 +197,9 @@ function OnRewardSelected(button)
         Task.Wait(0.1)
     until result == BroadcastEventResultCode.SUCCESS
 
-    DisconnectListeners()
+   --DisconnectListeners()
     Task.Wait()
-    REWARD_PARENT_UI.isEnabled = false
+    ToggleUI(false)
 end
 
 function OnRewardsChanged(object, string)

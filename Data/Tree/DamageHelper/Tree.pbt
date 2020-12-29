@@ -15,7 +15,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Binding"
-      String: "ability_extra_8"
+      String: "ability_extra_19"
     }
     Overrides {
       Name: "cs:ShowAtRoundEnd"
