@@ -94,7 +94,7 @@ local function GetGoldSmallAmmount()
 end
 
 local function GetGoldLargeAmmount()
-    return math.random(800, 1000)
+    return math.random(200, 1000)
 end
 
 local function GetAbilitySmallAmmount()
@@ -114,7 +114,7 @@ local function GetCostumeTokenAmmount()
 end
 
 local function GetRandomBind()
-    return math.random(1, 7)
+    return math.random(1, 6)
 end
 
 local function GetRandomClass()
@@ -145,9 +145,26 @@ end
 --@param object player
 local function GetPlayerRewards(player)
     local tempTable = {}
-    tempTable[1] = {[15] = GetSkillLargeAmmount()}
-    tempTable[2] = {G = GetGoldLargeAmmount()}
-    tempTable[3] = {C = GetCostumeTokenAmmount()}
+    local random = 2--math.random(1, 4)
+    if random == 1 then
+        local classBind = tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))
+        tempTable[1] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetSkillLargeAmmount()}
+        tempTable[2] = {G = GetGoldLargeAmmount()}
+        tempTable[3] = {C = GetCostumeTokenAmmount()}
+    elseif random == 2 then
+        local classBind = tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 7)))
+        tempTable[1] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetSkillLargeAmmount()}
+        tempTable[2] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetAbilityMediumAmmount()}
+        tempTable[3] = {[tonumber(tostring(math.random(1, 5)) .. tostring(math.random(1, 6)))] = GetAbilityMediumAmmount()}
+    elseif random == 3 then
+        tempTable[1] = {G = GetGoldLargeAmmount()}
+        tempTable[2] = {G = GetGoldSmallAmmount()}
+        tempTable[3] = {G = GetGoldLargeAmmount()}
+    elseif random == 4 then
+        tempTable[1] = {C = GetCostumeTokenAmmount()}
+        tempTable[2] = {C = GetCostumeTokenAmmount()}
+        tempTable[3] = {C = GetCostumeTokenAmmount()}
+    end
 
     return tempTable
 end
@@ -197,5 +214,3 @@ end
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "RewardSelect", OnRewardSelect)
 
-Task.Wait(5)
-CalculateRewards()

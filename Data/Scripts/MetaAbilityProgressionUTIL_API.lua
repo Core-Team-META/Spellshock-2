@@ -290,7 +290,8 @@ end
 function API.BuildRewardsTable(list)
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
-        if rewardType.name == "Shards" then
+        local id = rewardType:GetCustomProperty("ID")
+        if id == CONST.REWARDS.SHARDS then
             tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
             for classId, class in ipairs(rewardType:GetChildren()) do
                 tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
@@ -299,13 +300,10 @@ function API.BuildRewardsTable(list)
                         GetRewardInfo(tempTable[CONST.REWARDS.SHARDS][classId], bind)
                 end
             end
-        elseif rewardType.name == "Small Gold" then
+        elseif id == CONST.REWARDS.GOLD then
             tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
             tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
-        elseif rewardType.name == "Big Gold" then
-            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
-            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
-        elseif rewardType.name == "Cosmetic" then
+        elseif id == CONST.REWARDS.COSMETIC then
             tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
             tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
         end
