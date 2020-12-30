@@ -134,6 +134,24 @@ local function OnSaveCurrencyData(player, data)
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
 end
 
+
+--@param object player
+--@param table data
+local function OnLoadEquippedCosmetic(player, data)
+    local cosmetic
+    if data[CONST.STORAGE.EQUIPPED_COSMETIC] then
+       cosmetic = UTIL.EquippedCosmeticConvertToTable(data[CONST.STORAGE.EQUIPPED_COSMETIC])
+    end
+    META_COSMETIC.context.BuildEquippedCosmeticDataTable(player, cosmetic)
+end
+
+--@param object player
+--@param table data
+local function OnSaveEquippedCosmetic(player, data)
+    local playerCosmetics = META_COSMETIC.context.GetPlayerEquippedCosmetic(player)
+    data[CONST.STORAGE.EQUIPPED_COSMETIC] = next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
+end
+
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
@@ -141,6 +159,7 @@ local function OnPlayerJoined(player)
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
+        OnLoadEquippedCosmetic(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -153,7 +172,7 @@ local function OnPlayerLeft(player)
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
-    --#TODO create OnSaveEquippedCosmetic(player, data)
+    OnSaveEquippedCosmetic(player, data)
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
     Storage.SetPlayerData(player, data)
 

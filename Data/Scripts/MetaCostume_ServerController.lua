@@ -21,7 +21,8 @@ local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"]["VFX"] = API
 local cosmeticTable = {} -- Used for all cosmetic MUIDs
 local cosmeticNames = {} -- Table of all Cosmetic names
-local playerCosmetic = {} -- Unlocked Table Player Bars
+local playerCosmetic = {} -- Unlocked Table Player Cosmetics
+local playerEquippedCosmetic = {} -- Unlocked Table Player Cosmetics
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -47,6 +48,7 @@ local function CreateNewCosmeticTable(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin] = playerCosmetic[player][class][team][skin] or {}
     playerCosmetic[player][class][team][skin][bind] = playerCosmetic[player][class][team][skin][bind] or {}
 end
+
 
 --@param object player
 --@param int skin
@@ -75,12 +77,14 @@ end
 
 local function SetCurrentCosmetic(player, skinId)
     local class = player:GetResource(CONST.CLASS_RES)
+    playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
     player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
     print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
 end
 
 local function SetBindCosmetic(player, class, bind, skinId)
     class = class or player:GetResource(CONST.CLASS_RES) 
+    playerEquippedCosmetic[player][class][bind][player.team] = skinId
     player:SetResource(UTIL.GetSkinString(class, player.team, bind), skinId)
     print(player:GetResource(UTIL.GetSkinString(class, player.team, bind)))
 end
@@ -93,8 +97,15 @@ function GetPlayerCosmetic(player)
 end
 
 --@param object player
+--@param table playerCosmetic
+function GetPlayerEquippedCosmetic(player)
+    return playerEquippedCosmetic[player]
+end
+
+--@param object player
 function OnPlayerLeft(player)
     playerCosmetic[player] = nil
+    playerEquippedCosmetic[player] = nil
 end
 
 --Note data comes in as 1021,2011,3021 => classId, skinId, abilityId
@@ -103,6 +114,38 @@ end
 function BuildCosmeticDataTable(player, data)
     playerCosmetic[player] = data or {}
 end
+
+--@param object player
+--@param table data
+function BuildEquippedCosmeticDataTable(player, data)
+    playerEquippedCosmetic[player] = {}
+    if data ~= nil then
+        for class, classes in pairs(data) do
+            playerEquippedCosmetic[player][class] = {}
+            for bind, binds in pairs(classes) do
+                playerEquippedCosmetic[player][class][bind] = {}
+                for teamId, skinId in pairs(binds) do
+                    playerEquippedCosmetic[player][class][bind][teamId] = skinId
+                    player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
+                end
+            end
+        end
+    end
+    for _, class in pairs(CONST.CLASS) do
+        playerEquippedCosmetic[player][class] = playerEquippedCosmetic[player][class] or {}
+        if not next(playerEquippedCosmetic[player][class]) then
+            for _, bind in pairs(CONST.COSMETIC_BIND) do
+                playerEquippedCosmetic[player][class][bind] = {}
+                for _, team in pairs(CONST.TEAM) do
+                    playerEquippedCosmetic[player][class][bind][team] = 1
+                    player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
+                end
+            end
+        end
+    end
+end
+
+
 
 --Builds the cosmeticTable based on the heirarchy
 function Int()
