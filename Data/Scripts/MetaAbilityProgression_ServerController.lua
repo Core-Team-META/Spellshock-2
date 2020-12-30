@@ -156,15 +156,13 @@ function BindLevelUp(player, class, bind)
     local bindLevel = GetBindLevel(player, class, bind)
     local reqXp = GetReqBindXp(player, class, bind)
     local xp = GetBindXp(player, class, bind)
-    if bindLevel < CONST.MAX_LEVEL then
-        if bindLevel < CONST.MAX_LEVEL then
-            bindLevel = CoreMath.Round(bindLevel + 1)
-            xp = xp - reqXp
-            player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
-            player:SetResource(CONST.ACCOUNT_LEVEL, player:GetResource(CONST.ACCOUNT_LEVEL) + 1)
-        end
+    if xp >= reqXp and bindLevel < CONST.MAX_LEVEL then
+        bindLevel = CoreMath.Round(bindLevel + 1)
+        xp = xp - reqXp
+        player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
+        player:SetResource(CONST.ACCOUNT_LEVEL, player:GetResource(CONST.ACCOUNT_LEVEL) + 1)
         SetBindLevel(player, class, bind, bindLevel)
-        AddBindXp(player, class, bind, xp)
+        SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 end
@@ -249,7 +247,6 @@ end
 function API.GetReqBindXp(player, class, bind)
     return GetReqBindXp(player, class, bind)
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
