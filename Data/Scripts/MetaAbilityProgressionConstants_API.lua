@@ -42,6 +42,15 @@ API.BIND = {
     RMB = 7
 }
 
+-- BINDING KEYS
+API.COSMETIC_BIND = {
+    Q = 1,
+    E = 2,
+    R = 3,
+    T = 4,
+    OUTFIT = 8
+}
+
 -- PROGRESS KEYS
 API.PROGRESS = {
     LEVEL = 1,
