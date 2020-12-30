@@ -15,7 +15,8 @@ API.STORAGE = {
     VERSION = 1,
     PROGRESSION = 2,
     COSMETIC = 3,
-    CURRENCY = 4
+    CURRENCY = 4,
+    EQUIPPED_COSMETIC = 5
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -67,6 +68,7 @@ API.DEFAULT_SKIN = 1
 ------------------------------------------------------------------------------------------------------------------------
 API.COSTUME_STRING = "08_Costume"
 API.PLAYER_LEVEL = "P_LEVEL"
+API.ACCOUNT_LEVEL = "A_LEVEL"
 API.CLASS_RES = "CLASS_MAP"
 API.SKIN_RES = "SKIN_MAP"
 

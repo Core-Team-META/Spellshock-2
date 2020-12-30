@@ -231,7 +231,7 @@ Objects {
 }
 Objects {
   Id: 8185669749287709458
-  Name: "META_Combat_Helper"
+  Name: "META_CombatStats_Helper"
   Transform {
     Location {
     }

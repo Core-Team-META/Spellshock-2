@@ -3,8 +3,8 @@ local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/23/2020
--- Version 0.1.5
+-- Date: 12/30/2020
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -19,9 +19,9 @@ local VFX_LIST = script:GetCustomProperty("VFX_LIST"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 local API = _G["Meta.Ability.Progression"] or {}
 _G["Meta.Ability.Progression"]["VFX"] = API
-local cosmeticTable = {}
-local cosmeticNames = {}
-local playerCosmetic = {}
+local cosmeticTable = {} -- Used for all cosmetic MUIDs
+local cosmeticNames = {} -- Table of all Cosmetic names
+local playerCosmetic = {} -- Unlocked Table Player Bars
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -163,7 +163,7 @@ end
 function API.GetCurrentCosmetic(player, bind, class)
     local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     if skinId == 0 then
-        skinId = 5
+        skinId = 1
     end
     return cosmeticTable[class][player.team][skinId][bind]
 end

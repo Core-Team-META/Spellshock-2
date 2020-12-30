@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/23/2020
--- Version 0.1.2
+-- Date: 12/30/2020
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind)
-    return 2--player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
 end
 
 --@param object player
@@ -74,7 +74,7 @@ end
 function API.GetCurrentCosmetic(player, bind, class)
     local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     if skinId == 0 then
-        skinId = 5
+        skinId = 1
     end
     return cosmeticTable[class][player.team][skinId][bind]
 end
