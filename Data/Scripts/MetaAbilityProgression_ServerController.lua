@@ -175,7 +175,7 @@ end
 function AddBindXp(player, class, bind, ammount)
     if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
         local reqXp = GetReqBindXp(player, class, bind)
-        
+        local currentBindXp = GetBindXp(player, class, bind)
         if ammount then
             currentBindXp = currentBindXp + ammount
         end
