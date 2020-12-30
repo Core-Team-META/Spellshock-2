@@ -246,7 +246,8 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	
+	local abilityData = CurrentAbilityButton.clientUserData.dataTable
+	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 end
 
 function OnConfirmChoiceClicked(thisButton)
