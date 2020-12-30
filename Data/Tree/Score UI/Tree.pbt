@@ -37,6 +37,10 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:ShowAtRoundEnd"
+          Bool: false
+        }
       }
     }
     TemplateAsset {

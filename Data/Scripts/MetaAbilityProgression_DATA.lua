@@ -55,7 +55,7 @@ classTable = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-            [1] = {mod1 = 4000, mod2 = 3000, mod3 = {min=10, max=20}, mod4 = 150000, mod5 = 1},
+            [1] = {mod1 = 4000, mod2 = 4000, mod3 = {min=30, max=50}, mod4 = 180000, mod5 = 1},
             [2] = {mod1 = 4000, mod2 = 4000, mod3 = {min=10, max=20}, mod4 = 160000, mod5 = 1},
             [3] = {mod1 = 4000, mod2 = 5000, mod3 = {min=21, max=30}, mod4 = 170000, mod5 = 1},
             [4] = {mod1 = 4000, mod2 = 6000, mod3 = {min=31, max=40}, mod4 = 180000, mod5 = 1},
@@ -69,7 +69,7 @@ classTable = {
         --Stone Wall
         [CONST.BIND.E] = {
             --mod1 = Placement Range, mod2 = Duration
-            [1] = {mod1 = 1000, mod2 = 5, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 4000, mod2 = 8, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 2000, mod2 = 6, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 3000, mod2 = 7, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 4000, mod2 = 8, mod3 = 0, mod4 = 0, mod5 = 0},
@@ -83,7 +83,7 @@ classTable = {
         --Shield Dash
         [CONST.BIND.R] = {
             -- mod1 = Ending Radius, mod2 = Enemy Impulse, mod3 = Damage Amount
-            [1] = {mod1 = 400, mod2 = 150000, mod3 = 10, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 650, mod2 = 180000, mod3 = 20, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 450, mod2 = 160000, mod3 = 20, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 500, mod2 = 170000, mod3 = 30, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 550, mod2 = 180000, mod3 = 40, mod4 = 0, mod5 = 0},
@@ -97,7 +97,7 @@ classTable = {
         --Boulder Throw 
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Lifespan, mod3 = Projectile Speed, mod4 = Projectile Scale
-            [1] = {mod1 = 50, mod2 = 5, mod3 = 2500, mod4 = 0.6, mod5 = 0},
+            [1] = {mod1 = 70, mod2 = 8, mod3 = 3000, mod4 = 1, mod5 = 0},
             [2] = {mod1 = 60, mod2 = 6, mod3 = 2600, mod4 = 0.7, mod5 = 0},
             [3] = {mod1 = 70, mod2 = 7, mod3 = 2700, mod4 = 0.8, mod5 = 0},
             [4] = {mod1 = 80, mod2 = 8, mod3 = 2800, mod4 = 0.9, mod5 = 0},
@@ -124,7 +124,7 @@ classTable = {
         --Hammer
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min=10, max=20}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = {min=30, max=50}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = {min=20, max=30}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = {min=30, max=40}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = {min=40, max=50}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
@@ -138,7 +138,7 @@ classTable = {
         --Block
         [CONST.BIND.RMB] = {
             -- mod1 = Block %
-            [1] = {mod1 = 0.04, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 0.3, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 0.08, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 0.12, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 0.16, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
@@ -155,7 +155,7 @@ classTable = {
         --Tornado
         [CONST.BIND.Q] = {
             -- mod1 = Placement Range, mod2 = Damage Amount, mod3 = Damage Radius, mod4 = Duration, mod5 = DOT
-            [1] = {mod1 = 3200, mod2 = 5, mod3 = 500, mod4 = 7, mod5 = 1},
+            [1] = {mod1 = 4000, mod2 = 20, mod3 = 500, mod4 = 8, mod5 = 5},
             [2] = {mod1 = 3400, mod2 = 6, mod3 = 500, mod4 = 7, mod5 = 1},
             [3] = {mod1 = 3600, mod2 = 6, mod3 = 500, mod4 = 8, mod5 = 2},
             [4] = {mod1 = 3800, mod2 = 8, mod3 = 500, mod4 = 8, mod5 = 2},
@@ -169,7 +169,7 @@ classTable = {
         --Animorph Potion
         [CONST.BIND.E] = {
             -- mod1 = Impact Radius, mod2 = Damage Amount, mod3 = Projectile Speed, mod4 = Projectile Gravity, mod5 = Duration
-            [1] = {mod1 = 300, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 5},
+            [1] = {mod1 = 650, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 7},
             [2] = {mod1 = 340, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 5},
             [3] = {mod1 = 380, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 6},
             [4] = {mod1 = 420, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 6},
@@ -183,7 +183,7 @@ classTable = {
         --Iceberg
         [CONST.BIND.R] = {
             -- mod1 = Damage Radius, mod2 = DOT, mod3 = Duration, mod4 = Block Percentage
-            [1] = {mod1 = 400, mod2 = 5, mod3 = 6, mod4 = 0.5, mod5 = 0.5},
+            [1] = {mod1 = 650, mod2 = 8, mod3 = 7, mod4 = 0.8, mod5 = 0.5},
             [2] = {mod1 = 450, mod2 = 6, mod3 = 6, mod4 = 0.6, mod5 = 0.5},
             [3] = {mod1 = 475, mod2 = 7, mod3 = 7, mod4 = 0.6, mod5 = 0.5},
             [4] = {mod1 = 500, mod2 = 8, mod3 = 7, mod4 = 0.7, mod5 = 0.5},
@@ -197,7 +197,7 @@ classTable = {
         --Pyroblast
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range
-            [1] = {mod1 = 10, mod2 = 450, mod3 = 5000, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 60, mod2 = 650, mod3 = 8000, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 20, mod2 = 500, mod3 = 5500, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 30, mod2 = 550, mod3 = 6000, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 40, mod2 = 600, mod3 = 6500, mod4 = 0, mod5 = 0},
@@ -224,7 +224,7 @@ classTable = {
         --Zap
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min=5, max=10}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = {min=30, max=50}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = {min=7, max=12}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = {min=9, max=14}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = {min=11, max=16}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
@@ -254,7 +254,7 @@ classTable = {
         --Rain of Arrows
         [CONST.BIND.Q] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Placement Range
-            [1] = {mod1 = 30, mod2 = 400, mod3 = 1000, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 50, mod2 = 700, mod3 = 4000, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 35, mod2 = 450, mod3 = 1500, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 40, mod2 = 500, mod3 = 2000, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 45, mod2 = 650, mod3 = 2500, mod4 = 0, mod5 = 0},
@@ -268,7 +268,7 @@ classTable = {
         --Leap
         [CONST.BIND.E] = {
             -- mod1 = lifeSpan, mod2 = Impulse Radius, mod3 = Owner Impulse, mod4 = Enemy Impulse, mod5 = Bleed Amount
-            [1] = {mod1 = 5, mod2 = 400, mod3 = 150000, mod4 = 150000, mod5 = 0},
+            [1] = {mod1 = 7, mod2 = 650, mod3 = 180000, mod4 = 180000, mod5 = 0},
             [2] = {mod1 = 5, mod2 = 400, mod3 = 160000, mod4 = 160000, mod5 = 0},
             [3] = {mod1 = 6, mod2 = 500, mod3 = 170000, mod4 = 170000, mod5 = 0},
             [4] = {mod1 = 6, mod2 = 500, mod3 = 180000, mod4 = 180000, mod5 = 0},
@@ -282,7 +282,7 @@ classTable = {
         --Bear Trap
         [CONST.BIND.R] = {
             -- mod1 = Placement Range, mod2 = Max Traps, mod3 = Damage Amount, mod4 = Bleed Amount, mod5 = Stun Duration
-            [1] = {mod1 = 1000, mod2 = 1, mod3 = 10, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 2000, mod2 = 2, mod3 = 30, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 1200, mod2 = 1, mod3 = 20, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 1300, mod2 = 1, mod3 = 30, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 1400, mod2 = 1, mod3 = 40, mod4 = 0, mod5 = 0},
@@ -296,7 +296,7 @@ classTable = {
         --Hawk
         [CONST.BIND.T] = {
             -- mod1 = Hawk Speed, mod2 = LifeSpan, mod3 = Damage Amount, mod4 = Attack Range
-            [1] = {mod1 = 800, mod2 = 8, mod3 = 10, mod4 = 800, mod5 = 0},
+            [1] = {mod1 = 1500, mod2 = 10, mod3 = 30, mod4 = 1500, mod5 = 0},
             [2] = {mod1 = 900, mod2 = 8, mod3 = 15, mod4 = 900, mod5 = 0},
             [3] = {mod1 = 1000, mod2 = 9, mod3 = 20, mod4 = 1000, mod5 = 0},
             [4] = {mod1 = 1100, mod2 = 9, mod3 = 25, mod4 = 1100, mod5 = 0},
@@ -323,7 +323,7 @@ classTable = {
         --Shoot
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min=5, max=10}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = {min=30, max=50}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = {min=7, max=12}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = {min=9, max=14}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = {min=11, max=16}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
@@ -353,7 +353,7 @@ classTable = {
         --Sun Beam
         [CONST.BIND.Q] = {
             -- mod1 = Damage Range, mod2 = Heal Range, mod3 = Projectile Speed, mod4 = Range
-            [1] = {mod1 = {min=10, max=20}, mod2 = {min=10, max=20}, mod3 = 2000, mod4 = 2000, mod5 = 0},
+            [1] = {mod1 = {min=30, max=50}, mod2 = {min=20, max=40}, mod3 = 2000, mod4 = 4000, mod5 = 0},
             [2] = {mod1 = {min=20, max=30}, mod2 = {min=20, max=30}, mod3 = 2000, mod4 = 4000, mod5 = 0},
             [3] = {mod1 = {min=30, max=40}, mod2 = {min=30, max=40}, mod3 = 2000, mod4 = 4000, mod5 = 0},
             [4] = {mod1 = {min=40, max=50}, mod2 = {min=40, max=50}, mod3 = 2000, mod4 = 4000, mod5 = 0},
@@ -367,7 +367,7 @@ classTable = {
         --Healing Crystal
         [CONST.BIND.E] = {
             -- mod1 = Heal Amount, mod2 = Duration, mod3 = Delay Between Heals, mod4 = Placement Range, mod5 = Radius
-            [1] = {mod1 = 1, mod2 = 5, mod3 = 1, mod4 = 2000, mod5 = 500},
+            [1] = {mod1 = 5, mod2 = 10, mod3 = 0.5, mod4 = 4000, mod5 = 650},
             [2] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [3] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
             [4] = {mod1 = 1, mod2 = 10, mod3 = 0.5, mod4 = 2000, mod5 = 0},
@@ -395,7 +395,7 @@ classTable = {
         --Supernova
         [CONST.BIND.T] = {
             -- mod1 = Heal Amount, mod2 = Damage Amount, mod3 = Radius, mod4 = Placement Range
-            [1] = {mod1 = 50, mod2 = 50, mod3 = 500, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
             [2] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
             [3] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
             [4] = {mod1 = 50, mod2 = 50, mod3 = 2000, mod4 = 0, mod5 = 0},
@@ -422,7 +422,7 @@ classTable = {
         },
         --Blast
         [CONST.BIND.LMB] = {
-            [1] = {mod1 = {min=5, max=10}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
+            [1] = {mod1 = {min=30, max=50}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [2] = {mod1 = {min=7, max=12}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [3] = {mod1 = {min=9, max=14}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
             [4] = {mod1 = {min=11, max=16}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0},
