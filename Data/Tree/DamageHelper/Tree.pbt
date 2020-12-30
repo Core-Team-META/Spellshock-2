@@ -19,7 +19,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowAtRoundEnd"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:RoundEndDuration"

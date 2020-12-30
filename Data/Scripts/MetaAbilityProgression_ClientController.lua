@@ -98,6 +98,14 @@ function API.ChangeBindLevel(player, class, bind, ammount)
     Events.BroadcastToServer("META_AP.ChangeBindLevel", player, class, bind, ammount)
 end
 
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+function API.BindLevelUp(player, class, bind)
+    Events.BroadcastToServer("META_AP.BindLevelUp", player, class, bind)
+end
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)

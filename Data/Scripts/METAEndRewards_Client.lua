@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/28/2020
--- Version 0.1.0
+-- Date: 12/30/2020
+-- Version 0.1.1
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -222,4 +222,4 @@ end
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward)
 
-UTIL.TablePrint(rewardAssets)
+--UTIL.TablePrint(rewardAssets)
