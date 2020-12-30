@@ -30,6 +30,7 @@ local playerProgression = {}
 
 API.NAMESPACE = CONST.NAMESPACE
 API.PLAYER_LEVEL = CONST.PLAYER_LEVEL
+API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
@@ -95,6 +96,17 @@ local function GetReqBindXp(player, class, bind)
     return costTable.reqXP, costTable.reqGold
 end
 
+--@param object player
+local function SetAccountLevel(player)
+    local accountLevel = 0
+    for class = 1, 5 do
+        for bind = 1, 7 do
+            accountLevel = accountLevel + playerProgression[player][class][bind][API.LEVEL]
+        end
+    end
+    player:SetResource(CONST.ACCOUNT_LEVEL, accountLevel)
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
@@ -148,6 +160,7 @@ function BindLevelUp(player, class, bind, xp)
             bindLevel = CoreMath.Round(bindLevel + 1)
             xp = xp - reqXp
             player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
+            player:SetResource(CONST.ACCOUNT_LEVEL, player:GetResource(CONST.ACCOUNT_LEVEL) + 1)
         end
         SetBindLevel(player, class, bind, bindLevel)
         AddBindXp(player, class, bind, xp)
@@ -207,6 +220,7 @@ function BuildBindDataTable(player, data)
             end
         end
     end
+    SetAccountLevel(player)
 end
 
 --@param object player

@@ -42,6 +42,7 @@ function OnResourceChanged(player, resName, resAmt)
             UIContainer.visibility = Visibility.FORCE_OFF
         end
     end
+    
 end
 Events.Connect("META_AP.UpdateTempUI", UpdateUI)
 --LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
