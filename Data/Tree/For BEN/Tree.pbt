@@ -7519,12 +7519,12 @@ Objects {
   }
 }
 Objects {
-  Id: 11892929425233717926
-  Name: "Elven starting point"
+  Id: 10525362245816299090
+  Name: "ClientContext"
   Transform {
     Location {
-      X: 16783.6191
-      Y: 1184.14355
+      X: -5275
+      Y: -5790
     }
     Rotation {
     }
@@ -7535,6 +7535,34 @@ Objects {
     }
   }
   ParentId: 16227534043720893935
+  ChildIds: 16950031459520665739
+  ChildIds: 11892929425233717926
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 11892929425233717926
+  Name: "Elf Class Selection"
+  Transform {
+    Location {
+      X: 22058.6191
+      Y: 6974.14355
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10525362245816299090
   ChildIds: 9047288694584916593
   ChildIds: 12220229597544669101
   ChildIds: 18067021202376013827
@@ -7543,6 +7571,20 @@ Objects {
   ChildIds: 7409096718841962070
   ChildIds: 5372752028538435387
   ChildIds: 5991830129628126109
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:AnimatedMesh"
+      ObjectReference {
+        SelfId: 18067021202376013827
+      }
+    }
+    Overrides {
+      Name: "cs:Camera"
+      ObjectReference {
+        SelfId: 3558966053684698792
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7855,9 +7897,9 @@ Objects {
   Name: "Camera"
   Transform {
     Location {
-      X: 14911.6953
-      Y: 538.309692
-      Z: 14419.2354
+      X: 14906.4453
+      Y: 530.571777
+      Z: 14410.1348
     }
     Rotation {
       Pitch: -0.788085938
@@ -7877,14 +7919,13 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Camera {
-    UseAsDefault: true
-    AttachToLocalPlayer: true
-    InitialDistance: 400
     MinDistance: 300
     MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
+      Pitch: -0.788085938
+      Yaw: 145.082123
     }
     FieldOfView: 90
     ViewWidth: 1200
@@ -14007,11 +14048,11 @@ Objects {
 }
 Objects {
   Id: 16950031459520665739
-  Name: "Orc starting point"
+  Name: "Orc Class Selection"
   Transform {
     Location {
-      X: -27333.2852
-      Y: -12765.543
+      X: -22058.2852
+      Y: -6975.54297
     }
     Rotation {
     }
@@ -14021,12 +14062,26 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16227534043720893935
+  ParentId: 10525362245816299090
   ChildIds: 14285993383837075129
   ChildIds: 13684900413712216387
   ChildIds: 4167055801794542468
   ChildIds: 4534494283641744948
   ChildIds: 4390716176174881699
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:AnimatedMesh"
+      ObjectReference {
+        SelfId: 14285993383837075129
+      }
+    }
+    Overrides {
+      Name: "cs:Camera"
+      ObjectReference {
+        SelfId: 13684900413712216387
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -14553,9 +14608,9 @@ Objects {
   Name: "Camera"
   Transform {
     Location {
-      X: 3155.58594
-      Y: 23606.7539
-      Z: 6417.13037
+      X: 3150.85742
+      Y: 23600.543
+      Z: 6405.12256
     }
     Rotation {
       Pitch: -0.118713379
@@ -14576,14 +14631,14 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Camera {
-    UseAsDefault: true
-    AttachToLocalPlayer: true
-    InitialDistance: 400
     MinDistance: 300
     MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
+      Pitch: -0.118713379
+      Yaw: 142.600159
+      Roll: 3.33506023e-09
     }
     FieldOfView: 90
     ViewWidth: 1200

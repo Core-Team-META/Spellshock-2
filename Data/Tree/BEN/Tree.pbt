@@ -1,6 +1,33 @@
 ﻿Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 12481345003269002044
+  Name: "ClassSelectionServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1585716437870996774
+    }
+  }
+}
+Objects {
   Id: 9068468455938458046
   Name: "UI Menus"
   Transform {
@@ -1653,7 +1680,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -1877,7 +1904,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2101,7 +2128,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -2806,7 +2833,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3030,7 +3057,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
@@ -3254,7 +3281,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:TemplateToSpawn"
