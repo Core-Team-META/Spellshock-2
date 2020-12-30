@@ -110,7 +110,7 @@ function Int()
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
     cosmeticNames = UTIL.BuildOutfitNameTable(VFX_LIST)
-    UTIL.TablePrint(cosmeticTable)
+    --UTIL.TablePrint(cosmeticTable)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

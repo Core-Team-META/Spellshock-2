@@ -42,7 +42,10 @@ local function AddDefaultCosmetics(player)
     for c = 1, 5 do
         for t = 1, 2 do
             for s = 1, 20 do
-                for b = 1, 4 do
+                for b = 1, 5 do -- Costume Not saving with 4
+                    if b == 5 then
+                        b = 8 -- Used for costume ID 
+                    end
                     _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
                 end
             end
@@ -97,7 +100,6 @@ local function OnSaveCostumeData(player, data)
     data[CONST.STORAGE.COSMETIC] = next(playerCosmetics) ~= nil and UTIL.CosmeticConvertToString(playerCosmetics) or ""
 end
 
---#TODO REMOVE TESTING FOR LOOPS
 --@param object player
 --@param table data
 local function OnLoadCurrencyData(player, data)
@@ -110,8 +112,8 @@ local function OnLoadCurrencyData(player, data)
             end
         end
     else
-        for k, name in ipairs(CONST.CURRENCY) do
-            player:SetResource(name, 0)
+        for k, name in ipairs(CONST.CURRENCY) do 
+            player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
             warn(tostring(player:GetResource(name)))
         end
     end
@@ -151,6 +153,7 @@ local function OnPlayerLeft(player)
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
+    --#TODO create OnSaveEquippedCosmetic(player, data)
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
     Storage.SetPlayerData(player, data)
 

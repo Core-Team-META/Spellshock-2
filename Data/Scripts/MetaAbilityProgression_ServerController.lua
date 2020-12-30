@@ -152,9 +152,10 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
-function BindLevelUp(player, class, bind, xp)
+function BindLevelUp(player, class, bind)
     local bindLevel = GetBindLevel(player, class, bind)
     local reqXp = GetReqBindXp(player, class, bind)
+    local xp = GetBindXp(player, class, bind)
     if bindLevel < CONST.MAX_LEVEL then
         if bindLevel < CONST.MAX_LEVEL then
             bindLevel = CoreMath.Round(bindLevel + 1)
@@ -174,15 +175,11 @@ end
 function AddBindXp(player, class, bind, ammount)
     if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
         local reqXp = GetReqBindXp(player, class, bind)
-        local currentBindXp = GetBindXp(player, class, bind)
+        
         if ammount then
             currentBindXp = currentBindXp + ammount
         end
-        if currentBindXp >= reqXp then
-            BindLevelUp(player, class, bind, currentBindXp)
-        else
-            SetBindXp(player, class, bind, currentBindXp)
-        end
+        SetBindXp(player, class, bind, currentBindXp)
     end
 end
 
@@ -253,6 +250,14 @@ function API.GetReqBindXp(player, class, bind)
     return GetReqBindXp(player, class, bind)
 end
 
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+function API.BindLevelUp(player, class, bind)
+    BindLevelUp(player, class, bind)
+end
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.ChangeClass(player, class)
@@ -297,6 +302,8 @@ end
 -- Listeners
 ------------------------------------------------------------------------------------------------------------------------
 Events.Connect("META_AP.AddBindXp", AddBindXp)
+Events.Connect("META_AP.BindLevelUp", BindLevelUp)
+
 if DEBUG then
     Events.Connect("META_AP.ChangeBindLevel", ForceBindLevelUp)
     Events.Connect("META_AP.CBLMM", ForceBindChangeLevel)

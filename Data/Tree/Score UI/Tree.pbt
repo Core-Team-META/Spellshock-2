@@ -37,6 +37,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:Binding"
+          String: ""
+        }
+        Overrides {
+          Name: "cs:ShowAtRoundEnd"
+          Bool: false
+        }
       }
     }
     TemplateAsset {
