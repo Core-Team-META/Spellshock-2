@@ -59,6 +59,24 @@ Objects {
         SelfId: 4542412189343657266
       }
     }
+    Overrides {
+      Name: "cs:2__3_TOP_CENTER"
+      ObjectReference {
+        SelfId: 18072466856326533855
+      }
+    }
+    Overrides {
+      Name: "cs:ACTIVE_TEAM_NAME"
+      ObjectReference {
+        SelfId: 18268824057741244832
+      }
+    }
+    Overrides {
+      Name: "cs:MATCH_TIME"
+      ObjectReference {
+        SelfId: 17541211918243665553
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

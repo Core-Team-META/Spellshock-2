@@ -206,6 +206,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1250518445608309889
+  Name: "Warp"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_018"
+  }
+}
+Assets {
   Id: 1046635934407451220
   Name: "Fantasy Craft Crystal 018"
   PlatformAssetType: 9
