@@ -1,14 +1,15 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/30/2020
--- Version 0.1.5
+-- Date: 12/31/2020
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local DATA = require(script:GetCustomProperty("DATA"))
+local COST_TABLE = require(script:GetCustomProperty("MetaAbilityProgressionUpgradeCosts_DATA"))
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
@@ -44,17 +45,24 @@ for progress, key in pairs(CONST.PROGRESS) do
     API[progress] = key
 end
 
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return int reqXP, int reqGold
+local function GetReqCurrency(player, class, bind)
+    local currentLevel = player:SetResource(UTIL.GetLevelString(class, bind))
+    local costTable = COST_TABLE[currentLevel]
+    return costTable.reqXP, costTable.reqGold
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- PUBLIC CLIENT API
 ------------------------------------------------------------------------------------------------------------------------
-
---#TODO What is this?
---@param object player
---@param string BindName (API.STR, API.DEX, API.CON, API.INT, etc)
-function API.GetBindReqXp(player, BindName)
-    --local requiredXp, requiredXpScale, xp = BindS.FindXpByBindName(BindName)
-    --return BindS.Calculate(requiredXpScale, player:GetResource(BindName), requiredXp)
-end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
@@ -122,6 +130,16 @@ function API.GetBindMods(player, class, bind, plus)
     end
     return modTable[class][bind][bindLevel]
 end
+
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int bind => id of bind (API.Q, API.E)
+--@return int reqXP, int reqGold
+function API.GetReqCurrency(player, class, bind)
+    return GetReqCurrency(player, class, bind)
+end
+
 
 --@param object player
 --@param int class
