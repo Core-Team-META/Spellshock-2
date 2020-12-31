@@ -9,13 +9,16 @@
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
-local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
+local TOP_CENTER = script:GetCustomProperty("2__3_TOP_CENTER"):WaitForObject()
+local ACTIVE_TEAM_NAME = script:GetCustomProperty("ACTIVE_TEAM_NAME"):WaitForObject()
+local MATCH_TIME = script:GetCustomProperty("MATCH_TIME"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- UI OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -27,7 +30,7 @@ local playerRewards = {}
 local listeners = {}
 local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
-REWARD_PARENT_UI.isEnabled = false
+local roundTime = 0
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -55,9 +58,22 @@ local function ToggleUI(isTrue)
     UI.SetCanCursorInteractWithUI(isTrue)
     UI.SetCursorLockedToViewport(isTrue)
     if isTrue then
-        REWARD_PARENT_UI.isEnabled = true
+        REWARD_PARENT_UI.visibility = Visibility.FORCE_ON
+        TOP_CENTER.visibility = Visibility.FORCE_ON
+        local teamName
+        if LOCAL_PLAYER.team == 1 then
+            teamName = "Dark Devout"
+        elseif LOCAL_PLAYER.team == 2 then
+            teamName = "Legion of Light"
+        end
+        local minutes = math.floor(roundTime) // 60 % 60
+        local seconds = math.floor(roundTime) % 60
+        MATCH_TIME.text = "MATCH TIME: " .. string.format("%02d:%02d", minutes, seconds)
+        ACTIVE_TEAM_NAME.text = teamName
+        ACTIVE_TEAM_NAME:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
     else
-        REWARD_PARENT_UI.isEnabled = false
+        REWARD_PARENT_UI.visibility = Visibility.FORCE_OFF
+        TOP_CENTER.visibility = Visibility.FORCE_OFF
     end
 end
 
@@ -113,11 +129,10 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 else
                     if id == 2 then
                         RARITY_SHINE:SetColor(Color.New(0.713907, 0.77, 0, 0.615686))
-                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD) 
+                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
                     elseif id == 3 then
                         RARITY_SHINE:SetColor(Color.New(0, 0.793907, 0.81, 0.615686))
                         currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
-                        
                     end
                     infoTable = rewardAssets[id][bind]
                 end
@@ -136,8 +151,11 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 ICON_SHADOW:SetImage(infoTable.Image)
                 ITEMNAME.text = infoTable.Name
                 ITEMNAME2.text = infoTable.Name
-                REWARD_AMOUNT.text =  "REWARD: " .. string.format("%d", reward):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-                REWARD_OWNED.text = "OWNED: " .. string.format("%d", currentAmmount):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
+                REWARD_AMOUNT.text =
+                    "REWARD: " .. string.format("%d", reward):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+                REWARD_OWNED.text =
+                    "OWNED: " ..
+                    string.format("%d", currentAmmount):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
                 Button.clientUserData.id = slotId
                 if #listeners < 3 then
                     listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
@@ -203,7 +221,9 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(button)
-    if not isAllowed(1) then return end
+    if not isAllowed(1) then
+        return
+    end
     local result, message
     repeat
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
@@ -222,6 +242,22 @@ function OnRewardsChanged(object, string)
     end
 end
 
+function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
+    --[[
+    API.GAME_STATE_LOBBY = 0
+API.GAME_STATE_ROUND = 1
+API.GAME_STATE_ROUND_END = 2
+API.GAME_STATE_PLAYER_SHOWCASE = 3
+API.GAME_STATE_REWARDS = 4
+]]
+    if ABGS.GAME_STATE_ROUND == newState then
+        roundTime = time()
+    end
+    if ABGS.GAME_STATE_ROUND_END == newState then
+        roundTime = time() - roundTime
+    end
+end
+
 --#TODO TEMP FUNCTIONS
 function OnTriggerReward(player, keybind)
     if keybind == "ability_extra_63" then
@@ -234,5 +270,5 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward)
-
+Events.Connect("GameStateChanged", OnGameStateChanged)
 --UTIL.TablePrint(rewardAssets)
