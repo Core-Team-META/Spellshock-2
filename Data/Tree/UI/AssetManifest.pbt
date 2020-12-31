@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 18306033672834061437
+  Name: "Fantasy Craft Crystal 043"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Crystal_043"
+  }
+}
+Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
@@ -62,12 +71,39 @@ Assets {
   }
 }
 Assets {
+  Id: 11478889498718573073
+  Name: "Fantasy Crown 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Crown_001"
+  }
+}
+Assets {
+  Id: 10259004366553198523
+  Name: "Grave"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_icon_Grave"
+  }
+}
+Assets {
   Id: 9614194847790393795
   Name: "Fantasy Chain 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Chain_001"
+  }
+}
+Assets {
+  Id: 9384520849142346961
+  Name: "Icon Death"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Death"
   }
 }
 Assets {
@@ -86,6 +122,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_001"
+  }
+}
+Assets {
+  Id: 7999341358091324120
+  Name: "Fantasy Ability Blue 039"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_039"
   }
 }
 Assets {
@@ -221,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_018"
+  }
+}
+Assets {
+  Id: 289887178010430423
+  Name: "Flag Pole"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_038"
   }
 }
 Assets {
