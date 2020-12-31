@@ -22,6 +22,10 @@ API.NAMESPACE = CONST.NAMESPACE
 API.PLAYER_LEVEL = CONST.PLAYER_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
+-- Currency Resource Names
+API.GOLD_RES = CONST.GOLD
+API.COSMETIC_TOKEN_RES = CONST.COSMETIC_TOKEN
+
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
 for class, key in pairs(CONST.CLASS) do

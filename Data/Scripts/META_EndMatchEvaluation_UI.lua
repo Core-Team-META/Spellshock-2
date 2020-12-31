@@ -167,20 +167,35 @@ local function BuildRoundEndStats()
     if not IsEnoughPlayers(players) then
         return
     end
+    -- Most Deaths
     table.sort(players, ComparePlayerDeaths)
     BuildStats(players, MOST_DEATHS)
+
+    -- Most Kills
     table.sort(players, ComparePlayerKills)
     BuildStats(players, MOST_KILLS)
+
+    -- Most Damage
     table.sort(players, ComparePlayerDamage)
     BuildStats(players, MOST_DAMAGE)
+
+    -- Most Healing
     table.sort(players, ComparePlayerHealing)
     BuildStats(players, HEALING_GIVEN)
+
+    -- Most Kill Streak
     table.sort(players, ComparePlayerKillStreak)
     BuildStats(players, KILLSTREAK)
+
+    -- Most Ultimate Kills
     table.sort(players, ComparePlayerUltimate)
     BuildStats(players, ULTIMATE_KILLS)
+
+    -- Most Total Captures
     table.sort(players, ComparePlayerTotalCaptures)
     BuildStats(players, MOST_CAPPED)
+
+    -- MVP
     table.sort(players, ComparePlayersForMVP)
     MVP_PLAYER_NAME.text = players[1].name
     MVP_PLAYER_NAME:SetColor(_G.TeamColors[players[1].team])
