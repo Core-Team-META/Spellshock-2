@@ -20702,7 +20702,7 @@ Objects {
         }
         Overrides {
           Name: "cs:TeamScoreLimit"
-          Int: 500
+          Int: 5
         }
         Overrides {
           Name: "Scale"

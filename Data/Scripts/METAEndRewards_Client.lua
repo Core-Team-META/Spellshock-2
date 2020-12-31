@@ -3,7 +3,7 @@
 -- Meta End Rewards Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/30/2020
--- Version 0.1.1
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -100,34 +100,47 @@ end
 --@param int reward
 local function BuildSlotInfo(slot, id, class, bind, reward)
     for _, panel in ipairs(REWARD_PARENT_UI:GetChildren()) do
-        if panel.name ~= "Background" then
+        if panel.name ~= "BG" and panel.name ~= "TITLE" and panel.name ~= "RewardSlot3-Loss" then
             local slotId = panel:GetCustomProperty("SLOT")
             local infoTable = nil
+            local currentAmmount = nil
             if slotId and slotId == slot then
+                local RARITY_SHINE = panel:GetCustomProperty("RARITY_SHINE"):WaitForObject()
                 if id == 1 then
+                    RARITY_SHINE:SetColor(Color.New(0.361307, 0, 0.806952, 0.615686))
                     infoTable = rewardAssets[id][class][bind]
+                    currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
                 else
+                    if id == 2 then
+                        RARITY_SHINE:SetColor(Color.New(0.713907, 0.77, 0, 0.615686))
+                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD) 
+                    elseif id == 3 then
+                        RARITY_SHINE:SetColor(Color.New(0, 0.793907, 0.81, 0.615686))
+                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
+                        
+                    end
                     infoTable = rewardAssets[id][bind]
                 end
-                for _, child in ipairs(panel:GetChildren()) do
-                    print(child.name)
-                    if child.name == "REWARD" then
-                        for _, object in ipairs(child:GetChildren()) do
-                            if object.name == "REWARD IMAGE" then
-                                object:SetImage(infoTable.Image)
-                            elseif object.name == "REWARD TEXT" then
-                                object.text = infoTable.Name
-                            elseif object.name == "QUANTITY TEXT" then
-                                object.text = tostring(reward)
-                            end
-                        end
-                    end
-                    if child.name == "CollectButton" then
-                        child.clientUserData.id = slotId
-                        if #listeners < 3 then
-                        listeners[#listeners + 1] = child.clickedEvent:Connect(OnRewardSelected)
-                        end
-                    end
+
+                local Button = panel:GetCustomProperty("UIButton"):WaitForObject()
+                local ICON = panel:GetCustomProperty("ICON"):WaitForObject()
+                local ICON_SHADOW = panel:GetCustomProperty("ICON_SHADOW"):WaitForObject()
+                local ITEMNAME = panel:GetCustomProperty("ITEMNAME"):WaitForObject()
+                local ITEMNAME2 = panel:GetCustomProperty("ITEMNAME2"):WaitForObject()
+                local REWARD_OWNED = panel:GetCustomProperty("REWARD_OWNED"):WaitForObject()
+                local REWARD_AMOUNT = panel:GetCustomProperty("REWARD_AMOUNT"):WaitForObject()
+                local ITEM_DESCRIPTION = panel:GetCustomProperty("ITEM_DESCRIPTION"):WaitForObject()
+                local ITEM_DESCRIPTION2 = panel:GetCustomProperty("ITEM_DESCRIPTION2"):WaitForObject()
+
+                ICON:SetImage(infoTable.Image)
+                ICON_SHADOW:SetImage(infoTable.Image)
+                ITEMNAME.text = infoTable.Name
+                ITEMNAME2.text = infoTable.Name
+                REWARD_AMOUNT.text =  "REWARD: " .. string.format("%d", reward):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
+                REWARD_OWNED.text = "OWNED: " .. string.format("%d", currentAmmount):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
+                Button.clientUserData.id = slotId
+                if #listeners < 3 then
+                    listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
                 end
             end
         end
@@ -166,15 +179,14 @@ local function BuildRewardSlots(tbl)
                 bind, reward = GetCosmeticInfo(value)
             end
         end
-        BuildSlotInfo(slot, id, class, bind, reward)
         if slot == 3 then
             ThirdSlotEnabled(true)
         end
+        BuildSlotInfo(slot, id, class, bind, reward)
     end
 end
 
 -- d1073dbcc404405cbef8ce728e53d380^1~15=17^2~G=934
-
 --@param table tbl -- playerRewards from networked property
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
@@ -191,13 +203,14 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(button)
+    if not isAllowed(1) then return end
     local result, message
     repeat
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
-        Task.Wait(0.1)
+        Task.Wait(0.3)
     until result == BroadcastEventResultCode.SUCCESS
 
-   --DisconnectListeners()
+    --DisconnectListeners()
     Task.Wait()
     ToggleUI(false)
 end

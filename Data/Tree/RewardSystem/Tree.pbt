@@ -56,7 +56,7 @@ Objects {
     Overrides {
       Name: "cs:RoundEndRewardUI"
       ObjectReference {
-        SelfId: 11379000256257509839
+        SelfId: 4542412189343657266
       }
     }
   }

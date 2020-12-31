@@ -1497,7 +1497,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "UI"
+    FilePartitionName: "UI_1"
   }
 }
 Objects {
