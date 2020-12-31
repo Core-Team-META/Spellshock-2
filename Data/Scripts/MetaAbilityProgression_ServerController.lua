@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/29/2020
--- Version 0.1.3
+-- Date: 12/31/2020
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
-local function GetReqBindXp(player, class, bind)
+local function GetReqCurrency(player, class, bind)
     local currentLevel = GetBindLevel(player, class, bind)
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
@@ -152,19 +152,21 @@ if DEBUG then
     end
 end
 
---##FIXME Should not auto level up on shard gain
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function BindLevelUp(player, class, bind)
     local bindLevel = GetBindLevel(player, class, bind)
-    local reqXp = GetReqBindXp(player, class, bind)
+    local reqXp, reqGold = GetReqCurrency(player, class, bind)
+    local currentGold = player:GetResource(CONST.GOLD)
     local xp = GetBindXp(player, class, bind)
-    if xp >= reqXp and bindLevel < CONST.MAX_LEVEL then
+    if xp >= reqXp and currentGold >= reqGold and bindLevel < CONST.MAX_LEVEL then
         bindLevel = CoreMath.Round(bindLevel + 1)
         xp = xp - reqXp
+        currentGold = currentGold - reqGold
         player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
         player:SetResource(CONST.ACCOUNT_LEVEL, player:GetResource(CONST.ACCOUNT_LEVEL) + 1)
+        player:SetResource(CONST.GOLD, currentGold)
         SetBindLevel(player, class, bind, bindLevel)
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
@@ -176,7 +178,7 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 function AddBindXp(player, class, bind, ammount)
     if GetBindLevel(player, class, bind) < CONST.MAX_LEVEL then
-        local reqXp = GetReqBindXp(player, class, bind)
+        local reqXp = GetReqCurrency(player, class, bind)
         local currentBindXp = GetBindXp(player, class, bind)
         if ammount then
             currentBindXp = currentBindXp + ammount
@@ -248,8 +250,8 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
-function API.GetReqBindXp(player, class, bind)
-    return GetReqBindXp(player, class, bind)
+function API.GetReqCurrency(player, class, bind)
+    return GetReqCurrency(player, class, bind)
 end
 
 --@param object player
