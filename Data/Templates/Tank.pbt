@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
-              Id: 6482451050534705929
+              Id: 12880357743881602078
             }
           }
           Overrides {
@@ -1983,7 +1983,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2480,12 +2479,12 @@
       }
     }
     Assets {
-      Id: 6482451050534705929
-      Name: "Fantasy Ability Yellow 020"
+      Id: 12880357743881602078
+      Name: "Fantasy Ability Red 008"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_021"
+        AssetId: "UI_Fantasy_Ability_Red_008"
       }
     }
     Assets {

@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17620327046583338598
-  Name: "Sci-fi Ability Blue 031"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Ability_Blue_031"
-  }
-}
-Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -41,6 +32,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterArrow_005Wedge"
+  }
+}
+Assets {
+  Id: 16653840566016141598
+  Name: "Outfit Selection Core 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfxui_outfit_selection_01_Cue"
   }
 }
 Assets {
@@ -77,6 +77,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_003"
+  }
+}
+Assets {
+  Id: 14263710291750082864
+  Name: "Player Selection Core 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfxui_playerselection_core_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 14165644718560975210
+  Name: "Metal Armor Hit Impact Klang 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_metal_armor_hit_impact_klang_01_Cue_ref"
   }
 }
 Assets {
@@ -161,12 +179,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10392517578151200132
-  Name: "Fantasy Ability Blue 003"
+  Id: 9722663739032956639
+  Name: "Fantasy Coins 004"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_003"
+    AssetId: "UI_Fantasy_Equip_Coins_004"
   }
 }
 Assets {
@@ -215,12 +233,12 @@ Assets {
   }
 }
 Assets {
-  Id: 6990601500245861752
-  Name: "Sci-fi Ability Blue 030"
-  PlatformAssetType: 9
+  Id: 7246944659171041392
+  Name: "Shine Star Shimmer 01 SFX"
+  PlatformAssetType: 7
   PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Ability_Blue_030"
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_shine_star_shimmer_01_Cue_ref"
   }
 }
 Assets {
@@ -251,6 +269,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6116686186261477025
+  Name: "Gear Movement Cloth Fast 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_gear_movement_cloth_fast_01a_Cue_ref"
+  }
+}
+Assets {
   Id: 6053609717602983556
   Name: "BG Highlighted 011"
   PlatformAssetType: 9
@@ -266,6 +293,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
+  }
+}
+Assets {
+  Id: 4722208266744308418
+  Name: "Button Click Press Core 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfxui_click_press_core_01_Cue_ref"
   }
 }
 Assets {
@@ -323,15 +359,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2791845266855844444
-  Name: "Fantasy Corners 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Corners_004"
-  }
-}
-Assets {
   Id: 2764905514123890102
   Name: "Frame Outlined 001"
   PlatformAssetType: 9
@@ -368,12 +395,30 @@ Assets {
   }
 }
 Assets {
+  Id: 1316376324599490360
+  Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
+  }
+}
+Assets {
   Id: 1046635934407451220
   Name: "Fantasy Craft Crystal 018"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_018"
+  }
+}
+Assets {
+  Id: 980347467960366271
+  Name: "Button Hover Core 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfxui_hoverselect_core_02_Cue_ref"
   }
 }
 Assets {

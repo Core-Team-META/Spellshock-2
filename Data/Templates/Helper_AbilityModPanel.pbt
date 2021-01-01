@@ -108,9 +108,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 89
+          Width: 80
           Height: 556
-          UIY: -2.35742188
           RotationAngle: 90
           RenderTransformPivot {
             Anchor {
@@ -460,8 +459,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 60
-          Height: 60
+          Width: 55
+          Height: 55
           UIX: 25
           RenderTransformPivot {
             Anchor {
@@ -1089,7 +1088,7 @@
           Width: 1
           Height: 546
           UIX: 273.133789
-          UIY: 72.3674316
+          UIY: 71.5
           RotationAngle: 90
           RenderTransformPivot {
             Anchor {

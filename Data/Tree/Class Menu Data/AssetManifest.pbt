@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 18132479792113096322
+  Name: "Fantasy Ability Purple 032"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_032"
+  }
+}
+Assets {
   Id: 17941246008685149891
   Name: "Fantasy Ability Green 033"
   PlatformAssetType: 9
@@ -44,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17558830247768350468
+  Name: "Fantasy Ability Yellow 017"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_017"
+  }
+}
+Assets {
   Id: 17370828256945431127
   Name: "Fantasy Ability Yellow 026"
   PlatformAssetType: 9
@@ -53,12 +71,39 @@ Assets {
   }
 }
 Assets {
+  Id: 17365393624783698083
+  Name: "Fantasy Ability Yellow 014"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_014"
+  }
+}
+Assets {
   Id: 17014020883779663477
   Name: "Fantasy Ability Yellow 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_003"
+  }
+}
+Assets {
+  Id: 16966846675307380101
+  Name: "Fantasy Ability Purple 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_010"
+  }
+}
+Assets {
+  Id: 16142220198662695164
+  Name: "Fantasy Ability Teal 026"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_026"
   }
 }
 Assets {
@@ -80,6 +125,24 @@ Assets {
   }
 }
 Assets {
+  Id: 14065417185628223733
+  Name: "Fantasy Ability Yellow 030"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_030"
+  }
+}
+Assets {
+  Id: 13468123306975365733
+  Name: "Fantasy Ability Yellow 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_002"
+  }
+}
+Assets {
   Id: 13298271364458101774
   Name: "Fantasy Ability Teal 005"
   PlatformAssetType: 9
@@ -98,12 +161,39 @@ Assets {
   }
 }
 Assets {
+  Id: 12880357743881602078
+  Name: "Fantasy Ability Red 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_008"
+  }
+}
+Assets {
+  Id: 12302547594047116782
+  Name: "Fantasy Ability Purple 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_021"
+  }
+}
+Assets {
   Id: 12289747022974899819
   Name: "Fantasy Shield 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Weapon_Shield_003"
+  }
+}
+Assets {
+  Id: 11777958130908294853
+  Name: "Fantasy Ability Yellow 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_001"
   }
 }
 Assets {
@@ -116,12 +206,30 @@ Assets {
   }
 }
 Assets {
+  Id: 10192819447049905622
+  Name: "Fantasy Dagger 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Dagger_003"
+  }
+}
+Assets {
   Id: 8975273285240916744
   Name: "Fantasy Ability Yellow 004"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_004"
+  }
+}
+Assets {
+  Id: 8854358530398708523
+  Name: "Fantasy Ability Green 019"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Green_019"
   }
 }
 Assets {
@@ -152,12 +260,39 @@ Assets {
   }
 }
 Assets {
-  Id: 6482451050534705929
-  Name: "Fantasy Ability Yellow 020"
+  Id: 8134115028302896138
+  Name: "Icon Clock"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_021"
+    AssetId: "Icon_Clock"
+  }
+}
+Assets {
+  Id: 7408361315371782589
+  Name: "Fantasy Ability Yellow 025"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_025"
+  }
+}
+Assets {
+  Id: 6990601500245861752
+  Name: "Sci-fi Ability Blue 030"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Blue_030"
+  }
+}
+Assets {
+  Id: 6375726263607251280
+  Name: "Fantasy Ability Green 043"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Green_043"
   }
 }
 Assets {
@@ -197,6 +332,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3735462350312685832
+  Name: "Fantasy Ability Yellow 029"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_029"
+  }
+}
+Assets {
   Id: 3369441422951943214
   Name: "Fantasy Ability Yellow 033"
   PlatformAssetType: 9
@@ -212,6 +356,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Target"
+  }
+}
+Assets {
+  Id: 2813404828707589716
+  Name: "Fantasy Ability Blue 031"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_031"
   }
 }
 Assets {
@@ -275,5 +428,14 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Teal_004"
+  }
+}
+Assets {
+  Id: 606548452417380641
+  Name: "Fantasy Ability Red 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_002"
   }
 }

@@ -81,7 +81,7 @@ function SetGameState(newState)
 		stateDuration = 8
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 8
+		stateDuration = 10
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -100,14 +100,14 @@ function SetGameState(newState)
 		Game.EndRound()
 	end
 
-	-- Broadcast basic game state event
-	Events.Broadcast("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
-	Events.BroadcastToAllPlayers("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
-
 	-- Set replicator fields
 	script:SetNetworkedCustomProperty("State", newState)
 	script:SetNetworkedCustomProperty("StateHasDuration", stateHasduration)
 	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)
+
+	-- Broadcast basic game state event
+	Events.Broadcast("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
+	Events.BroadcastToAllPlayers("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
 end
 
 -- nil SetTimeRemainingInState(float)

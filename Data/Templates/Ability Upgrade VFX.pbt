@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 10796082430733460517
-  Name: "Level_Up"
+  Name: "Ability Upgrade VFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 13085712738003347847
       Objects {
         Id: 13085712738003347847
-        Name: "Level_Up"
+        Name: "Ability Upgrade VFX"
         Transform {
           Scale {
             X: 1
@@ -21,6 +21,7 @@
         ChildIds: 13968772387739111867
         ChildIds: 1650165062254679165
         ChildIds: 17220736952658851063
+        Lifespan: 3
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
