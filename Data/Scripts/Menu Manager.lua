@@ -19,7 +19,8 @@ function OnGameStateChanged (oldState, newState)
 end
 
 function OnBindingPressed(whichPlayer, binding)
-	if (binding == "ability_extra_50") and time()-previousBindingTime > BindingDelay then --F1
+	local CurrentGameState = ABGS.GetGameState()
+	if CurrentGameState == ABGS.GAME_STATE_LOBBY and (binding == "ability_extra_50") and time()-previousBindingTime > BindingDelay then --F1
 		print(">> CLASS SELECTION MENU")
 		previousBindingTime = time()
 		local newState = _G.MENU_TABLE["ClassSelection"] 

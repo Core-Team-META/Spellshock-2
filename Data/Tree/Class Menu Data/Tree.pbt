@@ -1,6 +1,1926 @@
 ﻿Name: "Class Menu Data"
 RootId: 14151859424388630810
 Objects {
+  Id: 12124708511639495803
+  Name: "Healer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14151859424388630810
+  ChildIds: 6603056763990519431
+  ChildIds: 16235204025351921921
+  ChildIds: 7866126941647045844
+  ChildIds: 11279935537839204400
+  ChildIds: 14339626899672504924
+  ChildIds: 16964737736516394105
+  ChildIds: 4958990320919939419
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 2813404828707589716
+      }
+    }
+    Overrides {
+      Name: "cs:Skillset"
+      String: "Skillset goes here"
+    }
+    Overrides {
+      Name: "cs:ClassID"
+      String: "HEALER"
+    }
+    Overrides {
+      Name: "cs:OrcDescription"
+      String: "\342\200\234The desert sun is relentless and unforgiving, healer. You have been chosen to wield this light; heal our allies and burn our foes.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:ElfDescription"
+      String: "\342\200\234To wield the power of the sun is a great responsibility, healer. You are a vessel of pure light; reach out and dispel the darkness.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:AM_Stance"
+      String: "2hand_staff_idle_relaxed"
+    }
+    Overrides {
+      Name: "cs:AM_Animation"
+      String: "2hand_staff_magic_up"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4958990320919939419
+  Name: "Aim"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 3134265528574068078
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Coming Soon"
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "RMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16964737736516394105
+  Name: "Staff"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 11849857975967017671
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 11777958130908294853
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a concentrated orb of solar fire that damages enemies."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11849857975967017671
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16964737736516394105
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14339626899672504924
+  Name: "Teleport"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 4896055284479103675
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 7408361315371782589
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "SHIFT"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4896055284479103675
+  Name: "Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14339626899672504924
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The farthest distance you can teleport"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10392517578151200132
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11279935537839204400
+  Name: "Supernova"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 18362008314686307681
+  ChildIds: 1360347109686458122
+  ChildIds: 17108055071189208160
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13468123306975365733
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press T to charge up a powerful explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are stunned."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17108055071189208160
+  Name: "Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the effect area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 1360347109686458122
+  Name: "Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of damage applied to enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18362008314686307681
+  Name: "Heal Amount"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of healing applied to allies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7866126941647045844
+  Name: "Divine Light"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 1315606167183961674
+  ChildIds: 2368931382467744602
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 3735462350312685832
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press R to release a wave of solar wind that pushes enemies away, briefly stunning them."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2368931382467744602
+  Name: "Impulse Amount"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7866126941647045844
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of impulse applied to enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 626394604982656881
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 1315606167183961674
+  Name: "Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7866126941647045844
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the effect area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16235204025351921921
+  Name: "Healing Crystal"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 1507681565660438466
+  ChildIds: 3120514432720301169
+  ChildIds: 16177311068279106477
+  ChildIds: 12362116761555344674
+  ChildIds: 451794062987978635
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17365393624783698083
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Placement \342\200\223 Press E to preview and LMB to summon a crystal imbued with sunlight, healing allies and damaging enemies in its radius."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 451794062987978635
+  Name: "Placement Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16235204025351921921
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How far the wall can be placed"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10392517578151200132
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12362116761555344674
+  Name: "Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16235204025351921921
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the effect area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16177311068279106477
+  Name: "Duration"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16235204025351921921
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long the crystal will last before disappearing"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3120514432720301169
+  Name: "Heal Frequency"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16235204025351921921
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The time between heals"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 6990601500245861752
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 1507681565660438466
+  Name: "Heal Amount"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16235204025351921921
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of healing applied to allies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6603056763990519431
+  Name: "Sun Beam"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 12761103757713680055
+  ChildIds: 7770550853757671688
+  ChildIds: 12638170253327895416
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17558830247768350468
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press Q to cast a beam of solar energy forward, damaging enemies caught in its path."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12638170253327895416
+  Name: "Beam Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6603056763990519431
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How far the beam will travel"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10392517578151200132
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7770550853757671688
+  Name: "Heal Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6603056763990519431
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible healing that will be applied to allies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12761103757713680055
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6603056763990519431
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 837517277244744736
+  Name: "Assassin"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14151859424388630810
+  ChildIds: 15882469756563991493
+  ChildIds: 78469244364511293
+  ChildIds: 7146157638163724227
+  ChildIds: 17507077983078006761
+  ChildIds: 10663133334451742732
+  ChildIds: 16496804219486441168
+  ChildIds: 14034572719115853383
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 12302547594047116782
+      }
+    }
+    Overrides {
+      Name: "cs:Skillset"
+      String: "Skillset goes here"
+    }
+    Overrides {
+      Name: "cs:ClassID"
+      String: "ASSASSIN"
+    }
+    Overrides {
+      Name: "cs:OrcDescription"
+      String: "\342\200\234The sand dunes play tricks on even the sharpest mind, assassin. You are a master of deception; destroy your enemies before they realize you\342\200\231re there.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:ElfDescription"
+      String: "\342\200\234The universe in held in balance by a thousand threads, assassin. You are a swift blade; eliminate the unworthy and restore balance.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:AM_Stance"
+      String: "unarmed_idle_ready"
+    }
+    Overrides {
+      Name: "cs:AM_Animation"
+      String: "unarmed_punch_right"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14034572719115853383
+  Name: "Coming Soon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8134115028302896138
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Coming Soon"
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "RMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16496804219486441168
+  Name: "Dagger"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  ChildIds: 11934659969873097983
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10192819447049905622
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Melee Weapon \342\200\223 Press LMB to attack nearby enemies with quick, precise strikes."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11934659969873097983
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16496804219486441168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 10663133334451742732
+  Name: "Roll"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8277485499354448455
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press SHIFT to perform an evasive dodge roll in the direction you\342\200\231re moving."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "SHIFT"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17507077983078006761
+  Name: "Wraith Strike"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  ChildIds: 8380954081570957251
+  ChildIds: 15339289212531332482
+  ChildIds: 13816951105555564383
+  ChildIds: 2770197239029822294
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 16142220198662695164
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2770197239029822294
+  Name: "Flying Duration"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long you will remain in the air before you strike"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 16966846675307380101
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 13816951105555564383
+  Name: "Targeting Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The farthest distance you can target"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10392517578151200132
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15339289212531332482
+  Name: "Damage Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the damage area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8380954081570957251
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7146157638163724227
+  Name: "Slasher"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  ChildIds: 6180741710619077583
+  ChildIds: 7191880160416436506
+  ChildIds: 14325669095874228210
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 606548452417380641
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press R to wind up and throw a balanced throwing knife in the direction you\342\200\231re aiming, damaging and slowing enemies on impact."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14325669095874228210
+  Name: "Heal Percentage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The percentage of the damage done to the enemy that will heal you"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7191880160416436506
+  Name: "Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How far the slasher will travel"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 10392517578151200132
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6180741710619077583
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 78469244364511293
+  Name: "Death\'s Shadow"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  ChildIds: 7786687914104591703
+  ChildIds: 4559944181589896695
+  ChildIds: 2501884905764305196
+  ChildIds: 18019913923763692998
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 18132479792113096322
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18019913923763692998
+  Name: "Speed Boost"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount your movement speed will increase"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 14065417185628223733
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2501884905764305196
+  Name: "Duration"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long you will stay invisible"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4559944181589896695
+  Name: "Attack Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How far your ending attack will reach"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7786687914104591703
+  Name: "Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of damage applied to enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15882469756563991493
+  Name: "Venom Bomb"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 837517277244744736
+  ChildIds: 16037613412710680742
+  ChildIds: 3074752349398664074
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 6375726263607251280
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; teleporting you to the point of impact and damaging nearby enemies."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3074752349398664074
+  Name: "Damage Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15882469756563991493
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the damage area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16037613412710680742
+  Name: "Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15882469756563991493
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The amount of damage initially applied to enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 15330066822177902891
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod1"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 12532102525843773576
   Name: "Mage"
   Transform {
@@ -44,6 +1964,14 @@ Objects {
     Overrides {
       Name: "cs:ElfDescription"
       String: "\342\200\234The wrath of the elements is inescapable, mage. You are the calm in the storm; turn the violence of nature against those who claim to master it.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:AM_Stance"
+      String: "2hand_staff_idle_ready"
+    }
+    Overrides {
+      Name: "cs:AM_Animation"
+      String: "2hand_staff_magic_bolt"
     }
   }
   Collidable_v2 {
@@ -1102,6 +3030,14 @@ Objects {
       Name: "cs:ElfDescription"
       String: "\342\200\234The eye of the hawk does not blink, hunter. You are a child of the trees; descend upon these trespassers and repel them.\342\200\235"
     }
+    Overrides {
+      Name: "cs:AM_Stance"
+      String: "2hand_rifle_aim_shoulder"
+    }
+    Overrides {
+      Name: "cs:AM_Animation"
+      String: "2hand_rifle_unsheathe"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2056,7 +3992,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 6482451050534705929
+        Id: 17370828256945431127
       }
     }
     Overrides {
@@ -2074,6 +4010,14 @@ Objects {
     Overrides {
       Name: "cs:ElfDescription"
       String: "\342\200\234These forests and streams are home to many creatures, guardian. You are their shield; go forth and protect them.\342\200\235"
+    }
+    Overrides {
+      Name: "cs:AM_Stance"
+      String: "1hand_melee_idle_ready"
+    }
+    Overrides {
+      Name: "cs:AM_Animation"
+      String: "1hand_melee_shield_bash"
     }
   }
   Collidable_v2 {
@@ -2524,7 +4468,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17370828256945431127
+        Id: 12880357743881602078
       }
     }
     Overrides {
