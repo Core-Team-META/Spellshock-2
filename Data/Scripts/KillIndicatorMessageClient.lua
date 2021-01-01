@@ -47,8 +47,8 @@ function Tick(deltaTime)
 	if (timeRemaining > 0) then
 		timeRemaining = timeRemaining - deltaTime
 		if (timeRemaining <= 0) then
-			KILL_ICON.isVisible = false
-			COMBO_LABEL.isVisible = false
+			KILL_ICON.visibility = Visibility.FORCE_OFF
+			COMBO_LABEL.visibility = Visibility.FORCE_OFF
 		else
 			local w = CoreMath.Lerp(KILL_ICON.width, ICON_END_SIZE, deltaTime * 12)
 			KILL_ICON.width = CoreMath.Round(w)
@@ -85,7 +85,7 @@ function OnPlayerDied(sourcePlayer)
 	-- Only continue if source player is the local player
 	if sourcePlayer ~= LOCAL_PLAYER then return end
 
-	KILL_ICON.isVisible = true
+	KILL_ICON.visibility = Visibility.FORCE_ON
 	timeRemaining = INDICATOR_DURATION
 	SetKillIconAlpha(1)
 	KILL_ICON.width = ICON_START_SIZE
@@ -94,10 +94,10 @@ function OnPlayerDied(sourcePlayer)
 	comboTime = COMBO_COOLDOWN
 	comboCount = comboCount + 1
 	if (comboCount >= 2) then
-		COMBO_LABEL.isVisible = true
+		COMBO_LABEL.visibility = Visibility.FORCE_ON
 		COMBO_LABEL.text = string.format("x%d POINTS ADDED TO TEAM", comboCount)
 	else
-		COMBO_LABEL.isVisible = true
+		COMBO_LABEL.visibility = Visibility.FORCE_ON
 		if SHOW_MAX_KILL then
 			COMBO_LABEL.text = string.format("%d / %d KILLS", LOCAL_PLAYER.kills  + 1, MAX_KILL)
 		else
@@ -108,5 +108,5 @@ end
 
 -- Initialize
 Events.Connect("AddKillFeedKill_Internal", OnPlayerDied)
-KILL_ICON.isVisible = false
-COMBO_LABEL.isVisible = false
+KILL_ICON.visibility = Visibility.FORCE_OFF
+COMBO_LABEL.visibility = Visibility.FORCE_OFF

@@ -56,7 +56,7 @@ function Tick(deltaTime)
 	for _, id in pairs(capturePointIds) do
 		if not indicators[id] then
             indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = CANVAS})
-            indicators[id].isVisible = false
+            indicators[id].visibility = Visibility.FORCE_OFF
 		end
     end
 
@@ -80,13 +80,17 @@ function Tick(deltaTime)
 
             -- If enabled, the indicator will be hidden when the local player is on the capture point
             if ABCP.GetPlayerCurrentCapturePoint(LOCAL_PLAYER) == capturePointState.id and HIDE_ON_TRIGGER then
-                indicator.isVisible = false
+                indicator.visibility = Visibility.FORCE_OFF
             else
                 if SHOW_ON_DISABLED and not capturePointState.isEnabled then
-                    indicator.isVisible = true
+                    indicator.visibility = Visibility.FORCE_ON
                 else
                     -- The world indicator is only visible if it's enabled
-                    indicator.isVisible = capturePointState.isEnabled
+                    if capturePointState.isEnabled then
+                        indicator.visibility = Visibility.FORCE_ON
+                    else
+                        indicator.visibility = Visibility.FORCE_OFF
+                    end
                 end
             end
 
@@ -99,7 +103,7 @@ function Tick(deltaTime)
                 indicator.y = CoreMath.Clamp(indicator.y, 0, screenSize.y)
             end
         else
-            indicator.isVisible = false
+            indicator.visibility = Visibility.FORCE_OFF
         end
 
         -- Getting references from the indicator template
@@ -129,29 +133,29 @@ function Tick(deltaTime)
         -- Setting capture point name
         if SHOW_NAME then
             nameText.text = capturePointState.name
-            nameText.isVisible = true
+            nameText.visibility = Visibility.FORCE_ON
         else
-            nameText.isVisible = false
+            nameText.visibility = Visibility.FORCE_OFF
         end
 
         -- Setting distance in meters and its visibility based on distance
         if SHOW_DISTANCE then
             distanceText.text = string.format("%.0fm", distance / 100)
             if HIDE_INFO_MAX_DISTANCE and distance / 100 > MAX_DISTANCE then
-                distanceText.isVisible = false
+                distanceText.visibility = Visibility.FORCE_OFF
             else
-                distanceText.isVisible = true
+                distanceText.visibility = Visibility.FORCE_ON
             end
         else
-            distanceText.isVisible = false
+            distanceText.visibility = Visibility.FORCE_OFF
         end
 
         -- Setting status text based on capture point owner and its visibility within distance
         if SHOW_STATE then
             if HIDE_INFO_MAX_DISTANCE and distance / 100 > MAX_DISTANCE then
-                statusText.isVisible = false
+                statusText.visibility = Visibility.FORCE_OFF
             else
-                statusText.isVisible = true
+                statusText.visibility = Visibility.FORCE_ON
             end
 
             local owningTeam = capturePointState.owningTeam
@@ -209,7 +213,7 @@ function Tick(deltaTime)
                 statusText.text = "CONTESTED"
             end
         else
-            statusText.isVisible = false
+            statusText.visibility = Visibility.FORCE_OFF
         end
 
         -- Setting panel clip progress

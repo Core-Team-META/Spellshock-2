@@ -48,7 +48,7 @@ function OnBannerMessageEvent(message, duration)
         messageEndTime = time() + DEFAULT_DURATION
     end
 
-    PANEL.isVisible = true
+    PANEL.visibility = Visibility.FORCE_ON
     TEXT_BOX.text = message
 end
 
@@ -56,10 +56,10 @@ end
 -- Hides the banner when the message has expired
 function Tick(deltaTime)
     if time() > messageEndTime then
-        PANEL.isVisible = false
+        PANEL.visibility = Visibility.FORCE_OFF
     end
 end
 
 -- Initialize
-PANEL.isVisible = false
+PANEL.visibility = Visibility.FORCE_OFF
 Events.Connect("BannerMessage", OnBannerMessageEvent)

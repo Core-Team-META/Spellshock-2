@@ -124,7 +124,7 @@ function Tick(deltaTime)
     end
 
     if bindingDown or atRoundEnd then
-        CANVAS.isVisible = true
+        CANVAS.visibility = Visibility.FORCE_ON
 
         local players = Game.GetPlayers() 
         table.sort(players, ComparePlayers)
@@ -144,15 +144,15 @@ function Tick(deltaTime)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
         end
     else
-        CANVAS.isVisible = false
+        CANVAS.visibility = Visibility.FORCE_OFF
     end
 end
 
 -- Initialize
-CANVAS.isVisible = false
+CANVAS.visibility = Visibility.FORCE_OFF
 
 headerLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
---headerLine:GetCustomProperty("PlayerImage"):WaitForObject().isVisible = false
+--headerLine:GetCustomProperty("PlayerImage"):WaitForObject().visibility = Visibility.FORCE_OFF
 headerLine:GetCustomProperty("Name"):WaitForObject().text = "Name"
 headerLine:GetCustomProperty("KillsText"):WaitForObject().text = "Kills"
 headerLine:GetCustomProperty("DeathsText"):WaitForObject().text = "Deaths"

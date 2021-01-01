@@ -62,7 +62,7 @@ end
 function Tick(deltaTime)
     local capturePointId = ABCP.GetPlayerCurrentCapturePoint(GetViewedPlayer())
 
-    CANVAS.isVisible = false
+    CANVAS.visibility = Visibility.FORCE_OFF
     
     if not capturePointId then
         if ALWAYS_SHOW then
@@ -86,7 +86,7 @@ function Tick(deltaTime)
         return
     end
 
-    CANVAS.isVisible = true
+    CANVAS.visibility = Visibility.FORCE_ON
 
     -- Update name
     if SHOW_POINT_NAME then
@@ -112,8 +112,8 @@ function Tick(deltaTime)
     -- Handle points with an attackingTeam set
     if capturePointState.attackingTeam ~= 0 then
         -- Hide unused elements
-        LEFT_PROGRESS_BAR.isVisible = false
-        LEFT_THRESHOLD_MARKER.isVisible = false
+        LEFT_PROGRESS_BAR.visibility = Visibility.FORCE_OFF
+        LEFT_THRESHOLD_MARKER.visibility = Visibility.FORCE_OFF
 
         -- Center things
         BAR_PANEL.x = -0.5 * LEFT_PROGRESS_BAR.width
@@ -130,8 +130,12 @@ function Tick(deltaTime)
             RIGHT_PROGRESS_BAR:SetFillColor(NEUTRAL_COLOR)
         end ]]
     else
-        LEFT_PROGRESS_BAR.isVisible = true
-        LEFT_THRESHOLD_MARKER.isVisible = SHOW_THRESHOLD_MARKERS
+        LEFT_PROGRESS_BAR.visibility = Visibility.FORCE_ON
+        if SHOW_THRESHOLD_MARKERS then
+            LEFT_THRESHOLD_MARKER.visibility = Visibility.FORCE_ON
+        else
+            LEFT_THRESHOLD_MARKER.visibility = Visibility.FORCE_OFF
+        end
         BAR_PANEL.x = 0.0
 
 		--print("CAPTURE PROGRESS: "..CoreMath.Round(capturePointState.captureProgress, 2))
@@ -183,10 +187,10 @@ end
 
 -- Initialize
 if not SHOW_POINT_NAME then
-    NAME_TEXT.isVisible = false
+    NAME_TEXT.visibility = Visibility.FORCE_OFF
 end
 
 if not SHOW_THRESHOLD_MARKERS then
-    LEFT_THRESHOLD_MARKER.isVisible = false
-    RIGHT_THRESHOLD_MARKER.isVisible = false
+    LEFT_THRESHOLD_MARKER.visibility = Visibility.FORCE_OFF
+    RIGHT_THRESHOLD_MARKER.visibility = Visibility.FORCE_OFF
 end

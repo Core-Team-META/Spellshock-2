@@ -27,14 +27,14 @@ local SHOW_HIT_FEEDBACK = COMPONENT_ROOT:GetCustomProperty("ShowHitFeedback")
 local HIT_FEEDBACK_SOUND = COMPONENT_ROOT:GetCustomProperty("HitFeedbackSound"):WaitForObject()
 
 -- Set indicator UI off at start
-HIT_INDICATOR.isVisible = false
+HIT_INDICATOR.visibility = Visibility.FORCE_OFF
 
 -- nil TriggerHitIndicator()
 -- Displays the the hit indicator for half a second
 function TriggerHitIndicator()
-    HIT_INDICATOR.isVisible = true
+    HIT_INDICATOR.visibility = Visibility.FORCE_ON
     Task.Wait(.5)
-    HIT_INDICATOR.isVisible = false
+    HIT_INDICATOR.visibility = Visibility.FORCE_OFF
 end
 
 -- nil DisplayDamage(float, Vector3)

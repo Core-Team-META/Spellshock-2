@@ -26,7 +26,7 @@ local PreviousSecond = 0
 local CurrentButton = nil
 local BaseButton = nil
 
-RESPAWN_TIMER_PANEL.isVisible = false
+RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 
 -- Wait for team colors
 while not _G.TeamColors do
@@ -45,7 +45,7 @@ function CheckRespawnTimer()
 	--print("RESPAWN TIMER: "..tostring(RespawnTimer))
 	if RespawnTimer == 0 then
 		RespawnTimer = -2 
-		RESPAWN_TIMER_PANEL.isVisible = false
+		RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 		local RespawnObjectReference 
 		if CurrentButton.clientUserData.stateID then
 			print("State Id: "..CurrentButton.clientUserData.stateID)
@@ -73,13 +73,13 @@ function OnButtonPressed(thisButton)
 
 	if CurrentButton then
 		local selectedIcon = CurrentButton:GetCustomProperty("SelectedIcon"):WaitForObject()
-		selectedIcon.isVisible = false
+		selectedIcon.visibility = Visibility.FORCE_OFF
 	end
 	
 	--print("Changing CurrentButton")
 	CurrentButton = thisButton
 	local selectedIcon = CurrentButton:GetCustomProperty("SelectedIcon"):WaitForObject()
-	selectedIcon.isVisible = true	
+	selectedIcon.visibility = Visibility.FORCE_ON	
 end
 
 -- bool CompareStates(table, table)
@@ -96,7 +96,7 @@ function Tick(DeltaTime)
 		
 		if AS.IsRespawning() and RespawnTimer == -1 then
 			RespawnTimer = RespawnDelay -- activate timer
-			RESPAWN_TIMER_PANEL.isVisible = true
+			RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_ON
 			TIMER.text = tostring(RespawnDelay)
 			OnButtonPressed(BaseButton)
 		end
@@ -115,7 +115,7 @@ function Tick(DeltaTime)
 			indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = PANEL})
 			local iconButton = indicators[id]:GetCustomProperty("IconButton"):WaitForObject()
 			local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()
-			selectedIcon.isVisible = false
+			selectedIcon.visibility = Visibility.FORCE_OFF
 			iconButton.clientUserData.stateID = id
 			iconButton.pressedEvent:Connect(OnButtonPressed)
 		end
@@ -131,7 +131,7 @@ function Tick(DeltaTime)
 			local iconImage = baseIndicators[locationTable.root]:GetCustomProperty("IconImage"):WaitForObject()
 			local iconBackground = baseIndicators[locationTable.root]:GetCustomProperty("IconBackground"):WaitForObject()
 			
-			selectedIcon.isVisible = false
+			selectedIcon.visibility = Visibility.FORCE_OFF
 			iconImage:SetColor(_G.TeamColors[locationTable.team])
 			iconBackground:SetColor(_G.TeamColors[locationTable.team])
 			
@@ -144,14 +144,14 @@ function Tick(DeltaTime)
         	
         	-- Set visibility
         	if locationTable.team == LOCAL_PLAYER.team then
-        		baseIndicator.isVisible = true
+        		baseIndicator.visibility = Visibility.FORCE_ON
         		local iconButton = baseIndicator:GetCustomProperty("IconButton"):WaitForObject()
         		if BaseButton ~= iconButton then
         			BaseButton = iconButton
         			OnButtonPressed(BaseButton)
         		end
         	else
-        		baseIndicator.isVisible = false
+        		baseIndicator.visibility = Visibility.FORCE_OFF
         	end
         	
         	-- Set position		
@@ -213,9 +213,9 @@ function Tick(DeltaTime)
 		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.name
 			shortName.text = capturePointState.shortName
-			nameText.isVisible = true
+			nameText.visibility = Visibility.FORCE_ON
 		else
-			nameText.isVisible = false
+			nameText.visibility = Visibility.FORCE_OFF
 		end
 		
 		-- Set position		

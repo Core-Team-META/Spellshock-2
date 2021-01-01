@@ -4,9 +4,9 @@ local OBJECT = script:GetCustomProperty("ObjectToTrigger"):WaitForObject()
 function Tick(deltaTime)
     if Object.IsValid(WEAPON) then
         if WEAPON.currentAmmo == 0 then
-            OBJECT.isVisible = false
+            OBJECT.visibility = Visibility.FORCE_OFF
         else
-            OBJECT.isVisible = true
+            OBJECT.visibility = Visibility.FORCE_ON
         end
     end
 end

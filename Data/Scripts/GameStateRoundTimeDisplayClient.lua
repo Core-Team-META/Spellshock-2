@@ -31,7 +31,7 @@ local SHOW_DURING_ROUND_END = COMPONENT_ROOT:GetCustomProperty("ShowDuringRoundE
 -- Displays time remaining in hh:mm:ss format
 function UpdateTimeRemaining(remainingTime)
     if remainingTime then
-        STATE_TIME_TEXT.isVisible = true
+        STATE_TIME_TEXT.visibility = Visibility.FORCE_ON
         local minutes = math.floor(remainingTime) // 60 % 60
         local seconds = math.floor(remainingTime) % 60
         STATE_TIME_TEXT.text = string.format("%02d:%02d", minutes, seconds)
@@ -44,7 +44,7 @@ function Tick(deltaTime)
     if ABGS.IsGameStateManagerRegistered() then
         -- Hide things by default, let specific logic show it when needed
         STATE_NAME_TEXT.text = ""
-        STATE_TIME_TEXT.isVisible = false
+        STATE_TIME_TEXT.visibility = Visibility.FORCE_OFF
         local currentState = ABGS.GetGameState()
         local remainingTime = ABGS.GetTimeRemainingInState()
 
@@ -77,5 +77,5 @@ end
 
 -- Set round time visibility off at the beginning
 if not SHOW_STATE_NAME then
-    STATE_NAME_TEXT.isVisible = false
+    STATE_NAME_TEXT.visibility = Visibility.FORCE_OFF
 end

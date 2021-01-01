@@ -34,11 +34,11 @@ local popupTime = 0.0
 -- Handles the LocationEntered event and updates UI
 function OnLocationEntered(player, properties)
     if player == Game.GetLocalPlayer() then
-        POPUP_PANEL.isVisible = true
+        POPUP_PANEL.visibility = Visibility.FORCE_ON
         POPUP_TEXT.text = properties.name
         POPUP_TEXT:SetColor(properties.textColor)
         POPUP_BACKGROUND:SetColor(properties.backgroundColor)
-        STATIC_PANEL.isVisible = true
+        STATIC_PANEL.visibility = Visibility.FORCE_ON
         STATIC_TEXT.text = properties.name
         STATIC_TEXT:SetColor(properties.textColor)
         STATIC_BACKGROUND:SetColor(properties.backgroundColor)
@@ -50,8 +50,8 @@ end
 -- Handles the LocationExited event and hides UI
 function OnLocationExited(player, properties)
     if player == Game.GetLocalPlayer() then
-        POPUP_PANEL.isVisible = false
-        STATIC_PANEL.isVisible = false
+        POPUP_PANEL.visibility = Visibility.FORCE_OFF
+        STATIC_PANEL.visibility = Visibility.FORCE_OFF
     end
 end
 
@@ -59,13 +59,13 @@ end
 -- Handles popup text timing out
 function Tick(deltaTime)
     if time() > popupTime + POPUP_TEXT_DURATION then
-        POPUP_PANEL.isVisible = false
+        POPUP_PANEL.visibility = Visibility.FORCE_OFF
     end
 end
 
 -- Initialize
-POPUP_PANEL.isVisible = false
-STATIC_PANEL.isVisible = false
+POPUP_PANEL.visibility = Visibility.FORCE_OFF
+STATIC_PANEL.visibility = Visibility.FORCE_OFF
 
 Events.Connect("LocationEntered", OnLocationEntered)
 Events.Connect("LocationExited", OnLocationExited)

@@ -18,13 +18,13 @@ function Tick(deltaTime)
     if currentTime > 0 then
         currentTime = currentTime - deltaTime
         if currentTime <= 0 then
-            ammoUIInstance.isVisible = false
+            ammoUIInstance.visibility = Visibility.FORCE_OFF
         else
-            ammoUIInstance.isVisible = true
+            ammoUIInstance.visibility = Visibility.FORCE_ON
             local text = ammoUIInstance:GetCustomProperty("AmmoText"):WaitForObject()
             local bar = ammoUIInstance:GetCustomProperty("AmmoProgressBar"):WaitForObject()
             if WEAPON.currentAmmo < 5 then
-                text.isVisible = true
+                text.visibility = Visibility.FORCE_ON
                 if WEAPON.currentAmmo > 0 then
                     text:SetColor(Color.ORANGE)
                     text.text = "LOW CHARGE"
@@ -34,23 +34,23 @@ function Tick(deltaTime)
                 end
                 bar:SetFillColor(Color.RED)
             else
-                text.isVisible = false
+                text.visibility = Visibility.FORCE_OFF
                 bar:SetFillColor(Color.GREEN)
             end
-            bar.isVisible = true
+            bar.visibility = Visibility.FORCE_ON
             bar.progress = WEAPON.currentAmmo / WEAPON.maxAmmo
         end
     else
         if WEAPON.currentAmmo == 0 then
-            ammoUIInstance.isVisible = true
+            ammoUIInstance.visibility = Visibility.FORCE_ON
             local text = ammoUIInstance:GetCustomProperty("AmmoText"):WaitForObject()
             local bar = ammoUIInstance:GetCustomProperty("AmmoProgressBar"):WaitForObject()
-            text.isVisible = true
-            bar.isVisible = false
+            text.visibility = Visibility.FORCE_ON
+            bar.visibility = Visibility.FORCE_OFF
             text:SetColor(Color.RED)
             text.text = "E - RECHARGE"
         else
-            ammoUIInstance.isVisible = false
+            ammoUIInstance.visibility = Visibility.FORCE_OFF
         end
     end
 end
@@ -63,7 +63,7 @@ end
 function OnEquipped(weapon, player)
     if AMMO_UI and player == LOCAL_PLAYER then
         ammoUIInstance = World.SpawnAsset(AMMO_UI)
-        ammoUIInstance.isVisible = false
+        ammoUIInstance.visibility = Visibility.FORCE_OFF
     end
 end
 

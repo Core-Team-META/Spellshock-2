@@ -99,9 +99,13 @@ function Tick(DeltaTime)
 		-- Set name text
 		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.shortName
-			nameText.isVisible = capturePointState.isEnabled
+			if capturePointState.isEnabled then
+				nameText.visibility = Visibility.FORCE_ON
+			else
+				nameText.visibility = Visibility.FORCE_OFF
+			end
 		else
-			nameText.isVisible = false
+			nameText.visibility = Visibility.FORCE_OFF
 		end
 
 		-- Set position

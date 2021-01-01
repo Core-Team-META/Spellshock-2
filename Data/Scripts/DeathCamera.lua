@@ -4,10 +4,10 @@ local propDeathCamera = script:GetCustomProperty("DeathCamera"):WaitForObject()
 function Tick(deltaTime)
 player = Game.GetLocalPlayer()
 	if player.isDead == true then
-		propDeadPostProcess.isVisible = true
+		propDeadPostProcess.visibility = Visibility.FORCE_ON
 		player:SetOverrideCamera(propDeathCamera)
 	else
-		propDeadPostProcess.isVisible = false
+		propDeadPostProcess.visibility = Visibility.FORCE_OFF
 		player:ClearOverrideCamera()
 	end
 end

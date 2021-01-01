@@ -58,7 +58,7 @@ end
 
 -- Initialize
 if not SHOW_NUMBER then
-    TEXT_BOX.isVisible = false
+    TEXT_BOX.visibility = Visibility.FORCE_OFF
 end
 
 PROGRESS_BAR.progress = 1

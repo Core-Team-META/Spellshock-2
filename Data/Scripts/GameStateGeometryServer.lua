@@ -46,8 +46,13 @@ function Tick(deltaTime)
 				exists = EXISTS_IN_ROUND_END
 			end
 
-			GEOMETRY.isVisible = exists
-			GEOMETRY.isCollidable = exists
+			if exists then
+				GEOMETRY.visibility = Visibility.FORCE_ON
+				GEOMETRY.collision = Collision.FORCE_ON
+			else
+				GEOMETRY.visibility = Visibility.FORCE_OFF
+				GEOMETRY.collision = Collision.FORCE_OFF
+			end
 		end
 	end
 end

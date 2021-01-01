@@ -67,7 +67,7 @@ function UpdateCurrentAbility()
     currentAbility = newAbility
 
     if currentAbility then
-        CANVAS.isVisible = true
+        CANVAS.visibility = Visibility.FORCE_ON
 
         local icon = AOI.GetObjectIcon(currentAbility)
 
@@ -80,7 +80,7 @@ function UpdateCurrentAbility()
         recoveryDuration = currentAbility.recoveryPhaseSettings.duration
         cooldownDuration = currentAbility.cooldownPhaseSettings.duration
     else
-        CANVAS.isVisible = false
+        CANVAS.visibility = Visibility.FORCE_OFF
     end
 end
 
@@ -94,11 +94,11 @@ function Tick(deltaTime)
         local phaseTime = currentAbility:GetPhaseTimeRemaining()
 
         if currentPhase == AbilityPhase.READY or currentPhase == AbilityPhase.CAST then
-            COUNTDOWN_TEXT.isVisible = false
-            PROGRESS_INDICATOR.isVisible = false
+            COUNTDOWN_TEXT.visibility = Visibility.FORCE_OFF
+            PROGRESS_INDICATOR.visibility = Visibility.FORCE_OFF
         else
-            COUNTDOWN_TEXT.isVisible = true
-            PROGRESS_INDICATOR.isVisible = true
+            COUNTDOWN_TEXT.visibility = Visibility.FORCE_ON
+            PROGRESS_INDICATOR.visibility = Visibility.FORCE_ON
 
             -- For a player, recovery, cooldown and execute phases all constitute an ability's cooldown
             local playerCooldownRemaining = phaseTime
@@ -119,11 +119,11 @@ function Tick(deltaTime)
 
             if shadowAngle <= 180.0 then
                 LEFT_SHADOW.rotationAngle = 0.0
-                RIGHT_SHADOW.isVisible = true
+                RIGHT_SHADOW.visibility = Visibility.FORCE_ON
                 RIGHT_SHADOW.rotationAngle = shadowAngle
             else
                 LEFT_SHADOW.rotationAngle = shadowAngle - 180.0
-                RIGHT_SHADOW.isVisible = false
+                RIGHT_SHADOW.visibility = Visibility.FORCE_OFF
             end
         end
     end
@@ -131,8 +131,8 @@ end
 
 -- Initialize
 if not SHOW_ABILITY_NAME then
-    NAME_TEXT.isVisible = false
+    NAME_TEXT.visibility = Visibility.FORCE_OFF
 end
 
-CANVAS.isVisible = false
+CANVAS.visibility = Visibility.FORCE_OFF
 BINDING_TEXT.text = BINDING_HINT

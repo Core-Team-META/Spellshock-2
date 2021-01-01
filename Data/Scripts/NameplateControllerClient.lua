@@ -117,17 +117,37 @@ function OnPlayerJoined(player)
 	nameplates[player].borderPiece:SetScale(Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH + 2.0 * BORDER_WIDTH, HEALTHBAR_HEIGHT + 2.0 * BORDER_WIDTH))
 	nameplates[player].borderPiece:SetPosition(Vector3.New(-3.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))
 	nameplates[player].borderPiece:SetColor(BORDER_COLOR)
-	nameplates[player].borderPiece.isVisible = SHOW_HEALTHBARS
+	if SHOW_HEALTHBARS then
+		nameplates[player].borderPiece.visibility = Visibility.FORCE_ON
+		nameplates[player].backgroundPiece.visibility = Visibility.FORCE_ON
+		nameplates[player].healthPiece.visibility = Visibility.FORCE_ON
+	else
+		nameplates[player].borderPiece.visibility = Visibility.FORCE_OFF
+		nameplates[player].backgroundPiece.visibility = Visibility.FORCE_OFF
+		nameplates[player].healthPiece.visibility = Visibility.FORCE_OFF
+	end
 	nameplates[player].backgroundPiece:SetScale(Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH, HEALTHBAR_HEIGHT))
 	nameplates[player].backgroundPiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))
 	nameplates[player].backgroundPiece:SetColor(BACKGROUND_COLOR)
-	nameplates[player].backgroundPiece.isVisible = SHOW_HEALTHBARS
-	nameplates[player].healthPiece.isVisible = SHOW_HEALTHBARS
-	nameplates[player].changePiece.isVisible = SHOW_HEALTHBARS and ANIMATE_CHANGES
-	nameplates[player].healthText.isVisible = SHOW_HEALTHBARS and SHOW_NUMBERS
+	if SHOW_HEALTHBARS and ANIMATE_CHANGES then
+		nameplates[player].changePiece.visibility = Visibility.FORCE_ON
+	else
+		nameplates[player].changePiece.visibility = Visibility.FORCE_OFF
+	end
+	if SHOW_HEALTHBARS and SHOW_NUMBERS then
+		nameplates[player].healthText.visibility = Visibility.FORCE_ON
+	else
+		nameplates[player].healthText.visibility = Visibility.FORCE_OFF
+	end
+	if SHOW_NAMES then
+		nameplates[player].nameText.visibility = Visibility.FORCE_ON
+	else
+		nameplates[player].nameText.visibility = Visibility.FORCE_OFF
+	end
+
 	nameplates[player].healthText:SetPosition(Vector3.New(50.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))		-- Text must be 50 units ahead as it doesn't have thickness
 	nameplates[player].healthText:SetColor(HEALTH_NUMBER_COLOR)
-	nameplates[player].nameText.isVisible = SHOW_NAMES
+
 	nameplates[player].nameText.text = player.name
 end
 
@@ -187,7 +207,11 @@ function Tick(deltaTime)
 			-- We calculate visibility every frame to handle when teams change
 			local visible = IsNameplateVisible(player)
 
-			nameplate.templateRoot.isVisible = visible
+			if visible then
+				nameplate.templateRoot.visibility = Visibility.FORCE_ON
+			else
+				nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+			end
 
 			if visible then
 				RotateNameplate(nameplate)
@@ -210,9 +234,9 @@ function Tick(deltaTime)
 						nameplate.changePiece:SetScale(Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH * math.abs(changeFraction), HEALTHBAR_HEIGHT))
 
 						if changeFraction == 0.0 then
-							nameplate.changePiece.isVisible = false
+							nameplate.changePiece.visibility = Visibility.FORCE_OFF
 						else
-							nameplate.changePiece.isVisible = true
+							nameplate.changePiece.visibility = Visibility.FORCE_ON
 
 							if changeFraction > 0.0 then		-- Player took damage
 								local changePieceOffset = 50.0 * HEALTHBAR_WIDTH * (1.0 - changeFraction) - 100.0 * HEALTHBAR_WIDTH * healthFraction

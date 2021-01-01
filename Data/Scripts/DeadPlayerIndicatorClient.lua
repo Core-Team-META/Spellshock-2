@@ -43,12 +43,12 @@ function Tick(deltaTime)
                 -- Set indicator position to the dead player's position
                 local indicator2DPosition = UI.GetScreenPosition(info.indicatorPosition)
                 if indicator2DPosition then
-                    info.indicator.isVisible = true
+                    info.indicator.visibility = Visibility.FORCE_ON
                     info.indicator.x = indicator2DPosition.x
                     info.indicator.y = indicator2DPosition.y
                 else
                     -- Hide the indicator if player doesn't look at the dead player location
-                    info.indicator.isVisible = false
+                    info.indicator.visibility = Visibility.FORCE_OFF
                 end
             else
                 -- Remove if the indicator is empty or nil

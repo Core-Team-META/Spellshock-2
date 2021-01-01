@@ -118,14 +118,14 @@ function EnableScoping(player)
         activeCamera:SetPositionOffset(ZOOM_OFFSET)
     end
     if Object.IsValid(WEAPON_ART) then
-        WEAPON_ART.isVisible = false
+        WEAPON_ART.visibility = Visibility.FORCE_OFF
     end
 
     if SCOPE_TEMPLATE and not Object.IsValid(scopeInstance) then
         scopeInstance = World.SpawnAsset(SCOPE_TEMPLATE)
         scopeInstance:AttachToLocalView(player)
     elseif Object.IsValid(scopeInstance) then
-        scopeInstance.isVisible = true
+        scopeInstance.visibility = Visibility.FORCE_ON
     end
     UI.SetReticleVisible(false)
     player.isVisibleToSelf = false
@@ -145,10 +145,10 @@ function ResetScoping(player)
         activeCamera:SetPositionOffset(cameraResetOffset)
     end
     if Object.IsValid(WEAPON_ART) then
-        WEAPON_ART.isVisible = true
+        WEAPON_ART.visibility = Visibility.FORCE_ON
     end
     if Object.IsValid(scopeInstance) then
-        scopeInstance.isVisible = false
+        scopeInstance.visibility = Visibility.FORCE_OFF
     end
     player.isVisibleToSelf = true
     UI.SetReticleVisible(true)
