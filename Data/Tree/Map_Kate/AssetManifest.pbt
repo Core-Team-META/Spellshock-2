@@ -2987,6 +2987,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2754963224534021958
+  Name: "Invisible"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_invisible_001"
+  }
+}
+Assets {
   Id: 2715939630273116812
   Name: "Ceramic Terracotta Pots Old 01"
   PlatformAssetType: 2
