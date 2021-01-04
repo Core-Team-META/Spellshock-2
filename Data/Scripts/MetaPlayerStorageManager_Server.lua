@@ -156,7 +156,7 @@ end
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     if true then --DataVersionCheck(data) then --#TODO turned off for now
-        nLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
+        OnLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
