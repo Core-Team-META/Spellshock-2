@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/30/2020
--- Version 0.1.8
+-- Date: 1/04/2020
+-- Version 0.1.9
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -156,7 +156,7 @@ end
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     if true then --DataVersionCheck(data) then --#TODO turned off for now
-        OnLoadProgressionData(player, data)
+        --OnLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
@@ -169,7 +169,7 @@ local function OnPlayerLeft(player)
     local data = Storage.GetPlayerData(player)
     data = {} --For testing
     Storage.SetPlayerData(player, data)
-    OnSaveProgressionData(player, data)
+   --OnSaveProgressionData(player, data) --#FIXME Progression Turned off for playtest
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
     OnSaveEquippedCosmetic(player, data)
