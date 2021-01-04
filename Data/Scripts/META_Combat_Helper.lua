@@ -9,6 +9,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -60,9 +61,26 @@ local function DevHelperFunction(attackData)
     end
 end
 
+local function ResetPlayers()
+    for _, player in ipairs(Game.GetPlayers()) do
+        for _, resName in pairs(CONST.COMBAT_STATS) do
+            player:SetResource(resName, 0)
+        end
+        player.kills = 0
+        player.deaths = 0
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
+    if ABGS.GAME_STATE_LOBBY == newState then
+        ResetPlayers()
+    end
+
+end
+
 
 function GoingToTakeDamage(attackData)
     local source = attackData.source
@@ -94,7 +112,7 @@ Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
 Events.Connect("CombatWrapAPI.OnDamageTaken", OnDamageTaken)
 Events.Connect("CombatWrapAPI.ObjectHasDied", OnDied)
 Events.Connect("Stats.Helper.CapturePoint", OnCapturePointChanged)
-
+Events.Connect("GameStateChanged", OnGameStateChanged)
 --[[local attackData = {
 		object = player,
 		damage = dmg,
