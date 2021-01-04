@@ -16,6 +16,7 @@ Objects {
   }
   ParentId: 15766608560554198711
   ChildIds: 8589843120984166375
+  ChildIds: 16753970550728364913
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -23,6 +24,114 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 16753970550728364913
+  Name: "EoR_Animation"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4519890512238287661
+  ChildIds: 11103123690946997835
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:EaseUI"
+      AssetReference {
+        Id: 1458786537451628614
+      }
+    }
+    Overrides {
+      Name: "cs:REWARDS"
+      ObjectReference {
+        SelfId: 4542412189343657266
+      }
+    }
+    Overrides {
+      Name: "cs:RewardSlot1"
+      ObjectReference {
+        SelfId: 14321908686649885733
+      }
+    }
+    Overrides {
+      Name: "cs:RewardSlot2"
+      ObjectReference {
+        SelfId: 7397882062375156290
+      }
+    }
+    Overrides {
+      Name: "cs:RewardSlot3"
+      ObjectReference {
+        SelfId: 2202239703406122424
+      }
+    }
+    Overrides {
+      Name: "cs:Stinger"
+      ObjectReference {
+        SelfId: 11103123690946997835
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13505058819200996876
+    }
+  }
+}
+Objects {
+  Id: 11103123690946997835
+  Name: "Orchestral Victory Achievement Music Stinger Set 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16753970550728364913
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_orchestralvictoryachievement_01:41"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10477657774098762667
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+    }
   }
 }
 Objects {
@@ -75,6 +184,12 @@ Objects {
       Name: "cs:MATCH_TIME"
       ObjectReference {
         SelfId: 17541211918243665553
+      }
+    }
+    Overrides {
+      Name: "cs:EoR_Animation"
+      ObjectReference {
+        SelfId: 16753970550728364913
       }
     }
   }
