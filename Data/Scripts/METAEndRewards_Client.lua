@@ -243,19 +243,19 @@ function OnRewardsChanged(object, string)
 end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    --[[
-    API.GAME_STATE_LOBBY = 0
-API.GAME_STATE_ROUND = 1
-API.GAME_STATE_ROUND_END = 2
-API.GAME_STATE_PLAYER_SHOWCASE = 3
-API.GAME_STATE_REWARDS = 4
-]]
     if ABGS.GAME_STATE_ROUND == newState then
         roundTime = time()
     end
     if ABGS.GAME_STATE_ROUND_END == newState then
         roundTime = time() - roundTime
     end
+
+    if ABGS.GAME_STATE_LOBBY == newState then
+        ToggleUI(false)
+        --Send First Reward Select
+        Events.BroadcastToServer(NAMESPACE .. "RewardSelect", 1)
+    end
+    
 end
 
 --#TODO TEMP FUNCTIONS
