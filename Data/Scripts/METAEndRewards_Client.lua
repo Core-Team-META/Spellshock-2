@@ -19,6 +19,7 @@ local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
 local TOP_CENTER = script:GetCustomProperty("2__3_TOP_CENTER"):WaitForObject()
 local ACTIVE_TEAM_NAME = script:GetCustomProperty("ACTIVE_TEAM_NAME"):WaitForObject()
 local MATCH_TIME = script:GetCustomProperty("MATCH_TIME"):WaitForObject()
+local ANIMATION = script:GetCustomProperty("EoR_Animation"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- UI OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -212,6 +213,7 @@ local function GetPlayerRewards(tbl)
             ThirdSlotEnabled(false)
             BuildRewardSlots(rewards)
             ToggleUI(true)
+            ANIMATION.context.OnRewardShow()
         end
     end
 end
@@ -233,6 +235,7 @@ function OnRewardSelected(button)
     --DisconnectListeners()
     Task.Wait()
     ToggleUI(false)
+    ANIMATION.context.OnRewardHide()
 end
 
 function OnRewardsChanged(object, string)
@@ -252,6 +255,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 
     if ABGS.GAME_STATE_LOBBY == newState then
         ToggleUI(false)
+        ANIMATION.context.OnRewardHide()
         --Send First Reward Select
         Events.BroadcastToServer(NAMESPACE .. "RewardSelect", 1)
     end
