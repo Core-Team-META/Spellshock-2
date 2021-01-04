@@ -44,7 +44,7 @@ local function AddDefaultCosmetics(player)
             for s = 1, 20 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
-                        b = 8 -- Used for costume ID 
+                        b = 8 -- Used for costume ID
                     end
                     _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
                 end
@@ -112,7 +112,7 @@ local function OnLoadCurrencyData(player, data)
             end
         end
     else
-        for k, name in ipairs(CONST.CURRENCY) do 
+        for k, name in ipairs(CONST.CURRENCY) do
             player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
             warn(tostring(player:GetResource(name)))
         end
@@ -134,13 +134,12 @@ local function OnSaveCurrencyData(player, data)
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
 end
 
-
 --@param object player
 --@param table data
 local function OnLoadEquippedCosmetic(player, data)
     local cosmetic
     if data[CONST.STORAGE.EQUIPPED_COSMETIC] then
-       cosmetic = UTIL.EquippedCosmeticConvertToTable(data[CONST.STORAGE.EQUIPPED_COSMETIC])
+        cosmetic = UTIL.EquippedCosmeticConvertToTable(data[CONST.STORAGE.EQUIPPED_COSMETIC])
     end
     META_COSMETIC.context.BuildEquippedCosmeticDataTable(player, cosmetic)
 end
@@ -149,14 +148,15 @@ end
 --@param table data
 local function OnSaveEquippedCosmetic(player, data)
     local playerCosmetics = META_COSMETIC.context.GetPlayerEquippedCosmetic(player)
-    data[CONST.STORAGE.EQUIPPED_COSMETIC] = next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
+    data[CONST.STORAGE.EQUIPPED_COSMETIC] =
+        next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
 end
 
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     if true then --DataVersionCheck(data) then --#TODO turned off for now
-        --OnLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
+        nLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
@@ -169,7 +169,7 @@ local function OnPlayerLeft(player)
     local data = Storage.GetPlayerData(player)
     data = {} --For testing
     Storage.SetPlayerData(player, data)
-   --OnSaveProgressionData(player, data) --#FIXME Progression Turned off for playtest
+    OnSaveProgressionData(player, data) --#FIXME Progression Turned off for playtest
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
     OnSaveEquippedCosmetic(player, data)
