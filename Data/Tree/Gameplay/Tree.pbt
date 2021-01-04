@@ -20628,6 +20628,10 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "cs:LobbyDuration"
+          Float: 30
+        }
       }
     }
     TemplateAsset {
@@ -20702,7 +20706,7 @@ Objects {
         }
         Overrides {
           Name: "cs:TeamScoreLimit"
-          Int: 5
+          Int: 200
         }
         Overrides {
           Name: "Scale"
@@ -20892,11 +20896,11 @@ Objects {
         }
         Overrides {
           Name: "cs:RequiredPlayers"
-          Int: 1
+          Int: 2
         }
         Overrides {
           Name: "cs:CountdownTime"
-          Float: 10
+          Float: 30
         }
         Overrides {
           Name: "Scale"

@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
-              Id: 12880357743881602078
+              Id: 17370828256945431127
             }
           }
           Overrides {
@@ -2381,7 +2381,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 17370828256945431127
+              Id: 12880357743881602078
             }
           }
           Overrides {
@@ -2479,12 +2479,12 @@
       }
     }
     Assets {
-      Id: 12880357743881602078
-      Name: "Fantasy Ability Red 008"
+      Id: 17370828256945431127
+      Name: "Fantasy Ability Yellow 026"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_008"
+        AssetId: "UI_Fantasy_Ability_Yellow_026"
       }
     }
     Assets {
@@ -2551,12 +2551,12 @@
       }
     }
     Assets {
-      Id: 17370828256945431127
-      Name: "Fantasy Ability Yellow 026"
+      Id: 12880357743881602078
+      Name: "Fantasy Ability Red 008"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Yellow_026"
+        AssetId: "UI_Fantasy_Ability_Red_008"
       }
     }
     PrimaryAssetId {

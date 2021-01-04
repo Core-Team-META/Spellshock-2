@@ -15,7 +15,9 @@ function OnMenuChanged(newMenu)
 end
 
 function OnGameStateChanged (oldState, newState)
-
+	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+	end
 end
 
 function OnBindingPressed(whichPlayer, binding)

@@ -37,6 +37,7 @@ function OnClassChanged(player, classID)
     Task.Wait()]]
     player.serverUserData.CurrentClass = classID
     player.animationStance = Class_Stances[classID]
+    player:SetResource("CLASS_MAP", classID)
 	--local newClass = World.SpawnAsset(ClassTemplates[classID])
 	--newClass:Equip(player)
 end
@@ -82,6 +83,11 @@ end
 
 function OnPlayerJoined(player)
     player.serverUserData.CurrentClass = META_AP().TANK
+
+    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+        local newClass = World.SpawnAsset(ClassTemplates[player.serverUserData.CurrentClass])
+	    newClass:Equip(player)
+    end
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
