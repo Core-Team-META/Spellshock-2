@@ -156,7 +156,7 @@ end
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     if true then --DataVersionCheck(data) then --#TODO turned off for now
-        OnLoadProgressionData(player, data) --#FIXME Progression Turned off for playtest
+        OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
@@ -166,10 +166,10 @@ end
 
 --@param object player
 local function OnPlayerLeft(player)
-    local data = Storage.GetPlayerData(player)
-    data = {} --For testing
+    --local data = Storage.GetPlayerData(player)
+    local data = {} --For testing
     Storage.SetPlayerData(player, data)
-    OnSaveProgressionData(player, data) --#FIXME Progression Turned off for playtest
+    OnSaveProgressionData(player, data) 
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
     OnSaveEquippedCosmetic(player, data)
@@ -179,6 +179,7 @@ local function OnPlayerLeft(player)
     --Nil out data tables
     META_AP.context.OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
+    ADAPTOR.context.OnPlayerLeft(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
