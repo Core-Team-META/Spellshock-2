@@ -34,6 +34,7 @@ Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 
 function Tick(dt)
+	if not owner or not Object.IsValid(owner) then return end
 	local currentPosition = propChicken:GetWorldPosition()
 	if ((currentPosition - previousPosition).size > 0 and ((owner and not owner.isMounted) or not owner)) then
 		propChicken.animationStance = RUN

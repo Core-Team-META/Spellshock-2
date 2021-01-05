@@ -56,7 +56,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
             end
             
             -- equip animal costume			
-			if not enemy.isDead then
+			if not enemy.isDead and not enemy.serverUserData.isAnimorphed then
+				enemy.serverUserData.isAnimorphed = true
 				local costumeTemplate = PlayerVFX.Attachment
 				local newCostume = World.SpawnAsset(costumeTemplate)
 
