@@ -1,5 +1,6 @@
 ﻿local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 
 local MenuData = script:GetCustomProperty("MenuData"):WaitForObject()
 local LeftPanel = script:GetCustomProperty("LeftPanel"):WaitForObject()
@@ -55,6 +56,9 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local CurrentClassButton = nil
 local CurrentAbilityButton = nil
 local spamPrevent = nil
+local ResourceChangedEventListener = nil
+local LevelResourceName = nil
+local isUpgrading = false
 
 ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 
@@ -170,7 +174,7 @@ function UpdateClassInfo(thisButton)
 end
 
 function OnClassClicked(thisButton)
-	if not isAllowed(0.5) then return end 
+	if not isAllowed(0.5) or isUpgrading then return end 
 	--if thisButton ~= CurrentClassButton then
 	Audio_ClassSelected:Play()
 
@@ -270,7 +274,7 @@ function UpdateAbilityInfo(thisButton)
 end
 
 function OnAbilityClicked(thisButton)
-	--print("button clicked: " .. thisButton.name)
+	if isUpgrading then return end
 	--if thisButton ~= CurrentAbilityButton then
 	Audio_AbilitySelect:Play()
 	-- return previous button to idle state
@@ -309,13 +313,38 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	if not isAllowed(0.5) then return end
+	--if not isAllowed(0.5) then return end
+	RightPanel_UpgradeButton.isInteractable = false
+	isUpgrading = true
 	local classData = CurrentClassButton.clientUserData.dataTable
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
+
+	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
+	ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
+
+	-- Make the animated mesh do an animation
+	local AnimMesh
+	if LOCAL_PLAYER.team == 1 then
+		AnimMesh = Orc_AnimatedMesh
+	else
+		AnimMesh = Elf_AnimatedMesh
+	end
+	AnimMesh:PlayAnimation(classData["Animation"], {playbackRate=0.6})
+
+	-- Spawn the upgrade vfx
+	World.SpawnAsset(UpgradeVFX, {position = AnimMesh:GetWorldPosition()-Vector3.New(0,0,105)})
+end
+
+function OnResourceChanged(player, resName, resAmount)
+	if resName ~= LevelResourceName then return end -- Check resource name
 	
-	Task.Wait()
-	Task.Wait()
+	ResourceChangedEventListener:Disconnect()
+	ResourceChangedEventListener = nil
+	LevelResourceName = nil
+
+	local classData = CurrentClassButton.clientUserData.dataTable
+	local abilityData = CurrentAbilityButton.clientUserData.dataTable
 
 	-- Update ability level text 
 	local Level = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("Level"):WaitForObject()
@@ -341,65 +370,83 @@ function OnUpgradeButtonClicked(thisButton)
 		ShowMorePanel.visibility = Visibility.INHERIT
 	end
 
+	isUpgrading = false -- turn upgradin off
+
 	-- Force the clicked event so the text updates with the new values
 	OnAbilityClicked(CurrentAbilityButton)
-
-	-- Make the animated mesh do an animation
-	local AnimMesh
-	if LOCAL_PLAYER.team == 1 then
-		AnimMesh = Orc_AnimatedMesh
-	else
-		AnimMesh = Elf_AnimatedMesh
-	end
-	AnimMesh:PlayAnimation(classData["Animation"], {playbackRate=0.6})
-
-	-- Spawn the upgrade vfx
-	World.SpawnAsset(UpgradeVFX, {position = AnimMesh:GetWorldPosition()-Vector3.New(0,0,105)})
+	
+	RightPanel_UpgradeButton.isInteractable = true -- turn Upgrade button back on
 end
 
-function EquipCostumeToPlayer(Class)
+function EquipCostumeToPlayer(player)
+	if not player.clientUserData.CurrentClass then
+		player.clientUserData.CurrentClass = META_AP().TANK
+	end
+
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
-		if LOCAL_PLAYER.clientUserData.LobbyCostume then
-			for _, attachment in ipairs(LOCAL_PLAYER.clientUserData.LobbyCostume) do
+		if player.clientUserData.LobbyCostume then
+			for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
 				attachment:Destroy()
 			end
 		end
 		
 		-- Equip new costume
 		local attachmentTable = {}
-		local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, Class)
+		local costumeTemplate = META_AP().VFX.GetCurrentCostume(player, player.clientUserData.CurrentClass)
 		local newCostume = World.SpawnAsset(costumeTemplate)
 		for _, attachment in ipairs(newCostume:GetChildren()) do
-			attachment:AttachToPlayer(LOCAL_PLAYER, attachment.name)
+			attachment:AttachToPlayer(player, attachment.name)
 			table.insert(attachmentTable, attachment)
 		end
-		LOCAL_PLAYER.clientUserData.LobbyCostume = attachmentTable
+		player.clientUserData.LobbyCostume = attachmentTable
+	end
+end
+
+function OnClassChanged(player, Class)
+	player.clientUserData.CurrentClass = Class
+	
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+		EquipCostumeToPlayer(player)
+	end
+
+	-- If the local player changed their class then close the menu and make the button interactable
+	if player == LOCAL_PLAYER then
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		ConfirmChoiceButton.isInteractable = true
 	end
 end
 
 function OnConfirmChoiceClicked(thisButton)
-	Audio_ClassConfirmed:Play()
+	ConfirmChoiceButton.isInteractable = false -- disable button
+	-- Play audio
+	Audio_ClassConfirmed:Play() 
 	Audio_ClassConfirmed_2:Play()
 	Audio_ClassConfirmed_3:Play()
+
 	local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
-	LOCAL_PLAYER.clientUserData.CurrentClass = META_AP()[dataTable["ClassID"]]
-	Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]])
-	EquipCostumeToPlayer(META_AP()[dataTable["ClassID"]])
-	Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+	Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
+	--LOCAL_PLAYER.clientUserData.CurrentClass = META_AP()[dataTable["ClassID"]]
+	--EquipCostumeToPlayer(META_AP()[dataTable["ClassID"]])
 end
 
 function OnGameStateChanged(oldState, newState)
 	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-		print("Equipping costume in lobby")
-		EquipCostumeToPlayer(LOCAL_PLAYER.clientUserData.CurrentClass)
+		--print("Equipping costume in lobby")
+		while ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY do Task.Wait() end
+
+		for _, player in ipairs(Game.GetPlayers()) do
+			EquipCostumeToPlayer(player)
+		end
 	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
-		-- Destroy lobby costume
-		if LOCAL_PLAYER.clientUserData.LobbyCostume then
-			for _, attachment in ipairs(LOCAL_PLAYER.clientUserData.LobbyCostume) do
-				attachment:Destroy()
+		-- Destroy lobby costumes
+		for _, player in ipairs(Game.GetPlayers()) do
+			if player.clientUserData.LobbyCostume then
+				for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
+					attachment:Destroy()
+				end
+				player.clientUserData.LobbyCostume = nil
 			end
-			LOCAL_PLAYER.clientUserData.LobbyCostume = nil
 		end
 	end
 end
@@ -511,12 +558,12 @@ end)
 SpinnerTask.repeatCount = -1
 SpinnerTask.repeatInterval = 0
 
-LOCAL_PLAYER.clientUserData.CurrentClass = META_AP().TANK
+--LOCAL_PLAYER.clientUserData.CurrentClass = META_AP().TANK
 
 OnClassClicked(CurrentClassButton)
 Events.Connect("Changing Menu", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-
+Events.Connect("Class Changed", OnClassChanged)
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end

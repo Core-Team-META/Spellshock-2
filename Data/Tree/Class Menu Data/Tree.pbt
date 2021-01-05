@@ -31,7 +31,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Skillset goes here"
+      String: "Long range support"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -1012,7 +1012,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Skillset goes here"
+      String: "Close range striker"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -1951,7 +1951,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Skillset goes here"
+      String: "Long range spellcaster"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -3016,7 +3016,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Skillset goes here"
+      String: "Long range skirmisher"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -3997,7 +3997,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Skillset goes here"
+      String: "Close combat warrior"
     }
     Overrides {
       Name: "cs:ClassID"

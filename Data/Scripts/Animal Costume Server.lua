@@ -11,6 +11,14 @@ function OnPlayerDied(player, _)
 	Timer = 0
 end
 
+function OnPlayerLeft(player)
+	if player == _Owner then
+		Equipment:Unequip()
+		Task.Wait()
+		Equipment:Destroy()
+	end
+end
+
 function OnEquip(equipment, player)
 	World.SpawnAsset(FX_Template, {position = player:GetWorldPosition()})
 	for _, equipment in pairs(player:GetEquipment()) do
@@ -25,8 +33,8 @@ function OnEquip(equipment, player)
 			end
 		end
 	end
-	Task.Wait()
-	Task.Wait()
+	--Task.Wait()
+	--Task.Wait()
 	PlayerDiedEvent = player.diedEvent:Connect( OnPlayerDied )
 	player:SetVisibility(false, false)
 	player.animationStance = "unarmed_stance"
@@ -35,7 +43,10 @@ function OnEquip(equipment, player)
 end
 
 function OnUnequip(equipment, player)
-	player:SetVisibility(true)
+	if Object.IsValid(player) then
+		player:SetVisibility(true)
+		player.serverUserData.isAnimorphed = false
+	end
 	PlayerDiedEvent:Disconnect()
 end
 

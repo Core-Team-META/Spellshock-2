@@ -38,6 +38,7 @@ function OnClassChanged(player, classID)
     player.serverUserData.CurrentClass = classID
     player.animationStance = Class_Stances[classID]
     player:SetResource("CLASS_MAP", classID)
+    while Events.BroadcastToAllPlayers("Class Changed", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 	--local newClass = World.SpawnAsset(ClassTemplates[classID])
 	--newClass:Equip(player)
 end
@@ -77,6 +78,7 @@ function OnGameStateChanged(oldState, newState)
                     equipment:Destroy()
                 end
             end
+            player:SetVisibility(true)
         end
     end
 end
