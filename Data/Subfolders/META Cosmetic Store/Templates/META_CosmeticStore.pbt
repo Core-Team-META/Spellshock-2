@@ -7750,27 +7750,7 @@
         ParentId: 4406967109701207403
         ChildIds: 13074708730924320297
         ChildIds: 7980579470551488813
-        ChildIds: 5680027138717359153
-        ChildIds: 13284032148962835188
-        ChildIds: 4490027246628102758
-        ChildIds: 9144469633848685794
-        ChildIds: 10349208858707690109
-        ChildIds: 15434765945732615449
-        ChildIds: 14718390658778843856
-        ChildIds: 16558417164578937891
-        ChildIds: 13086604046755300885
-        ChildIds: 18030178905584603422
-        ChildIds: 5940841494892568276
-        ChildIds: 1551440453718025657
-        ChildIds: 9198877117978209258
-        ChildIds: 1390486697437084945
-        ChildIds: 8431539476538799050
-        ChildIds: 15663148485943771646
-        ChildIds: 13654476990288100136
-        ChildIds: 6327946344007828184
-        ChildIds: 13844300407975146440
-        ChildIds: 7244500659664772285
-        ChildIds: 500593644435599053
+        ChildIds: 12617528841865066638
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7784,7 +7764,7 @@
       }
       Objects {
         Id: 13074708730924320297
-        Name: "STORE_BlueEyeHat"
+        Name: "STORE_AssassinElfCostumeEpic"
         Transform {
           Location {
           }
@@ -7800,11 +7780,11 @@
         UnregisteredParameters {
           Overrides {
             Name: "cs:StoreName"
-            String: "Blue Eye"
+            String: "Assassin Elf Costume"
           }
           Overrides {
             Name: "cs:ID"
-            String: "BLUEEYE"
+            String: "ASSASSINELFCOSTUMEEPIC"
           }
           Overrides {
             Name: "cs:Cost"
@@ -7812,25 +7792,25 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Rare"
+            String: "Epic"
           }
           Overrides {
             Name: "cs:Types"
-            String: "Hat"
+            String: "Outfit"
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: "Hat"
+            String: ""
           }
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 2519458169302244941
+              Id: 1403404499257704310
             }
           }
           Overrides {
             Name: "cs:CurrencyResourceName"
-            String: "silver"
+            String: "gems"
           }
         }
         Collidable_v2 {
@@ -7847,7 +7827,7 @@
       }
       Objects {
         Id: 7980579470551488813
-        Name: "STORE_Costume1"
+        Name: "STORE_AssassinElfCostumeFrost"
         Transform {
           Location {
           }
@@ -7863,11 +7843,11 @@
         UnregisteredParameters {
           Overrides {
             Name: "cs:StoreName"
-            String: "Topple Guy"
+            String: "Assassin Elf Costume"
           }
           Overrides {
             Name: "cs:ID"
-            String: "TOPPLECOSTUME"
+            String: "ASSASSINELFCOSTUMEFROST"
           }
           Overrides {
             Name: "cs:Cost"
@@ -7875,7 +7855,7 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Common"
+            String: "Frost"
           }
           Overrides {
             Name: "cs:Types"
@@ -7888,7 +7868,7 @@
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 18053658397213174961
+              Id: 5394791983193798307
             }
           }
           Overrides {
@@ -7897,11 +7877,11 @@
           }
           Overrides {
             Name: "cs:PlayerVisibility"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "cs:CurrencyResourceName"
-            String: "copper"
+            String: "gems"
           }
         }
         Collidable_v2 {
@@ -7917,8 +7897,8 @@
         }
       }
       Objects {
-        Id: 5680027138717359153
-        Name: "STORE_Costume2"
+        Id: 12617528841865066638
+        Name: "STORE_TankOrcStoneWallPlacementFire"
         Transform {
           Location {
           }
@@ -7934,11 +7914,11 @@
         UnregisteredParameters {
           Overrides {
             Name: "cs:StoreName"
-            String: "Topple Guy 2"
+            String: "Tank Orc StoneWall Fire"
           }
           Overrides {
             Name: "cs:ID"
-            String: "TOPPLECOSTUME2"
+            String: "TANKORCSTONEWALLFIRE"
           }
           Overrides {
             Name: "cs:Cost"
@@ -7946,11 +7926,11 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Common"
+            String: "Fire"
           }
           Overrides {
             Name: "cs:Types"
-            String: "Outfit"
+            String: "Ability"
           }
           Overrides {
             Name: "cs:ZoomView"
@@ -7959,78 +7939,7 @@
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 8586427063176195713
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 13284032148962835188
-        Name: "STORE_CrazyEye"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Crazy Eye"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "CRAZYEYE"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 40
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Rare"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 8308317576050482870
+              Id: 3597073966590162922
             }
           }
           Overrides {
@@ -8043,1356 +7952,7 @@
           }
           Overrides {
             Name: "cs:CurrencyResourceName"
-            String: "silver"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 4490027246628102758
-        Name: "STORE_FrogCostume"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Froggy "
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "FROGGYCOSTUME"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 40
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Rare"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Outfit"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 2423037220358159580
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 9144469633848685794
-        Name: "STORE_FruitHat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Fruity Tooty"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "FRUITHAT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Common"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 10881360810514851309
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 10349208858707690109
-        Name: "STORE_MushroomHat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Mushroom Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "MUSHROOMHAT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 15958828441518050541
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 15434765945732615449
-        Name: "STORE_ScoutArmor_Helmet"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Scout Helmet"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SCOUTHELMET"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 40
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Rare"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Mask"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Head"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 7396778302077128894
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "silver"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 14718390658778843856
-        Name: "STORE_ScoutArmor_Legs"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Scout Legs"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SCOUTPANTS"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 35
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Pants"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "LowerBody"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 7826818083986219295
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 16558417164578937891
-        Name: "STORE_ScoutArmor_Outfit"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Scout Suit"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SCOUTOUTFIT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 150
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "VIP Legendary"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Outfit"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 15901735358681475482
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 13086604046755300885
-        Name: "STORE_ScoutArmor_Shoes"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Scout Shoes"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SCOUTSHOES"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 25
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Common"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Shoes"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Feet"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 6519721328580835024
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 18030178905584603422
-        Name: "STORE_ScoutArmor_Torso"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Scout Torso"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SCOUTBODY"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Epic"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Shirt"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "UpperBody"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 187375488033735379
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gold"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 5940841494892568276
-        Name: "STORE_StrawberrryHat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Strawberry Cap"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "STRAWBERRYHAT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Common"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 2742968969915308041
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "silver"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 1551440453718025657
-        Name: "STORE_SuperHat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "The Super Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SUPERHAT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 40
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Rare"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 15776914744592565790
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 9198877117978209258
-        Name: "STORE_TheOoccoo"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "The Ooccoo Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "OOCCOO"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 50
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Legendary"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 15735192228326799008
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gold"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 1390486697437084945
-        Name: "STORE_TheSandy"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "The Sandy"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "SANDYHAT"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 2076497055966897975
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "silver"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 8431539476538799050
-        Name: "STORE_WinterHat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Winter Cap"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "WINTERCAP"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 30
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 3645346327445225418
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "silver"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 15663148485943771646
-        Name: "STOREITEM_BirthdayCake Hat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Birthday Cake"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "CAKE2"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 60
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Rare"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 5907232396412683957
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 13654476990288100136
-        Name: "STOREITEM_Chef Hat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Chef Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "CHEFHAT2"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 60
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Legendary"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 5597170418593143722
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gold"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 6327946344007828184
-        Name: "STOREITEM_CloudSoundRapper _Hat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Rapper Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "RAPPERHAT2"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 35
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 15162828225468702314
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 13844300407975146440
-        Name: "STOREITEM_Cowboy Hat _Hat"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Desperado Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "DESPERADOHAT3"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 50
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Epic"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 311966620306452947
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gold"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 7244500659664772285
-        Name: "STOREITEM_Hat1"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Essence Pearl Hat"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "BALL"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 35
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Uncommon"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Mask"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Head"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 13605408002006099503
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 500593644435599053
-        Name: "STORE_BaseballCap"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8409514803492499256
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Baseball Cap"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "BASEBALLCAP"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Common"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: "Hat"
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 1332106727512986593
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
+            String: "gems"
           }
         }
         Collidable_v2 {
@@ -9422,7 +7982,6 @@
           }
         }
         ParentId: 4406967109701207403
-        ChildIds: 3031739770766426318
         ChildIds: 7916486848864823979
         ChildIds: 2145240595183268067
         Collidable_v2 {
@@ -9437,55 +7996,8 @@
         }
       }
       Objects {
-        Id: 3031739770766426318
-        Name: "Copper"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10290086270096749557
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:CurrencyName"
-            String: "Copper"
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "copper"
-          }
-          Overrides {
-            Name: "cs:CurrencySymbol"
-            AssetReference {
-              Id: 11777686393994394183
-            }
-          }
-          Overrides {
-            Name: "cs:StoreUIPlacementOrder"
-            Int: 1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11630331363859286398
-          }
-        }
-      }
-      Objects {
         Id: 7916486848864823979
-        Name: "Silver"
+        Name: "Gems"
         Transform {
           Location {
           }
@@ -9501,11 +8013,11 @@
         UnregisteredParameters {
           Overrides {
             Name: "cs:CurrencyName"
-            String: "Silver"
+            String: "Cosmetic Gems"
           }
           Overrides {
             Name: "cs:CurrencyResourceName"
-            String: "silver"
+            String: "COSM_TOKEN"
           }
           Overrides {
             Name: "cs:StoreUIPlacementOrder"
@@ -9514,7 +8026,7 @@
           Overrides {
             Name: "cs:CurrencySymbol"
             AssetReference {
-              Id: 13463294209923687388
+              Id: 8643178046994123592
             }
           }
         }
@@ -9552,7 +8064,7 @@
           }
           Overrides {
             Name: "cs:CurrencyResourceName"
-            String: "gold"
+            String: "GOLD"
           }
           Overrides {
             Name: "cs:StoreUIPlacementOrder"
@@ -9597,6 +8109,8 @@
         ChildIds: 901452595011675334
         ChildIds: 7013734725567259362
         ChildIds: 16461370947476900092
+        ChildIds: 13193060071285089728
+        ChildIds: 448438534527269647
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -9815,6 +8329,87 @@
         }
       }
       Objects {
+        Id: 13193060071285089728
+        Name: "Frost"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3795768485861728258
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:TagColor"
+            Color {
+              G: 0.550993204
+              B: 0.64
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Number"
+            Int: 6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2582827079163950758
+          }
+        }
+      }
+      Objects {
+        Id: 448438534527269647
+        Name: "Fire"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3795768485861728258
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:TagColor"
+            Color {
+              R: 0.73
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Number"
+            Int: 7
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2582827079163950758
+          }
+        }
+      }
+      Objects {
         Id: 16753275449347007740
         Name: "STORE_TypeDefinitions"
         Transform {
@@ -9829,10 +8424,6 @@
           }
         }
         ParentId: 4406967109701207403
-        ChildIds: 9365502907877405758
-        ChildIds: 2410410968754592735
-        ChildIds: 11016539015752143333
-        ChildIds: 12917434714348193610
         ChildIds: 7113666148611139807
         ChildIds: 4974518808786507134
         Collidable_v2 {
@@ -9847,168 +8438,8 @@
         }
       }
       Objects {
-        Id: 9365502907877405758
-        Name: "Shoes"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16753275449347007740
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TypeColor"
-            Color {
-              R: 0.0338333659
-              B: 0.289999962
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 13924640470113397992
-          }
-        }
-      }
-      Objects {
-        Id: 2410410968754592735
-        Name: "Pants"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16753275449347007740
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TypeColor"
-            Color {
-              R: 0.0338333659
-              B: 0.289999962
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Number"
-            Int: 2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 13924640470113397992
-          }
-        }
-      }
-      Objects {
-        Id: 11016539015752143333
-        Name: "Shirt"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16753275449347007740
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TypeColor"
-            Color {
-              R: 0.0338333659
-              B: 0.289999962
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Number"
-            Int: 3
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 13924640470113397992
-          }
-        }
-      }
-      Objects {
-        Id: 12917434714348193610
-        Name: "Mask"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16753275449347007740
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TypeColor"
-            Color {
-              R: 0.0338333659
-              B: 0.289999962
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Number"
-            Int: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 13924640470113397992
-          }
-        }
-      }
-      Objects {
         Id: 7113666148611139807
-        Name: "Hat"
+        Name: "Ability"
         Transform {
           Location {
           }
