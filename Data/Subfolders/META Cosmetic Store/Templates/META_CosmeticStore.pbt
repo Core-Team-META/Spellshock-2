@@ -7792,7 +7792,7 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Epic"
+            String: "Assassin"
           }
           Overrides {
             Name: "cs:Types"
@@ -7855,7 +7855,7 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Frost"
+            String: "Assassin"
           }
           Overrides {
             Name: "cs:Types"
@@ -7926,7 +7926,7 @@
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Fire"
+            String: "Tank"
           }
           Overrides {
             Name: "cs:Types"
@@ -8109,8 +8109,6 @@
         ChildIds: 901452595011675334
         ChildIds: 7013734725567259362
         ChildIds: 16461370947476900092
-        ChildIds: 13193060071285089728
-        ChildIds: 448438534527269647
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8124,7 +8122,7 @@
       }
       Objects {
         Id: 13649299671737492249
-        Name: "Common"
+        Name: "Tank"
         Transform {
           Location {
           }
@@ -8162,7 +8160,7 @@
       }
       Objects {
         Id: 4290387533310184717
-        Name: "Uncommon"
+        Name: "Assassin"
         Transform {
           Location {
           }
@@ -8203,7 +8201,7 @@
       }
       Objects {
         Id: 901452595011675334
-        Name: "Rare"
+        Name: "Healer"
         Transform {
           Location {
           }
@@ -8244,7 +8242,7 @@
       }
       Objects {
         Id: 7013734725567259362
-        Name: "Epic"
+        Name: "Hunter"
         Transform {
           Location {
           }
@@ -8289,7 +8287,7 @@
       }
       Objects {
         Id: 16461370947476900092
-        Name: "Legendary"
+        Name: "Mage"
         Transform {
           Location {
           }
@@ -8314,87 +8312,6 @@
           Overrides {
             Name: "cs:Number"
             Int: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2582827079163950758
-          }
-        }
-      }
-      Objects {
-        Id: 13193060071285089728
-        Name: "Frost"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3795768485861728258
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TagColor"
-            Color {
-              G: 0.550993204
-              B: 0.64
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Number"
-            Int: 6
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2582827079163950758
-          }
-        }
-      }
-      Objects {
-        Id: 448438534527269647
-        Name: "Fire"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3795768485861728258
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:TagColor"
-            Color {
-              R: 0.73
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Number"
-            Int: 7
           }
         }
         Collidable_v2 {
