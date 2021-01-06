@@ -108,7 +108,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     RenderTransformPivot {
@@ -157,8 +157,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -23.4840088
-    UIY: 123.774841
+    UIX: -363.155334
+    UIY: 29.3624878
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -315,8 +315,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -23.7064209
-    UIY: -51.2507324
+    UIX: 345.9021
+    UIY: 83.4595337
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -327,12 +327,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -420,8 +420,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -140.428253
-    UIY: -51.2507324
+    UIX: 344.32312
+    UIY: 16.6801147
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -432,12 +432,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -525,8 +525,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -256.412445
-    UIY: -51.2507324
+    UIX: 249.064087
+    UIY: -24
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -537,12 +537,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -630,8 +630,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -369.857544
-    UIY: -51.2507324
+    UIX: 152.890747
+    UIY: -24
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -642,12 +642,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -735,8 +735,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -484.85965
-    UIY: -51.2507324
+    UIX: 54.0084229
+    UIY: -24
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -747,12 +747,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -840,8 +840,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -600
-    UIY: -51.2507324
+    UIX: -45.0118408
+    UIY: -24
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -852,12 +852,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -945,8 +945,8 @@ Objects {
   Control {
     Width: 102
     Height: 165
-    UIX: -715.931152
-    UIY: -51.2507324
+    UIX: -142.520081
+    UIY: -24
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -957,12 +957,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }

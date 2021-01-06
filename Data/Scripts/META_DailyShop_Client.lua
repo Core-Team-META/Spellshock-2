@@ -148,7 +148,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(button)
-    if not isAllowed(1) then
+    if not isAllowed(0.2) then
         return
     end
     Events.BroadcastToServer(NAMESPACE .. "PURCHASE", button.clientUserData.id)
@@ -169,7 +169,7 @@ function OnDataObjectAdded(parent, object)
 end
 
 function OnRefresh()
-    if not isAllowed(1) then
+    if not isAllowed(0.2) then
         return
     end
     Events.BroadcastToServer(NAMESPACE .. "REFRESH")
