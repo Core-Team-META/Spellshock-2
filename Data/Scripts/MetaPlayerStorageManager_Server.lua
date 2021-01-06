@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/04/2020
--- Version 0.1.9
+-- Date: 1/05/2020
+-- Version 0.1.10
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -15,6 +15,7 @@ local ADAPTOR = script:GetCustomProperty("MetaAbilityProgression_Adaptor"):WaitF
 local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerController"):WaitForObject()
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
+local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
@@ -23,7 +24,7 @@ local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 local progressionVersion = 1
 local cosmeticVersion = 1
 --Used for version control of data
-local versionControl = {P = progressionVersion, V = cosmeticVersion}
+local versionControl = {[1] = progressionVersion, [2] = cosmeticVersion}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -152,6 +153,26 @@ local function OnSaveEquippedCosmetic(player, data)
         next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
 end
 
+--#TODO Needs to be written
+--@param object player
+--@param table data
+local function OnLoadDailyShopData(player, data)
+    local dailyShopItems
+    if data[CONST.STORAGE.DAILY_SHOP] then
+        dailyShopItems = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.DAILY_SHOP])
+    end
+
+    DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
+end
+
+--#TODO Needs to be written
+--@param object player
+--@param table data
+local function OnSaveDailyShopData(player, data)
+    local dailyShopItems = DAILY_SHOP.context.GetDailyRewards(player)
+    data[CONST.STORAGE.DAILY_SHOP] = next(dailyShopItems) ~= nil and UTIL.DailyShopConvertToString(dailyShopItems) or ""
+end
+
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
@@ -160,25 +181,32 @@ local function OnPlayerJoined(player)
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
+        OnLoadDailyShopData(player, data)
         AddDefaultCosmetics(player)
     end
 end
 
 --@param object player
 local function OnPlayerLeft(player)
-    --local data = Storage.GetPlayerData(player)
-    local data = {} --For testing
+    local data = {}
+
+    --For testing to clear out old data prior to storage managment
     Storage.SetPlayerData(player, data)
-    OnSaveProgressionData(player, data) 
+
+    OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
     OnSaveEquippedCosmetic(player, data)
+    OnSaveDailyShopData(player, data)
+
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
+
     Storage.SetPlayerData(player, data)
 
     --Nil out data tables
     META_AP.context.OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
+    DAILY_SHOP.context.OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
 end
 

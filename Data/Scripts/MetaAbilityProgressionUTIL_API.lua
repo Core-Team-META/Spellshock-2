@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression UTIL API
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/23/2020
--- Version 0.1.3
+-- Date: 2021/1/6
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
@@ -87,6 +87,9 @@ function API.ConvertTableToString(tbl, pri_delimiter, sec_delimiter)
     local str = ""
     sec_delimiter = sec_delimiter or "~"
     pri_delimiter = pri_delimiter or "|"
+    if type(tbl) == "number" then
+        warn(tostring("CONVERT " .. tbl))
+    end
     for k, v in pairs(tbl) do
         str = str .. k .. sec_delimiter .. API.GetStringifiedValue(v or nil)
         if next(tbl, k) ~= nil then
@@ -446,7 +449,6 @@ function API.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
         playerCosmetic[class][team][skin][bind] == 1
 end
 
-
 ------------------------------------------------------------------------------------------------------------------------
 -- CURRENT EQUIPPED COSMECTIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -481,6 +483,48 @@ function API.EquippedCosmeticConvertToString(tbl)
         str = str .. key .. "^"
         for k, v in pairs(values) do
             str = str .. k .. "~" .. API.ConvertTableToString(v, ",", "=")
+            str = next(values, k) and str .. "^" or str
+        end
+        str = next(tbl, key) and str .. "|" or str
+    end
+
+    return str
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- CURRENT EQUIPPED COSMECTIC DATA FUNCTIONS
+------------------------------------------------------------------------------------------------------------------------
+
+--@param string str => string of compressed data
+--@return table finalTbl => player data
+function API.DailyShopConvertToTable(str)
+    local finalTbl = {}
+    local tbl = API.StringSplit("|", str)
+    for _, s in ipairs(tbl) do
+        local t1 = API.StringSplit("^", s)
+        local index = API.IsNumeric(t1[1]) and tonumber(t1[1]) or t1[1]
+        finalTbl[index] = finalTbl[index] or {}
+
+        for k, s1 in ipairs(t1) do
+            if k > 1 then
+                local t3 = API.StringSplit("~", s1)
+                local i = API.IsNumeric(t3[1]) and tonumber(t3[1]) or t3[1]
+                finalTbl[index][i] = t3[2]
+            end
+        end
+    end
+
+    return finalTbl
+end
+
+--@param table tbl => player data to be stored
+--@return string str => string of compressed data
+function API.DailyShopConvertToString(tbl)
+    local str = ""
+    for key, values in pairs(tbl) do
+        str = str .. key .. "^"
+        for k, v in pairs(values) do
+            str = str .. k .. "~" .. tostring(v)--API.ConvertTableToString(v, ",", "=")
             str = next(values, k) and str .. "^" or str
         end
         str = next(tbl, key) and str .. "|" or str
