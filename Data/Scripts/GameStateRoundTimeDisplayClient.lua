@@ -17,15 +17,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
-
--- User exposed settings
-local SHOW_STATE_NAME = COMPONENT_ROOT:GetCustomProperty("ShowStateName")
-local SHOW_DURING_LOBBY = COMPONENT_ROOT:GetCustomProperty("ShowDuringLobby")
-local SHOW_DURING_ROUND = COMPONENT_ROOT:GetCustomProperty("ShowDuringRound")
-local SHOW_DURING_ROUND_END = COMPONENT_ROOT:GetCustomProperty("ShowDuringRoundEnd")
 
 -- nil UpdateTimeRemaining(int)
 -- Displays time remaining in hh:mm:ss format
@@ -48,17 +41,17 @@ function Tick(deltaTime)
         local currentState = ABGS.GetGameState()
         local remainingTime = ABGS.GetTimeRemainingInState()
 
-        if currentState == ABGS.GAME_STATE_LOBBY and SHOW_DURING_LOBBY then
-            STATE_NAME_TEXT.text = "Lobby"
+        if currentState == ABGS.GAME_STATE_LOBBY then
+            STATE_NAME_TEXT.text = "LOBBY"
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_ROUND and SHOW_DURING_ROUND then
-            STATE_NAME_TEXT.text = "Round"
+        if currentState == ABGS.GAME_STATE_ROUND then
+            STATE_NAME_TEXT.text = "BATTLE"
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_ROUND_END and SHOW_DURING_ROUND_END then
+        --[[if currentState == ABGS.GAME_STATE_ROUND_END then
             STATE_NAME_TEXT.text = "Round End"
             UpdateTimeRemaining(remainingTime)
         end
@@ -71,11 +64,6 @@ function Tick(deltaTime)
         if currentState == ABGS.GAME_STATE_REWARDS then
             STATE_NAME_TEXT.text = "Rewards"
             UpdateTimeRemaining(remainingTime)
-        end
+        end]]
     end
-end
-
--- Set round time visibility off at the beginning
-if not SHOW_STATE_NAME then
-    STATE_NAME_TEXT.visibility = Visibility.FORCE_OFF
 end

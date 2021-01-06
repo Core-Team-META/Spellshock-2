@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 5947649812799017109
-  Name: "AbilityDisplayClient"
+  Id: 12821839503957755810
+  Name: "AbilityDisplyClientOptimized"
   PlatformAssetType: 3
   TextAsset {
   }

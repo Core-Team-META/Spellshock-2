@@ -22,12 +22,13 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local ICON = script:GetCustomProperty("Icon"):WaitForObject()
 local COUNTDOWN_TEXT = script:GetCustomProperty("CountdownText"):WaitForObject()
-local BINDING_TEXT = script:GetCustomProperty("BindingText"):WaitForObject()
 local NAME_TEXT = script:GetCustomProperty("NameText"):WaitForObject()
 local PROGRESS_INDICATOR = script:GetCustomProperty("ProgressIndicator"):WaitForObject()
 local RIGHT_SHADOW = script:GetCustomProperty("RightShadow"):WaitForObject()
 local LEFT_SHADOW = script:GetCustomProperty("LeftShadow"):WaitForObject()
 local ACTIVE_FRAME = script:GetCustomProperty("ActiveFrame"):WaitForObject()
+local ACTIVE_FLASH = script:GetCustomProperty("ActiveFlash"):WaitForObject()
+local DURATION_INDICATOR = script:GetCustomProperty("DurationIndicator"):WaitForObject()
 
 -- User exposed properties
 local BINDING = COMPONENT_ROOT:GetCustomProperty("Binding")
@@ -95,9 +96,11 @@ function UpdateCurrentAbility()
         end
 
 		if currentAbility:GetCustomProperty("Binding") and currentAbility.isEnabled then
-			ACTIVE_FRAME.visibility = Visibility.INHERIT
+            ACTIVE_FRAME.visibility = Visibility.INHERIT
+            ACTIVE_FLASH.visibility = Visibility.INHERIT
 		else
-			ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
+            ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
+            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
 		end
 
         NAME_TEXT.text = currentAbility.name
@@ -118,7 +121,7 @@ function Tick(deltaTime)
         local currentPhase = currentAbility:GetCurrentPhase()
         local phaseTime = currentAbility:GetPhaseTimeRemaining()
 
-        if HIDE_WHEN_DISABLED then
+        --[[if HIDE_WHEN_DISABLED then
             if currentAbility.isEnabled then
                 PANEL.visibility = Visibility.INHERIT
             else
@@ -137,13 +140,13 @@ function Tick(deltaTime)
                 newIconColor.a = newIconColor.a / 2.0
                 ICON:SetColor(newIconColor)
             end
-        end
+        end]]
 
         if currentPhase == AbilityPhase.READY or currentPhase == AbilityPhase.CAST then
-            COUNTDOWN_TEXT.visibility = Visibility.FORCE_OFF
+            --COUNTDOWN_TEXT.visibility = Visibility.FORCE_OFF
             PROGRESS_INDICATOR.visibility = Visibility.FORCE_OFF
         else
-            COUNTDOWN_TEXT.visibility = Visibility.INHERIT
+            --COUNTDOWN_TEXT.visibility = Visibility.INHERIT
             PROGRESS_INDICATOR.visibility = Visibility.INHERIT
 
             -- For a player, recovery, cooldown and execute phases all constitute an ability's cooldown
@@ -186,4 +189,3 @@ if not SHOW_ABILITY_NAME then
 end
 
 PANEL.visibility = Visibility.FORCE_OFF
-BINDING_TEXT.text = BINDING_HINT

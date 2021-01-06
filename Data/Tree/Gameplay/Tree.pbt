@@ -20654,7 +20654,7 @@ Objects {
     }
   }
   ParentId: 14852734758551696487
-  ChildIds: 16186739670479447875
+  ChildIds: 8262735017410123780
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -20668,9 +20668,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16186739670479447875
+  Id: 8262735017410123780
   Name: "Round Teamscore Limit"
   Transform {
+    Location {
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -20678,7 +20682,16 @@ Objects {
     }
   }
   ParentId: 331960150577104941
+  ChildIds: 9974091882436901008
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:TeamScoreLimit"
+      Int: 200
+    }
+    Overrides {
+      Name: "cs:TeamScoreLimit:tooltip"
+      String: "When a team reaches this many points, the round ends"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -20686,41 +20699,55 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5768415112764031484
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Round Teamscore Limit"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "cs:TeamScoreLimit"
-          Int: 200
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 9974091882436901008
+  Name: "RoundTeamscoreLimitServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8262735017410123780
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:API"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
-    TemplateAsset {
-      Id: 4250583515264430884
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 8262735017410123780
+      }
     }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6322885574366977805
+    }
+  }
+  InstanceHistory {
+    SelfId: 9974091882436901008
+    SubobjectId: 12163572761643508072
+    InstanceId: 16186739670479447875
+    TemplateId: 4250583515264430884
   }
 }
 Objects {
@@ -20896,11 +20923,11 @@ Objects {
         }
         Overrides {
           Name: "cs:RequiredPlayers"
-          Int: 2
+          Int: 1
         }
         Overrides {
           Name: "cs:CountdownTime"
-          Float: 30
+          Float: 10
         }
         Overrides {
           Name: "Scale"

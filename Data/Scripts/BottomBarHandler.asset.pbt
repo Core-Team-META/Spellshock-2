@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 13039838708654056087
-  Name: "APIObjectIcon"
+  Id: 8311517581163255806
+  Name: "BottomBarHandler"
   PlatformAssetType: 3
   TextAsset {
   }

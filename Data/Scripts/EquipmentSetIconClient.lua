@@ -22,15 +22,15 @@ local EQUIPMENT = script:FindAncestorByType('Equipment')
 if not EQUIPMENT then
     error(script.name .. " should be part of Equipment object hierarchy.")
 end
-
 -- User exposed variables
 local ICON = EQUIPMENT:GetCustomProperty("EquipmentIcon")
 local COLOR = EQUIPMENT:GetCustomProperty("EquipmentColor")
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-if Object.IsValid(EQUIPMENT) and ICON then
-    AOI.SetObjectIcon(EQUIPMENT, ICON)
+while not EQUIPMENT.owner do
+    Task.Wait()
 end
 
-if Object.IsValid(EQUIPMENT) and COLOR then
-    AOI.SetObjectColor(EQUIPMENT, COLOR)
+if LOCAL_PLAYER == EQUIPMENT.owner then
+    Events.Broadcast("Set Class Icon", EQUIPMENT.name, ICON)
 end
