@@ -28,10 +28,15 @@ local NEUTRAL_COLOR = COMPONENT_ROOT:GetCustomProperty("NeutralColor")
 local DISABLED_COLOR = COMPONENT_ROOT:GetCustomProperty("DisabledColor")
 
 -- Variables
-local indicators = {}
+local indicators = PANEL:GetChildren()
 
--- Wait for team colors
-while not _G.TeamColors do
+-- Wait for team colors and capture point data
+local ready = false
+while not _G.TeamColors or not ready do
+	local capturePointsTable = ABCP.GetCapturePoints()
+	if #capturePointsTable == 5 then
+		ready = true
+	end
 	Task.Wait()
 end
 
@@ -41,28 +46,34 @@ function CompareStates(state1, state2)
 	return state1.order < state2.order
 end
 
+--[[local indicatorObjects = PANEL:GetChildren()
+for index, id in pairs(ABCP.GetCapturePoints()) do
+	indicators[id] = indicatorObjects[index]
+end]]
+
 -- nil Tick(float)
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
-	-- Add indicators for new points
-	local capturePointIds = ABCP.GetCapturePoints()
+	--[[ Add indicators for new points
+	
 	for _, id in pairs(capturePointIds) do
 		if not indicators[id] then
 			indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = PANEL})
 		end
-	end
+	end]]
 
 	-- Get states and sort by order
+	local capturePointIds = ABCP.GetCapturePoints()
 	local capturePointStates = {}
 	for _, id in pairs(capturePointIds) do
 		table.insert(capturePointStates, ABCP.GetCapturePointState(id))
 	end
 
-	table.sort(capturePointStates, CompareStates)
+	--table.sort(capturePointStates, CompareStates)
 
 	-- Update indicators
 	for i, capturePointState in pairs(capturePointStates) do
-		local indicator = indicators[capturePointState.id]
+		local indicator = indicators[capturePointState.order]
 
 		local iconImage = indicator:GetCustomProperty("IconImage"):WaitForObject()
 		local iconBackground = indicator:GetCustomProperty("IconBackground"):WaitForObject()
@@ -75,6 +86,7 @@ function Tick(DeltaTime)
 		-- Set colors on icon image
 		if iconImage then
 			if capturePointState.isEnabled then
+				indicator.visibility = Visibility.INHERIT
 				-- Set icon image to represent current progressing team
 				if capturePointState.progressedTeam == 0 then
 					iconImage:SetColor(NEUTRAL_COLOR)
@@ -86,19 +98,23 @@ function Tick(DeltaTime)
 				if capturePointState.owningTeam == 0 then
 					iconBackground:SetColor(NEUTRAL_COLOR)
 				else
-					iconBackground:SetColor(_G.TeamColors[capturePointState.owningTeam])
+					local teamColor = _G.TeamColors[capturePointState.owningTeam]
+					teamColor.a = 0.655
+					iconBackground:SetColor(teamColor)
 				end
 			else
+				indicator.visibility = Visibility.FORCE_OFF
 				iconImage.isTeamColorUsed = false
 				iconBackground.isTeamColorUsed = false
-				iconImage:SetColor(DISABLED_COLOR)
-				iconBackground:SetColor(DISABLED_COLOR)
+				--iconImage:SetColor(DISABLED_COLOR)
+				iconBackground:SetColor(NEUTRAL_COLOR)
 			end
 		end
 
 		-- Set name text
 		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.shortName
+			nameText:GetChildren()[1].text = capturePointState.shortName
 			if capturePointState.isEnabled then
 				nameText.visibility = Visibility.FORCE_ON
 			else
@@ -108,9 +124,9 @@ function Tick(DeltaTime)
 			nameText.visibility = Visibility.FORCE_OFF
 		end
 
-		-- Set position
+		--[[ Set position
 		local indicatorOffset = indicator.width + HORIZONTAL_SPACING
 		local totalWidth = indicatorOffset * (#capturePointStates - 1)
-		indicator.x = -0.5 * totalWidth + (i - 1) * indicatorOffset
+		indicator.x = -0.5 * totalWidth + (i - 1) * indicatorOffset]]
 	end
 end

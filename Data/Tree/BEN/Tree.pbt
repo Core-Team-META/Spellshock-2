@@ -552,7 +552,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 347
@@ -4253,7 +4253,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 325
@@ -12414,7 +12414,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 298
@@ -13832,7 +13832,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 8277338959376334210
+        Id: 5223287246289902870
       }
       Color {
         R: 1
@@ -13890,7 +13890,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 8277338959376334210
+        Id: 5223287246289902870
       }
       Color {
         A: 1
@@ -13945,7 +13945,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 73478753972977788
+        Id: 14060330023043759337
       }
       Color {
         R: 0.909999967
@@ -14005,7 +14005,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 6173243591385665392
+        Id: 2764905514123890102
       }
       Color {
         A: 0.572
@@ -70242,7 +70242,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

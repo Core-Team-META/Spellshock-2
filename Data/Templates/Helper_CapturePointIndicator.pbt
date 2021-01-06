@@ -4,9 +4,9 @@
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5839741296995760456
+      RootId: 16416734658470842404
       Objects {
-        Id: 5839741296995760456
+        Id: 16416734658470842404
         Name: "Helper_CapturePointIndicator"
         Transform {
           Scale {
@@ -15,33 +15,34 @@
             Z: 1
           }
         }
-        ParentId: 12079463014202550499
-        ChildIds: 7202735380717673490
-        ChildIds: 2076860664473253773
-        ChildIds: 5080356350100769874
+        ParentId: 14718739911933960323
+        ChildIds: 6456698099112345522
+        ChildIds: 15978919843703683976
+        ChildIds: 5211730922061763584
+        ChildIds: 15269757092589988472
         UnregisteredParameters {
           Overrides {
             Name: "cs:IconBackground"
             ObjectReference {
-              SubObjectId: 7202735380717673490
+              SubObjectId: 15978919843703683976
             }
           }
           Overrides {
             Name: "cs:IconImage"
             ObjectReference {
-              SubObjectId: 1011326487474939394
+              SubObjectId: 5005542977220436952
             }
           }
           Overrides {
             Name: "cs:NameText"
             ObjectReference {
-              SubObjectId: 5080356350100769874
+              SubObjectId: 15269757092589988472
             }
           }
           Overrides {
             Name: "cs:PanelClipper"
             ObjectReference {
-              SubObjectId: 2076860664473253773
+              SubObjectId: 5211730922061763584
             }
           }
         }
@@ -52,8 +53,10 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 50
-          Height: 50
+          Width: 60
+          Height: 60
+          UIX: -140
+          UIY: -20
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -76,8 +79,8 @@
         }
       }
       Objects {
-        Id: 7202735380717673490
-        Name: "IconBackground"
+        Id: 6456698099112345522
+        Name: "FRAME"
         Transform {
           Location {
           }
@@ -89,9 +92,7 @@
             Z: 1
           }
         }
-        ParentId: 5839741296995760456
-        UnregisteredParameters {
-        }
+        ParentId: 16416734658470842404
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -99,8 +100,62 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 60
-          Height: 60
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 11846162225910715126
+            }
+            Color {
+              A: 0.572
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15978919843703683976
+        Name: "BG"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16416734658470842404
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 200
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -110,13 +165,12 @@
           UseParentHeight: true
           Image {
             Brush {
-              Id: 5196377603841433560
+              Id: 2905198102128315844
             }
             Color {
-              R: 0.1
-              G: 0.1
-              B: 0.1
-              A: 0.5
+              R: 0.909999967
+              G: 0.506225
+              A: 0.655000031
             }
             TeamSettings {
             }
@@ -124,19 +178,19 @@
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
         }
       }
       Objects {
-        Id: 2076860664473253773
+        Id: 5211730922061763584
         Name: "PanelClipper"
         Transform {
           Location {
@@ -149,8 +203,8 @@
             Z: 1
           }
         }
-        ParentId: 5839741296995760456
-        ChildIds: 1011326487474939394
+        ParentId: 16416734658470842404
+        ChildIds: 5005542977220436952
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -160,8 +214,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 50
-          Height: 50
+          Width: 60
+          Height: 60
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -186,8 +240,8 @@
         }
       }
       Objects {
-        Id: 1011326487474939394
-        Name: "IconImage"
+        Id: 5005542977220436952
+        Name: "FRAME"
         Transform {
           Location {
           }
@@ -199,9 +253,7 @@
             Z: 1
           }
         }
-        ParentId: 2076860664473253773
-        UnregisteredParameters {
-        }
+        ParentId: 5211730922061763584
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -209,22 +261,20 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 50
-          Height: 50
+          Width: 60
+          Height: 60
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          UseParentWidth: true
           Image {
             Brush {
-              Id: 16806313330175629846
+              Id: 11846162225910715126
             }
             Color {
-              R: 1
-              G: 0.110000014
-              B: 0.110000014
-              A: 0.7
+              A: 0.572
             }
             TeamSettings {
             }
@@ -244,8 +294,8 @@
         }
       }
       Objects {
-        Id: 5080356350100769874
-        Name: "NameText"
+        Id: 15269757092589988472
+        Name: "Name_Text"
         Transform {
           Location {
           }
@@ -257,9 +307,8 @@
             Z: 1
           }
         }
-        ParentId: 5839741296995760456
-        UnregisteredParameters {
-        }
+        ParentId: 16416734658470842404
+        ChildIds: 6059678524227406724
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -267,24 +316,78 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 60
-          Height: 60
+          Width: 37
+          Height: 27
+          UIY: -8
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
-          UseParentWidth: true
-          UseParentHeight: true
           Text {
-            Label: "A"
+            Label: "AB"
+            Color {
+              A: 0.512
+            }
+            Size: 21
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6059678524227406724
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15269757092589988472
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 37
+          Height: 27
+          UIX: -1
+          UIY: -2.3008728
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "AB"
             Color {
               R: 1
               G: 1
               B: 1
               A: 1
             }
-            Size: 25
+            Size: 21
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -305,21 +408,21 @@
       }
     }
     Assets {
-      Id: 5196377603841433560
-      Name: "BG Gradient 001"
+      Id: 11846162225910715126
+      Name: "Frame Outlined Thick 007"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundFlat_020"
+        AssetId: "FrameFlat_024"
       }
     }
     Assets {
-      Id: 16806313330175629846
-      Name: "Frame Outlined Thick 001"
+      Id: 2905198102128315844
+      Name: "BG Flat 007"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameFlat_020"
+        AssetId: "BackgroundNoOutline_24"
       }
     }
     PrimaryAssetId {
@@ -327,5 +430,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 72
 }
