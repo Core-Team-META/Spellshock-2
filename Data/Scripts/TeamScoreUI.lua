@@ -16,14 +16,12 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 --]]
 
 -- Internal custom properties --
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
+local TEAM = script:GetCustomProperty("Team")
+local ProgressBar = script:GetCustomProperty("ProgressBar"):WaitForObject()
+local RoundTeamscoreLimit = script:GetCustomProperty("RoundTeamscoreLimit"):WaitForObject()
 
--- User exposed properties --
-local TEAM = COMPONENT_ROOT:GetCustomProperty("Team")
-local LABEL = COMPONENT_ROOT:GetCustomProperty("Label")
-local SHOW_MAX_SCORE = COMPONENT_ROOT:GetCustomProperty("ShowMaxScore")
-local MAX_SCORE = COMPONENT_ROOT:GetCustomProperty("MaxScore")
+local MAX_SCORE = RoundTeamscoreLimit:GetCustomProperty("TeamScoreLimit")
 
 -- Check user properties
 if TEAM < 0 or TEAM > 4 then
@@ -31,19 +29,10 @@ if TEAM < 0 or TEAM > 4 then
     TEAM = 1
 end
 
-if SHOW_MAX_SCORE and MAX_SCORE <= 0 then
-    warn("MaxScore must be a positive")
-    MAX_SCORE = 100
-end
-
 -- nil Tick(float)
 -- Update the display
 function Tick(deltaTime)
     local score = Game.GetTeamScore(TEAM)
-    
-    if SHOW_MAX_SCORE then
-        TEXT_BOX.text = string.format("%s %d / %d", LABEL, score, MAX_SCORE)
-    else
-        TEXT_BOX.text = string.format("%s %d", LABEL, score)
-    end
+    TEXT_BOX.text = string.format("%d / %d", score, MAX_SCORE)
+    ProgressBar.progress = score / MAX_SCORE
 end

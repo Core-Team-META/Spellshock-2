@@ -52,11 +52,23 @@ Objects {
       value {
         Overrides {
           Name: "UIX"
-          Float: 0
+          Float: -10
         }
         Overrides {
           Name: "UIY"
-          Float: -160
+          Float: -120
+        }
+        Overrides {
+          Name: "Anchor"
+          Enum {
+            Value: "mc:euianchor:bottomright"
+          }
+        }
+        Overrides {
+          Name: "Dock"
+          Enum {
+            Value: "mc:euianchor:bottomright"
+          }
         }
       }
     }
@@ -91,34 +103,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Capture Point UI"
-  }
-}
-Objects {
-  Id: 302688705103381396
-  Name: "Score UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13334626079586580612
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Score UI"
   }
 }
 Objects {

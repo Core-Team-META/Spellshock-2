@@ -1,6 +1,6 @@
 ﻿Assets {
-  Id: 13039838708654056087
-  Name: "APIObjectIcon"
+  Id: 12821839503957755810
+  Name: "AbilityDisplyClientOptimized"
   PlatformAssetType: 3
   TextAsset {
   }

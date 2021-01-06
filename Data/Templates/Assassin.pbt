@@ -826,12 +826,6 @@
               SubObjectId: 10153399237310665229
             }
           }
-          Overrides {
-            Name: "cs:TimerUI_Template"
-            AssetReference {
-              Id: 7156155829847915259
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

@@ -22,6 +22,10 @@ anything that can be held in an inventory. Object Icons are a purely client-side
 
 local API = {}
 
+--[[if not _G.Ability_UI then
+	_G.Ability_UI = {}
+end]]
+
 -- nil SetObjectIcon(CoreObject, string) [Client]
 -- Called once on creation by each object that wishes to have an icon associated with it. Icon it stored as the MUID
 -- string of the icon asset (not a template).
@@ -32,6 +36,20 @@ end
 function API.SetObjectColor(object, color)
 	object.clientUserData.APIObjectIcons_Color = color
 end
+
+--[[function API.RegisterAbilityDurationBar(binding, durationBar)
+	if not _G.Ability_UI[binding] then
+		_G.Ability_UI[binding] = {}
+	end
+	_G.Ability_UI[binding].durationBar = durationBar
+end]]
+
+--[[function API.SetAbilityIcon(thisAbility, icon, color)
+	_G.AbilityIcons[thisAbility.actionBinding] = {}
+	_G.AbilityIcons[thisAbility.actionBinding].ability = thisAbility
+	_G.AbilityIcons[thisAbility.actionBinding].icon = icon
+	_G.AbilityIcons[thisAbility.actionBinding].color = color
+end]]
 
 -- <string> GetObjectIcon(CoreObject) [Client]
 -- Returns the MUID of the icon or nil

@@ -39,58 +39,21 @@ Objects {
         }
       }
     }
-    TemplateAsset {
-      Id: 18196809568001063302
-    }
-  }
-}
-Objects {
-  Id: 7525335440729255537
-  Name: "Spellshock Abilities Canvas"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1202107626836939879
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
     ParameterOverrideMap {
-      key: 15420478049503070623
+      key: 12570393415179122999
       value {
         Overrides {
-          Name: "Name"
-          String: "Spellshock Abilities Canvas"
+          Name: "UIX"
+          Float: 0
         }
         Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
+          Name: "UIY"
+          Float: -645
         }
       }
     }
     TemplateAsset {
-      Id: 4060522602773129057
+      Id: 18196809568001063302
     }
   }
 }

@@ -4,8 +4,8 @@ end
 
 local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = ServerScript:GetCustomProperty("MainAbility"):WaitForObject()
 local AudioFX = script:GetCustomProperty("AudioFX"):WaitForObject()
-local TimerUI_Template = script:GetCustomProperty("TimerUI_Template")
 
 local InvisibleCostumeTemplate
 local InvisibilityActiveTemplate = ServerScript:GetCustomProperty("InvisibilityActiveTemplate")
@@ -19,11 +19,6 @@ local InvisibilityActiveFX = nil
 local BindingPressedConnection = nil
 local NetworkPropertyConnection = nil
 local isInvisible = false
-
-local timerUI_position = Vector2.New(-485, 18)
-local timerUI_fillColor = Color.New(0.629001, 0.0, 0.74)
-local timerUI_backgroundColor = Color.New(0.131656, 0.0, 0.28)
-local TimerUI = {}
 
 local Timer = -1
 
@@ -105,17 +100,6 @@ function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then return end
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 	AttachCostume(player)
-	
-	-- Spawn timer UI
-	TimerUI.root = World.SpawnAsset(TimerUI_Template)
-	TimerUI.panel = TimerUI.root:GetCustomProperty("UIPanel"):WaitForObject()
-	TimerUI.panel.visibility = Visibility.FORCE_OFF
-	TimerUI.panel.x = timerUI_position.x
-	TimerUI.panel.y = timerUI_position.y
-	
-	TimerUI.progressBar = TimerUI.root:GetCustomProperty("AbilityProgressBar"):WaitForObject()
-	TimerUI.progressBar:SetFillColor(timerUI_fillColor)
-	TimerUI.progressBar:SetBackgroundColor(timerUI_backgroundColor)
 end
 
 function OnUnequip(equipment, player)
@@ -126,8 +110,6 @@ function OnUnequip(equipment, player)
 	BindingPressedConnection = nil
 	NetworkPropertyConnection:Disconnect()
 	NetworkPropertyConnection = nil
-	TimerUI.root:Destroy()
-	TimerUI = {}
 end
 
 if Equipment.owner then
@@ -138,13 +120,13 @@ Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 
 function Tick(deltaTime)
+	local DurationBar = SpecialAbility.clientUserData.durationBar
 	if Timer > 0 then
 		Timer = Timer - deltaTime
-		if TimerUI.root and Object.IsValid(TimerUI.root) then
-			TimerUI.panel.visibility = Visibility.INHERIT
-			TimerUI.progressBar.progress = Timer / Duration
+		if DurationBar and Object.IsValid(DurationBar) then
+			DurationBar.progress = Timer / Duration
 		end
-	elseif TimerUI.root and Object.IsValid(TimerUI.root) then
-		TimerUI.panel.visibility = Visibility.FORCE_OFF
+	elseif DurationBar and Object.IsValid(DurationBar) then
+		DurationBar.progress = 0
 	end
 end
