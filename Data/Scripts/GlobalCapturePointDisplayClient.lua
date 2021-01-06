@@ -46,22 +46,9 @@ function CompareStates(state1, state2)
 	return state1.order < state2.order
 end
 
---[[local indicatorObjects = PANEL:GetChildren()
-for index, id in pairs(ABCP.GetCapturePoints()) do
-	indicators[id] = indicatorObjects[index]
-end]]
-
 -- nil Tick(float)
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
-	--[[ Add indicators for new points
-	
-	for _, id in pairs(capturePointIds) do
-		if not indicators[id] then
-			indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = PANEL})
-		end
-	end]]
-
 	-- Get states and sort by order
 	local capturePointIds = ABCP.GetCapturePoints()
 	local capturePointStates = {}
@@ -123,10 +110,5 @@ function Tick(DeltaTime)
 		else
 			nameText.visibility = Visibility.FORCE_OFF
 		end
-
-		--[[ Set position
-		local indicatorOffset = indicator.width + HORIZONTAL_SPACING
-		local totalWidth = indicatorOffset * (#capturePointStates - 1)
-		indicator.x = -0.5 * totalWidth + (i - 1) * indicatorOffset]]
 	end
 end
