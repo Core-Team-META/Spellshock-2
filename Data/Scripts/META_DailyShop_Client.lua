@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/5/2021
--- Version 0.1.1
+-- Date: 2021/1/6
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -17,8 +17,9 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("Networking"):WaitForObject()
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
-local UI_Parent = script:GetCustomProperty("UI_Parent"):WaitForObject()
+local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
+local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +49,6 @@ local function GetBindInfo(value)
             shardId = tostring(shardId)
             class = tonumber(shardId:sub(1, 1))
             bind = tonumber(shardId:sub(2, 2))
-            print("Class ID " .. class .. " | Bind ID " .. bind .. " | Reward " .. reward)
             return class, bind, reward
         end
     end
@@ -81,7 +81,7 @@ local function GetCosmeticInfo(value)
 end
 
 local function BuildShopItems(slot, id, class, bind, reward)
-    local table = UI_Parent:GetChildren()
+    local table = SHOP_ITEMS:GetChildren()
     local panel = table[slot]
     if panel.name ~= "Background" then
         local slotId = panel:GetCustomProperty("SLOT")
@@ -141,9 +141,6 @@ local function BuildRewardSlots(tbl)
             BuildShopItems(slot, id, class, bind, reward)
         end
     end
-    UI.SetCursorVisible(true)
-    UI.SetCanCursorInteractWithUI(true)
-    UI.SetCursorLockedToViewport(true)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -160,7 +157,11 @@ end
 --Builds the cosmeticTable based on the heirarchy
 function OnDataObjectAdded(parent, object)
     if parent == NETWORKED and object.name == LOCAL_PLAYER.id then
-        local dataStr = child:GetCustomProperty("data")
+        local dataStr = object:GetCustomProperty("data")
+        repeat
+            dataStr = object:GetCustomProperty("data")
+            Task.Wait()
+        until dataStr and dataStr ~= ""
         dailyRewards = UTIL.DailyShopConvertToTable(dataStr)
         BuildRewardSlots(dailyRewards)
         Events.BroadcastToServer(NAMESPACE .. "DESTROY")
@@ -168,7 +169,25 @@ function OnDataObjectAdded(parent, object)
 end
 
 function OnRefresh()
+    if not isAllowed(1) then
+        return
+    end
     Events.BroadcastToServer(NAMESPACE .. "REFRESH")
+end
+
+function OnDailyShopOpen(player, keybind)
+    if keybind == "ability_extra_61" and not PARENT_UI:IsVisibleInHierarchy() then
+        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
+        PARENT_UI.visibility = Visibility.FORCE_ON
+        UI.SetCursorVisible(true)
+        UI.SetCanCursorInteractWithUI(true)
+        UI.SetCursorLockedToViewport(true)
+    elseif keybind == "ability_extra_61" and PARENT_UI:IsVisibleInHierarchy() then
+        PARENT_UI.visibility = Visibility.FORCE_OFF
+        UI.SetCursorVisible(false)
+        UI.SetCanCursorInteractWithUI(false)
+        UI.SetCursorLockedToViewport(false)
+    end
 end
 
 --REWARD_UTIL.CalculateDailyShopItemCost(key, value)
@@ -178,3 +197,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
+LOCAL_PLAYER.bindingPressedEvent:Connect(OnDailyShopOpen)

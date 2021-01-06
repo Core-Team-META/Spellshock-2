@@ -49,7 +49,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:UI_Parent"
+      Name: "cs:Shop_Items"
       ObjectReference {
         SelfId: 9005434791992860807
       }
@@ -58,6 +58,12 @@ Objects {
       Name: "cs:Refresh"
       ObjectReference {
         SelfId: 9098304763715064207
+      }
+    }
+    Overrides {
+      Name: "cs:DailyShop"
+      ObjectReference {
+        SelfId: 4775171134151071576
       }
     }
   }
@@ -88,8 +94,7 @@ Objects {
     }
   }
   ParentId: 3567758715086491143
-  ChildIds: 14812838753542296227
-  ChildIds: 9005434791992860807
+  ChildIds: 4775171134151071576
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -119,6 +124,33 @@ Objects {
   }
 }
 Objects {
+  Id: 4775171134151071576
+  Name: "DailyShop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12468440255762144638
+  ChildIds: 14812838753542296227
+  ChildIds: 9005434791992860807
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 9005434791992860807
   Name: "Shop_Items"
   Transform {
@@ -132,7 +164,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12468440255762144638
+  ParentId: 4775171134151071576
   ChildIds: 17979936354324958338
   ChildIds: 5244577173163335306
   ChildIds: 1966408804731438117
@@ -2527,7 +2559,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12468440255762144638
+  ParentId: 4775171134151071576
   ChildIds: 9098304763715064207
   ChildIds: 11932366546099398476
   Collidable_v2 {

@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/5/2021
+-- Date: 2021/1/6
 -- Version 0.1.1
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
@@ -25,16 +25,6 @@ local spamPrevent
 -- SERVER LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
---[[
-
-ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
-
-BOT_Bot1^1~51=15^2~G=165|BOT_Bot2^1~52=17^2~G=198
-
-SimpleValue {
-    StringVar: "1^1~1=1,2=0^2~1=1,2=0^3~1=1,2=0^4~1=1,2=0^5~1=1,2=16^6~1=1,2=0^7~1=1,2=0|2^1~1=1,2=0^2~1=1,2=0^3~1=1,2=0^4~1=1,2=0^5~1=1,2=0^6~1=1,2=0^7~1=1,2=0|3^1~1=1,2=0^2~1=1,2=0^3~1=1,2=20^4~1=1,2=0^5~1=1,2=0^6~1=1,2=0^7~1=1,2=0|4^1~1=1,2=0^2~1=1,2=0^3~1=1,2=16^4~1=1,2=15^5~1=1,2=0^6~1=1,2=0^7~1=1,2=0|5^1~1=1,2=0^2~1=1,2=0^3~1=1,2=0^4~1=1,2=0^5~1=1,2=0^6~1=1,2=0^7~1=1,2=0"
-}
-]]
 --Used for spam prevention
 --@return bool
 local function isAllowed(time)
@@ -58,7 +48,7 @@ end
 --@return bool
 --(24 * 60 * 60)
 local function Has24HoursPassed(time)
-    return time + 60 <= os.time()
+    return time + (24 * 60 * 60) <= os.time()
 end
 
 --@param object player
@@ -82,14 +72,27 @@ local function CalculateRewardSlot(player)
 end
 
 --@params object player
-local function GenerateShopItems(player)
+local function ReplicateShopItems(player)
+    local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP)
+    dataObject.name = tostring(player.id)
+    dataObject:SetNetworkedCustomProperty("data", UTIL.DailyShopConvertToString(dailyRewards[player.id]))
+    dataObject.parent = NETWORKED
+end
+
+--@params object player
+local function GenerateShopItems(player, forced)
     dailyRewards[player.id] = {}
     local tempTbl = {}
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
     end
     local time = os.time()
-    tempTbl["TIME"] = {T = time}
+    local refresh = 0
+    if forced then
+        refresh = player.serverUserData.DS_REFRESH + 1
+        player.serverUserData.DS_REFRESH = refresh
+    end
+    tempTbl["TIME"] = {T = time, R = CoreMath.Round(refresh)}
     dailyRewards[player.id] = tempTbl
 end
 
@@ -107,18 +110,10 @@ end
 function OnLoadPlayerDailyShop(player, data)
     if data and data["TIME"] and data["TIME"].T and not Has24HoursPassed(data["TIME"].T) then
         dailyRewards[player.id] = data
+        player.serverUserData.DS_REFRESH = data["TIME"].R or 0
     else
-        GenerateShopItems(player)
+        GenerateShopItems(player, false)
     end
-    Task.Wait(10)
-    OnDailyShopOpen(player)
-end
-
-function OnDailyShopOpen(player)
-    local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP)
-    dataObject.name = tostring(player.id)
-    dataObject:SetNetworkedCustomProperty("data", UTIL.DailyShopConvertToString(dailyRewards[player.id]))
-    dataObject.parent = NETWORKED
 end
 
 --@param object player
@@ -127,14 +122,13 @@ function OnPlayerLeft(player)
 end
 
 function OnPurchase(player, id)
-    warn(tostring(id))
     REWARD_UTIL.OnRewardSelect(player, id, dailyRewards, true)
-    OnDailyShopOpen(player)
+    ReplicateShopItems(player)
 end
 
 function OnRefresh(player)
-    GenerateShopItems(player)
-    OnDailyShopOpen(player)
+    GenerateShopItems(player, true)
+    ReplicateShopItems(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -143,3 +137,4 @@ end
 Events.ConnectForPlayer(NAMESPACE .. "DESTROY", OnDeletePlayerDataObject)
 Events.ConnectForPlayer(NAMESPACE .. "PURCHASE", OnPurchase)
 Events.ConnectForPlayer(NAMESPACE .. "REFRESH", OnRefresh)
+Events.ConnectForPlayer(NAMESPACE .. "OPENSHOP", ReplicateShopItems)

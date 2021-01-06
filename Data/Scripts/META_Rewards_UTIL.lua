@@ -71,7 +71,6 @@ function API.OnRewardSelect(player, rewardId, tbl, bool)
             elseif key == "C" then
                 player:AddResource(CONST.COSMETIC_TOKEN, value)
             end
-            warn(tostring(key .. " " .. value))
         end
         if not bool then
             tbl[player.id] = nil
@@ -85,7 +84,7 @@ end
 --@param int value
 --@return int cost
 function API.CalculateDailyShopItemCost(value)
-    return value * 100
+    return value * 30
 end
 
 ------------------------------------------------------------------------------------------------------------------------
