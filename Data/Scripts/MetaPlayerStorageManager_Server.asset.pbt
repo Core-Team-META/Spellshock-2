@@ -45,6 +45,12 @@
           Id: 14568273880639568162
         }
       }
+      Overrides {
+        Name: "cs:META_DailyShop_Server"
+        ObjectReference {
+          SelfId: 13450014505785450251
+        }
+      }
     }
   }
   SerializationVersion: 70
