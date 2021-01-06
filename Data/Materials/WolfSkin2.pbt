@@ -2,7 +2,7 @@
   Id: 177765282158027649
   Name: "WolfSkin2"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 72
   CustomMaterialAsset {
     BaseMaterialId: 4640068498251427509
     ParameterOverrides {

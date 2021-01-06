@@ -31,7 +31,7 @@ Objects {
   ChildIds: 6356897330857931981
   ChildIds: 5874015840417789592
   ChildIds: 3612684566017260609
-  ChildIds: 13945750086837791578
+  ChildIds: 5763622543987818276
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -44,9 +44,16 @@ Objects {
   }
 }
 Objects {
-  Id: 13945750086837791578
-  Name: "META_CosmeticStore"
+  Id: 5763622543987818276
+  Name: "CosmeticStore"
   Transform {
+    Location {
+      X: -35780
+      Y: 24160
+      Z: 6910
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -60,32 +67,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4406967109701207403
-      value {
-        Overrides {
-          Name: "Name"
-          String: "CosmeticStore"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35780
-            Y: 24160
-            Z: 6910
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3572556691414508523
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "CosmeticStore"
   }
 }
 Objects {
@@ -1793,6 +1777,7 @@ Objects {
       CanMoveUp: true
       CanMoveDown: true
       IsMountEnabled: true
+      MaxHitpoints: 100
     }
   }
   InstanceHistory {

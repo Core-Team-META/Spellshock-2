@@ -2,7 +2,7 @@
   Id: 8340788593877699680
   Name: "Orc_palm_ Leaves from Fern 01"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 72
   CustomMaterialAsset {
     BaseMaterialId: 15437848753356882295
     ParameterOverrides {

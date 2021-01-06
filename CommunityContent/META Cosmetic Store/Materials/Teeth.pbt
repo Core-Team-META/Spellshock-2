@@ -2,7 +2,7 @@
   Id: 13154021580627251857
   Name: "Teeth"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 72
   CustomMaterialAsset {
     BaseMaterialId: 12537868752084607232
     ParameterOverrides {

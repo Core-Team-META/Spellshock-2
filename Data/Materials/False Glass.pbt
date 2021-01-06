@@ -2,7 +2,7 @@
   Id: 3720753995173186750
   Name: "False Glass"
   PlatformAssetType: 13
-  SerializationVersion: 70
+  SerializationVersion: 72
   CustomMaterialAsset {
     BaseMaterialId: 17117735896314006411
     ParameterOverrides {
