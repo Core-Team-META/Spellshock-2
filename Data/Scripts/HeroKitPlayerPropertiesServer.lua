@@ -45,7 +45,7 @@ function ApplyEquipmentPlayerProperties(player)
     if player == EQUIPMENT.owner then
         weaponSettings = {
             animationStance = ANIMATION_STANCE,
-            maxHitPoints = MAX_HEALTH,
+            maxHitPoints = 300, --MAX_HEALTH,
             movementControlMode = player.movementControlMode,
             maxWalkSpeed = WALK_SPEED,
             jumpVelocity = JUMP_VELOCITY,
