@@ -19,6 +19,17 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 729040568759198389
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 4406967109701207403
       value {
         Overrides {
@@ -33,6 +44,12 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
           }
         }
       }
