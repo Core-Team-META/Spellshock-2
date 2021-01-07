@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 01/04/2020
--- Version 0.1.3
+-- Date: 2021/1/6
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -212,8 +212,6 @@ local function GetPlayerRewards(tbl)
         if playerId == LOCAL_PLAYER.id then
             ThirdSlotEnabled(false)
             BuildRewardSlots(rewards)
-            ToggleUI(true)
-            ANIMATION.context.OnRewardShow()
         end
     end
 end
@@ -231,11 +229,6 @@ function OnRewardSelected(button)
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
         Task.Wait(0.3)
     until result == BroadcastEventResultCode.SUCCESS
-
-    --DisconnectListeners()
-    Task.Wait()
-    ToggleUI(false)
-    ANIMATION.context.OnRewardHide()
 end
 
 function OnRewardsChanged(object, string)
@@ -259,7 +252,16 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         --Send First Reward Select
         Events.BroadcastToServer(NAMESPACE .. "RewardSelect", 1)
     end
-    
+end
+
+function OnMenuChanged(newMenu)
+    if newMenu == _G.MENU_TABLE["Rewards"] then -- show
+        ToggleUI(true)
+        ANIMATION.context.OnRewardShow()
+    else -- hide
+        ToggleUI(false)
+        ANIMATION.context.OnRewardHide()
+    end
 end
 
 --#TODO TEMP FUNCTIONS
@@ -275,4 +277,5 @@ end
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("Changing Menu", OnMenuChanged)
 --UTIL.TablePrint(rewardAssets)
