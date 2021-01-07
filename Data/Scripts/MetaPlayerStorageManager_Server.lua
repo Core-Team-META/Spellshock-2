@@ -38,13 +38,17 @@ local playerData = {}
 ------------------------------------------------------------------------------------------------------------------------
 
 local function DoesDataVersionMatch(data)
-    local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
-    for id, version in pairs(tbl) do
-        if versionControl[id] ~= version then
-            return false
+    if data[CONST.STORAGE.VERSION] then
+        local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
+        for id, version in pairs(tbl) do
+            if versionControl[id] ~= version then
+                return false
+            end
         end
+        return true
+    else
+        return true
     end
-    return true
 end
 
 local function AddDefaultCosmetics(player)
@@ -187,7 +191,7 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    if DoesDataVersionMatch(data) then 
+    if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
