@@ -902,7 +902,7 @@
             IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
-            Duration: 20
+            Duration: 7
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1211,10 +1211,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
+            Duration: 0.75
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"

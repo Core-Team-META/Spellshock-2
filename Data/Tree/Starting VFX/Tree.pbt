@@ -866,6 +866,36 @@ Objects {
         Id: 14779099188806658691
       }
     }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Placement"
+      AssetReference {
+        Id: 5914366131137133225
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Projectile"
+      AssetReference {
+        Id: 10839489698207188911
+      }
+    }
+    Overrides {
+      Name: "cs:03_DivineLight_Active"
+      AssetReference {
+        Id: 11640123223294048176
+      }
+    }
+    Overrides {
+      Name: "cs:01_SunBeam_Ending"
+      AssetReference {
+        Id: 4895527079609186475
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 15136798516269130110
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
