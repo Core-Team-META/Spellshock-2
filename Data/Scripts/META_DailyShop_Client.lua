@@ -87,8 +87,11 @@ local function BuildShopItems(slot, id, class, bind, reward)
         local slotId = panel:GetCustomProperty("SLOT")
         local infoTable = nil
         local currentAmmount = nil
+        local cost = nil
         if slotId and slotId == slot then
             if id == 1 then
+                --Shard Cost
+                cost = REWARD_UTIL.CalculateShardCost(reward)
                 infoTable = rewardAssets[id][class][bind]
                 currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
             else
@@ -97,6 +100,8 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 elseif id == 3 then
                     currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
                 end
+                --Cosmetic Token Cost
+                cost = REWARD_UTIL.CalculateCosmeticCost(reward)
                 infoTable = rewardAssets[id][bind]
             end
         end
@@ -107,9 +112,13 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local Button = panel:GetCustomProperty("Button"):WaitForObject()
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(reward)
-            Name.text = tostring(infoTable.Name)
+            if class then
+                Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
+            else
+                Name.text = tostring(infoTable.Name)
+            end
             if tonumber(dailyRewards[slot].P) == 0 then
-                Button.text = tostring("$" .. REWARD_UTIL.CalculateDailyShopItemCost(reward))
+                Button.text = tostring("$" .. cost)
                 Button.clientUserData.id = slotId
                 if #listeners < 6 then
                     listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
@@ -137,7 +146,7 @@ local function BuildRewardSlots(tbl)
                 bind, reward = GetCosmeticInfo(value)
             end
         end
-        if id and class and bind and reward then
+        if id and bind and reward then
             BuildShopItems(slot, id, class, bind, reward)
         end
     end

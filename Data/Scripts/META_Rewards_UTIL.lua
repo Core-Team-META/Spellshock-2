@@ -55,6 +55,20 @@ function API.GetRandomClass()
     return math.random(1, 5)
 end
 
+
+--@param int value
+--@return int cost
+function API.CalculateShardCost(value)
+    return CoreMath.Round(value * 30)
+end
+
+
+--@param int value
+--@return int cost
+function API.CalculateCosmeticCost(value)
+    return CoreMath.Round(value * 250)
+end
+
 --@param object player
 --@param int rewardId
 --@param tbl
@@ -80,12 +94,7 @@ function API.OnRewardSelect(player, rewardId, tbl, bool)
     end
 end
 
---@param int/string key
---@param int value
---@return int cost
-function API.CalculateDailyShopItemCost(value)
-    return value * 30
-end
+
 
 ------------------------------------------------------------------------------------------------------------------------
 return API
