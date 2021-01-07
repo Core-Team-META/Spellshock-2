@@ -37,22 +37,29 @@ local playerData = {}
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
+-- Used to check play storage version vs. current version - used for data conversions in the future
+--@params table data
 local function DoesDataVersionMatch(data)
     if data[CONST.STORAGE.VERSION] then
         local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
-        for id, version in pairs(tbl) do
-            if versionControl[id] ~= version then
+        for id, version in pairs(versionControl) do
+            if tbl[id] and tbl[id] ~= version then
+                -- Return false if version mismatch
                 return false
             end
         end
+        -- Return true if all versions match
         return true
     else
+        -- Return true if new player
         return true
     end
 end
 
+-- #TODO Currently used for adding multiple cosmetics to a player
+-- Builds default cosmetics
+--@params object player
 local function AddDefaultCosmetics(player)
-    --#TODO DATA BUILD TEST
     for c = 1, 5 do
         for t = 1, 2 do
             for s = 1, 10 do
@@ -102,6 +109,7 @@ local function OnLoadCostumeData(player, data)
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
 end
 
+--@param object player
 local function OnDeletePlayerDataObject(player)
     for _, object in ipairs(playerData) do
         if Object.IsValid(object) and object.name == player.id then
