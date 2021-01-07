@@ -1,11 +1,11 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- StoreScript
--- Authors:	Montoli (META) (https://www.coregames.com/user/422e57c184374923b8ce32176b018db5) 
+-- Authors:	Montoli (META) (https://www.coregames.com/user/422e57c184374923b8ce32176b018db5)
 --			Estlogic (META) (https://www.coregames.com/user/385b45d7abdb499f8664c6cb01df521b)
 --			Buckmonster (META) (https://www.coregames.com/user/901b7628983c4c8db4282f24afeda57a)
 -- Date: 2020/12/22
 -- Version: 0.1.3
--- Description: 
+-- Description:
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -20,7 +20,6 @@ local propAutosaveCurrency = propStoreRoot:GetCustomProperty("AutosaveCurrency")
 local propKeepSubscriptionCosmetics = propStoreRoot:GetCustomProperty("KeepSubscriptionCosmetics")
 local propAllowSubscriptionPurchase = propStoreRoot:GetCustomProperty("AllowSubscriptionPurchase")
 local propSubscriptionTagName = propStoreRoot:GetCustomProperty("SubscriptionTagName")
-
 
 local propStoreContentsFolderName = propStoreRoot:GetCustomProperty("StoreContentsFolderName")
 local propStoreContents = World.GetRootObject():FindDescendantByName(propStoreContentsFolderName)
@@ -62,35 +61,31 @@ local function StringSplit(s, delimiter)
 	return result
 end
 
+local function META_VFX()
+	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
 function PerksCheckTask()
-
 	if not propAllowSubscriptionPurchase then
-	
 		checkPerks:Cancel()
 		return
-		
 	end
-	
+
 	while not _G.PERKS and propAllowSubscriptionPurchase do
-	
 		Task.Wait()
-		
 	end
-	
+
 	while not _G.PERKS.SUBSCRIPTION do
-	
 		Task.Wait()
-		
-	end	
+	end
 
 	subscriptionPerk = _G.PERKS.SUBSCRIPTION
-	
-	checkPerks:Cancel()
 
+	checkPerks:Cancel()
 end
 
 function SavePreviousSettings(player)
@@ -124,8 +119,10 @@ function ShowStore_ServerHelper(player)
 	if player ~= nil then
 		SavePreviousSettings(player)
 		Task.Wait()
+		--[[
 		player.lookControlMode = LookControlMode.NONE
 		player.movementControlMode = MovementControlMode.NONE
+		]]--
 	end
 end
 
@@ -134,8 +131,8 @@ function HideStore_ServerHelper(player)
 	player.movementControlMode = previousMovementMode[player.id]
 end
 
-function ApplyCosmetic(player, templateId, cosmeticId, visible)
-	if templateId == nil or cosmeticId == nil then
+function ApplyCosmetic(player, templateId, cosmeticId, visible) --#region
+	--[[if templateId == nil or cosmeticId == nil then
 		player:SetVisibility(true, false)
 		return
 	end
@@ -146,11 +143,19 @@ function ApplyCosmetic(player, templateId, cosmeticId, visible)
 	AppliedCosmeticsTemplate[player.id] = templateId
 	AppliedCosmeticsVisibility[player.id] = visible
 	
-	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  
+	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  ]] if
+		not cosmeticId
+	 then
+		return
+	end
+	local class = tonumber(cosmeticId:sub(1, 1))
+	local team = tonumber(cosmeticId:sub(2, 2))
+	local skin = tonumber(cosmeticId:sub(3, 4))
+	local bind = tonumber(cosmeticId:sub(5, 5))
+	META_VFX().SetBindCosmetic(player, class, team, bind, skin)
 end
 
 function VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency)
-
 	if StoreElements[cosmeticId] then
 		--print("store element entry found")
 		if StoreElements[cosmeticId][3] == isPartOfSubscription then -- check subscription bool is correct
@@ -166,19 +171,14 @@ function VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency
 					elseif StoreElements[cosmeticId][3] and player:HasPerk(subscriptionPerk) then
 						--print("player has subscription")
 						--print(tostring(cosmeticId) .. " verified!")
-						return true							
+						return true
 					end
-					
 				end
-			
 			end
-			
 		end
 	end
-	--print(tostring(cosmeticId) .. " NOT verified!")	
+	--print(tostring(cosmeticId) .. " NOT verified!")
 	return false
-
-
 end
 
 -- this function listens to events from the client, so it has verification check.
@@ -186,15 +186,13 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 	if player and not Object.IsValid(player) or not player then
 		return
 	end
-	
-	if not VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency) then
 
-		ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, false) 
-		
+	if not VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency) then
+		ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, false)
+
 		return
-		
 	end
-	
+
 	player:SetResource("COSMETIC_" .. cosmeticId, 1)
 
 	if isPartOfSubscription then
@@ -210,21 +208,24 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 		playerOwnedCosmetics[player.id] = {}
 	end
 	playerOwnedCosmetics[player.id][cosmeticId] = true
-	
-	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)  	
+	local class = tonumber(cosmeticId:sub(1, 1))
+	local team = tonumber(cosmeticId:sub(2, 2))
+	local skin = tonumber(cosmeticId:sub(3, 4))
+	local bind = tonumber(cosmeticId:sub(5, 5))
+	META_VFX().UnlockCosmetic(player, class, team, skin, bind)
+	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
 end
 
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).
 function GetCosmeticFromServer(player, cosmeticId)
-	
 	player:SetResource("COSMETIC_" .. cosmeticId, 1)
 
 	if playerOwnedCosmetics[player.id] == nil then
 		playerOwnedCosmetics[player.id] = {}
 	end
 	playerOwnedCosmetics[player.id][cosmeticId] = true
-	
-	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)  	
+
+	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
 end
 
 function IsCosmeticName(rscName)
@@ -250,35 +251,33 @@ function SaveOwnedCosmeticsAndMoney(player)
 		saveTable.COSMETICS.equippedTemplate = AppliedCosmeticsTemplate[player.id]
 		saveTable.COSMETICS.visible = AppliedCosmeticsVisibility[player.id]
 		saveTable.COSMETICS.fromSubscription = playerOwnedSubscriptionCosmetics[player.id]
-		
+
 		local ownedCosmetics = {}
 		for k, v in pairs(player:GetResources()) do
 			if IsCosmeticName(k) then
 				ownedCosmetics[k] = 1
 			end
 		end
-		
+
 		saveTable.COSMETICS.owned = ownedCosmetics
 	end
-	
+
 	if propAutosaveCurrency then
 		local playerCurrencies = {}
-		
+
 		for c, r in pairs(Currencies) do
-		
 			playerCurrencies[c] = player:GetResource(r)
-		
 		end
-		
+
 		saveTable.COSMETICS.currency = playerCurrencies
 	end
 
 	Storage.SetPlayerData(player, saveTable)
 end
 
-function LoadOwnedCosmeticsAndMoney(player)	
+function LoadOwnedCosmeticsAndMoney(player)
 	local data = Storage.GetPlayerData(player)
-	
+
 	if data.COSMETICS then
 		if data.COSMETICS.owned then
 			if propAutosavePurchases then
@@ -291,20 +290,21 @@ function LoadOwnedCosmeticsAndMoney(player)
 						player:SetResource(k, 1)
 					end
 				end
-				
+
 				if propAllowSubscriptionPurchase then
 					if not propKeepSubscriptionCosmetics then
 						CheckSubscription(player, data)
-	
+
 						Task.Wait()
-	
+
 						data = Storage.GetPlayerData(player)
 					end
-					
+
 					playerOwnedSubscriptionCosmetics[player.id] = data.COSMETICS.fromSubscription
 				end
 			end
 
+		--[[
 			if propAutosaveCurrency and data.COSMETICS.currency then
 			
 				while not initialized do
@@ -317,9 +317,9 @@ function LoadOwnedCosmeticsAndMoney(player)
 				
 				end
 			end
+			--]]
 		end
 	end
-
 end
 
 function CheckSubscription(player)
@@ -360,63 +360,63 @@ function OnRequestCosmetics(player)
 		--print("Checking data for " .. v.id)
 		if AppliedCosmetics[v.id] ~= nil then
 			--print("Sending data for " .. v.id)
-						
-			ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", v.id, AppliedCosmetics[v.id]) 
-			
+
+			ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", v.id, AppliedCosmetics[v.id])
+
 			Task.Wait(0.2)
 		end
 	end
 end
 
 function InitializeStoreSever()
-	for k,v in pairs(propStoreContents:GetChildren()) do
+	for k, v in pairs(propStoreContents:GetChildren()) do
 		local storeInfo = v
 		if storeInfo ~= nil then
 			local propID = storeInfo:GetCustomProperty("ID")
 			local propCost = storeInfo:GetCustomProperty("Cost")
-			local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")			
+			local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")
 			local propTags = storeInfo:GetCustomProperty("Tags")
-			
+
 			local tagList = {}
 			--print("tags for " .. propID)
 			for tag in string.gmatch(propTags, "[^%s]+") do
 				tagList[tag] = tag
 				--print("[" .. tag .. "]")
-			end	
-			
+			end
+
 			local partOfSubscription = false
-			
-			for kk,vv in pairs(tagList) do
+
+			for kk, vv in pairs(tagList) do
 				if vv == propSubscriptionTagName then
 					partOfSubscription = true
 				end
 			end
 
-			if propCost == nil then propCost = 25 end
-				
-			StoreElements[propID] = {propCost, propResourceName, partOfSubscription}
+			if propCost == nil then
+				propCost = 25
+			end
 
+			StoreElements[propID] = {propCost, propResourceName, partOfSubscription}
 		end
 	end
-	
+
 	Currencies = {}
-	
-	for k,v in pairs(propStoreCurrencies:GetChildren()) do
+
+	for k, v in pairs(propStoreCurrencies:GetChildren()) do
 		local propCurrencyName = v:GetCustomProperty("CurrencyName")
 		local propResourceName = v:GetCustomProperty("CurrencyResourceName")
-				
+
 		Currencies[propCurrencyName] = propResourceName
 	end
-	
-	initialized = true
 
+	initialized = true
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
+--Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Events.Connect("SHOWSTORE_SERVER", ShowStore_ServerHelper)
 Events.Connect("HIDESTORE_SERVER", HideStore_ServerHelper)

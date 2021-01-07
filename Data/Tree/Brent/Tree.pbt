@@ -127,6 +127,32 @@ Objects {
   }
 }
 Objects {
+  Id: 6141650249730392564
+  Name: "Cosmetic Store"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cosmetic Store"
+  }
+}
+Objects {
   Id: 4683464414535277849
   Name: "Combat Stats Scoreboard"
   Transform {

@@ -72,13 +72,12 @@ API.REWARDS = {
     COSMETIC = 3
 }
 
-API.COSTUME_ID = 8
-
 API.STARTING_LEVEL = 1
 API.MAX_LEVEL = 10
 
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
+API.COSTUME_ID = 8
 
 ------------------------------------------------------------------------------------------------------------------------
 -- RESOURCE NAMES
