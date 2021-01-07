@@ -146,7 +146,7 @@
         Control {
           Width: 200
           Height: 25
-          UIX: 2.93164063
+          UIX: -6.0168004
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -154,7 +154,7 @@
           }
           UseParentWidth: true
           Text {
-            Label: "123"
+            Label: "8888"
             Color {
               R: 1
               G: 0.845298052
