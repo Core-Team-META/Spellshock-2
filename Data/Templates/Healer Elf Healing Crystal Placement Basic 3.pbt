@@ -135,6 +135,8 @@
         ChildIds: 1033726762501849077
         ChildIds: 10913833422200768143
         ChildIds: 13134400980599720504
+        ChildIds: 3763545174533594786
+        ChildIds: 216177683710003827
         ChildIds: 16456188174260226208
         ChildIds: 787745723328382276
         WantsNetworking: true
@@ -483,6 +485,78 @@
         }
       }
       Objects {
+        Id: 3763545174533594786
+        Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
+        Transform {
+          Location {
+            Z: 2200.00049
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17542189731085056780
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 4937714845344107743
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: 8000
+          Radius: 1000
+          EnableOcclusion: true
+          FadeOutTime: 3
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 216177683710003827
+        Name: "Magic Bright Light Spell Loop 01 SFX"
+        Transform {
+          Location {
+            Z: 2200.00049
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17542189731085056780
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 9254182311543276521
+          }
+          AutoPlay: true
+          Volume: 0.7
+          Falloff: 8000
+          Radius: 1000
+          EnableOcclusion: true
+          FadeOutTime: 3
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
         Id: 16456188174260226208
         Name: "RingVFX"
         Transform {
@@ -576,9 +650,8 @@
         }
         ParentId: 17542189731085056780
         ChildIds: 5651544341368577429
-        ChildIds: 216177683710003827
-        ChildIds: 3763545174533594786
         ChildIds: 2434124436182768904
+        ChildIds: 4082959681554838075
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -632,70 +705,6 @@
         }
       }
       Objects {
-        Id: 216177683710003827
-        Name: "Magic Bright Light Spell Loop 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 787745723328382276
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 9254182311543276521
-          }
-          AutoPlay: true
-          Volume: 0.7
-          Falloff: 1000
-          Radius: 516.585388
-          EnableOcclusion: true
-          FadeOutTime: 3
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 3763545174533594786
-        Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 787745723328382276
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 4937714845344107743
-          }
-          AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
-          FadeOutTime: 3
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
         Id: 2434124436182768904
         Name: "Group"
         Transform {
@@ -712,18 +721,6 @@
         }
         ParentId: 787745723328382276
         ChildIds: 16034478068543368464
-        ChildIds: 4383468672994052236
-        ChildIds: 8515513511128324025
-        ChildIds: 1158591317922753307
-        ChildIds: 15952321121754606005
-        ChildIds: 7737697601749087033
-        ChildIds: 6234195693981970786
-        ChildIds: 3549404223694623230
-        ChildIds: 16058332589480806774
-        ChildIds: 12918797800202103008
-        ChildIds: 11602738282316888487
-        ChildIds: 7635805284731555085
-        ChildIds: 9388732696073843976
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -768,6 +765,15 @@
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 3.10978699
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -793,29 +799,165 @@
         }
       }
       Objects {
-        Id: 4383468672994052236
-        Name: "Arch Fancy Peaked 6m"
+        Id: 4082959681554838075
+        Name: "GEO"
         Transform {
           Location {
-            X: 0.000429153442
-            Y: 504.25705
+            Z: 92.7502441
           }
           Rotation {
-            Pitch: 90
-            Yaw: -110.005737
           }
           Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
+            X: 27.481842
+            Y: 27.481842
+            Z: 27.481842
           }
         }
-        ParentId: 2434124436182768904
+        ParentId: 787745723328382276
+        ChildIds: 11234653727000702003
+        ChildIds: 7103505372760487984
+        ChildIds: 2203953457801595700
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11234653727000702003
+        Name: "Group"
+        Transform {
+          Location {
+            Y: 20.181118
+            Z: -5.00174904
+          }
+          Rotation {
+            Pitch: -50
+            Yaw: 89.9999924
+          }
+          Scale {
+            X: 0.426929563
+            Y: 0.426929563
+            Z: 0.426929563
+          }
+        }
+        ParentId: 4082959681554838075
+        ChildIds: 15781222609137139221
+        ChildIds: 8377356945034833821
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15781222609137139221
+        Name: "Fantasy Gauntlet Arm 01"
+        Transform {
+          Location {
+            X: -0.000732421875
+            Y: -0.000366210938
+            Z: -3.05175781e-05
+          }
+          Rotation {
+            Yaw: 90
+            Roll: 50.0526619
+          }
+          Scale {
+            X: 0.14825654
+            Y: -0.261939019
+            Z: 0.253846616
+          }
+        }
+        ParentId: 11234653727000702003
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 27.8822212
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 22.5581589
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 9.37677193
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 18.2507038
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 49.9336395
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 40.39888
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:utile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:vtile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
             }
           }
         }
@@ -827,46 +969,218 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7142781972612396783
+            Id: 4322675021483384603
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
-              Mass: 100
-              LinearDamping: 0.01
             }
           }
         }
       }
       Objects {
-        Id: 8515513511128324025
-        Name: "Arch Fancy Peaked 6m"
+        Id: 8377356945034833821
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: 252.129379
-            Y: 436.69754
+            X: -9.29325771
+            Y: -0.00229170406
+            Z: 5.16534901
           }
           Rotation {
-            Pitch: 90
-            Yaw: -140.005722
-            Roll: 1.72465946e-06
+            Pitch: 50.0525703
+            Roll: 180
           }
           Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
+            X: 0.0445358455
+            Y: 0.321242154
+            Z: 0.496824
           }
         }
-        ParentId: 2434124436182768904
+        ParentId: 11234653727000702003
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.61
+              B: 0.452450484
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 7103505372760487984
+        Name: "Group"
+        Transform {
+          Location {
+            X: 17.4773617
+            Y: -10.090559
+            Z: -5.00166035
+          }
+          Rotation {
+            Pitch: -50
+            Yaw: -30.000061
+            Roll: 3.37952e-06
+          }
+          Scale {
+            X: 0.426929682
+            Y: 0.426929682
+            Z: 0.426929682
+          }
+        }
+        ParentId: 4082959681554838075
+        ChildIds: 13556595479198927615
+        ChildIds: 598229849411648086
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13556595479198927615
+        Name: "Fantasy Gauntlet Arm 01"
+        Transform {
+          Location {
+            X: 3.05175781e-05
+            Y: -0.00048828125
+            Z: 6.10351563e-05
+          }
+          Rotation {
+            Yaw: 90
+            Roll: 50.0526619
+          }
+          Scale {
+            X: 0.14825654
+            Y: -0.261939019
+            Z: 0.253846616
+          }
+        }
+        ParentId: 7103505372760487984
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 27.8822212
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 22.5581589
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 9.37677193
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 18.2507038
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 49.9336395
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 40.39888
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:utile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:vtile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
             }
           }
         }
@@ -878,46 +1192,218 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7142781972612396783
+            Id: 4322675021483384603
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
-              Mass: 100
-              LinearDamping: 0.01
             }
           }
         }
       }
       Objects {
-        Id: 1158591317922753307
-        Name: "Arch Fancy Peaked 6m"
+        Id: 598229849411648086
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: 436.697968
-            Y: 252.127686
+            X: -9.29325771
+            Y: -0.00229170406
+            Z: 5.16534901
           }
           Rotation {
-            Pitch: 90
-            Yaw: -170.005676
-            Roll: 1.99413762e-06
+            Pitch: 50.0525703
+            Roll: 180
           }
           Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
+            X: 0.0445358455
+            Y: 0.321242154
+            Z: 0.496824
           }
         }
-        ParentId: 2434124436182768904
+        ParentId: 7103505372760487984
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.61
+              B: 0.452450484
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 2203953457801595700
+        Name: "Group"
+        Transform {
+          Location {
+            X: -17.4773617
+            Y: -10.090559
+            Z: -5.00174904
+          }
+          Rotation {
+            Pitch: -50
+            Yaw: -150.000015
+            Roll: 4.8278855e-07
+          }
+          Scale {
+            X: 0.426929563
+            Y: 0.426929563
+            Z: 0.426929563
+          }
+        }
+        ParentId: 4082959681554838075
+        ChildIds: 8405385797033441824
+        ChildIds: 1862499833140321029
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8405385797033441824
+        Name: "Fantasy Gauntlet Arm 01"
+        Transform {
+          Location {
+            X: -0.000366210938
+            Y: -0.000305175781
+            Z: -0.000122070313
+          }
+          Rotation {
+            Yaw: 90
+            Roll: 50.0526733
+          }
+          Scale {
+            X: 0.14825654
+            Y: -0.261939019
+            Z: 0.253846616
+          }
+        }
+        ParentId: 2203953457801595700
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 27.8822212
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 22.5581589
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 9.37677193
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 18.2507038
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 49.9336395
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 40.39888
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:utile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:vtile"
+            Float: 16.9412174
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
             }
           }
         }
@@ -929,46 +1415,65 @@
         }
         CoreMesh {
           MeshAsset {
-            Id: 7142781972612396783
+            Id: 4322675021483384603
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
-              Mass: 100
-              LinearDamping: 0.01
             }
           }
         }
       }
       Objects {
-        Id: 15952321121754606005
-        Name: "Arch Fancy Peaked 6m"
+        Id: 1862499833140321029
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: 504.255829
-            Y: 0.00168561935
+            X: -9.29325771
+            Y: -0.00229170406
+            Z: 5.16534901
           }
           Rotation {
-            Pitch: 90
-            Yaw: 159.994293
-            Roll: 1.9402421e-06
+            Pitch: 50.0525703
+            Roll: 180
           }
           Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
+            X: 0.0445358455
+            Y: 0.321242154
+            Z: 0.496823967
           }
         }
-        ParentId: 2434124436182768904
+        ParentId: 2203953457801595700
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.61
+              B: 0.452450484
+              A: 1
             }
           }
         }
@@ -978,428 +1483,14 @@
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
           }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
+          TeamSettings {
           }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7737697601749087033
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 436.699646
-            Y: -252.128159
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 129.994278
-            Roll: 1.9402421e-06
-          }
-          Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6234195693981970786
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 252.127686
-            Y: -436.697968
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 99.9943085
-            Roll: 1.72465946e-06
-          }
-          Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3549404223694623230
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -0.000429153442
-            Y: -504.25705
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 69.9942703
-            Roll: 2.15582418e-06
-          }
-          Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16058332589480806774
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -252.129379
-            Y: -436.69754
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 39.9942818
-            Roll: 1.9402421e-06
-          }
-          Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12918797800202103008
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -436.697968
-            Y: -252.127686
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: 9.99432373
-            Roll: 1.9402421e-06
-          }
-          Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11602738282316888487
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -504.255829
-            Y: -0.00168561935
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -20.0056763
-            Roll: 1.9402421e-06
-          }
-          Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7635805284731555085
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -436.699646
-            Y: 252.128159
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -50.0057068
-            Roll: 1.72465946e-06
-          }
-          Scale {
-            X: 0.538718462
-            Y: 0.538726807
-            Z: 0.339880973
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9388732696073843976
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: -252.127686
-            Y: 436.697968
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -80.0056763
-            Roll: 2.1558244e-06
-          }
-          Scale {
-            X: 0.538724542
-            Y: 0.538735628
-            Z: 0.428053468
-          }
-        }
-        ParentId: 2434124436182768904
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7142781972612396783
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
@@ -1450,21 +1541,21 @@
       }
     }
     Assets {
-      Id: 9254182311543276521
-      Name: "Magic Bright Light Spell Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_bright_light_spell_loop_01_Cue_ref"
-      }
-    }
-    Assets {
       Id: 4937714845344107743
       Name: "Fantasy Magic Shiny Glow Cast 02 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_fantasy_shiny_glow_cast_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 9254182311543276521
+      Name: "Magic Bright Light Spell Loop 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_bright_light_spell_loop_01_Cue_ref"
       }
     }
     Assets {
@@ -1486,12 +1577,21 @@
       }
     }
     Assets {
-      Id: 7142781972612396783
-      Name: "Arch Fancy Peaked 6m"
+      Id: 4322675021483384603
+      Name: "Fantasy Shield 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_arch_fancy_ogive_6m_001"
+        AssetId: "sm_weap_fan_shield_002"
+      }
+    }
+    Assets {
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_var"
       }
     }
     PrimaryAssetId {

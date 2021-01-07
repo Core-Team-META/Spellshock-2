@@ -7,7 +7,7 @@
       RootId: 6930645297964943566
       Objects {
         Id: 6930645297964943566
-        Name: "Elf Crystal Ending FX"
+        Name: "Healer Elf Healing Crystal Ending Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 10348510046911072974
         ChildIds: 13117377979569226928
         Lifespan: 2.3
@@ -70,7 +70,7 @@
           }
           Overrides {
             Name: "bp:Enable Base"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Density"
@@ -83,6 +83,18 @@
               B: 0.360784322
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.61
+              B: 0.355496764
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Sparkles"
+            Bool: false
           }
         }
         Collidable_v2 {
