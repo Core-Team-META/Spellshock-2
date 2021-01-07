@@ -275,7 +275,7 @@ end
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Changing Menu", OnMenuChanged)
 --UTIL.TablePrint(rewardAssets)
+--LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward) -- Used for testing

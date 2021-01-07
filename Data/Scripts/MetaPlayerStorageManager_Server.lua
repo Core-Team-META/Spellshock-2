@@ -2,7 +2,7 @@
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/1/6
--- Version 0.1.11
+-- Version 0.1.12
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -21,10 +21,14 @@ local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 -- DATA VERSIONS
 ------------------------------------------------------------------------------------------------------------------------
 -- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
-local progressionVersion = 1
-local cosmeticVersion = 1
 --Used for version control of data
-local versionControl = {[1] = progressionVersion, [2] = cosmeticVersion}
+local versionControl = {
+    [CONST.STORAGE.PROGRESSION] = 1,
+    [CONST.STORAGE.COSMETIC] = 1,
+    [CONST.STORAGE.CURRENCY] = 1,
+    [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
+    [CONST.STORAGE.DAILY_SHOP] = 1
+}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -33,21 +37,28 @@ local playerData = {}
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-local function DataVersionCheck(data)
+local function DoesDataVersionMatch(data)
     local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
-    return (tbl.P == progressionVersion and tbl.V == cosmeticVersion) or data == nil
+    for id, version in pairs(tbl) do
+        if versionControl[id] ~= version then
+            return false
+        end
+    end
+    return true
 end
 
 local function AddDefaultCosmetics(player)
     --#TODO DATA BUILD TEST
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 1 do
+            for s = 1, 10 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
                         b = 8 -- Used for costume ID
                     end
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    if b < 5 and s < 5 or b == 8 then
+                        _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    end
                 end
             end
         end
@@ -176,7 +187,7 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    if true then --DataVersionCheck(data) then --#TODO turned off for now
+    if DoesDataVersionMatch(data) then 
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
         OnLoadCurrencyData(player, data)
@@ -193,12 +204,14 @@ local function OnPlayerLeft(player)
     --For testing to clear out old data prior to storage managment
     Storage.SetPlayerData(player, data)
 
+    --Build string from data tables
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
 
+    --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
     Storage.SetPlayerData(player, data)
