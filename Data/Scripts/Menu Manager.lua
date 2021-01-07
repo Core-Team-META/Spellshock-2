@@ -7,7 +7,8 @@ local previousBindingTime = 0
 _G.MENU_TABLE = {
 	NONE = 0,
 	ClassSelection = 1,
-	Tutorial = 2
+	Tutorial = 2,
+	Rewards = 3
 }
 
 function OnMenuChanged(newMenu)
@@ -16,6 +17,10 @@ end
 
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Rewards"])
+	else
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	end
 end
