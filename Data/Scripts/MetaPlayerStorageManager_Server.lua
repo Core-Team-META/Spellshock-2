@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/05/2020
--- Version 0.1.10
+-- Date: 2021/1/6
+-- Version 0.1.11
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ local function AddDefaultCosmetics(player)
     --#TODO DATA BUILD TEST
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 20 do
+            for s = 1, 1 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
                         b = 8 -- Used for costume ID
@@ -77,9 +77,10 @@ end
 local function OnLoadCostumeData(player, data)
     local cosmetic
     if data[CONST.STORAGE.COSMETIC] then
-        local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP, {parent = DATA_TRANSFER})
+        local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP)
         dataObject.name = tostring(player.id)
         dataObject:SetNetworkedCustomProperty("data", data[CONST.STORAGE.COSMETIC])
+        dataObject.parent = DATA_TRANSFER
         playerData[#playerData + 1] = dataObject
         cosmetic = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
     end
@@ -161,7 +162,6 @@ local function OnLoadDailyShopData(player, data)
     if data[CONST.STORAGE.DAILY_SHOP] then
         dailyShopItems = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.DAILY_SHOP])
     end
-
     DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
 end
 
