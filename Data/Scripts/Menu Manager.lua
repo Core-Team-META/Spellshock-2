@@ -9,6 +9,7 @@ _G.MENU_TABLE = {
 	ClassSelection = 1,
 	Tutorial = 2
 }
+_G.CurrentMenu = _G.MENU_TABLE["NONE"]
 
 function OnMenuChanged(newMenu)
 	_G.CurrentMenu = newMenu

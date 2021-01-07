@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17370828256945431127
+  Name: "Fantasy Ability Yellow 026"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_026"
+  }
+}
+Assets {
   Id: 16806313330175629846
   Name: "Frame Outlined Thick 001"
   PlatformAssetType: 9
@@ -224,6 +233,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12302547594047116782
+  Name: "Fantasy Ability Purple 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_021"
+  }
+}
+Assets {
   Id: 12086971798166130178
   Name: "BG Flat 010"
   PlatformAssetType: 9
@@ -248,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
+  }
+}
+Assets {
+  Id: 11033324172077849451
+  Name: "Fantasy Spell Ingredient 030"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ingredient_030"
   }
 }
 Assets {
@@ -449,6 +476,24 @@ Assets {
   }
 }
 Assets {
+  Id: 5485640623370883304
+  Name: "Fantasy Ability Blue 029"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_029"
+  }
+}
+Assets {
+  Id: 5459426466684401753
+  Name: "Frame Outline Thin 011"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_028"
+  }
+}
+Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
@@ -581,6 +626,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_add_edgeline_sharpline"
+  }
+}
+Assets {
+  Id: 2813404828707589716
+  Name: "Fantasy Ability Blue 031"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_031"
   }
 }
 Assets {

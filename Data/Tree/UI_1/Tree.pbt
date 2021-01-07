@@ -48,6 +48,17 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 7370272654990377787
+      value {
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9692378619208917364
       value {
         Overrides {
@@ -69,6 +80,19 @@ Objects {
           Enum {
             Value: "mc:euianchor:bottomright"
           }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13170181372698416189
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 1468.44617
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 785.054565
         }
       }
     }
