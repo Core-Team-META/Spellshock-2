@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/7
--- Version 0.1.13
+-- Date: 2021/1/6
+-- Version 0.1.12
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -56,28 +56,20 @@ local function DoesDataVersionMatch(data)
     end
 end
 
---@param object player
-local function OnDeletePlayerDataObject(player)
-    for _, object in ipairs(playerData) do
-        if Object.IsValid(object) and object.name == player.id then
-            object:Destroy()
-        end
-    end
-end
-
 -- #TODO Currently used for adding multiple cosmetics to a player
 -- Builds default cosmetics
 --@params object player
 local function AddDefaultCosmetics(player)
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 1 do
+            for s = 1, 10 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
                         b = 8 -- Used for costume ID
                     end
-
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    if b < 5 and s < 5 or b == 8 then
+                        _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    end
                 end
             end
         end
@@ -105,11 +97,25 @@ end
 --@param object player
 --@param table data
 local function OnLoadCostumeData(player, data)
-    local cosmetics
-    if data[CONST.STORAGE.COSMETIC] then 
-        cosmetics = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
+    local cosmetic
+    if data[CONST.STORAGE.COSMETIC] then
+        local dataObject = World.SpawnAsset(PLAYER_DATA_TEMP)
+        dataObject.name = tostring(player.id)
+        dataObject:SetNetworkedCustomProperty("data", data[CONST.STORAGE.COSMETIC])
+        dataObject.parent = DATA_TRANSFER
+        playerData[#playerData + 1] = dataObject
+        cosmetic = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
     end
-    META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetics)
+    META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetic)
+end
+
+--@param object player
+local function OnDeletePlayerDataObject(player)
+    for _, object in ipairs(playerData) do
+        if Object.IsValid(object) and object.name == player.id then
+            object:Destroy()
+        end
+    end
 end
 
 --@param object player

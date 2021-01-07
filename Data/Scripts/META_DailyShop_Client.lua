@@ -197,9 +197,6 @@ function OnDailyShopOpen(player, keybind)
         UI.SetCanCursorInteractWithUI(false)
         UI.SetCursorLockedToViewport(false)
     end
-    if keybind == "ability_extra_67" then
-        Events.BroadcastToServer("SHOWSTORE_SERVER", player)
-    end
 end
 
 --REWARD_UTIL.CalculateDailyShopItemCost(key, value)

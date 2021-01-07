@@ -49,6 +49,7 @@ local function CreateNewCosmeticTable(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin][bind] = playerCosmetic[player][class][team][skin][bind] or {}
 end
 
+
 --@param object player
 --@param int skin
 --@param int bind => id of bind (API.Q, API.E)
@@ -73,6 +74,7 @@ local function UnlockCosmetic(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin][bind] = 1
 end
 
+
 local function SetCurrentCosmetic(player, skinId)
     local class = player:GetResource(CONST.CLASS_RES)
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
@@ -80,12 +82,13 @@ local function SetCurrentCosmetic(player, skinId)
     print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
 end
 
-local function SetBindCosmetic(player, class, team, bind, skinId)
-    class = class or player:GetResource(CONST.CLASS_RES)
-    playerEquippedCosmetic[player][class][bind][team] = skinId
-    player:SetResource(UTIL.GetSkinString(class, team, bind), skinId)
-    print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
+local function SetBindCosmetic(player, class, bind, skinId)
+    class = class or player:GetResource(CONST.CLASS_RES) 
+    playerEquippedCosmetic[player][class][bind][player.team] = skinId
+    player:SetResource(UTIL.GetSkinString(class, player.team, bind), skinId)
+    print(player:GetResource(UTIL.GetSkinString(class, player.team, bind)))
 end
+
 
 --@param object player
 --@param table playerCosmetic
@@ -110,31 +113,6 @@ end
 --@param table data
 function BuildCosmeticDataTable(player, data)
     playerCosmetic[player] = data or {}
-    if data then
-        for class, classes in ipairs(data) do
-            for team, teams in ipairs(classes) do
-                for skin, skins in pairs(teams) do
-                    for bind, binds in pairs(skins) do
-                        player:SetResource(UTIL.GetCosmeticIdString(class, team, skin, bind), 1)
-                        print(UTIL.GetCosmeticIdString(class, team, skin, bind))
-                    end
-                end
-            end
-        end
-    end
-    -- Build Default Skins (Never Saved)
-    for class = 1, 5 do
-        for team = 1, 2 do
-            for skin = 1, 1 do
-                for bind = 1, 5 do -- Costume Not saving with 4
-                    if bind == 5 then
-                        bind = 8 -- Used for costume ID
-                    end
-                    player:SetResource(UTIL.GetCosmeticIdString(class, team, CONST.DEFAULT_SKIN, bind), 1)
-                end
-            end
-        end
-    end
 end
 
 --@param object player
@@ -159,13 +137,15 @@ function BuildEquippedCosmeticDataTable(player, data)
             for _, bind in pairs(CONST.COSMETIC_BIND) do
                 playerEquippedCosmetic[player][class][bind] = {}
                 for _, team in pairs(CONST.TEAM) do
-                    playerEquippedCosmetic[player][class][bind][team] = CONST.DEFAULT_SKIN
+                    playerEquippedCosmetic[player][class][bind][team] = 1
                     player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
                 end
             end
         end
     end
 end
+
+
 
 --Builds the cosmeticTable based on the heirarchy
 function Int()
@@ -209,8 +189,8 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@param int skinId
-function API.SetBindCosmetic(player, class, team, bind, skinId)
-    SetBindCosmetic(player, class, team, bind, skinId)
+function API.SetBindCosmetic(player, class, bind, skinId)
+    SetBindCosmetic(player, class, bind, skinId)
 end
 
 --@param object player
@@ -231,7 +211,6 @@ function API.GetCurrentCosmetic(player, bind, class)
     return cosmeticTable[class][player.team][skinId][bind]
 end
 
-
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
@@ -250,4 +229,5 @@ end
 Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
+   
 end

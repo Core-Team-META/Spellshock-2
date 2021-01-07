@@ -80,13 +80,6 @@ function API.GetCurrentCosmetic(player, bind, class)
 end
 
 --@param object player
---@param int bind => id of bind (API.Q, API.E)
---@param int class => id of class (API.TANK, API.MAGE)
-function API.GetCosmeticMuid(player, class, team, skin, bind)
-    return cosmeticTable[class][team][skin][bind]
-end
-
---@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
     local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))

@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression UTIL API
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/7
--- Version 0.1.5
+-- Date: 2021/1/6
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
@@ -194,10 +194,6 @@ function API.GetSkinString(class, team, bind)
     return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
 
-function API.GetCosmeticIdString(class, team, skin, bind)
-    return "COSMETIC_" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- ABILITY PROGRESSION DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -322,7 +318,7 @@ end
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
---#TODO EX=> 11021,21011,31021
+--#TODO EX=> 1021,2011,3021
 --@param string str => string of compressed data
 --@return table finalTbl => player data
 function API.CosmeticConvertToTable(str)
@@ -357,32 +353,36 @@ function API.CosmeticConvertToString(tbl)
         for teamId, skins in pairs(teams) do
             local tId = tostring(teamId)
             for skinId, abilities in pairs(skins) do
-                local sId = NumConverter(skinId)
-                for abilityId, ability in pairs(abilities) do
-                    -- use this if the muid with int prefix is passed in
-                    -- local aId = string.match(NumConverter(ability), "^(d+)_")
-                    -- str = str .. cId .. tId .. sId .. aId
-                    -- str = next(abilities, abilityId) and str .. "," or str
+                if skinId ~= CONST.DEFAULT_SKIN then
+                    local sId = NumConverter(skinId)
+                    for abilityId, ability in pairs(abilities) do
+                        -- use this if the muid with int prefix is passed in
+                        -- local aId = string.match(NumConverter(ability), "^(d+)_")
+                        -- str = str .. cId .. tId .. sId .. aId
+                        -- str = next(abilities, abilityId) and str .. "," or str
 
-                    -- use this if either a 0 or 1 int passed in giving status
+                        -- use this if either a 0 or 1 int passed in giving status
 
-                    if ability > 0 then
-                        local num = tonumber(cId .. tId .. sId .. tostring(abilityId))
-                        if type(tonumber(num)) == "number" then
-                            num = BASE.Encode24(num)
-                        else
-                            num = cId .. tId .. sId .. tostring(abilityId)
+                        if ability > 0 then
+                            local num = tonumber(cId .. tId .. sId .. tostring(abilityId))
+                            if type(tonumber(num)) == "number" then
+                                num = BASE.Encode24(num)
+                            else
+                                num = cId .. tId .. sId .. tostring(abilityId)
+                            end
+                            str = str .. num
+                            str = next(abilities, abilityId) and str .. "," or str
                         end
-                        str = str .. num
-                        str = next(abilities, abilityId) and str .. "," or str
                     end
+                    str = next(skins, skinId) and str .. "," or str
                 end
-                str = next(skins, skinId) and str .. "," or str
             end
-
             str = next(teams, teamId) and str .. "," or str
         end
         str = next(tbl, classId) and str .. "," or str
+    end
+    if str == ",,,,,,,,," then
+        str = ""
     end
     return str
 end
@@ -525,8 +525,7 @@ function API.DailyShopConvertToString(tbl)
     for key, values in pairs(tbl) do
         str = str .. key .. "^"
         for k, v in pairs(values) do
-            str = str .. k .. "~" .. tostring(v)
-             --API.ConvertTableToString(v, ",", "=")
+            str = str .. k .. "~" .. tostring(v)--API.ConvertTableToString(v, ",", "=")
             str = next(values, k) and str .. "^" or str
         end
         str = next(tbl, key) and str .. "|" or str

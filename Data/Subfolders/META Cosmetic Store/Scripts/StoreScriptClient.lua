@@ -5,7 +5,7 @@
 --			Buckmonster (META) (https://www.coregames.com/user/901b7628983c4c8db4282f24afeda57a)
 -- Date: 2020/12/22
 -- Version: 0.1.3
--- Description:
+-- Description: 
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -112,31 +112,15 @@ local controlsLocked = false
 local controlsLockedSecondary = false
 
 local playerSockets = {
-	"left_clavicle",
-	"nameplate",
-	"right_clavicle",
-	"left_shoulder",
-	"camera",
-	"right_shoulder",
-	"left_elbow",
-	"root",
-	"right_elbow",
-	"left_wrist",
-	"head",
-	"right_wrist",
-	"left_prop",
-	"neck",
-	"right_prop",
-	"left_hip",
-	"upper_spine",
-	"right_hip",
-	"left_knee",
-	"lower_spine",
-	"right_knee",
-	"left_ankle",
-	"pelvis",
-	"right_ankle",
-	"left_arm_prop"
+	"left_clavicle",	"nameplate",		"right_clavicle",
+	"left_shoulder",	"camera",			"right_shoulder",
+	"left_elbow",		"root",			"right_elbow",
+	"left_wrist",		"head",			"right_wrist",
+	"left_prop",		"neck",			"right_prop",
+	"left_hip",		"upper_spine",	"right_hip",
+	"left_knee",		"lower_spine",	"right_knee",
+	"left_ankle",		"pelvis",			"right_ankle",
+	"left_arm_prop",
 }
 
 -- List of actual buttons, ui elements, and listeners for the store elements.
@@ -191,10 +175,10 @@ local expectedNewCurrency = 0
 
 --for filtering with type and rarity
 local currentType = {
-	type = nil
+		type = nil
 }
 local currentTag = {
-	tag = nil
+		tag = nil
 }
 
 local typeFilterButtonData = {}
@@ -205,18 +189,24 @@ local defaultColor = Color.FromLinearHex("63F3FFFF")
 local checkPerks = nil
 
 function PerksCheckTask()
+
 	if not propAllowSubscriptionPurchase then
+	
 		checkPerks:Cancel()
 		return
+		
 	end
-
+	
 	while not _G.PERKS and propAllowSubscriptionPurchase do
+	
 		Task.Wait()
+		
 	end
 
 	subscriptionPerkRef = _G.PERKS.SUBSCRIPTION
-
+	
 	checkPerks:Cancel()
+
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -231,27 +221,22 @@ local function StringSplit(s, delimiter)
 	return result
 end
 
-local function META_VFX()
-	return _G["Meta.Ability.Progression"]["VFX"]
-end
-
 ----------------------------------------------------------------------------------------------------------------
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
 function ShowStore_ClientHelper()
+
 	if propBaseUIContainer then
 		propBaseUIContainer.isEnabled = false
 	end
 
-	if player ~= Game.GetLocalPlayer() then
-		return
-	end
-
+	if player ~= Game.GetLocalPlayer() then return end
+	
 	setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0, true)
 	setPreviewMesh:RotateTo(Rotation.New(0, 0, -90), 0, true)
 	setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0, true)
 	zoomToggle = false
-
+	
 	pressedListener = player.bindingPressedEvent:Connect(OnRotateButtonPressed)
 	releasedListener = player.bindingReleasedEvent:Connect(OnRotateButtonReleased)
 
@@ -262,34 +247,37 @@ function ShowStore_ClientHelper()
 	storePos = 0
 	ClearFilter()
 	UpdateCurrencyDisplay()
-
-	for k, v in pairs(StoreUIButtons) do
+	
+	for k,v in pairs(StoreUIButtons) do
 		UpdateEntryButton(v, false)
 	end
 end
 
 function HideStore_ClientHelper()
+
 	if propBaseUIContainer then
 		propBaseUIContainer.isEnabled = true
 	end
 
 	pressedListener:Disconnect()
 	releasedListener:Disconnect()
-
+	
 	propStoreUIContainer.isEnabled = false
 	UI.SetCursorVisible(false)
 	player:ClearOverrideCamera()
 	ClearList()
-
+	
 	if currentlyEquipped == nil then
 		ApplyCosmetic(nil)
 	end
+
 end
+
 
 function HideStore()
 	HideStore_ClientHelper(player)
-
-	ReliableEvents.BroadcastToServer("HIDESTORE_SERVER", player)
+		
+	ReliableEvents.BroadcastToServer("HIDESTORE_SERVER", player) 
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -310,43 +298,42 @@ end
 -- BUTTON LISTENERS
 ----------------------------------------------------------------------------------------------------------------
 function StoreItemClicked(button)
-	if controlsLocked or controlsLockedSecondary then
-		return
-	end
-
+	if controlsLocked or controlsLockedSecondary then return end
+	
 	local entry = StoreUIButtons[button]
-
-	SelectNothing() -- Clear everything.
-
+	
+	SelectNothing()	-- Clear everything.
+	
 	if currentlySelected ~= nil then
 		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
 	end
-
+	
 	currentlySelected = entry
-
+	
 	local currency = player:GetResource(currentlySelected.data.currencyName)
-
+		
 	if currentlyEquipped == entry.data.templateId then
 		--currentlySelected = nil
-
+		
 		RemovePreview()
 		setPreviewMesh.visibility = Visibility.INHERIT
-
+		
 		currentlyEquipped = nil
 		equippedZoom = nil
-
+		
 		RemoveCosmetic(player.id)
 		UpdateEntryButton(entry, currentlySelected == entry)
 		--print("removed equipped")
 		return
+		
 	elseif currentlySelected ~= nil then
 		if HasCosmetic(currentlySelected.data.id) then
 			local oldEquipped = currentlyEquipped
-
+						
 			currentlyEquipped = currentlySelected.data.id -- nil
-
+			
 			ApplyCosmetic(currentlySelected)
-
+			
 			while not currentlyEquipped do
 				Task.Wait()
 			end
@@ -363,43 +350,32 @@ function StoreItemClicked(button)
 				if player:HasPerk(subscriptionPerkRef) then
 					expectedNewCurrency = currency
 					controlsLocked = true
-					while Events.BroadcastToServer(
-						"BUYCOSMETIC",
-						currentlySelected.data.id,
-						true,
-						currentlySelected.data.cost,
-						currentlySelected.data.currencyName
-					) == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
+					while Events.BroadcastToServer("BUYCOSMETIC", currentlySelected.data.id, true, currentlySelected.data.cost, currentlySelected.data.currencyName)  == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
 						Task.Wait(0.1)
-					end
-				else
+					end 
+				else 
 					currentlySelected = nil
 					return
 				end
 			elseif currency < currentlySelected.data.cost then
+
 				currentlySelected = nil
 				return
 			else
 				expectedNewCurrency = currency - currentlySelected.data.cost
 				controlsLocked = true
 
-				while Events.BroadcastToServer(
-					"BUYCOSMETIC",
-					currentlySelected.data.id,
-					false,
-					currentlySelected.data.cost,
-					currentlySelected.data.currencyName
-				) == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
+				while Events.BroadcastToServer("BUYCOSMETIC", currentlySelected.data.id, false, currentlySelected.data.cost, currentlySelected.data.currencyName)  == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
 					Task.Wait(0.1)
 				end
 			end
 		end
 	end
-
+	
 	local newColor = currentlySelected.BGMesh:GetCustomProperty("HighlightColor")
 	currentlySelected.BGMesh:SetColor(currentlySelected.geo:GetCustomProperty("HighlightColor"))
 	SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
-
+	
 	UpdateEntryButton(entry, entry == currentlyHovered)
 	currentZoom = entry.data.zoom
 end
@@ -409,21 +385,21 @@ function StoreItemHovered(button)
 	if entry then
 		currentlySelected = entry
 		currentlyHovered = entry
-
+		
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
 		currentZoom = entry.data.zoom
 		UpdateEntryButton(StoreUIButtons[button], true)
 	end
 end
 
-function StoreItemUnhovered(button)
+function StoreItemUnhovered(button)	
 	currentlyHovered = nil
-
+	
 	if currentlyEquipped ~= nil then
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 		currentZoom = equippedZoom
 	end
-
+	
 	UpdateEntryButton(StoreUIButtons[button], false)
 end
 
@@ -439,28 +415,29 @@ function SelectNothing()
 end
 
 function UpdateEntryButton(entry, highlighted)
-	if entry == nil then
-		return
-	end -- coming from LootboxGenerator
-	-- currently equipped
+	if entry == nil then return end -- coming from LootboxGenerator
+	 -- currently equipped
 	if entry.data.templateId == currentlyEquipped then
-		-- owned but not hovered
 		entry.price:SetColor(Color.WHITE)
 		entry.price.text = "EQUIPPED"
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+
+ 	-- owned but not hovered
 	elseif HasCosmetic(entry.data.id) and not highlighted then
-		-- owned but hovered
 		entry.price:SetColor(Color.WHITE)
 		entry.price.text = "OWNED"
 		entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
+
+	-- owned but hovered
 	elseif HasCosmetic(entry.data.id) and highlighted then
-		-- not owned and not hovered
 		entry.price:SetColor(Color.WHITE)
 		entry.price.text = "EQUIP NOW?"
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+
+ 	-- not owned and not hovered		
 	elseif not highlighted then
 		entry.itemName:SetColor(Color.WHITE)
-
+		
 		if entry.PartOfSubscription then
 			entry.itemName.text = entry.data.name
 			entry.price.text = tostring(entry.data.cost) -- .. " " .. propSubscriptionName .. " Only"
@@ -472,11 +449,11 @@ function UpdateEntryButton(entry, highlighted)
 			entry.price.text = tostring(entry.data.cost)
 			if (entry.vipImage:IsVisibleInHierarchy()) then
 				entry.vipImage.visibility = Visibility.FORCE_OFF
-			end
+			end			
 		end
-
+		
 		entry.itemName:SetColor(entry.BGImageColor)
-
+		
 		entry.rarityFin:SetColor(entry.BGImageColor)
 
 		entry.BGImageColor.a = 0.6
@@ -500,7 +477,7 @@ function UpdateEntryButton(entry, highlighted)
 		else
 			entry.price.text = "BUY IT!\n[" .. tostring(entry.data.cost) .. "]"
 		end
-
+		
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
 			entry.itemName:SetColor(Color.WHITE)
 			entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
@@ -511,7 +488,7 @@ function UpdateEntryButton(entry, highlighted)
 			else
 				entry.price.text = "NOT ENOUGH FUNDS"
 			end
-
+			
 			entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
 		end
 	end
@@ -544,24 +521,23 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function SpawnPreview(templateId, previewMesh, visible)
-	if string.len(templateId) == 5 then
-		return
-	end
 
 	previewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 	previewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
 	previewMesh:RotateTo(Rotation.New(0, 0, -90), 0.5, true)
-
+		
 	zoomToggle = false
-
+	
 	RemovePreview()
-
+	
+	if not templateId then return end
+	
 	if visible then
 		previewMesh.visibility = Visibility.INHERIT
 	else
 		previewMesh.visibility = Visibility.FORCE_OFF
 	end
-
+	
 	local previewItem = World.SpawnAsset(templateId)
 	for _, socket in pairs(previewMesh:GetSocketNames()) do
 		local deco = previewItem:FindDescendantByName(socket)
@@ -576,10 +552,8 @@ function SpawnPreview(templateId, previewMesh, visible)
 	previewItem:Destroy()
 end
 
+
 function SpawnMiniPreview(templateId, newGeo)
-	if not templateId then
-		return
-	end
 	local previewMesh = newGeo:GetCustomProperty("PreviewMesh"):WaitForObject()
 	local previewOutline = newGeo:GetCustomProperty("PreviewOutline"):WaitForObject()
 
@@ -590,7 +564,7 @@ function SpawnMiniPreview(templateId, newGeo)
 		storeGraphic:SetPosition(previewMesh:GetPosition())
 		storeGraphic:SetRotation(Rotation.New(0, 0, -90))
 		storeGraphic:SetScale(Vector3.ONE * 0.5)
-
+		
 		previewMesh.isEnabled = false
 		previewOutline.isEnabled = false
 	else
@@ -609,7 +583,7 @@ function SpawnMiniPreview(templateId, newGeo)
 end
 
 function RemovePreview()
-	for k, v in pairs(previewElements) do
+	for k,v in pairs(previewElements) do
 		v:Destroy()
 	end
 	previewElements = {}
@@ -630,7 +604,7 @@ end
 
 function RemoveCosmetic(playerId)
 	if cosmeticElements[playerId] ~= nil then
-		for k, v in pairs(cosmeticElements[playerId]) do
+		for k,v in pairs(cosmeticElements[playerId]) do
 			v:Destroy()
 		end
 	end
@@ -648,20 +622,18 @@ function ApplyCosmetic(entry)
 end
 
 function ApplyCosmeticHelper(playerId, templateId)
-	if templateId == nil then
-		return
-	end
-
+	if templateId == nil then return end
+	
 	RemoveCosmetic(playerId)
-
+	
 	local targetPlayer = nil
-	for k, v in pairs(Game.GetPlayers()) do
+	for k,v in pairs(Game.GetPlayers()) do
 		if v.id == playerId then
 			targetPlayer = v
 		end
 	end
 	if targetPlayer == nil then
-		warn("Could not find id to match " .. tostring(playerId))
+		 warn("Could not find id to match " .. tostring(playerId))
 		return
 	end
 	local itemList = {}
@@ -676,25 +648,25 @@ function ApplyCosmeticHelper(playerId, templateId)
 	end
 	cosmeticElements[playerId] = itemList
 	cosmeticItem:Destroy()
-
+	
 	Task.Wait()
+	
 
 	for _, v in pairs(CurrentStoreElements) do
 		if v.templateId == templateId then
-			if not player then
-				return
-			end
+			if not player then return end
 			if player.id == playerId then
 				currentlyEquipped = templateId
 				equippedVisibility = v.visible
 				equippedZoom = v.zoom
 				currentZoom = equippedZoom
 				SpawnPreview(templateId, setPreviewMesh, v.visible)
-			--print("set preview for " .. player.name)
+				--print("set preview for " .. player.name)
 			end
 			return
 		end
 	end
+
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -702,39 +674,25 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function BackPageClicked()
-	if controlsLocked or controlsLockedSecondary then
-		return
-	end
+	if controlsLocked or controlsLockedSecondary then return end
 
 	storePos = storePos - ITEMS_PER_PAGE
-	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
-		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
-	end
-	if storePos < 0 then
-		storePos = 0
-	end
+	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) end
+	if storePos < 0 then storePos = 0 end
 	PopulateStore(-1)
 end
 
 function NextPageClicked()
-	if controlsLocked or controlsLockedSecondary then
-		return
-	end
+	if controlsLocked or controlsLockedSecondary then return end
 
 	storePos = storePos + ITEMS_PER_PAGE
-	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
-		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
-	end
-	if storePos < 0 then
-		storePos = 0
-	end
+	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) end
+	if storePos < 0 then storePos = 0 end
 	PopulateStore(1)
 end
 
 function ExitStoreClicked(button)
-	if controlsLocked then
-		return
-	end
+	if controlsLocked then return end
 	ClearList(1)
 	SelectNothing()
 	HideStore()
@@ -745,12 +703,10 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function ClearList(direction)
-	if direction == nil then
-		direction = 1
-	end
+	if direction == nil then direction = 1 end
 	local startTime = time()
 
-	for k, v in pairs(StoreUIButtons) do
+	for k,v in pairs(StoreUIButtons) do
 		v.listener:Disconnect()
 		v.listener2:Disconnect()
 		v.listener3:Disconnect()
@@ -759,14 +715,13 @@ function ClearList(direction)
 
 		v.startPos = v.geo:GetPosition()
 
-		v.targetPos = Vector3.New(v.gridX * -100, 0, v.gridY * -100) + Vector3.FORWARD * 1000 * direction + Vector3.UP * -300
+		v.targetPos = Vector3.New(v.gridX * -100, 0, v.gridY * -100)
+					+ Vector3.FORWARD * 1000 * direction + Vector3.UP * -300
 
 		v.startTime = startTime
 
 		local timeOffset = (5 - v.gridX)
-		if direction > 0 then
-			timeOffset = v.gridX + 1
-		end
+		if direction > 0 then timeOffset = v.gridX + 1 end
 
 		v.travelTime = 0.2 + 0.2 * timeOffset + 0.1 * v.gridY
 		v.travelTime = v.travelTime * 0.8
@@ -777,9 +732,9 @@ end
 
 function PopulateStore(direction)
 	ClearList(direction)
-
+	
 	SelectNothing()
-
+	
 	propPageBackButton.isEnabled = storePos > 0
 	propPageNextButton.isEnabled = (storePos + ITEMS_PER_PAGE) < #CurrentStoreElements
 
@@ -787,76 +742,61 @@ function PopulateStore(direction)
 	for k = 1, ITEMS_PER_PAGE do
 		local index = k + storePos
 
-		if index > #CurrentStoreElements then
-			break
-		end
+		if index > #CurrentStoreElements then break end
 		local v = CurrentStoreElements[index]
 
 		local gridX = (k - 1) % ITEMS_PER_ROW
 		local gridY = (k - 1) // ITEMS_PER_ROW
-
+		
 		local target = Vector3.New(gridX * -ITEM_PADDING + 20, 0, gridY * -(ITEM_PADDING + 20) - 35)
-
+		
 		local start = Vector3.New(gridX * -100 + 1000, 0, gridY * -100)
-
+		
 		if not propEnableStoreAnimations then
 			start = target
 		end
+		
+		local newGeo = World.SpawnAsset(propSTORE_EntryGeo, {
+			parent = propStoreGeoHolder,
+			position = start,
+			scale = Vector3.ONE * BUTTON_SCALE
+		})
 
-		local newGeo =
-			World.SpawnAsset(
-			propSTORE_EntryGeo,
-			{
-				parent = propStoreGeoHolder,
-				position = start,
-				scale = Vector3.ONE * BUTTON_SCALE
-			}
-		)
-
-		local newOverlay =
-			World.SpawnAsset(
-			propSTORE_EntryOverlay,
-			{
-				parent = propButtonHolder
-			}
-		)
-
+		local newOverlay = World.SpawnAsset(propSTORE_EntryOverlay, {
+			parent = propButtonHolder
+		})
+		
 		local propItemName = newOverlay:GetCustomProperty("ItemName"):WaitForObject()
 		local propPrice = newOverlay:GetCustomProperty("Price"):WaitForObject()
 		local propButton = newOverlay:GetCustomProperty("Button"):WaitForObject()
 		local propBGImage = newOverlay:GetCustomProperty("BGImage"):WaitForObject()
-		local propRarityFin = newOverlay:GetCustomProperty("RarityFin"):WaitForObject()
-		local propRarityOverlay = newOverlay:GetCustomProperty("PriceOverlay"):WaitForObject()
-		local propVIPImage = newOverlay:GetCustomProperty("VIPImage"):WaitForObject()
+		local propRarityFin = newOverlay:GetCustomProperty("RarityFin"):WaitForObject()		
+		local propRarityOverlay = newOverlay:GetCustomProperty("PriceOverlay"):WaitForObject()		
+		local propVIPImage = newOverlay:GetCustomProperty("VIPImage"):WaitForObject()	
 		local propCurrencySymbol = newOverlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
-
+		
 		for _, c in pairs(Currencies) do
 			if v.currencyName == c.resource then
-				local newSymbol =
-					World.SpawnAsset(
-					c.symbol,
-					{
-						parent = propCurrencySymbol
-					}
-				)
+				local newSymbol = World.SpawnAsset(c.symbol, {
+					parent = propCurrencySymbol
+				})
 				break
 			end
 		end
-
+		
 		local previewMesh = newGeo:GetCustomProperty("PreviewMesh"):WaitForObject()
 		local BGMesh = newGeo:GetCustomProperty("BGMesh"):WaitForObject()
 
 		SpawnMiniPreview(v.templateId, newGeo)
 		local timeOffset = (5 - gridX)
-		if direction > 0 then
-			timeOffset = gridX + 1
-		end
+		if direction > 0 then timeOffset = gridX + 1 end
+
 
 		local BGMeshColor = newGeo:GetCustomProperty("DefaultColor")
 		local BGImageColor = newGeo:GetCustomProperty("DefaultColor")
-
+		
 		local partOfSubscription = false
-		for kk, vv in pairs(v.tags) do
+		for kk,vv in pairs(v.tags) do
 			if TagDefs[kk] ~= nil then
 				BGImageColor = TagDefs[kk].color
 			end
@@ -871,10 +811,10 @@ function PopulateStore(direction)
 
 		if partOfSubscription then
 			propPrice.text = propSubscriptionName
-		else
+		else 
 			propPrice.text = tostring(v.cost)
 		end
-
+		
 		BGMesh:SetColor(BGMeshColor)
 		newGeo.visibility = Visibility.FORCE_ON
 
@@ -897,18 +837,19 @@ function PopulateStore(direction)
 			BGImageColor = BGImageColor,
 			PartOfSubscription = partOfSubscription,
 			data = v,
+
 			-- Stuff for sliding around and being cool.
-			startPos = Vector3.New(gridX * -ITEM_PADDING, 0, gridY * -ITEM_PADDING) + Vector3.FORWARD * -1000 * direction +
-				Vector3.UP * 300,
+			startPos = Vector3.New(gridX * -ITEM_PADDING, 0, gridY * -ITEM_PADDING)
+					+ Vector3.FORWARD * -1000 * direction + Vector3.UP * 300,
 			targetPos = target,
 			startTime = startTime,
 			travelTime = 0.2 + 0.2 * timeOffset + 0.1 * gridY,
 			deleting = false,
 			gridX = gridX,
-			gridY = gridY
+			gridY = gridY,
 		}
 		StoreUIButtons[propButton] = entry
-		UpdateEntryButton(entry, false)
+		UpdateEntryButton(entry,false)
 	end
 end
 ----------------------------------------------------------------------------------------------------------------
@@ -926,8 +867,11 @@ end
 
 function UpdateCurrencyDisplay()
 	for k, v in pairs(Currencies) do
+	
 		v.entryText.text = tostring(player:GetResource(k))
+		
 	end
+
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -937,10 +881,10 @@ end
 function UpdateUIPos()
 	local screenSize = UI.GetScreenSize()
 	local currentTime = time()
-
+	
 	local newScale = (1.6 * UI.GetScreenSize().y) / UI.GetScreenSize().x
-
-	for k, v in pairs(StoreUIButtons) do
+	
+	for k,v in pairs(StoreUIButtons) do
 		if currentTime < v.startTime + v.travelTime and propEnableStoreAnimations then
 			local lerpVal
 			if not v.deleting then
@@ -969,42 +913,44 @@ function UpdateUIPos()
 			StoreUIButtons[k] = nil
 		end
 	end
-
+	
 	local propButtonLabel = nil
 	local propButtonLabelShadow = nil
-
-	for k, v in pairs(filterButtonData) do
+	
+	for k,v in pairs(filterButtonData) do
 		v.root.width = math.floor(screenSize.x * 0.08)
-		v.root.height = math.floor(screenSize.y * 0.055)
-
+		v.root.height =  math.floor(screenSize.y * 0.055)
+		
 		propButtonLabel = v.root:GetCustomProperty("ButtonLabel"):WaitForObject()
 		propButtonLabelShadow = v.root:GetCustomProperty("ButtonLabelShadow"):WaitForObject()
 		propButtonLabel.fontSize = math.floor(v.root.width * 0.10)
 		propButtonLabelShadow.fontSize = propButtonLabel.fontSize
-
+		
 		v.root.x = v.root.width * v.position
 		v.root.y = 0
+	
 	end
-
-	for k, v in pairs(typeFilterButtonData) do
+	
+	for k,v in pairs(typeFilterButtonData) do
 		v.root.width = math.floor(screenSize.x * 0.09)
-		v.root.height = math.floor(screenSize.y * 0.055)
-
+		v.root.height =  math.floor(screenSize.y * 0.055)
+		
 		propButtonLabel = v.root:GetCustomProperty("ButtonLabel"):WaitForObject()
 		propButtonLabelShadow = v.root:GetCustomProperty("ButtonLabelShadow"):WaitForObject()
 		propButtonLabel.fontSize = math.floor(v.root.width * 0.10)
 		propButtonLabelShadow.fontSize = propButtonLabel.fontSize
-
+		
 		v.root.x = v.root.width * v.position
 		v.root.y = 0
+	
 	end
-
+	
 	propRotateMarkerTopLeft.x = UI.GetScreenSize().x * 0.77
 	propRotateMarkerTopLeft.y = UI.GetScreenSize().y * 0.17
-
+	
 	propRotateMarkerBottomRight.x = UI.GetScreenSize().x * 0.92
 	propRotateMarkerBottomRight.y = UI.GetScreenSize().y * 0.87
-
+	
 	propUIMarkersAndPreviews:ScaleTo(Vector3.ONE * newScale, 0, true)
 end
 
@@ -1028,19 +974,20 @@ end
 function InitStore()
 	if not player then
 		player = Game.GetLocalPlayer()
-	--print(player.name)
+		--print(player.name)
 	end
-
+	
 	player.bindingPressedEvent:Connect(OnBindingPressed)
-
+	
 	ShopContents = {}
-	for k, v in pairs(propStoreGeoHolder:GetChildren()) do
+	for k,v in pairs(propStoreGeoHolder:GetChildren()) do
 		v:Destroy()
 	end
 
-	for k, v in pairs(propStoreContents:GetChildren()) do
+	for k,v in pairs(propStoreContents:GetChildren()) do
 		local storeInfo = v
 		if storeInfo ~= nil then
+
 			local propStoreName = storeInfo:GetCustomProperty("StoreName")
 			local propID = storeInfo:GetCustomProperty("ID")
 			local propCost = storeInfo:GetCustomProperty("Cost")
@@ -1053,29 +1000,24 @@ function InitStore()
 			local tempMuid = StringSplit(tempId, ":")
 			local muid = tempMuid[1]
 
+
 			local tagList = {}
 			--print("tags for " .. propID)
 			for tag in string.gmatch(propTags, "[^%s]+") do
 				tagList[tag] = tag
 				--print("[" .. tag .. "]")
-			end
-
+			end		
+			
 			local typeList = {}
 			--print("types for " .. propID)
 			for type in string.gmatch(propTypes, "[^%s]+") do
 				typeList[type] = type
 				--print("[" .. type .. "]")
-			end
+			end	
 
-			if propCost == nil then
-				propCost = 25
-			end
-			if propStoreDesc == nil then
-				propStoreDesc = ""
-			end
-			if propStoreName == nil then
-				propStoreName = v.name
-			end
+			if propCost == nil then propCost = 25 end
+			if propStoreDesc == nil then propStoreDesc = "" end
+			if propStoreName == nil then propStoreName = v.name end
 
 			local entry = {
 				name = propStoreName,
@@ -1092,93 +1034,81 @@ function InitStore()
 			table.insert(CurrentStoreElements, entry)
 		end
 	end
-
+	
 	Currencies = {}
-
-	for k, v in pairs(propStoreCurrencies:GetChildren()) do
+	
+	for k,v in pairs(propStoreCurrencies:GetChildren()) do
 		local propCurrencyName = v:GetCustomProperty("CurrencyName")
 		local propResourceName = v:GetCustomProperty("CurrencyResourceName")
 		local propCurrencySymbol = v:GetCustomProperty("CurrencySymbol")
 		local propStoreUIPlacementOrder = v:GetCustomProperty("StoreUIPlacementOrder")
-
-		local newCurrencyEntry =
-			World.SpawnAsset(
-			propSTORE_CurrencyEntry,
-			{
-				parent = propCurrencyDisplay
-			}
-		)
+		
+		local newCurrencyEntry = World.SpawnAsset(propSTORE_CurrencyEntry, {
+			parent = propCurrencyDisplay
+		})
 		newCurrencyEntry.x = 0
 		newCurrencyEntry.y = newCurrencyEntry.height * propStoreUIPlacementOrder
-
+		
 		local entryText = newCurrencyEntry:FindChildByName("CurrencyAmountText")
 		local symbolLocation = newCurrencyEntry:FindChildByName("CurrencySymbol")
-
-		local newSymbol =
-			World.SpawnAsset(
-			propCurrencySymbol,
-			{
-				parent = symbolLocation
-			}
-		)
-
+		
+		local newSymbol = World.SpawnAsset(propCurrencySymbol, {
+			parent = symbolLocation
+		})
+		
 		newSymbol.x = 0
 		newSymbol.y = 0
-
+		
 		Currencies[propCurrencyName] = {
 			resource = propResourceName,
 			symbol = propCurrencySymbol,
 			entryText = entryText
-		}
+		}	
 	end
-
+	
 	TagDefs = {}
 	TagList = {}
-
+		
 	if propTagDefinitions ~= nil then
-		for k, v in pairs(propTagDefinitions:GetChildren()) do
+		for k,v in pairs(propTagDefinitions:GetChildren()) do
 			local propDisplayName = v:GetCustomProperty("DisplayName")
-			if propDisplayName == "" then
-				propDisplayName = v.name
-			end
+			if propDisplayName == "" then propDisplayName = v.name end
 			local propTagColor = v:GetCustomProperty("TagColor")
 			local propNumber = v:GetCustomProperty("Number")
 			TagDefs[v.name] = {
-				name = propDisplayName,
-				color = propTagColor,
-				number = propNumber
+				name=propDisplayName,
+				color=propTagColor,
+				number= propNumber
 			}
 			table.insert(TagList, v.name)
 		end
 	end
-
+	
 	TypeDefs = {}
-	TypeList = {}
-
+	TypeList= {}
+	
 	if propTypeDefinitions ~= nil then
-		for k, v in ipairs(propTypeDefinitions:GetChildren()) do
+		for k,v in ipairs(propTypeDefinitions:GetChildren()) do
 			local propDisplayName = v:GetCustomProperty("DisplayName")
-			if propDisplayName == "" then
-				propDisplayName = v.name
-			end
+			if propDisplayName == "" then propDisplayName = v.name end
 			local propTagColor = v:GetCustomProperty("TypeColor")
 			local propNumber = v:GetCustomProperty("Number")
 			TypeDefs[v.name] = {
-				name = propDisplayName,
-				color = propTagColor,
-				number = propNumber
+				name=propDisplayName,
+				color=propTagColor,
+				number= propNumber
 			}
 			table.insert(TypeList, v.name)
 		end
 	end
-
+	
 	SelectNothing()
-
+	
 	local count = -1
-
+	
 	if propEnableFilterByType then
-		for k, v in ipairs(TypeList) do
-			if v:sub(1, 1) ~= "_" then
+		for k,v in ipairs(TypeList) do
+			if v:sub(1,1) ~= "_" then
 				SpawnTypeFilterButton(TypeDefs[v].name, v, TypeDefs[v].color, count + TypeDefs[v].number, propSTORE_FilterListEntry)
 			end
 		end
@@ -1190,22 +1120,16 @@ function InitStore()
 	if propEnableFilterByTag then
 		SpawnFilterButton("Owned", "OWNED", nil, 0, propSTORE_FilterListEntry_Bottom)
 		SpawnFilterButton("Not Owned", "UNOWNED", nil, 1, propSTORE_FilterListEntry_Bottom)
-
+		
 		if propAllowSubscriptionPurchase then
-			SpawnFilterButton(
-				propSubscriptionName,
-				propSubscriptionName,
-				propSubscriptionColor,
-				2,
-				propSTORE_FilterListEntry_Bottom
-			)
+			SpawnFilterButton(propSubscriptionName, propSubscriptionName, propSubscriptionColor, 2, propSTORE_FilterListEntry_Bottom)
 			count = 2
-		else
+		else 
 			count = 1
 		end
 
-		for k, v in ipairs(TagList) do
-			if v:sub(1, 1) ~= "_" then
+		for k,v in ipairs(TagList) do
+			if v:sub(1,1) ~= "_" then
 				SpawnFilterButton(TagDefs[v].name, v, TagDefs[v].color, count + TagDefs[v].number, propSTORE_FilterListEntry_Bottom)
 			end
 		end
@@ -1213,7 +1137,7 @@ function InitStore()
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
-
+	
 	--print("Requesting other player costume data")
 	ReliableEvents.BroadcastToServer("REQUEST_OTHER_COSMETICS")
 end
@@ -1223,16 +1147,12 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function SpawnFilterButton(displayName, tag, color, position, template)
-	local newFilterButton =
-		World.SpawnAsset(
-		template,
-		{
-			parent = propFilterListHolder
-		}
-	)
+	local newFilterButton = World.SpawnAsset(template, {
+		parent = propFilterListHolder
+	})
 	newFilterButton.x = newFilterButton.width * position
 	newFilterButton.y = 0
-
+	
 	local propBGImage = newFilterButton:GetCustomProperty("BGImage"):WaitForObject()
 	local propButtonLabel = newFilterButton:GetCustomProperty("ButtonLabel"):WaitForObject()
 	local propButtonLabelShadow = newFilterButton:GetCustomProperty("ButtonLabelShadow"):WaitForObject()
@@ -1241,12 +1161,12 @@ function SpawnFilterButton(displayName, tag, color, position, template)
 	local propFrameImage2 = newFilterButton:GetCustomProperty("FrameImage2"):WaitForObject()
 	local propRarity = newFilterButton:GetCustomProperty("RarityImage"):WaitForObject() or nil
 	local propRaritySelected = newFilterButton:GetCustomProperty("RarityImageSelected"):WaitForObject() or nil
-
+	
 	propFrameImage2.visibility = Visibility.FORCE_OFF
-
+	
 	local frameColor = propFrameImage:GetColor()
-
-	if color then
+	
+	if color then 
 		propBGImage:SetColor(color)
 		if (propRarity) then
 			local rarityColor = color
@@ -1256,12 +1176,13 @@ function SpawnFilterButton(displayName, tag, color, position, template)
 			if (propRaritySelected) then
 				propRaritySelected:SetColor(rarityColor)
 				propButtonLabel:SetColor(color)
-			end
+			end	
 		end
-	else
+	
+	else 
 		color = propBGImage:GetColor()
 	end
-
+	
 	propButtonLabel.text = string.upper(displayName)
 	propButtonLabelShadow.text = string.upper(displayName)
 	filterButtonData[propButton] = {
@@ -1272,81 +1193,87 @@ function SpawnFilterButton(displayName, tag, color, position, template)
 		frameColor = frameColor,
 		position = position
 	}
+
 end
 
 function OnFilterButtonSelected(button)
-	if controlsLocked or controlsLockedSecondary then
-		return
-	end
-
+	if controlsLocked or controlsLockedSecondary then return end
+	
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
-
+	
 	local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
 	local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
 	local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
-
+	
 	RemovePreview()
-
+	
 	if currentlyEquipped ~= nil then
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 	end
-
+	
 	if currentTag.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		
 		CurrentStoreElements = {}
-
-		for k, v in ipairs(StoreElements) do -- filter only by types
-			if v.types[currentType.type] ~= nil or (currentType.type == nil) then
+		
+		for k,v in ipairs(StoreElements) do -- filter only by types
+			if v.types[currentType.type] ~= nil
+				or (currentType.type == nil) then
 				table.insert(CurrentStoreElements, v)
 			end
 		end
-
+		
 		PopulateStore(-1)
 		storePos = 0
-
+			
 		currentTag = {
 			tag = nil
 		}
-
+		
 		propFrameImage:SetColor(buttonData.frameColor)
-
+		
 		propFrameImage2.visibility = Visibility.FORCE_OFF
 		propFrameImage2:SetColor(buttonData.frameColor)
-
+		
 		propBGImage:SetColor(buttonData.color)
-
+		
 		return
 	elseif currentTag.tag ~= nil then -- if the current active filter is not this button, reset highlight color
 		local propFrameImageOther = currentTag.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentTag.root:GetCustomProperty("FrameImage2"):WaitForObject()
 		local propBGImageOther = currentTag.root:GetCustomProperty("BGImage"):WaitForObject()
-
+		
 		propFrameImageOther:SetColor(currentTag.frameColor)
-
+		
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
-		propFrameImage2Other:SetColor(currentTag.frameColor)
-
+		propFrameImage2Other:SetColor(currentTag.frameColor)	
+		
 		propBGImageOther:SetColor(currentTag.color)
 	end
+	
+
 
 	-- highlight button while filter is active
 	propFrameImage2.visibility = Visibility.INHERIT
-
+	
 	--propFrameImage:SetColor(propFilterSelectedColor)
 	--propFrameImage2:SetColor(propFilterSelectedColor)
-
+	
 	propBGImage:SetColor(propBGImage:GetColor() + Color.New(0.01, 0.01, 0.01))
 
 	currentTag = buttonData
 
 	--print("Filtering for " .. buttonData.tag)
 	CurrentStoreElements = {}
-
+	
 	--actual filtering
-	for k, v in ipairs(StoreElements) do
+	for k,v in ipairs(StoreElements) do
 		local owned = HasCosmetic(v.id)
-		if tag == "OWNED" and owned or (tag == "UNOWNED" and not owned) or (v.tags[tag] ~= nil) then
-			if v.types[currentType.type] ~= nil or (currentType.type == nil) then
+		if tag == "OWNED" and owned or
+			(tag == "UNOWNED" and not owned) or
+			(v.tags[tag] ~= nil) then
+			if v.types[currentType.type] ~= nil
+				or (currentType.type == nil) then
 				table.insert(CurrentStoreElements, v)
 			end
 		end
@@ -1361,13 +1288,9 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function SpawnTypeFilterButton(displayName, type, color, position)
-	local newFilterButton =
-		World.SpawnAsset(
-		propSTORE_FilterListEntry,
-		{
-			parent = propTypeFilterListHolder
-		}
-	)
+	local newFilterButton = World.SpawnAsset(propSTORE_FilterListEntry, {
+		parent = propTypeFilterListHolder
+	})
 	newFilterButton.x = newFilterButton.width * position
 	newFilterButton.y = 0
 
@@ -1377,17 +1300,17 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 	local propButton = newFilterButton:GetCustomProperty("Button"):WaitForObject()
 	local propFrameImage = newFilterButton:GetCustomProperty("FrameImage"):WaitForObject()
 	local propFrameImage2 = newFilterButton:GetCustomProperty("FrameImage2"):WaitForObject()
-
+	
 	propFrameImage2.visibility = Visibility.FORCE_OFF
-
+	
 	local frameColor = propFrameImage:GetColor()
 
-	if color then
-		propBGImage:SetColor(color)
-	else
+	if color then 
+		propBGImage:SetColor(color) 
+	else 
 		color = propBGImage:GetColor()
 	end
-
+	
 	propButtonLabel.text = string.upper(displayName)
 	propButtonLabelShadow.text = string.upper(displayName)
 	typeFilterButtonData[propButton] = {
@@ -1398,16 +1321,15 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 		frameColor = frameColor,
 		position = position
 	}
+
 end
 
 function OnTypeFilterButtonSelected(button)
-	if controlsLocked or controlsLockedSecondary then
-		return
-	end
+	if controlsLocked or controlsLockedSecondary then return end
 
 	local buttonData = typeFilterButtonData[button]
 	local type = buttonData.type
-
+	
 	local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
 	local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
 	local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
@@ -1416,72 +1338,72 @@ function OnTypeFilterButtonSelected(button)
 	if currentlyEquipped ~= nil then
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 	end
-
+	
 	if currentType.type == type then -- if the current active filter is this button, reset filter and highlight color
 		--print("Clearing filter")
-
+		
 		CurrentStoreElements = {}
-
-		for k, v in ipairs(StoreElements) do -- filter only by tags
+		
+		for k,v in ipairs(StoreElements) do -- filter only by tags
 			local owned = HasCosmetic(v.id)
-			if
-				v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) or (currentTag.tag == "OWNED" and owned) or
-					(currentTag.tag == "UNOWNED" and not owned)
-			 then
-				table.insert(CurrentStoreElements, v)
+			if v.tags[currentTag.tag] ~= nil or
+				(currentTag.tag == nil) or
+				(currentTag.tag == "OWNED" and owned) or
+				(currentTag.tag == "UNOWNED" and not owned) then
+					table.insert(CurrentStoreElements, v)
 			end
 		end
-
+	
 		PopulateStore(-1)
 		storePos = 0
-
+		
 		currentType = {
 			type = nil
 		}
-
+		
 		propFrameImage:SetColor(buttonData.frameColor)
-
+		
 		propFrameImage2.visibility = Visibility.FORCE_OFF
 		propFrameImage2:SetColor(buttonData.frameColor)
-
+		
 		propBGImage:SetColor(buttonData.color)
-
+		
 		return
 	elseif currentType.type ~= nil then -- if the current active filter is not this button, reset highlight color
 		local propFrameImageOther = currentType.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentType.root:GetCustomProperty("FrameImage2"):WaitForObject()
 		local propBGImageOther = currentType.root:GetCustomProperty("BGImage"):WaitForObject()
-
+		
 		propFrameImageOther:SetColor(currentType.frameColor)
-
+		
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
 		propFrameImage2Other:SetColor(currentType.frameColor)
-
+		
 		propBGImageOther:SetColor(currentType.color)
 	end
-
+	
 	-- highlight button while filter is active
 	propFrameImage2.visibility = Visibility.INHERIT
-
+	
 	--propFrameImage:SetColor(propFilterSelectedColor)
 	--propFrameImage2:SetColor(propFilterSelectedColor)
-
+	
 	propBGImage:SetColor(propBGImage:GetColor() + Color.New(0.01, 0.01, 0.01))
-
+	
 	currentType = buttonData
-
+	
 	--print("Type filtering for " .. type)
 	CurrentStoreElements = {}
-
+	
 	-- actual filtering
-	for k, v in ipairs(StoreElements) do
+	for k,v in ipairs(StoreElements) do
 		local owned = HasCosmetic(v.id)
 		if v.types[type] ~= nil then
-			if
-				v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) or (currentTag.tag == "OWNED" and owned) or
-					(currentTag.tag == "UNOWNED" and not owned)
-			 then
-				table.insert(CurrentStoreElements, v)
+			if v.tags[currentTag.tag] ~= nil or
+				(currentTag.tag == nil) or
+				(currentTag.tag == "OWNED" and owned) or
+				(currentTag.tag == "UNOWNED" and not owned) then
+					table.insert(CurrentStoreElements, v)
 			end
 		end
 	end
@@ -1492,7 +1414,7 @@ end
 
 function ClearFilter()
 	CurrentStoreElements = {}
-	for k, v in ipairs(StoreElements) do
+	for k,v in ipairs(StoreElements) do
 		table.insert(CurrentStoreElements, v)
 	end
 	PopulateStore(-1)
@@ -1504,51 +1426,47 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function RotateTask()
-	setPreviewMesh:RotateTo(
-		Rotation.New(0, 0, ((prevCursorPosition.x - UI.GetCursorPosition().x) * 0.7 % 360) + previousZRotation),
-		0.1,
-		true
-	)
+	
+	setPreviewMesh:RotateTo(Rotation.New(0, 0, ((prevCursorPosition.x - UI.GetCursorPosition().x) * 0.7 % 360) + previousZRotation), 0.1, true)
+	
 end
 
 function OnRotateButtonPressed(player, binding)
-	if binding ~= "ability_primary" then
-		return
-	end
 
+	if binding ~= "ability_primary" then return end
+	
 	--print(UI.GetCursorPosition().x)
 	--print(UI.GetCursorPosition().y)
 
-	if UI.GetCursorPosition().x < propRotateMarkerTopLeft.x or UI.GetCursorPosition().x > propRotateMarkerBottomRight.x then
-		return
-	end
-	if UI.GetCursorPosition().y < propRotateMarkerTopLeft.y or UI.GetCursorPosition().y > propRotateMarkerBottomRight.y then
-		return
-	end
-
+	if UI.GetCursorPosition().x < propRotateMarkerTopLeft.x or UI.GetCursorPosition().x > propRotateMarkerBottomRight.x then return end
+	if UI.GetCursorPosition().y < propRotateMarkerTopLeft.y or UI.GetCursorPosition().y > propRotateMarkerBottomRight.y then return end
+	
 	prevCursorPosition = UI.GetCursorPosition()
 	previousZRotation = setPreviewMesh:GetRotation().z
-
+	
 	clickTime = time()
-
+	
 	if not rotatePreviewTask then
+	
 		rotatePreviewTask = Task.Spawn(RotateTask)
 		rotatePreviewTask.repeatCount = -1
 		rotatePreviewTask.repeatInterval = 0.1
+		
 	end
+	
 end
 
 function OnRotateButtonReleased(player, binding)
-	if binding ~= "ability_primary" then
-		return
-	end
-
+	if binding ~= "ability_primary" then return end
+	
 	if rotatePreviewTask then
+	
 		rotatePreviewTask:Cancel()
 		rotatePreviewTask = nil
+		
 	end
-
-	if UI.GetCursorPosition().x > propRotateMarkerTopLeft.x and UI.GetCursorPosition().x < propRotateMarkerBottomRight.x then
+	
+	if UI.GetCursorPosition().x > propRotateMarkerTopLeft.x and UI.GetCursorPosition().x < propRotateMarkerBottomRight.x then 
 		if UI.GetCursorPosition().y > propRotateMarkerTopLeft.y and UI.GetCursorPosition().y < propRotateMarkerBottomRight.y then
 			clickTime = time() - clickTime
 			if clickTime < 0.2 then
@@ -1566,12 +1484,12 @@ function OnClickZoom()
 	if zoomToggle then
 		setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 		setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
-
+		
 		zoomToggle = false
-
+		
 		return
 	end
-
+	
 	if currentZoom == nil then
 		setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 		setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
@@ -1594,7 +1512,7 @@ function OnClickZoom()
 		setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 		setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
 	end
-
+	
 	zoomToggle = true
 end
 
@@ -1603,6 +1521,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function SwapMannequin(button)
+
 	--print("Swapping")
 
 	local oldSetMesh = setPreviewMesh
@@ -1614,7 +1533,7 @@ function SwapMannequin(button)
 		propPreviewMesh.visibility = Visibility.FORCE_OFF
 
 		setPreviewMesh = propPreviewMesh2
-
+		
 		propSwapText.text = "MALE"
 
 		if (femaleIcon:IsVisibleInHierarchy()) then
@@ -1623,13 +1542,14 @@ function SwapMannequin(button)
 
 		if (not maleIcon:IsVisibleInHierarchy()) then
 			maleIcon.visibility = Visibility.FORCE_ON
-		end
+		end		
+
 	else
 		propPreviewMesh.visibility = propPreviewMesh2.visibility
 		propPreviewMesh2.visibility = Visibility.FORCE_OFF
-
+		
 		setPreviewMesh = propPreviewMesh
-
+		
 		propSwapText.text = "FEMALE"
 
 		if (not femaleIcon:IsVisibleInHierarchy()) then
@@ -1638,11 +1558,12 @@ function SwapMannequin(button)
 
 		if (maleIcon:IsVisibleInHierarchy()) then
 			maleIcon.visibility = Visibility.FORCE_OFF
-		end
+		end		
+
 	end
-
+	
 	setPreviewMesh:SetTransform(oldSetMesh:GetTransform())
-
+	
 	if currentlyEquipped ~= nil then
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 		currentZoom = equippedZoom
@@ -1650,7 +1571,7 @@ function SwapMannequin(button)
 		SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
 		currentZoom = currentlySelected.data.zoom
 	end
-
+	
 	if setPreviewMesh:GetPosition() ~= propDefaultZoomMarker:GetPosition() then
 		zoomToggle = true
 	end
@@ -1671,7 +1592,9 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function OnPlayerLeft(leftPlayer)
+
 	RemoveCosmetic(leftPlayer.id)
+
 end
 
 ----------------------------------------------------------------------------------------------------------------
