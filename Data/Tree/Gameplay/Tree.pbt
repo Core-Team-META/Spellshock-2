@@ -21069,7 +21069,7 @@ Objects {
   Camera {
     UseAsDefault: true
     AttachToLocalPlayer: true
-    InitialDistance: 650
+    InitialDistance: 800
     MinDistance: 400
     MaxDistance: 800
     PositionOffset {
@@ -21193,7 +21193,7 @@ Objects {
       CanMoveUp: true
       CanMoveDown: true
       IsMountEnabled: true
-      MaxHitpoints: 100
+      MaxHitpoints: -1
     }
   }
   InstanceHistory {

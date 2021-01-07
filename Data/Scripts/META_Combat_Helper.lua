@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/04/2020
--- Version 0.1.2
+-- Date: 2021/1/6
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -29,10 +29,10 @@ local function UpdateCombatAmmount(attackData)
     local source = attackData.source
     local ammount = attackData.damage.amount
     if ammount > 0 then
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, ammount)
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(ammount))
     else
         ammount = ammount * 1
-        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, ammount)
+        source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
     end
 end
 

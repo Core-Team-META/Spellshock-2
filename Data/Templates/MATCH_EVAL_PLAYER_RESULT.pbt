@@ -86,9 +86,9 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 180
+          Width: 153
           Height: 25
-          UIX: 50
+          UIX: 77.7197342
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -104,7 +104,7 @@
             }
             Size: 14
             Justification {
-              Value: "mc:etextjustify:right"
+              Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
           }
@@ -146,7 +146,7 @@
         Control {
           Width: 200
           Height: 25
-          UIX: 2.93164063
+          UIX: 5.24673796
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -154,7 +154,7 @@
           }
           UseParentWidth: true
           Text {
-            Label: "123"
+            Label: "8888"
             Color {
               R: 1
               G: 0.845298052

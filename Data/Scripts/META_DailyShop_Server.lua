@@ -3,7 +3,7 @@
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/1/6
--- Version 0.1.1
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -87,12 +87,11 @@ local function GenerateShopItems(player, forced)
         tempTbl[i] = CalculateRewardSlot(player)
     end
     local time = os.time()
-    local refresh = 0
+    player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
     if forced then
-        refresh = player.serverUserData.DS_REFRESH + 1
-        player.serverUserData.DS_REFRESH = refresh
+        player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
     end
-    tempTbl["TIME"] = {T = time, R = CoreMath.Round(refresh)}
+    tempTbl["TIME"] = {T = time, R = CoreMath.Round(player.serverUserData.DS_REFRESH)}
     dailyRewards[player.id] = tempTbl
 end
 

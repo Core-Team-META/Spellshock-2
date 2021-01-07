@@ -1898,8 +1898,7 @@
             MultiShot: 1
             ProjectileSpeed: 8000
             ProjectileLifeSpan: 10
-            ProjectileGravity: 0.5
-            ProjectileLength: 50
+            ProjectileLength: 30
             ProjectileRadius: 30
             ProjectileDrag: -0.1
             SpreadMin: 0.2
