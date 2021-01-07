@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/30/2020
--- Version 0.1.3
+-- Date: 2021/1/7
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -77,6 +77,13 @@ function API.GetCurrentCosmetic(player, bind, class)
         skinId = 1
     end
     return cosmeticTable[class][player.team][skinId][bind]
+end
+
+--@param object player
+--@param int bind => id of bind (API.Q, API.E)
+--@param int class => id of class (API.TANK, API.MAGE)
+function API.GetCosmeticMuid(player, class, team, skin, bind)
+    return cosmeticTable[class][team][skin][bind]
 end
 
 --@param object player
