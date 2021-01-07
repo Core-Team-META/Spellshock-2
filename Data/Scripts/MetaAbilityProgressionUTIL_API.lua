@@ -381,7 +381,9 @@ function API.CosmeticConvertToString(tbl)
         end
         str = next(tbl, classId) and str .. "," or str
     end
-
+    if str == ",,,,,,,,," then
+        str = ""
+    end
     return str
 end
 
@@ -487,7 +489,6 @@ function API.EquippedCosmeticConvertToString(tbl)
         end
         str = next(tbl, key) and str .. "|" or str
     end
-
     return str
 end
 
