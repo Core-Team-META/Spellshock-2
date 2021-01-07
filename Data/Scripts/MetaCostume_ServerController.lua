@@ -116,7 +116,6 @@ function BuildCosmeticDataTable(player, data)
                 for skin, skins in pairs(teams) do
                     for bind, binds in pairs(skins) do
                         player:SetResource(UTIL.GetCosmeticIdString(class, team, skin, bind), 1)
-                        print(UTIL.GetCosmeticIdString(class, team, skin, bind))
                     end
                 end
             end
@@ -230,7 +229,6 @@ function API.GetCurrentCosmetic(player, bind, class)
     end
     return cosmeticTable[class][player.team][skinId][bind]
 end
-
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
