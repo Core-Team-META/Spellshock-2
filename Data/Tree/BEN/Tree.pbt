@@ -5402,7 +5402,7 @@ Objects {
     }
     Overrides {
       Name: "cs:SameTeam"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
