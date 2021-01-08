@@ -42,7 +42,7 @@ function OnGoingToTakeDamage(attackData)
         return
     end
 
-    if attackData.object == EQUIPMENT.owner then
+    if attackData.object == EQUIPMENT.owner and attackData.source.team ~= EQUIPMENT.owner.team then
         local BlockPercentage = META_AP().GetAbilityMod(ABILITY.owner, META_AP().RMB, "mod1", DEFAULT_BLOCK_PERCENTAGE, ABILITY.name..": Block %")
         attackData.damage.amount = attackData.damage.amount - (attackData.damage.amount * BlockPercentage)
 	end

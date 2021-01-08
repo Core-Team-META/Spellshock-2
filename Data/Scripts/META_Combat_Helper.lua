@@ -51,6 +51,7 @@ local function UpdateUltimateKillAmmount(attackData)
 end
 
 local function DevHelperFunction(attackData)
+    local source = attackData.source
     for resource, value in pairs(source:GetResources()) do
         for _, combatName in pairs(CONST.COMBAT_STATS) do
             if resource == combatName then
@@ -94,7 +95,6 @@ function OnDied(attackData)
     if attackData.source then
         UpdateKillStreak(attackData)
         UpdateUltimateKillAmmount(attackData)
-        DevHelperFunction(attackData)
     end
 end
 
