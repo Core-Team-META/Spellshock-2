@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 911408642289788367
+        ParentId: 14162296025304194376
         ChildIds: 6462050412748948885
         ChildIds: 13502708920536236078
         ChildIds: 4407225746787958975
@@ -78,6 +78,7 @@
           }
         }
         ParentId: 6462050412748948885
+        ChildIds: 9785761027175108791
         ChildIds: 3219576377234817263
         ChildIds: 4338427027701110623
         ChildIds: 16568662984118643500
@@ -106,18 +107,190 @@
         }
       }
       Objects {
+        Id: 9785761027175108791
+        Name: "Feather"
+        Transform {
+          Location {
+            X: 5.39114952
+            Y: 5.48240089
+            Z: 27.023365
+          }
+          Rotation {
+            Pitch: 46.8335075
+            Yaw: 39.267952
+            Roll: 87.1175232
+          }
+          Scale {
+            X: 0.16999796
+            Y: 0.16999796
+            Z: 0.16999796
+          }
+        }
+        ParentId: 5887128325179288869
+        ChildIds: 6386365144432831584
+        ChildIds: 3998149077145967874
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6386365144432831584
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: 9.81735357e-05
+            Y: 0.000220547852
+            Z: 49.5275536
+          }
+          Rotation {
+            Yaw: -179.999954
+            Roll: -179.999954
+          }
+          Scale {
+            X: 0.0884431526
+            Y: 0.649834633
+            Z: 2.30484557
+          }
+        }
+        ParentId: 9785761027175108791
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 244066850900665391
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.30400002
+              G: 0.0191519894
+              B: 0.0191519894
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3998149077145967874
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -10.9179106
+            Y: 47.9900513
+            Z: 25.5381508
+          }
+          Rotation {
+            Pitch: 15.6999674
+            Yaw: -162.574905
+            Roll: 145.875488
+          }
+          Scale {
+            X: 0.0720395446
+            Y: 0.52930963
+            Z: 1.8773644
+          }
+        }
+        ParentId: 9785761027175108791
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 244066850900665391
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.30400002
+              G: 0.0191519894
+              B: 0.0191519894
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 3219576377234817263
         Name: "Feather"
         Transform {
           Location {
-            X: 7.19208145
-            Y: 8.05124364e-06
-            Z: 27.3388577
+            X: 5.39112711
+            Y: -5.482
+            Z: 27.0233612
           }
           Rotation {
-            Pitch: 37.9120903
-            Yaw: 2.44245911e-07
-            Roll: 9.1675156e-06
+            Pitch: 46.8335419
+            Yaw: -39.2679749
+            Roll: -87.1175537
           }
           Scale {
             X: 0.16999796
@@ -127,6 +300,7 @@
         }
         ParentId: 5887128325179288869
         ChildIds: 5237171857092053227
+        ChildIds: 7430786295192368050
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -175,6 +349,76 @@
             AssetReference {
               Id: 244066850900665391
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.30400002
+              G: 0.0191519894
+              B: 0.0191519894
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2635330027741249494
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7430786295192368050
+        Name: "Thorn - Wide"
+        Transform {
+          Location {
+            X: -10.9388189
+            Y: -49.0699348
+            Z: 26.625782
+          }
+          Rotation {
+            Pitch: 15.7000227
+            Yaw: 162.574875
+            Roll: -140.639191
+          }
+          Scale {
+            X: 0.0720395446
+            Y: 0.52930963
+            Z: 1.8773644
+          }
+        }
+        ParentId: 3219576377234817263
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 244066850900665391
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.169295549
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.538869262
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -506,7 +750,6 @@
           }
         }
         ParentId: 5887128325179288869
-        ChildIds: 3998149077145967874
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -515,75 +758,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3998149077145967874
-        Name: "Thorn - Wide"
-        Transform {
-          Location {
-            X: -7.52797318
-            Y: -24.331831
-            Z: 45.4545631
-          }
-          Rotation {
-            Yaw: 180
-            Roll: -166.85878
-          }
-          Scale {
-            X: 0.107523136
-            Y: 0.790024817
-            Z: 2.80207348
-          }
-        }
-        ParentId: 13746682052634095409
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 244066850900665391
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.169295549
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.538869262
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.30400002
-              G: 0.0191519894
-              B: 0.0191519894
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2635330027741249494
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -607,7 +781,6 @@
           }
         }
         ParentId: 5887128325179288869
-        ChildIds: 7430786295192368050
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -616,75 +789,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 7430786295192368050
-        Name: "Thorn - Wide"
-        Transform {
-          Location {
-            X: -7.52802
-            Y: 24.5161343
-            Z: 47.742836
-          }
-          Rotation {
-            Yaw: 180
-            Roll: 172.095261
-          }
-          Scale {
-            X: 0.107523136
-            Y: 0.790024817
-            Z: 2.80207348
-          }
-        }
-        ParentId: 8531729401373376872
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 244066850900665391
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.169295549
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.538869262
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.30400002
-              G: 0.0191519894
-              B: 0.0191519894
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2635330027741249494
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -1451,18 +1555,18 @@
         Name: "Fantasy Gauntlet Hand 01"
         Transform {
           Location {
-            X: -10.6190157
-            Y: 1.85652752e-05
-            Z: 9.42001057
+            X: -13.722681
+            Y: 2.47832941e-05
+            Z: 9.75427437
           }
           Rotation {
             Yaw: -90
-            Roll: 150.166885
+            Roll: 168.494675
           }
           Scale {
-            X: 0.962906897
-            Y: 2.15020728
-            Z: 0.985749543
+            X: 1.32286036
+            Y: 2.0431211
+            Z: 1.35423803
           }
         }
         ParentId: 6462050412748948885

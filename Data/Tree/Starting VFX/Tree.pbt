@@ -1171,6 +1171,12 @@ Objects {
         Id: 11131788392135189052
       }
     }
+    Overrides {
+      Name: "cs:03_DivineLight_Active"
+      AssetReference {
+        Id: 2392089005144652572
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
