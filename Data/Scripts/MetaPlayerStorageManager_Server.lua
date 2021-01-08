@@ -190,6 +190,7 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
+    data = {} --#TODO Testing
     if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)

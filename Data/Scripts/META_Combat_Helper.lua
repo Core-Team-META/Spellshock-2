@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/6
--- Version 0.1.3
+-- Date: 2021/1/8
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -31,7 +31,7 @@ local function UpdateCombatAmmount(attackData)
     if ammount > 0 then
         source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(ammount))
     else
-        ammount = ammount * 1
+        ammount = ammount * -1
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
     end
 end
@@ -51,7 +51,6 @@ local function UpdateUltimateKillAmmount(attackData)
 end
 
 local function DevHelperFunction(attackData)
-    local source = attackData.source
     for resource, value in pairs(source:GetResources()) do
         for _, combatName in pairs(CONST.COMBAT_STATS) do
             if resource == combatName then
@@ -78,23 +77,25 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     if ABGS.GAME_STATE_LOBBY == newState then
         ResetPlayers()
     end
-
 end
 
-
 function GoingToTakeDamage(attackData)
-    local source = attackData.source
+    --local source = attackData.source
 end
 
 --#TODO Will need to check Gamestate for round in progress
 function OnDamageTaken(attackData)
-    UpdateCombatAmmount(attackData)
+    if attackData.source then
+        UpdateCombatAmmount(attackData)
+    end
 end
 
 function OnDied(attackData)
-    UpdateKillStreak(attackData)
-    UpdateUltimateKillAmmount(attackData)
-    DevHelperFunction(attackData)
+    if attackData.source then
+        UpdateKillStreak(attackData)
+        UpdateUltimateKillAmmount(attackData)
+        DevHelperFunction(attackData)
+    end
 end
 
 function OnCapturePointChanged(playerId)
@@ -108,7 +109,7 @@ function OnCapturePointChanged(playerId)
     end
 end
 
-Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
+--Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
 Events.Connect("CombatWrapAPI.OnDamageTaken", OnDamageTaken)
 Events.Connect("CombatWrapAPI.ObjectHasDied", OnDied)
 Events.Connect("Stats.Helper.CapturePoint", OnCapturePointChanged)
