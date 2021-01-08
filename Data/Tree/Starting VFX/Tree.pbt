@@ -1177,6 +1177,18 @@ Objects {
         Id: 2392089005144652572
       }
     }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Placement"
+      AssetReference {
+        Id: 12271834012476174388
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 16431236309358610064
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -96,6 +96,10 @@
             Name: "bp:Enable Burst Sparkles"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Enable Sparkles"
+            Bool: true
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

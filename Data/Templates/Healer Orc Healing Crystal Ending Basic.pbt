@@ -7,7 +7,7 @@
       RootId: 17700766038969200339
       Objects {
         Id: 17700766038969200339
-        Name: "Orc Crystal Ending FX"
+        Name: "Healer Orc Healing Crystal Ending Basic"
         Transform {
           Scale {
             X: 1
@@ -70,7 +70,7 @@
           }
           Overrides {
             Name: "bp:Enable Base"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Density"
@@ -83,6 +83,10 @@
               G: 0.0705882385
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Sparkles"
+            Bool: false
           }
         }
         Collidable_v2 {
