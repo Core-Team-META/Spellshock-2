@@ -106,7 +106,7 @@ end
 --@param table data
 local function OnLoadCostumeData(player, data)
     local cosmetics
-    if data[CONST.STORAGE.COSMETIC] then 
+    if data[CONST.STORAGE.COSMETIC] then
         cosmetics = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
     end
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetics)
@@ -142,13 +142,10 @@ end
 --@param table data
 local function OnSaveCurrencyData(player, data)
     local playerCurrency = {}
-    for key, value in pairs(player:GetResources()) do
-        for index, k in ipairs(CONST.CURRENCY) do
-            if k == key then
-                playerCurrency[index] = value
-            end
-        end
+    for index, resName in ipairs(CONST.CURRENCY) do
+        playerCurrency[index] = player:GetResource(resName)
     end
+
     data[CONST.STORAGE.CURRENCY] =
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
 end
@@ -205,10 +202,7 @@ end
 
 --@param object player
 local function OnPlayerLeft(player)
-    local data = {}
-
-    --For testing to clear out old data prior to storage managment
-    Storage.SetPlayerData(player, data)
+    local data = Storage.GetPlayerData(player)
 
     --Build string from data tables
     OnSaveProgressionData(player, data)

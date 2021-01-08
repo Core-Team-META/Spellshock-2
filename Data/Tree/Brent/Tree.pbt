@@ -1,6 +1,32 @@
 ﻿Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 5611420104663390633
+  Name: "Perk Shop"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Perk Shop"
+  }
+}
+Objects {
   Id: 4197521803680757974
   Name: "UI"
   Transform {
@@ -124,6 +150,32 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Daily Shop"
+  }
+}
+Objects {
+  Id: 11490187644604034792
+  Name: "Cosmetics"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cosmetics"
   }
 }
 Objects {

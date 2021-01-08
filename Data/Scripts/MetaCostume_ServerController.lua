@@ -73,6 +73,9 @@ local function UnlockCosmetic(player, class, team, skin, bind)
     playerCosmetic[player][class][team][skin][bind] = 1
 end
 
+
+--@param object player
+--@param int skinId
 local function SetCurrentCosmetic(player, skinId)
     local class = player:GetResource(CONST.CLASS_RES)
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
@@ -80,10 +83,16 @@ local function SetCurrentCosmetic(player, skinId)
     print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
 end
 
-local function SetBindCosmetic(player, class, team, bind, skinId)
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+--@param int team
+--@param int bind => id of bind (API.Q, API.E)
+--@param int skin
+local function SetBindCosmetic(player, class, team, bind, skin)
     class = class or player:GetResource(CONST.CLASS_RES)
-    playerEquippedCosmetic[player][class][bind][team] = skinId
-    player:SetResource(UTIL.GetSkinString(class, team, bind), skinId)
+    playerEquippedCosmetic[player][class][bind][team] = skin
+    player:SetResource(UTIL.GetSkinString(class, team, bind), skin)
     print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
 end
 
@@ -152,6 +161,7 @@ function BuildEquippedCosmeticDataTable(player, data)
             end
         end
     end
+    --Set Default Class Skins if it doesn't exsist in data
     for _, class in pairs(CONST.CLASS) do
         playerEquippedCosmetic[player][class] = playerEquippedCosmetic[player][class] or {}
         if not next(playerEquippedCosmetic[player][class]) then

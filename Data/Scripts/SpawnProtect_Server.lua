@@ -1,6 +1,6 @@
 ﻿local ORC_SPAWN_TRIGGER = script:GetCustomProperty("OrcTrigger"):WaitForObject()
 local ELF_SPAWN_TRIGGER = script:GetCustomProperty("ElfTrigger"):WaitForObject()
-local ShouldDie = script:GetCustomProperty("ShouldDie")
+local SHOULD_DIE = script:GetCustomProperty("ShouldDie")
 
 function OnBeginOverLap(trigger, player)
     local teamId = trigger:GetCustomProperty("TeamId")
@@ -9,7 +9,7 @@ function OnBeginOverLap(trigger, player)
     end
 end
 
-if ShouldDie then
+if SHOULD_DIE then
     ORC_SPAWN_TRIGGER.beginOverlapEvent:Connect(OnBeginOverLap)
     ELF_SPAWN_TRIGGER.beginOverlapEvent:Connect(OnBeginOverLap)
 end
