@@ -24,23 +24,25 @@ local Class_Stances = {
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end
     
-    --[[ unequip everything
-    for _, equipment in pairs(player:GetEquipment()) do
-		if Object.IsValid(equipment) then
-			equipment:Unequip()
-		end
-		Task.Wait()
-		if Object.IsValid(equipment) then
-			equipment:Destroy()
-		end
-	end
-    Task.Wait()]]
-    player.serverUserData.CurrentClass = classID
     player.animationStance = Class_Stances[classID]
     player:SetResource("CLASS_MAP", classID)
     while Events.BroadcastToAllPlayers("Class Changed", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
-	--local newClass = World.SpawnAsset(ClassTemplates[classID])
-	--newClass:Equip(player)
+    
+    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+        --unequip everything
+        for _, equipment in pairs(player:GetEquipment()) do
+            if Object.IsValid(equipment) then
+                equipment:Unequip()
+            end
+            Task.Wait()
+            if Object.IsValid(equipment) then
+                equipment:Destroy()
+            end
+        end
+
+        local newClass = World.SpawnAsset(ClassTemplates[classID])
+        newClass:Equip(player)
+    end
 end
 
 function OnGameStateChanged(oldState, newState)
@@ -58,11 +60,12 @@ function OnGameStateChanged(oldState, newState)
                 end
             end
             
-            if not player.serverUserData.CurrentClass then
-                player.serverUserData.CurrentClass = META_AP().TANK
+            local classID = player:GetResource("CLASS_MAP")
+            if classID == 0 then
+                classID = META_AP().TANK
             end
 
-            local newClass = World.SpawnAsset(ClassTemplates[player.serverUserData.CurrentClass])
+            local newClass = World.SpawnAsset(ClassTemplates[classID])
 	        newClass:Equip(player)
         end
     elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
@@ -84,15 +87,18 @@ function OnGameStateChanged(oldState, newState)
 end
 
 function OnPlayerJoined(player)
-    player.serverUserData.CurrentClass = META_AP().TANK
-
+    --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
     while Events.BroadcastToAllPlayers("Class Changed", player, META_AP().TANK) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
-
+    
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-        local newClass = World.SpawnAsset(ClassTemplates[player.serverUserData.CurrentClass])
+        local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
 	    newClass:Equip(player)
     end
+end
+
+if Environment.IsSinglePlayerPreview() then
+    OnPlayerJoined(Game.GetPlayers()[1])
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

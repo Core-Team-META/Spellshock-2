@@ -692,6 +692,15 @@ Assets {
   }
 }
 Assets {
+  Id: 709537143699190667
+  Name: "\"The Dark Spiritwatcher\" Music Construction Kit (Layers) 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_TheDarkSpiritWatcherKit_ref"
+  }
+}
+Assets {
   Id: 489188521779173368
   Name: "Icon Alert"
   PlatformAssetType: 9

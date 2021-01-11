@@ -7,12 +7,15 @@ local previousBindingTime = 0
 _G.MENU_TABLE = {
 	NONE = 0,
 	ClassSelection = 1,
-	Tutorial = 2
+	Tutorial = 2,
+	Respawn = 3
 }
 _G.CurrentMenu = _G.MENU_TABLE["NONE"]
 
 function OnMenuChanged(newMenu)
+	local oldMenu = _G.CurrentMenu
 	_G.CurrentMenu = newMenu
+	Events.Broadcast("Menu Changed", oldMenu, newMenu)
 end
 
 function OnGameStateChanged (oldState, newState)

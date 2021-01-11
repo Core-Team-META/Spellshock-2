@@ -5,9 +5,9 @@ Objects {
   Name: "Base Location"
   Transform {
     Location {
-      X: 16200
-      Y: 19325
-      Z: 5325
+      X: 22160
+      Y: 20365
+      Z: 5325.00195
     }
     Rotation {
     }
@@ -192,9 +192,9 @@ Objects {
   Name: "Base Location"
   Transform {
     Location {
-      X: -24375
-      Y: -32975
-      Z: 5050
+      X: -23175
+      Y: -33345
+      Z: 5049.99805
     }
     Rotation {
     }

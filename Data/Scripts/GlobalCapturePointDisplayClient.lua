@@ -17,6 +17,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom properties --
 local ABCP = require(script:GetCustomProperty("API"))
+local AS = require(script:GetCustomProperty("AS"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local INDICATOR_COMPONENT = script:GetCustomProperty("IndicatorComponent")
@@ -49,6 +50,13 @@ end
 -- nil Tick(float)
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
+	if AS.IsRespawning() or AS.IsSpectating() then
+		PANEL.visibility = Visibility.FORCE_OFF
+		return
+	else
+		PANEL.visibility = Visibility.INHERIT
+	end
+	
 	-- Get states and sort by order
 	local capturePointIds = ABCP.GetCapturePoints()
 	local capturePointStates = {}

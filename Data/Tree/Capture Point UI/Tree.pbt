@@ -2011,6 +2011,12 @@ Objects {
         Id: 5831270212756495442
       }
     }
+    Overrides {
+      Name: "cs:AS"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
