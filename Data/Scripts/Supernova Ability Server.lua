@@ -82,7 +82,8 @@ function OnAbilityRecovery(thisAbility)
 			}
 			COMBAT().ApplyDamage(attackData)
 		   -- Stun
-		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+		   local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
+		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 		end
     end
 end

@@ -16,9 +16,10 @@ function DoDamage(other)
 			OverlapEvent:Disconnect()
 			OverlapEvent = nil
 		end
-
+		--#TODO Need the ability owner on this
+		--local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", DEFAULT_LifeSpan, Ability.name .. ": Status")
 		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, nil, 60, 1, 0.1)
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
 		
 		--[[
 		local dmg = Damage.New()

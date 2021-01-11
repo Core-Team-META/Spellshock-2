@@ -93,7 +93,8 @@ function Tick(deltaTime)
 			--print("DISTANCE: "..tostring(DistanceVector.size))
 
 			if DistanceVector.size < 150 then
-				API_SE.ApplyStatusEffect(HawkTarget, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, Ability.owner, 60, 1, 0.1)
+				local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
+				API_SE.ApplyStatusEffect(HawkTarget, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 

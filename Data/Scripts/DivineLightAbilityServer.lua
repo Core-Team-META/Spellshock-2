@@ -32,8 +32,10 @@ function OnAbilityExecute(thisAbility)
 	--CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), StunRadius, {duration = 5})
 	
 	ImpulseAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, Ability.name..": Impulse Amount")
+	local status = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod5", {}, Ability.name .. ": Status")
+				
 	for _, enemy in pairs(nearbyEnemies) do
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 		AddImpulseToPlayer(enemy)
 	end
 end

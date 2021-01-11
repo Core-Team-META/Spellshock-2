@@ -297,17 +297,17 @@ classTable = {
         },
         --Hawk
         [CONST.BIND.T] = {
-            -- mod1 = Hawk Speed, mod2 = LifeSpan, mod3 = Damage Amount, mod4 = Attack Range
-            [1] = {mod1 = 800, mod2 = 8, mod3 = 50, mod4 = 800, mod5 = 0},
-            [2] = {mod1 = 900, mod2 = 8, mod3 = 55, mod4 = 900, mod5 = 0},
-            [3] = {mod1 = 1000, mod2 = 9, mod3 = 60, mod4 = 1000, mod5 = 0},
-            [4] = {mod1 = 1100, mod2 = 9, mod3 = 65, mod4 = 1100, mod5 = 0},
-            [5] = {mod1 = 1200, mod2 = 10, mod3 = 70, mod4 = 1200, mod5 = 0},
-            [6] = {mod1 = 1300, mod2 = 10, mod3 = 75, mod4 = 1300, mod5 = 0},
-            [7] = {mod1 = 1400, mod2 = 11, mod3 = 80, mod4 = 1400, mod5 = 0},
-            [8] = {mod1 = 1500, mod2 = 11, mod3 = 85, mod4 = 1500, mod5 = 0},
-            [9] = {mod1 = 1600, mod2 = 12, mod3 = 90, mod4 = 1600, mod5 = 0},
-            [10] = {mod1 = 1700, mod2 = 12, mod3 = 100, mod4 = 1700, mod5 = 0}
+            -- mod1 = Hawk Speed, mod2 = LifeSpan, mod3 = Damage Amount, mod4 = Attack Range, mod 5 = Status Effect Slow
+            [1] = {mod1 = 800, mod2 = 8, mod3 = 50, mod4 = 800, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [2] = {mod1 = 900, mod2 = 8, mod3 = 55, mod4 = 900, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [3] = {mod1 = 1000, mod2 = 9, mod3 = 60, mod4 = 1000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [4] = {mod1 = 1100, mod2 = 9, mod3 = 65, mod4 = 1100, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [5] = {mod1 = 1200, mod2 = 10, mod3 = 70, mod4 = 1200, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [6] = {mod1 = 1300, mod2 = 10, mod3 = 75, mod4 = 1300, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [7] = {mod1 = 1400, mod2 = 11, mod3 = 80, mod4 = 1400, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [8] = {mod1 = 1500, mod2 = 11, mod3 = 85, mod4 = 1500, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [9] = {mod1 = 1600, mod2 = 12, mod3 = 90, mod4 = 1600, mod5 = {duration = 5, damage = 0, multiplier = 0.5}},
+            [10] = {mod1 = 1700, mod2 = 12, mod3 = 100, mod4 = 1700, mod5 = {duration = 5, damage = 0, multiplier = 0.5}}
         },
         --Roll
         [CONST.BIND.SHIFT] = {

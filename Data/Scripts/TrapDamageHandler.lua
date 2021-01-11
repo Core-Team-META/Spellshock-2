@@ -41,9 +41,9 @@ function DoDamage(other)
 		end
 		Root.visibility = Visibility.FORCE_OFF
 		World.SpawnAsset(TrapActivationTemplate, {position = Root:GetWorldPosition(), rotation = Root:GetWorldRotation()})
-		
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+		local status = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod5", {}, "Bear Trap: Status")
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, TrapOwner, status.duration, status.damage, status.multiplier)
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, TrapOwner, status.duration, status.damage, status.multiplier)
 		
 		local dmg = Damage.New()
 		dmg.amount = META_AP().GetAbilityMod(TrapOwner, META_AP().R, "mod3", DEFAULT_DamageAmount, "Bear Trap : Damage Amount")

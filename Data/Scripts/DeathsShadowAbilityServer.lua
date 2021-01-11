@@ -57,8 +57,8 @@ function Attack()
 			tags = {id = "Assassin_E"}
 			}
 		COMBAT().ApplyDamage(attackData)
-
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
+		local status = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod5", {}, Ability.name .. ": Status")
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 		return
 	end	
 end	

@@ -92,8 +92,8 @@ function PlaceObject(thisPlayer, position, rotation)
 				tags = {id = "Mage_Q"}
 			}
 			COMBAT().ApplyDamage(attackData)
-					
-			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+			local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
+			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		end	
 		
 		Timer = 1
@@ -181,7 +181,8 @@ function Tick(deltaTime)
 						
 				
 				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Slow") then
-					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+					local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
+					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 				end
 			end	
 			Timer = 1
