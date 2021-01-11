@@ -74,7 +74,7 @@ Objects {
         }
         Overrides {
           Name: "UIY"
-          Float: 160
+          Float: 220
         }
         Overrides {
           Name: "Height"

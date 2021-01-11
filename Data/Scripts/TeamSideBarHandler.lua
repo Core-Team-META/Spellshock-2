@@ -32,7 +32,8 @@ end
 
 function OnBindingPressed(player, binding)
     -- U key
-    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
+    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] 
+    or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
         if TeamInfoPanel.visibility == Visibility.INHERIT then
             TeamInfoPanel.visibility = Visibility.FORCE_OFF
         else
@@ -41,8 +42,8 @@ function OnBindingPressed(player, binding)
     end
 end
 
-function OnMenuChanged(newMenu)
-    if newMenu == _G.MENU_TABLE["NONE"] then -- show
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] then -- show
         TeamLeftSideBar.visibility = Visibility.INHERIT
     else
 		TeamLeftSideBar.visibility = Visibility.FORCE_OFF
@@ -173,5 +174,5 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
-Events.Connect("Changing Menu", OnMenuChanged)
+Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)

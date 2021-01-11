@@ -48,6 +48,8 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+while not _G.CurrentMenu do Task.Wait() end
+
 local HelperClassButtonTemplate = script:GetCustomProperty("Helper_Class_Button")
 local HelperAbilityModTemplate = script:GetCustomProperty("Helper_AbilityModPanel")
 local UpgradeVFX = script:GetCustomProperty("UpgradeVFX")
@@ -62,8 +64,9 @@ local isUpgrading = false
 
 ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 
-function OnMenuChanged(newMenu)
+function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["ClassSelection"] then -- show
+		Task.Wait()
 		if LOCAL_PLAYER.team == 1 then
 			LOCAL_PLAYER:SetOverrideCamera(Orc_Camera)
 		else
@@ -73,7 +76,8 @@ function OnMenuChanged(newMenu)
 		ClassSelectionCanvas.visibility = Visibility.INHERIT
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
-	else -- hide
+	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] then -- hide
+		print(">> Hiding Class Selection Menu")
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
 		UI.SetCanCursorInteractWithUI(false)
@@ -411,7 +415,7 @@ function OnClassChanged(player, Class)
 	end
 
 	-- If the local player changed their class then close the menu and make the button interactable
-	if player == LOCAL_PLAYER then
+	if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		ConfirmChoiceButton.isInteractable = true
 	end
@@ -561,7 +565,7 @@ SpinnerTask.repeatInterval = 0
 --LOCAL_PLAYER.clientUserData.CurrentClass = META_AP().TANK
 
 OnClassClicked(CurrentClassButton)
-Events.Connect("Changing Menu", OnMenuChanged)
+Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Class Changed", OnClassChanged)
 --function Tick()

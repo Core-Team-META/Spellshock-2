@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 16747647529320538654
+        ParentId: 14534063837544988851
         ChildIds: 2942132103363757878
         ChildIds: 8136430608815812301
         ChildIds: 4774052467234976602
@@ -367,9 +367,8 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 50
-          Height: 50
-          RotationAngle: 45
+          Width: 20
+          Height: 20
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -380,12 +379,11 @@
           UseParentHeight: true
           Image {
             Brush {
-              Id: 9637558081505740623
+              Id: 10184288288679106191
             }
             Color {
-              R: 0.849999905
-              G: 1
-              B: 0.100000024
+              R: 0.909999967
+              G: 0.506225
               A: 1
             }
             TeamSettings {
@@ -434,12 +432,12 @@
       }
     }
     Assets {
-      Id: 9637558081505740623
-      Name: "Center Arrow 003"
+      Id: 10184288288679106191
+      Name: "Frame Hex 004"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "CenterArrow_003"
+        AssetId: "FrameHex_004"
       }
     }
     PrimaryAssetId {

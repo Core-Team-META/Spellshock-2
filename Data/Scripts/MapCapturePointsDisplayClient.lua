@@ -11,6 +11,8 @@ local RESPAWN_TIMER_PANEL = script:GetCustomProperty("RespawnTimerPanel"):WaitFo
 local TIMER = RESPAWN_TIMER_PANEL:GetCustomProperty("Timer"):WaitForObject()
 local TimerTickSFX = script:GetCustomProperty("TimerTickSFX"):WaitForObject()
 
+while not _G.CurrentMenu do Task.Wait() end
+
 -- User exposed properties
 local SHOW_CAPTURE_POINT_NAMES = true
 local NEUTRAL_COLOR = script:GetCustomProperty("NeutralColor")
@@ -20,13 +22,13 @@ local DISABLED_COLOR = script:GetCustomProperty("DisabledColor")
 local indicators = {}
 local baseIndicators = {}
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local RespawnDelay = 10 
+local RespawnDelay = 15
 local RespawnTimer = -1 -- A value of -1 indicates the timer is disabled; only enabled during AS.IsRespawning()
 local PreviousSecond = 0
 local CurrentButton = nil
 local BaseButton = nil
 
-RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
+--RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 
 -- Wait for team colors
 while not _G.TeamColors do
@@ -45,7 +47,7 @@ function CheckRespawnTimer()
 	--print("RESPAWN TIMER: "..tostring(RespawnTimer))
 	if RespawnTimer == 0 then
 		RespawnTimer = -2 
-		RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
+		--RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 		local RespawnObjectReference 
 		if CurrentButton.clientUserData.stateID then
 			print("State Id: "..CurrentButton.clientUserData.stateID)
@@ -96,9 +98,10 @@ function Tick(DeltaTime)
 		
 		if AS.IsRespawning() and RespawnTimer == -1 then
 			RespawnTimer = RespawnDelay -- activate timer
-			RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_ON
+			--RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_ON
 			TIMER.text = tostring(RespawnDelay)
 			OnButtonPressed(BaseButton)
+			--Events.Broadcast("Changing Menu", _G.MENU_TABLE["Respawn"]) -- broadcast to show respawn UI
 		end
 	else
 		PANEL.visibility = Visibility.FORCE_OFF
@@ -134,7 +137,7 @@ function Tick(DeltaTime)
 			selectedIcon.visibility = Visibility.FORCE_OFF
 			iconImage:SetColor(_G.TeamColors[locationTable.team])
 			iconBackground:SetColor(_G.TeamColors[locationTable.team])
-			
+			selectedIcon:SetColor(_G.TeamColors[locationTable.team])
 			
 			iconButton.pressedEvent:Connect(OnButtonPressed)
         end
@@ -213,6 +216,7 @@ function Tick(DeltaTime)
 		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.name
 			shortName.text = capturePointState.shortName
+			shortName:GetChildren()[1].text = capturePointState.shortName
 			nameText.visibility = Visibility.FORCE_ON
 		else
 			nameText.visibility = Visibility.FORCE_OFF
