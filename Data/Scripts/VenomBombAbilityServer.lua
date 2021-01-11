@@ -33,7 +33,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 
         for _, enemy in ipairs(enemiesInRange) do
             -- Poison
-            API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
+            API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id, ABILITY.owner, 60, 1)
 			
 			local attackData = {
 				object = enemy,

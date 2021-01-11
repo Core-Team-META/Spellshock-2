@@ -18,7 +18,7 @@ function DoDamage(other)
 		end
 
 		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
-		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+		API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, nil, 60, 1, 0.1)
 		
 		--[[
 		local dmg = Damage.New()

@@ -37,11 +37,16 @@ type - type from above list
 <multiplier> - amount to multiply the given property by
 id - unique id number defined below
 --]]
-API.STATUS_EFFECT_DEFINITIONS = {}		-- name -> table
+API.STATUS_EFFECT_DEFINITIONS = {} -- name -> table
 
-local STATUS_EFFECT_ID_TABLE = {}		-- id -> table
+local STATUS_EFFECT_ID_TABLE = {} -- id -> table
 
-local tickCounts = {}		-- Player -> index -> int
+local tickCounts = {} -- Player -> index -> int
+
+local SOURCE_KEY = 1
+local DURATION_KEY = 2
+local DAMAGE_KEY = 3
+local MULTIPLIER_KEY = 4
 
 function GetStringHash(string)
 	local hash = 0
@@ -62,6 +67,10 @@ end
 
 function GetStartTimePropertyName(n)
 	return string.format("SE%d_StartTime", n)
+end
+
+function API.GetSourceProperty(n)
+	return string.format("SE%d_Source", n)
 end
 
 function UpdatePlayerEffectState(player, effectType)
@@ -90,8 +99,8 @@ function UpdatePlayerEffectState(player, effectType)
 		local statusEffectData = API.STATUS_EFFECT_DEFINITIONS[data.name]
 
 		if statusEffectData.type == effectType then
-			minMultiplier = math.min(statusEffectData.multiplier, minMultiplier)
-			maxMultiplier = math.max(statusEffectData.multiplier, maxMultiplier)
+			minMultiplier = math.min((statusEffects.multiplier or statusEffectData.multiplier), minMultiplier)
+			maxMultiplier = math.max((statusEffects.multiplier or statusEffectData.multiplier), maxMultiplier)
 		end
 	end
 
@@ -113,6 +122,70 @@ end
 
 function OnPlayerLeft(player)
 	tickCounts[player] = nil
+end
+
+function API.StringSplit(delimiter, text)
+	local tbl = {}
+	if delimiter == "" then -- this would result in endless loops
+		error("delimiter matches empty string!")
+	end
+	if text == "" then
+		error("Empty string!")
+	end
+	if string.find(text, delimiter) == nil then
+		tbl[1] = text
+		return tbl
+	end
+	local p = 1
+	local d = "[^" .. delimiter .. "]+"
+	for str in string.gmatch(text, d) do
+		tbl[p] = str
+		p = p + 1
+	end
+	return tbl
+end
+
+function API.GetStringifiedValue(v)
+	if v == nil then
+		return "^nil^"
+	end
+	if type(v) == "boolean" then
+		return v and "^true^" or "^false^"
+	end
+	return tostring(v)
+end
+
+function API.IsNumeric(value)
+	return value == tostring(tonumber(value)) or math.type(value) ~= nil
+end
+
+-- Client and Server
+function API.ConvertStringToTable(str, pri_delimiter, sec_delimiter)
+	local tbl = {}
+	local t1 = API.StringSplit(pri_delimiter or "|", str)
+	for _, v in pairs(t1) do
+		local t2 = API.StringSplit(sec_delimiter or "~", v)
+		local index = API.IsNumeric(t2[1]) and tonumber(t2[1]) or t2[1]
+		tbl[index] = API.IsNumeric(t2[2]) and tonumber(t2[2]) or t2[2]
+	end
+	return tbl
+end
+
+-- Client and Server
+function API.ConvertTableToString(tbl, pri_delimiter, sec_delimiter)
+	local str = ""
+	sec_delimiter = sec_delimiter or "~"
+	pri_delimiter = pri_delimiter or "|"
+	if type(tbl) == "number" then
+		warn(tostring("CONVERT " .. tbl))
+	end
+	for k, v in pairs(tbl) do
+		str = str .. k .. sec_delimiter .. API.GetStringifiedValue(v or nil)
+		if next(tbl, k) ~= nil then
+			str = str .. pri_delimiter
+		end
+	end
+	return str
 end
 
 -- Client and Server
@@ -198,11 +271,18 @@ function API.GetStatusEffectsOnPlayer(player)
 
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
-
+		local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
+		if source ~= "" then
+			source = API.ConvertStringToTable(source)
+		end
 		if id ~= 0 then
 			local data = {}
 			data.name = STATUS_EFFECT_ID_TABLE[id].name
 			data.startTime = tracker:GetCustomProperty(GetStartTimePropertyName(i))
+			data.source = source[SOURCE_KEY]
+			data.duration = source[DURATION_KEY]
+			data.damage = source[DAMAGE_KEY]
+			data.multiplier = source[MULTIPLIER_KEY]
 			result[i] = data
 		end
 	end
@@ -211,7 +291,7 @@ function API.GetStatusEffectsOnPlayer(player)
 end
 
 -- Server only
-function API.ApplyStatusEffect(player, id)
+function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 	if player.isDead or player.serverUserData.DamageImmunity then
 		return
 	end
@@ -224,6 +304,10 @@ function API.ApplyStatusEffect(player, id)
 		if slotId == 0 then
 			tracker:SetNetworkedCustomProperty(GetIdPropertyName(i), id)
 			tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
+			if source or duration or damage or multiplier then
+				local tempTbl = {source.id, duration, damage, multiplier}
+				tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), API.ConvertTableToString(tempTbl))
+			end
 			tickCounts[player][i] = 0
 
 			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
@@ -276,7 +360,7 @@ function API.DoesPlayerHaveStatusEffect(player, name)
 		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
 		if id ~= 0 then
 			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
-			if(statusEffectData.name == name) then
+			if (statusEffectData.name == name) then
 				return true
 			end
 		end
@@ -291,7 +375,7 @@ function API.RemoveStatusEffectByName(player, name)
 		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
 		if id ~= 0 then
 			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
-			if(statusEffectData.name == name) then
+			if (statusEffectData.name == name) then
 				API.RemoveStatusEffect(player, i)
 			end
 		end
@@ -300,7 +384,8 @@ end
 
 -- Server Only
 function API.Tick(deltaTime)
-	for _, player in pairs(Game.GetPlayers()) do
+	local players = Game.GetPlayers()
+	for _, player in ipairs(players) do
 		local tracker = API.GetStateTracker(player)
 
 		for i = 1, API.MAX_STATUS_EFFECTS do
@@ -309,13 +394,25 @@ function API.Tick(deltaTime)
 			if id ~= 0 then
 				local startTime = tracker:GetCustomProperty(GetStartTimePropertyName(i))
 				local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
+				local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
+				local sourcePlayer
+				if source ~= "" then
+					source = API.ConvertStringToTable(source)
 
+					if source then
+						for _, s in ipairs(players) do
+							if s.id == source[SOURCE_KEY] then
+								sourcePlayer = s
+							end
+						end
+					end
+				end
 				if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM and statusEffectData.tickFunction then
 					local ticksExpected = math.floor(time() - startTime)
-					
+
 					for j = tickCounts[player][i] + 1, ticksExpected do
 						tickCounts[player][i] = tickCounts[player][i] + 1
-						statusEffectData.tickFunction(player)
+						statusEffectData.tickFunction(player, sourcePlayer, source[DAMAGE_KEY])
 
 						-- The tick might kill you, which removes all your status effects. The rest of this is no longer valid.
 						if player.isDead then
@@ -324,7 +421,7 @@ function API.Tick(deltaTime)
 					end
 				end
 
-				if statusEffectData.duration and time() > startTime + statusEffectData.duration then
+				if statusEffectData.duration and time() > startTime + tonumber((source[DURATION_KEY] or statusEffectData.duration)) then
 					API.RemoveStatusEffect(player, i)
 				end
 			end

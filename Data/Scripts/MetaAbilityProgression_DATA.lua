@@ -45,107 +45,10 @@ function API.Exists(id)
     return classTable[id] ~= nil
 end
 
-
---@param String or Int | id => 1 = BLEED
---@return statusEffects
-function API.GetStatusEffectTable(id)
-    if API[id] == nil then
-        return statusEffects
-    elseif IsNumeric(id) and API.SEExists(id) then
-        return statusEffects[id]
-    elseif not IsNumeric(id) then
-        return statusEffects[API[id]]
-    end
-end
-
-function API.SEExists(id)
-    return statusEffects[id] ~= nil
-end
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA
 ------------------------------------------------------------------------------------------------------------------------
 
---Status
-statusEffects = {
-    [CONST.STATUS_EFFECT.BLEED] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    },
-    [CONST.STATUS_EFFECT.BURN] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    },
-    [CONST.STATUS_EFFECT.POISON] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    },
-    [CONST.STATUS_EFFECT.SLOW] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    },
-    [CONST.STATUS_EFFECT.SPEED_BOOST] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    },
-    [CONST.STATUS_EFFECT.STUN] = {
-        --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-        [1] = {mod1 = 4000, mod2 = 1250, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1},
-        [2] = {mod1 = 4000, mod2 = 1350, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1},
-        [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1},
-        [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1},
-        [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1},
-        [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1},
-        [7] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1},
-        [8] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1},
-        [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1},
-        [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1}
-    }
-}
 
 --Class Ability Values
 classTable = {
@@ -200,9 +103,9 @@ classTable = {
             [2] = {mod1 = 135, mod2 = 6, mod3 = 3000, mod4 = 0.55, mod5 = 0},
             [3] = {mod1 = 145, mod2 = 6, mod3 = 3000, mod4 = 0.6, mod5 = 0},
             [4] = {mod1 = 150, mod2 = 6, mod3 = 3000, mod4 = 0.65, mod5 = 0},
-            [5] = {mod1 = 155, mod2 = 6, mod3 = 3000, mod4 = .75, mod5 = 0},
-            [6] = {mod1 = 165, mod2 = 6, mod3 = 3000, mod4 = .85, mod5 = 0},
-            [7] = {mod1 = 170, mod2 = 6, mod3 = 3000, mod4 = .95, mod5 = 0},
+            [5] = {mod1 = 155, mod2 = 6, mod3 = 3000, mod4 = 0.75, mod5 = 0},
+            [6] = {mod1 = 165, mod2 = 6, mod3 = 3000, mod4 = 0.85, mod5 = 0},
+            [7] = {mod1 = 170, mod2 = 6, mod3 = 3000, mod4 = 0.95, mod5 = 0},
             [8] = {mod1 = 175, mod2 = 6, mod3 = 3000, mod4 = 1, mod5 = 0},
             [9] = {mod1 = 180, mod2 = 6, mod3 = 3000, mod4 = 1.1, mod5 = 0},
             [10] = {mod1 = 185, mod2 = 6, mod3 = 3000, mod4 = 1.2, mod5 = 0}

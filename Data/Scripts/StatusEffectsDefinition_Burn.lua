@@ -1,16 +1,19 @@
 ﻿-- Module dependencies
-local MODULE = require( script:GetCustomProperty("ModuleManager") )
-function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local MODULE = require(script:GetCustomProperty("ModuleManager"))
+function COMBAT()
+	return MODULE:Get("standardcombo.Combat.Wrap")
+end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local EFFECT_ICON = script:GetCustomProperty("EffectIcon")
 local EFFECT_TEMPLATE = script:GetCustomProperty("EffectTemplate")
+local DEFAULT_DPS = script:GetCustomProperty("DPS")
 
 local dmg = Damage.New()
-dmg.amount = script:GetCustomProperty("DPS")		
-dmg.reason = DamageReason.COMBAT
 
-function EffectTick(player)   	
+function EffectTick(player, source, damage)
+	dmg.amount = damage or DEFAULT_DPS
+	dmg.reason = DamageReason.COMBAT
 	local attackData = {
 		object = player,
 		damage = dmg,
@@ -19,7 +22,7 @@ function EffectTick(player)
 		rotation = nil,
 		tags = {id = "StatusEffect"}
 	}
-	COMBAT().ApplyDamage(attackData)		
+	COMBAT().ApplyDamage(attackData)
 end
 
 local data = {}

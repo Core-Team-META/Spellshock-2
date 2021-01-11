@@ -20630,7 +20630,7 @@ Objects {
         }
         Overrides {
           Name: "cs:LobbyDuration"
-          Float: 30
+          Float: 0
         }
       }
     }
