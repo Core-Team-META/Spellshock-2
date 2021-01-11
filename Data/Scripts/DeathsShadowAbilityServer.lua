@@ -84,6 +84,8 @@ function OnAbilityExecute(thisAbility)
 	World.SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
+	Ability.serverUserData.OriginalStance = Ability.owner.animationStance
+	Ability.owner.animationStance = "unarmed_sit_chair_upright"
 	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, Ability.name..": Speed Boost")
 	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_Duration, Ability.name..": Duration")
 	script:SetNetworkedCustomProperty("isInvisible", isInvisible)
@@ -92,7 +94,7 @@ end
 function DisableInvisility()
 	if isInvisible then
 		print("Disable Invis")
-
+		Ability.owner.animationStance = Ability.serverUserData.OriginalStance
 		World.SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
