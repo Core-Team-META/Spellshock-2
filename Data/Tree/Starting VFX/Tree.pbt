@@ -1201,6 +1201,12 @@ Objects {
         Id: 6760300758947135008
       }
     }
+    Overrides {
+      Name: "cs:04_Supernova_Charge"
+      AssetReference {
+        Id: 2544825718487104811
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
