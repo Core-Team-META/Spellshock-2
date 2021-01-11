@@ -295,6 +295,12 @@ Objects {
         Id: 8603629302167445173
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Costume"
+      AssetReference {
+        Id: 8583738201420865806
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -556,6 +562,12 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 9632849097138670638
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Costume"
+      AssetReference {
+        Id: 8583738201420865806
       }
     }
   }
