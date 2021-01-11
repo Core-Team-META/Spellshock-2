@@ -86,7 +86,6 @@
           }
           Rotation {
             Pitch: -9.93496704
-            Yaw: -15.8144226
           }
           Scale {
             X: 1
@@ -96,7 +95,6 @@
         }
         ParentId: 8354413830509859889
         ChildIds: 4209119415111712660
-        ChildIds: 4243477197977066018
         ChildIds: 5973771874404588164
         ChildIds: 3799962760503704578
         ChildIds: 1743387609515573141
@@ -108,6 +106,8 @@
         ChildIds: 12426330948521612615
         ChildIds: 15432121555007730198
         ChildIds: 4845665465078954907
+        ChildIds: 4326266240997449085
+        ChildIds: 4243477197977066018
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -154,7 +154,7 @@
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Folder {
           IsGroup: true
@@ -1683,133 +1683,6 @@
         }
       }
       Objects {
-        Id: 4243477197977066018
-        Name: "Layered Thrusters VFX"
-        Transform {
-          Location {
-            X: -3.08559537
-            Y: -0.0624946505
-            Z: 2.86559319
-          }
-          Rotation {
-            Pitch: -6.25428772
-            Yaw: 179.999863
-            Roll: -179.999924
-          }
-          Scale {
-            X: 1.53924286
-            Y: 2.21941447
-            Z: 3.79999852
-          }
-        }
-        ParentId: 6698859391638599994
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:ethrustermeshvar:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Color C"
-            Color {
-              R: 0.122324608
-              B: 0.141
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Enable Inner Core Layer"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Mid Layer End Pinch"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Displacement Amount"
-            Float: 0.225963265
-          }
-          Overrides {
-            Name: "bp:Enable Top Layer"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Bend Thrust Cone"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Color B"
-            Color {
-              R: 0.125304833
-              B: 0.159000009
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.14995192
-              G: 0.00485999556
-              B: 0.243000016
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Mid Layer Texture Style Morph"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Mid Layer Hot Spot Length"
-            Float: 0.242312819
-          }
-          Overrides {
-            Name: "bp:Mid Layer Fade Length"
-            Float: 0.340064079
-          }
-          Overrides {
-            Name: "bp:Color Offset A"
-            Float: 0.307480305
-          }
-          Overrides {
-            Name: "bp:Color Offset C"
-            Float: 0.690339386
-          }
-          Overrides {
-            Name: "bp:Top Layer Texture Style Morph"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Top Layer Fade Length"
-            Float: 0.168999374
-          }
-          Overrides {
-            Name: "bp:Top Layer End Pinch"
-            Float: 0.0956859291
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 2426790310185116976
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
         Id: 5973771874404588164
         Name: "Heart - Polished"
         Transform {
@@ -2527,6 +2400,206 @@
           StaticMesh {
             Physics {
             }
+          }
+        }
+      }
+      Objects {
+        Id: 4326266240997449085
+        Name: "Rocket Trail VFX"
+        Transform {
+          Location {
+            X: 14.3814774
+            Y: -4.39069843
+            Z: -171.954285
+          }
+          Rotation {
+            Pitch: 88.6852188
+            Yaw: 0.000891409582
+            Roll: 0.00100249972
+          }
+          Scale {
+            X: 2.60000086
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 6698859391638599994
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.61
+              B: 0.581721544
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -1
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 1.11862457
+          }
+          Overrides {
+            Name: "bp:Smoke Color"
+            Color {
+              R: 0.082
+              G: 0.082
+              B: 0.082
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.648691297
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.82618666
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 10069588324162714145
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 4243477197977066018
+        Name: "Layered Thrusters VFX"
+        Transform {
+          Location {
+            X: -3.23727322
+            Y: -0.0625
+            Z: -0.740035236
+          }
+          Rotation {
+            Pitch: -6.25427246
+            Yaw: 179.999832
+            Roll: -179.999908
+          }
+          Scale {
+            X: 2.50043225
+            Y: 3.16127419
+            Z: 6.4393096
+          }
+        }
+        ParentId: 6698859391638599994
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              R: 0.122324608
+              B: 0.141
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0.225963265
+          }
+          Overrides {
+            Name: "bp:Enable Top Layer"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              R: 0.125304833
+              B: 0.159000009
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              R: 0.14995192
+              G: 0.00485999556
+              B: 0.243000016
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Mid Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Hot Spot Length"
+            Float: 0.242312819
+          }
+          Overrides {
+            Name: "bp:Mid Layer Fade Length"
+            Float: 0.340064079
+          }
+          Overrides {
+            Name: "bp:Color Offset A"
+            Float: 0.307480305
+          }
+          Overrides {
+            Name: "bp:Color Offset C"
+            Float: 0.690339386
+          }
+          Overrides {
+            Name: "bp:Top Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Fade Length"
+            Float: 0.168999374
+          }
+          Overrides {
+            Name: "bp:Top Layer End Pinch"
+            Float: 0.0956859291
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
@@ -3323,15 +3396,6 @@
       }
     }
     Assets {
-      Id: 2426790310185116976
-      Name: "Layered Thrusters VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_thruster_var"
-      }
-    }
-    Assets {
       Id: 15339827692159902109
       Name: "Heart - Polished"
       PlatformAssetType: 1
@@ -3365,6 +3429,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_var"
       }
     }
     PrimaryAssetId {
