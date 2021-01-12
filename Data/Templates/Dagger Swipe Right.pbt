@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 14567992748388082871
-  Name: "DaggerSwipe"
+  Id: 5027751934724785496
+  Name: "Dagger Swipe Right"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12506559699580332784
+      RootId: 18359497441372031279
       Objects {
-        Id: 12506559699580332784
-        Name: "DaggerSwipe"
+        Id: 18359497441372031279
+        Name: "Dagger Swipe Right"
         Transform {
           Scale {
             X: 1
@@ -16,11 +16,11 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3424168573046142170
-        ChildIds: 4350617395674282453
+        ChildIds: 7563812065431784803
+        ChildIds: 1987038632383859573
         UnregisteredParameters {
         }
-        Lifespan: 2
+        Lifespan: 1
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -32,17 +32,17 @@
         }
       }
       Objects {
-        Id: 3424168573046142170
+        Id: 7563812065431784803
         Name: "Vertical Melee Swipe"
         Transform {
           Location {
-            X: 68.5436172
-            Y: 14.8697357
-            Z: -97.8711929
+            X: 70
+            Y: -75
+            Z: 35
           }
           Rotation {
-            Yaw: -45
-            Roll: 89.9999542
+            Yaw: 30
+            Roll: 180
           }
           Scale {
             X: 1
@@ -50,7 +50,7 @@
             Z: 1
           }
         }
-        ParentId: 12506559699580332784
+        ParentId: 18359497441372031279
         UnregisteredParameters {
           Overrides {
             Name: "bp:Swipe Length"
@@ -72,6 +72,26 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "bp:Shape Index"
+            Int: 1
+          }
+          Overrides {
+            Name: "bp:Arc Amount"
+            Float: 0.182783127
+          }
+          Overrides {
+            Name: "bp:Size"
+            Vector {
+              X: 1
+              Y: 1
+              Z: 0.7
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -91,7 +111,7 @@
         }
       }
       Objects {
-        Id: 4350617395674282453
+        Id: 1987038632383859573
         Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
         Transform {
           Location {
@@ -104,7 +124,7 @@
             Z: 1
           }
         }
-        ParentId: 12506559699580332784
+        ParentId: 18359497441372031279
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
