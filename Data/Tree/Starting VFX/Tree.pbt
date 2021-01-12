@@ -298,7 +298,7 @@ Objects {
     Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
-        Id: 8583738201420865806
+        Id: 5719005977356257604
       }
     }
   }
@@ -567,7 +567,7 @@ Objects {
     Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
-        Id: 8583738201420865806
+        Id: 13347412244189647636
       }
     }
   }
