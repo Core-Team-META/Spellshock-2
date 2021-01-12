@@ -18,84 +18,20 @@
         ParentId: 4781671109827199097
         UnregisteredParameters {
           Overrides {
-            Name: "cs:SE1_Id"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:SE1_StartTime"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:SE2_Id"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:SE2_StartTime"
-            Float: 0
+            Name: "cs:SE1_Source"
+            String: ""
           }
           Overrides {
             Name: "cs:SE2_Source"
             String: ""
           }
           Overrides {
-            Name: "cs:SE3_Id"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:SE3_StartTime"
-            Float: 0
-          }
-          Overrides {
             Name: "cs:SE3_Source"
             String: ""
           }
           Overrides {
-            Name: "cs:SE4_Id"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:SE4_StartTime"
-            Float: 0
-          }
-          Overrides {
             Name: "cs:SE4_Source"
             String: ""
-          }
-          Overrides {
-            Name: "cs:SE1_Source"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:SE1_Id:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE1_StartTime:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE2_Id:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE2_StartTime:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE3_Id:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE3_StartTime:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE4_Id:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:SE4_StartTime:isrep"
-            Bool: true
           }
           Overrides {
             Name: "cs:SE2_Source:isrep"
