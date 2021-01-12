@@ -30,7 +30,6 @@ Objects {
       Id: 4325401643181295799
     }
     Repeat: true
-    Volume: 0.8
     Falloff: 1000
     Radius: 2000
     EnableOcclusion: true
