@@ -1855,6 +1855,7 @@
         ChildIds: 5534575406005060671
         ChildIds: 18340669584196412261
         ChildIds: 6522519753598108575
+        ChildIds: 3230213687525692580
         ChildIds: 18369595493276635491
         UnregisteredParameters {
           Overrides {
@@ -1891,7 +1892,9 @@
         }
         ParentId: 2716804742797173936
         ChildIds: 8202727632896178477
+        ChildIds: 17585539102530407397
         ChildIds: 16793278118655160600
+        ChildIds: 7466746896168637483
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1946,6 +1949,33 @@
         Script {
           ScriptAsset {
             Id: 12439034694186114331
+          }
+        }
+      }
+      Objects {
+        Id: 17585539102530407397
+        Name: "EquipmentAbilityChainServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5534575406005060671
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3194930412626622494
           }
         }
       }
@@ -2012,6 +2042,67 @@
         }
       }
       Objects {
+        Id: 7466746896168637483
+        Name: "MeleeAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 5534575406005060671
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 3230213687525692580
+            }
+          }
+          Overrides {
+            Name: "cs:HitBox"
+            ObjectReference {
+              SubObjectId: 18369595493276635491
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 18
+              Y: 25
+            }
+          }
+          Overrides {
+            Name: "cs:AttackImpulse"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:VerticalImpulse"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9748598691135565465
+          }
+        }
+      }
+      Objects {
         Id: 18340669584196412261
         Name: "Client Context"
         Transform {
@@ -2026,8 +2117,9 @@
           }
         }
         ParentId: 2716804742797173936
-        ChildIds: 800269245416336375
-        ChildIds: 12938845594830669437
+        ChildIds: 12637696742421662481
+        ChildIds: 15505641406647177733
+        ChildIds: 2240986400692986383
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -2041,86 +2133,6 @@
         }
       }
       Objects {
-        Id: 800269245416336375
-        Name: "EquipmentAttachObjectToPlayer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18340669584196412261
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SelfId: 15419927113494458339
-            }
-          }
-          Overrides {
-            Name: "cs:PlayerSocket"
-            String: "left_prop"
-          }
-          Overrides {
-            Name: "cs:LocalPosition"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "cs:LocalRotation"
-            Rotator {
-            }
-          }
-          Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Set object to attach to player on equip event."
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12439034694186114331
-          }
-        }
-      }
-      Objects {
-        Id: 12938845594830669437
-        Name: "AbilityScripts"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18340669584196412261
-        ChildIds: 12637696742421662481
-        ChildIds: 2240986400692986383
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 12637696742421662481
         Name: "MeleeAbilityClient"
         Transform {
@@ -2128,8 +2140,8 @@
           }
           Rotation {
             Pitch: 90
-            Yaw: 116.565025
-            Roll: 26.5649261
+            Yaw: -90
+            Roll: 179.999893
           }
           Scale {
             X: 1
@@ -2137,7 +2149,7 @@
             Z: 1
           }
         }
-        ParentId: 12938845594830669437
+        ParentId: 18340669584196412261
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -2150,24 +2162,8 @@
             Bool: false
           }
           Overrides {
-            Name: "cs:SwipeRotation"
-            Rotator {
-              Pitch: 15.016
-              Yaw: 35.807
-              Roll: -13.081
-            }
-          }
-          Overrides {
-            Name: "cs:SwipePosition"
-            Vector {
-              X: 30
-              Y: -50
-              Z: 5
-            }
-          }
-          Overrides {
             Name: "cs:SwipeDelay"
-            Float: 0.05
+            Float: 0
           }
           Overrides {
             Name: "cs:PlayerImpactVFX"
@@ -2179,6 +2175,63 @@
             Name: "cs:SwipeEffect"
             AssetReference {
               Id: 14567992748388082871
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17016092657626258489
+          }
+        }
+      }
+      Objects {
+        Id: 15505641406647177733
+        Name: "MeleeAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: 90
+            Roll: -90.0001221
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18340669584196412261
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 3230213687525692580
+            }
+          }
+          Overrides {
+            Name: "cs:CalibrateSwipe"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SwipeDelay"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:PlayerImpactVFX"
+            AssetReference {
+              Id: 14373757464648078715
+            }
+          }
+          Overrides {
+            Name: "cs:SwipeEffect"
+            AssetReference {
+              Id: 5027751934724785496
             }
           }
         }
@@ -2208,7 +2261,7 @@
             Z: 1
           }
         }
-        ParentId: 12938845594830669437
+        ParentId: 18340669584196412261
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -2263,6 +2316,10 @@
         }
         ParentId: 2716804742797173936
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2295,7 +2352,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.03
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2306,7 +2363,81 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.5
+            Duration: 0.2
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+          }
+          Animation: "unarmed_punch_left"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:primaryaction"
+          }
+        }
+      }
+      Objects {
+        Id: 3230213687525692580
+        Name: "Dagger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 2716804742797173936
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.2
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
