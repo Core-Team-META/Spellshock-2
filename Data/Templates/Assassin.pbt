@@ -341,6 +341,7 @@
         ChildIds: 10043064803718761066
         ChildIds: 7355506324767663929
         ChildIds: 14326137833624201234
+        ChildIds: 12219954214652104381
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -442,9 +443,9 @@
           }
         }
         ParentId: 12390733973333184270
-        ChildIds: 43585359367409744
-        ChildIds: 12562863691850379453
         ChildIds: 7522061224197707128
+        ChildIds: 12562863691850379453
+        ChildIds: 43585359367409744
         ChildIds: 13905999893717263144
         ChildIds: 9824824817757129903
         Collidable_v2 {
@@ -458,7 +459,7 @@
         }
       }
       Objects {
-        Id: 43585359367409744
+        Id: 7522061224197707128
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
@@ -476,7 +477,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 8184323746341847196
+              SubObjectId: 7787036789120996490
             }
           }
           Overrides {
@@ -488,7 +489,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 6375726263607251280
+              Id: 3469815303062501792
             }
           }
           Overrides {
@@ -570,7 +571,7 @@
         }
       }
       Objects {
-        Id: 7522061224197707128
+        Id: 43585359367409744
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
@@ -588,7 +589,7 @@
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 7787036789120996490
+              SubObjectId: 8184323746341847196
             }
           }
           Overrides {
@@ -600,7 +601,7 @@
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 606548452417380641
+              Id: 6375726263607251280
             }
           }
           Overrides {
@@ -983,6 +984,41 @@
         }
       }
       Objects {
+        Id: 12219954214652104381
+        Name: "BlinkAbilityClient"
+        Transform {
+          Location {
+            X: -100
+            Y: -360
+            Z: 30
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 2489697862704505183
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
         Id: 15969373231472315619
         Name: "Load Out"
         Transform {
@@ -997,9 +1033,9 @@
           }
         }
         ParentId: 4569115510025570718
-        ChildIds: 8184323746341847196
-        ChildIds: 10946969989301189966
         ChildIds: 7787036789120996490
+        ChildIds: 10946969989301189966
+        ChildIds: 8184323746341847196
         ChildIds: 87249608989476396
         ChildIds: 4951305031756499143
         ChildIds: 2716804742797173936
@@ -1017,13 +1053,10 @@
         }
       }
       Objects {
-        Id: 8184323746341847196
-        Name: "Venom Bomb"
+        Id: 7787036789120996490
+        Name: "Blink"
         Transform {
           Location {
-            X: -8716.59375
-            Y: -10186.3789
-            Z: -2964.70215
           }
           Rotation {
           }
@@ -1034,8 +1067,12 @@
           }
         }
         ParentId: 15969373231472315619
-        ChildIds: 18378548991232479363
+        ChildIds: 2489697862704505183
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Binding"
+            String: "ability_extra_20"
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1045,23 +1082,22 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
-          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.15
             CanMove: true
-            PreventOtherAbilities: true
+            CanJump: true
+            CanRotate: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1072,32 +1108,32 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           CooldownPhaseSettings {
-            Duration: 15
+            Duration: 6
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_throw"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_30"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
       Objects {
-        Id: 18378548991232479363
-        Name: "VenomBombAbilityServer"
+        Id: 2489697862704505183
+        Name: "BlinkAbilityServer"
         Transform {
           Location {
+            X: 22025
+            Y: 30745
+            Z: -6280
           }
           Rotation {
           }
@@ -1107,20 +1143,8 @@
             Z: 1
           }
         }
-        ParentId: 8184323746341847196
+        ParentId: 7787036789120996490
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
@@ -1128,20 +1152,56 @@
             }
           }
           Overrides {
-            Name: "cs:Damage"
-            Float: 20
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 7787036789120996490
+            }
           }
           Overrides {
-            Name: "cs:Radius"
-            Int: 500
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 6522519753598108575
+            }
           }
           Overrides {
-            Name: "cs:ProjectileSpeed"
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 4883165977894045775
+            }
+          }
+          Overrides {
+            Name: "cs:TeleportFX"
+            AssetReference {
+              Id: 9636751773392762976
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Healer Teleport"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
             Int: 2500
           }
           Overrides {
-            Name: "cs:ProjectileGravity"
-            Float: 1.5
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "ASSASSIN"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "Q"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "NONE"
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -1153,7 +1213,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 10868725130796666737
+            Id: 15256544326295737396
           }
         }
       }
@@ -1231,7 +1291,6 @@
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_32"
@@ -1402,10 +1461,13 @@
         }
       }
       Objects {
-        Id: 7787036789120996490
-        Name: "Slasher"
+        Id: 8184323746341847196
+        Name: "Venom Bomb"
         Transform {
           Location {
+            X: -8716.59375
+            Y: -10186.3789
+            Z: -2964.70215
           }
           Rotation {
           }
@@ -1416,7 +1478,7 @@
           }
         }
         ParentId: 15969373231472315619
-        ChildIds: 6077411007921151374
+        ChildIds: 18378548991232479363
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -1450,7 +1512,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.03
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1461,14 +1523,14 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 5
+            Duration: 15
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
-          Animation: "2hand_sword_slash_spin"
+          Animation: "unarmed_throw"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
@@ -1476,8 +1538,8 @@
         }
       }
       Objects {
-        Id: 6077411007921151374
-        Name: "SlasherAbilityServer"
+        Id: 18378548991232479363
+        Name: "VenomBombAbilityServer"
         Transform {
           Location {
           }
@@ -1489,12 +1551,18 @@
             Z: 1
           }
         }
-        ParentId: 7787036789120996490
+        ParentId: 8184323746341847196
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 7787036789120996490
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
             }
           }
           Overrides {
@@ -1504,27 +1572,20 @@
             }
           }
           Overrides {
+            Name: "cs:Damage"
+            Float: 20
+          }
+          Overrides {
+            Name: "cs:Radius"
+            Int: 500
+          }
+          Overrides {
             Name: "cs:ProjectileSpeed"
-            Float: 6000
+            Int: 2500
           }
           Overrides {
-            Name: "cs:ProjectileRange"
-            Float: 8000
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 20
-              Y: 30
-            }
-          }
-          Overrides {
-            Name: "cs:HealPercentage"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "cs:HealPercentage:tooltip"
-            String: "DamageAmount * HealPercentage = HealAmount"
+            Name: "cs:ProjectileGravity"
+            Float: 1.5
           }
         }
         WantsNetworking: true
@@ -1536,7 +1597,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 11448023727438118213
+            Id: 10868725130796666737
           }
         }
       }
@@ -2342,12 +2403,12 @@
       }
     }
     Assets {
-      Id: 6375726263607251280
-      Name: "Fantasy Ability Green 043"
+      Id: 3469815303062501792
+      Name: "Fantasy Ability Purple 004"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Green_043"
+        AssetId: "UI_Fantasy_Ability_Purple_004"
       }
     }
     Assets {
@@ -2360,12 +2421,12 @@
       }
     }
     Assets {
-      Id: 606548452417380641
-      Name: "Fantasy Ability Red 002"
+      Id: 6375726263607251280
+      Name: "Fantasy Ability Green 043"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_002"
+        AssetId: "UI_Fantasy_Ability_Green_043"
       }
     }
     Assets {

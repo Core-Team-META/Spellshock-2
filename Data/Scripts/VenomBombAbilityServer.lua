@@ -18,6 +18,8 @@ local DEFAULT_DamageRadius = script:GetCustomProperty("Radius")
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
+-- ##FIXME Need to update all META_AP().Q to be the proper bind. This will require updating the DATA script as well.
+
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and ABILITY.owner then
 		local dmg = Damage.New()
@@ -51,11 +53,11 @@ function OnProjectileImpacted(projectile, other, hitResult)
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
         --local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
 		World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
-        Task.Wait(.1)
+        --Task.Wait(.1)
 
         -- Teleport
-        local teleportPosition = hitResult:GetImpactPosition() + Vector3.New(0, 0, 120)
-        ABILITY.owner:SetWorldPosition(teleportPosition)
+        --local teleportPosition = hitResult:GetImpactPosition() + Vector3.New(0, 0, 120)
+        --ABILITY.owner:SetWorldPosition(teleportPosition)
     end
 end
 

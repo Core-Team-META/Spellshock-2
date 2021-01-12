@@ -113,7 +113,12 @@ function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
-	local PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], AbilityMod, DEFAULT_Range, SpecialAbility.name..": Placement Range")
+	local PlacementRange
+	if AbilityMod == "NONE" then
+		PlacementRange = DEFAULT_Range
+	else
+		PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], AbilityMod, DEFAULT_Range, SpecialAbility.name..": Placement Range")
+	end
 	--print("PlacementRange: "..PlacementRange)
 	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
