@@ -73,7 +73,7 @@ function OnAbilityExecute(thisAbility)
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
     grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
-    grenadeProjectile.gravityScale = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", DEFAULT_ProjectileGravity, ABILITY.name..": Projectile Gravity")
+    grenadeProjectile.gravityScale = 1.5
     grenadeProjectile.shouldDieOnImpact = true
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end
