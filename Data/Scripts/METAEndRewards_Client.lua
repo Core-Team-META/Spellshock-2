@@ -254,7 +254,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     end
 end
 
-function OnMenuChanged(newMenu)
+function OnMenuChanged(oldMenu, newMenu)
     if newMenu == _G.MENU_TABLE["Rewards"] then -- show
         ToggleUI(true)
         ANIMATION.context.OnRewardShow()
@@ -276,6 +276,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("Changing Menu", OnMenuChanged)
+Events.Connect("Menu Changed", OnMenuChanged)
 --UTIL.TablePrint(rewardAssets)
 --LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward) -- Used for testing

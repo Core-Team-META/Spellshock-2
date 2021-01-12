@@ -158,13 +158,13 @@ function UpdatePlayerEffectState(player, effectType)
 
 			if statusEffectData.type == effectType then
 				player.movementControlMode = MovementControlMode.NONE
-				player.lookControlMode = LookControlMode.NONE
+				--player.lookControlMode = LookControlMode.NONE
 				return
 			end
 		end
 
 		player.movementControlMode = DEFAULT_PLAYER_SETTINGS.movementControlMode
-		player.lookControlMode = DEFAULT_PLAYER_SETTINGS.lookControlMode
+		--player.lookControlMode = DEFAULT_PLAYER_SETTINGS.lookControlMode
 		return
 	end
 
