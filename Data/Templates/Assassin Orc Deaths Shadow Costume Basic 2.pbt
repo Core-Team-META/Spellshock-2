@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 8583738201420865806
-  Name: "Assassin Deaths Shadow Costume Basic 2"
+  Id: 13347412244189647636
+  Name: "Assassin Orc Deaths Shadow Costume Basic 2"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 10168315123823146487
+      RootId: 1841219610101333631
       Objects {
-        Id: 10168315123823146487
-        Name: "Assassin Deaths Shadow Costume Basic 2"
+        Id: 1841219610101333631
+        Name: "Assassin Orc Deaths Shadow Costume Basic 2"
         Transform {
           Scale {
             X: 1
@@ -16,29 +16,29 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 8354413830509859889
-        ChildIds: 2621932593022981753
-        ChildIds: 3116127385398915033
-        ChildIds: 8436700526548960434
-        ChildIds: 17498906553795808929
-        ChildIds: 6919924263311880940
-        ChildIds: 305452378205516383
-        ChildIds: 14163995183303921373
-        ChildIds: 10056558108021198479
-        ChildIds: 4099512873759092499
-        ChildIds: 10095937880015825103
-        ChildIds: 11218034901465972046
-        ChildIds: 9072650984897987421
-        ChildIds: 11731985089571409609
-        ChildIds: 7557566551597452766
-        ChildIds: 29019979487382982
-        ChildIds: 3885914635893328103
-        ChildIds: 17902929952021725295
-        ChildIds: 8982064772870357450
-        ChildIds: 15802019771578935435
-        ChildIds: 13444450916766840742
-        ChildIds: 469796500981445859
-        ChildIds: 1544332857117008473
+        ChildIds: 2419663458141707686
+        ChildIds: 8433685751407527823
+        ChildIds: 10042226667156401516
+        ChildIds: 12885206876308882501
+        ChildIds: 15936226676604140660
+        ChildIds: 16095331223633711479
+        ChildIds: 12884858610726183049
+        ChildIds: 8433625784626153213
+        ChildIds: 5529847943076889787
+        ChildIds: 472349228232003342
+        ChildIds: 13996638237397734223
+        ChildIds: 2624289613007826371
+        ChildIds: 7526590376044675774
+        ChildIds: 2017921195392389261
+        ChildIds: 4361350516544366360
+        ChildIds: 5593430223492210035
+        ChildIds: 12581621884842771271
+        ChildIds: 14111364742980036998
+        ChildIds: 8390661719935297712
+        ChildIds: 13895344295126282851
+        ChildIds: 17197823211402548441
+        ChildIds: 14468896017229676645
+        ChildIds: 92389564809208469
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -49,7 +49,7 @@
         }
       }
       Objects {
-        Id: 8354413830509859889
+        Id: 2419663458141707686
         Name: "root"
         Transform {
           Location {
@@ -62,9 +62,9 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
-        ChildIds: 15219869819473933967
-        ChildIds: 6698859391638599994
+        ParentId: 1841219610101333631
+        ChildIds: 2870593095743123860
+        ChildIds: 11933097170229802744
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -77,7 +77,7 @@
         }
       }
       Objects {
-        Id: 15219869819473933967
+        Id: 2870593095743123860
         Name: "ShadowMovement"
         Transform {
           Location {
@@ -96,18 +96,18 @@
             Z: 1
           }
         }
-        ParentId: 8354413830509859889
+        ParentId: 2419663458141707686
         UnregisteredParameters {
           Overrides {
             Name: "cs:Body"
             ObjectReference {
-              SubObjectId: 6698859391638599994
+              SubObjectId: 11933097170229802744
             }
           }
           Overrides {
             Name: "cs:Arms"
             ObjectReference {
-              SubObjectId: 10191826176217578116
+              SubObjectId: 5881396694983518749
             }
           }
           Overrides {
@@ -130,7 +130,7 @@
         }
       }
       Objects {
-        Id: 6698859391638599994
+        Id: 11933097170229802744
         Name: "Body"
         Transform {
           Location {
@@ -146,21 +146,21 @@
             Z: 1
           }
         }
-        ParentId: 8354413830509859889
-        ChildIds: 10191826176217578116
-        ChildIds: 5973771874404588164
-        ChildIds: 3799962760503704578
-        ChildIds: 1743387609515573141
-        ChildIds: 8846878881588060499
-        ChildIds: 1638481075195455556
-        ChildIds: 12262361027206169434
-        ChildIds: 11139613316793580166
-        ChildIds: 8981241592786152108
-        ChildIds: 15432121555007730198
-        ChildIds: 4845665465078954907
-        ChildIds: 18297051722709739113
-        ChildIds: 10592917528771811346
-        ChildIds: 17898608497814940364
+        ParentId: 2419663458141707686
+        ChildIds: 5881396694983518749
+        ChildIds: 17830966935422711642
+        ChildIds: 16286269308293661894
+        ChildIds: 9426240819201383969
+        ChildIds: 46332430609797869
+        ChildIds: 5876235267637428369
+        ChildIds: 17869892236429979132
+        ChildIds: 467671609211414581
+        ChildIds: 5365716444944436048
+        ChildIds: 15546847470728644510
+        ChildIds: 18398157180203569339
+        ChildIds: 12489834464871216850
+        ChildIds: 5292443389653859345
+        ChildIds: 5174723862359527901
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -171,7 +171,7 @@
         }
       }
       Objects {
-        Id: 10191826176217578116
+        Id: 5881396694983518749
         Name: "Arms"
         Transform {
           Location {
@@ -188,9 +188,9 @@
             Z: 1
           }
         }
-        ParentId: 6698859391638599994
-        ChildIds: 18107078194276693130
-        ChildIds: 7541897804532114299
+        ParentId: 11933097170229802744
+        ChildIds: 15483102788971864489
+        ChildIds: 235268733354247980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -202,7 +202,7 @@
         }
       }
       Objects {
-        Id: 18107078194276693130
+        Id: 15483102788971864489
         Name: "Left_Arm"
         Transform {
           Location {
@@ -218,9 +218,9 @@
             Z: 1
           }
         }
-        ParentId: 10191826176217578116
-        ChildIds: 13167414672398281465
-        ChildIds: 5314380308199634038
+        ParentId: 5881396694983518749
+        ChildIds: 2995435315298645520
+        ChildIds: 3606159427649004070
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -232,7 +232,7 @@
         }
       }
       Objects {
-        Id: 13167414672398281465
+        Id: 2995435315298645520
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -251,7 +251,7 @@
             Z: 0.984427452
           }
         }
-        ParentId: 18107078194276693130
+        ParentId: 15483102788971864489
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -278,7 +278,7 @@
         }
       }
       Objects {
-        Id: 5314380308199634038
+        Id: 3606159427649004070
         Name: "Group"
         Transform {
           Location {
@@ -297,10 +297,10 @@
             Z: 1
           }
         }
-        ParentId: 18107078194276693130
-        ChildIds: 16911655735653706173
-        ChildIds: 149249651308081359
-        ChildIds: 4189132973636746395
+        ParentId: 15483102788971864489
+        ChildIds: 17021735510843735708
+        ChildIds: 17434487815342411250
+        ChildIds: 11601294417733079804
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -312,7 +312,7 @@
         }
       }
       Objects {
-        Id: 16911655735653706173
+        Id: 17021735510843735708
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -331,7 +331,7 @@
             Z: 0.868944347
           }
         }
-        ParentId: 5314380308199634038
+        ParentId: 3606159427649004070
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -358,7 +358,7 @@
         }
       }
       Objects {
-        Id: 149249651308081359
+        Id: 17434487815342411250
         Name: "Group"
         Transform {
           Location {
@@ -377,18 +377,18 @@
             Z: 1
           }
         }
-        ParentId: 5314380308199634038
-        ChildIds: 1484320635959438858
-        ChildIds: 4375158247260816165
-        ChildIds: 14763331076137993042
-        ChildIds: 2148451838071430609
-        ChildIds: 432598393142628230
-        ChildIds: 5676888072391339722
-        ChildIds: 2307655390658543775
-        ChildIds: 12871279446876419798
-        ChildIds: 3484682131728936996
-        ChildIds: 11773715404338131324
-        ChildIds: 4838675397287157214
+        ParentId: 3606159427649004070
+        ChildIds: 3646762148904238762
+        ChildIds: 13149211803436890457
+        ChildIds: 3403035770030197445
+        ChildIds: 13749961197185985557
+        ChildIds: 6975309410856790927
+        ChildIds: 12281058637688868485
+        ChildIds: 8409017683379622657
+        ChildIds: 10498308415137508576
+        ChildIds: 3572450765559231976
+        ChildIds: 3331483097162388332
+        ChildIds: 3156390114456351912
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -400,7 +400,7 @@
         }
       }
       Objects {
-        Id: 1484320635959438858
+        Id: 3646762148904238762
         Name: "Dodecahedron - Polished"
         Transform {
           Location {
@@ -418,7 +418,7 @@
             Z: 0.371335536
           }
         }
-        ParentId: 149249651308081359
+        ParentId: 17434487815342411250
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -474,7 +474,7 @@
         }
       }
       Objects {
-        Id: 4375158247260816165
+        Id: 13149211803436890457
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -493,7 +493,7 @@
             Z: 0.40038693
           }
         }
-        ParentId: 149249651308081359
+        ParentId: 17434487815342411250
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -520,7 +520,7 @@
         }
       }
       Objects {
-        Id: 14763331076137993042
+        Id: 3403035770030197445
         Name: "RightThumbRoot"
         Transform {
           Location {
@@ -539,9 +539,9 @@
             Z: 1.9168607
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 6729907617292711674
-        ChildIds: 12365299876212487043
+        ParentId: 17434487815342411250
+        ChildIds: 13616023930462860541
+        ChildIds: 7211533308859791955
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -553,7 +553,7 @@
         }
       }
       Objects {
-        Id: 6729907617292711674
+        Id: 13616023930462860541
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -572,7 +572,7 @@
             Z: 0.187553659
           }
         }
-        ParentId: 14763331076137993042
+        ParentId: 3403035770030197445
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -595,7 +595,7 @@
         }
       }
       Objects {
-        Id: 12365299876212487043
+        Id: 7211533308859791955
         Name: "RightThumbJoint"
         Transform {
           Location {
@@ -613,8 +613,8 @@
             Z: 0.700000048
           }
         }
-        ParentId: 14763331076137993042
-        ChildIds: 9493160302124014671
+        ParentId: 3403035770030197445
+        ChildIds: 13698726053711481176
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -626,7 +626,7 @@
         }
       }
       Objects {
-        Id: 9493160302124014671
+        Id: 13698726053711481176
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -644,7 +644,7 @@
             Z: 0.173431993
           }
         }
-        ParentId: 12365299876212487043
+        ParentId: 7211533308859791955
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -671,7 +671,7 @@
         }
       }
       Objects {
-        Id: 2148451838071430609
+        Id: 13749961197185985557
         Name: "RightIndexRoot"
         Transform {
           Location {
@@ -690,9 +690,9 @@
             Z: 1.36918616
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 12983281160186190551
-        ChildIds: 15809217422571183164
+        ParentId: 17434487815342411250
+        ChildIds: 799418534330785184
+        ChildIds: 11256605761614400087
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -704,7 +704,7 @@
         }
       }
       Objects {
-        Id: 12983281160186190551
+        Id: 799418534330785184
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -722,7 +722,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 2148451838071430609
+        ParentId: 13749961197185985557
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -745,7 +745,7 @@
         }
       }
       Objects {
-        Id: 15809217422571183164
+        Id: 11256605761614400087
         Name: "RightIndexRoot"
         Transform {
           Location {
@@ -762,8 +762,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 2148451838071430609
-        ChildIds: 10253367648601867096
+        ParentId: 13749961197185985557
+        ChildIds: 3557505223611285793
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -775,7 +775,7 @@
         }
       }
       Objects {
-        Id: 10253367648601867096
+        Id: 3557505223611285793
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -793,7 +793,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 15809217422571183164
+        ParentId: 11256605761614400087
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -820,7 +820,7 @@
         }
       }
       Objects {
-        Id: 432598393142628230
+        Id: 6975309410856790927
         Name: "RightMiddleRoot"
         Transform {
           Location {
@@ -839,9 +839,9 @@
             Z: 1.36918616
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 14707524772979614401
-        ChildIds: 2632247756361236710
+        ParentId: 17434487815342411250
+        ChildIds: 6407285193066799066
+        ChildIds: 8289231857875663189
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -853,7 +853,7 @@
         }
       }
       Objects {
-        Id: 14707524772979614401
+        Id: 6407285193066799066
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -871,7 +871,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 432598393142628230
+        ParentId: 6975309410856790927
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -894,7 +894,7 @@
         }
       }
       Objects {
-        Id: 2632247756361236710
+        Id: 8289231857875663189
         Name: "RightMiddleJoint"
         Transform {
           Location {
@@ -911,8 +911,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 432598393142628230
-        ChildIds: 5389479778193151598
+        ParentId: 6975309410856790927
+        ChildIds: 9932901970929122878
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -924,7 +924,7 @@
         }
       }
       Objects {
-        Id: 5389479778193151598
+        Id: 9932901970929122878
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -942,7 +942,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 2632247756361236710
+        ParentId: 8289231857875663189
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -969,7 +969,7 @@
         }
       }
       Objects {
-        Id: 5676888072391339722
+        Id: 12281058637688868485
         Name: "RightRingRoot"
         Transform {
           Location {
@@ -988,9 +988,9 @@
             Z: 1.36918616
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 18346104638510243895
-        ChildIds: 7118523649065694160
+        ParentId: 17434487815342411250
+        ChildIds: 9195508649621825726
+        ChildIds: 10689402401174482535
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1002,7 +1002,7 @@
         }
       }
       Objects {
-        Id: 18346104638510243895
+        Id: 9195508649621825726
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1020,7 +1020,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 5676888072391339722
+        ParentId: 12281058637688868485
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1043,7 +1043,7 @@
         }
       }
       Objects {
-        Id: 7118523649065694160
+        Id: 10689402401174482535
         Name: "RightRingJoint"
         Transform {
           Location {
@@ -1060,8 +1060,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 5676888072391339722
-        ChildIds: 3179959168692191108
+        ParentId: 12281058637688868485
+        ChildIds: 10523200122766076177
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1073,7 +1073,7 @@
         }
       }
       Objects {
-        Id: 3179959168692191108
+        Id: 10523200122766076177
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1091,7 +1091,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 7118523649065694160
+        ParentId: 10689402401174482535
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1118,7 +1118,7 @@
         }
       }
       Objects {
-        Id: 2307655390658543775
+        Id: 8409017683379622657
         Name: "RightPinkieRoot"
         Transform {
           Location {
@@ -1137,9 +1137,9 @@
             Z: 1.36918616
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 9378300876318249904
-        ChildIds: 12485288529334865281
+        ParentId: 17434487815342411250
+        ChildIds: 3448516041956253452
+        ChildIds: 3543793669540807106
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1151,7 +1151,7 @@
         }
       }
       Objects {
-        Id: 9378300876318249904
+        Id: 3448516041956253452
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1169,7 +1169,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 2307655390658543775
+        ParentId: 8409017683379622657
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1192,7 +1192,7 @@
         }
       }
       Objects {
-        Id: 12485288529334865281
+        Id: 3543793669540807106
         Name: "RightPinkieJoint"
         Transform {
           Location {
@@ -1209,8 +1209,8 @@
             Z: 0.700000346
           }
         }
-        ParentId: 2307655390658543775
-        ChildIds: 13079855719216935423
+        ParentId: 8409017683379622657
+        ChildIds: 5847038183586454158
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1222,7 +1222,7 @@
         }
       }
       Objects {
-        Id: 13079855719216935423
+        Id: 5847038183586454158
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1240,7 +1240,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 12485288529334865281
+        ParentId: 3543793669540807106
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1267,7 +1267,7 @@
         }
       }
       Objects {
-        Id: 12871279446876419798
+        Id: 10498308415137508576
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1286,7 +1286,7 @@
             Z: 0.400393
           }
         }
-        ParentId: 149249651308081359
+        ParentId: 17434487815342411250
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1313,7 +1313,7 @@
         }
       }
       Objects {
-        Id: 3484682131728936996
+        Id: 3572450765559231976
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1332,7 +1332,7 @@
             Z: 0.400393
           }
         }
-        ParentId: 149249651308081359
+        ParentId: 17434487815342411250
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1359,7 +1359,7 @@
         }
       }
       Objects {
-        Id: 11773715404338131324
+        Id: 3331483097162388332
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -1378,7 +1378,7 @@
             Z: 0.413609117
           }
         }
-        ParentId: 149249651308081359
+        ParentId: 17434487815342411250
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1405,7 +1405,7 @@
         }
       }
       Objects {
-        Id: 4838675397287157214
+        Id: 3156390114456351912
         Name: "Geo"
         Transform {
           Location {
@@ -1424,10 +1424,10 @@
             Z: 0.819310308
           }
         }
-        ParentId: 149249651308081359
-        ChildIds: 12622875535649425625
-        ChildIds: 5251484190933585082
-        ChildIds: 9895911105488263507
+        ParentId: 17434487815342411250
+        ChildIds: 9191960632659477212
+        ChildIds: 9005915080560843425
+        ChildIds: 5612219320502319145
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1441,7 +1441,7 @@
         }
       }
       Objects {
-        Id: 12622875535649425625
+        Id: 9191960632659477212
         Name: "Group"
         Transform {
           Location {
@@ -1457,9 +1457,9 @@
             Z: 1
           }
         }
-        ParentId: 4838675397287157214
-        ChildIds: 3737312974441688529
-        ChildIds: 1390942459052802158
+        ParentId: 3156390114456351912
+        ChildIds: 6036457459831588234
+        ChildIds: 1372817170717388165
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1471,7 +1471,7 @@
         }
       }
       Objects {
-        Id: 3737312974441688529
+        Id: 6036457459831588234
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -1487,7 +1487,7 @@
             Z: 0.870290577
           }
         }
-        ParentId: 12622875535649425625
+        ParentId: 9191960632659477212
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -1556,7 +1556,7 @@
         }
       }
       Objects {
-        Id: 1390942459052802158
+        Id: 1372817170717388165
         Name: "Group"
         Transform {
           Location {
@@ -1575,13 +1575,13 @@
             Z: 1.20880985
           }
         }
-        ParentId: 12622875535649425625
-        ChildIds: 7963714420894386948
-        ChildIds: 7808002678608792453
-        ChildIds: 14997048604945208878
-        ChildIds: 15619166584640313272
-        ChildIds: 15076271928564171902
-        ChildIds: 8466767834491220647
+        ParentId: 9191960632659477212
+        ChildIds: 9560912759443702845
+        ChildIds: 13125877997992455061
+        ChildIds: 5833214682464576375
+        ChildIds: 17344912234739828212
+        ChildIds: 15363263180227907757
+        ChildIds: 11731070975879597679
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1593,7 +1593,7 @@
         }
       }
       Objects {
-        Id: 7963714420894386948
+        Id: 9560912759443702845
         Name: "Ring - Beveled Thick"
         Transform {
           Location {
@@ -1612,7 +1612,7 @@
             Z: 0.279611051
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1663,7 +1663,7 @@
         }
       }
       Objects {
-        Id: 7808002678608792453
+        Id: 13125877997992455061
         Name: "Pyramid - Polished"
         Transform {
           Location {
@@ -1682,7 +1682,7 @@
             Z: 0.0673720166
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1725,7 +1725,7 @@
         }
       }
       Objects {
-        Id: 14997048604945208878
+        Id: 5833214682464576375
         Name: "Pyramid - Polished"
         Transform {
           Location {
@@ -1744,7 +1744,7 @@
             Z: 0.0732112527
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1787,7 +1787,7 @@
         }
       }
       Objects {
-        Id: 15619166584640313272
+        Id: 17344912234739828212
         Name: "Pyramid - Polished"
         Transform {
           Location {
@@ -1806,7 +1806,7 @@
             Z: 0.0673720166
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1849,7 +1849,7 @@
         }
       }
       Objects {
-        Id: 15076271928564171902
+        Id: 15363263180227907757
         Name: "Pyramid - Polished"
         Transform {
           Location {
@@ -1868,7 +1868,7 @@
             Z: 0.0673720166
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1911,7 +1911,7 @@
         }
       }
       Objects {
-        Id: 8466767834491220647
+        Id: 11731070975879597679
         Name: "Horn"
         Transform {
           Location {
@@ -1930,7 +1930,7 @@
             Z: 0.0752613544
           }
         }
-        ParentId: 1390942459052802158
+        ParentId: 1372817170717388165
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1981,7 +1981,7 @@
         }
       }
       Objects {
-        Id: 5251484190933585082
+        Id: 9005915080560843425
         Name: "Grass Tall"
         Transform {
           Location {
@@ -2000,7 +2000,7 @@
             Z: 0.134552613
           }
         }
-        ParentId: 4838675397287157214
+        ParentId: 3156390114456351912
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Grass:id"
@@ -2045,7 +2045,7 @@
         }
       }
       Objects {
-        Id: 9895911105488263507
+        Id: 5612219320502319145
         Name: "Blade"
         Transform {
           Location {
@@ -2064,11 +2064,11 @@
             Z: 0.92239511
           }
         }
-        ParentId: 4838675397287157214
-        ChildIds: 10626595219905581644
-        ChildIds: 11737714700793757478
-        ChildIds: 6125453176516377238
-        ChildIds: 18153236177710998507
+        ParentId: 3156390114456351912
+        ChildIds: 13222529111761286398
+        ChildIds: 9268754055883867412
+        ChildIds: 8629220241295449463
+        ChildIds: 10338361598014880274
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2080,7 +2080,7 @@
         }
       }
       Objects {
-        Id: 10626595219905581644
+        Id: 13222529111761286398
         Name: "Horn"
         Transform {
           Location {
@@ -2093,7 +2093,7 @@
             Z: 0.336022437
           }
         }
-        ParentId: 9895911105488263507
+        ParentId: 5612219320502319145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2144,7 +2144,7 @@
         }
       }
       Objects {
-        Id: 11737714700793757478
+        Id: 9268754055883867412
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -2163,7 +2163,7 @@
             Z: 0.50610429
           }
         }
-        ParentId: 9895911105488263507
+        ParentId: 5612219320502319145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -2224,7 +2224,7 @@
         }
       }
       Objects {
-        Id: 6125453176516377238
+        Id: 8629220241295449463
         Name: "Horn"
         Transform {
           Location {
@@ -2243,7 +2243,7 @@
             Z: 1.56471527
           }
         }
-        ParentId: 9895911105488263507
+        ParentId: 5612219320502319145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2322,7 +2322,7 @@
         }
       }
       Objects {
-        Id: 18153236177710998507
+        Id: 10338361598014880274
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -2341,7 +2341,7 @@
             Z: 0.63319248
           }
         }
-        ParentId: 9895911105488263507
+        ParentId: 5612219320502319145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -2402,7 +2402,7 @@
         }
       }
       Objects {
-        Id: 4189132973636746395
+        Id: 11601294417733079804
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2421,7 +2421,7 @@
             Z: 0.782442808
           }
         }
-        ParentId: 5314380308199634038
+        ParentId: 3606159427649004070
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -2448,7 +2448,7 @@
         }
       }
       Objects {
-        Id: 7541897804532114299
+        Id: 235268733354247980
         Name: "Right_Arm"
         Transform {
           Location {
@@ -2464,22 +2464,22 @@
             Z: 1
           }
         }
-        ParentId: 10191826176217578116
-        ChildIds: 2824368509059564870
-        ChildIds: 15164424337481737338
-        ChildIds: 15488469284395241045
-        ChildIds: 7759919044016477
-        ChildIds: 6405028194982333900
-        ChildIds: 1230059770243550308
-        ChildIds: 16349971862526290491
-        ChildIds: 1263588593212352678
-        ChildIds: 10851684954270002884
-        ChildIds: 10180255720003525942
-        ChildIds: 14588177588759146351
-        ChildIds: 1192773769495199077
-        ChildIds: 2816715821902143927
-        ChildIds: 9274157633765794637
-        ChildIds: 3777296218971295174
+        ParentId: 5881396694983518749
+        ChildIds: 7431169058204171943
+        ChildIds: 9984919407570191413
+        ChildIds: 2481714535432417325
+        ChildIds: 1481660628055149089
+        ChildIds: 10419627000891984937
+        ChildIds: 2616914634646081243
+        ChildIds: 730614779923765806
+        ChildIds: 17799796161147976573
+        ChildIds: 8666149494422976759
+        ChildIds: 18033743517104336697
+        ChildIds: 15513063039852917885
+        ChildIds: 5734597400845139735
+        ChildIds: 16847318518606477631
+        ChildIds: 5455850388368283112
+        ChildIds: 12268067110590714283
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2491,7 +2491,7 @@
         }
       }
       Objects {
-        Id: 2824368509059564870
+        Id: 7431169058204171943
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2510,7 +2510,7 @@
             Z: 0.984427333
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -2537,7 +2537,7 @@
         }
       }
       Objects {
-        Id: 15164424337481737338
+        Id: 9984919407570191413
         Name: "Dodecahedron - Polished"
         Transform {
           Location {
@@ -2556,7 +2556,7 @@
             Z: 0.371335506
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2612,7 +2612,7 @@
         }
       }
       Objects {
-        Id: 15488469284395241045
+        Id: 2481714535432417325
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2631,7 +2631,7 @@
             Z: 0.4003869
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -2658,7 +2658,7 @@
         }
       }
       Objects {
-        Id: 7759919044016477
+        Id: 1481660628055149089
         Name: "RightThumbRoot"
         Transform {
           Location {
@@ -2677,9 +2677,9 @@
             Z: 1.9168607
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 4536849192551310986
-        ChildIds: 9796643532962779445
+        ParentId: 235268733354247980
+        ChildIds: 17108782004287552029
+        ChildIds: 16194659552161282132
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2691,7 +2691,7 @@
         }
       }
       Objects {
-        Id: 4536849192551310986
+        Id: 17108782004287552029
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2710,7 +2710,7 @@
             Z: 0.187553659
           }
         }
-        ParentId: 7759919044016477
+        ParentId: 1481660628055149089
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2733,7 +2733,7 @@
         }
       }
       Objects {
-        Id: 9796643532962779445
+        Id: 16194659552161282132
         Name: "RightThumbJoint"
         Transform {
           Location {
@@ -2751,8 +2751,8 @@
             Z: 0.700000048
           }
         }
-        ParentId: 7759919044016477
-        ChildIds: 4552751433791857933
+        ParentId: 1481660628055149089
+        ChildIds: 12571365617328198255
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2764,7 +2764,7 @@
         }
       }
       Objects {
-        Id: 4552751433791857933
+        Id: 12571365617328198255
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2782,7 +2782,7 @@
             Z: 0.173431993
           }
         }
-        ParentId: 9796643532962779445
+        ParentId: 16194659552161282132
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -2809,7 +2809,7 @@
         }
       }
       Objects {
-        Id: 6405028194982333900
+        Id: 10419627000891984937
         Name: "RightIndexRoot"
         Transform {
           Location {
@@ -2828,9 +2828,9 @@
             Z: 1.36918604
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 4871279691111798773
-        ChildIds: 3161078212438816674
+        ParentId: 235268733354247980
+        ChildIds: 820563311805597405
+        ChildIds: 7583833479667679417
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2842,7 +2842,7 @@
         }
       }
       Objects {
-        Id: 4871279691111798773
+        Id: 820563311805597405
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2860,7 +2860,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 6405028194982333900
+        ParentId: 10419627000891984937
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -2883,7 +2883,7 @@
         }
       }
       Objects {
-        Id: 3161078212438816674
+        Id: 7583833479667679417
         Name: "RightIndexRoot"
         Transform {
           Location {
@@ -2900,8 +2900,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 6405028194982333900
-        ChildIds: 10274011705587700699
+        ParentId: 10419627000891984937
+        ChildIds: 11481342048262927992
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2913,7 +2913,7 @@
         }
       }
       Objects {
-        Id: 10274011705587700699
+        Id: 11481342048262927992
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -2931,7 +2931,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 3161078212438816674
+        ParentId: 7583833479667679417
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -2958,7 +2958,7 @@
         }
       }
       Objects {
-        Id: 1230059770243550308
+        Id: 2616914634646081243
         Name: "RightMiddleRoot"
         Transform {
           Location {
@@ -2977,9 +2977,9 @@
             Z: 1.36918604
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 14067766545209959943
-        ChildIds: 13255389532578082249
+        ParentId: 235268733354247980
+        ChildIds: 15211843219766032987
+        ChildIds: 17364575609013288699
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2991,7 +2991,7 @@
         }
       }
       Objects {
-        Id: 14067766545209959943
+        Id: 15211843219766032987
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3009,7 +3009,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 1230059770243550308
+        ParentId: 2616914634646081243
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3032,7 +3032,7 @@
         }
       }
       Objects {
-        Id: 13255389532578082249
+        Id: 17364575609013288699
         Name: "RightMiddleJoint"
         Transform {
           Location {
@@ -3049,8 +3049,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 1230059770243550308
-        ChildIds: 16848976995545299668
+        ParentId: 2616914634646081243
+        ChildIds: 7013597347243066715
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3062,7 +3062,7 @@
         }
       }
       Objects {
-        Id: 16848976995545299668
+        Id: 7013597347243066715
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3080,7 +3080,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 13255389532578082249
+        ParentId: 17364575609013288699
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3107,7 +3107,7 @@
         }
       }
       Objects {
-        Id: 16349971862526290491
+        Id: 730614779923765806
         Name: "RightRingRoot"
         Transform {
           Location {
@@ -3126,9 +3126,9 @@
             Z: 1.36918604
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 1843757491138897011
-        ChildIds: 4207390494235130717
+        ParentId: 235268733354247980
+        ChildIds: 17705721238707042775
+        ChildIds: 5302104760823651887
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3140,7 +3140,7 @@
         }
       }
       Objects {
-        Id: 1843757491138897011
+        Id: 17705721238707042775
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3158,7 +3158,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 16349971862526290491
+        ParentId: 730614779923765806
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3181,7 +3181,7 @@
         }
       }
       Objects {
-        Id: 4207390494235130717
+        Id: 5302104760823651887
         Name: "RightRingJoint"
         Transform {
           Location {
@@ -3198,8 +3198,8 @@
             Z: 0.700000107
           }
         }
-        ParentId: 16349971862526290491
-        ChildIds: 15529922165587909456
+        ParentId: 730614779923765806
+        ChildIds: 4586823057348690256
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3211,7 +3211,7 @@
         }
       }
       Objects {
-        Id: 15529922165587909456
+        Id: 4586823057348690256
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3229,7 +3229,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 4207390494235130717
+        ParentId: 5302104760823651887
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3256,7 +3256,7 @@
         }
       }
       Objects {
-        Id: 1263588593212352678
+        Id: 17799796161147976573
         Name: "RightPinkieRoot"
         Transform {
           Location {
@@ -3275,9 +3275,9 @@
             Z: 1.36918616
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 3903420100006432179
-        ChildIds: 16026127189287975802
+        ParentId: 235268733354247980
+        ChildIds: 5777775586827543164
+        ChildIds: 7166008245707343523
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3289,7 +3289,7 @@
         }
       }
       Objects {
-        Id: 3903420100006432179
+        Id: 5777775586827543164
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3307,7 +3307,7 @@
             Z: 0.222274974
           }
         }
-        ParentId: 1263588593212352678
+        ParentId: 17799796161147976573
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -3330,7 +3330,7 @@
         }
       }
       Objects {
-        Id: 16026127189287975802
+        Id: 7166008245707343523
         Name: "RightPinkieJoint"
         Transform {
           Location {
@@ -3347,8 +3347,8 @@
             Z: 0.700000346
           }
         }
-        ParentId: 1263588593212352678
-        ChildIds: 16489319527448519988
+        ParentId: 17799796161147976573
+        ChildIds: 14331751053208153451
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3360,7 +3360,7 @@
         }
       }
       Objects {
-        Id: 16489319527448519988
+        Id: 14331751053208153451
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3378,7 +3378,7 @@
             Z: 0.266581
           }
         }
-        ParentId: 16026127189287975802
+        ParentId: 7166008245707343523
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3405,7 +3405,7 @@
         }
       }
       Objects {
-        Id: 10851684954270002884
+        Id: 8666149494422976759
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3424,7 +3424,7 @@
             Z: 0.400392979
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3451,7 +3451,7 @@
         }
       }
       Objects {
-        Id: 10180255720003525942
+        Id: 18033743517104336697
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3470,7 +3470,7 @@
             Z: 0.400392979
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3497,7 +3497,7 @@
         }
       }
       Objects {
-        Id: 14588177588759146351
+        Id: 15513063039852917885
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -3516,7 +3516,7 @@
             Z: 0.413609087
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3543,7 +3543,7 @@
         }
       }
       Objects {
-        Id: 1192773769495199077
+        Id: 5734597400845139735
         Name: "Dodecahedron - Polished"
         Transform {
           Location {
@@ -3562,7 +3562,7 @@
             Z: 0.811939538
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3628,7 +3628,7 @@
         }
       }
       Objects {
-        Id: 2816715821902143927
+        Id: 16847318518606477631
         Name: "Group"
         Transform {
           Location {
@@ -3647,12 +3647,12 @@
             Z: 1.36918604
           }
         }
-        ParentId: 7541897804532114299
-        ChildIds: 13443139465368075732
-        ChildIds: 17894119298359367230
-        ChildIds: 3492060111740427793
-        ChildIds: 6040518477118499367
-        ChildIds: 1394145409084181826
+        ParentId: 235268733354247980
+        ChildIds: 15923580271448528756
+        ChildIds: 16372480361102686173
+        ChildIds: 3097410830203255728
+        ChildIds: 11890528616097918258
+        ChildIds: 3123023163487158763
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3664,7 +3664,7 @@
         }
       }
       Objects {
-        Id: 13443139465368075732
+        Id: 15923580271448528756
         Name: "Fantasy Clay Pot 02"
         Transform {
           Location {
@@ -3683,7 +3683,7 @@
             Z: 0.312174767
           }
         }
-        ParentId: 2816715821902143927
+        ParentId: 16847318518606477631
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -3746,7 +3746,7 @@
         }
       }
       Objects {
-        Id: 17894119298359367230
+        Id: 16372480361102686173
         Name: "Chain Tile 01"
         Transform {
           Location {
@@ -3762,7 +3762,7 @@
             Z: 0.0876497626
           }
         }
-        ParentId: 2816715821902143927
+        ParentId: 16847318518606477631
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3798,7 +3798,7 @@
         }
       }
       Objects {
-        Id: 3492060111740427793
+        Id: 3097410830203255728
         Name: "Chain Tile 01"
         Transform {
           Location {
@@ -3817,7 +3817,7 @@
             Z: 0.0876497701
           }
         }
-        ParentId: 2816715821902143927
+        ParentId: 16847318518606477631
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3853,7 +3853,7 @@
         }
       }
       Objects {
-        Id: 6040518477118499367
+        Id: 11890528616097918258
         Name: "Fantasy Clay Pot 02"
         Transform {
           Location {
@@ -3872,7 +3872,7 @@
             Z: 0.296774298
           }
         }
-        ParentId: 2816715821902143927
+        ParentId: 16847318518606477631
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -3934,7 +3934,7 @@
         }
       }
       Objects {
-        Id: 1394145409084181826
+        Id: 3123023163487158763
         Name: "Candle Flame VFX"
         Transform {
           Location {
@@ -3953,7 +3953,7 @@
             Z: 2.82283
           }
         }
-        ParentId: 2816715821902143927
+        ParentId: 16847318518606477631
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:id"
@@ -3992,7 +3992,7 @@
         }
       }
       Objects {
-        Id: 9274157633765794637
+        Id: 5455850388368283112
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -4011,7 +4011,7 @@
             Z: 0.782442749
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -4038,7 +4038,7 @@
         }
       }
       Objects {
-        Id: 3777296218971295174
+        Id: 12268067110590714283
         Name: "Teardrop - Truncated"
         Transform {
           Location {
@@ -4057,7 +4057,7 @@
             Z: 0.868944287
           }
         }
-        ParentId: 7541897804532114299
+        ParentId: 235268733354247980
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -4084,7 +4084,7 @@
         }
       }
       Objects {
-        Id: 5973771874404588164
+        Id: 17830966935422711642
         Name: "Heart - Polished"
         Transform {
           Location {
@@ -4103,7 +4103,7 @@
             Z: 0.201021969
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4141,7 +4141,7 @@
         }
       }
       Objects {
-        Id: 3799962760503704578
+        Id: 16286269308293661894
         Name: "Heart - Polished"
         Transform {
           Location {
@@ -4160,7 +4160,7 @@
             Z: 0.109038614
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4207,7 +4207,7 @@
         }
       }
       Objects {
-        Id: 1743387609515573141
+        Id: 9426240819201383969
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4226,7 +4226,7 @@
             Z: 0.501267731
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4273,7 +4273,7 @@
         }
       }
       Objects {
-        Id: 8846878881588060499
+        Id: 46332430609797869
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4292,7 +4292,7 @@
             Z: -0.570650756
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4339,7 +4339,7 @@
         }
       }
       Objects {
-        Id: 1638481075195455556
+        Id: 5876235267637428369
         Name: "Bone Human Jaw 01"
         Transform {
           Location {
@@ -4358,7 +4358,7 @@
             Z: 1.4816736
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4405,7 +4405,7 @@
         }
       }
       Objects {
-        Id: 12262361027206169434
+        Id: 17869892236429979132
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4424,7 +4424,7 @@
             Z: -0.556975543
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4471,7 +4471,7 @@
         }
       }
       Objects {
-        Id: 11139613316793580166
+        Id: 467671609211414581
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4490,7 +4490,7 @@
             Z: 0.579078734
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4537,7 +4537,7 @@
         }
       }
       Objects {
-        Id: 8981241592786152108
+        Id: 5365716444944436048
         Name: "Group"
         Transform {
           Location {
@@ -4553,11 +4553,11 @@
             Z: 1.67198527
           }
         }
-        ParentId: 6698859391638599994
-        ChildIds: 12426330948521612615
-        ChildIds: 11748518398195444646
-        ChildIds: 6254809311253376767
-        ChildIds: 887430148243625056
+        ParentId: 11933097170229802744
+        ChildIds: 4546581179489747139
+        ChildIds: 4406876834170456583
+        ChildIds: 9027963095412354191
+        ChildIds: 10539303438309675565
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4569,7 +4569,7 @@
         }
       }
       Objects {
-        Id: 12426330948521612615
+        Id: 4546581179489747139
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4585,7 +4585,7 @@
             Z: 0.487321883
           }
         }
-        ParentId: 8981241592786152108
+        ParentId: 5365716444944436048
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4632,7 +4632,7 @@
         }
       }
       Objects {
-        Id: 11748518398195444646
+        Id: 4406876834170456583
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4651,7 +4651,7 @@
             Z: 0.436074167
           }
         }
-        ParentId: 8981241592786152108
+        ParentId: 5365716444944436048
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4698,7 +4698,7 @@
         }
       }
       Objects {
-        Id: 6254809311253376767
+        Id: 9027963095412354191
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4717,7 +4717,7 @@
             Z: 0.436074167
           }
         }
-        ParentId: 8981241592786152108
+        ParentId: 5365716444944436048
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4764,7 +4764,7 @@
         }
       }
       Objects {
-        Id: 887430148243625056
+        Id: 10539303438309675565
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4783,7 +4783,7 @@
             Z: 0.303247452
           }
         }
-        ParentId: 8981241592786152108
+        ParentId: 5365716444944436048
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4830,7 +4830,7 @@
         }
       }
       Objects {
-        Id: 15432121555007730198
+        Id: 15546847470728644510
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -4849,7 +4849,7 @@
             Z: 0.515532136
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4896,7 +4896,7 @@
         }
       }
       Objects {
-        Id: 4845665465078954907
+        Id: 18398157180203569339
         Name: "Bone Human Skull 01"
         Transform {
           Location {
@@ -4915,7 +4915,7 @@
             Z: 1.65710258
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -4966,7 +4966,7 @@
         }
       }
       Objects {
-        Id: 18297051722709739113
+        Id: 12489834464871216850
         Name: "Layered Thrusters VFX"
         Transform {
           Location {
@@ -4985,7 +4985,7 @@
             Z: 3.35733628
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color A"
@@ -5080,7 +5080,7 @@
         }
       }
       Objects {
-        Id: 10592917528771811346
+        Id: 5292443389653859345
         Name: "Bone Human Pelvis Half 01"
         Transform {
           Location {
@@ -5099,7 +5099,7 @@
             Z: -0.64509964
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -5146,7 +5146,7 @@
         }
       }
       Objects {
-        Id: 17898608497814940364
+        Id: 5174723862359527901
         Name: "Bone Human Jaw 01"
         Transform {
           Location {
@@ -5163,7 +5163,7 @@
             Z: 1.15314794
           }
         }
-        ParentId: 6698859391638599994
+        ParentId: 11933097170229802744
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
@@ -5210,7 +5210,7 @@
         }
       }
       Objects {
-        Id: 2621932593022981753
+        Id: 8433685751407527823
         Name: "head"
         Transform {
           Location {
@@ -5228,7 +5228,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5241,7 +5241,7 @@
         }
       }
       Objects {
-        Id: 3116127385398915033
+        Id: 10042226667156401516
         Name: "neck"
         Transform {
           Location {
@@ -5257,7 +5257,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5270,7 +5270,7 @@
         }
       }
       Objects {
-        Id: 8436700526548960434
+        Id: 12885206876308882501
         Name: "left_clavicle"
         Transform {
           Location {
@@ -5288,7 +5288,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5301,7 +5301,7 @@
         }
       }
       Objects {
-        Id: 17498906553795808929
+        Id: 15936226676604140660
         Name: "left_shoulder"
         Transform {
           Location {
@@ -5320,7 +5320,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5333,7 +5333,7 @@
         }
       }
       Objects {
-        Id: 6919924263311880940
+        Id: 16095331223633711479
         Name: "left_elbow"
         Transform {
           Location {
@@ -5352,7 +5352,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5365,7 +5365,7 @@
         }
       }
       Objects {
-        Id: 305452378205516383
+        Id: 12884858610726183049
         Name: "left_arm_prop"
         Transform {
           Location {
@@ -5384,7 +5384,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5397,7 +5397,7 @@
         }
       }
       Objects {
-        Id: 14163995183303921373
+        Id: 8433625784626153213
         Name: "left_wrist"
         Transform {
           Location {
@@ -5416,7 +5416,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5429,7 +5429,7 @@
         }
       }
       Objects {
-        Id: 10056558108021198479
+        Id: 5529847943076889787
         Name: "right_clavicle"
         Transform {
           Location {
@@ -5447,7 +5447,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5460,7 +5460,7 @@
         }
       }
       Objects {
-        Id: 4099512873759092499
+        Id: 472349228232003342
         Name: "right_shoulder"
         Transform {
           Location {
@@ -5479,7 +5479,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5492,7 +5492,7 @@
         }
       }
       Objects {
-        Id: 10095937880015825103
+        Id: 13996638237397734223
         Name: "right_elbow"
         Transform {
           Location {
@@ -5511,7 +5511,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5524,7 +5524,7 @@
         }
       }
       Objects {
-        Id: 11218034901465972046
+        Id: 2624289613007826371
         Name: "right_wrist"
         Transform {
           Location {
@@ -5543,7 +5543,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5556,7 +5556,7 @@
         }
       }
       Objects {
-        Id: 9072650984897987421
+        Id: 7526590376044675774
         Name: "upper_spine"
         Transform {
           Location {
@@ -5573,7 +5573,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5586,7 +5586,7 @@
         }
       }
       Objects {
-        Id: 11731985089571409609
+        Id: 2017921195392389261
         Name: "lower_spine"
         Transform {
           Location {
@@ -5603,7 +5603,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5616,7 +5616,7 @@
         }
       }
       Objects {
-        Id: 7557566551597452766
+        Id: 4361350516544366360
         Name: "pelvis"
         Transform {
           Location {
@@ -5633,7 +5633,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5646,7 +5646,7 @@
         }
       }
       Objects {
-        Id: 29019979487382982
+        Id: 5593430223492210035
         Name: "left_hip"
         Transform {
           Location {
@@ -5665,7 +5665,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5678,7 +5678,7 @@
         }
       }
       Objects {
-        Id: 3885914635893328103
+        Id: 12581621884842771271
         Name: "left_knee"
         Transform {
           Location {
@@ -5697,7 +5697,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5710,7 +5710,7 @@
         }
       }
       Objects {
-        Id: 17902929952021725295
+        Id: 14111364742980036998
         Name: "left_ankle"
         Transform {
           Location {
@@ -5729,7 +5729,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5742,7 +5742,7 @@
         }
       }
       Objects {
-        Id: 8982064772870357450
+        Id: 8390661719935297712
         Name: "right_hip"
         Transform {
           Location {
@@ -5761,7 +5761,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5774,7 +5774,7 @@
         }
       }
       Objects {
-        Id: 15802019771578935435
+        Id: 13895344295126282851
         Name: "right_knee"
         Transform {
           Location {
@@ -5793,7 +5793,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5806,7 +5806,7 @@
         }
       }
       Objects {
-        Id: 13444450916766840742
+        Id: 17197823211402548441
         Name: "right_ankle"
         Transform {
           Location {
@@ -5825,7 +5825,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5838,7 +5838,7 @@
         }
       }
       Objects {
-        Id: 469796500981445859
+        Id: 14468896017229676645
         Name: "right_prop"
         Transform {
           Location {
@@ -5857,7 +5857,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5870,7 +5870,7 @@
         }
       }
       Objects {
-        Id: 1544332857117008473
+        Id: 92389564809208469
         Name: "left_prop"
         Transform {
           Location {
@@ -5889,7 +5889,7 @@
             Z: 1
           }
         }
-        ParentId: 10168315123823146487
+        ParentId: 1841219610101333631
         UnregisteredParameters {
         }
         Collidable_v2 {

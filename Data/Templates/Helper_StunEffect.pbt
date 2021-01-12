@@ -46,6 +46,7 @@
         ChildIds: 9757143991861952010
         ChildIds: 4338293000604461888
         ChildIds: 16716105245760767715
+        ChildIds: 16850027180451249727
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -313,6 +314,41 @@
           }
         }
       }
+      Objects {
+        Id: 16850027180451249727
+        Name: "Magic Dark Large Item Collect 01 SFX"
+        Transform {
+          Location {
+            Z: 180
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.20619249
+            Y: 1.20619249
+            Z: 1.20619249
+          }
+        }
+        ParentId: 2342472594459955927
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 9100686647221469272
+          }
+          AutoPlay: true
+          Pitch: -200
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 12764320832246126584
@@ -321,6 +357,15 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Signal_Flare"
+      }
+    }
+    Assets {
+      Id: 9100686647221469272
+      Name: "Magic Dark Large Item Collect 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_dark_large_item_collect_01_Cue_ref"
       }
     }
     PrimaryAssetId {
