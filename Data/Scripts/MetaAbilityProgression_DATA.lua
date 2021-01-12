@@ -453,17 +453,17 @@ classTable = {
     [CONST.CLASS.ASSASSIN] = {
         --Venom Bomb
         [CONST.BIND.Q] = {
-            -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Projectile Speed, mod4 = Projectile Gravity, mod 5 = Status Effect Poison
-            [1] = {mod1 = 35, mod2 = 400, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [2] = {mod1 = 40, mod2 = 450, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [3] = {mod1 = 40, mod2 = 500, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [4] = {mod1 = 45, mod2 = 525, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [5] = {mod1 = 45, mod2 = 550, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [6] = {mod1 = 50, mod2 = 575, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [7] = {mod1 = 50, mod2 = 600, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [8] = {mod1 = 60, mod2 = 625, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [9] = {mod1 = 60, mod2 = 650, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
-            [10] = {mod1 = 65, mod2 = 700, mod3 = 2500, mod4 = 1.5, mod5 = {duration = 10.0, damage = 5, multiplier = 0}}
+            -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Projectile Speed, mod4 = Status Effect Slow, mod 5 = Status Effect Poison
+            [1] = {mod1 = 35, mod2 = 400, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [2] = {mod1 = 40, mod2 = 450, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [3] = {mod1 = 40, mod2 = 500, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [4] = {mod1 = 45, mod2 = 525, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [5] = {mod1 = 45, mod2 = 550, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [6] = {mod1 = 50, mod2 = 575, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [7] = {mod1 = 50, mod2 = 600, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [8] = {mod1 = 60, mod2 = 625, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+            [9] = {mod1 = 60, mod2 = 650, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}},
+           [10] = {mod1 = 65, mod2 = 700, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}}
         },
         --Deaths Shadow
         [CONST.BIND.E] = {

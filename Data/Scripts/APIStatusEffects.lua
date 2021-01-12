@@ -43,10 +43,12 @@ local STATUS_EFFECT_ID_TABLE = {} -- id -> table
 
 local tickCounts = {} -- Player -> index -> int
 
-local SOURCE_KEY = 1
-local DURATION_KEY = 2
-local DAMAGE_KEY = 3
-local MULTIPLIER_KEY = 4
+local ID_KEY = 1
+local SOURCE_KEY = 2
+local TIME_KEY = 3
+local DURATION_KEY = 4
+local DAMAGE_KEY = 5
+local MULTIPLIER_KEY = 6
 
 
 local function StringSplit(delimiter, text)
@@ -70,7 +72,6 @@ local function StringSplit(delimiter, text)
 	return tbl
 end
 
-
 local function GetStringifieldValue(v)
 	if v == nil then
 		return "^nil^"
@@ -80,7 +81,6 @@ local function GetStringifieldValue(v)
 	end
 	return tostring(v)
 end
-
 
 local function IsNumeric(value)
 	return value == tostring(tonumber(value)) or math.type(value) ~= nil
@@ -116,7 +116,13 @@ local function ConvertTableToString(tbl, pri_delimiter, sec_delimiter)
 	return str
 end
 
-
+local function GetStatusTbl(tbl)
+	local tempTbl = {}
+	if tbl ~= "" then
+		tempTbl = ConvertStringToTable(tbl)
+		return tempTbl
+	end
+end
 
 function GetStringHash(string)
 	local hash = 0
@@ -254,7 +260,7 @@ function API.DefineStatusEffect(statusEffectData)
 		error(string.format("DefineStatusEffect for %s when that status effect already exists", statusEffectData.name))
 	end
 
-	local id = GetStringHash(statusEffectData.name)
+	local id = statusEffectData.name--GetStringHash(statusEffectData.name)
 	statusEffectData.id = id
 
 	if id == 0 then
@@ -276,15 +282,12 @@ function API.GetStatusEffectsOnPlayer(player)
 	local result = {}
 
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
-		local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
-		if source ~= "" then
-			source = ConvertStringToTable(source)
-		end
-		if id ~= 0 then
+		local source = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+		if source and source[ID_KEY] ~= 0 then
+			local id = source[ID_KEY]
 			local data = {}
 			data.name = STATUS_EFFECT_ID_TABLE[id].name
-			data.startTime = tracker:GetCustomProperty(GetStartTimePropertyName(i))
+			data.startTime = tonumber(source[TIME_KEY])
 			data.source = source[SOURCE_KEY]
 			data.duration = source[DURATION_KEY]
 			data.damage = source[DAMAGE_KEY]
@@ -303,15 +306,25 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 	end
 
 	local tracker = API.GetStateTracker(player)
-
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		local slotId = tracker:GetCustomProperty(GetIdPropertyName(i))
+		if API.DoesPlayerHaveStatusEffect(player, id) then
+			API.RemoveStatusEffect(player, i)
+		end
+		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 
-		if slotId == 0 then
-			tracker:SetNetworkedCustomProperty(GetIdPropertyName(i), id)
-			tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
+		if not trackerTbl then
+			--tracker:SetNetworkedCustomProperty(GetIdPropertyName(i), id)
+			--tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
 			if source or duration or damage or multiplier then
-				local tempTbl = {source.id, duration, damage, multiplier}
+				local tempTbl = {
+					[ID_KEY] = id,
+					[TIME_KEY] = CoreMath.Round(time(), 2),
+					[SOURCE_KEY] = source.id,
+					[DURATION_KEY] = duration,
+					[DAMAGE_KEY] = damage,
+					[MULTIPLIER_KEY] = multiplier
+				}
+
 				tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), ConvertTableToString(tempTbl))
 			end
 			tickCounts[player][i] = 0
@@ -330,6 +343,7 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 		end
 	end
 
+
 	-- Knock one off?
 	warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
 end
@@ -337,11 +351,10 @@ end
 -- Server only
 function API.RemoveStatusEffect(player, index)
 	local tracker = API.GetStateTracker(player)
-	local id = tracker:GetCustomProperty(GetIdPropertyName(index))
-
-	if id ~= 0 then
-		tracker:SetNetworkedCustomProperty(GetIdPropertyName(index), 0)
-		tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(index), 0.0)
+	local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(index)))
+	if trackerTbl and trackerTbl[ID_KEY] ~= "" then
+		local id = trackerTbl[ID_KEY]
+		tracker:SetNetworkedCustomProperty(API.GetSourceProperty(index), "")
 		tickCounts[player][index] = nil
 
 		local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
@@ -363,8 +376,9 @@ end
 function API.DoesPlayerHaveStatusEffect(player, name)
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
-		if id ~= 0 then
+		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+		if trackerTbl and trackerTbl[ID_KEY] ~= 0 then
+			local id = trackerTbl[ID_KEY]
 			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
 			if (statusEffectData.name == name) then
 				return true
@@ -378,9 +392,9 @@ end
 function API.RemoveStatusEffectByName(player, name)
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
-		if id ~= 0 then
-			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
+		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+		if trackerTbl and trackerTbl[ID_KEY] ~= "" then
+			local statusEffectData = STATUS_EFFECT_ID_TABLE[trackerTbl[ID_KEY]]
 			if (statusEffectData.name == name) then
 				API.RemoveStatusEffect(player, i)
 			end
@@ -395,30 +409,26 @@ function API.Tick(deltaTime)
 		local tracker = API.GetStateTracker(player)
 
 		for i = 1, API.MAX_STATUS_EFFECTS do
-			local id = tracker:GetCustomProperty(GetIdPropertyName(i))
+			local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 
-			if id ~= 0 then
-				local startTime = tracker:GetCustomProperty(GetStartTimePropertyName(i))
+			if trackerTbl and trackerTbl[ID_KEY] ~= "" then
+				local id = trackerTbl[ID_KEY]
+				local startTime = tonumber(trackerTbl[TIME_KEY])
 				local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
-				local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
 				local sourcePlayer
-				if source ~= "" then
-					source = ConvertStringToTable(source)
 
-					if source then
-						for _, s in ipairs(players) do
-							if s.id == source[SOURCE_KEY] then
-								sourcePlayer = s
-							end
-						end
+				for _, s in ipairs(players) do
+					if s.id == trackerTbl[SOURCE_KEY] then
+						sourcePlayer = s
 					end
 				end
+
 				if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM and statusEffectData.tickFunction then
 					local ticksExpected = math.floor(time() - startTime)
 
 					for j = tickCounts[player][i] + 1, ticksExpected do
 						tickCounts[player][i] = tickCounts[player][i] + 1
-						statusEffectData.tickFunction(player, sourcePlayer, source[DAMAGE_KEY])
+						statusEffectData.tickFunction(player, sourcePlayer, trackerTbl[DAMAGE_KEY])
 
 						-- The tick might kill you, which removes all your status effects. The rest of this is no longer valid.
 						if player.isDead then
@@ -427,7 +437,10 @@ function API.Tick(deltaTime)
 					end
 				end
 
-				if statusEffectData.duration and time() > startTime + tonumber((source[DURATION_KEY] or statusEffectData.duration)) then
+				if
+					statusEffectData.duration and
+						time() > tonumber(startTime + (trackerTbl[DURATION_KEY] or statusEffectData.duration))
+				 then
 					API.RemoveStatusEffect(player, i)
 				end
 			end
