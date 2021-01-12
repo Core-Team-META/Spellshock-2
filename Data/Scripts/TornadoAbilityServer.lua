@@ -70,7 +70,8 @@ function PlaceObject(thisPlayer, position, rotation)
 		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
 		local decalScale = CoreMath.Round(DamageRadius / 125, 3)
-		CurrentTornado.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		CurrentTornado.lifeSpan = mod4.duration
 		CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
 		CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 		
@@ -164,7 +165,8 @@ function Tick(deltaTime)
 		
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
-				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", DEFAULT_DOT, SpecialAbility.name..": DOT")
+				local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_DOT, SpecialAbility.name..": DOT")
+				dmg.amount = mod4.dotDamage
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility

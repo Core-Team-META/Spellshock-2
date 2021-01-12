@@ -48,6 +48,76 @@ local DURATION_KEY = 2
 local DAMAGE_KEY = 3
 local MULTIPLIER_KEY = 4
 
+
+local function StringSplit(delimiter, text)
+	local tbl = {}
+	if delimiter == "" then -- this would result in endless loops
+		error("delimiter matches empty string!")
+	end
+	if text == "" then
+		error("Empty string!")
+	end
+	if string.find(text, delimiter) == nil then
+		tbl[1] = text
+		return tbl
+	end
+	local p = 1
+	local d = "[^" .. delimiter .. "]+"
+	for str in string.gmatch(text, d) do
+		tbl[p] = str
+		p = p + 1
+	end
+	return tbl
+end
+
+
+local function GetStringifieldValue(v)
+	if v == nil then
+		return "^nil^"
+	end
+	if type(v) == "boolean" then
+		return v and "^true^" or "^false^"
+	end
+	return tostring(v)
+end
+
+
+local function IsNumeric(value)
+	return value == tostring(tonumber(value)) or math.type(value) ~= nil
+end
+
+-- Client and Server
+local function ConvertStringToTable(str, pri_delimiter, sec_delimiter)
+	local tbl = {}
+	local t1 = StringSplit(pri_delimiter or "|", str)
+	for _, v in pairs(t1) do
+		local t2 = StringSplit(sec_delimiter or "~", v)
+		local index = IsNumeric(t2[1]) and tonumber(t2[1]) or t2[1]
+		tbl[index] = IsNumeric(t2[2]) and tonumber(t2[2]) or t2[2]
+	end
+	return tbl
+end
+
+-- Client and Server
+
+local function ConvertTableToString(tbl, pri_delimiter, sec_delimiter)
+	local str = ""
+	sec_delimiter = sec_delimiter or "~"
+	pri_delimiter = pri_delimiter or "|"
+	if type(tbl) == "number" then
+		warn(tostring("CONVERT " .. tbl))
+	end
+	for k, v in pairs(tbl) do
+		str = str .. k .. sec_delimiter .. GetStringifieldValue(v or nil)
+		if next(tbl, k) ~= nil then
+			str = str .. pri_delimiter
+		end
+	end
+	return str
+end
+
+
+
 function GetStringHash(string)
 	local hash = 0
 	local pPow = 1
@@ -122,70 +192,6 @@ end
 
 function OnPlayerLeft(player)
 	tickCounts[player] = nil
-end
-
-function API.StringSplit(delimiter, text)
-	local tbl = {}
-	if delimiter == "" then -- this would result in endless loops
-		error("delimiter matches empty string!")
-	end
-	if text == "" then
-		error("Empty string!")
-	end
-	if string.find(text, delimiter) == nil then
-		tbl[1] = text
-		return tbl
-	end
-	local p = 1
-	local d = "[^" .. delimiter .. "]+"
-	for str in string.gmatch(text, d) do
-		tbl[p] = str
-		p = p + 1
-	end
-	return tbl
-end
-
-function API.GetStringifiedValue(v)
-	if v == nil then
-		return "^nil^"
-	end
-	if type(v) == "boolean" then
-		return v and "^true^" or "^false^"
-	end
-	return tostring(v)
-end
-
-function API.IsNumeric(value)
-	return value == tostring(tonumber(value)) or math.type(value) ~= nil
-end
-
--- Client and Server
-function API.ConvertStringToTable(str, pri_delimiter, sec_delimiter)
-	local tbl = {}
-	local t1 = API.StringSplit(pri_delimiter or "|", str)
-	for _, v in pairs(t1) do
-		local t2 = API.StringSplit(sec_delimiter or "~", v)
-		local index = API.IsNumeric(t2[1]) and tonumber(t2[1]) or t2[1]
-		tbl[index] = API.IsNumeric(t2[2]) and tonumber(t2[2]) or t2[2]
-	end
-	return tbl
-end
-
--- Client and Server
-function API.ConvertTableToString(tbl, pri_delimiter, sec_delimiter)
-	local str = ""
-	sec_delimiter = sec_delimiter or "~"
-	pri_delimiter = pri_delimiter or "|"
-	if type(tbl) == "number" then
-		warn(tostring("CONVERT " .. tbl))
-	end
-	for k, v in pairs(tbl) do
-		str = str .. k .. sec_delimiter .. API.GetStringifiedValue(v or nil)
-		if next(tbl, k) ~= nil then
-			str = str .. pri_delimiter
-		end
-	end
-	return str
 end
 
 -- Client and Server
@@ -273,7 +279,7 @@ function API.GetStatusEffectsOnPlayer(player)
 		local id = tracker:GetCustomProperty(GetIdPropertyName(i))
 		local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
 		if source ~= "" then
-			source = API.ConvertStringToTable(source)
+			source = ConvertStringToTable(source)
 		end
 		if id ~= 0 then
 			local data = {}
@@ -306,7 +312,7 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 			tracker:SetNetworkedCustomProperty(GetStartTimePropertyName(i), time())
 			if source or duration or damage or multiplier then
 				local tempTbl = {source.id, duration, damage, multiplier}
-				tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), API.ConvertTableToString(tempTbl))
+				tracker:SetNetworkedCustomProperty(API.GetSourceProperty(i), ConvertTableToString(tempTbl))
 			end
 			tickCounts[player][i] = 0
 
@@ -397,7 +403,7 @@ function API.Tick(deltaTime)
 				local source = tracker:GetCustomProperty(API.GetSourceProperty(i))
 				local sourcePlayer
 				if source ~= "" then
-					source = API.ConvertStringToTable(source)
+					source = ConvertStringToTable(source)
 
 					if source then
 						for _, s in ipairs(players) do
