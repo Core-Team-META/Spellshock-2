@@ -52,15 +52,14 @@ local function UpdateCombatAmmount(attackData)
 end
 
 local function UpdateUltimateKillAmmount(attackData)
-    if attackData.tag and attackData.tag.id then
+    if attackData.tags and attackData.tags.id then
         local source = attackData.source
-        local tag = attackData.tag.id
+        local tag = attackData.tags.id
         local bind = UTIL.StringSplit("_", tag)
         if bind[2] == "T" then
-            source:AddResource(
-                CONST.COMBAT_STATS.ULTIIMATE_KILL,
-                source:GetResource((CONST.COMBAT_STATS.ULTIIMATE_KILL)) + 1
-            )
+            local current = source:GetResource(CONST.COMBAT_STATS.ULTIMATE_KILL)
+            current = current + 1
+            source:SetResource(CONST.COMBAT_STATS.ULTIMATE_KILL, current)
         end
     end
 end
