@@ -33,10 +33,13 @@ function OnProjectileImpacted(projectile, other, hitResult)
         local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
         --CoreDebug.DrawSphere(projectile:GetWorldPosition(), radius, {duration = 5})
 
+        local slowStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", {}, ABILITY.name .. ": Slow Status")
+        local poisonStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod5", {}, ABILITY.name .. ": Poison Status")
+
         for _, enemy in ipairs(enemiesInRange) do
-            -- Poison
-            local status = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod5", {}, ABILITY.name .. ": Status")
-            API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id, ABILITY.owner, status.duration, status.damage, status.multiplier)
+            -- Slow and Poison
+            API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, ABILITY.owner, slowStatus.duration, slowStatus.damage, slowStatus.multiplier)
+            API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id, ABILITY.owner, poisonStatus.duration, poisonStatus.damage, poisonStatus.multiplier)
 			
 			local attackData = {
 				object = enemy,
@@ -47,18 +50,11 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				tags = {id = "Assassin_Q"}
 				}
 			COMBAT().ApplyDamage(attackData)	
-
         end
         
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
-        --local spawnedImpactFX = World.SpawnAsset(ImpactFX, {position = projectile:GetWorldPosition(), rotation = impactRotation})
 		World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
-        --Task.Wait(.1)
-
-        -- Teleport
-        --local teleportPosition = hitResult:GetImpactPosition() + Vector3.New(0, 0, 120)
-        --ABILITY.owner:SetWorldPosition(teleportPosition)
     end
 end
 
