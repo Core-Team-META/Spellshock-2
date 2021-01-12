@@ -89,6 +89,9 @@ function OnDamageTaken(attackData)
     if attackData.source then
         UpdateCombatAmmount(attackData)
     end
+    if attackData.object and attackData.object:IsA("Player") then
+        attackData.object:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
+    end
 end
 
 function OnDied(attackData)
