@@ -70,7 +70,8 @@ function PlaceObject(thisPlayer, position, rotation)
 		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
 		local decalScale = CoreMath.Round(DamageRadius / 125, 3)
-		CurrentTornado.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Duration, SpecialAbility.name..": Duration")
+		CurrentTornado.lifeSpan = mod4.duration
 		CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
 		CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 		
@@ -92,8 +93,8 @@ function PlaceObject(thisPlayer, position, rotation)
 				tags = {id = "Mage_Q"}
 			}
 			COMBAT().ApplyDamage(attackData)
-					
-			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+			local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
+			API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		end	
 		
 		Timer = 1
@@ -164,7 +165,8 @@ function Tick(deltaTime)
 		
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
-				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", DEFAULT_DOT, SpecialAbility.name..": DOT")
+				local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_DOT, SpecialAbility.name..": DOT")
+				dmg.amount = mod4.dotDamage
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
@@ -181,7 +183,8 @@ function Tick(deltaTime)
 						
 				
 				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Slow") then
-					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+					local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
+					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 				end
 			end	
 			Timer = 1

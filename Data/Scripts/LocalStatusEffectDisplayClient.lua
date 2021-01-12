@@ -9,6 +9,8 @@ local IS_RIGHT_ALIGNED = ROOT:GetCustomProperty("IsRightAligned")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local displayTemplates = {}
+local effectSource = {}
+
 
 function Tick(deltaTime)
 	local statusEffects = API_SE.GetStatusEffectsOnPlayer(LOCAL_PLAYER)
@@ -26,7 +28,7 @@ function Tick(deltaTime)
 			local timeText = displayTemplate:GetCustomProperty("TimeText"):WaitForObject()
 
 			if effectData.duration then
-				local timeLeft = data.startTime + effectData.duration - time()
+				local timeLeft = data.startTime +  (data.duration or effectData.duration) - time()
 
 				if timeLeft > 180.0 then
 					timeText.text = string.format("%dm", math.max(0.0, timeLeft // 60.0))

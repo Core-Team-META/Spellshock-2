@@ -147,8 +147,9 @@ function DamageInArea(targetPos, localPlayer)
     local enemiesInRange = COMBAT().FindInSphere(targetPos, DamageRadius, {ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)})
 	local damageTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
 	--CoreDebug.DrawSphere(targetPos, DamageRadius, {duration = 5})
+	local status = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod5", {}, ABILITY.name .. ": Status")
     for _, enemy in ipairs(enemiesInRange) do
-        API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id)
+        API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, ABILITY.owner, status.duration, status.damage, status.multiplier)
         
         local dmg = Damage.New()
         dmg.amount = math.random(damageTable.min, damageTable.max)

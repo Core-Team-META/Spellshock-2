@@ -54,8 +54,8 @@ function OnProjectileImpact(projectile, other, hitresult)
 		tags = {id = "Assassin_R"}
 		}
 	COMBAT().ApplyDamage(attackData)	
-
-    API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id)
+	local status = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod5", {}, ABILITY.name .. ": Status")
+    API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, ABILITY.owner, status.duration, status.damage, status.multiplier)
     
     local healAmount = dmg.amount * META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod3", DEFAULT_HealPercentage, ABILITY.name..": Heal %")
     local heal = Damage.New()

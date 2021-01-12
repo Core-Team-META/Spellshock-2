@@ -1,20 +1,25 @@
 ﻿-- Module dependencies
-local MODULE = require( script:GetCustomProperty("ModuleManager") )
-function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local MODULE = require(script:GetCustomProperty("ModuleManager"))
+function COMBAT()
+	return MODULE:Get("standardcombo.Combat.Wrap")
+end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local EFFECT_ICON = script:GetCustomProperty("EffectIcon")
 local EFFECT_TEMPLATE = script:GetCustomProperty("EffectTemplate")
 
-local dmg = Damage.New()
-dmg.amount = script:GetCustomProperty("DPS")		
-dmg.reason = DamageReason.COMBAT
+local DEFAULT_DPS = script:GetCustomProperty("DPS")
 
-function BleedTick(player)
-    local attackData = {
+local dmg = Damage.New()
+
+function BleedTick(player, source, damage)
+	dmg.amount = damage or DEFAULT_DPS
+	dmg.reason = DamageReason.COMBAT
+
+	local attackData = {
 		object = player,
 		damage = dmg,
-		source = nil,
+		source = source,
 		position = nil,
 		rotation = nil,
 		tags = {id = "StatusEffect"}

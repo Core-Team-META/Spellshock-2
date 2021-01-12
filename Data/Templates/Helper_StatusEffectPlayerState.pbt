@@ -34,6 +34,10 @@
             Float: 0
           }
           Overrides {
+            Name: "cs:SE2_Source"
+            String: ""
+          }
+          Overrides {
             Name: "cs:SE3_Id"
             Int: 0
           }
@@ -42,12 +46,24 @@
             Float: 0
           }
           Overrides {
+            Name: "cs:SE3_Source"
+            String: ""
+          }
+          Overrides {
             Name: "cs:SE4_Id"
             Int: 0
           }
           Overrides {
             Name: "cs:SE4_StartTime"
             Float: 0
+          }
+          Overrides {
+            Name: "cs:SE4_Source"
+            String: ""
+          }
+          Overrides {
+            Name: "cs:SE1_Source"
+            String: ""
           }
           Overrides {
             Name: "cs:SE1_Id:isrep"
@@ -79,6 +95,22 @@
           }
           Overrides {
             Name: "cs:SE4_StartTime:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:SE2_Source:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:SE3_Source:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:SE4_Source:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:SE1_Source:isrep"
             Bool: true
           }
         }
