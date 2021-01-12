@@ -1177,7 +1177,7 @@
           }
           Overrides {
             Name: "cs:EventName"
-            String: "Healer Teleport"
+            String: "Blink"
           }
           Overrides {
             Name: "cs:MaxPlacementRange"

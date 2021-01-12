@@ -470,6 +470,7 @@
         }
         ParentId: 14081494435077508625
         ChildIds: 7575872334836133316
+        ChildIds: 4017261440786260585
         ChildIds: 15759265484500681867
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -501,6 +502,41 @@
             Name: "cs:ServerScript"
             ObjectReference {
               SubObjectId: 8104286553099354162
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 4017261440786260585
+        Name: "SupernovaAbilityClient"
+        Transform {
+          Location {
+            X: -747.460938
+            Y: -197.537109
+            Z: 47.2485352
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 11626540599974007922
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 9559338655160658381
             }
           }
         }
@@ -1337,6 +1373,7 @@
           }
           RecoveryPhaseSettings {
             Duration: 0.3
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -1350,7 +1387,6 @@
             IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_34"
           }
@@ -1369,12 +1405,6 @@
         }
         ParentId: 9970096027225536454
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 9970096027225536454
-            }
-          }
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
@@ -1404,6 +1434,56 @@
           Overrides {
             Name: "cs:Radius"
             Int: 2000
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 9559338655160658381
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Supernova"
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod3"
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 2949140035181926443
+            }
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true

@@ -26,7 +26,6 @@ local isPreviewing = false
 local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
@@ -72,17 +71,6 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-	end
-end
-
 function OnPlayerDied(player, _)
 	isPreviewing = false
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
@@ -114,7 +102,6 @@ function OnEquip(equipment, player)
 	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))

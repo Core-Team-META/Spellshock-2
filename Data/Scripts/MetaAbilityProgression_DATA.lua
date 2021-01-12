@@ -397,16 +397,16 @@ classTable = {
         --Supernova
         [CONST.BIND.T] = {
             -- mod1 = Heal Amount, mod2 = Damage Amount, mod3 = Radius, mod4 = Placement Range, mod5 = Status Effect Stun
-            [1] = {mod1 = 150, mod2 = 180, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [2] = {mod1 = 150, mod2 = 190, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [3] = {mod1 = 160, mod2 = 200, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [4] = {mod1 = 160, mod2 = 210, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [5] = {mod1 = 170, mod2 = 220, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [6] = {mod1 = 170, mod2 = 230, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [7] = {mod1 = 180, mod2 = 240, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [8] = {mod1 = 190, mod2 = 250, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [9] = {mod1 = 200, mod2 = 260, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
-            [10] = {mod1 = 250, mod2 = 280, mod3 = 2200, mod4 = 0, mod5 = {duration = 5.0, damage = 0, multiplier = 0}}
+            [1] = {mod1 = 150, mod2 = 180, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [2] = {mod1 = 150, mod2 = 190, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [3] = {mod1 = 160, mod2 = 200, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [4] = {mod1 = 160, mod2 = 210, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [5] = {mod1 = 170, mod2 = 220, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [6] = {mod1 = 170, mod2 = 230, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [7] = {mod1 = 180, mod2 = 240, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [8] = {mod1 = 190, mod2 = 250, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+            [9] = {mod1 = 200, mod2 = 260, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}},
+           [10] = {mod1 = 250, mod2 = 280, mod3 = 2200, mod4 = 3000, mod5 = {duration = 5.0, damage = 0, multiplier = 0}}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
