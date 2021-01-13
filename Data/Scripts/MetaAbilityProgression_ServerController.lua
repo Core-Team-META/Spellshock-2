@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 12/31/2020
--- Version 0.1.10
+-- Date: 2021/1/13
+-- Version 0.1.11
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -299,6 +299,18 @@ function API.GetAbilityMod(player, binding, mod, defaultValue, source)
         warn("META_AP => failed to access " .. source .. " mod")
     end
     return result
+end
+
+--@param string template => MUID
+--@param table optionalTable 
+--@return newObject object
+function API.MetaSpawnAsset(template, optionalTable)
+    local resultTable = {}
+    Events.Broadcast("META_AP.Spawn", template, optionalTable, resultTable)
+    Task.Wait() --Wait (1) Server Tick to make sure the objects been spawned
+    local newObject = resultTable[1]
+    resultTable = nil
+    return newObject
 end
 
 ------------------------------------------------------------------------------------------------------------------------
