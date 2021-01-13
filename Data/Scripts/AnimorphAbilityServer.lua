@@ -24,9 +24,10 @@ local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-	print(projectile.name)
+	print(projectile)
 	if other and ABILITY.owner then
 		--Play ImpactFX
+		local projectilePos = projectile:GetWorldPosition()
 		local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
 		local impactTemplate = PlayerVFX.Impact
 		META_AP().SpawnAsset(impactTemplate, {position = projectile:GetWorldPosition(), rotation = impactRotation})
@@ -43,9 +44,9 @@ function OnProjectileImpacted(projectile, other, hitResult)
 		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod1", DEFAULT_Radius, ABILITY.name .. ": Radius")
 		local enemiesInRange =
 			Game.FindPlayersInSphere(
-			projectile:GetWorldPosition(),
+				projectilePos,
 			radius,
-			{ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team}
+			{ignoreDead = true, ignoreTeams = ABILITY.owner.team}
 		)
 		--CoreDebug.DrawSphere(projectile:GetWorldPosition(), RADIUS, {duration = 5})
 
@@ -109,22 +110,17 @@ function OnAbilityExecute(thisAbility)
 		DEFAULT_ProjectileGravity,
 		ABILITY.name .. ": Projectile Gravity"
 	)
-	CROSS_CONTEXT_CALLER().Call(
-		function()
-			local grenadeProjectile = Projectile.Spawn(projectileTemplate, worldPosition, forwardVector)
-			print(grenadeProjectile.name)
-			grenadeProjectile.lifeSpan = 10
-			grenadeProjectile.owner = ABILITY.owner
-			grenadeProjectile.sourceAbility = ABILITY
-			grenadeProjectile.speed = projectileSpeed
 
-			grenadeProjectile.gravityScale = projectileGravity
-			grenadeProjectile.shouldDieOnImpact = true
-			grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
-		end
-	)
+	local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
+	grenadeProjectile.lifeSpan = 10
+	grenadeProjectile.owner = ABILITY.owner
+	grenadeProjectile.sourceAbility = ABILITY
+	grenadeProjectile.speed = projectileSpeed
+
+	grenadeProjectile.gravityScale = projectileGravity
+	grenadeProjectile.shouldDieOnImpact = true
+	grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end
-
 
 function OnEquip(equipment, player)
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().MAGE)

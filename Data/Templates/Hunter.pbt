@@ -20,7 +20,6 @@
         ChildIds: 7137406222810709920
         ChildIds: 5361708159967945625
         ChildIds: 406380117814010332
-        ChildIds: 6389840870498740253
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -72,7 +71,7 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SubObjectId: 6389840870498740253
+            SelfId: 841534158063459245
           }
         }
       }
@@ -96,6 +95,7 @@
         ParentId: 2069545901692075652
         ChildIds: 3493467970047565540
         ChildIds: 10572375518235026021
+        ChildIds: 9149119488467156811
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -256,6 +256,66 @@
           Overrides {
             Name: "cs:AbilityMod"
             String: "mod1"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 9149119488467156811
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: -7820
+            Y: -10340.002
+            Z: -3105
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+          }
+        }
+        ParentId: 2843463732159386964
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
           }
         }
         Collidable_v2 {
@@ -1545,7 +1605,7 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 16525264169223272539
+              SubObjectId: 9149119488467156811
             }
           }
           Overrides {
@@ -2408,43 +2468,6 @@
           }
           KeyBinding_v2 {
             Value: "mc:egameaction:secondaryaction"
-          }
-        }
-      }
-      Objects {
-        Id: 6389840870498740253
-        Name: "Pickup Trigger"
-        Transform {
-          Location {
-            Z: 50
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1.89999986
-          }
-        }
-        ParentId: 2069545901692075652
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          Interactable: true
-          InteractionLabel: "Hunter"
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
           }
         }
       }
