@@ -30,7 +30,7 @@ Objects {
   ChildIds: 6356897330857931981
   ChildIds: 5874015840417789592
   ChildIds: 3612684566017260609
-  ChildIds: 7600013352733081997
+  ChildIds: 5763622543987818276
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -43,8 +43,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7600013352733081997
-  Name: "Kurtis"
+  Id: 5763622543987818276
+  Name: "CosmeticStore"
   Transform {
     Location {
       X: -35780
@@ -68,7 +68,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Kurtis"
+    FilePartitionName: "CosmeticStore"
   }
 }
 Objects {
