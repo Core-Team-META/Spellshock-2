@@ -33,5 +33,5 @@ function OnPlayerJoined(player)
 	targetingObjects[player] = obj
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
 

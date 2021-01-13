@@ -26,7 +26,7 @@ local PlayerVFX = nil
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -48,7 +48,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		Task.Wait()
 		--CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -62,7 +62,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		local vfxScale = Vector3.New(CoreMath.Round(radius / DEFAULT_DamageRadius, 3))
 		
 		local placementTemplate = PlayerVFX.Placement
-		World.SpawnAsset(placementTemplate, {position = position, rotation = rotation, scale = vfxScale})
+		META_AP().SpawnAsset(placementTemplate, {position = position, rotation = rotation, scale = vfxScale})
 
 		-- Damage enemies
 		local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
@@ -90,14 +90,14 @@ end
 
 function OnPlayerDied(player, _)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
@@ -105,7 +105,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility == PrimaryAbility then
@@ -117,7 +117,7 @@ end
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isPlacing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))		
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

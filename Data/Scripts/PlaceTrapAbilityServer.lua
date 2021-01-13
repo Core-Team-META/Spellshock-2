@@ -17,10 +17,15 @@ local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
 
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("R_isPreviewing", bool)
+end
+
+
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -41,7 +46,7 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -62,7 +67,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		isPlacing = true
 		
 		local trapTemplate = PlayerVFX.Placement
-		local newTrap = World.SpawnAsset(trapTemplate, {position = position, rotation = rotation})
+		local newTrap = META_AP().SpawnAsset(trapTemplate, {position = position, rotation = rotation})
 
 		table.insert(ActiveTraps, newTrap)
 		Task.Wait()
@@ -74,7 +79,7 @@ function DisablePlacement(player)
 	isPreviewing = false
 	
 	if Object.IsValid(script) then
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 	end
 	
 	if Object.IsValid(PrimaryAbility) and Object.IsValid(SpecialAbility) then
@@ -101,7 +106,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility == PrimaryAbility then
@@ -113,7 +118,7 @@ end
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isPlacing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))		
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

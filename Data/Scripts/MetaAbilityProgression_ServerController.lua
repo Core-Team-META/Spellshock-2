@@ -304,7 +304,7 @@ end
 --@param string template => MUID
 --@param table optionalTable 
 --@return newObject object
-function API.MetaSpawnAsset(template, optionalTable)
+function API.SpawnAsset(template, optionalTable)
     local resultTable = {}
     Events.Broadcast("META_AP.Spawn", template, optionalTable, resultTable)
     Task.Wait() --Wait (1) Server Tick to make sure the objects been spawned
