@@ -1038,10 +1038,6 @@
         ChildIds: 8104286553099354162
         UnregisteredParameters {
           Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:Binding"
             String: "ability_extra_22"
           }
@@ -1341,8 +1337,8 @@
         ChildIds: 9559338655160658381
         UnregisteredParameters {
           Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
+            Name: "cs:Binding"
+            String: "ability_extra_24"
           }
         }
         WantsNetworking: true
@@ -1353,10 +1349,12 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
-          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1364,7 +1362,10 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 3
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1372,7 +1373,9 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
@@ -1386,9 +1389,9 @@
             CanRotate: true
             IsTargetDataUpdated: true
           }
-          Animation: "unarmed_magic_up"
+          Animation: "2hand_staff_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
@@ -1432,13 +1435,13 @@
             Int: 50
           }
           Overrides {
-            Name: "cs:Radius"
+            Name: "cs:DamageRadius"
             Int: 2000
           }
           Overrides {
             Name: "cs:SpecialAbility"
             ObjectReference {
-              SubObjectId: 9559338655160658381
+              SubObjectId: 9970096027225536454
             }
           }
           Overrides {
@@ -1478,7 +1481,7 @@
           Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
-              Id: 2949140035181926443
+              Id: 3392388590054420013
             }
           }
           Overrides {
@@ -1679,7 +1682,6 @@
         ChildIds: 14112328780250061073
         ChildIds: 13141893348608307507
         ChildIds: 4620336145958381494
-        ChildIds: 1241678562242881738
         ChildIds: 221416856427887844
         UnregisteredParameters {
           Overrides {
@@ -1770,7 +1772,6 @@
               SubObjectId: 4620336145958381494
             }
             ReloadAbility {
-              SubObjectId: 1241678562242881738
             }
             WeaponTrajectoryMode {
               Value: "mc:eweapontrajectorymode:muzzletolooktarget"
@@ -1900,7 +1901,6 @@
           }
         }
         ParentId: 18270922159998676275
-        ChildIds: 8128108262610803925
         ChildIds: 8357201899851611185
         ChildIds: 2176729734375800191
         ChildIds: 18116069161725040159
@@ -1914,31 +1914,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 8128108262610803925
-        Name: "AutoRechargeWeaponClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: -2.04905591e-05
-          }
-          Scale {
-          }
-        }
-        ParentId: 13141893348608307507
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8431872900106975609
-          }
         }
       }
       Objects {
@@ -2147,52 +2122,6 @@
         }
       }
       Objects {
-        Id: 1241678562242881738
-        Name: "Recharge"
-        ParentId: 18270922159998676275
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_ult"
-          CastPhaseSettings {
-            Duration: 1.2
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-          }
-          ExecutePhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-          }
-          CooldownPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-          }
-          Animation: "2hand_staff_magic_up"
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_10"
-          }
-        }
-      }
-      Objects {
         Id: 221416856427887844
         Name: "Aim"
         Transform {
@@ -2225,7 +2154,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2235,7 +2163,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2245,7 +2172,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
@@ -2255,7 +2181,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"

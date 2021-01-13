@@ -12,11 +12,11 @@ local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject(
 local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
-local DEFAULT_Radius = script:GetCustomProperty("Radius")
+local DEFAULT_Radius = script:GetCustomProperty("DamageRadius")
 local EventName = script:GetCustomProperty("EventName")
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-
-local scaleDuration = SpecialAbility.executePhaseSettings.duration
+local scaleDuration = 3
 local CurrentChargeUp = nil
 local EffectRadius = DEFAULT_Radius
 local isPreviewing = false
@@ -41,32 +41,53 @@ function OnSpecialAbilityCast(thisAbility)
 	end
 end
 
-function OnSpecialAbilityExecute(thisAbility)
-	
-	CurrentChargeUp = World.SpawnAsset(PlayerVFX.Charge, {position = SpecialAbility.owner:GetWorldPosition()})
+function PlaceObject(thisPlayer, position, rotation)
+	if thisPlayer == Equipment.owner then
+		--Task.Wait()
+		isPreviewing = false
+		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		-- check if the placement was canceled
+		if position == nil then
+			return
+		end
+		
+		isPlacing = true
 
-	EffectRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Radius, SpecialAbility.name..": Radius")
-	print("Radius: "..EffectRadius)
-	CurrentChargeUp:AttachToPlayer(SpecialAbility.owner, "root")
-	local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
-	local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
-	local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
-	local scale = Vector3.New( CoreMath.Round(EffectRadius / 50, 3) )
-	OuterSphere:SetWorldScale(scale)
-	InnerSphere:ScaleTo(scale, scaleDuration)
-	Beam:SetSmartProperty("Teleport Duration", scaleDuration)
-	Beam:Play()
+		CurrentChargeUp = World.SpawnAsset(PlayerVFX.Charge, {position = position})
+		EffectRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Radius, SpecialAbility.name..": Radius")
+		local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
+		local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
+		local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
+		local scale = Vector3.New( CoreMath.Round(EffectRadius / 50, 3) )
+		OuterSphere:SetWorldScale(scale)
+		InnerSphere:ScaleTo(scale, scaleDuration)
+		Beam:SetSmartProperty("Teleport Duration", scaleDuration)
+		Beam:Play()
+		CoreDebug.DrawSphere(position, EffectRadius, {duration = 5})
+		Task.Spawn(function ()
+			SupernovaEnding()
+		end, scaleDuration)
+	end
 end
 
-function OnSpecialAbilityRecovery(thisAbility)
-	if not thisAbility.owner or not Object.IsValid(thisAbility.owner) or thisAbility.owner.isDead then return end
+function SupernovaEnding()
+	print("Supernova recovery")
+	local dmgPosition
+	if Object.IsValid(CurrentChargeUp) then
+		dmgPosition = CurrentChargeUp:GetWorldPosition()
+		World.SpawnAsset(PlayerVFX.Ending, {position = dmgPosition})
+		CurrentChargeUp:Destroy()
+		print('Destroyed ChargeUP vfx')
+	else
+		return
+	end
 
-	local newObject = World.SpawnAsset(PlayerVFX.Ending, {position = SpecialAbility.owner:GetWorldPosition()})
+	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) or SpecialAbility.owner.isDead then return end
 
-	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), EffectRadius, {duration = 5})
-	CurrentChargeUp:Destroy()
-
-    local playersInRange = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), EffectRadius, {ignoreDead = true, ignorePlayers = SpecialAbility.owner})
+    local playersInRange = Game.FindPlayersInSphere(dmgPosition, EffectRadius, {ignoreDead = true, ignorePlayers = SpecialAbility.owner})
     for _, otherPlayer in ipairs(playersInRange) do
 		if otherPlayer.team == SpecialAbility.owner.team then
 			local dmg = Damage.New() 
@@ -107,23 +128,6 @@ end
 
 function OnSpecialAbilityReady(thisAbility)
 	isPlacing = false
-end
-
-function PlaceObject(thisPlayer, position, rotation)
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		
-		-- check if the placement was canceled
-		if position == nil then
-			return
-		end
-		
-		isPlacing = true
-	end
 end
 
 function OnPlayerDied(player, _)
@@ -187,6 +191,3 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-
-SpecialAbility.recoveryEvent:Connect(OnSpecialAbilityRecovery)
-SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute)

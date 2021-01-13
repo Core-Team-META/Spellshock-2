@@ -355,16 +355,16 @@ classTable = {
         --Sun Beam
         [CONST.BIND.Q] = {
             -- mod1 = Damage Range, mod2 = Heal Range, mod3 = Projectile Speed, mod4 = Range
-            [1] = {mod1 = {min = 25, max = 25}, mod2 = {min = 100, max = 120}, mod3 = 2000, mod4 = 4000, mod5 = 0},
-            [2] = {mod1 = {min = 27, max = 27}, mod2 = {min = 120, max = 140}, mod3 = 2100, mod4 = 4000, mod5 = 0},
-            [3] = {mod1 = {min = 29, max = 29}, mod2 = {min = 140, max = 160}, mod3 = 2200, mod4 = 4000, mod5 = 0},
-            [4] = {mod1 = {min = 31, max = 31}, mod2 = {min = 160, max = 180}, mod3 = 2300, mod4 = 4000, mod5 = 0},
-            [5] = {mod1 = {min = 33, max = 33}, mod2 = {min = 180, max = 200}, mod3 = 2400, mod4 = 4000, mod5 = 0},
-            [6] = {mod1 = {min = 35, max = 35}, mod2 = {min = 200, max = 220}, mod3 = 2500, mod4 = 4000, mod5 = 0},
-            [7] = {mod1 = {min = 35, max = 35}, mod2 = {min = 220, max = 240}, mod3 = 2600, mod4 = 4000, mod5 = 0},
-            [8] = {mod1 = {min = 35, max = 35}, mod2 = {min = 240, max = 260}, mod3 = 2700, mod4 = 4000, mod5 = 0},
-            [9] = {mod1 = {min = 37, max = 37}, mod2 = {min = 260, max = 280}, mod3 = 2800, mod4 = 4000, mod5 = 0},
-            [10] = {mod1 = {min = 40, max = 40}, mod2 = {min = 280, max = 290}, mod3 = 3000, mod4 = 4000, mod5 = 0}
+            [1] = {mod1 = {min = 25, max = 25}, mod2 = {min = 0, max = 0}, mod3 = 2000, mod4 = 4000, mod5 = 0},
+            [2] = {mod1 = {min = 27, max = 27}, mod2 = {min = 0, max = 0}, mod3 = 2100, mod4 = 4000, mod5 = 0},
+            [3] = {mod1 = {min = 29, max = 29}, mod2 = {min = 0, max = 0}, mod3 = 2200, mod4 = 4000, mod5 = 0},
+            [4] = {mod1 = {min = 31, max = 31}, mod2 = {min = 0, max = 0}, mod3 = 2300, mod4 = 4000, mod5 = 0},
+            [5] = {mod1 = {min = 33, max = 33}, mod2 = {min = 0, max = 0}, mod3 = 2400, mod4 = 4000, mod5 = 0},
+            [6] = {mod1 = {min = 35, max = 35}, mod2 = {min = 0, max = 0}, mod3 = 2500, mod4 = 4000, mod5 = 0},
+            [7] = {mod1 = {min = 35, max = 35}, mod2 = {min = 0, max = 0}, mod3 = 2600, mod4 = 4000, mod5 = 0},
+            [8] = {mod1 = {min = 35, max = 35}, mod2 = {min = 0, max = 0}, mod3 = 2700, mod4 = 4000, mod5 = 0},
+            [9] = {mod1 = {min = 37, max = 37}, mod2 = {min = 0, max = 0}, mod3 = 2800, mod4 = 4000, mod5 = 0},
+           [10] = {mod1 = {min = 40, max = 40}, mod2 = {min = 0, max = 0}, mod3 = 3000, mod4 = 4000, mod5 = 0}
         },
         --Healing Crystal
         [CONST.BIND.E] = {

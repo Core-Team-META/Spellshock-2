@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 9528090018719946051
-  Name: "Healer Orc Supernova Preview Basic"
+  Id: 18349665107832834494
+  Name: "Generic Orc Preview Circle"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 3680000193455457199
+      RootId: 3949034697907572850
       Objects {
-        Id: 3680000193455457199
-        Name: "Healer Orc Supernova Preview Basic"
+        Id: 3949034697907572850
+        Name: "Generic Orc Preview Circle"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 10977432840192517643
+        ChildIds: 5563999643283033263
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -27,7 +27,7 @@
         }
       }
       Objects {
-        Id: 10977432840192517643
+        Id: 5563999643283033263
         Name: "2D Basic Shapes Decal"
         Transform {
           Location {
@@ -35,12 +35,12 @@
           Rotation {
           }
           Scale {
-            X: 20
-            Y: 20
-            Z: 8
+            X: 0.4
+            Y: 0.4
+            Z: 2.5
           }
         }
-        ParentId: 3680000193455457199
+        ParentId: 3949034697907572850
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sides"

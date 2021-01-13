@@ -1,13 +1,13 @@
 ﻿Assets {
-  Id: 9528090018719946051
-  Name: "Healer Orc Supernova Preview Basic"
+  Id: 3392388590054420013
+  Name: "Generic Elf Preview Circle"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 3680000193455457199
+      RootId: 10857542351817012990
       Objects {
-        Id: 3680000193455457199
-        Name: "Healer Orc Supernova Preview Basic"
+        Id: 10857542351817012990
+        Name: "Generic Elf Preview Circle"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 10977432840192517643
+        ChildIds: 16072818560770873055
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -27,7 +27,7 @@
         }
       }
       Objects {
-        Id: 10977432840192517643
+        Id: 16072818560770873055
         Name: "2D Basic Shapes Decal"
         Transform {
           Location {
@@ -35,12 +35,12 @@
           Rotation {
           }
           Scale {
-            X: 20
-            Y: 20
-            Z: 8
+            X: 0.4
+            Y: 0.4
+            Z: 2.5
           }
         }
-        ParentId: 3680000193455457199
+        ParentId: 10857542351817012990
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sides"
@@ -74,8 +74,8 @@
           Overrides {
             Name: "bp:Stroke Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882609
+              G: 0.87500006
+              B: 0.543919146
               A: 0.5
             }
           }
@@ -98,14 +98,6 @@
           Overrides {
             Name: "bp:Fade Time"
             Float: 0
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882609
-              A: 0.5
-            }
           }
         }
         Collidable_v2 {
