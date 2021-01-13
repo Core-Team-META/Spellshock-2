@@ -34,7 +34,7 @@ function OnAbilityExecute(thisAbility)
 	HawkTarget = nil
 
 	local hawkTemplate = PlayerVFX.Template
-	CurrentHawk = World.SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
+	CurrentHawk = META_AP().SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
 
 	Task.Wait()
 	Task.Wait()
