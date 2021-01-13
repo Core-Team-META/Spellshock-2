@@ -153,32 +153,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Daily Shop"
-  }
-}
-Objects {
   Id: 11490187644604034792
   Name: "Cosmetics Data"
   Transform {

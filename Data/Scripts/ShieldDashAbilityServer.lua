@@ -74,7 +74,7 @@ function ToggleDash(mode)
 		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
 		
 		local attachmentTemplate = PlayerVFX.Attachment
-		AttachedFX = World.SpawnAsset(attachmentTemplate, {position = Ability.owner:GetWorldPosition()})
+		AttachedFX = META_AP().SpawnAsset(attachmentTemplate, {position = Ability.owner:GetWorldPosition()})
 		AttachedFX:AttachToPlayer(Ability.owner, "root")
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
@@ -101,7 +101,7 @@ function OnAbilityCooldown(thisAbility)
 	ToggleDash(false)
 
 	local bashTemplate = PlayerVFX.Bash
-	World.SpawnAsset(bashTemplate, {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	META_AP().SpawnAsset(bashTemplate, {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
 
 	local sphereRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_Radius, Ability.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})

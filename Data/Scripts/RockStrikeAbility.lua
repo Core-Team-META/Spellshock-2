@@ -93,7 +93,7 @@ function OnAbilityExecute(thisAbility)
 	end
 	
 	spawnPosition.z = spawnPosition.z + 200
-	local RockProjectile = World.SpawnAsset(PlayerVFX.Projectile, {position=spawnPosition})
+	local RockProjectile = META_AP().SpawnAsset(PlayerVFX.Projectile, {position=spawnPosition})
 
 	local ProjectileRange = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_Range, ABILITY.name..": Range")
 	local MoveDuration = CoreMath.Round(ProjectileRange / ProjectileSpeed, 3)

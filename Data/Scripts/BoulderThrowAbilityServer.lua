@@ -32,7 +32,7 @@ function OnPickupExecute(thisAbility)
 	end
 	
 	local PickupTemplate = PlayerVFX.Pickup
-	PickupObject =  World.SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
+	PickupObject = META_AP().SpawnAsset(PickupTemplate, {position = PickupAbility.owner:GetWorldPosition()})
 	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
 	PickupObject:SetWorldScale(newScale)
 	PickupObject:AttachToPlayer(PickupAbility.owner, "right_prop")
@@ -83,7 +83,7 @@ function OnThrowExecute(thisAbility)
 	local velocityVector = directionVector * META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod3", DEFAULT_ProjectileSpeed, PickupAbility.name..": Projectile Speed")
 
 	local projectileTemplate = PlayerVFX.Projectile
-	CurrentProjectile = World.SpawnAsset(projectileTemplate, {position = spawnPosition})
+	CurrentProjectile = META_AP().SpawnAsset(projectileTemplate, {position = spawnPosition})
 
 	local newScale = Vector3.New(META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod4", DEFAULT_ProjectileScale, PickupAbility.name..": Scale"))
 	CurrentProjectile:SetWorldScale(newScale)
