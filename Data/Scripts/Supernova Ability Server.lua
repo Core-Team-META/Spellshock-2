@@ -25,10 +25,14 @@ local isEnabled = true
 local PlayerVFX = nil
 local EventListeners = {}
 
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
+end
+
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -45,7 +49,7 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		--Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -56,7 +60,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		
 		isPlacing = true
 
-		CurrentChargeUp = World.SpawnAsset(PlayerVFX.Charge, {position = position})
+		CurrentChargeUp = META_AP().SpawnAsset(PlayerVFX.Charge, {position = position})
 		EffectRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Radius, SpecialAbility.name..": Radius")
 		local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
 		local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
@@ -78,7 +82,7 @@ function SupernovaEnding()
 	local dmgPosition
 	if Object.IsValid(CurrentChargeUp) then
 		dmgPosition = CurrentChargeUp:GetWorldPosition()
-		World.SpawnAsset(PlayerVFX.Ending, {position = dmgPosition})
+		META_AP().SpawnAsset(PlayerVFX.Ending, {position = dmgPosition})
 		CurrentChargeUp:Destroy()
 		print('Destroyed ChargeUP vfx')
 	else
@@ -135,7 +139,7 @@ function OnPlayerDied(player, _)
 		CurrentChargeUp:Destroy()
 	end
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
@@ -145,7 +149,7 @@ function OnPlayerRespawn(player)
 		CurrentChargeUp:Destroy()
 	end
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
@@ -153,7 +157,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility == PrimaryAbility then
@@ -166,7 +170,7 @@ function OnEquip(equipment, player)
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().HEALER)
 	
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

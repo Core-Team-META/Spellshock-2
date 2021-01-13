@@ -7,7 +7,7 @@ local function META_AP()
 end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
-local ABILITY = script.parent
+local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local DEFAULT_DamageAmount = script:GetCustomProperty("Damage")
@@ -54,7 +54,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
         
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
-		World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+		META_AP().SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
     end
 end
 

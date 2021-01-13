@@ -23,7 +23,7 @@ Note: On ability that you want to ignore chaining, set a bool custom property "I
 --]]
 
 -- Internal custom properties
-local EQUIPMENT = script:FindAncestorByType('Equipment')
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 if not EQUIPMENT:IsA('Equipment') then
     error(script.name .. " should be part of Equipment object hierarchy.")
 end

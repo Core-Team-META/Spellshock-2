@@ -17,10 +17,18 @@ local isPlacing = false
 local DamageAmount = 30
 local DamageRadius = 600
 
+local function META_AP()
+	return _G["Meta.Ability.Progression"]
+end
+
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", bool)
+end
+
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -41,7 +49,7 @@ function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -53,7 +61,7 @@ function Teleport(thisPlayer, position, rotation)
 		
 		isPlacing = true
 		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
-        World.SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
+        META_AP().SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
         
         local enemiesInRange = Game.FindPlayersInSphere(thisPlayer:GetWorldPosition(), DamageRadius, {ignoreDead = true, ignoreTeams = thisPlayer.team})
         --CoreDebug.DrawSphere(thisPlayer:GetWorldPosition(), DamageRadius, {duration = 5})
@@ -80,21 +88,21 @@ end
 
 function OnPlayerDied(player, _)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnEquip(equipment, player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, Teleport))

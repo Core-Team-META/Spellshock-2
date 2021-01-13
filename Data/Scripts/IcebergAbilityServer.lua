@@ -58,7 +58,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local spawnPosition = thisAbility.owner:GetWorldPosition()
 	spawnPosition.z = spawnPosition.z - 50
 	local attachmentTemplate = PlayerVFX.Attachment
-	CurrentIceCube = World.SpawnAsset(attachmentTemplate,  {position = spawnPosition})
+	CurrentIceCube = META_AP().SpawnAsset(attachmentTemplate,  {position = spawnPosition})
 
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
@@ -90,7 +90,7 @@ function BreakIceCube(player)
 		
 	-- Spawn break vfx
 	local breakTemplate = PlayerVFX.Break
-	World.SpawnAsset(breakTemplate,  {position = player:GetWorldPosition()})
+	META_AP().SpawnAsset(breakTemplate,  {position = player:GetWorldPosition()})
 
 	-- Destroy attached iceberg
 	if CurrentIceCube and Object.IsValid(CurrentIceCube) then

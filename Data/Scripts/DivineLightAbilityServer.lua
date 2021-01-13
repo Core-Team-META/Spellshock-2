@@ -25,7 +25,7 @@ function AddImpulseToPlayer(player)
 end
 
 function OnAbilityExecute(thisAbility)
-	local newObject = World.SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
+	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
 	
 	local StunRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_StunRadius, Ability.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), StunRadius, {ignoreTeams = Ability.owner.team})

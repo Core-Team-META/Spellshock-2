@@ -20,7 +20,6 @@
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
-        ChildIds: 3186470043807040376
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -45,6 +44,14 @@
             Name: "cs:ClassID"
             Int: 1
           }
+          Overrides {
+            Name: "cs:E_isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:E_isPreviewing:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -56,7 +63,7 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SubObjectId: 3186470043807040376
+            SelfId: 841534158063459245
           }
         }
       }
@@ -77,6 +84,7 @@
         ParentId: 7855160156328725233
         ChildIds: 3189361155379003121
         ChildIds: 13702976538736563756
+        ChildIds: 5594691899314113372
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -221,6 +229,58 @@
           Overrides {
             Name: "cs:BindingName"
             String: "E"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 5594691899314113372
+        Name: "ShieldDashAbilityServer"
+        Transform {
+          Location {
+            Z: -55
+          }
+          Rotation {
+            Yaw: 89.9999542
+          }
+          Scale {
+          }
+        }
+        ParentId: 18389002564042511101
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 15328715113681216029
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 14809710803316002615
+            }
+          }
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+              SubObjectId: 274493358176543512
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
           }
         }
         Collidable_v2 {
@@ -813,6 +873,14 @@
           }
         }
         ParentId: 1059382485272021003
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -851,15 +919,21 @@
             }
           }
           Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Set object to attach to player on equip event."
-          }
-          Overrides {
             Name: "cs:LocalPosition"
             Vector {
               X: 100
               Z: 150
             }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
+          }
+          Overrides {
+            Name: "cs:Object:tooltip"
+            String: "Set object to attach to player on equip event."
           }
         }
         Collidable_v2 {
@@ -892,6 +966,14 @@
           }
         }
         ParentId: 1059382485272021003
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -956,6 +1038,12 @@
             Name: "cs:AbilityMod"
             String: "mod1"
           }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1001,6 +1089,12 @@
           Overrides {
             Name: "cs:BlockPercentage"
             Float: 0.1
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
           }
         }
         Collidable_v2 {
@@ -1144,6 +1238,10 @@
             ObjectReference {
               SubObjectId: 13702976538736563756
             }
+          }
+          Overrides {
+            Name: "cs:PreviewString"
+            String: "E_isPreviewing"
           }
         }
         Collidable_v2 {
@@ -1492,6 +1590,12 @@
               Id: 10354475835429315773
             }
           }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 13709554481697835406
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1679,7 +1783,7 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 2523905926295798748
+              SubObjectId: 5594691899314113372
             }
           }
           Overrides {
@@ -2591,43 +2695,6 @@
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-        }
-      }
-      Objects {
-        Id: 3186470043807040376
-        Name: "Pickup Trigger"
-        Transform {
-          Location {
-            Z: 50
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1.89999986
-          }
-        }
-        ParentId: 7855160156328725233
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          Interactable: true
-          InteractionLabel: "Tank"
           TeamSettings {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true

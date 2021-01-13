@@ -32,6 +32,11 @@ local CancelKeys = {
 	ability_secondary = true
 }
 
+
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("isInvisible", bool)
+end
+
 function Attack()
 	if not Object.IsValid(Ability) or not Ability.owner then return end
 	
@@ -81,25 +86,25 @@ end
 
 function OnAbilityExecute(thisAbility)
 	WeaponAbility.isEnabled = false
-	World.SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
+	META_AP().SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
 	Ability.serverUserData.OriginalStance = Ability.owner.animationStance
 	Ability.owner.animationStance = "unarmed_sit_chair_upright"
 	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, Ability.name..": Speed Boost")
 	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_Duration, Ability.name..": Duration")
-	script:SetNetworkedCustomProperty("isInvisible", isInvisible)
+	SetNetworkProperty(isInvisible)
 end
 
 function DisableInvisility()
 	if isInvisible then
 		print("Disable Invis")
 		Ability.owner.animationStance = Ability.serverUserData.OriginalStance
-		World.SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
+		META_AP().SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
 		Ability.owner:SetVisibility(true)
 		isInvisible = false
 		Ability.owner.maxWalkSpeed = OriginalWalkSpeed
-		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
+		SetNetworkProperty(isInvisible)
 		WeaponAbility.isEnabled = true
 	end
 end
@@ -114,7 +119,7 @@ function Client_VFX_Failed(thisPlayer)
 		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
 		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
 		Storage.SetPlayerData(thisPlayer, PlayerStorage)
-		script:SetNetworkedCustomProperty("CostumeTemplate", PlayerStorage.VFX[vfxKey])
+		SetNetworkProperty(PlayerStorage.VFX[vfxKey])
 	end
 end
 
@@ -143,7 +148,7 @@ function OnUnequip(thisEquipment, player)
 	player:SetVisibility(true)
 	isInvisible = false
 	if Object.IsValid(script) then
-		script:SetNetworkedCustomProperty("isInvisible", isInvisible)
+		SetNetworkProperty(isInvisible)
 	end
 	
 	for _, listener in ipairs(EventListeners) do

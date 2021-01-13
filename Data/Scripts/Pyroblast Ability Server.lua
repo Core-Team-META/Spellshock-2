@@ -26,7 +26,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 	Reset(false)
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
 	
-	World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition()})
+	META_AP().SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition()})
 
 	-- Damage enemies
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
@@ -68,7 +68,7 @@ function OnSpecialAbilityExecute(thisAbility)
 		endPoint = hitResult:GetImpactPosition()
 	end	
 	
-	CurrentTarget = World.SpawnAsset(PlayerVFX.Target, {position = endPoint})
+	CurrentTarget = META_AP().SpawnAsset(PlayerVFX.Target, {position = endPoint})
 
 	-- Spawn a new projectile and set its homingTarget to CurrentTarget
 	local playerPosition = thisAbility.owner:GetWorldPosition()
@@ -80,7 +80,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
 	
-	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
+	CurrentProjectile = META_AP().ProjectileSpawn(PlayerVFX.Projectile, spawnPosition, directionVector)
 	local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 	
 	CurrentProjectile.owner = thisAbility.owner

@@ -16,10 +16,10 @@
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 10065611523314269826
         ChildIds: 17566732273178486209
         ChildIds: 14081494435077508625
         ChildIds: 4708996743668767698
-        ChildIds: 8885717294518384202
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -44,6 +44,30 @@
             Name: "cs:ClassID"
             Int: 4
           }
+          Overrides {
+            Name: "cs:E_isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:S_isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:T_isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:E_isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:S_isPreviewing:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:T_isPreviewing:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -55,7 +79,387 @@
         Equipment {
           SocketName: "right_prop"
           PickupTrigger {
-            SubObjectId: 8885717294518384202
+            SelfId: 841534158063459245
+          }
+        }
+      }
+      Objects {
+        Id: 10065611523314269826
+        Name: "StaticContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1551665899132109167
+        ChildIds: 11140001443662444640
+        ChildIds: 15232445570186328109
+        ChildIds: 5311961891427463671
+        ChildIds: 7712793717427709362
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 11140001443662444640
+        Name: "Supernova Ability Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 10065611523314269826
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 2000
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 9970096027225536454
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Supernova"
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod3"
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 3392388590054420013
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 15232445570186328109
+        Name: "HealingCystalAbilityServer"
+        Transform {
+          Location {
+            X: -747.460938
+            Y: -197.539063
+            Z: 47.2485352
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 10065611523314269826
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 4954212764507547815
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Place Crystal"
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:DelayBetweenHeals"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 500
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod5"
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 5311961891427463671
+        Name: "TeleportAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 10065611523314269826
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 12132236651039923972
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 500164608151091677
+            }
+          }
+          Overrides {
+            Name: "cs:TeleportFX"
+            AssetReference {
+              Id: 9636751773392762976
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Healer Teleport"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "SHIFT"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:isPreviewing:isrep"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 7712793717427709362
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: -202.230469
+            Y: 775.152344
+            Z: -177.750977
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 0.999999821
+            Y: 0.999999821
+            Z: 1
+          }
+        }
+        ParentId: 10065611523314269826
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
           }
         }
       }
@@ -77,6 +481,13 @@
         ChildIds: 3046495783826538503
         ChildIds: 1655075835825390059
         ChildIds: 11544957051384721582
+        ChildIds: 993888919830758102
+        ChildIds: 8104286553099354162
+        ChildIds: 1175861072708434832
+        ChildIds: 9559338655160658381
+        ChildIds: 14112328780250061073
+        ChildIds: 16559630345007010090
+        ChildIds: 1004186579194125424
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -352,6 +763,529 @@
         }
       }
       Objects {
+        Id: 993888919830758102
+        Name: "SunBeamAbility"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 5850532589229611122
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:Speed"
+            Int: 2000
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 4000
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 30
+              Y: 50
+            }
+          }
+          Overrides {
+            Name: "cs:HealRange"
+            Vector2 {
+              X: 30
+              Y: 40
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3643779854759022285
+          }
+        }
+      }
+      Objects {
+        Id: 8104286553099354162
+        Name: "HealingCystalAbilityServer"
+        Transform {
+          Location {
+            X: -747.460938
+            Y: -197.539063
+            Z: 47.2485352
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 4954212764507547815
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Place Crystal"
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:DelayBetweenHeals"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 500
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod5"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12680176866972182826
+          }
+        }
+      }
+      Objects {
+        Id: 1175861072708434832
+        Name: "LightWaveAbilityServer"
+        Transform {
+          Location {
+            X: -747.460938
+            Y: -197.539063
+            Z: 47.2485352
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 12861631058086445073
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:VFX_Template"
+            AssetReference {
+              Id: 9583554867605228300
+            }
+          }
+          Overrides {
+            Name: "cs:StunRadius"
+            Int: 700
+          }
+          Overrides {
+            Name: "cs:ImpulseAmount"
+            Int: 150000
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10907208932040528762
+          }
+        }
+      }
+      Objects {
+        Id: 9559338655160658381
+        Name: "Supernova Ability Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:HealAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 2000
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 9970096027225536454
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Supernova"
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 3000
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod4"
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod3"
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 3392388590054420013
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15762428864747628620
+          }
+        }
+      }
+      Objects {
+        Id: 14112328780250061073
+        Name: "DestructibleWeaponServer"
+        Transform {
+          Location {
+            X: 18265.5566
+            Y: 19703.8184
+            Z: 7270.2793
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 1
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DamageToObjects"
+            Int: 129
+          }
+          Overrides {
+            Name: "cs:DamageToPlayers"
+            Int: 20
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 18154052875178810801
+          }
+        }
+      }
+      Objects {
+        Id: 16559630345007010090
+        Name: "TeleportAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 12132236651039923972
+            }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:PrimerObjectTemplate"
+            AssetReference {
+              Id: 500164608151091677
+            }
+          }
+          Overrides {
+            Name: "cs:TeleportFX"
+            AssetReference {
+              Id: 9636751773392762976
+            }
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Healer Teleport"
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 2500
+          }
+          Overrides {
+            Name: "cs:isPreviewing"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "SHIFT"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13911884867529172379
+          }
+        }
+      }
+      Objects {
+        Id: 1004186579194125424
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: -202.230469
+            Y: 775.152344
+            Z: -177.750977
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 0.999999821
+            Y: 0.999999821
+            Z: 1
+          }
+        }
+        ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6703712560572080575
+          }
+        }
+      }
+      Objects {
         Id: 14081494435077508625
         Name: "ClientContext"
         Transform {
@@ -370,6 +1304,9 @@
         ChildIds: 15031445199558909656
         ChildIds: 11626540599974007922
         ChildIds: 2336331780423953990
+        ChildIds: 8357201899851611185
+        ChildIds: 2176729734375800191
+        ChildIds: 18116069161725040159
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -501,8 +1438,12 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 8104286553099354162
+              SubObjectId: 15232445570186328109
             }
+          }
+          Overrides {
+            Name: "cs:PreviewString"
+            String: "E_isPreviewing"
           }
         }
         Collidable_v2 {
@@ -536,8 +1477,12 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 9559338655160658381
+              SubObjectId: 11140001443662444640
             }
+          }
+          Overrides {
+            Name: "cs:PreviewString"
+            String: "T_isPreviewing"
           }
         }
         Collidable_v2 {
@@ -568,8 +1513,12 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 16559630345007010090
+              SubObjectId: 5311961891427463671
             }
+          }
+          Overrides {
+            Name: "cs:PreviewString"
+            String: "S_isPreviewing"
           }
         }
         Collidable_v2 {
@@ -845,6 +1794,160 @@
         }
       }
       Objects {
+        Id: 8357201899851611185
+        Name: "WeaponAimClient"
+        Transform {
+          Location {
+            X: -202.230469
+            Y: 775.15625
+            Z: -177.750977
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ServerScript"
+            ObjectReference {
+              SubObjectId: 7712793717427709362
+            }
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11130398207020823026
+          }
+        }
+      }
+      Objects {
+        Id: 2176729734375800191
+        Name: "SetAbilityIconClientOptimized"
+        Transform {
+          Location {
+            Z: 43.4433594
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 11777958130908294853
+            }
+          }
+          Overrides {
+            Name: "cs:Color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 18116069161725040159
+        Name: "SetAbilityIconClientOptimized"
+        Transform {
+          Location {
+            X: 383.373047
+            Y: -1397.53516
+            Z: 49.2802734
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999821
+            Y: 0.999999821
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 221416856427887844
+            }
+          }
+          Overrides {
+            Name: "cs:API"
+            AssetReference {
+              Id: 7445855579671141283
+            }
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 3134265528574068078
+            }
+          }
+          Overrides {
+            Name: "cs:Color"
+            Color {
+              R: 0.87
+              G: 0.380264908
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
         Id: 4708996743668767698
         Name: "Load Out"
         Transform {
@@ -894,7 +1997,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 993888919830758102
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -953,74 +2055,6 @@
         }
       }
       Objects {
-        Id: 993888919830758102
-        Name: "SunBeamAbility"
-        Transform {
-          Location {
-            Z: -43.4432373
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 5850532589229611122
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 5850532589229611122
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:Speed"
-            Int: 2000
-          }
-          Overrides {
-            Name: "cs:Range"
-            Int: 4000
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 30
-              Y: 50
-            }
-          }
-          Overrides {
-            Name: "cs:HealRange"
-            Vector2 {
-              X: 30
-              Y: 40
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3643779854759022285
-          }
-        }
-      }
-      Objects {
         Id: 4954212764507547815
         Name: "Healing Crystal"
         Transform {
@@ -1035,7 +2069,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 8104286553099354162
         UnregisteredParameters {
           Overrides {
             Name: "cs:Binding"
@@ -1096,105 +2129,6 @@
         }
       }
       Objects {
-        Id: 8104286553099354162
-        Name: "HealingCystalAbilityServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 4954212764507547815
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 4954212764507547815
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Place Crystal"
-          }
-          Overrides {
-            Name: "cs:HealAmount"
-            Int: 3
-          }
-          Overrides {
-            Name: "cs:DelayBetweenHeals"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 3000
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HEALER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "E"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod4"
-          }
-          Overrides {
-            Name: "cs:RadiusMod"
-            String: "mod5"
-          }
-          Overrides {
-            Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12680176866972182826
-          }
-        }
-      }
-      Objects {
         Id: 12861631058086445073
         Name: "Divine Light"
         Transform {
@@ -1209,7 +2143,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 1175861072708434832
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1264,65 +2197,6 @@
         }
       }
       Objects {
-        Id: 1175861072708434832
-        Name: "LightWaveAbilityServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 12861631058086445073
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 12861631058086445073
-            }
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:VFX_Template"
-            AssetReference {
-              Id: 9583554867605228300
-            }
-          }
-          Overrides {
-            Name: "cs:StunRadius"
-            Int: 700
-          }
-          Overrides {
-            Name: "cs:ImpulseAmount"
-            Int: 150000
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10907208932040528762
-          }
-        }
-      }
-      Objects {
         Id: 9970096027225536454
         Name: "Supernova"
         Transform {
@@ -1334,7 +2208,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 9559338655160658381
         UnregisteredParameters {
           Overrides {
             Name: "cs:Binding"
@@ -1396,113 +2269,6 @@
         }
       }
       Objects {
-        Id: 9559338655160658381
-        Name: "Supernova Ability Server"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 9970096027225536454
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:HealAmount"
-            Int: 50
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 50
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 2000
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 9970096027225536454
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Supernova"
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 3000
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HEALER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "T"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod4"
-          }
-          Overrides {
-            Name: "cs:RadiusMod"
-            String: "mod3"
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 3392388590054420013
-            }
-          }
-          Overrides {
-            Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 15762428864747628620
-          }
-        }
-      }
-      Objects {
         Id: 12132236651039923972
         Name: "Teleport"
         Transform {
@@ -1514,7 +2280,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 16559630345007010090
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsAbilityChain"
@@ -1578,91 +2343,6 @@
         }
       }
       Objects {
-        Id: 16559630345007010090
-        Name: "TeleportAbilityServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 12132236651039923972
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 12132236651039923972
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 500164608151091677
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Healer Teleport"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HEALER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "SHIFT"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
-          }
-          Overrides {
-            Name: "cs:isPreviewing:isrep"
-            Bool: true
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 13911884867529172379
-          }
-        }
-      }
-      Objects {
         Id: 18270922159998676275
         Name: "Healer Staff"
         Transform {
@@ -1678,9 +2358,6 @@
           }
         }
         ParentId: 4708996743668767698
-        ChildIds: 1004186579194125424
-        ChildIds: 14112328780250061073
-        ChildIds: 13141893348608307507
         ChildIds: 4620336145958381494
         ChildIds: 221416856427887844
         UnregisteredParameters {
@@ -1776,290 +2453,6 @@
             WeaponTrajectoryMode {
               Value: "mc:eweapontrajectorymode:muzzletolooktarget"
             }
-          }
-        }
-      }
-      Objects {
-        Id: 1004186579194125424
-        Name: "WeaponAimServer"
-        Transform {
-          Location {
-            X: -202.230469
-            Y: 775.154297
-            Z: -221.194336
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 0.999999881
-            Y: 0.999999881
-            Z: 1
-          }
-        }
-        ParentId: 18270922159998676275
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:AimBinding"
-            String: "ability_secondary"
-          }
-          Overrides {
-            Name: "cs:AimWalkSpeedPercentage"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:AimActiveStance"
-            String: "unarmed_carry_object_heavy"
-          }
-          Overrides {
-            Name: "cs:AimZoomDistance"
-            Float: 150
-          }
-          Overrides {
-            Name: "cs:SpreadZoom"
-            Float: -2
-          }
-          Overrides {
-            Name: "cs:ZoomSpeed"
-            Float: 1
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6703712560572080575
-          }
-        }
-      }
-      Objects {
-        Id: 14112328780250061073
-        Name: "DestructibleWeaponServer"
-        Transform {
-          Location {
-            X: 18265.5586
-            Y: 19703.8203
-            Z: 7226.83594
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 18270922159998676275
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:DamageToObjects"
-            Int: 129
-          }
-          Overrides {
-            Name: "cs:DamageToPlayers"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "LMB"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 18154052875178810801
-          }
-        }
-      }
-      Objects {
-        Id: 13141893348608307507
-        Name: "Client Context"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18270922159998676275
-        ChildIds: 8357201899851611185
-        ChildIds: 2176729734375800191
-        ChildIds: 18116069161725040159
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 8357201899851611185
-        Name: "WeaponAimClient"
-        Transform {
-          Location {
-            X: -202.22998
-            Y: 775.155151
-            Z: -221.19458
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 1
-          }
-        }
-        ParentId: 13141893348608307507
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 1004186579194125424
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11130398207020823026
-          }
-        }
-      }
-      Objects {
-        Id: 2176729734375800191
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13141893348608307507
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 11777958130908294853
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 18116069161725040159
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-            X: 383.373932
-            Y: -1397.53687
-            Z: 5.83682251
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.999999881
-            Y: 0.999999881
-            Z: 1
-          }
-        }
-        ParentId: 13141893348608307507
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 221416856427887844
-            }
-          }
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 3134265528574068078
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 0.87
-              G: 0.380264908
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
           }
         }
       }
@@ -2191,43 +2584,6 @@
           }
         }
       }
-      Objects {
-        Id: 8885717294518384202
-        Name: "Pickup Trigger"
-        Transform {
-          Location {
-            Z: 50
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1.89999986
-          }
-        }
-        ParentId: 1551665899132109167
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          Interactable: true
-          InteractionLabel: "Healer"
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-        }
-      }
     }
     Assets {
       Id: 2813404828707589716
@@ -2284,15 +2640,6 @@
       }
     }
     Assets {
-      Id: 17824683867460661746
-      Name: "Fantasy Staff 013"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Staff_013"
-      }
-    }
-    Assets {
       Id: 11777958130908294853
       Name: "Fantasy Ability Yellow 001"
       PlatformAssetType: 9
@@ -2308,6 +2655,15 @@
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "Icon_Target"
+      }
+    }
+    Assets {
+      Id: 17824683867460661746
+      Name: "Fantasy Staff 013"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Staff_013"
       }
     }
     PrimaryAssetId {

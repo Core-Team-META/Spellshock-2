@@ -96,7 +96,7 @@ function DetachCostume(player)
 end
 
 function OnEquip(equipment, player)
-	NetworkPropertyConnection = ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+	NetworkPropertyConnection = Equipment.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
 	if player ~= LOCAL_PLAYER then return end
 	BindingPressedConnection = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 	AttachCostume(player)

@@ -28,6 +28,11 @@ local isEnabled = true
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
+end
+
+
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing 
 	and not isExecuting and not player.isDead and player.isGrounded then
@@ -51,7 +56,7 @@ function OnBindingPressed(player, binding)
 	    isFlying = true
 	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
 
-		local newObject = World.SpawnAsset(PlayerVFX.Launch, {position = player:GetWorldPosition()})
+		local newObject = META_AP().SpawnAsset(PlayerVFX.Launch, {position = player:GetWorldPosition()})
 	
 	    Task.Wait(1)
 	    if not player or not Object.IsValid(player) or player.isDead then return end
@@ -60,7 +65,7 @@ function OnBindingPressed(player, binding)
 	    player:ResetVelocity()
 	   	
 	   	isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		   SetNetworkProperty(isPreviewing)
 		ABILITY.isEnabled = true
 	end
 end
@@ -80,7 +85,7 @@ function OnTargetChosen(player, targetPos)
 	if player == Equipment.owner then
 	    Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		ABILITY.isEnabled = false
 		
 		-- reactive other abilities
@@ -132,7 +137,7 @@ function OnTargetChosen(player, targetPos)
 	    player.gravityScale = DefaultPlayerSetttings.gravityScale
 	    isFlying = false
 		
-		local newObject = World.SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
+		local newObject = META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
 	
 	    -- Stun / deal damage / check radius etcs
 	    DamageInArea(player:GetWorldPosition(), player)
@@ -211,7 +216,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == ABILITY or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		ABILITY.isEnabled = false
 		isEnabled = mode
 		if thisAbility == ABILITY then
@@ -227,7 +232,7 @@ end
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isExecuting = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, OnTargetChosen))
 	table.insert(EventListeners, ABILITY.castEvent:Connect(OnSpecialAbilityCast))

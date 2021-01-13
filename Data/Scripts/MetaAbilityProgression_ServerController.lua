@@ -302,12 +302,21 @@ function API.GetAbilityMod(player, binding, mod, defaultValue, source)
 end
 
 --@param string template => MUID
---@param table optionalTable 
+--@param table optionalTable
 --@return newObject object
 function API.SpawnAsset(template, optionalTable)
     local resultTable = {}
     Events.Broadcast("META_AP.Spawn", template, optionalTable, resultTable)
     Task.Wait() --Wait (1) Server Tick to make sure the objects been spawned
+    local newObject = resultTable[1]
+    resultTable = nil
+    return newObject
+end
+
+function API.ProjectileSpawn(projectileTemplate, worldPosition, forwardVector, resultTable)
+    local resultTable = {}
+    Events.Broadcast("META_AP.PSpawn", projectileTemplate, worldPosition, forwardVector, resultTable)
+--Wait (1) Server Tick to make sure the objects been spawned
     local newObject = resultTable[1]
     resultTable = nil
     return newObject
