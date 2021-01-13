@@ -17,6 +17,7 @@
         }
         ParentId: 4781671109827199097
         ChildIds: 4347260479540699765
+        ChildIds: 18440920329637206996
         ChildIds: 17174007983185873655
         ChildIds: 11330446735406457755
         Lifespan: 2.5
@@ -97,6 +98,56 @@
         }
       }
       Objects {
+        Id: 18440920329637206996
+        Name: "Explosion Kit Afterglow VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 2363486019203186635
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784322
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Particle Scale"
+            Float: 2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 15468302836055406992
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
         Id: 17174007983185873655
         Name: "Sci-fi Barrier Energy Shield Large Impact Startup 03 SFX"
         Transform {
@@ -127,8 +178,8 @@
           AutoPlay: true
           Pitch: -100
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -161,8 +212,8 @@
           AutoPlay: true
           Pitch: -100
           Volume: 0.5
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -175,6 +226,15 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_plasma_impact"
+      }
+    }
+    Assets {
+      Id: 15468302836055406992
+      Name: "Explosion Kit Afterglow VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explokit_afterglow"
       }
     }
     Assets {

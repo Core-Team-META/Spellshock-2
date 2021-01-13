@@ -905,7 +905,7 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Preview"
       AssetReference {
-        Id: 15136798516269130110
+        Id: 3392388590054420013
       }
     }
     Overrides {
@@ -1198,7 +1198,7 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Preview"
       AssetReference {
-        Id: 16431236309358610064
+        Id: 18349665107832834494
       }
     }
     Overrides {
@@ -1515,6 +1515,12 @@ Objects {
         Id: 4288486983837307165
       }
     }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 3392388590054420013
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1770,6 +1776,12 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 14875131962515328614
+      }
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 18349665107832834494
       }
     }
   }
@@ -2090,6 +2102,12 @@ Objects {
         Id: 12147802266133948339
       }
     }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 3392388590054420013
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2367,6 +2385,12 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 16021815535294018144
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 18349665107832834494
       }
     }
   }

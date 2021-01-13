@@ -78,7 +78,6 @@ function ApplyEquipmentPlayerProperties(player)
 
         }
         
-		print("HERE")
         ABES.SetDefaultSettings(player, weaponSettings)
     end
 end

@@ -98,7 +98,6 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -154,7 +153,6 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -383,12 +381,10 @@
             Id: 10275684307032384058
           }
           AutoPlay: true
-          Pitch: 1029.06738
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           FadeInTime: 0.5
-          IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }

@@ -7,7 +7,7 @@
       RootId: 17666739317002180979
       Objects {
         Id: 17666739317002180979
-        Name: "Elf ExcavatePickup"
+        Name: "Tank Elf Boulder Throw Pickup Basic"
         Transform {
           Scale {
             X: 1
@@ -19,6 +19,7 @@
         ChildIds: 10401052584630691944
         ChildIds: 6476730550929530250
         ChildIds: 8220988803279777573
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"

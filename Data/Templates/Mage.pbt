@@ -1069,24 +1069,6 @@
             }
           }
           Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 1490966563412810811
-            }
-          }
-          Overrides {
-            Name: "cs:OrcObjectTemplate"
-            AssetReference {
-              Id: 7827469757850190083
-            }
-          }
-          Overrides {
-            Name: "cs:ElfObjectTemplate"
-            AssetReference {
-              Id: 3760287097131009270
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Tornado"
           }
