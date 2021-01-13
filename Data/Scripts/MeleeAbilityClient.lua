@@ -118,7 +118,7 @@ ABILITY.executeEvent:Connect(OnExecute)
 ABILITY.recoveryEvent:Connect(OnRecovery)
 
 function OnMeleeImpact(abilityId, pos, rot)
-	if PLAYER_IMPACT_VFX and abilityId == ABILITY.id then
+	if PLAYER_IMPACT_VFX and Object.IsValid(ABILITY) and abilityId == ABILITY.id then
         World.SpawnAsset(PLAYER_IMPACT_VFX, {position = pos, rotation = rot})
     end
 end

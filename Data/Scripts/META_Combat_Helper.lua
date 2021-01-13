@@ -10,9 +10,23 @@
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+
+local playerTimer = {}
+local playerDead = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+
+local function ShouldTrack(player)
+    local timeNow = time()
+    if playerTimer[player.id] ~= nil and (timeNow - playerTimer[player.id]) < 25 then
+        playerDead[player.id] = true
+        return false
+    end
+    playerTimer[player.id] = timeNow
+    playerDead[player.id] = false
+    return true
+end
 
 local function UpdateKillStreak(attackData)
     local source = attackData.source
@@ -26,6 +40,7 @@ local function UpdateKillStreak(attackData)
 end
 
 local function UpdateCombatAmmount(attackData)
+    local target = attackData.object
     local source = attackData.source
     local ammount = attackData.damage.amount
     if ammount > 0 then
@@ -37,15 +52,14 @@ local function UpdateCombatAmmount(attackData)
 end
 
 local function UpdateUltimateKillAmmount(attackData)
-    if attackData.tag and attackData.tag.id then
+    if attackData.tags and attackData.tags.id then
         local source = attackData.source
-        local tag = attackData.tag.id
+        local tag = attackData.tags.id
         local bind = UTIL.StringSplit("_", tag)
         if bind[2] == "T" then
-            source:AddResource(
-                CONST.COMBAT_STATS.ULTIIMATE_KILL,
-                source:GetResource((CONST.COMBAT_STATS.ULTIIMATE_KILL)) + 1
-            )
+            local current = source:GetResource(CONST.COMBAT_STATS.ULTIMATE_KILL)
+            current = current + 1
+            source:SetResource(CONST.COMBAT_STATS.ULTIMATE_KILL, current)
         end
     end
 end
@@ -69,6 +83,8 @@ local function ResetPlayers()
         player.kills = 0
         player.deaths = 0
     end
+    playerTimer = {}
+    playerDead = {}
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -86,18 +102,20 @@ end
 
 --#TODO Will need to check Gamestate for round in progress
 function OnDamageTaken(attackData)
-    if attackData.source then
+    if attackData.source and not playerDead[attackData.object.id] then
         UpdateCombatAmmount(attackData)
-    end
-    if attackData.object and attackData.object:IsA("Player") then
-        attackData.object:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
     end
 end
 
 function OnDied(attackData)
-    if attackData.source then
-        UpdateKillStreak(attackData)
-        UpdateUltimateKillAmmount(attackData)
+    local target = attackData.object
+    local source = attackData.source
+    if target and ShouldTrack(target) then
+        target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
+        if source then
+            UpdateKillStreak(attackData)
+            UpdateUltimateKillAmmount(attackData)
+        end
     end
 end
 
@@ -126,14 +144,4 @@ Events.Connect("GameStateChanged", OnGameStateChanged)
 		tags = {id = "StatusEffect"}
     }
     
-    Kills -- Done
-Deaths -- Done
-Ultimate Kills -- 
-Number of Capture points they finished capping.
-Amount of points spent capturing
-Amount of Damage --Done
-Amount of Healing --Done
-Biggest Killstreak --Done
-    
-    
-    ]]
+]] --
