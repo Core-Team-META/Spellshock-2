@@ -1521,6 +1521,12 @@ Objects {
         Id: 3392388590054420013
       }
     }
+    Overrides {
+      Name: "cs:02_Leap_Placement"
+      AssetReference {
+        Id: 1213996206729767403
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1782,6 +1788,12 @@ Objects {
       Name: "cs:01_RainofArrows_Preview"
       AssetReference {
         Id: 18349665107832834494
+      }
+    }
+    Overrides {
+      Name: "cs:02_Leap_Placement"
+      AssetReference {
+        Id: 3882087902667678297
       }
     }
   }
