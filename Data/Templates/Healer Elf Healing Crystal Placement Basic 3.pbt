@@ -131,7 +131,6 @@
         }
         ParentId: 8933825174897608060
         ChildIds: 5869239009867362647
-        ChildIds: 13452349173997631318
         ChildIds: 1033726762501849077
         ChildIds: 10913833422200768143
         ChildIds: 13134400980599720504
@@ -208,77 +207,8 @@
             Id: 3816918904715199575
           }
           TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 13452349173997631318
-        Name: "Beam Down Teleport VFX"
-        Transform {
-          Location {
-            Z: 2.53032303
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17542189731085056780
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Spiral Color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Spiral Ground Element Color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Teleport Duration"
-            Float: 0.8
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 7177062183354186388
-          }
-          TeamSettings {
+            UseTeamColor: true
+            TeamInt: 2
           }
           Vfx {
             AutoPlay: true
@@ -325,6 +255,8 @@
             Id: 8747548866599712479
           }
           TeamSettings {
+            UseTeamColor: true
+            TeamInt: 2
           }
           Vfx {
             AutoPlay: true
@@ -359,14 +291,6 @@
           Overrides {
             Name: "bp:Emissive Boost"
             Float: 50
-          }
-          Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
           }
           Overrides {
             Name: "bp:Count"
@@ -410,6 +334,24 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.932185411
+              B: 0.36
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Color"
+            Color {
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -449,15 +391,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 925672138032122417
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              Id: 14260814583452507381
             }
           }
         }
@@ -472,6 +406,8 @@
             Id: 6747614045051753376
           }
           Teams {
+            UseTeamColor: true
+            TeamInt: 2
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
@@ -571,14 +507,6 @@
         ParentId: 17542189731085056780
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
             Name: "bp:Life Max"
             Float: 2
           }
@@ -628,6 +556,8 @@
             Id: 14678969413949532768
           }
           TeamSettings {
+            UseTeamColor: true
+            TeamInt: 2
           }
           Vfx {
           }
@@ -947,16 +877,18 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1011,8 +943,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -1025,8 +958,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.61
-              B: 0.452450484
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1170,16 +1104,18 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1234,8 +1170,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -1248,8 +1185,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.61
-              B: 0.452450484
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1393,16 +1331,18 @@
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1457,8 +1397,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -1471,8 +1412,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.61
-              B: 0.452450484
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -1502,15 +1444,6 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Treasure_Rays"
-      }
-    }
-    Assets {
-      Id: 7177062183354186388
-      Name: "Beam Down Teleport VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Teleporter_BeamDown"
       }
     }
     Assets {

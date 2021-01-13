@@ -131,9 +131,8 @@
         }
         ParentId: 1502813998929782707
         ChildIds: 3688162482502138370
-        ChildIds: 5018408595151542392
         ChildIds: 15426208375884682300
-        ChildIds: 4341657510442435374
+        ChildIds: 15520883553174264626
         ChildIds: 9112381155069342487
         ChildIds: 14057347176863609433
         ChildIds: 7511452639707942933
@@ -197,14 +196,6 @@
             }
           }
           Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
             Name: "bp:Enable Burst Sparkles"
             Bool: false
           }
@@ -224,89 +215,8 @@
             Id: 3816918904715199575
           }
           TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 5018408595151542392
-        Name: "Beam Down Teleport VFX"
-        Transform {
-          Location {
-            Z: 2.53032303
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3773405799134010835
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Spiral Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Spiral Ground Element Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Teleport Duration"
-            Float: 0.8
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Enable Central Flare Element"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 7177062183354186388
-          }
-          TeamSettings {
+            UseTeamColor: true
+            TeamInt: 1
           }
           Vfx {
             AutoPlay: true
@@ -341,14 +251,6 @@
               A: 1
             }
           }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -361,6 +263,8 @@
             Id: 8747548866599712479
           }
           TeamSettings {
+            UseTeamColor: true
+            TeamInt: 1
           }
           Vfx {
             AutoPlay: true
@@ -368,11 +272,11 @@
         }
       }
       Objects {
-        Id: 4341657510442435374
+        Id: 15520883553174264626
         Name: "Cast Burst Ring VFX"
         Transform {
           Location {
-            Z: -19.2828178
+            Z: -19.2827148
           }
           Rotation {
           }
@@ -395,14 +299,6 @@
           Overrides {
             Name: "bp:Emissive Boost"
             Float: 50
-          }
-          Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              R: 0.721568644
-              G: 0.120261453
-              A: 1
-            }
           }
           Overrides {
             Name: "bp:Count"
@@ -449,8 +345,18 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.721568644
-              G: 0.228496775
+              R: 1
+              G: 0.932185411
+              B: 0.36
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Color"
+            Color {
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -493,15 +399,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7535229294616165836
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.960000038
-              G: 0.208000034
-              A: 0.21100001
+              Id: 14260814583452507381
             }
           }
         }
@@ -516,6 +414,8 @@
             Id: 6747614045051753376
           }
           Teams {
+            UseTeamColor: true
+            TeamInt: 1
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
@@ -615,14 +515,6 @@
         ParentId: 3773405799134010835
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-          Overrides {
             Name: "bp:Life Max"
             Float: 2
           }
@@ -660,14 +552,6 @@
               A: 1
             }
           }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -680,6 +564,8 @@
             Id: 14678969413949532768
           }
           TeamSettings {
+            UseTeamColor: true
+            TeamInt: 1
           }
           Vfx {
           }
@@ -872,8 +758,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -886,9 +773,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.102000006
-              G: 0.0270739011
-              B: 0.0061200005
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -2248,8 +2135,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -2337,8 +2225,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -2351,9 +2240,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.102000006
-              G: 0.0270739011
-              B: 0.0061200005
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -3713,8 +3602,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -3802,8 +3692,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -3816,9 +3707,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.102000006
-              G: 0.0270739011
-              B: 0.0061200005
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -5178,8 +5069,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
+              R: 1
+              G: 0.569602609
+              B: 0.0299999714
               A: 1
             }
           }
@@ -5212,15 +5104,6 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Treasure_Rays"
-      }
-    }
-    Assets {
-      Id: 7177062183354186388
-      Name: "Beam Down Teleport VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Teleporter_BeamDown"
       }
     }
     Assets {
