@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 4347260479540699765
         ChildIds: 18440920329637206996
         ChildIds: 17174007983185873655
@@ -79,6 +79,15 @@
             Name: "bp:Enable Impact Ring"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.837814689
+              B: 0.209999979
+              A: 0.5
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -116,9 +125,10 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              R: 1
+              G: 0.837814689
+              B: 0.209999979
+              A: 0.5
             }
           }
           Overrides {

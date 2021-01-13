@@ -69,15 +69,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 925672138032122417
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784322
-              A: 1
+              Id: 14260814583452507381
             }
           }
         }
@@ -93,6 +85,8 @@
             Id: 13950225922132296555
           }
           Teams {
+            UseTeamColor: true
+            TeamInt: 2
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
@@ -124,15 +118,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 925672138032122417
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.580392182
-              B: 0.360784471
-              A: 0.3
+              Id: 14260814583452507381
             }
           }
         }
@@ -148,6 +134,8 @@
             Id: 13950225922132296555
           }
           Teams {
+            UseTeamColor: true
+            TeamInt: 2
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
@@ -195,30 +183,42 @@
           Overrides {
             Name: "bp:Particle Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
           Overrides {
             Name: "bp:Spiral Ground Element Color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
           Overrides {
             Name: "bp:Emissive Boost"
             Float: 30
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
+              A: 1
+            }
           }
         }
         WantsNetworking: true
@@ -235,6 +235,7 @@
           TeamSettings {
           }
           Vfx {
+            AutoPlay: true
           }
         }
       }
@@ -258,6 +259,7 @@
         ChildIds: 2282560410954992553
         ChildIds: 8628520306110904307
         ChildIds: 12457951114105417960
+        ChildIds: 7979858541820396819
         ChildIds: 3268762473508852598
         WantsNetworking: true
         Collidable_v2 {
@@ -339,6 +341,12 @@
             Name: "cs:Ease3D"
             AssetReference {
               Id: 16050147283496351669
+            }
+          }
+          Overrides {
+            Name: "cs:Burst"
+            ObjectReference {
+              SubObjectId: 7979858541820396819
             }
           }
         }
@@ -451,11 +459,68 @@
           }
           AutoPlay: true
           Pitch: -600
-          Volume: 0.6
+          Volume: 1
           Falloff: 15000
           Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 7979858541820396819
+        Name: "Ground Explosion VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13763941301205530224
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Fireball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 2
+              G: 1.53333342
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 0.98333323
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2839312775702113675
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
         }
       }
       Objects {
@@ -2270,16 +2335,18 @@
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Trim2:color"
             Color {
-              G: 0.580392182
-              B: 0.360784322
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -2331,8 +2398,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.61
-              B: 0.355496764
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -2345,8 +2413,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.61
-              B: 0.452450484
+              R: 1
+              G: 0.837814569
+              B: 0.209999979
               A: 1
             }
           }
@@ -2412,6 +2481,15 @@
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_designer_growl_warning_horn_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 2839312775702113675
+      Name: "Ground Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explosion_ground"
       }
     }
     Assets {

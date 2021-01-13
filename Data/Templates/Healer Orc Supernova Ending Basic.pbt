@@ -79,6 +79,15 @@
             Name: "bp:Enable Impact Ring"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.837814689
+              B: 0.209999979
+              A: 0.5
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -116,9 +125,10 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882609
-              A: 1
+              R: 1
+              G: 0.837814689
+              B: 0.209999979
+              A: 0.5
             }
           }
           Overrides {
