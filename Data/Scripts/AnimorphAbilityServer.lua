@@ -73,7 +73,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				enemy.serverUserData.isAnimorphed = true
 				local costumeTemplate = PlayerVFX.Attachment
 				local newCostume = META_AP().SpawnAsset(costumeTemplate)
-
+				newCostume:SetScale(newCostume:GetScale() * 1.5)
 				local Duration =
 					META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod5", DEFAULT_Duration, ABILITY.name .. ": Duration")
 				newCostume:SetNetworkedCustomProperty("Duration", Duration)
