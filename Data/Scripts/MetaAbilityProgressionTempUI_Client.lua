@@ -1,4 +1,4 @@
-﻿local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+﻿--[[local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 
 local TEST = script:GetCustomProperty("TEST_LevelUpScript"):WaitForObject()
@@ -45,4 +45,4 @@ function OnResourceChanged(player, resName, resAmt)
     
 end
 Events.Connect("META_AP.UpdateTempUI", UpdateUI)
---LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+--LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)]]--
