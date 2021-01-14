@@ -56,6 +56,10 @@
           A: 1
         }
       }
+      Overrides {
+        Name: "u_tiles"
+        Float: 0.7
+      }
     }
     Assets {
       Id: 1512708355930270667
