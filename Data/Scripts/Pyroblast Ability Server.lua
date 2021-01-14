@@ -80,7 +80,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
 	
-	CurrentProjectile = META_AP().ProjectileSpawn(PlayerVFX.Projectile, spawnPosition, directionVector)
+	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
 	local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 	
 	CurrentProjectile.owner = thisAbility.owner
