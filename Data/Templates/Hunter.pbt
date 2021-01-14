@@ -2349,6 +2349,7 @@
             IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
