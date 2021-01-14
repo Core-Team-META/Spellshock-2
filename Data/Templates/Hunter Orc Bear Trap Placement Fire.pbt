@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 6899149900113682347
         ChildIds: 16233959753842595931
         ChildIds: 6507224587799988729
@@ -59,7 +59,6 @@
         ChildIds: 16095403514251379595
         ChildIds: 3139698969274271967
         ChildIds: 13236310715305706688
-        ChildIds: 3205994852852154214
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2315,65 +2314,6 @@
         }
       }
       Objects {
-        Id: 3205994852852154214
-        Name: "Fairy Dot Volume VFX"
-        Transform {
-          Location {
-            Z: 65
-          }
-          Rotation {
-          }
-          Scale {
-            X: 3.10000014
-            Y: 2.8
-            Z: 1
-          }
-        }
-        ParentId: 6899149900113682347
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 0.3
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 2
-          }
-          Overrides {
-            Name: "bp:Camera Depth Fade Length"
-            Float: 3
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.223840982
-              G: 0.52
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6651735499252087003
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
         Id: 16233959753842595931
         Name: "Trigger"
         Transform {
@@ -2544,15 +2484,6 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
-      }
-    }
-    Assets {
-      Id: 6651735499252087003
-      Name: "Fairy Dot Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Swirling_Magic_Column"
       }
     }
     PrimaryAssetId {

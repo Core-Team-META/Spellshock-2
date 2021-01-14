@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 3424168573046142170
         ChildIds: 4350617395674282453
         UnregisteredParameters {
@@ -92,11 +92,12 @@
             }
           }
         }
+        Lifespan: 0.2
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Blueprint {
           BlueprintAsset {
