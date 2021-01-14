@@ -332,7 +332,7 @@ function Tick(deltaTime)
 							timeText.fontSize = uiScale * 50.0
 
 							local effectData = API_SE.STATUS_EFFECT_DEFINITIONS[data.name]
-							iconTemplate.visibility = Visibility.INHERIT
+							--iconTemplate.visibility = Visibility.INHERIT
 							icon:SetColor(effectData.color)
 							icon:SetImage(effectData.icon)
 
