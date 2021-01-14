@@ -40,8 +40,10 @@ function OnAbilityExecute(thisAbility)
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	Task.Wait(1)
-	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name .. ": LifeSpan")
-	CurrentHawk.lifeSpan = Timer + 5
+	if Object.IsValid(Ability) then
+		Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name .. ": LifeSpan")
+		CurrentHawk.lifeSpan = Timer + 5
+	end
 end
 
 function OnPlayerRespawn(player)
@@ -94,7 +96,14 @@ function Tick(deltaTime)
 
 			if DistanceVector.size < 150 then
 				local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
-				API_SE.ApplyStatusEffect(HawkTarget, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+				API_SE.ApplyStatusEffect(
+					HawkTarget,
+					API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+					Ability.owner,
+					status.duration,
+					status.damage,
+					status.multiplier
+				)
 
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 
