@@ -2618,7 +2618,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2629,7 +2629,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -2638,7 +2638,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2649,7 +2649,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2692,7 +2692,7 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2703,7 +2703,7 @@
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
             IsTargetDataUpdated: true
@@ -2712,7 +2712,7 @@
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2723,7 +2723,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
