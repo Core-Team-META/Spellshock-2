@@ -198,17 +198,17 @@ classTable = {
         },
         --Pyroblast
         [CONST.BIND.T] = {
-            -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range
-            [1] = {mod1 = 80, mod2 = 500, mod3 = 3000, mod4 = 0, mod5 = 0},
-            [2] = {mod1 = 90, mod2 = 500, mod3 = 3200, mod4 = 0, mod5 = 0},
-            [3] = {mod1 = 100, mod2 = 500, mod3 = 3400, mod4 = 0, mod5 = 0},
-            [4] = {mod1 = 100, mod2 = 500, mod3 = 3600, mod4 = 0, mod5 = 0},
-            [5] = {mod1 = 100, mod2 = 500, mod3 = 3800, mod4 = 0, mod5 = 0},
-            [6] = {mod1 = 110, mod2 = 500, mod3 = 4000, mod4 = 0, mod5 = 0},
-            [7] = {mod1 = 110, mod2 = 550, mod3 = 4200, mod4 = 0, mod5 = 0},
-            [8] = {mod1 = 115, mod2 = 550, mod3 = 4400, mod4 = 0, mod5 = 0},
-            [9] = {mod1 = 120, mod2 = 550, mod3 = 4600, mod4 = 0, mod5 = 0},
-            [10] = {mod1 = 140, mod2 = 600, mod3 = 5000, mod4 = 0, mod5 = 0}
+            -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range, mod4 = Knockback
+            [1] = {mod1 = 180, mod2 = 800, mod3 = 3000, mod4 = 100000, mod5 = 0},
+            [2] = {mod1 = 190, mod2 = 800, mod3 = 3200, mod4 = 100000, mod5 = 0},
+            [3] = {mod1 = 200, mod2 = 800, mod3 = 3400, mod4 = 100000, mod5 = 0},
+            [4] = {mod1 = 200, mod2 = 800, mod3 = 3600, mod4 = 100000, mod5 = 0},
+            [5] = {mod1 = 200, mod2 = 800, mod3 = 3800, mod4 = 100000, mod5 = 0},
+            [6] = {mod1 = 210, mod2 = 800, mod3 = 4000, mod4 = 100000, mod5 = 0},
+            [7] = {mod1 = 210, mod2 = 850, mod3 = 4200, mod4 = 100000, mod5 = 0},
+            [8] = {mod1 = 215, mod2 = 850, mod3 = 4400, mod4 = 100000, mod5 = 0},
+            [9] = {mod1 = 220, mod2 = 850, mod3 = 4600, mod4 = 100000, mod5 = 0},
+            [10] = {mod1 = 240, mod2 = 900, mod3 = 5000, mod4 = 100000, mod5 = 0}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
