@@ -104,6 +104,7 @@
         ChildIds: 15107115459971592988
         ChildIds: 15746345843771633212
         ChildIds: 13012543468557526091
+        ChildIds: 17347115782364650425
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -369,6 +370,69 @@
         }
       }
       Objects {
+        Id: 17347115782364650425
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: -7274.76758
+            Y: -9116.68555
+            Z: -3330
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7446398700877787801
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 14738406619974674146
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
         Id: 18222319590489236690
         Name: "ServerContext"
         Transform {
@@ -392,6 +456,7 @@
         ChildIds: 17441912587668400096
         ChildIds: 8228187279433582210
         ChildIds: 3773820494088276868
+        ChildIds: 1852349643762610454
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1123,6 +1188,69 @@
         }
       }
       Objects {
+        Id: 1852349643762610454
+        Name: "WeaponAimServer"
+        Transform {
+          Location {
+            X: 545.232422
+            Y: 972.691406
+            Z: -225
+          }
+          Rotation {
+            Yaw: -94.9999695
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18222319590489236690
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AimBinding"
+            String: "ability_secondary"
+          }
+          Overrides {
+            Name: "cs:AimWalkSpeedPercentage"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "cs:AimActiveStance"
+            String: "unarmed_carry_object_heavy"
+          }
+          Overrides {
+            Name: "cs:AimZoomDistance"
+            Float: 150
+          }
+          Overrides {
+            Name: "cs:SpreadZoom"
+            Float: -2
+          }
+          Overrides {
+            Name: "cs:ZoomSpeed"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 14738406619974674146
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6703712560572080575
+          }
+        }
+      }
+      Objects {
         Id: 11747234676183721272
         Name: "ClientContext"
         Transform {
@@ -1141,7 +1269,6 @@
         ChildIds: 1660676645019909115
         ChildIds: 3981296022251942220
         ChildIds: 1297799432452933319
-        ChildIds: 1852349643762610454
         ChildIds: 5931065898975178281
         ChildIds: 12781921330556252170
         ChildIds: 13070035726976862727
@@ -1712,69 +1839,6 @@
         }
       }
       Objects {
-        Id: 1852349643762610454
-        Name: "WeaponAimServer"
-        Transform {
-          Location {
-            X: 545.232422
-            Y: 972.691406
-            Z: -225
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11747234676183721272
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:AimBinding"
-            String: "ability_secondary"
-          }
-          Overrides {
-            Name: "cs:AimWalkSpeedPercentage"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:AimActiveStance"
-            String: "unarmed_carry_object_heavy"
-          }
-          Overrides {
-            Name: "cs:AimZoomDistance"
-            Float: 150
-          }
-          Overrides {
-            Name: "cs:SpreadZoom"
-            Float: -2
-          }
-          Overrides {
-            Name: "cs:ZoomSpeed"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 14738406619974674146
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6703712560572080575
-          }
-        }
-      }
-      Objects {
         Id: 5931065898975178281
         Name: "WeaponAimClient"
         Transform {
@@ -1797,7 +1861,7 @@
           Overrides {
             Name: "cs:ServerScript"
             ObjectReference {
-              SubObjectId: 1852349643762610454
+              SubObjectId: 17347115782364650425
             }
           }
           Overrides {
@@ -2368,7 +2432,7 @@
             }
           }
           CooldownPhaseSettings {
-            Duration: 30
+            Duration: 90
             CanMove: true
             CanJump: true
             CanRotate: true
