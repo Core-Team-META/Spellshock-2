@@ -74,6 +74,7 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isExecuting then
 		--print("INTERRUPTING")
 		ABILITY:Interrupt()
+		SetNetworkProperty(false)
 	end
 end
 

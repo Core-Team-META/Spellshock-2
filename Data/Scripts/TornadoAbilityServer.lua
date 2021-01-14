@@ -47,6 +47,7 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
+		SetNetworkProperty(false)
 	end
 end
 
