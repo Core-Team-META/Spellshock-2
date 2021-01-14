@@ -2120,6 +2120,18 @@ Objects {
         Id: 3392388590054420013
       }
     }
+    Overrides {
+      Name: "cs:04_Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2403,6 +2415,18 @@ Objects {
       Name: "cs:01_Tornado_Preview"
       AssetReference {
         Id: 18349665107832834494
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
       }
     }
   }

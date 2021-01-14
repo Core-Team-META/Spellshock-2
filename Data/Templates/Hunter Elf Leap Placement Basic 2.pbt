@@ -8917,15 +8917,15 @@
         Name: "Cylinder"
         Transform {
           Location {
-            Z: 1121.15344
+            Z: 6.17675924
           }
           Rotation {
             Pitch: 180
           }
           Scale {
-            X: 11.2073641
-            Y: 11.2073526
-            Z: 38.7308159
+            X: 11.25
+            Y: 11.25
+            Z: 9.75
           }
         }
         ParentId: 349614687134748181
@@ -8933,7 +8933,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 18104480854948179778
+              Id: 925672138032122417
             }
           }
         }
@@ -8948,7 +8948,6 @@
             Id: 13950225922132296555
           }
           Teams {
-            UseTeamColor: true
             TeamInt: 2
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true

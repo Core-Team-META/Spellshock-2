@@ -7,7 +7,7 @@
       RootId: 4912356062919113190
       Objects {
         Id: 4912356062919113190
-        Name: "Mage Pyroblast Projectile Basic"
+        Name: "Mage Orc Pyroblast Projectile Fire"
         Transform {
           Scale {
             X: 1
@@ -39,9 +39,9 @@
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 4912356062919113190

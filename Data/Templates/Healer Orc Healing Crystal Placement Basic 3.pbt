@@ -203,6 +203,14 @@
             Name: "bp:Enable Base"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -215,7 +223,6 @@
             Id: 3816918904715199575
           }
           TeamSettings {
-            UseTeamColor: true
             TeamInt: 1
           }
           Vfx {
@@ -251,6 +258,14 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -263,7 +278,6 @@
             Id: 8747548866599712479
           }
           TeamSettings {
-            UseTeamColor: true
             TeamInt: 1
           }
           Vfx {
@@ -345,19 +359,17 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.932185411
-              B: 0.36
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
             Name: "bp:Edge Color"
             Color {
-              R: 1
-              G: 0.837814569
-              B: 0.209999979
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -399,7 +411,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14260814583452507381
+              Id: 7535229294616165836
             }
           }
         }
@@ -414,7 +426,6 @@
             Id: 6747614045051753376
           }
           Teams {
-            UseTeamColor: true
             TeamInt: 1
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
@@ -552,6 +563,22 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -564,7 +591,6 @@
             Id: 14678969413949532768
           }
           TeamSettings {
-            UseTeamColor: true
             TeamInt: 1
           }
           Vfx {
@@ -758,10 +784,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 1
-              G: 0.837814569
-              B: 0.209999979
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -773,10 +798,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 1
-              G: 0.569602609
-              B: 0.0299999714
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -2225,10 +2249,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 1
-              G: 0.837814569
-              B: 0.209999979
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -2240,10 +2263,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 1
-              G: 0.569602609
-              B: 0.0299999714
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -3692,10 +3714,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 1
-              G: 0.837814569
-              B: 0.209999979
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -3707,10 +3728,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 1
-              G: 0.569602609
-              B: 0.0299999714
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }

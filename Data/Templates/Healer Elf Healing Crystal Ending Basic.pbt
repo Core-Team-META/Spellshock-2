@@ -112,7 +112,6 @@
             Id: 3816918904715199575
           }
           TeamSettings {
-            UseTeamColor: true
             TeamInt: 2
           }
           Vfx {

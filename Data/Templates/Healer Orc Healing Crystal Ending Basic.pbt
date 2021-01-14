@@ -88,6 +88,14 @@
             Name: "bp:Enable Burst Sparkles"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -100,7 +108,6 @@
             Id: 3816918904715199575
           }
           TeamSettings {
-            UseTeamColor: true
             TeamInt: 1
           }
           Vfx {

@@ -15,11 +15,12 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 9641060406160085662
         ChildIds: 6850119050645440428
         ChildIds: 2416196606626890195
         ChildIds: 2594304203653326655
+        ChildIds: 11288311454432678489
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -82,10 +83,9 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.837814689
-              B: 0.209999979
-              A: 0.5
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -125,10 +125,9 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.837814689
-              B: 0.209999979
-              A: 0.5
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -225,6 +224,64 @@
           IsAttenuationEnabled: true
         }
       }
+      Objects {
+        Id: 11288311454432678489
+        Name: "Ground Explosion VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 2138632444635200016
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Fireball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2839312775702113675
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
     }
     Assets {
       Id: 15862839354445934362
@@ -260,6 +317,15 @@
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_meta_fantasy_revive_life_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 2839312775702113675
+      Name: "Ground Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explosion_ground"
       }
     }
     PrimaryAssetId {
