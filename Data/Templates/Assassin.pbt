@@ -186,7 +186,22 @@
           }
           Overrides {
             Name: "cs:AbilityMod"
-            String: "NONE"
+            String: "mod2"
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 600
+          }
+          Overrides {
+            Name: "cs:RadiusMod"
+            String: "mod3"
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 30
+              Y: 50
+            }
           }
         }
         Collidable_v2 {
@@ -705,6 +720,17 @@
           Overrides {
             Name: "cs:AbilityMod"
             String: "NONE"
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 30
+              Y: 50
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Int: 600
           }
         }
         Collidable_v2 {
