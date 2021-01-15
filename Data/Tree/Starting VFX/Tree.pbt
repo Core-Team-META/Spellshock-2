@@ -1216,7 +1216,7 @@ Objects {
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 2544825718487104811
+        Id: 18127499291287709125
       }
     }
   }

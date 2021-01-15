@@ -266,6 +266,8 @@
         ParentId: 3185878250927913247
         ChildIds: 3036981207979900865
         ChildIds: 2047393309193674359
+        ChildIds: 11609873897470634391
+        ChildIds: 1834981182347461823
         ChildIds: 2282560410954992553
         ChildIds: 8628520306110904307
         ChildIds: 12457951114105417960
@@ -358,6 +360,24 @@
               SubObjectId: 12457951114105417960
             }
           }
+          Overrides {
+            Name: "cs:Flares"
+            ObjectReference {
+              SubObjectId: 14017102943326000593
+            }
+          }
+          Overrides {
+            Name: "cs:Debris"
+            ObjectReference {
+              SubObjectId: 11609873897470634391
+            }
+          }
+          Overrides {
+            Name: "cs:Smoke"
+            ObjectReference {
+              SubObjectId: 1834981182347461823
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -368,6 +388,111 @@
         Script {
           ScriptAsset {
             Id: 3098821681666749903
+          }
+        }
+      }
+      Objects {
+        Id: 11609873897470634391
+        Name: "Debris"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 6.7207489
+            Y: 6.7207489
+            Z: 6.7207489
+          }
+        }
+        ParentId: 13763941301205530224
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+              Z: -500
+            }
+          }
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -50
+          }
+          Overrides {
+            Name: "bp:Enable Dust"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3902609303942155418
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+      }
+      Objects {
+        Id: 1834981182347461823
+        Name: "Smoke"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 7.20704269
+            Y: 7.20704269
+            Z: 7.20704269
+          }
+        }
+        ParentId: 13763941301205530224
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.634027779
+          }
+          Overrides {
+            Name: "bp:Radius"
+            Float: 10
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.710000038
+              G: 0.655364573
+              B: 0.5325
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11736239447341257999
+          }
+          TeamSettings {
+          }
+          Vfx {
           }
         }
       }
@@ -464,9 +589,9 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 2175373826146049983
+            Id: 2538994747368739144
           }
-          Pitch: 200
+          Pitch: -400
           Volume: 1
           Falloff: 15000
           Radius: 5000
@@ -484,13 +609,12 @@
           Rotation {
           }
           Scale {
-            X: 2
-            Y: 2
-            Z: 2
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 13763941301205530224
-        ChildIds: 11962890351815633763
         ChildIds: 16887315579548046697
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -503,51 +627,16 @@
         }
       }
       Objects {
-        Id: 11962890351815633763
-        Name: "Thruster Engine Boost Crackle Loop 01 SFX"
-        Transform {
-          Location {
-            Y: 52.8808594
-            Z: 65.6889648
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3268762473508852598
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 1653184049901691723
-          }
-          AutoPlay: true
-          Pitch: -600
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
         Id: 16887315579548046697
         Name: "Group"
         Transform {
           Location {
-            Y: 52.8808594
-            Z: 413.652832
+            Z: 100
           }
           Rotation {
-            Roll: 165.783661
+            Pitch: -1.36603776e-05
+            Yaw: 1.36603685e-05
+            Roll: -179.999985
           }
           Scale {
             X: 24.3184795
@@ -556,17 +645,10 @@
           }
         }
         ParentId: 3268762473508852598
+        ChildIds: 10839001137763446835
         ChildIds: 498018979575129431
-        ChildIds: 6691892115523734748
-        ChildIds: 14295039534248074676
-        ChildIds: 8714393877633500388
-        ChildIds: 8233638361327742662
-        ChildIds: 5430013423963175429
-        ChildIds: 8352549257926648912
-        ChildIds: 16091432771530898948
-        ChildIds: 12893396459798362992
-        ChildIds: 15952912367840913208
-        ChildIds: 7384175731545299977
+        ChildIds: 14017102943326000593
+        ChildIds: 4344274799848834515
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -578,16 +660,71 @@
         }
       }
       Objects {
+        Id: 10839001137763446835
+        Name: "Candle Flame VFX"
+        Transform {
+          Location {
+            X: -1.12083512e-06
+            Z: -4.70112038
+          }
+          Rotation {
+            Pitch: 180
+          }
+          Scale {
+            X: 1.45517874
+            Y: 1.45517874
+            Z: 1.45517874
+          }
+        }
+        ParentId: 16887315579548046697
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Flame_A:id"
+            AssetReference {
+              Id: 11734275128532210001
+            }
+          }
+          Overrides {
+            Name: "ma:Flame_B:id"
+            AssetReference {
+              Id: 11734275128532210001
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9199751096616988864
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
         Id: 498018979575129431
         Name: "Dodecahedron - Polished"
         Transform {
           Location {
-            X: -0.435384542
-            Y: -0.924912274
-            Z: -2.82344794
+            X: -1.03584478e-06
+            Y: 8.91669358e-21
+            Z: -4.34464598
           }
           Rotation {
-            Roll: -75.6178
+            Roll: -90
           }
           Scale {
             X: 0.130475551
@@ -637,151 +774,26 @@
         }
       }
       Objects {
-        Id: 6691892115523734748
-        Name: "Dodecahedron - Polished"
+        Id: 14017102943326000593
+        Name: "Flares"
         Transform {
           Location {
-            X: -0.519152522
-            Y: 0.199259698
-            Z: 1.0062927
+            X: 2.82707646e-07
+            Z: 1.18576109
           }
           Rotation {
-            Pitch: 11.4742527
-            Yaw: 16.071104
-            Roll: 19.8122597
+            Yaw: 30
           }
           Scale {
-            X: 0.11841733
-            Y: 0.0861444697
-            Z: 0.101949207
+            X: 0.03
+            Y: 0.03
+            Z: 0.03
           }
         }
         ParentId: 16887315579548046697
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14295039534248074676
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -0.322783709
-            Y: 3.46090961
-            Z: 8.25246906
-          }
-          Rotation {
-            Pitch: 1.04352307
-            Yaw: -3.45339966
-            Roll: -159.67157
-          }
-          Scale {
-            X: 0.128385112
-            Y: 0.0712896734
-            Z: 0.106063016
-          }
-        }
-        ParentId: 16887315579548046697
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.35
-              G: 0.35
-              B: 0.35
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8714393877633500388
-        Name: "RightThumbRoot"
-        Transform {
-          Location {
-            X: -4.9375
-            Y: -2.28320313
-            Z: 6.65820313
-          }
-          Rotation {
-            Pitch: -14.7062073
-            Yaw: 31.9807262
-            Roll: -19.6316528
-          }
-          Scale {
-            X: 1.40000021
-            Y: 1.40000021
-            Z: 1.40000021
-          }
-        }
-        ParentId: 16887315579548046697
-        ChildIds: 1872802730984659458
-        ChildIds: 10587863028719241827
-        ChildIds: 11274259097196976444
+        ChildIds: 7384175731545299977
+        ChildIds: 15926705428662506511
+        ChildIds: 14461888956267692343
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -793,261 +805,227 @@
         }
       }
       Objects {
-        Id: 1872802730984659458
-        Name: "Teardrop - Truncated"
+        Id: 7384175731545299977
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: -1.26728619e-05
-            Y: -5.11267e-05
-            Z: -3.17640879e-05
+            X: -7.15252e-07
+            Z: -2.9999826
           }
           Rotation {
+            Pitch: 80
           }
           Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
+            X: 0.199374929
+            Y: 0.199375778
+            Z: 0.54282546
           }
         }
-        ParentId: 8714393877633500388
+        ParentId: 14017102943326000593
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10587863028719241827
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: -3.05175781e-05
-            Roll: 1.28066049e-05
-          }
-          Scale {
-            X: 0.0238367934
-            Y: 0.0238446463
-            Z: 0.0470338911
-          }
-        }
-        ParentId: 8714393877633500388
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
+            Name: "bp:Color A"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
             }
           }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
             }
           }
-        }
-      }
-      Objects {
-        Id: 11274259097196976444
-        Name: "RightThumbJoint"
-        Transform {
-          Location {
-            X: 8.36593608e-05
-            Y: -0.00084689667
-            Z: 5.00019693
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
           }
-          Rotation {
-            Pitch: -70.961853
-            Roll: -20.9142456
-          }
-          Scale {
-            X: 0.700000048
-            Y: 0.700000048
-            Z: 0.700000048
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
           }
         }
-        ParentId: 8714393877633500388
-        ChildIds: 11980235102561535786
-        ChildIds: 2180559392591309428
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 11980235102561535786
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -1.26728619e-05
-            Y: -5.11267e-05
-            Z: -3.17640879e-05
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
           }
-          Rotation {
+          TeamSettings {
           }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 11274259097196976444
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
       Objects {
-        Id: 2180559392591309428
-        Name: "Teardrop - Truncated"
+        Id: 15926705428662506511
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
+            X: -7.15194517e-07
+            Z: -2.99974155
           }
           Rotation {
-            Yaw: -3.05175781e-05
-            Roll: 1.28066049e-05
+            Pitch: 80
+            Yaw: 120
           }
           Scale {
-            X: 0.028991472
-            Y: 0.028992109
-            Z: 0.0475533195
+            X: 0.199374929
+            Y: 0.199375778
+            Z: 0.54282546
           }
         }
-        ParentId: 11274259097196976444
+        ParentId: 14017102943326000593
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
             }
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
+            Name: "bp:Color A"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
             }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
           }
-          Teams {
+          TeamSettings {
           }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
       Objects {
-        Id: 8233638361327742662
-        Name: "RightIndexRoot"
+        Id: 14461888956267692343
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: -4.84179688
-            Y: 4.91601563
-            Z: 13.9052734
+            X: -7.15194517e-07
+            Z: -2.99974155
           }
           Rotation {
-            Pitch: 8.27790833
-            Roll: -85.197937
+            Pitch: 80
+            Yaw: -120
+          }
+          Scale {
+            X: 0.199374929
+            Y: 0.199375778
+            Z: 0.54282546
+          }
+        }
+        ParentId: 14017102943326000593
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:0"
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 4344274799848834515
+        Name: "Group"
+        Transform {
+          Location {
+          }
+          Rotation {
           }
           Scale {
             X: 1
@@ -1056,9 +1034,9 @@
           }
         }
         ParentId: 16887315579548046697
-        ChildIds: 14901323172785352609
-        ChildIds: 11639484363710341711
-        ChildIds: 16972738452579175151
+        ChildIds: 15952912367840913208
+        ChildIds: 3414240919842911777
+        ChildIds: 1547357238179148298
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1067,1156 +1045,6 @@
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 14901323172785352609
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -1.48465479e-05
-            Y: -4.77094e-05
-            Z: -3.82297512e-05
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 8233638361327742662
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11639484363710341711
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: 6.83018879e-06
-            Yaw: 1.70754652e-06
-          }
-          Scale {
-            X: 0.0290026292
-            Y: 0.0290155299
-            Z: 0.0740760267
-          }
-        }
-        ParentId: 8233638361327742662
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16972738452579175151
-        Name: "RightIndexRoot"
-        Transform {
-          Location {
-            X: 4.29981301e-05
-            Y: -0.000119267243
-            Z: 6.99961376
-          }
-          Rotation {
-            Roll: -107.023529
-          }
-          Scale {
-            X: 0.700000107
-            Y: 0.700000107
-            Z: 0.700000107
-          }
-        }
-        ParentId: 8233638361327742662
-        ChildIds: 14824672674676485496
-        ChildIds: 3757554154674369600
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 14824672674676485496
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -1.48465479e-05
-            Y: -4.77094e-05
-            Z: -3.82297512e-05
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 16972738452579175151
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3757554154674369600
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: 6.83018879e-06
-            Yaw: 1.70754652e-06
-          }
-          Scale {
-            X: 0.0352767035
-            Y: 0.0352776945
-            Z: 0.0894430503
-          }
-        }
-        ParentId: 16972738452579175151
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5430013423963175429
-        Name: "RightMiddleRoot"
-        Transform {
-          Location {
-            X: -1.53515625
-            Y: 5.24414063
-            Z: 14.1767578
-          }
-          Rotation {
-            Pitch: -1.45544434
-            Yaw: 1.93754852
-            Roll: -83.5105591
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16887315579548046697
-        ChildIds: 6126363475743503555
-        ChildIds: 6780589941505855246
-        ChildIds: 17308847360533481696
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 6126363475743503555
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -1.91939216e-05
-            Y: -4.08748019e-05
-            Z: -5.11610888e-05
-          }
-          Rotation {
-            Pitch: 4.77640581
-            Yaw: -2.84472656
-            Roll: -58.7674866
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 5430013423963175429
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6780589941505855246
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: 1.36603776e-05
-            Yaw: 2.0063675e-05
-          }
-          Scale {
-            X: 0.0290026292
-            Y: 0.0290155299
-            Z: 0.0740760267
-          }
-        }
-        ParentId: 5430013423963175429
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17308847360533481696
-        Name: "RightMiddleJoint"
-        Transform {
-          Location {
-            X: 6.83665276e-05
-            Y: -0.000450611115
-            Z: 6.99989271
-          }
-          Rotation {
-            Roll: -112.351776
-          }
-          Scale {
-            X: 0.700000107
-            Y: 0.700000107
-            Z: 0.700000107
-          }
-        }
-        ParentId: 5430013423963175429
-        ChildIds: 8419973561981658482
-        ChildIds: 3793501345613519574
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8419973561981658482
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -1.91939216e-05
-            Y: -4.08748019e-05
-            Z: -5.11610888e-05
-          }
-          Rotation {
-            Pitch: 4.77640581
-            Yaw: -2.84471917
-            Roll: -58.7674789
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 17308847360533481696
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3793501345613519574
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -6.74260218e-06
-            Y: -0.000103032682
-            Z: -7.84538224e-06
-          }
-          Rotation {
-            Pitch: 1.36603776e-05
-            Yaw: 2.0063675e-05
-          }
-          Scale {
-            X: 0.0352767035
-            Y: 0.0352776945
-            Z: 0.0894430503
-          }
-        }
-        ParentId: 17308847360533481696
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8352549257926648912
-        Name: "RightRingRoot"
-        Transform {
-          Location {
-            X: 1.49804688
-            Y: 4.98242188
-            Z: 13.5424805
-          }
-          Rotation {
-            Pitch: -5.20913696
-            Yaw: -2.62057495
-            Roll: -91.5692139
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16887315579548046697
-        ChildIds: 11555915288584643185
-        ChildIds: 7332825277046737422
-        ChildIds: 16690574905262567843
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 11555915288584643185
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -2.1736862e-06
-            Y: 3.41729719e-06
-            Z: -6.46566423e-06
-          }
-          Rotation {
-            Pitch: -4.12566614
-            Yaw: -5.17288494
-            Roll: -68.3818436
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 8352549257926648912
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7332825277046737422
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 2.56132057e-06
-            Roll: 1.36603758e-05
-          }
-          Scale {
-            X: 0.0290026292
-            Y: 0.0290155299
-            Z: 0.0740760267
-          }
-        }
-        ParentId: 8352549257926648912
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16690574905262567843
-        Name: "RightRingJoint"
-        Transform {
-          Location {
-            X: -3.31799201e-05
-            Y: -2.11927636e-06
-            Z: 6.99971962
-          }
-          Rotation {
-            Roll: -93.604248
-          }
-          Scale {
-            X: 0.700000107
-            Y: 0.700000107
-            Z: 0.700000107
-          }
-        }
-        ParentId: 8352549257926648912
-        ChildIds: 15703264167550636688
-        ChildIds: 16040153884155587922
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 15703264167550636688
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -2.1736862e-06
-            Y: 3.41729719e-06
-            Z: -6.46566423e-06
-          }
-          Rotation {
-            Pitch: -4.12566614
-            Yaw: -5.17288494
-            Roll: -68.3818436
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 16690574905262567843
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16040153884155587922
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 2.56132057e-06
-            Roll: 1.36603758e-05
-          }
-          Scale {
-            X: 0.0352767035
-            Y: 0.0352776945
-            Z: 0.0894430503
-          }
-        }
-        ParentId: 16690574905262567843
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16091432771530898948
-        Name: "RightPinkieRoot"
-        Transform {
-          Location {
-            X: 4.49023438
-            Y: 4.37304688
-            Z: 12.2919922
-          }
-          Rotation {
-            Pitch: -15.6216431
-            Yaw: -0.142883301
-            Roll: -98.1002197
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1.00000012
-          }
-        }
-        ParentId: 16887315579548046697
-        ChildIds: 8096257546703618449
-        ChildIds: 9626812312490818688
-        ChildIds: 14725468130687210515
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8096257546703618449
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -2.1736862e-06
-            Y: 3.41729719e-06
-            Z: -6.46566423e-06
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 16091432771530898948
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9626812312490818688
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: -3.05175781e-05
-            Roll: -3.05175781e-05
-          }
-          Scale {
-            X: 0.0275193341
-            Y: 0.0275316276
-            Z: 0.0702876225
-          }
-        }
-        ParentId: 16091432771530898948
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14725468130687210515
-        Name: "RightPinkieJoint"
-        Transform {
-          Location {
-            X: -0.000137488038
-            Y: 0.000283453177
-            Z: 6.99973392
-          }
-          Rotation {
-            Roll: -99.4858704
-          }
-          Scale {
-            X: 0.700000346
-            Y: 0.700000346
-            Z: 0.700000346
-          }
-        }
-        ParentId: 16091432771530898948
-        ChildIds: 8659224491068970793
-        ChildIds: 12390732407737083537
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8659224491068970793
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -2.1736862e-06
-            Y: 3.41729719e-06
-            Z: -6.46566423e-06
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.039250277
-            Y: 0.039250277
-            Z: 0.039250277
-          }
-        }
-        ParentId: 14725468130687210515
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12390732407737083537
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: -3.05175781e-05
-            Roll: -3.05175781e-05
-          }
-          Scale {
-            X: 0.0334725194
-            Y: 0.033473555
-            Z: 0.0848687589
-          }
-        }
-        ParentId: 14725468130687210515
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7372319856718923568
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12893396459798362992
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -4.18945313
-            Y: 0.8828125
-            Z: 4.18457031
-          }
-          Rotation {
-            Pitch: -26.7826843
-            Yaw: 142.252502
-            Roll: -20.3939819
-          }
-          Scale {
-            X: 0.0619118921
-            Y: 0.0905069113
-            Z: 0.13086085
-          }
-        }
-        ParentId: 16887315579548046697
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14629909211943041809
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7363477334452929865
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
         }
       }
       Objects {
@@ -2224,22 +1052,21 @@
         Name: "Scifi Ship Nose 01"
         Transform {
           Location {
-            X: 0.266081721
-            Y: 5.92828321
-            Z: 4.98530388
+            X: -7.15251531e-07
+            Y: 2.99998379
+            Z: 1.07287838e-06
           }
           Rotation {
-            Pitch: 1.04378951
-            Yaw: -3.45248413
-            Roll: 14.4620695
+            Yaw: -179.999985
+            Roll: -164.999924
           }
           Scale {
-            X: 0.162432358
-            Y: 0.162432358
-            Z: 0.162432358
+            X: 0.12475913
+            Y: 0.12475913
+            Z: 0.12475913
           }
         }
-        ParentId: 16887315579548046697
+        ParentId: 4344274799848834515
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2319,33 +1146,71 @@
         }
       }
       Objects {
-        Id: 7384175731545299977
-        Name: "Layered Thrusters VFX"
+        Id: 3414240919842911777
+        Name: "Scifi Ship Nose 01"
         Transform {
           Location {
-            X: -0.435384542
-            Y: -0.924912274
-            Z: -2.82344794
+            X: -2.59809136
+            Y: -1.49995244
+            Z: 8.30081746e-08
           }
           Rotation {
-            Roll: -165.617813
+            Pitch: -1.36603776e-05
+            Yaw: -59.9999161
+            Roll: -164.999893
           }
           Scale {
-            X: 0.348626226
-            Y: 0.348626
-            Z: 0.478082806
+            X: 0.124759123
+            Y: 0.124759123
+            Z: 0.124759123
           }
         }
-        ParentId: 16887315579548046697
+        ParentId: 4344274799848834515
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:ethrustermeshvar:2"
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
             }
           }
           Overrides {
-            Name: "bp:Color A"
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.75
+              G: 0.75
+              B: 0.75
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
             Color {
               G: 0.580392182
               B: 0.360784471
@@ -2353,13 +1218,7 @@
             }
           }
           Overrides {
-            Name: "bp:Color C"
-            Color {
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color B"
+            Name: "ma:Shared_Trim2:color"
             Color {
               G: 0.580392182
               B: 0.360784471
@@ -2368,19 +1227,118 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Blueprint {
-          BlueprintAsset {
-            Id: 2426790310185116976
+        CoreMesh {
+          MeshAsset {
+            Id: 4322675021483384603
           }
-          TeamSettings {
+          Teams {
           }
-          Vfx {
-            AutoPlay: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1547357238179148298
+        Name: "Scifi Ship Nose 01"
+        Transform {
+          Location {
+            X: 2.59809208
+            Y: -1.49995112
+            Z: -1.15585783e-06
+          }
+          Rotation {
+            Yaw: 59.9999847
+            Roll: -164.999817
+          }
+          Scale {
+            X: 0.124759123
+            Y: 0.124759123
+            Z: 0.124759123
+          }
+        }
+        ParentId: 4344274799848834515
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14629909211943041809
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.75
+              G: 0.75
+              B: 0.75
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.5
+              G: 0.5
+              B: 0.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 1009636138000564291
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.3
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4322675021483384603
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
           }
         }
       }
@@ -2404,6 +1362,24 @@
       }
     }
     Assets {
+      Id: 3902609303942155418
+      Name: "Gun Impact Small VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_gun_impact_dirt_sm"
+      }
+    }
+    Assets {
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_smoke_puff_radial"
+      }
+    }
+    Assets {
       Id: 10275684307032384058
       Name: "Magic Spell Cast Beam Loop 01 SFX"
       PlatformAssetType: 7
@@ -2422,21 +1398,21 @@
       }
     }
     Assets {
-      Id: 2175373826146049983
-      Name: "Cinematic Synth Growl Impact 01 SFX"
+      Id: 2538994747368739144
+      Name: "Sci-fi Cinematic Time Warp Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_designer_cinematic_synth_growl_impact_01_Cue_ref"
+        AssetId: "sfx_designer_cinematic_scifi_timewarp_impact_01_Cue_ref"
       }
     }
     Assets {
-      Id: 1653184049901691723
-      Name: "Jetpack Thruster Booster Loop 01 SFX"
-      PlatformAssetType: 7
+      Id: 9199751096616988864
+      Name: "Candle Flame VFX"
+      PlatformAssetType: 1
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_jetpack_thruster_booster_loop_01_Cue_ref"
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "fxsm_candleflame"
       }
     }
     Assets {
@@ -2458,21 +1434,12 @@
       }
     }
     Assets {
-      Id: 7363477334452929865
-      Name: "Sphere"
-      PlatformAssetType: 1
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 7372319856718923568
-      Name: "Cylinder - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_001"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_var"
       }
     }
     Assets {
@@ -2482,15 +1449,6 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_002"
-      }
-    }
-    Assets {
-      Id: 2426790310185116976
-      Name: "Layered Thrusters VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_thruster_var"
       }
     }
     PrimaryAssetId {

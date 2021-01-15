@@ -20,7 +20,7 @@
         ChildIds: 6850119050645440428
         ChildIds: 2416196606626890195
         ChildIds: 2594304203653326655
-        ChildIds: 11288311454432678489
+        ChildIds: 2858435111468704207
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -37,6 +37,7 @@
         Name: "Plasma Impact VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -111,6 +112,7 @@
         Name: "Explosion Kit Afterglow VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -136,6 +138,10 @@
           }
           Overrides {
             Name: "bp:Particle Scale"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
             Float: 2
           }
         }
@@ -225,10 +231,11 @@
         }
       }
       Objects {
-        Id: 11288311454432678489
+        Id: 2858435111468704207
         Name: "Ground Explosion VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -263,6 +270,22 @@
               G: 0.381457061
               A: 0.21100001
             }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Shockwave"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Ground Dust"
+            Bool: false
           }
         }
         Collidable_v2 {

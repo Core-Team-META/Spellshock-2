@@ -37,6 +37,7 @@
         Name: "Plasma Impact VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -111,6 +112,7 @@
         Name: "Explosion Kit Afterglow VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -138,6 +140,10 @@
             Name: "bp:Particle Scale"
             Float: 2
           }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 2
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -161,6 +167,7 @@
         Name: "Ground Explosion VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -195,6 +202,22 @@
               B: 0.360784471
               A: 0.3
             }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Shockwave"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Ground Dust"
+            Bool: false
           }
         }
         Collidable_v2 {
