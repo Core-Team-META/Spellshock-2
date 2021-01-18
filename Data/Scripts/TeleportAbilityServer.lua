@@ -20,6 +20,13 @@ local function SetNetworkProperty(bool)
 end
 
 function OnBindingPressed(player, binding)
+	if binding == AbilityBinding then
+		print("* Teleport *")
+		print("  isEnabled: "..tostring(isEnabled))
+		print("  isPreviewing: "..tostring(isPreviewing))
+		print("  isPlacing: "..tostring(isPlacing))
+	end
+
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
 		SetNetworkProperty(isPreviewing)
@@ -48,7 +55,7 @@ function Teleport(thisPlayer, position, rotation)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		print("~ Received Broadcast ~")
+		
 		-- check if the placement was canceled
 		if position == nil then
 			return
@@ -92,6 +99,12 @@ end
 function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
+	end
+end
+
+function Tick()
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		isPlacing = false
 	end
 end
 
