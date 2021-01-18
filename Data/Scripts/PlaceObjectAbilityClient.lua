@@ -79,6 +79,7 @@ end
 function OnBindingPressed(player, binding)
 	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 		--print("Canceling: "..binding)
+		isPreviewing = false
 		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 			Task.Wait()
 		end
@@ -94,6 +95,11 @@ function OnSpecialAbilityExecute(thisAbility)
 				Task.Wait()
 			end
 		--print("~ Executing placement ~")
+		else
+			while Events.BroadcastToServer(EventName, nil, nil) ==
+				BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+				Task.Wait()
+			end
 		end
 	end
 end
