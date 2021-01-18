@@ -54,8 +54,8 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
-local function GetReqCurrency(player, class, bind)
-    local currentLevel = player:SetResource(UTIL.GetLevelString(class, bind))
+local function GetReqCurrency(player, class, bind, level)
+    local currentLevel = level or player:GetResource(UTIL.GetLevelString(class, bind))
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
 end
