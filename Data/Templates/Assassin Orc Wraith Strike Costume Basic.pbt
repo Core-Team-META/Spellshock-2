@@ -63,7 +63,7 @@
           }
         }
         ParentId: 18402204660853377172
-        ChildIds: 11034073842817514052
+        ChildIds: 12997901272912264921
         ChildIds: 2655777931851486982
         UnregisteredParameters {
         }
@@ -77,18 +77,12 @@
         }
       }
       Objects {
-        Id: 11034073842817514052
-        Name: "ShadowMovement"
+        Id: 12997901272912264921
+        Name: "WraithStrikeMovement"
         Transform {
           Location {
-            X: 3.09960938
-            Y: -0.0625
-            Z: 39.8334961
           }
           Rotation {
-            Pitch: -0.212275431
-            Yaw: 1.0938494e-12
-            Roll: 3.08758097e-12
           }
           Scale {
             X: 1
@@ -99,21 +93,93 @@
         ParentId: 6854881897793374534
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Body"
-            ObjectReference {
-              SubObjectId: 2655777931851486982
-            }
-          }
-          Overrides {
-            Name: "cs:Arms"
-            ObjectReference {
-              SubObjectId: 2787178634423721369
-            }
-          }
-          Overrides {
             Name: "cs:Ease3D"
             AssetReference {
               Id: 16050147283496351669
+            }
+          }
+          Overrides {
+            Name: "cs:Left_Wing"
+            ObjectReference {
+              SubObjectId: 6942850673730376152
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWing0"
+            ObjectReference {
+              SubObjectId: 9286471132015755261
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWing1"
+            ObjectReference {
+              SubObjectId: 14693739833911524215
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWrist"
+            ObjectReference {
+              SubObjectId: 16999579079246299925
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWingTop"
+            ObjectReference {
+              SubObjectId: 4968998955430399502
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWingMid"
+            ObjectReference {
+              SubObjectId: 9620910793262540140
+            }
+          }
+          Overrides {
+            Name: "cs:LeftWingBot"
+            ObjectReference {
+              SubObjectId: 11746242556071290816
+            }
+          }
+          Overrides {
+            Name: "cs:Right_Wing"
+            ObjectReference {
+              SubObjectId: 2693819495457422560
+            }
+          }
+          Overrides {
+            Name: "cs:RightWing0"
+            ObjectReference {
+              SubObjectId: 17209594625094473395
+            }
+          }
+          Overrides {
+            Name: "cs:RightWing1"
+            ObjectReference {
+              SubObjectId: 9123285980552260839
+            }
+          }
+          Overrides {
+            Name: "cs:RightWrist"
+            ObjectReference {
+              SubObjectId: 11039099914141587413
+            }
+          }
+          Overrides {
+            Name: "cs:RightWingTop"
+            ObjectReference {
+              SubObjectId: 12701027742239077084
+            }
+          }
+          Overrides {
+            Name: "cs:RightWingMid"
+            ObjectReference {
+              SubObjectId: 5235405147017190045
+            }
+          }
+          Overrides {
+            Name: "cs:RightWingBot"
+            ObjectReference {
+              SubObjectId: 10032909748323763524
             }
           }
         }
@@ -125,7 +191,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 12059718626481054599
+            Id: 15295879210036339172
           }
         }
       }
@@ -174,17 +240,17 @@
         Name: "Arms"
         Transform {
           Location {
-            X: 1.7096889
-            Y: 2.49102767e-14
-            Z: -5
+            X: -20.1044102
+            Y: 4.74000917e-12
+            Z: -2.35453439
           }
           Rotation {
             Pitch: 6.83018879e-06
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.77705562
+            Y: 1.77705562
+            Z: 1.77705562
           }
         }
         ParentId: 2655777931851486982
@@ -207,9 +273,9 @@
           Location {
           }
           Rotation {
-            Pitch: -6.83018879e-06
-            Yaw: 8.67809242e-27
-            Roll: -1.94125628e-19
+            Pitch: 53.2209625
+            Yaw: -60.4612732
+            Roll: -67.5561218
           }
           Scale {
             X: 1
@@ -219,7 +285,7 @@
         }
         ParentId: 2787178634423721369
         ChildIds: 1565390024857845786
-        ChildIds: 396597402435678646
+        ChildIds: 9286471132015755261
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -277,18 +343,18 @@
         }
       }
       Objects {
-        Id: 396597402435678646
-        Name: "Group"
+        Id: 9286471132015755261
+        Name: "LeftWing0"
         Transform {
           Location {
-            X: -37.4595184
-            Y: -41.4570313
-            Z: 6.02248716
+            X: -35.1646805
+            Y: -39.4944382
+            Z: 2.9116478
           }
           Rotation {
-            Pitch: 41.5427666
-            Yaw: -109.916168
-            Roll: -48.8648071
+            Pitch: -66.8884277
+            Yaw: 161.454559
+            Roll: -87.1282349
           }
           Scale {
             X: 1
@@ -314,14 +380,14 @@
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 14.0390625
-            Y: -0.818359375
-            Z: -1.74804688
+            X: -5.54101563
+            Y: -13.2089844
+            Z: 11.1035156
           }
           Rotation {
-            Pitch: -87.1115417
-            Yaw: -24.8101501
-            Roll: -159.002289
+            Pitch: -28.250391
+            Yaw: -52.9736366
+            Roll: 137.26001
           }
           Scale {
             X: 1.01535428
@@ -329,7 +395,7 @@
             Z: 0.868944347
           }
         }
-        ParentId: 396597402435678646
+        ParentId: 9286471132015755261
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -357,17 +423,17 @@
       }
       Objects {
         Id: 14693739833911524215
-        Name: "Group"
+        Name: "LeftWing1"
         Transform {
           Location {
-            X: 33.6442299
-            Y: -1.55366516
-            Z: -0.190544128
+            X: -11.8354893
+            Y: -26.5056763
+            Z: 24.0885925
           }
           Rotation {
-            Pitch: -6.84619141
-            Yaw: 18.2293243
-            Roll: 8.9062767
+            Pitch: -19.2946625
+            Yaw: -64.1434402
+            Roll: -14.0335493
           }
           Scale {
             X: 1
@@ -375,7 +441,7 @@
             Z: 1
           }
         }
-        ParentId: 396597402435678646
+        ParentId: 9286471132015755261
         ChildIds: 13005092345840853357
         ChildIds: 16999579079246299925
         Collidable_v2 {
@@ -436,17 +502,17 @@
       }
       Objects {
         Id: 16999579079246299925
-        Name: "Group"
+        Name: "LeftWrist"
         Transform {
           Location {
-            X: 31.3266315
-            Y: -1.41026878
-            Z: -1.585042
+            X: 30.9991722
+            Y: -2.00048637
+            Z: -2.00005913
           }
           Rotation {
-            Pitch: -23.9198
-            Yaw: -50.5881348
-            Roll: -36.1045227
+            Pitch: -40.8660278
+            Yaw: -133.949203
+            Roll: 17.8791142
           }
           Scale {
             X: 1
@@ -455,7 +521,6 @@
           }
         }
         ParentId: 14693739833911524215
-        ChildIds: 2549495312549042251
         ChildIds: 4968998955430399502
         ChildIds: 9620910793262540140
         ChildIds: 11746242556071290816
@@ -470,165 +535,15 @@
         }
       }
       Objects {
-        Id: 2549495312549042251
-        Name: "RightThumbRoot"
-        Transform {
-          Location {
-            X: 0.315242171
-            Y: 2.22966695
-            Z: 2.41161728
-          }
-          Rotation {
-            Pitch: -14.1400452
-            Yaw: -146.222748
-            Roll: -116.54245
-          }
-          Scale {
-            X: 1.917
-            Y: 1.917
-            Z: 1.917
-          }
-        }
-        ParentId: 16999579079246299925
-        ChildIds: 1747849295877997388
-        ChildIds: 4337043066202261954
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 1747849295877997388
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -0.258789063
-            Y: -0.461669922
-            Z: 4.55566406
-          }
-          Rotation {
-            Pitch: -7.70452881
-            Yaw: -120.667328
-            Roll: 180
-          }
-          Scale {
-            X: 0.20865722
-            Y: 0.200110033
-            Z: 0.187553659
-          }
-        }
-        ParentId: 2549495312549042251
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 482873605194865923
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4337043066202261954
-        Name: "RightThumbJoint"
-        Transform {
-          Location {
-            X: 0.0234375
-            Y: -0.112304688
-            Z: 8.53076172
-          }
-          Rotation {
-            Pitch: -39.255188
-            Yaw: -69.0440369
-            Roll: -7.66372681
-          }
-          Scale {
-            X: 0.700000048
-            Y: 0.700000048
-            Z: 0.700000048
-          }
-        }
-        ParentId: 2549495312549042251
-        ChildIds: 2128277290345746842
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 2128277290345746842
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: 0.00020368323
-            Y: -1.59072065
-            Z: 3.08060789
-          }
-          Rotation {
-            Yaw: -3.05175781e-05
-            Roll: 1.28066049e-05
-          }
-          Scale {
-            X: 0.260786355
-            Y: 0.333848119
-            Z: 0.173431993
-          }
-        }
-        ParentId: 4337043066202261954
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 482873605194865923
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 4968998955430399502
-        Name: "Forefinger"
+        Name: "LeftWingTop"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: 12.2049685
+            Pitch: -21.7445679
+            Yaw: -26.1423035
+            Roll: -3.93377686
           }
           Scale {
             X: 1.67055798
@@ -848,12 +763,14 @@
       }
       Objects {
         Id: 9620910793262540140
-        Name: "Forefinger"
+        Name: "LeftWingMid"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -11.7898254
+            Pitch: -20.7902527
+            Yaw: -29.2296448
+            Roll: -4.73553467
           }
           Scale {
             X: 1.57424867
@@ -1070,12 +987,14 @@
       }
       Objects {
         Id: 11746242556071290816
-        Name: "Forefinger"
+        Name: "LeftWingBot"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -51.6161804
+            Pitch: -15.1114807
+            Yaw: -37.1965332
+            Roll: -3.66470337
           }
           Scale {
             X: 1.41938913
@@ -1147,9 +1066,9 @@
         Name: "RightIndexRoot"
         Transform {
           Location {
-            X: 19.171875
-            Y: 2.02734375
-            Z: -2.125
+            X: 19.5545406
+            Y: 2.02746916
+            Z: -1.31605446
           }
           Rotation {
             Pitch: -64.706604
@@ -1295,9 +1214,9 @@
           Location {
           }
           Rotation {
-            Pitch: 3.4150944e-05
-            Yaw: -1.90445465e-17
-            Roll: -2.08174828e-18
+            Pitch: 53.2209625
+            Yaw: 60.461
+            Roll: 67.556
           }
           Scale {
             X: 1
@@ -1307,7 +1226,7 @@
         }
         ParentId: 2787178634423721369
         ChildIds: 8759359567802220777
-        ChildIds: 9123285980552260839
+        ChildIds: 17209594625094473395
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1365,18 +1284,18 @@
         }
       }
       Objects {
-        Id: 9123285980552260839
-        Name: "Group"
+        Id: 17209594625094473395
+        Name: "RightWing0"
         Transform {
           Location {
-            X: -47.1542969
-            Y: 65.6523438
-            Z: 27.357666
+            X: -33.7820396
+            Y: 41.59375
+            Z: 2.96554971
           }
           Rotation {
-            Pitch: 47.8845444
-            Yaw: 83.9050751
-            Roll: 20.3710308
+            Pitch: -66.8884277
+            Yaw: -161.455
+            Roll: 87.128
           }
           Scale {
             X: 1
@@ -1386,7 +1305,7 @@
         }
         ParentId: 2693819495457422560
         ChildIds: 9538814800562180578
-        ChildIds: 2246486346045621330
+        ChildIds: 9123285980552260839
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1402,14 +1321,14 @@
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -18.0753975
-            Y: -7.32561
-            Z: -2.63095
+            X: -6.92604685
+            Y: 11.1171875
+            Z: 11.0401192
           }
           Rotation {
-            Pitch: -78.7072296
-            Yaw: -37.3731155
-            Roll: -119.768974
+            Pitch: -28.250433
+            Yaw: 52.9734306
+            Roll: -137.259781
           }
           Scale {
             X: 1.01535428
@@ -1417,7 +1336,7 @@
             Z: 0.868944347
           }
         }
-        ParentId: 9123285980552260839
+        ParentId: 17209594625094473395
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1444,18 +1363,18 @@
         }
       }
       Objects {
-        Id: 2246486346045621330
-        Name: "Group"
+        Id: 9123285980552260839
+        Name: "RightWing1"
         Transform {
           Location {
-            X: -31.265522
-            Y: -12.4042568
-            Z: -1.65165329
+            X: -13.3716974
+            Y: 24.0585938
+            Z: 24.3922768
           }
           Rotation {
-            Pitch: 3.6364677
-            Yaw: 19.1011982
-            Roll: 10.6180315
+            Pitch: -19.2946777
+            Yaw: 64.143
+            Roll: 14.034
           }
           Scale {
             X: 1
@@ -1463,7 +1382,7 @@
             Z: 1
           }
         }
-        ParentId: 9123285980552260839
+        ParentId: 17209594625094473395
         ChildIds: 17027295150087807430
         ChildIds: 11039099914141587413
         Collidable_v2 {
@@ -1481,14 +1400,14 @@
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 47.0331116
-            Y: -1.72481537
-            Z: -3.46286774
+            X: 14.0370779
+            Y: 0.814918518
+            Z: -1.74808884
           }
           Rotation {
-            Pitch: -79.068367
-            Yaw: 94.0228729
-            Roll: 70.7499847
+            Pitch: -87.1111908
+            Yaw: 24.8115768
+            Roll: 159.000443
           }
           Scale {
             X: 1.01535428
@@ -1496,7 +1415,7 @@
             Z: 0.868944347
           }
         }
-        ParentId: 2246486346045621330
+        ParentId: 9123285980552260839
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1524,17 +1443,17 @@
       }
       Objects {
         Id: 11039099914141587413
-        Name: "Group"
+        Name: "RightWrist"
         Transform {
           Location {
-            X: 63.5390625
-            Y: -6.57226563
-            Z: -5.2734375
+            X: 31.3245659
+            Y: 1.40704155
+            Z: -1.58602047
           }
           Rotation {
-            Pitch: -20.997818
-            Yaw: 36.3183022
-            Roll: 24.3813305
+            Pitch: -40.8660278
+            Yaw: 133.949
+            Roll: -17.8789978
           }
           Scale {
             X: 1
@@ -1542,8 +1461,7 @@
             Z: 1
           }
         }
-        ParentId: 2246486346045621330
-        ChildIds: 11699896020166272484
+        ParentId: 9123285980552260839
         ChildIds: 12701027742239077084
         ChildIds: 5235405147017190045
         ChildIds: 10032909748323763524
@@ -1558,161 +1476,8 @@
         }
       }
       Objects {
-        Id: 11699896020166272484
-        Name: "Group"
-        Transform {
-          Location {
-            X: 0.3203125
-            Y: -2.22802734
-            Z: 2.4140625
-          }
-          Rotation {
-            Pitch: -14.140048
-            Yaw: 146.222778
-            Roll: 116.542381
-          }
-          Scale {
-            X: 1.917
-            Y: 1.917
-            Z: 1.917
-          }
-        }
-        ParentId: 11039099914141587413
-        ChildIds: 429745706366122457
-        ChildIds: 16010055604872595715
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 429745706366122457
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -0.259277344
-            Y: 0.462890625
-            Z: 4.55419922
-          }
-          Rotation {
-            Pitch: -7.70454836
-            Yaw: 120.667358
-            Roll: 179.999954
-          }
-          Scale {
-            X: 0.20865722
-            Y: -0.200110033
-            Z: 0.187553659
-          }
-        }
-        ParentId: 11699896020166272484
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 482873605194865923
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16010055604872595715
-        Name: "Group"
-        Transform {
-          Location {
-            X: 0.0244140625
-            Y: 0.11328125
-            Z: 8.52734375
-          }
-          Rotation {
-            Pitch: -39.2551651
-            Yaw: 69.0440598
-            Roll: 7.66373062
-          }
-          Scale {
-            X: 0.700000048
-            Y: 0.7
-            Z: 0.700000048
-          }
-        }
-        ParentId: 11699896020166272484
-        ChildIds: 7577909997960509382
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 7577909997960509382
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -0.001953125
-            Y: 1.59082031
-            Z: 3.08203125
-          }
-          Rotation {
-            Pitch: -4.09811328e-05
-            Yaw: 3.68281835e-05
-            Roll: -1.29714335e-05
-          }
-          Scale {
-            X: 0.260786325
-            Y: -0.333848149
-            Z: 0.173431978
-          }
-        }
-        ParentId: 16010055604872595715
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 482873605194865923
-          }
-          Teams {
-          }
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
         Id: 12701027742239077084
-        Name: "Group"
+        Name: "RightWingTop"
         Transform {
           Location {
             X: 0.00390625
@@ -1720,9 +1485,9 @@
             Z: 0.00390625
           }
           Rotation {
-            Pitch: -2.73207552e-05
-            Yaw: -12.2050142
-            Roll: 3.68998044e-05
+            Pitch: -21.7445679
+            Yaw: 26.142
+            Roll: 3.934
           }
           Scale {
             X: 1
@@ -1944,7 +1709,7 @@
       }
       Objects {
         Id: 5235405147017190045
-        Name: "Group"
+        Name: "RightWingMid"
         Transform {
           Location {
             X: 0.00390625
@@ -1952,9 +1717,9 @@
             Z: 0.00390625
           }
           Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: 11.7898588
-            Roll: 4.2591997e-05
+            Pitch: -20.7902527
+            Yaw: 29.23
+            Roll: 4.736
           }
           Scale {
             X: 1
@@ -2176,7 +1941,7 @@
       }
       Objects {
         Id: 10032909748323763524
-        Name: "Group"
+        Name: "RightWingBot"
         Transform {
           Location {
             X: 0.00390625
@@ -2184,9 +1949,9 @@
             Z: 0.00390625
           }
           Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: 51.61623
-            Roll: 2.79061969e-05
+            Pitch: -15.1114807
+            Yaw: 37.197
+            Roll: 3.665
           }
           Scale {
             X: 1
@@ -2258,12 +2023,12 @@
         Name: "Group"
         Transform {
           Location {
-            X: 27.2099609
-            Y: -2.875
-            Z: -3.01953125
+            X: 28.8963871
+            Y: -4.13020897
+            Z: -2.27976418
           }
           Rotation {
-            Pitch: -64.7065887
+            Pitch: -64.706604
             Yaw: 179.999878
             Roll: -179.999878
           }

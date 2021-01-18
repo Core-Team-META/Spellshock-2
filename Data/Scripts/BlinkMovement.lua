@@ -10,7 +10,7 @@ local Woosh = script:GetCustomProperty("Woosh")
 local FanPos = BladeFan:GetWorldPosition()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 
-Task.Wait(4) --testing buffer
+
 --Ease3D.EaseRotation(BladeFan, Rotation.New(0, 0, -45), .4, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EasePosition(Dagger1, Vector3.New(750, 0, 0), .2, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EasePosition(Dagger3, Vector3.New(750, 0, 0), .2, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)

@@ -143,6 +143,30 @@ Objects {
         Id: 6738937092225821013
       }
     }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 2104224913586788579
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 9392791916696762581
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -301,6 +325,30 @@ Objects {
         Id: 5719005977356257604
       }
     }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 6481751857886768330
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 5202994091235663908
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -410,6 +458,30 @@ Objects {
       Name: "cs:03_Slasher_NormalImpact"
       AssetReference {
         Id: 15345620429388998215
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 7601839425209033086
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 17801137391214202879
       }
     }
   }
@@ -568,6 +640,30 @@ Objects {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
         Id: 13347412244189647636
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 6481751857886768330
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 5202994091235663908
       }
     }
   }
