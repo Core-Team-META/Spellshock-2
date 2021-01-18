@@ -108,33 +108,9 @@ Objects {
       Int: 5
     }
     Overrides {
-      Name: "cs:01_VenomBomb_Projectile"
-      AssetReference {
-        Id: 2104224913586788579
-      }
-    }
-    Overrides {
-      Name: "cs:01_VenomBomb_Impact"
-      AssetReference {
-        Id: 9392791916696762581
-      }
-    }
-    Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
         Id: 17966040025736251861
-      }
-    }
-    Overrides {
-      Name: "cs:03_Slasher_Projectile"
-      AssetReference {
-        Id: 5432023853122515340
-      }
-    }
-    Overrides {
-      Name: "cs:03_Slasher_NormalImpact"
-      AssetReference {
-        Id: 12510419486879215421
       }
     }
     Overrides {
@@ -437,27 +413,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:01_VenomBomb_Impact"
-      AssetReference {
-        Id: 7601839425209033086
-      }
-    }
-    Overrides {
-      Name: "cs:01_VenomBomb_Projectile"
-      AssetReference {
-        Id: 17801137391214202879
-      }
-    }
-    Overrides {
       Name: "cs:04_WraithStrike_Impact"
       AssetReference {
         Id: 11395878667126256154
-      }
-    }
-    Overrides {
-      Name: "cs:03_Slasher_NormalImpact"
-      AssetReference {
-        Id: 15345620429388998215
       }
     }
     Overrides {
@@ -807,19 +765,19 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Placement"
       AssetReference {
-        Id: 8480354754001927698
+        Id: 1737908342690364901
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Ending"
       AssetReference {
-        Id: 526721940899255177
+        Id: 4895527079609186475
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Projectile"
       AssetReference {
-        Id: 17972774475744623316
+        Id: 3493372388929023277
       }
     }
   }
@@ -1100,19 +1058,19 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Placement"
       AssetReference {
-        Id: 2985282815979522936
+        Id: 12015791184120145874
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Projectile"
       AssetReference {
-        Id: 12886882762364699151
+        Id: 9285589052537802742
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Ending"
       AssetReference {
-        Id: 129666070119651245
+        Id: 4981123765839941673
       }
     }
     Overrides {
