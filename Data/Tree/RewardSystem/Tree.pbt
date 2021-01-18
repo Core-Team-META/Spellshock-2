@@ -192,6 +192,24 @@ Objects {
         SelfId: 16753970550728364913
       }
     }
+    Overrides {
+      Name: "cs:CLAIMED1"
+      ObjectReference {
+        SelfId: 255567564686577672
+      }
+    }
+    Overrides {
+      Name: "cs:CLAIMED2"
+      ObjectReference {
+        SelfId: 753699609515617348
+      }
+    }
+    Overrides {
+      Name: "cs:CLAIMED3"
+      ObjectReference {
+        SelfId: 15333338177699358443
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
