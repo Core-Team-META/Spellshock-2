@@ -179,6 +179,12 @@ function Tick(deltaTime)
 
 			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not PreviousTarget.isDead then
 				HawkTarget = PreviousTarget
+			else
+				local HawkSpeed =
+					META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, Ability.name .. ": Speed")
+				local DistanceVector = Ability.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
+				CurrentHawk:MoveTo(Ability.owner:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
+				CurrentHawk:LookAtContinuous(Ability.owner, true)
 			end
 		end
 	end

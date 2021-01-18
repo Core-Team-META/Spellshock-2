@@ -20,6 +20,7 @@ local GAME_STATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitF
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
+local choosenRewards = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- SERVER LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -83,7 +84,9 @@ local function GetPlayerRewards(player)
         --90% chance to be a random class bind shards
         if random >= 10 then
             tempTable[3] = {
-                [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
+                [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
+
+                )
             }
         else -- 10% chance to be costume tokens
             tempTable[3] = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
@@ -112,7 +115,14 @@ end
 --@param object player
 --@param int rewardId
 function OnRewardSelect(player, rewardId)
-    REWARD_UTIL.OnRewardSelect(player, rewardId, playerRewards)
+    choosenRewards[player] = rewardId
+end
+
+function GivePlayerRewards()
+    for player, rewardId in pairs(choosenRewards) do
+        REWARD_UTIL.OnRewardSelect(player, rewardId, playerRewards)
+    end
+    choosenRewards = {}
 end
 
 function OnGameStateChanged(object, string)
@@ -120,6 +130,9 @@ function OnGameStateChanged(object, string)
         local state = object:GetCustomProperty(string)
         if state == GAME_STATE_API.GAME_STATE_REWARDS then
             CalculateRewards()
+        end
+        if state == GAME_STATE_API.GAME_STATE_LOBBY then
+            GivePlayerRewards()
         end
     end
 end

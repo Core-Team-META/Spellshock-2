@@ -279,6 +279,8 @@ function API.ChangeClass(player, class)
     end
     playerLevel = playerLevel - 6
     player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
+    player.maxHitPoints = CONST.CLASS_HEALTH[class]
+    player.hitPoints = player.maxHitPoints
 end
 
 --@param object player
