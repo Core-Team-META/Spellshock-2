@@ -33,6 +33,13 @@ local function SetNetworkProperty(bool)
 end
 
 function OnBindingPressed(player, binding)
+	if binding == AbilityBinding then
+		print("* Healing Crystal *")
+		print("  isEnabled: "..tostring(isEnabled))
+		print("  isPreviewing: "..tostring(isPreviewing))
+		print("  isPlacing: "..tostring(isPlacing))
+	end
+	
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
 		SetNetworkProperty(isPreviewing)
@@ -45,7 +52,8 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
-		SetNetworkProperty(false)
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
 	end
 end
 
@@ -128,6 +136,10 @@ end
 function Tick(dTime)
 	Timer = Timer - dTime 
 	
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		isPlacing = false
+	end
+
 	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do
