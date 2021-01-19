@@ -280,8 +280,12 @@ function API.ChangeClass(player, class)
     end
     playerLevel = playerLevel - 6
     player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
+
     player.maxHitPoints = CONST.CLASS_HEALTH[class]
-    player.hitPoints = player.maxHitPoints
+    if not player.serverUserData.NotAdjustHp then
+        player.hitPoints = player.maxHitPoints
+    end
+    player.serverUserData.NotAdjustHp = false
 end
 
 --@param object player
@@ -319,7 +323,7 @@ end
 function API.ProjectileSpawn(projectileTemplate, worldPosition, forwardVector, resultTable)
     local resultTable = {}
     Events.Broadcast("META_AP.PSpawn", projectileTemplate, worldPosition, forwardVector, resultTable)
---Wait (1) Server Tick to make sure the objects been spawned
+    --Wait (1) Server Tick to make sure the objects been spawned
     local newObject = resultTable[1]
     resultTable = nil
     return newObject
@@ -327,7 +331,7 @@ end
 
 function API.AbilitySpamPreventer()
     local timeNow = time()
-    print("Spam prevent: "..tostring(AbilitySpamTime))
+    print("Spam prevent: " .. tostring(AbilitySpamTime))
     if (timeNow - AbilitySpamTime) < 0.6 then
         return false
     end
