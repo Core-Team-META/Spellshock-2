@@ -32,6 +32,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
 		local impactTemplate = PlayerVFX.Impact
 		META_AP().SpawnAsset(impactTemplate, {position = projectile:GetWorldPosition(), rotation = impactRotation})
 
+		
+
 		-- init dmg object
 		local DamageAmount =
 			META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod2", DEFAULT_DamageAmount, ABILITY.name .. ": Damage Amount")
@@ -53,7 +55,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 		for _, enemy in ipairs(enemiesInRange) do
 			-- apply status effect
 			--API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
-
+			enemy.serverUserData.NotAdjustHp = true
 			-- Damage
 			if DamageAmount ~= 0 then
 				local attackData = {
