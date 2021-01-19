@@ -28,13 +28,23 @@ local isEnabled = true
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
+
 local function SetNetworkProperty(bool)
 	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
 end
 
 
+
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and isEnabled and not isPreviewing 
+	if isEnabled and binding == AbilityBinding and not isPreviewing 
 	and not isExecuting and not player.isDead and player.isGrounded then
 		--PrimaryAbility.isEnabled = false
 		--print("STARTING AIR DIVE")
@@ -88,7 +98,9 @@ function OnTargetChosen(player, targetPos)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		ABILITY.isEnabled = false
-		
+		if ABILITY:GetCurrentPhase() == AbilityPhase.READY then 
+			return 
+		end
 		-- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
 	    	playerAbility.isEnabled = true
@@ -213,14 +225,15 @@ end
 function OnPlayerRespawn(player)
 	DisableFlying(player)
 end
-  
+
+ 
 function OnAbilityToggled(thisAbility, mode)
-	if thisAbility == ABILITY or thisAbility == "ALL" then
+	if thisAbility.id == ABILITY.id or thisAbility == "ALL" then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		ABILITY.isEnabled = false
 		isEnabled = mode
-		if thisAbility == ABILITY then
+		if thisAbility.id == ABILITY.id then
 			-- reactive other abilities
 			for _, playerAbility in pairs(ActiveAbilities) do
 				playerAbility.isEnabled = true

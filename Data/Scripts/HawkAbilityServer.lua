@@ -26,6 +26,9 @@ local Timer = 0
 local PlayerVFX = nil
 
 function OnAbilityExecute(thisAbility)
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+		return 
+	end
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
 	local startingPosition = OwnerPosition + Vector3.New(0, 0, 200)
 	local startingRotation = thisAbility.owner:GetWorldRotation()
