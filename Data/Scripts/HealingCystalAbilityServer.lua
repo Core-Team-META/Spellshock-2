@@ -27,30 +27,38 @@ local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
 
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
 
 local function SetNetworkProperty(bool)
 	Equipment:SetNetworkedCustomProperty("E_isPreviewing", bool)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding then
-		print("* Healing Crystal *")
-		print("  isEnabled: "..tostring(isEnabled))
-		print("  isPreviewing: "..tostring(isPreviewing))
-		print("  isPlacing: "..tostring(isPlacing))
-	end
-	
-	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
-		isPreviewing = true
-		SetNetworkProperty(isPreviewing)
-		PrimaryAbility.isEnabled = false
-		SpecialAbility.isEnabled = true
+	if isEnabled and not isPlacing and not player.isDead then
+		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
+			isPreviewing = true
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = false
+			SpecialAbility.isEnabled = true
+		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+			isPreviewing = false
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = true
+			SpecialAbility.isEnabled = false
+		end
 	end
 end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
-		print("INTERRUPTING")
+		--print("INTERRUPTING")
 		SpecialAbility:Interrupt()
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
@@ -63,15 +71,15 @@ end
 
 function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
-		Task.Wait()
+		--print("## Placement: "..SpecialAbility.name)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
-		
-		-- check if the placement was canceled
-		if position == nil then
-			return
+
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			--print("STOPPED BUG")
+			return 
 		end
 		
 		isPlacing = true
@@ -81,7 +89,6 @@ function PlaceObject(thisPlayer, position, rotation)
 		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
-		--DestroyedEventListener = newObject.destroyEvent:Connect( OnCrystalDestroyed )
 	end
 end
 
@@ -99,13 +106,13 @@ function OnPlayerRespawn(player)
 	SpecialAbility.isEnabled = false
 end
 
-function OnAbilityToggled(thisAbility, mode)
-	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
+function OnAbilityToggled(abilityID, mode)
+	if abilityID == SpecialAbility.id or abilityID == "ALL" then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
-		if thisAbility == PrimaryAbility then
+		if abilityID == SpecialAbility.id then
 			PrimaryAbility.isEnabled = true
 		end
 	end
