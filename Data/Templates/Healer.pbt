@@ -24,7 +24,7 @@
           Overrides {
             Name: "cs:EquipmentIcon"
             AssetReference {
-              Id: 2813404828707589716
+              Id: 16959982771222489953
             }
           }
           Overrides {
@@ -927,7 +927,7 @@
       }
       Objects {
         Id: 1175861072708434832
-        Name: "LightWaveAbilityServer"
+        Name: "DivineLightAbilityServer"
         Transform {
           Location {
             X: -747.460938
@@ -2122,7 +2122,7 @@
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2262,7 +2262,7 @@
           }
           Animation: "2hand_staff_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2338,7 +2338,7 @@
             IsTargetDataUpdated: true
           }
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2583,12 +2583,12 @@
       }
     }
     Assets {
-      Id: 2813404828707589716
-      Name: "Fantasy Ability Blue 031"
+      Id: 16959982771222489953
+      Name: "Fantasy Ability Yellow 037"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_031"
+        AssetId: "UI_Fantasy_Ability_Yellow_037"
       }
     }
     Assets {

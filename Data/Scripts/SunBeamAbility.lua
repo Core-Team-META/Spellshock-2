@@ -59,6 +59,8 @@ end
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 
+	if ABILITY:GetCurrentPhase() == AbilityPhase.READY then return end
+
 	local SPEED = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_Speed, ABILITY.name .. ": Speed")
 	local RANGE = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", DEFAULT_Range, ABILITY.name .. ": Range")
 

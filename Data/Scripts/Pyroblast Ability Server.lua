@@ -26,6 +26,9 @@ local PlayerVFX = nil
 
 function OnProjectileImpact(projectile, other, hitResult)
 	Reset(false)
+
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+
 	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
 		return
 	end
@@ -66,9 +69,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 		directionVector = directionVector / directionVector.size
 		directionVector.z = 0.7
 		--#TODO Fix the magic number
-		local impulseVector =
-			directionVector *
-			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", 100000, SpecialAbility.name .. ": Enemy Impulse")
+		local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", 100000, SpecialAbility.name .. ": Enemy Impulse")
 
 		local attackData = {
 			object = enemy,

@@ -46,6 +46,8 @@ function OnGoingToTakeDamage(attackData)
 end
 
 function OnSpecialAbilityExecute(thisAbility)
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+	
 	PlayerSettings.movementControlMode = thisAbility.owner.movementControlMode
 	PlayerSettings.maxJumpCount = thisAbility.owner.maxJumpCount
 	

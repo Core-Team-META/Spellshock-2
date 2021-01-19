@@ -2178,7 +2178,7 @@
           Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2518,7 +2518,7 @@
           }
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
