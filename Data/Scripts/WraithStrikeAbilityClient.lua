@@ -23,6 +23,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
 local flyingTimer = 0
 local AllHalograms = {}
+local placementTable = {position = nil, rotation = nil, isVisible = nil}
 
 local timerUI_position = Vector2.New(-255, 18)
 local timerUI_fillColor = Color.New(0.629001, 0.0, 0.74)
@@ -31,14 +32,6 @@ local TimerUI = {}
 
 local objectHalogram = nil
 local EventListeners = {}
-local CancelBindings = {
-	ability_extra_20 = true,
-	ability_extra_22 = true,
-	ability_extra_23 = true,
-	ability_extra_24 = true,
-	ability_secondary = true,
-	ability_extra_12 = true
-}
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "T_isPreviewing" then
