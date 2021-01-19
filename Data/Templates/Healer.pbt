@@ -2044,11 +2044,9 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
           }
@@ -2109,6 +2107,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2122,9 +2121,8 @@
             IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2177,6 +2175,7 @@
           }
           RecoveryPhaseSettings {
             Duration: 0.75
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2190,7 +2189,6 @@
             IsTargetDataUpdated: true
           }
           Animation: "unarmed_shout"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }
@@ -2264,7 +2262,7 @@
           }
           Animation: "2hand_staff_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2304,6 +2302,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2314,6 +2313,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2324,6 +2324,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
+            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2336,9 +2337,8 @@
             CanRotate: true
             IsTargetDataUpdated: true
           }
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2477,7 +2477,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2488,7 +2487,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2499,7 +2497,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
@@ -2507,7 +2504,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"
@@ -2579,6 +2575,7 @@
               Value: "mc:eabilitysetfacing:none"
             }
           }
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:secondaryaction"
           }

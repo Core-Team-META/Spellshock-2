@@ -24,6 +24,7 @@ _G["Meta.Ability.Progression"] = API
 ------------------------------------------------------------------------------------------------------------------------
 local playerListeners = {}
 local playerProgression = {}
+local AbilitySpamTime = 0
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -322,6 +323,16 @@ function API.ProjectileSpawn(projectileTemplate, worldPosition, forwardVector, r
     local newObject = resultTable[1]
     resultTable = nil
     return newObject
+end
+
+function API.AbilitySpamPreventer()
+    local timeNow = time()
+    print("Spam prevent: "..tostring(AbilitySpamTime))
+    if (timeNow - AbilitySpamTime) < 0.6 then
+        return false
+    end
+    AbilitySpamTime = timeNow
+    return true
 end
 
 ------------------------------------------------------------------------------------------------------------------------

@@ -14,11 +14,6 @@ local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation"
 local EventName = ServerScript:GetCustomProperty("EventName")
 local abilityPreview = script:GetCustomProperty("PreviewString")
 local isPreviewing = Equipment:GetCustomProperty(abilityPreview)
---[[if not abilityPreview then
-	isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
-else
-	isPreviewing = Equipment:GetCustomProperty(abilityPreview)
-end]]--
 
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
@@ -30,6 +25,7 @@ local PlayerVFX = nil
 local AllHalograms = {}
 local objectHalogram = nil
 local EventListeners = {}
+local placementTable = {position = nil, rotation = nil, isVisible = nil}
 
 local CancelBindings = {
 	ability_extra_20 = true,
@@ -77,25 +73,30 @@ function OnNetworkedPropertyChanged(thisObject, name)
 end
 
 function OnBindingPressed(player, binding)
-	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-		--print("Canceling: "..binding)
-		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
-			Task.Wait()
-		end
+	if binding == "ability_primary" and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
+		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
+		placementTable.rotation = objectHalogram:GetWorldRotation()
+		
+		-- if the hologram position is nil or not visible then do not activate the ability; this means the placement position is invalid
+		if not placementTable.position or not placementTable.isVisible then return end
+
+		isPreviewing = false
+
+		-- Destroy hologram
+		AllHalograms[objectHalogram.id] = nil
+		objectHalogram:Destroy()
+		objectHalogram = nil
+		
+		SpecialAbility:Activate()
 	end
 end
 
 function OnSpecialAbilityExecute(thisAbility)
-	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
-		local targetPosition, _, targetIsVisible = CalculatePlacement()
-		if targetPosition and targetIsVisible and EventName then
-			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) ==
-				BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
-				Task.Wait()
-			end
-		--print("~ Executing placement ~")
-		end
+	while Events.BroadcastToServer(EventName, placementTable.position, placementTable.rotation) ==
+		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+		Task.Wait()
 	end
+	--print("~ Executing placement: "..SpecialAbility.name)
 end
 
 function OnEquip(equipment, player)
