@@ -753,13 +753,13 @@ Objects {
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 3018006546627770720
+        Id: 5224364241756978283
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Ending"
       AssetReference {
-        Id: 10361163652299667815
+        Id: 9716011756738589723
       }
     }
     Overrides {
@@ -771,7 +771,7 @@ Objects {
     Overrides {
       Name: "cs:01_SunBeam_Ending"
       AssetReference {
-        Id: 4895527079609186475
+        Id: 12743534185662601435
       }
     }
     Overrides {
@@ -1076,13 +1076,13 @@ Objects {
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 12008153979794448805
+        Id: 17770457708602014408
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Ending"
       AssetReference {
-        Id: 1535993576978115928
+        Id: 11548624648656035757
       }
     }
   }
