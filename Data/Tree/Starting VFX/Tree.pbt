@@ -747,7 +747,7 @@ Objects {
     Overrides {
       Name: "cs:03_DivineLight_Active"
       AssetReference {
-        Id: 14361516424257808637
+        Id: 14281930789658138167
       }
     }
     Overrides {
@@ -1052,7 +1052,7 @@ Objects {
     Overrides {
       Name: "cs:03_DivineLight_Active"
       AssetReference {
-        Id: 14393575782714755705
+        Id: 3838786937762771186
       }
     }
     Overrides {
