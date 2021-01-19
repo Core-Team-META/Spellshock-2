@@ -71,7 +71,7 @@ end
 local function AddDefaultCosmetics(player)
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 1 do
+            for s = 1, 10 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
                         b = 8 -- Used for costume ID
@@ -190,7 +190,7 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    data = {} --#TODO Testing
+    --data = {} --#TODO Testing
     if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)

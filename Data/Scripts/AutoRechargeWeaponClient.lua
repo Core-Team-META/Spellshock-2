@@ -23,7 +23,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  ]]
 if true then return end
 -- Internal custom properties
-local WEAPON = script:FindAncestorByType('Weapon')
+local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
 if not WEAPON:IsA('Weapon') then
     error(script.name .. " should be part of Weapon object hierarchy.")
 end

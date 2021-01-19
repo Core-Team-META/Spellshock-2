@@ -50,7 +50,6 @@ local DURATION_KEY = 4
 local DAMAGE_KEY = 5
 local MULTIPLIER_KEY = 6
 
-
 local function StringSplit(delimiter, text)
 	local tbl = {}
 	if delimiter == "" then -- this would result in endless loops
@@ -158,13 +157,13 @@ function UpdatePlayerEffectState(player, effectType)
 
 			if statusEffectData.type == effectType then
 				player.movementControlMode = MovementControlMode.NONE
-				player.lookControlMode = LookControlMode.NONE
+				--player.lookControlMode = LookControlMode.NONE
 				return
 			end
 		end
 
 		player.movementControlMode = DEFAULT_PLAYER_SETTINGS.movementControlMode
-		player.lookControlMode = DEFAULT_PLAYER_SETTINGS.lookControlMode
+		--player.lookControlMode = DEFAULT_PLAYER_SETTINGS.lookControlMode
 		return
 	end
 
@@ -260,7 +259,8 @@ function API.DefineStatusEffect(statusEffectData)
 		error(string.format("DefineStatusEffect for %s when that status effect already exists", statusEffectData.name))
 	end
 
-	local id = statusEffectData.name--GetStringHash(statusEffectData.name)
+	local id = statusEffectData.name
+	 --GetStringHash(statusEffectData.name)
 	statusEffectData.id = id
 
 	if id == 0 then
@@ -304,12 +304,13 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 	if player.isDead or player.serverUserData.DamageImmunity then
 		return
 	end
+	local doesHave, currentId = API.DoesPlayerHaveStatusEffect(player, id)
+	if doesHave then
+		API.RemoveStatusEffect(player, currentId)
+	end
 
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
-		if API.DoesPlayerHaveStatusEffect(player, id) then
-			API.RemoveStatusEffect(player, i)
-		end
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 
 		if not trackerTbl then
@@ -342,7 +343,6 @@ function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
 			return
 		end
 	end
-
 
 	-- Knock one off?
 	warn(string.format("Failed to apply status effect id: %d to player %s because they already had max", id, player.name))
@@ -381,7 +381,7 @@ function API.DoesPlayerHaveStatusEffect(player, name)
 			local id = trackerTbl[ID_KEY]
 			local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
 			if (statusEffectData.name == name) then
-				return true
+				return true, i
 			end
 		end
 	end

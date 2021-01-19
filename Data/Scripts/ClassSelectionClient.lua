@@ -104,7 +104,8 @@ function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation
 		table.insert(attachmentTable, attachment)
 	end
 	AnimMesh.clientUserData.costume = attachmentTable
-
+	newCostume:Destroy()
+	
 	-- Show animated mesh
 	AnimMesh.visibility = Visibility.INHERIT
 
@@ -404,6 +405,7 @@ function EquipCostumeToPlayer(player)
 			table.insert(attachmentTable, attachment)
 		end
 		player.clientUserData.LobbyCostume = attachmentTable
+		newCostume:Destroy()
 	end
 end
 

@@ -1,5 +1,5 @@
 ﻿local function META_AP()
-    return _G["Meta.Ability.Progression"]
+	return _G["Meta.Ability.Progression"]
 end
 
 local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
@@ -12,7 +12,13 @@ local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
 local EventName = ServerScript:GetCustomProperty("EventName")
-local isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
+local abilityPreview = script:GetCustomProperty("PreviewString")
+local isPreviewing = Equipment:GetCustomProperty(abilityPreview)
+--[[if not abilityPreview then
+	isPreviewing = ServerScript:GetCustomProperty("isPreviewing")
+else
+	isPreviewing = Equipment:GetCustomProperty(abilityPreview)
+end]]--
 
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
@@ -26,25 +32,27 @@ local objectHalogram = nil
 local EventListeners = {}
 
 local CancelBindings = {
-	ability_extra_20 = true, 
-	ability_extra_22 = true, 
-	ability_extra_23 = true, 
-	ability_extra_24 = true, 
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
 
 function OnNetworkedPropertyChanged(thisObject, name)
-	if name == "isPreviewing" then
-		if SpecialAbility.owner ~= LOCAL_PLAYER then return end
-		isPreviewing = ServerScript:GetCustomProperty(name)
-		
-		if isPreviewing then	
+	if name == abilityPreview then
+		if SpecialAbility.owner ~= LOCAL_PLAYER then
+			return
+		end
+		isPreviewing = Equipment:GetCustomProperty(name)
+
+		if isPreviewing then
 			local previewScale = Vector3.ONE
 			if RadiusMod then
 				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
-				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name..": Radius")
-				previewScale = Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
+				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
+				previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 			end
 
 			local ObjectTemplate
@@ -53,25 +61,25 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			else
 				ObjectTemplate = PlayerVFX.Preview
 			end
-			
+
 			local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
-			
+
 			objectHalogram = newObject
-			AllHalograms[objectHalogram.id] = objectHalogram			
+			AllHalograms[objectHalogram.id] = objectHalogram
 		else
 			if objectHalogram and Object.IsValid(objectHalogram) then
 				AllHalograms[objectHalogram.id] = nil
 				objectHalogram:Destroy()
-				objectHalogram = nil				
+				objectHalogram = nil
 			end
 		end
 	end
 end
 
-function OnBindingPressed(player, binding)		
+function OnBindingPressed(player, binding)
 	if CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 		--print("Canceling: "..binding)
-		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do 
+		while Events.BroadcastToServer(EventName, nil) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 			Task.Wait()
 		end
 	end
@@ -81,29 +89,34 @@ function OnSpecialAbilityExecute(thisAbility)
 	if thisAbility.owner == LOCAL_PLAYER and objectHalogram and Object.IsValid(objectHalogram) then
 		local targetPosition, _, targetIsVisible = CalculatePlacement()
 		if targetPosition and targetIsVisible and EventName then
-			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+			while Events.BroadcastToServer(EventName, targetPosition, objectHalogram:GetWorldRotation()) ==
+				BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 				Task.Wait()
 			end
-			--print("~ Executing placement ~")
+		--print("~ Executing placement ~")
 		end
 	end
 end
 
 function OnEquip(equipment, player)
-	if player ~= LOCAL_PLAYER then return end
+	if player ~= LOCAL_PLAYER then
+		return
+	end
 	if not PreviewObjectTemplate then
 		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
 	end
-	table.insert(EventListeners, SpecialAbility.executeEvent:Connect( OnSpecialAbilityExecute ))
-	table.insert(EventListeners, player.bindingPressedEvent:Connect( OnBindingPressed ))
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
+	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
 
 function OnUnequip(equipment, player)
-	if player ~= LOCAL_PLAYER then return end
+	if player ~= LOCAL_PLAYER then
+		return
+	end
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	
+
 	if objectHalogram and Object.IsValid(objectHalogram) then
 		objectHalogram:Destroy()
 	end
@@ -117,19 +130,27 @@ function CalculatePlacement()
 	if AbilityMod == "NONE" then
 		PlacementRange = DEFAULT_Range
 	else
-		PlacementRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], AbilityMod, DEFAULT_Range, SpecialAbility.name..": Placement Range")
+		PlacementRange =
+			META_AP().GetAbilityMod(
+			SpecialAbility.owner,
+			META_AP()[Class],
+			META_AP()[BindingName],
+			AbilityMod,
+			DEFAULT_Range,
+			SpecialAbility.name .. ": Placement Range"
+		)
 	end
 	--print("PlacementRange: "..PlacementRange)
-	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)--MAX_PLACEMENT_RANGE)
+	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)
+	 --MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
-	
+
 	if hr ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
-		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000,
-			{ignorePlayers = true})
+		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
 		if hr ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
@@ -153,22 +174,22 @@ function Tick()
 			objectHalogram = nil
 			return
 		end
-		
+
 		local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-		if(MatchPlayerRotation) then
+		if (MatchPlayerRotation) then
 			objectHalogram:SetWorldRotation(playerViewRotation)
 		else
 			objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
 		end
-		
+
 		-- calculate placement:
 		local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
 		if impactPosition ~= nil and targetIsVisible then
 			objectHalogram:SetWorldPosition(impactPosition)
 			objectHalogram.visibility = Visibility.INHERIT
-			
+
 			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
-			if MatchNormal then		
+			if MatchNormal then
 				local quat = Quaternion.New(Vector3.UP, impactNormal)
 				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
 			end
@@ -184,4 +205,4 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-ServerScript.networkedPropertyChangedEvent:Connect( OnNetworkedPropertyChanged )
+Equipment.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)

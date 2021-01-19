@@ -7,7 +7,7 @@ local function META_AP()
 end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
-local ABILITY = script.parent
+local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local DEFAULT_DamageAmount = script:GetCustomProperty("Damage")
@@ -18,23 +18,21 @@ local DEFAULT_DamageRadius = script:GetCustomProperty("Radius")
 local PlayerVFX = nil
 local abilityName = string.gsub(ABILITY.name, " ", "_")
 
--- ##FIXME Need to update all META_AP().Q to be the proper bind. This will require updating the DATA script as well.
-
 function OnProjectileImpacted(projectile, other, hitResult)
     if other and ABILITY.owner then
 		local dmg = Damage.New()
-		dmg.amount = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod1", DEFAULT_DamageAmount, ABILITY.name..": Damage Amount")
+		dmg.amount = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod1", DEFAULT_DamageAmount, ABILITY.name..": Damage Amount")
         dmg:SetHitResult(hitResult)
         dmg.reason = DamageReason.COMBAT
         dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
 
-		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_DamageRadius, ABILITY.name..": Radius")
+		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod2", DEFAULT_DamageRadius, ABILITY.name..": Radius")
         local enemiesInRange = Game.FindPlayersInSphere(projectile:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = projectile.sourceAbility.owner.team})
         --CoreDebug.DrawSphere(projectile:GetWorldPosition(), radius, {duration = 5})
 
-        local slowStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", {}, ABILITY.name .. ": Slow Status")
-        local poisonStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod5", {}, ABILITY.name .. ": Poison Status")
+        local slowStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod4", {}, ABILITY.name .. ": Slow Status")
+        local poisonStatus = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod5", {}, ABILITY.name .. ": Poison Status")
 
         for _, enemy in ipairs(enemiesInRange) do
             -- Slow and Poison
@@ -47,14 +45,14 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				source = ABILITY.owner,
 				position = nil,
 				rotation = nil,
-				tags = {id = "Assassin_Q"}
+				tags = {id = "Assassin_R"}
 				}
 			COMBAT().ApplyDamage(attackData)	
         end
         
         --Play ImpactFX
         local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
-		World.SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+		META_AP().SpawnAsset(PlayerVFX.Impact, {position = projectile:GetWorldPosition(), rotation = impactRotation})
     end
 end
 
@@ -72,14 +70,14 @@ function OnAbilityExecute(thisAbility)
     local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
     grenadeProjectile.owner = ABILITY.owner
     grenadeProjectile.sourceAbility = ABILITY
-    grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
+    grenadeProjectile.speed = META_AP().GetAbilityMod(ABILITY.owner, META_AP().R, "mod3", DEFAULT_ProjectileSpeed, ABILITY.name..": Projectile Speed")
     grenadeProjectile.gravityScale = 1.5
     grenadeProjectile.shouldDieOnImpact = true
     grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q, META_AP().ASSASSIN)
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R, META_AP().ASSASSIN)
 end
 
 function OnUnequip(equipment, player)

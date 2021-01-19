@@ -29,10 +29,15 @@ local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
 
+
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", bool)
+end
+
 function OnBindingPressed(player, binding)
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -42,6 +47,7 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
+		SetNetworkProperty(false)
 	end
 end
 
@@ -54,7 +60,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		Task.Wait()
 		
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -65,7 +71,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		isPlacing = true
 
 		local tornadoTemplate = PlayerVFX.Placement
-		CurrentTornado = World.SpawnAsset(tornadoTemplate, {position = position, rotation = rotation})
+		CurrentTornado = META_AP().SpawnAsset(tornadoTemplate, {position = position, rotation = rotation})
 
 		local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 		CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
@@ -103,14 +109,14 @@ end
 
 function OnPlayerDied(player, _)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
@@ -118,7 +124,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility == PrimaryAbility then
@@ -130,7 +136,7 @@ end
 function OnEquip(equipment, player)
 	isPreviewing = false
 	isPlacing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

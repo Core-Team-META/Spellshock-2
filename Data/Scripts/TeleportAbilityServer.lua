@@ -10,10 +10,26 @@ local EventListeners = {}
 local isPreviewing = false
 local isPlacing = false
 
+
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("S_isPreviewing", bool)
+end
+
 function OnBindingPressed(player, binding)
+	if binding == AbilityBinding then
+		print("* Teleport *")
+		print("  isEnabled: "..tostring(isEnabled))
+		print("  isPreviewing: "..tostring(isPreviewing))
+		print("  isPlacing: "..tostring(isPlacing))
+	end
+
 	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -23,6 +39,7 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
+		SetNetworkProperty(false)
 	end
 end
 
@@ -34,11 +51,11 @@ function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		print("~ Received Broadcast ~")
+		
 		-- check if the placement was canceled
 		if position == nil then
 			return
@@ -46,27 +63,27 @@ function Teleport(thisPlayer, position, rotation)
 		
 		isPlacing = true
 		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 50))
-		World.SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
+		META_AP().SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
 	end
 end
 
 function OnPlayerDied(player, _)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnEquip(equipment, player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	if(EventName) then
 		table.insert(EventListeners, Events.ConnectForPlayer(EventName, Teleport))
@@ -82,6 +99,12 @@ end
 function OnUnequip(equipment, player)
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
+	end
+end
+
+function Tick()
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		isPlacing = false
 	end
 end
 

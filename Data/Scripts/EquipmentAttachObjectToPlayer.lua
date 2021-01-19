@@ -21,7 +21,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 --]]
 
 -- Internal custom properties
-local EQUIPMENT = script:FindAncestorByType('Equipment')
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
+
 if not EQUIPMENT:IsA('Equipment') then
     error(script.name .. " should be part of Equipment object hierarchy.")
 end

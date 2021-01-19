@@ -9,7 +9,6 @@ local FillColor = script:GetCustomProperty("FillColor")
 local BackgroundColor = script:GetCustomProperty("BackgroundColor")
 local Position = script:GetCustomProperty("Position")
 
-
 --[[if not MainAbility then
 	MainAbility = ServerScript:GetCustomProperty("Ability")
 end
@@ -19,7 +18,6 @@ if MainAbility then
 else
 	error("Server script is missing ability reference")
 end]]
-
 local Timer = -1
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 if not LOCAL_PLAYER then
@@ -40,23 +38,27 @@ end
 
 function OnEquip(equipment, player)
 	Task.Wait()
-	if MainAbility.owner ~= LOCAL_PLAYER then return end
+	if MainAbility.owner ~= LOCAL_PLAYER then
+		return
+	end
 	print("Setting up Timer")
 	DurationDisplay = World.SpawnAsset(DisplayTemplate)
 	AbilityProgressBar = DurationDisplay:GetCustomProperty("AbilityProgressBar"):WaitForObject()
 	UIPanel = DurationDisplay:GetCustomProperty("UIPanel"):WaitForObject()
 	UIPanel.visibility = Visibility.FORCE_OFF
-	
+
 	AbilityProgressBar:SetFillColor(FillColor)
 	AbilityProgressBar:SetBackgroundColor(BackgroundColor)
 	UIPanel.x = Position.x
 	UIPanel.y = Position.y
-	
+
 	MainAbility.executeEvent:Connect(OnMainAbilityExecute)
 end
 
 function OnUnequip(equipment, player)
-	DurationDisplay:Destroy()
+	if Object.IsValid(DurationDisplay) then
+		DurationDisplay:Destroy()
+	end
 end
 
 if Equipment.owner then
@@ -72,7 +74,7 @@ function Tick(deltaTime)
 		if Timer < 0 then
 			UIPanel.visibility = Visibility.FORCE_OFF
 			return
-		else 
+		else
 			UIPanel.visibility = Visibility.FORCE_ON
 		end
 		AbilityProgressBar.progress = Timer / Duration

@@ -26,12 +26,23 @@ local isPreviewing = false
 local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
+
+
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("E_isPreviewing", bool)
+end
 
 function OnBindingPressed(player, binding)
+	if binding == AbilityBinding then
+		print("* Healing Crystal *")
+		print("  isEnabled: "..tostring(isEnabled))
+		print("  isPreviewing: "..tostring(isPreviewing))
+		print("  isPlacing: "..tostring(isPlacing))
+	end
+	
 	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
 		isPreviewing = true
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		PrimaryAbility.isEnabled = false
 		SpecialAbility.isEnabled = true
 	end
@@ -41,6 +52,8 @@ function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
 		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
 	end
 end
 
@@ -52,7 +65,7 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		Task.Wait()
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
@@ -63,7 +76,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		
 		isPlacing = true
 			
-		local newObject = World.SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+		local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
 		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
 		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
@@ -72,27 +85,16 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-	end
-end
-
 function OnPlayerDied(player, _)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
@@ -100,7 +102,7 @@ end
 function OnAbilityToggled(thisAbility, mode)
 	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
 		isPreviewing = false
-		script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility == PrimaryAbility then
@@ -111,10 +113,9 @@ end
 
 function OnEquip(equipment, player)
 	isPreviewing = false
-	script:SetNetworkedCustomProperty("isPreviewing", isPreviewing)
+	SetNetworkProperty(isPreviewing)
 	
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName.."FAILED", Client_VFX_Failed))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
@@ -135,6 +136,10 @@ end
 function Tick(dTime)
 	Timer = Timer - dTime 
 	
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		isPlacing = false
+	end
+
 	if HealTrigger and Object.IsValid(HealTrigger) and Timer < 0 then
 		local OverlappingObjects = HealTrigger:GetOverlappingObjects()
 		for _, thisObject in pairs(OverlappingObjects) do

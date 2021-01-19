@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 9322174965092246613
         ChildIds: 865622591006778875
         ChildIds: 7109949033584959669
@@ -198,8 +198,8 @@
           }
         }
         ParentId: 12597983505510063666
+        ChildIds: 12695977401961365304
         ChildIds: 9592652887879133899
-        ChildIds: 12474481072207634037
         ChildIds: 13211947406657820910
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -212,18 +212,73 @@
         }
       }
       Objects {
-        Id: 9592652887879133899
-        Name: "Tornado VFX"
+        Id: 12695977401961365304
+        Name: "Smoke Puff Radial VFX"
         Transform {
           Location {
-            Z: -57.0175781
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.54455626
+            Y: 1.54455626
+            Z: 0.77227813
+          }
+        }
+        ParentId: 7109949033584959669
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Radius"
+            Float: 8.14006424
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 1.59082639
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.721568644
+              G: 0.0705882609
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11736239447341257999
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 9592652887879133899
+        Name: "Tornado VFX"
+        Transform {
+          Location {
+            Z: 885.836914
+          }
+          Rotation {
+            Pitch: 180
+          }
+          Scale {
+            X: 0.701039672
+            Y: 0.701039493
+            Z: 1.06856287
           }
         }
         ParentId: 7109949033584959669
@@ -247,7 +302,7 @@
           }
           Overrides {
             Name: "bp:Wiggle Offset Amount"
-            Float: 1.3
+            Float: 0.0599341914
           }
           Overrides {
             Name: "bp:Wiggle Speed"
@@ -273,6 +328,30 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Bottom Fade"
+            Float: 0.63738215
+          }
+          Overrides {
+            Name: "bp:Fade Length Top"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Fade Length Bottom"
+            Float: 0.0687382668
+          }
+          Overrides {
+            Name: "bp:Cross Section Width"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Collapse Funnel Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Fade"
+            Float: 0
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -285,41 +364,6 @@
             Id: 7897514575113664858
           }
           TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 12474481072207634037
-        Name: "Swirling Dust VFX"
-        Transform {
-          Location {
-            X: 19.875
-            Y: -71.9335938
-            Z: -57.0178223
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7109949033584959669
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 17932064971979899982
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
           }
         }
       }
@@ -394,7 +438,7 @@
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Blueprint {
           BlueprintAsset {
@@ -487,21 +531,21 @@
       }
     }
     Assets {
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_smoke_puff_radial"
+      }
+    }
+    Assets {
       Id: 7897514575113664858
       Name: "Tornado VFX"
       PlatformAssetType: 6
       PrimaryAsset {
         AssetType: "BlueprintAssetRef"
         AssetId: "fxbp_tornado"
-      }
-    }
-    Assets {
-      Id: 17932064971979899982
-      Name: "Swirling Dust VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_swirling_dust"
       }
     }
     Assets {

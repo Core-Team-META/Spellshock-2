@@ -20,6 +20,9 @@ local TOP_CENTER = script:GetCustomProperty("2__3_TOP_CENTER"):WaitForObject()
 local ACTIVE_TEAM_NAME = script:GetCustomProperty("ACTIVE_TEAM_NAME"):WaitForObject()
 local MATCH_TIME = script:GetCustomProperty("MATCH_TIME"):WaitForObject()
 local ANIMATION = script:GetCustomProperty("EoR_Animation"):WaitForObject()
+local CLAIMED1 = script:GetCustomProperty("CLAIMED1"):WaitForObject()
+local CLAIMED2 = script:GetCustomProperty("CLAIMED2"):WaitForObject()
+local CLAIMED3 = script:GetCustomProperty("CLAIMED3"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- UI OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,12 +32,18 @@ local REWARD_PARENT_UI = script:GetCustomProperty("RoundEndRewardUI"):WaitForObj
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
 local listeners = {}
+local claimedTbl = {CLAIMED1, CLAIMED2, CLAIMED3}
 local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
 local roundTime = 0
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
+
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 --Used for spam prevention
 --@return bool
 local function isAllowed(time)
@@ -51,6 +60,12 @@ local function DisconnectListeners()
         if listener and listener.isConnected then
             listener:Disconnect()
         end
+    end
+end
+
+local function HideClaimed()
+    for _, object in ipairs(claimedTbl) do
+        object.visibility = Visibility.FORCE_OFF
     end
 end
 
@@ -121,12 +136,14 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
             local slotId = panel:GetCustomProperty("SLOT")
             local infoTable = nil
             local currentAmmount = nil
+            local reqXp
             if slotId and slotId == slot then
                 local RARITY_SHINE = panel:GetCustomProperty("RARITY_SHINE"):WaitForObject()
                 if id == 1 then
                     RARITY_SHINE:SetColor(Color.New(0.361307, 0, 0.806952, 0.615686))
                     infoTable = rewardAssets[id][class][bind]
                     currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+                    reqXp = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
                 else
                     if id == 2 then
                         RARITY_SHINE:SetColor(Color.New(0.713907, 0.77, 0, 0.615686))
@@ -147,6 +164,16 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 local REWARD_AMOUNT = panel:GetCustomProperty("REWARD_AMOUNT"):WaitForObject()
                 local ITEM_DESCRIPTION = panel:GetCustomProperty("ITEM_DESCRIPTION"):WaitForObject()
                 local ITEM_DESCRIPTION2 = panel:GetCustomProperty("ITEM_DESCRIPTION2"):WaitForObject()
+                local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
+                PROGRESS_BARS.visibility = Visibility.FORCE_OFF
+                if reqXp then
+                    --Progress Bars
+                    local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
+                    local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
+                    PROGRESS_BARS.visibility = Visibility.FORCE_ON
+                    CURRENT_BAR.progress = currentAmmount / reqXp
+                    REWARD_BAR.progress = (currentAmmount + reward) / reqXp
+                end
 
                 ICON:SetImage(infoTable.Image)
                 ICON_SHADOW:SetImage(infoTable.Image)
@@ -224,11 +251,14 @@ function OnRewardSelected(button)
     if not isAllowed(1) then
         return
     end
+    HideClaimed()
     local result, message
     repeat
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
         Task.Wait(0.3)
     until result == BroadcastEventResultCode.SUCCESS
+    local claimed = button:GetCustomProperty("CLAIMED"):WaitForObject()
+    claimed.visibility = Visibility.FORCE_ON
 end
 
 function OnRewardsChanged(object, string)
@@ -254,7 +284,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     end
 end
 
-function OnMenuChanged(newMenu)
+function OnMenuChanged(oldMenu, newMenu)
     if newMenu == _G.MENU_TABLE["Rewards"] then -- show
         ToggleUI(true)
         ANIMATION.context.OnRewardShow()
@@ -276,6 +306,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("Changing Menu", OnMenuChanged)
+Events.Connect("Menu Changed", OnMenuChanged)
 --UTIL.TablePrint(rewardAssets)
 --LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward) -- Used for testing

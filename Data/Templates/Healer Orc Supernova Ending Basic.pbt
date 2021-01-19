@@ -15,10 +15,12 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 9641060406160085662
+        ChildIds: 6850119050645440428
         ChildIds: 2416196606626890195
         ChildIds: 2594304203653326655
+        ChildIds: 2858435111468704207
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -35,6 +37,7 @@
         Name: "Plasma Impact VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -78,6 +81,14 @@
             Name: "bp:Enable Impact Ring"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -88,6 +99,61 @@
         Blueprint {
           BlueprintAsset {
             Id: 15862839354445934362
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 6850119050645440428
+        Name: "Explosion Kit Afterglow VFX"
+        Transform {
+          Location {
+            Z: 250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 2138632444635200016
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Particle Scale"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 15468302836055406992
           }
           TeamSettings {
           }
@@ -124,8 +190,8 @@
           AutoPlay: true
           Pitch: -100
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -158,10 +224,85 @@
           AutoPlay: true
           Pitch: -100
           Volume: 0.5
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 2858435111468704207
+        Name: "Ground Explosion VFX"
+        Transform {
+          Location {
+            Z: 250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 2138632444635200016
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Fireball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Shockwave"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Ground Dust"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2839312775702113675
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
         }
       }
     }
@@ -172,6 +313,15 @@
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_plasma_impact"
+      }
+    }
+    Assets {
+      Id: 15468302836055406992
+      Name: "Explosion Kit Afterglow VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explokit_afterglow"
       }
     }
     Assets {
@@ -190,6 +340,15 @@
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_meta_fantasy_revive_life_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 2839312775702113675
+      Name: "Ground Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explosion_ground"
       }
     }
     PrimaryAssetId {

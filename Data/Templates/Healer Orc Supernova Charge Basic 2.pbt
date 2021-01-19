@@ -72,14 +72,6 @@
               Id: 7535229294616165836
             }
           }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -93,12 +85,12 @@
             Id: 13950225922132296555
           }
           Teams {
+            TeamInt: 1
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -128,14 +120,6 @@
               Id: 7535229294616165836
             }
           }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882609
-              A: 0.389000028
-            }
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -149,12 +133,12 @@
             Id: 13950225922132296555
           }
           Teams {
+            TeamInt: 1
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          EnableCameraCollision: true
           StaticMesh {
             Physics {
             }
@@ -197,25 +181,25 @@
           Overrides {
             Name: "bp:Particle Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
             Name: "bp:Spiral Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
             Name: "bp:Spiral Ground Element Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -225,9 +209,9 @@
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -245,6 +229,7 @@
           TeamSettings {
           }
           Vfx {
+            AutoPlay: true
           }
         }
       }
@@ -351,6 +336,12 @@
               Id: 16050147283496351669
             }
           }
+          Overrides {
+            Name: "cs:Burst"
+            ObjectReference {
+              SubObjectId: 10670264027216646669
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -393,10 +384,9 @@
           AutoPlay: true
           Pitch: 1029.06738
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           FadeInTime: 0.5
-          IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
@@ -459,11 +449,10 @@
         }
         AudioInstance {
           AudioAsset {
-            Id: 4393061335836055638
+            Id: 2175373826146049983
           }
-          AutoPlay: true
-          Pitch: -600
-          Volume: 0.6
+          Pitch: 400
+          Volume: 1
           Falloff: 15000
           Radius: 5000
           IsSpatializationEnabled: true
@@ -480,9 +469,9 @@
           Rotation {
           }
           Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 6803006744558839766
@@ -1461,10 +1450,9 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 1
-              G: 0.572649956
-              B: 0.306999981
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
           Overrides {
@@ -1476,9 +1464,9 @@
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.342
-              G: 0.0227999985
-              A: 1
+              R: 0.960000038
+              G: 0.381457061
+              A: 0.21100001
             }
           }
         }
@@ -1675,12 +1663,12 @@
       }
     }
     Assets {
-      Id: 4393061335836055638
-      Name: "Growl Warning Synth Horn 01 SFX"
+      Id: 2175373826146049983
+      Name: "Cinematic Synth Growl Impact 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_designer_growl_warning_horn_01_Cue_ref"
+        AssetId: "sfx_designer_cinematic_synth_growl_impact_01_Cue_ref"
       }
     }
     Assets {

@@ -1,6 +1,59 @@
 ﻿Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
+  Id: 4113000831214338610
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 31759.6309
+      Y: 12422.0234
+      Z: -607.046387
+    }
+    Rotation {
+      Yaw: 39.3783379
+    }
+    Scale {
+      X: 13.5971479
+      Y: 2.76259565
+      Z: 22.4379196
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2754963224534021958
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 198353679974341757
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 3841485251860642063
   Name: "Pole_with_skull and banners"
   Transform {

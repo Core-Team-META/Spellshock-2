@@ -75,7 +75,7 @@ function OnAbilityExecute(thisAbility)
 	local WorldPosition = player:GetWorldPosition() + (ForwardVector * 200)
 	--CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
 
-	local CurrentProjectile = World.SpawnAsset(PlayerVFX.Projectile, {position = WorldPosition})
+	local CurrentProjectile = META_AP().SpawnAsset(PlayerVFX.Projectile, {position = WorldPosition})
 
 	local DamageTrigger = CurrentProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
@@ -92,7 +92,7 @@ function OnAbilityExecute(thisAbility)
 			CurrentProjectile:StopMove()
 			--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
 
-			local newObject = World.SpawnAsset(PlayerVFX.Ending, {position = CurrentProjectile:GetWorldPosition()})
+			local newObject = META_AP().SpawnAsset(PlayerVFX.Ending, {position = CurrentProjectile:GetWorldPosition()})
 
 			CurrentProjectile.lifeSpan = 0.1
 			CurrentProjectile = nil

@@ -140,11 +140,11 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
             if SHOW_HEALTH_CHANGE_EFFECT then
                 TriggerHitPostProcess(Color.RED)
             end
-        elseif damage == 0 then
+        --[[elseif damage == 0 then
             UI.ShowFlyUpText("BLOCKED", LOCAL_PLAYER:GetWorldPosition(),
                 {duration = DAMAGE_TEXT_DURATION,
                 color = Color.CYAN,
-                isBig = IS_BIG_TEXT})
+                isBig = IS_BIG_TEXT})]]
         else
             --if SHOW_HEALTH_CHANGE_EFFECT then
             TriggerHitPostProcess(Color.GREEN)

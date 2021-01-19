@@ -112,6 +112,7 @@
             Id: 3816918904715199575
           }
           TeamSettings {
+            TeamInt: 2
           }
           Vfx {
             AutoPlay: true

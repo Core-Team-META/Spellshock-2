@@ -1,4 +1,5 @@
-﻿floater = script.parent
+﻿--[[
+floater = script.parent
 initalPos = floater:GetPosition()
 initalRot = floater:GetRotation()
 amplitude = script:GetCustomProperty("Amplitude") or 0
@@ -11,3 +12,4 @@ function Tick(deltaTime)
 	floater:SetPosition(newPos)
 	floater:SetRotation(newRot)
 end
+]]--

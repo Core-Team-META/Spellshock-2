@@ -15,7 +15,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-local EQUIPMENT = script:FindAncestorByType("Equipment")
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 local HIT_BOX = script:GetCustomProperty("HitBox"):WaitForObject()

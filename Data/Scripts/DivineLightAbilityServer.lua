@@ -8,6 +8,7 @@ local VFX_Template = script:GetCustomProperty("VFX_Template")
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local DEFAULT_ImpulseAmount = script:GetCustomProperty("ImpulseAmount")
+local DEFAULT_HealAmmount = 10
 local ImpulseAmount = DEFAULT_ImpulseAmount
 local DEFAULT_StunRadius = script:GetCustomProperty("StunRadius")
 
@@ -25,7 +26,7 @@ function AddImpulseToPlayer(player)
 end
 
 function OnAbilityExecute(thisAbility)
-	local newObject = World.SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
+	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
 	
 	local StunRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_StunRadius, Ability.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), StunRadius, {ignoreTeams = Ability.owner.team})
@@ -33,6 +34,11 @@ function OnAbilityExecute(thisAbility)
 	
 	ImpulseAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, Ability.name..": Impulse Amount")
 	local status = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod5", {}, Ability.name .. ": Status")
+
+
+	local healAmmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod4", DEFAULT_HealAmmount, Ability.name..": Heal Amount")
+
+	Ability.owner.hitPoints = CoreMath.Clamp(Ability.owner.hitPoints + healAmmount, Ability.owner.maxHitPoints)
 				
 	for _, enemy in pairs(nearbyEnemies) do
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)

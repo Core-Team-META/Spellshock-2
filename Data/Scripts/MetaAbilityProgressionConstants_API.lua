@@ -40,6 +40,15 @@ API.CLASS_NAME = {
     [API.CLASS.HEALER] = "Healer",
     [API.CLASS.ASSASSIN] = "Assassin"
 }
+
+API.CLASS_HEALTH = {
+    [API.CLASS.TANK] = 500,
+    [API.CLASS.MAGE] = 300,
+    [API.CLASS.HUNTER] = 350,
+    [API.CLASS.HEALER] = 400,
+    [API.CLASS.ASSASSIN] = 300
+}
+
 -- BINDING KEYS
 API.BIND = {
     Q = 1,

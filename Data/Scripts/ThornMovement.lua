@@ -17,6 +17,7 @@ while Root:GetCustomProperty("lifeSpan") == 0 do
 end
 
 Task.Wait(.1)
+--[[
 Ease3D.EaseWorldScale(CenterThorns, Vector3.New(1), .7, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontThorns, Vector3.New(1), .5, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontLeftThorns, Vector3.New(1), .45, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
@@ -29,11 +30,13 @@ Ease3D.EasePosition(FrontLeftThorns, Vector3.New(-35, 17, -36), .35, Ease3D.Easi
 Ease3D.EasePosition(FrontRightThorns, Vector3.New(52, -14, -51), .45, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.OUT)
 Ease3D.EasePosition(BackLeftThorns, Vector3.New(12, 40, -46), .55, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.OUT)
 Ease3D.EasePosition(BackRightThorns, Vector3.New(18, 5, -46), .5, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.OUT)
+]]--
 CrunchSFX:Play()
 DustVFX:Play()
 Task.Wait(.6)
 RumbleSFX:Stop()
 Task.Wait(Root:GetCustomProperty("lifeSpan")-1.8)
+--[[
 Ease3D.EaseWorldScale(CenterThorns, Vector3.New(.1), 1.7, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontThorns, Vector3.New(.1), 1.5, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)
 Ease3D.EaseWorldScale(FrontLeftThorns, Vector3.New(.1), 1.45, Ease3D.EasingEquation.BACK, Ease3D.EasingDirection.INOUT)
@@ -46,3 +49,4 @@ Ease3D.EasePosition(FrontLeftThorns, Vector3.New(365, -17, -271), 1.35, Ease3D.E
 Ease3D.EasePosition(FrontRightThorns, Vector3.New(-154, 152, -281), 1.45, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EasePosition(BackLeftThorns, Vector3.New(193, -220, -298), 1.55, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
 Ease3D.EasePosition(BackRightThorns, Vector3.New(-88, -218, -270), 1.5, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
+]]--

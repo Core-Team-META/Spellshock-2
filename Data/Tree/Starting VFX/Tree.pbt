@@ -108,39 +108,39 @@ Objects {
       Int: 5
     }
     Overrides {
-      Name: "cs:01_VenomBomb_Projectile"
-      AssetReference {
-        Id: 2104224913586788579
-      }
-    }
-    Overrides {
-      Name: "cs:01_VenomBomb_Impact"
-      AssetReference {
-        Id: 9392791916696762581
-      }
-    }
-    Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
         Id: 17966040025736251861
       }
     }
     Overrides {
-      Name: "cs:03_Slasher_Projectile"
-      AssetReference {
-        Id: 5432023853122515340
-      }
-    }
-    Overrides {
-      Name: "cs:03_Slasher_NormalImpact"
-      AssetReference {
-        Id: 12510419486879215421
-      }
-    }
-    Overrides {
       Name: "cs:04_WraithStrike_Impact"
       AssetReference {
         Id: 6738937092225821013
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 2104224913586788579
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 9392791916696762581
       }
     }
   }
@@ -301,6 +301,30 @@ Objects {
         Id: 5719005977356257604
       }
     }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 6481751857886768330
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 5202994091235663908
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -389,27 +413,33 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:01_VenomBomb_Impact"
-      AssetReference {
-        Id: 7601839425209033086
-      }
-    }
-    Overrides {
-      Name: "cs:01_VenomBomb_Projectile"
-      AssetReference {
-        Id: 17801137391214202879
-      }
-    }
-    Overrides {
       Name: "cs:04_WraithStrike_Impact"
       AssetReference {
         Id: 11395878667126256154
       }
     }
     Overrides {
-      Name: "cs:03_Slasher_NormalImpact"
+      Name: "cs:01_BladeDash_Preview"
       AssetReference {
-        Id: 15345620429388998215
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 7601839425209033086
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 17801137391214202879
       }
     }
   }
@@ -570,6 +600,30 @@ Objects {
         Id: 13347412244189647636
       }
     }
+    Overrides {
+      Name: "cs:01_BladeDash_Preview"
+      AssetReference {
+        Id: 4883165977894045775
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Placement"
+      AssetReference {
+        Id: 11878262350625250626
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Projectile"
+      AssetReference {
+        Id: 6481751857886768330
+      }
+    }
+    Overrides {
+      Name: "cs:03_VenomBomb_Impact"
+      AssetReference {
+        Id: 5202994091235663908
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -693,37 +747,37 @@ Objects {
     Overrides {
       Name: "cs:03_DivineLight_Active"
       AssetReference {
-        Id: 14361516424257808637
+        Id: 14281930789658138167
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 3018006546627770720
+        Id: 5224364241756978283
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Ending"
       AssetReference {
-        Id: 10361163652299667815
+        Id: 9716011756738589723
       }
     }
     Overrides {
       Name: "cs:02_HealingCrystal_Placement"
       AssetReference {
-        Id: 8480354754001927698
+        Id: 1737908342690364901
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Ending"
       AssetReference {
-        Id: 526721940899255177
+        Id: 12743534185662601435
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Projectile"
       AssetReference {
-        Id: 17972774475744623316
+        Id: 3493372388929023277
       }
     }
   }
@@ -905,7 +959,7 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Preview"
       AssetReference {
-        Id: 15136798516269130110
+        Id: 3392388590054420013
       }
     }
     Overrides {
@@ -998,37 +1052,37 @@ Objects {
     Overrides {
       Name: "cs:03_DivineLight_Active"
       AssetReference {
-        Id: 14393575782714755705
+        Id: 3838786937762771186
       }
     }
     Overrides {
       Name: "cs:02_HealingCrystal_Placement"
       AssetReference {
-        Id: 2985282815979522936
+        Id: 12015791184120145874
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Projectile"
       AssetReference {
-        Id: 12886882762364699151
+        Id: 9285589052537802742
       }
     }
     Overrides {
       Name: "cs:01_SunBeam_Ending"
       AssetReference {
-        Id: 129666070119651245
+        Id: 4981123765839941673
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 12008153979794448805
+        Id: 17770457708602014408
       }
     }
     Overrides {
       Name: "cs:04_Supernova_Ending"
       AssetReference {
-        Id: 1535993576978115928
+        Id: 11548624648656035757
       }
     }
   }
@@ -1198,7 +1252,7 @@ Objects {
     Overrides {
       Name: "cs:02_HealingCrystal_Preview"
       AssetReference {
-        Id: 16431236309358610064
+        Id: 18349665107832834494
       }
     }
     Overrides {
@@ -1216,7 +1270,7 @@ Objects {
     Overrides {
       Name: "cs:04_Supernova_Charge"
       AssetReference {
-        Id: 2544825718487104811
+        Id: 18127499291287709125
       }
     }
   }
@@ -1515,6 +1569,18 @@ Objects {
         Id: 4288486983837307165
       }
     }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 3392388590054420013
+      }
+    }
+    Overrides {
+      Name: "cs:02_Leap_Placement"
+      AssetReference {
+        Id: 1213996206729767403
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1770,6 +1836,18 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 14875131962515328614
+      }
+    }
+    Overrides {
+      Name: "cs:01_RainofArrows_Preview"
+      AssetReference {
+        Id: 18349665107832834494
+      }
+    }
+    Overrides {
+      Name: "cs:02_Leap_Placement"
+      AssetReference {
+        Id: 3882087902667678297
       }
     }
   }
@@ -2090,6 +2168,24 @@ Objects {
         Id: 12147802266133948339
       }
     }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 3392388590054420013
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2367,6 +2463,24 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 16021815535294018144
+      }
+    }
+    Overrides {
+      Name: "cs:01_Tornado_Preview"
+      AssetReference {
+        Id: 18349665107832834494
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Projectile"
+      AssetReference {
+        Id: 1501139048018181677
+      }
+    }
+    Overrides {
+      Name: "cs:04_Pyroblast_Impact"
+      AssetReference {
+        Id: 7794121287511761576
       }
     }
   }

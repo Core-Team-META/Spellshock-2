@@ -34,14 +34,16 @@ function OnAbilityExecute(thisAbility)
 	HawkTarget = nil
 
 	local hawkTemplate = PlayerVFX.Template
-	CurrentHawk = World.SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
+	CurrentHawk = META_AP().SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
 
 	Task.Wait()
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	Task.Wait(1)
-	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name .. ": LifeSpan")
-	CurrentHawk.lifeSpan = Timer + 5
+	if Object.IsValid(Ability) then
+		Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name .. ": LifeSpan")
+		CurrentHawk.lifeSpan = Timer + 5
+	end
 end
 
 function OnPlayerRespawn(player)
@@ -94,7 +96,14 @@ function Tick(deltaTime)
 
 			if DistanceVector.size < 150 then
 				local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
-				API_SE.ApplyStatusEffect(HawkTarget, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+				API_SE.ApplyStatusEffect(
+					HawkTarget,
+					API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+					Ability.owner,
+					status.duration,
+					status.damage,
+					status.multiplier
+				)
 
 				CurrentHawk:SetNetworkedCustomProperty("Attack", true)
 
@@ -170,6 +179,12 @@ function Tick(deltaTime)
 
 			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not PreviousTarget.isDead then
 				HawkTarget = PreviousTarget
+			else
+				local HawkSpeed =
+					META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, Ability.name .. ": Speed")
+				local DistanceVector = Ability.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
+				CurrentHawk:MoveTo(Ability.owner:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
+				CurrentHawk:LookAtContinuous(Ability.owner, true)
 			end
 		end
 	end

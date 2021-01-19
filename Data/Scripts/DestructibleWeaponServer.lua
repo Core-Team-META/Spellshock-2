@@ -18,7 +18,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-local WEAPON = script.parent
+local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject(1) or script.parent
 
 local DAMAGE_TO_PLAYERS = script:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DAMAGE_TO_PLAYERS.x, max=DAMAGE_TO_PLAYERS.y}

@@ -11,13 +11,13 @@
         }
       }
       Overrides {
-        Name: "cs:01_VenomBomb_Projectile"
+        Name: "cs:01_BladeDash_Preview"
         AssetReference {
           Id: 6481751857886768330
         }
       }
       Overrides {
-        Name: "cs:01_VenomBomb_Impact"
+        Name: "cs:01_BladeDash_Placement"
         AssetReference {
           Id: 5202994091235663908
         }
@@ -41,27 +41,15 @@
         }
       }
       Overrides {
-        Name: "cs:03_Slasher_Projectile"
+        Name: "cs:03_VenomBomb_Projectile"
         AssetReference {
           Id: 17990456245832998922
         }
       }
       Overrides {
-        Name: "cs:03_Slasher_Beginning"
-        AssetReference {
-          Id: 3260618482035830264
-        }
-      }
-      Overrides {
-        Name: "cs:03_Slasher_NormalImpact"
+        Name: "cs:03_VenomBomb_Impact"
         AssetReference {
           Id: 11650929185820647296
-        }
-      }
-      Overrides {
-        Name: "cs:03_Slasher_PlayerImpact"
-        AssetReference {
-          Id: 6697248670123946068
         }
       }
       Overrides {

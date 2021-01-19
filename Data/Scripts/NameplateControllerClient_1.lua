@@ -332,7 +332,7 @@ function Tick(deltaTime)
 							timeText.fontSize = uiScale * 50.0
 
 							local effectData = API_SE.STATUS_EFFECT_DEFINITIONS[data.name]
-							iconTemplate.visibility = Visibility.INHERIT
+							--iconTemplate.visibility = Visibility.INHERIT
 							icon:SetColor(effectData.color)
 							icon:SetImage(effectData.icon)
 
@@ -411,13 +411,9 @@ function Tick(deltaTime)
 
 				-- Update name and health color based on teams
 				if SHOW_NAMES then					
-					if player.team == LOCAL_PLAYER.team then
-						nameplate.nameText:SetColor(FRIENDLY_NAME_COLOR)
-						nameplate.healthPiece:SetColor(FRIENDLY_HEALTH_COLOR)
-					else
-						nameplate.nameText:SetColor(ENEMY_NAME_COLOR)
-						nameplate.healthPiece:SetColor(ENEMY_HEALTH_COLOR)
-					end
+						nameplate.nameText:SetColor(_G.TeamColors[player.team])
+						nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
+				
 					--nameplate.nameText:SetColor(_G.TeamColors[player.team])
 					--nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 				end

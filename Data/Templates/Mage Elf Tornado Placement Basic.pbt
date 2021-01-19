@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 6270308689058147762
         ChildIds: 10772566095877105579
         ChildIds: 4545488589136616139
@@ -122,6 +122,14 @@
             Name: "bp:Fade Time"
             Float: 0
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 0.5
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -205,7 +213,7 @@
         }
         ParentId: 18396550010636760668
         ChildIds: 12274350895697227030
-        ChildIds: 13919270022095110263
+        ChildIds: 7733455011545212798
         ChildIds: 13027836158761203257
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -222,14 +230,15 @@
         Name: "Tornado VFX"
         Transform {
           Location {
-            Z: -54.6896973
+            Z: 885.836914
           }
           Rotation {
+            Pitch: 180
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.701039672
+            Y: 0.701039493
+            Z: 1.06856287
           }
         }
         ParentId: 4545488589136616139
@@ -253,7 +262,7 @@
           }
           Overrides {
             Name: "bp:Wiggle Offset Amount"
-            Float: 1.3
+            Float: 0.0599341914
           }
           Overrides {
             Name: "bp:Color B"
@@ -277,7 +286,7 @@
           }
           Overrides {
             Name: "bp:Bottom Fade"
-            Float: 0
+            Float: 0.63738215
           }
           Overrides {
             Name: "bp:Edge Shredding"
@@ -309,6 +318,22 @@
           }
           Overrides {
             Name: "bp:Cross Section Width"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Surface Speed"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Fade Length Bottom"
+            Float: 0.0687382668
+          }
+          Overrides {
+            Name: "bp:Collapse Funnel Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Fade"
             Float: 0
           }
         }
@@ -327,21 +352,42 @@
         }
       }
       Objects {
-        Id: 13919270022095110263
-        Name: "Swirling Dust VFX"
+        Id: 7733455011545212798
+        Name: "Smoke Puff Radial VFX"
         Transform {
           Location {
-            Z: -54.6896973
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.54455626
+            Y: 1.54455626
+            Z: 0.77227813
           }
         }
         ParentId: 4545488589136616139
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Radius"
+            Float: 8.14006424
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 1.59082639
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.580392182
+              B: 0.360784471
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -350,7 +396,7 @@
         }
         Blueprint {
           BlueprintAsset {
-            Id: 17932064971979899982
+            Id: 11736239447341257999
           }
           TeamSettings {
           }
@@ -428,7 +474,7 @@
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Blueprint {
           BlueprintAsset {
@@ -530,12 +576,12 @@
       }
     }
     Assets {
-      Id: 17932064971979899982
-      Name: "Swirling Dust VFX"
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_swirling_dust"
+        AssetId: "fxbp_smoke_puff_radial"
       }
     }
     Assets {

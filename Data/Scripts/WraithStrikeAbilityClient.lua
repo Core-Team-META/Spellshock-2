@@ -41,11 +41,11 @@ local CancelBindings = {
 }
 
 function OnNetworkedPropertyChanged(thisObject, name)
-	if name == "isPreviewing" then
+	if name == "T_isPreviewing" then
 		if SpecialAbility.owner ~= LOCAL_PLAYER then
 			return
 		end
-		isPreviewing = ServerScript:GetCustomProperty(name)
+		isPreviewing = Equipment:GetCustomProperty(name)
 
 		if isPreviewing then
 			--objectHalogram = World.SpawnAsset(ObjectTemplate)
@@ -225,4 +225,4 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-ServerScript.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
+Equipment.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)

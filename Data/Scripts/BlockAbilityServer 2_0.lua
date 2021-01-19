@@ -19,7 +19,8 @@ local function META_AP()
 end
 
 -- Internal custom properties
-local EQUIPMENT = script:FindAncestorByType('Equipment')
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
+
 
 if not EQUIPMENT then
     error(script.name .. " should be part of Equipment object hierarchy.")

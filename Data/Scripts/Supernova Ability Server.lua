@@ -8,58 +8,101 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
-local DEFAULT_Radius = script:GetCustomProperty("Radius")
+local DEFAULT_Radius = script:GetCustomProperty("DamageRadius")
+local EventName = script:GetCustomProperty("EventName")
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local VFX_Chargeup = "CC262FD37D50A523:Healer Elf Supernova Charge Basic"
-local VFX_Ending = "0061AD3DB266FDE2:Healer Elf Supernova Ending Basic"
-
-local scaleDuration = Ability.executePhaseSettings.duration
+local scaleDuration = 3
 local CurrentChargeUp = nil
 local EffectRadius = DEFAULT_Radius
+local isPreviewing = false
+local isPlacing = false
+local isEnabled = true
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 local EventListeners = {}
 
-function OnAbilityExecute(thisAbility)
-	
-	CurrentChargeUp = World.SpawnAsset(PlayerVFX.Charge, {position = Ability.owner:GetWorldPosition()})
-
-	EffectRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod3", DEFAULT_Radius, Ability.name..": Radius")
-	print("Radius: "..EffectRadius)
-	CurrentChargeUp:AttachToPlayer(Ability.owner, "root")
-	local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
-	local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
-	local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
-	local scale = Vector3.New( CoreMath.Round(EffectRadius / 50, 3) )
-	OuterSphere:SetWorldScale(scale)
-	InnerSphere:ScaleTo(scale, scaleDuration)
-	Beam:SetSmartProperty("Teleport Duration", scaleDuration)
-	Beam:Play()
+local function SetNetworkProperty(bool)
+	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
 end
 
-function OnAbilityRecovery(thisAbility)
-	if not thisAbility.owner or not Object.IsValid(thisAbility.owner) or thisAbility.owner.isDead then return end
+function OnBindingPressed(player, binding)
+	if binding == AbilityBinding and isEnabled and not isPreviewing and not isPlacing and not player.isDead then
+		isPreviewing = true
+		SetNetworkProperty(isPreviewing)
+		PrimaryAbility.isEnabled = false
+		SpecialAbility.isEnabled = true
+	end
+end
 
-	local newObject = World.SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
+function OnSpecialAbilityCast(thisAbility)
+	if isPreviewing == false or isPlacing then
+		print("INTERRUPTING")
+		SpecialAbility:Interrupt()
+		SetNetworkProperty(false)
+	end
+end
 
-	
-	--CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), EffectRadius, {duration = 5})
-	CurrentChargeUp:Destroy()
+function PlaceObject(thisPlayer, position, rotation)
+	if thisPlayer == Equipment.owner then
+		--Task.Wait()
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		
+		-- check if the placement was canceled
+		if position == nil then
+			return
+		end
+		
+		isPlacing = true
 
-    local playersInRange = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), EffectRadius, {ignoreDead = true, ignorePlayers = Ability.owner})
+		CurrentChargeUp = META_AP().SpawnAsset(PlayerVFX.Charge, {position = position})
+		EffectRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Radius, SpecialAbility.name..": Radius")
+		local InnerSphere = CurrentChargeUp:GetCustomProperty("InnerSphere"):WaitForObject()
+		local OuterSphere = CurrentChargeUp:GetCustomProperty("OuterSphere"):WaitForObject()
+		local Beam = CurrentChargeUp:GetCustomProperty("Beam"):WaitForObject()
+		local scale = Vector3.New( CoreMath.Round(EffectRadius / 50, 3) )
+		OuterSphere:SetWorldScale(scale)
+		InnerSphere:ScaleTo(scale, scaleDuration)
+		Beam:SetSmartProperty("Teleport Duration", scaleDuration)
+		Beam:Play()
+		CoreDebug.DrawSphere(position, EffectRadius, {duration = 5})
+		Task.Spawn(function ()
+			SupernovaEnding()
+		end, scaleDuration)
+	end
+end
+
+function SupernovaEnding()
+	print("Supernova recovery")
+	local dmgPosition
+	if Object.IsValid(CurrentChargeUp) then
+		dmgPosition = CurrentChargeUp:GetWorldPosition()
+		META_AP().SpawnAsset(PlayerVFX.Ending, {position = dmgPosition})
+		CurrentChargeUp:Destroy()
+		print('Destroyed ChargeUP vfx')
+	else
+		return
+	end
+
+	if not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) or SpecialAbility.owner.isDead then return end
+
+    local playersInRange = Game.FindPlayersInSphere(dmgPosition, EffectRadius, {ignoreDead = true, ignorePlayers = SpecialAbility.owner})
     for _, otherPlayer in ipairs(playersInRange) do
-		if otherPlayer.team == Ability.owner.team then
+		if otherPlayer.team == SpecialAbility.owner.team then
 			local dmg = Damage.New() 
-			dmg.amount = -META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HealAmount, Ability.name..": Heal Amount")
-			dmg.sourcePlayer = Ability.owner
-			dmg.sourceAbility = Ability
+			dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HealAmount, SpecialAbility.name..": Heal Amount")
+			dmg.sourcePlayer = SpecialAbility.owner
+			dmg.sourceAbility = SpecialAbility
 			local attackData = {
 				object = otherPlayer,
 				damage = dmg,
-				source = Ability.owner,
+				source = SpecialAbility.owner,
 				position = nil,
 				rotation = nil,
 				tags = {id = "Mage_T"}
@@ -69,42 +112,75 @@ function OnAbilityRecovery(thisAbility)
 	
 		else
 			local dmg = Damage.New() 
-			dmg.amount = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_DamageAmount, Ability.name..": Damage Amount")
-			dmg.sourcePlayer = Ability.owner
-			dmg.sourceAbility = Ability
+			dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
+			dmg.sourcePlayer = SpecialAbility.owner
+			dmg.sourceAbility = SpecialAbility
 			local attackData = {
 				object = otherPlayer,
 				damage = dmg,
-				source = Ability.owner,
+				source = SpecialAbility.owner,
 				position = nil,
 				rotation = nil,
 				tags = {id = "Mage_T"}
 			}
 			COMBAT().ApplyDamage(attackData)
 		   -- Stun
-		   local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
-		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+		   local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
+		   API_SE.ApplyStatusEffect(otherPlayer, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		end
     end
+end
+
+function OnSpecialAbilityReady(thisAbility)
+	isPlacing = false
 end
 
 function OnPlayerDied(player, _)
 	if Object.IsValid(CurrentChargeUp) then
 		CurrentChargeUp:Destroy()
 	end
+	isPreviewing = false
+	SetNetworkProperty(isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
 end
 
 function OnPlayerRespawn(player)
 	if Object.IsValid(CurrentChargeUp) then
 		CurrentChargeUp:Destroy()
 	end
+	isPreviewing = false
+	SetNetworkProperty(isPreviewing)
+	PrimaryAbility.isEnabled = true
+	SpecialAbility.isEnabled = false
+end
+
+function OnAbilityToggled(thisAbility, mode)
+	if thisAbility == PrimaryAbility or thisAbility == "ALL" then
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+		isEnabled = mode
+		if thisAbility == PrimaryAbility then
+			PrimaryAbility.isEnabled = true
+		end
+	end
 end
 
 function OnEquip(equipment, player)
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().HEALER)
 	
+	isPreviewing = false
+	SetNetworkProperty(isPreviewing)
+	
+	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
+	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
+	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
 end
 
 function OnUnequip(equipment, player)
@@ -120,6 +196,3 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-
-Ability.recoveryEvent:Connect(OnAbilityRecovery)
-Ability.executeEvent:Connect(OnAbilityExecute)

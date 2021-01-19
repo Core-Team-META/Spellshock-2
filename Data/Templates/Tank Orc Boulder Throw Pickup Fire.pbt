@@ -7,7 +7,7 @@
       RootId: 13443002092362923387
       Objects {
         Id: 13443002092362923387
-        Name: "Fire Orc ExcavatePickup"
+        Name: "Tank Orc Boulder Throw Pickup Fire"
         Transform {
           Scale {
             X: 1
@@ -19,6 +19,7 @@
         ChildIds: 17824617888131527228
         ChildIds: 18075576082980084591
         ChildIds: 8088008634514459634
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
