@@ -1584,6 +1584,7 @@
         }
         ParentId: 12390733973333184270
         ChildIds: 14022298515563068289
+        ChildIds: 17205920200914817298
         ChildIds: 11309600053152836331
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1638,6 +1639,50 @@
         }
       }
       Objects {
+        Id: 17205920200914817298
+        Name: "WraithStrikeEffectsClient"
+        Transform {
+          Location {
+            X: 22425
+            Y: 30800
+            Z: -6285
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14326137833624201234
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ConfirmSound"
+            ObjectReference {
+              SubObjectId: 11309600053152836331
+            }
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+              SubObjectId: 17515797633147736346
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8641582811737118701
+          }
+        }
+      }
+      Objects {
         Id: 11309600053152836331
         Name: "ConfirmSound"
         Transform {
@@ -1663,7 +1708,7 @@
             Id: 4433167291023742498
           }
           Volume: 1
-          Falloff: -1
+          Falloff: 4600
           Radius: -1
         }
       }
@@ -2435,7 +2480,6 @@
             Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2506,7 +2550,6 @@
             Duration: 0.1
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
