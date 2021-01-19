@@ -2145,7 +2145,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2156,7 +2155,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2166,19 +2164,17 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
             Duration: 60
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:invalid"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
@@ -2218,7 +2214,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2227,7 +2222,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2238,7 +2232,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2249,7 +2242,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_throw"
           CanBePrevented: true
@@ -2332,7 +2324,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2341,7 +2332,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2352,7 +2342,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2363,7 +2352,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CanBePrevented: true
           KeyBinding_v2 {
@@ -2404,7 +2392,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2415,7 +2402,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2426,7 +2412,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2437,7 +2422,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_bolt"
           KeyBinding_v2 {
@@ -2484,7 +2468,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2494,7 +2477,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2504,7 +2486,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2514,11 +2495,10 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:invalid"
+            Value: "mc:egameaction:primaryaction"
           }
         }
       }
@@ -2660,7 +2640,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2670,7 +2649,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2680,7 +2658,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2734,7 +2711,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2745,7 +2721,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2755,7 +2730,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2764,7 +2738,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
@@ -2807,7 +2780,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2817,7 +2789,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2827,7 +2798,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2836,7 +2806,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
