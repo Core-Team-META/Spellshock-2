@@ -110,7 +110,7 @@ Objects {
     Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
-        Id: 17966040025736251861
+        Id: 18053292440294828009
       }
     }
     Overrides {
@@ -141,6 +141,12 @@ Objects {
       Name: "cs:03_VenomBomb_Impact"
       AssetReference {
         Id: 9392791916696762581
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 5219591705029108737
       }
     }
   }
@@ -325,6 +331,12 @@ Objects {
         Id: 5202994091235663908
       }
     }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 5219591705029108737
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -409,7 +421,7 @@ Objects {
     Overrides {
       Name: "cs:02_DeathsShadow_Costume"
       AssetReference {
-        Id: 9553951876314605743
+        Id: 10121348316362166125
       }
     }
     Overrides {
@@ -440,6 +452,12 @@ Objects {
       Name: "cs:03_VenomBomb_Projectile"
       AssetReference {
         Id: 17801137391214202879
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 5219591705029108737
       }
     }
   }
@@ -622,6 +640,12 @@ Objects {
       Name: "cs:03_VenomBomb_Impact"
       AssetReference {
         Id: 5202994091235663908
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Preview"
+      AssetReference {
+        Id: 5219591705029108737
       }
     }
   }
