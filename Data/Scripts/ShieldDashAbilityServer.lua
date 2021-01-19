@@ -58,6 +58,10 @@ function OnBeginOverlap(thisTrigger, other)
 end
 
 function ToggleDash(mode)
+	if Ability:GetCurrentPhase() == AbilityPhase.READY then 
+		return 
+	end
+	
 	if mode then
 		originalPlayerSettings.MovementMode = Ability.owner.movementControlMode
 		originalPlayerSettings.AnimationStance = Ability.owner.animationStance

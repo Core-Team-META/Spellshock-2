@@ -78,6 +78,8 @@ function OnBindingPressed(player, binding)
 	end
 end
 
+
+
 function OnPlayerDamaged(player, damage)
 	if isInvisible and not player.isDead then
 		DisableInvisility()

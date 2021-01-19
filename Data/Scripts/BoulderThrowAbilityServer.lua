@@ -27,6 +27,9 @@ function OnPickupCast(thisAbility)
 end
 
 function OnPickupExecute(thisAbility)
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+		return 
+	end
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
 		CurrentProjectile:Destroy()
 	end

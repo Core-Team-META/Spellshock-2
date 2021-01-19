@@ -18,6 +18,15 @@ local DamageRange = script:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
 local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
 
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
+
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
@@ -27,11 +36,18 @@ local function SetNetworkProperty(bool)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
-		isPreviewing = true
-		SetNetworkProperty(isPreviewing)
-		PrimaryAbility.isEnabled = false
-		SpecialAbility.isEnabled = true
+	if not isPlacing and not player.isDead then
+		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
+			isPreviewing = true
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = false
+			SpecialAbility.isEnabled = true
+		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+			isPreviewing = false
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = true
+			SpecialAbility.isEnabled = false
+		end
 	end
 end
 
@@ -48,11 +64,14 @@ end
 
 function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
-		Task.Wait()
+		Task.Wait(0.3)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			return 
+		end
 		
 		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
@@ -85,6 +104,19 @@ function Teleport(thisPlayer, position, rotation)
 			}
             COMBAT().ApplyDamage(attackData)
         end
+	end
+end
+
+
+
+function OnAbilityToggled(abilityID, mode)
+	if abilityID == SpecialAbility.id or abilityID == "ALL" then
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+		if abilityID == SpecialAbility.id then
+			PrimaryAbility.isEnabled = true
+		end
 	end
 end
 
