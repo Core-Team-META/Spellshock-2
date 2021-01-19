@@ -27,15 +27,6 @@ local objectHalogram = nil
 local EventListeners = {}
 local placementTable = {position = nil, rotation = nil, isVisible = nil}
 
-local CancelBindings = {
-	ability_extra_20 = true,
-	ability_extra_22 = true,
-	ability_extra_23 = true,
-	ability_extra_24 = true,
-	ability_secondary = true,
-	ability_extra_12 = true
-}
-
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == abilityPreview then
 		if SpecialAbility.owner ~= LOCAL_PLAYER then
