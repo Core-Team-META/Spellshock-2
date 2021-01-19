@@ -26,6 +26,8 @@ function AddImpulseToPlayer(player)
 end
 
 function OnAbilityExecute(thisAbility)
+	if Ability:GetCurrentPhase() == AbilityPhase.READY then return end
+	
 	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
 	
 	local StunRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_StunRadius, Ability.name..": Radius")

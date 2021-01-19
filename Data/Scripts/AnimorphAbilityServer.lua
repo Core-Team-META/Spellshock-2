@@ -84,9 +84,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
 end
 
 function OnAbilityExecute(thisAbility)
-	--local ownerForwardVect = thisAbility.owner:GetWorldTransform():GetForwardVector()
-	--local spawnPos = ability.owner:GetWorldPosition() + ownerForwardVect * 600 - Vector3.UP * 50
-
+	if ABILITY:GetCurrentPhase() == AbilityPhase.READY then return end
+	
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
 	local lookQuaternion = Quaternion.New(lookRotation)
 	local forwardVector = lookQuaternion:GetForwardVector()

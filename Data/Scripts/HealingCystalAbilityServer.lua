@@ -77,10 +77,7 @@ function PlaceObject(thisPlayer, position, rotation)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-			--print("STOPPED BUG")
-			return 
-		end
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 		
 		isPlacing = true
 			
@@ -104,6 +101,18 @@ function OnPlayerRespawn(player)
 	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
 	SpecialAbility.isEnabled = false
+end
+
+function OnAbilityToggled(abilityID, mode)
+	if abilityID == SpecialAbility.id or abilityID == "ALL" then
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+		isEnabled = mode
+		if abilityID == SpecialAbility.id then
+			PrimaryAbility.isEnabled = true
+		end
+	end
 end
 
 function OnAbilityToggled(abilityID, mode)
