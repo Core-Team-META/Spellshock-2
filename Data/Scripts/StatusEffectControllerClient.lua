@@ -1,9 +1,10 @@
 ﻿local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local STATE_TRACKER_GROUP = script:GetCustomProperty("StateTrackerGroup"):WaitForObject()
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 local EFFECT_FADE_OUT_TIME = 0.6
 
-local effectObjects = {}		-- Player -> index -> int
+local effectObjects = {} -- Player -> index -> int
 
 function FadeOutEffect(effectObject)
 	for _, object in pairs(effectObject:FindDescendantsByType("Audio")) do
@@ -40,7 +41,7 @@ function OnPlayerLeft(player)
 end
 
 function Tick(deltaTime)
-	for _, player in pairs(Game.GetPlayers()) do
+	for _, player in ipairs(Game.GetPlayers()) do
 		local effects = API_SE.GetStatusEffectsOnPlayer(player)
 
 		for i = 1, API_SE.MAX_STATUS_EFFECTS do
@@ -50,6 +51,12 @@ function Tick(deltaTime)
 				local statusEffectData = API_SE.STATUS_EFFECT_DEFINITIONS[effects[i].name]
 				effectObjects[player][i] = World.SpawnAsset(statusEffectData.effectTemplate)
 				effectObjects[player][i]:AttachToPlayer(player, "root")
+
+				if effects[i].name == "Blind" and effects[i].source and player == LOCAL_PLAYER and effects[i].source ~= LOCAL_PLAYER.id then
+					local blind = effectObjects[player][i]:GetCustomProperty("Blind"):WaitForObject() 
+					blind:SetSmartProperty("Hold Duration", effects[i].duration)
+					blind:Play()
+				end
 			elseif not effects[i] and effectObject then
 				if Object.IsValid(effectObject) then
 					FadeOutEffect(effectObject)

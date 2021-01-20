@@ -43,7 +43,7 @@ function OnAbilityExecute(thisAbility)
 	Ability.owner.hitPoints = CoreMath.Clamp(Ability.owner.hitPoints + healAmmount, Ability.owner.maxHitPoints)
 				
 	for _, enemy in pairs(nearbyEnemies) do
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Blind"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 		AddImpulseToPlayer(enemy)
 	end
 end
