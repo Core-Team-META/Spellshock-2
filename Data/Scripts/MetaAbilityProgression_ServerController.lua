@@ -11,8 +11,7 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local COST_TABLE = require(script:GetCustomProperty("MetaAbilityProgressionUpgradeCosts_DATA"))
 local ADAPTOR = script:GetCustomProperty("Adaptor"):WaitForObject()
 
----DEV--
-local DEBUG = true
+local DEV_TOOLS = true
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
@@ -90,7 +89,6 @@ local function SetBindXp(player, class, bind, ammount)
     player:SetResource(resName, CoreMath.Round(ammount))
 end
 
---#FIXME
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -112,11 +110,27 @@ local function SetAccountLevel(player)
     player:SetResource(CONST.ACCOUNT_LEVEL, accountLevel)
 end
 
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+local function AdjustPlayerHealth(player, class)
+    player.maxHitPoints = CONST.CLASS_HEALTH[class]
+    if not player.serverUserData.NotAdjustHp then
+        player.hitPoints = player.maxHitPoints
+    end
+    player.serverUserData.NotAdjustHp = false
+end
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+local function AdjustPlayerMovment(player, class)
+    player.maxWalkSpeed = 640
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
-if DEBUG then
-    --##FIXME Temp Function
+if DEV_TOOLS then
+
     --@param object player
     --@param int class => id of class (API.TANK, API.MAGE)
     --@param int bind => id of bind (API.Q, API.E)
@@ -128,13 +142,12 @@ if DEBUG then
             bindLevel = CoreMath.Round(bindLevel + level)
         end
         SetBindLevel(player, class, bind, bindLevel)
-        --##FIXME currently setting XP to 0 on level up
         local xp = 0
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
     end
 
-    --##FIXME Temp Function
+   
     --@param object player
     --@param int class => id of class (API.TANK, API.MAGE)
     --@param int bind => id of bind (API.Q, API.E)
@@ -146,7 +159,6 @@ if DEBUG then
             bindLevel = CONST.STARTING_LEVEL
         end
         SetBindLevel(player, class, bind, bindLevel)
-        --##FIXME currently setting XP to 0 on level up
         local xp = 0
         SetBindXp(player, class, bind, xp)
         Events.Broadcast("META_AP.ApplyStats", player, class, bind, bindLevel)
@@ -281,11 +293,8 @@ function API.ChangeClass(player, class)
     playerLevel = playerLevel - 6
     player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
 
-    player.maxHitPoints = CONST.CLASS_HEALTH[class]
-    if not player.serverUserData.NotAdjustHp then
-        player.hitPoints = player.maxHitPoints
-    end
-    player.serverUserData.NotAdjustHp = false
+    AdjustPlayerHealth(player, class)
+    AdjustPlayerMovment(player, class)
 end
 
 --@param object player
@@ -344,7 +353,7 @@ end
 Events.Connect("META_AP.AddBindXp", AddBindXp)
 Events.Connect("META_AP.BindLevelUp", BindLevelUp)
 
-if DEBUG then
+if DEV_TOOLS then
     Events.Connect("META_AP.ChangeBindLevel", ForceBindLevelUp)
     Events.Connect("META_AP.CBLMM", ForceBindChangeLevel)
 end
