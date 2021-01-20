@@ -15,9 +15,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 12859999312686483396
         ChildIds: 14773601984430604069
+        ChildIds: 7033171889003434288
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -46,6 +47,50 @@ Assets {
         }
         ParentId: 5750308492877294026
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.0622218437
+              G: 0.115
+              B: 0.0425499938
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 13802195091322210055
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13802195091322210055
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0630463213
+              G: 0.169999957
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 13802195091322210055
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.126490012
+              G: 0.278000027
+              B: 0.149216563
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -111,6 +156,64 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 7033171889003434288
+        Name: "Basic Projectile Trail VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5750308492877294026
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.361324489
+              G: 0.88
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:ColorB"
+            Color {
+              G: 0.73
+              B: 0.0918542892
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:ColorC"
+            Color {
+              G: 0.36
+              B: 0.00953647681
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17977280587505271142
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
     }
     Assets {
       Id: 3337256621200851928
@@ -119,6 +222,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_bolt_cross_001"
+      }
+    }
+    Assets {
+      Id: 13802195091322210055
+      Name: "Plastic Matte"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "plastic_matte_001"
+      }
+    }
+    Assets {
+      Id: 17977280587505271142
+      Name: "Basic Projectile Trail VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_basic_projectile_trail"
       }
     }
     PrimaryAssetId {
