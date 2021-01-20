@@ -128,7 +128,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 11878262350625250626
+        Id: 5847803406760630635
       }
     }
     Overrides {
@@ -147,6 +147,12 @@ Objects {
       Name: "cs:04_WraithStrike_Preview"
       AssetReference {
         Id: 5219591705029108737
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 3001366697168823164
       }
     }
   }
@@ -316,7 +322,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 13008566670688052404
+        Id: 5847803406760630635
       }
     }
     Overrides {
@@ -335,6 +341,12 @@ Objects {
       Name: "cs:04_WraithStrike_Preview"
       AssetReference {
         Id: 5219591705029108737
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 3001366697168823164
       }
     }
   }
@@ -439,7 +451,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 11878262350625250626
+        Id: 5847803406760630635
       }
     }
     Overrides {
@@ -458,6 +470,12 @@ Objects {
       Name: "cs:04_WraithStrike_Preview"
       AssetReference {
         Id: 5219591705029108737
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 3001366697168823164
       }
     }
   }
@@ -627,7 +645,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 11878262350625250626
+        Id: 5847803406760630635
       }
     }
     Overrides {
@@ -646,6 +664,12 @@ Objects {
       Name: "cs:04_WraithStrike_Preview"
       AssetReference {
         Id: 5219591705029108737
+      }
+    }
+    Overrides {
+      Name: "cs:01_BladeDash_Ending"
+      AssetReference {
+        Id: 3001366697168823164
       }
     }
   }

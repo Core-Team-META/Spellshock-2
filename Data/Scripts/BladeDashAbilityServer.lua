@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
@@ -85,9 +85,11 @@ function Teleport(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
+		META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+		Task.Wait(.4)
 		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
 		thisPlayer:ResetVelocity()
-		META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+		META_AP().SpawnAsset(PlayerVFX.Ending, {position = position, rotation = rotation})
         local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
         local enemiesInRange = Game.FindPlayersInSphere(thisPlayer:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = thisPlayer.team})
         --CoreDebug.DrawSphere(thisPlayer:GetWorldPosition(), DamageRadius, {duration = 5})

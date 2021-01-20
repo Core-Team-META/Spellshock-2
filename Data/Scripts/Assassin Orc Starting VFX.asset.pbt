@@ -23,6 +23,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:01_BladeDash_Ending"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
         Name: "cs:02_DeathsShadow_Costume"
         AssetReference {
           Id: 14330017190000743294
