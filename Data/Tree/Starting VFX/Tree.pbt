@@ -1432,7 +1432,7 @@ Objects {
     Overrides {
       Name: "cs:02_Leap_Placement"
       AssetReference {
-        Id: 939651685836620573
+        Id: 2462517313490716501
       }
     }
     Overrides {
@@ -1689,7 +1689,7 @@ Objects {
     Overrides {
       Name: "cs:02_Leap_Placement"
       AssetReference {
-        Id: 9787452031526615739
+        Id: 1745987770005120759
       }
     }
     Overrides {

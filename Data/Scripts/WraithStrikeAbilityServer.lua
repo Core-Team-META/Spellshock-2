@@ -67,16 +67,19 @@ function OnBindingPressed(player, binding)
 
 			META_AP().SpawnAsset(PlayerVFX.Launch, {position = player:GetWorldPosition()})
 		
+			isPreviewing = true
+			SetNetworkProperty(isPreviewing)
+
 			Task.Wait(1)
 			if not player or not Object.IsValid(player) or player.isDead or not isFlying then return end
 			
 			player.gravityScale = 0
 			player:ResetVelocity()
 			
-			isPreviewing = true
-			SetNetworkProperty(isPreviewing)
+			
 			SpecialAbility.isEnabled = true
 		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+			print("Canceling Wraith Strike")
 			DisableFlying()
 		end
 	end
@@ -102,13 +105,13 @@ function OnTargetChosen(player, targetPos)
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
-
 		-- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
 	    	playerAbility.isEnabled = true
 	    end
-	    ActiveAbilities = {}
+		ActiveAbilities = {}
+		
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 		
 		--[[if targetPos == nil then
 			player.movementControlMode = DefaultPlayerSetttings.movementControlMode
@@ -190,7 +193,7 @@ function DamageInArea(targetPos, localPlayer)
     end
 end
   
-function DisableFlying(player)
+function DisableFlying()
 	--print("Disabling Flying")
 	for _, playerAbility in pairs(ActiveAbilities) do
 		if Object.IsValid(playerAbility) then
@@ -199,12 +202,13 @@ function DisableFlying(player)
 	end
 	ActiveAbilities = {}
 	
-	if Object.IsValid(player) then 
-		player.movementControlMode = DefaultPlayerSetttings.movementControlMode
-		player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
-		player:ResetVelocity()
-		player:ActivateWalking()
-		player.gravityScale = DefaultPlayerSetttings.gravityScale
+	if Object.IsValid(Equipment.owner) then 
+		print("Default player settings")
+		Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
+		Equipment.owner.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
+		Equipment.owner:ResetVelocity()
+		Equipment.owner:ActivateWalking()
+		Equipment.owner.gravityScale = DefaultPlayerSetttings.gravityScale
 	end
 	isFlying = false
 
@@ -215,7 +219,7 @@ function DisableFlying(player)
 		SpecialAbility.isEnabled = false
 	end
 end
-  
+
 function PrintAbilities(player)
 	for _, thisAbility in pairs(player:GetAbilities()) do
 		print(thisAbility.name)
@@ -227,11 +231,11 @@ end
   
 function OnPlayerDied(player, _)
 	Task.Wait()
-	DisableFlying(player)
+	DisableFlying()
 end
 
 function OnPlayerRespawn(player)
-	DisableFlying(player)
+	DisableFlying()
 end
  
 function OnAbilityToggled(thisAbility, mode)

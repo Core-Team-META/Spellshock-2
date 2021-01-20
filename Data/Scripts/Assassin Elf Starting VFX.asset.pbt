@@ -71,6 +71,12 @@
         }
       }
       Overrides {
+        Name: "cs:04_WraithStrike_Costume"
+        AssetReference {
+          Id: 6376604265419333521
+        }
+      }
+      Overrides {
         Name: "cs:ID"
         Int: 1
       }
