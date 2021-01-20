@@ -2421,7 +2421,6 @@ Assets {
           ExecutePhaseSettings {
             Duration: 0.1
             CanMove: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2488,7 +2487,6 @@ Assets {
           ExecutePhaseSettings {
             Duration: 0.1
             CanMove: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }

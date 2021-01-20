@@ -2096,7 +2096,7 @@ Assets {
       }
       Objects {
         Id: 13709554481697835406
-        Name: "Mace and Shield"
+        Name: "Hammer and Shield"
         Transform {
           Location {
           }
@@ -2175,7 +2175,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2183,7 +2182,6 @@ Assets {
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2193,7 +2191,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2203,7 +2200,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
           }
           Animation: "1hand_melee_slash_right"
           CanBePrevented: true

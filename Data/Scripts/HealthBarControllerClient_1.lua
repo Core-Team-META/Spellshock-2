@@ -5,6 +5,10 @@ local PROGRESS_BAR = script:GetCustomProperty("ProgressBar"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
+while not _G.TeamColors do
+    Task.Wait()
+end
+
 -- Player GetViewedPlayer()
 -- Returns which player the local player is spectating (or themselves if not spectating)
 function GetViewedPlayer()
@@ -22,6 +26,7 @@ function Tick(deltaTime)
     if player then
         local healthFraction = player.hitPoints / player.maxHitPoints
         PROGRESS_BAR.progress = healthFraction
+        PROGRESS_BAR:SetFillColor(_G.TeamColors[player.team])
         TEXT_BOX.text = string.format("%.0f / %.0f", player.hitPoints, player.maxHitPoints)
         TEXT_BOX:GetChildren()[1].text = string.format("%.0f / %.0f", player.hitPoints, player.maxHitPoints)
     end

@@ -2170,7 +2170,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 60
+            Duration: 15
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2522,7 +2522,6 @@ Assets {
         }
         ParentId: 10663446143340725464
         ChildIds: 1254248059045754243
-        ChildIds: 3294057035434288413
         ChildIds: 9549032318106308816
         UnregisteredParameters {
           Overrides {
@@ -2596,7 +2595,7 @@ Assets {
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 8000
+            ProjectileSpeed: 20000
             ProjectileLifeSpan: 10
             ProjectileLength: 30
             ProjectileRadius: 30
@@ -2608,7 +2607,7 @@ Assets {
               SubObjectId: 1254248059045754243
             }
             ReloadAbility {
-              SubObjectId: 3294057035434288413
+              SelfId: 841534158063459245
             }
           }
         }
@@ -2683,77 +2682,6 @@ Assets {
         }
       }
       Objects {
-        Id: 3294057035434288413
-        Name: "Recharge"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 2.04905627e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14738406619974674146
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Ability {
-          KeyBinding: "ability_ult"
-          CastPhaseSettings {
-            Duration: 1.2
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          Animation: "0"
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_19"
-          }
-        }
-      }
-      Objects {
         Id: 9549032318106308816
         Name: "Aim"
         Transform {
@@ -2783,7 +2711,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2792,7 +2719,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2801,7 +2727,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
