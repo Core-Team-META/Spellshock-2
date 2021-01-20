@@ -53,7 +53,7 @@ Assets {
       }
       Overrides {
         Name: "foamtightness"
-        Float: 4.13904
+        Float: 0.25
       }
       Overrides {
         Name: "foamnormalstrength"
@@ -77,7 +77,7 @@ Assets {
       }
       Overrides {
         Name: "startfadeoffset"
-        Float: 0.386852592
+        Float: 0.387218714
       }
     }
     Assets {
