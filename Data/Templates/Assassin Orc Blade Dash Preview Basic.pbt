@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 4883165977894045775
-  Name: "Assassin Orc Blink Preview Basic"
+  Name: "Assassin Orc Blade Dash Preview Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

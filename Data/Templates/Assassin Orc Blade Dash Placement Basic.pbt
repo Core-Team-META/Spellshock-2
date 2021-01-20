@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 11878262350625250626
-  Name: "Assassin Orc Blink Placement Basic"
+  Name: "Assassin Orc Blade Dash Placement Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 4282473580696750923
       Objects {
         Id: 4282473580696750923
-        Name: "Assassin Orc Blink Placement Basic"
+        Name: "Assassin Orc Blade Dash Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -15,9 +15,11 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 4164831764160040292
         ChildIds: 18148159118967786187
+        Lifespan: 1
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -100,7 +102,7 @@
           Overrides {
             Name: "cs:Woosh"
             AssetReference {
-              Id: 5027751934724785496
+              Id: 8893189170014775832
             }
           }
         }

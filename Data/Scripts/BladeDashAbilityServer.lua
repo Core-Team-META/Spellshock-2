@@ -2,21 +2,24 @@
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
-local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local PrimaryAbility = AbilitySettings:GetCustomProperty("PrimaryAbility"):WaitForObject()
+local PrimaryAbility2 = AbilitySettings:GetCustomProperty("PrimaryAbility2"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local TeleportFX = script:GetCustomProperty("TeleportFX")
-local EventName = script:GetCustomProperty("EventName")
+local TeleportFX = AbilitySettings:GetCustomProperty("TeleportFX")
+local EventName = AbilitySettings:GetCustomProperty("EventName")
 local EventListeners = {}
 
 local isPreviewing = false
 local isPlacing = false
+local PlayerVFX = nil
 
-local DamageRange = script:GetCustomProperty("DamageRange")
+local DamageRange = AbilitySettings:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
-local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
+local DEFAULT_DamageRadius = AbilitySettings:GetCustomProperty("DamageRadius")
 
 local CancelBindings = {
 	ability_extra_20 = true,
@@ -38,14 +41,17 @@ end
 function OnBindingPressed(player, binding)
 	if not isPlacing and not player.isDead then
 		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
+			print('PREVIEW')
 			isPreviewing = true
 			SetNetworkProperty(isPreviewing)
 			PrimaryAbility.isEnabled = false
+			PrimaryAbility2.isEnabled = false
 			SpecialAbility.isEnabled = true
 		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 			isPreviewing = false
 			SetNetworkProperty(isPreviewing)
 			PrimaryAbility.isEnabled = true
+			PrimaryAbility2.isEnabled = true
 			SpecialAbility.isEnabled = false
 		end
 	end
@@ -64,16 +70,15 @@ end
 
 function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
-		Task.Wait(0.3)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
+		PrimaryAbility2.isEnabled = true
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
 			return 
 		end
 		
-		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil then
 			return
@@ -81,7 +86,8 @@ function Teleport(thisPlayer, position, rotation)
 		
 		isPlacing = true
 		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
-        META_AP().SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
+		thisPlayer:ResetVelocity()
+		META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
         local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
         local enemiesInRange = Game.FindPlayersInSphere(thisPlayer:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = thisPlayer.team})
         --CoreDebug.DrawSphere(thisPlayer:GetWorldPosition(), DamageRadius, {duration = 5})
@@ -107,8 +113,6 @@ function Teleport(thisPlayer, position, rotation)
 	end
 end
 
-
-
 function OnAbilityToggled(abilityID, mode)
 	if abilityID == SpecialAbility.id or abilityID == "ALL" then
 		isPreviewing = false
@@ -116,6 +120,7 @@ function OnAbilityToggled(abilityID, mode)
 		SpecialAbility.isEnabled = false
 		if abilityID == SpecialAbility.id then
 			PrimaryAbility.isEnabled = true
+			PrimaryAbility2.isEnabled = true
 		end
 	end
 end
@@ -124,6 +129,7 @@ function OnPlayerDied(player, _)
 	isPreviewing = false
 	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
+	PrimaryAbility2.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
@@ -131,6 +137,7 @@ function OnPlayerRespawn(player)
 	isPreviewing = false
 	SetNetworkProperty(isPreviewing)
 	PrimaryAbility.isEnabled = true
+	PrimaryAbility2.isEnabled = true
 	SpecialAbility.isEnabled = false
 end
 
@@ -147,6 +154,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q, META_AP().ASSASSIN)
 end
 
 function OnUnequip(equipment, player)

@@ -1,13 +1,13 @@
 ﻿Assets {
   Id: 6551672392761649837
-  Name: "Assassin Elf Blink Placement Frost"
+  Name: "Assassin Elf Blade Dash Placement Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 8735458561615950802
       Objects {
         Id: 8735458561615950802
-        Name: "Assassin Elf Blink Placement Basic"
+        Name: "Assassin Elf Blade Dash Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -15,9 +15,11 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 7920819128900319105
         ChildIds: 17069632774358188161
+        Lifespan: 1
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -100,7 +102,7 @@
           Overrides {
             Name: "cs:Woosh"
             AssetReference {
-              Id: 5027751934724785496
+              Id: 8893189170014775832
             }
           }
         }

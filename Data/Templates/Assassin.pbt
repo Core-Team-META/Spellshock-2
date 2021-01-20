@@ -57,6 +57,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "unarmed_ready"
+          }
+          Overrides {
             Name: "cs:Q_isPreviewing:isrep"
             Bool: true
           }
@@ -102,8 +106,8 @@
         }
         ParentId: 4569115510025570718
         ChildIds: 15817725685703269186
-        ChildIds: 17515797633147736346
         ChildIds: 12028678257515034993
+        ChildIds: 17515797633147736346
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -117,7 +121,7 @@
       }
       Objects {
         Id: 15817725685703269186
-        Name: "Blink Settings"
+        Name: "Blade Dash Settings"
         Transform {
           Location {
             X: -25
@@ -150,18 +154,6 @@
             Name: "cs:PrimaryAbility"
             ObjectReference {
               SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 4883165977894045775
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
             }
           }
           Overrides {
@@ -198,6 +190,94 @@
               X: 30
               Y: 50
             }
+          }
+          Overrides {
+            Name: "cs:PrimaryAbility2"
+            ObjectReference {
+              SubObjectId: 3230213687525692580
+            }
+          }
+          Overrides {
+            Name: "cs:MatchNormal"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 12028678257515034993
+        Name: "Deaths Shadow Settings"
+        Transform {
+          Location {
+            X: -30070
+            Y: -40970
+            Z: 3240
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7204248853923322945
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:MainAbility"
+            ObjectReference {
+              SubObjectId: 10946969989301189966
+            }
+          }
+          Overrides {
+            Name: "cs:AttackAbility"
+            ObjectReference {
+              SubObjectId: 15582202196448252345
+            }
+          }
+          Overrides {
+            Name: "cs:WeaponAbility"
+            ObjectReference {
+              SubObjectId: 6522519753598108575
+            }
+          }
+          Overrides {
+            Name: "cs:InvisibilityActiveTemplate"
+            AssetReference {
+              Id: 15482014499059417987
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 8
+          }
+          Overrides {
+            Name: "cs:AttackRadius"
+            Int: 150
+          }
+          Overrides {
+            Name: "cs:DamageAmount"
+            Int: 40
+          }
+          Overrides {
+            Name: "cs:SpeedBoost"
+            Int: 200
           }
         }
         Collidable_v2 {
@@ -281,84 +361,6 @@
           Overrides {
             Name: "cs:BindingName"
             String: "T"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5320349203892634237
-          }
-        }
-      }
-      Objects {
-        Id: 12028678257515034993
-        Name: "Deaths Shadow Settings"
-        Transform {
-          Location {
-            X: -30070
-            Y: -40970
-            Z: 3240
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7204248853923322945
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 4569115510025570718
-            }
-          }
-          Overrides {
-            Name: "cs:MainAbility"
-            ObjectReference {
-              SubObjectId: 10946969989301189966
-            }
-          }
-          Overrides {
-            Name: "cs:AttackAbility"
-            ObjectReference {
-              SubObjectId: 15582202196448252345
-            }
-          }
-          Overrides {
-            Name: "cs:WeaponAbility"
-            ObjectReference {
-              SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:InvisibilityActiveTemplate"
-            AssetReference {
-              Id: 15482014499059417987
-            }
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 8
-          }
-          Overrides {
-            Name: "cs:AttackRadius"
-            Int: 150
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 40
-          }
-          Overrides {
-            Name: "cs:SpeedBoost"
-            Int: 200
           }
         }
         Collidable_v2 {
@@ -497,7 +499,7 @@
       }
       Objects {
         Id: 2489697862704505183
-        Name: "BlinkAbilityServer"
+        Name: "BladeDashAbilityServer"
         Transform {
           Location {
             X: 22025
@@ -515,69 +517,10 @@
         ParentId: 3557475336528325194
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 4569115510025570718
+              SubObjectId: 15817725685703269186
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 7787036789120996490
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 4883165977894045775
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Blink"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "ASSASSIN"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "Q"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "NONE"
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 30
-              Y: 50
-            }
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 600
           }
         }
         Collidable_v2 {
@@ -1714,7 +1657,7 @@
       }
       Objects {
         Id: 12219954214652104381
-        Name: "BlinkAbilityClient"
+        Name: "BladeDashAbilityClient"
         Transform {
           Location {
             X: -100
@@ -1971,7 +1914,7 @@
       }
       Objects {
         Id: 7787036789120996490
-        Name: "Blink"
+        Name: "Blade Dash"
         Transform {
           Location {
           }
@@ -2471,7 +2414,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2489,7 +2431,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2499,7 +2440,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
           }
           Animation: "unarmed_punch_left"
           CanBePrevented: true
@@ -2541,7 +2481,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2559,7 +2498,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2569,7 +2507,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
           }
           Animation: "unarmed_punch_right"
           CanBePrevented: true

@@ -77,12 +77,16 @@ function OnBindingPressed(player, binding)
 		AllHalograms[objectHalogram.id] = nil
 		objectHalogram:Destroy()
 		objectHalogram = nil
-		
+
 		SpecialAbility:Activate()
 	end
 end
 
 function OnSpecialAbilityExecute(thisAbility)
+	if objectHalogram and Object.IsValid(objectHalogram) then
+		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
+		placementTable.rotation = objectHalogram:GetWorldRotation()
+	end
 	while Events.BroadcastToServer(EventName, placementTable.position, placementTable.rotation) ==
 		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 		Task.Wait()

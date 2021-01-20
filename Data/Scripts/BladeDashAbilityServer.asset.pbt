@@ -1,6 +1,6 @@
 ﻿Assets {
   Id: 15256544326295737396
-  Name: "BlinkAbilityServer"
+  Name: "BladeDashAbilityServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

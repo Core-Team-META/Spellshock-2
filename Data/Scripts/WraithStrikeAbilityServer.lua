@@ -156,7 +156,7 @@ function OnTargetChosen(player, targetPos)
 	    player.gravityScale = DefaultPlayerSetttings.gravityScale
 	    isFlying = false
 		
-		local newObject = META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
+		META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
 	
 	    -- Stun / deal damage / check radius etcs
 	    DamageInArea(player:GetWorldPosition(), player)

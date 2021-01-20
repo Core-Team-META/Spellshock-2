@@ -5,18 +5,26 @@ end
 local ConfirmSound = script:GetCustomProperty("ConfirmSound"):WaitForObject()
 local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
+local DEFAULT_FlyingDuration = AbilitySettings:GetCustomProperty("FlyingDuration")
+local FlyingDuration = DEFAULT_FlyingDuration
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PlayerAttachments = {}
 local PlayerVFX
+local flyingTimer = 0
+local isPreviewing = false
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "T_isPreviewing" then
-		local isPreviewing = Equipment:GetCustomProperty(name)
+		isPreviewing = Equipment:GetCustomProperty(name)
 
 		if isPreviewing then
-			AttachCostume()
-		else
+            AttachCostume()
+            FlyingDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod4", DEFAULT_FlyingDuration, SpecialAbility.name .. ": Fly Duration")
+			flyingTimer = FlyingDuration
+        else
+            flyingTimer = -1
             DestroyCostume()
             ConfirmSound:Play()
 		end
@@ -56,6 +64,25 @@ function OnPlayerLeft(player)
     if not Object.IsValid(Equipment) or not Equipment.owner or not Object.IsValid(Equipment.owner) then
         DestroyCostume()
     end
+end
+
+function Tick(deltaTime)
+    local DurationBar = SpecialAbility.clientUserData.durationBar
+    if flyingTimer > 0 then
+		flyingTimer = flyingTimer - deltaTime
+        
+        --Update duration bar
+        if DurationBar and Object.IsValid(DurationBar) then
+			DurationBar.progress = flyingTimer / FlyingDuration
+        end
+        
+        -- Check if timer has run out
+		if flyingTimer < 0 and isPreviewing and SpecialAbility.isEnabled then
+			SpecialAbility:Activate()
+		end
+    elseif DurationBar and Object.IsValid(DurationBar) then
+		DurationBar.progress = 0 
+	end
 end
 
 if Equipment.owner then
