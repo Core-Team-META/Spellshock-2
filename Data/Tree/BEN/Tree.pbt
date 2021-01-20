@@ -1440,113 +1440,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8293898011953904661
-  Name: "Tornado VFX"
-  Transform {
-    Location {
-      X: 19353.3887
-      Y: 20029.3457
-      Z: 7276.00684
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.11338637
-      Y: 0.11338637
-      Z: 0.285869449
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Color A"
-      Color {
-        G: 0.048344288
-        B: 0.73
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Color B"
-      Color {
-        G: 0.203377426
-        B: 0.830000043
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:color c"
-      Color {
-        R: 0.329999983
-        G: 0.48086077
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Emissive Boost"
-      Float: 1.10120106
-    }
-    Overrides {
-      Name: "bp:Surface Speed"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Wiggle Offset Amount"
-      Float: 0.190875232
-    }
-    Overrides {
-      Name: "bp:Edge Shredding"
-      Bool: true
-    }
-    Overrides {
-      Name: "bp:Cross Section Width"
-      Float: 1.89040279
-    }
-    Overrides {
-      Name: "bp:Collapse Funnel Amount"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Pin Top Amount"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Enable Shadows"
-      Bool: false
-    }
-    Overrides {
-      Name: "bp:Fade Length Top"
-      Float: 1
-    }
-    Overrides {
-      Name: "bp:Top Fade"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Bottom Fade"
-      Float: 0.0665965
-    }
-    Overrides {
-      Name: "bp:Body Fade"
-      Float: 0.176192731
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 15599228502728747198
-    }
-    TeamSettings {
-    }
-  }
-}
-Objects {
   Id: 9214649830315504141
   Name: "Teleportation Network"
   Transform {
@@ -1576,6 +1469,33 @@ Objects {
   }
 }
 Objects {
+  Id: 9688819487003701538
+  Name: "Equipment Spawners"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 832037447795371647
+  ChildIds: 5782594925224994604
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 5782594925224994604
   Name: "Equipment Spawners"
   Transform {
@@ -1593,7 +1513,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12935185397369316502
+  ParentId: 9688819487003701538
   ChildIds: 10669969969850093714
   ChildIds: 892317619564514928
   ChildIds: 9335975385538524820
@@ -2746,7 +2666,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12935185397369316502
+  ParentId: 9688819487003701538
   ChildIds: 8039469647497027952
   ChildIds: 1132661241704069348
   ChildIds: 15504043701109405572
@@ -28013,7 +27933,7 @@ Objects {
 }
 Objects {
   Id: 1045993142902290094
-  Name: "GameStateRoundTimeDisplayClient"
+  Name: "TopBarHandler_UI"
   Transform {
     Location {
       X: 23295
@@ -28046,6 +27966,12 @@ Objects {
       Name: "cs:StateTimeText"
       ObjectReference {
         SelfId: 14867459276365245301
+      }
+    }
+    Overrides {
+      Name: "cs:TopBar"
+      ObjectReference {
+        SelfId: 9772533843055238086
       }
     }
   }

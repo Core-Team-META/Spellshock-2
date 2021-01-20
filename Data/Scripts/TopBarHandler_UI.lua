@@ -19,6 +19,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local ABGS = require(script:GetCustomProperty("API"))
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
+local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
 
 -- nil UpdateTimeRemaining(int)
 -- Displays time remaining in hh:mm:ss format
@@ -51,6 +52,12 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
+        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND then
+            TopBar.visibility = Visibility.INHERIT
+        else
+            TopBar.visibility = Visibility.FORCE_OFF
+        end
+
         --[[if currentState == ABGS.GAME_STATE_ROUND_END then
             STATE_NAME_TEXT.text = "Round End"
             UpdateTimeRemaining(remainingTime)
@@ -67,3 +74,5 @@ function Tick(deltaTime)
         end]]
     end
 end
+
+TopBar.visibility = Visibility.FORCE_OFF

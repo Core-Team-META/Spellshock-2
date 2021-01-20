@@ -331,7 +331,6 @@ end
 
 function API.AbilitySpamPreventer()
     local timeNow = time()
-    print("Spam prevent: " .. tostring(AbilitySpamTime))
     if (timeNow - AbilitySpamTime) < 0.6 then
         return false
     end

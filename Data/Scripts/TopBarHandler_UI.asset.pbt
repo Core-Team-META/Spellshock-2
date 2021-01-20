@@ -1,6 +1,6 @@
 Assets {
   Id: 3307912974547883426
-  Name: "GameStateRoundTimeDisplayClient"
+  Name: "TopBarHandler_UI"
   PlatformAssetType: 3
   TextAsset {
   }

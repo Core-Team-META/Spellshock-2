@@ -116,15 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15599228502728747198
-  Name: "Tornado VFX"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_tornado"
-  }
-}
-Assets {
   Id: 15204381781527651531
   Name: "Line Full 003"
   PlatformAssetType: 9
