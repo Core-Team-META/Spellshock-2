@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12548340795272367205
   Name: "Orc_part_01"
   PlatformAssetType: 5
@@ -584,5 +584,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

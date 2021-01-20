@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8308231682525855788
   Name: "Tank Elf Starting VFX"
   PlatformAssetType: 3
@@ -58,5 +58,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Name: "Capture Point UI"
+Name: "Capture Point UI"
 RootId: 527033524674069522
 Objects {
   Id: 6610135967179747994

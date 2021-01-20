@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 6253620979802748301
   Name: "Custom Cliff 03"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 15979377991647608535
     ParameterOverrides {

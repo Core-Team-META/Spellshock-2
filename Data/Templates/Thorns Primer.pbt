@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4603934176734530980
   Name: "Thorns Primer"
   PlatformAssetType: 5
@@ -214,5 +214,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

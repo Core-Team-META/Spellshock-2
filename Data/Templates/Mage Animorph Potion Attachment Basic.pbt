@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7047570860712842217
   Name: "Mage Animorph Potion Attachment Basic"
   PlatformAssetType: 5
@@ -3580,6 +3580,14 @@
               PlaybackRate: 1
               ShouldLoop: true
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -3848,5 +3856,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10494890791234986688
   Name: "Multishot Crossbow"
   PlatformAssetType: 5
@@ -337,5 +337,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

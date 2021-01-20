@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17952693581840529841
   Name: "Hunter Orc Starting VFX"
   PlatformAssetType: 3
@@ -52,5 +52,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

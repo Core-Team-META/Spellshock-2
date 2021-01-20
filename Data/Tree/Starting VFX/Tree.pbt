@@ -1,4 +1,4 @@
-﻿Name: "Starting VFX"
+Name: "Starting VFX"
 RootId: 5874015840417789592
 Objects {
   Id: 7869052251248813548

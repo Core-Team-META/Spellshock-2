@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3711299298965877483
   Name: "Healer Elf Costume Frost"
   PlatformAssetType: 5
@@ -5210,5 +5210,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

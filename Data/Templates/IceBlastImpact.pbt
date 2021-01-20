@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3882824591213549786
   Name: "IceBlastImpact"
   PlatformAssetType: 5
@@ -291,5 +291,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

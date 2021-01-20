@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3107346622540214285
   Name: "Hunter Trap Activation Basic"
   PlatformAssetType: 5
@@ -2533,5 +2533,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

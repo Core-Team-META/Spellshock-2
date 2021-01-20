@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9195378867472169284
   Name: "Crossbow Scope"
   PlatformAssetType: 5
@@ -974,5 +974,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

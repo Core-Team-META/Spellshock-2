@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17801137391214202879
   Name: "Assassin Orc Venom Bomb Projectile Fire"
   PlatformAssetType: 5
@@ -1331,5 +1331,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

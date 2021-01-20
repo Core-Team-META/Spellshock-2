@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10298965103520888440
   Name: "Capture_Point_Area"
   PlatformAssetType: 5
@@ -2217,5 +2217,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

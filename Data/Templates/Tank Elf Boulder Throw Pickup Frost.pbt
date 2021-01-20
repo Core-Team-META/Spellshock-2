@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8952580800435141697
   Name: "Tank Elf Boulder Throw Pickup Frost"
   PlatformAssetType: 5
@@ -186,5 +186,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

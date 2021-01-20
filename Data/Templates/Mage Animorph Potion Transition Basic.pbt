@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13713238088668800394
   Name: "Mage Animorph Potion Transition Basic"
   PlatformAssetType: 5
@@ -237,5 +237,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13115565443093371155
   Name: "Orc_barricade"
   PlatformAssetType: 5
@@ -2926,5 +2926,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

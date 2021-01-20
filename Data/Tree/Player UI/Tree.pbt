@@ -1,4 +1,4 @@
-﻿Name: "Player UI"
+Name: "Player UI"
 RootId: 1202107626836939879
 Objects {
   Id: 8477218747647194147

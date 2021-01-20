@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7677756861318576936
   Name: "Arrow Launcher"
   PlatformAssetType: 5
@@ -6906,5 +6906,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

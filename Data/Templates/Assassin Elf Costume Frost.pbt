@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5394791983193798307
   Name: "Assassin Elf Costume Frost"
   PlatformAssetType: 5
@@ -3496,5 +3496,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

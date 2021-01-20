@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12339898779811593320
   Name: "Lobby Start Respawn Players"
   PlatformAssetType: 5
@@ -84,5 +84,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

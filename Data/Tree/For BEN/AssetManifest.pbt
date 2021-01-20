@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18257460502441294512
   Name: "Prism - 3-Sided Convex"
   PlatformAssetType: 1

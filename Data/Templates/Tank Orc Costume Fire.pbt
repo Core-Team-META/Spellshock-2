@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10111260506252562499
   Name: "Tank Orc Costume Fire"
   PlatformAssetType: 5
@@ -10010,5 +10010,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

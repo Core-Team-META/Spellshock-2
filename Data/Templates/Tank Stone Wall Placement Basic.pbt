@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8766393355139966205
   Name: "Tank Stone Wall Placement Basic"
   PlatformAssetType: 5
@@ -1122,5 +1122,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

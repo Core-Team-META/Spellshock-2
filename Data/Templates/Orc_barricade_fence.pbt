@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6149956278976832248
   Name: "Orc_barricade_fence"
   PlatformAssetType: 5
@@ -1850,5 +1850,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12292371233634189790
   Name: "Elven_road_standing_light"
   PlatformAssetType: 5
@@ -1490,5 +1490,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

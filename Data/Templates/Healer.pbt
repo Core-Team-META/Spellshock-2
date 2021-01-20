@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10891347061023344361
   Name: "Healer"
   PlatformAssetType: 5
@@ -2466,5 +2466,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

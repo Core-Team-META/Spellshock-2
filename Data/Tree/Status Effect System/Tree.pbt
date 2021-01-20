@@ -1,4 +1,4 @@
-﻿Name: "Status Effect System"
+Name: "Status Effect System"
 RootId: 3202946136614365771
 Objects {
   Id: 12789809754890541052

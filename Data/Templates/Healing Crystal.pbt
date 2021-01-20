@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12922134233902895912
   Name: "Healing Crystal"
   PlatformAssetType: 5
@@ -1518,5 +1518,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

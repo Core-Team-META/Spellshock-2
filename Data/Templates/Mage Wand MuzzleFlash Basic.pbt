@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2580083533563872171
   Name: "Mage Wand MuzzleFlash Basic"
   PlatformAssetType: 5
@@ -108,5 +108,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

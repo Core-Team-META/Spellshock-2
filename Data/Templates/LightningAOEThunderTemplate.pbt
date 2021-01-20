@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7985053823299019551
   Name: "LightningAOEThunderTemplate"
   PlatformAssetType: 5
@@ -922,5 +922,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

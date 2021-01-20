@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5183598678381924592
   Name: "Gauntlet Ammo UI Container"
   PlatformAssetType: 5
@@ -227,5 +227,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

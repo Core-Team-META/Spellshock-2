@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12582858560613182221
   Name: "Mage Animorph Potion Impact Basic"
   PlatformAssetType: 5
@@ -442,5 +442,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15834726106847442933
   Name: "GOLDEN_UI_Kate"
   PlatformAssetType: 5
@@ -12997,5 +12997,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4231308166832060540
   Name: "PoisonBlastImpact"
   PlatformAssetType: 5
@@ -344,5 +344,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11072531370415895459
   Name: "Healer Elf Costume Rare"
   PlatformAssetType: 5
@@ -5150,5 +5150,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2418048523852605265
   Name: "BlightWallRight"
   PlatformAssetType: 5
@@ -13065,5 +13065,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

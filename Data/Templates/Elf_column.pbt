@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4075384341934062930
   Name: "Elf_column"
   PlatformAssetType: 5
@@ -938,5 +938,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

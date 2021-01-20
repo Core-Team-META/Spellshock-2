@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1501139048018181677
   Name: "Mage Orc Pyroblast Projectile Fire"
   PlatformAssetType: 5
@@ -628,5 +628,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

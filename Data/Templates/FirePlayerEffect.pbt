@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7358781774307562864
   Name: "FirePlayerEffect"
   PlatformAssetType: 5
@@ -448,5 +448,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16021815535294018144
   Name: "Mage Orc Costume Default"
   PlatformAssetType: 5
@@ -3214,5 +3214,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

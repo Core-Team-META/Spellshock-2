@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1453546943157492303
   Name: "Hunter Elf Costume Legendary"
   PlatformAssetType: 5
@@ -8213,5 +8213,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

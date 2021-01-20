@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13331124737271784681
   Name: "Tank Rock Strike Projectile Basic"
   PlatformAssetType: 5
@@ -302,5 +302,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

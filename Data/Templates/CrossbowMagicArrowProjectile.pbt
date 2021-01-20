@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15286181249944660659
   Name: "CrossbowMagicArrowProjectile"
   PlatformAssetType: 5
@@ -701,5 +701,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

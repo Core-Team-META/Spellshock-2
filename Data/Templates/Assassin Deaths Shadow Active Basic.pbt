@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15482014499059417987
   Name: "Assassin Deaths Shadow Active Basic"
   PlatformAssetType: 5
@@ -160,5 +160,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

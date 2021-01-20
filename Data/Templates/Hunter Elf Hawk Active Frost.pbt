@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14378502203219747314
   Name: "Hunter Elf Hawk Active Frost"
   PlatformAssetType: 5
@@ -4211,6 +4211,14 @@
             PlayOnStartAnimation {
               PlaybackRate: 0.8
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -4472,5 +4480,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

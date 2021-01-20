@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12196372579882285201
   Name: "IcePlayerEffect"
   PlatformAssetType: 5
@@ -224,5 +224,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

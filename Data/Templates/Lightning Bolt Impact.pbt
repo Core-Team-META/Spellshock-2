@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3025603993560060871
   Name: "Lightning Bolt Impact"
   PlatformAssetType: 5
@@ -103,5 +103,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

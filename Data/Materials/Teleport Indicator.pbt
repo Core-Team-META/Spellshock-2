@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 17393503133865181723
   Name: "Teleport Indicator"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 6658585544379660340
     ParameterOverrides {

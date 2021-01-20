@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3838786937762771186
   Name: "Healer Orc Divine Light Active Fire 2"
   PlatformAssetType: 5
@@ -3338,5 +3338,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

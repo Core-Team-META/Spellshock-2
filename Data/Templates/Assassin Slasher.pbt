@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14161552992450762216
   Name: "Assassin Slasher"
   PlatformAssetType: 5
@@ -1877,5 +1877,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

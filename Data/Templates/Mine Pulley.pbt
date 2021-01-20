@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11771491110792182820
   Name: "Mine Pulley"
   PlatformAssetType: 5
@@ -2839,5 +2839,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

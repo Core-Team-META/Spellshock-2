@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16298828584612169397
   Name: "Ground Slam FX"
   PlatformAssetType: 5
@@ -123,5 +123,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18196809568001063302
   Name: "Kill Indicator Message"
   PlatformAssetType: 5
@@ -361,5 +361,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7312333655936516000
   Name: "Tank Elf Costume Default"
   PlatformAssetType: 5
@@ -2807,5 +2807,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

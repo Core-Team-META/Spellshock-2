@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14985877915950573545
   Name: "Damage Feedback"
   PlatformAssetType: 5
@@ -416,5 +416,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

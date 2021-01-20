@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2836178766407105349
   Name: "Fantasy Castle Stairs Spiral 03 with Railing - Large 3m Template"
   PlatformAssetType: 5
@@ -125,5 +125,5 @@
       AssetId: "Fantasy_Castle_Stairs_Spiral_03_with_Railing_-_Large_3m_Template"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

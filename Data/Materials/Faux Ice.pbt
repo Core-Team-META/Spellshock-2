@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 2984351661227581568
   Name: "Faux Ice"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 6631081666212622438
     ParameterOverrides {

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17242794308955100454
   Name: "Hunter"
   PlatformAssetType: 5
@@ -2358,5 +2358,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8803090588083866509
   Name: "Elven_corner"
   PlatformAssetType: 5
@@ -639,5 +639,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

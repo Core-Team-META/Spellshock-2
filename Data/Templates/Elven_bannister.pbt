@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5576557899363017038
   Name: "Elven_bannister"
   PlatformAssetType: 5
@@ -486,5 +486,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

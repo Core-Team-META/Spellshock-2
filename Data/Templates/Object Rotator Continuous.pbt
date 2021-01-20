@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13971110458628146731
   Name: "Object Rotator Continuous"
   PlatformAssetType: 5
@@ -81,5 +81,5 @@
       AssetId: "Object_Rotator_Continuous"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

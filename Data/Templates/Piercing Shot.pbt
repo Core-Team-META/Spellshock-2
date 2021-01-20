@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3786009366943915335
   Name: "Piercing Shot"
   PlatformAssetType: 5
@@ -327,5 +327,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

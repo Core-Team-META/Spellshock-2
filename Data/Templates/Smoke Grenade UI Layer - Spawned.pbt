@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4613546842731507603
   Name: "Smoke Grenade UI Layer - Spawned"
   PlatformAssetType: 5
@@ -190,5 +190,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9293650821442732191
   Name: "Assassin Orc Starting VFX"
   PlatformAssetType: 3
@@ -82,5 +82,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

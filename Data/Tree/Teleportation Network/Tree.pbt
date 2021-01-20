@@ -1,4 +1,4 @@
-﻿Name: "Teleportation Network"
+Name: "Teleportation Network"
 RootId: 9214649830315504141
 Objects {
   Id: 13850080541975460496

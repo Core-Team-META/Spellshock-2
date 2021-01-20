@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 182375513380770216
   Name: "Elven_big_tower"
   PlatformAssetType: 5
@@ -2441,5 +2441,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

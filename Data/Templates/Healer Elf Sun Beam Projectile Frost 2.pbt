@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3493372388929023277
   Name: "Healer Elf Sun Beam Projectile Frost 2"
   PlatformAssetType: 5
@@ -1740,5 +1740,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

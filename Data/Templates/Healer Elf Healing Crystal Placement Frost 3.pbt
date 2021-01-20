@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1737908342690364901
   Name: "Healer Elf Healing Crystal Placement Frost 3"
   PlatformAssetType: 5
@@ -1662,5 +1662,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

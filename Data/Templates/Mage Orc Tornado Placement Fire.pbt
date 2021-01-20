@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17488736841778857887
   Name: "Mage Orc Tornado Placement Fire"
   PlatformAssetType: 5
@@ -614,5 +614,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

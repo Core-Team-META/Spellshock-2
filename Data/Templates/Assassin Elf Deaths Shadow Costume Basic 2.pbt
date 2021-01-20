@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5719005977356257604
   Name: "Assassin Elf Deaths Shadow Costume Basic 2"
   PlatformAssetType: 5
@@ -5825,5 +5825,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

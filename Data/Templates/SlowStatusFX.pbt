@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15001429429045429461
   Name: "SlowStatusFX"
   PlatformAssetType: 5
@@ -309,5 +309,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

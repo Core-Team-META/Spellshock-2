@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 14226583370930000717
   Name: "Strider Armor Painted"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 7467570831701101845
     ParameterOverrides {

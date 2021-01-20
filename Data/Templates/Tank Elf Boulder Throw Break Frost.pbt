@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7996876791036096152
   Name: "Tank Elf Boulder Throw Break Frost"
   PlatformAssetType: 5
@@ -138,5 +138,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

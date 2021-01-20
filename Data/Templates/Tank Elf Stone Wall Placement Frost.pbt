@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3361009821012354788
   Name: "Tank Elf Stone Wall Placement Frost"
   PlatformAssetType: 5
@@ -1122,5 +1122,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

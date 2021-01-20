@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4883165977894045775
   Name: "Assassin Orc Blade Dash Preview Basic"
   PlatformAssetType: 5
@@ -230,5 +230,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

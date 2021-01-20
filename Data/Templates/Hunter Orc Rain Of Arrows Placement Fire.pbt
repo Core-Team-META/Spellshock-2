@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14477423852380848897
   Name: "Hunter Orc Rain Of Arrows Placement Fire"
   PlatformAssetType: 5
@@ -5416,5 +5416,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

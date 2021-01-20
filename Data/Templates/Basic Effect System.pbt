@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10245160804268536417
   Name: "Basic Effect System"
   PlatformAssetType: 5
@@ -81,5 +81,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

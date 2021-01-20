@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16181789164175594017
   Name: "Healer Orc Costume Epic"
   PlatformAssetType: 5
@@ -11591,5 +11591,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

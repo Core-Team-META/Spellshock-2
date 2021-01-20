@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2124661416244044752
   Name: "Fire Wall Primer"
   PlatformAssetType: 5
@@ -111,5 +111,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

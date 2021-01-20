@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3462382851178288174
   Name: "Healing Aura"
   PlatformAssetType: 5
@@ -171,5 +171,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

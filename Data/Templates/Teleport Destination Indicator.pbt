@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 500164608151091677
   Name: "Teleport Destination Indicator"
   PlatformAssetType: 5
@@ -87,5 +87,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

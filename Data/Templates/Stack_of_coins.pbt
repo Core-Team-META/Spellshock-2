@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14789196444205267272
   Name: "Stack_of_coins"
   PlatformAssetType: 5
@@ -1874,5 +1874,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

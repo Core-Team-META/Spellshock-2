@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2513968207127130069
   Name: "Elf_standing_light"
   PlatformAssetType: 5
@@ -2751,5 +2751,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

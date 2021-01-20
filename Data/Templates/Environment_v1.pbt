@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14962935756998985495
   Name: "Environment_v1"
   PlatformAssetType: 5
@@ -663,5 +663,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

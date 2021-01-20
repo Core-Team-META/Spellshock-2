@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 883948206680258696
   Name: "FireballMuzzleBigSpellSound"
   PlatformAssetType: 5
@@ -158,5 +158,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

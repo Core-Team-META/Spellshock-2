@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9553951876314605743
   Name: "Assassin Orc Deaths Shadow Costume Fire"
   PlatformAssetType: 5
@@ -2536,5 +2536,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

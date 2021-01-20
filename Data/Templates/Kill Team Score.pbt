@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15939366409926775473
   Name: "Kill Team Score"
   PlatformAssetType: 5
@@ -78,5 +78,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

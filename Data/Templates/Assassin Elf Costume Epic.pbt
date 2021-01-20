@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1403404499257704310
   Name: "Assassin Elf Costume Epic"
   PlatformAssetType: 5
@@ -3321,5 +3321,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

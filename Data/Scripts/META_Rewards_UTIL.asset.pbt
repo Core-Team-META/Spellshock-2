@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2433320775435313890
   Name: "META_Rewards_UTIL"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1365417561647704522
   Name: "Assassin Elf Blade Dash Preview Basic"
   PlatformAssetType: 5
@@ -238,5 +238,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

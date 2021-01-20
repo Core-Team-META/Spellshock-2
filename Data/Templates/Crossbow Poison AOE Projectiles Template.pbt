@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 757544796828106135
   Name: "Crossbow Poison AOE Projectiles Template"
   PlatformAssetType: 5
@@ -1476,5 +1476,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

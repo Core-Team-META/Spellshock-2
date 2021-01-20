@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3010480918737894383
   Name: "Assassin Elf Costume Rare"
   PlatformAssetType: 5
@@ -3097,5 +3097,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2587376687102126928
   Name: "Tank Elf Costume Frost"
   PlatformAssetType: 5
@@ -5737,5 +5737,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

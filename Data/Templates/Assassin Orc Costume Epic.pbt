@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2860333127380789030
   Name: "Assassin Orc Costume Epic"
   PlatformAssetType: 5
@@ -6395,5 +6395,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

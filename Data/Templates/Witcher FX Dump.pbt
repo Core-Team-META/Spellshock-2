@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16541927475436256540
   Name: "Witcher FX Dump"
   PlatformAssetType: 5
@@ -595,5 +595,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

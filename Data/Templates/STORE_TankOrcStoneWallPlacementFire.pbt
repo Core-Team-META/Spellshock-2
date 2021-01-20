@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3597073966590162922
   Name: "STORE_TankOrcStoneWallPlacementFire"
   PlatformAssetType: 5
@@ -571,5 +571,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

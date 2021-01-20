@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15256544326295737396
   Name: "BladeDashAbilityServer"
   PlatformAssetType: 3
@@ -12,5 +12,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

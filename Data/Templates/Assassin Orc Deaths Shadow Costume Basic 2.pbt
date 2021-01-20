@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13347412244189647636
   Name: "Assassin Orc Deaths Shadow Costume Basic 2"
   PlatformAssetType: 5
@@ -6114,5 +6114,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

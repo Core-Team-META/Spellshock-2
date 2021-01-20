@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13018880813639644526
   Name: "Object Mover"
   PlatformAssetType: 5
@@ -179,5 +179,5 @@
       AssetId: "Object_Mover"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

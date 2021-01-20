@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8642317457105429321
   Name: "Elf_Hanging Light"
   PlatformAssetType: 5
@@ -1472,5 +1472,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

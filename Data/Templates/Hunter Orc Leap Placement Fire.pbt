@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9787452031526615739
   Name: "Hunter Orc Leap Placement Fire"
   PlatformAssetType: 5
@@ -932,5 +932,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

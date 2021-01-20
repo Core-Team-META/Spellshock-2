@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8334719430546276783
   Name: "Helper_TeamMemberPanel"
   PlatformAssetType: 5
@@ -703,5 +703,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

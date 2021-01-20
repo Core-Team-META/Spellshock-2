@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2519458169302244941
   Name: "STORE_BlueEyeHat"
   PlatformAssetType: 5
@@ -816,5 +816,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

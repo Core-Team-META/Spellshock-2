@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7827469757850190083
   Name: "Mage Orc Tornado Placement Basic"
   PlatformAssetType: 5
@@ -580,5 +580,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

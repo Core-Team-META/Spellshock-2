@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8863279680582417533
   Name: "Mage Orc Iceberg Attachment Fire"
   PlatformAssetType: 5
@@ -1841,5 +1841,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

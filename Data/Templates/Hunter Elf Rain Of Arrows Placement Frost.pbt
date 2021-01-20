@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18370148347094241027
   Name: "Hunter Elf Rain Of Arrows Placement Frost"
   PlatformAssetType: 5
@@ -5380,5 +5380,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

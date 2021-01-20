@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 172043116817079840
   Name: "Small_tower"
   PlatformAssetType: 5
@@ -15286,5 +15286,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5224364241756978283
   Name: "Healer Elf Supernova Charge Frost 3"
   PlatformAssetType: 5
@@ -1491,5 +1491,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

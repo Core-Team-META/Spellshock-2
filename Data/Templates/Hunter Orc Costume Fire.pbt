@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6576685640446495568
   Name: "Hunter Orc Costume Fire"
   PlatformAssetType: 5
@@ -11013,5 +11013,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

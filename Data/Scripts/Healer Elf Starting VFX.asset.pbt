@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4287529334157423026
   Name: "Healer Elf Starting VFX"
   PlatformAssetType: 3
@@ -58,5 +58,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

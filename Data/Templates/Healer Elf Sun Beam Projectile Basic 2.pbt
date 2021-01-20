@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10839489698207188911
   Name: "Healer Elf Sun Beam Projectile Basic 2"
   PlatformAssetType: 5
@@ -1740,5 +1740,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17990456245832998922
   Name: "Assassin Slasher Projectile Basic"
   PlatformAssetType: 5
@@ -2010,5 +2010,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

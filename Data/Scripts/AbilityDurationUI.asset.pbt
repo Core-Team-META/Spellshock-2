@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9094472670648911279
   Name: "AbilityDurationUI"
   PlatformAssetType: 3
@@ -34,5 +34,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

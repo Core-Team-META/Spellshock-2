@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 975250975012962628
   Name: "Death Beam FX"
   PlatformAssetType: 5
@@ -181,5 +181,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

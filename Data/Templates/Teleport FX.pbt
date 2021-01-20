@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9636751773392762976
   Name: "Teleport FX"
   PlatformAssetType: 5
@@ -151,5 +151,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

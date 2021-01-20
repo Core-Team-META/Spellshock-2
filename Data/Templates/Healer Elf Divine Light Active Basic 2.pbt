@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11640123223294048176
   Name: "Healer Elf Divine Light Active Basic 2"
   PlatformAssetType: 5
@@ -1045,5 +1045,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

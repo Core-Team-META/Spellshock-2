@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9012068803185341832
   Name: "Fire Cloak"
   PlatformAssetType: 5
@@ -151,5 +151,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

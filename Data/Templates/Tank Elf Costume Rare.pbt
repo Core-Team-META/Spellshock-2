@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16382017523589552416
   Name: "Tank Elf Costume Rare"
   PlatformAssetType: 5
@@ -4865,5 +4865,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

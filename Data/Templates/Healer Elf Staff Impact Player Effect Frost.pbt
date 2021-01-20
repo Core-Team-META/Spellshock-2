@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18339021532217806401
   Name: "Healer Elf Staff Impact Player Effect Frost"
   PlatformAssetType: 5
@@ -197,5 +197,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

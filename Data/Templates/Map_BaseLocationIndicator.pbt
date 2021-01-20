@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14890777611168654967
   Name: "Map_BaseLocationIndicator"
   PlatformAssetType: 5
@@ -445,5 +445,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

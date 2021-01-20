@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11106147542934173593
   Name: "CrossbowPoisonImpact"
   PlatformAssetType: 5
@@ -919,5 +919,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

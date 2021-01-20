@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7702565210062601240
   Name: "DestructibleWeaponAOE"
   PlatformAssetType: 3
@@ -38,5 +38,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

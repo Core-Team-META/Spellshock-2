@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11548624648656035757
   Name: "Healer Orc Supernova Ending Fire 3"
   PlatformAssetType: 5
@@ -374,5 +374,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

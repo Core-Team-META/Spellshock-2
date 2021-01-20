@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4665091050441408463
   Name: "Hunter Elf Bear Trap Activation Frost"
   PlatformAssetType: 5
@@ -2473,5 +2473,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

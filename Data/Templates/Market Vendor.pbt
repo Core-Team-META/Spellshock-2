@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15903497662364614025
   Name: "Market Vendor"
   PlatformAssetType: 5
@@ -1519,6 +1519,14 @@
               Animation: "unarmed_sit_ground_crossed"
               PlaybackRate: 1
               ShouldLoop: true
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -3461,5 +3469,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

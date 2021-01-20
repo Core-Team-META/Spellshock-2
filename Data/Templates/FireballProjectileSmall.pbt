@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17394256842907642079
   Name: "FireballProjectileSmall"
   PlatformAssetType: 5
@@ -290,5 +290,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

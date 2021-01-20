@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16417575589097358380
   Name: "Healer Sun Beam Ending Basic"
   PlatformAssetType: 5
@@ -217,5 +217,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

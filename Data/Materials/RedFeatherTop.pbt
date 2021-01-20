@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 16936033135153682932
   Name: "RedFeatherTop"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 1781535275264321496
     ParameterOverrides {

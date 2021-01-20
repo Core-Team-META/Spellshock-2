@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2137448305448189427
   Name: "CrossbowWindSurfaceImpact"
   PlatformAssetType: 5
@@ -239,5 +239,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

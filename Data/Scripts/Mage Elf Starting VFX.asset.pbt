@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1083974979704324912
   Name: "Mage Elf Starting VFX"
   PlatformAssetType: 3
@@ -76,5 +76,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

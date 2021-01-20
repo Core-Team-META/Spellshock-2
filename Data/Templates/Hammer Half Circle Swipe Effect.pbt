@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12648056360132516756
   Name: "Hammer Half Circle Swipe Effect"
   PlatformAssetType: 5
@@ -186,5 +186,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

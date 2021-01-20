@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14162005454645790252
   Name: "LightningPlayerEffect"
   PlatformAssetType: 5
@@ -220,5 +220,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

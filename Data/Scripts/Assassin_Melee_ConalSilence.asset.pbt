@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15183397283648465844
   Name: "Assassin_Melee_ConalSilence"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

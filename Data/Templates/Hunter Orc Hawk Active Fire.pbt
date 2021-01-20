@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16346447748011586810
   Name: "Hunter Orc Hawk Active Fire"
   PlatformAssetType: 5
@@ -4110,6 +4110,14 @@
             PlayOnStartAnimation {
               PlaybackRate: 0.8
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -4380,5 +4388,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6905881845296895516
   Name: "Elf_flower_pot"
   PlatformAssetType: 5
@@ -773,5 +773,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

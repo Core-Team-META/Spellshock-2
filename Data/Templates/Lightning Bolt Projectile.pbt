@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13500957309735232933
   Name: "Lightning Bolt Projectile"
   PlatformAssetType: 5
@@ -168,5 +168,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

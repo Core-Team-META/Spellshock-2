@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5035916133444917773
   Name: "STORE_ScoutArmor_Shoes"
   PlatformAssetType: 5
@@ -2393,5 +2393,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2961603344546662916
   Name: "Orc_Standing Light"
   PlatformAssetType: 5
@@ -2176,5 +2176,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

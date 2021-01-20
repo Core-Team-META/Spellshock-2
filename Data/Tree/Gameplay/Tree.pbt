@@ -1,4 +1,4 @@
-﻿Name: "Gameplay"
+Name: "Gameplay"
 RootId: 6139923059512821780
 Objects {
   Id: 6867461716647578189

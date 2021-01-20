@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4847507470353447900
   Name: "Mine Cart"
   PlatformAssetType: 5
@@ -1492,5 +1492,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

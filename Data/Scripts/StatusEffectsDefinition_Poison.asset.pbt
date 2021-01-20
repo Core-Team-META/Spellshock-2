@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8260763536855232172
   Name: "StatusEffectsDefinition_Poison"
   PlatformAssetType: 3
@@ -33,5 +33,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

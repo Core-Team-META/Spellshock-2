@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1721108279989058967
   Name: "Palm_Tree_kelp"
   PlatformAssetType: 5
@@ -1077,5 +1077,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

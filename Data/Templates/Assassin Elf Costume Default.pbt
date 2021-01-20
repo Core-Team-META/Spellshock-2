@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8603629302167445173
   Name: "Assassin Elf Costume Default"
   PlatformAssetType: 5
@@ -2280,5 +2280,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9912592471396875537
   Name: "Audio Trigger Zone"
   PlatformAssetType: 5
@@ -378,6 +378,6 @@
   Marketplace {
     Description: "An easy-to-use drag-and-drop audio trigger zone. Simply put sounds you want to trigger in the AudioFolderEnter and they will play when you enter the zone. You can also put sounds in the AudioFolderLeave if you want sounds to trigger when you leave the zone.\r\n\r\nComment out the print to screen messages in the script and remove the visual reference object as needed."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

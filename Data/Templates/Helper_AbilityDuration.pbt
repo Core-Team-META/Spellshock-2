@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7156155829847915259
   Name: "Helper_AbilityDuration"
   PlatformAssetType: 5
@@ -170,5 +170,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

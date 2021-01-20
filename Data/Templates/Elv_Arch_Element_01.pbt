@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17147417442232962104
   Name: "Elv_Arch_Element_01"
   PlatformAssetType: 5
@@ -469,5 +469,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

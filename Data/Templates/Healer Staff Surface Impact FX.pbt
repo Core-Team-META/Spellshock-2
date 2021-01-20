@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3731118247202363736
   Name: "Healer Staff Surface Impact FX"
   PlatformAssetType: 5
@@ -360,5 +360,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2112935786619930455
   Name: "Hunter Elf Hawk Active Basic"
   PlatformAssetType: 5
@@ -4309,6 +4309,14 @@
             PlayOnStartAnimation {
               PlaybackRate: 0.8
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -4561,5 +4569,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

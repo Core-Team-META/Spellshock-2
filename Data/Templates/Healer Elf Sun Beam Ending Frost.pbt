@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 526721940899255177
   Name: "Healer Elf Sun Beam Ending Frost"
   PlatformAssetType: 5
@@ -234,5 +234,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

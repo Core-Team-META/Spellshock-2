@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 13192962680081309748
   Name: "Custom Base Material from Door Large"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 4365801235607398433
     ParameterOverrides {

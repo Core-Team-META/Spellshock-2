@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11846162225910715126
   Name: "Frame Outlined Thick 007"
   PlatformAssetType: 9

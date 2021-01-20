@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17239230977527023930
   Name: "META_DailyShop_Client"
   PlatformAssetType: 3
@@ -36,5 +36,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

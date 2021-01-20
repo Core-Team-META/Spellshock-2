@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3168550522020651484
   Name: "YellowFL_Plant_Small"
   PlatformAssetType: 5
@@ -401,5 +401,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

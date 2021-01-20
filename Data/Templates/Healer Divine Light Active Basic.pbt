@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9583554867605228300
   Name: "Healer Divine Light Active Basic"
   PlatformAssetType: 5
@@ -212,5 +212,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

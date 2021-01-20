@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1458786537451628614
   Name: "EaseUI"
   PlatformAssetType: 3
@@ -12,5 +12,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3765999754692721073
   Name: "Hunter Orc Crossbow Projectile Fire"
   PlatformAssetType: 5
@@ -322,5 +322,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

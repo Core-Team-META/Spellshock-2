@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5177912263410251781
   Name: "StatusEffectsDefinition_Blind"
   PlatformAssetType: 3
@@ -33,5 +33,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

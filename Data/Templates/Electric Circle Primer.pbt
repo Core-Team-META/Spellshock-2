@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4827230565070222589
   Name: "Electric Circle Primer"
   PlatformAssetType: 5
@@ -104,5 +104,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

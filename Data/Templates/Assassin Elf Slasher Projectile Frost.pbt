@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5432023853122515340
   Name: "Assassin Elf Slasher Projectile Frost"
   PlatformAssetType: 5
@@ -1293,5 +1293,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

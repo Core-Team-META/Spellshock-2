@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6523977272442773925
   Name: "Assassin Orc Slasher Projectile Fire"
   PlatformAssetType: 5
@@ -2536,5 +2536,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

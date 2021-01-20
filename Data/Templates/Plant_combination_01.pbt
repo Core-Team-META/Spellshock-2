@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16761194216714760008
   Name: "Plant_combination_01"
   PlatformAssetType: 5
@@ -802,5 +802,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

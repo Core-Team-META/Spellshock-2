@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13527897414884290774
   Name: "Mage Orc Costume Fire"
   PlatformAssetType: 5
@@ -10652,5 +10652,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

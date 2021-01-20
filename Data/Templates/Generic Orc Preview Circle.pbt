@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18349665107832834494
   Name: "Generic Orc Preview Circle"
   PlatformAssetType: 5
@@ -139,5 +139,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

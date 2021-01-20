@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16935783527848616368
   Name: "FireballImpactSmall"
   PlatformAssetType: 5
@@ -225,5 +225,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

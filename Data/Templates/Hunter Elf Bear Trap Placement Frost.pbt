@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10788932069430149450
   Name: "Hunter Elf Bear Trap Placement Frost"
   PlatformAssetType: 5
@@ -2500,5 +2500,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

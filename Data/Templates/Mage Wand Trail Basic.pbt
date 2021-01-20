@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14811229842374036418
   Name: "Mage Wand Trail Basic"
   PlatformAssetType: 5
@@ -336,5 +336,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

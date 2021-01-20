@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 601593399694631930
   Name: "Mage Elf Costume Legendary"
   PlatformAssetType: 5
@@ -5756,5 +5756,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

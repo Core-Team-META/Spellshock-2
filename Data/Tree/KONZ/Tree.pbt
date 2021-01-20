@@ -1,4 +1,4 @@
-﻿Name: "KONZ"
+Name: "KONZ"
 RootId: 8983380287600545020
 Objects {
   Id: 4362092203162598167

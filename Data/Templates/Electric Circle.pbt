@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15303948334794438477
   Name: "Electric Circle"
   PlatformAssetType: 5
@@ -310,5 +310,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

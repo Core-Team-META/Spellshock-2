@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18394002155784329196
   Name: "CrossbowArrowTrail"
   PlatformAssetType: 5
@@ -123,5 +123,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3018525531227009304
   Name: "Hunter Leap Placement Basic"
   PlatformAssetType: 5
@@ -923,5 +923,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

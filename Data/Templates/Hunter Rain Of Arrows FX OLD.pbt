@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10719404219839224023
   Name: "Hunter Rain Of Arrows FX OLD"
   PlatformAssetType: 5
@@ -5206,5 +5206,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

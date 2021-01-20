@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2180257237140361536
   Name: "WorldIndicatorCapturePoint"
   PlatformAssetType: 5
@@ -275,5 +275,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

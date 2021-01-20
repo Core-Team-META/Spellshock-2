@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13917466264583367927
   Name: "Lightning Storm"
   PlatformAssetType: 5
@@ -181,5 +181,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

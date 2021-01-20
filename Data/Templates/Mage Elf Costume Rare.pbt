@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3216325290225775465
   Name: "Mage Elf Costume Rare"
   PlatformAssetType: 5
@@ -4945,5 +4945,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

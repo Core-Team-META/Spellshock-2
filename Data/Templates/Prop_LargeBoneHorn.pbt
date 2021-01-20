@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17783329558533487911
   Name: "Prop_LargeBoneHorn"
   PlatformAssetType: 5
@@ -778,5 +778,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

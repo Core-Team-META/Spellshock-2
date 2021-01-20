@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12454507609031662847
   Name: "Ambient Occlusion Recolor Post Process_deadWorld"
   PlatformAssetType: 5
@@ -84,5 +84,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

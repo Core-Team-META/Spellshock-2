@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8871137856751991335
   Name: "Multishot Impact Projectile Aligned"
   PlatformAssetType: 5
@@ -110,5 +110,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

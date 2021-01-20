@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9656965676697602122
   Name: "Healer Elf Healing Crystal Placement Basic"
   PlatformAssetType: 5
@@ -1592,5 +1592,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

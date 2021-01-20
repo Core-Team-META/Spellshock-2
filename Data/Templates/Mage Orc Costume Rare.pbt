@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16790948681181480696
   Name: "Mage Orc Costume Rare"
   PlatformAssetType: 5
@@ -4817,5 +4817,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

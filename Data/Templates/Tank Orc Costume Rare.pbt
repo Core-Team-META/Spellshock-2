@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16050518157234755672
   Name: "Tank Orc Costume Rare"
   PlatformAssetType: 5
@@ -3516,5 +3516,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9241462357745059911
   Name: "Gate_part"
   PlatformAssetType: 5
@@ -4028,5 +4028,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

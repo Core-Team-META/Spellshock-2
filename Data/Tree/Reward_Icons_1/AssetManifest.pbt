@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18132479792113096322
   Name: "Fantasy Ability Purple 032"
   PlatformAssetType: 9

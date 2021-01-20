@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15867696918606394905
   Name: "Tank Orc Boulder Throw Pickup Basic"
   PlatformAssetType: 5
@@ -186,5 +186,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

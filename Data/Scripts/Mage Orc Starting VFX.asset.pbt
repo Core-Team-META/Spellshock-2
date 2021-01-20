@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15748669819301712087
   Name: "Mage Orc Starting VFX"
   PlatformAssetType: 3
@@ -76,5 +76,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

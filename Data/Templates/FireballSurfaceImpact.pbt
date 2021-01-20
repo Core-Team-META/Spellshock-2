@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4549121699096036832
   Name: "FireballSurfaceImpact"
   PlatformAssetType: 5
@@ -124,5 +124,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

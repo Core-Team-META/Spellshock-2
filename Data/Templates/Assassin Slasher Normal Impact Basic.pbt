@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11650929185820647296
   Name: "Assassin Slasher Normal Impact Basic"
   PlatformAssetType: 5
@@ -162,5 +162,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

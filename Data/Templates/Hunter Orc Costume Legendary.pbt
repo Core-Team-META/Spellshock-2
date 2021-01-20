@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10716214664751823333
   Name: "Hunter Orc Costume Legendary"
   PlatformAssetType: 5
@@ -16835,5 +16835,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

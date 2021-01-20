@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17020530466204675231
   Name: "Tank"
   PlatformAssetType: 5
@@ -2617,5 +2617,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

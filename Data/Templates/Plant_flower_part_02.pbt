@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3588891595602626762
   Name: "Plant_flower_part_02"
   PlatformAssetType: 5
@@ -210,5 +210,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

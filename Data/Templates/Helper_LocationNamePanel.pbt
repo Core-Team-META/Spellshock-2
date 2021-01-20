@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 22917687809546015
   Name: "Helper_LocationNamePanel"
   PlatformAssetType: 5
@@ -313,5 +313,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

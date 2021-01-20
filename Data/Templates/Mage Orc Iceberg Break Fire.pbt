@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 493810947062000790
   Name: "Mage Orc Iceberg Break Fire"
   PlatformAssetType: 5
@@ -142,5 +142,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

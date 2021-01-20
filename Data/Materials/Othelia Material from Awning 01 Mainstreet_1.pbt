@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 829044516748457860
   Name: "Othelia Material from Awning 01 Mainstreet_1"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 2628883503437916145
     ParameterOverrides {

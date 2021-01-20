@@ -1,4 +1,4 @@
-﻿Name: "NPC"
+Name: "NPC"
 RootId: 6356897330857931981
 Objects {
   Id: 18298441680868103020
@@ -167,6 +167,14 @@ Objects {
       PlayOnStartAnimation {
         PlaybackRate: 1
         ShouldLoop: true
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
       }
     }
   }
@@ -9185,6 +9193,14 @@ Objects {
         PlaybackRate: 1
         ShouldLoop: true
       }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
     }
   }
 }
@@ -14138,6 +14154,14 @@ Objects {
       PlayOnStartAnimation {
         PlaybackRate: 1
         ShouldLoop: true
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
       }
     }
   }
@@ -21847,6 +21871,14 @@ Objects {
       PlayOnStartAnimation {
         PlaybackRate: 1
         ShouldLoop: true
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
       }
     }
   }

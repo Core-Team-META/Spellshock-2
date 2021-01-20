@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10488213697618161642
   Name: "Assassin Orc Blade Dash Placement Fire"
   PlatformAssetType: 5
@@ -2432,5 +2432,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1939393386208935566
   Name: "Hunter Elf Rain Of Arrows Placement Basic"
   PlatformAssetType: 5
@@ -5635,5 +5635,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

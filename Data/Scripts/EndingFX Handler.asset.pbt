@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1897143244213311680
   Name: "EndingFX Handler"
   PlatformAssetType: 3
@@ -16,5 +16,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

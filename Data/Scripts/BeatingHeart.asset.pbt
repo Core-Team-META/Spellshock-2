@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8292884019671371150
   Name: "BeatingHeart"
   PlatformAssetType: 3
@@ -28,5 +28,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13597461145019088703
   Name: "Tank Elf Boulder Throw Pickup Basic"
   PlatformAssetType: 5
@@ -186,5 +186,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

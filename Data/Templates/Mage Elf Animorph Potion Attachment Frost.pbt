@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9363043525726820220
   Name: "Mage Elf Animorph Potion Attachment Frost"
   PlatformAssetType: 5
@@ -3602,6 +3602,14 @@
               PlaybackRate: 1
               ShouldLoop: true
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -3879,5 +3887,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

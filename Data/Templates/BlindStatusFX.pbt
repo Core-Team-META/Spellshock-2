@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15768097145132196247
   Name: "BlindStatusFX"
   PlatformAssetType: 5
@@ -379,5 +379,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

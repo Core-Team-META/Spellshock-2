@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8049623945515956290
   Name: "FX_Template_To_Spawn"
   PlatformAssetType: 5
@@ -119,5 +119,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

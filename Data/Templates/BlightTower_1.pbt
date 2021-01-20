@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16057614292968707144
   Name: "BlightTower"
   PlatformAssetType: 5
@@ -12978,5 +12978,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

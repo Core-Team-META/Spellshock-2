@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15345620429388998215
   Name: "Assassin Orc Slasher Normal Impact Fire"
   PlatformAssetType: 5
@@ -166,5 +166,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

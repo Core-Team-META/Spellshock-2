@@ -1,4 +1,4 @@
-﻿Name: "Perk Shop"
+Name: "Perk Shop"
 RootId: 5611420104663390633
 Objects {
   Id: 15657846731419429560

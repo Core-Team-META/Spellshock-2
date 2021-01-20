@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17202468479479449482
   Name: "Helper_Class_Button"
   PlatformAssetType: 5
@@ -2213,5 +2213,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

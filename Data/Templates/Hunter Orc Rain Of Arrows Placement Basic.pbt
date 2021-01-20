@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9619618021631241089
   Name: "Hunter Orc Rain Of Arrows Placement Basic"
   PlatformAssetType: 5
@@ -5803,5 +5803,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

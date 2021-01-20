@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2969735918098534603
   Name: "Hunter Orc Hawk Active Basic"
   PlatformAssetType: 5
@@ -4327,6 +4327,14 @@
             PlayOnStartAnimation {
               PlaybackRate: 0.8
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -4579,5 +4587,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

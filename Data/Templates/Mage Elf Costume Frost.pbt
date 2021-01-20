@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8043111153345216687
   Name: "Mage Elf Costume Frost"
   PlatformAssetType: 5
@@ -5952,5 +5952,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16119998931012082798
   Name: "Earthquake FX"
   PlatformAssetType: 5
@@ -76,5 +76,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

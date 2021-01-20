@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 258707949483211358
   Name: "Elven Waterfall from Waterfall Straight_3"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 5824363194825852145
     ParameterOverrides {

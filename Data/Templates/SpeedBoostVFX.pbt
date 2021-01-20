@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7843710248559220529
   Name: "SpeedBoostVFX"
   PlatformAssetType: 5
@@ -101,5 +101,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1259958909182382340
   Name: "Healer Orc Supernova Charge Basic"
   PlatformAssetType: 5
@@ -381,5 +381,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

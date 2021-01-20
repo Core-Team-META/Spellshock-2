@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9754313940285145496
   Name: "LightningGauntlet_OutOfAmmo"
   PlatformAssetType: 5
@@ -132,5 +132,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

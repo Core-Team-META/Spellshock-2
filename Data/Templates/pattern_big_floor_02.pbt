@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5369426878229761577
   Name: "pattern_big_floor_02"
   PlatformAssetType: 5
@@ -4194,5 +4194,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

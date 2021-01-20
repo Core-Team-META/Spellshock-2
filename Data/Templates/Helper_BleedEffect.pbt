@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6034558872979117633
   Name: "Helper_BleedEffect"
   PlatformAssetType: 5
@@ -339,5 +339,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

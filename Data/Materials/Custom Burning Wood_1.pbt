@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 2397729212965434140
   Name: "ElfBoulder"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {

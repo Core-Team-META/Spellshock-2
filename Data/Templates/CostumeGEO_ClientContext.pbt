@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9665857650078159158
   Name: "CostumeGEO_ClientContext"
   PlatformAssetType: 5
@@ -7710,5 +7710,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5222342210973956888
   Name: "MATCH_EVAL_PLAYER_RESULT"
   PlatformAssetType: 5
@@ -187,5 +187,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16070017289157504481
   Name: "Healer Orc Starting VFX"
   PlatformAssetType: 3
@@ -58,5 +58,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

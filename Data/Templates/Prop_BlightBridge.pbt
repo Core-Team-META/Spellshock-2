@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9906166558533216595
   Name: "Prop_BlightBridge"
   PlatformAssetType: 5
@@ -8797,5 +8797,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

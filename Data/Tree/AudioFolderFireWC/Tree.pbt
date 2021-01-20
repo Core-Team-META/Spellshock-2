@@ -1,4 +1,4 @@
-﻿Name: "AudioFolderFireWC"
+Name: "AudioFolderFireWC"
 RootId: 8501837111167630165
 Objects {
   Id: 15630855271564211800

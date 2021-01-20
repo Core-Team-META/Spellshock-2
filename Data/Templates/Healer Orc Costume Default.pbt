@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11131788392135189052
   Name: "Healer Orc Costume Default"
   PlatformAssetType: 5
@@ -3104,5 +3104,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

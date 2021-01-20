@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7646593255349821538
   Name: "Combat Dependencies"
   PlatformAssetType: 5
@@ -120,5 +120,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

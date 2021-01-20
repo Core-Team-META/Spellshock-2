@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9200187627411167986
   Name: "PoisonStatusFX"
   PlatformAssetType: 5
@@ -76,5 +76,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

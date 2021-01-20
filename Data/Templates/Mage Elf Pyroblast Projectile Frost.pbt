@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 190311559756997868
   Name: "Mage Elf Pyroblast Projectile Frost"
   PlatformAssetType: 5
@@ -613,5 +613,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

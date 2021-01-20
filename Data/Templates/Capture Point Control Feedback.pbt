@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14677087816454980018
   Name: "Capture Point Control Feedback"
   PlatformAssetType: 5
@@ -97,5 +97,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

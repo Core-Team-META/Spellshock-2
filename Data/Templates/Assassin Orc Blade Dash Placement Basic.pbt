@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11878262350625250626
   Name: "Assassin Orc Blade Dash Placement Basic"
   PlatformAssetType: 5
@@ -2435,5 +2435,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

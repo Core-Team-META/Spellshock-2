@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7156613417916661940
   Name: "Mage Elf Iceberg Attachment Frost"
   PlatformAssetType: 5
@@ -1797,5 +1797,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

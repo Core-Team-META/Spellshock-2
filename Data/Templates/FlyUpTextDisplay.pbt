@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 337403098889447562
   Name: "FlyUpTextDisplay"
   PlatformAssetType: 5
@@ -95,5 +95,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

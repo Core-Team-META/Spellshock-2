@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10400548438601485915
   Name: "HammerBlastImpact"
   PlatformAssetType: 5
@@ -404,5 +404,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

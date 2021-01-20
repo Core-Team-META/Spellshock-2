@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8381065170024406029
   Name: "Healer Ultimate FX"
   PlatformAssetType: 5
@@ -299,5 +299,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

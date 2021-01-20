@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2985282815979522936
   Name: "Healer Orc Healing Crystal Placement Fire"
   PlatformAssetType: 5
@@ -1767,5 +1767,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

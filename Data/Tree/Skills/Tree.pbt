@@ -1,4 +1,4 @@
-﻿Name: "Skills"
+Name: "Skills"
 RootId: 16629351977808918313
 Objects {
   Id: 11452141803278496636

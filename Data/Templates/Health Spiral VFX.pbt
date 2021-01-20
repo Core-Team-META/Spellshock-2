@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14325639722933592118
   Name: "Health Spiral VFX"
   PlatformAssetType: 5
@@ -110,5 +110,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

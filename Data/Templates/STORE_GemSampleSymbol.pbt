@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8643178046994123592
   Name: "STORE_GemSampleSymbol"
   PlatformAssetType: 5
@@ -74,5 +74,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

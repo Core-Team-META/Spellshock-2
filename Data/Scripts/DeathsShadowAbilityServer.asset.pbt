@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6553233916944605564
   Name: "DeathsShadowAbilityServer"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

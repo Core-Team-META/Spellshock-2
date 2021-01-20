@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2309478069929941983
   Name: "Healer Healing Crystal Preview Basic"
   PlatformAssetType: 5
@@ -301,5 +301,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

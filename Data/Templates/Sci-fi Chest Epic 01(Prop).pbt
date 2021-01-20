@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10716266893733904579
   Name: "Sci-fi Chest Epic 01(Prop)"
   PlatformAssetType: 5
@@ -243,5 +243,5 @@
       AssetId: "Sci-fi_Chest_Epic_01_Prop_"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

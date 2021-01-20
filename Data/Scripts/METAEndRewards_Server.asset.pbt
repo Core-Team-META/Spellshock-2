@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16281924477316564444
   Name: "METAEndRewards_Server"
   PlatformAssetType: 3
@@ -30,5 +30,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

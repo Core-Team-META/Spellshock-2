@@ -1,4 +1,4 @@
-﻿Name: "Class Menu Data"
+Name: "Class Menu Data"
 RootId: 14151859424388630810
 Objects {
   Id: 12124708511639495803

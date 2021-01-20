@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17713115033133431476
   Name: "Prop_GladeBridge"
   PlatformAssetType: 5
@@ -7096,5 +7096,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

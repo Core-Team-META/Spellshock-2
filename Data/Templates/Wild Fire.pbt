@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16871229772278373878
   Name: "Wild Fire"
   PlatformAssetType: 5
@@ -209,5 +209,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8123813860697167780
   Name: "Healer Elf Staff Surface Impact FX Frost"
   PlatformAssetType: 5
@@ -359,5 +359,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

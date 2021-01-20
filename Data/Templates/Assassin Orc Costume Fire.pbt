@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 391006820139421947
   Name: "Assassin Orc Costume Fire"
   PlatformAssetType: 5
@@ -6703,5 +6703,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

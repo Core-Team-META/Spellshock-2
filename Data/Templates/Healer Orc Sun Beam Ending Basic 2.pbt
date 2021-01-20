@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17109796014348089273
   Name: "Healer Orc Sun Beam Ending Basic 2"
   PlatformAssetType: 5
@@ -235,5 +235,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

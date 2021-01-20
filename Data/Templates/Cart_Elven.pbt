@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6167754679974892545
   Name: "Cart_Elven"
   PlatformAssetType: 5
@@ -7224,5 +7224,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

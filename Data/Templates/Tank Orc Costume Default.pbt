@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5044328203892269816
   Name: "Tank Orc Costume Default"
   PlatformAssetType: 5
@@ -2522,5 +2522,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6376604265419333521
   Name: "Assassin Orc Wraith Strike Costume Basic"
   PlatformAssetType: 5
@@ -3943,5 +3943,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

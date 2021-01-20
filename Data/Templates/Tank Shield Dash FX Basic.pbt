@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8213125305841566245
   Name: "Tank Shield Dash FX Basic"
   PlatformAssetType: 5
@@ -824,5 +824,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7034271320763119631
   Name: "Wood Raw White"
   PlatformAssetType: 2

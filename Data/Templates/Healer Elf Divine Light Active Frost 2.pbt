@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14281930789658138167
   Name: "Healer Elf Divine Light Active Frost 2"
   PlatformAssetType: 5
@@ -1098,5 +1098,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

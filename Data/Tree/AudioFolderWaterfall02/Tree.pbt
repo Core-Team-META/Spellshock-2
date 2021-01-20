@@ -1,4 +1,4 @@
-﻿Name: "AudioFolderWaterfall02"
+Name: "AudioFolderWaterfall02"
 RootId: 11646273830196560111
 Objects {
   Id: 14092001047997830760

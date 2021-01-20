@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11210505986581036002
   Name: "LightningGauntlet_PowerupSFX"
   PlatformAssetType: 5
@@ -623,5 +623,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

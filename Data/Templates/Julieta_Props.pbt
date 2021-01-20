@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3016561015879885400
   Name: "Julieta_Props"
   PlatformAssetType: 5
@@ -11591,5 +11591,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

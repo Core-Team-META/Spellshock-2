@@ -1,4 +1,4 @@
-﻿Name: "DamageHelper"
+Name: "DamageHelper"
 RootId: 4683464414535277849
 Objects {
   Id: 14284452669964148176

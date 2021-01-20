@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12527094592906841678
   Name: "Market Tent 2_New"
   PlatformAssetType: 5
@@ -7764,5 +7764,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7569250083106348559
   Name: "Effect Announcer"
   PlatformAssetType: 5
@@ -302,5 +302,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

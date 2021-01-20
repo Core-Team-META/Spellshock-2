@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15863781025588256896
   Name: "Hunter Bear Trap Preview Basic"
   PlatformAssetType: 5
@@ -2091,5 +2091,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

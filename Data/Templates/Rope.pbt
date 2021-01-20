@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3941837310879865287
   Name: "Rope"
   PlatformAssetType: 5
@@ -1454,5 +1454,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

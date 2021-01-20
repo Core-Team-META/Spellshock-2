@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11448023727438118213
   Name: "SlasherAbilityServer"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

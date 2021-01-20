@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10750937685288866590
   Name: "Mage Iceberg Attachment Basic"
   PlatformAssetType: 5
@@ -824,5 +824,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

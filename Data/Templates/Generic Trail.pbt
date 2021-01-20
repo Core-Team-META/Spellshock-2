@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16943198897384362849
   Name: "Generic Trail"
   PlatformAssetType: 5
@@ -97,5 +97,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

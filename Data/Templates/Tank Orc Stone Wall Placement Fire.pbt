@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5934541114304810566
   Name: "Tank Orc Stone Wall Placement Fire"
   PlatformAssetType: 5
@@ -1131,5 +1131,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

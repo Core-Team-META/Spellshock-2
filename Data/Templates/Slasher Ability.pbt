@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5760787664573849246
   Name: "Slasher Ability"
   PlatformAssetType: 5
@@ -146,5 +146,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 939651685836620573
   Name: "Hunter Elf Leap Placement Frost"
   PlatformAssetType: 5
@@ -926,5 +926,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

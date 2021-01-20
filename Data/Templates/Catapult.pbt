@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4539284850511781023
   Name: "Catapult"
   PlatformAssetType: 5
@@ -10284,5 +10284,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

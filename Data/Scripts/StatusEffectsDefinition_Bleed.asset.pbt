@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6590875941051553841
   Name: "StatusEffectsDefinition_Bleed"
   PlatformAssetType: 3
@@ -33,5 +33,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

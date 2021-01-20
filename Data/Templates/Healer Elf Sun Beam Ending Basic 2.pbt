@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4895527079609186475
   Name: "Healer Elf Sun Beam Ending Basic 2"
   PlatformAssetType: 5
@@ -235,5 +235,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

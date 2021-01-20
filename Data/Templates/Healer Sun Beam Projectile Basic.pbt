@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17277006247643650522
   Name: "Healer Sun Beam Projectile Basic"
   PlatformAssetType: 5
@@ -328,5 +328,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

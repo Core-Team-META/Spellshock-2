@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16312255697338676201
   Name: "GOLDEN_UI_ BETTER_compromise"
   PlatformAssetType: 5
@@ -12977,5 +12977,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

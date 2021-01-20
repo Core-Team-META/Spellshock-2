@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6551672392761649837
   Name: "Assassin Elf Blade Dash Placement Frost"
   PlatformAssetType: 5
@@ -2773,5 +2773,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

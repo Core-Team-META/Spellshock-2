@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6522244484860834116
   Name: "Mace And Shield Swipe Effect Full Circle"
   PlatformAssetType: 5
@@ -241,5 +241,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

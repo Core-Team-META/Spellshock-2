@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 824822947016407409
   Name: "Fire AOE Projectiles Blast Template"
   PlatformAssetType: 5
@@ -1476,5 +1476,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

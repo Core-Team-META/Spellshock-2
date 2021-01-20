@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4481013209671994049
   Name: "Orc Crossbow Projectile"
   PlatformAssetType: 5
@@ -333,5 +333,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16941705711145073364
   Name: "Elf Crossbow Projectile"
   PlatformAssetType: 5
@@ -342,5 +342,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

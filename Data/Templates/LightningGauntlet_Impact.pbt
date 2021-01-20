@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4068550412729497325
   Name: "LightningGauntlet_Impact"
   PlatformAssetType: 5
@@ -145,5 +145,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

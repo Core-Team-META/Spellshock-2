@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14330017190000743294
   Name: "Assassin Deaths Shadow Costume Basic"
   PlatformAssetType: 5
@@ -2360,5 +2360,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

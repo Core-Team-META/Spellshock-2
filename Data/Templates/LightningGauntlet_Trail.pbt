@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 365679098034516179
   Name: "LightningGauntlet_Trail"
   PlatformAssetType: 5
@@ -332,5 +332,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

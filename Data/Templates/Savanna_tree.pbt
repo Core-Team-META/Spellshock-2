@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4892213723100784896
   Name: "Savanna_tree"
   PlatformAssetType: 5
@@ -656,5 +656,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

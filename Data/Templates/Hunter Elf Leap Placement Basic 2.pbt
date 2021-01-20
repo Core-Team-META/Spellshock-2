@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1213996206729767403
   Name: "Hunter Elf Leap Placement Basic 2"
   PlatformAssetType: 5
@@ -9071,5 +9071,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

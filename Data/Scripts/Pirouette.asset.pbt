@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15389891795204192998
   Name: "Pirouette"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

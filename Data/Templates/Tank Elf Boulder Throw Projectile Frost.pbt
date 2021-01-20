@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1273489800256864344
   Name: "Tank Elf Boulder Throw Projectile Frost"
   PlatformAssetType: 5
@@ -259,5 +259,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

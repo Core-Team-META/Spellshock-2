@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11106787426060956844
   Name: "Rock_02"
   PlatformAssetType: 5
@@ -306,5 +306,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

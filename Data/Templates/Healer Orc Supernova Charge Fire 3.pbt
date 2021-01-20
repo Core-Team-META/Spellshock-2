@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17770457708602014408
   Name: "Healer Orc Supernova Charge Fire 3"
   PlatformAssetType: 5
@@ -6268,5 +6268,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

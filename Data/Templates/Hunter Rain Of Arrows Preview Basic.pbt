@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1490966563412810811
   Name: "Hunter Rain Of Arrows Preview Basic"
   PlatformAssetType: 5
@@ -137,5 +137,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

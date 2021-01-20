@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13708443171978120359
   Name: "pattern_big_01"
   PlatformAssetType: 5
@@ -3114,5 +3114,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

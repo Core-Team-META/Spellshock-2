@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4524642581024538766
   Name: "SmokeGrenadeEffectClient"
   PlatformAssetType: 3
@@ -44,5 +44,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

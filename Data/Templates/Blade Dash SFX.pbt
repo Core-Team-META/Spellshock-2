@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8893189170014775832
   Name: "Blade Dash SFX"
   PlatformAssetType: 5
@@ -78,5 +78,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

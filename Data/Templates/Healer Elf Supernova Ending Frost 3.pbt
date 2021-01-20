@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9716011756738589723
   Name: "Healer Elf Supernova Ending Frost 3"
   PlatformAssetType: 5
@@ -377,5 +377,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

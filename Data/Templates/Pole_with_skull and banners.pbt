@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15980543633291182514
   Name: "Pole_with_skull and banners"
   PlatformAssetType: 5
@@ -4279,5 +4279,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

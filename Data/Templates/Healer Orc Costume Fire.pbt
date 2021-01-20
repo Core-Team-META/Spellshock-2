@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4608858167394329527
   Name: "Healer Orc Costume Fire"
   PlatformAssetType: 5
@@ -11801,5 +11801,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

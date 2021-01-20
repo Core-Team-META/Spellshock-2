@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5051749503635535465
   Name: "Fire Wall"
   PlatformAssetType: 5
@@ -213,5 +213,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

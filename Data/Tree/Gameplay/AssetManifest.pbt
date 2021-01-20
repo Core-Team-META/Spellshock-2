@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18322083209027112941
   Name: "Plasma Charge Up Hold VFX"
   PlatformAssetType: 8

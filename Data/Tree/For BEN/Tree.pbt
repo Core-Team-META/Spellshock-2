@@ -1,4 +1,4 @@
-﻿Name: "For BEN"
+Name: "For BEN"
 RootId: 16227534043720893935
 Objects {
   Id: 2450592768795792909
@@ -8027,6 +8027,14 @@ Objects {
       PlayOnStartAnimation {
         PlaybackRate: 1
       }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
     }
   }
 }
@@ -14691,6 +14699,14 @@ Objects {
       AnimationPlaybackRateMultiplier: 1
       PlayOnStartAnimation {
         PlaybackRate: 1
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
+      }
+      SkinnedMeshes {
       }
     }
   }

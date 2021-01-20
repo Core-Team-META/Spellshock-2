@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8559393718562157757
   Name: "MetaAbilityProgression_ServerController"
   PlatformAssetType: 3
@@ -24,5 +24,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

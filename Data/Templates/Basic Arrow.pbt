@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12944083588315564253
   Name: "Basic Arrow"
   PlatformAssetType: 5
@@ -228,5 +228,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

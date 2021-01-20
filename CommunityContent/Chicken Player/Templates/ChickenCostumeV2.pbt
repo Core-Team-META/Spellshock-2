@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3288969034693327593
   Name: "ChickenCostumeV2"
   PlatformAssetType: 5
@@ -3714,5 +3714,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

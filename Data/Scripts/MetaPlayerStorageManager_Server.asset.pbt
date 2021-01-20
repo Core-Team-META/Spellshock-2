@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10419913492106103170
   Name: "MetaPlayerStorageManager_Server"
   PlatformAssetType: 3
@@ -53,5 +53,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

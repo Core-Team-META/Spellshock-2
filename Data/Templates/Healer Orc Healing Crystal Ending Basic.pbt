@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15004923690597365431
   Name: "Healer Orc Healing Crystal Ending Basic"
   PlatformAssetType: 5
@@ -175,5 +175,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

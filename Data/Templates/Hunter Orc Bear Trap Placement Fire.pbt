@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6584251115473192762
   Name: "Hunter Orc Bear Trap Placement Fire"
   PlatformAssetType: 5
@@ -2491,5 +2491,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3941906157023332887
   Name: "Hunter Elf Costume Frost"
   PlatformAssetType: 5
@@ -8303,5 +8303,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

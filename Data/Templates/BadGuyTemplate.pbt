@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7901618729158363093
   Name: "BadGuyTemplate"
   PlatformAssetType: 5
@@ -241,5 +241,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

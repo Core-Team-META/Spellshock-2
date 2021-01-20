@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17464056591119542564
   Name: "Mage Orc Animorph Potion Attachment Fire"
   PlatformAssetType: 5
@@ -3551,6 +3551,14 @@
               PlaybackRate: 1
               ShouldLoop: true
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -3819,5 +3827,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

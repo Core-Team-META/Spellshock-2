@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8497683954571070335
   Name: "Fog Adjustment Volume"
   PlatformAssetType: 6

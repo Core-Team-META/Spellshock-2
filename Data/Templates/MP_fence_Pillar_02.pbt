@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9208958918792263210
   Name: "MP_fence_Pillar_02"
   PlatformAssetType: 5
@@ -640,5 +640,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

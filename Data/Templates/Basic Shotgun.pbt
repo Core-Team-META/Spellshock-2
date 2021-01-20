@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10562937454098823326
   Name: "Basic Shotgun"
   PlatformAssetType: 5
@@ -766,5 +766,5 @@
       AssetId: "Basic_Shotgun"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

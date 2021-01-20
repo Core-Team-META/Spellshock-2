@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15664502698481242815
   Name: "Thorns"
   PlatformAssetType: 5
@@ -380,5 +380,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

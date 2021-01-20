@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3760287097131009270
   Name: "Mage Elf Tornado Placement Basic"
   PlatformAssetType: 5
@@ -616,5 +616,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

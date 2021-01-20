@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17649761221516168462
   Name: "PoisonPlayerEffect"
   PlatformAssetType: 5
@@ -290,5 +290,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

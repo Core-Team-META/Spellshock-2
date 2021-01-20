@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18412382550261402735
   Name: "Tank Elf Shield Dash Ending FX Frost"
   PlatformAssetType: 5
@@ -223,5 +223,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

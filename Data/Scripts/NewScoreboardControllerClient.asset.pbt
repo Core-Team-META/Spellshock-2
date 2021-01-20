@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16089916744130296203
   Name: "NewScoreboardControllerClient"
   PlatformAssetType: 3
@@ -12,5 +12,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

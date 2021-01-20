@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16946794819248017744
   Name: "Generic Staff Blast Impact FX"
   PlatformAssetType: 5
@@ -160,5 +160,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

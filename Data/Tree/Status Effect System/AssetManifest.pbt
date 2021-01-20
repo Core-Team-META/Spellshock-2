@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10955959331911207443
   Name: "Cells"
   PlatformAssetType: 18

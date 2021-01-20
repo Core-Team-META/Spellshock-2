@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18053292440294828009
   Name: "Assassin Elf Deaths Shadow Costume Frost 2"
   PlatformAssetType: 5
@@ -6067,5 +6067,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

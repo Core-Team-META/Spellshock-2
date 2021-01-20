@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7788901531937892726
   Name: "LightningGauntlet_ProjectileBody"
   PlatformAssetType: 5
@@ -89,5 +89,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

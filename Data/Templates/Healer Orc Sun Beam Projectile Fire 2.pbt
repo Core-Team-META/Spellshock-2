@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9285589052537802742
   Name: "Healer Orc Sun Beam Projectile Fire 2"
   PlatformAssetType: 5
@@ -1751,5 +1751,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

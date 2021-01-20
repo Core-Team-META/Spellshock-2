@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8415357861376842630
   Name: "Healer Orc Healing Crystal Placement Basic"
   PlatformAssetType: 5
@@ -1585,5 +1585,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10810461884856319320
   Name: "Tank Elf Boulder Throw Projectile Basic 2"
   PlatformAssetType: 5
@@ -259,5 +259,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

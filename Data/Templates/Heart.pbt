@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8037362499574704942
   Name: "Heart"
   PlatformAssetType: 5
@@ -175,5 +175,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13008566670688052404
   Name: "Assassin Elf Blade Dash Placement Basic"
   PlatformAssetType: 5
@@ -2820,5 +2820,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

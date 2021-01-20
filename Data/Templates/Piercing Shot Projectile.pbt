@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16024394461969702333
   Name: "Piercing Shot Projectile"
   PlatformAssetType: 5
@@ -195,5 +195,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

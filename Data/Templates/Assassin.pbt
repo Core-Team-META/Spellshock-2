@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17802584465689016806
   Name: "Assassin"
   PlatformAssetType: 5
@@ -2637,5 +2637,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

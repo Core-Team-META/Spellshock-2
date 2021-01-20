@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17816880227317936423
   Name: "Tank Elf Rock Strike Projectile Frost"
   PlatformAssetType: 5
@@ -308,5 +308,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

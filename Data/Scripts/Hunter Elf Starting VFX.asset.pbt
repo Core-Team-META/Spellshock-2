@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13263787292238581681
   Name: "Hunter Elf Starting VFX"
   PlatformAssetType: 3
@@ -52,5 +52,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

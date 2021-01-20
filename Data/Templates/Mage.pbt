@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 84492020368917091
   Name: "Mage"
   PlatformAssetType: 5
@@ -2907,5 +2907,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

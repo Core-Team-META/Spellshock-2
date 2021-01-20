@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5202994091235663908
   Name: "Assassin Venom Bomb Impact Basic"
   PlatformAssetType: 5
@@ -417,5 +417,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

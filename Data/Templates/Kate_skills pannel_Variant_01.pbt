@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14651169629295450996
   Name: "Kate_skills pannel_Variant_01"
   PlatformAssetType: 5
@@ -3874,5 +3874,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

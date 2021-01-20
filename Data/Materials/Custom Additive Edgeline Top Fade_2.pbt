@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 14260814583452507381
   Name: "New Healer Material"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 6658585544379660340
     ParameterOverrides {

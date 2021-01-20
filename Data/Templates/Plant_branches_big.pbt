@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10240628397337775553
   Name: "Plant_branches_big"
   PlatformAssetType: 5
@@ -228,5 +228,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

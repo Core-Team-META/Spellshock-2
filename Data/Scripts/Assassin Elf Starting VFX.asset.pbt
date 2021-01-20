@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6665958889220481136
   Name: "Assassin Elf Starting VFX"
   PlatformAssetType: 3
@@ -82,5 +82,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

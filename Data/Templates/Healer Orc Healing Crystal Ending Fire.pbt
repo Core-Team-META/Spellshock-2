@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8163930673611997630
   Name: "Healer Orc Healing Crystal Ending Fire"
   PlatformAssetType: 5
@@ -161,5 +161,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4110777389302809276
   Name: "BleedStatusFX"
   PlatformAssetType: 5
@@ -83,5 +83,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

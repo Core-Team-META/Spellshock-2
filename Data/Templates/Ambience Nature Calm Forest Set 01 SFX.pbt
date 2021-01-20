@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10666199799979168205
   Name: "Ambience Nature Calm Forest Set 01 SFX"
   PlatformAssetType: 5
@@ -191,5 +191,5 @@
       AssetId: "Ambience_Nature_Calm_Forest_Kit_01_SFX"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

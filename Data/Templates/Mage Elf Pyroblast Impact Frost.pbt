@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7677382368845934921
   Name: "Mage Elf Pyroblast Impact Frost"
   PlatformAssetType: 5
@@ -193,5 +193,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

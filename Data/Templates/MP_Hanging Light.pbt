@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4406795340585660742
   Name: "MP_Hanging Light"
   PlatformAssetType: 5
@@ -1573,5 +1573,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

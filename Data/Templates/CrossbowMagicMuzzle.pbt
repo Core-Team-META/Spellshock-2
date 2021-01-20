@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18127828690405500729
   Name: "CrossbowMagicMuzzle"
   PlatformAssetType: 5
@@ -281,5 +281,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13603550887462860015
   Name: "TowerWall"
   PlatformAssetType: 5
@@ -5290,5 +5290,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

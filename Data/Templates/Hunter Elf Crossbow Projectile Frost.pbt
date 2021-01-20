@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3773330765986699781
   Name: "Hunter Elf Crossbow Projectile Frost"
   PlatformAssetType: 5
@@ -333,5 +333,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

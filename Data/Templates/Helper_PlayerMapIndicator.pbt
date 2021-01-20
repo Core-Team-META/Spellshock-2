@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15577483575707105487
   Name: "Helper_PlayerMapIndicator"
   PlatformAssetType: 5
@@ -197,5 +197,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

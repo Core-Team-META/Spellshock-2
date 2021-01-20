@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2104224913586788579
   Name: "Assassin Elf Venom Bomb Projectile Frost"
   PlatformAssetType: 5
@@ -1318,5 +1318,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12147802266133948339
   Name: "Mage Elf Costume Default"
   PlatformAssetType: 5
@@ -3278,5 +3278,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

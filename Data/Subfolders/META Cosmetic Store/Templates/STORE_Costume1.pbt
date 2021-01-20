@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18053658397213174961
   Name: "STORE_Costume1"
   PlatformAssetType: 5
@@ -1080,5 +1080,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

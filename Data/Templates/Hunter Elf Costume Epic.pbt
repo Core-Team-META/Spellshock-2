@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1747841798671645204
   Name: "Hunter Elf Costume Epic"
   PlatformAssetType: 5
@@ -7517,5 +7517,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

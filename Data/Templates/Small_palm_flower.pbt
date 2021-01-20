@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15098451683578824339
   Name: "Small_palm_flower"
   PlatformAssetType: 5
@@ -469,5 +469,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }
