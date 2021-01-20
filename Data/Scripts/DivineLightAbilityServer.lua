@@ -35,15 +35,16 @@ function OnAbilityExecute(thisAbility)
 	--CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), StunRadius, {duration = 5})
 	
 	ImpulseAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, Ability.name..": Impulse Amount")
-	local status = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod5", {}, Ability.name .. ": Status")
-
-
+	local statusEffects = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod5", {}, Ability.name .. ": Status")
+	local status = statusEffects.BLIND
+	local speedStatus = statusEffects.SPEED
 	local healAmmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod4", DEFAULT_HealAmmount, Ability.name..": Heal Amount")
+	API_SE.ApplyStatusEffect(Ability.owner, API_SE.STATUS_EFFECT_DEFINITIONS["Speed"].id, Ability.owner, speedStatus.duration, speedStatus.damage, speedStatus.multiplier)
 
 	Ability.owner.hitPoints = CoreMath.Clamp(Ability.owner.hitPoints + healAmmount, Ability.owner.maxHitPoints)
 				
 	for _, enemy in pairs(nearbyEnemies) do
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Blind"].id, Ability.owner, status.duration, status.damage, status.multiplier)
 		AddImpulseToPlayer(enemy)
 	end
 end

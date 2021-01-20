@@ -1,4 +1,13 @@
 ﻿Assets {
+  Id: 10955959331911207443
+  Name: "Cells"
+  PlatformAssetType: 18
+  PrimaryAsset {
+    AssetType: "TerrainSculptMaskAssetRef"
+    AssetId: "tsm_hills"
+  }
+}
+Assets {
   Id: 4937617657811823156
   Name: "Icon Flame"
   PlatformAssetType: 9
