@@ -2243,7 +2243,7 @@ Assets {
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 8000
+            ProjectileSpeed: 20000
             ProjectileLifeSpan: 10
             ProjectileLength: 30
             ProjectileRadius: 30
@@ -2283,6 +2283,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2292,6 +2293,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
