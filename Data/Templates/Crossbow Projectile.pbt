@@ -18,7 +18,6 @@ Assets {
         ParentId: 14162296025304194376
         ChildIds: 12859999312686483396
         ChildIds: 14773601984430604069
-        ChildIds: 12312793048437760339
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -156,72 +155,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 12312793048437760339
-        Name: "Sci-fi Trails"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5750308492877294026
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 4
-          }
-          Overrides {
-            Name: "bp:ColorC"
-            Color {
-              G: 0.36
-              B: 0.00953647681
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:ColorB"
-            Color {
-              G: 0.36
-              B: 0.00953647681
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 0.36
-              B: 0.00953647681
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 5
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 9335436089691328372
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
     }
     Assets {
       Id: 3337256621200851928
@@ -239,15 +172,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "plastic_matte_001"
-      }
-    }
-    Assets {
-      Id: 9335436089691328372
-      Name: "Sci-fi Trails"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_trail_variants"
       }
     }
     PrimaryAssetId {

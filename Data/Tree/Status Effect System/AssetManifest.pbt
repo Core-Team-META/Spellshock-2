@@ -1,4 +1,13 @@
 Assets {
+  Id: 16499032441981861114
+  Name: "Water"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Water"
+  }
+}
+Assets {
   Id: 10955959331911207443
   Name: "Cells"
   PlatformAssetType: 18

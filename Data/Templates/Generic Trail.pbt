@@ -7,7 +7,7 @@ Assets {
       RootId: 11388592286874595498
       Objects {
         Id: 11388592286874595498
-        Name: "Client Context"
+        Name: "Generic Trail"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 7928271528055639521
         UnregisteredParameters {
         }
@@ -64,7 +64,31 @@ Assets {
           }
           Overrides {
             Name: "bp:Emissive Boost"
-            Float: 0.5
+            Float: 4.52167749
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.106622525
+              G: 0.700000048
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:ColorB"
+            Color {
+              R: 0.106622525
+              G: 0.700000048
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:ColorC"
+            Color {
+              R: 0.106622525
+              G: 0.700000048
+              A: 1
+            }
           }
         }
         Collidable_v2 {
