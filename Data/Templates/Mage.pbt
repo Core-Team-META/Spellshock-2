@@ -57,6 +57,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "2hand_staff_ready"
+          }
+          Overrides {
             Name: "cs:E_isPreviewing:isrep"
             Bool: true
           }

@@ -49,6 +49,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
             Name: "cs:E_isPreviewing:isrep"
             Bool: true
           }

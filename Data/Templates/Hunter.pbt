@@ -53,6 +53,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "2hand_rifle_aim_shoulder"
+          }
+          Overrides {
             Name: "cs:Q_isPreviewing:isrep"
             Bool: true
           }
