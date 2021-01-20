@@ -2643,6 +2643,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2652,6 +2653,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2670,12 +2672,12 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           Animation: "2hand_staff_magic_bolt"
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
           }

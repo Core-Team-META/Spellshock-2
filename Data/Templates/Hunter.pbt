@@ -2129,6 +2129,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2138,6 +2139,7 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
+            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
