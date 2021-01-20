@@ -119,10 +119,13 @@ Assets {
         Name: "Dagger1"
         Transform {
           Location {
+            X: -115.806641
+            Y: 0.00390625
+            Z: 623.947266
           }
           Rotation {
-            Pitch: -420
-            Roll: -90
+            Pitch: 115.97084
+            Roll: -89.9988403
           }
           Scale {
             X: 5
@@ -150,9 +153,9 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -21.9757748
-            Y: 9.29308
-            Z: -1.58437049
+            X: 0.130231291
+            Y: 4.21518421
+            Z: -3.13671947
           }
           Rotation {
             Pitch: -4.89465332
@@ -249,9 +252,9 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -30.1535378
-            Y: 8.9121809
-            Z: -0.515231311
+            X: -8.04748535
+            Y: 3.83424759
+            Z: -2.06757808
           }
           Rotation {
             Pitch: -83.7430115
@@ -310,9 +313,9 @@ Assets {
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: -45.5381851
-            Y: 12.7210417
-            Z: 0.301571667
+            X: -23.4321194
+            Y: 7.64315939
+            Z: -1.25078428
           }
           Rotation {
             Pitch: 5.03288603
