@@ -15,9 +15,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 17055211611967992561
         ChildIds: 16639646337402643721
+        ChildIds: 273107852852170802
         UnregisteredParameters {
         }
         Lifespan: 1.5
@@ -57,7 +58,6 @@ Assets {
             Id: 12929175263144190661
           }
           AutoPlay: true
-          Volume: 1
           Falloff: -1
           Radius: -1
           IsSpatializationEnabled: true
@@ -90,11 +90,56 @@ Assets {
             Id: 15870650808192187890
           }
           AutoPlay: true
-          Volume: 1
           Falloff: -1
           Radius: -1
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 273107852852170802
+        Name: "Gunshot Laser Rifle Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15232351996905395859
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_gunshot_laserrifle_01:12"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 13947208864969484444
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: 800
+            Volume: 1
+            Falloff: 3600
+            Radius: 400
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
     }
@@ -114,6 +159,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_recurve_bow_fire_release_arrow_heavy_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 13947208864969484444
+      Name: "Gunshot Laser Rifle Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_gunshot_laserrifle_ref"
       }
     }
     PrimaryAssetId {
