@@ -2556,7 +2556,9 @@ Assets {
             }
             Muzzle {
               Location {
-                Z: 46.8156166
+                X: -40
+                Y: 60
+                Z: 46.8154297
               }
             }
             AnimationSet: "2hand_staff_ready"

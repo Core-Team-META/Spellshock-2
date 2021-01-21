@@ -2211,7 +2211,7 @@ Assets {
             Muzzle {
               Location {
                 X: 100
-                Z: 25
+                Z: 40
               }
             }
             AnimationSet: "2hand_rifle_aim_shoulder"

@@ -2245,7 +2245,7 @@ Assets {
               Id: 3691668285842845988
             }
             TrailAssetRef {
-              Id: 16943198897384362849
+              Id: 841534158063459245
             }
             ImpactAssetRef {
               Id: 3731118247202363736
@@ -2253,7 +2253,9 @@ Assets {
             UseReticle: true
             Muzzle {
               Location {
-                Z: 110
+                X: -40
+                Y: 60
+                Z: 100
               }
               Rotation {
               }
