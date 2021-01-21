@@ -10,7 +10,7 @@ Assets {
         Name: "color a"
         Color {
           R: 4
-          G: 1.00000012
+          G: 0.599999905
           A: 1
         }
       }
@@ -32,7 +32,7 @@ Assets {
       }
       Overrides {
         Name: "speed"
-        Float: 2.58894253
+        Float: 2.08117151
       }
     }
     Assets {
