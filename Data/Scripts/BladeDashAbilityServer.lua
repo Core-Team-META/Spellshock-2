@@ -41,7 +41,6 @@ end
 function OnBindingPressed(player, binding)
 	if not isPlacing and not player.isDead then
 		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
-			print('PREVIEW')
 			isPreviewing = true
 			SetNetworkProperty(isPreviewing)
 			PrimaryAbility.isEnabled = false
@@ -59,7 +58,6 @@ end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
-		print("INTERRUPTING")
 		SpecialAbility:Interrupt()
 	end
 end

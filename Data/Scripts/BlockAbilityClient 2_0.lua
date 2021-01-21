@@ -29,7 +29,6 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 -- Turn on the blocking display
 function OnAbilityExecute(ability)
     if ability.owner == LOCAL_PLAYER then
-        print("Turning on")
 		Events.Broadcast("BlockingDisplay", true, ABILITY.executePhaseSettings.duration)
 	end
 end
@@ -37,7 +36,6 @@ end
 -- nil OnAbilityInterrupted(Ability)
 -- Turns off the blocking display
 function OnAbilityCooldown(ability)
-    print("Turning off")
 	Events.Broadcast("BlockingDisplay", false)
 end
 

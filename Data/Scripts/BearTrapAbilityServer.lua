@@ -49,7 +49,7 @@ end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
-		print("INTERRUPTING")
+		--print("INTERRUPTING")
 		SpecialAbility:Interrupt()
 		SetNetworkProperty(false)
 	end
@@ -72,7 +72,6 @@ function PlaceObject(thisPlayer, position, rotation)
 			return 
 		end
 		
-		print("~ Received Broadcast ~")
 		-- check if the placement was canceled
 		if position == nil then
 			return
@@ -86,8 +85,6 @@ function PlaceObject(thisPlayer, position, rotation)
 				oldTrap:Destroy()
 			end
 		end
-
-
 
 		isPlacing = true
 		

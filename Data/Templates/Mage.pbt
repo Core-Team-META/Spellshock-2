@@ -1273,11 +1273,7 @@ Assets {
         ChildIds: 1660676645019909115
         ChildIds: 3981296022251942220
         ChildIds: 1297799432452933319
-        ChildIds: 5931065898975178281
-        ChildIds: 12781921330556252170
-        ChildIds: 13070035726976862727
-        ChildIds: 719838432390101910
-        ChildIds: 3534192933717282768
+        ChildIds: 7617081542033333176
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1693,7 +1689,6 @@ Assets {
         ParentId: 11747234676183721272
         ChildIds: 15540843134272266616
         ChildIds: 354566938322484678
-        ChildIds: 16032349741446648766
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1782,13 +1777,13 @@ Assets {
         }
       }
       Objects {
-        Id: 16032349741446648766
-        Name: "AbilityDurationUI"
+        Id: 7617081542033333176
+        Name: "Wand"
         Transform {
           Location {
-            X: -13534.7744
-            Y: -14815.2598
-            Z: 16.4165039
+            X: 595
+            Y: -355
+            Z: -225
           }
           Rotation {
           }
@@ -1798,48 +1793,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1297799432452933319
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:BackgroundColor"
-            Color {
-              G: 0.124503106
-              B: 0.470000029
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:FillColor"
-            Color {
-              G: 0.417218238
-              B: 0.9
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:Position"
-            Vector2 {
-              X: -370
-              Y: 18
-            }
-          }
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 13012543468557526091
-            }
-          }
-        }
+        ParentId: 11747234676183721272
+        ChildIds: 5931065898975178281
+        ChildIds: 12781921330556252170
+        ChildIds: 719838432390101910
+        ChildIds: 3534192933717282768
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 9094472670648911279
-          }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
@@ -1847,9 +1813,8 @@ Assets {
         Name: "WeaponAimClient"
         Transform {
           Location {
-            X: 545.232422
-            Y: 972.691406
-            Z: -225
+            X: -49.7675781
+            Y: 1327.69141
           }
           Rotation {
             Yaw: -94.9999695
@@ -1860,7 +1825,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11747234676183721272
+        ParentId: 7617081542033333176
         UnregisteredParameters {
           Overrides {
             Name: "cs:ServerScript"
@@ -1892,9 +1857,9 @@ Assets {
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
-            X: 1130.83594
-            Y: -1200
-            Z: 2.03125
+            X: 535.835938
+            Y: -845
+            Z: 227.03125
           }
           Rotation {
           }
@@ -1904,7 +1869,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11747234676183721272
+        ParentId: 7617081542033333176
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1947,49 +1912,13 @@ Assets {
         }
       }
       Objects {
-        Id: 13070035726976862727
-        Name: "EquipmentSetIconClient"
-        Transform {
-          Location {
-            X: -978.841797
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11747234676183721272
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10109220941690346490
-          }
-        }
-      }
-      Objects {
         Id: 719838432390101910
         Name: "SetAbilityIconClientOptimized"
         Transform {
           Location {
-            X: 1130.83594
-            Y: -1200
-            Z: 2.03125
+            X: 535.835938
+            Y: -845
+            Z: 227.03125
           }
           Rotation {
           }
@@ -1999,7 +1928,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11747234676183721272
+        ParentId: 7617081542033333176
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -2046,11 +1975,12 @@ Assets {
         Name: "AutoRechargeWeaponClient"
         Transform {
           Location {
-            X: -430.835938
-            Z: -97.2485352
+            X: -1025.83594
+            Y: 355
+            Z: 127.751465
           }
           Rotation {
-            Yaw: 1.6284438e-12
+            Yaw: 1.62844369e-12
           }
           Scale {
             X: 1
@@ -2058,7 +1988,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11747234676183721272
+        ParentId: 7617081542033333176
         UnregisteredParameters {
           Overrides {
             Name: "cs:Weapon"

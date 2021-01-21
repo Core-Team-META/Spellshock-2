@@ -123,7 +123,7 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 local function AdjustPlayerMovment(player, class)
-    player.maxWalkSpeed = 640
+    player.maxWalkSpeed = 700
 end
 
 ------------------------------------------------------------------------------------------------------------------------

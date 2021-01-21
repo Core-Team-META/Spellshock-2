@@ -24,7 +24,6 @@ local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-	print(projectile)
 	if other and ABILITY.owner then
 		--Play ImpactFX
 		local projectilePos = projectile:GetWorldPosition()

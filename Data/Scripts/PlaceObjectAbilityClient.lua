@@ -38,7 +38,15 @@ function OnNetworkedPropertyChanged(thisObject, name)
 			local previewScale = Vector3.ONE
 			if RadiusMod then
 				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
-				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
+				local radius =
+					META_AP().GetAbilityMod(
+					SpecialAbility.owner,
+					META_AP()[Class],
+					META_AP()[BindingName],
+					RadiusMod,
+					DEFAULT_Radius,
+					SpecialAbility.name .. ": Radius"
+				)
 				previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 			end
 
@@ -64,12 +72,14 @@ function OnNetworkedPropertyChanged(thisObject, name)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary" and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
+	if binding == "ability_primary" and SpecialAbility.isEnabled and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
 		placementTable.rotation = objectHalogram:GetWorldRotation()
-		
+
 		-- if the hologram position is nil or not visible then do not activate the ability; this means the placement position is invalid
-		if not placementTable.position or not placementTable.isVisible then return end
+		if not placementTable.position or not placementTable.isVisible then
+			return
+		end
 
 		isPreviewing = false
 
@@ -138,7 +148,7 @@ function CalculatePlacement()
 	end
 	--print("PlacementRange: "..PlacementRange)
 	local edgeOfRange = playerViewPosition + (playerViewRotation * Vector3.FORWARD * PlacementRange)
-	 --MAX_PLACEMENT_RANGE)
+	--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 
 	if hr ~= nil then
@@ -155,42 +165,44 @@ function CalculatePlacement()
 	end
 end
 
-function Tick()
-	for id, halogram in pairs(AllHalograms) do
-		if halogram ~= objectHalogram and Object.IsValid(halogram) then
-			print("REMOVING LEFT OVER HALOGRAM")
-			halogram:Destroy()
-			AllHalograms[id] = nil
-		end
-	end
-
-	if objectHalogram and Object.IsValid(objectHalogram) then
-		if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
-			objectHalogram:Destroy()
-			objectHalogram = nil
-			return
-		end
-
-		local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-		if (MatchPlayerRotation) then
-			objectHalogram:SetWorldRotation(playerViewRotation)
-		else
-			objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
-		end
-
-		-- calculate placement:
-		local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
-		if impactPosition ~= nil and targetIsVisible then
-			objectHalogram:SetWorldPosition(impactPosition)
-			objectHalogram.visibility = Visibility.INHERIT
-
-			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
-			if MatchNormal then
-				local quat = Quaternion.New(Vector3.UP, impactNormal)
-				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
+if LOCAL_PLAYER == Equipment.owner then
+	function Tick()
+		for id, halogram in pairs(AllHalograms) do
+			if halogram ~= objectHalogram and Object.IsValid(halogram) then
+				print("REMOVING LEFT OVER HALOGRAM")
+				halogram:Destroy()
+				AllHalograms[id] = nil
 			end
-		else
-			objectHalogram.visibility = Visibility.FORCE_OFF
+		end
+
+		if objectHalogram and Object.IsValid(objectHalogram) then
+			if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
+				objectHalogram:Destroy()
+				objectHalogram = nil
+				return
+			end
+
+			local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
+			if (MatchPlayerRotation) then
+				objectHalogram:SetWorldRotation(playerViewRotation)
+			else
+				objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
+			end
+
+			-- calculate placement:
+			local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
+			if impactPosition ~= nil and targetIsVisible then
+				objectHalogram:SetWorldPosition(impactPosition)
+				objectHalogram.visibility = Visibility.INHERIT
+
+				--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
+				if MatchNormal then
+					local quat = Quaternion.New(Vector3.UP, impactNormal)
+					objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
+				end
+			else
+				objectHalogram.visibility = Visibility.FORCE_OFF
+			end
 		end
 	end
 end

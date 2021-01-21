@@ -1,6 +1,6 @@
 Assets {
   Id: 15428462289765350781
-  Name: "PlaceTrapAbilityServer"
+  Name: "BearTrapAbilityServer"
   PlatformAssetType: 3
   TextAsset {
   }

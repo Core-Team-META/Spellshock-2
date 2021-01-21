@@ -77,7 +77,7 @@ function OnMenuChanged(oldMenu, newMenu)
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
 	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] then -- hide
-		print(">> Hiding Class Selection Menu")
+		--print(">> Hiding Class Selection Menu")
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
 		UI.SetCanCursorInteractWithUI(false)
@@ -383,7 +383,7 @@ function OnResourceChanged(player, resName, resAmount)
 	RightPanel_UpgradeButton.isInteractable = true -- turn Upgrade button back on
 end
 
-function EquipCostumeToPlayer(player)
+function AttachCostumeToPlayer(player)
 	if not player.clientUserData.CurrentClass then
 		player.clientUserData.CurrentClass = META_AP().TANK
 	end
@@ -409,11 +409,20 @@ function EquipCostumeToPlayer(player)
 	end
 end
 
+function DetachCostumeFromPlayer(player)
+	if player.clientUserData.LobbyCostume then
+		for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
+			attachment:Destroy()
+		end
+		player.clientUserData.LobbyCostume = nil
+	end
+end
+
 function OnClassChanged(player, Class)
 	player.clientUserData.CurrentClass = Class
 	
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
-		EquipCostumeToPlayer(player)
+		AttachCostumeToPlayer(player)
 	end
 
 	-- If the local player changed their class then close the menu and make the button interactable
@@ -433,7 +442,7 @@ function OnConfirmChoiceClicked(thisButton)
 	local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
 	Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
 	--LOCAL_PLAYER.clientUserData.CurrentClass = META_AP()[dataTable["ClassID"]]
-	--EquipCostumeToPlayer(META_AP()[dataTable["ClassID"]])
+	--AttachCostumeToPlayer(META_AP()[dataTable["ClassID"]])
 end
 
 function OnGameStateChanged(oldState, newState)
@@ -442,19 +451,18 @@ function OnGameStateChanged(oldState, newState)
 		while ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY do Task.Wait() end
 
 		for _, player in ipairs(Game.GetPlayers()) do
-			EquipCostumeToPlayer(player)
+			AttachCostumeToPlayer(player)
 		end
 	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
 		-- Destroy lobby costumes
 		for _, player in ipairs(Game.GetPlayers()) do
-			if player.clientUserData.LobbyCostume then
-				for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
-					attachment:Destroy()
-				end
-				player.clientUserData.LobbyCostume = nil
-			end
+			DetachCostumeFromPlayer(player)
 		end
 	end
+end
+
+function OnPlayerLeft(player)
+	DetachCostumeFromPlayer(player)
 end
 
 function isAllowed(delay)
@@ -570,6 +578,8 @@ OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Class Changed", OnClassChanged)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
+
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end

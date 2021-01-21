@@ -20,13 +20,21 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = Equipment:GetCustomProperty(name)
 
 		if isPreviewing then
-            AttachCostume()
-            FlyingDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod4", DEFAULT_FlyingDuration, SpecialAbility.name .. ": Fly Duration")
+			AttachCostume()
+			FlyingDuration =
+				META_AP().GetAbilityMod(
+				SpecialAbility.owner,
+				META_AP().ASSASSIN,
+				META_AP().T,
+				"mod4",
+				DEFAULT_FlyingDuration,
+				SpecialAbility.name .. ": Fly Duration"
+			)
 			flyingTimer = FlyingDuration
-        else
-            flyingTimer = -1
-            DestroyCostume()
-            ConfirmSound:Play()
+		else
+			flyingTimer = -1
+			DestroyCostume()
+			ConfirmSound:Play()
 		end
 	end
 end
@@ -53,7 +61,7 @@ function DestroyCostume()
 end
 
 function OnEquip(equipment, player)
-    PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
 end
 
 function OnUnequip(equipment, player)
@@ -61,27 +69,29 @@ function OnUnequip(equipment, player)
 end
 
 function OnPlayerLeft(player)
-    if not Object.IsValid(Equipment) or not Equipment.owner or not Object.IsValid(Equipment.owner) then
-        DestroyCostume()
-    end
+	if not Object.IsValid(Equipment) or not Equipment.owner or not Object.IsValid(Equipment.owner) then
+		DestroyCostume()
+	end
 end
 
-function Tick(deltaTime)
-    local DurationBar = SpecialAbility.clientUserData.durationBar
-    if flyingTimer > 0 then
-		flyingTimer = flyingTimer - deltaTime
-        
-        --Update duration bar
-        if DurationBar and Object.IsValid(DurationBar) then
-			DurationBar.progress = flyingTimer / FlyingDuration
-        end
-        
-        -- Check if timer has run out
-		if flyingTimer < 0 and isPreviewing and SpecialAbility.isEnabled then
-			SpecialAbility:Activate()
+if LOCAL_PLAYER == Equipment.owner then
+	function Tick(deltaTime)
+		local DurationBar = SpecialAbility.clientUserData.durationBar
+		if flyingTimer > 0 then
+			flyingTimer = flyingTimer - deltaTime
+
+			--Update duration bar
+			if DurationBar and Object.IsValid(DurationBar) then
+				DurationBar.progress = flyingTimer / FlyingDuration
+			end
+
+			-- Check if timer has run out
+			if flyingTimer < 0 and isPreviewing and SpecialAbility.isEnabled then
+				SpecialAbility:Activate()
+			end
+		elseif DurationBar and Object.IsValid(DurationBar) then
+			DurationBar.progress = 0
 		end
-    elseif DurationBar and Object.IsValid(DurationBar) then
-		DurationBar.progress = 0 
 	end
 end
 
