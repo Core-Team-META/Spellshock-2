@@ -741,6 +741,12 @@ Objects {
         Id: 10955959331911207443
       }
     }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 15768097145132196247
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -883,6 +889,12 @@ Objects {
       Name: "cs:ModuleManager"
       AssetReference {
         Id: 9770511928359673738
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 3466880615205517635
       }
     }
   }
@@ -1056,6 +1068,12 @@ Objects {
         Id: 10955959331911207443
       }
     }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 15768097145132196247
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1198,6 +1216,12 @@ Objects {
       Name: "cs:ModuleManager"
       AssetReference {
         Id: 9770511928359673738
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 3466880615205517635
       }
     }
   }

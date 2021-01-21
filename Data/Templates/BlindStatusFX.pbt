@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 11905359394757445664
         UnregisteredParameters {
           Overrides {
@@ -51,8 +51,8 @@ Assets {
         }
         ParentId: 8862268323532329590
         ChildIds: 1788026589390922202
-        ChildIds: 565434483526122371
-        ChildIds: 14074846978920913837
+        ChildIds: 16763501930608199328
+        ChildIds: 8883202962330462818
         ChildIds: 5654093195818528330
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -132,109 +132,43 @@ Assets {
         }
       }
       Objects {
-        Id: 565434483526122371
-        Name: "Tornado VFX"
+        Id: 16763501930608199328
+        Name: "Smoke Puff Radial VFX"
         Transform {
           Location {
-            Z: 242.117188
+            Z: 215.125488
           }
           Rotation {
           }
           Scale {
-            X: 0.0707251504
-            Y: 0.0707251504
-            Z: 0.0380450562
+            X: 1
+            Y: 1
+            Z: 0.165811017
           }
         }
         ParentId: 11905359394757445664
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.261059612
-              B: 0.269999981
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Surface Speed"
-            Float: -0.5
-          }
-          Overrides {
-            Name: "bp:Wiggle Offset Amount"
-            Float: 0.05
-          }
-          Overrides {
-            Name: "bp:Top Fade"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Cross Section Width"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Pin Top Amount"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Pin Bottom Amount"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Enable Shadows"
+            Name: "bp:Burst"
             Bool: false
           }
           Overrides {
-            Name: "bp:Collapse Funnel Amount"
-            Float: 0
+            Name: "bp:Density"
+            Float: 3.11165404
           }
           Overrides {
-            Name: "bp:Fade Length Bottom"
-            Float: 0
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.60608238
           }
           Overrides {
-            Name: "bp:Fade Length Top"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Body Fade"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Bottom Fade"
-            Float: 0.653682649
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 4.3575
-          }
-          Overrides {
-            Name: "bp:Color B"
+            Name: "bp:Color"
             Color {
-              R: 0.582186
-              B: 0.590000033
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Color C"
-            Color {
-              R: 0.333774775
-              B: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Wiggle Waves Frequency"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "bp:Wiggle Speed"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Edge Shredding"
-            Bool: false
+            Name: "bp:Local Space"
+            Bool: true
           }
         }
         Collidable_v2 {
@@ -245,18 +179,21 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 15599228502728747198
+            Id: 11736239447341257999
           }
           TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
           }
         }
       }
       Objects {
-        Id: 14074846978920913837
-        Name: "Magic Dark Portal Summon 01 SFX"
+        Id: 8883202962330462818
+        Name: "Ear Ringing Piercing Tone Loop 01 SFX"
         Transform {
           Location {
-            Z: 250
+            Z: 249.251465
           }
           Rotation {
           }
@@ -267,6 +204,7 @@ Assets {
           }
         }
         ParentId: 11905359394757445664
+        Lifespan: 1
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -275,12 +213,13 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 8390081188686627930
+            Id: 6801389668665319570
           }
           AutoPlay: true
           Volume: 1
           Falloff: -1
           Radius: -1
+          FadeOutTime: 2
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -348,21 +287,21 @@ Assets {
       }
     }
     Assets {
-      Id: 15599228502728747198
-      Name: "Tornado VFX"
-      PlatformAssetType: 6
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
+      PlatformAssetType: 8
       PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_tornado"
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_smoke_puff_radial"
       }
     }
     Assets {
-      Id: 8390081188686627930
-      Name: "Magic Dark Portal Summon 01 SFX"
+      Id: 6801389668665319570
+      Name: "Ear Ringing Piercing Tone Loop 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_dark_portal_summon_01_Cue_ref"
+        AssetId: "sfx_ear_ringing_piercing_tone_loop_01_Cue_ref"
       }
     }
     Assets {
