@@ -128,7 +128,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 5847803406760630635
+        Id: 585043062059235126
       }
     }
     Overrides {
@@ -152,7 +152,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 3001366697168823164
+        Id: 15362198929177536963
       }
     }
   }
@@ -322,7 +322,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 5847803406760630635
+        Id: 585043062059235126
       }
     }
     Overrides {
@@ -346,7 +346,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 3001366697168823164
+        Id: 15362198929177536963
       }
     }
   }
@@ -475,7 +475,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 3001366697168823164
+        Id: 579776759173474023
       }
     }
   }
@@ -669,7 +669,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 3001366697168823164
+        Id: 579776759173474023
       }
     }
   }
