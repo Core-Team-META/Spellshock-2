@@ -81,7 +81,7 @@ Assets {
       }
       Objects {
         Id: 2843463732159386964
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
             X: 7820
@@ -113,7 +113,7 @@ Assets {
       }
       Objects {
         Id: 3493467970047565540
-        Name: "RainOfArrowsAbility"
+        Name: "RainOfArrows Settings "
         Transform {
           Location {
           }
@@ -197,7 +197,7 @@ Assets {
       }
       Objects {
         Id: 10572375518235026021
-        Name: "PlaceTrapAbilityServer"
+        Name: "Bear Trap Settings"
         Transform {
           Location {
             X: -8093.00586
@@ -276,7 +276,7 @@ Assets {
       }
       Objects {
         Id: 9149119488467156811
-        Name: "WeaponAimServer"
+        Name: "Weapon Aim Settings"
         Transform {
           Location {
             X: -7820
@@ -651,7 +651,7 @@ Assets {
       }
       Objects {
         Id: 2760011268594344962
-        Name: "HunterLeapServer"
+        Name: "LeapAbilityServer"
         Transform {
           Location {
           }
@@ -873,6 +873,8 @@ Assets {
         ChildIds: 10631699742497799838
         ChildIds: 3683594478347275263
         ChildIds: 11619508425871329849
+        ChildIds: 14491672959901234972
+        ChildIds: 800927036902884953
         ChildIds: 4017735643055830044
         WantsNetworking: true
         Collidable_v2 {
@@ -1341,7 +1343,7 @@ Assets {
       }
       Objects {
         Id: 11619508425871329849
-        Name: "PlaceTrapAbilityClient"
+        Name: "PlaceBearTrapAbilityClient"
         Transform {
           Location {
             X: -273.006836
@@ -1378,6 +1380,124 @@ Assets {
         }
       }
       Objects {
+        Id: 14491672959901234972
+        Name: "Leap_ActivateDurationBarUI"
+        Transform {
+          Location {
+            X: -11500
+            Y: -17130.002
+            Z: -4955
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 10679331535669617236
+            }
+          }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 10
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
+        Id: 800927036902884953
+        Name: "Hawk_ActivateDurationBarUI"
+        Transform {
+          Location {
+            X: -11500
+            Y: -17130.002
+            Z: -4955
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 16077949688686323587
+            }
+          }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod2"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 10
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
         Id: 4017735643055830044
         Name: "Crossbow"
         Transform {
@@ -1392,6 +1512,7 @@ Assets {
           }
         }
         ParentId: 5361708159967945625
+        ChildIds: 10814169424989923108
         ChildIds: 1231559079360679353
         ChildIds: 7905627217205649232
         ChildIds: 2695547812234798459
@@ -1404,6 +1525,44 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10814169424989923108
+        Name: "AutoShootClient"
+        Transform {
+          Location {
+            X: 22330
+            Y: 31790
+            Z: -6355
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4017735643055830044
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 10839953769775855596
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14074483271059500969
+          }
         }
       }
       Objects {
@@ -2069,7 +2228,7 @@ Assets {
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1000
+            BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
@@ -2117,7 +2276,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.15
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2127,7 +2286,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.1
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2142,7 +2301,7 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.1
+            Duration: 0.8
             CanMove: true
             CanJump: true
             CanRotate: true

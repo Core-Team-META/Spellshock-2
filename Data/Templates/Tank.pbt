@@ -73,7 +73,7 @@ Assets {
       }
       Objects {
         Id: 18389002564042511101
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
           }
@@ -102,7 +102,7 @@ Assets {
       }
       Objects {
         Id: 3189361155379003121
-        Name: "ExcavateAbilityServer"
+        Name: "Excavate Settings"
         Transform {
           Location {
           }
@@ -174,7 +174,7 @@ Assets {
       }
       Objects {
         Id: 13702976538736563756
-        Name: "PlaceStoneWallAbilityServer"
+        Name: "Stone Wall Settings"
         Transform {
           Location {
             X: 8105
@@ -234,6 +234,10 @@ Assets {
             Name: "cs:BindingName"
             String: "E"
           }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod2"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -249,7 +253,7 @@ Assets {
       }
       Objects {
         Id: 5594691899314113372
-        Name: "ShieldDashAbilityServer"
+        Name: "Shield Dash Settings"
         Transform {
           Location {
             Z: -55

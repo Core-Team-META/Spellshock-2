@@ -17,7 +17,6 @@ local isPreviewing = false
 local isPlacing = false
 local isEnabled = true
 local PlayerVFX = nil
-local abilityName = string.gsub(SpecialAbility.name, " ", "_")
 
 local CancelBindings = {
 	ability_extra_20 = true,
@@ -27,8 +26,6 @@ local CancelBindings = {
 	ability_secondary = true,
 	ability_extra_12 = true
 }
-
-
 
 local function SetNetworkProperty(bool)
 	Equipment:SetNetworkedCustomProperty("E_isPreviewing", bool)

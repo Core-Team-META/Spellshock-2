@@ -9,6 +9,7 @@ local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 local PreviewObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 
 local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
+local DEFAULT_Duration = ServerScript:GetCustomProperty("Duration")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
 local EventName = ServerScript:GetCustomProperty("EventName")
@@ -19,6 +20,7 @@ local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
 local AbilityMod = ServerScript:GetCustomProperty("AbilityMod")
 local RadiusMod = ServerScript:GetCustomProperty("RadiusMod")
+local DurationMod = ServerScript:GetCustomProperty("DurationMod")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PlayerVFX = nil
@@ -26,6 +28,8 @@ local AllHalograms = {}
 local objectHalogram = nil
 local EventListeners = {}
 local placementTable = {position = nil, rotation = nil, isVisible = nil}
+local durationTimer = 0
+local totalDuration = 0
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == abilityPreview then
@@ -101,11 +105,20 @@ function OnSpecialAbilityExecute(thisAbility)
 		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 		Task.Wait()
 	end
-	--print("~ Executing placement: "..SpecialAbility.name)
+
+	-- Activate duration bar UI if DurationMod was set
+	if DurationMod then
+		totalDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], DurationMod, DEFAULT_Range, SpecialAbility.name .. ": Duration")
+		if type(totalDuration) == "table" then
+			totalDuration = totalDuration.duration
+		end
+		durationTimer = totalDuration
+	end
 end
 
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then
+		script:Destroy()
 		return
 	end
 	if not PreviewObjectTemplate then
@@ -165,47 +178,60 @@ function CalculatePlacement()
 	end
 end
 
-if LOCAL_PLAYER == Equipment.owner then
-	function Tick()
-		for id, halogram in pairs(AllHalograms) do
-			if halogram ~= objectHalogram and Object.IsValid(halogram) then
-				print("REMOVING LEFT OVER HALOGRAM")
-				halogram:Destroy()
-				AllHalograms[id] = nil
-			end
-		end
-
-		if objectHalogram and Object.IsValid(objectHalogram) then
-			if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
-				objectHalogram:Destroy()
-				objectHalogram = nil
-				return
-			end
-
-			local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-			if (MatchPlayerRotation) then
-				objectHalogram:SetWorldRotation(playerViewRotation)
-			else
-				objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
-			end
-
-			-- calculate placement:
-			local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
-			if impactPosition ~= nil and targetIsVisible then
-				objectHalogram:SetWorldPosition(impactPosition)
-				objectHalogram.visibility = Visibility.INHERIT
-
-				--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
-				if MatchNormal then
-					local quat = Quaternion.New(Vector3.UP, impactNormal)
-					objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
-				end
-			else
-				objectHalogram.visibility = Visibility.FORCE_OFF
-			end
+--if LOCAL_PLAYER == Equipment.owner then
+function Tick(deltaTime)
+	for id, halogram in pairs(AllHalograms) do
+		if halogram ~= objectHalogram and Object.IsValid(halogram) then
+			print("REMOVING LEFT OVER HALOGRAM")
+			halogram:Destroy()
+			AllHalograms[id] = nil
 		end
 	end
+
+	if objectHalogram and Object.IsValid(objectHalogram) then
+		if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
+			objectHalogram:Destroy()
+			objectHalogram = nil
+			return
+		end
+
+		local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
+		if (MatchPlayerRotation) then
+			objectHalogram:SetWorldRotation(playerViewRotation)
+		else
+			objectHalogram:SetWorldRotation(Rotation.New(0, 0, playerViewRotation.z))
+		end
+
+		-- calculate placement:
+		local impactPosition, impactNormal, targetIsVisible = CalculatePlacement()
+		if impactPosition ~= nil and targetIsVisible then
+			objectHalogram:SetWorldPosition(impactPosition)
+			objectHalogram.visibility = Visibility.INHERIT
+
+			--CoreDebug.DrawLine(impactPosition, impactPosition + (impactNormal * 200))
+			if MatchNormal then
+				local quat = Quaternion.New(Vector3.UP, impactNormal)
+				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
+			end
+		else
+			objectHalogram.visibility = Visibility.FORCE_OFF
+		end
+	end
+
+	-- Update the duration bar UI
+	local DurationBar = SpecialAbility.clientUserData.durationBar
+	if durationTimer > 0 then
+		durationTimer = durationTimer - deltaTime
+
+		--Update duration bar
+		if DurationBar and Object.IsValid(DurationBar) then
+			DurationBar.progress = durationTimer / totalDuration
+		end
+	elseif DurationBar and Object.IsValid(DurationBar) then
+		DurationBar.progress = 0
+	end
 end
+
 
 if Equipment.owner then
 	OnEquip(Equipment, Equipment.owner)

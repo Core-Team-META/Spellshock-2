@@ -1,6 +1,6 @@
 Assets {
-  Id: 11875820563247283070
-  Name: "WeaponAutoRechargeClient"
+  Id: 696201589024105337
+  Name: "ActivateDurationBarUI"
   PlatformAssetType: 3
   TextAsset {
   }

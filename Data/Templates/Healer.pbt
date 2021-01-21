@@ -89,7 +89,7 @@ Assets {
       }
       Objects {
         Id: 10065611523314269826
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
           }
@@ -119,7 +119,7 @@ Assets {
       }
       Objects {
         Id: 11140001443662444640
-        Name: "Supernova Ability Server"
+        Name: "Supernova Settings"
         Transform {
           Location {
           }
@@ -221,7 +221,7 @@ Assets {
       }
       Objects {
         Id: 15232445570186328109
-        Name: "HealingCystalAbilityServer"
+        Name: "Healing Cystal Settings"
         Transform {
           Location {
             X: -747.460938
@@ -304,6 +304,10 @@ Assets {
             String: "mod5"
           }
           Overrides {
+            Name: "cs:DurationMod"
+            String: "mod2"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -322,7 +326,7 @@ Assets {
       }
       Objects {
         Id: 5311961891427463671
-        Name: "TeleportAbilityServer"
+        Name: "Teleport Settings"
         Transform {
           Location {
           }
@@ -406,7 +410,7 @@ Assets {
       }
       Objects {
         Id: 7712793717427709362
-        Name: "WeaponAimServer"
+        Name: "Weapon Aim Settings"
         Transform {
           Location {
             X: -202.230469
@@ -1133,6 +1137,7 @@ Assets {
         ChildIds: 8357201899851611185
         ChildIds: 2176729734375800191
         ChildIds: 18116069161725040159
+        ChildIds: 15778048683844327364
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1774,6 +1779,44 @@ Assets {
         }
       }
       Objects {
+        Id: 15778048683844327364
+        Name: "AutoShootClient"
+        Transform {
+          Location {
+            X: -5655
+            Y: -15305
+            Z: -3665
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14074483271059500969
+          }
+        }
+      }
+      Objects {
         Id: 4708996743668767698
         Name: "Load Out"
         Transform {
@@ -2229,7 +2272,7 @@ Assets {
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1000
+            BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
@@ -2289,7 +2332,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2299,13 +2342,12 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 1
+            Duration: 0.8
             CanMove: true
             CanJump: true
             CanRotate: true

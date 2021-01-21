@@ -89,7 +89,7 @@ Assets {
       }
       Objects {
         Id: 7446398700877787801
-        Name: "StaticContext"
+        Name: "Ability Setting StaticContext"
         Transform {
           Location {
             X: 7820
@@ -122,7 +122,7 @@ Assets {
       }
       Objects {
         Id: 15107115459971592988
-        Name: "TornadoAbilityServer"
+        Name: "Tornado Settings"
         Transform {
           Location {
           }
@@ -211,6 +211,10 @@ Assets {
             Name: "cs:RadiusMod"
             String: "mod3"
           }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod4"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -226,7 +230,7 @@ Assets {
       }
       Objects {
         Id: 15746345843771633212
-        Name: "TeleportAbilityServer"
+        Name: "Teleport Settings"
         Transform {
           Location {
             X: -7232.13086
@@ -309,7 +313,7 @@ Assets {
       }
       Objects {
         Id: 13012543468557526091
-        Name: "IcebergAbilityServer"
+        Name: "Iceberg Settings"
         Transform {
           Location {
             X: 16302.6816
@@ -375,7 +379,7 @@ Assets {
       }
       Objects {
         Id: 17347115782364650425
-        Name: "WeaponAimServer"
+        Name: "Weapon Aim Settings"
         Transform {
           Location {
             X: -7274.76758
@@ -1689,6 +1693,7 @@ Assets {
         ParentId: 11747234676183721272
         ChildIds: 15540843134272266616
         ChildIds: 354566938322484678
+        ChildIds: 4362377662528572463
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1777,6 +1782,62 @@ Assets {
         }
       }
       Objects {
+        Id: 4362377662528572463
+        Name: "Iceberg_ActivateDurationBarUI"
+        Transform {
+          Location {
+            X: -25039.7734
+            Y: -31570.2598
+            Z: -4938.5835
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 3870953613855714336
+            }
+          }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod3"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "R"
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+              SubObjectId: 13012543468557526091
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
         Id: 7617081542033333176
         Name: "Wand"
         Transform {
@@ -1797,6 +1858,7 @@ Assets {
         ChildIds: 5931065898975178281
         ChildIds: 12781921330556252170
         ChildIds: 719838432390101910
+        ChildIds: 4906948746998877600
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1966,6 +2028,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 4906948746998877600
+        Name: "AutoShootClient"
+        Transform {
+          Location {
+            X: -7045
+            Y: -15775
+            Z: -3825
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 1254248059045754243
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14074483271059500969
           }
         }
       }
@@ -2472,7 +2572,7 @@ Assets {
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1000
+            BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
             Range: 7000
@@ -2529,7 +2629,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.1
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2539,7 +2639,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.1
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2549,7 +2649,6 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2558,7 +2657,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.5
+            Duration: 0.8
             CanMove: true
             CanJump: true
             CanRotate: true

@@ -1,6 +1,6 @@
 Assets {
-  Id: 8431872900106975609
-  Name: "AutoRechargeWeaponClient"
+  Id: 14074483271059500969
+  Name: "AutoShootClient"
   PlatformAssetType: 3
   TextAsset {
   }
