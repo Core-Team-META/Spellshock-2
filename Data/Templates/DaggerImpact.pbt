@@ -18,6 +18,8 @@ Assets {
         ParentId: 14162296025304194376
         ChildIds: 14129512450366587082
         ChildIds: 3928466468553689206
+        ChildIds: 9075468116578147061
+        ChildIds: 2622263756087459579
         Lifespan: 0.4
         WantsNetworking: true
         Collidable_v2 {
@@ -137,6 +139,82 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 9075468116578147061
+        Name: "Smoke Puff Radial VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16076737125092730526
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Radius"
+            Float: 3.21709371
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 1.77717817
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11736239447341257999
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 2622263756087459579
+        Name: "Heavy Ground Rocky Debris Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16076737125092730526
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 16735611449542770288
+          }
+          AutoPlay: true
+          Pitch: 1104.78516
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 13633382478652610944
@@ -154,6 +232,24 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_mil_dirt_impact_large"
+      }
+    }
+    Assets {
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_smoke_puff_radial"
+      }
+    }
+    Assets {
+      Id: 16735611449542770288
+      Name: "Heavy Ground Rocky Debris Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_heavy_ground_rocky_debris_impact_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
