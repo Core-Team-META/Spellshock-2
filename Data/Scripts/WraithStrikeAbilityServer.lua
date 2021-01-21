@@ -71,7 +71,7 @@ function OnBindingPressed(player, binding)
 
 			isPreviewing = true
 			SetNetworkProperty(isPreviewing)
-
+			--print("NOT READY")
 			Task.Wait(1)
 			if not player or not Object.IsValid(player) or player.isDead or not isFlying then
 				return
@@ -81,8 +81,9 @@ function OnBindingPressed(player, binding)
 			player:ResetVelocity()
 
 			SpecialAbility.isEnabled = true
+			--print("READY")
 		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-			print("Canceling Wraith Strike")
+			--print("Canceling Wraith Strike")
 			DisableFlying()
 		end
 	end
@@ -103,7 +104,8 @@ end
 
 function OnTargetChosen(player, targetPos)
 	if player == Equipment.owner then
-		Task.Wait()
+		--Task.Wait()
+		--print("Wraith Strike ACTIVATE")
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
@@ -115,6 +117,7 @@ function OnTargetChosen(player, targetPos)
 		ActiveAbilities = {}
 
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+			--print("NOT COMPLETING")
 			return
 		end
 

@@ -4,7 +4,6 @@ local ParentObject = script:GetCustomProperty("ParentObject"):WaitForObject()
 local DestroyedEventListener
 
 function OnObjectDestroyed(thisObject)
-	print("Crystal being destroyed")
 	World.SpawnAsset(FX_Template, {position = thisObject:GetWorldPosition()})
 	DestroyedEventListener:Disconnect()
 end

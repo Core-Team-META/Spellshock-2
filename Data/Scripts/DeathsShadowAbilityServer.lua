@@ -100,7 +100,7 @@ end
 
 function DisableInvisility()
 	if isInvisible then
-		print("Disable Invis")
+		--print("Disable Invis")
 		Ability.owner.animationStance = Ability.serverUserData.OriginalStance
 		META_AP().SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
 		Ability.owner:SetVisibility(true)
@@ -111,27 +111,12 @@ function DisableInvisility()
 	end
 end
 
-function Client_VFX_Failed(thisPlayer)
-	print("Failure receaved")
-	if thisPlayer == Equipment.owner then
-		Task.Wait()
-		--DisableInvisility()
-		local vfxKey = string.format("%s_%d_%s_%s", Equipment.name, thisPlayer.team, abilityName, "Costume")
-		warn("INVALID VFX TEMPLATE: "..vfxKey.." | "..PlayerVFX[vfxKey])
-		local PlayerStorage = Storage.GetPlayerData(thisPlayer)
-		PlayerStorage.VFX[vfxKey] = _G.VFX[vfxKey]
-		Storage.SetPlayerData(thisPlayer, PlayerStorage)
-		SetNetworkProperty(PlayerStorage.VFX[vfxKey])
-	end
-end
-
 function OnPlayerDied(player, _)
 	DisableInvisility()
 end
 
 function OnPlayerRespawn(player)
 	DisableInvisility()
-	print("Weapon: "..tostring(WeaponAbility.isEnabled))
 end
 
 function OnEquip(thisEquipment, player)
@@ -141,7 +126,6 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	table.insert(EventListeners, Events.ConnectForPlayer("Invisibiliy FAILED", Client_VFX_Failed))
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().ASSASSIN)
 end
 

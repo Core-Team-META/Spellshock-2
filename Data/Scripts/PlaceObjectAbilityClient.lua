@@ -72,7 +72,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary" and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
+	if binding == "ability_primary" and SpecialAbility.isEnabled and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
 		placementTable.rotation = objectHalogram:GetWorldRotation()
 

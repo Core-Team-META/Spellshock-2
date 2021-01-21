@@ -9,7 +9,6 @@ function OnEquipped(_, player)
     for _, gear in ipairs(gearToEquip) do
         if (Object.IsValid(gear) and gear:IsA("Equipment")) then
             gear:Equip(player)
-            print("Gear Equipped: " .. gear.name .. " in " .. gear.socket)
             table.insert(EQUIPPED_GEAR, gear)
         end
     end
@@ -19,7 +18,6 @@ end
 function OnUnequipped(_, player)
     for _, gear in pairs(player.serverUserData.gear) do
         if (Object.IsValid(gear)) then
-            print("Gear Removed" .. gear.name)
             gear:Unequip()
             gear:Destroy()
         end

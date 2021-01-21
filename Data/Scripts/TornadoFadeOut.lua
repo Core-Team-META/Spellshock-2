@@ -17,6 +17,4 @@ end, lifeSpan-1.3)
 
 local DecalScale = Root:GetCustomProperty("DecalScale")
 local defaultScale = Decal:GetWorldScale()
-print(tostring(DecalScale))
 Decal:SetWorldScale(Vector3.New(DecalScale, DecalScale, defaultScale.z))
-print(tostring(Decal:GetWorldScale()))

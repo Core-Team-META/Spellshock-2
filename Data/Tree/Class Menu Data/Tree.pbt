@@ -26,7 +26,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 2813404828707589716
+        Id: 8614122186465498534
       }
     }
     Overrides {
@@ -996,9 +996,9 @@ Objects {
     }
   }
   ParentId: 14151859424388630810
-  ChildIds: 15882469756563991493
-  ChildIds: 78469244364511293
   ChildIds: 7146157638163724227
+  ChildIds: 78469244364511293
+  ChildIds: 15882469756563991493
   ChildIds: 17507077983078006761
   ChildIds: 10663133334451742732
   ChildIds: 16496804219486441168
@@ -1420,8 +1420,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7146157638163724227
-  Name: "Slasher"
+  Id: 15882469756563991493
+  Name: "Venom Bomb"
   Transform {
     Location {
     }
@@ -1434,19 +1434,18 @@ Objects {
     }
   }
   ParentId: 837517277244744736
-  ChildIds: 6180741710619077583
-  ChildIds: 7191880160416436506
-  ChildIds: 14325669095874228210
+  ChildIds: 16037613412710680742
+  ChildIds: 3074752349398664074
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 606548452417380641
+        Id: 6375726263607251280
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to wind up and throw a balanced throwing knife in the direction you\342\200\231re aiming, damaging and slowing enemies on impact."
+      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; teleporting you to the point of impact and damaging nearby enemies."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1464,8 +1463,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14325669095874228210
-  Name: "Heal Percentage"
+  Id: 3074752349398664074
+  Name: "Damage Radius"
   Transform {
     Location {
     }
@@ -1477,57 +1476,16 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7146157638163724227
+  ParentId: 15882469756563991493
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The percentage of the damage done to the enemy that will heal you"
+      String: "Radius of the damage area"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 8854358530398708523
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7191880160416436506
-  Name: "Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7146157638163724227
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far the slasher will travel"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
+        Id: 13298271364458101774
       }
     }
     Overrides {
@@ -1546,8 +1504,8 @@ Objects {
   }
 }
 Objects {
-  Id: 6180741710619077583
-  Name: "Damage Range"
+  Id: 16037613412710680742
+  Name: "Damage"
   Transform {
     Location {
     }
@@ -1559,11 +1517,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7146157638163724227
+  ParentId: 15882469756563991493
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The range of possible damage that will be inflicted on enemies"
+      String: "The amount of damage initially applied to enemies"
     }
     Overrides {
       Name: "cs:Icon"
@@ -1796,8 +1754,8 @@ Objects {
   }
 }
 Objects {
-  Id: 15882469756563991493
-  Name: "Venom Bomb"
+  Id: 7146157638163724227
+  Name: "Blade Dash"
   Transform {
     Location {
     }
@@ -1810,18 +1768,19 @@ Objects {
     }
   }
   ParentId: 837517277244744736
-  ChildIds: 16037613412710680742
-  ChildIds: 3074752349398664074
+  ChildIds: 6180741710619077583
+  ChildIds: 5825215787427395226
+  ChildIds: 8295886532193173621
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 6375726263607251280
+        Id: 3469815303062501792
       }
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; teleporting you to the point of impact and damaging nearby enemies."
+      String: "Placement \342\200\223 TODO"
     }
     Overrides {
       Name: "cs:Bind"
@@ -1839,8 +1798,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3074752349398664074
-  Name: "Damage Radius"
+  Id: 8295886532193173621
+  Name: "Placement Range"
   Transform {
     Location {
     }
@@ -1852,16 +1811,16 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15882469756563991493
+  ParentId: 7146157638163724227
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Radius of the damage area"
+      String: "How far this attack can be placed"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 13298271364458101774
+        Id: 10392517578151200132
       }
     }
     Overrides {
@@ -1880,8 +1839,8 @@ Objects {
   }
 }
 Objects {
-  Id: 16037613412710680742
-  Name: "Damage"
+  Id: 5825215787427395226
+  Name: "Damage Radius"
   Transform {
     Location {
     }
@@ -1893,11 +1852,52 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15882469756563991493
+  ParentId: 7146157638163724227
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage initially applied to enemies"
+      String: "Radius of the damage area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6180741710619077583
+  Name: "Damage Range"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "The range of possible damage that will be inflicted on enemies"
     }
     Overrides {
       Name: "cs:Icon"

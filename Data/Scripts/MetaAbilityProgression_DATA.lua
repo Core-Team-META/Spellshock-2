@@ -451,7 +451,7 @@ classTable = {
     },
     -- Assassian
     [CONST.CLASS.ASSASSIN] = {
-        -- Blink
+        -- Blade Dash
         [CONST.BIND.Q] = {
             -- mod1 = Damage Range, mod2 = Placement Range, mod3 = DamageRadius
             [1] = {mod1 = {min = 35, max = 35}, mod2 = 2000, mod3 = 600, mod4 = 0, mod5 = 0},

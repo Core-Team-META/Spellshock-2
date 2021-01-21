@@ -711,7 +711,7 @@ Assets {
       }
       Objects {
         Id: 11108734766873830573
-        Name: "PlaceTrapAbilityServer"
+        Name: "BearTrapAbilityServer"
         Transform {
           Location {
             X: -273.005859
