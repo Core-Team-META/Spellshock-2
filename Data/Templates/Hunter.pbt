@@ -873,11 +873,7 @@ Assets {
         ChildIds: 10631699742497799838
         ChildIds: 3683594478347275263
         ChildIds: 11619508425871329849
-        ChildIds: 7715059201367182424
-        ChildIds: 1231559079360679353
-        ChildIds: 7905627217205649232
-        ChildIds: 2695547812234798459
-        ChildIds: 2726600085118415138
+        ChildIds: 4017735643055830044
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1382,36 +1378,32 @@ Assets {
         }
       }
       Objects {
-        Id: 7715059201367182424
-        Name: "AutoRechargeWeaponClient"
+        Id: 4017735643055830044
+        Name: "Crossbow"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -2.04905591e-05
           }
           Scale {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 5361708159967945625
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 13944462686745880869
-            }
-          }
-        }
+        ChildIds: 1231559079360679353
+        ChildIds: 7905627217205649232
+        ChildIds: 2695547812234798459
+        ChildIds: 2726600085118415138
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 8431872900106975609
-          }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
@@ -1426,7 +1418,7 @@ Assets {
           Scale {
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:ServerScript"
@@ -1464,7 +1456,7 @@ Assets {
           Scale {
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1519,7 +1511,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1560,7 +1552,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         ChildIds: 12352649972463341139
         UnregisteredParameters {
           Overrides {

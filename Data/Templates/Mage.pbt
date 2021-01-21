@@ -1797,7 +1797,6 @@ Assets {
         ChildIds: 5931065898975178281
         ChildIds: 12781921330556252170
         ChildIds: 719838432390101910
-        ChildIds: 3534192933717282768
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1967,45 +1966,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 3534192933717282768
-        Name: "AutoRechargeWeaponClient"
-        Transform {
-          Location {
-            X: -1025.83594
-            Y: 355
-            Z: 127.751465
-          }
-          Rotation {
-            Yaw: 1.62844369e-12
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7617081542033333176
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 14738406619974674146
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8431872900106975609
           }
         }
       }
