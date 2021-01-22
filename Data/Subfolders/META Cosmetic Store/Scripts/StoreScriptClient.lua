@@ -973,7 +973,7 @@ function UpdateUIPos()
 	local propButtonLabel = nil
 	local propButtonLabelShadow = nil
 
-	for k, v in pairs(filterButtonData) do
+	--[[for k, v in pairs(filterButtonData) do
 		v.root.width = math.floor(screenSize.x * 0.08)
 		v.root.height = math.floor(screenSize.y * 0.055)
 
@@ -997,7 +997,7 @@ function UpdateUIPos()
 
 		v.root.x = v.root.width * v.position
 		v.root.y = 0
-	end
+	end]]
 
 	propRotateMarkerTopLeft.x = UI.GetScreenSize().x * 0.77
 	propRotateMarkerTopLeft.y = UI.GetScreenSize().y * 0.17
@@ -1149,6 +1149,7 @@ function InitStore()
 				number = propNumber
 			}
 			table.insert(TagList, v.name)
+			print("ADDING TAG: "..propDisplayName)
 		end
 	end
 
@@ -1230,7 +1231,8 @@ function SpawnFilterButton(displayName, tag, color, position, template)
 			parent = propFilterListHolder
 		}
 	)
-	newFilterButton.x = newFilterButton.width * position
+
+	newFilterButton.x = (newFilterButton.width * position) + 5	
 	newFilterButton.y = 0
 
 	local propBGImage = newFilterButton:GetCustomProperty("BGImage"):WaitForObject()
