@@ -19908,8 +19908,6 @@ Objects {
   ChildIds: 331960150577104941
   ChildIds: 2468698662337628124
   ChildIds: 4821486034769759147
-  ChildIds: 659399950873663659
-  ChildIds: 16917532852075624648
   ChildIds: 8746288417949254922
   ChildIds: 15649347557172905711
   ChildIds: 9795384715512489844
@@ -20415,119 +20413,6 @@ Objects {
   }
 }
 Objects {
-  Id: 16917532852075624648
-  Name: "Effect Announcer"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14852734758551696487
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 18423320620050789259
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Effect Announcer"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7569250083106348559
-    }
-  }
-}
-Objects {
-  Id: 659399950873663659
-  Name: "Basic Effect System"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14852734758551696487
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13965279790418399636
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Basic Effect System"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "cs:DefaultMovementSettings"
-          ObjectReference {
-            SelfId: 18224688022444578463
-            SubObjectId: 11592647923584693331
-            InstanceId: 1967900192041222895
-            TemplateId: 425347663873707340
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10245160804268536417
-    }
-  }
-}
-Objects {
   Id: 4821486034769759147
   Name: "Game State Message"
   Transform {
@@ -20923,11 +20808,11 @@ Objects {
         }
         Overrides {
           Name: "cs:RequiredPlayers"
-          Int: 2
+          Int: 1
         }
         Overrides {
           Name: "cs:CountdownTime"
-          Float: 20
+          Float: 10
         }
         Overrides {
           Name: "Scale"

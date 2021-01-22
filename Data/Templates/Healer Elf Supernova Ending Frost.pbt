@@ -1,13 +1,13 @@
 Assets {
-  Id: 10361163652299667815
+  Id: 9716011756738589723
   Name: "Healer Elf Supernova Ending Frost"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17190262406262628390
+      RootId: 11227495897027109769
       Objects {
-        Id: 17190262406262628390
-        Name: "Healer Elf Supernova Ending Frost"
+        Id: 11227495897027109769
+        Name: "Healer Elf Supernova Ending Basic"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 8285496984040719449
-        ChildIds: 12591856996814775435
-        ChildIds: 9223322773659339774
+        ParentId: 14162296025304194376
+        ChildIds: 634591417281797146
+        ChildIds: 10592460757687746198
+        ChildIds: 4300252051271648865
+        ChildIds: 1057315369689046366
+        ChildIds: 14400536492297960071
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -31,10 +33,11 @@ Assets {
         }
       }
       Objects {
-        Id: 8285496984040719449
+        Id: 634591417281797146
         Name: "Plasma Impact VFX"
         Transform {
           Location {
+            Z: 250
           }
           Rotation {
           }
@@ -44,7 +47,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17190262406262628390
+        ParentId: 11227495897027109769
         UnregisteredParameters {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
@@ -53,8 +56,8 @@ Assets {
           Overrides {
             Name: "bp:color"
             Color {
-              G: 0.473112464
-              B: 0.76
+              G: 0.580392182
+              B: 0.360784322
               A: 1
             }
           }
@@ -78,6 +81,14 @@ Assets {
             Name: "bp:Enable Impact Ring"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.112913601
+              B: 0.549999952
+              A: 0.3
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -97,10 +108,161 @@ Assets {
         }
       }
       Objects {
-        Id: 12591856996814775435
+        Id: 10592460757687746198
+        Name: "Explosion Kit Afterglow VFX"
+        Transform {
+          Location {
+            Z: 250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 11227495897027109769
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.112913601
+              B: 0.549999952
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Particle Scale"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 15468302836055406992
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 4300252051271648865
+        Name: "Ground Explosion VFX"
+        Transform {
+          Location {
+            Z: 250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 11227495897027109769
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Fireball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.112913601
+              B: 0.549999952
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              G: 0.112913601
+              B: 0.549999952
+              A: 0.3
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Burst Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Spikes"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Ground Shockwave"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Ground Dust"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Smoke Color"
+            Color {
+              R: 0.480000019
+              G: 0.69006604
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Shockwave Color"
+            Color {
+              R: 0.3
+              G: 0.805297792
+              B: 1
+              A: 0.305
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2839312775702113675
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 1057315369689046366
         Name: "Sci-fi Barrier Energy Shield Large Impact Startup 03 SFX"
         Transform {
           Location {
+            X: 29.7646484
+            Y: 8.79199219
+            Z: 0.995849609
           }
           Rotation {
           }
@@ -110,7 +272,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17190262406262628390
+        ParentId: 11227495897027109769
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -124,14 +286,14 @@ Assets {
           AutoPlay: true
           Pitch: -100
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
       Objects {
-        Id: 9223322773659339774
+        Id: 14400536492297960071
         Name: "Meta Fantasy Revive Life Choir 02 SFX"
         Transform {
           Location {
@@ -144,7 +306,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17190262406262628390
+        ParentId: 11227495897027109769
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -158,8 +320,8 @@ Assets {
           AutoPlay: true
           Pitch: -100
           Volume: 0.5
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 3000
+          Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -172,6 +334,24 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_plasma_impact"
+      }
+    }
+    Assets {
+      Id: 15468302836055406992
+      Name: "Explosion Kit Afterglow VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explokit_afterglow"
+      }
+    }
+    Assets {
+      Id: 2839312775702113675
+      Name: "Ground Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explosion_ground"
       }
     }
     Assets {

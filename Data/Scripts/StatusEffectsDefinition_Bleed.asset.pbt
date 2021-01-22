@@ -19,7 +19,7 @@ Assets {
       Overrides {
         Name: "cs:EffectTemplate"
         AssetReference {
-          Id: 4110777389302809276
+          Id: 6034558872979117633
         }
       }
     }

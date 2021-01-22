@@ -44,6 +44,17 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 13398739294564669698
+      value {
+        Overrides {
+          Name: "cs:API_Spectator"
+          AssetReference {
+            Id: 13062533657555781867
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 14428041308681977959
       value {
         Overrides {

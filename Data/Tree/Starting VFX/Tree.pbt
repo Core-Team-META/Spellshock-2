@@ -1629,6 +1629,12 @@ Objects {
         Id: 1213996206729767403
       }
     }
+    Overrides {
+      Name: "cs:01_RainofArrows_Placement"
+      AssetReference {
+        Id: 1939393386208935566
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

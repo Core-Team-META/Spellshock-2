@@ -702,7 +702,6 @@ Assets {
           }
         }
         ParentId: 4159325021862714735
-        ChildIds: 3890386686321137353
         ChildIds: 13203218025387527418
         ChildIds: 11631127456224602423
         ChildIds: 12017777593537436719
@@ -715,43 +714,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3890386686321137353
-        Name: "EquipmentStanceServer"
-        Transform {
-          Location {
-            X: -15019.4
-            Y: -15636.5625
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1059382485272021003
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 13709554481697835406
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1427829216143793458
-          }
         }
       }
       Objects {

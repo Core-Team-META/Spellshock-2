@@ -13,7 +13,7 @@ Assets {
       Overrides {
         Name: "cs:01_RainofArrows_Preview"
         AssetReference {
-          Id: 1490966563412810811
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -25,7 +25,7 @@ Assets {
       Overrides {
         Name: "cs:02_Leap_Placement"
         AssetReference {
-          Id: 3018525531227009304
+          Id: 841534158063459245
         }
       }
       Overrides {

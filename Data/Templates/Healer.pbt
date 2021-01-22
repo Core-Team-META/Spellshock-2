@@ -786,7 +786,7 @@ Assets {
           Overrides {
             Name: "cs:VFX_Template"
             AssetReference {
-              Id: 9583554867605228300
+              Id: 841534158063459245
             }
           }
           Overrides {
