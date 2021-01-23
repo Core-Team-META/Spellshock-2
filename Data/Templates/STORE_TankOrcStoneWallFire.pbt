@@ -7,7 +7,7 @@ Assets {
       RootId: 12935646335962544054
       Objects {
         Id: 12935646335962544054
-        Name: "STORE_TankOrcStoneWallPlacementFire"
+        Name: "STORE_TankOrcStoneWallFire"
         Transform {
           Scale {
             X: 1
@@ -32,7 +32,7 @@ Assets {
         Name: "store_graphic"
         Transform {
           Location {
-            X: 75
+            X: 7.5
           }
           Rotation {
           }
@@ -60,16 +60,16 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            X: -26.875
+            X: -37.7734375
             Z: -42.8710938
           }
           Rotation {
             Pitch: -9.74295
           }
           Scale {
-            X: 0.237341523
-            Y: 0.415227592
-            Z: 0.344703853
+            X: 0.237341613
+            Y: 0.302414656
+            Z: 0.344703674
           }
         }
         ParentId: 12812864537761745306
@@ -77,12 +77,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12490803274073903427
+              Id: 14402556056167558311
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -382,9 +391,9 @@ Assets {
         Name: "Rock 03"
         Transform {
           Location {
-            X: 5.67675781
-            Y: 350.898438
-            Z: -17.9208584
+            X: 5.64236069
+            Y: 350.911407
+            Z: -92.9361877
           }
           Rotation {
             Pitch: -0.638702393
@@ -473,9 +482,9 @@ Assets {
         Name: "Rock 03"
         Transform {
           Location {
-            X: 42.015789
-            Y: -478.463379
-            Z: -16.5120449
+            X: 42.1006889
+            Y: -478.515564
+            Z: -119.466133
           }
           Rotation {
             Pitch: -74.6200256
@@ -534,9 +543,9 @@ Assets {
         Name: "Rock 03"
         Transform {
           Location {
-            X: 13.838623
-            Y: 527.620605
-            Z: -1.46110034
+            X: 13.8888874
+            Y: 441.84024
+            Z: -87.8906174
           }
           Rotation {
             Pitch: -6.50338745
@@ -598,6 +607,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_hill_002"
+      }
+    }
+    Assets {
+      Id: 14402556056167558311
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
       }
     }
     Assets {

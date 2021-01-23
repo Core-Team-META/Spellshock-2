@@ -32,7 +32,7 @@ Assets {
         Name: "store_graphic"
         Transform {
           Location {
-            X: 75
+            X: 7.5
           }
           Rotation {
           }
@@ -62,16 +62,16 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            X: -26.875
+            X: -37.7734375
             Z: -42.8710938
           }
           Rotation {
             Pitch: -9.74295
           }
           Scale {
-            X: 0.237341523
-            Y: 0.415227592
-            Z: 0.344703853
+            X: 0.237341613
+            Y: 0.302414656
+            Z: 0.344703674
           }
         }
         ParentId: 4251404975037943881
@@ -79,12 +79,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12490803274073903427
+              Id: 2148407408977013770
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -261,9 +270,9 @@ Assets {
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.875
-            Y: 140.40625
-            Z: 130.785156
+            X: 31
+            Y: -14
+            Z: -614
           }
           Rotation {
             Pitch: -6.71472168
@@ -318,14 +327,14 @@ Assets {
         Name: "Urban Brick Debris 05"
         Transform {
           Location {
-            X: 30.8789063
-            Y: 893.984375
-            Z: -227.8125
+            X: 30.9471951
+            Y: 796.90863
+            Z: -694.677
           }
           Rotation {
-            Pitch: -172.377258
-            Yaw: -51.2878723
-            Roll: 75.2766724
+            Pitch: -7.6227417
+            Yaw: 128.712112
+            Roll: -104.723358
           }
           Scale {
             X: 95.946907
@@ -1077,6 +1086,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_hill_002"
+      }
+    }
+    Assets {
+      Id: 2148407408977013770
+      Name: "Grass Clumps"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_002_uv"
       }
     }
     Assets {

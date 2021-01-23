@@ -74,7 +74,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Assassin"
+      String: "Healer"
     }
     Overrides {
       Name: "cs:Types"
@@ -140,7 +140,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Assassin"
+      String: "Healer"
     }
     Overrides {
       Name: "cs:Types"
@@ -206,7 +206,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Assassin"
+      String: "Healer"
     }
     Overrides {
       Name: "cs:Types"
@@ -280,7 +280,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Assassin"
+      String: "Healer"
     }
     Overrides {
       Name: "cs:Types"

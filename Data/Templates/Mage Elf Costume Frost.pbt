@@ -1326,11 +1326,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1358,7 +1358,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1410,16 +1410,16 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.370309
+            Float: 0.488645852
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.20031548
+            Float: 0.394296706
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1484,11 +1484,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1516,7 +1516,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1898,11 +1898,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
@@ -1924,7 +1924,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -4870,8 +4870,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.705856
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.684551239
           }
         }
         Collidable_v2 {
@@ -5742,8 +5750,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.705856
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.684551239
           }
         }
         Collidable_v2 {

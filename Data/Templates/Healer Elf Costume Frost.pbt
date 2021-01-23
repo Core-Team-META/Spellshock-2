@@ -4260,7 +4260,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -4296,11 +4296,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 7.69880247
+            Float: 2.47989082
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 15.8635731
+            Float: 3.58223748
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"

@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 911408642289788367
+        ParentId: 14162296025304194376
         ChildIds: 7775484286046702800
         ChildIds: 7681726834696670689
         ChildIds: 11423605522365470867
@@ -1811,16 +1811,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
-            Float: 20.6335926
+            Float: 0.958997965
           }
           Overrides {
             Name: "ma:Shared_Detail1:vtile"
-            Float: 22.0352745
+            Float: 1.15259993
           }
           Overrides {
             Name: "ma:Shared_Trim2:id"
@@ -1927,16 +1927,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
-            Float: 20.6335926
+            Float: 0.958997965
           }
           Overrides {
             Name: "ma:Shared_Detail1:vtile"
-            Float: 22.0352745
+            Float: 1.15259993
           }
           Overrides {
             Name: "ma:Shared_Trim2:id"
@@ -6113,7 +6113,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -6122,7 +6122,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:utile"
-            Float: 0.752524078
+            Float: 0.419221431
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
@@ -6134,7 +6134,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:vtile"
-            Float: 0.637389183
+            Float: 0.445721686
           }
         }
         Collidable_v2 {
@@ -6532,7 +6532,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Sides:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -6541,7 +6541,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:utile"
-            Float: 0.752524078
+            Float: 0.419221431
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
@@ -6553,7 +6553,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Sides:vtile"
-            Float: 0.637389183
+            Float: 0.445721686
           }
         }
         Collidable_v2 {
@@ -6951,7 +6951,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -7089,7 +7089,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -7976,7 +7976,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
