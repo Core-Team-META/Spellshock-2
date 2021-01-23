@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 3038388280380942555
         WantsNetworking: true
         Collidable_v2 {
@@ -43,8 +43,7 @@ Assets {
           }
         }
         ParentId: 18226309135745434178
-        ChildIds: 5791435178512847905
-        ChildIds: 3964483289004465333
+        ChildIds: 12631759395367104141
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -56,15 +55,42 @@ Assets {
         }
       }
       Objects {
-        Id: 5791435178512847905
-        Name: "Hill 02"
+        Id: 12631759395367104141
+        Name: "root"
         Transform {
           Location {
             X: -37.7734375
             Z: -42.8710938
           }
           Rotation {
-            Pitch: -9.74295
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3038388280380942555
+        ChildIds: 5791435178512847905
+        ChildIds: 13503640393779141666
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5791435178512847905
+        Name: "Hill 02"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -9.74294376
           }
           Scale {
             X: 0.237341613
@@ -72,7 +98,7 @@ Assets {
             Z: 0.344703674
           }
         }
-        ParentId: 3038388280380942555
+        ParentId: 12631759395367104141
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -116,47 +142,22 @@ Assets {
         }
       }
       Objects {
-        Id: 3964483289004465333
-        Name: "RockWall"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3038388280380942555
-        ChildIds: 13503640393779141666
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 13503640393779141666
         Name: "Rock 03"
         Transform {
           Location {
-            Z: 35.0097656
+            X: 37.7734375
+            Z: 46.3720703
           }
           Rotation {
           }
           Scale {
-            X: 2.60088229
-            Y: 2.60088229
-            Z: 2.60088229
+            X: 0.260088235
+            Y: 0.260088235
+            Z: 0.260088235
           }
         }
-        ParentId: 3964483289004465333
+        ParentId: 12631759395367104141
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

@@ -55,7 +55,7 @@ Assets {
           Overrides {
             Name: "cs:FrameImage2"
             ObjectReference {
-              SubObjectId: 10514230812662278763
+              SubObjectId: 4277647358622373971
             }
           }
         }
@@ -643,7 +643,7 @@ Assets {
       }
       Objects {
         Id: 10514230812662278763
-        Name: "FRAME_EXTRA"
+        Name: "FRAME_EXTRA 2"
         Transform {
           Location {
             X: 36630

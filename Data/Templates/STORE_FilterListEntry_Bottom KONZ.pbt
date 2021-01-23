@@ -55,19 +55,18 @@ Assets {
           Overrides {
             Name: "cs:FrameImage2"
             ObjectReference {
-              SubObjectId: 9705847423500026182
+              SubObjectId: 16240258895353459569
             }
           }
           Overrides {
             Name: "cs:RarityImage"
             ObjectReference {
-              SubObjectId: 1889876409252565805
+              SelfId: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:RarityImageSelected"
             ObjectReference {
-              SubObjectId: 2373461738294690095
             }
           }
         }
@@ -147,14 +146,10 @@ Assets {
         ChildIds: 9742964440477824401
         ChildIds: 1467728552603926869
         ChildIds: 7825668857542631751
-        ChildIds: 780203852082361390
-        ChildIds: 4286753335087302531
-        ChildIds: 15283031502329931838
         ChildIds: 9705847423500026182
         ChildIds: 439225145728036994
         ChildIds: 10748852325585557483
         ChildIds: 16240258895353459569
-        ChildIds: 1889876409252565805
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -440,6 +435,7 @@ Assets {
           }
         }
         ParentId: 1839391381352698855
+        ChildIds: 780203852082361390
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -450,18 +446,18 @@ Assets {
           Width: 151
           Height: 36
           UIX: 2
-          UIY: -15.6436481
+          UIY: 8
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
           Text {
-            Label: "HEADGEAR"
+            Label: "ASSASSIN"
             Color {
               A: 1
             }
-            Size: 20
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -470,12 +466,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -495,7 +491,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1839391381352698855
+        ParentId: 7825668857542631751
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -505,136 +501,22 @@ Assets {
         Control {
           Width: 151
           Height: 36
-          UIY: -18.6572342
+          UIX: -1
+          UIY: -2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
           Text {
-            Label: "HEADGEAR"
+            Label: "ASSASSIN"
             Color {
               R: 1
               G: 0.871367335
               B: 0.603827536
               A: 1
             }
-            Size: 20
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4286753335087302531
-        Name: "DESCRIPTION_SHADOW"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1839391381352698855
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
-        }
-        Control {
-          Width: 151
-          Height: 31
-          UIX: 2
-          UIY: -38.8074493
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "HATS & HELMETS"
-            Color {
-              R: 0.0193823576
-              G: 0.00518151606
-              A: 1
-            }
-            Size: 11
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15283031502329931838
-        Name: "DESCRIPTION"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1839391381352698855
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
-        }
-        Control {
-          Width: 151
-          Height: 31
-          UIY: -42.3547935
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "HATS & HELMETS"
-            Color {
-              R: 0.752942443
-              G: 0.270497859
-              A: 1
-            }
-            Size: 11
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1506,7 +1388,6 @@ Assets {
         }
         ParentId: 1839391381352698855
         ChildIds: 7611359004047949619
-        ChildIds: 2373461738294690095
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1990,118 +1871,6 @@ Assets {
         }
       }
       Objects {
-        Id: 2373461738294690095
-        Name: "Rarity Image Selected"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16240258895353459569
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 12804716500201279526
-            }
-            Color {
-              R: 1
-              G: 1
-              B: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1889876409252565805
-        Name: "Rarity Image"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1839391381352698855
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 12804716500201279526
-            }
-            Color {
-              R: 1
-              G: 1
-              B: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 787720216741214599
         Name: "UI Button"
         Transform {
@@ -2197,7 +1966,7 @@ Assets {
           Overrides {
             Name: "cs:SelectedFrame"
             ObjectReference {
-              SubObjectId: 2373461738294690095
+              SubObjectId: 16240258895353459569
             }
           }
         }
@@ -2284,15 +2053,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Crafting_Stone_028"
-      }
-    }
-    Assets {
-      Id: 12804716500201279526
-      Name: "BG Highlighted 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundHighlighted_020"
       }
     }
     Assets {

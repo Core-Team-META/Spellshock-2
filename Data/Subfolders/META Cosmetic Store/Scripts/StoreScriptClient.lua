@@ -1189,8 +1189,9 @@ function InitStore()
 	end
 
 	if propEnableFilterByTag then
-		SpawnFilterButton("Owned", "OWNED", nil, 0, propSTORE_FilterListEntry_Bottom)
-		SpawnFilterButton("Not Owned", "UNOWNED", nil, 1, propSTORE_FilterListEntry_Bottom)
+		--#FIXME Create new filter category
+		--SpawnFilterButton("Owned", "OWNED", nil, 0, propSTORE_FilterListEntry_Bottom)
+		--SpawnFilterButton("Not Owned", "UNOWNED", nil, 1, propSTORE_FilterListEntry_Bottom)
 
 		if propAllowSubscriptionPurchase then
 			SpawnFilterButton(
@@ -1207,7 +1208,7 @@ function InitStore()
 
 		for k, v in ipairs(TagList) do
 			if v:sub(1, 1) ~= "_" then
-				SpawnFilterButton(TagDefs[v].name, v, TagDefs[v].color, count + TagDefs[v].number, propSTORE_FilterListEntry_Bottom)
+				SpawnFilterButton(TagDefs[v].name, v, TagDefs[v].color, TagDefs[v].number-1, propSTORE_FilterListEntry_Bottom)
 			end
 		end
 		propFilterListHolder.visibility = Visibility.INHERIT
@@ -1276,7 +1277,7 @@ function SpawnFilterButton(displayName, tag, color, position, template)
 	}
 end
 
-function OnFilterButtonSelected(button)
+function OnFilterButtonSelected(button) 
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
@@ -1345,7 +1346,7 @@ function OnFilterButtonSelected(button)
 	CurrentStoreElements = {}
 
 	--actual filtering
-	for k, v in ipairs(StoreElements) do
+	for k, v in ipairs(StoreElements) do --#FIXME Add logic for 3rd filter
 		local owned = HasCosmetic(v.id)
 		if tag == "OWNED" and owned or (tag == "UNOWNED" and not owned) or (v.tags[tag] ~= nil) then
 			if v.types[currentType.type] ~= nil or (currentType.type == nil) then
@@ -1588,10 +1589,10 @@ function OnClickZoom()
 		setPreviewMesh:ScaleTo(Vector3.New(2.3, 2.3, 2.3), 0.5, true)
 	elseif currentZoom == "LowerBody" then
 		setPreviewMesh:MoveTo(propLowerZoomMarker:GetPosition(), 0.5, true)
-		setPreviewMesh:ScaleTo(Vector3.New(2, 2, 2), 0.5, true)
+		setPreviewMesh:ScaleTo(Vector3.New(1.7), 0.5, true)
 	elseif currentZoom == "Feet" then
 		setPreviewMesh:MoveTo(propFeetZoomMarker:GetPosition(), 0.5, true)
-		setPreviewMesh:ScaleTo(Vector3.New(2.3, 2.3, 2.3), 0.5, true)
+		setPreviewMesh:ScaleTo(Vector3.New(2.3), 0.5, true)
 	else
 		setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 		setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
