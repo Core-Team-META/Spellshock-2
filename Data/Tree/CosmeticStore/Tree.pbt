@@ -1,8 +1,8 @@
 Name: "CosmeticStore"
 RootId: 5763622543987818276
 Objects {
-  Id: 13945750086837791578
-  Name: "CosmeticStore(Group)"
+  Id: 5821724278744846916
+  Name: "CosmeticStore KONZ"
   Transform {
     Scale {
       X: 1
@@ -19,22 +19,11 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 729040568759198389
-      value {
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:inheritfromparent"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 4406967109701207403
+      key: 16136235253929035173
       value {
         Overrides {
           Name: "Name"
-          String: "CosmeticStore(Group)"
+          String: "CosmeticStore KONZ"
         }
         Overrides {
           Name: "Position"
@@ -46,16 +35,10 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
-      Id: 3572556691414508523
+      Id: 1749998263944627932
     }
   }
 }
