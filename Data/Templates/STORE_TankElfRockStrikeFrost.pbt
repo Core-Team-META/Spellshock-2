@@ -89,10 +89,10 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            Z: -56.9775391
+            Z: 4.3359375
           }
           Rotation {
-            Yaw: -179.999985
+            Yaw: -179.999969
           }
           Scale {
             X: 0.237341613
@@ -149,13 +149,13 @@ Assets {
         Transform {
           Location {
             X: 28.9453125
-            Y: -12.7929688
-            Z: -22.8417969
+            Y: -12.7734375
+            Z: 38.4765625
           }
           Rotation {
             Pitch: -1.37426758
-            Yaw: 3.4315815
-            Roll: -12.4488831
+            Yaw: 3.43158221
+            Roll: -12.4489136
           }
           Scale {
             X: 0.0109170647
@@ -470,13 +470,13 @@ Assets {
         Transform {
           Location {
             X: 12.1289063
-            Y: 6.1328125
-            Z: -24.9951172
+            Y: 6.15234375
+            Z: 36.3232422
           }
           Rotation {
             Pitch: -3.0055542
             Yaw: -17.0715332
-            Roll: -14.8464966
+            Roll: -14.8465271
           }
           Scale {
             X: 0.00950869825
@@ -791,8 +791,8 @@ Assets {
         Transform {
           Location {
             X: -8.57421875
-            Y: 8.06640625
-            Z: -24.9951172
+            Y: 8.0859375
+            Z: 36.3232422
           }
           Rotation {
             Pitch: -4.69589233
@@ -1112,8 +1112,8 @@ Assets {
         Transform {
           Location {
             X: -14.21875
-            Y: 26.6015625
-            Z: -31.2207031
+            Y: 26.6210938
+            Z: 30.0976563
           }
           Rotation {
             Pitch: -4.31131

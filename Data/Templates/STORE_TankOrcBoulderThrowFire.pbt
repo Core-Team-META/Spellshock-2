@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 3038388280380942555
         WantsNetworking: true
         Collidable_v2 {
@@ -86,7 +86,7 @@ Assets {
         Name: "Rock 03"
         Transform {
           Location {
-            Z: 6.87890625
+            Z: 68.1982422
           }
           Rotation {
           }
@@ -134,7 +134,7 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            Z: -56.9765625
+            Z: 4.3359375
           }
           Rotation {
             Yaw: -179.999969

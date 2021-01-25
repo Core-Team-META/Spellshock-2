@@ -47,6 +47,22 @@ Objects {
   ChildIds: 14493132290779803639
   ChildIds: 13833948934020580939
   ChildIds: 6408905260295144167
+  ChildIds: 17614246485239672850
+  ChildIds: 16348571654364691735
+  ChildIds: 9411285042508520408
+  ChildIds: 3929267959202477414
+  ChildIds: 6908700123423512477
+  ChildIds: 17895816693172876961
+  ChildIds: 4276410697137418747
+  ChildIds: 3739216199135642556
+  ChildIds: 14051251867355227241
+  ChildIds: 5187039859187737225
+  ChildIds: 8037206047070415896
+  ChildIds: 5690668345450459331
+  ChildIds: 6823510911642807350
+  ChildIds: 11279401135197223272
+  ChildIds: 15856381905228816930
+  ChildIds: 17608075414726458275
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -55,6 +71,1190 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 17608075414726458275
+  Name: "STORE_HunterElfCostumeRare"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Rare Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERELFCOSTUMERARE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4342432449545971391
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 15856381905228816930
+  Name: "STORE_HunterOrcCostumeRare"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Rare Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERORCCOSTUMERARE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 174155639706240155
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 11279401135197223272
+  Name: "STORE_HunterOrcCostumeEpic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERORCCOSTUMEEPIC"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 17109881192568858526
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6823510911642807350
+  Name: "STORE_HunterElfCostumeEpic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERELFCOSTUMEEPIC"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 1747841798671645204
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 5690668345450459331
+  Name: "STORE_HunterElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERELFCOSTUMELEGENDARY"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 1453546943157492303
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 8037206047070415896
+  Name: "STORE_HunterOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERORCCOSTUMELEGENDARY"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 10716214664751823333
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 5187039859187737225
+  Name: "STORE_HunterOrcCostumeFire"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Fire Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERORCCOSTUMEFIRE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 6576685640446495568
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14051251867355227241
+  Name: "STORE_HunterElfCostumeFrost"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Frost Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "HUNTERELFCOSTUMEFROST"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3941906157023332887
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3739216199135642556
+  Name: "STORE_MageElfCostumeRare"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Rare Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEELFCOSTUMERARE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3216325290225775465
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 4276410697137418747
+  Name: "STORE_MageOrcCostumeRare"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Rare Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEORCCOSTUMERARE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 16790948681181480696
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17895816693172876961
+  Name: "STORE_MageOrcCostumeEpic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEORCCOSTUMEEPIC"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 16121741689753837393
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6908700123423512477
+  Name: "STORE_MageElfCostumeEpic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEELFCOSTUMEEPIC"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 242662362910603305
+      }
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3929267959202477414
+  Name: "STORE_MageElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEELFCOSTUMELEGENDARY"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 601593399694631930
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 9411285042508520408
+  Name: "STORE_MageOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEORCCOSTUMELEGENDARY"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13686905645483775050
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 16348571654364691735
+  Name: "STORE_MageOrcCostumeFire"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Fire Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEORCCOSTUMEFIRE"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13527897414884290774
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17614246485239672850
+  Name: "STORE_MageElfCostumeFrost"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Frost Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "MAGEELFCOSTUMEFROST"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 8043111153345216687
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:CurrencyResourceName"
+      String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
   }
 }
 Objects {
@@ -78,7 +1278,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Elf Costume"
+      String: "Rare Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -86,7 +1286,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -98,7 +1298,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -109,6 +1309,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -144,7 +1348,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Orc Costume"
+      String: "Rare Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -152,7 +1356,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -164,7 +1368,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -175,6 +1379,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -210,7 +1418,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Orc Costume"
+      String: "Epic Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -218,7 +1426,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -230,7 +1438,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -241,6 +1449,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -276,7 +1488,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Elf Costume"
+      String: "Epic Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -284,7 +1496,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -296,7 +1508,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -307,6 +1519,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -342,7 +1558,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Elf Costume"
+      String: "Legendary Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -350,7 +1566,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -362,7 +1578,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -381,6 +1597,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -416,7 +1636,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Orc Costume"
+      String: "Legendary Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -424,7 +1644,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -436,7 +1656,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -455,6 +1675,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -490,7 +1714,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Orc Costume"
+      String: "Fire Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -498,7 +1722,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -510,7 +1734,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -529,6 +1753,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -564,7 +1792,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Tank Elf Costume"
+      String: "Frost Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -572,7 +1800,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -584,7 +1812,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -603,6 +1831,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -638,7 +1870,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Elf Costume"
+      String: "Rare Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -646,7 +1878,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -658,7 +1890,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -669,6 +1901,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -704,7 +1940,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Orc Costume"
+      String: "Rare Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -712,7 +1948,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -724,7 +1960,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -735,6 +1971,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -770,7 +2010,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Orc Costume"
+      String: "Epic Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -778,7 +2018,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -790,7 +2030,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -801,6 +2041,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -836,7 +2080,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Elf Costume"
+      String: "Epic Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -844,7 +2088,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -856,7 +2100,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -867,6 +2111,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -902,7 +2150,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Elf Costume"
+      String: "Legendary Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -910,7 +2158,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -922,7 +2170,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -941,6 +2189,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -976,7 +2228,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Orc Costume"
+      String: "Legendary Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -984,7 +2236,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -996,7 +2248,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1015,6 +2267,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1050,7 +2306,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Orc Costume"
+      String: "Fire Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -1058,7 +2314,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1070,12 +2326,12 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 391006820139421947
+        Id: 4608858167394329527
       }
     }
     Overrides {
@@ -1089,6 +2345,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1124,7 +2384,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Healer Elf Costume"
+      String: "Frost Healer"
     }
     Overrides {
       Name: "cs:ID"
@@ -1132,7 +2392,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1144,7 +2404,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1163,6 +2423,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1198,7 +2462,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Elf Costume"
+      String: "Rare Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1206,7 +2470,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1218,7 +2482,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1237,6 +2501,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1272,7 +2540,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Orc Costume"
+      String: "Rare Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1280,7 +2548,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1292,7 +2560,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1311,6 +2579,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1346,7 +2618,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Orc Costume"
+      String: "Epic Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1354,7 +2626,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1366,7 +2638,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1377,6 +2649,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1412,7 +2688,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Elf Costume"
+      String: "Epic Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1420,7 +2696,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1432,7 +2708,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1443,6 +2719,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1478,7 +2758,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Elf Costume"
+      String: "Legendary Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1486,7 +2766,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1498,7 +2778,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1509,6 +2789,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1544,7 +2828,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Orc Costume"
+      String: "Legendary Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1552,7 +2836,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 30
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1564,7 +2848,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1575,6 +2859,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1610,7 +2898,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Orc Costume"
+      String: "Fire Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1618,7 +2906,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1630,7 +2918,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1649,6 +2937,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -1684,7 +2976,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Assassin Elf Costume"
+      String: "Frost Assassin"
     }
     Overrides {
       Name: "cs:ID"
@@ -1692,7 +2984,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1704,7 +2996,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "Head"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1723,6 +3015,10 @@ Objects {
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1766,7 +3062,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1778,7 +3074,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1792,11 +3088,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1840,7 +3140,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1852,7 +3152,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1866,11 +3166,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1914,7 +3218,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -1926,7 +3230,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -1940,11 +3244,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -1988,7 +3296,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -2000,7 +3308,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -2014,11 +3322,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
     }
   }
   Collidable_v2 {
@@ -2062,7 +3374,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -2074,7 +3386,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -2088,11 +3400,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -2136,7 +3452,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -2148,7 +3464,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -2162,11 +3478,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -2210,7 +3530,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -2222,7 +3542,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -2236,11 +3556,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
@@ -2284,7 +3608,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 25
+      Int: 20
     }
     Overrides {
       Name: "cs:Tags"
@@ -2296,7 +3620,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ZoomView"
-      String: ""
+      String: "LowerBody"
     }
     Overrides {
       Name: "cs:MUID"
@@ -2310,11 +3634,15 @@ Objects {
     }
     Overrides {
       Name: "cs:PlayerVisibility"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:CurrencyResourceName"
       String: "gems"
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
     }
   }
   Collidable_v2 {
