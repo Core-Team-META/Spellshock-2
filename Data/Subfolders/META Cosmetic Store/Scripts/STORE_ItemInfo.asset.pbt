@@ -13,6 +13,10 @@ Assets {
         String: "Dummy Item"
       }
       Overrides {
+        Name: "cs:Team"
+        String: ""
+      }
+      Overrides {
         Name: "cs:ID"
         String: "DummyID"
       }
