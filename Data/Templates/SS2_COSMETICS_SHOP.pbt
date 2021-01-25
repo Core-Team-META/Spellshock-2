@@ -90,10 +90,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:StoreContentsFolderName"
-            String: "STORE_StoreContents"
-          }
-          Overrides {
             Name: "cs:StoreCurrenciesFolder"
             String: "STORE_CurrencyDefinitions"
           }
@@ -136,6 +132,12 @@ Assets {
           Overrides {
             Name: "cs:SubscriptionTagName"
             String: "VIP"
+          }
+          Overrides {
+            Name: "cs:StoreContents"
+            ObjectReference {
+              SelfId: 13822426573499217334
+            }
           }
           Overrides {
             Name: "cs:KeepSubscriptionCosmetics:tooltip"
@@ -12277,22 +12279,38 @@ Assets {
           }
         }
         ParentId: 16136235253929035173
-        ChildIds: 4560243893547307394
-        ChildIds: 8005657090363409298
-        ChildIds: 7715568961527011393
-        ChildIds: 7847465570258936014
-        ChildIds: 10902155891744061298
-        ChildIds: 10190771807177535156
-        ChildIds: 8321778430408177081
-        ChildIds: 15762532738155236016
-        ChildIds: 8063797007371447738
-        ChildIds: 2220901105700745058
-        ChildIds: 5312676330464097393
-        ChildIds: 17762059659102840178
-        ChildIds: 3041733376865016389
-        ChildIds: 14628515005205733392
-        ChildIds: 2080612829536033497
-        ChildIds: 15899795728895340551
+        ChildIds: 11789139647005552127
+        ChildIds: 17262767416037837413
+        ChildIds: 12115927054642532711
+        ChildIds: 15045036186051864848
+        ChildIds: 1813454367057259178
+        ChildIds: 17509290557834216283
+        ChildIds: 7968176165666561886
+        ChildIds: 4407897873520431958
+        ChildIds: 17701629748234081658
+        ChildIds: 14557759051169688255
+        ChildIds: 10826405104114965909
+        ChildIds: 17709340463995396550
+        ChildIds: 3868209082876425727
+        ChildIds: 12397588516204193560
+        ChildIds: 4586712809964963651
+        ChildIds: 3485869680221706837
+        ChildIds: 2001433867705219758
+        ChildIds: 4051290318265557086
+        ChildIds: 11369687855457707330
+        ChildIds: 17408698614820779426
+        ChildIds: 16292678235879642127
+        ChildIds: 2965830900939516940
+        ChildIds: 6823553813837186282
+        ChildIds: 16892971147556679939
+        ChildIds: 13266675580800187683
+        ChildIds: 7497703436561262681
+        ChildIds: 11141203980341996662
+        ChildIds: 12199508386218615453
+        ChildIds: 3317779334782824046
+        ChildIds: 3574926087769049362
+        ChildIds: 16345437475465350966
+        ChildIds: 4865772047157783404
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -12305,7 +12323,79 @@ Assets {
         }
       }
       Objects {
-        Id: 4560243893547307394
+        Id: 11789139647005552127
+        Name: "STORE_TankOrcStoneWallFire"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Orc StoneWall Fire"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKORCSTONEWALLFIRE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Ability"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "LowerBody"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 3597073966590162922
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 17262767416037837413
         Name: "STORE_TankOrcBoulderThrowFire"
         Transform {
           Location {
@@ -12377,7 +12467,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8005657090363409298
+        Id: 12115927054642532711
         Name: "STORE_TankOrcRockStrikeFire"
         Transform {
           Location {
@@ -12415,7 +12505,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12449,7 +12539,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7715568961527011393
+        Id: 15045036186051864848
         Name: "STORE_TankOrcShieldDashFire"
         Transform {
           Location {
@@ -12487,7 +12577,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12521,7 +12611,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7847465570258936014
+        Id: 1813454367057259178
         Name: "STORE_TankElfStoneWallFrost"
         Transform {
           Location {
@@ -12559,7 +12649,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12593,79 +12683,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10902155891744061298
-        Name: "STORE_TankOrcStoneWallFire"
-        Transform {
-          Location {
-            Y: -0.001953125
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18182946945917466890
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Tank Orc StoneWall Fire"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "TANKORCSTONEWALLFIRE"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 25
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Tank"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Ability"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 3597073966590162922
-            }
-          }
-          Overrides {
-            Name: "cs:Info"
-            String: "Mouseover For Info"
-          }
-          Overrides {
-            Name: "cs:PlayerVisibility"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gems"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 10190771807177535156
+        Id: 17509290557834216283
         Name: "STORE_TankElfBoulderThrowFrost"
         Transform {
           Location {
@@ -12703,7 +12721,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12737,7 +12755,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8321778430408177081
+        Id: 7968176165666561886
         Name: "STORE_TankElfRockStrikeFrost"
         Transform {
           Location {
@@ -12775,7 +12793,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12809,7 +12827,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15762532738155236016
+        Id: 4407897873520431958
         Name: "STORE_TankElfShieldDashFrost"
         Transform {
           Location {
@@ -12847,7 +12865,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "LowerBody"
           }
           Overrides {
             Name: "cs:MUID"
@@ -12881,71 +12899,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8063797007371447738
-        Name: "STORE_AssassinElfCostumeEpic"
-        Transform {
-          Location {
-            Y: -0.001953125
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18182946945917466890
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Assassin Elf Costume"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "ASSASSINELFCOSTUMEEPIC"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 30
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Assassin"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Outfit"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 1403404499257704310
-            }
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gems"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 2220901105700745058
+        Id: 17701629748234081658
         Name: "STORE_AssassinElfCostumeFrost"
         Transform {
           Location {
@@ -12983,7 +12937,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
@@ -13017,71 +12971,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5312676330464097393
-        Name: "STORE_AssassinOrcCostumeEpic"
-        Transform {
-          Location {
-            Y: -0.001953125
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18182946945917466890
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:StoreName"
-            String: "Assassin Orc Costume"
-          }
-          Overrides {
-            Name: "cs:ID"
-            String: "ASSASSINORCCOSTUMEEPIC"
-          }
-          Overrides {
-            Name: "cs:Cost"
-            Int: 30
-          }
-          Overrides {
-            Name: "cs:Tags"
-            String: "Assassin"
-          }
-          Overrides {
-            Name: "cs:Types"
-            String: "Outfit"
-          }
-          Overrides {
-            Name: "cs:ZoomView"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:MUID"
-            AssetReference {
-              Id: 2860333127380789030
-            }
-          }
-          Overrides {
-            Name: "cs:CurrencyResourceName"
-            String: "gems"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5461895297082359166
-          }
-        }
-      }
-      Objects {
-        Id: 17762059659102840178
+        Id: 14557759051169688255
         Name: "STORE_AssassinOrcCostumeFire"
         Transform {
           Location {
@@ -13119,7 +13009,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
@@ -13153,8 +13043,8 @@ Assets {
         }
       }
       Objects {
-        Id: 3041733376865016389
-        Name: "STORE_HealerOrcCostumeFire"
+        Id: 10826405104114965909
+        Name: "STORE_AssassinOrcCostumeLegendary"
         Transform {
           Location {
             Y: -0.001953125
@@ -13171,19 +13061,19 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:StoreName"
-            String: "Healer Orc Costume"
+            String: "Assassin Orc Costume"
           }
           Overrides {
             Name: "cs:ID"
-            String: "HEALERORCCOSTUMEFIRE"
+            String: "ASSASSINORCCOSTUMELEGENDARY"
           }
           Overrides {
             Name: "cs:Cost"
-            Int: 25
+            Int: 30
           }
           Overrides {
             Name: "cs:Tags"
-            String: "Healer"
+            String: "Assassin"
           }
           Overrides {
             Name: "cs:Types"
@@ -13191,12 +13081,268 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 391006820139421947
+              Id: 15182184640494259521
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 17709340463995396550
+        Name: "STORE_AssassinElfCostumeLegendary"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Assassin Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "ASSASSINELFCOSTUMELEGENDARY"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Assassin"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 13654207909089287810
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 3868209082876425727
+        Name: "STORE_AssassinElfCostumeEpic"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Assassin Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "ASSASSINELFCOSTUMEEPIC"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Assassin"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 1403404499257704310
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 12397588516204193560
+        Name: "STORE_AssassinOrcCostumeEpic"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Assassin Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "ASSASSINORCCOSTUMEEPIC"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Assassin"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 2860333127380789030
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 4586712809964963651
+        Name: "STORE_AssassinOrcCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Assassin Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "ASSASSINORCCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Assassin"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 11905656053057602774
             }
           }
           Overrides {
@@ -13225,7 +13371,79 @@ Assets {
         }
       }
       Objects {
-        Id: 14628515005205733392
+        Id: 3485869680221706837
+        Name: "STORE_AssassinElfCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Assassin Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "ASSASSINELFCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Assassin"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 3010480918737894383
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 2001433867705219758
         Name: "STORE_HealerElfCostumeFrost"
         Transform {
           Location {
@@ -13263,12 +13481,12 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 5394791983193798307
+              Id: 3711299298965877483
             }
           }
           Overrides {
@@ -13297,7 +13515,223 @@ Assets {
         }
       }
       Objects {
-        Id: 2080612829536033497
+        Id: 4051290318265557086
+        Name: "STORE_HealerOrcCostumeFire"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Healer Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "HEALERORCCOSTUMEFIRE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Healer"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 391006820139421947
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 11369687855457707330
+        Name: "STORE_HealerOrcCostumeLegendary"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Healer Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "HEALERORCCOSTUMELEGENDARY"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Healer"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 2362225133279161332
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 17408698614820779426
+        Name: "STORE_HealerElfCostumeLegendary"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Healer Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "HEALERELFCOSTUMELEGENDARY"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Healer"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 1553787859656583436
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 16292678235879642127
         Name: "STORE_HealerElfCostumeEpic"
         Transform {
           Location {
@@ -13335,12 +13769,12 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 1403404499257704310
+              Id: 7046404805608648903
             }
           }
           Overrides {
@@ -13361,7 +13795,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15899795728895340551
+        Id: 2965830900939516940
         Name: "STORE_HealerOrcCostumeEpic"
         Transform {
           Location {
@@ -13399,12 +13833,684 @@ Assets {
           }
           Overrides {
             Name: "cs:ZoomView"
-            String: ""
+            String: "Head"
           }
           Overrides {
             Name: "cs:MUID"
             AssetReference {
-              Id: 2860333127380789030
+              Id: 16181789164175594017
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 6823553813837186282
+        Name: "STORE_HealerOrcCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Healer Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "HEALERORCCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Healer"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 18148878585261730907
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 16892971147556679939
+        Name: "STORE_HealerElfCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Healer Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "HEALERELFCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Healer"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 11072531370415895459
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 13266675580800187683
+        Name: "STORE_TankElfCostumeFrost"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKELFCOSTUMEFROST"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 2587376687102126928
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 7497703436561262681
+        Name: "STORE_TankOrcCostumeFire"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKORCCOSTUMEFIRE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 10111260506252562499
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 11141203980341996662
+        Name: "STORE_TankOrcCostumeLegendary"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKORCCOSTUMELEGENDARY"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 7483364902131033518
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 12199508386218615453
+        Name: "STORE_TankElfCostumeLegendary"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKELFCOSTUMELEGENDARY"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 7801033221654521675
+            }
+          }
+          Overrides {
+            Name: "cs:Info"
+            String: "Mouseover For Info"
+          }
+          Overrides {
+            Name: "cs:PlayerVisibility"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 3317779334782824046
+        Name: "STORE_TankElfCostumeEpic"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKELFCOSTUMEEPIC"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 4749402639707591408
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 3574926087769049362
+        Name: "STORE_TankOrcCostumeEpic"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKORCCOSTUMEEPIC"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 13121404178247294828
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 16345437475465350966
+        Name: "STORE_TankOrcCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Orc Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKORCCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 16050518157234755672
+            }
+          }
+          Overrides {
+            Name: "cs:CurrencyResourceName"
+            String: "gems"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5461895297082359166
+          }
+        }
+      }
+      Objects {
+        Id: 4865772047157783404
+        Name: "STORE_TankElfCostumeRare"
+        Transform {
+          Location {
+            Y: -0.001953125
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18182946945917466890
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:StoreName"
+            String: "Tank Elf Costume"
+          }
+          Overrides {
+            Name: "cs:ID"
+            String: "TANKELFCOSTUMERARE"
+          }
+          Overrides {
+            Name: "cs:Cost"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Tags"
+            String: "Tank"
+          }
+          Overrides {
+            Name: "cs:Types"
+            String: "Outfit"
+          }
+          Overrides {
+            Name: "cs:ZoomView"
+            String: "Head"
+          }
+          Overrides {
+            Name: "cs:MUID"
+            AssetReference {
+              Id: 16382017523589552416
             }
           }
           Overrides {

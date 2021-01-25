@@ -49,8 +49,7 @@ local uiNextButton = propPageNextButton:FindChildByType("UIButton")
 local propStoreCurrenciesFolderName = propStoreRoot:GetCustomProperty("StoreCurrenciesFolder")
 local propStoreCurrencies = World.GetRootObject():FindDescendantByName(propStoreCurrenciesFolderName)
 
-local propStoreContentsFolderName = propStoreRoot:GetCustomProperty("StoreContentsFolderName")
-local propStoreContents = World.GetRootObject():FindDescendantByName(propStoreContentsFolderName)
+local propStoreContents = propStoreRoot:GetCustomProperty("StoreContents"):WaitForObject()
 
 local propStoreTagsFolder = propStoreRoot:GetCustomProperty("StoreTagsFolder")
 local propTagDefinitions = World.GetRootObject():FindDescendantByName(propStoreTagsFolder)
@@ -829,6 +828,7 @@ function PopulateStore(direction)
 		local propRarityOverlay = newOverlay:GetCustomProperty("PriceOverlay"):WaitForObject()
 		local propVIPImage = newOverlay:GetCustomProperty("VIPImage"):WaitForObject()
 		local propCurrencySymbol = newOverlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
+		local propTeamName = newOverlay:GetCustomProperty("TeamName"):WaitForObject()
 
 		for _, c in pairs(Currencies) do
 			if v.currencyName == c.resource then
@@ -868,6 +868,11 @@ function PopulateStore(direction)
 
 		-- Set item name
 		propItemName.text = v.name
+		if v.teamName == "Orc" then
+			propTeamName.text = "Dark Devout"
+		else
+			propTeamName.text = "Legen of Light"
+		end
 
 		if partOfSubscription then
 			propPrice.text = propSubscriptionName
@@ -1042,6 +1047,7 @@ function InitStore()
 		local storeInfo = v
 		if storeInfo ~= nil then
 			local propStoreName = storeInfo:GetCustomProperty("StoreName")
+			local propTeamName = storeInfo:GetCustomProperty("Team")
 			local propID = storeInfo:GetCustomProperty("ID")
 			local propCost = storeInfo:GetCustomProperty("Cost")
 			local propCurrencyName = storeInfo:GetCustomProperty("CurrencyResourceName")
@@ -1079,6 +1085,7 @@ function InitStore()
 
 			local entry = {
 				name = propStoreName,
+				teamName = propTeamName,
 				id = propID,
 				cost = propCost,
 				currencyName = propCurrencyName,

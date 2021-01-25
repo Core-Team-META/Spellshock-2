@@ -23,6 +23,7 @@ Assets {
         ChildIds: 13160699268130470060
         ChildIds: 1935541717091752298
         ChildIds: 2594391602656768132
+        ChildIds: 2898606390466801523
         ChildIds: 14149949894093164750
         UnregisteredParameters {
           Overrides {
@@ -73,6 +74,12 @@ Assets {
               SubObjectId: 4468370219568870368
             }
           }
+          Overrides {
+            Name: "cs:TeamName"
+            ObjectReference {
+              SubObjectId: 2898606390466801523
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -83,8 +90,8 @@ Assets {
         Control {
           Width: 245
           Height: 370
-          UIX: 865
-          UIY: 345
+          UIX: 1100
+          UIY: 645
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1383,6 +1390,66 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:topright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2898606390466801523
+        Name: "Team Name"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15017360723897601218
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: -31
+          Height: 30
+          UIY: -50
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          Text {
+            Label: "Legion of Light"
+            Color {
+              R: 1
+              G: 0.742649
+              B: 0.420000017
+              A: 1
+            }
+            Size: 16
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
               }
             }
           }

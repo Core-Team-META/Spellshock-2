@@ -21,8 +21,7 @@ local propKeepSubscriptionCosmetics = propStoreRoot:GetCustomProperty("KeepSubsc
 local propAllowSubscriptionPurchase = propStoreRoot:GetCustomProperty("AllowSubscriptionPurchase")
 local propSubscriptionTagName = propStoreRoot:GetCustomProperty("SubscriptionTagName")
 
-local propStoreContentsFolderName = propStoreRoot:GetCustomProperty("StoreContentsFolderName")
-local propStoreContents = World.GetRootObject():FindDescendantByName(propStoreContentsFolderName)
+local propStoreContents = propStoreRoot:GetCustomProperty("StoreContents"):WaitForObject()
 
 local propStoreCurrenciesFolderName = propStoreRoot:GetCustomProperty("StoreCurrenciesFolder")
 local propStoreCurrencies = World.GetRootObject():FindDescendantByName(propStoreCurrenciesFolderName)
