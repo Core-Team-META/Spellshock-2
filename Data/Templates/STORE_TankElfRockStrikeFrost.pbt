@@ -43,10 +43,11 @@ Assets {
           }
         }
         ParentId: 15579090742456907965
-        ChildIds: 14836890508739460256
         ChildIds: 12233739226106800034
         ChildIds: 7672289149381426758
+        ChildIds: 5192693045972958391
         ChildIds: 8989016220231117644
+        ChildIds: 14836890508739460256
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -58,81 +59,23 @@ Assets {
         }
       }
       Objects {
-        Id: 14836890508739460256
-        Name: "Hill 02"
-        Transform {
-          Location {
-            X: -37.7734375
-            Z: -42.8710938
-          }
-          Rotation {
-            Pitch: -9.74295
-          }
-          Scale {
-            X: 0.237341613
-            Y: 0.302414656
-            Z: 0.344703674
-          }
-        }
-        ParentId: 4251404975037943881
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2148407408977013770
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.796875
-              G: 0.610107422
-              B: 0.610107422
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14270419193600238466
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
         Id: 12233739226106800034
-        Name: "RockWall"
+        Name: "RockStrike"
         Transform {
           Location {
-            X: 6.26953125
-            Y: -25.3125
-            Z: -17.7734375
+            X: 20.1171875
+            Y: 1.26953125
+            Z: -22.8417969
           }
           Rotation {
-            Roll: -11.7349243
+            Pitch: -1.37426758
+            Yaw: 3.43158078
+            Roll: -12.4488525
           }
           Scale {
-            X: 0.017040113
-            Y: 0.017040113
-            Z: 0.017040113
+            X: 0.0109170638
+            Y: 0.0109170638
+            Z: 0.0109170638
           }
         }
         ParentId: 4251404975037943881
@@ -438,22 +381,22 @@ Assets {
       }
       Objects {
         Id: 7672289149381426758
-        Name: "RockWall"
+        Name: "RockStrike"
         Transform {
           Location {
-            X: -6.6015625
-            Y: 9.53125
-            Z: -20.6933594
+            X: 3.30078125
+            Y: 20.1953125
+            Z: -24.9951172
           }
           Rotation {
-            Pitch: 5.13902044
-            Yaw: 24.2965164
-            Roll: -11.2225647
+            Pitch: -3.0055542
+            Yaw: -17.0715332
+            Roll: -14.8464661
           }
           Scale {
-            X: 0.0118902698
-            Y: 0.0118902698
-            Z: 0.0118902698
+            X: 0.00950869825
+            Y: 0.00950869825
+            Z: 0.00950869825
           }
         }
         ParentId: 4251404975037943881
@@ -758,23 +701,344 @@ Assets {
         }
       }
       Objects {
-        Id: 8989016220231117644
-        Name: "RockWall"
+        Id: 5192693045972958391
+        Name: "RockStrike"
         Transform {
           Location {
-            X: -27.2265625
-            Y: 30.3710938
-            Z: -20.6933594
+            X: -17.4023438
+            Y: 22.1289063
+            Z: -24.9951172
           }
           Rotation {
-            Pitch: 0.309018224
-            Yaw: 24.7997169
-            Roll: -0.66885376
+            Pitch: -4.69589233
+            Yaw: -34.5256348
+            Roll: -17.3013611
           }
           Scale {
-            X: 0.0082434481
-            Y: 0.0082434481
-            Z: 0.0082434481
+            X: 0.00802156515
+            Y: 0.00802156515
+            Z: 0.00802156515
+          }
+        }
+        ParentId: 4251404975037943881
+        ChildIds: 9843039492683225639
+        ChildIds: 13077508054397032297
+        ChildIds: 3791578782030300964
+        ChildIds: 817197171116117800
+        ChildIds: 2977405187584871227
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9843039492683225639
+        Name: "Urban Brick Debris 05"
+        Transform {
+          Location {
+            X: -526.875
+            Y: 275.234375
+            Z: 690.97168
+          }
+          Rotation {
+            Pitch: -0.573120117
+            Yaw: 113.838768
+            Roll: -100.568512
+          }
+          Scale {
+            X: 66.0801697
+            Y: 294.748474
+            Z: 67.7687912
+          }
+        }
+        ParentId: 5192693045972958391
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1.56595826
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 2.19377446
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13124452396836071645
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13077508054397032297
+        Name: "Urban Brick Debris 05"
+        Transform {
+          Location {
+            X: 32.3046875
+            Y: 1112.83203
+            Z: 395.322266
+          }
+          Rotation {
+            Pitch: 17.3490276
+            Yaw: -87.7125549
+            Roll: -94.6242065
+          }
+          Scale {
+            X: 46.09095
+            Y: 205.587143
+            Z: 47.2687645
+          }
+        }
+        ParentId: 5192693045972958391
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.79791528
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1.66494739
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13124452396836071645
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3791578782030300964
+        Name: "Urban Brick Debris 05"
+        Transform {
+          Location {
+            X: 30.875
+            Y: 140.40625
+            Z: 130.785156
+          }
+          Rotation {
+            Pitch: -6.71472168
+            Yaw: -137.919159
+            Roll: 90.7511368
+          }
+          Scale {
+            X: 54.143322
+            Y: -148.034821
+            Z: 55.526989
+          }
+        }
+        ParentId: 5192693045972958391
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1.22545922
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1.66494739
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13124452396836071645
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 817197171116117800
+        Name: "Urban Brick Debris 05"
+        Transform {
+          Location {
+            X: 30.8789063
+            Y: 893.984375
+            Z: -227.8125
+          }
+          Rotation {
+            Pitch: -172.377258
+            Yaw: -51.2878723
+            Roll: 75.2766724
+          }
+          Scale {
+            X: 95.946907
+            Y: 148.035
+            Z: 61.6662903
+          }
+        }
+        ParentId: 5192693045972958391
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.62441808
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.773831904
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13124452396836071645
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2977405187584871227
+        Name: "Urban Brick Debris 05"
+        Transform {
+          Location {
+            X: 48.6328125
+            Y: -391.914063
+            Z: -227.8125
+          }
+          Rotation {
+            Pitch: -7.62271118
+            Yaw: -90.1062317
+            Roll: -104.724152
+          }
+          Scale {
+            X: 70.8882751
+            Y: 109.372414
+            Z: 45.5607872
+          }
+        }
+        ParentId: 5192693045972958391
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.62441808
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.848353863
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13124452396836071645
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8989016220231117644
+        Name: "RockStrike"
+        Transform {
+          Location {
+            X: -23.046875
+            Y: 40.6640625
+            Z: -31.2207031
+          }
+          Rotation {
+            Pitch: -4.31131
+            Yaw: -30.9311218
+            Roll: -7.98266602
+          }
+          Scale {
+            X: 0.00662601087
+            Y: 0.00662601087
+            Z: 0.00662601087
           }
         }
         ParentId: 4251404975037943881
@@ -1078,23 +1342,64 @@ Assets {
           }
         }
       }
-    }
-    Assets {
-      Id: 14270419193600238466
-      Name: "Hill 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_hill_002"
-      }
-    }
-    Assets {
-      Id: 2148407408977013770
-      Name: "Grass Clumps"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_002_uv"
+      Objects {
+        Id: 14836890508739460256
+        Name: "Hill 02"
+        Transform {
+          Location {
+            Z: -56.9775391
+          }
+          Rotation {
+            Yaw: 180
+          }
+          Scale {
+            X: 0.237341613
+            Y: 0.237844348
+            Z: 0.324557096
+          }
+        }
+        ParentId: 4251404975037943881
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2148407408977013770
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8828521707055617985
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
       }
     }
     Assets {
@@ -1104,6 +1409,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_prop_urban_destruction_debris_brick_05_ref"
+      }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
+      }
+    }
+    Assets {
+      Id: 2148407408977013770
+      Name: "Grass Clumps"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_002_uv"
       }
     }
     PrimaryAssetId {

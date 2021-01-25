@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 3038388280380942555
         WantsNetworking: true
         Collidable_v2 {
@@ -44,6 +44,7 @@ Assets {
         }
         ParentId: 18226309135745434178
         ChildIds: 12631759395367104141
+        ChildIds: 5791435178512847905
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -56,22 +57,19 @@ Assets {
       }
       Objects {
         Id: 12631759395367104141
-        Name: "root"
+        Name: "Boulder"
         Transform {
           Location {
-            X: -37.7734375
-            Z: -42.8710938
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.1
+            Y: 0.1
+            Z: 0.1
           }
         }
         ParentId: 3038388280380942555
-        ChildIds: 5791435178512847905
         ChildIds: 13503640393779141666
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84,21 +82,70 @@ Assets {
         }
       }
       Objects {
+        Id: 13503640393779141666
+        Name: "Rock 03"
+        Transform {
+          Location {
+            Z: 68.7988281
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.21325755
+            Y: 3.21325755
+            Z: 3.21325755
+          }
+        }
+        ParentId: 12631759395367104141
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17763375775449008280
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
         Id: 5791435178512847905
         Name: "Hill 02"
         Transform {
           Location {
+            Z: -56.9775391
           }
           Rotation {
-            Pitch: -9.74294376
+            Yaw: 180
           }
           Scale {
             X: 0.237341613
-            Y: 0.302414656
-            Z: 0.344703674
+            Y: 0.237844348
+            Z: 0.324557096
           }
         }
-        ParentId: 12631759395367104141
+        ParentId: 3038388280380942555
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -128,7 +175,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 14270419193600238466
+            Id: 8828521707055617985
           }
           Teams {
           }
@@ -141,64 +188,23 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 13503640393779141666
-        Name: "Rock 03"
-        Transform {
-          Location {
-            X: 37.7734375
-            Z: 46.3720703
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.260088235
-            Y: 0.260088235
-            Z: 0.260088235
-          }
-        }
-        ParentId: 12631759395367104141
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17763375775449008280
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6981536508008379085
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
     }
     Assets {
-      Id: 14270419193600238466
-      Name: "Hill 02"
+      Id: 6981536508008379085
+      Name: "Rock 03"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_hill_002"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
       }
     }
     Assets {
@@ -208,15 +214,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_sand_001_uv"
-      }
-    }
-    Assets {
-      Id: 6981536508008379085
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
       }
     }
     PrimaryAssetId {
