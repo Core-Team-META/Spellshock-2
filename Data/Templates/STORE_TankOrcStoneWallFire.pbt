@@ -44,7 +44,6 @@ Assets {
         }
         ParentId: 12935646335962544054
         ChildIds: 11541692836675174762
-        ChildIds: 13770318144092291975
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -57,7 +56,7 @@ Assets {
       }
       Objects {
         Id: 11541692836675174762
-        Name: "StoneWall"
+        Name: "root"
         Transform {
           Location {
           }
@@ -73,6 +72,7 @@ Assets {
         ChildIds: 6963656021765393741
         ChildIds: 4658329236085367599
         ChildIds: 15087267579009969
+        ChildIds: 13770318144092291975
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -544,18 +544,18 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            Z: -56.9775391
+            Z: -569.775391
           }
           Rotation {
-            Yaw: 180
+            Yaw: -179.999985
           }
           Scale {
-            X: 0.237341613
-            Y: 0.237844348
-            Z: 0.324557096
+            X: 2.37341619
+            Y: 2.37844348
+            Z: 3.2455709
           }
         }
-        ParentId: 12812864537761745306
+        ParentId: 11541692836675174762
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

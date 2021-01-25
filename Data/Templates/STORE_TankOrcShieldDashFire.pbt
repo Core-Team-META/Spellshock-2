@@ -44,7 +44,6 @@ Assets {
         }
         ParentId: 12935646335962544054
         ChildIds: 10088707875424276312
-        ChildIds: 6361681950186726288
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -57,7 +56,7 @@ Assets {
       }
       Objects {
         Id: 10088707875424276312
-        Name: "ShieldDash"
+        Name: "root"
         Transform {
           Location {
             X: 21.6210938
@@ -78,6 +77,7 @@ Assets {
         ChildIds: 5464139774645845814
         ChildIds: 13817392904477023619
         ChildIds: 9813426093860302805
+        ChildIds: 6361681950186726288
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -93,19 +93,19 @@ Assets {
         Name: "FarLeftRock"
         Transform {
           Location {
-            X: -627.96875
-            Y: -1487.73438
-            Z: 150
+            X: -627.508423
+            Y: -1487.42749
+            Z: 150.098465
           }
           Rotation {
-            Pitch: -41.4007492
+            Pitch: -41.4007568
             Yaw: 115.846832
             Roll: 134.389572
           }
           Scale {
-            X: 2.32898235
-            Y: 1.72506821
-            Z: 5.17547131
+            X: 2.93680358
+            Y: 2.17527747
+            Z: 6.52616835
           }
         }
         ParentId: 10088707875424276312
@@ -154,19 +154,19 @@ Assets {
         Name: "LeftRock"
         Transform {
           Location {
-            X: 242.03125
-            Y: -1057.73438
-            Z: 150
+            X: 241.44873
+            Y: -1057.4679
+            Z: 150.098465
           }
           Rotation {
-            Pitch: -51.1052971
+            Pitch: -51.1052856
             Yaw: 132.923584
             Roll: 11.2400846
           }
           Scale {
-            X: 2.7
-            Y: 1.9998796
-            Z: 5.99994755
+            X: 3.40464973
+            Y: 2.5218091
+            Z: 7.56581879
           }
         }
         ParentId: 10088707875424276312
@@ -215,19 +215,19 @@ Assets {
         Name: "FarRightRock"
         Transform {
           Location {
-            X: -627.96875
-            Y: 1492.26563
-            Z: 150
+            X: -627.508423
+            Y: 1492.59216
+            Z: 150.098465
           }
           Rotation {
             Pitch: -46.0680542
-            Yaw: -120.382225
+            Yaw: -120.382233
             Roll: -117.582275
           }
           Scale {
-            X: 2.32898235
-            Y: 1.72506821
-            Z: 5.17547131
+            X: 2.93680358
+            Y: 2.17527747
+            Z: 6.52616835
           }
         }
         ParentId: 10088707875424276312
@@ -276,19 +276,19 @@ Assets {
         Name: "RightRock"
         Transform {
           Location {
-            X: 102.03125
-            Y: 892.265625
-            Z: 150
+            X: 102.002403
+            Y: 892.198242
+            Z: 150.098465
           }
           Rotation {
-            Pitch: -49.2194023
+            Pitch: -49.2193909
             Yaw: -131.0354
             Roll: 160.302872
           }
           Scale {
-            X: 2.7
-            Y: 1.9998796
-            Z: 5.99994755
+            X: 3.40464973
+            Y: 2.5218091
+            Z: 7.56581879
           }
         }
         ParentId: 10088707875424276312
@@ -337,18 +337,18 @@ Assets {
         Name: "MidRock"
         Transform {
           Location {
-            X: 902.03125
-            Y: 12.265625
+            X: 902.527588
+            Y: 11.6205273
           }
           Rotation {
-            Pitch: -49.0164223
+            Pitch: -49.0164185
             Yaw: 177.690506
             Roll: -170.03862
           }
           Scale {
-            X: 4
-            Y: 3
-            Z: 10
+            X: 5.04392338
+            Y: 3.78294253
+            Z: 12.609807
           }
         }
         ParentId: 10088707875424276312
@@ -397,18 +397,20 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            Z: -56.9775391
+            X: -1429.32483
+            Y: -25.8233929
+            Z: -2177.88037
           }
           Rotation {
-            Yaw: 180
+            Yaw: -179.999985
           }
           Scale {
-            X: 0.237341613
-            Y: 0.237844348
-            Z: 0.324557096
+            X: 15.6901522
+            Y: 15.7233868
+            Z: 21.4557838
           }
         }
-        ParentId: 12812864537761745306
+        ParentId: 10088707875424276312
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

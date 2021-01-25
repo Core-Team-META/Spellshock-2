@@ -44,7 +44,6 @@ Assets {
         }
         ParentId: 14645162201219312230
         ChildIds: 10646826725264147579
-        ChildIds: 18324238427341888707
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -57,7 +56,7 @@ Assets {
       }
       Objects {
         Id: 10646826725264147579
-        Name: "ShieldDash"
+        Name: "root"
         Transform {
           Location {
             X: 21.6210938
@@ -73,11 +72,12 @@ Assets {
           }
         }
         ParentId: 10401406779247895939
-        ChildIds: 5549865934039885756
+        ChildIds: 18324238427341888707
         ChildIds: 6372540890397247505
         ChildIds: 16072848269079936590
         ChildIds: 9167993496441854406
         ChildIds: 7487486522717774525
+        ChildIds: 5549865934039885756
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -89,23 +89,21 @@ Assets {
         }
       }
       Objects {
-        Id: 5549865934039885756
-        Name: "FarLeftRock"
+        Id: 18324238427341888707
+        Name: "Hill 02"
         Transform {
           Location {
-            X: -627.96875
-            Y: -1487.73438
-            Z: 150
+            X: -1429.32483
+            Y: -25.8233929
+            Z: -2177.88037
           }
           Rotation {
-            Pitch: -41.4007492
-            Yaw: 115.846832
-            Roll: 134.389572
+            Yaw: -179.999954
           }
           Scale {
-            X: 2.32898235
-            Y: 1.72506821
-            Z: 5.17547131
+            X: 15.6901512
+            Y: 15.7233868
+            Z: 21.4557838
           }
         }
         ParentId: 10646826725264147579
@@ -113,7 +111,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 926391387561774024
+              Id: 2148407408977013770
             }
           }
           Overrides {
@@ -121,12 +119,13 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -137,14 +136,15 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1197983536016875073
+            Id: 8828521707055617985
           }
           Teams {
           }
           DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
+              Mass: 100
+              LinearDamping: 0.01
             }
           }
         }
@@ -154,19 +154,19 @@ Assets {
         Name: "LeftRock"
         Transform {
           Location {
-            X: 242.03125
-            Y: -1057.73438
-            Z: 150
+            X: 241.44873
+            Y: -1057.4679
+            Z: 150.098465
           }
           Rotation {
-            Pitch: -51.1052971
-            Yaw: 132.923584
-            Roll: 11.2400846
+            Pitch: -51.1052856
+            Yaw: 132.923599
+            Roll: 11.2401161
           }
           Scale {
-            X: 2.7
-            Y: 1.9998796
-            Z: 5.99994755
+            X: 3.40464902
+            Y: 2.5218091
+            Z: 7.56581879
           }
         }
         ParentId: 10646826725264147579
@@ -215,19 +215,19 @@ Assets {
         Name: "FarRightRock"
         Transform {
           Location {
-            X: -627.96875
-            Y: 1492.26563
-            Z: 150
+            X: -627.508423
+            Y: 1492.59216
+            Z: 150.098465
           }
           Rotation {
             Pitch: -46.0680542
-            Yaw: -120.382225
+            Yaw: -120.382233
             Roll: -117.582275
           }
           Scale {
-            X: 2.32898235
-            Y: 1.72506821
-            Z: 5.17547131
+            X: 2.93680334
+            Y: 2.17527771
+            Z: 6.52616835
           }
         }
         ParentId: 10646826725264147579
@@ -276,19 +276,19 @@ Assets {
         Name: "RightRock"
         Transform {
           Location {
-            X: 102.03125
-            Y: 892.265625
-            Z: 150
+            X: 102.002403
+            Y: 892.198242
+            Z: 150.098465
           }
           Rotation {
-            Pitch: -49.2194023
+            Pitch: -49.2193909
             Yaw: -131.0354
             Roll: 160.302872
           }
           Scale {
-            X: 2.7
-            Y: 1.9998796
-            Z: 5.99994755
+            X: 3.40464902
+            Y: 2.5218091
+            Z: 7.56581879
           }
         }
         ParentId: 10646826725264147579
@@ -337,18 +337,18 @@ Assets {
         Name: "MidRock"
         Transform {
           Location {
-            X: 902.03125
-            Y: 12.265625
+            X: 902.527588
+            Y: 11.6205273
           }
           Rotation {
-            Pitch: -49.0164223
+            Pitch: -49.0164185
             Yaw: 177.690506
             Roll: -170.03862
           }
           Scale {
-            X: 4
-            Y: 3
-            Z: 10
+            X: 5.04392338
+            Y: 3.78294253
+            Z: 12.609807
           }
         }
         ParentId: 10646826725264147579
@@ -393,27 +393,31 @@ Assets {
         }
       }
       Objects {
-        Id: 18324238427341888707
-        Name: "Hill 02"
+        Id: 5549865934039885756
+        Name: "FarLeftRock"
         Transform {
           Location {
-            Z: -56.9775391
+            X: -627.508423
+            Y: -1487.42749
+            Z: 150.098465
           }
           Rotation {
-            Yaw: 180
+            Pitch: -41.4007263
+            Yaw: 115.846779
+            Roll: 134.389542
           }
           Scale {
-            X: 0.237341613
-            Y: 0.237844348
-            Z: 0.324557096
+            X: 2.93680334
+            Y: 2.17527771
+            Z: 6.52616835
           }
         }
-        ParentId: 10401406779247895939
+        ParentId: 10646826725264147579
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2148407408977013770
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -421,13 +425,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.796875
-              G: 0.610107422
-              B: 0.610107422
-              A: 1
-            }
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
           }
         }
         Collidable_v2 {
@@ -438,36 +441,17 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 8828521707055617985
+            Id: 1197983536016875073
           }
           Teams {
           }
           DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
-              Mass: 100
-              LinearDamping: 0.01
             }
           }
         }
-      }
-    }
-    Assets {
-      Id: 1197983536016875073
-      Name: "Rock Flat 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_005"
-      }
-    }
-    Assets {
-      Id: 4842806961858489681
-      Name: "Rock Flat 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_004"
       }
     }
     Assets {
@@ -486,6 +470,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_grass_002_uv"
+      }
+    }
+    Assets {
+      Id: 1197983536016875073
+      Name: "Rock Flat 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_005"
+      }
+    }
+    Assets {
+      Id: 4842806961858489681
+      Name: "Rock Flat 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_004"
       }
     }
     PrimaryAssetId {

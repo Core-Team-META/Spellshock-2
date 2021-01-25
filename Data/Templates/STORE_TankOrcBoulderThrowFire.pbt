@@ -44,7 +44,6 @@ Assets {
         }
         ParentId: 18226309135745434178
         ChildIds: 12631759395367104141
-        ChildIds: 5791435178512847905
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -57,7 +56,7 @@ Assets {
       }
       Objects {
         Id: 12631759395367104141
-        Name: "Boulder"
+        Name: "root"
         Transform {
           Location {
           }
@@ -71,6 +70,7 @@ Assets {
         }
         ParentId: 3038388280380942555
         ChildIds: 13503640393779141666
+        ChildIds: 5791435178512847905
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -134,18 +134,18 @@ Assets {
         Name: "Hill 02"
         Transform {
           Location {
-            Z: -56.9775391
+            Z: -569.775391
           }
           Rotation {
-            Yaw: 180
+            Yaw: -179.999985
           }
           Scale {
-            X: 0.237341613
-            Y: 0.237844348
-            Z: 0.324557096
+            X: 2.37341619
+            Y: 2.37844348
+            Z: 3.2455709
           }
         }
-        ParentId: 3038388280380942555
+        ParentId: 12631759395367104141
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
