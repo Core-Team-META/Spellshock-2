@@ -1,7 +1,7 @@
 ﻿local BUTTON = script.parent
-local propButtonSelected = script:GetCustomProperty("ButtonSelected"):WaitForObject()
+--local propButtonSelected = script:GetCustomProperty("ButtonSelected"):WaitForObject()
 local propButtonHover = script:GetCustomProperty("ButtonHover"):WaitForObject()
-local propSelectedFrame = script:GetCustomProperty("SelectedFrame"):WaitForObject()
+--local propSelectedFrame = script:GetCustomProperty("SelectedFrame"):WaitForObject()
 
 function OnHovered(button)
     --print("button hovered: " .. button.name)
@@ -28,6 +28,6 @@ function Tick(delta)
     
 end
 ]]
-
+propButtonHover.visibility = Visibility.FORCE_OFF
 BUTTON.hoveredEvent:Connect(OnHovered)
 BUTTON.unhoveredEvent:Connect(OnUnhovered)

@@ -10387,6 +10387,12 @@ Assets {
         ChildIds: 6676379816575574862
         ChildIds: 15793254217826412305
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Hover"
+            ObjectReference {
+              SubObjectId: 17101528538295851708
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10883,6 +10889,7 @@ Assets {
           }
         }
         ParentId: 611272774807376173
+        ChildIds: 8993658303041605889
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -10926,6 +10933,7 @@ Assets {
               Id: 16020038083592938182
             }
             IsButtonEnabled: true
+            OnlyUseMainColor: true
           }
           AnchorLayout {
             SelfAnchor {
@@ -10938,6 +10946,41 @@ Assets {
                 Value: "mc:euianchor:topleft"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 8993658303041605889
+        Name: "FilterButtonClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15793254217826412305
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ButtonHover"
+            ObjectReference {
+              SubObjectId: 17101528538295851708
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 7327420028071212888
           }
         }
       }
@@ -10960,6 +11003,14 @@ Assets {
         ChildIds: 9167936230351428157
         ChildIds: 13309062820279077911
         ChildIds: 3835121457520832593
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Hover"
+            ObjectReference {
+              SubObjectId: 12718852446470825800
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -11459,6 +11510,7 @@ Assets {
           }
         }
         ParentId: 15702939150230081735
+        ChildIds: 257813066841727622
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -11500,6 +11552,7 @@ Assets {
               Id: 9933879321394361768
             }
             IsButtonEnabled: true
+            OnlyUseMainColor: true
           }
           AnchorLayout {
             SelfAnchor {
@@ -11512,6 +11565,41 @@ Assets {
                 Value: "mc:euianchor:topleft"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 257813066841727622
+        Name: "FilterButtonClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3835121457520832593
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ButtonHover"
+            ObjectReference {
+              SubObjectId: 12718852446470825800
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 7327420028071212888
           }
         }
       }
@@ -11814,7 +11902,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
           Width: 185

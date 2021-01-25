@@ -586,7 +586,7 @@ function SpawnMiniPreview(templateId, newGeo)
 	local storeGraphic = previewItem:FindChildByName("store_graphic")
 	if storeGraphic ~= nil then
 		storeGraphic.parent = newGeo
-		storeGraphic:SetPosition(previewMesh:GetPosition())
+		storeGraphic:SetPosition(previewMesh:GetPosition()-Vector3.New(0,0,25))
 		storeGraphic:SetRotation(Rotation.New(0, 0, -90))
 		storeGraphic:SetScale(Vector3.ONE * 0.5)
 
@@ -871,7 +871,7 @@ function PopulateStore(direction)
 		if v.teamName == "Orc" then
 			propTeamName.text = "Dark Devout"
 		else
-			propTeamName.text = "Legen of Light"
+			propTeamName.text = "Legion of Light"
 		end
 
 		if partOfSubscription then

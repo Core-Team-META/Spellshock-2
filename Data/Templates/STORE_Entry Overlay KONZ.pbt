@@ -18,6 +18,8 @@ Assets {
         ParentId: 14783742013657790731
         ChildIds: 15613006457679444845
         ChildIds: 13114953145776296687
+        ChildIds: 17529104032688472860
+        ChildIds: 949572228161442332
         ChildIds: 3198581902970870347
         ChildIds: 17018226905069306366
         ChildIds: 13160699268130470060
@@ -222,6 +224,118 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:topcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17529104032688472860
+        Name: "Fade bottom"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15017360723897601218
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Height: 66
+          UIY: -45
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          Image {
+            Brush {
+              Id: 12804716500201279526
+            }
+            Color {
+              R: 0.0193823576
+              G: 0.00477695325
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 949572228161442332
+        Name: "Fade Bottom 2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15017360723897601218
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Height: 66
+          UIY: -45
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          Image {
+            Brush {
+              Id: 12804716500201279526
+            }
+            Color {
+              R: 0.0193823576
+              G: 0.00477695325
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
               }
             }
           }
