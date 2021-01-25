@@ -43,8 +43,8 @@ Assets {
           }
         }
         ParentId: 14645162201219312230
-        ChildIds: 18324238427341888707
         ChildIds: 10646826725264147579
+        ChildIds: 18324238427341888707
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -56,79 +56,20 @@ Assets {
         }
       }
       Objects {
-        Id: 18324238427341888707
-        Name: "Hill 02"
-        Transform {
-          Location {
-            X: -37.7734375
-            Z: -42.8710938
-          }
-          Rotation {
-            Pitch: -9.74295
-          }
-          Scale {
-            X: 0.237341613
-            Y: 0.302414656
-            Z: 0.344703674
-          }
-        }
-        ParentId: 10401406779247895939
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2148407408977013770
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.796875
-              G: 0.610107422
-              B: 0.610107422
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14270419193600238466
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
         Id: 10646826725264147579
-        Name: "Group"
+        Name: "ShieldDash"
         Transform {
           Location {
-            X: -6.19140625
-            Z: -16.7919922
+            X: 21.6210938
+            Y: 0.390625
+            Z: -24.0332031
           }
           Rotation {
           }
           Scale {
-            X: 0.0184435155
-            Y: 0.0184435155
-            Z: 0.0184435155
+            X: 0.0151267881
+            Y: 0.0151267881
+            Z: 0.0151267881
           }
         }
         ParentId: 10401406779247895939
@@ -451,23 +392,64 @@ Assets {
           }
         }
       }
-    }
-    Assets {
-      Id: 14270419193600238466
-      Name: "Hill 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_hill_002"
-      }
-    }
-    Assets {
-      Id: 2148407408977013770
-      Name: "Grass Clumps"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_grass_002_uv"
+      Objects {
+        Id: 18324238427341888707
+        Name: "Hill 02"
+        Transform {
+          Location {
+            Z: -56.9775391
+          }
+          Rotation {
+            Yaw: 180
+          }
+          Scale {
+            X: 0.237341613
+            Y: 0.237844348
+            Z: 0.324557096
+          }
+        }
+        ParentId: 10401406779247895939
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2148407408977013770
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8828521707055617985
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
       }
     }
     Assets {
@@ -486,6 +468,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_004"
+      }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
+      }
+    }
+    Assets {
+      Id: 2148407408977013770
+      Name: "Grass Clumps"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_grass_002_uv"
       }
     }
     PrimaryAssetId {

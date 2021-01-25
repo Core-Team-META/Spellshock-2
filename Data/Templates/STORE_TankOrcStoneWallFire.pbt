@@ -43,8 +43,8 @@ Assets {
           }
         }
         ParentId: 12935646335962544054
-        ChildIds: 13770318144092291975
         ChildIds: 11541692836675174762
+        ChildIds: 13770318144092291975
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -56,68 +56,8 @@ Assets {
         }
       }
       Objects {
-        Id: 13770318144092291975
-        Name: "Hill 02"
-        Transform {
-          Location {
-            X: -37.7734375
-            Z: -42.8710938
-          }
-          Rotation {
-            Pitch: -9.74295
-          }
-          Scale {
-            X: 0.237341613
-            Y: 0.302414656
-            Z: 0.344703674
-          }
-        }
-        ParentId: 12812864537761745306
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14402556056167558311
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.796875
-              G: 0.610107422
-              B: 0.610107422
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14270419193600238466
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
-      Objects {
         Id: 11541692836675174762
-        Name: "RockWall"
+        Name: "StoneWall"
         Transform {
           Location {
           }
@@ -148,16 +88,16 @@ Assets {
         Name: "Center"
         Transform {
           Location {
-            X: 95
-            Y: 12
-            Z: -25
+            X: 142.96875
+            Y: 119.335938
+            Z: -130.273438
           }
           Rotation {
           }
           Scale {
-            X: 0.9
-            Y: 0.9
-            Z: 0.9
+            X: 1.05579495
+            Y: 1.05579495
+            Z: 1.05579495
           }
         }
         ParentId: 11541692836675174762
@@ -300,16 +240,16 @@ Assets {
         Name: "Mid"
         Transform {
           Location {
-            X: 10
-            Y: 1
-            Z: -50
+            X: 58.0078125
+            Y: 108.398438
+            Z: -155.273438
           }
           Rotation {
           }
           Scale {
-            X: 0.9
-            Y: 0.9
-            Z: 0.9
+            X: 1.05579495
+            Y: 1.05579495
+            Z: 1.05579495
           }
         }
         ParentId: 11541692836675174762
@@ -452,16 +392,16 @@ Assets {
         Name: "Outer"
         Transform {
           Location {
-            X: -105
-            Y: -9
-            Z: -75
+            X: -57.03125
+            Y: 98.4375
+            Z: -180.273438
           }
           Rotation {
           }
           Scale {
-            X: 0.9
-            Y: 0.9
-            Z: 0.9
+            X: 1.05579495
+            Y: 1.05579495
+            Z: 1.05579495
           }
         }
         ParentId: 11541692836675174762
@@ -599,23 +539,64 @@ Assets {
           }
         }
       }
-    }
-    Assets {
-      Id: 14270419193600238466
-      Name: "Hill 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_hill_002"
-      }
-    }
-    Assets {
-      Id: 14402556056167558311
-      Name: "Sand 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_001_uv"
+      Objects {
+        Id: 13770318144092291975
+        Name: "Hill 02"
+        Transform {
+          Location {
+            Z: -56.9775391
+          }
+          Rotation {
+            Yaw: 180
+          }
+          Scale {
+            X: 0.237341613
+            Y: 0.237844348
+            Z: 0.324557096
+          }
+        }
+        ParentId: 12812864537761745306
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14402556056167558311
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8828521707055617985
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
       }
     }
     Assets {
@@ -643,6 +624,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
+      }
+    }
+    Assets {
+      Id: 14402556056167558311
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
       }
     }
     PrimaryAssetId {
