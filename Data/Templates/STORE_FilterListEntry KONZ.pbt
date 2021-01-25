@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14783742013657790731
+        ParentId: 6248693275935275973
         ChildIds: 5317823371261962446
         UnregisteredParameters {
           Overrides {
@@ -135,9 +135,6 @@ Assets {
         ChildIds: 6385584745157915740
         ChildIds: 14202850095524838345
         ChildIds: 13518720514862560824
-        ChildIds: 834913356769985907
-        ChildIds: 11395997303117964878
-        ChildIds: 13904824099995052062
         ChildIds: 10514230812662278763
         ChildIds: 11471278434935357399
         ChildIds: 12069662575789308413
@@ -427,6 +424,7 @@ Assets {
           }
         }
         ParentId: 5272969188277255618
+        ChildIds: 834913356769985907
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -437,7 +435,7 @@ Assets {
           Width: 151
           Height: 36
           UIX: 2
-          UIY: 14
+          UIY: 25
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -448,7 +446,7 @@ Assets {
             Color {
               A: 1
             }
-            Size: 20
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -482,7 +480,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5272969188277255618
+        ParentId: 13518720514862560824
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -492,7 +490,8 @@ Assets {
         Control {
           Width: 151
           Height: 36
-          UIY: 10
+          UIX: -2
+          UIY: -4
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -506,122 +505,7 @@ Assets {
               B: 0.603827536
               A: 1
             }
-            Size: 20
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:topcenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11395997303117964878
-        Name: "DESCRIPTION_SHADOW"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5272969188277255618
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
-        }
-        Control {
-          Width: 151
-          Height: 31
-          UIX: 2
-          UIY: 52
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "HATS & HELMETS"
-            Color {
-              R: 0.0193823576
-              G: 0.00518151606
-              A: 1
-            }
-            Size: 11
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:topcenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13904824099995052062
-        Name: "DESCRIPTION"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5272969188277255618
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
-        }
-        Control {
-          Width: 151
-          Height: 31
-          UIY: 48.5661201
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "HATS & HELMETS"
-            Color {
-              R: 0.752942443
-              G: 0.270497859
-              A: 1
-            }
-            Size: 11
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }

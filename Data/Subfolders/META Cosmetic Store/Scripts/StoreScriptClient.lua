@@ -1180,7 +1180,7 @@ function InitStore()
 	if propEnableFilterByType then
 		for k, v in ipairs(TypeList) do
 			if v:sub(1, 1) ~= "_" then
-				SpawnTypeFilterButton(TypeDefs[v].name, v, TypeDefs[v].color, count + TypeDefs[v].number, propSTORE_FilterListEntry)
+				SpawnTypeFilterButton(TypeDefs[v].name, v, TypeDefs[v].color, TypeDefs[v].number-1, propSTORE_FilterListEntry)
 			end
 		end
 		propTypeFilterListHolder.visibility = Visibility.INHERIT
@@ -1224,7 +1224,7 @@ end
 -- FILTER RARITY FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
-function SpawnFilterButton(displayName, tag, color, position, template)
+function SpawnFilterButton(displayName, tag, color, position, template, type)
 	local newFilterButton =
 		World.SpawnAsset(
 		template,
@@ -1295,6 +1295,8 @@ function OnFilterButtonSelected(button)
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 	end
 
+	propFrameImage2.visibility = Visibility.INHERIT
+
 	if currentTag.tag == tag then -- if the current active filter is this button, reset filter and highlight color
 		CurrentStoreElements = {}
 
@@ -1310,35 +1312,15 @@ function OnFilterButtonSelected(button)
 		currentTag = {
 			tag = nil
 		}
-
-		propFrameImage:SetColor(buttonData.frameColor)
-
 		propFrameImage2.visibility = Visibility.FORCE_OFF
-		propFrameImage2:SetColor(buttonData.frameColor)
-
-		propBGImage:SetColor(buttonData.color)
-
 		return
 	elseif currentTag.tag ~= nil then -- if the current active filter is not this button, reset highlight color
-		local propFrameImageOther = currentTag.root:GetCustomProperty("FrameImage"):WaitForObject()
+		--local propFrameImageOther = currentTag.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentTag.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		local propBGImageOther = currentTag.root:GetCustomProperty("BGImage"):WaitForObject()
-
-		propFrameImageOther:SetColor(currentTag.frameColor)
+		--local propBGImageOther = currentTag.root:GetCustomProperty("BGImage"):WaitForObject()
 
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
-		propFrameImage2Other:SetColor(currentTag.frameColor)
-
-		propBGImageOther:SetColor(currentTag.color)
 	end
-
-	-- highlight button while filter is active
-	propFrameImage2.visibility = Visibility.INHERIT
-
-	--propFrameImage:SetColor(propFilterSelectedColor)
-	--propFrameImage2:SetColor(propFilterSelectedColor)
-
-	propBGImage:SetColor(propBGImage:GetColor() + Color.New(0.01, 0.01, 0.01))
 
 	currentTag = buttonData
 
@@ -1420,9 +1402,12 @@ function OnTypeFilterButtonSelected(button)
 		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
 	end
 
+	-- highlight button while filter is active
+	propFrameImage2.visibility = Visibility.INHERIT
+	print("Current type: "..tostring(currentType.type))
 	if currentType.type == type then -- if the current active filter is this button, reset filter and highlight color
 		--print("Clearing filter")
-
+		
 		CurrentStoreElements = {}
 
 		for k, v in ipairs(StoreElements) do -- filter only by tags
@@ -1442,34 +1427,17 @@ function OnTypeFilterButtonSelected(button)
 			type = nil
 		}
 
-		propFrameImage:SetColor(buttonData.frameColor)
-
 		propFrameImage2.visibility = Visibility.FORCE_OFF
-		propFrameImage2:SetColor(buttonData.frameColor)
-
-		propBGImage:SetColor(buttonData.color)
-
+		print("Option 1")
 		return
 	elseif currentType.type ~= nil then -- if the current active filter is not this button, reset highlight color
-		local propFrameImageOther = currentType.root:GetCustomProperty("FrameImage"):WaitForObject()
+		print("Option 2")
+		--local propFrameImageOther = currentType.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentType.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		local propBGImageOther = currentType.root:GetCustomProperty("BGImage"):WaitForObject()
-
-		propFrameImageOther:SetColor(currentType.frameColor)
+		--local propBGImageOther = currentType.root:GetCustomProperty("BGImage"):WaitForObject()
 
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
-		propFrameImage2Other:SetColor(currentType.frameColor)
-
-		propBGImageOther:SetColor(currentType.color)
 	end
-
-	-- highlight button while filter is active
-	propFrameImage2.visibility = Visibility.INHERIT
-
-	--propFrameImage:SetColor(propFilterSelectedColor)
-	--propFrameImage2:SetColor(propFilterSelectedColor)
-
-	propBGImage:SetColor(propBGImage:GetColor() + Color.New(0.01, 0.01, 0.01))
 
 	currentType = buttonData
 

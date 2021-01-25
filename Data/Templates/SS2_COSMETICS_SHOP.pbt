@@ -265,7 +265,6 @@ Assets {
           }
         }
         ParentId: 1259172051613445859
-        ChildIds: 4771838725194298116
         UnregisteredParameters {
           Overrides {
             Name: "cs:STORE_EntryOverlay"
@@ -464,32 +463,6 @@ Assets {
           ScriptAsset {
             Id: 13387608029504168863
           }
-        }
-      }
-      Objects {
-        Id: 4771838725194298116
-        Name: "NewFolder"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15395255354003835443
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsFilePartition: true
-          FilePartitionName: "NewFolder"
         }
       }
       Objects {
@@ -10422,8 +10395,8 @@ Assets {
         Control {
           Width: 166
           Height: 55
-          UIX: 134.348389
-          UIY: 109.671967
+          UIX: 149.348389
+          UIY: 114.671967
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -10994,8 +10967,8 @@ Assets {
         Control {
           Width: 140
           Height: 40
-          UIX: 1229.47986
-          UIY: 109.671959
+          UIX: 290
+          UIY: 120
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -11743,7 +11716,7 @@ Assets {
         Control {
           Width: 100
           Height: 100
-          UIX: 265
+          UIX: 555
           UIY: 4
           RenderTransformPivot {
             Anchor {
@@ -13863,7 +13836,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Number"
-            Int: 5
+            Int: 1
           }
         }
         Collidable_v2 {
@@ -13904,7 +13877,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Number"
-            Int: 6
+            Int: 2
           }
         }
         Collidable_v2 {
