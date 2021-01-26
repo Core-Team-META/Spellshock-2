@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 4808538104140802329
         ChildIds: 5046688974131774356
         UnregisteredParameters {
@@ -1909,7 +1909,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15740376057655838420
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -1919,7 +1919,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.88
+              R: 5
+              G: 0.5
               A: 1
             }
           }
@@ -1964,7 +1965,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15740376057655838420
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -1974,7 +1975,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.88
+              R: 5
+              G: 0.5
               A: 1
             }
           }
@@ -2207,6 +2209,9 @@ Assets {
         Name: "Modern Weapon - Bullet 01"
         Transform {
           Location {
+            X: -0.0652842671
+            Y: 9.07579718e-08
+            Z: 0.129490644
           }
           Rotation {
             Pitch: 27.3399677
@@ -2216,7 +2221,7 @@ Assets {
           Scale {
             X: 0.2588121
             Y: 0.2588121
-            Z: 0.0859255642
+            Z: 0.085
           }
         }
         ParentId: 2552381497217167714
@@ -2237,7 +2242,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.192005247
+            Float: 0.427990645
           }
         }
         Collidable_v2 {
@@ -2279,7 +2284,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2381158559571814563
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2331,7 +2336,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2381158559571814563
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2403,7 +2408,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2381158559571814563
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -3742,12 +3747,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15740376057655838420
-      Name: "Plastic Shiny"
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "plastic_shiny_001"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     Assets {

@@ -2002,7 +2002,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2032,7 +2032,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2090,7 +2090,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2120,7 +2120,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2178,7 +2178,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2208,7 +2208,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2266,7 +2266,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2296,7 +2296,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 5351428073291024820
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2400,15 +2400,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_ts_mil_fence_bracket_end_01"
-      }
-    }
-    Assets {
-      Id: 5351428073291024820
-      Name: "Emissive Glow Opaque"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_opaque_emissive"
       }
     }
     PrimaryAssetId {

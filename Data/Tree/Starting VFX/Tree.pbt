@@ -2231,7 +2231,7 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Projectile"
       AssetReference {
-        Id: 1501139048018181677
+        Id: 13667023393242254669
       }
     }
     Overrides {
@@ -2528,7 +2528,7 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Projectile"
       AssetReference {
-        Id: 1501139048018181677
+        Id: 13667023393242254669
       }
     }
     Overrides {

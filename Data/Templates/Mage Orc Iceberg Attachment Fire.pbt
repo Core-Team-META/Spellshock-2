@@ -1235,7 +1235,7 @@ Assets {
           Rotation {
             Pitch: 11.415308
             Yaw: 51.3632774
-            Roll: -3.25228977
+            Roll: -3.25228882
           }
           Scale {
             X: 0.208508804
@@ -1248,16 +1248,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.358157426
+            Float: 1.95815718
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.40981
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1309,16 +1309,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1370,16 +1370,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.358157426
+            Float: 1.95815718
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.40981
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1418,7 +1418,7 @@ Assets {
           Rotation {
             Pitch: 12.950345
             Yaw: 31.493433
-            Roll: -10.5277853
+            Roll: -10.527771
           }
           Scale {
             X: 0.384744495
@@ -1431,16 +1431,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1492,16 +1492,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1539,8 +1539,8 @@ Assets {
           }
           Rotation {
             Pitch: 7.76998854
-            Yaw: -29.8743305
-            Roll: -19.9960308
+            Yaw: -29.8743286
+            Roll: -19.9960327
           }
           Scale {
             X: 0.384744495
@@ -1553,16 +1553,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1601,7 +1601,7 @@ Assets {
           Rotation {
             Pitch: 2.79170299
             Yaw: 118.216881
-            Roll: -12.6866322
+            Roll: -12.6866455
           }
           Scale {
             X: 0.38476792
@@ -1614,16 +1614,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.584540725
+            Float: 1.95815718
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.40981
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1675,16 +1675,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -1721,9 +1721,9 @@ Assets {
             Z: -1.14257813
           }
           Rotation {
-            Pitch: -6.13314772
+            Pitch: -6.13314819
             Yaw: -138.355148
-            Roll: -18.3039284
+            Roll: -18.3039246
           }
           Scale {
             X: 0.384744495
@@ -1736,16 +1736,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.23989071
+            Float: 1.17460012
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.327637732
+            Float: 1.82028437
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"

@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 6691584294084928103
         ChildIds: 12092837317964936151
         ChildIds: 8867897979800354681
@@ -58,8 +58,8 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 5
-            Y: 5
+            X: 1
+            Y: 1
             Z: 2.53371763
           }
         }
@@ -200,9 +200,8 @@ Assets {
         }
         ParentId: 811390275251659663
         ChildIds: 13125240322143721881
-        ChildIds: 11044013597810060401
-        ChildIds: 13584456984823963825
         ChildIds: 8596987154260651344
+        ChildIds: 12806099471688273787
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -218,14 +217,15 @@ Assets {
         Name: "Tornado VFX"
         Transform {
           Location {
-            Z: -54.6896973
+            Z: 885.836914
           }
           Rotation {
+            Pitch: 180
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.701039672
+            Y: 0.701039493
+            Z: 1.06856287
           }
         }
         ParentId: 8867897979800354681
@@ -250,7 +250,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Wiggle Offset Amount"
-            Float: 1.3
+            Float: 0.0599341914
           }
           Overrides {
             Name: "bp:Color B"
@@ -274,7 +274,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Bottom Fade"
-            Float: 0
+            Float: 0.63738215
           }
           Overrides {
             Name: "bp:Edge Shredding"
@@ -306,7 +306,23 @@ Assets {
           }
           Overrides {
             Name: "bp:Cross Section Width"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Surface Speed"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Wiggle Waves Frequency"
+            Float: 0.8
+          }
+          Overrides {
+            Name: "bp:Top Fade"
             Float: 0
+          }
+          Overrides {
+            Name: "bp:Fade Length Bottom"
+            Float: 0.0687382668
           }
         }
         Collidable_v2 {
@@ -324,145 +340,11 @@ Assets {
         }
       }
       Objects {
-        Id: 11044013597810060401
-        Name: "Swirling Dust VFX"
-        Transform {
-          Location {
-            Z: -54.6896973
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8867897979800354681
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.36
-              G: 0.809271574
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Debris Color"
-            Color {
-              G: 0.584569037
-              B: 0.909999967
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 17932064971979899982
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 13584456984823963825
-        Name: "Multicast Beam VFX"
-        Transform {
-          Location {
-            Z: 1006.24268
-          }
-          Rotation {
-            Pitch: -90
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8867897979800354681
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Max Cone Angle"
-            Float: 26.0754623
-          }
-          Overrides {
-            Name: "bp:Min Cone Angle"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Max Distance"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Min Distance"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Break By Distance"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Secondary Color"
-            Color {
-              G: 0.371456653
-              B: 0.710000038
-              A: 0.5
-            }
-          }
-          Overrides {
-            Name: "bp:Tertiary Color"
-            Color {
-              G: 0.183790684
-              B: 0.580392182
-              A: 0.5
-            }
-          }
-          Overrides {
-            Name: "bp:Beam Maximum Life"
-            Float: 0.563862443
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 3870889675061657431
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
         Id: 8596987154260651344
         Name: "Snow Volume VFX"
         Transform {
           Location {
-            Z: 602.586426
+            Z: 102.586426
           }
           Rotation {
           }
@@ -478,6 +360,14 @@ Assets {
             Name: "bp:Emissive Boost"
             Float: 5
           }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+              X: 200
+              Y: 200
+              Z: 50
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -488,6 +378,61 @@ Assets {
         Blueprint {
           BlueprintAsset {
             Id: 1165672060587372127
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 12806099471688273787
+        Name: "Smoke Puff Radial VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.54455626
+            Y: 1.54455626
+            Z: 0.77227813
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Radius"
+            Float: 8.14006424
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 1.59082639
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.36
+              G: 0.809271574
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11736239447341257999
           }
           TeamSettings {
           }
@@ -585,30 +530,21 @@ Assets {
       }
     }
     Assets {
-      Id: 17932064971979899982
-      Name: "Swirling Dust VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_swirling_dust"
-      }
-    }
-    Assets {
-      Id: 3870889675061657431
-      Name: "Multicast Beam VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_MulticastBeam"
-      }
-    }
-    Assets {
       Id: 1165672060587372127
       Name: "Snow Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_snow_volume"
+      }
+    }
+    Assets {
+      Id: 11736239447341257999
+      Name: "Smoke Puff Radial VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_smoke_puff_radial"
       }
     }
     Assets {

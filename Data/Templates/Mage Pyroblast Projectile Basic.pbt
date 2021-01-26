@@ -7,7 +7,7 @@ Assets {
       RootId: 5645632638997810804
       Objects {
         Id: 5645632638997810804
-        Name: "Mage Pyroblast Projectile"
+        Name: "Mage Pyroblast Projectile Basic"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 3637276016891827027
         UnregisteredParameters {
         }
@@ -39,19 +39,19 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
         }
         ParentId: 5645632638997810804
         ChildIds: 12998181878062928787
         ChildIds: 16494534721684031301
         ChildIds: 15021254031558122692
-        ChildIds: 2966295989250120270
         ChildIds: 10171057895347709774
         ChildIds: 6521382542869684129
         ChildIds: 14692762341199026860
+        ChildIds: 2715499949975651818
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -170,55 +170,6 @@ Assets {
             Radius: 200
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
-          }
-        }
-      }
-      Objects {
-        Id: 2966295989250120270
-        Name: "Point Light"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3637276016891827027
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Light {
-          Intensity: 21
-          Color {
-            R: 5
-            G: 0.8
-            A: 1
-          }
-          VolumetricIntensity: 5
-          TeamSettings {
-          }
-          Light {
-            Temperature: 6500
-            LocalLight {
-              AttenuationRadius: 1500
-              PointLight {
-                SourceRadius: 20
-                SoftSourceRadius: 20
-                FallOffExponent: 8
-                UseFallOffExponent: true
-              }
-            }
-            MaxDrawDistance: 5000
-            MaxDistanceFadeRange: 1000
           }
         }
       }
@@ -405,6 +356,63 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 2715499949975651818
+        Name: "Sphere"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.01042521
+            Y: 1.01042521
+            Z: 1.01042521
+          }
+        }
+        ParentId: 3637276016891827027
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 230872137319562526
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 5
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7363477334452929865
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
     }
     Assets {
       Id: 7165087681498963828
@@ -458,6 +466,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_magic_projectile"
+      }
+    }
+    Assets {
+      Id: 7363477334452929865
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
       }
     }
     PrimaryAssetId {

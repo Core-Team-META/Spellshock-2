@@ -21,9 +21,32 @@ Assets {
       Overrides {
         Name: "color"
         Color {
-          R: 0.093843095
-          G: 0.0990000069
-          B: 0.0990000069
+          R: 0.104
+          G: 0.0992680043
+          B: 0.09048
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor3"
+        Color {
+          R: 0.230000019
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor"
+        Color {
+          R: 2
+          G: 0.1
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor2"
+        Color {
+          R: 0.340000033
+          G: 0.0135099282
           A: 1
         }
       }
