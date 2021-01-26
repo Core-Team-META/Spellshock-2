@@ -1,13 +1,13 @@
 Assets {
-  Id: 6584251115473192762
-  Name: "Hunter Orc Bear Trap Placement Fire"
+  Id: 5521270715962430521
+  Name: "STORE_HunterOrcBearTrapFire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17419346950944615411
+      RootId: 8575949940646007553
       Objects {
-        Id: 17419346950944615411
-        Name: "Hunter Orc Bear Trap Placement Fire"
+        Id: 8575949940646007553
+        Name: "STORE_HunterOrcBearTrapFire"
         Transform {
           Scale {
             X: 1
@@ -16,20 +16,34 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 6899149900113682347
-        ChildIds: 16233959753842595931
-        ChildIds: 6507224587799988729
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:OwnerID"
-            String: ""
+        ChildIds: 16050202422667203767
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceon"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 16050202422667203767
+        Name: "store_graphic"
+        Transform {
+          Location {
+            X: 7.5
           }
-          Overrides {
-            Name: "cs:OwnerID:isrep"
-            Bool: true
+          Rotation {
+          }
+          Scale {
+            X: 0.1
+            Y: 0.1
+            Z: 0.1
           }
         }
-        WantsNetworking: true
+        ParentId: 8575949940646007553
+        ChildIds: 2787111604650181923
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -37,12 +51,12 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Folder {
-          IsGroup: true
+          IsFilePartition: true
         }
       }
       Objects {
-        Id: 6899149900113682347
-        Name: "GEO"
+        Id: 2787111604650181923
+        Name: "root"
         Transform {
           Location {
           }
@@ -54,59 +68,118 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17419346950944615411
-        ChildIds: 15987553049041362348
-        ChildIds: 16095403514251379595
-        ChildIds: 3139698969274271967
-        ChildIds: 13236310715305706688
-        WantsNetworking: true
+        ParentId: 16050202422667203767
+        ChildIds: 11542499710588293070
+        ChildIds: 14237366990317873322
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11542499710588293070
+        Name: "Hill 02"
+        Transform {
+          Location {
+            Z: 4.3359375
+          }
+          Rotation {
+            Yaw: -179.999969
+          }
+          Scale {
+            X: 0.237341598
+            Y: 0.237844348
+            Z: 0.324557096
+          }
+        }
+        ParentId: 2787111604650181923
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14402556056167558311
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        CoreMesh {
+          MeshAsset {
+            Id: 8828521707055617985
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
         }
       }
       Objects {
-        Id: 15987553049041362348
+        Id: 14237366990317873322
         Name: "Trap"
         Transform {
           Location {
-            Z: 50
+            X: 10.6835938
+            Z: 32.5244141
           }
           Rotation {
-            Pitch: 5
-            Roll: 5
+            Pitch: -14.9226379
+            Yaw: 0.8974424
+            Roll: -10.1938782
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.219808444
+            Y: 0.219808444
+            Z: 0.219808444
           }
         }
-        ParentId: 6899149900113682347
-        ChildIds: 10809145612904594759
-        ChildIds: 13770474290189299706
-        ChildIds: 7098566204446785779
-        ChildIds: 12596528258178300578
-        ChildIds: 14925735982331950798
-        ChildIds: 2411459781454218543
-        ChildIds: 17834452221623362313
-        ChildIds: 16820738650065513190
+        ParentId: 2787111604650181923
+        ChildIds: 90662902979882649
+        ChildIds: 16517669785577747100
+        ChildIds: 5851321662309957667
+        ChildIds: 16549665913454221879
+        ChildIds: 8990545127189031301
+        ChildIds: 851108386876380218
+        ChildIds: 6535758422720662214
+        ChildIds: 16559800519664544222
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         Folder {
           IsGroup: true
         }
       }
       Objects {
-        Id: 10809145612904594759
+        Id: 90662902979882649
         Name: "Jaw"
         Transform {
           Location {
@@ -114,7 +187,6 @@ Assets {
             Z: 25
           }
           Rotation {
-            Pitch: 45
           }
           Scale {
             X: 1
@@ -122,21 +194,21 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
-        ChildIds: 504651970987946521
-        ChildIds: 15124931373199267179
-        ChildIds: 9221622782783932922
-        ChildIds: 4869474478854924678
-        ChildIds: 5010806310590550441
-        ChildIds: 8868970856767242638
-        ChildIds: 9857390579032113863
-        ChildIds: 17192876281472613613
-        ChildIds: 14985593866729005185
-        ChildIds: 3872397496195512376
-        ChildIds: 4711070949663375684
-        ChildIds: 1290038894542643071
-        ChildIds: 5506925547831258911
-        ChildIds: 1273901209899946681
+        ParentId: 14237366990317873322
+        ChildIds: 3358147621956775109
+        ChildIds: 7571782133722172166
+        ChildIds: 13658164397589135413
+        ChildIds: 8784937959985665506
+        ChildIds: 11961368653951558806
+        ChildIds: 807710784929713500
+        ChildIds: 2555558054851387345
+        ChildIds: 287325971668198349
+        ChildIds: 6078026242733580168
+        ChildIds: 6624922019176606139
+        ChildIds: 16318822879108473457
+        ChildIds: 5691897320068265862
+        ChildIds: 5572786802080274179
+        ChildIds: 15148255028246654547
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -148,7 +220,7 @@ Assets {
         }
       }
       Objects {
-        Id: 504651970987946521
+        Id: 3358147621956775109
         Name: "Cube - Rounded Bottom-Aligned"
         Transform {
           Location {
@@ -161,7 +233,7 @@ Assets {
             Z: 3.08728433
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -183,7 +255,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -204,7 +276,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15124931373199267179
+        Id: 7571782133722172166
         Name: "Thorn"
         Transform {
           Location {
@@ -222,7 +294,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -244,7 +316,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -263,7 +335,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9221622782783932922
+        Id: 13658164397589135413
         Name: "Thorn"
         Transform {
           Location {
@@ -281,7 +353,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -303,7 +375,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -322,7 +394,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4869474478854924678
+        Id: 8784937959985665506
         Name: "Thorn"
         Transform {
           Location {
@@ -340,7 +412,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -362,7 +434,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -381,7 +453,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5010806310590550441
+        Id: 11961368653951558806
         Name: "Thorn"
         Transform {
           Location {
@@ -399,7 +471,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -421,7 +493,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -440,7 +512,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8868970856767242638
+        Id: 807710784929713500
         Name: "Thorn"
         Transform {
           Location {
@@ -458,7 +530,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -480,7 +552,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -499,7 +571,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9857390579032113863
+        Id: 2555558054851387345
         Name: "Thorn"
         Transform {
           Location {
@@ -518,7 +590,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -540,7 +612,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -559,7 +631,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17192876281472613613
+        Id: 287325971668198349
         Name: "Cube - Rounded Bottom-Aligned"
         Transform {
           Location {
@@ -575,7 +647,7 @@ Assets {
             Z: 3.08728433
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -597,7 +669,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -618,7 +690,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14985593866729005185
+        Id: 6078026242733580168
         Name: "Thorn"
         Transform {
           Location {
@@ -637,7 +709,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -659,7 +731,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -678,7 +750,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3872397496195512376
+        Id: 6624922019176606139
         Name: "Thorn"
         Transform {
           Location {
@@ -697,7 +769,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -719,7 +791,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -738,7 +810,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4711070949663375684
+        Id: 16318822879108473457
         Name: "Thorn"
         Transform {
           Location {
@@ -756,7 +828,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -778,7 +850,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -797,7 +869,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1290038894542643071
+        Id: 5691897320068265862
         Name: "Thorn"
         Transform {
           Location {
@@ -815,7 +887,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -837,7 +909,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -856,7 +928,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5506925547831258911
+        Id: 5572786802080274179
         Name: "Thorn"
         Transform {
           Location {
@@ -875,7 +947,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -897,7 +969,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -916,7 +988,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1273901209899946681
+        Id: 15148255028246654547
         Name: "Thorn"
         Transform {
           Location {
@@ -935,7 +1007,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 10809145612904594759
+        ParentId: 90662902979882649
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -957,7 +1029,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -976,7 +1048,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13770474290189299706
+        Id: 16517669785577747100
         Name: "JawOffset"
         Transform {
           Location {
@@ -984,7 +1056,6 @@ Assets {
             Z: 25
           }
           Rotation {
-            Pitch: 60
             Yaw: 180
           }
           Scale {
@@ -993,20 +1064,20 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
-        ChildIds: 12768513933349780114
-        ChildIds: 7968225465276420428
-        ChildIds: 5909204165972077848
-        ChildIds: 14649735035949174056
-        ChildIds: 7399765465123280468
-        ChildIds: 9330561199143619534
-        ChildIds: 11564777646838799765
-        ChildIds: 4495073919937739720
-        ChildIds: 11433626364583916104
-        ChildIds: 14741456231380734327
-        ChildIds: 7033299272837007324
-        ChildIds: 17277083301871749234
-        ChildIds: 10531060325750989391
+        ParentId: 14237366990317873322
+        ChildIds: 13774899569827095367
+        ChildIds: 12495673736035785586
+        ChildIds: 1752335711691888079
+        ChildIds: 11488809116147131618
+        ChildIds: 3346295821332116303
+        ChildIds: 3909989931859738781
+        ChildIds: 14951191702030880771
+        ChildIds: 8561037579579119676
+        ChildIds: 6082348487809160797
+        ChildIds: 11290419581631064261
+        ChildIds: 4530658875938825551
+        ChildIds: 16024341018180268119
+        ChildIds: 1915624273831497281
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1018,7 +1089,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12768513933349780114
+        Id: 13774899569827095367
         Name: "Cube - Rounded Bottom-Aligned"
         Transform {
           Location {
@@ -1031,7 +1102,7 @@ Assets {
             Z: 3.08728433
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1053,7 +1124,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1074,7 +1145,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7968225465276420428
+        Id: 12495673736035785586
         Name: "Thorn"
         Transform {
           Location {
@@ -1093,7 +1164,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1115,7 +1186,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1134,7 +1205,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5909204165972077848
+        Id: 1752335711691888079
         Name: "Thorn"
         Transform {
           Location {
@@ -1153,7 +1224,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1175,7 +1246,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1194,7 +1265,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14649735035949174056
+        Id: 11488809116147131618
         Name: "Thorn"
         Transform {
           Location {
@@ -1212,7 +1283,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1234,7 +1305,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1253,7 +1324,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7399765465123280468
+        Id: 3346295821332116303
         Name: "Thorn"
         Transform {
           Location {
@@ -1272,7 +1343,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1294,7 +1365,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1313,7 +1384,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9330561199143619534
+        Id: 3909989931859738781
         Name: "Thorn"
         Transform {
           Location {
@@ -1332,7 +1403,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1354,7 +1425,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1373,7 +1444,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11564777646838799765
+        Id: 14951191702030880771
         Name: "Thorn"
         Transform {
           Location {
@@ -1392,7 +1463,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1414,7 +1485,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1433,7 +1504,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4495073919937739720
+        Id: 8561037579579119676
         Name: "Thorn"
         Transform {
           Location {
@@ -1452,7 +1523,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1474,7 +1545,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1493,7 +1564,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11433626364583916104
+        Id: 6082348487809160797
         Name: "Thorn"
         Transform {
           Location {
@@ -1510,7 +1581,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1532,7 +1603,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1551,7 +1622,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14741456231380734327
+        Id: 11290419581631064261
         Name: "Thorn"
         Transform {
           Location {
@@ -1568,7 +1639,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1590,7 +1661,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1609,7 +1680,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7033299272837007324
+        Id: 4530658875938825551
         Name: "Thorn"
         Transform {
           Location {
@@ -1627,7 +1698,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1649,7 +1720,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1668,7 +1739,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17277083301871749234
+        Id: 16024341018180268119
         Name: "Thorn"
         Transform {
           Location {
@@ -1686,7 +1757,7 @@ Assets {
             Z: 0.298628837
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1708,7 +1779,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1727,7 +1798,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10531060325750989391
+        Id: 1915624273831497281
         Name: "Cube - Rounded Bottom-Aligned"
         Transform {
           Location {
@@ -1742,7 +1813,7 @@ Assets {
             Z: 3.08728433
           }
         }
-        ParentId: 13770474290189299706
+        ParentId: 16517669785577747100
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1764,7 +1835,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1785,7 +1856,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7098566204446785779
+        Id: 5851321662309957667
         Name: "Base"
         Transform {
           Location {
@@ -1803,7 +1874,7 @@ Assets {
             Z: 0.294916451
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1825,7 +1896,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1846,7 +1917,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12596528258178300578
+        Id: 16549665913454221879
         Name: "PressurePlate"
         Transform {
           Location {
@@ -1864,7 +1935,7 @@ Assets {
             Z: 0.0455329716
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1886,7 +1957,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1907,7 +1978,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14925735982331950798
+        Id: 8990545127189031301
         Name: "Urban Fence Bracket - End"
         Transform {
           Location {
@@ -1926,12 +1997,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -1951,14 +2022,30 @@ Assets {
             Float: 63.916954
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1979,7 +2066,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2411459781454218543
+        Id: 851108386876380218
         Name: "Urban Fence Bracket - End"
         Transform {
           Location {
@@ -1998,12 +2085,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -2023,14 +2110,30 @@ Assets {
             Float: 63.916954
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2051,7 +2154,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17834452221623362313
+        Id: 6535758422720662214
         Name: "Urban Fence Bracket - End"
         Transform {
           Location {
@@ -2070,12 +2173,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -2095,14 +2198,30 @@ Assets {
             Float: 63.916954
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2123,7 +2242,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16820738650065513190
+        Id: 16559800519664544222
         Name: "Urban Fence Bracket - End"
         Transform {
           Location {
@@ -2142,12 +2261,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15987553049041362348
+        ParentId: 14237366990317873322
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -2167,14 +2286,30 @@ Assets {
             Float: 63.916954
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3078691490377343238
+              Id: 5351428073291024820
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 4
+              G: 0.1
+              A: 1
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2194,242 +2329,23 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 16095403514251379595
-        Name: "TrapPlacement"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6899149900113682347
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ease3D"
-            AssetReference {
-              Id: 16050147283496351669
-            }
-          }
-          Overrides {
-            Name: "cs:Trap"
-            ObjectReference {
-              SubObjectId: 15987553049041362348
-            }
-          }
-          Overrides {
-            Name: "cs:Jaw"
-            ObjectReference {
-              SubObjectId: 10809145612904594759
-            }
-          }
-          Overrides {
-            Name: "cs:JawOffset"
-            ObjectReference {
-              SubObjectId: 13770474290189299706
-            }
-          }
-          Overrides {
-            Name: "cs:LockSFX"
-            ObjectReference {
-              SubObjectId: 3139698969274271967
-            }
-          }
-          Overrides {
-            Name: "cs:PlacementFX"
-            ObjectReference {
-              SubObjectId: 13236310715305706688
-            }
-          }
-          Overrides {
-            Name: "cs:Root"
-            ObjectReference {
-              SubObjectId: 17419346950944615411
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 15679536523653727947
-          }
-        }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
       }
-      Objects {
-        Id: 3139698969274271967
-        Name: "LockSFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6899149900113682347
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 13538296278047170089
-          }
-          Pitch: -400
-          Volume: 1
-          Falloff: 3000
-          Radius: 200
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 13236310715305706688
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6899149900113682347
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 1
-              G: 0.622516572
-              B: 0.25
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-          }
-        }
-      }
-      Objects {
-        Id: 16233959753842595931
-        Name: "Trigger"
-        Transform {
-          Location {
-            Z: 110
-          }
-          Rotation {
-          }
-          Scale {
-            X: 3.8
-            Y: 3.5
-            Z: 3.4
-          }
-        }
-        ParentId: 17419346950944615411
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-        }
-      }
-      Objects {
-        Id: 6507224587799988729
-        Name: "TrapDamageHandler"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17419346950944615411
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 16233959753842595931
-            }
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:TrapActivationTemplate"
-            AssetReference {
-              Id: 17967033697158490853
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6822716955623708278
-          }
-        }
+    }
+    Assets {
+      Id: 14402556056167558311
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
       }
     }
     Assets {
@@ -2487,21 +2403,12 @@ Assets {
       }
     }
     Assets {
-      Id: 13538296278047170089
-      Name: "Mechanical Gear Lock 02 SFX"
-      PlatformAssetType: 7
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_mechanical_gear_lock_02_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 8368756853707329605
-      Name: "Explosion Kit Dust Ring VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     PrimaryAssetId {

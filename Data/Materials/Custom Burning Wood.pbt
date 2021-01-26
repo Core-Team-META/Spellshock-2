@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "embererode"
-        Float: 0.771336
+        Float: 0.873228669
       }
       Overrides {
         Name: "asherode"
@@ -17,6 +17,15 @@ Assets {
       Overrides {
         Name: "embersoftness"
         Float: 1
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.093843095
+          G: 0.0990000069
+          B: 0.0990000069
+          A: 1
+        }
       }
     }
     Assets {
