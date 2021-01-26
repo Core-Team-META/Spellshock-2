@@ -7,7 +7,7 @@ Assets {
       RootId: 8167322934774301301
       Objects {
         Id: 8167322934774301301
-        Name: "Mage Iceberg Attachment Basic"
+        Name: "Mage Elf Iceberg Attachment Frost"
         Transform {
           Scale {
             X: 1
@@ -188,7 +188,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8440229342576301274
+              Id: 926391387561774024
             }
           }
           Overrides {

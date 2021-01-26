@@ -3401,7 +3401,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -3579,7 +3579,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -3757,7 +3757,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -4397,7 +4397,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -4575,7 +4575,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -5133,7 +5133,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -5380,7 +5380,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -5604,7 +5604,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -6266,9 +6266,9 @@ Assets {
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
-            X: 3.71264648
-            Y: 31.4134216
-            Z: -2.29095459
+            X: 3.79492188
+            Y: 31.84375
+            Z: -2.13226318
           }
           Rotation {
             Pitch: -45
@@ -6363,7 +6363,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6837315599476812801
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -6404,9 +6404,9 @@ Assets {
         Name: "Fantasy Crossbow Foregrip 01"
         Transform {
           Location {
-            X: 3.47360444
-            Y: -31.7144241
-            Z: -2.3732295
+            X: 3.32969093
+            Y: -31.8900242
+            Z: -1.82311308
           }
           Rotation {
             Pitch: 44.7471504
@@ -6501,7 +6501,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6837315599476812801
+              Id: 3072860601980276895
             }
           }
           Overrides {

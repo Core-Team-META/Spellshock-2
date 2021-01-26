@@ -49,7 +49,6 @@ Assets {
         ChildIds: 4149274322619737017
         ChildIds: 8684573042625005778
         ChildIds: 14302226200115105549
-        ChildIds: 5957725093885111035
         ChildIds: 15182561017365675379
         ChildIds: 723098742998976081
         ChildIds: 4300179238099287184
@@ -249,55 +248,6 @@ Assets {
         }
       }
       Objects {
-        Id: 5957725093885111035
-        Name: "Point Light"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1394437074502449749
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Light {
-          Intensity: 21
-          Color {
-            R: 5
-            G: 0.166666806
-            A: 1
-          }
-          VolumetricIntensity: 5
-          TeamSettings {
-          }
-          Light {
-            Temperature: 6500
-            LocalLight {
-              AttenuationRadius: 1500
-              PointLight {
-                SourceRadius: 20
-                SoftSourceRadius: 20
-                FallOffExponent: 8
-                UseFallOffExponent: true
-              }
-            }
-            MaxDrawDistance: 5000
-            MaxDistanceFadeRange: 1000
-          }
-        }
-      }
-      Objects {
         Id: 15182561017365675379
         Name: "Fire Volume VFX"
         Transform {
@@ -469,14 +419,6 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.358157426
           }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 0.100000024
-              A: 1
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -508,9 +450,9 @@ Assets {
             Pitch: 90
           }
           Scale {
-            X: 3.62114739
-            Y: 3.62114739
-            Z: 3.37993646
+            X: 3.702703
+            Y: 3.702703
+            Z: 3.45605946
           }
         }
         ParentId: 1394437074502449749
@@ -522,24 +464,46 @@ Assets {
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.735570908
-              B: 1
+              R: 0.663000047
+              G: 0.0172379762
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 1
-              G: 0.350000024
-              A: 0.037
+              R: 0.0470000021
+              G: 0.00197399152
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 0.650000036
+              R: 0.948000073
+              G: 0.0474000163
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Color Offset B"
+            Float: 0.277318329
+          }
+          Overrides {
+            Name: "bp:Color Offset C"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 0.745336115
+          }
+          Overrides {
+            Name: "bp:Color Offset A"
+            Float: 0
           }
         }
         Collidable_v2 {

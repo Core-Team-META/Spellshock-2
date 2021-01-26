@@ -189,7 +189,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -226,7 +226,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -235,15 +235,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 11.1789474
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 12.6615763
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -287,7 +287,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -302,9 +302,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -346,7 +354,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -361,9 +369,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -405,7 +421,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -420,9 +436,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -464,7 +488,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -479,9 +503,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -523,7 +555,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -538,9 +570,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -583,7 +623,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -598,9 +638,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -640,7 +688,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -649,15 +697,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 11.1789474
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 12.6615763
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -702,7 +750,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -717,9 +765,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -762,7 +818,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -777,9 +833,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -821,7 +885,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -836,9 +900,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -880,7 +952,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -895,9 +967,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -940,7 +1020,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -955,9 +1035,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1036,7 +1124,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1045,15 +1133,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 11.1789474
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 12.6615763
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1098,7 +1186,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1113,9 +1201,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1158,7 +1254,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1173,9 +1269,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1217,7 +1321,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1232,9 +1336,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1277,7 +1389,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1292,9 +1404,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1337,7 +1457,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1352,9 +1472,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1397,7 +1525,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1412,9 +1540,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1457,7 +1593,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1472,9 +1608,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1515,7 +1659,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1530,9 +1674,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1573,7 +1725,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1588,9 +1740,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1632,7 +1792,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1647,9 +1807,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1691,7 +1859,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1706,9 +1874,17 @@ Assets {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.454422623
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1747,7 +1923,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1756,15 +1932,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 11.1789474
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 12.6615763
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1809,7 +1985,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1828,9 +2004,31 @@ Assets {
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6837315599476812801
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1855,15 +2053,18 @@ Assets {
         Name: "Base"
         Transform {
           Location {
+            X: -0.0157103762
+            Y: -0.0142265558
+            Z: -11.3380833
           }
           Rotation {
             Yaw: -1.33402125e-08
             Roll: 4.07663847e-18
           }
           Scale {
-            X: 0.6
-            Y: 3.4
-            Z: 0.2
+            X: 0.60001874
+            Y: 3.39999843
+            Z: 0.294916451
           }
         }
         ParentId: 3853871347428105056
@@ -1871,7 +2072,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6024748366808673382
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -1889,15 +2090,14 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.5
-              G: 0.5
-              B: 0.5
+              G: 0.277499884
+              B: 0.666
               A: 1
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1941,7 +2141,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1950,15 +2150,15 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.380857527
+            Float: 0.786130905
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.434796035
+            Float: 1.13249397
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2003,7 +2203,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -2022,9 +2222,31 @@ Assets {
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6837315599476812801
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2069,7 +2291,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -2088,9 +2310,31 @@ Assets {
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6837315599476812801
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2135,7 +2379,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 6837315599476812801
             }
           }
           Overrides {
@@ -2154,9 +2398,31 @@ Assets {
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6837315599476812801
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.277499884
+              B: 0.666
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2442,30 +2708,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
       Id: 15529149580810381787
       Name: "Cube - Rounded Bottom-Aligned"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_rounded_001"
-      }
-    }
-    Assets {
-      Id: 6024748366808673382
-      Name: "Terrain - Snow"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_terrain_rock-snow_001_wa"
       }
     }
     Assets {

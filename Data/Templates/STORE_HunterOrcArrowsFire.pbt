@@ -1,13 +1,13 @@
 Assets {
-  Id: 14477423852380848897
-  Name: "Hunter Orc Rain Of Arrows Placement Fire"
+  Id: 10077247746261509738
+  Name: "STORE_HunterOrcArrowsFire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17517058638544218899
+      RootId: 3435293670448751102
       Objects {
-        Id: 17517058638544218899
-        Name: "Hunter Orc Rain Of Arrows Placement Fire"
+        Id: 3435293670448751102
+        Name: "STORE_HunterOrcArrowsFire"
         Transform {
           Scale {
             X: 1
@@ -15,34 +15,50 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 5233782375943931870
-        ChildIds: 276435431742321795
-        ChildIds: 3726561712761259347
-        ChildIds: 8577317983575439662
-        ChildIds: 541491260474034063
-        ChildIds: 9592988298025100106
-        ChildIds: 5999405193271085178
-        ChildIds: 5667157954872853147
-        Lifespan: 2
+        ParentId: 14162296025304194376
+        ChildIds: 3129688013706599469
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         NetworkContext {
         }
       }
       Objects {
-        Id: 5233782375943931870
-        Name: "Group"
+        Id: 3129688013706599469
+        Name: "store_graphic"
         Transform {
           Location {
-            X: -5.61589813
-            Y: 12.813179
-            Z: 1257.45728
+            X: 7.5
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.1
+            Y: 0.1
+            Z: 0.1
+          }
+        }
+        ParentId: 3435293670448751102
+        ChildIds: 3084469594874385058
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 3084469594874385058
+        Name: "root"
+        Transform {
+          Location {
           }
           Rotation {
           }
@@ -52,29 +68,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17517058638544218899
-        ChildIds: 13593624781246039945
-        ChildIds: 7026913342682553413
-        ChildIds: 11828181772576448745
-        ChildIds: 5425051259716919563
-        ChildIds: 6379661539945284554
-        ChildIds: 9954857898610954759
-        ChildIds: 5555711975632841968
-        ChildIds: 4161208586697027243
-        ChildIds: 18001241615477635812
-        ChildIds: 16089315979027850858
-        ChildIds: 4169863366901278087
-        ChildIds: 16121954439337511063
-        ChildIds: 8383108082843646079
-        ChildIds: 16821827725950736797
-        ChildIds: 3931816767213444094
-        ChildIds: 12355768245862511841
-        ChildIds: 7015005355972444773
-        ChildIds: 2417493968099099345
-        ChildIds: 97829464130951253
-        ChildIds: 7245030216676739008
-        ChildIds: 524169862223310994
-        ChildIds: 2114434133116172835
+        ParentId: 3129688013706599469
+        ChildIds: 12388189901831066826
+        ChildIds: 15369507330155267216
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -86,76 +82,113 @@ Assets {
         }
       }
       Objects {
-        Id: 13593624781246039945
-        Name: "Object Mover Continuous"
+        Id: 12388189901831066826
+        Name: "Hill 02"
         Transform {
           Location {
-            X: 40.842144
-            Y: -31.427063
-            Z: -1453.44751
+            Z: 4.3359375
+          }
+          Rotation {
+            Yaw: -179.999969
+          }
+          Scale {
+            X: 0.237341613
+            Y: 0.237844348
+            Z: 0.324557096
+          }
+        }
+        ParentId: 3084469594874385058
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14402556056167558311
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.796875
+              G: 0.610107422
+              B: 0.610107422
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8828521707055617985
+          }
+          Teams {
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15369507330155267216
+        Name: "Group"
+        Transform {
+          Location {
+            Z: 80.7666
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.1
+            Y: 0.1
+            Z: 0.1
           }
         }
-        ParentId: 5233782375943931870
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 5233782375943931870
-            }
-          }
-          Overrides {
-            Name: "cs:MoveVelocity"
-            Vector {
-              Z: -3000
-            }
-          }
-          Overrides {
-            Name: "cs:LocalSpace"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:StartDelayRange"
-            Vector2 {
-            }
-          }
-          Overrides {
-            Name: "cs:StartDelayRange:tooltip"
-            String: "Random delay range for the object to take action at the start of the game."
-          }
-          Overrides {
-            Name: "cs:LocalSpace:tooltip"
-            String: "Whether RotateTo is in local space"
-          }
-          Overrides {
-            Name: "cs:Object:tooltip"
-            String: "Object to transform"
-          }
-          Overrides {
-            Name: "cs:MoveVelocity:tooltip"
-            String: "Smoothly moves the object over time by the given velocity vector."
-          }
-        }
+        ParentId: 3084469594874385058
+        ChildIds: 8466230873545748952
+        ChildIds: 8246489671598182215
+        ChildIds: 15300555597629260938
+        ChildIds: 8726462059734486668
+        ChildIds: 13005575043971628199
+        ChildIds: 10589392768604794493
+        ChildIds: 7857722397103766299
+        ChildIds: 6770510995966659577
+        ChildIds: 5256508753381062008
+        ChildIds: 18100850713895555202
+        ChildIds: 670789604794615252
+        ChildIds: 357043283690283876
+        ChildIds: 13463479180494713031
+        ChildIds: 18086127938878542864
+        ChildIds: 10345976777422957177
+        ChildIds: 7274462650011592619
+        ChildIds: 465050070109280425
+        ChildIds: 16742860445954338577
+        ChildIds: 8540981975191601107
+        ChildIds: 11077272105585804959
+        ChildIds: 9371115024639103619
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 2331688389429807128
-          }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
-        Id: 7026913342682553413
+        Id: 8466230873545748952
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -171,11 +204,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 15484349461652824693
-        ChildIds: 559662658033498726
-        ChildIds: 15336340435890253314
-        ChildIds: 17502523210151299997
+        ParentId: 15369507330155267216
+        ChildIds: 3139206417090540697
+        ChildIds: 16857167861003290296
+        ChildIds: 6008982550444259444
+        ChildIds: 5868689445584532136
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -187,7 +220,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15484349461652824693
+        Id: 3139206417090540697
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -201,7 +234,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 7026913342682553413
+        ParentId: 8466230873545748952
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -262,7 +295,7 @@ Assets {
         }
       }
       Objects {
-        Id: 559662658033498726
+        Id: 16857167861003290296
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -276,7 +309,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 7026913342682553413
+        ParentId: 8466230873545748952
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -319,7 +352,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15336340435890253314
+        Id: 6008982550444259444
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -333,7 +366,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 7026913342682553413
+        ParentId: 8466230873545748952
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -376,33 +409,36 @@ Assets {
         }
       }
       Objects {
-        Id: 17502523210151299997
+        Id: 5868689445584532136
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
-            Z: -85.793457
+            Z: -85.7910156
           }
           Rotation {
-            Pitch: 180
+            Pitch: -1.36603776e-05
+            Yaw: -179.999985
+            Roll: -179.999985
           }
           Scale {
             X: 0.0823371485
-            Y: 0.0823370665
-            Z: 0.168180019
+            Y: 0.0823370814
+            Z: 0.168180048
           }
         }
-        ParentId: 7026913342682553413
+        ParentId: 8466230873545748952
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -429,7 +465,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11828181772576448745
+        Id: 8246489671598182215
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -445,11 +481,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 10496239036807287392
-        ChildIds: 15219380761158768523
-        ChildIds: 15792509871646844457
-        ChildIds: 14252194902031254419
+        ParentId: 15369507330155267216
+        ChildIds: 10370575147429901741
+        ChildIds: 9618088026632687605
+        ChildIds: 2366337027355906518
+        ChildIds: 15720178011099334075
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -461,7 +497,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10496239036807287392
+        Id: 10370575147429901741
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -475,7 +511,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 11828181772576448745
+        ParentId: 8246489671598182215
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -536,7 +572,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15219380761158768523
+        Id: 9618088026632687605
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -550,7 +586,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 11828181772576448745
+        ParentId: 8246489671598182215
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -593,7 +629,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15792509871646844457
+        Id: 2366337027355906518
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -607,7 +643,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 11828181772576448745
+        ParentId: 8246489671598182215
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -650,33 +686,36 @@ Assets {
         }
       }
       Objects {
-        Id: 14252194902031254419
+        Id: 15720178011099334075
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
-            Z: -85.793457
+            Z: -85.7910156
           }
           Rotation {
-            Pitch: 180
+            Pitch: -1.36603776e-05
+            Yaw: -179.999985
+            Roll: -179.999985
           }
           Scale {
             X: 0.0823371485
-            Y: 0.0823370665
-            Z: 0.168180019
+            Y: 0.0823370814
+            Z: 0.168180048
           }
         }
-        ParentId: 11828181772576448745
+        ParentId: 8246489671598182215
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -703,7 +742,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5425051259716919563
+        Id: 15300555597629260938
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -719,11 +758,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 9961278669050861297
-        ChildIds: 14238491977226516977
-        ChildIds: 3104004492688435825
-        ChildIds: 4452967383794846407
+        ParentId: 15369507330155267216
+        ChildIds: 2582380987273988473
+        ChildIds: 10174965285851777528
+        ChildIds: 14057143610388889037
+        ChildIds: 15604807472477702415
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -735,7 +774,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9961278669050861297
+        Id: 2582380987273988473
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -749,7 +788,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 5425051259716919563
+        ParentId: 15300555597629260938
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -810,7 +849,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14238491977226516977
+        Id: 10174965285851777528
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -824,7 +863,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 5425051259716919563
+        ParentId: 15300555597629260938
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -867,7 +906,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3104004492688435825
+        Id: 14057143610388889037
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -881,7 +920,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 5425051259716919563
+        ParentId: 15300555597629260938
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -924,7 +963,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4452967383794846407
+        Id: 15604807472477702415
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -939,18 +978,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 5425051259716919563
+        ParentId: 15300555597629260938
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -977,7 +1017,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6379661539945284554
+        Id: 8726462059734486668
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -993,11 +1033,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 4173561366809466718
-        ChildIds: 15034304987922966888
-        ChildIds: 7716506505119772463
-        ChildIds: 6330085004823024265
+        ParentId: 15369507330155267216
+        ChildIds: 3498544884240782566
+        ChildIds: 12285973758882519492
+        ChildIds: 16490231568375165859
+        ChildIds: 1751868700939854738
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1009,7 +1049,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4173561366809466718
+        Id: 3498544884240782566
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -1023,7 +1063,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 6379661539945284554
+        ParentId: 8726462059734486668
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -1084,7 +1124,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15034304987922966888
+        Id: 12285973758882519492
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -1098,7 +1138,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 6379661539945284554
+        ParentId: 8726462059734486668
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1141,7 +1181,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7716506505119772463
+        Id: 16490231568375165859
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -1155,7 +1195,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 6379661539945284554
+        ParentId: 8726462059734486668
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1198,7 +1238,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6330085004823024265
+        Id: 1751868700939854738
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -1213,18 +1253,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 6379661539945284554
+        ParentId: 8726462059734486668
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -1251,7 +1292,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9954857898610954759
+        Id: 13005575043971628199
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -1267,11 +1308,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 14635726601338313775
-        ChildIds: 17688201097454556516
-        ChildIds: 12286647101874674811
-        ChildIds: 15524779832156005080
+        ParentId: 15369507330155267216
+        ChildIds: 2673535462618119794
+        ChildIds: 6798414996682491961
+        ChildIds: 9215234097150139017
+        ChildIds: 2686106995105736980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1283,7 +1324,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14635726601338313775
+        Id: 2673535462618119794
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -1297,7 +1338,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 9954857898610954759
+        ParentId: 13005575043971628199
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -1358,7 +1399,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17688201097454556516
+        Id: 6798414996682491961
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -1372,7 +1413,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 9954857898610954759
+        ParentId: 13005575043971628199
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1415,7 +1456,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12286647101874674811
+        Id: 9215234097150139017
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -1429,7 +1470,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 9954857898610954759
+        ParentId: 13005575043971628199
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1472,7 +1513,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15524779832156005080
+        Id: 2686106995105736980
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -1487,18 +1528,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 9954857898610954759
+        ParentId: 13005575043971628199
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -1525,7 +1567,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5555711975632841968
+        Id: 10589392768604794493
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -1541,11 +1583,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 7060517308427715174
-        ChildIds: 6303813815251614689
-        ChildIds: 15503877838722033910
-        ChildIds: 9973033838244646376
+        ParentId: 15369507330155267216
+        ChildIds: 6755601670099692111
+        ChildIds: 7110722692338655168
+        ChildIds: 16075369812611619463
+        ChildIds: 15289602342473796289
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1557,7 +1599,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7060517308427715174
+        Id: 6755601670099692111
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -1571,7 +1613,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 5555711975632841968
+        ParentId: 10589392768604794493
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -1632,7 +1674,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6303813815251614689
+        Id: 7110722692338655168
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -1646,7 +1688,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 5555711975632841968
+        ParentId: 10589392768604794493
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1689,7 +1731,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15503877838722033910
+        Id: 16075369812611619463
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -1703,7 +1745,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 5555711975632841968
+        ParentId: 10589392768604794493
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1746,7 +1788,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9973033838244646376
+        Id: 15289602342473796289
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -1761,18 +1803,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 5555711975632841968
+        ParentId: 10589392768604794493
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -1799,7 +1842,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4161208586697027243
+        Id: 7857722397103766299
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -1815,11 +1858,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 11532829546177704235
-        ChildIds: 14486427217592929811
-        ChildIds: 9109138070348410717
-        ChildIds: 4199089830819167271
+        ParentId: 15369507330155267216
+        ChildIds: 4799593796629420044
+        ChildIds: 1136693201161204936
+        ChildIds: 8550192026061182328
+        ChildIds: 4435538533385662408
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1831,7 +1874,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11532829546177704235
+        Id: 4799593796629420044
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -1845,7 +1888,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 4161208586697027243
+        ParentId: 7857722397103766299
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -1906,7 +1949,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14486427217592929811
+        Id: 1136693201161204936
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -1920,7 +1963,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 4161208586697027243
+        ParentId: 7857722397103766299
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1963,7 +2006,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9109138070348410717
+        Id: 8550192026061182328
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -1977,7 +2020,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 4161208586697027243
+        ParentId: 7857722397103766299
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2020,7 +2063,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4199089830819167271
+        Id: 4435538533385662408
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -2035,18 +2078,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 4161208586697027243
+        ParentId: 7857722397103766299
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -2073,7 +2117,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18001241615477635812
+        Id: 6770510995966659577
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -2089,11 +2133,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 15456252200022093516
-        ChildIds: 3280962092237963954
-        ChildIds: 939360307479340067
-        ChildIds: 5528873735652536370
+        ParentId: 15369507330155267216
+        ChildIds: 2450334182769159771
+        ChildIds: 16141532362418802801
+        ChildIds: 2054141082438179155
+        ChildIds: 5412881117749581126
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2105,7 +2149,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15456252200022093516
+        Id: 2450334182769159771
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -2119,7 +2163,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 18001241615477635812
+        ParentId: 6770510995966659577
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -2180,7 +2224,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3280962092237963954
+        Id: 16141532362418802801
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -2194,7 +2238,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 18001241615477635812
+        ParentId: 6770510995966659577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2237,7 +2281,7 @@ Assets {
         }
       }
       Objects {
-        Id: 939360307479340067
+        Id: 2054141082438179155
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -2251,7 +2295,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 18001241615477635812
+        ParentId: 6770510995966659577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2294,7 +2338,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5528873735652536370
+        Id: 5412881117749581126
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -2309,18 +2353,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 18001241615477635812
+        ParentId: 6770510995966659577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -2347,7 +2392,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16089315979027850858
+        Id: 5256508753381062008
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -2363,11 +2408,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 17613496518359218660
-        ChildIds: 4611915093310776130
-        ChildIds: 5738389078923035744
-        ChildIds: 17955569960357614139
+        ParentId: 15369507330155267216
+        ChildIds: 776316077771904115
+        ChildIds: 14284701387752022798
+        ChildIds: 2487453147331831805
+        ChildIds: 17736274999533367629
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2379,7 +2424,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17613496518359218660
+        Id: 776316077771904115
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -2393,7 +2438,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 16089315979027850858
+        ParentId: 5256508753381062008
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -2454,7 +2499,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4611915093310776130
+        Id: 14284701387752022798
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -2468,7 +2513,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 16089315979027850858
+        ParentId: 5256508753381062008
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2511,7 +2556,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5738389078923035744
+        Id: 2487453147331831805
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -2525,7 +2570,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 16089315979027850858
+        ParentId: 5256508753381062008
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2568,7 +2613,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17955569960357614139
+        Id: 17736274999533367629
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -2583,18 +2628,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 16089315979027850858
+        ParentId: 5256508753381062008
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -2621,7 +2667,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4169863366901278087
+        Id: 18100850713895555202
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -2637,11 +2683,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 6871932607590995541
-        ChildIds: 18278022732087850928
-        ChildIds: 13788979431533178225
-        ChildIds: 14594973200319348284
+        ParentId: 15369507330155267216
+        ChildIds: 2401551925394488163
+        ChildIds: 14904654855602948660
+        ChildIds: 15043804892287118364
+        ChildIds: 7248352768372752182
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2653,7 +2699,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6871932607590995541
+        Id: 2401551925394488163
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
@@ -2667,7 +2713,7 @@ Assets {
             Z: 1.49999976
           }
         }
-        ParentId: 4169863366901278087
+        ParentId: 18100850713895555202
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -2728,7 +2774,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18278022732087850928
+        Id: 14904654855602948660
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -2742,7 +2788,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 4169863366901278087
+        ParentId: 18100850713895555202
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2785,7 +2831,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13788979431533178225
+        Id: 15043804892287118364
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -2799,7 +2845,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 4169863366901278087
+        ParentId: 18100850713895555202
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2842,7 +2888,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14594973200319348284
+        Id: 7248352768372752182
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -2857,18 +2903,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 4169863366901278087
+        ParentId: 18100850713895555202
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -2895,7 +2942,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16121954439337511063
+        Id: 670789604794615252
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -2911,10 +2958,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 7440523481279640472
-        ChildIds: 16729168851824231800
-        ChildIds: 1847079960857243560
+        ParentId: 15369507330155267216
+        ChildIds: 13029331693010318964
+        ChildIds: 17008571311818331557
+        ChildIds: 8566711826070761573
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2926,7 +2973,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7440523481279640472
+        Id: 13029331693010318964
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -2940,7 +2987,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 16121954439337511063
+        ParentId: 670789604794615252
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2983,7 +3030,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16729168851824231800
+        Id: 17008571311818331557
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -2997,7 +3044,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 16121954439337511063
+        ParentId: 670789604794615252
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3040,7 +3087,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1847079960857243560
+        Id: 8566711826070761573
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -3055,18 +3102,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 16121954439337511063
+        ParentId: 670789604794615252
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -3093,7 +3141,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8383108082843646079
+        Id: 357043283690283876
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -3109,10 +3157,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 4033157895441810243
-        ChildIds: 5574080850765773914
-        ChildIds: 593232052117858729
+        ParentId: 15369507330155267216
+        ChildIds: 2291325181365644772
+        ChildIds: 9639646885895406483
+        ChildIds: 12806767920087499028
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3124,7 +3172,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4033157895441810243
+        Id: 2291325181365644772
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -3138,7 +3186,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 8383108082843646079
+        ParentId: 357043283690283876
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3181,7 +3229,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5574080850765773914
+        Id: 9639646885895406483
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -3195,7 +3243,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 8383108082843646079
+        ParentId: 357043283690283876
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3238,7 +3286,7 @@ Assets {
         }
       }
       Objects {
-        Id: 593232052117858729
+        Id: 12806767920087499028
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -3253,18 +3301,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 8383108082843646079
+        ParentId: 357043283690283876
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -3291,7 +3340,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16821827725950736797
+        Id: 13463479180494713031
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -3307,10 +3356,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 8119359351306959264
-        ChildIds: 9669250756298022645
-        ChildIds: 1686652922326913265
+        ParentId: 15369507330155267216
+        ChildIds: 4115158097254048306
+        ChildIds: 9467312208553605393
+        ChildIds: 14087795445359310507
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3322,7 +3371,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8119359351306959264
+        Id: 4115158097254048306
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -3336,7 +3385,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 16821827725950736797
+        ParentId: 13463479180494713031
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3379,7 +3428,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9669250756298022645
+        Id: 9467312208553605393
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -3393,7 +3442,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 16821827725950736797
+        ParentId: 13463479180494713031
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3436,7 +3485,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1686652922326913265
+        Id: 14087795445359310507
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -3451,18 +3500,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 16821827725950736797
+        ParentId: 13463479180494713031
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -3489,7 +3539,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3931816767213444094
+        Id: 18086127938878542864
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -3505,10 +3555,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 17997376666465729098
-        ChildIds: 4719494960610442908
-        ChildIds: 8107671221358336330
+        ParentId: 15369507330155267216
+        ChildIds: 16316634575656025540
+        ChildIds: 12264981320740698746
+        ChildIds: 11661188132128954908
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3520,7 +3570,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17997376666465729098
+        Id: 16316634575656025540
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -3534,7 +3584,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 3931816767213444094
+        ParentId: 18086127938878542864
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3577,7 +3627,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4719494960610442908
+        Id: 12264981320740698746
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -3591,7 +3641,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 3931816767213444094
+        ParentId: 18086127938878542864
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3634,7 +3684,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8107671221358336330
+        Id: 11661188132128954908
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -3649,18 +3699,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 3931816767213444094
+        ParentId: 18086127938878542864
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -3687,7 +3738,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12355768245862511841
+        Id: 10345976777422957177
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -3703,10 +3754,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 16849496917648298371
-        ChildIds: 11353001081907748930
-        ChildIds: 7175619743396548010
+        ParentId: 15369507330155267216
+        ChildIds: 12640089937298402944
+        ChildIds: 5589051782565895951
+        ChildIds: 8069292895189964667
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3718,7 +3769,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16849496917648298371
+        Id: 12640089937298402944
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -3732,7 +3783,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 12355768245862511841
+        ParentId: 10345976777422957177
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3775,7 +3826,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11353001081907748930
+        Id: 5589051782565895951
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -3789,7 +3840,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 12355768245862511841
+        ParentId: 10345976777422957177
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3832,7 +3883,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7175619743396548010
+        Id: 8069292895189964667
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -3847,18 +3898,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 12355768245862511841
+        ParentId: 10345976777422957177
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -3885,7 +3937,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7015005355972444773
+        Id: 7274462650011592619
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -3901,10 +3953,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 16087169822473218304
-        ChildIds: 13742365397069929756
-        ChildIds: 1034762929507945490
+        ParentId: 15369507330155267216
+        ChildIds: 10386254815246013536
+        ChildIds: 815821601739679418
+        ChildIds: 13962108270374797433
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3916,7 +3968,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16087169822473218304
+        Id: 10386254815246013536
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -3930,7 +3982,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 7015005355972444773
+        ParentId: 7274462650011592619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3973,7 +4025,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13742365397069929756
+        Id: 815821601739679418
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -3987,7 +4039,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 7015005355972444773
+        ParentId: 7274462650011592619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4030,7 +4082,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1034762929507945490
+        Id: 13962108270374797433
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -4045,18 +4097,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 7015005355972444773
+        ParentId: 7274462650011592619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -4083,7 +4136,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2417493968099099345
+        Id: 465050070109280425
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -4099,10 +4152,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 4009589502800491916
-        ChildIds: 12154428027593141285
-        ChildIds: 16573637349827961711
+        ParentId: 15369507330155267216
+        ChildIds: 6682409340308968328
+        ChildIds: 13352847123979056172
+        ChildIds: 16579038464385306904
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4114,7 +4167,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4009589502800491916
+        Id: 6682409340308968328
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -4128,7 +4181,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 2417493968099099345
+        ParentId: 465050070109280425
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4171,7 +4224,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12154428027593141285
+        Id: 13352847123979056172
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -4185,7 +4238,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 2417493968099099345
+        ParentId: 465050070109280425
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4228,7 +4281,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16573637349827961711
+        Id: 16579038464385306904
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -4243,18 +4296,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 2417493968099099345
+        ParentId: 465050070109280425
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -4281,7 +4335,7 @@ Assets {
         }
       }
       Objects {
-        Id: 97829464130951253
+        Id: 16742860445954338577
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -4297,10 +4351,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 15526865711401948402
-        ChildIds: 3578970726575842516
-        ChildIds: 16912039857077424379
+        ParentId: 15369507330155267216
+        ChildIds: 1168719946292788607
+        ChildIds: 633938024521290205
+        ChildIds: 2941162477778104782
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4312,7 +4366,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15526865711401948402
+        Id: 1168719946292788607
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -4326,7 +4380,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 97829464130951253
+        ParentId: 16742860445954338577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4369,7 +4423,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3578970726575842516
+        Id: 633938024521290205
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -4383,7 +4437,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 97829464130951253
+        ParentId: 16742860445954338577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4426,7 +4480,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16912039857077424379
+        Id: 2941162477778104782
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -4441,18 +4495,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 97829464130951253
+        ParentId: 16742860445954338577
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -4479,7 +4534,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7245030216676739008
+        Id: 8540981975191601107
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -4495,10 +4550,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 2339016142931676253
-        ChildIds: 13466583729795539258
-        ChildIds: 15900382308347910603
+        ParentId: 15369507330155267216
+        ChildIds: 3963754118855995350
+        ChildIds: 2394234371911127208
+        ChildIds: 4639230213331001812
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4510,7 +4565,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2339016142931676253
+        Id: 3963754118855995350
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -4524,7 +4579,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 7245030216676739008
+        ParentId: 8540981975191601107
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4567,7 +4622,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13466583729795539258
+        Id: 2394234371911127208
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -4581,7 +4636,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 7245030216676739008
+        ParentId: 8540981975191601107
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4624,7 +4679,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15900382308347910603
+        Id: 4639230213331001812
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -4639,18 +4694,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 7245030216676739008
+        ParentId: 8540981975191601107
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -4677,7 +4733,7 @@ Assets {
         }
       }
       Objects {
-        Id: 524169862223310994
+        Id: 11077272105585804959
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -4693,10 +4749,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 8189554563926248124
-        ChildIds: 18114072608652284753
-        ChildIds: 9284214680008954774
+        ParentId: 15369507330155267216
+        ChildIds: 582979944172749573
+        ChildIds: 8502307342268675429
+        ChildIds: 5835521046474517796
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4708,7 +4764,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8189554563926248124
+        Id: 582979944172749573
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -4722,7 +4778,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 524169862223310994
+        ParentId: 11077272105585804959
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4765,7 +4821,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18114072608652284753
+        Id: 8502307342268675429
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -4779,7 +4835,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 524169862223310994
+        ParentId: 11077272105585804959
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4822,7 +4878,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9284214680008954774
+        Id: 5835521046474517796
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -4837,18 +4893,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 524169862223310994
+        ParentId: 11077272105585804959
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -4875,7 +4932,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2114434133116172835
+        Id: 9371115024639103619
         Name: "Basic Arrow"
         Transform {
           Location {
@@ -4891,10 +4948,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5233782375943931870
-        ChildIds: 1057871865546449039
-        ChildIds: 16789367365752996897
-        ChildIds: 12937279533856195572
+        ParentId: 15369507330155267216
+        ChildIds: 15037875676662766093
+        ChildIds: 8515020917008294510
+        ChildIds: 750588163306298860
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4906,7 +4963,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1057871865546449039
+        Id: 15037875676662766093
         Name: "Prism - 5-Sided"
         Transform {
           Location {
@@ -4920,7 +4977,7 @@ Assets {
             Z: 0.927249789
           }
         }
-        ParentId: 2114434133116172835
+        ParentId: 9371115024639103619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4963,7 +5020,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16789367365752996897
+        Id: 8515020917008294510
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
@@ -4977,7 +5034,7 @@ Assets {
             Z: 0.393465698
           }
         }
-        ParentId: 2114434133116172835
+        ParentId: 9371115024639103619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5020,7 +5077,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12937279533856195572
+        Id: 750588163306298860
         Name: "Pyramid - 4-Sided"
         Transform {
           Location {
@@ -5035,18 +5092,19 @@ Assets {
             Z: 0.168180019
           }
         }
-        ParentId: 2114434133116172835
+        ParentId: 9371115024639103619
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.61
+              R: 4
+              G: 0.1
               A: 1
             }
           }
@@ -5072,330 +5130,23 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 276435431742321795
-        Name: "Projectile Fire Arrow 01 SFX"
-        Transform {
-          Location {
-            Z: 80
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17517058638544218899
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 2721088161473172859
-          }
-          AutoPlay: true
-          Volume: 1.5
-          Falloff: 2500
-          Radius: 1000
-          IsAttenuationEnabled: true
-        }
+    }
+    Assets {
+      Id: 8828521707055617985
+      Name: "Hill 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_hill_005"
       }
-      Objects {
-        Id: 3726561712761259347
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 8577317983575439662
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: 175.165527
-            Y: -392.240234
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 541491260474034063
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: -355.797852
-            Y: -233.899414
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 9592988298025100106
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: -305.079102
-            Y: 273.462891
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 5999405193271085178
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: 179.07373
-            Y: 346.791016
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 5667157954872853147
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: 415.757324
-            Y: -111.801758
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 17517058638544218899
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.067
-              G: 0.067
-              B: 0.067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
+    }
+    Assets {
+      Id: 14402556056167558311
+      Name: "Sand 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_001_uv"
       }
     }
     Assets {
@@ -5444,21 +5195,12 @@ Assets {
       }
     }
     Assets {
-      Id: 2721088161473172859
-      Name: "Projectile Fire Arrow 01 SFX"
-      PlatformAssetType: 7
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_projectile_fire_arrow_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 8368756853707329605
-      Name: "Explosion Kit Dust Ring VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_mil_dirt_impact_explosikit_dustRing"
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     PrimaryAssetId {
