@@ -1,8 +1,8 @@
 Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
-  Id: 14441791922638094002
-  Name: "STORE_HealerOrcHealingCrystalFire"
+  Id: 6346008296887726519
+  Name: "STORE_HealerElfSupernovaFrost"
   Transform {
     Scale {
       X: 1
@@ -20,15 +20,18 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 12935646335962544054
+      key: 1491409904157658500
       value {
         Overrides {
           Name: "Name"
-          String: "STORE_HealerOrcHealingCrystalFire"
+          String: "STORE_HealerElfSupernovaFrost"
         }
         Overrides {
           Name: "Position"
           Vector {
+            X: 40.3828125
+            Y: 20.4023438
+            Z: -91.2446289
           }
         }
         Overrides {
@@ -39,107 +42,13 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:forceon"
           }
         }
       }
     }
     TemplateAsset {
-      Id: 8719637795602797495
-    }
-  }
-}
-Objects {
-  Id: 10297149094836148556
-  Name: "STORE_HealerOrcDivineLightFire"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14162296025304194376
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 8575949940646007553
-      value {
-        Overrides {
-          Name: "Name"
-          String: "STORE_HealerOrcDivineLightFire"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -18.3964844
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3598001500795037918
-    }
-  }
-}
-Objects {
-  Id: 12491902712149528466
-  Name: "STORE_HealerOrcSunBeamFire"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14162296025304194376
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3435293670448751102
-      value {
-        Overrides {
-          Name: "Name"
-          String: "STORE_HealerOrcSunBeamFire"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -38.3320313
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6370767088243959691
+      Id: 14103027898437344391
     }
   }
 }
@@ -172,7 +81,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -57.0566406
+            X: 40.3828125
+            Z: -91.2446289
           }
         }
         Overrides {
@@ -183,57 +93,13 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:forceon"
           }
         }
       }
     }
     TemplateAsset {
       Id: 13947110941262607128
-    }
-  }
-}
-Objects {
-  Id: 4451364312033876303
-  Name: "STORE_HealerElfHealingCrystalFrost"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14162296025304194376
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6355977493171644725
-      value {
-        Overrides {
-          Name: "Name"
-          String: "STORE_HealerElfHealingCrystalFrost"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Y: 21.125
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 11063712525175852637
     }
   }
 }
@@ -266,8 +132,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -18.3964844
+            X: 79.0429688
             Y: 20.4023438
+            Z: -91.2446289
           }
         }
         Overrides {
@@ -278,13 +145,161 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:forceon"
           }
         }
       }
     }
     TemplateAsset {
       Id: 115474395513047901
+    }
+  }
+}
+Objects {
+  Id: 10297149094836148556
+  Name: "STORE_HealerOrcDivineLightFire"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14162296025304194376
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8575949940646007553
+      value {
+        Overrides {
+          Name: "Name"
+          String: "STORE_HealerOrcDivineLightFire"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 79.0429688
+            Z: -91.2446289
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceon"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3598001500795037918
+    }
+  }
+}
+Objects {
+  Id: 4451364312033876303
+  Name: "STORE_HealerElfHealingCrystalFrost"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14162296025304194376
+  WantsNetworking: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6355977493171644725
+      value {
+        Overrides {
+          Name: "Name"
+          String: "STORE_HealerElfHealingCrystalFrost"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 97.4394531
+            Y: 21.125
+            Z: -91.2446289
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceon"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11063712525175852637
+    }
+  }
+}
+Objects {
+  Id: 14441791922638094002
+  Name: "STORE_HealerOrcHealingCrystalFire"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14162296025304194376
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12935646335962544054
+      value {
+        Overrides {
+          Name: "Name"
+          String: "STORE_HealerOrcHealingCrystalFire"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 97.4394531
+            Z: -91.2446289
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceon"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8719637795602797495
     }
   }
 }
@@ -328,8 +343,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -38.3320313
+            X: 59.1074219
             Y: 20.4023438
+            Z: -91.2446289
           }
         }
         Overrides {
@@ -340,7 +356,7 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:forceon"
           }
         }
       }
@@ -351,8 +367,8 @@ Objects {
   }
 }
 Objects {
-  Id: 6346008296887726519
-  Name: "STORE_HealerElfSupernovaFrost"
+  Id: 12491902712149528466
+  Name: "STORE_HealerOrcSunBeamFire"
   Transform {
     Scale {
       X: 1
@@ -362,25 +378,19 @@ Objects {
   }
   ParentId: 14162296025304194376
   WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 1491409904157658500
+      key: 3435293670448751102
       value {
         Overrides {
           Name: "Name"
-          String: "STORE_HealerElfSupernovaFrost"
+          String: "STORE_HealerOrcSunBeamFire"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -57.0566406
-            Y: 20.4023438
+            X: 59.1074219
+            Z: -91.2446289
           }
         }
         Overrides {
@@ -391,13 +401,13 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:forceon"
           }
         }
       }
     }
     TemplateAsset {
-      Id: 14103027898437344391
+      Id: 6370767088243959691
     }
   }
 }

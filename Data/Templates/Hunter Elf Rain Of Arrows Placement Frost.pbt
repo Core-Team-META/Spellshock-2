@@ -7,7 +7,7 @@ Assets {
       RootId: 3913048274682296068
       Objects {
         Id: 3913048274682296068
-        Name: "Frost Elf RainOfArrows_FX"
+        Name: "Hunter Elf Rain Of Arrows Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -191,7 +191,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -219,24 +219,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -459,7 +465,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -487,24 +493,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -727,7 +739,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -755,24 +767,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -995,7 +1013,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -1023,24 +1041,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1263,7 +1287,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -1291,24 +1315,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1531,7 +1561,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -1559,24 +1589,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1799,7 +1835,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -1827,24 +1863,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2067,7 +2109,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -2095,24 +2137,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2335,7 +2383,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -2363,24 +2411,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2603,7 +2657,7 @@ Assets {
         Name: "Basic Projectile Trail VFX"
         Transform {
           Location {
-            Z: 4.83496094
+            Z: 4
           }
           Rotation {
           }
@@ -2631,24 +2685,30 @@ Assets {
           Overrides {
             Name: "bp:ColorB"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.499999523
+              B: 2
+              A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.62
-              G: 1
-              B: 0.984900653
-              A: 0.4
+              G: 0.0201324318
+              B: 0.190000057
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.489041984
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 5
+              A: 1
+            }
           }
         }
         Collidable_v2 {
