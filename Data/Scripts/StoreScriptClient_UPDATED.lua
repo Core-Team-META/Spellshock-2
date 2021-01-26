@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- StoreScriptClient
 -- Authors: Montoli (META) (https://www.coregames.com/user/422e57c184374923b8ce32176b018db5)
 --		    Estlogic (META) (https://www.coregames.com/user/385b45d7abdb499f8664c6cb01df521b)
@@ -1323,9 +1323,9 @@ function OnFilterButtonSelected(button)
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
-	local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
-	local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
-	local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
+    local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
+    --local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
+	--local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
 
 	RemovePreview()
 
@@ -1336,53 +1336,26 @@ function OnFilterButtonSelected(button)
 	propFrameImage2.visibility = Visibility.INHERIT
 
 	if currentTag.tag == tag then -- if the current active filter is this button, reset filter and highlight color
-		CurrentStoreElements = {}
-
-		for k, v in ipairs(StoreElements) do -- filter only by types
-			if v.types[currentType.type] ~= nil or (currentType.type == nil) then
-				table.insert(CurrentStoreElements, v)
-			end
-		end
-
-		PopulateStore(-1)
-		storePos = 0
-
-		currentTag = {
-			tag = nil
-		}
+		currentTag = {tag = nil}
+        FilterStoreItems()
 		propFrameImage2.visibility = Visibility.FORCE_OFF
 		return
 	elseif currentTag.tag ~= nil then -- if the current active filter is not this button, reset highlight color
-		--local propFrameImageOther = currentTag.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentTag.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		--local propBGImageOther = currentTag.root:GetCustomProperty("BGImage"):WaitForObject()
-
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
 	end
 
 	currentTag = buttonData
 
-	--print("Filtering for " .. buttonData.tag)
-	CurrentStoreElements = {}
-
-	--actual filtering
-	for k, v in ipairs(StoreElements) do --#FIXME Add logic for 3rd filter
-		local owned = HasCosmetic(v.id)
-		if tag == "OWNED" and owned or (tag == "UNOWNED" and not owned) or (v.tags[tag] ~= nil) then
-			if v.types[currentType.type] ~= nil or (currentType.type == nil) then
-				table.insert(CurrentStoreElements, v)
-			end
-		end
-	end
-
-	PopulateStore(-1)
-	storePos = 0
+	-- Clear and repopulate store with filtered items
+    FilterStoreItems()
 end
 
 ----------------------------------------------------------------------------------------------------------------
 -- FILTER TYPE FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
+-- Used for both Type and Ownership
 function SpawnTypeFilterButton(displayName, type, color, position)
 	local newFilterButton = World.SpawnAsset(propSTORE_FilterListEntry, {parent = propTypeFilterListHolder})
 
@@ -1434,9 +1407,9 @@ function OnTypeFilterButtonSelected(button)
 	local buttonData = typeFilterButtonData[button]
 	local type = buttonData.type
 
-	local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
-	local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
-	local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
+    local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
+	--local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
+	--local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
 
 	RemovePreview()
 	if currentlyEquipped ~= nil then
@@ -1447,59 +1420,19 @@ function OnTypeFilterButtonSelected(button)
 	propFrameImage2.visibility = Visibility.INHERIT
 	
 	if currentType.type == type then -- if the current active filter is this button, reset filter and highlight color
-		--print("Clearing filter")
-		
-		CurrentStoreElements = {}
-
-		for k, v in ipairs(StoreElements) do -- filter only by tags
-			local owned = HasCosmetic(v.id)
-			if
-				v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) or (currentTag.tag == "OWNED" and owned) or
-					(currentTag.tag == "UNOWNED" and not owned)
-			 then
-				table.insert(CurrentStoreElements, v)
-			end
-		end
-
-		PopulateStore(-1)
-		storePos = 0
-
-		currentType = {
-			type = nil
-		}
-
+        currentType = {type = nil}
+        FilterStoreItems()
 		propFrameImage2.visibility = Visibility.FORCE_OFF
-		
 		return
 	elseif currentType.type ~= nil then -- if the current active filter is not this button, reset highlight color
-		
-		--local propFrameImageOther = currentType.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentType.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		--local propBGImageOther = currentType.root:GetCustomProperty("BGImage"):WaitForObject()
-
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
 	end
 
 	currentType = buttonData
 
-	--print("Type filtering for " .. type)
-	CurrentStoreElements = {}
-
-	-- actual filtering
-	for k, v in ipairs(StoreElements) do
-		local owned = HasCosmetic(v.id)
-		if v.types[type] ~= nil then
-			if
-				v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) or (currentTag.tag == "OWNED" and owned) or
-					(currentTag.tag == "UNOWNED" and not owned)
-			 then
-				table.insert(CurrentStoreElements, v)
-			end
-		end
-	end
-
-	PopulateStore(-1)
-	storePos = 0
+	-- Clear and repopulate store with filtered items
+    FilterStoreItems()
 end
 
 function OnOwnershipFilterButtonSelected(button)
@@ -1510,9 +1443,9 @@ function OnOwnershipFilterButtonSelected(button)
 	local buttonData = typeFilterButtonData[button]
 	local type = buttonData.type
 
-	local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
-	local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
-	local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
+    local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
+	--local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
+	--local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
 
 	RemovePreview()
 	if currentlyEquipped ~= nil then
@@ -1523,66 +1456,83 @@ function OnOwnershipFilterButtonSelected(button)
 	propFrameImage2.visibility = Visibility.INHERIT
 	
 	if currentOwnership.type == type then -- if the current active filter is this button, reset filter and highlight color
-		--print("Clearing filter")
-		
-		CurrentStoreElements = {}
-
-		for k, v in ipairs(StoreElements) do -- filter only by tags
-			local owned = HasCosmetic(v.id)
-			if
-				v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) 
-			 then
-				table.insert(CurrentStoreElements, v)
-			end
-		end
-
-		PopulateStore(-1)
-		storePos = 0
-
-		currentOwnership = {
-			type = nil
-		}
-
+		currentOwnership = {type = nil}
+        FilterStoreItems()
 		propFrameImage2.visibility = Visibility.FORCE_OFF
-		
 		return
 	elseif currentOwnership.type ~= nil then -- if the current active filter is not this button, reset highlight color
-		
-		--local propFrameImageOther = currentType.root:GetCustomProperty("FrameImage"):WaitForObject()
 		local propFrameImage2Other = currentOwnership.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		--local propBGImageOther = currentType.root:GetCustomProperty("BGImage"):WaitForObject()
-
 		propFrameImage2Other.visibility = Visibility.FORCE_OFF
 	end
 
 	currentOwnership = buttonData
 
-	--print("Type filtering for " .. type)
-	CurrentStoreElements = {}
+	-- Clear and repopulate store with filtered items
+    FilterStoreItems()
+end
 
-	
+function FilterStoreItems()
+    CurrentStoreElements = {}
+    local filterFunctions = {}
 
-	-- actual filtering
-	for k, v in ipairs(StoreElements) do
-		local owned = HasCosmetic(v.id)
-		--print("TYPE: "..currentType.type)
-		if v.types[currentType.type] ~= nil or currentType.type == nil then
-			print("level 1")
-			if v.tags[currentTag.tag] ~= nil or (currentTag.tag == nil) then
-				print("level 2")
-				if (type == "Purchased" and owned) or (type == "Shop" and not owned) then
-					print("level 3")
-					 table.insert(CurrentStoreElements, v)
-				end
-			end
-		end
+    -- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
+    if currentTag.tag then
+        --print("Adding tag filter")
+        table.insert(filterFunctions, function (thisItem)
+            if thisItem.tags[currentTag.tag] then
+                return true
+            else
+                return false
+            end
+        end)
+    end
 
-		--[[if (type == "Purchased" and owned) or (type == "Shop" and not owned) then
-			if 
-		end]]
-	end
+    -- Add type filter | Ability or Costume
+    if currentType.type then
+        --print("Adding type filter")
+        table.insert(filterFunctions, function (thisItem)
+            if thisItem.types[currentType.type] then
+                return true
+            else
+                return false
+            end
+        end)
+    end
 
-	PopulateStore(-1)
+    -- Add ownership filter | Shop or Purchased
+    if currentOwnership.type then
+        --print("Adding ownership filter")
+        table.insert(filterFunctions, function (thisItem)
+            local owned = HasCosmetic(thisItem.id)
+            if (currentOwnership.type == "Purchased" and owned) or (currentOwnership.type == "Shop" and not owned) then
+                return true
+            else
+                return false
+            end
+        end)
+    end
+
+    -- Determine which items should appear in the store
+    for _, item in ipairs(StoreElements) do
+        local addItem = false
+        
+        -- If there are filters applied then do filtering
+        if #filterFunctions ~= 0 then
+            for _, filter in ipairs(filterFunctions) do
+                addItem = filter(item)
+                if not addItem then break end
+            end
+        else -- otherwise just add all items
+            addItem = true
+        end
+
+        if addItem then
+            table.insert(CurrentStoreElements, item)
+        end
+    end
+
+    -- Repopulate store with filtered items
+    PopulateStore(-1)
 	storePos = 0
 end
 

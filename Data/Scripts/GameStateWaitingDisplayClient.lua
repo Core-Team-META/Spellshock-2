@@ -45,7 +45,7 @@ function Tick(deltaTime)
 	end
 	
 	if showWaitingText then
-		WAITING_TEXT.visibility = Visibility.FORCE_ON
+		WAITING_TEXT.visibility = Visibility.INHERIT
 	else
 		WAITING_TEXT.visibility = Visibility.FORCE_OFF
 	end

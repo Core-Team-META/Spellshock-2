@@ -432,7 +432,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 151
+          Width: 155
           Height: 36
           UIX: 2
           UIY: 25
@@ -442,7 +442,7 @@ Assets {
             }
           }
           Text {
-            Label: "HEADGEAR"
+            Label: "PURCHASED"
             Color {
               A: 1
             }
@@ -488,7 +488,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 151
+          Width: 155
           Height: 36
           UIX: -2
           UIY: -4
@@ -498,7 +498,7 @@ Assets {
             }
           }
           Text {
-            Label: "HEADGEAR"
+            Label: "PURCHASED"
             Color {
               R: 1
               G: 0.871367335
