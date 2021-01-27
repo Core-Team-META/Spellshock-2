@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4203246446074641205
+        ParentId: 2861350782748890552
         ChildIds: 16248516045219901306
         ChildIds: 17027646047341410091
         ChildIds: 16372659227406236914
@@ -581,7 +581,6 @@ Assets {
           }
         }
         ParentId: 6670084148681734199
-        ChildIds: 12122197019379088507
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -592,7 +591,6 @@ Assets {
           Width: 40
           Height: 40
           UIX: 21.97229
-          UIY: 113.636177
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -609,122 +607,6 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:middleleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12122197019379088507
-        Name: "COIN_ICON_SHADOW"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6889628968396317621
-        ChildIds: 16278276674525562149
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 52
-          Height: 52
-          UIX: 15.006897
-          UIY: -114.187302
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 9722663739032956639
-            }
-            Color {
-              R: 0.0900000334
-              G: 0.0482781641
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 16278276674525562149
-        Name: "COIN_ICON"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12122197019379088507
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 50
-          Height: 50
-          UIX: -2.30853271
-          UIY: -1.26156616
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 9722663739032956639
-            }
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleright"
               }
             }
           }
@@ -756,15 +638,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Corners_006"
-      }
-    }
-    Assets {
-      Id: 9722663739032956639
-      Name: "Fantasy Coins 004"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Equip_Coins_004"
       }
     }
     PrimaryAssetId {

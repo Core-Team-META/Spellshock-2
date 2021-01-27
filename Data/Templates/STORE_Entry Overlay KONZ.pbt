@@ -82,12 +82,41 @@ Assets {
               SubObjectId: 2898606390466801523
             }
           }
+          Overrides {
+            Name: "cs:FramePanel"
+            ObjectReference {
+              SubObjectId: 13160699268130470060
+            }
+          }
+          Overrides {
+            Name: "cs:PriceFrame"
+            ObjectReference {
+              SubObjectId: 11644949726114645135
+            }
+          }
+          Overrides {
+            Name: "cs:FrameDefaultColor"
+            Color {
+              R: 0.651405811
+              G: 0.351532698
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:FrameHoverColor"
+            Color {
+              R: 1
+              G: 0.6685431
+              B: 0.0899999738
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceon"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
           Width: 245
@@ -811,7 +840,7 @@ Assets {
         Control {
           Width: 32
           Height: 32
-          UIX: 9
+          UIX: 30
           UIY: 0.5
           RenderTransformPivot {
             Anchor {

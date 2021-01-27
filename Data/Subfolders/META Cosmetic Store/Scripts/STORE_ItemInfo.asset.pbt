@@ -22,7 +22,7 @@ Assets {
       }
       Overrides {
         Name: "cs:CurrencyResourceName"
-        String: "money"
+        String: "COSM_TOKEN"
       }
       Overrides {
         Name: "cs:Cost"

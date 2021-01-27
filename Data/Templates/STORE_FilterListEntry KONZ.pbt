@@ -432,7 +432,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 155
+          Width: 160
           Height: 36
           UIX: 2
           UIY: 25
@@ -488,7 +488,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 155
+          Width: 160
           Height: 36
           UIX: -2
           UIY: -4

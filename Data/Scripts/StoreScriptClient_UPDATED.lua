@@ -10,6 +10,7 @@
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -241,6 +242,25 @@ local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
 end
 
+function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
+    local infoTable = StringSplit(id, "_")
+
+    if not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] 
+    or not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or not CONST.COSMETIC_BIND[string.upper(infoTable[4])] then
+        error("Cosmetic Store - the ID property of "..hierarchyName.." is not formatted correctly")
+    end
+
+    local skin = CONST.COSMETIC_SKIN[string.upper(infoTable[3])]
+    if skin < 10 then
+        skin = "0"..tostring(skin)
+    else
+        skin = tostring(skin)
+    end
+
+    return string.format("%d%d%s%d", CONST.CLASS[string.upper(infoTable[1])], CONST.TEAM[string.upper(infoTable[2])],
+    skin, CONST.COSMETIC_BIND[string.upper(infoTable[4])])
+end
+
 ----------------------------------------------------------------------------------------------------------------
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
@@ -344,11 +364,33 @@ function StoreItemClicked(button)
 		currentlySelected = entry
 		--currentlyHovered = entry
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
-		currentZoom = entry.data.zoom
+        currentZoom = entry.data.zoom
+        
+        -- Update the Purchase button
+        if HasCosmetic(entry.data.id) then
+            if not CosmeticIsEquipped(entry.data.id) then
+                local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+                purchaseText.text = "EQUIP"
+                purchaseText:GetChildren()[1].text = "EQUIP"
+                propPurchaseButton.visibility = Visibility.INHERIT
+            else
+                propPurchaseButton.visibility = Visibility.FORCE_OFF
+            end
+        else
+            local currency = player:GetResource(entry.data.currencyName)
+            if currency >= entry.data.cost then
+                local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+                purchaseText.text = "PURCHASE"
+                purchaseText:GetChildren()[1].text = "PURCHASE"
+                propPurchaseButton.visibility = Visibility.INHERIT
+            else
+                propPurchaseButton.visibility = Visibility.FORCE_OFF
+            end
+        end
 	end
 end	
 
-function PurchaseButtonClicked(button) --#TODO need to implement
+function PurchaseButtonClicked(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
@@ -451,31 +493,33 @@ function SelectNothing()
 	currentZoom = equippedZoom
 	if currentlySelected ~= nil then
 		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
-	end
+    end
+    propPurchaseButton.visibility = Visibility.FORCE_OFF
 end
 
 function UpdateEntryButton(entry, highlighted)
 	if entry == nil then
 		return
 	end -- coming from LootboxGenerator
-	-- currently equipped
-	if entry.data.templateId == currentlyEquipped then
-		-- owned but not hovered
-		entry.price:SetColor(Color.WHITE)
+    
+    function SetFramesColor(frames, color)
+        for _, frame in ipairs(frames) do
+            frame:SetColor(color)
+        end
+    end
+
+	if CosmeticIsEquipped(entry.data.id) then
+		-- currently equipped
+		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
-	elseif HasCosmetic(entry.data.id) and not highlighted then
-		-- owned but hovered
-		entry.price:SetColor(Color.WHITE)
+        entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+	elseif HasCosmetic(entry.data.id) then --and not highlighted then
+		-- owned 
+		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "OWNED"
 		entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
-	elseif HasCosmetic(entry.data.id) and highlighted then
-		-- not owned and not hovered
-		entry.price:SetColor(Color.WHITE)
-		entry.price.text = "EQUIP NOW?"
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
 	elseif not highlighted then
-		entry.itemName:SetColor(Color.WHITE)
+		--entry.itemName:SetColor(Color.WHITE)
 
 		if entry.PartOfSubscription then
 			entry.itemName.text = entry.data.name
@@ -491,7 +535,8 @@ function UpdateEntryButton(entry, highlighted)
 			end
 		end
 
-		entry.itemName:SetColor(entry.BGImageColor)
+		--entry.itemName:SetColor(entry.BGImageColor)
+        SetFramesColor(entry.frames, entry.frameDefaultColor)
 
 		entry.rarityFin:SetColor(entry.BGImageColor)
 
@@ -506,7 +551,7 @@ function UpdateEntryButton(entry, highlighted)
 		end
 	else -- cases for not owned and not hovered
 		local currency = player:GetResource(entry.data.currencyName)
-		if entry.PartOfSubscription and propAllowSubscriptionPurchase then
+		--[[if entry.PartOfSubscription and propAllowSubscriptionPurchase then
 			if player:HasPerk(subscriptionPerkRef) then
 				entry.price.text = "CLAIM IT!"
 				entry.price:SetColor(Color.WHITE)
@@ -515,10 +560,10 @@ function UpdateEntryButton(entry, highlighted)
 			end
 		else
 			entry.price.text = "BUY IT!\n[" .. tostring(entry.data.cost) .. "]"
-		end
+		end]]
 
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
-			entry.itemName:SetColor(Color.WHITE)
+			--entry.itemName:SetColor(Color.WHITE)
 			entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
 		else
 			entry.itemName:SetColor(Color.RED)
@@ -530,10 +575,17 @@ function UpdateEntryButton(entry, highlighted)
 
 			entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
 		end
-	end
-	if not highlighted then
+    end
+    
+    if highlighted then
+        SetFramesColor(entry.frames, entry.frameHoverColor)
+    else
+        SetFramesColor(entry.frames, entry.frameDefaultColor)
+    end
+
+	--[[if not highlighted then
 		entry.BGMesh:SetColor(entry.BGMeshColor)
-	end
+	end]]
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -542,15 +594,12 @@ end
 
 function BuyCosmeticResponse(storeId, success)
 	--print(player.name .. " Bought cosmetic " .. storeId)
-	if success then
-		OwnedCosmetics[storeId] = true
-	end
-	--[[
-	while player:GetResource(propCurrencyResourceName) ~= expectedNewCurrency do
+	
+	--[[while player:GetResource(propCurrencyResourceName) ~= expectedNewCurrency do
 		Task.Wait()
 	end
-	UpdateCurrencyDisplay()
-	]]
+	UpdateCurrencyDisplay()]]
+	
 	UpdateEntryButton(currentlySelected, currentlyHovered == currentlySelected)
 	controlsLocked = false
 end
@@ -636,12 +685,18 @@ end
 -- APPLY/REMOVE COSMETICS
 ----------------------------------------------------------------------------------------------------------------
 
-function HasCosmetic(storeId) --#TODO modify to use our systems to check if owned
-	if OwnedCosmetics[storeId] == true then
-		return true
-	else
-		return player:GetResource("COSMETIC_" .. storeId) > 0
-	end
+function HasCosmetic(storeId)
+	return player:GetResource("COSMETIC_" .. storeId) > 0
+end
+
+function CosmeticIsEquipped(cosmeticId)
+    -- storeID = 11021
+    local class = tonumber(cosmeticId:sub(1, 1))
+	local team = tonumber(cosmeticId:sub(2, 2))
+	local skin = tonumber(cosmeticId:sub(3, 4))
+	local bind = tonumber(cosmeticId:sub(5, 5))
+    local currentSkin = META_VFX().GetCurrentCosmeticId(Game.GetLocalPlayer(), class, bind, team)
+    return skin == currentSkin
 end
 
 function RemoveCosmetic(playerId)
@@ -845,7 +900,14 @@ function PopulateStore(direction)
 		local propRarityOverlay = newOverlay:GetCustomProperty("PriceOverlay"):WaitForObject()
 		local propVIPImage = newOverlay:GetCustomProperty("VIPImage"):WaitForObject()
 		local propCurrencySymbol = newOverlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
-		local propTeamName = newOverlay:GetCustomProperty("TeamName"):WaitForObject()
+        local propTeamName = newOverlay:GetCustomProperty("TeamName"):WaitForObject()
+        local propFramePanel = newOverlay:GetCustomProperty("FramePanel"):WaitForObject()
+        local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
+        local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
+        local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
+
+        local Frames = propFramePanel:GetChildren()
+        table.insert(Frames, propPriceFrame)
 
 		for _, c in pairs(Currencies) do
 			if v.currencyName == c.resource then
@@ -908,7 +970,8 @@ function PopulateStore(direction)
 			vipImage = propVIPImage,
 			rarityFin = propRarityFin,
 			rarityOverlay = propRarityOverlay,
-			price = propPrice,
+            price = propPrice,
+            priceColor = propPrice:GetColor(), --Color.FromStandardHex("FFD395FF"), --propPrice:GetColor(),
 			listener = propButton.clickedEvent:Connect(StoreItemClicked),
 			listener2 = propButton.hoveredEvent:Connect(StoreItemHovered),
 			listener3 = propButton.unhoveredEvent:Connect(StoreItemUnhovered),
@@ -927,7 +990,10 @@ function PopulateStore(direction)
 			travelTime = 0.2 + 0.2 * timeOffset + 0.1 * gridY,
 			deleting = false,
 			gridX = gridX,
-			gridY = gridY
+            gridY = gridY,
+            frames = Frames,
+            frameDefaultColor = propFrameDefaultColor,
+            frameHoverColor = propFrameHoverColor
 		}
 		StoreUIButtons[propButton] = entry
 		UpdateEntryButton(entry, false)
@@ -938,6 +1004,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function Tick()
+    --print("Tokens: "..tostring(Game.GetLocalPlayer():GetResource("COSM_TOKEN")))
 	UpdateUIPos()
 	UpdateCurrencyDisplay()
 end
@@ -1067,7 +1134,8 @@ function InitStore()
 		if storeInfo ~= nil then
 			local propStoreName = storeInfo:GetCustomProperty("StoreName")
 			local propTeamName = storeInfo:GetCustomProperty("Team")
-			local propID = storeInfo:GetCustomProperty("ID")
+            local propID = storeInfo:GetCustomProperty("ID")
+            propID = ID_Converter(propID, v.name)
 			local propCost = storeInfo:GetCustomProperty("Cost")
 			local propCurrencyName = storeInfo:GetCustomProperty("CurrencyResourceName")
 			local propTags = storeInfo:GetCustomProperty("Tags")
@@ -1084,8 +1152,6 @@ function InitStore()
 				tagList[tag] = tag
 				--print("[" .. tag .. "]")
 			end
-			
-			
 
 			local typeList = {}
 			--print("types for " .. propID)
@@ -1117,10 +1183,10 @@ function InitStore()
 				zoom = propZoomView
 			}
 
-			if ownedCount < 5 then
+			--[[if ownedCount < 5 then
 				OwnedCosmetics[propID] = true
 				ownedCount = ownedCount + 1
-			end
+			end]]
 
 			table.insert(StoreElements, entry)
 			table.insert(CurrentStoreElements, entry)
