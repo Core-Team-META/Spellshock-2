@@ -37,6 +37,10 @@ Assets {
         String: ""
       }
       Overrides {
+        Name: "cs:Rarity"
+        String: ""
+      }
+      Overrides {
         Name: "cs:Types"
         String: ""
       }

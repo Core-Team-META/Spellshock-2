@@ -146,14 +146,15 @@ Assets {
         Transform {
           Location {
             X: 10.8007813
-            Z: 31.7382813
+            Z: 31.796875
           }
           Rotation {
+            Yaw: -22.4999695
           }
           Scale {
-            X: 0.0722257718
-            Y: 0.0722257718
-            Z: 0.0722257718
+            X: 0.0858179331
+            Y: 0.0858179331
+            Z: 0.0858179331
           }
         }
         ParentId: 11541692836675174762
@@ -8470,7 +8471,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            Z: 93.1594772
+            Z: 177.747299
           }
           Rotation {
             Yaw: 180
