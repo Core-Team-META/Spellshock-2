@@ -13,12 +13,16 @@ Assets {
         String: "Dummy Item"
       }
       Overrides {
+        Name: "cs:Team"
+        String: ""
+      }
+      Overrides {
         Name: "cs:ID"
         String: "DummyID"
       }
       Overrides {
         Name: "cs:CurrencyResourceName"
-        String: "money"
+        String: "COSM_TOKEN"
       }
       Overrides {
         Name: "cs:Cost"
@@ -30,6 +34,10 @@ Assets {
       }
       Overrides {
         Name: "cs:Tags"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:Rarity"
         String: ""
       }
       Overrides {

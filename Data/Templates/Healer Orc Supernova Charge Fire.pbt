@@ -7,7 +7,7 @@ Assets {
       RootId: 15574618777276276582
       Objects {
         Id: 15574618777276276582
-        Name: "Healer Orc Supernova Charge Fire 3"
+        Name: "Healer Orc Supernova Charge Fire"
         Transform {
           Scale {
             X: 1
@@ -675,9 +675,9 @@ Assets {
             Roll: -179.999969
           }
           Scale {
-            X: 0.026794564
-            Y: 0.0178630427
-            Z: 0.0219181348
+            X: 0.0181244481
+            Y: 0.0178630371
+            Z: 0.0219222661
           }
         }
         ParentId: 5606555973532419508
@@ -848,17 +848,17 @@ Assets {
         Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: -0.0029296875
-            Y: -0.00390625
-            Z: -3
+            X: -0.00267661
+            Y: -0.00463602738
+            Z: -2.9997437
           }
           Rotation {
             Pitch: 80
           }
           Scale {
-            X: 0.199374959
-            Y: 0.121407032
-            Z: 0.542825639
+            X: 0.199375018
+            Y: 0.0333992317
+            Z: 0.542825699
           }
         }
         ParentId: 9698197322984788395
@@ -920,18 +920,18 @@ Assets {
         Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: -0.0029296875
-            Y: -0.00390625
-            Z: -3
+            X: -0.00267661
+            Y: -0.00463602738
+            Z: -2.9997437
           }
           Rotation {
             Pitch: 80
             Yaw: 120
           }
           Scale {
-            X: 0.199374959
-            Y: 0.121407032
-            Z: 0.542825639
+            X: 0.199375018
+            Y: 0.0333992317
+            Z: 0.542825699
           }
         }
         ParentId: 9698197322984788395
@@ -993,18 +993,18 @@ Assets {
         Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            X: -0.0029296875
-            Y: -0.00390625
-            Z: -3
+            X: -0.00267661
+            Y: -0.00463602738
+            Z: -2.9997437
           }
           Rotation {
             Pitch: 80
             Yaw: -120
           }
           Scale {
-            X: 0.199374959
-            Y: 0.121407032
-            Z: 0.542825639
+            X: 0.199375018
+            Y: 0.0333992317
+            Z: 0.542825699
           }
         }
         ParentId: 9698197322984788395
@@ -6034,9 +6034,9 @@ Assets {
             Roll: 180
           }
           Scale {
-            X: 2.56973267
-            Y: 2.56973267
-            Z: 2.56973267
+            X: 1.90019572
+            Y: 1.9001956
+            Z: 1.09834015
           }
         }
         ParentId: 5606555973532419508

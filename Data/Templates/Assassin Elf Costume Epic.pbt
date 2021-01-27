@@ -132,7 +132,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6837315599476812801
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -193,15 +193,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.290000021
-              G: 0.731986642
-              B: 1
+              R: 0.0730000064
+              G: 2.00000024
+              B: 7
               A: 1
             }
           }
@@ -815,7 +815,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -843,7 +843,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -914,7 +914,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -942,7 +942,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -1046,7 +1046,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -1074,7 +1074,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -1145,7 +1145,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -1173,7 +1173,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim2:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -1756,7 +1756,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -2552,7 +2552,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 16743017400344465135
+              Id: 3072860601980276895
             }
           }
           Overrides {
@@ -3197,6 +3197,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_heart_polished_001"
+      }
+    }
+    Assets {
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     Assets {

@@ -71,7 +71,7 @@ end
 local function AddDefaultCosmetics(player)
     for c = 1, 5 do
         for t = 1, 2 do
-            for s = 1, 10 do
+            for s = 1, 1 do
                 for b = 1, 5 do -- Costume Not saving with 4
                     if b == 5 then
                         b = 8 -- Used for costume ID

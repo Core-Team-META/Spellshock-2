@@ -7,7 +7,7 @@ Assets {
       RootId: 1841219610101333631
       Objects {
         Id: 1841219610101333631
-        Name: "Assassin Orc Deaths Shadow Costume Basic 2"
+        Name: "Assassin Orc Deaths Shadow Costume Basic"
         Transform {
           Scale {
             X: 1
@@ -441,9 +441,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -1492,14 +1492,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 4247430867898109902
+              Id: 2858322153361950350
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0920000076
-              G: 0.0199333373
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2174,9 +2175,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2352,9 +2353,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2579,9 +2580,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4245,9 +4246,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4311,9 +4312,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4377,9 +4378,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4443,9 +4444,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4509,9 +4510,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4604,9 +4605,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4670,9 +4671,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4736,9 +4737,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4802,9 +4803,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4868,9 +4869,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -4938,9 +4939,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -5118,9 +5119,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -5182,9 +5183,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -5945,15 +5946,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_humerus_01_ref"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     Assets {

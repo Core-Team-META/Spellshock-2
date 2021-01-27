@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 911408642289788367
+        ParentId: 14162296025304194376
         ChildIds: 16191157469272558588
         ChildIds: 5462798238876200738
         ChildIds: 16445203441889294499
@@ -2020,7 +2020,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14212988502358508072
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2065,7 +2065,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
-            Float: 1.52409577
+            Float: 0.248983636
           }
           Overrides {
             Name: "ma:Font.Bevel:utile"
@@ -2079,6 +2079,10 @@ Assets {
               B: 0.213541672
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 0.125
           }
         }
         Collidable_v2 {
@@ -2288,8 +2292,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.43226853
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.445721686
           }
         }
         Collidable_v2 {
@@ -2767,7 +2779,7 @@ Assets {
           Overrides {
             Name: "ma:Font.Faces:id"
             AssetReference {
-              Id: 14212988502358508072
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2812,7 +2824,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Font.Faces:utile"
-            Float: 1.52409577
+            Float: 0.248983636
           }
           Overrides {
             Name: "ma:Font.Bevel:utile"
@@ -2826,6 +2838,10 @@ Assets {
               B: 0.213541672
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Font.Faces:vtile"
+            Float: 0.125
           }
         }
         Collidable_v2 {
@@ -3331,8 +3347,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.43226853
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.445721686
           }
         }
         Collidable_v2 {

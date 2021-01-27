@@ -10,6 +10,7 @@
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM PROPERTIES
 ------------------------------------------------------------------------------------------------------------------------
@@ -21,8 +22,7 @@ local propKeepSubscriptionCosmetics = propStoreRoot:GetCustomProperty("KeepSubsc
 local propAllowSubscriptionPurchase = propStoreRoot:GetCustomProperty("AllowSubscriptionPurchase")
 local propSubscriptionTagName = propStoreRoot:GetCustomProperty("SubscriptionTagName")
 
-local propStoreContentsFolderName = propStoreRoot:GetCustomProperty("StoreContentsFolderName")
-local propStoreContents = World.GetRootObject():FindDescendantByName(propStoreContentsFolderName)
+local propStoreContents = propStoreRoot:GetCustomProperty("StoreContents"):WaitForObject()
 
 local propStoreCurrenciesFolderName = propStoreRoot:GetCustomProperty("StoreCurrenciesFolder")
 local propStoreCurrencies = World.GetRootObject():FindDescendantByName(propStoreCurrenciesFolderName)
@@ -63,6 +63,33 @@ end
 
 local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
+function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
+	if returnString then
+		local infoTable = StringSplit(id, "_")
+		if not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] 
+		or not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or not CONST.COSMETIC_BIND[string.upper(infoTable[4])] then
+			error("Cosmetic Store - the ID property of "..hierarchyName.." is not formatted correctly")
+		end
+
+		local skin = CONST.COSMETIC_SKIN[string.upper(infoTable[3])]
+		if skin < 10 then
+			skin = "0"..tostring(skin)
+		else
+			skin = tostring(skin)
+		end
+
+    	return string.format("%d%d%s%d", CONST.CLASS[string.upper(infoTable[1])], CONST.TEAM[string.upper(infoTable[2])],
+		skin, CONST.COSMETIC_BIND[string.upper(infoTable[4])])
+	else	
+		local class = tonumber(id:sub(1, 1))
+		local team = tonumber(id:sub(2, 2))
+		local skin = tonumber(id:sub(3, 4))
+		local bind = tonumber(id:sub(5, 5))
+
+		return class, team, skin, bind
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -143,34 +170,35 @@ function ApplyCosmetic(player, templateId, cosmeticId, visible) --#region
 	AppliedCosmeticsTemplate[player.id] = templateId
 	AppliedCosmeticsVisibility[player.id] = visible
 	
-	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  ]] if
-		not cosmeticId
-	 then
+	ReliableEvents.BroadcastToAllPlayers("APPLYCOSMETIC", player.id, templateId)  ]] 
+	if not cosmeticId then
 		return
 	end
-	local class = tonumber(cosmeticId:sub(1, 1))
+	--[[local class = tonumber(cosmeticId:sub(1, 1))
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
-	local bind = tonumber(cosmeticId:sub(5, 5))
+	local bind = tonumber(cosmeticId:sub(5, 5))]]
+
+	local class, team, skin, bind = ID_Converter(cosmeticId, false)
 	META_VFX().SetBindCosmetic(player, class, team, bind, skin)
 end
 
 function VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency)
 	if StoreElements[cosmeticId] then
-		--print("store element entry found")
+		print("store element entry found")
 		if StoreElements[cosmeticId][3] == isPartOfSubscription then -- check subscription bool is correct
-			--print("subscription match")
+			print("subscription match")
 			if StoreElements[cosmeticId][2] == currency then -- check if needed currency is correct
-				--print("currency match")
+				print("currency match")
 				if StoreElements[cosmeticId][1] == cost then -- check if cost amount is correct
-					--print("cost match")
+					print("cost match")
 					if player:GetResource(currency) >= StoreElements[cosmeticId][1] and not StoreElements[cosmeticId][3] then -- check if player can afford the item.
-						--print("player can afford this")
-						--print(tostring(cosmeticId) .. " verified!")
+						print("player can afford this")
+						print(tostring(cosmeticId) .. " verified!")
 						return true
 					elseif StoreElements[cosmeticId][3] and player:HasPerk(subscriptionPerk) then
-						--print("player has subscription")
-						--print(tostring(cosmeticId) .. " verified!")
+						print("player has subscription")
+						print(tostring(cosmeticId) .. " verified!")
 						return true
 					end
 				end
@@ -183,17 +211,17 @@ end
 
 -- this function listens to events from the client, so it has verification check.
 function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
+	print("BUYING COSMETIC: "..tostring(cosmeticId))
 	if player and not Object.IsValid(player) or not player then
 		return
 	end
 
 	if not VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency) then
 		ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, false)
-
 		return
 	end
 
-	player:SetResource("COSMETIC_" .. cosmeticId, 1)
+	
 
 	if isPartOfSubscription then
 		if playerOwnedSubscriptionCosmetics[player.id] == nil then
@@ -208,12 +236,18 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 		playerOwnedCosmetics[player.id] = {}
 	end
 	playerOwnedCosmetics[player.id][cosmeticId] = true
-	local class = tonumber(cosmeticId:sub(1, 1))
+	
+	--[[local class = tonumber(cosmeticId:sub(1, 1))
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
-	local bind = tonumber(cosmeticId:sub(5, 5))
+	local bind = tonumber(cosmeticId:sub(5, 5))]]
+
+	local class, team, skin, bind = ID_Converter(cosmeticId, false)
+	player:SetResource("COSMETIC_" .. cosmeticId, 1)
 	META_VFX().UnlockCosmetic(player, class, team, skin, bind)
+
 	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
+	print("Purchase complete")
 end
 
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).
@@ -373,6 +407,7 @@ function InitializeStoreSever()
 		local storeInfo = v
 		if storeInfo ~= nil then
 			local propID = storeInfo:GetCustomProperty("ID")
+			propID = ID_Converter(propID, true, v.name)
 			local propCost = storeInfo:GetCustomProperty("Cost")
 			local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")
 			local propTags = storeInfo:GetCustomProperty("Tags")
@@ -394,6 +429,10 @@ function InitializeStoreSever()
 
 			if propCost == nil then
 				propCost = 25
+			end
+
+			if StoreElements[propID] then
+				error("Item "..storeInfo.name.." has the same ID as another item: "..storeInfo:GetCustomProperty("ID"))
 			end
 
 			StoreElements[propID] = {propCost, propResourceName, partOfSubscription}

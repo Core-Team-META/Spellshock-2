@@ -50,9 +50,9 @@ Assets {
           Overrides {
             Name: "cs:HighlightColor"
             Color {
-              R: 0.13
-              G: 0.13
-              B: 0.13
+              R: 0.0481666736
+              G: 0.0661986098
+              B: 0.136
               A: 1
             }
           }
@@ -310,8 +310,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.0580000021
-              B: 0.0570334047
+              R: 0.018446181
+              G: 0.0253517944
+              B: 0.0520833321
               A: 1
             }
           }

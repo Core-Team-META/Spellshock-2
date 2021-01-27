@@ -1,13 +1,13 @@
 Assets {
   Id: 8643178046994123592
-  Name: "STORE_GemSampleSymbol"
+  Name: "STORE_TokenSymbol"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 5716403310548745797
       Objects {
         Id: 5716403310548745797
-        Name: "STORE_GemSampleSymbol"
+        Name: "STORE_TokenSymbol"
         Transform {
           Scale {
             X: 1
@@ -34,7 +34,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 8412122233337608752
+              Id: 14108921733462450899
             }
             Color {
               R: 1
@@ -61,12 +61,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8412122233337608752
-      Name: "Fantasy Craft Gem 019"
+      Id: 14108921733462450899
+      Name: "Fantasy Rune 002"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Crafting_Gem_019"
+        AssetId: "UI_Fantasy_Equip_Rune_002"
       }
     }
     PrimaryAssetId {

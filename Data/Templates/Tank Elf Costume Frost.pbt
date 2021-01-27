@@ -7,7 +7,7 @@ Assets {
       RootId: 17144584856393943103
       Objects {
         Id: 17144584856393943103
-        Name: "Frost Elf Tank Costume"
+        Name: "Tank Elf Costume Frost"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 9866194374814815617
         ChildIds: 16971575441123792499
         ChildIds: 11653394914544009119
@@ -2462,8 +2462,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.535703719
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.930052638
           }
         }
         Collidable_v2 {
@@ -4058,16 +4066,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
-            Float: 20.6335926
+            Float: 1.77019382
           }
           Overrides {
             Name: "ma:Shared_Detail1:vtile"
-            Float: 22.0352745
+            Float: 2.55707026
           }
           Overrides {
             Name: "ma:Shared_Trim2:id"
@@ -4087,15 +4095,6 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 14212988502358508072
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.199999988
-              G: 1
-              B: 0.427814662
-              A: 1
             }
           }
           Overrides {
@@ -5220,7 +5219,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -5262,11 +5261,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.880012929
+            Float: 0.62441808
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.82403487
+            Float: 0.727823853
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"

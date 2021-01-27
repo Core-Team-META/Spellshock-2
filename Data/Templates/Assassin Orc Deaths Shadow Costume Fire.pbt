@@ -7,7 +7,7 @@ Assets {
       RootId: 1084920533787765891
       Objects {
         Id: 1084920533787765891
-        Name: "Assassin Orc Deaths Shadow Costume Basic 2"
+        Name: "Assassin Orc Deaths Shadow Costume Fire"
         Transform {
           Scale {
             X: 1

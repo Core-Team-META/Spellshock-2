@@ -128,7 +128,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 585043062059235126
+        Id: 17838899508014173263
       }
     }
     Overrides {
@@ -152,7 +152,13 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 15362198929177536963
+        Id: 8747154442055655829
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 445660835511654315
       }
     }
   }
@@ -349,6 +355,12 @@ Objects {
         Id: 15362198929177536963
       }
     }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 4450848993927554778
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -451,7 +463,7 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Placement"
       AssetReference {
-        Id: 5847803406760630635
+        Id: 1395070710669761155
       }
     }
     Overrides {
@@ -475,7 +487,13 @@ Objects {
     Overrides {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
-        Id: 579776759173474023
+        Id: 15092535546216765792
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 1798522335355902466
       }
     }
   }
@@ -670,6 +688,12 @@ Objects {
       Name: "cs:01_BladeDash_Ending"
       AssetReference {
         Id: 579776759173474023
+      }
+    }
+    Overrides {
+      Name: "cs:04_WraithStrike_Costume"
+      AssetReference {
+        Id: 6376604265419333521
       }
     }
   }
@@ -2231,7 +2255,7 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Projectile"
       AssetReference {
-        Id: 1501139048018181677
+        Id: 13667023393242254669
       }
     }
     Overrides {
@@ -2528,7 +2552,7 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Projectile"
       AssetReference {
-        Id: 1501139048018181677
+        Id: 13667023393242254669
       }
     }
     Overrides {
