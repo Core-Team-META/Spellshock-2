@@ -2,7 +2,7 @@ Assets {
   Id: 17291073892603629501
   Name: "Chicken"
   PlatformAssetType: 13
-  SerializationVersion: 73
+  SerializationVersion: 74
   CustomMaterialAsset {
     BaseMaterialId: 1781535275264321496
     ParameterOverrides {
