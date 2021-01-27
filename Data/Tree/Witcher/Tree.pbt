@@ -65,10 +65,10 @@ Objects {
   ChildIds: 11807175734850269983
   ChildIds: 17524648586450420420
   ChildIds: 6397622032014528679
-  ChildIds: 575729387110107926
-  ChildIds: 12374150115451199912
   ChildIds: 12065763734273195343
   ChildIds: 14454537958866677791
+  ChildIds: 575729387110107926
+  ChildIds: 12374150115451199912
   ChildIds: 5976715077352220847
   ChildIds: 15624778972612786406
   ChildIds: 10858388624702354382
@@ -130,7 +130,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFSUPERNOVAFROST"
+      String: "Healer_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -204,7 +204,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCSUPERNOVAFIRE"
+      String: "Healer_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -278,7 +278,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFDIVINELIGHTFROST"
+      String: "Healer_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -352,7 +352,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCDIVINELIGHTFIRE"
+      String: "Healer_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -426,7 +426,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFHEALINGCRYSTALFROST"
+      String: "Healer_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -500,7 +500,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCHEALINGCRYSTALFIRE"
+      String: "Healer_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -574,7 +574,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFSUNBEAMFROST"
+      String: "Healer_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -648,7 +648,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCSUNBEAMFIRE"
+      String: "Healer_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -722,7 +722,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFCOSTUMEFROST"
+      String: "Healer_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -796,7 +796,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCCOSTUMEFIRE"
+      String: "Healer_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -870,7 +870,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFCOSTUMEEPIC"
+      String: "Healer_Elf_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -936,7 +936,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCCOSTUMEEPIC"
+      String: "Healer_Orc_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1002,7 +1002,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFCOSTUMELEGENDARY"
+      String: "Healer_Elf_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1076,7 +1076,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCCOSTUMELEGENDARY"
+      String: "Healer_Orc_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1150,7 +1150,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERELFCOSTUMERARE"
+      String: "Healer_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1216,7 +1216,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HEALERORCCOSTUMERARE"
+      String: "Healer_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1282,7 +1282,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFWRAITHSTRIKEFROST"
+      String: "Assassin_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1356,7 +1356,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCWRAITHSTRIKEFIRE"
+      String: "Assassin_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1430,7 +1430,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFDEATHSSHADOWFROST"
+      String: "Assassin_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1504,7 +1504,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCDEATHSSHADOWFIRE"
+      String: "Assassin_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1578,7 +1578,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFVENOMBOMFROST"
+      String: "Assassin_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1652,7 +1652,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCVENOMBOMFIRE"
+      String: "Assassin_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1726,7 +1726,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFBLADEDASHFROST"
+      String: "Assassin_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1800,7 +1800,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCBLADEDASHFIRE"
+      String: "Assassin_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1874,7 +1874,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFCOSTUMEFROST"
+      String: "Assassin_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1948,7 +1948,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCCOSTUMEFIRE"
+      String: "Assassin_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -1998,138 +1998,6 @@ Objects {
   }
 }
 Objects {
-  Id: 14454537958866677791
-  Name: "STORE_AssassinElfCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "ASSASSINELFCOSTUMELEGENDARY"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 13654207909089287810
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 12065763734273195343
-  Name: "STORE_AssassinOrcCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "ASSASSINORCCOSTUMELEGENDARY"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 15182184640494259521
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
   Id: 12374150115451199912
   Name: "STORE_AssassinElfCostumeEpic"
   Transform {
@@ -2154,7 +2022,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFCOSTUMEEPIC"
+      String: "Assassin_Elf_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2220,7 +2088,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCCOSTUMEEPIC"
+      String: "Assassin_Orc_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2242,6 +2110,138 @@ Objects {
       Name: "cs:MUID"
       AssetReference {
         Id: 2860333127380789030
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14454537958866677791
+  Name: "STORE_AssassinElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13654207909089287810
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12065763734273195343
+  Name: "STORE_AssassinOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 15182184640494259521
       }
     }
     Overrides {
@@ -2286,7 +2286,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINELFCOSTUMERARE"
+      String: "Assassin_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2360,7 +2360,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "ASSASSINORCCOSTUMERARE"
+      String: "Assassin_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2434,7 +2434,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFPYROBLASTFROST"
+      String: "Mage_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2508,7 +2508,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCPYROBLASTFIRE"
+      String: "Mage_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2582,7 +2582,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFICEBERGFROST"
+      String: "Mage_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2656,7 +2656,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCICEBERGFIRE"
+      String: "Mage_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2730,7 +2730,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFCHICKENFROST"
+      String: "Mage_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2804,7 +2804,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCCHICKENFIRE"
+      String: "Mage_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2878,7 +2878,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFTORNADOFROST"
+      String: "Mage_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -2952,7 +2952,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCTORNADOFIRE"
+      String: "Mage_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3026,7 +3026,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFCOSTUMEFROST"
+      String: "Mage_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3100,7 +3100,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCCOSTUMEFIRE"
+      String: "Mage_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3174,7 +3174,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFCOSTUMEEPIC"
+      String: "Mage_Elf_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3240,7 +3240,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCCOSTUMEEPIC"
+      String: "Mage_Orc_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3306,7 +3306,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFCOSTUMELEGENDARY"
+      String: "Mage_Elf_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3380,7 +3380,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCCOSTUMELEGENDARY"
+      String: "Mage_Orc_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3454,7 +3454,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEELFCOSTUMERARE"
+      String: "Mage_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3520,7 +3520,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "MAGEORCCOSTUMERARE"
+      String: "Mage_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3586,7 +3586,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFHAWKFROST"
+      String: "Hunter_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3660,7 +3660,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCHAWKFIRE"
+      String: "Hunter_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3734,7 +3734,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFBEARTRAPFROST"
+      String: "Hunter_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3808,7 +3808,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCBEARTRAPFIRE"
+      String: "Hunter_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3882,7 +3882,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFLEAPFROST"
+      String: "Hunter_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -3956,7 +3956,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCLEAPFIRE"
+      String: "Hunter_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4030,7 +4030,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFFARROWSFROST"
+      String: "Hunter_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4104,7 +4104,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCARROWSFIRE"
+      String: "Hunter_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4178,7 +4178,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFCOSTUMEFROST"
+      String: "Hunter_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4252,7 +4252,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCCOSTUMEFIRE"
+      String: "Hunter_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4326,7 +4326,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFCOSTUMEEPIC"
+      String: "Hunter_Elf_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4392,7 +4392,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCCOSTUMEEPIC"
+      String: "Hunter_Orc_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4458,7 +4458,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFCOSTUMELEGENDARY"
+      String: "Hunter_Elf_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4532,7 +4532,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCCOSTUMELEGENDARY"
+      String: "Hunter_Orc_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4606,7 +4606,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERELFCOSTUMERARE"
+      String: "Hunter_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4672,7 +4672,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "HUNTERORCCOSTUMERARE"
+      String: "Hunter_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4738,7 +4738,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFBOULDERTHROWFROST"
+      String: "Tank_Elf_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4812,7 +4812,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCBOULDERTHROWFIRE"
+      String: "Tank_Orc_Elemental_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4886,7 +4886,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFSHIELDDASHFROST"
+      String: "Tank_Elf_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -4960,7 +4960,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCSHIELDDASHFIRE"
+      String: "Tank_Orc_Elemental_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5034,7 +5034,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFSTONEWALLFROST"
+      String: "Tank_Elf_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5108,7 +5108,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCSTONEWALLFIRE"
+      String: "Tank_Orc_Elemental_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5182,7 +5182,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFROCKSTRIKEFROST"
+      String: "Tank_Elf_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5256,7 +5256,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCROCKSTRIKEFIRE"
+      String: "Tank_Orc_Elemental_Q"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5330,7 +5330,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFCOSTUMEFROST"
+      String: "Tank_Elf_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5404,7 +5404,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCCOSTUMEFIRE"
+      String: "Tank_Orc_Elemental_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5478,7 +5478,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFCOSTUMEEPIC"
+      String: "Tank_Elf_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5544,7 +5544,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCCOSTUMEEPIC"
+      String: "Tank_Orc_Epic_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5610,7 +5610,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFCOSTUMELEGENDARY"
+      String: "Tank_Elf_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5684,7 +5684,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCCOSTUMELEGENDARY"
+      String: "Tank_Orc_Legendary_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5758,7 +5758,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKELFCOSTUMERARE"
+      String: "Tank_Elf_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
@@ -5824,7 +5824,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ID"
-      String: "TANKORCCOSTUMERARE"
+      String: "Tank_Orc_Rare_Outfit"
     }
     Overrides {
       Name: "cs:Cost"
