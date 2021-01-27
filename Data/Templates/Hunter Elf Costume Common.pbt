@@ -1,6 +1,6 @@
 Assets {
   Id: 4288486983837307165
-  Name: "Hunter Elf Costume Default"
+  Name: "Hunter Elf Costume Common"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

@@ -15,6 +15,8 @@ Objects {
     }
   }
   ParentId: 14162296025304194376
+  ChildIds: 3313126365483771089
+  ChildIds: 314812734704559989
   ChildIds: 13833948934020580939
   ChildIds: 6408905260295144167
   ChildIds: 3075184271881805343
@@ -31,14 +33,16 @@ Objects {
   ChildIds: 14482252957040816307
   ChildIds: 3783340107223211995
   ChildIds: 10602099677958718876
+  ChildIds: 17772401655245539286
+  ChildIds: 6996652104203306651
   ChildIds: 15856381905228816930
   ChildIds: 17608075414726458275
   ChildIds: 8037206047070415896
   ChildIds: 5690668345450459331
-  ChildIds: 11279401135197223272
-  ChildIds: 6823510911642807350
   ChildIds: 5187039859187737225
   ChildIds: 14051251867355227241
+  ChildIds: 11279401135197223272
+  ChildIds: 6823510911642807350
   ChildIds: 16359673036423672261
   ChildIds: 18217005688881991308
   ChildIds: 18064084883793853892
@@ -47,12 +51,14 @@ Objects {
   ChildIds: 11953853374292182088
   ChildIds: 7152732957242517176
   ChildIds: 5004448442235076941
+  ChildIds: 7225523822951391698
+  ChildIds: 2659207789543413907
+  ChildIds: 17895816693172876961
+  ChildIds: 6908700123423512477
   ChildIds: 4276410697137418747
   ChildIds: 3739216199135642556
   ChildIds: 9411285042508520408
   ChildIds: 3929267959202477414
-  ChildIds: 17895816693172876961
-  ChildIds: 6908700123423512477
   ChildIds: 16348571654364691735
   ChildIds: 17614246485239672850
   ChildIds: 16768759697498795110
@@ -63,14 +69,16 @@ Objects {
   ChildIds: 11411942130879638245
   ChildIds: 16032677421273409447
   ChildIds: 11807175734850269983
-  ChildIds: 17524648586450420420
-  ChildIds: 6397622032014528679
-  ChildIds: 12065763734273195343
-  ChildIds: 14454537958866677791
+  ChildIds: 6200469885995720052
+  ChildIds: 4057298682148134071
   ChildIds: 575729387110107926
   ChildIds: 12374150115451199912
+  ChildIds: 17524648586450420420
+  ChildIds: 6397622032014528679
   ChildIds: 5976715077352220847
   ChildIds: 15624778972612786406
+  ChildIds: 12065763734273195343
+  ChildIds: 14454537958866677791
   ChildIds: 10858388624702354382
   ChildIds: 16715113682375497273
   ChildIds: 10986047227093199117
@@ -79,14 +87,16 @@ Objects {
   ChildIds: 2087286623573668550
   ChildIds: 12606270406449732386
   ChildIds: 18171643065690948695
-  ChildIds: 11898292365082880589
-  ChildIds: 762559271884659237
-  ChildIds: 3634909081853222500
-  ChildIds: 16250579084912036216
   ChildIds: 9297630445368064445
   ChildIds: 14213151336900160258
+  ChildIds: 10517250986579374619
+  ChildIds: 14540046255317055289
+  ChildIds: 11898292365082880589
+  ChildIds: 762559271884659237
   ChildIds: 3444901168638195437
   ChildIds: 2012340364839425430
+  ChildIds: 3634909081853222500
+  ChildIds: 16250579084912036216
   ChildIds: 13785336927372409374
   ChildIds: 9280211786251937525
   ChildIds: 18017105108312657929
@@ -166,6 +176,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -239,6 +253,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -314,6 +332,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -387,6 +409,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -462,6 +488,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -535,6 +565,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -610,6 +644,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -683,6 +721,166 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 16250579084912036216
+  Name: "STORE_HealerElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7046404805608648903
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3634909081853222500
+  Name: "STORE_HealerOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 16181789164175594017
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
     }
   }
   Collidable_v2 {
@@ -758,6 +956,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -832,285 +1034,9 @@ Objects {
       Name: "cs:Team"
       String: "Orc"
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 14213151336900160258
-  Name: "STORE_HealerElfCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
     Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Healer"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Elf_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 7046404805608648903
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 9297630445368064445
-  Name: "STORE_HealerOrcCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Healer"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Orc_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 16181789164175594017
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 16250579084912036216
-  Name: "STORE_HealerElfCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Healer"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Elf_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 1553787859656583436
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 3634909081853222500
-  Name: "STORE_HealerOrcCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Healer"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Orc_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 2362225133279161332
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -1171,12 +1097,16 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 11072531370415895459
+        Id: 1553787859656583436
       }
     }
     Overrides {
       Name: "cs:Team"
       String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -1237,12 +1167,296 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
+        Id: 2362225133279161332
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14540046255317055289
+  Name: "STORE_HealerElfCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 11072531370415895459
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 10517250986579374619
+  Name: "STORE_HealerOrcCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
         Id: 18148878585261730907
       }
     }
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14213151336900160258
+  Name: "STORE_HealerElfCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14779099188806658691
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 9297630445368064445
+  Name: "STORE_HealerOrcCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Healer"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 11131788392135189052
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
     }
   }
   Collidable_v2 {
@@ -1318,6 +1532,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1391,6 +1609,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -1466,6 +1688,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1539,6 +1765,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -1614,6 +1844,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1687,6 +1921,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -1762,6 +2000,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1835,6 +2077,150 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14454537958866677791
+  Name: "STORE_AssassinElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 1403404499257704310
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12065763734273195343
+  Name: "STORE_AssassinOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 2860333127380789030
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
     }
   }
   Collidable_v2 {
@@ -1910,6 +2296,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1984,269 +2374,9 @@ Objects {
       Name: "cs:Team"
       String: "Orc"
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 12374150115451199912
-  Name: "STORE_AssassinElfCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
     Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Assassin_Elf_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 1403404499257704310
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 575729387110107926
-  Name: "STORE_AssassinOrcCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Assassin_Orc_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 2860333127380789030
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 14454537958866677791
-  Name: "STORE_AssassinElfCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Assassin_Elf_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 13654207909089287810
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 12065763734273195343
-  Name: "STORE_AssassinOrcCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Assassin"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Assassin_Orc_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Assassin"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 15182184640494259521
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -2307,7 +2437,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 3010480918737894383
+        Id: 13654207909089287810
       }
     }
     Overrides {
@@ -2321,6 +2451,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -2381,7 +2515,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 11905656053057602774
+        Id: 15182184640494259521
       }
     }
     Overrides {
@@ -2395,6 +2529,306 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 12374150115451199912
+  Name: "STORE_AssassinElfCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3010480918737894383
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 575729387110107926
+  Name: "STORE_AssassinOrcCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 11905656053057602774
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 4057298682148134071
+  Name: "STORE_AssassinElfCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Elf_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 8603629302167445173
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6200469885995720052
+  Name: "STORE_AssassinOrcCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Assassin"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Assassin_Orc_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Assassin"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 9632849097138670638
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
     }
   }
   Collidable_v2 {
@@ -2470,6 +2904,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2543,6 +2981,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -2618,6 +3060,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2691,6 +3137,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -2766,6 +3216,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2839,6 +3293,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -2914,6 +3372,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2987,6 +3449,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -3062,6 +3528,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3136,137 +3606,9 @@ Objects {
       Name: "cs:Team"
       String: "Orc"
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 6908700123423512477
-  Name: "STORE_MageElfCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
     Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Mage"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Elf_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 242662362910603305
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 17895816693172876961
-  Name: "STORE_MageOrcCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Mage"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Mage_Orc_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Mage"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 16121741689753837393
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -3327,7 +3669,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 601593399694631930
+        Id: 242662362910603305
       }
     }
     Overrides {
@@ -3341,6 +3683,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
     }
   }
   Collidable_v2 {
@@ -3401,7 +3747,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 13686905645483775050
+        Id: 16121741689753837393
       }
     }
     Overrides {
@@ -3415,6 +3761,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
     }
   }
   Collidable_v2 {
@@ -3475,12 +3825,16 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 3216325290225775465
+        Id: 601593399694631930
       }
     }
     Overrides {
       Name: "cs:Team"
       String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -3541,12 +3895,296 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
+        Id: 13686905645483775050
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6908700123423512477
+  Name: "STORE_MageElfCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 3216325290225775465
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17895816693172876961
+  Name: "STORE_MageOrcCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
         Id: 16790948681181480696
       }
     }
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 2659207789543413907
+  Name: "STORE_MageElfCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Elf_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 12147802266133948339
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 7225523822951391698
+  Name: "STORE_MageOrcCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Mage"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Mage_Orc_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Mage"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 16021815535294018144
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
     }
   }
   Collidable_v2 {
@@ -3622,6 +4260,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3695,6 +4337,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -3770,6 +4416,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3843,6 +4493,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -3918,6 +4572,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3991,6 +4649,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -4066,6 +4728,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4139,6 +4805,150 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6823510911642807350
+  Name: "STORE_HunterElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 1747841798671645204
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 11279401135197223272
+  Name: "STORE_HunterOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Legendary Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Legendary_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 17109881192568858526
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
     }
   }
   Collidable_v2 {
@@ -4214,6 +5024,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4288,137 +5102,9 @@ Objects {
       Name: "cs:Team"
       String: "Orc"
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 6823510911642807350
-  Name: "STORE_HunterElfCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
     Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Hunter"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Hunter_Elf_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Hunter"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 1747841798671645204
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 11279401135197223272
-  Name: "STORE_HunterOrcCostumeEpic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Epic Hunter"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Hunter_Orc_Epic_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Hunter"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 17109881192568858526
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -4435,154 +5121,6 @@ Objects {
 }
 Objects {
   Id: 5690668345450459331
-  Name: "STORE_HunterElfCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Hunter"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Hunter_Elf_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Hunter"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 1453546943157492303
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 8037206047070415896
-  Name: "STORE_HunterOrcCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13822426573499217334
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Hunter"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Hunter_Orc_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Hunter"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 10716214664751823333
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 17608075414726458275
   Name: "STORE_HunterElfCostumeRare"
   Transform {
     Location {
@@ -4627,12 +5165,24 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 4342432449545971391
+        Id: 1453546943157492303
       }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
     }
     Overrides {
       Name: "cs:Team"
       String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -4648,7 +5198,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15856381905228816930
+  Id: 8037206047070415896
   Name: "STORE_HunterOrcCostumeRare"
   Transform {
     Location {
@@ -4693,12 +5243,304 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
+        Id: 10716214664751823333
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Rare"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17608075414726458275
+  Name: "STORE_HunterElfCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4342432449545971391
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 15856381905228816930
+  Name: "STORE_HunterOrcCostumeUncommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Uncommon Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Uncommon_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
         Id: 174155639706240155
       }
     }
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 6996652104203306651
+  Name: "STORE_HunterElfCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Elf_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4288486983837307165
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17772401655245539286
+  Name: "STORE_HunterOrcCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Hunter"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Hunter_Orc_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Hunter"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 14875131962515328614
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
     }
   }
   Collidable_v2 {
@@ -4774,6 +5616,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4847,6 +5693,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -4922,6 +5772,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4995,6 +5849,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -5070,6 +5928,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5143,6 +6005,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -5218,6 +6084,10 @@ Objects {
       Name: "cs:Team"
       String: "Elf"
     }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5291,6 +6161,10 @@ Objects {
     Overrides {
       Name: "cs:Team"
       String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
     }
   }
   Collidable_v2 {
@@ -5883,6 +6757,146 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Uncommon"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 314812734704559989
+  Name: "STORE_TankElfCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Tank"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Elf_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Tank"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7312333655936516000
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 3313126365483771089
+  Name: "STORE_TankOrcCostumeCommon"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Tank"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Orc_Common_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Tank"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 5044328203892269816
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
     }
   }
   Collidable_v2 {

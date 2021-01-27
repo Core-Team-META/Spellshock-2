@@ -1,6 +1,6 @@
 Assets {
   Id: 16021815535294018144
-  Name: "Mage Orc Costume Default"
+  Name: "Mage Orc Costume Common"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

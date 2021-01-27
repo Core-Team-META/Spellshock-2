@@ -1,6 +1,6 @@
 Assets {
   Id: 8603629302167445173
-  Name: "Assassin Elf Costume Default"
+  Name: "Assassin Elf Costume Common"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

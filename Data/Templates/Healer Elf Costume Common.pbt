@@ -1,6 +1,6 @@
 Assets {
   Id: 14779099188806658691
-  Name: "Healer Elf Costume Default"
+  Name: "Healer Elf Costume Common"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
