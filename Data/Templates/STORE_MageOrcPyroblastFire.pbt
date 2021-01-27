@@ -153,9 +153,9 @@ Assets {
             Yaw: -37.8548889
           }
           Scale {
-            X: 0.0348124392
-            Y: 0.0348124392
-            Z: 0.0348124392
+            X: 0.0236937683
+            Y: 0.0236937683
+            Z: 0.0236937683
           }
         }
         ParentId: 7692023557723945794
@@ -296,6 +296,10 @@ Assets {
           Overrides {
             Name: "bp:Displacement Amount"
             Float: 0.0496966913
+          }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
           }
         }
         Collidable_v2 {

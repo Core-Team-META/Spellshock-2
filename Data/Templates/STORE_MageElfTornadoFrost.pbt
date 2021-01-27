@@ -145,9 +145,10 @@ Assets {
         Name: "VFX"
         Transform {
           Location {
-            Z: 37.0556641
+            Z: 45.6689453
           }
           Rotation {
+            Pitch: -10
           }
           Scale {
             X: 0.101537824

@@ -338,6 +338,10 @@ Assets {
             Name: "bp:Displacement Amount"
             Float: 0.0240658149
           }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1823,6 +1827,10 @@ Assets {
             Name: "bp:Displacement Amount"
             Float: 0.0240658149
           }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3307,6 +3315,10 @@ Assets {
           Overrides {
             Name: "bp:Displacement Amount"
             Float: 0.0240658149
+          }
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
           }
         }
         Collidable_v2 {

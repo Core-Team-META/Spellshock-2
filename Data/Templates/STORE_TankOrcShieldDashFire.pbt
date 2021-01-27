@@ -69,12 +69,43 @@ Assets {
           }
         }
         ParentId: 12812864537761745306
+        ChildIds: 13478647009860194026
+        ChildIds: 6361681950186726288
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13478647009860194026
+        Name: "Group"
+        Transform {
+          Location {
+            X: 16.1523438
+            Y: -9.27734375
+            Z: 37.2851563
+          }
+          Rotation {
+            Yaw: -50
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10088707875424276312
         ChildIds: 6262132579252386612
         ChildIds: 9220352304133876595
         ChildIds: 5464139774645845814
         ChildIds: 13817392904477023619
         ChildIds: 9813426093860302805
-        ChildIds: 6361681950186726288
+        ChildIds: 3651415647478127481
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -90,14 +121,14 @@ Assets {
         Name: "FarLeftRock"
         Transform {
           Location {
-            X: 12.1289063
-            Y: -22.0898438
-            Z: 39.5556641
+            X: -12.2070313
+            Y: -22.0507813
+            Z: 2.27050781
           }
           Rotation {
-            Pitch: -41.4007568
-            Yaw: 115.846802
-            Roll: 134.389557
+            Pitch: -41.4007607
+            Yaw: 115.846779
+            Roll: 134.389542
           }
           Scale {
             X: 0.0444244035
@@ -105,7 +136,7 @@ Assets {
             Z: 0.0987199694
           }
         }
-        ParentId: 10088707875424276312
+        ParentId: 13478647009860194026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -151,14 +182,14 @@ Assets {
         Name: "LeftRock"
         Transform {
           Location {
-            X: 25.2734375
-            Y: -15.5859375
-            Z: 39.5556641
+            X: 0.9375
+            Y: -15.546875
+            Z: 2.27050781
           }
           Rotation {
             Pitch: -51.1052856
             Yaw: 132.923584
-            Roll: 11.2401009
+            Roll: 11.240118
           }
           Scale {
             X: 0.0515014157
@@ -166,7 +197,7 @@ Assets {
             Z: 0.114446536
           }
         }
-        ParentId: 10088707875424276312
+        ParentId: 13478647009860194026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -212,13 +243,13 @@ Assets {
         Name: "FarRightRock"
         Transform {
           Location {
-            X: 12.1289063
-            Y: 22.96875
-            Z: 39.5556641
+            X: -12.2070313
+            Y: 23.0078125
+            Z: 2.27050781
           }
           Rotation {
             Pitch: -46.0680542
-            Yaw: -120.382233
+            Yaw: -120.38224
             Roll: -117.582275
           }
           Scale {
@@ -227,7 +258,7 @@ Assets {
             Z: 0.0987199694
           }
         }
-        ParentId: 10088707875424276312
+        ParentId: 13478647009860194026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -273,12 +304,12 @@ Assets {
         Name: "RightRock"
         Transform {
           Location {
-            X: 23.1640625
-            Y: 13.90625
-            Z: 39.5556641
+            X: -1.171875
+            Y: 13.9453125
+            Z: 2.27050781
           }
           Rotation {
-            Pitch: -49.2193909
+            Pitch: -49.2193832
             Yaw: -131.0354
             Roll: 160.302872
           }
@@ -288,7 +319,7 @@ Assets {
             Z: 0.114446536
           }
         }
-        ParentId: 10088707875424276312
+        ParentId: 13478647009860194026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -334,12 +365,11 @@ Assets {
         Name: "MidRock"
         Transform {
           Location {
-            X: 35.2734375
-            Y: 0.5859375
-            Z: 37.2851563
+            X: 10.9375
+            Y: 0.625
           }
           Rotation {
-            Pitch: -49.0164185
+            Pitch: -49.016407
             Yaw: 177.690506
             Roll: -170.03862
           }
@@ -349,7 +379,7 @@ Assets {
             Z: 0.190745875
           }
         }
-        ParentId: 10088707875424276312
+        ParentId: 13478647009860194026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -384,6 +414,125 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3651415647478127481
+        Name: "Group"
+        Transform {
+          Location {
+            X: 13.6914063
+            Y: 0.0390625
+            Z: 2.20214844
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.292351961
+            Y: 0.292351961
+            Z: 0.292351961
+          }
+        }
+        ParentId: 13478647009860194026
+        ChildIds: 2033673277508592689
+        ChildIds: 12642863431653737209
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2033673277508592689
+        Name: "Waterfall Straight"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -3.4150944e-05
+            Yaw: -89.9999542
+            Roll: 89.9999542
+          }
+          Scale {
+            X: 0.3
+            Y: 0.3
+            Z: 1.5
+          }
+        }
+        ParentId: 3651415647478127481
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:waterfall:id"
+            AssetReference {
+              Id: 8694155043609989744
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8179760419682545374
+          }
+          Teams {
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12642863431653737209
+        Name: "Waterfall Straight"
+        Transform {
+          Location {
+            Z: 120
+          }
+          Rotation {
+            Pitch: -2.73207552e-05
+            Yaw: 89.9999466
+            Roll: -89.999939
+          }
+          Scale {
+            X: 0.3
+            Y: 0.3
+            Z: 1.5
+          }
+        }
+        ParentId: 3651415647478127481
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:waterfall:id"
+            AssetReference {
+              Id: 8694155043609989744
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8179760419682545374
+          }
+          Teams {
+          }
           StaticMesh {
             Physics {
             }
@@ -475,6 +624,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_004"
+      }
+    }
+    Assets {
+      Id: 8179760419682545374
+      Name: "Waterfall Straight"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "fxsm_waterfall_straight"
       }
     }
     Assets {
