@@ -142,8 +142,8 @@ Objects {
   }
 }
 Objects {
-  Id: 10443185470600098586
-  Name: "Common"
+  Id: 5095489549755589164
+  Name: "Uncommon"
   Transform {
     Location {
     }
@@ -157,10 +157,6 @@ Objects {
   }
   ParentId: 8365011557849145417
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TagName"
-      String: ""
-    }
     Overrides {
       Name: "cs:TagColor"
       Color {
@@ -186,15 +182,15 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 5657773594819613437
-    SubobjectId: 12708843000550406559
+    SelfId: 8708515630698603364
+    SubobjectId: 9655804014757988358
     InstanceId: 5821724278744846916
     TemplateId: 1749998263944627932
   }
 }
 Objects {
-  Id: 5095489549755589164
-  Name: "Uncommon"
+  Id: 10443185470600098586
+  Name: "Common"
   Transform {
     Location {
     }
@@ -217,6 +213,10 @@ Objects {
         A: 0.8
       }
     }
+    Overrides {
+      Name: "cs:Number"
+      Int: 1
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -230,8 +230,8 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 8708515630698603364
-    SubobjectId: 9655804014757988358
+    SelfId: 5657773594819613437
+    SubobjectId: 12708843000550406559
     InstanceId: 5821724278744846916
     TemplateId: 1749998263944627932
   }

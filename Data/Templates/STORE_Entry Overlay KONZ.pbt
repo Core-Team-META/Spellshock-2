@@ -111,6 +111,18 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "cs:ClassIcon"
+            ObjectReference {
+              SubObjectId: 4739751513587226671
+            }
+          }
+          Overrides {
+            Name: "cs:TypeIcon"
+            ObjectReference {
+              SubObjectId: 17316770183776865867
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1399,6 +1411,8 @@ Assets {
         }
         ParentId: 15017360723897601218
         ChildIds: 11491445977266947348
+        ChildIds: 4739751513587226671
+        ChildIds: 17316770183776865867
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1407,9 +1421,9 @@ Assets {
         }
         Control {
           Width: 154
-          Height: 22
-          UIX: 1
-          UIY: 16.1282043
+          Height: 30
+          UIX: 2
+          UIY: 40
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1417,12 +1431,11 @@ Assets {
           }
           UseParentWidth: true
           Panel {
-            IsClipping: true
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:bottomleft"
               }
             }
             TargetAnchor {
@@ -1455,10 +1468,8 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 30
-          Height: 236
-          UIX: -108.838135
-          UIY: -52.8184433
+          Width: -5
+          Height: 200
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1466,9 +1477,10 @@ Assets {
           }
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
+          UseParentHeight: true
           Image {
             Brush {
-              Id: 11142210224783054821
+              Id: 15602681661189935351
             }
             Color {
               R: 0.651405811
@@ -1481,12 +1493,132 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middleleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4739751513587226671
+        Name: "Class Icon"
+        Transform {
+          Location {
+            X: 1340
+            Y: -1270
+            Z: 700
+          }
+          Rotation {
+            Yaw: 39.9999847
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1935541717091752298
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 30
+          Height: 30
+          UIX: 30
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 16137887764800981818
+            }
+            Color {
+              R: 1
+              G: 0.536423802
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17316770183776865867
+        Name: "Type Icon"
+        Transform {
+          Location {
+            X: 1340
+            Y: -1270
+            Z: 700
+          }
+          Rotation {
+            Yaw: 39.999958
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1935541717091752298
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 30
+          Height: 30
+          UIX: 65
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 16137887764800981818
+            }
+            Color {
+              R: 1
+              G: 0.536423802
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
               }
             }
           }
@@ -1739,12 +1871,21 @@ Assets {
       }
     }
     Assets {
-      Id: 11142210224783054821
-      Name: "Center Arrow 008 Wedge"
+      Id: 15602681661189935351
+      Name: "Line Half 010a"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "CenterArrow_008Wedge"
+        AssetId: "LineHalf_010a"
+      }
+    }
+    Assets {
+      Id: 16137887764800981818
+      Name: "Sun"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Icon_Sun"
       }
     }
     PrimaryAssetId {

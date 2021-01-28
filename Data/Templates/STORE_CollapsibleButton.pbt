@@ -122,8 +122,8 @@ Assets {
               A: 1
             }
             PressedColor {
-              R: 0.05
-              G: 0.0119205238
+              R: 0.01
+              G: 0.00238410477
               A: 1
             }
             DisabledColor {

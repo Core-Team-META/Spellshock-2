@@ -20789,7 +20789,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 17
     }
     Overrides {
       Name: "cs:CountdownTime"

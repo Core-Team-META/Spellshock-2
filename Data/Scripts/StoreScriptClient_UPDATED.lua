@@ -1300,8 +1300,8 @@ function InitStore()
 	end
 
 	-- Spawn Ownership filter buttons
-	SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("310093FF"), 2)
-	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("310093FF"), 3)
+	SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
+	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 3)
 
 	if propEnableFilterByTag then
 		--[[if propAllowSubscriptionPurchase then

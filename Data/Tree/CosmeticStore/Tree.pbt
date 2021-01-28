@@ -823,7 +823,7 @@ Objects {
     Overrides {
       Name: "cs:StoreContents"
       ObjectReference {
-        SelfId: 183626879870554728
+        SelfId: 13822426573499217334
       }
     }
     Overrides {
@@ -944,6 +944,7 @@ Objects {
   ChildIds: 2164216698044686535
   ChildIds: 12523467810014353075
   ChildIds: 2686919243240322485
+  ChildIds: 11785601215159890601
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -976,6 +977,54 @@ Objects {
     SubobjectId: 3742761001269711465
     InstanceId: 5821724278744846916
     TemplateId: 1749998263944627932
+  }
+}
+Objects {
+  Id: 11785601215159890601
+  Name: "STORE_Entry Overlay KONZ"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14783742013657790731
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15017360723897601218
+      value {
+        Overrides {
+          Name: "Name"
+          String: "STORE_Entry Overlay KONZ"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4066051561278959340
+    }
   }
 }
 Objects {
@@ -16959,9 +17008,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.0108870687
-        G: 0.0144925397
-        B: 0.026041666
+        R: 0.0334450752
+        G: 0.0445210822
+        B: 0.08
         A: 1
       }
     }
