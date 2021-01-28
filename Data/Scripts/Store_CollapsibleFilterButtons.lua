@@ -22,6 +22,13 @@ function OnChildAdded(_, newChild)
 
     TopPanel.height = TopPanel.height + newChild.height
     TopFrame.width = TopFrame.width + newChild.height
+
+    local button = newChild:GetCustomProperty("Button"):WaitForObject()
+    button.clickedEvent:Connect(OnChildButtonClicked)
+end
+
+function OnChildButtonClicked(button)
+    TopPanel.visibility = Visibility.FORCE_OFF
 end
 
 function Tick()

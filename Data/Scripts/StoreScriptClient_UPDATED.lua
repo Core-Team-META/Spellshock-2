@@ -205,6 +205,9 @@ local currentOwnership = {
 local currentTag = {
 	tag = nil
 }
+local currentRarity = {
+	tag = nil
+}
 
 local typeFilterButtonData = {}
 local filterButtonData = {}
@@ -510,11 +513,14 @@ function UpdateEntryButton(entry, highlighted)
         end
     end
 
+	local currencySymbol = entry.overlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
+	currencySymbol.visibility = Visibility.FORCE_OFF
+
 	if CosmeticIsEquipped(entry.data.id) then
 		-- currently equipped
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
-        entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
 		-- owned 
 		entry.price:SetColor(entry.priceColor)
@@ -539,7 +545,7 @@ function UpdateEntryButton(entry, highlighted)
 
 		--entry.itemName:SetColor(entry.BGImageColor)
         SetFramesColor(entry.frames, entry.frameDefaultColor)
-
+		currencySymbol.visibility = Visibility.INHERIT
 		entry.rarityFin:SetColor(entry.BGImageColor)
 
 		entry.BGImageColor.a = 0.6
@@ -566,9 +572,10 @@ function UpdateEntryButton(entry, highlighted)
 
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
 			--entry.itemName:SetColor(Color.WHITE)
+			currencySymbol.visibility = Visibility.INHERIT
 			entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
 		else
-			entry.itemName:SetColor(Color.RED)
+			--entry.itemName:SetColor(Color.RED)
 			if entry.PartOfSubscription then
 				entry.price.text = "NEED " .. propSubscriptionName
 			else
@@ -876,23 +883,8 @@ function PopulateStore(direction)
 			start = target
 		end
 
-		local newGeo =
-			World.SpawnAsset(
-			propSTORE_EntryGeo,
-			{
-				parent = propStoreGeoHolder,
-				position = start,
-				scale = Vector3.ONE * BUTTON_SCALE
-			}
-		)
-
-		local newOverlay =
-			World.SpawnAsset(
-			propSTORE_EntryOverlay,
-			{
-				parent = propButtonHolder
-			}
-		)
+		local newGeo = World.SpawnAsset(propSTORE_EntryGeo, {parent = propStoreGeoHolder, position = start, scale = Vector3.ONE * BUTTON_SCALE})
+		local newOverlay = World.SpawnAsset(propSTORE_EntryOverlay, {parent = propButtonHolder})
 
 		local propItemName = newOverlay:GetCustomProperty("ItemName"):WaitForObject()
 		local propPrice = newOverlay:GetCustomProperty("Price"):WaitForObject()
@@ -913,13 +905,7 @@ function PopulateStore(direction)
 
 		for _, c in pairs(Currencies) do
 			if v.currencyName == c.resource then
-				local newSymbol =
-					World.SpawnAsset(
-					c.symbol,
-					{
-						parent = propCurrencySymbol
-					}
-				)
+				local newSymbol = World.SpawnAsset(c.symbol, {parent = propCurrencySymbol})
 				break
 			end
 		end
@@ -1337,22 +1323,24 @@ function InitStore()
 			end
 		end]]
 
-		SpawnCollapsibleFilterButton("CLASS", 0)
+		SpawnCollapsibleFilterButton("CLASS", 0, TagDefs, OnClassFilterButtonSelected)
 
 		--propFilterListHolder.visibility = Visibility.INHERIT #FIXME
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
+	SpawnCollapsibleFilterButton("RARITY", 1, RarityDefs, OnRarityFilterButtonSelected)
+
 	--print("Requesting other player costume data")
 	ReliableEvents.BroadcastToServer("REQUEST_OTHER_COSMETICS")
 end
 
 ----------------------------------------------------------------------------------------------------------------
--- FILTER RARITY FUNCTIONS
+-- FILTER CLASS FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
-function SpawnFilterButton(displayName, tag, color, position, template, type)
+--[[function SpawnFilterButton(displayName, tag, color, position, template, type)
 	local newFilterButton =
 		World.SpawnAsset(
 		template,
@@ -1388,7 +1376,7 @@ function SpawnFilterButton(displayName, tag, color, position, template, type)
 				propRaritySelected:SetColor(rarityColor)
 				propButtonLabel:SetColor(color)
 			end
-		end]]
+		end]
 	else
 		color = propBGImage:GetColor()
 	end
@@ -1403,9 +1391,9 @@ function SpawnFilterButton(displayName, tag, color, position, template, type)
 		frameColor = frameColor,
 		position = position
 	}
-end
+end]]
 
-function SpawnCollapsibleFilterButton(displayName, position, color)
+function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunction, color)
 	local newCollapsibleMenu = World.SpawnAsset(propSTORE_FilterListEntry_Bottom, {parent = propFilterListHolder})
 	
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
@@ -1428,38 +1416,113 @@ function SpawnCollapsibleFilterButton(displayName, position, color)
 		Background:SetColor(color)
 	end
 
-	local totalHeight = 0 
-
-	for _, data in pairs(TagDefs) do
+	for _, data in pairs(defList) do
 		local newFilterPanel = World.SpawnAsset(CollapsibleButtonTemplate, {parent = ListPanel})
 
 		local propButton = newFilterPanel:GetCustomProperty("Button"):WaitForObject()
-		local propLeftIcon = newFilterPanel:GetCustomProperty("LeftIcon"):WaitForObject()
-		local propRightIcon = newFilterPanel:GetCustomProperty("RightIcon"):WaitForObject()
+		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
+		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
 		local position = data.number-1
+		
 		newFilterPanel.x = 0
 		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position) 
-		--totalHeight = totalHeight + newFilterPanel.height
+		propTitle.text = data.name
 
-		propButton.text = data.name
-		propLeftIcon:SetImage(data.icon)
-		propRightIcon:SetImage(data.icon)
+		if data.icon then
+			propIcon:SetImage(data.icon)
+			propIcon:GetChildren()[1]:SetImage(data.icon)
+		else
+			propIcon.visibility = Visibility.FORCE_OFF
+			propTitle.anchor = UIPivot.MIDDLE_CENTER
+			propTitle.dock = UIPivot.MIDDLE_CENTER
+			propTitle.x = 0
+			propTitle.y = 0
+			propTitle.justification = TextJustify.CENTER
+		end
 
-		--[[filterButtonData[propButton] = {
-			listener = propButton.clickedEvent:Connect(OnFilterButtonSelected),
-			root = newFilterButton,
-			tag = tag,
-			color = color,
-			frameColor = frameColor,
+		filterButtonData[propButton] = {
+			listener = propButton.clickedEvent:Connect(clickFunction),
+			root = newFilterPanel,
+			tag = data.name,
+			color = propButton:GetButtonColor(),
+			clickedColor = propButton:GetPressedColor(),
+			selectedPanel = SelectedPanel,
 			position = position
-		}]]
+		}
 	end
-
-	--TopPanel.height = totalHeight
-	--TopFrame.width = totalHeight
 end
 
-function OnFilterButtonSelected(button) 
+function OnClassFilterButtonSelected(button)
+	if controlsLocked or controlsLockedSecondary then
+		return
+	end
+
+	local buttonData = filterButtonData[button]
+	local tag = buttonData.tag
+
+	RemovePreview()
+
+	if currentlyEquipped ~= nil then
+		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
+	end
+
+	button:SetButtonColor(buttonData.clickedColor)
+	buttonData.selectedPanel.visibility = Visibility.INHERIT
+
+	if currentTag.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		currentTag = {tag = nil}
+		button:SetButtonColor(buttonData.color)
+		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
+        FilterStoreItems()
+		return
+	elseif currentTag.tag ~= nil then -- if the current active filter is not this button, reset highlight color
+		local currentButton = currentTag.root:GetCustomProperty("Button"):WaitForObject()
+		local currentData = filterButtonData[currentButton]
+		currentButton:SetButtonColor(currentData.color)
+	end
+
+	currentTag = buttonData
+
+	-- Clear and repopulate store with filtered items
+    FilterStoreItems()
+end
+
+function OnRarityFilterButtonSelected(button)
+	if controlsLocked or controlsLockedSecondary then
+		return
+	end
+
+	local buttonData = filterButtonData[button]
+	local tag = buttonData.tag
+
+	RemovePreview()
+
+	if currentlyEquipped ~= nil then
+		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
+	end
+
+	button:SetButtonColor(buttonData.clickedColor)
+	buttonData.selectedPanel.visibility = Visibility.INHERIT
+
+	if currentRarity.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		currentRarity = {tag = nil}
+		button:SetButtonColor(buttonData.color)
+		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
+        FilterStoreItems()
+		return
+	elseif currentRarity.tag ~= nil then -- if the current active filter is not this button, reset highlight color
+		local currentButton = currentRarity.root:GetCustomProperty("Button"):WaitForObject()
+		local currentData = filterButtonData[currentButton]
+		currentButton:SetButtonColor(currentData.color)
+	end
+
+	currentRarity = buttonData
+
+	-- Clear and repopulate store with filtered items
+    FilterStoreItems()
+end
+
+--[[function OnFilterButtonSelected(button) 
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
@@ -1493,7 +1556,7 @@ function OnFilterButtonSelected(button)
 
 	-- Clear and repopulate store with filtered items
     FilterStoreItems()
-end
+end]]
 
 ----------------------------------------------------------------------------------------------------------------
 -- FILTER TYPE FUNCTIONS
@@ -1621,9 +1684,20 @@ function FilterStoreItems()
 
     -- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
     if currentTag.tag then
-        --print("Adding tag filter")
+        --print("Adding class filter")
         table.insert(filterFunctions, function (thisItem)
             if thisItem.tags[currentTag.tag] then
+                return true
+            else
+                return false
+            end
+        end)
+    end
+
+	-- Add rarity filter | Uncommon, Common, Rare, Epic, Legendary
+    if currentRarity.tag then
+        table.insert(filterFunctions, function (thisItem)
+			if thisItem.rarity == currentRarity.tag then
                 return true
             else
                 return false
