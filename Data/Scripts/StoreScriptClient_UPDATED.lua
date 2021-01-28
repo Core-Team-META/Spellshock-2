@@ -18,6 +18,7 @@ local propSTORE_EntryOverlay = script:GetCustomProperty("STORE_EntryOverlay")
 local propSTORE_EntryGeo = script:GetCustomProperty("STORE_EntryGeo")
 local propSTORE_FilterListEntry = script:GetCustomProperty("STORE_FilterListEntry")
 local propSTORE_FilterListEntry_Bottom = script:GetCustomProperty("STORE_FilterListEntry_Bottom")
+local propSTORE_CollapsibleFilterButtons = script:GetCustomProperty("STORE_CollapsibleFilterButtons")
 local propSTORE_CurrencyEntry = script:GetCustomProperty("STORE_CurrencyEntry")
 
 local propStoreRoot = script:GetCustomProperty("StoreRoot"):WaitForObject()
@@ -899,7 +900,9 @@ function PopulateStore(direction)
         local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
         local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
         local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
-
+		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
+		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
+		
         local Frames = propFramePanel:GetChildren()
         table.insert(Frames, propPriceFrame)
 
@@ -921,6 +924,8 @@ function PopulateStore(direction)
 
 		local BGMeshColor = newGeo:GetCustomProperty("DefaultColor")
 		local BGImageColor = newGeo:GetCustomProperty("DefaultColor")
+		propClassIcon:SetImage(v.classIcon)
+		propTypeIcon:SetImage(v.typeIcon)
 
 		local partOfSubscription = false
 		--[[for kk, vv in pairs(v.tags) do
@@ -1118,69 +1123,75 @@ function InitStore()
 
 	local ownedCount = 0
 
-	for k, v in pairs(propStoreContents:GetChildren()) do
-		local storeInfo = v
-		if storeInfo ~= nil then
-			local propStoreName = storeInfo:GetCustomProperty("StoreName")
-			local propTeamName = storeInfo:GetCustomProperty("Team")
-            local propID = storeInfo:GetCustomProperty("ID")
-            propID = ID_Converter(propID, v.name)
-			local propCost = storeInfo:GetCustomProperty("Cost")
-			local propCurrencyName = storeInfo:GetCustomProperty("CurrencyResourceName")
-			local propTags = storeInfo:GetCustomProperty("Tags")
-			local propTypes = storeInfo:GetCustomProperty("Types")
-			local propRarity = storeInfo:GetCustomProperty("Rarity")
-			local propZoomView = storeInfo:GetCustomProperty("ZoomView")
-			local propPlayerVisibility = storeInfo:GetCustomProperty("PlayerVisibility")
-			local tempId = storeInfo:GetCustomProperty("MUID")
-			local tempMuid = StringSplit(tempId, ":")
-			local muid = tempMuid[1]
+	for _, childGroup in ipairs(propStoreContents:GetChildren()) do
+		for k, v in ipairs(childGroup:GetChildren()) do
+			local storeInfo = v
+			if storeInfo ~= nil then
+				local propStoreName = storeInfo:GetCustomProperty("StoreName")
+				local propTeamName = storeInfo:GetCustomProperty("Team")
+				local propID = storeInfo:GetCustomProperty("ID")
+				propID = ID_Converter(propID, v.name)
+				local propCost = storeInfo:GetCustomProperty("Cost")
+				local propCurrencyName = storeInfo:GetCustomProperty("CurrencyResourceName")
+				local propTags = storeInfo:GetCustomProperty("Tags")
+				local propTypes = storeInfo:GetCustomProperty("Types")
+				local propRarity = storeInfo:GetCustomProperty("Rarity")
+				local propZoomView = storeInfo:GetCustomProperty("ZoomView")
+				local propPlayerVisibility = storeInfo:GetCustomProperty("PlayerVisibility")
+				local propClassIcon = storeInfo:GetCustomProperty("ClassIcon")
+				local propTypeIcon = storeInfo:GetCustomProperty("TypeIcon")
+				local tempId = storeInfo:GetCustomProperty("MUID")
+				local tempMuid = StringSplit(tempId, ":")
+				local muid = tempMuid[1]
 
-			local tagList = {}
-			--print("tags for " .. propID)
-			for tag in string.gmatch(propTags, "[^%s]+") do
-				tagList[tag] = tag
-				--print("[" .. tag .. "]")
+				local tagList = {}
+				--print("tags for " .. propID)
+				for tag in string.gmatch(propTags, "[^%s]+") do
+					tagList[tag] = tag
+					--print("[" .. tag .. "]")
+				end
+
+				local typeList = {}
+				--print("types for " .. propID)
+				for type in string.gmatch(propTypes, "[^%s]+") do
+					typeList[type] = type
+					--print("[" .. type .. "]")
+				end
+
+				if propCost == nil then
+					propCost = 25
+				end
+				if propStoreDesc == nil then
+					propStoreDesc = ""
+				end
+				if propStoreName == nil then
+					propStoreName = v.name
+				end
+
+				local entry = {
+					name = propStoreName,
+					teamName = propTeamName,
+					id = propID,
+					cost = propCost,
+					currencyName = propCurrencyName,
+					templateId = muid,
+					tags = tagList,
+					rarity = propRarity,
+					types = typeList,
+					visible = propPlayerVisibility,
+					zoom = propZoomView,
+					classIcon = propClassIcon,
+					typeIcon = propTypeIcon
+				}
+
+				--[[if ownedCount < 5 then
+					OwnedCosmetics[propID] = true
+					ownedCount = ownedCount + 1
+				end]]
+
+				table.insert(StoreElements, entry)
+				table.insert(CurrentStoreElements, entry)
 			end
-
-			local typeList = {}
-			--print("types for " .. propID)
-			for type in string.gmatch(propTypes, "[^%s]+") do
-				typeList[type] = type
-				--print("[" .. type .. "]")
-			end
-
-			if propCost == nil then
-				propCost = 25
-			end
-			if propStoreDesc == nil then
-				propStoreDesc = ""
-			end
-			if propStoreName == nil then
-				propStoreName = v.name
-			end
-
-			local entry = {
-				name = propStoreName,
-				teamName = propTeamName,
-				id = propID,
-				cost = propCost,
-				currencyName = propCurrencyName,
-				templateId = muid,
-				tags = tagList,
-				rarity = propRarity,
-				types = typeList,
-				visible = propPlayerVisibility,
-				zoom = propZoomView
-			}
-
-			--[[if ownedCount < 5 then
-				OwnedCosmetics[propID] = true
-				ownedCount = ownedCount + 1
-			end]]
-
-			table.insert(StoreElements, entry)
-			table.insert(CurrentStoreElements, entry)
 		end
 	end
 
@@ -1291,7 +1302,7 @@ function InitStore()
 	if propEnableFilterByType then
 		for k, v in ipairs(TypeList) do
 			if v:sub(1, 1) ~= "_" then
-				SpawnTypeFilterButton(TypeDefs[v].name, "Type", TypeDefs[v].color, TypeDefs[v].number-1)
+				SpawnTypeFilterButton(TypeDefs[v].name, "Type", TypeDefs[v].color, TypeDefs[v].number)
 			end
 		end
 		propTypeFilterListHolder.visibility = Visibility.INHERIT
@@ -1300,8 +1311,8 @@ function InitStore()
 	end
 
 	-- Spawn Ownership filter buttons
-	SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
-	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 3)
+	SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 1)
+	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
 
 	if propEnableFilterByTag then
 		--[[if propAllowSubscriptionPurchase then
@@ -1323,14 +1334,14 @@ function InitStore()
 			end
 		end]]
 
-		SpawnCollapsibleFilterButton("CLASS", 0, TagDefs, OnClassFilterButtonSelected)
+		SpawnCollapsibleFilterButton("CLASS", 2, TagDefs, OnClassFilterButtonSelected)
 
 		--propFilterListHolder.visibility = Visibility.INHERIT #FIXME
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
-	SpawnCollapsibleFilterButton("RARITY", 1, RarityDefs, OnRarityFilterButtonSelected)
+	SpawnCollapsibleFilterButton("RARITY", 3, RarityDefs, OnRarityFilterButtonSelected)
 
 	--print("Requesting other player costume data")
 	ReliableEvents.BroadcastToServer("REQUEST_OTHER_COSMETICS")
@@ -1394,7 +1405,7 @@ end
 end]]
 
 function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunction, color)
-	local newCollapsibleMenu = World.SpawnAsset(propSTORE_FilterListEntry_Bottom, {parent = propFilterListHolder})
+	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons, {parent = propFilterListHolder})
 	
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
 		local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
@@ -1564,7 +1575,12 @@ end]]
 
 -- Used for both Type and Ownership
 function SpawnTypeFilterButton(displayName, type, color, position)
-	local newFilterButton = World.SpawnAsset(propSTORE_FilterListEntry, {parent = propTypeFilterListHolder})
+	local newFilterButton 
+	if type == "Type" then
+		newFilterButton = World.SpawnAsset(propSTORE_FilterListEntry_Bottom, {parent = propFilterListHolder})
+	else
+		newFilterButton = World.SpawnAsset(propSTORE_FilterListEntry, {parent = propTypeFilterListHolder})
+	end
 
 	newFilterButton.y = 0
 
@@ -1586,13 +1602,13 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 	end
 
 	local buttonListener 
-	if type == "Type" then
+	--[[if type == "Type" then
 		buttonListener = propButton.clickedEvent:Connect(OnTypeFilterButtonSelected)
 		newFilterButton.x = newFilterButton.width * position
-	else
-		buttonListener = propButton.clickedEvent:Connect(OnOwnershipFilterButtonSelected)
-		newFilterButton.x = (newFilterButton.width * position) + 30
-	end
+	else]]
+	buttonListener = propButton.clickedEvent:Connect(OnOwnershipFilterButtonSelected)
+	newFilterButton.x = (newFilterButton.width * (position-1)) --+ 30
+	--end
 
 	propButtonLabel.text = string.upper(displayName)
 	propButtonLabelShadow.text = string.upper(displayName)

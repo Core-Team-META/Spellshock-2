@@ -1530,9 +1530,10 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 30
-          Height: 30
+          Width: 26
+          Height: 26
           UIX: 30
+          UIY: -2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1540,7 +1541,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 16137887764800981818
+              Id: 17459582866457614450
             }
             Color {
               R: 1
@@ -1590,9 +1591,10 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 30
-          Height: 30
+          Width: 26
+          Height: 26
           UIX: 65
+          UIY: -2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1600,7 +1602,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 16137887764800981818
+              Id: 2200816922913628269
             }
             Color {
               R: 1
@@ -1880,12 +1882,21 @@ Assets {
       }
     }
     Assets {
-      Id: 16137887764800981818
-      Name: "Sun"
+      Id: 17459582866457614450
+      Name: "Hammer"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Icon_Sun"
+        AssetId: "UI_Fantasy_Icon_Hammer"
+      }
+    }
+    Assets {
+      Id: 2200816922913628269
+      Name: "Icon Damage"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Damage"
       }
     }
     PrimaryAssetId {

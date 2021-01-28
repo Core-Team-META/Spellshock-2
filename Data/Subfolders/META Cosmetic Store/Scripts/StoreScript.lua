@@ -403,39 +403,41 @@ function OnRequestCosmetics(player)
 end
 
 function InitializeStoreSever()
-	for k, v in pairs(propStoreContents:GetChildren()) do
-		local storeInfo = v
-		if storeInfo ~= nil then
-			local propID = storeInfo:GetCustomProperty("ID")
-			propID = ID_Converter(propID, true, v.name)
-			local propCost = storeInfo:GetCustomProperty("Cost")
-			local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")
-			local propTags = storeInfo:GetCustomProperty("Tags")
+	for _, childGroup in ipairs(propStoreContents:GetChildren()) do
+		for k, v in ipairs(childGroup:GetChildren()) do
+			local storeInfo = v
+			if storeInfo ~= nil then
+				local propID = storeInfo:GetCustomProperty("ID")
+				propID = ID_Converter(propID, true, v.name)
+				local propCost = storeInfo:GetCustomProperty("Cost")
+				local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")
+				local propTags = storeInfo:GetCustomProperty("Tags")
 
-			local tagList = {}
-			--print("tags for " .. propID)
-			for tag in string.gmatch(propTags, "[^%s]+") do
-				tagList[tag] = tag
-				--print("[" .. tag .. "]")
-			end
-
-			local partOfSubscription = false
-
-			for kk, vv in pairs(tagList) do
-				if vv == propSubscriptionTagName then
-					partOfSubscription = true
+				local tagList = {}
+				--print("tags for " .. propID)
+				for tag in string.gmatch(propTags, "[^%s]+") do
+					tagList[tag] = tag
+					--print("[" .. tag .. "]")
 				end
-			end
 
-			if propCost == nil then
-				propCost = 25
-			end
+				local partOfSubscription = false
 
-			if StoreElements[propID] then
-				error("Item "..storeInfo.name.." has the same ID as another item: "..storeInfo:GetCustomProperty("ID"))
-			end
+				for kk, vv in pairs(tagList) do
+					if vv == propSubscriptionTagName then
+						partOfSubscription = true
+					end
+				end
 
-			StoreElements[propID] = {propCost, propResourceName, partOfSubscription}
+				if propCost == nil then
+					propCost = 25
+				end
+
+				if StoreElements[propID] then
+					error("Item "..storeInfo.name.." has the same ID as another item: "..storeInfo:GetCustomProperty("ID"))
+				end
+
+				StoreElements[propID] = {propCost, propResourceName, partOfSubscription}
+			end
 		end
 	end
 
