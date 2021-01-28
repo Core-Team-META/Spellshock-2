@@ -18,9 +18,9 @@ Assets {
       Overrides {
         Name: "ashcolor"
         Color {
-          R: 0.97
-          G: 0.681749403
-          B: 0.41904
+          R: 0.526
+          G: 0.312451094
+          B: 0.117823996
           A: 1
         }
       }

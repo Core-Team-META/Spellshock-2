@@ -1659,6 +1659,12 @@ Objects {
         Id: 1939393386208935566
       }
     }
+    Overrides {
+      Name: "cs:03_BearTrap_Placement"
+      AssetReference {
+        Id: 6835319675050620528
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1926,6 +1932,12 @@ Objects {
       Name: "cs:02_Leap_Placement"
       AssetReference {
         Id: 3882087902667678297
+      }
+    }
+    Overrides {
+      Name: "cs:03_BearTrap_Placement"
+      AssetReference {
+        Id: 2889334659248871823
       }
     }
   }
@@ -2897,6 +2909,24 @@ Objects {
         Id: 7312333655936516000
       }
     }
+    Overrides {
+      Name: "cs:01_RockStrike_Projectile"
+      AssetReference {
+        Id: 9337022097625700095
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Placement"
+      AssetReference {
+        Id: 17320332013998621453
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Attachment"
+      AssetReference {
+        Id: 3596751211212476151
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3198,6 +3228,24 @@ Objects {
       Name: "cs:08_Costume"
       AssetReference {
         Id: 5044328203892269816
+      }
+    }
+    Overrides {
+      Name: "cs:01_RockStrike_Projectile"
+      AssetReference {
+        Id: 17988687176319291930
+      }
+    }
+    Overrides {
+      Name: "cs:02_StoneWall_Placement"
+      AssetReference {
+        Id: 16415894409426101042
+      }
+    }
+    Overrides {
+      Name: "cs:03_ShieldDash_Attachment"
+      AssetReference {
+        Id: 8644628869217574717
       }
     }
   }
