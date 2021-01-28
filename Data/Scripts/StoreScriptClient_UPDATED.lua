@@ -53,6 +53,7 @@ local propStoreCurrenciesFolderName = propStoreRoot:GetCustomProperty("StoreCurr
 local propStoreCurrencies = World.GetRootObject():FindDescendantByName(propStoreCurrenciesFolderName)
 
 local propStoreContents = propStoreRoot:GetCustomProperty("StoreContents"):WaitForObject()
+local propRarityDefinitions = propStoreRoot:GetCustomProperty("RarityDefinitions"):WaitForObject()
 
 local propStoreTagsFolder = propStoreRoot:GetCustomProperty("StoreTagsFolder")
 local propTagDefinitions = World.GetRootObject():FindDescendantByName(propStoreTagsFolder)
@@ -160,6 +161,7 @@ local TagList = {}
 local TypeDefs = {}
 
 local OwnerShipDefs = {}
+local RarityDefs = {}
 
 -- array of type names.  (For ordered iteration)
 local TypeList = {}
@@ -935,15 +937,16 @@ function PopulateStore(direction)
 		local BGImageColor = newGeo:GetCustomProperty("DefaultColor")
 
 		local partOfSubscription = false
-		for kk, vv in pairs(v.tags) do
+		--[[for kk, vv in pairs(v.tags) do
 			if TagDefs[kk] ~= nil then
 				BGImageColor = TagDefs[kk].color
 			end
 			if vv == propSubscriptionName then
 				partOfSubscription = true
 			end
-		end
-		--print(partOfSubscription)
+		end]]
+		
+		BGImageColor = RarityDefs[v.rarity].color
 
 		-- Set item name
 		propItemName.text = v.name
@@ -1140,6 +1143,7 @@ function InitStore()
 			local propCurrencyName = storeInfo:GetCustomProperty("CurrencyResourceName")
 			local propTags = storeInfo:GetCustomProperty("Tags")
 			local propTypes = storeInfo:GetCustomProperty("Types")
+			local propRarity = storeInfo:GetCustomProperty("Rarity")
 			local propZoomView = storeInfo:GetCustomProperty("ZoomView")
 			local propPlayerVisibility = storeInfo:GetCustomProperty("PlayerVisibility")
 			local tempId = storeInfo:GetCustomProperty("MUID")
@@ -1178,6 +1182,7 @@ function InitStore()
 				currencyName = propCurrencyName,
 				templateId = muid,
 				tags = tagList,
+				rarity = propRarity,
 				types = typeList,
 				visible = propPlayerVisibility,
 				zoom = propZoomView
@@ -1243,12 +1248,32 @@ function InitStore()
 			end
 			local propTagColor = v:GetCustomProperty("TagColor")
 			local propNumber = v:GetCustomProperty("Number")
+			local propIcon = v:GetCustomProperty("Icon")
+
 			TagDefs[v.name] = {
+				name = propDisplayName,
+				color = propTagColor,
+				number = propNumber, 
+				icon = propIcon
+			}
+			table.insert(TagList, v.name)
+		end
+	end
+
+	RarityDefs = {}
+	if propRarityDefinitions ~= nil then
+		for k, v in pairs(propRarityDefinitions:GetChildren()) do
+			local propDisplayName = v:GetCustomProperty("DisplayName")
+			if propDisplayName == "" then
+				propDisplayName = v.name
+			end
+			local propTagColor = v:GetCustomProperty("TagColor")
+			local propNumber = v:GetCustomProperty("Number")
+			RarityDefs[v.name] = {
 				name = propDisplayName,
 				color = propTagColor,
 				number = propNumber
 			}
-			table.insert(TagList, v.name)
 		end
 	end
 
@@ -1293,11 +1318,7 @@ function InitStore()
 	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("310093FF"), 3)
 
 	if propEnableFilterByTag then
-		--#FIXME Create new filter category
-		--SpawnFilterButton("Owned", "OWNED", nil, 0, propSTORE_FilterListEntry_Bottom)
-		--SpawnFilterButton("Not Owned", "UNOWNED", nil, 1, propSTORE_FilterListEntry_Bottom)
-
-		if propAllowSubscriptionPurchase then
+		--[[if propAllowSubscriptionPurchase then
 			SpawnFilterButton(
 				propSubscriptionName,
 				propSubscriptionName,
@@ -1308,14 +1329,17 @@ function InitStore()
 			count = 2
 		else
 			count = 1
-		end
+		end]]
 
-		for k, v in ipairs(TagList) do
+		--[[for k, v in ipairs(TagList) do
 			if v:sub(1, 1) ~= "_" then
 				SpawnFilterButton(TagDefs[v].name, v, TagDefs[v].color, TagDefs[v].number-1, propSTORE_FilterListEntry_Bottom)
 			end
-		end
-		propFilterListHolder.visibility = Visibility.INHERIT
+		end]]
+
+		SpawnCollapsibleFilterButton("CLASS", 0)
+
+		--propFilterListHolder.visibility = Visibility.INHERIT #FIXME
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
@@ -1354,7 +1378,7 @@ function SpawnFilterButton(displayName, tag, color, position, template, type)
 	local frameColor = propFrameImage:GetColor()
 
 	if color then
-		propBGImage:SetColor(color)
+		--[[propBGImage:SetColor(color)
 		if (propRarity) then
 			local rarityColor = color
 			rarityColor.a = 0.6
@@ -1364,7 +1388,7 @@ function SpawnFilterButton(displayName, tag, color, position, template, type)
 				propRaritySelected:SetColor(rarityColor)
 				propButtonLabel:SetColor(color)
 			end
-		end
+		end]]
 	else
 		color = propBGImage:GetColor()
 	end
@@ -1379,6 +1403,60 @@ function SpawnFilterButton(displayName, tag, color, position, template, type)
 		frameColor = frameColor,
 		position = position
 	}
+end
+
+function SpawnCollapsibleFilterButton(displayName, position, color)
+	local newCollapsibleMenu = World.SpawnAsset(propSTORE_FilterListEntry_Bottom, {parent = propFilterListHolder})
+	
+	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
+		local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
+		local TopFrame = TopPanel:GetCustomProperty("Frame"):WaitForObject()
+	local MainButtonPanel = newCollapsibleMenu:GetCustomProperty("MainButtonPanel"):WaitForObject()
+		local Background = MainButtonPanel:GetCustomProperty("Background"):WaitForObject()
+		local SelectedPanel = MainButtonPanel:GetCustomProperty("SelectedPanel"):WaitForObject()
+		local Title = MainButtonPanel:GetCustomProperty("Title"):WaitForObject()
+	local MainButton = newCollapsibleMenu:GetCustomProperty("MainButton"):WaitForObject()
+	local CollapsibleButtonTemplate = newCollapsibleMenu:GetCustomProperty("CollapsibleButtonTemplate")
+
+	newCollapsibleMenu.x = (newCollapsibleMenu.width * position)
+	newCollapsibleMenu.y = 0
+
+	Title.text = displayName
+	Title:GetChildren()[1].text = displayName
+
+	if color then
+		Background:SetColor(color)
+	end
+
+	local totalHeight = 0 
+
+	for _, data in pairs(TagDefs) do
+		local newFilterPanel = World.SpawnAsset(CollapsibleButtonTemplate, {parent = ListPanel})
+
+		local propButton = newFilterPanel:GetCustomProperty("Button"):WaitForObject()
+		local propLeftIcon = newFilterPanel:GetCustomProperty("LeftIcon"):WaitForObject()
+		local propRightIcon = newFilterPanel:GetCustomProperty("RightIcon"):WaitForObject()
+		local position = data.number-1
+		newFilterPanel.x = 0
+		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position) 
+		--totalHeight = totalHeight + newFilterPanel.height
+
+		propButton.text = data.name
+		propLeftIcon:SetImage(data.icon)
+		propRightIcon:SetImage(data.icon)
+
+		--[[filterButtonData[propButton] = {
+			listener = propButton.clickedEvent:Connect(OnFilterButtonSelected),
+			root = newFilterButton,
+			tag = tag,
+			color = color,
+			frameColor = frameColor,
+			position = position
+		}]]
+	end
+
+	--TopPanel.height = totalHeight
+	--TopFrame.width = totalHeight
 end
 
 function OnFilterButtonSelected(button) 
@@ -1598,8 +1676,8 @@ function FilterStoreItems()
     end
 
     -- Repopulate store with filtered items
-    PopulateStore(-1)
 	storePos = 0
+	PopulateStore(-1)
 end
 
 function ClearFilter()
@@ -1607,8 +1685,8 @@ function ClearFilter()
 	for k, v in ipairs(StoreElements) do
 		table.insert(CurrentStoreElements, v)
 	end
-	PopulateStore(-1)
 	storePos = 0
+	PopulateStore(-1)
 end
 
 ----------------------------------------------------------------------------------------------------------------
