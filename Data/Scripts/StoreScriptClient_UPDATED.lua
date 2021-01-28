@@ -1602,13 +1602,14 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 	end
 
 	local buttonListener 
-	--[[if type == "Type" then
+	if type == "Type" then
 		buttonListener = propButton.clickedEvent:Connect(OnTypeFilterButtonSelected)
-		newFilterButton.x = newFilterButton.width * position
-	else]]
-	buttonListener = propButton.clickedEvent:Connect(OnOwnershipFilterButtonSelected)
+	else
+		buttonListener = propButton.clickedEvent:Connect(OnOwnershipFilterButtonSelected)
+		
+	end
+
 	newFilterButton.x = (newFilterButton.width * (position-1)) --+ 30
-	--end
 
 	propButtonLabel.text = string.upper(displayName)
 	propButtonLabelShadow.text = string.upper(displayName)
