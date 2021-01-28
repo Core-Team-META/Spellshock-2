@@ -17,13 +17,22 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
+      Name: "cs:TagColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:Number"
       Int: 5
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 16137887764800981818
+        Id: 10192819447049905622
       }
     }
   }
@@ -62,13 +71,22 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
+      Name: "cs:TagColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:Number"
       Int: 4
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 2562562495929064540
+        Id: 10192819447049905622
       }
     }
   }
@@ -107,13 +125,22 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
+      Name: "cs:TagColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:Number"
       Int: 3
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 1884193319258424262
+        Id: 10192819447049905622
       }
     }
   }
@@ -156,13 +183,22 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:TagColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:Number"
       Int: 2
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 15674995096238196966
+        Id: 10192819447049905622
       }
     }
   }
@@ -201,9 +237,18 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
+      Name: "cs:TagColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 14837481857743318239
+        Id: 10192819447049905622
       }
     }
   }

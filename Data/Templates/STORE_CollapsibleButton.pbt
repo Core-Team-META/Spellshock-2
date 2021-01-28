@@ -15,11 +15,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8641297663486034065
+        ParentId: 10318492689469749846
         ChildIds: 3190977140971153198
         ChildIds: 806383486788500039
-        ChildIds: 495931109563760197
-        ChildIds: 213124352824303191
+        ChildIds: 4966041012143024029
+        ChildIds: 8714028126838862601
         UnregisteredParameters {
           Overrides {
             Name: "cs:Button"
@@ -28,15 +28,15 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Icon"
+            Name: "cs:LeftIcon"
             ObjectReference {
-              SubObjectId: 495931109563760197
+              SubObjectId: 4966041012143024029
             }
           }
           Overrides {
-            Name: "cs:Title"
+            Name: "cs:RightIcon"
             ObjectReference {
-              SubObjectId: 213124352824303191
+              SubObjectId: 8714028126838862601
             }
           }
         }
@@ -104,6 +104,7 @@ Assets {
           UseParentWidth: true
           UseParentHeight: true
           Button {
+            Label: "Assassin"
             FontColor {
               R: 1
               G: 0.871367335
@@ -212,66 +213,8 @@ Assets {
         }
       }
       Objects {
-        Id: 495931109563760197
-        Name: "Icon"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: -3.4150944e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18319931300997210246
-        ChildIds: 4966041012143024029
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 45
-          Height: 45
-          UIX: 10
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 16137887764800981818
-            }
-            Color {
-              R: 0.00972121768
-              G: 0.00402471703
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 4966041012143024029
-        Name: "Shadow"
+        Name: "Left Icon"
         Transform {
           Location {
           }
@@ -284,7 +227,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 495931109563760197
+        ParentId: 18319931300997210246
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -294,8 +237,7 @@ Assets {
         Control {
           Width: 45
           Height: 45
-          UIX: 2
-          UIY: -2
+          UIX: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -303,11 +245,12 @@ Assets {
           }
           Image {
             Brush {
-              Id: 16137887764800981818
+              Id: 4315360263434643283
             }
             Color {
               R: 1
-              G: 0.536423802
+              G: 1
+              B: 1
               A: 1
             }
             TeamSettings {
@@ -328,14 +271,12 @@ Assets {
         }
       }
       Objects {
-        Id: 213124352824303191
-        Name: "UI Text Box"
+        Id: 8714028126838862601
+        Name: "Right Icon"
         Transform {
           Location {
-            Z: -60
           }
           Rotation {
-            Yaw: 6.83018879e-06
           }
           Scale {
             X: 1
@@ -351,38 +292,36 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 200
-          Height: 60
-          UIX: 65
-          UIY: 3.24569917
+          Width: 45
+          Height: 45
+          UIX: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
-          Text {
-            Label: "Healer"
+          Image {
+            Brush {
+              Id: 4315360263434643283
+            }
             Color {
               R: 1
-              G: 0.871367335
-              B: 0.603827536
+              G: 1
+              B: 1
               A: 1
             }
-            Size: 24
-            Justification {
-              Value: "mc:etextjustify:left"
+            TeamSettings {
             }
-            AutoWrapText: true
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middleright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middleright"
               }
             }
           }
@@ -408,12 +347,12 @@ Assets {
       }
     }
     Assets {
-      Id: 16137887764800981818
-      Name: "Sun"
+      Id: 4315360263434643283
+      Name: "Fantasy Dagger 023"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Icon_Sun"
+        AssetId: "UI_Fantasy_Weapon_Dagger_023"
       }
     }
     PrimaryAssetId {

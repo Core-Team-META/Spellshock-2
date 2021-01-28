@@ -65,7 +65,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Legendary"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -151,7 +151,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Legendary"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -229,7 +229,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -307,7 +307,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -541,7 +541,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Uncommon"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -619,7 +619,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Uncommon"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -697,7 +697,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Common"
+      String: "Rare"
     }
   }
   Collidable_v2 {
@@ -775,7 +775,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Common"
+      String: "Rare"
     }
   }
   Collidable_v2 {
