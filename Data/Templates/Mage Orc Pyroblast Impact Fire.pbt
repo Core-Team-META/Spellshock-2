@@ -1,5 +1,5 @@
 Assets {
-  Id: 7794121287511761576
+  Id: 382110103784642460
   Name: "Mage Orc Pyroblast Impact Fire"
   PlatformAssetType: 5
   TemplateAsset {
@@ -7,7 +7,7 @@ Assets {
       RootId: 10393214660969083880
       Objects {
         Id: 10393214660969083880
-        Name: "Mage Orc Pyroblast Impact Fire"
+        Name: "Mage Orc Pyroblast Impact Basic"
         Transform {
           Scale {
             X: 1
@@ -51,7 +51,7 @@ Assets {
             Name: "bp:Color"
             Color {
               R: 0.960000038
-              G: 0.381457061
+              G: 0.112000011
               A: 0.21100001
             }
           }
@@ -109,7 +109,7 @@ Assets {
             Name: "bp:Color"
             Color {
               R: 0.960000038
-              G: 0.381457061
+              G: 0.176000014
               A: 0.21100001
             }
           }
@@ -117,7 +117,6 @@ Assets {
             Name: "bp:Secondary Color"
             Color {
               R: 0.960000038
-              G: 0.381457061
               A: 0.21100001
             }
           }
@@ -178,8 +177,14 @@ Assets {
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              R: 1
-              G: 0.200000048
+              R: 0.559999943
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.63
               A: 1
             }
           }

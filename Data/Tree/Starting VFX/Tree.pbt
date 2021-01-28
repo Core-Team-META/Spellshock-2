@@ -2267,13 +2267,25 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Projectile"
       AssetReference {
-        Id: 13667023393242254669
+        Id: 12126443012913655570
       }
     }
     Overrides {
       Name: "cs:04_Pyroblast_Impact"
       AssetReference {
-        Id: 7794121287511761576
+        Id: 14248801232993029065
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Attachment"
+      AssetReference {
+        Id: 4202313060147102476
+      }
+    }
+    Overrides {
+      Name: "cs:03_Iceberg_Attachment"
+      AssetReference {
+        Id: 7921538902990370686
       }
     }
   }
@@ -2396,7 +2408,7 @@ Objects {
     Overrides {
       Name: "cs:04_Pyroblast_Impact"
       AssetReference {
-        Id: 7794121287511761576
+        Id: 382110103784642460
       }
     }
   }
@@ -2571,6 +2583,18 @@ Objects {
       Name: "cs:04_Pyroblast_Impact"
       AssetReference {
         Id: 7794121287511761576
+      }
+    }
+    Overrides {
+      Name: "cs:03_Iceberg_Attachment"
+      AssetReference {
+        Id: 7816712407552257158
+      }
+    }
+    Overrides {
+      Name: "cs:02_AnimorphPotion_Attachment"
+      AssetReference {
+        Id: 16667705773786617483
       }
     }
   }
