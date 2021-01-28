@@ -15,94 +15,36 @@ Objects {
     }
   }
   ParentId: 14162296025304194376
-  ChildIds: 3313126365483771089
-  ChildIds: 314812734704559989
-  ChildIds: 13833948934020580939
-  ChildIds: 6408905260295144167
-  ChildIds: 3075184271881805343
-  ChildIds: 12338177664323810263
-  ChildIds: 713905896997721129
-  ChildIds: 15481148716723326991
-  ChildIds: 14493132290779803639
-  ChildIds: 5341131626927997607
-  ChildIds: 6100781853705067113
-  ChildIds: 9687886825386178366
-  ChildIds: 8777211559642771132
-  ChildIds: 622954927096549449
-  ChildIds: 16409464646720641478
-  ChildIds: 11160144491952037939
-  ChildIds: 10361623898726908323
-  ChildIds: 7673713895796379085
-  ChildIds: 18012905845899944778
-  ChildIds: 10244571785008880988
-  ChildIds: 3963394231376893271
-  ChildIds: 14482252957040816307
-  ChildIds: 15548845113383419473
-  ChildIds: 13125053465978149227
-  ChildIds: 3783340107223211995
-  ChildIds: 10602099677958718876
-  ChildIds: 17772401655245539286
-  ChildIds: 6996652104203306651
-  ChildIds: 15856381905228816930
-  ChildIds: 17608075414726458275
-  ChildIds: 8037206047070415896
-  ChildIds: 5690668345450459331
-  ChildIds: 5187039859187737225
-  ChildIds: 14051251867355227241
-  ChildIds: 11279401135197223272
-  ChildIds: 6823510911642807350
-  ChildIds: 17534545772615637159
-  ChildIds: 1966838831545657190
-  ChildIds: 16359673036423672261
-  ChildIds: 18217005688881991308
-  ChildIds: 14572742681475469979
-  ChildIds: 11971731038133470505
-  ChildIds: 18064084883793853892
-  ChildIds: 1534932373401823375
-  ChildIds: 886742657528018517
-  ChildIds: 12394607887872057159
-  ChildIds: 6001378647495528104
-  ChildIds: 11953853374292182088
-  ChildIds: 4349123108618465013
-  ChildIds: 11334848757823316738
-  ChildIds: 7152732957242517176
-  ChildIds: 5004448442235076941
-  ChildIds: 7225523822951391698
-  ChildIds: 2659207789543413907
-  ChildIds: 17895816693172876961
-  ChildIds: 6908700123423512477
-  ChildIds: 4276410697137418747
-  ChildIds: 3739216199135642556
-  ChildIds: 9411285042508520408
-  ChildIds: 3929267959202477414
-  ChildIds: 16348571654364691735
-  ChildIds: 17614246485239672850
-  ChildIds: 16768759697498795110
-  ChildIds: 10921355169709725371
-  ChildIds: 3378937637982962175
-  ChildIds: 10898051254180326815
-  ChildIds: 13912436471049289011
-  ChildIds: 11411942130879638245
-  ChildIds: 16032677421273409447
-  ChildIds: 11807175734850269983
-  ChildIds: 6200469885995720052
-  ChildIds: 4057298682148134071
-  ChildIds: 575729387110107926
-  ChildIds: 12374150115451199912
-  ChildIds: 17524648586450420420
-  ChildIds: 6397622032014528679
-  ChildIds: 5976715077352220847
-  ChildIds: 15624778972612786406
-  ChildIds: 12065763734273195343
-  ChildIds: 14454537958866677791
-  ChildIds: 10858388624702354382
-  ChildIds: 16715113682375497273
-  ChildIds: 10986047227093199117
-  ChildIds: 11841283818961926325
-  ChildIds: 2562563756057343982
-  ChildIds: 2087286623573668550
-  ChildIds: 12606270406449732386
-  ChildIds: 18171643065690948695
+  ChildIds: 6211165977381076390
+  ChildIds: 16366324456517193687
+  ChildIds: 4103420210580201749
+  ChildIds: 13094153289303066374
+  ChildIds: 2068005454954417997
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2068005454954417997
+  Name: "Healer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
   ChildIds: 9297630445368064445
   ChildIds: 14213151336900160258
   ChildIds: 10517250986579374619
@@ -148,7 +90,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -196,6 +138,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -226,7 +180,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -274,6 +228,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -304,7 +270,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -352,6 +318,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -382,7 +360,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -430,6 +408,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -460,7 +450,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -508,6 +498,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -538,7 +540,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -586,6 +588,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -616,7 +630,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -664,6 +678,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -694,7 +720,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -742,6 +768,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -772,7 +810,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -820,6 +858,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -850,7 +900,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -898,6 +948,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -928,7 +990,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -976,6 +1038,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1006,7 +1080,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1054,6 +1128,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1084,7 +1170,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1124,6 +1210,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1154,7 +1252,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1194,6 +1292,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1224,7 +1334,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1264,6 +1374,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1294,7 +1416,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1334,6 +1456,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1364,7 +1498,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1404,6 +1538,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1434,7 +1580,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 2068005454954417997
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1474,6 +1620,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1485,6 +1643,49 @@ Objects {
     ScriptAsset {
       Id: 5461895297082359166
     }
+  }
+}
+Objects {
+  Id: 13094153289303066374
+  Name: "Assassin"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  ChildIds: 6200469885995720052
+  ChildIds: 4057298682148134071
+  ChildIds: 575729387110107926
+  ChildIds: 12374150115451199912
+  ChildIds: 17524648586450420420
+  ChildIds: 6397622032014528679
+  ChildIds: 5976715077352220847
+  ChildIds: 15624778972612786406
+  ChildIds: 12065763734273195343
+  ChildIds: 14454537958866677791
+  ChildIds: 10858388624702354382
+  ChildIds: 16715113682375497273
+  ChildIds: 10986047227093199117
+  ChildIds: 11841283818961926325
+  ChildIds: 2562563756057343982
+  ChildIds: 2087286623573668550
+  ChildIds: 12606270406449732386
+  ChildIds: 18171643065690948695
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
   }
 }
 Objects {
@@ -1504,7 +1705,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1552,6 +1753,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1582,7 +1795,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1630,6 +1843,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1660,7 +1885,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1708,6 +1933,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1738,7 +1975,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1786,6 +2023,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1816,7 +2065,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1864,6 +2113,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1894,7 +2155,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -1942,6 +2203,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1972,7 +2245,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2020,6 +2293,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2050,7 +2335,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2098,6 +2383,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2128,7 +2425,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2168,6 +2465,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2198,7 +2507,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2238,6 +2547,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2268,7 +2589,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2316,6 +2637,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2346,7 +2679,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2394,6 +2727,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2424,7 +2769,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2472,6 +2817,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2502,7 +2859,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2550,6 +2907,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2580,7 +2949,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2620,6 +2989,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2650,7 +3031,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2690,6 +3071,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2720,7 +3113,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2768,6 +3161,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2798,7 +3203,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 13094153289303066374
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2846,6 +3251,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 2562562495929064540
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2857,6 +3274,49 @@ Objects {
     ScriptAsset {
       Id: 5461895297082359166
     }
+  }
+}
+Objects {
+  Id: 4103420210580201749
+  Name: "Mage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  ChildIds: 7225523822951391698
+  ChildIds: 2659207789543413907
+  ChildIds: 17895816693172876961
+  ChildIds: 6908700123423512477
+  ChildIds: 4276410697137418747
+  ChildIds: 3739216199135642556
+  ChildIds: 9411285042508520408
+  ChildIds: 3929267959202477414
+  ChildIds: 16348571654364691735
+  ChildIds: 17614246485239672850
+  ChildIds: 16768759697498795110
+  ChildIds: 10921355169709725371
+  ChildIds: 3378937637982962175
+  ChildIds: 10898051254180326815
+  ChildIds: 13912436471049289011
+  ChildIds: 11411942130879638245
+  ChildIds: 16032677421273409447
+  ChildIds: 11807175734850269983
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
   }
 }
 Objects {
@@ -2876,7 +3336,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -2924,6 +3384,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2954,7 +3426,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3002,6 +3474,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3032,7 +3516,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3080,6 +3564,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3110,7 +3606,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3158,6 +3654,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3188,7 +3696,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3236,6 +3744,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3266,7 +3786,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3314,6 +3834,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3344,7 +3876,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3392,6 +3924,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3422,7 +3966,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3470,6 +4014,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3500,7 +4056,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3548,6 +4104,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3578,7 +4146,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3626,6 +4194,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3656,7 +4236,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3704,6 +4284,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3734,7 +4326,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3782,6 +4374,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3812,7 +4416,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3852,6 +4456,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3882,7 +4498,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3922,6 +4538,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3952,7 +4580,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -3992,6 +4620,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4022,7 +4662,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4062,6 +4702,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4092,7 +4744,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4132,6 +4784,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4162,7 +4826,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 4103420210580201749
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4202,6 +4866,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 11110360824915348075
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4213,6 +4889,57 @@ Objects {
     ScriptAsset {
       Id: 5461895297082359166
     }
+  }
+}
+Objects {
+  Id: 16366324456517193687
+  Name: "Hunter"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  ChildIds: 17772401655245539286
+  ChildIds: 6996652104203306651
+  ChildIds: 15856381905228816930
+  ChildIds: 17608075414726458275
+  ChildIds: 8037206047070415896
+  ChildIds: 5690668345450459331
+  ChildIds: 5187039859187737225
+  ChildIds: 14051251867355227241
+  ChildIds: 11279401135197223272
+  ChildIds: 6823510911642807350
+  ChildIds: 17534545772615637159
+  ChildIds: 1966838831545657190
+  ChildIds: 16359673036423672261
+  ChildIds: 18217005688881991308
+  ChildIds: 14572742681475469979
+  ChildIds: 11971731038133470505
+  ChildIds: 18064084883793853892
+  ChildIds: 1534932373401823375
+  ChildIds: 886742657528018517
+  ChildIds: 12394607887872057159
+  ChildIds: 6001378647495528104
+  ChildIds: 11953853374292182088
+  ChildIds: 4349123108618465013
+  ChildIds: 11334848757823316738
+  ChildIds: 7152732957242517176
+  ChildIds: 5004448442235076941
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
   }
 }
 Objects {
@@ -4232,7 +4959,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4280,6 +5007,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4310,7 +5049,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4358,6 +5097,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4388,7 +5139,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4436,6 +5187,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4466,7 +5229,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4514,6 +5277,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4544,7 +5319,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4592,6 +5367,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4622,7 +5409,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4670,6 +5457,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4700,7 +5499,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4748,6 +5547,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4778,7 +5589,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4826,6 +5637,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4856,7 +5679,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4904,6 +5727,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4934,7 +5769,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -4982,6 +5817,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5012,7 +5859,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5060,6 +5907,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5090,7 +5949,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5138,6 +5997,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5168,7 +6039,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5216,6 +6087,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5246,7 +6129,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5294,6 +6177,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5324,7 +6219,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5372,6 +6267,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5402,7 +6309,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5450,6 +6357,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5480,7 +6399,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5520,6 +6439,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5550,7 +6481,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5590,6 +6521,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5620,7 +6563,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5668,6 +6611,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5698,7 +6653,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5746,6 +6701,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5776,7 +6743,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5824,6 +6791,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5854,7 +6833,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5902,6 +6881,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5932,7 +6923,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -5972,6 +6963,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6002,7 +7005,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6042,6 +7045,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6072,7 +7087,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6112,6 +7127,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6142,7 +7169,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 16366324456517193687
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6182,6 +7209,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 1185698000734154284
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6193,6 +7232,57 @@ Objects {
     ScriptAsset {
       Id: 5461895297082359166
     }
+  }
+}
+Objects {
+  Id: 6211165977381076390
+  Name: "Tank"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13822426573499217334
+  ChildIds: 3313126365483771089
+  ChildIds: 314812734704559989
+  ChildIds: 13833948934020580939
+  ChildIds: 6408905260295144167
+  ChildIds: 3075184271881805343
+  ChildIds: 12338177664323810263
+  ChildIds: 713905896997721129
+  ChildIds: 15481148716723326991
+  ChildIds: 14493132290779803639
+  ChildIds: 5341131626927997607
+  ChildIds: 6100781853705067113
+  ChildIds: 9687886825386178366
+  ChildIds: 8777211559642771132
+  ChildIds: 622954927096549449
+  ChildIds: 16409464646720641478
+  ChildIds: 11160144491952037939
+  ChildIds: 10361623898726908323
+  ChildIds: 7673713895796379085
+  ChildIds: 18012905845899944778
+  ChildIds: 10244571785008880988
+  ChildIds: 3963394231376893271
+  ChildIds: 14482252957040816307
+  ChildIds: 15548845113383419473
+  ChildIds: 13125053465978149227
+  ChildIds: 3783340107223211995
+  ChildIds: 10602099677958718876
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
   }
 }
 Objects {
@@ -6212,7 +7302,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6259,6 +7349,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6290,7 +7392,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6337,6 +7439,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6368,15 +7482,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Boulder Throw"
+      String: "Common Boulder Throw"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_T"
+      String: "Tank_Elf_Common_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -6397,7 +7511,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 7910424829988999358
+        Id: 1563600668836155822
       }
     }
     Overrides {
@@ -6415,6 +7529,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6446,15 +7572,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Boulder Throw"
+      String: "Common Boulder Throw"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_T"
+      String: "Tank_Orc_Common_T"
     }
     Overrides {
       Name: "cs:Cost"
@@ -6475,7 +7601,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 442564797380434077
+        Id: 7601292209682783938
       }
     }
     Overrides {
@@ -6493,6 +7619,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6524,7 +7662,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6571,6 +7709,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6602,7 +7752,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6649,6 +7799,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6680,15 +7842,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Shield Dash"
+      String: "Common Shield Dash"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Elf_Elemental_R"
+      String: "Tank_Elf_Common_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -6709,7 +7871,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 7394657208443942855
+        Id: 16997687387891012006
       }
     }
     Overrides {
@@ -6727,6 +7889,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6758,15 +7932,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Shield Dash"
+      String: "Common Shield Dash"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_R"
+      String: "Tank_Orc_Common_R"
     }
     Overrides {
       Name: "cs:Cost"
@@ -6787,7 +7961,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 565203418766709414
+        Id: 1614207772911582092
       }
     }
     Overrides {
@@ -6805,6 +7979,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6836,7 +8022,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6883,6 +8069,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -6914,7 +8112,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -6962,6 +8160,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6992,11 +8202,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Stone Wall"
+      String: "Common Stone Wall"
     }
     Overrides {
       Name: "cs:ID"
@@ -7021,7 +8231,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 4243865929982470630
+        Id: 10820890108737123142
       }
     }
     Overrides {
@@ -7039,6 +8249,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -7070,15 +8292,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Stone Wall"
+      String: "Common Stone Wall"
     }
     Overrides {
       Name: "cs:ID"
-      String: "Tank_Orc_Elemental_E"
+      String: "Tank_Orc_Common_E"
     }
     Overrides {
       Name: "cs:Cost"
@@ -7099,7 +8321,7 @@ Objects {
     Overrides {
       Name: "cs:MUID"
       AssetReference {
-        Id: 3597073966590162922
+        Id: 7189599363683902404
       }
     }
     Overrides {
@@ -7117,6 +8339,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
     }
   }
   Collidable_v2 {
@@ -7148,7 +8382,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7196,6 +8430,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7226,7 +8472,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7274,6 +8520,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7304,7 +8562,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7352,6 +8610,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7382,7 +8652,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7430,6 +8700,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7460,7 +8742,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7500,6 +8782,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7530,7 +8824,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7570,6 +8864,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Legendary"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7600,7 +8906,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7648,6 +8954,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7678,7 +8996,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7726,6 +9044,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Epic"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7756,7 +9086,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7804,6 +9134,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7834,7 +9176,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7882,6 +9224,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Rare"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7912,7 +9266,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -7952,6 +9306,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7982,7 +9348,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8022,6 +9388,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Uncommon"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8052,7 +9430,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8092,6 +9470,18 @@ Objects {
       Name: "cs:Rarity"
       String: "Common"
     }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8122,7 +9512,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13822426573499217334
+  ParentId: 6211165977381076390
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
@@ -8161,6 +9551,18 @@ Objects {
     Overrides {
       Name: "cs:Rarity"
       String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
     }
   }
   Collidable_v2 {
