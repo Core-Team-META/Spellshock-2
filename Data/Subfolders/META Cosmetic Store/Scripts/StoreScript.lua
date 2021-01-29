@@ -181,24 +181,26 @@ function ApplyCosmetic(player, templateId, cosmeticId, visible) --#region
 
 	local class, team, skin, bind = ID_Converter(cosmeticId, false)
 	META_VFX().SetBindCosmetic(player, class, team, bind, skin)
+	Task.Wait()
+	ReliableEvents.BroadcastToPlayer(player, "APPLYCOSMETIC")
 end
 
 function VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency)
 	if StoreElements[cosmeticId] then
-		print("store element entry found")
+		--print("store element entry found")
 		if StoreElements[cosmeticId][3] == isPartOfSubscription then -- check subscription bool is correct
-			print("subscription match")
+			--print("subscription match")
 			if StoreElements[cosmeticId][2] == currency then -- check if needed currency is correct
-				print("currency match")
+				--print("currency match")
 				if StoreElements[cosmeticId][1] == cost then -- check if cost amount is correct
-					print("cost match")
+					--print("cost match")
 					if player:GetResource(currency) >= StoreElements[cosmeticId][1] and not StoreElements[cosmeticId][3] then -- check if player can afford the item.
-						print("player can afford this")
-						print(tostring(cosmeticId) .. " verified!")
+						--print("player can afford this")
+						--print(tostring(cosmeticId) .. " verified!")
 						return true
 					elseif StoreElements[cosmeticId][3] and player:HasPerk(subscriptionPerk) then
-						print("player has subscription")
-						print(tostring(cosmeticId) .. " verified!")
+						--print("player has subscription")
+						--print(tostring(cosmeticId) .. " verified!")
 						return true
 					end
 				end
@@ -211,7 +213,7 @@ end
 
 -- this function listens to events from the client, so it has verification check.
 function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
-	print("BUYING COSMETIC: "..tostring(cosmeticId))
+	--print("BUYING COSMETIC: "..tostring(cosmeticId))
 	if player and not Object.IsValid(player) or not player then
 		return
 	end
@@ -247,7 +249,7 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 	META_VFX().UnlockCosmetic(player, class, team, skin, bind)
 
 	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
-	print("Purchase complete")
+	--print("Purchase complete")
 end
 
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).

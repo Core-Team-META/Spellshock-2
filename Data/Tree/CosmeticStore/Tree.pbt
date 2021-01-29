@@ -944,7 +944,7 @@ Objects {
   ChildIds: 2164216698044686535
   ChildIds: 12523467810014353075
   ChildIds: 2686919243240322485
-  ChildIds: 10490243785556472695
+  ChildIds: 16031605735027342971
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -980,7 +980,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10490243785556472695
+  Id: 16031605735027342971
   Name: "STORE_Entry Overlay KONZ"
   Transform {
     Scale {
@@ -990,12 +990,6 @@ Objects {
     }
   }
   ParentId: 14783742013657790731
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 15017360723897601218

@@ -397,97 +397,56 @@ function StoreItemClicked(button)
 end	
 
 function PurchaseButtonClicked(button)
-	if controlsLocked or controlsLockedSecondary then
+	if controlsLocked or controlsLockedSecondary or currentlySelected == nil then
 		return
 	end
-
-	--local entry = StoreUIButtons[button]
 
 	SelectNothing() -- Clear everything.
-
-	if currentlySelected ~= nil then
-		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
-	end
-
-	--currentlySelected = entry
-
 	local currency = player:GetResource(currentlySelected.data.currencyName)
-
-	if currentlyEquipped == currentlySelected.data.templateId then
-		--currentlySelected = nil
-
-		RemovePreview()
-		setPreviewMesh.visibility = Visibility.INHERIT
-
-		currentlyEquipped = nil
-		equippedZoom = nil
-
-		RemoveCosmetic(player.id)
-		UpdateEntryButton(currentlySelected, true)
-		--print("removed equipped")
-		return
-	elseif currentlySelected ~= nil then
-		if HasCosmetic(currentlySelected.data.id) then
-			local oldEquipped = currentlyEquipped
-
-			currentlyEquipped = currentlySelected.data.id -- nil
-
-			ApplyCosmetic(currentlySelected)
-
-			while not currentlyEquipped do
-				Task.Wait()
-			end
-
-			for _, v in pairs(StoreUIButtons) do
-				if v.data.templateId == oldEquipped then
-					--print("previously equipped found")
-					UpdateEntryButton(v, false)
-					break
-				end
-			end
-		else
-			if currentlySelected.PartOfSubscription and propAllowSubscriptionPurchase then
-				if player:HasPerk(subscriptionPerkRef) then
-					expectedNewCurrency = currency
-					controlsLocked = true
-					while Events.BroadcastToServer(
-						"BUYCOSMETIC",
-						currentlySelected.data.id,
-						true,
-						currentlySelected.data.cost,
-						currentlySelected.data.currencyName
-					) == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
-						Task.Wait(0.1)
-					end
-				else
-					currentlySelected = nil
-					return
-				end
-			elseif currency < currentlySelected.data.cost then
-				currentlySelected = nil
-				return
-			else
-				expectedNewCurrency = currency - currentlySelected.data.cost
+	
+	if HasCosmetic(currentlySelected.data.id) then
+		-- EQUIP
+		ApplyCosmetic(currentlySelected)
+	else
+		-- PURCHASE
+		if currentlySelected.PartOfSubscription and propAllowSubscriptionPurchase then
+			if player:HasPerk(subscriptionPerkRef) then
+				expectedNewCurrency = currency
 				controlsLocked = true
-
 				while Events.BroadcastToServer(
 					"BUYCOSMETIC",
 					currentlySelected.data.id,
-					false,
+					true,
 					currentlySelected.data.cost,
 					currentlySelected.data.currencyName
 				) == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
 					Task.Wait(0.1)
 				end
+			else
+				currentlySelected = nil
+				return
+			end
+		elseif currency < currentlySelected.data.cost then
+			currentlySelected = nil
+			return
+		else
+			expectedNewCurrency = currency - currentlySelected.data.cost
+			controlsLocked = true
+
+			while Events.BroadcastToServer(
+				"BUYCOSMETIC",
+				currentlySelected.data.id,
+				false,
+				currentlySelected.data.cost,
+				currentlySelected.data.currencyName
+			) == BroadcastEventResultCode.EXCEEDED_SIZE_LIMIT do
+				Task.Wait(0.1)
 			end
 		end
 	end
 
-	local newColor = currentlySelected.BGMesh:GetCustomProperty("HighlightColor")
-	currentlySelected.BGMesh:SetColor(currentlySelected.geo:GetCustomProperty("HighlightColor"))
 	SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
-
-	UpdateEntryButton(currentlySelected, true)
+	UpdateEntryButton(currentlySelected, false)
 	currentZoom = currentlySelected.data.zoom
 end
 
@@ -516,12 +475,18 @@ function UpdateEntryButton(entry, highlighted)
 
 	local currencySymbol = entry.overlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
 	currencySymbol.visibility = Visibility.FORCE_OFF
+	entry.BGMesh:SetColor(entry.BGMeshColor)
+	local rarityColor = RarityDefs[entry.data.rarity].color
+	entry.rarityFin:SetColor(rarityColor)
+	entry.rarityOverlay:SetColor(rarityColor)
 
 	if CosmeticIsEquipped(entry.data.id) then
 		-- currently equipped
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+		local newColor = entry.geo:GetCustomProperty("EquippedColor")
+		entry.BGMesh:SetColor(newColor)
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
 		-- owned 
 		entry.price:SetColor(entry.priceColor)
@@ -547,11 +512,6 @@ function UpdateEntryButton(entry, highlighted)
 		--entry.itemName:SetColor(entry.BGImageColor)
         SetFramesColor(entry.frames, entry.frameDefaultColor)
 		currencySymbol.visibility = Visibility.INHERIT
-		entry.rarityFin:SetColor(entry.BGImageColor)
-
-		entry.BGImageColor.a = 0.6
-		entry.rarityOverlay:SetColor(entry.BGImageColor)
-		entry.BGImageColor.a = 1
 
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
 		local currency = player:GetResource(entry.data.currencyName)
@@ -603,14 +563,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function BuyCosmeticResponse(storeId, success)
-	--print(player.name .. " Bought cosmetic " .. storeId)
-	
-	--[[while player:GetResource(propCurrencyResourceName) ~= expectedNewCurrency do
-		Task.Wait()
-	end
-	UpdateCurrencyDisplay()]]
-	
-	UpdateEntryButton(currentlySelected, currentlyHovered == currentlySelected)
+	UpdateEntryButton(currentlySelected, false)
 	controlsLocked = false
 end
 
@@ -728,53 +681,10 @@ function ApplyCosmetic(entry)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
-function ApplyCosmeticHelper(playerId, templateId)
-	if templateId == nil then
-		return
-	end
-
-	RemoveCosmetic(playerId)
-
-	local targetPlayer = nil
-	for k, v in pairs(Game.GetPlayers()) do
-		if v.id == playerId then
-			targetPlayer = v
-		end
-	end
-	if targetPlayer == nil then
-		warn("Could not find id to match " .. tostring(playerId))
-		return
-	end
-	local itemList = {}
-	local cosmeticItem = World.SpawnAsset(templateId)
-	for _, socket in pairs(playerSockets) do
-		local deco = cosmeticItem:FindDescendantByName(socket)
-		if deco ~= nil then
-			deco.parent = nil
-			deco:AttachToPlayer(targetPlayer, socket)
-			table.insert(itemList, deco)
-		end
-	end
-	cosmeticElements[playerId] = itemList
-	cosmeticItem:Destroy()
-
-	Task.Wait()
-
-	for _, v in pairs(CurrentStoreElements) do
-		if v.templateId == templateId then
-			if not player then
-				return
-			end
-			if player.id == playerId then
-				currentlyEquipped = templateId
-				equippedVisibility = v.visible
-				equippedZoom = v.zoom
-				currentZoom = equippedZoom
-				SpawnPreview(templateId, setPreviewMesh, v.visible)
-			--print("set preview for " .. player.name)
-			end
-			return
-		end
+function ApplyCosmeticHelper()
+	-- Update UI
+	for _, v in pairs(StoreUIButtons) do
+		UpdateEntryButton(v, false)
 	end
 end
 
@@ -902,7 +812,7 @@ function PopulateStore(direction)
         local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
 		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
 		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
-		
+
         local Frames = propFramePanel:GetChildren()
         table.insert(Frames, propPriceFrame)
 
@@ -923,21 +833,16 @@ function PopulateStore(direction)
 		end
 
 		local BGMeshColor = newGeo:GetCustomProperty("DefaultColor")
-		local BGImageColor = newGeo:GetCustomProperty("DefaultColor")
+		local BGImageColor = RarityDefs[v.rarity].color --newGeo:GetCustomProperty("DefaultColor")
 		propClassIcon:SetImage(v.classIcon)
 		propTypeIcon:SetImage(v.typeIcon)
 
 		local partOfSubscription = false
-		--[[for kk, vv in pairs(v.tags) do
-			if TagDefs[kk] ~= nil then
-				BGImageColor = TagDefs[kk].color
-			end
+		for kk, vv in pairs(v.tags) do
 			if vv == propSubscriptionName then
 				partOfSubscription = true
 			end
-		end]]
-		
-		BGImageColor = RarityDefs[v.rarity].color
+		end		
 
 		-- Set item name
 		propItemName.text = v.name
