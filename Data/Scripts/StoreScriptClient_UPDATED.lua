@@ -424,11 +424,13 @@ function PurchaseButtonClicked(button)
 		return
 	end
 
-	SelectNothing() -- Clear everything.
+	--SelectNothing() -- Clear everything.
+	
 	local currency = player:GetResource(currentlySelected.data.currencyName)
 	
 	if HasCosmetic(currentlySelected.data.id) then
 		-- EQUIP
+		propPurchaseButton.visibility = Visibility.FORCE_OFF
 		ApplyCosmetic(currentlySelected)
 	else
 		-- PURCHASE
@@ -589,6 +591,9 @@ end
 
 function BuyCosmeticResponse(storeId, success)
 	UpdateEntryButton(currentlySelected, false)
+	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+	purchaseText.text = "EQUIP"
+	purchaseText:GetChildren()[1].text = "EQUIP"
 	controlsLocked = false
 end
 
@@ -729,6 +734,8 @@ function BackPageClicked()
 	if storePos < 0 then
 		storePos = 0
 	end
+
+	RemovePreview()
 	PopulateStore(-1)
 end
 
@@ -744,6 +751,7 @@ function NextPageClicked()
 	if storePos < 0 then
 		storePos = 0
 	end
+	RemovePreview()
 	PopulateStore(1)
 end
 
@@ -1215,7 +1223,10 @@ function InitStore()
 
 	TypeDefs = {}
 	TypeList = {}
-	OwnerShipDefs = {}
+	OwnerShipDefs = {
+		Shop = {name = "Shop", number = 1}, 
+		Purchased = {name = "Purchased", number = 2}
+	}
 
 	if propTypeDefinitions ~= nil then
 		for k, v in ipairs(propTypeDefinitions:GetChildren()) do
@@ -1236,46 +1247,21 @@ function InitStore()
 
 	SelectNothing()
 
-	local count = -1
+	-- Spawn Ownership filter buttons
+	--SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 1)
+	--SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
+	SpawnCollapsibleFilterButton("TITLE", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
 
 	if propEnableFilterByType then
-		for k, v in ipairs(TypeList) do
-			if v:sub(1, 1) ~= "_" then
-				SpawnTypeFilterButton(TypeDefs[v].name, "Type", TypeDefs[v].color, TypeDefs[v].number)
-			end
-		end
+		SpawnCollapsibleFilterButton("TYPE", 1, TypeDefs, OnTypeFilterButtonSelected)
 		propTypeFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propTypeFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
-	-- Spawn Ownership filter buttons
-	SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 1)
-	SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
-
 	if propEnableFilterByTag then
-		--[[if propAllowSubscriptionPurchase then
-			SpawnFilterButton(
-				propSubscriptionName,
-				propSubscriptionName,
-				propSubscriptionColor,
-				2,
-				propSTORE_FilterListEntry_Bottom
-			)
-			count = 2
-		else
-			count = 1
-		end]]
-
-		--[[for k, v in ipairs(TagList) do
-			if v:sub(1, 1) ~= "_" then
-				SpawnFilterButton(TagDefs[v].name, v, TagDefs[v].color, TagDefs[v].number-1, propSTORE_FilterListEntry_Bottom)
-			end
-		end]]
-
 		SpawnCollapsibleFilterButton("CLASS", 2, TagDefs, OnClassFilterButtonSelected)
-
-		--propFilterListHolder.visibility = Visibility.INHERIT #FIXME
+		propFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
@@ -1567,29 +1553,26 @@ function OnTypeFilterButtonSelected(button)
 		return
 	end
 
-	local buttonData = typeFilterButtonData[button]
-	local type = buttonData.type
+	local buttonData = filterButtonData[button]
+	local tag = buttonData.tag
 
-    local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
-	--local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
-	--local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
+	print("Type: "..tag)
 
 	RemovePreview()
-	if currentlyEquipped ~= nil then
-		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
-	end
 
-	-- highlight button while filter is active
-	propFrameImage2.visibility = Visibility.INHERIT
-	
-	if currentType.type == type then -- if the current active filter is this button, reset filter and highlight color
-        currentType = {type = nil}
+	button:SetButtonColor(buttonData.clickedColor)
+	buttonData.selectedPanel.visibility = Visibility.INHERIT
+
+	if currentType.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		currentType = {tag = nil}
+		button:SetButtonColor(buttonData.color)
+		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
         FilterStoreItems()
-		propFrameImage2.visibility = Visibility.FORCE_OFF
 		return
-	elseif currentType.type ~= nil then -- if the current active filter is not this button, reset highlight color
-		local propFrameImage2Other = currentType.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		propFrameImage2Other.visibility = Visibility.FORCE_OFF
+	elseif currentType.tag ~= nil then -- if the current active filter is not this button, reset highlight color
+		local currentButton = currentType.root:GetCustomProperty("Button"):WaitForObject()
+		local currentData = filterButtonData[currentButton]
+		currentButton:SetButtonColor(currentData.color)
 	end
 
 	currentType = buttonData
@@ -1603,29 +1586,24 @@ function OnOwnershipFilterButtonSelected(button)
 		return
 	end
 
-	local buttonData = typeFilterButtonData[button]
-	local type = buttonData.type
-
-    local propFrameImage2 = buttonData.root:GetCustomProperty("FrameImage2"):WaitForObject()
-	--local propFrameImage = buttonData.root:GetCustomProperty("FrameImage"):WaitForObject()
-	--local propBGImage = buttonData.root:GetCustomProperty("BGImage"):WaitForObject()
+	local buttonData = filterButtonData[button]
+	local tag = buttonData.tag
 
 	RemovePreview()
-	if currentlyEquipped ~= nil then
-		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
-	end
 
-	-- highlight button while filter is active
-	propFrameImage2.visibility = Visibility.INHERIT
-	
-	if currentOwnership.type == type then -- if the current active filter is this button, reset filter and highlight color
-		currentOwnership = {type = nil}
+	button:SetButtonColor(buttonData.clickedColor)
+	buttonData.selectedPanel.visibility = Visibility.INHERIT
+
+	if currentOwnership.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		currentOwnership = {tag = nil}
+		button:SetButtonColor(buttonData.color)
+		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
         FilterStoreItems()
-		propFrameImage2.visibility = Visibility.FORCE_OFF
 		return
-	elseif currentOwnership.type ~= nil then -- if the current active filter is not this button, reset highlight color
-		local propFrameImage2Other = currentOwnership.root:GetCustomProperty("FrameImage2"):WaitForObject()
-		propFrameImage2Other.visibility = Visibility.FORCE_OFF
+	elseif currentOwnership.tag ~= nil then -- if the current active filter is not this button, reset highlight color
+		local currentButton = currentOwnership.root:GetCustomProperty("Button"):WaitForObject()
+		local currentData = filterButtonData[currentButton]
+		currentButton:SetButtonColor(currentData.color)
 	end
 
 	currentOwnership = buttonData
@@ -1662,10 +1640,10 @@ function FilterStoreItems()
     end
 
     -- Add type filter | Ability or Costume
-    if currentType.type then
+    if currentType.tag then
         --print("Adding type filter")
         table.insert(filterFunctions, function (thisItem)
-            if thisItem.types[currentType.type] then
+            if thisItem.types[currentType.tag] then
                 return true
             else
                 return false
@@ -1674,11 +1652,11 @@ function FilterStoreItems()
     end
 
     -- Add ownership filter | Shop or Purchased
-    if currentOwnership.type then
+    if currentOwnership.tag then
         --print("Adding ownership filter")
         table.insert(filterFunctions, function (thisItem)
             local owned = HasCosmetic(thisItem.id)
-            if (currentOwnership.type == "Purchased" and owned) or (currentOwnership.type == "Shop" and not owned) then
+            if (currentOwnership.tag == "Purchased" and owned) or (currentOwnership.tag == "Shop" and not owned) then
                 return true
             else
                 return false

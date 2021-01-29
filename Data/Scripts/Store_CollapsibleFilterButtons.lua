@@ -3,6 +3,8 @@ local ROOT = script.parent
 local TopPanel = ROOT:GetCustomProperty("TopPanel"):WaitForObject()
 local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
 local TopFrame = TopPanel:GetCustomProperty("Frame"):WaitForObject()
+local MainButtonPanel = ROOT:GetCustomProperty("MainButtonPanel"):WaitForObject()
+local SelectedPanel = MainButtonPanel:GetCustomProperty("SelectedPanel"):WaitForObject()
 local MainButton = ROOT:GetCustomProperty("MainButton"):WaitForObject()
 local BorderButtons = script:GetCustomProperty("BorderButtons"):WaitForObject()
 
@@ -34,6 +36,7 @@ end
 function Tick()
     if not MainButton:IsVisibleInHierarchy() then
         TopPanel.visibility = Visibility.FORCE_OFF
+        SelectedPanel.visibility = Visibility.FORCE_OFF
     end
 end
 

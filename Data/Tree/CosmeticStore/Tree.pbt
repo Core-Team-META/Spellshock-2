@@ -5359,7 +5359,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 95
+    Width: 100
     Height: 30
     UIX: 10
     RenderTransformPivot {
@@ -5910,7 +5910,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 95
+    Width: 110
     Height: 30
     UIX: 10
     UIY: -3
