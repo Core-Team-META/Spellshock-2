@@ -29,7 +29,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Folder {
     IsGroup: true
@@ -97,6 +97,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -188,6 +189,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -240,6 +242,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -293,6 +296,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     DisableCastShadows: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -346,6 +350,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     DisableCastShadows: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -398,6 +403,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12210,6 +12216,7 @@ Objects {
     DisableCastShadows: true
     DisableReceiveDecals: true
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
         Mass: 100

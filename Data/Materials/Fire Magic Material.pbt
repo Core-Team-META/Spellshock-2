@@ -2,7 +2,7 @@ Assets {
   Id: 2381158559571814563
   Name: "Fire Magic Material"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 6717054932271956401
     ParameterOverrides {

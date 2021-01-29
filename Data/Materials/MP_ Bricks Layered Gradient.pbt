@@ -2,7 +2,7 @@ Assets {
   Id: 2426845962304686405
   Name: "MP_ Bricks Layered Gradient"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 15025871309956447741
     ParameterOverrides {

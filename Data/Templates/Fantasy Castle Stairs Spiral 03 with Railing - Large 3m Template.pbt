@@ -58,6 +58,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -95,6 +96,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -125,5 +127,5 @@ Assets {
       AssetId: "Fantasy_Castle_Stairs_Spiral_03_with_Railing_-_Large_3m_Template"
     }
   }
-  SerializationVersion: 74
+  SerializationVersion: 75
 }

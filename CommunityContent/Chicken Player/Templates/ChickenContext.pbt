@@ -140,6 +140,7 @@ Assets {
           }
           Teams {
           }
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStancePlaybackRate: 2
             AnimationStanceShouldLoop: true
@@ -264,5 +265,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 74
+  SerializationVersion: 75
 }

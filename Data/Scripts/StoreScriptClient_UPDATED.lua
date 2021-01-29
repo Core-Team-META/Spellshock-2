@@ -143,6 +143,22 @@ local playerSockets = {
 	"left_arm_prop"
 }
 
+local PreviewAnimationStances = {
+	Tank = "1hand_melee_idle_ready",
+	Hunter = "2hand_rifle_aim_shoulder",
+	Mage = "2hand_staff_idle_ready",
+	Assassin = "unarmed_idle_ready",
+	Healer = "2hand_staff_idle_relaxed"
+}
+
+local ItemAnimationStances = {
+	Tank = "2hand_staff_idle_relaxed",
+	Hunter = "2hand_rifle_idle_relaxed",
+	Mage = "2hand_staff_idle_relaxed",
+	Assassin = "unarmed_idle_ready",
+	Healer = "2hand_staff_idle_relaxed"
+}
+
 -- List of actual buttons, ui elements, and listeners for the store elements.
 local StoreUIButtons = {}
 
@@ -371,7 +387,14 @@ function StoreItemClicked(button)
 		--currentlyHovered = entry
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
         currentZoom = entry.data.zoom
-        
+		
+		-- Change stance of preview animated mesh
+		if entry.data.class then
+			local newStance = PreviewAnimationStances[entry.data.class]
+			propPreviewMesh.animationStance = newStance
+			propPreviewMesh2.animationStance = newStance
+		end
+
         -- Update the Purchase button
         if HasCosmetic(entry.data.id) then
             if not CosmeticIsEquipped(entry.data.id) then
@@ -459,7 +482,9 @@ function SelectNothing()
 	if currentlySelected ~= nil then
 		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
     end
-    propPurchaseButton.visibility = Visibility.FORCE_OFF
+	propPurchaseButton.visibility = Visibility.FORCE_OFF
+	propPreviewMesh.animationStance = "unarmed_idle_relaxed"
+	propPreviewMesh2.animationStance = "unarmed_idle_relaxed"
 end
 
 function UpdateEntryButton(entry, highlighted)
@@ -824,6 +849,7 @@ function PopulateStore(direction)
 		end
 
 		local previewMesh = newGeo:GetCustomProperty("PreviewMesh"):WaitForObject()
+		local previewMeshOutline = newGeo:GetCustomProperty("PreviewOutline"):WaitForObject()
 		local BGMesh = newGeo:GetCustomProperty("BGMesh"):WaitForObject()
 
 		SpawnMiniPreview(v.templateId, newGeo)
@@ -836,6 +862,13 @@ function PopulateStore(direction)
 		local BGImageColor = RarityDefs[v.rarity].color --newGeo:GetCustomProperty("DefaultColor")
 		propClassIcon:SetImage(v.classIcon)
 		propTypeIcon:SetImage(v.typeIcon)
+
+		-- Change stance of preview animated mesh
+		if v.class then
+			local newStance = ItemAnimationStances[v.class]
+			previewMesh.animationStance = newStance
+			previewMeshOutline.animationStance = newStance
+		end
 
 		local partOfSubscription = false
 		for kk, vv in pairs(v.tags) do
@@ -1081,6 +1114,7 @@ function InitStore()
 					currencyName = propCurrencyName,
 					templateId = muid,
 					tags = tagList,
+					class = propTags,
 					rarity = propRarity,
 					types = typeList,
 					visible = propPlayerVisibility,
