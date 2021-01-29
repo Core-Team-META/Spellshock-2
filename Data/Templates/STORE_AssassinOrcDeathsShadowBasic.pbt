@@ -7,7 +7,7 @@ Assets {
       RootId: 17660917136629489811
       Objects {
         Id: 17660917136629489811
-        Name: "STORE_AssassinOrcDeathsShadowFire"
+        Name: "STORE_AssassinOrcDeathsShadowBasic"
         Transform {
           Scale {
             X: 20
@@ -157,7 +157,6 @@ Assets {
           }
         }
         ParentId: 5148922605112174239
-        ChildIds: 14039453073368850191
         ChildIds: 13382218505436771215
         UnregisteredParameters {
         }
@@ -168,59 +167,6 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 14039453073368850191
-        Name: "ShadowMovement"
-        Transform {
-          Location {
-            X: 3.09960938
-            Y: -0.0625
-            Z: 39.8334961
-          }
-          Rotation {
-            Pitch: -0.212275431
-            Yaw: 1.0938494e-12
-            Roll: 3.08758097e-12
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12238985863608861288
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Body"
-            ObjectReference {
-              SubObjectId: 13382218505436771215
-            }
-          }
-          Overrides {
-            Name: "cs:Arms"
-            ObjectReference {
-              SubObjectId: 14885114345175059263
-            }
-          }
-          Overrides {
-            Name: "cs:Ease3D"
-            AssetReference {
-              Id: 16050147283496351669
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12059718626481054599
-          }
         }
       }
       Objects {

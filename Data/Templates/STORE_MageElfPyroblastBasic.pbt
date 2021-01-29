@@ -7,7 +7,7 @@ Assets {
       RootId: 14275165916858555312
       Objects {
         Id: 14275165916858555312
-        Name: "STORE_MageElfPyroblastFrost"
+        Name: "STORE_MageElfPyroblastBasic"
         Transform {
           Scale {
             X: 20
@@ -98,7 +98,7 @@ Assets {
           }
         }
         ParentId: 11883638470086513649
-        ChildIds: 10096755809608306426
+        ChildIds: 1536871622814252010
         ChildIds: 628827947830263390
         UnregisteredParameters {
         }
@@ -112,23 +112,35 @@ Assets {
         }
       }
       Objects {
-        Id: 10096755809608306426
-        Name: "Torch Fire VFX"
+        Id: 1536871622814252010
+        Name: "Plasma Charge Up Hold VFX"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 4.98719788
-            Y: 4.98719788
-            Z: 4.98719788
+            X: 2.68741632
+            Y: 2.68741632
+            Z: 2.68741632
           }
         }
         ParentId: 7938144461375066151
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Color"
+            Name: "bp:Enable Arc Rings"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Outer Core Color"
             Color {
               G: 0.0399999619
               B: 0.0177483298
@@ -136,26 +148,19 @@ Assets {
             }
           }
           Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 0.859822571
-          }
-          Overrides {
-            Name: "bp:Velocity Max"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 2.77543545
-          }
-          Overrides {
-            Name: "bp:Initial Velocity"
-            Vector {
+            Name: "bp:Arc Color"
+            Color {
+              G: 0.0399999619
+              B: 0.0177483298
+              A: 1
             }
           }
           Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-              Z: 50
+            Name: "bp:Color"
+            Color {
+              G: 0.0399999619
+              B: 0.0177483298
+              A: 1
             }
           }
         }
@@ -167,7 +172,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 4603537691901304316
+            Id: 6100814957947705535
           }
           TeamSettings {
           }
@@ -302,12 +307,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4603537691901304316
-      Name: "Torch Fire VFX"
+      Id: 6100814957947705535
+      Name: "Plasma Charge Up Hold VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_torch_fire"
+        AssetId: "fxbp_ChargeUp_Hold"
       }
     }
     Assets {

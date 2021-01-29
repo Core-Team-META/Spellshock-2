@@ -1,6 +1,410 @@
 Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
+  Id: 12421557893191504479
+  Name: "Witcher Mock Up"
+  Transform {
+    Location {
+      X: -12989.5742
+      Y: 55415.1719
+      Z: 103.750977
+    }
+    Rotation {
+      Yaw: 10.370863
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14162296025304194376
+  ChildIds: 13787942063952323156
+  ChildIds: 4866484738413798765
+  ChildIds: 4696901337024785134
+  ChildIds: 9140644502881891886
+  ChildIds: 6005808159546006813
+  ChildIds: 16980025553519112799
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16980025553519112799
+  Name: "Cube - bottom aligned"
+  Transform {
+    Location {
+      X: 28.2207031
+      Y: 56.5195313
+    }
+    Rotation {
+      Yaw: -69.8874588
+    }
+    Scale {
+      X: 1.05513978
+      Y: 14.3567839
+      Z: 6.63371658
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2426845962304686405
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.221000016
+        G: 0.221000016
+        B: 0.221000016
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4.86710501
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 3.24432445
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 198353679974341757
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 6005808159546006813
+  Name: "Fantasy Castle Wall 01"
+  Transform {
+    Location {
+      X: 725.874
+      Y: 256.928711
+      Z: 648.567139
+    }
+    Rotation {
+      Yaw: -159.786514
+    }
+    Scale {
+      X: 1.80365515
+      Y: 0.999997556
+      Z: 1
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Building_WallInner:id"
+      AssetReference {
+        Id: 1626097446304398136
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:id"
+      AssetReference {
+        Id: 18276034198579100461
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Building_LowerTrimOuter:id"
+      AssetReference {
+        Id: 7362232965091765999
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_TrimOuter:id"
+      AssetReference {
+        Id: 125457281986470150
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallInner:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:utile"
+      Float: 10.1002951
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:vtile"
+      Float: 7.30158567
+    }
+    Overrides {
+      Name: "ma:Shared_TrimInner:utile"
+      Float: 5.27837
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8197503148267063602
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 9140644502881891886
+  Name: "Stone Wall Divider 6m"
+  Transform {
+    Location {
+      X: 374.014648
+      Y: 93.9255219
+      Z: 659.869141
+    }
+    Rotation {
+      Pitch: 88.0809097
+      Yaw: 132.626099
+      Roll: -67.6538696
+    }
+    Scale {
+      X: 0.303560019
+      Y: 0.401131302
+      Z: 0.635704756
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.305
+        G: 0.305
+        B: 0.305
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1116770904020850526
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4696901337024785134
+  Name: "Stone Wall Divider 6m"
+  Transform {
+    Location {
+      X: 43.6763115
+      Y: -28.2637463
+      Z: 655.400391
+    }
+    Rotation {
+      Pitch: 88.0858154
+      Yaw: 132.627884
+      Roll: -67.6581421
+    }
+    Scale {
+      X: 0.303560019
+      Y: 0.401131302
+      Z: 0.635704756
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.305
+        G: 0.305
+        B: 0.305
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1116770904020850526
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableCastShadows: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4866484738413798765
+  Name: "Stone Wall Divider 6m"
+  Transform {
+    Location {
+      X: -639.950745
+      Y: -281.024689
+      Z: 646.119141
+    }
+    Rotation {
+      Pitch: 88.0860138
+      Yaw: 132.627853
+      Roll: -67.6585388
+    }
+    Scale {
+      X: 0.303560019
+      Y: 0.401131302
+      Z: 0.635704756
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.305
+        G: 0.305
+        B: 0.305
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1116770904020850526
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableCastShadows: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 13787942063952323156
+  Name: "Stone Wall Divider 6m"
+  Transform {
+    Location {
+      X: -309.612335
+      Y: -158.835403
+      Z: 650.587891
+    }
+    Rotation {
+      Pitch: 88.0809097
+      Yaw: 132.625916
+      Roll: -67.6537476
+    }
+    Scale {
+      X: 0.303560019
+      Y: 0.401131302
+      Z: 0.635704756
+    }
+  }
+  ParentId: 12421557893191504479
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.305
+        G: 0.305
+        B: 0.305
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1116770904020850526
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 13822426573499217334
   Name: "STORE_StoreContents(Witcher)"
   Transform {

@@ -7,7 +7,7 @@ Assets {
       RootId: 11919594018985707400
       Objects {
         Id: 11919594018985707400
-        Name: "STORE_MageElfChickenFrost"
+        Name: "STORE_MageElfChickenBasic"
         Transform {
           Scale {
             X: 20
@@ -145,8 +145,6 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 12.9384766
-            Y: 1.42773438
             Z: 34.7851563
           }
           Rotation {
@@ -575,9 +573,9 @@ Assets {
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: 3.68148375
-            Y: -22.4729118
-            Z: 25.8757801
+            X: 3.6825254
+            Y: -22.4730911
+            Z: 21.6439342
           }
           Rotation {
             Pitch: 42.0049286
@@ -635,9 +633,9 @@ Assets {
         Name: "left_ankle_GEO"
         Transform {
           Location {
-            X: -7.60506058
-            Y: -26.4236202
-            Z: 6.85843325
+            X: -7.60574102
+            Y: -26.4241276
+            Z: 2.62630463
           }
           Rotation {
             Pitch: 31.5491409
@@ -702,13 +700,14 @@ Assets {
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: -5.05890942
-            Y: -27.7196522
+            X: -5.05890179
+            Y: -27.71982
+            Z: -4.23197365
           }
           Rotation {
-            Pitch: 89.4118195
-            Yaw: 168.304016
-            Roll: 169.277374
+            Pitch: 89.4101563
+            Yaw: 168.303497
+            Roll: 169.277054
           }
           Scale {
             X: 0.0173433535
@@ -768,14 +767,14 @@ Assets {
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: 3.07625103
-            Y: -27.8573952
-            Z: 0.0813933462
+            X: 3.07616878
+            Y: -27.8570652
+            Z: -4.15062284
           }
           Rotation {
-            Pitch: 89.4138184
-            Yaw: 168.29332
-            Roll: 169.266388
+            Pitch: 89.3967056
+            Yaw: 168.289124
+            Roll: 169.262817
           }
           Scale {
             X: 0.0280423369
@@ -835,14 +834,14 @@ Assets {
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: 1.84700286
-            Y: -30.4348507
-            Z: 0.0876543745
+            X: 1.84645379
+            Y: -30.4351
+            Z: -4.14427614
           }
           Rotation {
-            Pitch: 89.4075089
-            Yaw: 147.03299
-            Roll: 169.463928
+            Pitch: 89.3941193
+            Yaw: 147.025543
+            Roll: 169.462311
           }
           Scale {
             X: 0.0272140708
@@ -902,14 +901,14 @@ Assets {
         Name: "left_toe_01_GEO"
         Transform {
           Location {
-            X: 2.74024272
-            Y: -24.3679161
-            Z: 0.0746105686
+            X: 2.74060202
+            Y: -24.3679886
+            Z: -4.15754652
           }
           Rotation {
-            Pitch: 89.4154892
-            Yaw: -172.937759
-            Roll: 169.319
+            Pitch: 89.4101563
+            Yaw: -172.936722
+            Roll: 169.318298
           }
           Scale {
             X: 0.0221393425
@@ -969,9 +968,9 @@ Assets {
         Name: "Gem - Heart Polished"
         Transform {
           Location {
-            X: 3.67730975
-            Y: 22.46665
-            Z: 25.8747368
+            X: 3.67650509
+            Y: 22.4660702
+            Z: 30.911005
           }
           Rotation {
             Pitch: 42.0057564
@@ -1029,14 +1028,14 @@ Assets {
         Name: "right_ankle_GEO"
         Transform {
           Location {
-            X: -7.60297346
-            Y: 26.4215336
-            Z: 6.85791111
+            X: -7.60345459
+            Y: 26.4210987
+            Z: 11.8939524
           }
           Rotation {
             Pitch: 31.5492096
-            Yaw: -0.000199369548
-            Roll: -11.1909647
+            Yaw: -0.000213623047
+            Roll: -11.190979
           }
           Scale {
             X: 0.0440530516
@@ -1096,14 +1095,14 @@ Assets {
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: 3.07416415
-            Y: 27.85322
-            Z: 0.0813933462
+            X: 3.07400131
+            Y: 27.8529644
+            Z: 5.11760139
           }
           Rotation {
-            Pitch: 89.4195175
-            Yaw: -168.292526
-            Roll: -169.265411
+            Pitch: 89.4078369
+            Yaw: -168.289886
+            Roll: -169.263
           }
           Scale {
             X: 0.0280423369
@@ -1163,13 +1162,14 @@ Assets {
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: -5.05890942
-            Y: 27.7133904
+            X: -5.0589819
+            Y: 27.7142715
+            Z: 5.03625059
           }
           Rotation {
-            Pitch: 89.4161606
-            Yaw: -168.302094
-            Roll: -169.275024
+            Pitch: 89.3999557
+            Yaw: -168.296021
+            Roll: -169.269379
           }
           Scale {
             X: 0.0173433535
@@ -1229,14 +1229,14 @@ Assets {
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: 2.74024272
-            Y: 24.3658295
-            Z: 0.0740888193
+            X: 2.73943925
+            Y: 24.3660545
+            Z: 5.11010122
           }
           Rotation {
-            Pitch: 89.4154892
-            Yaw: 172.938904
-            Roll: -169.318
+            Pitch: 89.3807068
+            Yaw: 172.933151
+            Roll: -169.312546
           }
           Scale {
             X: 0.0221393425
@@ -1296,14 +1296,14 @@ Assets {
         Name: "right_toe_01_GEO"
         Transform {
           Location {
-            X: 1.84700286
-            Y: 30.4285908
-            Z: 0.0876543745
+            X: 1.84824717
+            Y: 30.4283657
+            Z: 5.1239481
           }
           Rotation {
-            Pitch: 89.4134827
-            Yaw: -147.035721
-            Roll: -169.464447
+            Pitch: 89.4104919
+            Yaw: -147.033615
+            Roll: -169.463654
           }
           Scale {
             X: 0.0272140708
