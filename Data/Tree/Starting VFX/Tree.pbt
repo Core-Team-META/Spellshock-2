@@ -334,13 +334,13 @@ Objects {
     Overrides {
       Name: "cs:03_VenomBomb_Projectile"
       AssetReference {
-        Id: 6481751857886768330
+        Id: 987687575125277230
       }
     }
     Overrides {
       Name: "cs:03_VenomBomb_Impact"
       AssetReference {
-        Id: 5202994091235663908
+        Id: 11865746876812040430
       }
     }
     Overrides {
@@ -669,13 +669,13 @@ Objects {
     Overrides {
       Name: "cs:03_VenomBomb_Projectile"
       AssetReference {
-        Id: 6481751857886768330
+        Id: 5468743982221731542
       }
     }
     Overrides {
       Name: "cs:03_VenomBomb_Impact"
       AssetReference {
-        Id: 5202994091235663908
+        Id: 6555861377138286643
       }
     }
     Overrides {
