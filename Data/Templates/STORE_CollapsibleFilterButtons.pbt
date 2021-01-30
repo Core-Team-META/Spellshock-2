@@ -17,9 +17,8 @@ Assets {
         }
         ParentId: 2164216698044686535
         ChildIds: 6424670469754417284
-        ChildIds: 13438041172123288059
+        ChildIds: 4241163689911039774
         ChildIds: 7984874280242524036
-        ChildIds: 6115153808007253652
         ChildIds: 5504030437980954104
         UnregisteredParameters {
           Overrides {
@@ -31,7 +30,7 @@ Assets {
           Overrides {
             Name: "cs:TopPanel"
             ObjectReference {
-              SubObjectId: 13438041172123288059
+              SubObjectId: 4241163689911039774
             }
           }
           Overrides {
@@ -56,7 +55,6 @@ Assets {
         Control {
           Width: 225
           Height: 138
-          UIX: 420
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -114,13 +112,16 @@ Assets {
         }
       }
       Objects {
-        Id: 13438041172123288059
+        Id: 4241163689911039774
         Name: "Top Panel"
         Transform {
           Location {
+            X: -47.0456619
+            Y: 4.24569321
+            Z: -20
           }
           Rotation {
-            Yaw: 2.03555488e-13
+            Yaw: 3.4150944e-06
           }
           Scale {
             X: 1
@@ -129,10 +130,15 @@ Assets {
           }
         }
         ParentId: 11959434576416077310
-        ChildIds: 1786902820702240317
-        ChildIds: 6601423722612764278
-        ChildIds: 18157548587843732623
+        ChildIds: 13438041172123288059
+        ChildIds: 6115153808007253652
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:MenuPanel"
+            ObjectReference {
+              SubObjectId: 13438041172123288059
+            }
+          }
           Overrides {
             Name: "cs:ListPanel"
             ObjectReference {
@@ -145,6 +151,59 @@ Assets {
               SubObjectId: 18157548587843732623
             }
           }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 100
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13438041172123288059
+        Name: "Menu Panel"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 2.03555488e-13
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4241163689911039774
+        ChildIds: 1786902820702240317
+        ChildIds: 6601423722612764278
+        ChildIds: 18157548587843732623
+        UnregisteredParameters {
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -347,6 +406,264 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6115153808007253652
+        Name: "BorderButtons"
+        Transform {
+          Location {
+            X: 1140
+            Y: -1270
+            Z: 750
+          }
+          Rotation {
+            Yaw: 44.9999962
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4241163689911039774
+        ChildIds: 2750382018363752535
+        ChildIds: 12263981975228818092
+        ChildIds: 17079920502141527166
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 100
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2750382018363752535
+        Name: "Left Border Button"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 4.07110977e-13
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6115153808007253652
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 25
+          Height: 340
+          UIX: 15
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            FontColor {
+              A: 1
+            }
+            FontSize: 20
+            ButtonColor {
+              R: 1
+              G: 1
+              B: 1
+            }
+            HoveredColor {
+            }
+            PressedColor {
+            }
+            DisabledColor {
+            }
+            Brush {
+              Id: 14060330023043759337
+            }
+            IsButtonEnabled: true
+            OnlyUseMainColor: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12263981975228818092
+        Name: "Right Border Button"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 8.14221954e-13
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6115153808007253652
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 25
+          Height: 340
+          UIX: -15
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            FontColor {
+              A: 1
+            }
+            FontSize: 20
+            ButtonColor {
+              R: 1
+              G: 1
+              B: 1
+            }
+            HoveredColor {
+            }
+            PressedColor {
+            }
+            DisabledColor {
+            }
+            Brush {
+              Id: 14060330023043759337
+            }
+            IsButtonEnabled: true
+            OnlyUseMainColor: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17079920502141527166
+        Name: "Top Border Button"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 4.07110977e-13
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6115153808007253652
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 10
+          Height: 25
+          UIX: -5
+          UIY: -200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          Button {
+            FontColor {
+              A: 1
+            }
+            FontSize: 20
+            ButtonColor {
+              R: 1
+              G: 1
+              B: 1
+            }
+            HoveredColor {
+            }
+            PressedColor {
+            }
+            DisabledColor {
+            }
+            Brush {
+              Id: 14060330023043759337
+            }
+            IsButtonEnabled: true
+            OnlyUseMainColor: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
               }
             }
           }
@@ -2117,264 +2434,6 @@ Assets {
         }
       }
       Objects {
-        Id: 6115153808007253652
-        Name: "BorderButtons"
-        Transform {
-          Location {
-            X: 1140
-            Y: -1270
-            Z: 750
-          }
-          Rotation {
-            Yaw: 44.9999962
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11959434576416077310
-        ChildIds: 2750382018363752535
-        ChildIds: 12263981975228818092
-        ChildIds: 17079920502141527166
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 100
-          Height: 100
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          UseParentWidth: true
-          UseParentHeight: true
-          Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2750382018363752535
-        Name: "Left Border Button"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 4.07110977e-13
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6115153808007253652
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 15
-          Height: 340
-          UIX: 10
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Button {
-            FontColor {
-              A: 1
-            }
-            FontSize: 20
-            ButtonColor {
-              R: 1
-              G: 1
-              B: 1
-            }
-            HoveredColor {
-            }
-            PressedColor {
-            }
-            DisabledColor {
-            }
-            Brush {
-              Id: 14060330023043759337
-            }
-            IsButtonEnabled: true
-            OnlyUseMainColor: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12263981975228818092
-        Name: "Right Border Button"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 8.14221954e-13
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6115153808007253652
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 15
-          Height: 340
-          UIX: -10
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Button {
-            FontColor {
-              A: 1
-            }
-            FontSize: 20
-            ButtonColor {
-              R: 1
-              G: 1
-              B: 1
-            }
-            HoveredColor {
-            }
-            PressedColor {
-            }
-            DisabledColor {
-            }
-            Brush {
-              Id: 14060330023043759337
-            }
-            IsButtonEnabled: true
-            OnlyUseMainColor: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomright"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17079920502141527166
-        Name: "Top Border Button"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 4.07110977e-13
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6115153808007253652
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Control {
-          Width: 10
-          Height: 15
-          UIX: -5
-          UIY: -200
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          Button {
-            FontColor {
-              A: 1
-            }
-            FontSize: 20
-            ButtonColor {
-              R: 1
-              G: 1
-              B: 1
-            }
-            HoveredColor {
-            }
-            PressedColor {
-            }
-            DisabledColor {
-            }
-            Brush {
-              Id: 14060330023043759337
-            }
-            IsButtonEnabled: true
-            OnlyUseMainColor: true
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 5504030437980954104
         Name: "Main Button"
         Transform {
@@ -2396,7 +2455,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 202
+          Width: 190
           Height: 125
           RenderTransformPivot {
             Anchor {
@@ -2455,6 +2514,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Basic_Frame_001"
+      }
+    }
+    Assets {
+      Id: 14060330023043759337
+      Name: "BG Flat 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_020"
       }
     }
     Assets {
@@ -2518,15 +2586,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Crafting_Stone_028"
-      }
-    }
-    Assets {
-      Id: 14060330023043759337
-      Name: "BG Flat 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundNoOutline_020"
       }
     }
     Assets {

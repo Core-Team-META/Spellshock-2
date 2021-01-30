@@ -39,6 +39,7 @@ local propPageBackButton = script:GetCustomProperty("PageBackButton"):WaitForObj
 local propPageNextButton = script:GetCustomProperty("PageNextButton"):WaitForObject()
 local propPurchaseButton = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 local PurchaseButton = propPurchaseButton:GetCustomProperty("Button"):WaitForObject()
+local ClearFiltersButton = script:GetCustomProperty("ClearFiltersButton"):WaitForObject()
 
 local propStoreGeoHolder = script:GetCustomProperty("StoreGeoHolder"):WaitForObject()
 local propFilterListHolder = script:GetCustomProperty("FilterListHolder"):WaitForObject()
@@ -219,7 +220,7 @@ local currentType = {
 local currentOwnership = {
 	type = nil
 }
-local currentTag = {
+local currentClass = {
 	tag = nil
 }
 local currentRarity = {
@@ -307,8 +308,9 @@ function ShowStore_ClientHelper()
 	propCamera.rotationMode = RotationMode.CAMERA
 	propStoreUIContainer.isEnabled = true
 	UI.SetCursorVisible(true)
+	UI.SetCanCursorInteractWithUI(true)
 	storePos = 0
-	ClearFilter()
+	FilterStoreItems() --ClearFilter()
 	UpdateCurrencyDisplay()
 
 	for k, v in pairs(StoreUIButtons) do
@@ -326,6 +328,7 @@ function HideStore_ClientHelper()
 
 	propStoreUIContainer.isEnabled = false
 	UI.SetCursorVisible(false)
+	UI.SetCanCursorInteractWithUI(false)
 	player:ClearOverrideCamera()
 	ClearList()
 
@@ -360,23 +363,13 @@ end
 function StoreItemHovered(button)
 	local entry = StoreUIButtons[button]
 	if entry then
-		--currentlySelected = entry
 		currentlyHovered = entry
-
-		--SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
-		--currentZoom = entry.data.zoom
 		UpdateEntryButton(StoreUIButtons[button], true)
 	end
 end
 
 function StoreItemUnhovered(button)
 	currentlyHovered = nil
-
-	--[[if currentlyEquipped ~= nil then
-		SpawnPreview(currentlyEquipped, setPreviewMesh, equippedVisibility)
-		currentZoom = equippedZoom
-	end]]
-
 	UpdateEntryButton(StoreUIButtons[button], false)
 end
 
@@ -487,6 +480,7 @@ function SelectNothing()
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
 	propPreviewMesh.animationStance = "unarmed_idle_relaxed"
 	propPreviewMesh2.animationStance = "unarmed_idle_relaxed"
+	RemovePreview()
 end
 
 function UpdateEntryButton(entry, highlighted)
@@ -1223,10 +1217,6 @@ function InitStore()
 
 	TypeDefs = {}
 	TypeList = {}
-	OwnerShipDefs = {
-		Shop = {name = "Shop", number = 1}, 
-		Purchased = {name = "Purchased", number = 2}
-	}
 
 	if propTypeDefinitions ~= nil then
 		for k, v in ipairs(propTypeDefinitions:GetChildren()) do
@@ -1247,9 +1237,12 @@ function InitStore()
 
 	SelectNothing()
 
-	-- Spawn Ownership filter buttons
-	--SpawnTypeFilterButton("Shop", "Ownership", Color.FromStandardHex("0082A1CC"), 1)
-	--SpawnTypeFilterButton("Purchased", "Ownership", Color.FromStandardHex("0082A1CC"), 2)
+	OwnerShipDefs = {
+		Shop = {name = "Shop", number = 1}, 
+		Purchased = {name = "Purchased", number = 2},
+		Equipped = {name = "Equipped", number = 3}
+	}
+
 	SpawnCollapsibleFilterButton("TITLE", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
 
 	if propEnableFilterByType then
@@ -1342,7 +1335,7 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 	local MainButton = newCollapsibleMenu:GetCustomProperty("MainButton"):WaitForObject()
 	local CollapsibleButtonTemplate = newCollapsibleMenu:GetCustomProperty("CollapsibleButtonTemplate")
 
-	newCollapsibleMenu.x = (newCollapsibleMenu.width * position)
+	newCollapsibleMenu.x = (newCollapsibleMenu.width * position) + (position+15)
 	newCollapsibleMenu.y = 0
 
 	Title.text = displayName
@@ -1378,6 +1371,7 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 
 		filterButtonData[propButton] = {
 			listener = propButton.clickedEvent:Connect(clickFunction),
+			button = propButton,
 			root = newFilterPanel,
 			tag = data.name,
 			color = propButton:GetButtonColor(),
@@ -1405,19 +1399,19 @@ function OnClassFilterButtonSelected(button)
 	button:SetButtonColor(buttonData.clickedColor)
 	buttonData.selectedPanel.visibility = Visibility.INHERIT
 
-	if currentTag.tag == tag then -- if the current active filter is this button, reset filter and highlight color
-		currentTag = {tag = nil}
+	if currentClass.tag == tag then -- if the current active filter is this button, reset filter and highlight color
+		currentClass = {tag = nil}
 		button:SetButtonColor(buttonData.color)
 		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
         FilterStoreItems()
 		return
-	elseif currentTag.tag ~= nil then -- if the current active filter is not this button, reset highlight color
-		local currentButton = currentTag.root:GetCustomProperty("Button"):WaitForObject()
+	elseif currentClass.tag ~= nil then -- if the current active filter is not this button, reset highlight color
+		local currentButton = currentClass.root:GetCustomProperty("Button"):WaitForObject()
 		local currentData = filterButtonData[currentButton]
 		currentButton:SetButtonColor(currentData.color)
 	end
 
-	currentTag = buttonData
+	currentClass = buttonData
 
 	-- Clear and repopulate store with filtered items
     FilterStoreItems()
@@ -1617,10 +1611,10 @@ function FilterStoreItems()
     local filterFunctions = {}
 
     -- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
-    if currentTag.tag then
+    if currentClass.tag then
         --print("Adding class filter")
         table.insert(filterFunctions, function (thisItem)
-            if thisItem.tags[currentTag.tag] then
+            if thisItem.tags[currentClass.tag] then
                 return true
             else
                 return false
@@ -1655,8 +1649,14 @@ function FilterStoreItems()
     if currentOwnership.tag then
         --print("Adding ownership filter")
         table.insert(filterFunctions, function (thisItem)
-            local owned = HasCosmetic(thisItem.id)
-            if (currentOwnership.tag == "Purchased" and owned) or (currentOwnership.tag == "Shop" and not owned) then
+			local owned = HasCosmetic(thisItem.id)
+			local equipped = CosmeticIsEquipped(thisItem.id)
+
+			-- Shop, Purchased, Equipped
+
+			if (currentOwnership.tag == "Shop" and not owned) or 
+			(currentOwnership.tag == "Purchased" and owned and not equipped) or 
+			(currentOwnership.tag == "Equipped" and equipped) then
                 return true
             else
                 return false
@@ -1688,13 +1688,33 @@ function FilterStoreItems()
 	PopulateStore(-1)
 end
 
-function ClearFilter()
-	CurrentStoreElements = {}
-	for k, v in ipairs(StoreElements) do
-		table.insert(CurrentStoreElements, v)
+function ClearFilters()
+	if currentClass.tag then
+		currentClass.button:SetButtonColor(currentClass.color)
+		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
+		currentClass = {tag = nil}
 	end
-	storePos = 0
-	PopulateStore(-1)
+	
+	if currentType.tag then
+		currentType.button:SetButtonColor(currentType.color)
+		currentType.selectedPanel.visibility = Visibility.FORCE_OFF
+		currentType = {tag = nil}
+	end
+	
+	if currentRarity.tag then
+		currentRarity.button:SetButtonColor(currentRarity.color)
+		currentRarity.selectedPanel.visibility = Visibility.FORCE_OFF
+		currentRarity = {tag = nil}
+	end
+	
+	if currentOwnership.tag then
+		currentOwnership.button:SetButtonColor(currentOwnership.color)
+		currentOwnership.selectedPanel.visibility = Visibility.FORCE_OFF
+		currentOwnership = {tag = nil}
+	end
+
+	SelectNothing()
+	FilterStoreItems()
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -1778,7 +1798,7 @@ function OnClickZoom()
 		setPreviewMesh:ScaleTo(Vector3.New(3, 3, 3), 0.5, true)
 	elseif currentZoom == "Head" then
 		setPreviewMesh:MoveTo(propHeadZoomMarker:GetPosition(), 0.5, true)
-		setPreviewMesh:ScaleTo(Vector3.New(3, 3, 3), 0.5, true)
+		setPreviewMesh:ScaleTo(Vector3.New(2.1), 0.5, true)
 	elseif currentZoom == "UpperBody" then
 		setPreviewMesh:MoveTo(propUpperZoomMarker:GetPosition(), 0.5, true)
 		setPreviewMesh:ScaleTo(Vector3.New(2.3, 2.3, 2.3), 0.5, true)
@@ -1887,6 +1907,7 @@ uiBackButton.clickedEvent:Connect(BackPageClicked)
 uiNextButton.clickedEvent:Connect(NextPageClicked)
 propSwapMannequin.clickedEvent:Connect(SwapMannequin)
 PurchaseButton.clickedEvent:Connect(PurchaseButtonClicked)
+ClearFiltersButton.clickedEvent:Connect(ClearFilters)
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

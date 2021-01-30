@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14659414155711643810
+  Name: "Frame Outlined 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_015"
+  }
+}
+Assets {
   Id: 14435918643864210506
   Name: "Grid Glow Topographical"
   PlatformAssetType: 2
@@ -77,15 +86,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_raw_white_001_uv"
-  }
-}
-Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
@@ -296,15 +296,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7615847344375253670
-  Name: "UI Basic Frame 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Frame_001"
-  }
-}
-Assets {
   Id: 7331838309352431776
   Name: "Curtains Straight"
   PlatformAssetType: 1
@@ -401,15 +392,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_cabinet_narrow_001_cabient"
-  }
-}
-Assets {
-  Id: 2704989702499929423
-  Name: "Frame Outline Thin 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameOutline_020"
   }
 }
 Assets {

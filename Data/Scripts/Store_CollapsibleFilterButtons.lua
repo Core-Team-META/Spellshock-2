@@ -1,6 +1,7 @@
 local ROOT = script.parent
 
 local TopPanel = ROOT:GetCustomProperty("TopPanel"):WaitForObject()
+local MenuPanel = TopPanel:GetCustomProperty("MenuPanel"):WaitForObject()
 local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
 local TopFrame = TopPanel:GetCustomProperty("Frame"):WaitForObject()
 local MainButtonPanel = ROOT:GetCustomProperty("MainButtonPanel"):WaitForObject()
@@ -22,7 +23,7 @@ function OnChildAdded(_, newChild)
     allBorderButtons[2].height = allBorderButtons[2].height + newChild.height
     allBorderButtons[3].y = allBorderButtons[3].y - newChild.height + 4
 
-    TopPanel.height = TopPanel.height + newChild.height
+    MenuPanel.height = TopPanel.height + newChild.height
     TopFrame.width = TopFrame.width + newChild.height
 
     local button = newChild:GetCustomProperty("Button"):WaitForObject()
@@ -36,7 +37,7 @@ end
 function Tick()
     if not MainButton:IsVisibleInHierarchy() then
         TopPanel.visibility = Visibility.FORCE_OFF
-        SelectedPanel.visibility = Visibility.FORCE_OFF
+        --SelectedPanel.visibility = Visibility.FORCE_OFF
     end
 end
 
