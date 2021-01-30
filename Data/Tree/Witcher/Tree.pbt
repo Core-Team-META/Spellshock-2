@@ -79,11 +79,11 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 3.24432445
+      Float: 2.34534764
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -93,11 +93,9 @@ Objects {
       Id: 198353679974341757
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
     StaticMesh {
       Physics {
       }
@@ -175,7 +173,7 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -185,11 +183,9 @@ Objects {
       Id: 8197503148267063602
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
     StaticMesh {
       Physics {
       }
@@ -229,7 +225,7 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -239,10 +235,9 @@ Objects {
       Id: 1116770904020850526
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
     StaticMesh {
       Physics {
       }
@@ -282,7 +277,7 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -292,11 +287,9 @@ Objects {
       Id: 1116770904020850526
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     DisableCastShadows: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -336,7 +329,7 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -346,11 +339,9 @@ Objects {
       Id: 1116770904020850526
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
     DisableCastShadows: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -390,7 +381,7 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -400,10 +391,9 @@ Objects {
       Id: 1116770904020850526
     }
     Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
     StaticMesh {
       Physics {
       }
