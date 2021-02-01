@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15810894035057021327
   Name: "BlockAbilityClient"
   PlatformAssetType: 3
@@ -11,5 +11,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

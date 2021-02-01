@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 15520903157796868046
   Name: "BleedMaterial"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 12315230890479394018
     ParameterOverrides {
@@ -53,7 +53,7 @@
       }
       Overrides {
         Name: "foamtightness"
-        Float: 4.13904
+        Float: 0.25
       }
       Overrides {
         Name: "foamnormalstrength"
@@ -77,7 +77,7 @@
       }
       Overrides {
         Name: "startfadeoffset"
-        Float: 0.386852592
+        Float: 0.387218714
       }
     }
     Assets {

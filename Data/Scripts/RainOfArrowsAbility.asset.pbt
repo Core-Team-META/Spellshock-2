@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12763873982096909902
   Name: "RainOfArrowsAbility"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

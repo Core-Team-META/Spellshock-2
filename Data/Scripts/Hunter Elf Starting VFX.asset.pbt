@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13263787292238581681
   Name: "Hunter Elf Starting VFX"
   PlatformAssetType: 3
@@ -13,19 +13,19 @@
       Overrides {
         Name: "cs:01_RainofArrows_Preview"
         AssetReference {
-          Id: 1490966563412810811
+          Id: 841534158063459245
         }
       }
       Overrides {
         Name: "cs:01_RainofArrows_Placement"
         AssetReference {
-          Id: 10719404219839224023
+          Id: 841534158063459245
         }
       }
       Overrides {
         Name: "cs:02_Leap_Placement"
         AssetReference {
-          Id: 3018525531227009304
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -52,5 +52,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

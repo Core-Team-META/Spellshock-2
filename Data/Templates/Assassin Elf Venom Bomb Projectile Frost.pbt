@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2104224913586788579
   Name: "Assassin Elf Venom Bomb Projectile Frost"
   PlatformAssetType: 5
@@ -7,7 +7,7 @@
       RootId: 15481075207354997388
       Objects {
         Id: 15481075207354997388
-        Name: "Assassin Venom Bomb Projectile Basic"
+        Name: "Assassin Elf Venom Bomb Projectile Frost"
         Transform {
           Scale {
             X: 1
@@ -139,6 +139,12 @@
               A: 1
             }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -154,6 +160,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -187,10 +194,16 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0700000525
-              G: 0.0471995063
-              B: 0.0375200287
+              R: 0.07434
+              G: 0.296386331
+              B: 0.420000017
               A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14574329988604054906
             }
           }
         }
@@ -208,6 +221,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -235,15 +249,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5861223425148352605
+              Id: 18007932134064521969
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.15
-              G: 0.15
-              B: 0.15
+              R: 0.5
+              G: 0.5
+              B: 0.5
               A: 1
             }
           }
@@ -262,6 +276,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -337,6 +352,14 @@
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.301914513
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.5
+              B: 3
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -352,6 +375,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -424,6 +448,14 @@
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.301914513
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.5
+              B: 3
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -439,6 +471,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -513,6 +546,14 @@
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 0.301914513
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.5
+              B: 3
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -528,6 +569,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -590,6 +632,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -643,6 +686,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -676,11 +720,17 @@
             }
           }
           Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14574329988604054906
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0700000525
-              G: 0.0471995063
-              B: 0.0375200287
+              R: 0.07434
+              G: 0.296386331
+              B: 0.420000017
               A: 1
             }
           }
@@ -699,6 +749,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -734,11 +785,17 @@
             }
           }
           Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14574329988604054906
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0700000525
-              G: 0.0471995063
-              B: 0.0375200287
+              R: 0.07434
+              G: 0.296386331
+              B: 0.420000017
               A: 1
             }
           }
@@ -757,6 +814,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -792,11 +850,17 @@
             }
           }
           Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 14574329988604054906
+            }
+          }
+          Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.0700000525
-              G: 0.0471995063
-              B: 0.0375200287
+              R: 0.07434
+              G: 0.296386331
+              B: 0.420000017
               A: 1
             }
           }
@@ -815,6 +879,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -873,6 +938,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1161,7 +1227,7 @@
       }
     }
     Assets {
-      Id: 5861223425148352605
+      Id: 18007932134064521969
       Name: "Metal Basic Steel"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -1203,6 +1269,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_weap_fan_shield_strap_001"
+      }
+    }
+    Assets {
+      Id: 5861223425148352605
+      Name: "Metal Basic Steel"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "steel_001"
       }
     }
     Assets {
@@ -1255,5 +1330,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

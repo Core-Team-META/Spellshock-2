@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11106787426060956844
   Name: "Rock_02"
   PlatformAssetType: 5
@@ -84,6 +84,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -153,6 +154,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -216,6 +218,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -276,6 +279,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -306,5 +310,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

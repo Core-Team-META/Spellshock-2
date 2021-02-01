@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12292371233634189790
   Name: "Elven_road_standing_light"
   PlatformAssetType: 5
@@ -143,6 +143,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -193,6 +194,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -515,6 +517,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -656,6 +659,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -695,6 +699,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -760,6 +765,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -820,6 +826,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -951,6 +958,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1074,6 +1082,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1131,6 +1140,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1194,6 +1204,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1244,6 +1255,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1282,6 +1294,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1325,6 +1338,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1490,5 +1504,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

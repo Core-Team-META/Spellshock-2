@@ -1,4 +1,4 @@
-﻿Name: "DamageHelper"
+Name: "DamageHelper"
 RootId: 4683464414535277849
 Objects {
   Id: 14284452669964148176
@@ -168,12 +168,6 @@ Objects {
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 8445789955444278387
-    SubobjectId: 9750537744248185750
-    InstanceId: 10025619589047887709
-    TemplateId: 3430158136425294756
   }
 }
 Objects {

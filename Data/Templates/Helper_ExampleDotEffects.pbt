@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11322991377758087402
   Name: "Helper_ExampleDotEffects"
   PlatformAssetType: 5
@@ -140,5 +140,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

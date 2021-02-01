@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9390915965553320450
   Name: "Mage Wand Reload SFX Basic"
   PlatformAssetType: 5
@@ -114,5 +114,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

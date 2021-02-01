@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6481751857886768330
   Name: "Assassin Venom Bomb Projectile Basic"
   PlatformAssetType: 5
@@ -138,6 +138,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -192,6 +193,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -246,6 +248,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -336,6 +339,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -423,6 +427,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -512,6 +517,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -574,6 +580,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -626,6 +633,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -682,6 +690,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -740,6 +749,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -798,6 +808,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -856,6 +867,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1226,5 +1238,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -9,7 +9,16 @@ local EventListeners = {}
 
 local isPreviewing = false
 local isPlacing = false
+local isEnabled = true
 
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
 
 local function META_AP()
     return _G["Meta.Ability.Progression"]
@@ -20,24 +29,24 @@ local function SetNetworkProperty(bool)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding then
-		print("* Teleport *")
-		print("  isEnabled: "..tostring(isEnabled))
-		print("  isPreviewing: "..tostring(isPreviewing))
-		print("  isPlacing: "..tostring(isPlacing))
-	end
-
-	if binding == AbilityBinding and not isPreviewing and not isPlacing and not player.isDead then
-		isPreviewing = true
-		SetNetworkProperty(isPreviewing)
-		PrimaryAbility.isEnabled = false
-		SpecialAbility.isEnabled = true
+	if isEnabled and not isPlacing and not player.isDead then
+		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
+			isPreviewing = true
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = false
+			SpecialAbility.isEnabled = true
+		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+			isPreviewing = false
+			SetNetworkProperty(isPreviewing)
+			PrimaryAbility.isEnabled = true
+			SpecialAbility.isEnabled = false
+		end
 	end
 end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isPlacing then
-		print("INTERRUPTING")
+		--print("INTERRUPTING")
 		SpecialAbility:Interrupt()
 		SetNetworkProperty(false)
 	end
@@ -49,16 +58,15 @@ end
 
 function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
-		Task.Wait()
+		--print("## Placement: "..SpecialAbility.name)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 		PrimaryAbility.isEnabled = true
 		
-		
-		-- check if the placement was canceled
-		if position == nil then
-			return
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			--print("STOPPED BUG")
+			return 
 		end
 		
 		isPlacing = true
@@ -81,6 +89,19 @@ function OnPlayerRespawn(player)
 	SpecialAbility.isEnabled = false
 end
 
+function OnAbilityToggled(abilityID, mode)
+	if abilityID == SpecialAbility.id or abilityID == "ALL" then
+		--print("!! Toggling "..SpecialAbility.name)
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+		isEnabled = mode
+		if abilityID == SpecialAbility.id then
+			PrimaryAbility.isEnabled = true
+		end
+	end
+end
+
 function OnEquip(equipment, player)
 	isPreviewing = false
 	SetNetworkProperty(isPreviewing)
@@ -94,6 +115,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
+	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
 end
 
 function OnUnequip(equipment, player)

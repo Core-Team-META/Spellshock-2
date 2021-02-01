@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8929882190614343836
   Name: "Mage Elf Iceberg Break Frost"
   PlatformAssetType: 5
@@ -145,5 +145,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

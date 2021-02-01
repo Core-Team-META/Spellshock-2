@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8873727555978059131
   Name: "Tank Elf Boulder Throw Projectile Basic"
   PlatformAssetType: 5
@@ -162,6 +162,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -259,5 +260,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

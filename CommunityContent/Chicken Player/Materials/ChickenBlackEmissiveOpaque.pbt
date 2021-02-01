@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 8989001989064350503
   Name: "ChickenBlackEmissiveOpaque"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 5351428073291024820
     ParameterOverrides {

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3001366697168823164
   Name: "Tank Shield Dash Ending FX Basic"
   PlatformAssetType: 5
@@ -224,5 +224,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

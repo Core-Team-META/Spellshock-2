@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 391006820139421947
   Name: "Assassin Orc Costume Fire"
   PlatformAssetType: 5
@@ -149,6 +149,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -215,6 +216,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -281,6 +283,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -347,6 +350,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -408,6 +412,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -472,6 +477,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -538,6 +544,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -632,6 +639,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -693,6 +701,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -754,6 +763,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -815,6 +825,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -876,6 +887,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -937,6 +949,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -998,6 +1011,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1068,6 +1082,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1134,6 +1149,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1200,6 +1216,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1266,6 +1283,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1332,6 +1350,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1525,6 +1544,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1637,6 +1657,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1701,7 +1722,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -1719,7 +1740,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -1738,6 +1760,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1766,7 +1789,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -1784,7 +1807,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -1803,6 +1827,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1867,6 +1892,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1947,6 +1973,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2013,6 +2040,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2078,6 +2106,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2143,6 +2172,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2209,6 +2239,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2273,7 +2304,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -2291,7 +2322,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -2310,6 +2342,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2338,7 +2371,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -2356,7 +2389,8 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -2375,6 +2409,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2439,6 +2474,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2519,6 +2555,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2583,6 +2620,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2647,6 +2685,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2711,6 +2750,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2775,6 +2815,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2839,6 +2880,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2903,6 +2945,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2967,6 +3010,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3031,6 +3075,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3095,6 +3140,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3159,6 +3205,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3223,6 +3270,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3287,6 +3335,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3351,6 +3400,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3415,6 +3465,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3479,6 +3530,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3543,6 +3595,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3607,6 +3660,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3799,6 +3853,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3906,6 +3961,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3968,6 +4024,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4030,6 +4087,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4092,6 +4150,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4154,6 +4213,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4215,6 +4275,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4279,6 +4340,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4343,6 +4405,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4407,6 +4470,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4471,6 +4535,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4535,6 +4600,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4625,6 +4691,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4702,6 +4769,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4751,7 +4819,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -4771,7 +4839,8 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -4799,6 +4868,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4876,6 +4946,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4940,6 +5011,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5004,6 +5076,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5068,6 +5141,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5260,6 +5334,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5367,6 +5442,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5429,6 +5505,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5491,6 +5568,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5553,6 +5631,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5615,6 +5694,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5676,6 +5756,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5740,6 +5821,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5804,6 +5886,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5868,6 +5951,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5932,6 +6016,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5996,6 +6081,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6086,6 +6172,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6163,6 +6250,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6212,7 +6300,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 1009636138000564291
+              Id: 5351428073291024820
             }
           }
           Overrides {
@@ -6232,7 +6320,8 @@
           Overrides {
             Name: "ma:Shared_Trim:color"
             Color {
-              R: 0.62
+              R: 3
+              G: 0.05
               A: 1
             }
           }
@@ -6260,6 +6349,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6337,6 +6427,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6401,6 +6492,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6465,6 +6557,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6529,6 +6622,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -6627,6 +6721,15 @@
       }
     }
     Assets {
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_opaque_emissive"
+      }
+    }
+    Assets {
       Id: 1687528788148422459
       Name: "Prism - 8-Sided"
       PlatformAssetType: 1
@@ -6703,5 +6806,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

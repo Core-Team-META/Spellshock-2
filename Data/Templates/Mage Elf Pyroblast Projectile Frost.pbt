@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 190311559756997868
   Name: "Mage Elf Pyroblast Projectile Frost"
   PlatformAssetType: 5
@@ -39,9 +39,9 @@
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 908732772526045370
@@ -49,7 +49,6 @@
         ChildIds: 1024100183926338673
         ChildIds: 3178573640201027555
         ChildIds: 16737856022452373341
-        ChildIds: 18049212269086065177
         ChildIds: 13704415086252529951
         ChildIds: 13331083695535625519
         ChildIds: 7138495907616537185
@@ -240,55 +239,6 @@
         }
       }
       Objects {
-        Id: 18049212269086065177
-        Name: "Point Light"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10936111547398869539
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Light {
-          Intensity: 21
-          Color {
-            G: 0.387814194
-            B: 0.960000038
-            A: 1
-          }
-          VolumetricIntensity: 5
-          TeamSettings {
-          }
-          Light {
-            Temperature: 6500
-            LocalLight {
-              AttenuationRadius: 1500
-              PointLight {
-                SourceRadius: 20
-                SoftSourceRadius: 20
-                FallOffExponent: 8
-                UseFallOffExponent: true
-              }
-            }
-            MaxDrawDistance: 5000
-            MaxDistanceFadeRange: 1000
-          }
-        }
-      }
-      Objects {
         Id: 13704415086252529951
         Name: "Fire Volume VFX"
         Transform {
@@ -446,7 +396,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8440229342576301274
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -475,6 +425,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -492,9 +443,9 @@
             Pitch: 90
           }
           Scale {
-            X: 3.62114739
-            Y: 3.62114739
-            Z: 3.37993646
+            X: 3.702703
+            Y: 3.702703
+            Z: 3.45605946
           }
         }
         ParentId: 10936111547398869539
@@ -506,16 +457,17 @@
           Overrides {
             Name: "bp:Color A"
             Color {
-              G: 0.735570908
-              B: 1
+              G: 0.462673962
+              B: 0.629
+              A: 1
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.549999714
-              B: 1
-              A: 0.037
+              G: 0.00879998785
+              B: 0.016
+              A: 1
             }
           }
           Overrides {
@@ -525,6 +477,26 @@
               B: 0.6
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Color Offset B"
+            Float: 0.27
+          }
+          Overrides {
+            Name: "bp:Color Offset C"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 0.745336115
+          }
+          Overrides {
+            Name: "bp:Color Offset A"
+            Float: 0
           }
         }
         Collidable_v2 {
@@ -613,5 +585,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

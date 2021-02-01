@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6584251115473192762
   Name: "Hunter Orc Bear Trap Placement Fire"
   PlatformAssetType: 5
@@ -175,15 +175,15 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.24491711
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.34866941
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -197,6 +197,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -227,7 +228,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -244,7 +245,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -256,6 +257,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -286,7 +288,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -303,7 +305,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -315,6 +317,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -345,7 +348,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -362,7 +365,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -374,6 +377,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -404,7 +408,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -421,7 +425,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -433,6 +437,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -463,7 +468,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -480,7 +485,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -492,6 +497,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -523,7 +529,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -540,7 +546,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -552,6 +558,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -589,15 +596,15 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.24491711
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.34866941
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -611,6 +618,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -642,7 +650,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -659,7 +667,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -671,6 +679,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -702,7 +711,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -719,7 +728,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -731,6 +740,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -761,7 +771,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -778,7 +788,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -790,6 +800,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -820,7 +831,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -837,7 +848,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -849,6 +860,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -880,7 +892,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -897,7 +909,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -909,6 +921,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -940,7 +953,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -957,7 +970,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -969,6 +982,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1045,15 +1059,15 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.24491711
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.34866941
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1067,6 +1081,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1098,7 +1113,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1115,7 +1130,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1127,6 +1142,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1158,7 +1174,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1175,7 +1191,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1187,6 +1203,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1217,7 +1234,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1234,7 +1251,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1246,6 +1263,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1277,7 +1295,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1294,7 +1312,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1306,6 +1324,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1337,7 +1356,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1354,7 +1373,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1366,6 +1385,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1397,7 +1417,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1414,7 +1434,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1426,6 +1446,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1457,7 +1478,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1474,7 +1495,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1486,6 +1507,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1515,7 +1537,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1532,7 +1554,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1544,6 +1566,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1573,7 +1596,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1590,7 +1613,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1602,6 +1625,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1632,7 +1656,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1649,7 +1673,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1661,6 +1685,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1691,7 +1716,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1512708355930270667
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1708,7 +1733,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1720,6 +1745,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1756,15 +1782,15 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.24491711
+            Float: 1.51659191
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.34866941
+            Float: 2.92578697
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1778,6 +1804,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1789,15 +1816,18 @@
         Name: "Base"
         Transform {
           Location {
+            X: -0.0157103762
+            Y: -0.0142265558
+            Z: -11.3380833
           }
           Rotation {
             Yaw: -1.33402125e-08
             Roll: 4.07663847e-18
           }
           Scale {
-            X: 0.6
-            Y: 3.4
-            Z: 0.2
+            X: 0.60001874
+            Y: 3.39999843
+            Z: 0.294916451
           }
         }
         ParentId: 15987553049041362348
@@ -1805,7 +1835,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1814,7 +1844,7 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.13200134
+            Float: 0.757950366
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -1822,7 +1852,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1836,6 +1866,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1883,7 +1914,7 @@
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1897,6 +1928,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1928,7 +1960,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -1947,9 +1979,15 @@
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 3078691490377343238
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1963,6 +2001,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1994,7 +2033,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2013,9 +2052,15 @@
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 3078691490377343238
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2029,6 +2074,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2060,7 +2106,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2079,9 +2125,15 @@
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 3078691490377343238
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2095,6 +2147,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2126,7 +2179,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 15592158619972675004
+              Id: 3078691490377343238
             }
           }
           Overrides {
@@ -2145,9 +2198,15 @@
             Name: "ma:Shared_Detail01:vtile"
             Float: 63.916954
           }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 3078691490377343238
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2161,6 +2220,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2424,15 +2484,6 @@
       }
     }
     Assets {
-      Id: 1512708355930270667
-      Name: "Burning Wood"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_burning_erode"
-      }
-    }
-    Assets {
       Id: 15529149580810381787
       Name: "Cube - Rounded Bottom-Aligned"
       PlatformAssetType: 1
@@ -2451,21 +2502,21 @@
       }
     }
     Assets {
+      Id: 1512708355930270667
+      Name: "Burning Wood"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_burning_erode"
+      }
+    }
+    Assets {
       Id: 4201434476092912909
       Name: "Urban Fence Bracket - End"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_ts_mil_fence_bracket_end_01"
-      }
-    }
-    Assets {
-      Id: 15592158619972675004
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
       }
     }
     Assets {
@@ -2491,5 +2542,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

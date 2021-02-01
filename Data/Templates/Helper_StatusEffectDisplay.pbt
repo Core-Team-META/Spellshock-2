@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14193068822760167103
   Name: "Helper_StatusEffectDisplay"
   PlatformAssetType: 5
@@ -385,5 +385,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

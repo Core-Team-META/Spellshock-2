@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8480470584545096208
   Name: "SS2_GAME_OVER_&_REWARDS"
   PlatformAssetType: 5
@@ -29603,5 +29603,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

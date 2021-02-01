@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2945782094965142153
   Name: "Mage Animorph Potion Projectile Basic"
   PlatformAssetType: 5
@@ -125,6 +125,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -367,5 +368,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

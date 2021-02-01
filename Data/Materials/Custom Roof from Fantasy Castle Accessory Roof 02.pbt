@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 6480348831718420033
   Name: "Elven Roof from Fantasy Castle 02"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 13656561743389096180
     ParameterOverrides {

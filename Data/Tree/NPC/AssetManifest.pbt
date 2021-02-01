@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17205556389324759255
   Name: "Pipe - Quarter Wedge"
   PlatformAssetType: 1

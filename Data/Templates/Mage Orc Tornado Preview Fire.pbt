@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5674955556886786459
   Name: "Mage Orc Tornado Preview Fire"
   PlatformAssetType: 5
@@ -129,5 +129,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9329183117425341503
   Name: "MetaAbilityProgression_ServerAdaptor"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

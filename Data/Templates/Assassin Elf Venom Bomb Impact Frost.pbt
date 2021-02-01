@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9392791916696762581
   Name: "Assassin Elf Venom Bomb Impact Frost"
   PlatformAssetType: 5
@@ -472,5 +472,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

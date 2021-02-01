@@ -22,7 +22,7 @@ API.STATUS_EFFECT_TYPE_MOVE_SPEED = 3
 API.STATUS_EFFECT_TYPE_DAMAGE_DEALT_MOD = 4
 API.STATUS_EFFECT_TYPE_DAMAGE_TAKEN_MOD = 5
 API.STATUS_EFFECT_TYPE_FRICTION = 6
-
+API.STATUS_EFFECT_TYPE_BLIND = 7
 --[[
 statusEffectData fields:
 name - player-facing name
@@ -260,7 +260,7 @@ function API.DefineStatusEffect(statusEffectData)
 	end
 
 	local id = statusEffectData.name
-	 --GetStringHash(statusEffectData.name)
+	--GetStringHash(statusEffectData.name)
 	statusEffectData.id = id
 
 	if id == 0 then
@@ -398,6 +398,18 @@ function API.RemoveStatusEffectByName(player, name)
 			if (statusEffectData.name == name) then
 				API.RemoveStatusEffect(player, i)
 			end
+		end
+	end
+end
+
+-- Server only
+function API.RemoveAllStatusEffects(player)
+	local tracker = API.GetStateTracker(player)
+	for i = 1, API.MAX_STATUS_EFFECTS do
+		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+		if trackerTbl and trackerTbl[ID_KEY] ~= "" then
+			local statusEffectData = STATUS_EFFECT_ID_TABLE[trackerTbl[ID_KEY]]
+			API.RemoveStatusEffect(player, i)
 		end
 	end
 end

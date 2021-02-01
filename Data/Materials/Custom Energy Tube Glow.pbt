@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 6837315599476812801
   Name: "Custom Energy Tube Glow"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 7142068506126400895
     ParameterOverrides {

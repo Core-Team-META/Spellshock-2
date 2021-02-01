@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11972259582471283945
   Name: "Healer Staff Impact Player Effect"
   PlatformAssetType: 5
@@ -197,5 +197,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

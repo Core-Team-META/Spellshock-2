@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3316896745004929018
   Name: "Whitebox Roof 01 - Peak End with Wall Template"
   PlatformAssetType: 5
@@ -59,6 +59,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -95,6 +96,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -131,6 +133,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -170,5 +173,5 @@
       AssetId: "Whitebox_Roof_01_-_Peak_End_with_Wall_Template"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

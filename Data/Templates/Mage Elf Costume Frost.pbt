@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8043111153345216687
   Name: "Mage Elf Costume Frost"
   PlatformAssetType: 5
@@ -163,6 +163,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -229,6 +230,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -295,6 +297,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -361,6 +364,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -431,6 +435,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -497,6 +502,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -563,6 +569,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -629,6 +636,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -695,6 +703,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -868,6 +877,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1006,6 +1016,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1144,6 +1155,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1282,6 +1294,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1326,11 +1339,11 @@
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1358,7 +1371,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1382,6 +1395,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1410,16 +1424,16 @@
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.370309
+            Float: 0.488645852
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.20031548
+            Float: 0.394296706
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1441,6 +1455,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1484,11 +1499,11 @@
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1516,7 +1531,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1540,6 +1555,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1728,6 +1744,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1854,6 +1871,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1898,11 +1916,11 @@
           }
           Overrides {
             Name: "ma:Shared_Trim:utile"
-            Float: 1.79940093
+            Float: 0.750475407
           }
           Overrides {
             Name: "ma:Shared_Trim:vtile"
-            Float: 3.21760702
+            Float: 1.08407235
           }
           Overrides {
             Name: "ma:Shared_Detail1:utile"
@@ -1924,7 +1942,7 @@
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1954,6 +1972,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2138,6 +2157,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2256,6 +2276,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2359,6 +2380,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2437,6 +2459,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2599,6 +2622,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2725,6 +2749,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2834,6 +2859,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2890,6 +2916,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2946,6 +2973,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3125,6 +3153,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3375,6 +3404,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3501,6 +3531,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3613,6 +3644,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3669,6 +3701,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3725,6 +3758,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3877,6 +3911,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4003,6 +4038,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4185,6 +4221,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4303,6 +4340,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4406,6 +4444,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4484,6 +4523,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4691,6 +4731,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4870,8 +4911,16 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.705856
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.684551239
           }
         }
         Collidable_v2 {
@@ -4888,6 +4937,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4961,6 +5011,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5034,6 +5085,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5107,6 +5159,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5184,6 +5237,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5252,6 +5306,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5352,6 +5407,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5442,6 +5498,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5560,6 +5617,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5742,8 +5800,16 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2984351661227581568
+              Id: 926391387561774024
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.705856
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.684551239
           }
         }
         Collidable_v2 {
@@ -5760,6 +5826,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -5952,5 +6019,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

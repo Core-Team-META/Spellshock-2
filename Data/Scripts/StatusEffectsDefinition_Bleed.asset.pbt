@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6590875941051553841
   Name: "StatusEffectsDefinition_Bleed"
   PlatformAssetType: 3
@@ -19,7 +19,7 @@
       Overrides {
         Name: "cs:EffectTemplate"
         AssetReference {
-          Id: 4110777389302809276
+          Id: 6034558872979117633
         }
       }
     }
@@ -33,5 +33,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

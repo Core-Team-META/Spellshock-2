@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 16167680134006870113
   Name: "Elven_Flower Material from Coral Table 02_1"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 2622783030681469540
     ParameterOverrides {

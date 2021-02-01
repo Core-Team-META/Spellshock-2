@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6738937092225821013
   Name: "Assassin Elf Wraith Strike Impact Frost"
   PlatformAssetType: 5
@@ -227,5 +227,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

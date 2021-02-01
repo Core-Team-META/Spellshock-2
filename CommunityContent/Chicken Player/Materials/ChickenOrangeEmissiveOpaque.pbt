@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 1550254740413902422
   Name: "ChickenOrangeEmissiveOpaque"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 5351428073291024820
     ParameterOverrides {

@@ -1,22 +1,26 @@
-﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
-function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+﻿local MODULE = require(script:GetCustomProperty("ModuleManager"))
+function COMBAT()
+	return MODULE:Get("standardcombo.Combat.Wrap")
+end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local function META_AP()
-    return _G["Meta.Ability.Progression"]
+	return _G["Meta.Ability.Progression"]
 end
 
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local ABILITY = script:GetCustomProperty("SpecialAbility"):WaitForObject()
-local AbilityBinding = ABILITY:GetCustomProperty("Binding")
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 
-local DamageRange = script:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
-local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
-local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius") or 500
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local LAUNCH_FORCE = script:GetCustomProperty("LaunchForce") or 40
-local EventName = script:GetCustomProperty("EventName")
+local DamageRange = AbilitySettings:GetCustomProperty("DamageRange") or Vector2.New(20, 30)
+local DEFAULT_DamageRange = {min = DamageRange.x, max = DamageRange.y}
+local DEFAULT_DamageRadius = AbilitySettings:GetCustomProperty("DamageRadius") or 500
+
+local LAUNCH_FORCE = AbilitySettings:GetCustomProperty("LaunchForce") or 40
+local EventName = AbilitySettings:GetCustomProperty("EventName")
 
 local EventListeners = {}
 local DefaultPlayerSetttings = {}
@@ -26,55 +30,71 @@ local isExecuting = false
 local isFlying = false
 local isEnabled = true
 local PlayerVFX = nil
-local abilityName = string.gsub(ABILITY.name, " ", "_")
+
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
 
 local function SetNetworkProperty(bool)
 	Equipment:SetNetworkedCustomProperty("T_isPreviewing", bool)
 end
 
-
 function OnBindingPressed(player, binding)
-	if binding == AbilityBinding and isEnabled and not isPreviewing 
-	and not isExecuting and not player.isDead and player.isGrounded then
-		--PrimaryAbility.isEnabled = false
-		--print("STARTING AIR DIVE")
-		 -- disable any active abilities
-	    ActiveAbilities = {}
-	    for _, playerAbility in pairs(player:GetAbilities()) do
-	    	if playerAbility.isEnabled and playerAbility ~= ABILITY then
-	    		playerAbility.isEnabled = false
-	    		table.insert(ActiveAbilities, playerAbility)
-	    	end
-	    end
-	    
-	    DefaultPlayerSetttings.gravityScale = player.gravityScale
-	    DefaultPlayerSetttings.movementControlMode = player.movementControlMode
-	    DefaultPlayerSetttings.maxJumpCount = player.maxJumpCount
-	    
-	    player.movementControlMode = MovementControlMode.NONE
-	    player.maxJumpCount = 0
-	    isFlying = true
-	    player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
+	if isEnabled and not isExecuting and not player.isDead then
+		if binding == AbilityBinding and not isPreviewing and player.isGrounded and META_AP().AbilitySpamPreventer() then
+			-- Disable active abilities
+			ActiveAbilities = {}
+			for _, playerAbility in pairs(player:GetAbilities()) do
+				if playerAbility.isEnabled and playerAbility ~= SpecialAbility then
+					playerAbility.isEnabled = false
+					table.insert(ActiveAbilities, playerAbility)
+				end
+			end
 
-		local newObject = META_AP().SpawnAsset(PlayerVFX.Launch, {position = player:GetWorldPosition()})
-	
-	    Task.Wait(1)
-	    if not player or not Object.IsValid(player) or player.isDead then return end
-	    
-	    player.gravityScale = 0
-	    player:ResetVelocity()
-	   	
-	   	isPreviewing = true
-		   SetNetworkProperty(isPreviewing)
-		ABILITY.isEnabled = true
+			-- Store default player settings
+			DefaultPlayerSetttings.gravityScale = player.gravityScale
+			DefaultPlayerSetttings.movementControlMode = player.movementControlMode
+			DefaultPlayerSetttings.maxJumpCount = player.maxJumpCount
+
+			-- Change player settings for flying effect
+			player.movementControlMode = MovementControlMode.NONE
+			player.maxJumpCount = 0
+			isFlying = true
+			player:SetVelocity(Vector3.UP * player.mass * LAUNCH_FORCE)
+
+			META_AP().SpawnAsset(PlayerVFX.Launch, {position = player:GetWorldPosition()})
+
+			isPreviewing = true
+			SetNetworkProperty(isPreviewing)
+			--print("NOT READY")
+			Task.Wait(1)
+			if not player or not Object.IsValid(player) or player.isDead or not isFlying then
+				return
+			end
+
+			player.gravityScale = 0
+			player:ResetVelocity()
+
+			SpecialAbility.isEnabled = true
+			--print("READY")
+		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
+			--print("Canceling Wraith Strike")
+			DisableFlying()
+		end
 	end
 end
 
 function OnSpecialAbilityCast(thisAbility)
 	if isPreviewing == false or isExecuting then
 		--print("INTERRUPTING")
-		ABILITY:Interrupt()
-		SetNetworkProperty(false)
+		SpecialAbility:Interrupt()
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
 	end
 end
 
@@ -84,118 +104,184 @@ end
 
 function OnTargetChosen(player, targetPos)
 	if player == Equipment.owner then
-	    Task.Wait()
+		--Task.Wait()
+		--print("Wraith Strike ACTIVATE")
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		ABILITY.isEnabled = false
-		
+		SpecialAbility.isEnabled = false
+
 		-- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
-	    	playerAbility.isEnabled = true
-	    end
-	    ActiveAbilities = {}
-		
-		if targetPos == nil then
+			playerAbility.isEnabled = true
+		end
+		ActiveAbilities = {}
+
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+			--print("NOT COMPLETING")
+			return
+		end
+
+		--[[if targetPos == nil then
 			player.movementControlMode = DefaultPlayerSetttings.movementControlMode
 			player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
 			player.gravityScale = DefaultPlayerSetttings.gravityScale
 			isFlying = false
 			return
-		end
-		
+		end]]
 		isExecuting = true
-	    local playerPos = player:GetWorldPosition()
-	    local launchVector = (targetPos - playerPos) * player.mass * 5
-	    --print(launchVector)
-	    player.serverUserData.immuneToFallDamage = true
-	    player.movementControlMode = MovementControlMode.NONE
-	    player.maxJumpCount = 0
-	    player:ResetVelocity()
-	    player:AddImpulse(launchVector)
-	    Task.Wait()
-	
-	    local teammates = Game.GetPlayers({includeTeams = COMBAT().GetTeam(player)})
-	    for i, p in ipairs(teammates) do
-	        if (p == player) then
-	            table.remove(teammates, i)
-	            break
-	        end
-	    end
-	    local reachedMaxTime = false
-	    Task.Spawn(function() Task.Wait(1) reachedMaxTime = true end)
-		local DamageRadius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, ABILITY.name..": Radius")
-	    while(player.isGrounded == false and player.isDead == false and reachedMaxTime == false) do
-	        local players = COMBAT().FindInSphere(targetPos, DamageRadius, {ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player) })
-	        if(players == player) then break end
-	        Task.Wait()
-	    end
-	    player.movementControlMode = DefaultPlayerSetttings.movementControlMode
-	    player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
-		
-	    player:ResetVelocity()
-	    -- Grounded
-	    player:ActivateWalking()
-	    player.gravityScale = DefaultPlayerSetttings.gravityScale
-	    isFlying = false
-		
-		local newObject = META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
-	
-	    -- Stun / deal damage / check radius etcs
-	    DamageInArea(player:GetWorldPosition(), player)
-	
-	    player.serverUserData.immuneToFallDamage = false
+		local playerPos = player:GetWorldPosition()
+
+		local launchVector
+		if targetPos then
+			launchVector = (targetPos - playerPos) * player.mass * 5
+		end
+		--print(launchVector)
+		player.serverUserData.immuneToFallDamage = true
+		player.movementControlMode = MovementControlMode.NONE
+		player.maxJumpCount = 0
+		player:ResetVelocity()
+		if launchVector then
+			player:AddImpulse(launchVector)
+		end
+		Task.Wait()
+
+		local teammates = Game.GetPlayers({includeTeams = COMBAT().GetTeam(player)})
+		for i, p in ipairs(teammates) do
+			if (p == player) then
+				table.remove(teammates, i)
+				break
+			end
+		end
+		local reachedMaxTime = false
+		Task.Spawn(
+			function()
+				Task.Wait(1)
+				reachedMaxTime = true
+			end
+		)
+		local DamageRadius =
+			META_AP().GetAbilityMod(
+			SpecialAbility.owner,
+			META_AP().T,
+			"mod3",
+			DEFAULT_DamageRadius,
+			SpecialAbility.name .. ": Radius"
+		)
+		while (player.isGrounded == false and player.isDead == false and reachedMaxTime == false) do
+			local players
+			if targetPos then
+				players =
+					COMBAT().FindInSphere(
+					targetPos,
+					DamageRadius,
+					{ignorePlayers = teammates, includeTeams = COMBAT().GetTeam(player)}
+				)
+			end
+			if (players == player) then
+				break
+			end
+			Task.Wait()
+		end
+		player.movementControlMode = DefaultPlayerSetttings.movementControlMode
+		player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
+
+		player:ResetVelocity()
+		-- Grounded
+		player:ActivateWalking()
+		player.gravityScale = DefaultPlayerSetttings.gravityScale
+		isFlying = false
+
+		META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
+
+		-- Stun / deal damage / check radius etcs
+		DamageInArea(player:GetWorldPosition(), player)
+
+		player.serverUserData.immuneToFallDamage = false
 	end
 end
 
 function DamageInArea(targetPos, localPlayer)
 	-- Get enemies in a sphere
-	local DamageRadius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod3", DEFAULT_DamageRadius, ABILITY.name..": Radius")
-    local enemiesInRange = COMBAT().FindInSphere(targetPos, DamageRadius, {ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)})
-	local damageTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod1", DEFAULT_DamageRange, ABILITY.name..": Damage Range")
+	local DamageRadius =
+		META_AP().GetAbilityMod(
+		SpecialAbility.owner,
+		META_AP().T,
+		"mod3",
+		DEFAULT_DamageRadius,
+		SpecialAbility.name .. ": Radius"
+	)
+	local enemiesInRange =
+		COMBAT().FindInSphere(
+		targetPos,
+		DamageRadius,
+		{ignorePlayers = localPlayer, ignoreTeams = COMBAT().GetTeam(localPlayer)}
+	)
+	local damageTable =
+		META_AP().GetAbilityMod(
+		SpecialAbility.owner,
+		META_AP().T,
+		"mod1",
+		DEFAULT_DamageRange,
+		SpecialAbility.name .. ": Damage Range"
+	)
 	--CoreDebug.DrawSphere(targetPos, DamageRadius, {duration = 5})
-	local status = META_AP().GetAbilityMod(ABILITY.owner, META_AP().T, "mod5", {}, ABILITY.name .. ": Status")
-    for _, enemy in ipairs(enemiesInRange) do
-        API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, ABILITY.owner, status.duration, status.damage, status.multiplier)
-        
-        local dmg = Damage.New()
-        dmg.amount = math.random(damageTable.min, damageTable.max)
-        dmg.reason = DamageReason.COMBAT
-        dmg.sourcePlayer = ABILITY.owner
-        dmg.sourceAbility = ABILITY
-        
+	local status =
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
+	for _, enemy in ipairs(enemiesInRange) do
+		API_SE.ApplyStatusEffect(
+			enemy,
+			API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id,
+			SpecialAbility.owner,
+			status.duration,
+			status.damage,
+			status.multiplier
+		)
+
+		local dmg = Damage.New()
+		dmg.amount = math.random(damageTable.min, damageTable.max)
+		dmg.reason = DamageReason.COMBAT
+		dmg.sourcePlayer = SpecialAbility.owner
+		dmg.sourceAbility = SpecialAbility
+
 		local attackData = {
 			object = enemy,
 			damage = dmg,
-			source = ABILITY.owner,
+			source = SpecialAbility.owner,
 			position = nil,
 			rotation = nil,
 			tags = {id = "Assassin_T"}
-			}
+		}
 		COMBAT().ApplyDamage(attackData)
-    end
-end
-  
-function DisableFlying(player)
-	if isFlying then
-		--print("Disabling Flying")
-		for _, playerAbility in pairs(ActiveAbilities) do
-	    	playerAbility.isEnabled = true
-	    end
-	    ActiveAbilities = {}
-		
-		player.movementControlMode = DefaultPlayerSetttings.movementControlMode
-	    player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
-	    player:ResetVelocity()
-	    player:ActivateWalking()
-	    player.gravityScale = DefaultPlayerSetttings.gravityScale
-	    isFlying = false
-	end
-	
-	if Object.IsValid(ABILITY) then
-		ABILITY.isEnabled = false
 	end
 end
-  
+
+function DisableFlying()
+	--print("Disabling Flying")
+	for _, playerAbility in pairs(ActiveAbilities) do
+		if Object.IsValid(playerAbility) then
+			playerAbility.isEnabled = true
+		end
+	end
+	ActiveAbilities = {}
+
+	if Object.IsValid(Equipment.owner) then
+		print("Default player settings")
+		Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
+		Equipment.owner.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
+		Equipment.owner:ResetVelocity()
+		Equipment.owner:ActivateWalking()
+		Equipment.owner.gravityScale = DefaultPlayerSetttings.gravityScale
+	end
+	isFlying = false
+
+	-- disable preview mode
+	if Object.IsValid(SpecialAbility) then
+		isPreviewing = false
+		SetNetworkProperty(isPreviewing)
+		SpecialAbility.isEnabled = false
+	end
+end
+
 function PrintAbilities(player)
 	for _, thisAbility in pairs(player:GetAbilities()) do
 		print(thisAbility.name)
@@ -203,24 +289,24 @@ function PrintAbilities(player)
 		print(thisAbility.isEnabled)
 		print("\n")
 	end
-end  
-  
+end
+
 function OnPlayerDied(player, _)
 	Task.Wait()
-	DisableFlying(player)
+	DisableFlying()
 end
 
 function OnPlayerRespawn(player)
-	DisableFlying(player)
+	DisableFlying()
 end
-  
+
 function OnAbilityToggled(thisAbility, mode)
-	if thisAbility == ABILITY or thisAbility == "ALL" then
+	if thisAbility.id == SpecialAbility.id or thisAbility == "ALL" then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		ABILITY.isEnabled = false
+		SpecialAbility.isEnabled = false
 		isEnabled = mode
-		if thisAbility == ABILITY then
+		if thisAbility.id == SpecialAbility.id then
 			-- reactive other abilities
 			for _, playerAbility in pairs(ActiveAbilities) do
 				playerAbility.isEnabled = true
@@ -234,19 +320,19 @@ function OnEquip(equipment, player)
 	isPreviewing = false
 	isExecuting = false
 	SetNetworkProperty(isPreviewing)
-	
+
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, OnTargetChosen))
-	table.insert(EventListeners, ABILITY.castEvent:Connect(OnSpecialAbilityCast))
-	table.insert(EventListeners, ABILITY.readyEvent:Connect( OnSpecialAbilityReady ))
-	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
+	table.insert(EventListeners, SpecialAbility.readyEvent:Connect(OnSpecialAbilityReady))
+	table.insert(EventListeners, player.diedEvent:Connect(OnPlayerDied))
+	table.insert(EventListeners, player.respawnedEvent:Connect(OnPlayerRespawn))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
 	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
 
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
 	Task.Wait()
-	ABILITY.isEnabled = false
+	SpecialAbility.isEnabled = false
 end
 
 function OnUnequip(equipment, player)
@@ -257,6 +343,6 @@ function OnUnequip(equipment, player)
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)  
-  
---ABILITY.executeEvent:Connect( OnAbilityExecute )
+Equipment.unequippedEvent:Connect(OnUnequip)
+
+--SpecialAbility.executeEvent:Connect( OnAbilityExecute )

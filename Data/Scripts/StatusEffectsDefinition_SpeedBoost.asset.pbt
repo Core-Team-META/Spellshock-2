@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8034536755908120973
   Name: "StatusEffectsDefinition_SpeedBoost"
   PlatformAssetType: 3
@@ -33,5 +33,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

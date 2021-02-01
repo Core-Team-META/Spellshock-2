@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14108921733462450899
   Name: "Fantasy Rune 002"
   PlatformAssetType: 9

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16516361297687057248
   Name: "STOREITEM_CloudSoundRapper _Hat"
   PlatformAssetType: 5
@@ -210,6 +210,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -265,6 +266,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -506,6 +508,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -561,6 +564,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -600,5 +604,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

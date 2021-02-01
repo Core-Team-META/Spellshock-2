@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10891347061023344361
   Name: "Healer"
   PlatformAssetType: 5
@@ -57,6 +57,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "2hand_staff_stance"
+          }
+          Overrides {
             Name: "cs:E_isPreviewing:isrep"
             Bool: true
           }
@@ -85,7 +89,7 @@
       }
       Objects {
         Id: 10065611523314269826
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
           }
@@ -115,7 +119,7 @@
       }
       Objects {
         Id: 11140001443662444640
-        Name: "Supernova Ability Server"
+        Name: "Supernova Settings"
         Transform {
           Location {
           }
@@ -217,7 +221,7 @@
       }
       Objects {
         Id: 15232445570186328109
-        Name: "HealingCystalAbilityServer"
+        Name: "Healing Cystal Settings"
         Transform {
           Location {
             X: -747.460938
@@ -300,6 +304,10 @@
             String: "mod5"
           }
           Overrides {
+            Name: "cs:DurationMod"
+            String: "mod2"
+          }
+          Overrides {
             Name: "cs:isPreviewing:isrep"
             Bool: true
           }
@@ -318,7 +326,7 @@
       }
       Objects {
         Id: 5311961891427463671
-        Name: "TeleportAbilityServer"
+        Name: "Teleport Settings"
         Transform {
           Location {
           }
@@ -402,7 +410,7 @@
       }
       Objects {
         Id: 7712793717427709362
-        Name: "WeaponAimServer"
+        Name: "Weapon Aim Settings"
         Transform {
           Location {
             X: -202.230469
@@ -478,7 +486,6 @@
           }
         }
         ParentId: 1551665899132109167
-        ChildIds: 3046495783826538503
         ChildIds: 1655075835825390059
         ChildIds: 11544957051384721582
         ChildIds: 993888919830758102
@@ -497,183 +504,6 @@
         }
         NetworkContext {
           Type: Server
-        }
-      }
-      Objects {
-        Id: 3046495783826538503
-        Name: "HeroKitPlayerPropertiesServer"
-        Transform {
-          Location {
-            X: 3019.21777
-            Y: -2359.71118
-            Z: -64.1432495
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17566732273178486209
-        ChildIds: 16127924666294212248
-        ChildIds: 6519732869447380735
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-          Overrides {
-            Name: "cs:API_EffectSystem"
-            AssetReference {
-              Id: 11192919480659211898
-            }
-          }
-          Overrides {
-            Name: "cs:AnimationStance"
-            String: "1hand_melee_stance"
-          }
-          Overrides {
-            Name: "cs:WalkSpeed"
-            Float: 700
-          }
-          Overrides {
-            Name: "cs:JumpVelocity"
-            Float: 900
-          }
-          Overrides {
-            Name: "cs:JumpCount"
-            Int: 1
-          }
-          Overrides {
-            Name: "cs:MaxHealth"
-            Int: 300
-          }
-          Overrides {
-            Name: "cs:HealthRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:MaxEnergy"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:EnergyRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:BasicDamage"
-            Int: 25
-          }
-          Overrides {
-            Name: "cs:PowerPhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:PowerMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefensePhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefenseMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:CriticalHitChance"
-            Float: 0.02
-          }
-          Overrides {
-            Name: "cs:CriticalDamageBonus"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:BaseAttackSpeed"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LifeSteal"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:ArmorPenetration"
-            Int: 0
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 643752288155017208
-          }
-        }
-      }
-      Objects {
-        Id: 16127924666294212248
-        Name: "PlayerEnergyRegenServer"
-        Transform {
-          Location {
-            X: -3366.67944
-            Y: 2359.71118
-            Z: -33.1054077
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3046495783826538503
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12958287165690366055
-          }
-        }
-      }
-      Objects {
-        Id: 6519732869447380735
-        Name: "PlayerHealthRegenServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3046495783826538503
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11449417992889389486
-          }
         }
       }
       Objects {
@@ -956,7 +786,7 @@
           Overrides {
             Name: "cs:VFX_Template"
             AssetReference {
-              Id: 9583554867605228300
+              Id: 841534158063459245
             }
           }
           Overrides {
@@ -1307,6 +1137,7 @@
         ChildIds: 8357201899851611185
         ChildIds: 2176729734375800191
         ChildIds: 18116069161725040159
+        ChildIds: 15778048683844327364
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1948,6 +1779,44 @@
         }
       }
       Objects {
+        Id: 15778048683844327364
+        Name: "AutoShootClient"
+        Transform {
+          Location {
+            X: -5655
+            Y: -15305
+            Z: -3665
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14074483271059500969
+          }
+        }
+      }
+      Objects {
         Id: 4708996743668767698
         Name: "Load Out"
         Transform {
@@ -2015,7 +1884,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2026,7 +1894,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2037,18 +1904,14 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
             Duration: 7
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_30"
           }
@@ -2090,7 +1953,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2099,7 +1961,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2109,7 +1970,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2119,12 +1980,10 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2162,7 +2021,6 @@
           CastPhaseSettings {
             Duration: 0.7
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2170,14 +2028,13 @@
           ExecutePhaseSettings {
             Duration: 0.1
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           RecoveryPhaseSettings {
             Duration: 0.75
-            IsTargetDataUpdated: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2187,10 +2044,8 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_shout"
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }
@@ -2229,7 +2084,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2240,7 +2094,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2250,7 +2103,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2260,11 +2112,10 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2304,7 +2155,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2314,7 +2165,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2324,7 +2175,7 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
+            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2334,11 +2185,9 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:extraaction_71"
           }
         }
       }
@@ -2396,7 +2245,7 @@
               Id: 3691668285842845988
             }
             TrailAssetRef {
-              Id: 16943198897384362849
+              Id: 841534158063459245
             }
             ImpactAssetRef {
               Id: 3731118247202363736
@@ -2404,7 +2253,9 @@
             UseReticle: true
             Muzzle {
               Location {
-                Z: 110
+                X: -40
+                Y: 60
+                Z: 100
               }
               Rotation {
               }
@@ -2423,7 +2274,7 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1000
+            BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
@@ -2437,7 +2288,7 @@
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 8000
+            ProjectileSpeed: 20000
             ProjectileLifeSpan: 10
             ProjectileLength: 30
             ProjectileRadius: 30
@@ -2477,38 +2328,31 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
-            Duration: 1
+            Duration: 0.8
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
@@ -2547,7 +2391,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2556,7 +2399,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2565,7 +2407,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2574,11 +2415,11 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
+          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:secondaryaction"
           }
@@ -2671,5 +2512,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

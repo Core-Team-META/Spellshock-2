@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15436478629864918866
   Name: "WraithStrikeAbilityServer"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

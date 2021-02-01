@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14017068995717020871
   Name: "STORE_Entry Geo"
   PlatformAssetType: 5
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 8535933385773224714
+        ParentId: 4781671109827199097
         ChildIds: 7808404998850808861
         ChildIds: 6604133153937003334
         ChildIds: 16914064471433568227
@@ -50,9 +50,18 @@
           Overrides {
             Name: "cs:HighlightColor"
             Color {
-              R: 0.13
-              G: 0.13
-              B: 0.13
+              R: 0.0481666736
+              G: 0.0661986098
+              B: 0.136
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:EquippedColor"
+            Color {
+              R: 0.0283333343
+              G: 0.0722499937
+              B: 0.08
               A: 1
             }
           }
@@ -162,13 +171,20 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
-            AnimationStancePlaybackRate: 1.1
-            AnimationStanceShouldLoop: true
             AnimationPlaybackRateMultiplier: 1
             PlayOnStartAnimation {
               PlaybackRate: 1
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -256,13 +272,20 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
-            AnimationStancePlaybackRate: 1.1
-            AnimationStanceShouldLoop: true
             AnimationPlaybackRateMultiplier: 1
             PlayOnStartAnimation {
               PlaybackRate: 1
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -294,8 +317,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.0580000021
-              B: 0.0570334047
+              R: 0.018446181
+              G: 0.0253517944
+              B: 0.0520833321
               A: 1
             }
           }
@@ -327,6 +351,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -375,5 +400,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

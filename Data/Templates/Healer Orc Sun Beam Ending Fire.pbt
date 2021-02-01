@@ -1,13 +1,13 @@
-﻿Assets {
-  Id: 129666070119651245
+Assets {
+  Id: 4981123765839941673
   Name: "Healer Orc Sun Beam Ending Fire"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12086683333480763227
+      RootId: 16586183630275364105
       Objects {
-        Id: 12086683333480763227
-        Name: "Healer Sun Beam Ending Basic"
+        Id: 16586183630275364105
+        Name: "Healer Orc Sun Beam Ending Fire 2"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 6395233564937827051
+        ChildIds: 7980554789697047810
         Lifespan: 1.6
         WantsNetworking: true
         Collidable_v2 {
@@ -30,7 +30,7 @@
         }
       }
       Objects {
-        Id: 6395233564937827051
+        Id: 7980554789697047810
         Name: "ClientContext"
         Transform {
           Location {
@@ -43,10 +43,10 @@
             Z: 1
           }
         }
-        ParentId: 12086683333480763227
-        ChildIds: 1713720290278050555
-        ChildIds: 6629231158259529284
-        ChildIds: 11814653319078423133
+        ParentId: 16586183630275364105
+        ChildIds: 4110999551394868422
+        ChildIds: 3899859043393931837
+        ChildIds: 13700745979084894007
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -58,11 +58,11 @@
         }
       }
       Objects {
-        Id: 1713720290278050555
+        Id: 4110999551394868422
         Name: "Electricity Power Plast Whoosh 01 SFX"
         Transform {
           Location {
-            Z: 115
+            Z: 1367.70898
           }
           Rotation {
           }
@@ -72,7 +72,7 @@
             Z: 1
           }
         }
-        ParentId: 6395233564937827051
+        ParentId: 7980554789697047810
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -93,10 +93,11 @@
         }
       }
       Objects {
-        Id: 6629231158259529284
+        Id: 3899859043393931837
         Name: "Impact Sparks VFX"
         Transform {
           Location {
+            Z: 1367.70898
           }
           Rotation {
           }
@@ -106,7 +107,7 @@
             Z: 1
           }
         }
-        ParentId: 6395233564937827051
+        ParentId: 7980554789697047810
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -121,10 +122,9 @@
             Float: 2
           }
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Color"
             Color {
               R: 0.721568644
-              G: 0.0705882385
               A: 1
             }
           }
@@ -147,10 +147,11 @@
         }
       }
       Objects {
-        Id: 11814653319078423133
+        Id: 13700745979084894007
         Name: "Spark Explosion VFX"
         Transform {
           Location {
+            Z: 1367.70898
           }
           Rotation {
           }
@@ -160,7 +161,7 @@
             Z: 1
           }
         }
-        ParentId: 6395233564937827051
+        ParentId: 7980554789697047810
         UnregisteredParameters {
           Overrides {
             Name: "bp:Emissive Boost"
@@ -175,10 +176,9 @@
             Float: 2
           }
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Color"
             Color {
-              R: 2
-              G: 0.466666698
+              R: 0.721568644
               A: 1
             }
           }
@@ -233,5 +233,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

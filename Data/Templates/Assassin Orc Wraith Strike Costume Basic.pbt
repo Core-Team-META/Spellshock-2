@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6376604265419333521
   Name: "Assassin Orc Wraith Strike Costume Basic"
   PlatformAssetType: 5
@@ -15,7 +15,7 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 6854881897793374534
         ChildIds: 6736813285319020531
         ChildIds: 17862777999483977637
@@ -207,25 +207,14 @@
             Yaw: 1.37878294e-11
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
           }
         }
         ParentId: 6854881897793374534
         ChildIds: 2787178634423721369
-        ChildIds: 8727904131314380668
-        ChildIds: 15950271979867776303
-        ChildIds: 15032576308223789723
-        ChildIds: 10185894499070868189
-        ChildIds: 13296774093922971524
-        ChildIds: 9323165421516753300
-        ChildIds: 6748186424405024771
         ChildIds: 16421322645327269217
-        ChildIds: 3832792325163690719
-        ChildIds: 12765716494766995558
-        ChildIds: 12178519968843653023
-        ChildIds: 2005935718634367573
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -336,6 +325,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -415,6 +405,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -494,6 +485,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -604,6 +596,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -678,6 +671,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -755,6 +749,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -831,6 +826,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -905,6 +901,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -979,6 +976,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1055,6 +1053,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1129,6 +1128,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1201,6 +1201,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1277,6 +1278,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1356,6 +1358,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1435,6 +1438,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1548,6 +1552,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1623,6 +1628,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1701,6 +1707,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1780,6 +1787,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1855,6 +1863,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1933,6 +1942,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2012,6 +2022,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2086,6 +2097,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2164,459 +2176,7 @@
           Teams {
           }
           DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 8727904131314380668
-        Name: "Heart - Polished"
-        Transform {
-          Location {
-            X: 11.1360788
-            Y: 4.9180353e-06
-            Z: 7.02947617
-          }
-          Rotation {
-            Pitch: -82.8277
-            Yaw: 0.000751948101
-            Roll: -0.000579834
-          }
-          Scale {
-            X: 0.282116145
-            Y: 0.414519668
-            Z: 0.201021969
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 13.4845228
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 33.9840164
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6419995403362959337
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15339827692159902109
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15950271979867776303
-        Name: "Heart - Polished"
-        Transform {
-          Location {
-            X: 12.4860973
-            Y: 1.67608482e-06
-            Z: 8.26375484
-          }
-          Rotation {
-            Pitch: 0.000293698104
-            Yaw: 89.9997177
-            Roll: -91.6841431
-          }
-          Scale {
-            X: 0.141304553
-            Y: 0.224844247
-            Z: 0.109038614
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 13.4845228
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 33.9840164
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1009636138000564291
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.385061711
-              G: 0.0124799879
-              B: 0.624
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15339827692159902109
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15032576308223789723
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: -4.52084732
-            Y: 10.5749493
-            Z: 7.15973377
-          }
-          Rotation {
-            Pitch: -28.3516846
-            Yaw: 76.1330109
-            Roll: -155.12175
-          }
-          Scale {
-            X: 1.06816733
-            Y: 0.886376917
-            Z: 0.501267731
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.2
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.56
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10185894499070868189
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: -6.62194824
-            Y: -9.24389648
-            Z: 7.66714478
-          }
-          Rotation {
-            Pitch: -18.3577576
-            Yaw: 98.7183075
-            Roll: 54.116909
-          }
-          Scale {
-            X: -0.903511047
-            Y: -1.14471602
-            Z: -0.570650756
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.55067
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 13296774093922971524
-        Name: "Bone Human Jaw 01"
-        Transform {
-          Location {
-            X: 9.45273399
-            Y: 6.35918332e-06
-            Z: -2.75340509
-          }
-          Rotation {
-            Pitch: 6.83018879e-05
-            Yaw: 90.000267
-            Roll: -136.881348
-          }
-          Scale {
-            X: 1.86396575
-            Y: 2.3515985
-            Z: 1.4816736
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 17.5
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 9.3
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11312867989431867200
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9323165421516753300
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: -9.16784668
-            Y: 1.86376953
-            Z: -2.14498901
-          }
-          Rotation {
-            Pitch: 24.7690983
-            Yaw: -36.9772339
-            Roll: 165.777435
-          }
-          Scale {
-            X: -1.25271118
-            Y: -1.0231626
-            Z: -0.556975543
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.55067
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6748186424405024771
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: -10.6731253
-            Y: 4.09740257
-            Z: 0.313497305
-          }
-          Rotation {
-            Pitch: -10.5188293
-            Yaw: 124.645226
-            Roll: -164.379303
-          }
-          Scale {
-            X: 1.56017721
-            Y: 1.07374513
-            Z: 0.579078734
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.55067
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2628,16 +2188,16 @@
         Name: "Group"
         Transform {
           Location {
-            X: -17.0729198
-            Y: -0.98828125
-            Z: -17.3761158
+            X: -41.2179794
+            Y: -0.98828119
+            Z: -18.8358593
           }
           Rotation {
           }
           Scale {
-            X: 1.67198527
-            Y: 1.67198527
-            Z: 1.67198527
+            X: 2.13293886
+            Y: 2.13293886
+            Z: 2.13293886
           }
         }
         ParentId: 2655777931851486982
@@ -2691,9 +2251,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2712,6 +2272,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2757,9 +2318,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2778,6 +2339,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2823,9 +2385,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2844,6 +2406,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2889,9 +2452,9 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
+              R: 0.48266679
+              G: 0.223999977
+              B: 1
               A: 1
             }
           }
@@ -2910,272 +2473,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3832792325163690719
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: 1.51688933
-            Y: 16.9120979
-            Z: -6.92812061
-          }
-          Rotation {
-            Pitch: 16.0755596
-            Yaw: 71.1067734
-            Roll: 177.562256
-          }
-          Scale {
-            X: 1.38146853
-            Y: 1.14970636
-            Z: 0.515532136
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.55067
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12765716494766995558
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: 15.2061119
-            Y: -0.000109735454
-            Z: 14.8563147
-          }
-          Rotation {
-            Pitch: -0.000710339635
-            Yaw: 90.0002213
-            Roll: 75.1088
-          }
-          Scale {
-            X: 1.06112194
-            Y: 1.40961993
-            Z: 1.65710258
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 6.75050259
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11594524757616528940
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12178519968843653023
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: 14.9746094
-            Y: 1.55078125
-            Z: -6.22607422
-          }
-          Rotation {
-            Pitch: 79.7913284
-            Yaw: 118.846321
-            Roll: -61.4005432
-          }
-          Scale {
-            X: 1.28772366
-            Y: -1.21305799
-            Z: -0.64509964
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 5.5425005
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 4.55067
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4080200756085571976
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2005935718634367573
-        Name: "Bone Human Jaw 01"
-        Transform {
-          Location {
-            X: 1.46610057
-            Z: -5.6269393
-          }
-          Rotation {
-            Yaw: 90
-            Roll: 144.270844
-          }
-          Scale {
-            X: 1.45067596
-            Y: 1.8301878
-            Z: 1.15314794
-          }
-        }
-        ParentId: 2655777931851486982
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 17.5
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 9.3
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5475761223416488121
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.156716809
-              G: 0.148896009
-              B: 0.188000008
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11312867989431867200
-          }
-          Teams {
-          }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3894,15 +3192,6 @@
       }
     }
     Assets {
-      Id: 15339827692159902109
-      Name: "Heart - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_heart_polished_001"
-      }
-    }
-    Assets {
       Id: 4080200756085571976
       Name: "Bone Human Pelvis Half 01"
       PlatformAssetType: 1
@@ -3920,28 +3209,10 @@
         AssetId: "mi_fan_fabric_burlap_002_uv"
       }
     }
-    Assets {
-      Id: 11312867989431867200
-      Name: "Bone Human Jaw 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_jaw_01_ref"
-      }
-    }
-    Assets {
-      Id: 11594524757616528940
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

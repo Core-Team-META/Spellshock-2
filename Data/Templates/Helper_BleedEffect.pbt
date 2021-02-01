@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6034558872979117633
   Name: "Helper_BleedEffect"
   PlatformAssetType: 5
@@ -31,14 +31,14 @@
         Name: "Blood"
         Transform {
           Location {
-            Z: 110.059082
+            Z: 11.9594727
           }
           Rotation {
           }
           Scale {
-            X: 0.829055071
-            Y: 0.829055071
-            Z: 0.829055071
+            X: 1.71977937
+            Y: 1.71977937
+            Z: 1.71977937
           }
         }
         ParentId: 10928808795437687725
@@ -160,6 +160,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -209,6 +210,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -258,6 +260,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -307,6 +310,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -339,5 +343,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

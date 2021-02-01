@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9293650821442732191
   Name: "Assassin Orc Starting VFX"
   PlatformAssetType: 3
@@ -23,9 +23,15 @@
         }
       }
       Overrides {
+        Name: "cs:01_BladeDash_Ending"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
         Name: "cs:02_DeathsShadow_Costume"
         AssetReference {
-          Id: 14330017190000743294
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -49,13 +55,13 @@
       Overrides {
         Name: "cs:03_VenomBomb_Impact"
         AssetReference {
-          Id: 11650929185820647296
+          Id: 841534158063459245
         }
       }
       Overrides {
         Name: "cs:04_WraithStrike_Preview"
         AssetReference {
-          Id: 17869001443527042596
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -71,10 +77,16 @@
         }
       }
       Overrides {
+        Name: "cs:04_WraithStrike_Costume"
+        AssetReference {
+          Id: 6376604265419333521
+        }
+      }
+      Overrides {
         Name: "cs:ID"
         Int: 1
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

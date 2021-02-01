@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4247196307060116089
   Name: "Healer Orc Supernova Ending Basic"
   PlatformAssetType: 5
@@ -356,5 +356,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

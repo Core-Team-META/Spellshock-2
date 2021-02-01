@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12959607917215841960
   Name: "Player Homing Target Object"
   PlatformAssetType: 5
@@ -40,6 +40,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -70,5 +71,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

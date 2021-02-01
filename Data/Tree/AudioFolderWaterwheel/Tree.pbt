@@ -1,4 +1,4 @@
-﻿Name: "AudioFolderWaterwheel"
+Name: "AudioFolderWaterwheel"
 RootId: 12219226419110392707
 Objects {
   Id: 6980197269022091737

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3696543723512829738
   Name: "Generic Staff Projectile"
   PlatformAssetType: 5
@@ -240,5 +240,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

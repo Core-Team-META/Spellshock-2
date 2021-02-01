@@ -1,4 +1,4 @@
-﻿Name: "Map Locations"
+Name: "Map Locations"
 RootId: 8954844137992596854
 Objects {
   Id: 1530259350057247115
@@ -113,6 +113,7 @@ Objects {
     }
     DisableCastShadows: true
     DisableReceiveDecals: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -300,6 +301,7 @@ Objects {
     }
     DisableCastShadows: true
     DisableReceiveDecals: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }

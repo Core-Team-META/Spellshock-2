@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 13193983356672862709
   Name: "FROG GGREEN"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 4399777814431567982
     ParameterOverrides {

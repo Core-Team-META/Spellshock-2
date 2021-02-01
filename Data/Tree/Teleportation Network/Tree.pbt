@@ -1,4 +1,4 @@
-﻿Name: "Teleportation Network"
+Name: "Teleportation Network"
 RootId: 9214649830315504141
 Objects {
   Id: 13850080541975460496
@@ -113,6 +113,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -207,6 +208,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -437,6 +439,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -533,6 +536,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }

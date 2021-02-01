@@ -1,4 +1,4 @@
-﻿Name: "AudioFolderMPtent"
+Name: "AudioFolderMPtent"
 RootId: 7010297739281378277
 Objects {
   Id: 17777300689225841980

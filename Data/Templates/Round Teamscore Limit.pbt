@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4250583515264430884
   Name: "Round Teamscore Limit"
   PlatformAssetType: 5
@@ -84,5 +84,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

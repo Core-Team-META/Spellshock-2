@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3219672101883223829
   Name: "Assassin Wraith Strike Impact Basic"
   PlatformAssetType: 5
@@ -227,5 +227,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

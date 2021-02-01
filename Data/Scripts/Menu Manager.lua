@@ -9,13 +9,24 @@ _G.MENU_TABLE = {
 	ClassSelection = 1,
 	Tutorial = 2,
 	Respawn = 3,
-	Rewards = 4
+	Rewards = 4,
+	CosmeticStore = 5
 }
 _G.CurrentMenu = _G.MENU_TABLE["NONE"]
+
+function SpamPrevent()
+	if time()-previousBindingTime > BindingDelay then
+		previousBindingTime = time()
+		return true
+	else
+		return false
+	end
+end
 
 function OnMenuChanged(newMenu)
 	local oldMenu = _G.CurrentMenu
 	_G.CurrentMenu = newMenu
+	--print(string.format(">> Setting Menu: %d, %d", oldMenu, newMenu))
 	Events.Broadcast("Menu Changed", oldMenu, newMenu)
 end
 
@@ -31,21 +42,27 @@ end
 
 function OnBindingPressed(whichPlayer, binding)
 	local CurrentGameState = ABGS.GetGameState()
-	if CurrentGameState == ABGS.GAME_STATE_LOBBY and (binding == "ability_extra_50") and time()-previousBindingTime > BindingDelay then --F1
-		print(">> CLASS SELECTION MENU")
-		previousBindingTime = time()
-		local newState = _G.MENU_TABLE["ClassSelection"] 
-		if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
-			newState = _G.MENU_TABLE["NONE"]
+	if CurrentGameState == ABGS.GAME_STATE_LOBBY and (binding == "ability_extra_50") and SpamPrevent() then --F1
+		--print(">> CLASS SELECTION MENU")
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"]) -- Show
+		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
-		Events.Broadcast("Changing Menu", newState)
-	elseif (binding == "ability_extra_51") and time()-previousBindingTime > BindingDelay then --F2
-		print(">> TUTORIAL MENU")
+	elseif (binding == "ability_extra_51") and SpamPrevent() then --F2
+		--print(">> TUTORIAL MENU")
 		local newState = _G.MENU_TABLE["Tutorial"] 
 		if _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
 			newState = _G.MENU_TABLE["NONE"]
 		end
 		Events.Broadcast("Changing Menu", newState)	
+	elseif binding == "ability_extra_29" and CurrentGameState == ABGS.GAME_STATE_LOBBY and SpamPrevent() then -- P
+		--print(">> COSMETIC SHOP")
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["CosmeticStore"]) -- Show
+		elseif _G.CurrentMenu == _G.MENU_TABLE["CosmeticStore"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		end
 	end
 end
 

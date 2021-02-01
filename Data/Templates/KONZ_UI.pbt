@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7102528775270530899
   Name: "KONZ_UI"
   PlatformAssetType: 5
@@ -64519,5 +64519,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

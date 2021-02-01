@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17381053717527779467
   Name: "Ambience Nature Water Shore Lake Bank Set 01 SFX"
   PlatformAssetType: 10

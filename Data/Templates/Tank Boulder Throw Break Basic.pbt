@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13459923181472021410
   Name: "Tank Boulder Throw Break Basic"
   PlatformAssetType: 5
@@ -129,5 +129,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

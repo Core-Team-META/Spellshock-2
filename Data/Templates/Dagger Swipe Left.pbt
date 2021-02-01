@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14567992748388082871
   Name: "Dagger Swipe Left"
   PlatformAssetType: 5
@@ -180,5 +180,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

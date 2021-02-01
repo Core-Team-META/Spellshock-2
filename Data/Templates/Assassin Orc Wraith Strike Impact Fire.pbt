@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11395878667126256154
   Name: "Assassin Orc Wraith Strike Impact Fire"
   PlatformAssetType: 5
@@ -227,5 +227,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 901997733535561420
   Name: "Helper_StunEffect"
   PlatformAssetType: 5
@@ -373,5 +373,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8114760666220012107
   Name: "Assassin Elf Deaths Shadow Active Frost"
   PlatformAssetType: 5
@@ -185,5 +185,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

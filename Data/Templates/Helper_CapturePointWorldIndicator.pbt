@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8029776738376556676
   Name: "Helper_CapturePointWorldIndicator"
   PlatformAssetType: 5
@@ -467,5 +467,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

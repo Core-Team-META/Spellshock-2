@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1634567378137939524
   Name: "SS2_ONDEATH"
   PlatformAssetType: 5
@@ -10022,5 +10022,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

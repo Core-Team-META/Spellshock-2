@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17347292399839852453
   Name: "Animated Flag Beams"
   PlatformAssetType: 5
@@ -921,5 +921,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

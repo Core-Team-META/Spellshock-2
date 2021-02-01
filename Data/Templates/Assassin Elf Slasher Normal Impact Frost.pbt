@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12510419486879215421
   Name: "Assassin Elf Slasher Normal Impact Frost"
   PlatformAssetType: 5
@@ -170,5 +170,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

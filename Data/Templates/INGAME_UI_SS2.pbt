@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13420961296342516645
   Name: "INGAME_UI_SS2"
   PlatformAssetType: 5
@@ -33284,5 +33284,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

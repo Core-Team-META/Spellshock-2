@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 16066250432848695231
   Name: "Custom Bark Oak 01"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 6136827371784165474
     ParameterOverrides {

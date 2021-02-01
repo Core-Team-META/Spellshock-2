@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3392388590054420013
   Name: "Generic Elf Preview Circle"
   PlatformAssetType: 5
@@ -131,5 +131,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5083654227690584583
   Name: "SS2_MIDGAME_UI"
   PlatformAssetType: 5
@@ -25736,5 +25736,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

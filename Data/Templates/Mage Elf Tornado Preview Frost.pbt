@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15421457792109044896
   Name: "Mage Elf Tornado Preview Frost"
   PlatformAssetType: 5
@@ -132,5 +132,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

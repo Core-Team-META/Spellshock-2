@@ -1,4 +1,4 @@
-﻿Name: "Game State UI"
+Name: "Game State UI"
 RootId: 1898078422538986234
 Objects {
   Id: 11179809748719661636

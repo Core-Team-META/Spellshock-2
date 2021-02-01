@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4847507470353447900
   Name: "Mine Cart"
   PlatformAssetType: 5
@@ -121,6 +121,7 @@
           }
           DisableCastShadows: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -178,6 +179,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -235,6 +237,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -316,6 +319,7 @@
           }
           DisableCastShadows: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -398,6 +402,7 @@
           }
           DisableCastShadows: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -480,6 +485,7 @@
           }
           DisableCastShadows: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -566,6 +572,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -652,6 +659,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -702,6 +710,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -752,6 +761,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -802,6 +812,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -852,6 +863,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -923,6 +935,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -992,6 +1005,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1063,6 +1077,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1132,6 +1147,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1202,6 +1218,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1270,6 +1287,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1340,6 +1358,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1408,6 +1427,7 @@
           Teams {
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1492,5 +1512,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

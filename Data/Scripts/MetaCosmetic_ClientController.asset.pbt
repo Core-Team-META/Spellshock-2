@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18388342393237027465
   Name: "MetaCosmetic_ClientController"
   PlatformAssetType: 3
@@ -24,5 +24,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

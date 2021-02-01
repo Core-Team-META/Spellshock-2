@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8110936735748430739
   Name: "STORE_Entry Geo"
   PlatformAssetType: 5
@@ -162,6 +162,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
             AnimationStancePlaybackRate: 1.1
@@ -169,6 +170,14 @@
             AnimationPlaybackRateMultiplier: 1
             PlayOnStartAnimation {
               PlaybackRate: 1
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -256,6 +265,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
             AnimationStancePlaybackRate: 1.1
@@ -263,6 +273,14 @@
             AnimationPlaybackRateMultiplier: 1
             PlayOnStartAnimation {
               PlaybackRate: 1
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -327,6 +345,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -375,5 +394,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

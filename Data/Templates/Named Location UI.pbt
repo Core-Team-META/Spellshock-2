@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14237134263932082416
   Name: "Named Location UI"
   PlatformAssetType: 5
@@ -609,5 +609,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12874348109318974616
   Name: "Mage Iceberg Break Basic"
   PlatformAssetType: 5
@@ -145,5 +145,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

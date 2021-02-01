@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 18104480854948179778
   Name: "New Hunter Material"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16954927520066399002
   Name: "ChickenContext"
   PlatformAssetType: 5
@@ -140,6 +140,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStancePlaybackRate: 2
             AnimationStanceShouldLoop: true
@@ -147,6 +148,14 @@
             PlayOnStartAnimation {
               PlaybackRate: 1
               ShouldLoop: true
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -256,5 +265,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

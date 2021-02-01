@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17802584465689016806
   Name: "Assassin"
   PlatformAssetType: 5
@@ -57,6 +57,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "unarmed_ready"
+          }
+          Overrides {
             Name: "cs:Q_isPreviewing:isrep"
             Bool: true
           }
@@ -85,7 +89,7 @@
       }
       Objects {
         Id: 7204248853923322945
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
             X: 22050
@@ -102,8 +106,8 @@
         }
         ParentId: 4569115510025570718
         ChildIds: 15817725685703269186
-        ChildIds: 17515797633147736346
         ChildIds: 12028678257515034993
+        ChildIds: 17515797633147736346
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -117,7 +121,7 @@
       }
       Objects {
         Id: 15817725685703269186
-        Name: "BlinkAbilityServer"
+        Name: "Blade Dash Settings"
         Transform {
           Location {
             X: -25
@@ -153,28 +157,12 @@
             }
           }
           Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 4883165977894045775
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
             Name: "cs:EventName"
             String: "Blink"
           }
           Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -203,86 +191,15 @@
               Y: 50
             }
           }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5320349203892634237
-          }
-        }
-      }
-      Objects {
-        Id: 17515797633147736346
-        Name: "WraithStrikeAbilityServer"
-        Transform {
-          Location {
-            X: -22050
-            Y: -30750
-            Z: 6300
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7204248853923322945
-        UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:PrimaryAbility2"
             ObjectReference {
-              SubObjectId: 4569115510025570718
+              SubObjectId: 3230213687525692580
             }
           }
           Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 87249608989476396
-            }
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 7000
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Air Dive"
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 50
-              Y: 60
-            }
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Float: 600
-          }
-          Overrides {
-            Name: "cs:FlyingDuration"
-            Float: 4
-          }
-          Overrides {
-            Name: "cs:LaunchForce"
-            Float: 30
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
+            Name: "cs:MatchNormal"
+            Bool: true
           }
         }
         Collidable_v2 {
@@ -299,7 +216,7 @@
       }
       Objects {
         Id: 12028678257515034993
-        Name: "DeathsShadowAbilityServer"
+        Name: "Deaths Shadow Settings"
         Transform {
           Location {
             X: -30070
@@ -362,9 +279,88 @@
             Name: "cs:SpeedBoost"
             Int: 200
           }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5320349203892634237
+          }
+        }
+      }
+      Objects {
+        Id: 17515797633147736346
+        Name: "Wraith Strike Settings"
+        Transform {
+          Location {
+            X: -22050
+            Y: -30750
+            Z: 6300
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7204248853923322945
+        UnregisteredParameters {
           Overrides {
-            Name: "cs:isInvisible"
-            Bool: false
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 87249608989476396
+            }
+          }
+          Overrides {
+            Name: "cs:MaxPlacementRange"
+            Int: 7000
+          }
+          Overrides {
+            Name: "cs:EventName"
+            String: "Air Dive"
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 50
+              Y: 60
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRadius"
+            Float: 600
+          }
+          Overrides {
+            Name: "cs:FlyingDuration"
+            Float: 4
+          }
+          Overrides {
+            Name: "cs:LaunchForce"
+            Float: 30
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod2"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "ASSASSIN"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
           }
         }
         Collidable_v2 {
@@ -394,7 +390,6 @@
           }
         }
         ParentId: 4569115510025570718
-        ChildIds: 7926632237305793917
         ChildIds: 15581592299774707229
         ChildIds: 5124582396827107511
         ChildIds: 2489697862704505183
@@ -414,152 +409,6 @@
         }
         NetworkContext {
           Type: Server
-        }
-      }
-      Objects {
-        Id: 7926632237305793917
-        Name: "HeroKitPlayerPropertiesServer"
-        Transform {
-          Location {
-            X: 3019.21777
-            Y: -2359.71118
-            Z: -64.1432495
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3557475336528325194
-        ChildIds: 17103559494860760055
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 4569115510025570718
-            }
-          }
-          Overrides {
-            Name: "cs:API_EffectSystem"
-            AssetReference {
-              Id: 11192919480659211898
-            }
-          }
-          Overrides {
-            Name: "cs:AnimationStance"
-            String: "unarmed_ready"
-          }
-          Overrides {
-            Name: "cs:WalkSpeed"
-            Float: 700
-          }
-          Overrides {
-            Name: "cs:JumpVelocity"
-            Float: 900
-          }
-          Overrides {
-            Name: "cs:JumpCount"
-            Int: 1
-          }
-          Overrides {
-            Name: "cs:MaxHealth"
-            Int: 480
-          }
-          Overrides {
-            Name: "cs:HealthRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:MaxEnergy"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:EnergyRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:BasicDamage"
-            Int: 25
-          }
-          Overrides {
-            Name: "cs:PowerPhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:PowerMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefensePhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefenseMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:CriticalHitChance"
-            Float: 0.02
-          }
-          Overrides {
-            Name: "cs:CriticalDamageBonus"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:BaseAttackSpeed"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LifeSteal"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:ArmorPenetration"
-            Int: 0
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 643752288155017208
-          }
-        }
-      }
-      Objects {
-        Id: 17103559494860760055
-        Name: "PlayerHealthRegenServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7926632237305793917
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11449417992889389486
-          }
         }
       }
       Objects {
@@ -650,7 +499,7 @@
       }
       Objects {
         Id: 2489697862704505183
-        Name: "BlinkAbilityServer"
+        Name: "BladeDashAbilityServer"
         Transform {
           Location {
             X: 22025
@@ -668,69 +517,10 @@
         ParentId: 3557475336528325194
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 4569115510025570718
+              SubObjectId: 15817725685703269186
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 7787036789120996490
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 4883165977894045775
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Blink"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "ASSASSIN"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "Q"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "NONE"
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 30
-              Y: 50
-            }
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 600
           }
         }
         Collidable_v2 {
@@ -916,15 +706,9 @@
         ParentId: 3557475336528325194
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 4569115510025570718
-            }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 87249608989476396
+              SubObjectId: 17515797633147736346
             }
           }
           Overrides {
@@ -932,37 +716,6 @@
             AssetReference {
               Id: 6140123420589022677
             }
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 7000
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Air Dive"
-          }
-          Overrides {
-            Name: "cs:DamageRange"
-            Vector2 {
-              X: 50
-              Y: 60
-            }
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Float: 600
-          }
-          Overrides {
-            Name: "cs:FlyingDuration"
-            Float: 4
-          }
-          Overrides {
-            Name: "cs:LaunchForce"
-            Float: 30
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
         }
         Collidable_v2 {
@@ -1774,6 +1527,7 @@
         }
         ParentId: 12390733973333184270
         ChildIds: 14022298515563068289
+        ChildIds: 17205920200914817298
         ChildIds: 11309600053152836331
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1787,7 +1541,7 @@
       }
       Objects {
         Id: 14022298515563068289
-        Name: "WraithStrikeAbilityClient"
+        Name: "WraithStrikePlacementClient"
         Transform {
           Location {
             X: -7995.12695
@@ -1811,15 +1565,51 @@
             }
           }
           Overrides {
+            Name: "cs:PreviewString"
+            String: "T_isPreviewing"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 17205920200914817298
+        Name: "WraithStrikeEffectsClient"
+        Transform {
+          Location {
+            X: 22425
+            Y: 30800
+            Z: -6285
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14326137833624201234
+        UnregisteredParameters {
+          Overrides {
             Name: "cs:ConfirmSound"
             ObjectReference {
               SubObjectId: 11309600053152836331
             }
           }
           Overrides {
-            Name: "cs:TimerUI_Template"
-            AssetReference {
-              Id: 7156155829847915259
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+              SubObjectId: 17515797633147736346
             }
           }
         }
@@ -1831,7 +1621,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 2585631326682394561
+            Id: 8641582811737118701
           }
         }
       }
@@ -1861,13 +1651,13 @@
             Id: 4433167291023742498
           }
           Volume: 1
-          Falloff: -1
+          Falloff: 4600
           Radius: -1
         }
       }
       Objects {
         Id: 12219954214652104381
-        Name: "BlinkAbilityClient"
+        Name: "BladeDashAbilityClient"
         Transform {
           Location {
             X: -100
@@ -2124,7 +1914,7 @@
       }
       Objects {
         Id: 7787036789120996490
-        Name: "Blink"
+        Name: "Blade Dash"
         Transform {
           Location {
           }
@@ -2157,7 +1947,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2167,7 +1956,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2177,7 +1965,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2187,11 +1974,10 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2233,7 +2019,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2244,7 +2029,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2255,7 +2039,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2266,7 +2049,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CanBePrevented: true
           KeyBinding_v2 {
@@ -2307,7 +2089,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2317,7 +2098,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2328,7 +2108,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2339,7 +2118,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2386,7 +2164,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2395,7 +2172,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2406,7 +2182,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2417,7 +2192,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_throw"
           CanBePrevented: true
@@ -2462,7 +2236,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2471,7 +2244,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2481,7 +2253,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2492,12 +2263,11 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "2hand_sword_thrust"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2536,7 +2306,6 @@
             Duration: 0.7
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:movement"
             }
@@ -2547,7 +2316,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2558,7 +2326,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2569,7 +2336,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_roll"
           CanBePrevented: true
@@ -2648,8 +2414,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2657,8 +2421,6 @@
           ExecutePhaseSettings {
             Duration: 0.1
             CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2668,8 +2430,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2679,8 +2439,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_punch_left"
           CanBePrevented: true
@@ -2722,8 +2480,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2731,8 +2487,6 @@
           ExecutePhaseSettings {
             Duration: 0.1
             CanMove: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2742,8 +2496,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2753,8 +2505,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_punch_right"
           CanBePrevented: true
@@ -2885,5 +2635,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14514095492957445752
   Name: "Healer Orc Staff Surface Impact FX Fire"
   PlatformAssetType: 5
@@ -359,5 +359,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

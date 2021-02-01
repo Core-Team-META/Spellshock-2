@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12063658360155247816
   Name: "Tank Orc Rock Strike Projectile Fire"
   PlatformAssetType: 5
@@ -303,5 +303,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

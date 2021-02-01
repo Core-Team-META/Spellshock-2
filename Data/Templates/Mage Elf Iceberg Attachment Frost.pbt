@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7156613417916661940
   Name: "Mage Elf Iceberg Attachment Frost"
   PlatformAssetType: 5
@@ -7,7 +7,7 @@
       RootId: 8167322934774301301
       Objects {
         Id: 8167322934774301301
-        Name: "Mage Iceberg Attachment Basic"
+        Name: "Mage Elf Iceberg Attachment Frost"
         Transform {
           Scale {
             X: 1
@@ -188,7 +188,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8440229342576301274
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -226,6 +226,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1234,6 +1235,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1295,6 +1297,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1356,6 +1359,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1417,6 +1421,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1478,6 +1483,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1539,6 +1545,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1600,6 +1607,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1661,6 +1669,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1722,6 +1731,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1797,5 +1807,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

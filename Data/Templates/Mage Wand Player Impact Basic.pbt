@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7162940562527151262
   Name: "Mage Wand Player Impact Basic"
   PlatformAssetType: 5
@@ -210,5 +210,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

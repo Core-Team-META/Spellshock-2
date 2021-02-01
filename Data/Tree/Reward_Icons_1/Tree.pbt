@@ -1,4 +1,4 @@
-﻿Name: "Reward_Icons_1"
+Name: "Reward_Icons_1"
 RootId: 12153954283957030340
 Objects {
   Id: 6162272171672063087

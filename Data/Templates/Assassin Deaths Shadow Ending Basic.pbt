@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1429104248892819753
   Name: "Assassin Deaths Shadow Ending Basic"
   PlatformAssetType: 5
@@ -178,5 +178,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

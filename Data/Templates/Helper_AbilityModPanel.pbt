@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17193164197596063630
   Name: "Helper_AbilityModPanel"
   PlatformAssetType: 5
@@ -1163,5 +1163,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1518160165269425996
   Name: "Generic Sound Out Of Ammo"
   PlatformAssetType: 5
@@ -78,5 +78,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

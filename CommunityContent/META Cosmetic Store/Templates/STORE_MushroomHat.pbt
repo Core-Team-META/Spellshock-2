@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6573502763353393387
   Name: "STORE_MushroomHat"
   PlatformAssetType: 5
@@ -127,6 +127,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -186,6 +187,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -245,6 +247,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -410,6 +413,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -469,6 +473,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -528,6 +533,7 @@
             IsEnemyCollisionEnabled: true
           }
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -576,5 +582,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

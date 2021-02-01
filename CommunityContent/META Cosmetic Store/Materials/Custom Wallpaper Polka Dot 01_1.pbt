@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 4874315205512777534
   Name: "Custom Wallpaper Polka Dot 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 445867743109748230
     ParameterOverrides {

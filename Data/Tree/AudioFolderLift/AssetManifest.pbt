@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4325401643181295799
   Name: "Wood Wheel Turning Movement 01 SFX"
   PlatformAssetType: 7

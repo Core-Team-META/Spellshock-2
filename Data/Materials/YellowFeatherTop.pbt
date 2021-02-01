@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 13898612443987996531
   Name: "YellowFeatherTop"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 1781535275264321496
     ParameterOverrides {

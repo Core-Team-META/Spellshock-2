@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17104170140279690969
   Name: "CLASS_SELECT_UI_final_v2"
   PlatformAssetType: 5
@@ -55925,5 +55925,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

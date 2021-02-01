@@ -1,0 +1,45 @@
+Assets {
+  Id: 17459582866457614450
+  Name: "Hammer"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Hammer"
+  }
+}
+Assets {
+  Id: 11110360824915348075
+  Name: "Electric Loop"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_044"
+  }
+}
+Assets {
+  Id: 8178901969581781700
+  Name: "Sun"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Sun"
+  }
+}
+Assets {
+  Id: 2562562495929064540
+  Name: "Daggers"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_icon_Daggers"
+  }
+}
+Assets {
+  Id: 1185698000734154284
+  Name: "Arrow"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Arrow"
+  }
+}

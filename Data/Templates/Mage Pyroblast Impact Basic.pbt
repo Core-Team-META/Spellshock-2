@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 313465437675986879
   Name: "Mage Pyroblast Impact Basic"
   PlatformAssetType: 5
@@ -133,5 +133,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

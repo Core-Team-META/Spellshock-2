@@ -1,4 +1,4 @@
-﻿Name: "RewardSystem"
+Name: "RewardSystem"
 RootId: 15766608560554198711
 Objects {
   Id: 4519890512238287661

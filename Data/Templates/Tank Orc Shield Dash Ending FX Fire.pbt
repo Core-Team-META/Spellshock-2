@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 716049939813205708
   Name: "Tank Orc Shield Dash Ending FX Fire"
   PlatformAssetType: 5
@@ -222,5 +222,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

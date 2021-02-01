@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15656180872712003816
   Name: "STORE_CurrencyEntry"
   PlatformAssetType: 5
@@ -227,5 +227,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

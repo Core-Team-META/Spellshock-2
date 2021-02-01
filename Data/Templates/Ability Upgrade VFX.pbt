@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10796082430733460517
   Name: "Ability Upgrade VFX"
   PlatformAssetType: 5
@@ -379,5 +379,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

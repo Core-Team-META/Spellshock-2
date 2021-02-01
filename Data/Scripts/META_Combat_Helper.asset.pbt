@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14775487138945020345
   Name: "META_Combat_Helper"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

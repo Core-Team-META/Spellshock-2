@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5461895297082359166
   Name: "STORE_ItemInfo"
   PlatformAssetType: 3
@@ -13,12 +13,16 @@
         String: "Dummy Item"
       }
       Overrides {
+        Name: "cs:Team"
+        String: ""
+      }
+      Overrides {
         Name: "cs:ID"
         String: "DummyID"
       }
       Overrides {
         Name: "cs:CurrencyResourceName"
-        String: "money"
+        String: "COSM_TOKEN"
       }
       Overrides {
         Name: "cs:Cost"
@@ -33,6 +37,10 @@
         String: ""
       }
       Overrides {
+        Name: "cs:Rarity"
+        String: ""
+      }
+      Overrides {
         Name: "cs:Types"
         String: ""
       }
@@ -42,6 +50,18 @@
       }
       Overrides {
         Name: "cs:MUID"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:ClassIcon"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:TypeIcon"
         AssetReference {
           Id: 841534158063459245
         }
@@ -80,5 +100,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2607136788901765941
   Name: "Tank Orc Boulder Throw Projectile Fire"
   PlatformAssetType: 5
@@ -162,6 +162,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -259,5 +260,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

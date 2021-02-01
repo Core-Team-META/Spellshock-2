@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7677382368845934921
   Name: "Mage Elf Pyroblast Impact Frost"
   PlatformAssetType: 5
@@ -7,7 +7,7 @@
       RootId: 10967820473134866711
       Objects {
         Id: 10967820473134866711
-        Name: "Mage Orc Pyroblast Impact Fire"
+        Name: "Mage Elf Pyroblast Impact Frost"
         Transform {
           Scale {
             X: 1
@@ -15,8 +15,10 @@
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
-        ChildIds: 15591566199334030865
+        ParentId: 4781671109827199097
+        ChildIds: 12771607081744968686
+        ChildIds: 194798614852827632
+        ChildIds: 6066097525588116490
         ChildIds: 12805941739439042021
         ChildIds: 15898285169024311286
         Lifespan: 2.5
@@ -31,10 +33,127 @@
         }
       }
       Objects {
-        Id: 15591566199334030865
+        Id: 12771607081744968686
+        Name: "Explosion Kit Afterglow VFX"
+        Transform {
+          Location {
+            X: 250
+            Y: 50
+            Z: -50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 10967820473134866711
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.426666558
+              B: 0.64
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Particle Scale"
+            Float: 2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 15468302836055406992
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 194798614852827632
+        Name: "Ground Explosion VFX"
+        Transform {
+          Location {
+            X: 250
+            Y: 50
+            Z: -50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 10967820473134866711
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Light"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Fireball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.469333172
+              B: 0.64
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              G: 0.426666558
+              B: 0.64
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2839312775702113675
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+      }
+      Objects {
+        Id: 6066097525588116490
         Name: "Explosion Kit Airburst Fireball VFX"
         Transform {
           Location {
+            X: 250
+            Y: 50
+            Z: -50
           }
           Rotation {
           }
@@ -61,16 +180,24 @@
           Overrides {
             Name: "bp:color"
             Color {
-              G: 0.866666317
-              B: 2
+              R: 2
+              G: 0.0666667223
               A: 1
             }
           }
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              G: 0.99
-              B: 0.950662255
+              G: 0.415999889
+              B: 0.64
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.0958333
+              B: 0.230000019
               A: 1
             }
           }
@@ -162,6 +289,24 @@
       }
     }
     Assets {
+      Id: 15468302836055406992
+      Name: "Explosion Kit Afterglow VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explokit_afterglow"
+      }
+    }
+    Assets {
+      Id: 2839312775702113675
+      Name: "Ground Explosion VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_explosion_ground"
+      }
+    }
+    Assets {
       Id: 18395802130075595668
       Name: "Explosion Kit Airburst Fireball VFX"
       PlatformAssetType: 8
@@ -193,5 +338,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

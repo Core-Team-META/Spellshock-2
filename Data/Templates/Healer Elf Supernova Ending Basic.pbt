@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 27493553238638050
   Name: "Healer Elf Supernova Ending Basic"
   PlatformAssetType: 5
@@ -359,5 +359,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

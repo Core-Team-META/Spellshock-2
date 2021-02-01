@@ -24,13 +24,14 @@ local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-	print(projectile)
 	if other and ABILITY.owner then
 		--Play ImpactFX
 		local projectilePos = projectile:GetWorldPosition()
 		local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
 		local impactTemplate = PlayerVFX.Impact
 		META_AP().SpawnAsset(impactTemplate, {position = projectile:GetWorldPosition(), rotation = impactRotation})
+
+		
 
 		-- init dmg object
 		local DamageAmount =
@@ -53,7 +54,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 		for _, enemy in ipairs(enemiesInRange) do
 			-- apply status effect
 			--API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Poison"].id)
-
+			enemy.serverUserData.NotAdjustHp = true
 			-- Damage
 			if DamageAmount ~= 0 then
 				local attackData = {
@@ -84,9 +85,8 @@ function OnProjectileImpacted(projectile, other, hitResult)
 end
 
 function OnAbilityExecute(thisAbility)
-	--local ownerForwardVect = thisAbility.owner:GetWorldTransform():GetForwardVector()
-	--local spawnPos = ability.owner:GetWorldPosition() + ownerForwardVect * 600 - Vector3.UP * 50
-
+	if ABILITY:GetCurrentPhase() == AbilityPhase.READY then return end
+	
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
 	local lookQuaternion = Quaternion.New(lookRotation)
 	local forwardVector = lookQuaternion:GetForwardVector()

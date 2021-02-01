@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16070017289157504481
   Name: "Healer Orc Starting VFX"
   PlatformAssetType: 3
@@ -13,7 +13,7 @@
       Overrides {
         Name: "cs:01_SunBeam_Projectile"
         AssetReference {
-          Id: 17277006247643650522
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -31,19 +31,19 @@
       Overrides {
         Name: "cs:02_HealingCrystal_Placement"
         AssetReference {
-          Id: 8415357861376842630
+          Id: 841534158063459245
         }
       }
       Overrides {
         Name: "cs:03_DivineLight_Active"
         AssetReference {
-          Id: 9583554867605228300
+          Id: 841534158063459245
         }
       }
       Overrides {
         Name: "cs:04_Supernova_Charge"
         AssetReference {
-          Id: 1259958909182382340
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -58,5 +58,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

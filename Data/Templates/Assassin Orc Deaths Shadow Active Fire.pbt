@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3936744820164282082
   Name: "Assassin Orc Deaths Shadow Active Fire"
   PlatformAssetType: 5
@@ -183,5 +183,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

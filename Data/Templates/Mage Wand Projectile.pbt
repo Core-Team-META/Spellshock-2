@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15211008498432540868
   Name: "Mage Wand Projectile"
   PlatformAssetType: 5
@@ -169,5 +169,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

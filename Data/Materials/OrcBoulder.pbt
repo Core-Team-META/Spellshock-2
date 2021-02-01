@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 17947426394362982948
   Name: "OrcBoulder"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {
@@ -26,9 +26,9 @@
       Overrides {
         Name: "ashcolor"
         Color {
-          R: 0.97
-          G: 0.681749403
-          B: 0.41904
+          R: 0.526
+          G: 0.312451094
+          B: 0.117823996
           A: 1
         }
       }

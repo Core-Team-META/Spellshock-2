@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 16743017400344465135
   Name: "Elven Water"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

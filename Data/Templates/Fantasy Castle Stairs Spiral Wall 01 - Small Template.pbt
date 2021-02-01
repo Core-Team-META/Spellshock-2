@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 557051211400487762
   Name: "Fantasy Castle Stairs Spiral Wall 01 - Small Template"
   PlatformAssetType: 5
@@ -60,6 +60,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -96,6 +97,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -133,6 +135,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -172,5 +175,5 @@
       AssetId: "Fantasy_Castle_Stairs_Spiral_Wall_01_-_Small_Template"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

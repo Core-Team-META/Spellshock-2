@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2549718506323341774
   Name: "META_EndMatchEvaluation_UI"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

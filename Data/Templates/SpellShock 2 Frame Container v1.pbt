@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4477819803644187359
   Name: "SpellShock 2 Frame Container v1.2"
   PlatformAssetType: 5
@@ -28306,5 +28306,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

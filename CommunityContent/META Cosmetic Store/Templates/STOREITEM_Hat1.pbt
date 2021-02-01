@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18397369611777861779
   Name: "STOREITEM_Hat1"
   PlatformAssetType: 5
@@ -97,6 +97,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -247,6 +248,7 @@
           }
           Teams {
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -268,5 +270,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

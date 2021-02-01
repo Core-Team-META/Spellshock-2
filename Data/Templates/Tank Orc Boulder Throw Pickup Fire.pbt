@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8677730548454533978
   Name: "Tank Orc Boulder Throw Pickup Fire"
   PlatformAssetType: 5
@@ -111,6 +111,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -186,5 +187,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 120287087225471347
   Name: "CostumeManagerScriptClient"
   PlatformAssetType: 3
@@ -10,5 +10,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

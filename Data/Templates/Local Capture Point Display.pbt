@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10840005683375302091
   Name: "Local Capture Point Display"
   PlatformAssetType: 5
@@ -795,5 +795,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

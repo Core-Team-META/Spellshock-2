@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7070018317375265854
   Name: "META_Perk_Shop"
   PlatformAssetType: 3
@@ -18,5 +18,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

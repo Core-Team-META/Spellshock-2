@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 8220563240647999580
   Name: "Bark_palm_tree"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 75
   CustomMaterialAsset {
     BaseMaterialId: 5512000712628422335
     ParameterOverrides {

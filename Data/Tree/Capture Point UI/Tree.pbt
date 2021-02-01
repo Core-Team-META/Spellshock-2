@@ -1,4 +1,4 @@
-﻿Name: "Capture Point UI"
+Name: "Capture Point UI"
 RootId: 527033524674069522
 Objects {
   Id: 6610135967179747994
@@ -40,6 +40,17 @@ Objects {
         Overrides {
           Name: "cs:ContestedMessage"
           String: "ENEMIES PRESENT"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13398739294564669698
+      value {
+        Overrides {
+          Name: "cs:API_Spectator"
+          AssetReference {
+            Id: 13062533657555781867
+          }
         }
       }
     }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12098153250026619541
   Name: "META_DataCompression"
   PlatformAssetType: 5
@@ -322,5 +322,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

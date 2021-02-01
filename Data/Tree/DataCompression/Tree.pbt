@@ -1,4 +1,4 @@
-﻿Name: "DataCompression"
+Name: "DataCompression"
 RootId: 15057716785033630782
 Objects {
   Id: 12368577691492172997

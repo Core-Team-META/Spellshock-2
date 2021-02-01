@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10298965103520888440
   Name: "Capture_Point_Area"
   PlatformAssetType: 5
@@ -79,6 +79,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -348,6 +349,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -390,6 +392,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -430,6 +433,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -470,6 +474,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -559,6 +564,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -619,6 +625,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -685,6 +692,7 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -827,6 +835,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -876,6 +885,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -924,6 +934,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -973,6 +984,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1042,6 +1054,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1123,6 +1136,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1172,6 +1186,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1220,6 +1235,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1269,6 +1285,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1357,6 +1374,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1412,6 +1430,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1466,6 +1485,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1521,6 +1541,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1644,6 +1665,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1736,6 +1758,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1828,6 +1851,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1920,6 +1944,7 @@
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1976,6 +2001,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2018,6 +2044,7 @@
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2079,6 +2106,7 @@
           }
           DisableDistanceFieldLighting: true
           DisableCastShadows: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2217,5 +2245,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

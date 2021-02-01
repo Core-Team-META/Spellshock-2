@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17242794308955100454
   Name: "Hunter"
   PlatformAssetType: 5
@@ -53,6 +53,10 @@
             Bool: false
           }
           Overrides {
+            Name: "cs:AnimationStance"
+            String: "2hand_rifle_aim_shoulder"
+          }
+          Overrides {
             Name: "cs:Q_isPreviewing:isrep"
             Bool: true
           }
@@ -77,7 +81,7 @@
       }
       Objects {
         Id: 2843463732159386964
-        Name: "StaticContext"
+        Name: "Ability Settings StaticContext"
         Transform {
           Location {
             X: 7820
@@ -109,7 +113,7 @@
       }
       Objects {
         Id: 3493467970047565540
-        Name: "RainOfArrowsAbility"
+        Name: "RainOfArrows Settings "
         Transform {
           Location {
           }
@@ -193,7 +197,7 @@
       }
       Objects {
         Id: 10572375518235026021
-        Name: "PlaceTrapAbilityServer"
+        Name: "Bear Trap Settings"
         Transform {
           Location {
             X: -8093.00586
@@ -272,7 +276,7 @@
       }
       Objects {
         Id: 9149119488467156811
-        Name: "WeaponAimServer"
+        Name: "Weapon Aim Settings"
         Transform {
           Location {
             X: -7820
@@ -345,7 +349,6 @@
           }
         }
         ParentId: 2069545901692075652
-        ChildIds: 17191191923893616965
         ChildIds: 10145611772151817927
         ChildIds: 15534419632634071167
         ChildIds: 9326815864443726021
@@ -363,183 +366,6 @@
         }
         NetworkContext {
           Type: Server
-        }
-      }
-      Objects {
-        Id: 17191191923893616965
-        Name: "HeroKitPlayerPropertiesServer"
-        Transform {
-          Location {
-            X: 3019.21777
-            Y: -2359.71118
-            Z: -64.1432495
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7137406222810709920
-        ChildIds: 3675748460146983179
-        ChildIds: 6446912200179585265
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 2069545901692075652
-            }
-          }
-          Overrides {
-            Name: "cs:API_EffectSystem"
-            AssetReference {
-              Id: 11192919480659211898
-            }
-          }
-          Overrides {
-            Name: "cs:AnimationStance"
-            String: "2hand_rifle_aim_shoulder"
-          }
-          Overrides {
-            Name: "cs:WalkSpeed"
-            Float: 700
-          }
-          Overrides {
-            Name: "cs:JumpVelocity"
-            Float: 900
-          }
-          Overrides {
-            Name: "cs:JumpCount"
-            Int: 1
-          }
-          Overrides {
-            Name: "cs:MaxHealth"
-            Int: 480
-          }
-          Overrides {
-            Name: "cs:HealthRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:MaxEnergy"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:EnergyRegenSpeed"
-            Float: 0.04
-          }
-          Overrides {
-            Name: "cs:BasicDamage"
-            Int: 25
-          }
-          Overrides {
-            Name: "cs:PowerPhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:PowerMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefensePhysical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:DefenseMagical"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:CriticalHitChance"
-            Float: 0.02
-          }
-          Overrides {
-            Name: "cs:CriticalDamageBonus"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:BaseAttackSpeed"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LifeSteal"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:ArmorPenetration"
-            Int: 0
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 643752288155017208
-          }
-        }
-      }
-      Objects {
-        Id: 3675748460146983179
-        Name: "PlayerEnergyRegenServer"
-        Transform {
-          Location {
-            X: -3366.67944
-            Y: 2359.71118
-            Z: -33.1054077
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17191191923893616965
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12958287165690366055
-          }
-        }
-      }
-      Objects {
-        Id: 6446912200179585265
-        Name: "PlayerHealthRegenServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17191191923893616965
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11449417992889389486
-          }
         }
       }
       Objects {
@@ -825,7 +651,7 @@
       }
       Objects {
         Id: 2760011268594344962
-        Name: "HunterLeapServer"
+        Name: "LeapAbilityServer"
         Transform {
           Location {
           }
@@ -885,7 +711,7 @@
       }
       Objects {
         Id: 11108734766873830573
-        Name: "PlaceTrapAbilityServer"
+        Name: "BearTrapAbilityServer"
         Transform {
           Location {
             X: -273.005859
@@ -1047,11 +873,9 @@
         ChildIds: 10631699742497799838
         ChildIds: 3683594478347275263
         ChildIds: 11619508425871329849
-        ChildIds: 7715059201367182424
-        ChildIds: 1231559079360679353
-        ChildIds: 7905627217205649232
-        ChildIds: 2695547812234798459
-        ChildIds: 2726600085118415138
+        ChildIds: 14491672959901234972
+        ChildIds: 800927036902884953
+        ChildIds: 4017735643055830044
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1519,7 +1343,7 @@
       }
       Objects {
         Id: 11619508425871329849
-        Name: "PlaceTrapAbilityClient"
+        Name: "PlaceBearTrapAbilityClient"
         Transform {
           Location {
             X: -273.006836
@@ -1556,23 +1380,176 @@
         }
       }
       Objects {
-        Id: 7715059201367182424
-        Name: "AutoRechargeWeaponClient"
+        Id: 14491672959901234972
+        Name: "Leap_ActivateDurationBarUI"
         Transform {
           Location {
+            X: -11500
+            Y: -17130.002
+            Z: -4955
           }
           Rotation {
-            Yaw: -2.04905591e-05
           }
           Scale {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 5361708159967945625
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Weapon"
+            Name: "cs:SpecialAbility"
             ObjectReference {
-              SubObjectId: 13944462686745880869
+              SubObjectId: 10679331535669617236
+            }
+          }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 10
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
+        Id: 800927036902884953
+        Name: "Hawk_ActivateDurationBarUI"
+        Transform {
+          Location {
+            X: -11500
+            Y: -17130.002
+            Z: -4955
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 16077949688686323587
+            }
+          }
+          Overrides {
+            Name: "cs:DurationMod"
+            String: "mod2"
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "T"
+          }
+          Overrides {
+            Name: "cs:AbilitySettings"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Duration"
+            Float: 10
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
+        Id: 4017735643055830044
+        Name: "Crossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5361708159967945625
+        ChildIds: 10814169424989923108
+        ChildIds: 1231559079360679353
+        ChildIds: 7905627217205649232
+        ChildIds: 2695547812234798459
+        ChildIds: 2726600085118415138
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10814169424989923108
+        Name: "AutoShootClient"
+        Transform {
+          Location {
+            X: 22330
+            Y: 31790
+            Z: -6355
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4017735643055830044
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 10839953769775855596
             }
           }
         }
@@ -1584,7 +1561,7 @@
         }
         Script {
           ScriptAsset {
-            Id: 8431872900106975609
+            Id: 14074483271059500969
           }
         }
       }
@@ -1600,7 +1577,7 @@
           Scale {
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:ServerScript"
@@ -1638,7 +1615,7 @@
           Scale {
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1693,7 +1670,7 @@
             Z: 1
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1734,7 +1711,7 @@
             Z: 1
           }
         }
-        ParentId: 5361708159967945625
+        ParentId: 4017735643055830044
         ChildIds: 12352649972463341139
         UnregisteredParameters {
           Overrides {
@@ -1891,7 +1868,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -1902,7 +1878,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -1912,14 +1887,12 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
             Duration: 30
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
           CanBePrevented: true
@@ -1962,7 +1935,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -1973,7 +1945,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -1982,7 +1953,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -1992,7 +1962,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           CanBePrevented: true
           KeyBinding_v2 {
@@ -2039,7 +2008,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2048,7 +2016,6 @@
             Duration: 0.3
             CanMove: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2059,7 +2026,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2070,7 +2036,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
@@ -2097,7 +2062,6 @@
           CastPhaseSettings {
             Duration: 0.5
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2105,7 +2069,6 @@
           ExecutePhaseSettings {
             Duration: 0.1
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2115,14 +2078,12 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
             Duration: 20
             CanMove: true
             CanJump: true
             CanRotate: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
@@ -2165,7 +2126,6 @@
             Duration: 0.7
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:movement"
             }
@@ -2176,7 +2136,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2187,7 +2146,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2198,7 +2156,6 @@
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "unarmed_roll"
           CanBePrevented: true
@@ -2223,7 +2180,6 @@
         }
         ParentId: 406380117814010332
         ChildIds: 10839953769775855596
-        ChildIds: 10540071309458970955
         ChildIds: 18214553218914697683
         UnregisteredParameters {
         }
@@ -2255,7 +2211,7 @@
             Muzzle {
               Location {
                 X: 100
-                Z: 25
+                Z: 40
               }
             }
             AnimationSet: "2hand_rifle_aim_shoulder"
@@ -2272,7 +2228,7 @@
             BeamAssetRef {
               Id: 841534158063459245
             }
-            BurstCount: 1000
+            BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
@@ -2286,7 +2242,7 @@
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 25000
+            ProjectileSpeed: 40000
             ProjectileLifeSpan: 10
             ProjectileLength: 50
             ProjectileRadius: 5
@@ -2320,22 +2276,20 @@
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.15
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.1
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2345,63 +2299,15 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           CooldownPhaseSettings {
-            Duration: 0.1
+            Duration: 0.8
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
           }
           Animation: "2hand_rifle_shoot"
           CanBePrevented: true
-        }
-      }
-      Objects {
-        Id: 10540071309458970955
-        Name: "Reload"
-        ParentId: 13944462686745880869
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        Ability {
-          KeyBinding: "ability_ult"
-          CastPhaseSettings {
-            Duration: 1.5
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-          }
-          ExecutePhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-          }
-          CooldownPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-          }
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_19"
-          }
         }
       }
       Objects {
@@ -2431,8 +2337,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2441,8 +2345,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }
@@ -2451,8 +2353,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2461,7 +2361,6 @@
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
@@ -2559,5 +2458,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

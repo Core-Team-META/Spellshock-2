@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14378502203219747314
   Name: "Hunter Elf Hawk Active Frost"
   PlatformAssetType: 5
@@ -7,7 +7,7 @@
       RootId: 4395297972198219632
       Objects {
         Id: 4395297972198219632
-        Name: "Hunter Elf Hawk Active Fost"
+        Name: "Hunter Elf Hawk Active Frost"
         Transform {
           Scale {
             X: 1
@@ -210,16 +210,16 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1523214900353875295
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 7.69379425
+            Float: 0.845674276
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 9.46858501
+            Float: 2.03096151
           }
         }
         Collidable_v2 {
@@ -235,6 +235,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -273,16 +274,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.51
-              G: 0.873443604
-              B: 1
+              G: 5
+              B: 15
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 5351428073291024820
             }
           }
         }
@@ -300,6 +300,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -338,16 +339,15 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.51
-              G: 0.873443604
-              B: 1
+              G: 5
+              B: 15
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17567893295837774896
+              Id: 5351428073291024820
             }
           }
         }
@@ -365,6 +365,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -411,7 +412,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -433,6 +434,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -556,6 +558,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -587,7 +590,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -617,6 +620,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -648,7 +652,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -678,6 +682,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -709,7 +714,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -739,6 +744,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -770,7 +776,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -800,6 +806,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -831,7 +838,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -861,6 +868,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1073,6 +1081,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1158,6 +1167,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1278,6 +1288,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1308,7 +1319,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1347,6 +1358,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1405,6 +1417,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1463,6 +1476,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1521,6 +1535,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1552,7 +1567,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1591,6 +1606,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1622,7 +1638,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1661,6 +1677,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1692,7 +1709,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -1731,6 +1748,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1909,12 +1927,12 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1523214900353875295
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.476652831
+            Float: 0.235672727
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -1938,6 +1956,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2088,6 +2107,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2119,7 +2139,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2149,6 +2169,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2180,7 +2201,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2210,6 +2231,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2241,7 +2263,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2271,6 +2293,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2302,7 +2325,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2332,6 +2355,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2363,7 +2387,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2393,6 +2417,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2635,6 +2660,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2786,6 +2812,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2816,7 +2843,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -2855,6 +2882,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2913,6 +2941,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2971,6 +3000,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3029,6 +3059,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3060,7 +3091,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3099,6 +3130,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3130,7 +3162,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3169,6 +3201,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3200,7 +3233,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3239,6 +3272,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3292,6 +3326,7 @@
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3495,16 +3530,16 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1523214900353875295
+              Id: 926391387561774024
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.806726515
+            Float: 0.262949079
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 3.03358746
+            Float: 0.507277489
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -3533,6 +3568,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3628,7 +3664,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3637,11 +3673,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3657,6 +3693,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3687,7 +3724,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3696,11 +3733,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3716,6 +3753,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3746,7 +3784,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3755,11 +3793,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3775,6 +3813,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3805,7 +3844,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3814,11 +3853,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3834,6 +3873,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3864,7 +3904,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3873,11 +3913,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3893,6 +3933,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3923,7 +3964,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3932,11 +3973,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -3952,6 +3993,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -3982,7 +4024,7 @@
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1007126261426868767
+              Id: 926391387561774024
             }
           }
           Overrides {
@@ -3991,11 +4033,11 @@
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.125
+            Float: 0.227224529
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.125
+            Float: 0.253523111
           }
         }
         Collidable_v2 {
@@ -4011,6 +4053,7 @@
           Teams {
           }
           DisableReceiveDecals: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -4204,12 +4247,21 @@
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           AnimatedMesh {
             AnimationStancePlaybackRate: 1
             AnimationStanceShouldLoop: true
             AnimationPlaybackRateMultiplier: 1
             PlayOnStartAnimation {
               PlaybackRate: 0.8
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -4351,15 +4403,6 @@
       }
     }
     Assets {
-      Id: 1523214900353875295
-      Name: "Snow 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_snow_001_uv"
-      }
-    }
-    Assets {
       Id: 7363477334452929865
       Name: "Sphere"
       PlatformAssetType: 1
@@ -4369,12 +4412,12 @@
       }
     }
     Assets {
-      Id: 17567893295837774896
-      Name: "Emissive Glow Transparent"
+      Id: 5351428073291024820
+      Name: "Emissive Glow Opaque"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     Assets {
@@ -4393,6 +4436,15 @@
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_scap_01_ref"
+      }
+    }
+    Assets {
+      Id: 1523214900353875295
+      Name: "Snow 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_snow_001_uv"
       }
     }
     Assets {
@@ -4472,5 +4524,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

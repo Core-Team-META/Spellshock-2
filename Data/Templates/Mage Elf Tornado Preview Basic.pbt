@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15136798516269130110
   Name: "Mage Elf Tornado Preview Basic"
   PlatformAssetType: 5
@@ -131,5 +131,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

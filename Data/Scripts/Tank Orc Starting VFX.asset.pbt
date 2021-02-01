@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17951190285812977083
   Name: "Tank Orc Starting VFX"
   PlatformAssetType: 3
@@ -58,5 +58,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

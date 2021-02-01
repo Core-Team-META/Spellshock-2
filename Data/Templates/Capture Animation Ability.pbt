@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16997134585340290467
   Name: "Capture Animation Ability"
   PlatformAssetType: 5
@@ -145,5 +145,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

@@ -43,6 +43,9 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+		return 
+	end
 	local targetPosition = thisAbility.owner:GetWorldPosition()
 	local targetRotation = Rotation.ZERO
 
@@ -55,7 +58,7 @@ function OnAbilityExecute(thisAbility)
 	end
 
 	local trapTemplate = PlayerVFX.Placement
-	newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation})
+	local newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation})
 	newTrap.lifeSpan =
 		META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, Ability.name .. ": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)

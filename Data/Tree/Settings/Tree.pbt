@@ -1,4 +1,4 @@
-﻿Name: "Settings"
+Name: "Settings"
 RootId: 1430082256893166478
 Objects {
   Id: 17554272077537473916

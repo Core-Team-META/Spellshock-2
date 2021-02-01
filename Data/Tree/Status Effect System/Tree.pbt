@@ -1,4 +1,4 @@
-﻿Name: "Status Effect System"
+Name: "Status Effect System"
 RootId: 3202946136614365771
 Objects {
   Id: 12789809754890541052
@@ -445,7 +445,7 @@ Objects {
     Overrides {
       Name: "cs:API"
       AssetReference {
-        Id: 11930975873753377917
+        Id: 13062533657555781867
       }
     }
     Overrides {
@@ -709,6 +709,7 @@ Objects {
   ChildIds: 14498778836163098257
   ChildIds: 15940961261362330534
   ChildIds: 4423950474415881218
+  ChildIds: 5853737910244577816
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -716,6 +717,47 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 5853737910244577816
+  Name: "StatusEffectsDefinition_Blind"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 388783345485890869
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:EffectIcon"
+      AssetReference {
+        Id: 10955959331911207443
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 15768097145132196247
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5177912263410251781
+    }
   }
 }
 Objects {
@@ -769,6 +811,18 @@ Objects {
       Name: "cs:ModuleManager"
       AssetReference {
         Id: 9770511928359673738
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 6034558872979117633
+      }
+    }
+    Overrides {
+      Name: "cs:EffectIcon"
+      AssetReference {
+        Id: 16499032441981861114
       }
     }
   }
@@ -837,6 +891,12 @@ Objects {
         Id: 9770511928359673738
       }
     }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 3466880615205517635
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -881,7 +941,7 @@ Objects {
     Overrides {
       Name: "cs:EffectTemplate"
       AssetReference {
-        Id: 11322991377758087402
+        Id: 11757913127078773314
       }
     }
     Overrides {
@@ -975,6 +1035,7 @@ Objects {
   ChildIds: 15625049143942954705
   ChildIds: 6127590355833688739
   ChildIds: 12694298116994829951
+  ChildIds: 11872582013329450630
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -983,6 +1044,47 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+}
+Objects {
+  Id: 11872582013329450630
+  Name: "StatusEffectsDefinition_Blind"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4042260062498603935
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:EffectIcon"
+      AssetReference {
+        Id: 10955959331911207443
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 15768097145132196247
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5177912263410251781
+    }
   }
 }
 Objects {
@@ -1036,6 +1138,18 @@ Objects {
       Name: "cs:ModuleManager"
       AssetReference {
         Id: 9770511928359673738
+      }
+    }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 6034558872979117633
+      }
+    }
+    Overrides {
+      Name: "cs:EffectIcon"
+      AssetReference {
+        Id: 16499032441981861114
       }
     }
   }
@@ -1104,6 +1218,12 @@ Objects {
         Id: 9770511928359673738
       }
     }
+    Overrides {
+      Name: "cs:EffectTemplate"
+      AssetReference {
+        Id: 3466880615205517635
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1148,7 +1268,7 @@ Objects {
     Overrides {
       Name: "cs:EffectTemplate"
       AssetReference {
-        Id: 11322991377758087402
+        Id: 11757913127078773314
       }
     }
     Overrides {

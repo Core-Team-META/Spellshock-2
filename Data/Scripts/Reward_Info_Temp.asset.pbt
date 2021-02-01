@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14699549414970058459
   Name: "Reward_Info_Temp"
   PlatformAssetType: 3
@@ -20,5 +20,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

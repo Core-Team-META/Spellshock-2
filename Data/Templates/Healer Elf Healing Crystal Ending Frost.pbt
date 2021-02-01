@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9674222678604166117
   Name: "Healer Elf Healing Crystal Ending Frost"
   PlatformAssetType: 5
@@ -162,5 +162,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

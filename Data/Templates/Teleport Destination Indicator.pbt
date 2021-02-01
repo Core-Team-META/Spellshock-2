@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 500164608151091677
   Name: "Teleport Destination Indicator"
   PlatformAssetType: 5
@@ -66,6 +66,7 @@
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -87,5 +88,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

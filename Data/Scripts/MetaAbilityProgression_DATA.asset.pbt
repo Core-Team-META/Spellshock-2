@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14014501421890204527
   Name: "MetaAbilityProgression_DATA"
   PlatformAssetType: 3
@@ -12,5 +12,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

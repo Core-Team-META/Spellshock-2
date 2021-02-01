@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11842070002624660189
   Name: "Helper_ScoreboardLine"
   PlatformAssetType: 5
@@ -737,5 +737,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

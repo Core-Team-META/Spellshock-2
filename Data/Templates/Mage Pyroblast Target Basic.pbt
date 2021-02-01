@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13272352193882752730
   Name: "Mage Pyroblast Target Basic"
   PlatformAssetType: 5
@@ -33,5 +33,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

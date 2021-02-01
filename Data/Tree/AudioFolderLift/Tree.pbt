@@ -1,4 +1,4 @@
-﻿Name: "AudioFolderLift"
+Name: "AudioFolderLift"
 RootId: 13017664279981194341
 Objects {
   Id: 17695587806712915601

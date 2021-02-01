@@ -6,6 +6,7 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
 local DEFAULT_Duration = script:GetCustomProperty("Duration")
@@ -46,6 +47,9 @@ function OnGoingToTakeDamage(attackData)
 end
 
 function OnSpecialAbilityExecute(thisAbility)
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+	
+	API_SE.RemoveAllStatusEffects(SpecialAbility.owner)
 	PlayerSettings.movementControlMode = thisAbility.owner.movementControlMode
 	PlayerSettings.maxJumpCount = thisAbility.owner.maxJumpCount
 	

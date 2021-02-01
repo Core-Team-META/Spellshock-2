@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18306033672834061437
   Name: "Fantasy Craft Crystal 043"
   PlatformAssetType: 9
@@ -113,15 +113,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_capsule_001"
-  }
-}
-Assets {
-  Id: 15599228502728747198
-  Name: "Tornado VFX"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_tornado"
   }
 }
 Assets {

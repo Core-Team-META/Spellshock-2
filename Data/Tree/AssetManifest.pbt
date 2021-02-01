@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16388825162191980240
   Name: "Rock Pile 002"
   PlatformAssetType: 1

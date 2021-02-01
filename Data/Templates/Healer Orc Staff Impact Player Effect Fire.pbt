@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5220295224226331450
   Name: "Healer Orc Staff Impact Player Effect Fire"
   PlatformAssetType: 5
@@ -197,5 +197,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

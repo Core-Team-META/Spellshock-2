@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14574818313883817360
   Name: "Map_CapturePointIndicator"
   PlatformAssetType: 5
@@ -668,5 +668,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

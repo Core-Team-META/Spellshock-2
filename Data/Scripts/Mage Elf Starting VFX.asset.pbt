@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1083974979704324912
   Name: "Mage Elf Starting VFX"
   PlatformAssetType: 3
@@ -13,7 +13,7 @@
       Overrides {
         Name: "cs:01_Tornado_Preview"
         AssetReference {
-          Id: 1490966563412810811
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -76,5 +76,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

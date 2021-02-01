@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10632890108449713432
   Name: "META_Player_Cosmetic_Data"
   PlatformAssetType: 5
@@ -45,5 +45,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

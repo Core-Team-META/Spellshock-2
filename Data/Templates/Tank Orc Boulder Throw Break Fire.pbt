@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9651045591463097405
   Name: "Tank Orc Boulder Throw Break Fire"
   PlatformAssetType: 5
@@ -238,5 +238,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

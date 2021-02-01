@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12298732682685433681
   Name: "MetaCostume_ServerController"
   PlatformAssetType: 3
@@ -23,5 +23,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

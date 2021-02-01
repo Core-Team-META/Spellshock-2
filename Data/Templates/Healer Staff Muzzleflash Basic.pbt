@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3691668285842845988
   Name: "Healer Staff Muzzleflash Basic"
   PlatformAssetType: 5
@@ -173,5 +173,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }

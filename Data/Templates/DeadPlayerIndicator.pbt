@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7649609477726348637
   Name: "DeadPlayerIndicator"
   PlatformAssetType: 5
@@ -219,5 +219,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 75
 }
