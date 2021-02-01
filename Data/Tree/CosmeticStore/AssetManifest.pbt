@@ -44,15 +44,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14975837595723687713
-  Name: "Metal Gold 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_gold_001"
-  }
-}
-Assets {
   Id: 14659414155711643810
   Name: "Frame Outlined 006"
   PlatformAssetType: 9
@@ -68,24 +59,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_grid_topographical_001_wa"
-  }
-}
-Assets {
-  Id: 14331488779309247797
-  Name: "Cabinet Topper"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_cabinet_topper_001"
-  }
-}
-Assets {
-  Id: 14231809728886464860
-  Name: "Wood Raw White"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_wood_raw_white_001_uv"
   }
 }
 Assets {
@@ -134,39 +107,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12905923173550510229
-  Name: "Cylinder - Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_hq_test_001"
-  }
-}
-Assets {
   Id: 12804716500201279526
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundHighlighted_020"
-  }
-}
-Assets {
-  Id: 12280745604099262983
-  Name: "Cylinder - Chamfered Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_hq_002"
-  }
-}
-Assets {
-  Id: 12095835209017042614
-  Name: "Cube"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_002"
   }
 }
 Assets {
@@ -215,15 +161,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9136786294201978281
-  Name: "Metal Old Beaten Gold 02"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_gold_002"
-  }
-}
-Assets {
   Id: 9008238566657320754
   Name: "Sci-fi Frame 006"
   PlatformAssetType: 9
@@ -269,21 +206,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8245276785317172772
-  Name: "Brick Red Old 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_red_old_001_uv"
-  }
-}
-Assets {
-  Id: 8165999569881703527
-  Name: "Text 03: $"
+  Id: 8197503148267063602
+  Name: "Fantasy Castle Wall 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "F5_Text_040"
+    AssetId: "sm_ts_fan_cas_wall_002"
   }
 }
 Assets {
@@ -296,12 +224,12 @@ Assets {
   }
 }
 Assets {
-  Id: 7331838309352431776
-  Name: "Curtains Straight"
-  PlatformAssetType: 1
+  Id: 7362232965091765999
+  Name: "Bricks Mortar Thick 01"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_curtain_02"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fan_bricks_mortar_001_uv"
   }
 }
 Assets {
@@ -386,15 +314,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2888315853894773784
-  Name: "Cabinet - Upper Narrow"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_cabinet_narrow_001_cabient"
-  }
-}
-Assets {
   Id: 2604353830693238371
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
@@ -422,6 +341,24 @@ Assets {
   }
 }
 Assets {
+  Id: 1626097446304398136
+  Name: "Stucco Tintable"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_stucco_tint_001_uv"
+  }
+}
+Assets {
+  Id: 1116770904020850526
+  Name: "Stone Wall Divider 6m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_stone-edge_middle_6m_001"
+  }
+}
+Assets {
   Id: 1046635934407451220
   Name: "Fantasy Craft Crystal 018"
   PlatformAssetType: 9
@@ -431,12 +368,21 @@ Assets {
   }
 }
 Assets {
-  Id: 132672053610873933
-  Name: "Plastic Matte"
+  Id: 198353679974341757
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
+  }
+}
+Assets {
+  Id: 125457281986470150
+  Name: "Bricks Stone Floor Large 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "plastic_matte_001"
+    AssetId: "mi_brick_stone_floor_large_001"
   }
 }
 Assets {

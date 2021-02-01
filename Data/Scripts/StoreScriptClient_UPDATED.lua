@@ -11,6 +11,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+while not _G.CurrentMenu do Task.Wait() end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -82,8 +83,8 @@ local prop_CosmeticStore = script:GetCustomProperty("_CosmeticStore")
 local store = require(prop_CosmeticStore)
 
 local propUIMarkersAndPreviews = script:GetCustomProperty("UIMarkersAndPreviews"):WaitForObject()
-
 local propBaseUIContainer = propStoreRoot:GetCustomProperty("BaseUIContainer"):WaitForObject()
+
 ------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM PROPERTIES
 ------------------------------------------------------------------------------------------------------------------------
@@ -288,6 +289,8 @@ end
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
 function ShowStore_ClientHelper()
+	ReliableEvents.BroadcastToServer("SHOWSTORE_SERVER")
+	
 	if propBaseUIContainer then
 		propBaseUIContainer.isEnabled = false
 	end
@@ -310,7 +313,7 @@ function ShowStore_ClientHelper()
 	UI.SetCursorVisible(true)
 	UI.SetCanCursorInteractWithUI(true)
 	storePos = 0
-	FilterStoreItems() --ClearFilter()
+	FilterStoreItems()
 	UpdateCurrencyDisplay()
 
 	for k, v in pairs(StoreUIButtons) do
@@ -319,6 +322,8 @@ function ShowStore_ClientHelper()
 end
 
 function HideStore_ClientHelper()
+	ReliableEvents.BroadcastToServer("HIDESTORE_SERVER")
+
 	if propBaseUIContainer then
 		propBaseUIContainer.isEnabled = true
 	end
@@ -337,10 +342,12 @@ function HideStore_ClientHelper()
 	end
 end
 
-function HideStore()
-	HideStore_ClientHelper(player)
-
-	ReliableEvents.BroadcastToServer("HIDESTORE_SERVER", player)
+function OnMenuChanged(oldMenu, newMenu)
+	if newMenu == _G.MENU_TABLE["CosmeticStore"] then -- show
+		ShowStore_ClientHelper()
+	elseif oldMenu == _G.MENU_TABLE["CosmeticStore"] then -- hide
+		HideStore_ClientHelper()
+	end
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -600,12 +607,7 @@ function SpawnPreview(templateId, previewMesh, visible)
 		return
 	end
 
-	previewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
-	previewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
-	previewMesh:RotateTo(Rotation.New(0, 0, -90), 0.5, true)
-
 	zoomToggle = false
-
 	RemovePreview()
 
 	if visible then
@@ -665,6 +667,10 @@ function RemovePreview()
 		v:Destroy()
 	end
 	previewElements = {}
+	
+	setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
+	setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
+	setPreviewMesh:RotateTo(Rotation.New(0, 0, -90), 0.5, true)
 	setPreviewMesh.visibility = Visibility.INHERIT
 end
 
@@ -755,7 +761,8 @@ function ExitStoreClicked(button)
 	end
 	ClearList(1)
 	SelectNothing()
-	HideStore()
+	HideStore_ClientHelper(player)
+	Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -1054,8 +1061,6 @@ function InitStore()
 	--print(player.name)
 	end
 
-	player.bindingPressedEvent:Connect(OnBindingPressed)
-
 	ShopContents = {}
 	for k, v in pairs(propStoreGeoHolder:GetChildren()) do
 		v:Destroy()
@@ -1207,10 +1212,12 @@ function InitStore()
 			end
 			local propTagColor = v:GetCustomProperty("TagColor")
 			local propNumber = v:GetCustomProperty("Number")
+			local propIcon = v:GetCustomProperty("Icon")
 			RarityDefs[v.name] = {
 				name = propDisplayName,
 				color = propTagColor,
-				number = propNumber
+				number = propNumber,
+				icon = propIcon
 			}
 		end
 	end
@@ -1369,6 +1376,29 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 			propTitle.justification = TextJustify.CENTER
 		end
 
+		if data.color then
+			--[[local offsetColor 
+			local buttonColor = Color.New(data.color)
+			local hoverColor 
+			local clickedColor
+			
+			offsetColor = data.color * 0.25
+			hoverColor = data.color + offsetColor
+			clickedColor = data.color - offsetColor
+
+			buttonColor.a = 1
+			hoverColor.a = 1
+			clickedColor.a = 1
+
+			propButton:SetButtonColor(buttonColor)
+			propButton:SetHoveredColor(hoverColor)
+			propButton:SetPressedColor(clickedColor)]]
+
+			local buttonColor = Color.New(data.color)
+			buttonColor.a = 1
+			propIcon:GetChildren()[1]:SetColor(buttonColor)
+		end
+
 		filterButtonData[propButton] = {
 			listener = propButton.clickedEvent:Connect(clickFunction),
 			button = propButton,
@@ -1492,7 +1522,7 @@ end]]
 -- FILTER TYPE FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
 
--- Used for both Type and Ownership
+--[[ Used for both Type and Ownership
 function SpawnTypeFilterButton(displayName, type, color, position)
 	local newFilterButton 
 	if type == "Type" then
@@ -1540,7 +1570,7 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 		frameColor = frameColor,
 		position = position
 	}
-end
+end]]
 
 function OnTypeFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
@@ -1873,17 +1903,6 @@ function SwapMannequin(button)
 		zoomToggle = true
 	end
 end
-
-function OnBindingPressed(player, binding)
-	if binding == "ability_extra_29" then
-		if player:GetOverrideCamera() == propCamera then
-			HideStore()
-		else
-			store.ShowStore(player)
-		end
-	end
-end
-
 ----------------------------------------------------------------------------------------------------------------
 -- COSMETIC CLEANUP ON PLAYER LEFT EVENT
 ----------------------------------------------------------------------------------------------------------------
@@ -1898,10 +1917,11 @@ end
 
 propBackButton.clickedEvent:Connect(ExitStoreClicked)
 
-Events.Connect("SHOWSTORE_CLIENT", ShowStore_ClientHelper)
-Events.Connect("HIDESTORE_CLIENT", HideStore_ClientHelper)
+--Events.Connect("SHOWSTORE_CLIENT", ShowStore_ClientHelper)
+--Events.Connect("HIDESTORE_CLIENT", HideStore_ClientHelper)
 Events.Connect("APPLYCOSMETIC", ApplyCosmeticHelper)
 Events.Connect("BUYCOSMETIC_RESPONSE", BuyCosmeticResponse)
+Events.Connect("Menu Changed", OnMenuChanged)
 
 uiBackButton.clickedEvent:Connect(BackPageClicked)
 uiNextButton.clickedEvent:Connect(NextPageClicked)

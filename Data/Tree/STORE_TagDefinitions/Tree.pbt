@@ -28,6 +28,12 @@ Objects {
       Name: "cs:Number"
       Int: 5
     }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1140002898835594765
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -74,6 +80,12 @@ Objects {
     Overrides {
       Name: "cs:Number"
       Int: 4
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1140002898835594765
+      }
     }
   }
   Collidable_v2 {
@@ -122,6 +134,12 @@ Objects {
       Name: "cs:Number"
       Int: 3
     }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1140002898835594765
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -168,6 +186,12 @@ Objects {
     Overrides {
       Name: "cs:Number"
       Int: 2
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1140002898835594765
+      }
     }
   }
   Collidable_v2 {
@@ -216,6 +240,12 @@ Objects {
     Overrides {
       Name: "cs:Number"
       Int: 1
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1140002898835594765
+      }
     }
   }
   Collidable_v2 {

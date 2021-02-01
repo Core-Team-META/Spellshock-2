@@ -5,24 +5,24 @@ end
 
 
 function ShowStore(player)
-	if IsRunningOnClient() then
+	--[[if IsRunningOnClient() then
 		Events.Broadcast("SHOWSTORE_CLIENT",  player)
 		Events.BroadcastToServer("SHOWSTORE_SERVER", player)
 	else
 		Events.BroadcastToPlayer(player, "SHOWSTORE_CLIENT")
 		Events.Broadcast("SHOWSTORE_SERVER", player)
-	end
+	end]]
 end
 
 
 function HideStore(player)
-	if IsRunningOnClient() then
+	--[[if IsRunningOnClient() then
 		Events.Broadcast("HIDESTORE_CLIENT", player)
 		Events.BroadcastToServer("HIDESTORE_SERVER", player)
 	else
 		Events.BroadcastToPlayer(player, "HIDESTORE_CLIENT")
 		Events.Broadcast("HIDESTORE_SERVER", player)
-	end
+	end]]
 end
 
 

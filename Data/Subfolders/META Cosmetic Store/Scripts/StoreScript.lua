@@ -116,7 +116,7 @@ function PerksCheckTask()
 end
 
 function SavePreviousSettings(player)
-	-- Seems like you cannot directly store a control mode, so just brute-forced with if-else
+	--[[ Seems like you cannot directly store a control mode, so just brute-forced with if-else
 	if player.lookControlMode == LookControlMode.RELATIVE then
 		previousLookMode[player.id] = LookControlMode.RELATIVE
 	elseif player.lookControlMode == LookControlMode.LOOK_AT_CURSOR then
@@ -139,17 +139,18 @@ function SavePreviousSettings(player)
 		previousMovementMode[player.id] = MovementControlMode.NONE
 	else
 		previousMovementMode[player.id] = MovementControlMode.LOOK_RELATIVE
-	end
+	end]]
+
+	previousLookMode[player.id] = player.lookControlMode
+	previousMovementMode[player.id] = player.movementControlMode
 end
 
 function ShowStore_ServerHelper(player)
 	if player ~= nil then
 		SavePreviousSettings(player)
-		Task.Wait()
-		--[[
+		--Task.Wait()
 		player.lookControlMode = LookControlMode.NONE
 		player.movementControlMode = MovementControlMode.NONE
-		]]--
 	end
 end
 
@@ -461,8 +462,8 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 --Game.playerLeftEvent:Connect(OnPlayerLeft)
 
-Events.Connect("SHOWSTORE_SERVER", ShowStore_ServerHelper)
-Events.Connect("HIDESTORE_SERVER", HideStore_ServerHelper)
+Events.ConnectForPlayer("SHOWSTORE_SERVER", ShowStore_ServerHelper)
+Events.ConnectForPlayer("HIDESTORE_SERVER", HideStore_ServerHelper)
 Events.ConnectForPlayer("REQUESTCOSMETIC", ApplyCosmetic)
 Events.ConnectForPlayer("BUYCOSMETIC", BuyCosmetic)
 Events.Connect("GETCOSMETIC", GetCosmeticFromServer)

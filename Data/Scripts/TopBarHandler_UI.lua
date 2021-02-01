@@ -1,22 +1,7 @@
-﻿--[[
-Copyright 2019 Manticore Games, Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
-persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
---]]
-
--- Internal custom properties
+﻿-- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
+while not _G.CurrentMenu do Task.Wait() end
+
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
 local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
@@ -30,6 +15,23 @@ function UpdateTimeRemaining(remainingTime)
         local seconds = math.floor(remainingTime) % 60
         STATE_TIME_TEXT.text = string.format("%02d:%02d", minutes, seconds)
     end
+end
+
+function OnMenuChanged(oldMenu, newMenu)
+    local currentState = ABGS.GetGameState()
+    if newMenu == _G.MENU_TABLE["NONE"] and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND) then -- show
+		TopBar.visibility = Visibility.INHERIT
+	else -- hide
+		TopBar.visibility = Visibility.FORCE_OFF
+	end
+end
+
+function OnGameStateChanged (oldState, newState)
+	if newState == ABGS.GAME_STATE_LOBBY or newState == ABGS.GAME_STATE_ROUND then
+        TopBar.visibility = Visibility.INHERIT
+	else -- hide
+		TopBar.visibility = Visibility.FORCE_OFF
+	end
 end
 
 -- nil Tick(float)
@@ -52,12 +54,6 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND then
-            TopBar.visibility = Visibility.INHERIT
-        else
-            TopBar.visibility = Visibility.FORCE_OFF
-        end
-
         --[[if currentState == ABGS.GAME_STATE_ROUND_END then
             STATE_NAME_TEXT.text = "Round End"
             UpdateTimeRemaining(remainingTime)
@@ -76,3 +72,5 @@ function Tick(deltaTime)
 end
 
 TopBar.visibility = Visibility.FORCE_OFF
+Events.Connect("Menu Changed", OnMenuChanged)
+Events.Connect("GameStateChanged", OnGameStateChanged)

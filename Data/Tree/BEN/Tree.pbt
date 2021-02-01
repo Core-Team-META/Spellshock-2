@@ -74097,7 +74097,7 @@ Objects {
 }
 Objects {
   Id: 13462317965625364425
-  Name: "Class Selection Handler"
+  Name: "ClassSelectionClient"
   Transform {
     Location {
     }

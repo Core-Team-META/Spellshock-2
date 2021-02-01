@@ -17,15 +17,6 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
-      Name: "cs:TagColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
       Name: "cs:Number"
       Int: 5
     }
@@ -71,15 +62,6 @@ Objects {
   ParentId: 13894713750631482667
   UnregisteredParameters {
     Overrides {
-      Name: "cs:TagColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
       Name: "cs:Number"
       Int: 4
     }
@@ -124,15 +106,6 @@ Objects {
   }
   ParentId: 13894713750631482667
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TagColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
     Overrides {
       Name: "cs:Number"
       Int: 3
@@ -183,15 +156,6 @@ Objects {
       String: ""
     }
     Overrides {
-      Name: "cs:TagColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
       Name: "cs:Number"
       Int: 2
     }
@@ -236,15 +200,6 @@ Objects {
   }
   ParentId: 13894713750631482667
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TagColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
