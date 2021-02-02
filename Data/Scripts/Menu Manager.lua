@@ -1,4 +1,7 @@
 ﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local propClassSelectionClient = script:GetCustomProperty("ClassSelectionClient"):WaitForObject() -- This just here to ensure that it loads before this script does
+
+while not ABGS.IsGameStateManagerRegistered() do Task.Wait() end
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local BindingDelay = 0.5
@@ -12,7 +15,6 @@ _G.MENU_TABLE = {
 	Rewards = 4,
 	CosmeticStore = 5
 }
-_G.CurrentMenu = _G.MENU_TABLE["NONE"]
 
 function SpamPrevent()
 	if time()-previousBindingTime > BindingDelay then
@@ -69,3 +71,4 @@ end
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Changing Menu", OnMenuChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+_G.CurrentMenu = _G.MENU_TABLE["NONE"]

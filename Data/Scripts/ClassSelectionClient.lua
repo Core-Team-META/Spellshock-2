@@ -583,3 +583,8 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end
+
+if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and (ABGS.GetTimeRemainingInState() == nil or ABGS.GetTimeRemainingInState() > 4.0) then
+	print("Showing class selection")
+	Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
+end
