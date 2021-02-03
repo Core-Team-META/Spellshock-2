@@ -1092,7 +1092,7 @@ Objects {
     }
     Overrides {
       Name: "cs:DisableTrigger"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ReverseTrigger:tooltip"
@@ -1344,6 +1344,12 @@ Objects {
       Name: "cs:RespawnMusic"
       ObjectReference {
         SelfId: 17192106309769407465
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }
@@ -40372,6 +40378,12 @@ Objects {
       Name: "cs:BottomBar"
       ObjectReference {
         SelfId: 1670694423098377925
+      }
+    }
+    Overrides {
+      Name: "cs:API_Spectator"
+      AssetReference {
+        Id: 13062533657555781867
       }
     }
   }

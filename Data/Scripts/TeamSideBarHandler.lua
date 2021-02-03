@@ -164,6 +164,7 @@ function Tick()
     end
 end
 
+OnMenuChanged(nil, _G.CurrentMenu)
 TeamInfoPanel.visibility = Visibility.FORCE_OFF
 
 -- Add a new panel for every player already in the server

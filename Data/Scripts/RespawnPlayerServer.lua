@@ -17,7 +17,10 @@
 		Task.Wait(1.8)
 		player:SetVisibility(true)
 	else
+		player:SetVisibility(false)
 		player:Respawn()
+		Task.Wait(1.8)
+		player:SetVisibility(true)
 	end
 end
 

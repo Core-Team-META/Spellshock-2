@@ -2,7 +2,7 @@ Assets {
   Id: 14259498043935258221
   Name: "FrostWood"
   PlatformAssetType: 13
-  SerializationVersion: 75
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {

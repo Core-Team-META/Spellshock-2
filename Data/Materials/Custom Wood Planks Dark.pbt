@@ -2,7 +2,7 @@ Assets {
   Id: 16311163195241644230
   Name: "WC_roof_ Wood Planks Dark"
   PlatformAssetType: 13
-  SerializationVersion: 75
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 10634098119816284342
     ParameterOverrides {

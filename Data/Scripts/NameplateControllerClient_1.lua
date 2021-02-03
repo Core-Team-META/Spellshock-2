@@ -202,13 +202,13 @@ end
 -- bool IsNameplateVisible(Player)
 -- Can we see this player's nameplate given team and distance properties?
 function IsNameplateVisible(player)
-	if player.isDead and not SHOW_ON_DEAD_PLAYERS then
+	if (player.isDead and not SHOW_ON_DEAD_PLAYERS) or not player:GetVisibility() then
 		return false
 	end
 
-	if player.clientUserData.isInvisible then
+	--[[if player.clientUserData.isInvisible then
 		return false
-	end
+	end]]
 
 	if player == GetViewedPlayer() then
 		return SHOW_ON_SELF

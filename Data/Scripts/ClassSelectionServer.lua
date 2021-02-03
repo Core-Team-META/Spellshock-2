@@ -22,13 +22,12 @@ local Class_Stances = {
 }
 
 function OnClassChanged(player, classID)
-    --if classID == player.serverUserData.CurrentClass then return end
-    
-    player.animationStance = Class_Stances[classID]
-    player:SetResource("CLASS_MAP", classID)
-    while Events.BroadcastToAllPlayers("Class Changed", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
-    
-    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+    --if classID == player.serverUserData.CurrentClass then return end 
+    if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+        player.animationStance = Class_Stances[classID]
+        player:SetResource("CLASS_MAP", classID)
+        while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
+    elseif ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         --unequip everything
         for _, equipment in pairs(player:GetEquipment()) do
             if Object.IsValid(equipment) then
@@ -40,6 +39,10 @@ function OnClassChanged(player, classID)
             end
         end
 
+        player.animationStance = Class_Stances[classID]
+        player:SetResource("CLASS_MAP", classID)
+        while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
+        
         local newClass = World.SpawnAsset(ClassTemplates[classID])
         newClass:Equip(player)
     end
@@ -89,11 +92,12 @@ end
 function OnPlayerJoined(player)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
-    while Events.BroadcastToAllPlayers("Class Changed", player, META_AP().TANK) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
+    while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, META_AP().TANK, true) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
     
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-        local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
-	    newClass:Equip(player)
+        --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
+        --newClass:Equip(player)
+        player:SetVisibility(false)
     end
 end
 
@@ -102,5 +106,5 @@ if Environment.IsSinglePlayerPreview() then
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Events.ConnectForPlayer("Class Changed", OnClassChanged)
+Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)

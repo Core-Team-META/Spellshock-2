@@ -29,28 +29,16 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 -- nil OnBindingPressed(Player, string)
 -- Trigger the map when the map binding is pressed
 function OnBindingPressed(player, binding)
-	-- Only activate this spectator map on local player
-	if player ~= LOCAL_PLAYER then
-		return
-	end
-
 	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and not LOCAL_PLAYER:GetOverrideCamera() then
 		LOCAL_PLAYER:SetOverrideCamera(CAMERA)
-		AS.SetIsSpectating(true)
+		AS.SetIsViewingMap(true)
 	end
 end
 
 function OnBindingReleased(player, binding)
-
-	-- Only activate this spectator map on local player
-	if player ~= LOCAL_PLAYER then
-		return
-	end
-
-	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and LOCAL_PLAYER:GetOverrideCamera() == CAMERA and AS.IsSpectating() then
-		print("MAP MODE: CLEARING CAM")
+	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and LOCAL_PLAYER:GetOverrideCamera() == CAMERA and AS.IsViewingMap() then
 		LOCAL_PLAYER:ClearOverrideCamera()
-		AS.SetIsSpectating(false)
+		AS.SetIsViewingMap(false)
 	end
 end
 

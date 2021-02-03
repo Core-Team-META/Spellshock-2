@@ -34,7 +34,7 @@ end
 
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
 	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
@@ -71,4 +71,13 @@ end
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Changing Menu", OnMenuChanged)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
-_G.CurrentMenu = _G.MENU_TABLE["NONE"]
+
+-- Initalize _G.CurrentMenu
+if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and (ABGS.GetTimeRemainingInState() == nil or ABGS.GetTimeRemainingInState() > 4.0) then
+	_G.CurrentMenu = _G.MENU_TABLE["ClassSelection"]
+elseif ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+	_G.CurrentMenu = _G.MENU_TABLE["Respawn"]
+else
+	_G.CurrentMenu = _G.MENU_TABLE["NONE"]
+end
+

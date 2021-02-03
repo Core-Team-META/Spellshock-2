@@ -1,4 +1,5 @@
 ﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+local AS = require(script:GetCustomProperty("API_Spectator"))
 local ClassInfo = script:GetCustomProperty("ClassInfo"):WaitForObject()
 local BottomBar = script:GetCustomProperty("BottomBar"):WaitForObject()
 
@@ -30,7 +31,7 @@ function OnClassIconSet(name, icon)
 end
 
 function Tick()
-    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and not LOCAL_PLAYER.isDead then
+    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap() then
         BottomBar.visibility = Visibility.INHERIT
     else
         BottomBar.visibility = Visibility.FORCE_OFF

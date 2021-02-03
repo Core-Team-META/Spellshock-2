@@ -264,13 +264,14 @@ function DisableFlying()
 	end
 	ActiveAbilities = {}
 
-	if Object.IsValid(Equipment.owner) then
+	if Object.IsValid(Equipment.owner) and DefaultPlayerSetttings ~= {} then
 		print("Default player settings")
 		Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
 		Equipment.owner.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
 		Equipment.owner:ResetVelocity()
 		Equipment.owner:ActivateWalking()
 		Equipment.owner.gravityScale = DefaultPlayerSetttings.gravityScale
+		DefaultPlayerSetttings = {}
 	end
 	isFlying = false
 

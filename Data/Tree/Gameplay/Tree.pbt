@@ -3617,6 +3617,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -3666,6 +3669,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -3786,6 +3792,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -3880,6 +3889,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -7377,6 +7389,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -7426,6 +7441,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -7546,6 +7564,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -7640,6 +7661,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -11132,6 +11156,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -11181,6 +11208,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -11301,6 +11331,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -11395,6 +11428,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -14889,6 +14925,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -14938,6 +14977,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -15058,6 +15100,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -15152,6 +15197,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -18649,6 +18697,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -18698,6 +18749,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
 }
@@ -18818,6 +18872,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -18912,6 +18969,9 @@ Objects {
     TeamSettings {
     }
     Vfx {
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -19285,6 +19345,9 @@ Objects {
     }
     Vfx {
       AutoPlay: true
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -19532,6 +19595,9 @@ Objects {
     }
     Vfx {
       AutoPlay: true
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -19794,6 +19860,9 @@ Objects {
     }
     Vfx {
       AutoPlay: true
+      Relevance {
+        Value: "mc:evfxrelevance:critical"
+      }
     }
   }
   InstanceHistory {
@@ -20721,7 +20790,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:TeamScoreLimit"
-      Int: 200
+      Int: 400
     }
     Overrides {
       Name: "cs:TeamScoreLimit:tooltip"
@@ -20939,7 +21008,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"

@@ -60,6 +60,10 @@ function CheckRespawnTimer()
 			RespawnObjectReference = nil
 		end
 		
+		if AS.IsJoiningMidgame() then
+			Events.Broadcast("PlayerJoinedRound")
+		end
+	
 		Events.BroadcastToServer("Respawn Player", RespawnObjectReference)
 	end
 end
@@ -93,23 +97,7 @@ end
 -- nil Tick(float)
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
-	if AS.IsRespawning() or AS.IsSpectating() then
-		PANEL.visibility = Visibility.INHERIT
-		
-		if AS.IsRespawning() and RespawnTimer == -1 then
-			RespawnTimer = RespawnDelay -- activate timer
-			--RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_ON
-			TIMER.text = tostring(RespawnDelay)
-			OnButtonPressed(BaseButton)
-			--Events.Broadcast("Changing Menu", _G.MENU_TABLE["Respawn"]) -- broadcast to show respawn UI
-		end
-	else
-		PANEL.visibility = Visibility.FORCE_OFF
-		
-		--if UI.IsCursorVisible() or UI.CanCursorInteractWithUI() then
-			--print("Disabling cursor")
-		--end
-	end
+	
 		
 	-- Add indicators for new points
 	local capturePointIds = ABCP.GetCapturePoints()
@@ -231,10 +219,22 @@ function Tick(DeltaTime)
 		indicator.y = screenPos.y
 	end
 	
-	if not LOCAL_PLAYER.isDead then
+	if not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() then
 		RespawnTimer = -1 -- disable timer
 	end
 	
+	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
+		PANEL.visibility = Visibility.INHERIT
+		
+		if (AS.IsRespawning() or AS.IsJoiningMidgame()) and RespawnTimer == -1 then
+			RespawnTimer = RespawnDelay -- activate timer
+			TIMER.text = tostring(RespawnDelay)
+			OnButtonPressed(BaseButton)
+		end
+	else
+		PANEL.visibility = Visibility.FORCE_OFF
+	end
+
 	if RespawnTimer >= 0 then -- if timer is activated
 		RespawnTimer = RespawnTimer - DeltaTime
 		--CoreMath.Clamp(RespawnTimer, 0, RespawnDelay)

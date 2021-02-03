@@ -21,9 +21,11 @@ local DISABLE = script:GetCustomProperty("DisableTrigger")
 local REVERSE = script:GetCustomProperty("ReverseTrigger")
 local PARENT = script.parent
 
+if DISABLE then script:Destroy() return end
+
 function Tick()
     if not Object.IsValid(PARENT) then return end
-    if DISABLE then return end
+    
 
     if AS.IsSpectating() then
         if REVERSE then

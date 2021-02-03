@@ -385,16 +385,15 @@ end
 
 function AttachCostumeToPlayer(player)
 	if not player.clientUserData.CurrentClass then
-		player.clientUserData.CurrentClass = META_AP().TANK
+		player.clientUserData.CurrentClass = player:GetResource("CLASS_MAP")
+		if player.clientUserData.CurrentClass == 0 then
+			player.clientUserData.CurrentClass = META_AP().TANK
+		end
 	end
 
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
-		if player.clientUserData.LobbyCostume then
-			for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
-				attachment:Destroy()
-			end
-		end
+		DetachCostumeFromPlayer(player)
 		
 		-- Equip new costume
 		local attachmentTable = {}
@@ -418,7 +417,7 @@ function DetachCostumeFromPlayer(player)
 	end
 end
 
-function OnClassChanged(player, Class)
+function OnClassChanged(player, Class, InitClass)
 	player.clientUserData.CurrentClass = Class
 	
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
@@ -426,7 +425,7 @@ function OnClassChanged(player, Class)
 	end
 
 	-- If the local player changed their class then close the menu and make the button interactable
-	if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+	if not InitClass and player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		ConfirmChoiceButton.isInteractable = true
 	end
@@ -440,9 +439,7 @@ function OnConfirmChoiceClicked(thisButton)
 	Audio_ClassConfirmed_3:Play()
 
 	local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
-	Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
-	--LOCAL_PLAYER.clientUserData.CurrentClass = META_AP()[dataTable["ClassID"]]
-	--AttachCostumeToPlayer(META_AP()[dataTable["ClassID"]])
+	Events.BroadcastToServer("ClassChanged_SERVER", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
 end
 
 function OnGameStateChanged(oldState, newState)
@@ -572,19 +569,20 @@ end)
 SpinnerTask.repeatCount = -1
 SpinnerTask.repeatInterval = 0
 
---LOCAL_PLAYER.clientUserData.CurrentClass = META_AP().TANK
-
 OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("Class Changed", OnClassChanged)
+Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end
 
-if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and (ABGS.GetTimeRemainingInState() == nil or ABGS.GetTimeRemainingInState() > 4.0) then
-	print("Showing class selection")
-	Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
+-- Check to see if the Class Selection should be turned on
+OnMenuChanged(nil, _G.CurrentMenu) 
+if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
+	for _, player in ipairs(Game.GetPlayers()) do
+		AttachCostumeToPlayer(player)
+	end
 end

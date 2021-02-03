@@ -71,6 +71,11 @@ function Tick(deltaTime)
     end
 end
 
-TopBar.visibility = Visibility.FORCE_OFF
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+
+if _G.CurrentMenu == _G.MENU_TABLE["Respawn"] then
+    TopBar.visibility = Visibility.INHERIT
+else
+    TopBar.visibility = Visibility.FORCE_OFF
+end
