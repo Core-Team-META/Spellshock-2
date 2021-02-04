@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
 	return MODULE:Get("standardcombo.Combat.Wrap")
@@ -76,7 +76,9 @@ function OnAbilityExecute(thisAbility)
 	local WorldPosition = player:GetWorldPosition() + (ForwardVector * 200)
 	--CurrentProjectile = World.SpawnAsset(ProjectileTemplate, {position=WorldPosition})
 
-	local CurrentProjectile = META_AP().SpawnAsset(PlayerVFX.Projectile, {position = WorldPosition})
+	-- NOTE: newProjectile is required otherwise Object.IsValid(CurrentProjectile) will not work for some reason
+	local newProjectile = META_AP().SpawnAsset(PlayerVFX.Projectile, {position = WorldPosition})
+	CurrentProjectile = newProjectile
 
 	local DamageTrigger = CurrentProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
@@ -94,7 +96,6 @@ function OnAbilityExecute(thisAbility)
 			--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
 
 			local newObject = META_AP().SpawnAsset(PlayerVFX.Ending, {position = CurrentProjectile:GetWorldPosition()})
-
 			CurrentProjectile.lifeSpan = 0.1
 			CurrentProjectile = nil
 		end,
@@ -114,19 +115,31 @@ end
 function Tick(deltaTime)
 	if CurrentProjectile and Object.IsValid(CurrentProjectile) then
 		local rayStart = CurrentProjectile:GetWorldPosition()
-		local rayEnd = Vector3.New(rayStart.x, rayStart.y, rayStart.z - 5000)
+		local rayEnd = Vector3.New(rayStart.x, rayStart.y, rayStart.z - 1000)
 		local hitResult = World.Raycast(rayStart, rayEnd, {ignorePlayers = true})
-		if not hitResult then
-			return
+		--CoreDebug.DrawLine(rayStart, rayEnd, {duration=1})
+		local targetPosition
+		if hitResult then 
+			local impactPosition = hitResult:GetImpactPosition()
+			local Zdiff = rayStart.z - impactPosition.z
+			if Zdiff > 110 then -- too high
+				--print("Too high")
+				ProjectileVelocity.z = ProjectileVelocity.z - 30
+			elseif Zdiff < 90 then -- too low
+				--print("Too low")
+				--targetPosition = Vector3.New(rayStart.x, rayStart.y, impactPosition.z + 100)
+				ProjectileVelocity.z = ProjectileVelocity.z + 30
+			else -- just right :)
+				--print("Just right")
+				ProjectileVelocity.z = 0
+			end
+		else -- May be below terrain
+			--print("Not getting hit result")
+			ProjectileVelocity.z = ProjectileVelocity.z + 30
 		end
-
-		local impactPosition = hitResult:GetImpactPosition()
-		local Zdiff = rayStart.z - impactPosition.z
-		if Zdiff > 105 or Zdiff < 95 then
-			local targetPosition = Vector3.New(rayStart.x, rayStart.y, impactPosition.z + 100)
-			CurrentProjectile:MoveTo(targetPosition, 0)
-			CurrentProjectile:MoveContinuous(ProjectileVelocity)
-		end
+		
+		--CurrentProjectile:MoveTo(targetPosition, 0)
+		CurrentProjectile:MoveContinuous(ProjectileVelocity)
 	end
 end
 
