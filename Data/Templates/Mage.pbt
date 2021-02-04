@@ -1982,7 +1982,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 15
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2053,7 +2053,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 20
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2163,7 +2163,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 40
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2233,7 +2233,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 90
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true

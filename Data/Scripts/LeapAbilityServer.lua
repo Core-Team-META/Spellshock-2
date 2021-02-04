@@ -5,7 +5,7 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local DEFAULT_ThornLifeSpan = script:GetCustomProperty("ThornLifeSpan")
 local DEFAULT_OwnerImpulse = script:GetCustomProperty("OwnerImpulse")
 local DEFAULT_EnemyImpulse = script:GetCustomProperty("EnemyImpulse")
@@ -17,20 +17,20 @@ local OverlapEvent = nil
 function AddImpulse(player)
 	local impulseVector
 
-	if player == Ability.owner then
+	if player == SpecialAbility.owner then
 		local forwardVector = player:GetWorldRotation() * Vector3.FORWARD
 		local oppositeVector = -forwardVector
 		oppositeVector.z = 1
 		impulseVector =
 			oppositeVector *
-			META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_OwnerImpulse, Ability.name .. ": Owner Impulse")
+			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_OwnerImpulse, SpecialAbility.name .. ": Owner Impulse")
 	else
-		local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
+		local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 		directionVector = directionVector / directionVector.size
 		directionVector.z = 0.7
 		impulseVector =
 			directionVector *
-			META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_EnemyImpulse, Ability.name .. ": Enemy Impulse")
+			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", DEFAULT_EnemyImpulse, SpecialAbility.name .. ": Enemy Impulse")
 	end
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
@@ -60,27 +60,27 @@ function OnAbilityExecute(thisAbility)
 	local trapTemplate = PlayerVFX.Placement
 	local newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation})
 	newTrap.lifeSpan =
-		META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, Ability.name .. ": LifeSpan")
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
 
 	local ImpulseRadius =
-		META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, Ability.name .. ": Impulse Radius")
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, SpecialAbility.name .. ": Impulse Radius")
 	local nearbyEnemies =
 		Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
-	local status = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod5", {}, Ability.name .. ": Status")
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulse(enemy)
 		API_SE.ApplyStatusEffect(
 			enemy,
 			API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id,
-			Ability.owner,
+			SpecialAbility.owner,
 			status.duration,
 			status.damage,
 			status.multiplier
 		)
 	end
 
-	AddImpulse(Ability.owner)
+	AddImpulse(SpecialAbility.owner)
 
 	local trapTrigger = newTrap:GetCustomProperty("Trigger"):WaitForObject()
 	if OverlapEvent then
@@ -89,13 +89,22 @@ function OnAbilityExecute(thisAbility)
 	OverlapEvent = trapTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
 end
 
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 4, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnBeginOverlap(thisTrigger, other)
-	local status = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod5", {}, Ability.name .. ": Status")
-	if Object.IsValid(other) and other:IsA("Player") and other.team ~= Ability.owner.team then
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
+	if Object.IsValid(other) and other:IsA("Player") and other.team ~= SpecialAbility.owner.team then
 		API_SE.ApplyStatusEffect(
 			other,
 			API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id,
-			Ability.owner,
+			SpecialAbility.owner,
 			status.duration,
 			status.damage,
 			status.multiplier
@@ -119,5 +128,6 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-Ability.executeEvent:Connect(OnAbilityExecute)
-Ability.castEvent:Connect(OnAbilityCast)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.castEvent:Connect(OnAbilityCast)
+SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)

@@ -757,7 +757,7 @@ Assets {
       }
       Objects {
         Id: 1175861072708434832
-        Name: "LightWaveAbilityServer"
+        Name: "DivineLightAbilityServer"
         Transform {
           Location {
             X: -747.460938
@@ -781,12 +781,6 @@ Assets {
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:VFX_Template"
-            AssetReference {
-              Id: 841534158063459245
             }
           }
           Overrides {
@@ -1906,7 +1900,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 7
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1976,7 +1970,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2040,7 +2034,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 6
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2108,7 +2102,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 60
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true

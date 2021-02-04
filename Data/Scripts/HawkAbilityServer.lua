@@ -10,7 +10,7 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 
 local DEFAULT_HawkSpeed = script:GetCustomProperty("HawkSpeed")
 local DEFAULT_HawkRange = script:GetCustomProperty("HawkRange")
@@ -43,10 +43,19 @@ function OnAbilityExecute(thisAbility)
 	Task.Wait()
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	Task.Wait(1)
-	if Object.IsValid(Ability) then
-		Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, Ability.name .. ": LifeSpan")
+	if Object.IsValid(SpecialAbility) then
+		Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, SpecialAbility.name .. ": LifeSpan")
 		CurrentHawk.lifeSpan = Timer + 5
 	end
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function OnPlayerRespawn(player)
@@ -76,7 +85,8 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-Ability.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)
 
 function Tick(deltaTime)
 	if Timer > 0 then
@@ -98,11 +108,11 @@ function Tick(deltaTime)
 			--print("DISTANCE: "..tostring(DistanceVector.size))
 
 			if DistanceVector.size < 150 then
-				local status = META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod5", {}, Ability.name .. ": Status")
+				local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
 				API_SE.ApplyStatusEffect(
 					HawkTarget,
 					API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
-					Ability.owner,
+					SpecialAbility.owner,
 					status.duration,
 					status.damage,
 					status.multiplier
@@ -113,20 +123,20 @@ function Tick(deltaTime)
 				local dmg = Damage.New()
 				dmg.amount =
 					META_AP().GetAbilityMod(
-					Ability.owner,
+					SpecialAbility.owner,
 					META_AP().T,
 					"mod3",
 					DEFAULT_DamageAmount,
-					Ability.name .. ": Damage Amount"
+					SpecialAbility.name .. ": Damage Amount"
 				)
 				dmg.reason = DamageReason.COMBAT
-				dmg.sourcePlayer = Ability.owner
-				dmg.sourceAbility = Ability
+				dmg.sourcePlayer = SpecialAbility.owner
+				dmg.sourceAbility = SpecialAbility
 
 				local attackData = {
 					object = HawkTarget,
 					damage = dmg,
-					source = Ability.owner,
+					source = SpecialAbility.owner,
 					position = nil,
 					rotation = nil,
 					tags = {id = "Hunter_T"}
@@ -150,7 +160,7 @@ function Tick(deltaTime)
 				--local velocityVector = (DistanceVector/DistanceVector.size) * HawkSpeed
 				--CurrentHawk:MoveContinuous(velocityVector)
 				local HawkSpeed =
-					META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, Ability.name .. ": Speed")
+					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, SpecialAbility.name .. ": Speed")
 				CurrentHawk:MoveTo(HawkTarget:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
 			end
 		else
@@ -160,12 +170,12 @@ function Tick(deltaTime)
 			end
 			-- Check for enemies in the area
 			local HawkRange =
-				META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod4", DEFAULT_HawkRange, Ability.name .. ": Range")
+				META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", DEFAULT_HawkRange, SpecialAbility.name .. ": Range")
 			local neabyEnemies =
 				Game.FindPlayersInSphere(
 				CurrentHawk:GetWorldPosition(),
 				HawkRange,
-				{ignoreTeams = Ability.owner.team, ignoreDead = true}
+				{ignoreTeams = SpecialAbility.owner.team, ignoreDead = true}
 			)
 			--CoreDebug.DrawSphere(CurrentHawk:GetWorldPosition(), HawkRange, {duration = 1})
 			for _, enemy in pairs(neabyEnemies) do
@@ -184,10 +194,10 @@ function Tick(deltaTime)
 				HawkTarget = PreviousTarget
 			else
 				local HawkSpeed =
-					META_AP().GetAbilityMod(Ability.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, Ability.name .. ": Speed")
-				local DistanceVector = Ability.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
-				CurrentHawk:MoveTo(Ability.owner:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
-				CurrentHawk:LookAtContinuous(Ability.owner, true)
+					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, SpecialAbility.name .. ": Speed")
+				local DistanceVector = SpecialAbility.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
+				CurrentHawk:MoveTo(SpecialAbility.owner:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
+				CurrentHawk:LookAtContinuous(SpecialAbility.owner, true)
 			end
 		end
 	end

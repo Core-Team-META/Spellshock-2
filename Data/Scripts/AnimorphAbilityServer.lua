@@ -13,7 +13,7 @@ end
 
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local ABILITY = script:GetCustomProperty("AnimorphPotion"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("AnimorphPotion"):WaitForObject()
 
 local DEFAULT_DamageAmount = script:GetCustomProperty("Damage")
 local DEFAULT_ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
@@ -24,7 +24,7 @@ local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-	if other and ABILITY.owner then
+	if other and SpecialAbility.owner then
 		--Play ImpactFX
 		local projectilePos = projectile:GetWorldPosition()
 		local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
@@ -35,19 +35,19 @@ function OnProjectileImpacted(projectile, other, hitResult)
 
 		-- init dmg object
 		local DamageAmount =
-			META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod2", DEFAULT_DamageAmount, ABILITY.name .. ": Damage Amount")
+			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_DamageAmount, SpecialAbility.name .. ": Damage Amount")
 		local dmg = Damage.New(DamageAmount)
 		dmg:SetHitResult(hitResult)
 		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = ABILITY.owner
-		dmg.sourceAbility = ABILITY
+		dmg.sourcePlayer = SpecialAbility.owner
+		dmg.sourceAbility = SpecialAbility
 
-		local radius = META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod1", DEFAULT_Radius, ABILITY.name .. ": Radius")
+		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_Radius, SpecialAbility.name .. ": Radius")
 		local enemiesInRange =
 			Game.FindPlayersInSphere(
 				projectilePos,
 			radius,
-			{ignoreDead = true, ignoreTeams = ABILITY.owner.team}
+			{ignoreDead = true, ignoreTeams = SpecialAbility.owner.team}
 		)
 		--CoreDebug.DrawSphere(projectile:GetWorldPosition(), RADIUS, {duration = 5})
 
@@ -60,7 +60,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				local attackData = {
 					object = enemy,
 					damage = dmg,
-					source = ABILITY.owner,
+					source = SpecialAbility.owner,
 					position = nil,
 					rotation = nil,
 					tags = {id = "Mage_E"}
@@ -76,7 +76,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 				local newCostume = META_AP().SpawnAsset(costumeTemplate)
 				newCostume:SetScale(newCostume:GetScale() * 1.5)
 				local Duration =
-					META_AP().GetAbilityMod(ABILITY.owner, META_AP().E, "mod5", DEFAULT_Duration, ABILITY.name .. ": Duration")
+					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Duration, SpecialAbility.name .. ": Duration")
 				newCostume:SetNetworkedCustomProperty("Duration", Duration)
 				newCostume:Equip(enemy)
 			end
@@ -85,7 +85,7 @@ function OnProjectileImpacted(projectile, other, hitResult)
 end
 
 function OnAbilityExecute(thisAbility)
-	if ABILITY:GetCurrentPhase() == AbilityPhase.READY then return end
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 	
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
 	local lookQuaternion = Quaternion.New(lookRotation)
@@ -96,30 +96,39 @@ function OnAbilityExecute(thisAbility)
 	local projectileTemplate = PlayerVFX.Projectile
 	local projectileSpeed =
 		META_AP().GetAbilityMod(
-		ABILITY.owner,
+		SpecialAbility.owner,
 		META_AP().E,
 		"mod3",
 		DEFAULT_ProjectileSpeed,
-		ABILITY.name .. ": Projectile Speed"
+		SpecialAbility.name .. ": Projectile Speed"
 	)
 	local projectileGravity =
 		META_AP().GetAbilityMod(
-		ABILITY.owner,
+		SpecialAbility.owner,
 		META_AP().E,
 		"mod4",
 		DEFAULT_ProjectileGravity,
-		ABILITY.name .. ": Projectile Gravity"
+		SpecialAbility.name .. ": Projectile Gravity"
 	)
 
 	local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
 	grenadeProjectile.lifeSpan = 10
-	grenadeProjectile.owner = ABILITY.owner
-	grenadeProjectile.sourceAbility = ABILITY
+	grenadeProjectile.owner = SpecialAbility.owner
+	grenadeProjectile.sourceAbility = SpecialAbility
 	grenadeProjectile.speed = projectileSpeed
 
 	grenadeProjectile.gravityScale = projectileGravity
 	grenadeProjectile.shouldDieOnImpact = true
 	grenadeProjectile.impactEvent:Connect(OnProjectileImpacted)
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 20, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function OnEquip(equipment, player)
@@ -134,4 +143,5 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 --Equipment.unequippedEvent:Connect(OnUnequip)
-ABILITY.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)

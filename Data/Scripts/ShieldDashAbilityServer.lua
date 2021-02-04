@@ -5,7 +5,7 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
 --local DashFX = Equipment:GetCustomProperty("DashFX")
@@ -16,7 +16,6 @@ local DEFAULT_EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
 local DEFAULT_DamageAmount = Equipment:GetCustomProperty("DamageAmount")
 
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 local DashImpulseVector = nil
 local originalPlayerSettings = {}
 local isDashing = false
@@ -24,20 +23,20 @@ local TriggerEventConnection = nil
 local AttachedFX = nil
 
 function AddImpulseToPlayer(player)
-	local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
+	local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 	directionVector = directionVector/directionVector.size
 	directionVector.z = 0.5
-	local impulseVector = directionVector * META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_EnemyImpulseAmount, Ability.name..": Enemy Impulse")
+	local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Enemy Impulse")
 
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
 	
 	-- Do damage
-	local dmgAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, Ability.name..": Damage")
+	local dmgAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, SpecialAbility.name..": Damage")
 	local dmg = Damage.New(dmgAmount)
 	dmg.reason = DamageReason.COMBAT
-	dmg.sourcePlayer = Ability.owner
-	dmg.sourceAbility = Ability
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
 
 	local attackData = {
 		object = player,
@@ -52,41 +51,41 @@ function AddImpulseToPlayer(player)
 end
 
 function OnBeginOverlap(thisTrigger, other)
-	if other:IsA("Player") and other.team ~= Ability.owner.team then
+	if other:IsA("Player") and other.team ~= SpecialAbility.owner.team then
 		AddImpulseToPlayer(other)
 	end
 end
 
 function ToggleDash(mode)
-	if Ability:GetCurrentPhase() == AbilityPhase.READY then 
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
 		return 
 	end
 	
 	if mode then
-		originalPlayerSettings.MovementMode = Ability.owner.movementControlMode
-		originalPlayerSettings.AnimationStance = Ability.owner.animationStance
-		originalPlayerSettings.GroundFriction = Ability.owner.groundFriction
-		originalPlayerSettings.BrakingDecelerationWalking = Ability.owner.brakingDecelerationWalking
+		originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
+		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
+		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction
+		originalPlayerSettings.BrakingDecelerationWalking = SpecialAbility.owner.brakingDecelerationWalking
 		
-		Ability.owner.movementControlMode = MovementMode.NONE
-		Ability.owner.animationStance = "1hand_melee_shield_block"
-		Ability.owner.groundFriction = 0
-		Ability.owner.brakingDecelerationWalking = 0
+		SpecialAbility.owner.movementControlMode = MovementMode.NONE
+		SpecialAbility.owner.animationStance = "1hand_melee_shield_block"
+		SpecialAbility.owner.groundFriction = 0
+		SpecialAbility.owner.brakingDecelerationWalking = 0
 		
-		local directionVector = Ability.owner:GetWorldRotation() * Vector3.FORWARD
+		local directionVector = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
 		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
 		
 		local attachmentTemplate = PlayerVFX.Attachment
-		AttachedFX = META_AP().SpawnAsset(attachmentTemplate, {position = Ability.owner:GetWorldPosition()})
-		AttachedFX:AttachToPlayer(Ability.owner, "root")
+		AttachedFX = META_AP().SpawnAsset(attachmentTemplate, {position = SpecialAbility.owner:GetWorldPosition()})
+		AttachedFX:AttachToPlayer(SpecialAbility.owner, "root")
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
-		Ability.owner.movementControlMode = originalPlayerSettings.MovementMode
-		Ability.owner.animationStance = originalPlayerSettings.AnimationStance
-		Ability.owner.groundFriction = originalPlayerSettings.GroundFriction
-		Ability.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+		SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
+		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
+		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction
+		SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
 	end
 	isDashing = mode
 end
@@ -102,12 +101,19 @@ function OnAbilityExecute(thisAbility)
 end
 
 function OnAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 7, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+
 	ToggleDash(false)
 
 	local bashTemplate = PlayerVFX.Bash
-	META_AP().SpawnAsset(bashTemplate, {position = Ability.owner:GetWorldPosition(), rotation = Ability.owner:GetWorldRotation()})
+	META_AP().SpawnAsset(bashTemplate, {position = SpecialAbility.owner:GetWorldPosition(), rotation = SpecialAbility.owner:GetWorldRotation()})
 
-	local sphereRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_Radius, Ability.name..": Radius")
+	local sphereRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_Radius, SpecialAbility.name..": Radius")
 	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulseToPlayer(enemy)
@@ -119,12 +125,12 @@ function OnEquip(equipment, player)
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
-Ability.castEvent:Connect(OnAbilityCast)
-Ability.executeEvent:Connect(OnAbilityExecute)
-Ability.cooldownEvent:Connect(OnAbilityCooldown)
+SpecialAbility.castEvent:Connect(OnAbilityCast)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.cooldownEvent:Connect(OnAbilityCooldown)
 
 function Tick(deltaTime)
-	if isDashing and Object.IsValid(Ability) and Ability.owner and Object.IsValid(Ability.owner) then
-		Ability.owner:AddImpulse(DashImpulseVector * (deltaTime * 10))
+	if isDashing and Object.IsValid(SpecialAbility) and SpecialAbility.owner and Object.IsValid(SpecialAbility.owner) then
+		SpecialAbility.owner:AddImpulse(DashImpulseVector * (deltaTime * 10))
 	end
 end

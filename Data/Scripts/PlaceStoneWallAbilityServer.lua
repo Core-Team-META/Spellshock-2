@@ -86,6 +86,15 @@ function PlaceObject(thisPlayer, position, rotation)
 	end
 end
 
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 15, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnPlayerDied(player, _)
 	isPreviewing = false
 	SetNetworkProperty(isPreviewing)
@@ -120,6 +129,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))

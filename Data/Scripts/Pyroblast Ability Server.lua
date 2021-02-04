@@ -139,6 +139,15 @@ function OnSpecialAbilityExecute(thisAbility)
 	EventListeners["lifeSpanEndedEvent"] = CurrentProjectile.lifeSpanEndedEvent:Connect(OnLifespanEnded)
 end
 
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 90, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnBindingPressed(player, binding)
 	if binding == "ability_secondary" then
 		MoveTarget = true
@@ -193,6 +202,7 @@ end
 function OnEquip(equipment, player)
 	EventListeners["diedEvent"] = player.diedEvent:Connect(OnPlayerDied)
 	EventListeners["respawnedEvent"] = player.respawnedEvent:Connect(OnPlayerRespawn)
+	EventListeners["cooldownEvent"] = SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown )
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().MAGE)
 end
 

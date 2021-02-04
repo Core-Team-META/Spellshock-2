@@ -8,7 +8,7 @@ local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
-local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 
 local DEFAULT_Speed = script:GetCustomProperty("Speed")
@@ -21,10 +21,9 @@ local DEFAULT_DamageRange = {min = DamageRange.x, max = DamageRange.y}
 local CurrentProjectile = nil
 local ProjectileVelocity = nil
 local PlayerVFX = nil
-local abilityName = string.gsub(ABILITY.name, " ", "_")
 
 function OnBeginOverlap(thisTrigger, other)
-	if not Object.IsValid(ABILITY) or not Object.IsValid(ABILITY.owner) or other == ABILITY.owner then
+	if not Object.IsValid(SpecialAbility) or not Object.IsValid(SpecialAbility.owner) or other == SpecialAbility.owner then
 		return
 	end
 	if not other:IsA("Player") or COMBAT().IsDead(other) then
@@ -32,23 +31,23 @@ function OnBeginOverlap(thisTrigger, other)
 	end
 
 	local damageTable =
-		META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, ABILITY.name .. ": Damage Range")
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, SpecialAbility.name .. ": Damage Range")
 	local healTable =
-		META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod2", DEFAULT_HealRange, ABILITY.name .. ": Heal Range")
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod2", DEFAULT_HealRange, SpecialAbility.name .. ": Heal Range")
 	local otherTeam = COMBAT().GetTeam(other)
 	local dmg = Damage.New()
 	dmg.amount = math.random(damageTable.min, damageTable.max)
-	if otherTeam and Teams.AreTeamsFriendly(otherTeam, ABILITY.owner.team) then
+	if otherTeam and Teams.AreTeamsFriendly(otherTeam, SpecialAbility.owner.team) then
 		dmg.amount = -math.random(healTable.min, healTable.max)
 	end
 	dmg.reason = DamageReason.COMBAT
-	dmg.sourcePlayer = ABILITY.owner
-	dmg.sourceAbility = ABILITY
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
 
 	local attackData = {
 		object = other,
 		damage = dmg,
-		source = ABILITY.owner,
+		source = SpecialAbility.owner,
 		position = nil,
 		rotation = nil,
 		tags = {id = "Mage_Q"}
@@ -59,10 +58,10 @@ end
 function OnAbilityExecute(thisAbility)
 	local player = thisAbility.owner
 
-	if ABILITY:GetCurrentPhase() == AbilityPhase.READY then return end
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 
-	local SPEED = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod3", DEFAULT_Speed, ABILITY.name .. ": Speed")
-	local RANGE = META_AP().GetAbilityMod(ABILITY.owner, META_AP().Q, "mod4", DEFAULT_Range, ABILITY.name .. ": Range")
+	local SPEED = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_Speed, SpecialAbility.name .. ": Speed")
+	local RANGE = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_Range, SpecialAbility.name .. ": Range")
 
 	local MOVE_DURATION = RANGE / SPEED
 	local LIFE_SPAN = MOVE_DURATION + 5
@@ -81,7 +80,7 @@ function OnAbilityExecute(thisAbility)
 
 	local DamageTrigger = CurrentProjectile:GetCustomProperty("DamageTrigger"):WaitForObject()
 	local OverlapEvent = DamageTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
-	local ViewRotation = ABILITY.owner:GetViewWorldRotation()
+	local ViewRotation = SpecialAbility.owner:GetViewWorldRotation()
 	ViewRotation.x = 0
 	ViewRotation.y = 0
 	CurrentProjectile:SetWorldRotation(ViewRotation)
@@ -101,6 +100,15 @@ function OnAbilityExecute(thisAbility)
 		end,
 		MOVE_DURATION
 	)
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().Q, "mod6", 7, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function Tick(deltaTime)
@@ -134,4 +142,5 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-ABILITY.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)

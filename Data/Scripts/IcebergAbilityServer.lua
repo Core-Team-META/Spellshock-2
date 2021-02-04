@@ -74,6 +74,15 @@ function OnSpecialAbilityExecute(thisAbility)
 	damageTimer = 0
 end
 
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 40, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnBindingPressed(thisPlayer, binding)
 	if CancelBindings[binding] then
 		BreakIceCube(thisPlayer)
@@ -123,6 +132,7 @@ end
 function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().MAGE)
 end
 

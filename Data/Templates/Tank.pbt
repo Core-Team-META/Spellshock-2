@@ -322,8 +322,8 @@ Assets {
         ChildIds: 9889259402150851656
         ChildIds: 17611315973771645835
         ChildIds: 12132287434350879122
-        ChildIds: 1412048591863833559
         ChildIds: 2523905926295798748
+        ChildIds: 1412048591863833559
         ChildIds: 1059382485272021003
         WantsNetworking: true
         Collidable_v2 {
@@ -561,6 +561,58 @@ Assets {
         }
       }
       Objects {
+        Id: 2523905926295798748
+        Name: "ShieldDashAbilityServer"
+        Transform {
+          Location {
+            Z: -55
+          }
+          Rotation {
+            Yaw: 89.9999771
+          }
+          Scale {
+          }
+        }
+        ParentId: 4159325021862714735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 15328715113681216029
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 14809710803316002615
+            }
+          }
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+              SubObjectId: 274493358176543512
+            }
+          }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12558501937767822560
+          }
+        }
+      }
+      Objects {
         Id: 1412048591863833559
         Name: "ExcavateAbilityServer"
         Transform {
@@ -633,58 +685,6 @@ Assets {
         }
       }
       Objects {
-        Id: 2523905926295798748
-        Name: "ShieldDashAbilityServer"
-        Transform {
-          Location {
-            Z: -55
-          }
-          Rotation {
-            Yaw: 89.9999771
-          }
-          Scale {
-          }
-        }
-        ParentId: 4159325021862714735
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 15328715113681216029
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 14809710803316002615
-            }
-          }
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 274493358176543512
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12558501937767822560
-          }
-        }
-      }
-      Objects {
         Id: 1059382485272021003
         Name: "Mace And Shield"
         Transform {
@@ -703,7 +703,6 @@ Assets {
         }
         ParentId: 4159325021862714735
         ChildIds: 13203218025387527418
-        ChildIds: 11631127456224602423
         ChildIds: 12017777593537436719
         ChildIds: 8962058382446678117
         Collidable_v2 {
@@ -768,44 +767,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 12439034694186114331
-          }
-        }
-      }
-      Objects {
-        Id: 11631127456224602423
-        Name: "EquipmentAbilityChainServer"
-        Transform {
-          Location {
-            X: 3754.84961
-            Y: 3909.14063
-            Z: 7270.2793
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1059382485272021003
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 13709554481697835406
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3194930412626622494
           }
         }
       }
@@ -1766,7 +1727,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 5
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1841,7 +1802,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 15
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1906,7 +1867,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 20
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2380,7 +2341,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 7
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true

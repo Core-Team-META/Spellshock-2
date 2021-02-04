@@ -30941,12 +30941,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 17411066251981793769
-      }
-    }
-    Overrides {
       Name: "cs:Panel"
       ObjectReference {
         SelfId: 17411066251981793769
@@ -32499,12 +32493,6 @@ Objects {
       Name: "cs:API_Spectator"
       AssetReference {
         Id: 13062533657555781867
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 629246028934877367
       }
     }
     Overrides {
@@ -34063,12 +34051,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 4779595786122894328
-      }
-    }
-    Overrides {
       Name: "cs:Panel"
       ObjectReference {
         SelfId: 4779595786122894328
@@ -35624,12 +35606,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 3618128583915851831
-      }
-    }
-    Overrides {
       Name: "cs:Panel"
       ObjectReference {
         SelfId: 3618128583915851831
@@ -37182,12 +37158,6 @@ Objects {
       Name: "cs:API_Spectator"
       AssetReference {
         Id: 13062533657555781867
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 15650361729091216794
       }
     }
     Overrides {

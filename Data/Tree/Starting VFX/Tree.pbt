@@ -1662,7 +1662,7 @@ Objects {
     Overrides {
       Name: "cs:03_BearTrap_Placement"
       AssetReference {
-        Id: 6835319675050620528
+        Id: 1772477994984263747
       }
     }
   }

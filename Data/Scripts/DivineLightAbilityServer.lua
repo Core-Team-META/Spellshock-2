@@ -3,8 +3,7 @@
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("Ability"):WaitForObject()
-local VFX_Template = script:GetCustomProperty("VFX_Template")
+local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local DEFAULT_ImpulseAmount = script:GetCustomProperty("ImpulseAmount")
@@ -13,10 +12,9 @@ local ImpulseAmount = DEFAULT_ImpulseAmount
 local DEFAULT_StunRadius = script:GetCustomProperty("StunRadius")
 
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 
 function AddImpulseToPlayer(player)
-	local directionVector = player:GetWorldPosition() - Ability.owner:GetWorldPosition()
+	local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 	directionVector = directionVector/directionVector.size
 	directionVector.z = 0.5
 	local impulseVector = directionVector * ImpulseAmount
@@ -26,27 +24,36 @@ function AddImpulseToPlayer(player)
 end
 
 function OnAbilityExecute(thisAbility)
-	if Ability:GetCurrentPhase() == AbilityPhase.READY then return end
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 	
-	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = Ability.owner:GetWorldPosition()})
+	local newObject = META_AP().SpawnAsset(PlayerVFX.Active, {position = SpecialAbility.owner:GetWorldPosition()})
 	
-	local StunRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod2", DEFAULT_StunRadius, Ability.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInSphere(Ability.owner:GetWorldPosition(), StunRadius, {ignoreTeams = Ability.owner.team})
-	--CoreDebug.DrawSphere(Ability.owner:GetWorldPosition(), StunRadius, {duration = 5})
+	local StunRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_StunRadius, SpecialAbility.name..": Radius")
+	local nearbyEnemies = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), StunRadius, {ignoreTeams = SpecialAbility.owner.team})
+	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), StunRadius, {duration = 5})
 	
-	ImpulseAmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, Ability.name..": Impulse Amount")
-	local statusEffects = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod5", {}, Ability.name .. ": Status")
+	ImpulseAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_ImpulseAmount, SpecialAbility.name..": Impulse Amount")
+	local statusEffects = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", {}, SpecialAbility.name .. ": Status")
 	local status = statusEffects.BLIND
 	local speedStatus = statusEffects.SPEED
-	local healAmmount = META_AP().GetAbilityMod(Ability.owner, META_AP().R, "mod4", DEFAULT_HealAmmount, Ability.name..": Heal Amount")
-	API_SE.ApplyStatusEffect(Ability.owner, API_SE.STATUS_EFFECT_DEFINITIONS["Speed"].id, Ability.owner, speedStatus.duration, speedStatus.damage, speedStatus.multiplier)
+	local healAmmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_HealAmmount, SpecialAbility.name..": Heal Amount")
+	API_SE.ApplyStatusEffect(SpecialAbility.owner, API_SE.STATUS_EFFECT_DEFINITIONS["Speed"].id, SpecialAbility.owner, speedStatus.duration, speedStatus.damage, speedStatus.multiplier)
 
-	Ability.owner.hitPoints = CoreMath.Clamp(Ability.owner.hitPoints + healAmmount, Ability.owner.maxHitPoints)
+	SpecialAbility.owner.hitPoints = CoreMath.Clamp(SpecialAbility.owner.hitPoints + healAmmount, SpecialAbility.owner.maxHitPoints)
 				
 	for _, enemy in pairs(nearbyEnemies) do
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Blind"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Blind"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		AddImpulseToPlayer(enemy)
 	end
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 6, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function OnEquip(equipment, player)
@@ -58,4 +65,5 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-Ability.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.executeEvent:Connect(OnAbilityExecute)
+SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)
