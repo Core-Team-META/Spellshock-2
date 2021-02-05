@@ -372,7 +372,7 @@ Assets {
           Location {
             X: -190
             Y: -9
-            Z: 161.053711
+            Z: -130
           }
           Rotation {
             Pitch: -41.4007568
@@ -434,7 +434,7 @@ Assets {
           Location {
             X: -190
             Y: 30
-            Z: 161.053711
+            Z: -130
           }
           Rotation {
             Pitch: -46.0680542
@@ -496,7 +496,7 @@ Assets {
           Location {
             X: -120
             Y: -15
-            Z: 146.053711
+            Z: -145
           }
           Rotation {
             Pitch: -51.1052856
@@ -558,7 +558,7 @@ Assets {
           Location {
             X: -140
             Y: -14
-            Z: 141.053711
+            Z: -150
           }
           Rotation {
             Pitch: -49.2194214
@@ -620,7 +620,7 @@ Assets {
           Location {
             X: -119
             Y: 7
-            Z: 114.053711
+            Z: -177
           }
           Rotation {
             Pitch: -49.016449

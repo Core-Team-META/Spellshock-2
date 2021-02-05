@@ -7,7 +7,7 @@ Assets {
       RootId: 13042010303399603354
       Objects {
         Id: 13042010303399603354
-        Name: "Shield Dash FX"
+        Name: "Tank Shield Dash FX Basic"
         Transform {
           Scale {
             X: 1
