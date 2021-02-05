@@ -264,7 +264,7 @@ function DisableFlying()
 	end
 	ActiveAbilities = {}
 
-	if Object.IsValid(Equipment.owner) and DefaultPlayerSetttings ~= {} then
+	if Object.IsValid(Equipment.owner) and DefaultPlayerSetttings.movementControlMode then
 		print("Default player settings")
 		Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
 		Equipment.owner.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
@@ -307,6 +307,7 @@ function OnPlayerDied(player, _)
 end
 
 function OnPlayerRespawn(player)
+	Task.Wait()
 	DisableFlying()
 end
 

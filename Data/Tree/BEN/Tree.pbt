@@ -29486,7 +29486,7 @@ Objects {
   ChildIds: 9997305627899528589
   ChildIds: 12641698970539887635
   ChildIds: 17744026483681771127
-  ChildIds: 272475323674353258
+  ChildIds: 8726712430418680107
   UnregisteredParameters {
     Overrides {
       Name: "cs:Binding"
@@ -29530,8 +29530,8 @@ Objects {
   }
 }
 Objects {
-  Id: 272475323674353258
-  Name: "Duration Indicator"
+  Id: 8726712430418680107
+  Name: "T Duration Indicator"
   Transform {
     Location {
     }
@@ -29544,7 +29544,7 @@ Objects {
     }
   }
   ParentId: 17411066251981793769
-  ChildIds: 15097657213475789998
+  ChildIds: 17657078475471798097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29588,7 +29588,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15097657213475789998
+  Id: 17657078475471798097
   Name: "UI Image"
   Transform {
     Location {
@@ -29601,7 +29601,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 272475323674353258
+  ParentId: 8726712430418680107
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30997,7 +30997,7 @@ Objects {
     Overrides {
       Name: "cs:DurationIndicator"
       ObjectReference {
-        SelfId: 272475323674353258
+        SelfId: 8726712430418680107
       }
     }
   }

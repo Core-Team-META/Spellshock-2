@@ -74,6 +74,8 @@ function OnPlayerLeft(player)
 	end
 end
 
+while not Equipment.owner do Task.Wait() end
+
 if LOCAL_PLAYER == Equipment.owner then
 	function Tick(deltaTime)
 		local DurationBar = SpecialAbility.clientUserData.durationBar
@@ -95,11 +97,9 @@ if LOCAL_PLAYER == Equipment.owner then
 	end
 end
 
-if Equipment.owner then
-	OnEquip(Equipment, Equipment.owner)
-end
 
-Equipment.equippedEvent:Connect(OnEquip)
+OnEquip(Equipment, Equipment.owner)
+--Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 Equipment.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
