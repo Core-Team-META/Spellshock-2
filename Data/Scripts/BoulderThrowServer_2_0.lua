@@ -55,7 +55,14 @@ function OnSpecialAbilityCooldown(thisAbility)
 	end, Cooldown)
 end
 
-function OnBeginOverlap(thisTrigger, other)
+function OnStunBeginOverlap(thisTrigger, other)
+	if not Object.IsValid(other) or not Object.IsValid(PickupAbility) or not PickupAbility.owner or not Object.IsValid(PickupAbility.owner) or not other:IsA("Player")
+	or other == PickupAbility.owner or Teams.AreTeamsFriendly(other.team, PickupAbility.owner.team) or COMBAT().IsDead(other) then return end
+
+	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, PickupAbility.owner, 3, 0, 0)
+end
+
+function OnBoulderBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
 	or other == PickupAbility.owner then return end
 	
@@ -82,7 +89,6 @@ function OnBeginOverlap(thisTrigger, other)
 		tags = {id = "Tank_T"}
 	}
 	COMBAT().ApplyDamage(attackData)
-
 end
 
 function OnThrowExecute(thisAbility)
@@ -105,13 +111,20 @@ function OnThrowExecute(thisAbility)
     -- Spawn the template
 	local projectileTemplate = PlayerVFX.Projectile
 	CurrentProjectile = META_AP().SpawnAsset(TestTemplate, {position = spawnPosition, rotation = PickupAbility.owner:GetWorldRotation(), scale = Vector3.New(projectileScale)})
-    
-	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("Trigger"):WaitForObject()
-	ProjectileTrigger.beginOverlapEvent:Connect( OnBeginOverlap )
-    
+	
+	local StunTrigger = CurrentProjectile:GetCustomProperty("StunTrigger"):WaitForObject()
+	StunTrigger.beginOverlapEvent:Connect(OnStunBeginOverlap)
+
+	local ProjectileTrigger = CurrentProjectile:GetCustomProperty("BoulderTrigger"):WaitForObject()
+	ProjectileTrigger.beginOverlapEvent:Connect( OnBoulderBeginOverlap )
+
     local ProjectileCollision = CurrentProjectile:GetCustomProperty("Collision"):WaitForObject()
     ProjectileCollision.team = Equipment.owner.team
-    
+
+	for _, other in pairs(StunTrigger:GetOverlappingObjects()) do
+		OnStunBeginOverlap(StunTrigger, other)
+	end
+
     CurrentProjectile:MoveContinuous(ProjectileVelocity)
     CurrentProjectile.lifeSpan = LifeSpan
 end

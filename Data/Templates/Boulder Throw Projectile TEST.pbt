@@ -19,9 +19,10 @@ Assets {
         ChildIds: 289101705919115896
         ChildIds: 11347987939879458996
         ChildIds: 3847761231457257003
+        ChildIds: 9740625229921452422
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Trigger"
+            Name: "cs:BoulderTrigger"
             ObjectReference {
               SubObjectId: 3847761231457257003
             }
@@ -30,6 +31,12 @@ Assets {
             Name: "cs:Collision"
             ObjectReference {
               SubObjectId: 289101705919115896
+            }
+          }
+          Overrides {
+            Name: "cs:StunTrigger"
+            ObjectReference {
+              SubObjectId: 9740625229921452422
             }
           }
         }
@@ -319,7 +326,7 @@ Assets {
       }
       Objects {
         Id: 3847761231457257003
-        Name: "Trigger"
+        Name: "BoulderTrigger"
         Transform {
           Location {
           }
@@ -346,6 +353,39 @@ Assets {
           }
           TriggerShape_v2 {
             Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 9740625229921452422
+        Name: "StunTrigger"
+        Transform {
+          Location {
+            X: 275
+          }
+          Rotation {
+          }
+          Scale {
+            X: 5
+            Y: 1.1
+            Z: 1.1
+          }
+        }
+        ParentId: 11569940419982232802
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
           }
         }
       }
