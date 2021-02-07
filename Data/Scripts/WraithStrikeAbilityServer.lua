@@ -71,9 +71,10 @@ function OnBindingPressed(player, binding)
 
 			isPreviewing = true
 			SetNetworkProperty(isPreviewing)
-			--print("NOT READY")
+			print("Phase 1")
 			Task.Wait(1)
 			if not player or not Object.IsValid(player) or player.isDead or not isFlying then
+				print("Print wraith got interrupted")
 				return
 			end
 
@@ -81,7 +82,7 @@ function OnBindingPressed(player, binding)
 			player:ResetVelocity()
 
 			SpecialAbility.isEnabled = true
-			--print("READY")
+			print("Phase 2")
 		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 			--print("Canceling Wraith Strike")
 			DisableFlying()
@@ -105,7 +106,7 @@ end
 function OnTargetChosen(player, targetPos)
 	if player == Equipment.owner then
 		--Task.Wait()
-		--print("Wraith Strike ACTIVATE")
+		print("Wraith Strike ACTIVATE")
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
@@ -117,7 +118,7 @@ function OnTargetChosen(player, targetPos)
 		ActiveAbilities = {}
 
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
-			--print("NOT COMPLETING")
+			print("NOT COMPLETING")
 			return
 		end
 
@@ -256,7 +257,7 @@ function DamageInArea(targetPos, localPlayer)
 end
 
 function DisableFlying()
-	--print("Disabling Flying")
+	print("Disabling Flying")
 	for _, playerAbility in pairs(ActiveAbilities) do
 		if Object.IsValid(playerAbility) then
 			playerAbility.isEnabled = true
@@ -265,7 +266,6 @@ function DisableFlying()
 	ActiveAbilities = {}
 
 	if Object.IsValid(Equipment.owner) and DefaultPlayerSetttings.movementControlMode then
-		print("Default player settings")
 		Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
 		Equipment.owner.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
 		Equipment.owner:ResetVelocity()
