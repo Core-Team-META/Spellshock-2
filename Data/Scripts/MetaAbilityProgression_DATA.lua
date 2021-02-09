@@ -99,16 +99,16 @@ classTable = {
         --Boulder Throw
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Lifespan, mod3 = Projectile Speed, mod4 = Projectile Scale
-            [1] = {mod1 = 125, mod2 = 6, mod3 = 3000, mod4 = 0.5, mod5 = 0, mod6 = 20},
-            [2] = {mod1 = 135, mod2 = 6, mod3 = 3000, mod4 = 0.55, mod5 = 0, mod6 = 20},
-            [3] = {mod1 = 145, mod2 = 6, mod3 = 3000, mod4 = 0.6, mod5 = 0, mod6 = 20},
-            [4] = {mod1 = 150, mod2 = 6, mod3 = 3000, mod4 = 0.65, mod5 = 0, mod6 = 20},
-            [5] = {mod1 = 155, mod2 = 6, mod3 = 3000, mod4 = 0.75, mod5 = 0, mod6 = 20},
-            [6] = {mod1 = 165, mod2 = 6, mod3 = 3000, mod4 = 0.85, mod5 = 0, mod6 = 20},
-            [7] = {mod1 = 170, mod2 = 6, mod3 = 3000, mod4 = 0.95, mod5 = 0, mod6 = 20},
-            [8] = {mod1 = 175, mod2 = 6, mod3 = 3000, mod4 = 1, mod5 = 0, mod6 = 20},
-            [9] = {mod1 = 180, mod2 = 6, mod3 = 3000, mod4 = 1.1, mod5 = 0, mod6 = 20},
-            [10] = {mod1 = 185, mod2 = 6, mod3 = 3000, mod4 = 1.2, mod5 = 0, mod6 = 10}
+            [1] = {mod1 = 125, mod2 = 3, mod3 = 2000, mod4 = 4.0, mod5 = 0, mod6 = 5},
+            [2] = {mod1 = 135, mod2 = 3, mod3 = 2000, mod4 = 4.2, mod5 = 0, mod6 = 20},
+            [3] = {mod1 = 145, mod2 = 3, mod3 = 2000, mod4 = 4.4, mod5 = 0, mod6 = 20},
+            [4] = {mod1 = 150, mod2 = 3, mod3 = 2000, mod4 = 4.6, mod5 = 0, mod6 = 20},
+            [5] = {mod1 = 155, mod2 = 3, mod3 = 2000, mod4 = 4.8, mod5 = 0, mod6 = 20},
+            [6] = {mod1 = 165, mod2 = 3, mod3 = 2000, mod4 = 5.0, mod5 = 0, mod6 = 20},
+            [7] = {mod1 = 170, mod2 = 3, mod3 = 2000, mod4 = 5.2, mod5 = 0, mod6 = 20},
+            [8] = {mod1 = 175, mod2 = 3, mod3 = 2000, mod4 = 5.4, mod5 = 0, mod6 = 20},
+            [9] = {mod1 = 180, mod2 = 3, mod3 = 2000, mod4 = 5.6, mod5 = 0, mod6 = 20},
+           [10] = {mod1 = 185, mod2 = 3, mod3 = 2000, mod4 = 5.8, mod5 = 0, mod6 = 5}
         },
         --Roll
         [CONST.BIND.SHIFT] = {

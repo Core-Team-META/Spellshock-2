@@ -614,7 +614,7 @@ Assets {
       }
       Objects {
         Id: 1412048591863833559
-        Name: "ExcavateAbilityServer"
+        Name: "BoulderThrowAbilityServer"
         Transform {
           Location {
           }
@@ -680,7 +680,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 14161684854126715918
+            Id: 5446849658256120563
           }
         }
       }
