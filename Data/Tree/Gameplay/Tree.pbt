@@ -22241,6 +22241,14 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "cs:Team1Name"
+          String: "Dark Devout"
+        }
+        Overrides {
+          Name: "cs:Team2Name"
+          String: "Legion of Light"
+        }
       }
     }
     TemplateAsset {

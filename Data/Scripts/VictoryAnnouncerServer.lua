@@ -43,7 +43,7 @@ function OnTeamVictory(team)
 	elseif team == 2 then
 		teamName = TEAM_2_NAME
 	end
-	Events.BroadcastToAllPlayers("BannerMessage", "Team " ..teamName.." wins!", DURATION)
+	Events.BroadcastToAllPlayers("BannerMessage", "The " ..teamName.." wins!", DURATION)
 end
 
 -- nil OnPlayerVictory(Player)
