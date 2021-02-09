@@ -1,8 +1,8 @@
 Name: "KONZ"
 RootId: 8983380287600545020
 Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
+  Id: 5611420104663390633
+  Name: "Perk Shop"
   Transform {
     Location {
     }
@@ -23,6 +23,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Daily Shop"
+    FilePartitionName: "Perk Shop"
   }
 }
