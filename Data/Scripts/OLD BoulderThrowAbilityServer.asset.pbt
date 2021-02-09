@@ -1,6 +1,6 @@
 Assets {
-  Id: 5446849658256120563
-  Name: "BoulderThrowServer_2.0"
+  Id: 14161684854126715918
+  Name: "OLD BoulderThrowAbilityServer"
   PlatformAssetType: 3
   TextAsset {
   }
