@@ -1169,7 +1169,9 @@ Objects {
     Overrides {
       Name: "cs:NeutralColor"
       Color {
-        A: 0.5
+        R: 0.909999967
+        G: 0.506225
+        A: 0.655000031
       }
     }
     Overrides {
@@ -1188,6 +1190,12 @@ Objects {
       Name: "cs:TimerTickSFX"
       ObjectReference {
         SelfId: 16876453173366929200
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }
@@ -74248,6 +74256,41 @@ Objects {
   Script {
     ScriptAsset {
       Id: 14730659522932281457
+    }
+  }
+}
+Objects {
+  Id: 14570647703378092628
+  Name: "DynamicCapturePoints"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ABCP"
+      AssetReference {
+        Id: 5415161041024035059
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16389341816514845889
     }
   }
 }

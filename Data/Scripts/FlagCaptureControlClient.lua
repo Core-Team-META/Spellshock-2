@@ -29,6 +29,7 @@ local AUDIO = script:GetCustomProperty("Audio"):WaitForObject()
 local ChargeUpSFX = AUDIO:GetCustomProperty("ChargeUpSFX"):WaitForObject()
 local CapturedSFX = AUDIO:GetCustomProperty("CapturedSFX"):WaitForObject()
 local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
+local BaseSpawn = SERVER_SCRIPT:GetCustomProperty("BaseSpawn"):WaitForObject()
 
 -- User exposed properties
 local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
@@ -135,7 +136,7 @@ end
 function GetState()
     local result = {}
 
-    result.id = COMPONENT_ROOT.id
+    result.id = ORDER--COMPONENT_ROOT.id
     result.name = NAME
     result.shortName = SHORT_NAME
     result.worldPosition = COMPONENT_ROOT:GetWorldPosition()
@@ -150,7 +151,7 @@ function GetState()
     result.attackingTeam = 0
     result.order = ORDER
     result.spawnPoints = SpawnPoints
-
+    result.baseSpawn = BaseSpawn
     return result
 end
 
@@ -192,6 +193,12 @@ function SetGeometryEnabledColor(enabled)
             object:SetColor(DISABLED_COLOR)
         end
     end
+
+    if enabled then
+        FLAG_BEAMS.visibility = Visibility.INHERIT
+    else
+        FLAG_BEAMS.visibility = Visibility.FORCE_OFF
+    end
 end
 
 -- nil GetAncestors(CoreObject, table)
@@ -224,7 +231,7 @@ function OnNetworkedPropertyChanged(thisObject, name)
 	if name == "OwningTeam" then
 		newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
 		if newOwner ~= owningTeam then
-	        Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
+	        Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
 	        owningTeam = newOwner
 	        SetGeometryTeam(owningTeam)
 	        ChargeUpSFX:Stop()
@@ -312,7 +319,7 @@ function Tick(deltaTime)
 
         if isEnabled ~= previousEnabledState then
             SetGeometryEnabledColor(isEnabled)
-            Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, previousEnabledState, isEnabled)
+            Events.Broadcast("CapturePointEnabledStateChanged", ORDER, previousEnabledState, isEnabled)
 
             previousEnabledState = isEnabled
         end
@@ -335,4 +342,4 @@ local functionTable = {}
 functionTable.GetState = GetState
 functionTable.IsPlayerPresent = IsPlayerPresent
 
-ABCP.RegisterCapturePoint(COMPONENT_ROOT.id, functionTable)
+ABCP.RegisterCapturePoint(ORDER, functionTable)

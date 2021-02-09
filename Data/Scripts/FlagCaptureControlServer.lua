@@ -32,6 +32,7 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 local CAPTURE_TRIGGER = script:GetCustomProperty("CaptureTrigger"):WaitForObject()
 local SpawnPoints = script:GetCustomProperty("SpawnPoints"):WaitForObject()
+local BaseSpawn = script:GetCustomProperty("BaseSpawn"):WaitForObject()
 local AnimationAbilityTemplate = script:GetCustomProperty("AnimationAbilityTemplate")
 
 -- User exposed properties
@@ -84,7 +85,7 @@ function Reset()
     local oldEnabled = script:GetCustomProperty("IsEnabled")
 
     if oldEnabled ~= ENABLED_BY_DEFAULT then
-        Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, oldEnabled, ENABLED_BY_DEFAULT)
+        Events.Broadcast("CapturePointEnabledStateChanged", ORDER, oldEnabled, ENABLED_BY_DEFAULT)
     end    
 
     script:SetNetworkedCustomProperty("ProgressedTeam", 0)
@@ -152,7 +153,7 @@ end
 function GetState()
     local result = {}
 
-    result.id = COMPONENT_ROOT.id
+    result.id = ORDER--COMPONENT_ROOT.id
     result.name = NAME
     result.shortName = SHORT_NAME
     result.worldPosition = COMPONENT_ROOT:GetWorldPosition()
@@ -167,7 +168,7 @@ function GetState()
     result.attackingTeam = 0
     result.order = ORDER
     result.spawnPoints = SpawnPoints
-
+    result.baseSpawn = BaseSpawn
     return result
 end
 
@@ -251,8 +252,10 @@ function SetEnabled(enabled)
 
     -- Only broadcast 'CapturePointEnabledStateChanged' event if we actually changed the statae
     if oldEnabled ~= enabled then
-        Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, oldEnabled, enabled)
+        Events.Broadcast("CapturePointEnabledStateChanged", ORDER, oldEnabled, enabled)
     end    
+
+    CAPTURE_TRIGGER.isInteractable = enabled
 end
 
 -- nil OnRoundEnd()
@@ -291,7 +294,7 @@ function ResetCapturePlayer()
 			event:Disconnect()
 		end
 		capturePlayerEvents = {}
-		CAPTURE_TRIGGER.isInteractable = true
+		CAPTURE_TRIGGER.isInteractable = script:GetCustomProperty("IsEnabled")
 		script:SetNetworkedCustomProperty("CapturePlayerID", "")
 		capturePlayer = nil
 	end
@@ -358,7 +361,7 @@ function Tick(deltaTime)
     end
 
     if newOwner ~= owningTeam then
-        Events.Broadcast("CapturePointOwnerChanged", COMPONENT_ROOT.id, owningTeam, newOwner)
+        Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
         owningTeam = newOwner
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
         Events.Broadcast("Stats.Helper.CapturePoint", script:GetCustomProperty("CapturePlayerID"))
@@ -393,7 +396,7 @@ end
 
 -- Initialize
 if RESET_ON_ROUND_END then
-    Game.roundStartEvent:Connect(OnRoundStart)
+    --Game.roundStartEvent:Connect(OnRoundStart)
     Game.roundEndEvent:Connect(OnRoundEnd)
 end
 
@@ -405,7 +408,7 @@ functionTable.IsPlayerPresent = IsPlayerPresent
 functionTable.Reset = Reset
 functionTable.SetEnabled = SetEnabled
 
-ABCP.RegisterCapturePoint(COMPONENT_ROOT.id, functionTable)
+ABCP.RegisterCapturePoint(ORDER, functionTable)
 
 
 --[[function OnBindingPressed (player, binding)
