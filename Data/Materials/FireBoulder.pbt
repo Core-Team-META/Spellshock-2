@@ -1,41 +1,52 @@
 Assets {
-  Id: 926391387561774024
-  Name: "Custom Burning Wood 2"
+  Id: 17763375775449008280
+  Name: "FireBoulder"
   PlatformAssetType: 13
   SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 1512708355930270667
     ParameterOverrides {
       Overrides {
+        Name: "embererode"
+        Float: 0.873228669
+      }
+      Overrides {
+        Name: "asherode"
+        Float: 0
+      }
+      Overrides {
+        Name: "embersoftness"
+        Float: 1
+      }
+      Overrides {
         Name: "color"
         Color {
-          R: 0.3
-          G: 0.860927045
-          B: 1
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "embercolor"
-        Color {
-          G: 0.455960214
-          B: 0.809999943
-          A: 1
-        }
-      }
-      Overrides {
-        Name: "embercolor2"
-        Color {
-          G: 0.237615883
-          B: 0.78
+          R: 0.104
+          G: 0.0992680043
+          B: 0.09048
           A: 1
         }
       }
       Overrides {
         Name: "embercolor3"
         Color {
-          G: 0.127417162
-          B: 0.52
+          R: 0.230000019
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor"
+        Color {
+          R: 2
+          G: 0.1
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor2"
+        Color {
+          R: 0.340000033
+          G: 0.0135099282
           A: 1
         }
       }

@@ -110,7 +110,7 @@ function OnThrowExecute(thisAbility)
 
     -- Spawn the template
 	local projectileTemplate = PlayerVFX.Projectile
-	CurrentProjectile = META_AP().SpawnAsset(TestTemplate, {position = spawnPosition, rotation = PickupAbility.owner:GetWorldRotation(), scale = Vector3.New(projectileScale)})
+	CurrentProjectile = META_AP().SpawnAsset(projectileTemplate, {position = spawnPosition, rotation = PickupAbility.owner:GetWorldRotation(), scale = Vector3.New(projectileScale)})
 	
 	local StunTrigger = CurrentProjectile:GetCustomProperty("StunTrigger"):WaitForObject()
 	StunTrigger.beginOverlapEvent:Connect(OnStunBeginOverlap)

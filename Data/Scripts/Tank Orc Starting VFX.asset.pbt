@@ -49,7 +49,7 @@ Assets {
       Overrides {
         Name: "cs:04_BoulderThrow_Projectile"
         AssetReference {
-          Id: 4152617433700755742
+          Id: 841534158063459245
         }
       }
       Overrides {
