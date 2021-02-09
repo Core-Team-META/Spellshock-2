@@ -112,6 +112,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local Button = panel:GetCustomProperty("Button"):WaitForObject()
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(reward)
+            Value:GetChildren()[1].text = tostring(reward)
             if class then
                 Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
             else
@@ -200,7 +201,7 @@ function OnDailyShopOpen(player, keybind)
 end
 
 --REWARD_UTIL.CalculateDailyShopItemCost(key, value)
-
+PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------

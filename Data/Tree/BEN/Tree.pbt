@@ -74294,29 +74294,3 @@ Objects {
     }
   }
 }
-Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Daily Shop"
-  }
-}
