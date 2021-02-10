@@ -71,8 +71,7 @@ function OnGameStateChanged(oldState, newState)
             local newClass = World.SpawnAsset(ClassTemplates[classID])
 	        newClass:Equip(player)
         end
-    elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
-        Task.Wait(5)
+    elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
         for _, player in pairs(Game.GetPlayers()) do 
             -- unequip everything 
             for _, equipment in pairs(player:GetEquipment()) do

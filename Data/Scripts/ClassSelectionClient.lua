@@ -391,7 +391,7 @@ function AttachCostumeToPlayer(player)
 		end
 	end
 
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
 		DetachCostumeFromPlayer(player)
 		
@@ -405,7 +405,7 @@ function AttachCostumeToPlayer(player)
 		end
 		player.clientUserData.LobbyCostume = attachmentTable
 		newCostume:Destroy()
-	end
+	--end
 end
 
 function DetachCostumeFromPlayer(player)
@@ -443,9 +443,9 @@ function OnConfirmChoiceClicked(thisButton)
 end
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+	if newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
 		--print("Equipping costume in lobby")
-		while ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY do Task.Wait() end
+		while ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND_END do Task.Wait() end
 
 		for _, player in ipairs(Game.GetPlayers()) do
 			AttachCostumeToPlayer(player)

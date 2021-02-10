@@ -55,13 +55,11 @@ function API.GetRandomClass()
     return math.random(1, 5)
 end
 
-
 --@param int value
 --@return int cost
 function API.CalculateShardCost(value)
     return CoreMath.Round(value * 30)
 end
-
 
 --@param int value
 --@return int cost
@@ -69,11 +67,59 @@ function API.CalculateCosmeticCost(value)
     return CoreMath.Round(value * 250)
 end
 
+--@param int value
+--@return int cost
+function API.CalculateRefreshCost(value)
+    return CoreMath.Round(value * 100)
+end
+
+function API.GetRewardCost(dailyRewards)
+    local cost = 0
+    for key, value in pairs(dailyRewards) do
+        if type(key) == "number" then
+            cost = API.CalculateShardCost(value)
+        elseif key == "G" then
+            cost = API.CalculateCosmeticCost(value)
+        elseif key == "C" then
+            cost = API.CalculateCosmeticCost(value)
+        end
+    end
+    return cost
+end
+
+--#FIXME Not completed, orginally from DailyShop_Client
+function API.CalculateDailyShopCost(player, slot, id, class, bind, reward)
+    local infoTable = nil
+    local currentAmmount = nil
+    local cost = nil
+    player = player or Game.GetLocalPlayer()
+    if slotId and slotId == slot then
+        if id == 1 then
+            --Shard Cost
+            cost = API.CalculateShardCost(reward)
+            infoTable = rewardAssets[id][class][bind]
+            currentAmmount = player:GetResource(UTIL.GetXpString(class, bind))
+        else
+            if id == 2 then
+                currentAmmount = player:GetResource(CONST.GOLD)
+            elseif id == 3 then
+                currentAmmount = player:GetResource(CONST.COSMETIC_TOKEN)
+            end
+            --Cosmetic Token Cost
+            cost = API.CalculateCosmeticCost(reward)
+            infoTable = rewardAssets[id][bind]
+        end
+        return infoTable
+    end
+end
+
 --@param object player
 --@param int rewardId
 --@param tbl
 function API.OnRewardSelect(player, rewardId, tbl, bool)
-    if not Object.IsValid(player) then return end
+    if not Object.IsValid(player) then
+        return
+    end
     if tbl[player.id] and tbl[player.id][rewardId] then
         for key, value in pairs(tbl[player.id][rewardId]) do
             if type(key) == "number" then
@@ -94,8 +140,6 @@ function API.OnRewardSelect(player, rewardId, tbl, bool)
         end
     end
 end
-
-
 
 ------------------------------------------------------------------------------------------------------------------------
 return API
