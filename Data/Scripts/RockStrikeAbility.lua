@@ -19,8 +19,7 @@ local CurrentProjectile = nil
 local ProjectileVelocity = nil
 
 function OnBeginOverlap(thisTrigger, other)
-	if not Object.IsValid(SpecialAbility) then return end
-	if other == SpecialAbility.owner then return end
+	if not Object.IsValid(SpecialAbility) or other == SpecialAbility.owner then return end
 	
 	if not other:IsA("Player") or COMBAT().IsDead(other) then return end
 	
@@ -47,6 +46,8 @@ function OnBeginOverlap(thisTrigger, other)
 	}
 	COMBAT().ApplyDamage(attackData)
 	
+	if not CurrentProjectile or not Object.IsValid(CurrentProjectile) then return end
+
 	local directionVector = CurrentProjectile:GetWorldRotation() * Vector3.FORWARD
 	directionVector = -directionVector
 	directionVector.z = 1
