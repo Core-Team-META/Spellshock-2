@@ -1,6 +1,205 @@
 Name: "Daily Shop"
 RootId: 4362092203162598167
 Objects {
+  Id: 9271168163295537897
+  Name: "NPC Triggers"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4362092203162598167
+  ChildIds: 12438902226095385717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12438902226095385717
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -21647.416
+      Y: -31216.3125
+      Z: 6383.95508
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9271168163295537897
+  ChildIds: 17041487251641569192
+  ChildIds: 13520035707292206735
+  ChildIds: 10524266762975298242
+  ChildIds: 12075469522019376866
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 12075469522019376866
+  Name: "ELF_DAILY_SHOP_LEAVE_TRIGGER"
+  Transform {
+    Location {
+      X: 40210.2656
+      Y: 51799.0078
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 33.1580811
+    }
+    Scale {
+      X: 5.69476271
+      Y: 4.21105146
+      Z: 4.60918236
+    }
+  }
+  ParentId: 12438902226095385717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 10524266762975298242
+  Name: "ELF_DAILY_SHOP_TRIGGER"
+  Transform {
+    Location {
+      X: 40210.2656
+      Y: 51799.0078
+      Z: 1051.16553
+    }
+    Rotation {
+      Yaw: 33.1580811
+    }
+    Scale {
+      X: 1.12097239
+      Y: 1.12097239
+      Z: 3.26704121
+    }
+  }
+  ParentId: 12438902226095385717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "View Daily Shop"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 13520035707292206735
+  Name: "ORC_DAILY_SHOP_LEAVE_TRIGGER"
+  Transform {
+    Location {
+      X: 31.9257813
+      Y: 6.31445313
+      Z: 18.9360352
+    }
+    Rotation {
+    }
+    Scale {
+      X: 5.69476271
+      Y: 4.21105146
+      Z: 4.60918236
+    }
+  }
+  ParentId: 12438902226095385717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 17041487251641569192
+  Name: "ORC_DAILY_SHOP_TRIGGER"
+  Transform {
+    Location {
+      X: 31.9257813
+      Y: 6.31445313
+      Z: 18.9360352
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.12097239
+      Y: 1.12097239
+      Z: 3.26704121
+    }
+  }
+  ParentId: 12438902226095385717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    InteractionLabel: "View Daily Shop"
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
   Id: 3567758715086491143
   Name: "ClientContext"
   Transform {
@@ -64,6 +263,30 @@ Objects {
       Name: "cs:DailyShop"
       ObjectReference {
         SelfId: 12468440255762144638
+      }
+    }
+    Overrides {
+      Name: "cs:ORC_DAILY_SHOP_TRIGGER"
+      ObjectReference {
+        SelfId: 17041487251641569192
+      }
+    }
+    Overrides {
+      Name: "cs:ORC_DAILY_SHOP_LEAVE_TRIGGER"
+      ObjectReference {
+        SelfId: 13520035707292206735
+      }
+    }
+    Overrides {
+      Name: "cs:ELF_DAILY_SHOP_TRIGGER"
+      ObjectReference {
+        SelfId: 10524266762975298242
+      }
+    }
+    Overrides {
+      Name: "cs:ELF_DAILY_SHOP_LEAVE_TRIGGER"
+      ObjectReference {
+        SelfId: 12075469522019376866
       }
     }
   }

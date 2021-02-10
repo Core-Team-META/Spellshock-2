@@ -20,6 +20,11 @@ local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
 local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
 local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
+local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"):WaitForObject()
+local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
+local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"):WaitForObject()
+local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -46,6 +51,7 @@ local function ToggleUi(bool)
     UI.SetCursorVisible(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
+    ORC_DAILY_SHOP_TRIGGER.isInteractable = bool
     if bool then
         PARENT_UI.visibility = Visibility.FORCE_ON
     else
@@ -210,10 +216,22 @@ function OnRefresh()
 end
 
 function OnDailyShopOpen(player, keybind)
-    if keybind == "ability_extra_61" and not PARENT_UI:IsVisibleInHierarchy() then
+    if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() then
+        ToggleUi(false)
+    end
+end
+
+function OnInteracted(trigger, player)
+    if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
-    elseif keybind == "ability_extra_61" and PARENT_UI:IsVisibleInHierarchy() then
+    elseif player == LOCAL_PLAYER and PARENT_UI:IsVisibleInHierarchy() then
+        ToggleUi(false)
+    end
+end
+
+function OnEndOverlap(trigger, player)
+    if player == LOCAL_PLAYER and PARENT_UI:IsVisibleInHierarchy() then
         ToggleUi(false)
     end
 end
@@ -223,6 +241,13 @@ PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
+ORC_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+ELF_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+
+ORC_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
+ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
+
+
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnDailyShopOpen)
