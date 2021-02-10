@@ -28005,6 +28005,18 @@ Objects {
         SelfId: 9772533843055238086
       }
     }
+    Overrides {
+      Name: "cs:TickSFX"
+      ObjectReference {
+        SelfId: 16876453173366929200
+      }
+    }
+    Overrides {
+      Name: "cs:ShopTimer"
+      ObjectReference {
+        SelfId: 32397007172213840
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -74298,5 +74310,38 @@ Objects {
     ScriptAsset {
       Id: 16389341816514845889
     }
+  }
+}
+Objects {
+  Id: 16092321819556394275
+  Name: "Ship Boat Bell Ring 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 8383064983738244106
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
   }
 }
