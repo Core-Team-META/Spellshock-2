@@ -158,15 +158,7 @@ end
 -- nil SetGeometryTeam(int)
 -- Sets the geometry to match the team color, including a neutral state
 function SetGeometryTeam(team)
-    for _, object in pairs(teamColoredGeometry) do
-        --[[if team == 0 then
-            object.isTeamColorUsed = false
-        else
-            object.isTeamColorUsed = true
-        end
-
-        object.team = team]]
-        
+    for _, object in pairs(teamColoredGeometry) do        
         if team ~= 0 then
         	object:SetColor(_G.TeamColors[team])
         else
@@ -250,9 +242,9 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		local playerID = SERVER_SCRIPT:GetCustomProperty("CapturePlayerID")
 		
 		if playerID == "" or progressedTeam == 0 then 
-			if LOCAL_PLAYER.name == "Bot1" then
+			--[[if LOCAL_PLAYER.name == "Bot1" then
 				print("STOPPING")
-			end
+			end]]
 			ChargeUpSFX:Stop()
 			return 
 		end
@@ -265,9 +257,9 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		--print("Player id: "..SERVER_SCRIPT:GetCustomProperty("CapturePlayerID"))
 		
 		
-		if LOCAL_PLAYER.name == "Bot1" then
+		--[[if LOCAL_PLAYER.name == "Bot1" then
 			print("ANIMATING")
-		end
+		end]]
 		
 		local capturePlayer 
 		for _, player in pairs(Game.GetPlayers()) do
@@ -322,9 +314,11 @@ function Tick(deltaTime)
             Events.Broadcast("CapturePointEnabledStateChanged", ORDER, previousEnabledState, isEnabled)
 
             previousEnabledState = isEnabled
+        else
+            SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
         end
     end
-    
+
     -- Update pitch of ChargeUpSFX
     ChargeUpSFX.pitch = GetCaptureProgress() * 1000
     

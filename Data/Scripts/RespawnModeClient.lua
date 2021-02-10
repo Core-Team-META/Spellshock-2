@@ -46,6 +46,12 @@ function Tick(deltaTime)
 		LOCAL_PLAYER:ClearOverrideCamera(CamLerp)
 		RespawnMusic.volume = 0.01
 	end
+
+	--[[if AS.IsViewingMap() or AS.IsRespawning() or AS.IsJoiningMidgame() then
+		UI.SetReticleVisible(false)
+	else
+		UI.SetReticleVisible(true)
+	end]]
 end
 
 Events.Connect("PlayerJoinedRound", OnJoinedRound)

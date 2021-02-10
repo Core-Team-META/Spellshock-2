@@ -80,8 +80,7 @@ function CheckRespawnTimer()
 end
 
 function OnButtonPressed(thisButton)
-	print("Button: "..thisButton.name)
-	if thisButton.clientUserData.stateID then -- player selected a capture point
+	if thisButton.clientUserData.stateID and thisButton ~= BaseButton then -- player selected a capture point
 		local capturePointState = ABCP.GetCapturePointState(thisButton.clientUserData.stateID)
 		print("Name: "..capturePointState.name)
 		print("Player Team: "..LOCAL_PLAYER.team)
@@ -102,7 +101,6 @@ end
 
 function OnRoundEnd()
     if #BASE_BUTTONS >= 2 then
-		print("Resetting")
 		BASE_BUTTONS[1].clientUserData.stateID = nil
 		BASE_BUTTONS[2].clientUserData.stateID = nil
 	end

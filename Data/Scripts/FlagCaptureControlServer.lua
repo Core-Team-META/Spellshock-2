@@ -78,6 +78,11 @@ local capturePlayerAnimation = nil
 local capturePlayerEvents = {}
 local lastTeamScoreAwardTime = time()
 
+local BINDING_IGNORE = {
+    ability_extra_19 = true,
+    ability_extra_45 = true
+}
+
 -- nil Reset()
 -- Resets the capture point to its default state
 function Reset()
@@ -284,7 +289,7 @@ end
 function ResetCapturePlayer()
 	UpdateReplicatedProgress()
 	if capturePlayer and Object.IsValid(capturePlayer) then
-		print("RESETTING CAPTURE PLAYER")
+		--print("RESETTING CAPTURE PLAYER")
 		if Object.IsValid(capturePlayerAnimation) then
 			capturePlayerAnimation.owner = nil
 			capturePlayerAnimation:Destroy()
@@ -301,13 +306,13 @@ function ResetCapturePlayer()
 end
 
 function OnCapturePlayerDamaged(player, damage)
-	if player == capturePlayer then
+	if player == capturePlayer and damage.amount > 0 then
 		ResetCapturePlayer()	
 	end
 end
 
 function OnBindingPressed(player, binding)
-	if player == capturePlayer then
+	if player == capturePlayer and not BINDING_IGNORE[binding] then
 		ResetCapturePlayer()
 	end
 end
