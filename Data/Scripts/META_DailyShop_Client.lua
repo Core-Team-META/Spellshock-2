@@ -42,6 +42,17 @@ local function isAllowed(time)
     return true
 end
 
+local function ToggleUi(bool)
+    UI.SetCursorVisible(bool)
+    UI.SetCanCursorInteractWithUI(bool)
+    UI.SetCursorLockedToViewport(bool)
+    if bool then
+        PARENT_UI.visibility = Visibility.FORCE_ON
+    else
+        PARENT_UI.visibility = Visibility.FORCE_OFF
+    end
+end
+
 local function GetBindInfo(value)
     local class, bind
     for shardId, reward in pairs(value) do
@@ -121,10 +132,16 @@ local function BuildShopItems(slot, id, class, bind, reward)
             else
                 Name.text = tostring(infoTable.Name)
             end
-        
+
             if tonumber(dailyRewards[slot].P) == 0 then
+                if cost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
+                    costText:SetColor(Color.RED)
+                else
+                    costText:SetColor(Color.BLACK)
+                end
                 costText.text = tostring(cost)
-                costTextShadow.text = tostring(cost) 
+                costTextShadow.text = tostring(cost)
+
                 Button.clientUserData.id = slotId
                 Button.clientUserData.slot = slot
                 if #listeners < 6 then -- #TODO WHY!?
@@ -195,15 +212,9 @@ end
 function OnDailyShopOpen(player, keybind)
     if keybind == "ability_extra_61" and not PARENT_UI:IsVisibleInHierarchy() then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
-        PARENT_UI.visibility = Visibility.FORCE_ON
-        UI.SetCursorVisible(true)
-        UI.SetCanCursorInteractWithUI(true)
-        UI.SetCursorLockedToViewport(true)
+        ToggleUi(true)
     elseif keybind == "ability_extra_61" and PARENT_UI:IsVisibleInHierarchy() then
-        PARENT_UI.visibility = Visibility.FORCE_OFF
-        UI.SetCursorVisible(false)
-        UI.SetCanCursorInteractWithUI(false)
-        UI.SetCursorLockedToViewport(false)
+        ToggleUi(false)
     end
 end
 

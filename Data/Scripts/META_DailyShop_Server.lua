@@ -131,8 +131,13 @@ function OnPurchase(player, id, slot)
 end
 
 function OnRefresh(player)
-    GenerateShopItems(player, true)
-    ReplicateShopItems(player)
+    local refreshCount = player.serverUserData.DS_REFRESH or 0
+    local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.CalculateRefreshCost(refreshCount)
+    if remainingGold >= 0 then
+        GenerateShopItems(player, true)
+        ReplicateShopItems(player)
+        player:SetResource(CONST.GOLD, remainingGold)
+    end
 end
 
 ------------------------------------------------------------------------------------------------------------------------

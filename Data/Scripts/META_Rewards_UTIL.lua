@@ -64,8 +64,13 @@ end
 --@param int value
 --@return int cost
 function API.CalculateCosmeticCost(value)
-    print(value)
     return CoreMath.Round(value * 250)
+end
+
+--@param int value
+--@return int cost
+function API.CalculateRefreshCost(value)
+    return CoreMath.Round(value * 100)
 end
 
 function API.GetRewardCost(dailyRewards)
