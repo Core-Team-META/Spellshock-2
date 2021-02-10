@@ -15,6 +15,7 @@ function OnUnequipped(thisEquipment, player)
 	if HidePlayer then
 		player:SetVisibility(true, false)
 	end
+	player.animationStance = "unarmed_stance"
 end
 
 ParentEquipment.equippedEvent:Connect( OnEquipped )
