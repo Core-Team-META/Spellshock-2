@@ -82,6 +82,7 @@ function ToggleDash(mode)
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
+
 		SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
 		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
 		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction
@@ -124,7 +125,20 @@ function OnEquip(equipment, player)
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().TANK)
 end
 
+function OnUnequip(equipment, player)
+	if TriggerEventConnection then TriggerEventConnection:Disconnect() end
+	if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
+
+	if player.movementControlMode then
+		player.movementControlMode = originalPlayerSettings.MovementMode
+		player.animationStance = originalPlayerSettings.AnimationStance
+		player.groundFriction = originalPlayerSettings.GroundFriction
+		player.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+	end
+end
+
 Equipment.equippedEvent:Connect(OnEquip)
+Equipment.unequippedEvent:Connect(OnUnequip)
 SpecialAbility.castEvent:Connect(OnAbilityCast)
 SpecialAbility.executeEvent:Connect(OnAbilityExecute)
 SpecialAbility.cooldownEvent:Connect(OnAbilityCooldown)
