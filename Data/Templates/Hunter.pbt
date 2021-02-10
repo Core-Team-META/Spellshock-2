@@ -2237,7 +2237,7 @@ Assets {
               Id: 14373757464648078715
             }
             ReticleType {
-              Value: "mc:ereticletype:none"
+              Value: "mc:ereticletype:crosshair"
             }
             MaxAmmo: -1
             AmmoType: "rounds"
@@ -2301,7 +2301,7 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.8
+            Duration: 0.6
             CanMove: true
             CanJump: true
             CanRotate: true

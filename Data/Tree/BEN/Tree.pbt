@@ -972,7 +972,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     RenderTransformPivot {
@@ -1008,7 +1008,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     RenderTransformPivot {
@@ -1040,7 +1040,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     RenderTransformPivot {
@@ -4568,9 +4568,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -23815
-      Y: -31940
-      Z: 6545
+      X: -7114.81152
+      Y: -3990.47778
+      Z: 3555
     }
     Rotation {
     }
@@ -4698,6 +4698,12 @@ Objects {
       Name: "cs:Root"
       ObjectReference {
         SelfId: 9738099254667150138
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }

@@ -19,21 +19,23 @@ else
 end
 
 function OnEquip(thisEquipment, player)
-	if player == LOCAL_PLAYER then
+	player.clientUserData.hasReticle = true
+	--[[if player == LOCAL_PLAYER then
 		local reticleObject = World.SpawnAsset(ReticleTemplate)
 		Reticle = reticleObject:GetCustomProperty("ReticleImage"):WaitForObject()
 		CurrentColor = DefaultColor
 		Reticle:SetColor(CurrentColor)
 	else
 		script:Destroy()
-	end
+	end]]
 end	
 
 function OnUnequip(equipment, player)
-	if Reticle and Object.IsValid(Reticle) then
+	player.clientUserData.hasReticle = false
+	--[[if Reticle and Object.IsValid(Reticle) then
 		Reticle:Destroy()
 		Reticle = nil
-	end
+	end]]
 end
 
 if Equipment.owner then
@@ -93,7 +95,7 @@ function FromCameraToTarget()
 	end	
 end
 
-function Tick()
+--[[function Tick()
 	if Object.IsValid(Equipment) and Object.IsValid(Reticle)
 	and Object.IsValid(Equipment.owner) and LOCAL_PLAYER == Equipment.owner then
 		if Equipment:IsA("Weapon") and MuzzleToLookTarget then
@@ -102,4 +104,4 @@ function Tick()
 			FromCameraToTarget()
 		end
 	end
-end
+end]]

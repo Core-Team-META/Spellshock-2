@@ -1681,6 +1681,7 @@ Assets {
         ChildIds: 12781921330556252170
         ChildIds: 719838432390101910
         ChildIds: 4906948746998877600
+        ChildIds: 5904571599766240539
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1888,6 +1889,109 @@ Assets {
         Script {
           ScriptAsset {
             Id: 14074483271059500969
+          }
+        }
+      }
+      Objects {
+        Id: 5904571599766240539
+        Name: "Reticle"
+        Transform {
+          Location {
+            X: -755
+            Y: 335
+            Z: 225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        ChildIds: 16743815792358495293
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 14738406619974674146
+            }
+          }
+          Overrides {
+            Name: "cs:MuzzleToLookTarget"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:ReticleTemplate"
+            AssetReference {
+              Id: 10414967070514943464
+            }
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:InRangeColor"
+            Color {
+              R: 0.919999957
+              G: 0.091390729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:DefaultColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16743815792358495293
+        Name: "ReticleHandler"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5904571599766240539
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 5904571599766240539
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1665784526678537401
           }
         }
       }
@@ -2481,7 +2585,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.8
+            Duration: 0.6
             CanMove: true
             CanJump: true
             CanRotate: true

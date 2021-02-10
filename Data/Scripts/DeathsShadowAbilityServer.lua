@@ -139,6 +139,7 @@ function OnEquip(thisEquipment, player)
 end
 
 function OnUnequip(thisEquipment, player)
+	if not Object.IsValid(player) then return end
 	player.maxWalkSpeed = OriginalWalkSpeed
 	player:SetVisibility(true)
 	isInvisible = false

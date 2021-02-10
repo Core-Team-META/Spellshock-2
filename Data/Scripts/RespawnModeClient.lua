@@ -47,11 +47,11 @@ function Tick(deltaTime)
 		RespawnMusic.volume = 0.01
 	end
 
-	--[[if AS.IsViewingMap() or AS.IsRespawning() or AS.IsJoiningMidgame() then
+	if AS.IsViewingMap() or AS.IsRespawning() or AS.IsJoiningMidgame() then
 		UI.SetReticleVisible(false)
-	else
+	elseif LOCAL_PLAYER.clientUserData.hasReticle then
 		UI.SetReticleVisible(true)
-	end]]
+	end
 end
 
 Events.Connect("PlayerJoinedRound", OnJoinedRound)

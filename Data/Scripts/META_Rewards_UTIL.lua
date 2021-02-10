@@ -73,6 +73,7 @@ end
 --@param int rewardId
 --@param tbl
 function API.OnRewardSelect(player, rewardId, tbl, bool)
+    if not Object.IsValid(player) then return end
     if tbl[player.id] and tbl[player.id][rewardId] then
         for key, value in pairs(tbl[player.id][rewardId]) do
             if type(key) == "number" then
