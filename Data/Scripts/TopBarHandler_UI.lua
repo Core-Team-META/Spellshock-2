@@ -5,15 +5,21 @@ while not _G.CurrentMenu do Task.Wait() end
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
 local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
+local TickSFX = script:GetCustomProperty("TickSFX"):WaitForObject()
+local ShopTimer = script:GetCustomProperty("ShopTimer"):WaitForObject()
+
+local PreviousSecond = 0
 
 -- nil UpdateTimeRemaining(int)
 -- Displays time remaining in hh:mm:ss format
 function UpdateTimeRemaining(remainingTime)
     if remainingTime then
         STATE_TIME_TEXT.visibility = Visibility.FORCE_ON
+        ShopTimer.visibility = Visibility.INHERIT
         local minutes = math.floor(remainingTime) // 60 % 60
         local seconds = math.floor(remainingTime) % 60
         STATE_TIME_TEXT.text = string.format("%02d:%02d", minutes, seconds)
+        ShopTimer:GetChildren()[2].text = string.format("%02d:%02d", minutes, seconds)
     end
 end
 
@@ -41,12 +47,19 @@ function Tick(deltaTime)
         -- Hide things by default, let specific logic show it when needed
         STATE_NAME_TEXT.text = ""
         STATE_TIME_TEXT.visibility = Visibility.FORCE_OFF
+        ShopTimer.visibility = Visibility.FORCE_OFF
         local currentState = ABGS.GetGameState()
         local remainingTime = ABGS.GetTimeRemainingInState()
 
         if currentState == ABGS.GAME_STATE_LOBBY then
             STATE_NAME_TEXT.text = "LOBBY"
             UpdateTimeRemaining(remainingTime)
+            if not remainingTime then return end
+            local currentSecond = math.ceil(remainingTime)
+            if currentSecond <= 6 and currentSecond ~= PreviousSecond then
+                TickSFX:Play()
+                PreviousSecond = currentSecond
+            end
         end
 
         if currentState == ABGS.GAME_STATE_ROUND then

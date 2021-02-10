@@ -613,6 +613,7 @@ Objects {
   ChildIds: 12342842787787294506
   ChildIds: 2164216698044686535
   ChildIds: 12523467810014353075
+  ChildIds: 32397007172213840
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -643,6 +644,212 @@ Objects {
   InstanceHistory {
     SelfId: 14783742013657790731
     SubobjectId: 3742761001269711465
+    InstanceId: 5821724278744846916
+    TemplateId: 1749998263944627932
+  }
+}
+Objects {
+  Id: 32397007172213840
+  Name: "ShopTimer"
+  Transform {
+    Location {
+      X: 2012.30103
+      Y: -25076.834
+      Z: -3070
+    }
+    Rotation {
+      Yaw: 144.999969
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14783742013657790731
+  ChildIds: 3722047255660530529
+  ChildIds: 6390707606815940797
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 90
+    UIX: 1275
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6390707606815940797
+  Name: "Timer"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.70754709e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 32397007172213840
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Female"
+      ObjectReference {
+        SelfId: 5408664582770108325
+      }
+    }
+    Overrides {
+      Name: "cs:Male"
+      ObjectReference {
+        SelfId: 16979900639233972758
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "10"
+      Color {
+        R: 1
+        G: 0.854992807
+        B: 0.610495746
+        A: 1
+      }
+      Size: 24
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15387623722233427332
+    SubobjectId: 3121346917491154662
+    InstanceId: 5821724278744846916
+    TemplateId: 1749998263944627932
+  }
+}
+Objects {
+  Id: 3722047255660530529
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 3.4150944e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 32397007172213840
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Female"
+      ObjectReference {
+        SelfId: 5408664582770108325
+      }
+    }
+    Overrides {
+      Name: "cs:Male"
+      ObjectReference {
+        SelfId: 16979900639233972758
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 570
+    Height: 49
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Until Battle"
+      Color {
+        R: 1
+        G: 0.854992807
+        B: 0.610495746
+        A: 1
+      }
+      Size: 24
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15387623722233427332
+    SubobjectId: 3121346917491154662
     InstanceId: 5821724278744846916
     TemplateId: 1749998263944627932
   }
@@ -2206,7 +2413,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIX: 160
+    UIX: -925
     UIY: -270
     RenderTransformPivot {
       Anchor {
@@ -2223,7 +2430,7 @@ Objects {
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:bottomright"
         }
       }
     }
