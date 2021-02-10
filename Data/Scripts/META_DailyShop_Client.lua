@@ -52,6 +52,7 @@ local function ToggleUi(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
     ORC_DAILY_SHOP_TRIGGER.isInteractable = bool
+    ELF_DAILY_SHOP_TRIGGER.isInteractable = bool
     if bool then
         PARENT_UI.visibility = Visibility.FORCE_ON
     else
