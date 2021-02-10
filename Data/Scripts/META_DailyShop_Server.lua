@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/6
--- Version 0.1.2
+-- Date: 2021/2/10
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -80,6 +80,7 @@ local function ReplicateShopItems(player)
 end
 
 --@params object player
+--@params bool forced | Should count as refresh
 local function GenerateShopItems(player, forced)
     dailyRewards[player.id] = {}
     local tempTbl = {}
@@ -120,9 +121,13 @@ function OnPlayerLeft(player)
     dailyRewards[player.id] = nil
 end
 
-function OnPurchase(player, id)
-    REWARD_UTIL.OnRewardSelect(player, id, dailyRewards, true)
-    ReplicateShopItems(player)
+function OnPurchase(player, id, slot)
+    local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
+    if remainingGold >= 0 then
+        player:SetResource(CONST.GOLD, remainingGold)
+        REWARD_UTIL.OnRewardSelect(player, id, dailyRewards, true)
+        ReplicateShopItems(player)
+    end
 end
 
 function OnRefresh(player)

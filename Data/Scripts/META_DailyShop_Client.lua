@@ -110,6 +110,9 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local Name = panel:GetCustomProperty("Name"):WaitForObject()
             local Value = panel:GetCustomProperty("Value"):WaitForObject()
             local Button = panel:GetCustomProperty("Button"):WaitForObject()
+            local costText = panel:GetCustomProperty("AMOUNT"):WaitForObject()
+            local costTextShadow = panel:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
+
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(reward)
             Value:GetChildren()[1].text = tostring(reward)
@@ -118,14 +121,18 @@ local function BuildShopItems(slot, id, class, bind, reward)
             else
                 Name.text = tostring(infoTable.Name)
             end
+        
             if tonumber(dailyRewards[slot].P) == 0 then
-                Button.text = tostring("$" .. cost)
+                costText.text = tostring(cost)
+                costTextShadow.text = tostring(cost) 
                 Button.clientUserData.id = slotId
-                if #listeners < 6 then
+                Button.clientUserData.slot = slot
+                if #listeners < 6 then -- #TODO WHY!?
                     listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
                 end
             else
-                Button.text = "PURCHASED"
+                costText.text = "Bought"
+                costTextShadow.text = "Bought"
             end
         end
     end
@@ -161,7 +168,7 @@ function OnRewardSelected(button)
     if not isAllowed(0.2) then
         return
     end
-    Events.BroadcastToServer(NAMESPACE .. "PURCHASE", button.clientUserData.id)
+    Events.BroadcastToServer(NAMESPACE .. "PURCHASE", button.clientUserData.id, button.clientUserData.slot)
 end
 
 --Builds the cosmeticTable based on the heirarchy

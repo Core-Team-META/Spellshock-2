@@ -234,6 +234,18 @@ Objects {
         SelfId: 2718928048010881320
       }
     }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 3034579348657976324
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 16839117555657675092
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1610,6 +1622,18 @@ Objects {
       Name: "cs:Button"
       ObjectReference {
         SelfId: 13854716961641708463
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 10344017837108774108
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 906645266982327048
       }
     }
   }
@@ -2990,6 +3014,18 @@ Objects {
         SelfId: 10840016937681893919
       }
     }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 1773447154756532156
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 3905554675179922735
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4366,6 +4402,18 @@ Objects {
       Name: "cs:Button"
       ObjectReference {
         SelfId: 13752835672446557556
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 10535358278280200464
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 2621631683515902219
       }
     }
   }
@@ -5745,6 +5793,18 @@ Objects {
         SelfId: 1361756988685869136
       }
     }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 15427807098711142935
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 14868766603150585082
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7120,6 +7180,18 @@ Objects {
       Name: "cs:Button"
       ObjectReference {
         SelfId: 12347822086820408053
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT"
+      ObjectReference {
+        SelfId: 17941243098339832583
+      }
+    }
+    Overrides {
+      Name: "cs:AMOUNT_SHADOW"
+      ObjectReference {
+        SelfId: 8247926714350903730
       }
     }
   }
