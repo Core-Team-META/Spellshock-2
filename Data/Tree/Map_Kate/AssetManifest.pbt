@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17091160006555877630
+  Name: "Cube - Rounded"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_rounded_002"
+  }
+}
+Assets {
   Id: 17076031360332202797
   Name: "Terrain - Desert"
   PlatformAssetType: 2
@@ -458,6 +467,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15240646233324917545
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
+  }
+}
+Assets {
   Id: 15223421943927964872
   Name: "Cube - Arched"
   PlatformAssetType: 1
@@ -626,6 +644,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_moss_patch_001"
+  }
+}
+Assets {
+  Id: 14629909211943041809
+  Name: "Metal Gold 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_001"
   }
 }
 Assets {
@@ -1445,6 +1472,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_scap_01_ref"
+  }
+}
+Assets {
+  Id: 10727817675464078874
+  Name: "Arch Fancy 3m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_fancy_3m_001"
   }
 }
 Assets {
@@ -2537,6 +2573,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5026846565116306924
+  Name: "Pipe - Half Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_003"
+  }
+}
+Assets {
   Id: 4956137530833491633
   Name: "Bone Human Pile Straight 01"
   PlatformAssetType: 1
@@ -3137,6 +3182,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_kelp_bush_02"
+  }
+}
+Assets {
+  Id: 1982661357157207299
+  Name: "Ring - Quarter Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter_torus_001"
   }
 }
 Assets {

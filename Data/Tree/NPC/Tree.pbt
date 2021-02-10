@@ -5,12 +5,12 @@ Objects {
   Name: "Elf_Merchant_02"
   Transform {
     Location {
-      X: 43293.4297
-      Y: 51669.5313
-      Z: 840.348633
+      X: 43171.875
+      Y: 51875.1719
+      Z: 839.047852
     }
     Rotation {
-      Yaw: -6.15643787
+      Yaw: -9.93746948
     }
     Scale {
       X: 1.07703626
@@ -9111,12 +9111,12 @@ Objects {
   Name: "Elf_Merchant_01"
   Transform {
     Location {
-      X: 43390.5391
-      Y: 52047.7656
-      Z: 837.001465
+      X: 43415.4
+      Y: 52111.2109
+      Z: 835.016113
     }
     Rotation {
-      Yaw: -44.3578796
+      Yaw: -69.6584167
     }
     Scale {
       X: 1.00794923
@@ -14130,12 +14130,12 @@ Objects {
   Name: "Orc_Merchant_02"
   Transform {
     Location {
-      X: -36.9960938
-      Y: -158.802734
-      Z: 22.8876953
+      X: 3245.52734
+      Y: 305.910156
+      Z: -109.107422
     }
     Rotation {
-      Yaw: -0.531311035
+      Yaw: 174.074783
     }
     Scale {
       X: 1.11252153
@@ -21925,11 +21925,12 @@ Objects {
   Name: "Orc_Merchant_01"
   Transform {
     Location {
-      X: 36.9394531
-      Y: 152.605469
+      X: 3286.79297
+      Y: -91.4355469
+      Z: -86.293457
     }
     Rotation {
-      Yaw: -28.2519531
+      Yaw: 153.628052
     }
     Scale {
       X: 1.09987068
