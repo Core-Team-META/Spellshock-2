@@ -19,6 +19,18 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local ABGS = require(script:GetCustomProperty("API"))
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
 
+local delay = 0.2
+local timeBuf = 0
+
+function OnNetworkPropertyChanged(thisObject, name)
+	if name == "State" or name == "StateEndTime" and time() > timeBuf then
+		print("Broadcasting game state: "..tostring(SERVER_SCRIPT:GetCustomProperty("State")))
+		timeBuf = time() + delay
+		Events.Broadcast("GameStateChanged", SERVER_SCRIPT:GetCustomProperty("OldState"), SERVER_SCRIPT:GetCustomProperty("State"), 
+		SERVER_SCRIPT:GetCustomProperty("StateHasDuration"), SERVER_SCRIPT:GetCustomProperty("StateEndTime"))
+	end
+end
+
 -- int GetGameState()
 -- Gets the current state. Passed to API
 function GetGameState()
@@ -35,6 +47,8 @@ function GetTimeRemainingInState()
 	local endTime = SERVER_SCRIPT:GetCustomProperty("StateEndTime")
 	return math.max(endTime - time(), 0.0)
 end
+
+SERVER_SCRIPT.networkedPropertyChangedEvent:Connect(OnNetworkPropertyChanged)
 
 -- Initialize
 ABGS.RegisterGameStateManagerClient(GetGameState, GetTimeRemainingInState)
