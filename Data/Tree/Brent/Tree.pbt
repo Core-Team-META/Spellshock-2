@@ -1,6 +1,32 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 10393850260092772171
+  Name: "Networked Events"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Networked Events"
+  }
+}
+Objects {
   Id: 4197521803680757974
   Name: "UI"
   Transform {
