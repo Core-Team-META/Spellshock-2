@@ -39,6 +39,10 @@ function OnRoundStart()
         CapturePointColliders[tostring(NewBases[1])]:WaitForObject().collision = Collision.INHERIT
         CapturePointColliders[tostring(NewBases[2])]:WaitForObject().collision = Collision.INHERIT
 
+        Task.Wait(1)
+        Events.BroadcastToAllPlayers("ToggleLoadScreen", true)
+        Task.Wait(2)
+
         -- Move all players to the new base locations
         for _, player in ipairs(AllPlayers) do
             local id = NewBases[player.team]
@@ -48,6 +52,8 @@ function OnRoundStart()
             player:SetWorldPosition(RandomSP:GetWorldPosition())
             player:SetWorldRotation(RandomSP:GetWorldRotation())
         end
+
+        Events.BroadcastToAllPlayers("ToggleLoadScreen", false)
     end
 end
 

@@ -4451,6 +4451,7 @@ Objects {
   ChildIds: 10014706379529750765
   ChildIds: 13236614663246059772
   ChildIds: 8351820270940681377
+  ChildIds: 8909625047588018725
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -4458,6 +4459,149 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 8909625047588018725
+  Name: "Load Screen"
+  Transform {
+    Location {
+      X: -21100
+      Y: -31035
+      Z: 7560
+    }
+    Rotation {
+      Yaw: 30.0000057
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11740795219228208423
+  ChildIds: 7908503854706131672
+  ChildIds: 5750044622214638845
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5750044622214638845
+  Name: "Black screen"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8909625047588018725
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 1814707273787853473
+      }
+      Color {
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7908503854706131672
+  Name: "LoadScreenClient"
+  Transform {
+    Location {
+      X: 33790.6367
+      Y: 16327.0977
+      Z: -7560
+    }
+    Rotation {
+      Yaw: -30.0000095
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8909625047588018725
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BlackScreen"
+      ObjectReference {
+        SelfId: 5750044622214638845
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 12097270576040070503
+    }
   }
 }
 Objects {
