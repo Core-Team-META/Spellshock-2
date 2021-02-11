@@ -4,7 +4,7 @@ function OnToggleLoadScreen(bool)
     if bool then
         id = 1
     else
-        id = 2
+        id = 0
     end
     script:SetNetworkedCustomProperty("TLS", id)
 end
