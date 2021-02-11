@@ -80067,6 +80067,41 @@ Objects {
   }
 }
 Objects {
+  Id: 6016624472631552493
+  Name: "PlayerMovementToggle"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 10583423179915449172
+    }
+  }
+}
+Objects {
   Id: 14570647703378092628
   Name: "DynamicCapturePoints"
   Transform {
