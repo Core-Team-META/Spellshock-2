@@ -3149,6 +3149,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2211930898932802599
+  Name: "Pyramid - 4-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_truncated_001"
+  }
+}
+Assets {
   Id: 2140913818093261140
   Name: "Sci-fi Trim 01 bend 90"
   PlatformAssetType: 1

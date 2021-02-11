@@ -1,6 +1,136 @@
 Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
+  Id: 15672047856758488687
+  Name: "Hill 02"
+  Transform {
+    Location {
+      X: 28859.4824
+      Y: 46311.6133
+      Z: -2931.02783
+    }
+    Rotation {
+      Pitch: -2.95651245
+      Yaw: -48.8453674
+      Roll: -14.2460938
+    }
+    Scale {
+      X: 0.796159804
+      Y: 1.20257199
+      Z: 0.665153623
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13802195091322210055
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.18879351
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.235219017
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0964238122
+        G: 0.139999986
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14270419193600238466
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 13106931145028029690
+  Name: "Rock Pile 002"
+  Transform {
+    Location {
+      X: 28844.2422
+      Y: 46186.2305
+      Z: -2921.54175
+    }
+    Rotation {
+      Pitch: -22.3223267
+      Yaw: -70.7557373
+      Roll: -24.7695
+    }
+    Scale {
+      X: 0.783155
+      Y: 0.783155
+      Z: 0.783155
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.812000036
+        G: 0.504768372
+        B: 0.333731979
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16388825162191980240
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 12421557893191504479
   Name: "Witcher Mock Up"
   Transform {

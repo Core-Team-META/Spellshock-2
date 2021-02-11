@@ -1,16 +1,47 @@
 Name: "NPC"
 RootId: 6356897330857931981
 Objects {
+  Id: 8935342203076718032
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 23279.8984
+      Y: 26050.2148
+      Z: -109.107422
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6356897330857931981
+  ChildIds: 11860927824346617452
+  ChildIds: 17882584209336007597
+  ChildIds: 7059974110036798949
+  ChildIds: 18298441680868103020
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
   Id: 18298441680868103020
   Name: "Elf_Merchant_02"
   Transform {
     Location {
-      X: 43171.875
-      Y: 51875.1719
-      Z: 839.047852
+      X: 19891.9766
+      Y: 25824.957
+      Z: 948.155273
     }
     Rotation {
-      Yaw: -9.93746948
+      Yaw: -9.93748283
     }
     Scale {
       X: 1.07703626
@@ -18,7 +49,7 @@ Objects {
       Z: 1.07703626
     }
   }
-  ParentId: 6356897330857931981
+  ParentId: 8935342203076718032
   ChildIds: 14845376797846255837
   ChildIds: 13390665848538708308
   UnregisteredParameters {
@@ -9111,9 +9142,9 @@ Objects {
   Name: "Elf_Merchant_01"
   Transform {
     Location {
-      X: 43415.4
-      Y: 52111.2109
-      Z: 835.016113
+      X: 20135.5
+      Y: 26060.9961
+      Z: 944.123535
     }
     Rotation {
       Yaw: -69.6584167
@@ -9124,7 +9155,7 @@ Objects {
       Z: 1.00794923
     }
   }
-  ParentId: 6356897330857931981
+  ParentId: 8935342203076718032
   ChildIds: 15345183123162182535
   ChildIds: 3394557704846598436
   UnregisteredParameters {
@@ -14130,9 +14161,8 @@ Objects {
   Name: "Orc_Merchant_02"
   Transform {
     Location {
-      X: 3245.52734
-      Y: 305.910156
-      Z: -109.107422
+      X: -20034.3711
+      Y: -25744.3047
     }
     Rotation {
       Yaw: 174.074783
@@ -14143,7 +14173,7 @@ Objects {
       Z: 1.11252153
     }
   }
-  ParentId: 6356897330857931981
+  ParentId: 8935342203076718032
   ChildIds: 3045172279069700908
   ChildIds: 1957196777447720315
   UnregisteredParameters {
@@ -21925,12 +21955,12 @@ Objects {
   Name: "Orc_Merchant_01"
   Transform {
     Location {
-      X: 3286.79297
-      Y: -91.4355469
-      Z: -86.293457
+      X: -19993.1055
+      Y: -26141.6504
+      Z: 22.8139648
     }
     Rotation {
-      Yaw: 153.628052
+      Yaw: 153.628082
     }
     Scale {
       X: 1.09987068
@@ -21938,7 +21968,7 @@ Objects {
       Z: 1.09987068
     }
   }
-  ParentId: 6356897330857931981
+  ParentId: 8935342203076718032
   ChildIds: 5958266258148139316
   ChildIds: 3617097581600145817
   UnregisteredParameters {
@@ -27092,5 +27122,230 @@ Objects {
     SubobjectId: 12648205658809413154
     InstanceId: 17850673641858488743
     TemplateId: 2222293508240886553
+  }
+}
+Objects {
+  Id: 9667128413959232033
+  Name: "Collision"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6356897330857931981
+  ChildIds: 15187976618503292279
+  ChildIds: 7812192831411853497
+  ChildIds: 6465263253838146534
+  ChildIds: 8852692993766575235
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 8852692993766575235
+  Name: "Capsule"
+  Transform {
+    Location {
+      X: 43150.9141
+      Y: 51865.1641
+      Z: 929.075195
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.41926515
+      Y: 1.41926515
+      Z: 1.58405232
+    }
+  }
+  ParentId: 9667128413959232033
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2754963224534021958
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 6465263253838146534
+  Name: "Capsule"
+  Transform {
+    Location {
+      X: 43399.8672
+      Y: 52118.4531
+      Z: 929.075195
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.41926515
+      Y: 1.41926515
+      Z: 1.58405232
+    }
+  }
+  ParentId: 9667128413959232033
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2754963224534021958
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7812192831411853497
+  Name: "Capsule"
+  Transform {
+    Location {
+      X: 3257.14844
+      Y: 305.009766
+      Z: -4.01171875
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.41926515
+      Y: 1.41926515
+      Z: 1.58405232
+    }
+  }
+  ParentId: 9667128413959232033
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2754963224534021958
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 15187976618503292279
+  Name: "Capsule"
+  Transform {
+    Location {
+      X: 3296.80859
+      Y: -94.6347656
+      Z: 5.73681641
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.41926515
+      Y: 1.41926515
+      Z: 1.58405232
+    }
+  }
+  ParentId: 9667128413959232033
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2754963224534021958
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
   }
 }

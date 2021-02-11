@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15683169359350375517
+  Name: "Capsule"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_capsule_001"
+  }
+}
+Assets {
   Id: 15671591457305353788
   Name: "Chain Link 01"
   PlatformAssetType: 2
