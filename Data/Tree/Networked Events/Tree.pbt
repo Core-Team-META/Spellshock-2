@@ -81,7 +81,15 @@ Objects {
       Int: 0
     }
     Overrides {
+      Name: "cs:OPD"
+      String: ""
+    }
+    Overrides {
       Name: "cs:TLS:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:OPD:isrep"
       Bool: true
     }
   }

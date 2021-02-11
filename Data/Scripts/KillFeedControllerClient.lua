@@ -120,7 +120,7 @@ for i = 1, NUM_LINES do
 	lineTemplates[i]:SetColor(Color.TRANSPARENT)
 end
 
-Events.Connect("AddKillFeedKill_Internal", OnAddKillFeedKill)
+Events.Connect("AKI", OnAddKillFeedKill)
 
 if SHOW_JOIN_AND_LEAVE then
 	Game.playerJoinedEvent:Connect(OnPlayerJoined)

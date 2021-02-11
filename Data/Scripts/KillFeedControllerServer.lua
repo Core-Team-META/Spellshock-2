@@ -19,9 +19,9 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Fires an event for the client to add a line to the kill feed
 function OnPlayerDied(player, damage)
 	if damage.sourceAbility then
-		Events.BroadcastToAllPlayers("AddKillFeedKill_Internal", damage.sourcePlayer, player, damage.sourceAbility.name)
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name)
 	else
-		Events.BroadcastToAllPlayers("AddKillFeedKill_Internal", damage.sourcePlayer, player, nil)
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, nil)
 	end
 end
 

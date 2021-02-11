@@ -107,6 +107,6 @@ function OnPlayerDied(sourcePlayer)
 end
 
 -- Initialize
-Events.Connect("AddKillFeedKill_Internal", OnPlayerDied)
+Events.Connect("AKI", OnPlayerDied)
 KILL_ICON.visibility = Visibility.FORCE_OFF
 COMBO_LABEL.visibility = Visibility.FORCE_OFF
