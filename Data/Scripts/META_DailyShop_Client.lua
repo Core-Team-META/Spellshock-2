@@ -24,13 +24,14 @@ local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"
 local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
-
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local dailyRewards = {}
 local listeners = {}
+local npcTriggers = {}
 local spamPrevent
+local closeButtonLisener = nil
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -51,12 +52,17 @@ local function ToggleUi(bool)
     UI.SetCursorVisible(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
-    ORC_DAILY_SHOP_TRIGGER.isInteractable = bool
-    ELF_DAILY_SHOP_TRIGGER.isInteractable = bool
     if bool then
+        -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON
+        ORC_DAILY_SHOP_TRIGGER.isInteractable = false
+        ELF_DAILY_SHOP_TRIGGER.isInteractable = false
     else
+        --PARENT_UI.isEnabled = false
         PARENT_UI.visibility = Visibility.FORCE_OFF
+        Task.Wait()
+        ORC_DAILY_SHOP_TRIGGER.isInteractable = true
+        ELF_DAILY_SHOP_TRIGGER.isInteractable = true
     end
 end
 
@@ -184,6 +190,18 @@ local function BuildRewardSlots(tbl)
     end
 end
 
+local function DisconnectNpcListener()
+    for _, listener in ipairs(npcTriggers) do
+        listener:Disconnect()
+    end
+    npcTriggers = {}
+end
+
+local function ConnectNpcListener()
+    npcTriggers[#npcTriggers + 1] = ORC_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+    npcTriggers[#npcTriggers + 1] = ELF_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -217,8 +235,9 @@ function OnRefresh()
 end
 
 function OnDailyShopOpen(player, keybind)
-    if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() then
+    if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() and isAllowed(0.5) then
         ToggleUi(false)
+        
     end
 end
 
@@ -226,8 +245,7 @@ function OnInteracted(trigger, player)
     if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
-    elseif player == LOCAL_PLAYER and PARENT_UI:IsVisibleInHierarchy() then
-        ToggleUi(false)
+        isAllowed(0.5)
     end
 end
 
@@ -242,13 +260,11 @@ PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-ORC_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
-ELF_DAILY_SHOP_TRIGGER.interactedEvent:Connect(OnInteracted)
+ConnectNpcListener()
 
 ORC_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 
-
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnDailyShopOpen)
+LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
