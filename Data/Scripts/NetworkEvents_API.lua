@@ -1,12 +1,10 @@
 function OnToggleLoadScreen(bool)
-    local TLS = script:GetCustomProperty("TLS")
-    local id
-    if bool then
-        id = 1
-    else
-        id = 0
-    end
-    script:SetNetworkedCustomProperty("TLS", id)
+    script:SetNetworkedCustomProperty("TLS", bool and 1 or 0)
+end
+
+function OnPlayerDied(player)
+    script:SetNetworkedCustomProperty("OPD", player.id)
 end
 
 Events.Connect("ToggleLoadScreen", OnToggleLoadScreen)
+Events.Connect("PlayerDied", OnPlayerDied)

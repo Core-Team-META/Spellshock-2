@@ -20,7 +20,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 function OnPlayerDied(player, damage)
     -- Only send this event when the damage has source player
     if damage.sourcePlayer then
-        Events.BroadcastToAllPlayers("PlayerDied", player)
+        Events.Broadcast("PlayerDied", player)
     end
 end
 
