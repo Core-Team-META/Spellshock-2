@@ -1,6 +1,353 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 14067136948649209529
+  Name: "Base Collision"
+  Transform {
+    Location {
+      X: -4030
+      Y: -7050
+      Z: 6775
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 4879254931009550151
+  ChildIds: 4598412272264715444
+  ChildIds: 16223040169054749634
+  ChildIds: 9832731735981833309
+  ChildIds: 3886707144223941666
+  ChildIds: 354285136108517247
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      ObjectReference {
+        SelfId: 16223040169054749634
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      ObjectReference {
+        SelfId: 9832731735981833309
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      ObjectReference {
+        SelfId: 3886707144223941666
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      ObjectReference {
+        SelfId: 354285136108517247
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 354285136108517247
+  Name: "Temple Glade Collider"
+  Transform {
+    Location {
+      X: 15535
+      Y: 17000
+      Z: -6575
+    }
+    Rotation {
+      Yaw: 40
+    }
+    Scale {
+      X: 206.1
+      Y: 231.600021
+      Z: 149.5
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6747614045051753376
+    }
+    Teams {
+      TeamInt: 2
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 3886707144223941666
+  Name: "Old Mines Collider"
+  Transform {
+    Location {
+      X: -13720
+      Y: 14805
+      Z: -6575
+    }
+    Rotation {
+      Yaw: -40
+    }
+    Scale {
+      X: 170.3
+      Y: 246.699951
+      Z: 149.5
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6747614045051753376
+    }
+    Teams {
+      TeamInt: 1
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 9832731735981833309
+  Name: "Overlook Collider"
+  Transform {
+    Location {
+      X: 13410
+      Y: -10875
+      Z: -6575
+    }
+    Rotation {
+      Yaw: -50
+    }
+    Scale {
+      X: 170.3
+      Y: 259.100037
+      Z: 149.5
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6747614045051753376
+    }
+    Teams {
+      TeamInt: 2
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 16223040169054749634
+  Name: "War Camp Collider"
+  Transform {
+    Location {
+      X: -13505
+      Y: -11790
+      Z: -6574.99805
+    }
+    Rotation {
+      Yaw: 70
+    }
+    Scale {
+      X: 170.3
+      Y: 206.700027
+      Z: 149.5
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6747614045051753376
+    }
+    Teams {
+      TeamInt: 1
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4598412272264715444
+  Name: "Elf Base Collider"
+  Transform {
+    Location {
+      X: 17270
+      Y: 19075
+    }
+    Rotation {
+      Yaw: 135
+      Roll: 90.0000076
+    }
+    Scale {
+      X: 212.799988
+      Y: 109.400017
+      Z: 102.4
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+      TeamInt: 2
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4879254931009550151
+  Name: "Orc Base Collider"
+  Transform {
+    Location {
+      X: -17270
+      Y: -19075
+      Z: 1345
+    }
+    Rotation {
+      Yaw: -19.9999886
+      Roll: 89.9999924
+    }
+    Scale {
+      X: 130.5
+      Y: 77.7000046
+      Z: 102.4
+    }
+  }
+  ParentId: 14067136948649209529
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsBaseCollider"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+      TeamInt: 1
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 940592713003572108
   Name: "Roaming Camera"
   Transform {
@@ -4568,9 +4915,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -7114.81152
-      Y: -3990.47778
-      Z: 3555
+      X: -23575
+      Y: -23585
+      Z: 4602.84814
     }
     Rotation {
     }
@@ -74297,6 +74644,12 @@ Objects {
       Name: "cs:ABCP"
       AssetReference {
         Id: 5415161041024035059
+      }
+    }
+    Overrides {
+      Name: "cs:BaseCollision"
+      ObjectReference {
+        SelfId: 14067136948649209529
       }
     }
   }

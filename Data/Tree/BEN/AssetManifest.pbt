@@ -305,6 +305,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8933537604162373856
+  Name: "Plane 1m - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_001"
+  }
+}
+Assets {
   Id: 8744665518178580042
   Name: "Fantasy Ability Green 018"
   PlatformAssetType: 9
@@ -410,6 +419,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_26"
+  }
+}
+Assets {
+  Id: 6747614045051753376
+  Name: "Cylinder - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_001"
   }
 }
 Assets {
