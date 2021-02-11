@@ -117,6 +117,10 @@ function OnDied(attackData)
             UpdateUltimateKillAmmount(attackData)
         end
     end
+    if attackData.tags.id and attackData.tags.id == "StatusEffect" then
+        Events.BroadcastToAllPlayers("AKI", source, target, attackData.tags.name)
+        target.serverUserData.killedByStatusEffect = false
+    end
 end
 
 function OnCapturePointChanged(playerId)

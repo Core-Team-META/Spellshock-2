@@ -22,7 +22,7 @@ function PoisonTick(player, source, damage)
 		source = source,
 		position = nil,
 		rotation = nil,
-		tags = {id = "StatusEffect"}
+		tags = {id = "StatusEffect", name = "Poison"}
 	}
 	COMBAT().ApplyDamage(attackData)
 end
