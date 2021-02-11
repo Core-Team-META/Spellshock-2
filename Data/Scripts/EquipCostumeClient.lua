@@ -2,6 +2,8 @@
 local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local ClassID = ParentEquipment:GetCustomProperty("ClassID")
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
 end
@@ -36,6 +38,9 @@ function OnEquipped(thisEquipment, player)
 end
 
 function OnUnequipped(thisEquipment, player)
+	if player == LOCAL_PLAYER then
+		UI.SetReticleVisible(false)
+	end
 	DestroyCostume(player)
 end
 

@@ -40,7 +40,7 @@ function OnRoundStart()
         CapturePointColliders[tostring(NewBases[2])]:WaitForObject().collision = Collision.INHERIT
 
         Task.Wait(1)
-        Events.BroadcastToAllPlayers("ToggleLoadScreen", true)
+        Events.Broadcast("ToggleLoadScreen", true)
         Task.Wait(2)
 
         -- Move all players to the new base locations
@@ -53,7 +53,8 @@ function OnRoundStart()
             player:SetWorldRotation(RandomSP:GetWorldRotation())
         end
 
-        Events.BroadcastToAllPlayers("ToggleLoadScreen", false)
+        Events.Broadcast("ToggleLoadScreen", false)
+        Events.Broadcast("Teleport")
     end
 end
 

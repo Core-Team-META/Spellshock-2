@@ -98,6 +98,9 @@ function OnPlayerJoined(player)
         --newClass:Equip(player)
         player:SetVisibility(false)
     end
+
+    Task.Wait(2)
+    player:SetResource("GOLD", 100000)
 end
 
 if Environment.IsSinglePlayerPreview() then

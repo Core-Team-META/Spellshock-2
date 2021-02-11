@@ -5,13 +5,17 @@ local IsEnabled = Root:GetCustomProperty("IsEnabled")
 
 function OnGameStateChanged(oldState, newState)
     if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
-        if IsEnabled then
-			for _, player in ipairs(Game.GetPlayers()) do
-				player:SetWorldPosition(PositionPoint:GetWorldPosition())
-			end
-		end
+        OnTeleport()
     end
 end
 
+function OnTeleport()
+	if IsEnabled then
+		for _, player in ipairs(Game.GetPlayers()) do
+			player:SetWorldPosition(PositionPoint:GetWorldPosition())
+		end
+	end
+end
 
-Events.Connect("GameStateChanged", OnGameStateChanged)
+--Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("Teleport", OnTeleport)
