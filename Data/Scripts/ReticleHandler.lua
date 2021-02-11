@@ -31,21 +31,25 @@ function OnEquip(thisEquipment, player)
 end	
 
 function OnUnequip(equipment, player)
-	player.clientUserData.hasReticle = false
+	if player == LOCAL_PLAYER then
+		UI.SetReticleVisible(false)
+		player.clientUserData.hasReticle = false
+	end
+	
 	--[[if Reticle and Object.IsValid(Reticle) then
 		Reticle:Destroy()
 		Reticle = nil
 	end]]
 end
 
-if Equipment.owner then
+--[[if Equipment.owner then
 	if Equipment.owner == LOCAL_PLAYER then
 		local reticleObject = World.SpawnAsset(ReticleTemplate)
 		Reticle = reticleObject:GetCustomProperty("ReticleImage"):WaitForObject()
 	else
 		script:Destroy()
 	end
-end
+end]]
 
 Equipment.equippedEvent:Connect( OnEquip )
 Equipment.unequippedEvent:Connect(OnUnequip)

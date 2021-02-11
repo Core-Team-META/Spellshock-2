@@ -38,9 +38,6 @@ function OnEquipped(thisEquipment, player)
 end
 
 function OnUnequipped(thisEquipment, player)
-	if player == LOCAL_PLAYER then
-		UI.SetReticleVisible(false)
-	end
 	DestroyCostume(player)
 end
 
