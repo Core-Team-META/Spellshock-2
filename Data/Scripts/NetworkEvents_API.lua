@@ -1,12 +1,5 @@
 function OnToggleLoadScreen(bool)
-    print(bool)
-    local id
-    if bool then
-        id = 1
-    else
-        id = 0
-    end
-    script:SetNetworkedCustomProperty("TLS", id)
+    script:SetNetworkedCustomProperty("TLS", bool and 1 or 0)
 end
 
 function OnPlayerDied(player)
