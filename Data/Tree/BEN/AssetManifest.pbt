@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17589500154826526248
-  Name: "Radial Blur Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_ppm_radial_blur"
-  }
-}
-Assets {
   Id: 17587880652047825598
   Name: "Cylinder - Bottom-Aligned"
   PlatformAssetType: 1
@@ -104,15 +95,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_006"
-  }
-}
-Assets {
-  Id: 15683169359350375517
-  Name: "Capsule"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_capsule_001"
   }
 }
 Assets {
@@ -404,15 +386,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7302246634419215840
-  Name: "Bullet Body Flesh 02 Impact SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_bullet_impact_body_flesh_02_Cue_ref"
-  }
-}
-Assets {
   Id: 7246944659171041392
   Name: "Shine Star Shimmer 01 SFX"
   PlatformAssetType: 7
@@ -554,24 +527,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
-  }
-}
-Assets {
-  Id: 4998159696449081601
-  Name: "Wireframe"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "wireframe_glow_001"
-  }
-}
-Assets {
-  Id: 4948247749987491170
-  Name: "Crosshair 020"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Crosshair_020"
   }
 }
 Assets {

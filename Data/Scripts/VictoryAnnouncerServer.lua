@@ -43,13 +43,13 @@ function OnTeamVictory(team)
 	elseif team == 2 then
 		teamName = TEAM_2_NAME
 	end
-	Events.BroadcastToAllPlayers("BannerMessage", "The " ..teamName.." wins!", DURATION)
+	Events.BroadcastToAllPlayers("TeamVictory_Client", teamName.." Wins!")
 end
 
 -- nil OnPlayerVictory(Player)
 -- Announces that there was a tie
 function OnTieVictory(winners)
-	Events.BroadcastToAllPlayers("BannerMessage", "Tie!")
+	Events.BroadcastToAllPlayers("TeamVictory_Client", "Tie!")
 end
 
 -- Initialize

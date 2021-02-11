@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17589500154826526248
+  Name: "Radial Blur Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_ppm_radial_blur"
+  }
+}
+Assets {
   Id: 17118136979191323600
   Name: "Metal Iron 01"
   PlatformAssetType: 2
@@ -134,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7302246634419215840
+  Name: "Bullet Body Flesh 02 Impact SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_bullet_impact_body_flesh_02_Cue_ref"
+  }
+}
+Assets {
   Id: 7142068506126400895
   Name: "Energy Tube Glow"
   PlatformAssetType: 2
@@ -176,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "wireframe_glow_001"
+  }
+}
+Assets {
+  Id: 4948247749987491170
+  Name: "Crosshair 020"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_020"
   }
 }
 Assets {
