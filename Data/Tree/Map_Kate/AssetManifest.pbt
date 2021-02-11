@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17105483186841445735
+  Name: "Fantasy Sack Open"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_001_ref"
+  }
+}
+Assets {
   Id: 17091160006555877630
   Name: "Cube - Rounded"
   PlatformAssetType: 1
@@ -674,6 +683,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14541980029145667132
+  Name: "Fantasy Sack Laying"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_003_ref"
+  }
+}
+Assets {
   Id: 14541379120575232735
   Name: "Urban Pipe Coupling 01"
   PlatformAssetType: 1
@@ -1139,6 +1157,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_eightsided_002"
+  }
+}
+Assets {
+  Id: 12148720894562039167
+  Name: "Fantasy Book Collection 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_003_ref"
   }
 }
 Assets {
@@ -1718,6 +1745,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9364533443650044160
+  Name: "Fantasy Book Collection 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_004_ref"
+  }
+}
+Assets {
   Id: 9338910762992902201
   Name: "Craftsman Stairs 01 Railing"
   PlatformAssetType: 1
@@ -1769,6 +1805,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_hq_003"
+  }
+}
+Assets {
+  Id: 9129172925362125493
+  Name: "Urban Plank Debris 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urban_destruction_debris_plank_01_ref"
   }
 }
 Assets {
@@ -2357,6 +2402,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6358034599651012933
+  Name: "Fantasy Book Collection 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_002_ref"
+  }
+}
+Assets {
   Id: 6289363088155023181
   Name: "Decal Elven Symbols"
   PlatformAssetType: 14
@@ -2429,6 +2483,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6084079896259528281
+  Name: "Fantasy Book Pile 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_pile_003_ref"
+  }
+}
+Assets {
   Id: 6054953119424435965
   Name: "Fantasy Human Guy 2"
   PlatformAssetType: 17
@@ -2480,6 +2543,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_reflector_hex_001"
+  }
+}
+Assets {
+  Id: 5729905043926227526
+  Name: "Fantasy Sack Tied"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_002_ref"
   }
 }
 Assets {
@@ -2561,6 +2633,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_006"
+  }
+}
+Assets {
+  Id: 5253804418413104983
+  Name: "Decal Rubble Concrete 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_mil_rubble_concrete_001_ref"
   }
 }
 Assets {
@@ -2651,6 +2732,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_bottle_003"
+  }
+}
+Assets {
+  Id: 4603740449467706689
+  Name: "Fantasy Book Open 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_open_001_ref"
   }
 }
 Assets {
@@ -3230,6 +3320,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1909548803215530403
+  Name: "Fantasy Bookshelf Middle"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_bookshelf_middle_001_ref"
+  }
+}
+Assets {
   Id: 1890184376442337231
   Name: "Metal Old Beaten Gold 02"
   PlatformAssetType: 2
@@ -3254,6 +3353,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_gear_001_spoke5x"
+  }
+}
+Assets {
+  Id: 1676531612695025637
+  Name: "Fantasy Book Collection 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_001_ref"
   }
 }
 Assets {

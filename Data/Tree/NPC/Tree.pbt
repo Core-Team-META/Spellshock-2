@@ -36,12 +36,12 @@ Objects {
   Name: "Elf_Merchant_02"
   Transform {
     Location {
-      X: 19891.9766
-      Y: 25824.957
+      X: 19898.4355
+      Y: 25861.8242
       Z: 948.155273
     }
     Rotation {
-      Yaw: -9.93748283
+      Yaw: -39.561554
     }
     Scale {
       X: 1.07703626
@@ -14165,7 +14165,7 @@ Objects {
       Y: -25744.3047
     }
     Rotation {
-      Yaw: 174.074783
+      Yaw: -138.208115
     }
     Scale {
       X: 1.11252153
