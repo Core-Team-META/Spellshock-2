@@ -242,6 +242,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11846162225910715126
+  Name: "Frame Outlined Thick 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameFlat_024"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9
@@ -257,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
+  }
+}
+Assets {
+  Id: 11051940373171549903
+  Name: "Frame Highlighted 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameHighlighted_024"
   }
 }
 Assets {
@@ -503,6 +521,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5483050497813228660
+  Name: "BG Highlighted 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_024"
+  }
+}
+Assets {
   Id: 5459426466684401753
   Name: "Frame Outline Thin 011"
   PlatformAssetType: 9
@@ -629,6 +656,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2905198102128315844
+  Name: "BG Flat 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_24"
+  }
+}
+Assets {
   Id: 2813404828707589716
   Name: "Fantasy Ability Blue 031"
   PlatformAssetType: 9
@@ -683,6 +719,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1326530273708952835
+  Name: "Frame Outline Thin 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_024"
+  }
+}
+Assets {
   Id: 1316376324599490360
   Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
   PlatformAssetType: 10
@@ -725,6 +770,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Alert"
+  }
+}
+Assets {
+  Id: 180266187625907627
+  Name: "Fantasy Compass 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Compass_001"
   }
 }
 Assets {
