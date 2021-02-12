@@ -115,13 +115,13 @@ function Commands.god(player,message)
 end 
 
 function Commands.lookinggood(player,message)
-    player:SetResource("COSM_TOKEN", 10000)
-    return string.format( "%s's 10000 Cosmetics")
+    player:AddResource("COSM_TOKEN", 10000)
+    return string.format( "10000 Cosmetics")
 end 
 
 function Commands.glitteringprizes(player,message)
-    player:SetResource("GOLD", 10000)
-    return string.format( "%s's 10000 gold")
+    player:AddResource("GOLD", 10000)
+    return string.format( "10000 gold")
 end 
 
 function Commands.ungod(player,message)
