@@ -4591,6 +4591,12 @@ Objects {
         SelfId: 5750044622214638845
       }
     }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
