@@ -85,11 +85,19 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:OVS"
+      String: ""
+    }
+    Overrides {
       Name: "cs:TLS:isrep"
       Bool: true
     }
     Overrides {
       Name: "cs:OPD:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:OVS:isrep"
       Bool: true
     }
   }

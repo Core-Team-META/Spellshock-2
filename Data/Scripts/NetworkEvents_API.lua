@@ -6,5 +6,10 @@ function OnPlayerDied(player)
     script:SetNetworkedCustomProperty("OPD", player.id)
 end
 
+function OnVictory(message)
+    script:SetNetworkedCustomProperty("OVS", message)
+end
+
 Events.Connect("ToggleLoadScreen", OnToggleLoadScreen)
 Events.Connect("PlayerDied", OnPlayerDied)
+Events.Connect("TeamVictory_Client", OnVictory)

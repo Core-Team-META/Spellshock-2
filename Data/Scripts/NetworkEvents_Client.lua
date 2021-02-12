@@ -17,6 +17,9 @@ function OnNetworkedChanged(object, string)
                     Events.Broadcast("PlayerDied", player)
                 end
             end
+        elseif string == "OVS" then
+            local message = NETWORK:GetCustomProperty(string)
+            Events.Broadcast("TeamVictory_Client", message)
         end
     end
 end
