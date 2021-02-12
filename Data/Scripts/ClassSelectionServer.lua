@@ -97,7 +97,6 @@ end
 function OnPlayerJoined(player)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
-    --while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, META_AP().TANK, true) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
