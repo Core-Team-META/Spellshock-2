@@ -110,7 +110,6 @@ function SetGameState(newState)
 
 	-- Broadcast basic game state event
 	Events.Broadcast("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
-	--while Events.BroadcastToAllPlayers("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 end
 
 -- nil SetTimeRemainingInState(float)
@@ -121,7 +120,6 @@ function SetTimeRemainingInState(remainingTime)
 
 	-- We broadcast the event because the time changed, even though we are still in the same state
 	Events.Broadcast("GameStateChanged", currentState, currentState, true, stateEndTime)
-	--while Events.BroadcastToAllPlayers("GameStateChanged", currentState, currentState, true, stateEndTime) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 
 	script:SetNetworkedCustomProperty("StateHasDuration", true)
 	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)

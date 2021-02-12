@@ -278,6 +278,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10577491396371571795
+  Name: "Depth of Field Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_DOF"
+  }
+}
+Assets {
   Id: 10304004596054394633
   Name: "Frame Highlighted 001"
   PlatformAssetType: 9

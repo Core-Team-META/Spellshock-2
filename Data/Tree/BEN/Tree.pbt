@@ -80067,6 +80067,187 @@ Objects {
   }
 }
 Objects {
+  Id: 4529847807221634031
+  Name: "Round End Logic"
+  Transform {
+    Location {
+      X: -22430
+      Y: -27455
+      Z: 5275
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 17033447853019655713
+  ChildIds: 6561122938750029361
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6561122938750029361
+  Name: "RoundEndPostProcess"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4529847807221634031
+  ChildIds: 18350651884582151246
+  ChildIds: 16611355214580020966
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 16611355214580020966
+  Name: "Depth of Field Post Process"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6561122938750029361
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Depth Blur Radius"
+      Float: 15
+    }
+    Overrides {
+      Name: "bp:Focal Distance"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Blend Weight"
+      Float: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10577491396371571795
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 18350651884582151246
+  Name: "RoundEndPostProcess"
+  Transform {
+    Location {
+      X: 22430
+      Y: 27455
+      Z: -5275
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6561122938750029361
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DepthOfFieldPostProcess"
+      ObjectReference {
+        SelfId: 16611355214580020966
+      }
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15794142769484771746
+    }
+  }
+}
+Objects {
+  Id: 17033447853019655713
+  Name: "LookControlToggle"
+  Transform {
+    Location {
+      X: 22430
+      Y: 27455
+      Z: -5275
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4529847807221634031
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1425395053078250488
+    }
+  }
+}
+Objects {
   Id: 6016624472631552493
   Name: "PlayerMovementToggle"
   Transform {
