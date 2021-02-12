@@ -23,10 +23,19 @@ local Class_Stances = {
 
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end 
+
+    if player:GetResource("CLASS_MAP") == classID then
+        if player:GetResource("CLOSE_CLASS_SELECTION") == 0 then
+            player:SetResource("CLOSE_CLASS_SELECTION", 1)
+        else
+            player:SetResource("CLOSE_CLASS_SELECTION", 0)
+        end  
+    else
+        player:SetResource("CLASS_MAP", classID)
+    end
+
     if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
         player.animationStance = Class_Stances[classID]
-        player:SetResource("CLASS_MAP", classID)
-        while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
     elseif ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         --unequip everything
         for _, equipment in pairs(player:GetEquipment()) do
@@ -40,9 +49,6 @@ function OnClassChanged(player, classID)
         end
 
         player.animationStance = Class_Stances[classID]
-        player:SetResource("CLASS_MAP", classID)
-        while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, classID) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
-        
         local newClass = World.SpawnAsset(ClassTemplates[classID])
         newClass:Equip(player)
     end
@@ -91,8 +97,8 @@ end
 function OnPlayerJoined(player)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
-    while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, META_AP().TANK, true) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
-    
+    --while Events.BroadcastToAllPlayers("ClassChanged_CLIENT", player, META_AP().TANK, true) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
+
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
         --newClass:Equip(player)
