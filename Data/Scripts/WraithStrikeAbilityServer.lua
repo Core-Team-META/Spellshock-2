@@ -110,7 +110,25 @@ function OnTargetChosen(player, targetPos)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
+		--#TODO Temp Fix For Stuck Flying
+		Task.Spawn(
+			function()
+				if isFlying then
+					player.movementControlMode = DefaultPlayerSetttings.movementControlMode
+					player.maxJumpCount = DefaultPlayerSetttings.maxJumpCount
 
+					player:ResetVelocity()
+					-- Grounded
+					player:ActivateWalking()
+					player.gravityScale = DefaultPlayerSetttings.gravityScale
+					isFlying = false
+					player.serverUserData.immuneToFallDamage = true
+					Task.Wait(3)
+					player.serverUserData.immuneToFallDamage = false
+				end
+			end,
+			1
+		)
 		-- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
 			playerAbility.isEnabled = true
@@ -284,12 +302,15 @@ function DisableFlying()
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
-	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 60, thisAbility.name..": Cooldown")
-	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
-			thisAbility:AdvancePhase()
-		end
-	end, Cooldown)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 60, thisAbility.name .. ": Cooldown")
+	Task.Spawn(
+		function()
+			if Object.IsValid(thisAbility) then
+				thisAbility:AdvancePhase()
+			end
+		end,
+		Cooldown
+	)
 end
 
 function PrintAbilities(player)
@@ -335,7 +356,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, Events.ConnectForPlayer(EventName, OnTargetChosen))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect(OnSpecialAbilityReady))
-	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown))
 	table.insert(EventListeners, player.diedEvent:Connect(OnPlayerDied))
 	table.insert(EventListeners, player.respawnedEvent:Connect(OnPlayerRespawn))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
