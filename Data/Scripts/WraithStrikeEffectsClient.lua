@@ -34,7 +34,9 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		else
 			flyingTimer = -1
 			DestroyCostume()
-			ConfirmSound:Play()
+			if Equipment.owner == LOCAL_PLAYER then
+				ConfirmSound:Play()
+			end
 		end
 	end
 end
