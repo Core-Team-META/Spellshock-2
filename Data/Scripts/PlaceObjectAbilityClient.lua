@@ -28,6 +28,7 @@ local AllHalograms = {}
 local objectHalogram = nil
 local EventListeners = {}
 local placementTable = {position = nil, rotation = nil, isVisible = nil}
+local lastValidPlacement = {position = nil, rotation = nil}
 local durationTimer = 0
 local totalDuration = 0
 
@@ -77,23 +78,39 @@ function OnBindingPressed(player, binding)
 			return
 		end
 
+		--[[
 		isPreviewing = false
 
 		-- Destroy hologram
 		AllHalograms[objectHalogram.id] = nil
 		objectHalogram:Destroy()
 		objectHalogram = nil
+		]]
 
 		SpecialAbility:Activate()
 	end
 end
 
 function OnSpecialAbilityExecute(thisAbility)
-	if objectHalogram and Object.IsValid(objectHalogram) then
+	--[[if objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
 		placementTable.rotation = objectHalogram:GetWorldRotation()
+	end]]
+	Task.Wait()
+
+	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		print("Placement Failed: was in Ready phase during Execute")
+		return
 	end
-	while Events.BroadcastToServer(EventName, placementTable.position, placementTable.rotation) ==
+
+	isPreviewing = false
+
+	-- Destroy hologram
+	AllHalograms[objectHalogram.id] = nil
+	objectHalogram:Destroy()
+	objectHalogram = nil
+
+	while Events.BroadcastToServer(EventName, lastValidPlacement.position, lastValidPlacement.rotation) ==
 		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
 		Task.Wait()
 	end
@@ -205,6 +222,9 @@ function Tick(deltaTime)
 				local quat = Quaternion.New(Vector3.UP, impactNormal)
 				objectHalogram:SetWorldRotation(Rotation.New(quat * Quaternion.New(Rotation.New(0, 0, playerViewRotation.z))))
 			end
+
+			lastValidPlacement.position = impactPosition
+			lastValidPlacement.rotation = objectHalogram:GetWorldRotation()
 		else
 			objectHalogram.visibility = Visibility.FORCE_OFF
 		end

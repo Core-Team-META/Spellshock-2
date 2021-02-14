@@ -1,6 +1,6 @@
 Assets {
-  Id: 18199302755054554368
-  Name: "WraithStrikeAbilityServer"
+  Id: 15436478629864918866
+  Name: "OLD WraithStrikeAbilityServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
