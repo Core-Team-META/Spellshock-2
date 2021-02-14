@@ -1808,6 +1808,24 @@ Assets {
   }
 }
 Assets {
+  Id: 9199751096616988864
+  Name: "Candle Flame VFX"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "fxsm_candleflame"
+  }
+}
+Assets {
+  Id: 9146532306811306174
+  Name: "Ring - Beveled Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_faceted_002"
+  }
+}
+Assets {
   Id: 9129172925362125493
   Name: "Urban Plank Debris 01"
   PlatformAssetType: 1

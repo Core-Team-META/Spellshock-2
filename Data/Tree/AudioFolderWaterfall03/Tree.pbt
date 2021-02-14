@@ -40,14 +40,13 @@ Objects {
     AudioBP {
       Repeat: true
       Pitch: 79.6311
-      Volume: 0.616595805
+      Volume: 0.435574919
       Falloff: 2000
       Radius: 5000
       EnableOcclusion: true
       FadeInTime: 2
       FadeOutTime: 2
       IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
     }
   }
 }
@@ -91,14 +90,13 @@ Objects {
     AudioBP {
       Repeat: true
       Pitch: 79.6311
-      Volume: 0.616595805
+      Volume: 0.435574919
       Falloff: 2000
       Radius: 5000
       EnableOcclusion: true
       FadeInTime: 2
       FadeOutTime: 2
       IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
     }
   }
 }

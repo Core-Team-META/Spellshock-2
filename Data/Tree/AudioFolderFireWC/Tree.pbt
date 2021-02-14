@@ -1,13 +1,10 @@
 Name: "AudioFolderFireWC"
-RootId: 8501837111167630165
+RootId: 3310153342891958462
 Objects {
-  Id: 15630855271564211800
+  Id: 16525702340772090316
   Name: "Fire and Flame Burning Loop Set 01 SFX"
   Transform {
     Location {
-      X: 496.017273
-      Y: -1440.79346
-      Z: -860.593262
     }
     Rotation {
       Yaw: -14.0627699
@@ -18,7 +15,7 @@ Objects {
       Z: 0.897012532
     }
   }
-  ParentId: 8501837111167630165
+  ParentId: 3310153342891958462
   UnregisteredParameters {
     Overrides {
       Name: "bp:Type"
@@ -40,15 +37,14 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      AutoPlay: true
       Repeat: true
-      Volume: 0.7
+      Volume: 0.463358819
       Falloff: 1500
       Radius: 1000
       EnableOcclusion: true
       FadeInTime: 1
       FadeOutTime: 1
-      IsAttenuationEnabled: true
+      IsSpatializationEnabled: true
     }
   }
 }
