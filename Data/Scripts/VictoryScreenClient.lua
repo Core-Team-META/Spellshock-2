@@ -8,15 +8,15 @@
 
 --]]
 
-local GT_API
+--[[local GT_API
 repeat
 
     GT_API = _G.META_GAME_MODES
     Task.Wait()
     
-until GT_API
+until GT_API]]
 
-local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 
 ------------------------------------------------------------------------------------------------------------------------
 --	OBJECTS AND REFERENCES
@@ -28,6 +28,9 @@ local Container = script:GetCustomProperty("Container"):WaitForObject()
 local Spawns = script:GetCustomProperty("Spawns"):WaitForObject()
 
 local OverrideCamera = RootGroup:GetCustomProperty("OverrideCamera"):WaitForObject()
+local rootRotation = RootGroup:GetWorldRotation()
+local camRotation = OverrideCamera:GetRotationOffset()
+OverrideCamera:SetRotationOffset(Rotation.New(camRotation.x, camRotation.y, rootRotation.z))
 
 local LocalPlayer = Game.GetLocalPlayer()
 
@@ -126,9 +129,9 @@ end
 local function SendToVictoryScreen() -- topThreePlayerStats
 
 	-- change the default camera rotation to look in the same direction so the head faces the right way
-	LocalPlayer:SetLookWorldRotation(OverrideCamera:GetWorldRotation())
+	--LocalPlayer:SetLookWorldRotation(OverrideCamera:GetWorldRotation())
 	LocalPlayer:SetOverrideCamera(OverrideCamera)
-	LocalPlayer.lookSensitivity = 0
+	--LocalPlayer.lookSensitivity = 0
 		
 	if not UpdateUITask then
 	
@@ -143,13 +146,13 @@ local function SendToVictoryScreen() -- topThreePlayerStats
 	Events.Broadcast("HideUI")
 end
 
---	nil SendToVictoryScreen(string)
+--	nil RestoreFromPodium(string)
 --	Resets the camera and hides the UI for the victory Screen
 local function RestoreFromPodium()
 
 	Events.Broadcast("ShowUI")
-	LocalPlayer:ClearOverrideCamera()
-	LocalPlayer.lookSensitivity = 1
+	--LocalPlayer:ClearOverrideCamera()
+	--LocalPlayer.lookSensitivity = 1
 		
 	if UpdateUITask then
 	
@@ -180,13 +183,13 @@ local function GetProperty(value, options)
 end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
-
-    if newState == ABGS.GAME_STATE_ROUND_VOTING and oldState ~= ABGS.GAME_STATE_ROUND_VOTING then
-        
-        RestoreFromPodium()
-                
+	if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
+		print(">> Team Victory CLIENT")
+		SendToVictoryScreen()
+    elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+        print(">> CLOSING Team Victory CLIENT")
+		RestoreFromPodium()      
     end
-   
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -198,5 +201,6 @@ WINNER_SORT_TYPE = GetProperty(WINNER_SORT_TYPE, WINNER_SORT_TYPES)
 
 --	Connect events appropriately
 --Events.Connect("SendToVictoryScreen", SendToVictoryScreen)
-Game.roundEndEvent:Connect(SendToVictoryScreen)
+--Game.roundEndEvent:Connect(SendToVictoryScreen)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+print("VICTORY CLIENT COMPILED")
