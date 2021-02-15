@@ -113,7 +113,7 @@ function DisableInvisility()
 		META_AP().SpawnAsset(PlayerVFX.Ending, {position = SpecialAbility.owner:GetWorldPosition()})
 		SpecialAbility.owner:SetVisibility(true)
 		isInvisible = false
-		SpecialAbility.owner.maxWalkSpeed = OriginalWalkSpeed
+		META_AP().AdjustPlayerMovment(SpecialAbility.owner, META_AP().ASSASSIN)
 		SetNetworkProperty(isInvisible)
 		WeaponAbility.isEnabled = true
 	end
@@ -140,7 +140,7 @@ end
 
 function OnUnequip(thisEquipment, player)
 	if not Object.IsValid(player) then return end
-	player.maxWalkSpeed = OriginalWalkSpeed
+	META_AP().AdjustPlayerMovment(player, META_AP().ASSASSIN)
 	player:SetVisibility(true)
 	isInvisible = false
 	if Object.IsValid(script) then

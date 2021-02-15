@@ -120,12 +120,6 @@ local function AdjustPlayerHealth(player, class)
     player.serverUserData.NotAdjustHp = false
 end
 
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
-local function AdjustPlayerMovment(player, class)
-    player.maxWalkSpeed = 700
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
@@ -294,7 +288,7 @@ function API.ChangeClass(player, class)
     player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
 
     AdjustPlayerHealth(player, class)
-    AdjustPlayerMovment(player, class)
+    API.AdjustPlayerMovment(player, class)
 end
 
 --@param object player
@@ -315,6 +309,12 @@ function API.GetAbilityMod(player, binding, mod, defaultValue, source)
         warn("META_AP => failed to access " .. source .. " mod")
     end
     return result
+end
+
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+function API.AdjustPlayerMovment(player, class)
+    player.maxWalkSpeed = 700
 end
 
 --@param string template => MUID
