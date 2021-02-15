@@ -129,10 +129,10 @@ end
 local function SendToVictoryScreen() -- topThreePlayerStats
 
 	-- change the default camera rotation to look in the same direction so the head faces the right way
-	--LocalPlayer:SetLookWorldRotation(OverrideCamera:GetWorldRotation())
+	LocalPlayer:SetLookWorldRotation(RootGroup:GetWorldRotation() - Rotation.New(0,0,180))
 	LocalPlayer:SetOverrideCamera(OverrideCamera)
 	--LocalPlayer.lookSensitivity = 0
-		
+	
 	if not UpdateUITask then
 	
 		UpdateUITask = Task.Spawn(UpdateUI)
