@@ -24,7 +24,7 @@ local timeBuf = 0
 
 function OnNetworkPropertyChanged(thisObject, name)
 	if name == "State" or name == "StateEndTime" and time() > timeBuf then
-		print("Broadcasting game state: "..tostring(SERVER_SCRIPT:GetCustomProperty("State")))
+		--print("Broadcasting game state: "..tostring(SERVER_SCRIPT:GetCustomProperty("State")))
 		timeBuf = time() + delay
 		Events.Broadcast("GameStateChanged", SERVER_SCRIPT:GetCustomProperty("OldState"), SERVER_SCRIPT:GetCustomProperty("State"), 
 		SERVER_SCRIPT:GetCustomProperty("StateHasDuration"), SERVER_SCRIPT:GetCustomProperty("StateEndTime"))

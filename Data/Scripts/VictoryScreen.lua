@@ -12,7 +12,7 @@
 --	EXTERNAL SCRIPTS AND APIS
 ------------------------------------------------------------------------------------------------------------------------
 local VictoryScreenAPI = require(script:GetCustomProperty("API_VictoryScreen"))
-
+local ABGS = require(script:GetCustomProperty("ABGS"))
 ------------------------------------------------------------------------------------------------------------------------
 --	OBJECTS AND REFERENCES
 ------------------------------------------------------------------------------------------------------------------------
@@ -45,11 +45,22 @@ function Deactivate()
 	end
 end
 
+function OnGameStateChanged(oldState, newState, hasDuration, time)
+	if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
+		print("Team Victory")
+		Activate()
+    elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+        print("CLOSING Team Victory")
+		Deactivate()   
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 --	INITIALIZATION
 ------------------------------------------------------------------------------------------------------------------------
+Events.Connect("GameStateChanged", OnGameStateChanged)
 
---	Connect Game.roundEndEvent to teleport players if ACTIVATE_AUTOMATICALLY is true
+--[[	Connect Game.roundEndEvent to teleport players if ACTIVATE_AUTOMATICALLY is true
 if(ACTIVATE_AUTOMATICALLY) then
 	Game.roundEndEvent:Connect(Activate)
 end
@@ -61,4 +72,4 @@ end
 --	Connect DEACTIVATE_EVENT to restore players
 if(DEACTIVATE_EVENT and (#DEACTIVATE_EVENT > 0)) then
 	Events.Connect(DEACTIVATE_EVENT, Deactivate)
-end
+end]]

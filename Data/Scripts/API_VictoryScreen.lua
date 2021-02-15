@@ -168,37 +168,37 @@ function API.CalculateWinners(winnerSortType, winnerSortResource)
 	return winners
 end
 
-function API.TeleportWinners( player, spawnObject, overrideCamera)
+function API.TeleportWinners( player, spawnObject)
 	local spawnPosition = spawnObject:GetWorldPosition()
 	local spawnRotation = spawnObject:GetWorldRotation()
-		player:Respawn({position = spawnPosition, rotation = spawnRotation})
+	player:Respawn({position = spawnPosition, rotation = spawnRotation})
 
-		player:ResetVelocity() -- stop the player from flying off if they are currently in motion
-		player:SetWorldPosition(spawnPosition)
-		player:SetWorldRotation(spawnRotation)
-		
+	player:ResetVelocity() -- stop the player from flying off if they are currently in motion
+	player:SetWorldPosition(spawnPosition)
+	player:SetWorldRotation(spawnRotation)
+	
+	Task.Wait(.1)
+
+	player:ResetVelocity()
+	player:SetWorldPosition(spawnPosition)
+	player:SetWorldRotation(spawnRotation)	
+	
+	for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
+		equipment:Destroy()
+	end
+
+	Task.Wait()
+	
+	--player.animationStance = "unarmed_stance"
+	
+	for i=1,5 do
 		Task.Wait(.1)
 
 		player:ResetVelocity()
 		player:SetWorldPosition(spawnPosition)
 		player:SetWorldRotation(spawnRotation)	
 		
-		for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
-			equipment:Destroy()
-		end
-
-		Task.Wait()
-		
-		player.animationStance = "unarmed_stance"
-		
-		for i=1,5 do
-			Task.Wait(.1)
-
-			player:ResetVelocity()
-			player:SetWorldPosition(spawnPosition)
-			player:SetWorldRotation(spawnRotation)	
-			
-		end
+	end
 end
 
 
@@ -257,8 +257,8 @@ function API.OnPlayerRestored(victoryScreen, player, data)
 
 	end
 
-	player.movementControlMode = data.originalMovementControlMode
-	player.lookControlMode = data.originalLookControlMode 
+	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+	player.lookControlMode = LookControlMode.RELATIVE
 	
 	if(respawnOnDeactivate) then
 		player:Respawn()
@@ -268,7 +268,7 @@ function API.OnPlayerRestored(victoryScreen, player, data)
 		tasks[player] = nil
 	end
 	Task.Wait()
-	player.lookControlMode = data.originalLookControlMode 
+	player.lookControlMode = LookControlMode.RELATIVE
 end
 
 --	nil API.TeleportPlayers(CoreObject, table)
@@ -283,7 +283,6 @@ function API.TeleportPlayers(victoryScreen, playerList)
 		victoryScreen:GetCustomProperty("WinnerSortResource"),
 		victoryScreen:GetCustomProperty("Spawns"):WaitForObject()
 
-	local OverrideCamera = victoryScreen:GetCustomProperty("OverrideCamera"):WaitForObject()
 	winnerSortType = GetProperty(winnerSortType, WINNER_SORT_TYPES)
 	_G["MovementCanControl"] = false
 	if(not playerList) then
@@ -299,14 +298,14 @@ function API.TeleportPlayers(victoryScreen, playerList)
 		end
 	end
 	
-	for _, player in pairs(Game.GetPlayers()) do
+	--[[for _, player in pairs(Game.GetPlayers()) do
 		if(Object.IsValid(player)) then
 			FastSpawn(function()
-				API.OnPlayerTeleported(victoryScreen, player, topThreePlayerStats, duration, respawnOnDeactivate, OverrideCamera)
+				API.OnPlayerTeleported(victoryScreen, player, topThreePlayerStats, duration, respawnOnDeactivate)
 				API.playerTeleportedEvent:_Fire(victoryScreen, player, topThreePlayerStats)
 			end)
 		end
-	end
+	end]]
 
 
 
@@ -316,7 +315,7 @@ function API.TeleportPlayers(victoryScreen, playerList)
 		local player = playerList[place]
 		if(Object.IsValid(player)) then
 			FastSpawn(function()
-				API.TeleportWinners( player, spawnObject, OverrideCamera)
+				API.TeleportWinners( player, spawnObject)
 				
 			end)
 		end
