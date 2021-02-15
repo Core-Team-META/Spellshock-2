@@ -170,6 +170,14 @@ local function RestoreFromPodium()
 	
 end
 
+function OnHideVictoryPanels()
+	for _, panel in pairs(PlayerPanels) do
+		panel.visibility = Visibility.FORCE_OFF
+		local resourcePanel = panel:GetCustomProperty("ResourcePanel"):WaitForObject()
+		resourcePanel.visibility = Visibility.FORCE_OFF
+	end
+end
+
 --	string GetProperty(string, table)
 --	Returns a value (string) based on a table of default options (strings)
 local function GetProperty(value, options)
@@ -210,3 +218,4 @@ WINNER_SORT_TYPE = GetProperty(WINNER_SORT_TYPE, WINNER_SORT_TYPES)
 --Game.roundEndEvent:Connect(SendToVictoryScreen)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("SendToVictoryScreen", SendToVictoryScreen)
+Events.Connect("HideVictoryPanels", OnHideVictoryPanels)
