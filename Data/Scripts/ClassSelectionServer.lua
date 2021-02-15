@@ -78,6 +78,7 @@ function OnGameStateChanged(oldState, newState)
 	        newClass:Equip(player)
         end
     elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
+        Task.Wait()
         for _, player in pairs(Game.GetPlayers()) do 
             -- unequip everything 
             for _, equipment in pairs(player:GetEquipment()) do
@@ -90,6 +91,8 @@ function OnGameStateChanged(oldState, newState)
                 end
             end
             player:SetVisibility(true)
+            local classID = player:GetResource("CLASS_MAP")
+            player.animationStance = Class_Stances[classID]
         end
     end
 end

@@ -199,7 +199,6 @@ local function BuildRoundEndStats()
     table.sort(players, ComparePlayersForMVP)
     MVP_PLAYER_NAME.text = players[1].name
     MVP_PLAYER_NAME:SetColor(_G.TeamColors[players[1].team])
-    PARENT_PANEL.visibility = Visibility.FORCE_ON
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -207,12 +206,21 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if ABGS.GAME_STATE_PLAYER_SHOWCASE == newState then
+    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         BuildRoundEndStats()
-    end
-    if ABGS.GAME_STATE_PLAYER_SHOWCASE ~= newState then
-        PARENT_PANEL.visibility = Visibility.FORCE_OFF
+    elseif newState == ABGS.GAME_STATE_REWARDS then
         ResetStats()
+    end
+end
+
+function Tick()
+    if ABGS.IsGameStateManagerRegistered() then
+        local currentState = ABGS.GetGameState()
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 8 then
+            PARENT_PANEL.visibility = Visibility.INHERIT
+        else
+            PARENT_PANEL.visibility = Visibility.FORCE_OFF
+        end
     end
 end
 

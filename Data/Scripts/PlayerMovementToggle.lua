@@ -6,8 +6,10 @@ function TogglePlayerMovement(mode)
     for _, player in ipairs(Game.GetPlayers()) do
         if mode then
             player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+            player.lookControlMode = LookControlMode.RELATIVE
         else 
             player.movementControlMode = MovementControlMode.NONE
+            player.lookControlMode = LookControlMode.NONE
         end
     end
 end

@@ -10,6 +10,8 @@ function OnGameStateChanged(oldState, newState)
             Task.Wait()
             Task.Wait()
         end
+    elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
+        DepthOfFieldPostProcess:SetSmartProperty("Blend Weight", 0.4)
     elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
         DepthOfFieldPostProcess:SetSmartProperty("Blend Weight", 0)
 	end
