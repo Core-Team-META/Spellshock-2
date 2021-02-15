@@ -54,6 +54,7 @@ local roundEndTime = 0.0
 local bindingDown = false
 
 function OnTeamVictory(messsage)
+    if messsage == "" then return end
     TEAM_NAME.text = messsage
     TEAM_NAME:GetChildren()[1].text = messsage
     HEADER.visibility = Visibility.INHERIT

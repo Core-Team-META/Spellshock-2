@@ -81249,7 +81249,7 @@ Objects {
       Z: 10995
     }
     Rotation {
-      Yaw: -25
+      Yaw: -30
     }
     Scale {
       X: 1

@@ -50,7 +50,7 @@ local WINNER_SORT_TYPES = { "KILL_DEATH", "RESOURCE" }
 --	LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local UpdateUITask = nil
-
+local inVictory = false
 ------------------------------------------------------------------------------------------------------------------------
 --	LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -127,9 +127,9 @@ end
 --	nil SendToVictoryScreen(string, table)
 --	Sets the camera and shows the UI for the victory Screen
 local function SendToVictoryScreen() -- topThreePlayerStats
-
+	inVictory = true
 	-- change the default camera rotation to look in the same direction so the head faces the right way
-	LocalPlayer:SetLookWorldRotation(RootGroup:GetWorldRotation() - Rotation.New(0,0,180))
+	LocalPlayer:SetLookWorldRotation(RootGroup:GetWorldRotation() + Rotation.New(0, 0, 180))
 	LocalPlayer:SetOverrideCamera(OverrideCamera)
 	--LocalPlayer.lookSensitivity = 0
 	
@@ -149,7 +149,7 @@ end
 --	nil RestoreFromPodium(string)
 --	Resets the camera and hides the UI for the victory Screen
 local function RestoreFromPodium()
-
+	inVictory = false
 	Events.Broadcast("ShowUI")
 	--LocalPlayer:ClearOverrideCamera()
 	--LocalPlayer.lookSensitivity = 1
@@ -192,6 +192,12 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
     end
 end
 
+function Tick()
+	if inVictory then
+		LocalPlayer:SetLookWorldRotation(RootGroup:GetWorldRotation() + Rotation.New(0, 0, 180))
+	end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 --	INITIALIZATION
 ------------------------------------------------------------------------------------------------------------------------
@@ -203,4 +209,4 @@ WINNER_SORT_TYPE = GetProperty(WINNER_SORT_TYPE, WINNER_SORT_TYPES)
 --Events.Connect("SendToVictoryScreen", SendToVictoryScreen)
 --Game.roundEndEvent:Connect(SendToVictoryScreen)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-print("VICTORY CLIENT COMPILED")
+Events.Connect("SendToVictoryScreen", SendToVictoryScreen)

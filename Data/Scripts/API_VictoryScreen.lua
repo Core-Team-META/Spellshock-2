@@ -327,6 +327,7 @@ function API.TeleportPlayers(victoryScreen, playerList)
 		end
 	end
 
+	--Events.BroadcastToAllPlayers("SendToVictoryScreen")
 end
 
 return API
