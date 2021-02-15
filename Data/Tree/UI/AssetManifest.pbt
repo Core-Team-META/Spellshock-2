@@ -8,12 +8,30 @@ Assets {
   }
 }
 Assets {
+  Id: 16881924154795479640
+  Name: "Fantasy Ability Blue 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_006"
+  }
+}
+Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterArrow_005Wedge"
+  }
+}
+Assets {
+  Id: 16694726705708733533
+  Name: "Sci-fi Ability Red 034"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Red_034"
   }
 }
 Assets {
@@ -44,12 +62,48 @@ Assets {
   }
 }
 Assets {
+  Id: 15330066822177902891
+  Name: "Fantasy Ability Red 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_006"
+  }
+}
+Assets {
+  Id: 15289181932311617399
+  Name: "Fantasy Ability Blue 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_001"
+  }
+}
+Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 13827580013813487729
+  Name: "Fantasy Craft Gem 027"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_027"
+  }
+}
+Assets {
+  Id: 12044941701028804425
+  Name: "Sci-fi Ability Red 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Red_005"
   }
 }
 Assets {
@@ -71,39 +125,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11478889498718573073
-  Name: "Fantasy Crown 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Crown_001"
-  }
-}
-Assets {
-  Id: 10259004366553198523
-  Name: "Grave"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_icon_Grave"
-  }
-}
-Assets {
   Id: 9614194847790393795
   Name: "Fantasy Chain 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Chain_001"
-  }
-}
-Assets {
-  Id: 9384520849142346961
-  Name: "Icon Death"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Death"
   }
 }
 Assets {
@@ -116,21 +143,30 @@ Assets {
   }
 }
 Assets {
+  Id: 8885537733943985189
+  Name: "Sci-fi Ability Purple 030"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Purple_030"
+  }
+}
+Assets {
+  Id: 8583752597932582461
+  Name: "Fantasy Ability Red 020"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_020"
+  }
+}
+Assets {
   Id: 8578995028087510781
   Name: "UI Gradient Circular 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_001"
-  }
-}
-Assets {
-  Id: 7999341358091324120
-  Name: "Fantasy Ability Blue 039"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_039"
   }
 }
 Assets {
@@ -242,6 +278,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
   Id: 1653769258472556796
   Name: "Fantasy Ability Blue 012"
   PlatformAssetType: 9
@@ -269,12 +314,21 @@ Assets {
   }
 }
 Assets {
-  Id: 289887178010430423
-  Name: "Flag Pole"
+  Id: 632696386122979766
+  Name: "Sci-fi Ability Red 009"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Military_Icon_038"
+    AssetId: "UI_SciFi_Ability_Red_009"
+  }
+}
+Assets {
+  Id: 163598988004345801
+  Name: "Fantasy Ability Blue 027"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Blue_027"
   }
 }
 Assets {
