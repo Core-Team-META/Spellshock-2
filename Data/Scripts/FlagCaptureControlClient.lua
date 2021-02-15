@@ -242,6 +242,8 @@ function OnNetworkedPropertyChanged(thisObject, name)
                 POINT_CAPTURED_VFX:GetChildren()[owningTeam]:Play()
             end
         end
+    elseif name == "IsEnabled" then
+        previousCaptureProgress = 0
     elseif name == "ProgressedTeam" or name == "CapturePlayerID" then
         for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
             vfx.visibility = Visibility.FORCE_OFF
