@@ -9,7 +9,6 @@ function OnNetworkedChanged(object, string)
             else
                 Events.Broadcast("ToggleLoadScreen", false)
             end
-            print("bool change")
         elseif string == "OPD" then
             local id = NETWORK:GetCustomProperty(string)
             for _, player in ipairs(Game.GetPlayers()) do
@@ -19,7 +18,9 @@ function OnNetworkedChanged(object, string)
             end
         elseif string == "OVS" then
             local message = NETWORK:GetCustomProperty(string)
-            Events.Broadcast("TeamVictory_Client", message)
+            if message ~= "" then
+                Events.Broadcast("TeamVictory_Client", message)
+            end
         end
     end
 end
