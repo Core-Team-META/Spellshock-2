@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 13230009063758229621
         ChildIds: 5918496311518185852
         WantsNetworking: true
         Collidable_v2 {
@@ -71,6 +72,68 @@ Assets {
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_10"
+          }
+        }
+      }
+      Objects {
+        Id: 13230009063758229621
+        Name: "ServerContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17312142621022584643
+        ChildIds: 11333786721285014967
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: Server
+        }
+      }
+      Objects {
+        Id: 11333786721285014967
+        Name: "Capture_Animation_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13230009063758229621
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ABILITY"
+            ObjectReference {
+              SubObjectId: 17312142621022584643
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 18129475370468813633
           }
         }
       }
