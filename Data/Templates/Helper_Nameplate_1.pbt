@@ -154,6 +154,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -208,6 +210,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -262,6 +266,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -316,6 +322,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -478,6 +486,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -532,6 +542,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
@@ -586,6 +598,8 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
