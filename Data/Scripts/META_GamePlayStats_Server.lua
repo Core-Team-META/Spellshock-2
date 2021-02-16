@@ -16,21 +16,13 @@ local TOTAL_GAME_WON_WEIGHT = 0.9 -- Higher value means the total games won is w
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-local function CalculatePlayerGamesWon(player)
-    local totalGamesPlayed = player:GetResource(CONST.TOTAL_GAMES)
-    local totalGamesWon = player:GetResource(CONST.GAMES_WON)
-    local lastGameResult = player.serverUserData.IsLastMatchAWin and 1 or 0
-    local weightMovingAverage = (lastGameResult * LAST_GAME_WEIGHT) + (totalGamesWon * TOTAL_GAME_WON_WEIGHT) / totalGamesPlayed
-    player.serverUserData.WeightedWins = weightMovingAverage
-end
-
-
 local function SetPlayerWeightedWins()
     for _, player in ipairs(Game.GetPlayers()) do
-        CalculatePlayerGamesWon(player)
+        player.serverUserData.WeightedWins =
+            (player.serverUserData.IsLastMatchAWin and 1 or 0 * LAST_GAME_WEIGHT) +
+            (player:GetResource(CONST.GAMES_WON) * TOTAL_GAME_WON_WEIGHT) / player:GetResource(CONST.TOTAL_GAMES)
     end
 end
-
 
 --@param object player
 --@param int orcScore
@@ -47,7 +39,6 @@ local function SetPlayerWinLoss(player, orcScore, elfScore)
     player:AddResource(CONST.TOTAL_GAMES, 1)
     player.serverUserData.IsLastMatchAWin = false
 end
-
 
 local function CalculateGamePlayStats()
     local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
