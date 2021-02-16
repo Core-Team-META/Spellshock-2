@@ -74,10 +74,13 @@ function PlaceObject(thisPlayer, position, rotation)
 		--print("## Placement: "..SpecialAbility.name)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
 
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
+			return 
+		end
 		
 		isPlacing = true
 			
@@ -86,6 +89,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
 		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
 		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
+
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
 

@@ -66,15 +66,12 @@ function PlaceObject(thisPlayer, position, rotation)
 		
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-			return 
-		end
 		
-		-- check if the placement was canceled
-		if position == nil then
-			return
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
+			return 
 		end
 		
 		local MaxTraps = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_MaxTraps, SpecialAbility.name..": Max Traps")
@@ -94,6 +91,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		table.insert(ActiveTraps, newTrap)
 		Task.Wait()
 		newTrap:SetNetworkedCustomProperty("OwnerID", SpecialAbility.owner.id)
+
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
 

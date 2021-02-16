@@ -172,6 +172,7 @@ function OnTargetChosen(player, targetPos)
             print("Finished damage")
         end
 
+		Task.Wait()
         SpecialAbility.isEnabled = false
         print("Wraith Strike Finished\n")
 	end

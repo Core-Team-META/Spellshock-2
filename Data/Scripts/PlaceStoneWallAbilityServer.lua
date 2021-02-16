@@ -63,9 +63,11 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
+		
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
 			return 
 		end
 		
@@ -83,6 +85,10 @@ function PlaceObject(thisPlayer, position, rotation)
 			Task.Wait()
 			newObject:SetNetworkedCustomProperty("Team", SpecialAbility.owner.team)
 		end
+	
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
 
