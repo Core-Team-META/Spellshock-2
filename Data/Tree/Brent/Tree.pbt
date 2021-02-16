@@ -1,6 +1,28 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 17296953895266496212
+  Name: "Achievement System"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Achivment System"
+  }
+}
+Objects {
   Id: 17500005132081638094
   Name: "Command"
   Transform {
