@@ -226,6 +226,8 @@ end
 
 function DisableFlying()
 	print("Disabling Flying")
+	local Owner = Equipment.owner
+
 	for _, playerAbility in pairs(ActiveAbilities) do
 		if Object.IsValid(playerAbility) then
 			playerAbility.isEnabled = true
@@ -233,11 +235,11 @@ function DisableFlying()
 	end
 	ActiveAbilities = {}
 
-	if Object.IsValid(Equipment.owner) and DefaultPlayerSetttings.movementControlMode then
-		Equipment.owner:ResetVelocity()
-		Equipment.owner:ActivateWalking()
-		Equipment.owner.gravityScale = DefaultPlayerSetttings.gravityScale
-        Equipment.owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
+	if Object.IsValid(Owner) and DefaultPlayerSetttings.movementControlMode then
+		Owner:ResetVelocity()
+		Owner:ActivateWalking()
+		Owner.gravityScale = DefaultPlayerSetttings.gravityScale
+        Owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
 		DefaultPlayerSetttings = {}
 	end
 	isFlying = false
@@ -318,10 +320,10 @@ function OnEquip(equipment, player)
 end
 
 function OnUnequip(equipment, player)
+	DisableFlying()
 	for _, listener in ipairs(EventListeners) do
 		listener:Disconnect()
 	end
-	DisableFlying()
 end
 
 --[[function Tick()

@@ -71,7 +71,7 @@ local function UpdatePanelForPlayer(panel, player)
 
 	if not Object.IsValid(player) then
 	
-		panel.visibility = Visibility .FORCE_OFF
+		panel.visibility = Visibility.FORCE_OFF
 		
 		return
 		
@@ -90,10 +90,10 @@ local function UpdatePanelForPlayer(panel, player)
 
 	if(WINNER_SORT_TYPE == "RESOURCE") then
 		resourceValueLabel.text = tostring(player:GetResource(WINNER_SORT_RESOURCE))
-		resourcePanel.visibility = Visibility.FORCE_ON
+		resourcePanel.visibility = Visibility.INHERIT
 	end
 
-	panel.visibility = Visibility.FORCE_ON
+	panel.visibility = Visibility.INHERIT
 end
 
 --	nil UpdateUI()
@@ -171,7 +171,9 @@ local function RestoreFromPodium()
 end
 
 function OnHideVictoryPanels()
+	print("Hiding Victory Panels")
 	for _, panel in pairs(PlayerPanels) do
+		print("Hiding")
 		panel.visibility = Visibility.FORCE_OFF
 		local resourcePanel = panel:GetCustomProperty("ResourcePanel"):WaitForObject()
 		resourcePanel.visibility = Visibility.FORCE_OFF

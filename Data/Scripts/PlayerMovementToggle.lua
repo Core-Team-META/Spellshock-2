@@ -21,6 +21,7 @@ function Tick(deltaTime)
         if currentState ~= previousState then
             previousState = currentState
             if currentState == ABGS.GAME_STATE_ROUND_END then
+                Task.Wait(1)
                 TogglePlayerMovement(false)
             elseif currentState == ABGS.GAME_STATE_LOBBY then
                 TogglePlayerMovement(true)
