@@ -113,6 +113,15 @@ local function ComparePlayerTotalCaptures(player1, player2)
     SortByPlayerName(player1, player2)
 end
 
+local function ComparePlayerCaptureAssists(player1, player2)
+    local player1Stats = player1:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
+    local player2Stats = player2:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
+    if player1Stats ~= player2Stats then
+        return player1Stats > player2Stats
+    end
+    SortByPlayerName(player1, player2)
+end
+
 local function ComparePlayersForMVP(player1, player2)
     if player1.clientUserData.MVP_Stats ~= player2.clientUserData.MVP_Stats then
         return player1.clientUserData.MVP_Stats > player2.clientUserData.MVP_Stats
@@ -156,7 +165,7 @@ local function BuildStats(players, parentPanel)
                 stats.text = tostring(value)
                 player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
             end
-            playerStats.y = (i - 1) * 30 + 52
+            playerStats.y = (i - 1) * 30 --+ 52
             statPanels[#statPanels + 1] = playerStats
         end
     end
@@ -216,9 +225,10 @@ end
 function Tick()
     if ABGS.IsGameStateManagerRegistered() then
         local currentState = ABGS.GetGameState()
-        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 8 then
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 8 and not PARENT_PANEL:IsVisibleInHierarchy() then
+            Events.Broadcast("HideVictoryPanels")
             PARENT_PANEL.visibility = Visibility.INHERIT
-        else
+        elseif currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_LOBBY then
             PARENT_PANEL.visibility = Visibility.FORCE_OFF
         end
     end
