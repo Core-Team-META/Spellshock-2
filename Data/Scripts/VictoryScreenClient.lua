@@ -171,9 +171,11 @@ local function RestoreFromPodium()
 end
 
 function OnHideVictoryPanels()
-	print("Hiding Victory Panels")
+	if UpdateUITask then
+		UpdateUITask:Cancel()
+		UpdateUITask = nil
+	end
 	for _, panel in pairs(PlayerPanels) do
-		print("Hiding")
 		panel.visibility = Visibility.FORCE_OFF
 		local resourcePanel = panel:GetCustomProperty("ResourcePanel"):WaitForObject()
 		resourcePanel.visibility = Visibility.FORCE_OFF
