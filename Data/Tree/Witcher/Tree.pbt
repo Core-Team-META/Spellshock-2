@@ -1,6 +1,209 @@
 Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
+  Id: 5280935401388171125
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: 38584.4609
+      Y: 30093.0898
+      Z: 1330.50342
+    }
+    Rotation {
+      Pitch: 8.42374
+      Yaw: 81.3990326
+      Roll: -159.680023
+    }
+    Scale {
+      X: 2.95013809
+      Y: 3.7499938
+      Z: 3.49930024
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13065655182320038362
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.88500005
+        G: 0.774169922
+        B: 0.61065
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8021476752120115971
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 17419596158621671731
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: 38932.2891
+      Y: 29576.127
+      Z: 1745.14014
+    }
+    Rotation {
+      Pitch: -4.85256958
+      Yaw: 109.445915
+      Roll: -169.080948
+    }
+    Scale {
+      X: 2.95013785
+      Y: 3.74999166
+      Z: 6.67155886
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13065655182320038362
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.88500005
+        G: 0.774169922
+        B: 0.61065
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4604543814956860583
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: 38932.2891
+      Y: 29576.127
+      Z: 2103.96436
+    }
+    Rotation {
+      Pitch: -4.85256958
+      Yaw: 109.44593
+      Roll: -169.081009
+    }
+    Scale {
+      X: 2.50000548
+      Y: 3.74999809
+      Z: 2.04238892
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13065655182320038362
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.88500005
+        G: 0.774169922
+        B: 0.61065
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2.61012125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.61012125
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 15672047856758488687
   Name: "Hill 02"
   Transform {
@@ -12606,12 +12809,12 @@ Objects {
   Name: "Victory Screen"
   Transform {
     Location {
-      X: -8810.88281
-      Y: 38361.125
-      Z: 4597.58643
+      X: 39094.1172
+      Y: 29633.4336
+      Z: 2402.58643
     }
     Rotation {
-      Yaw: -30.0000057
+      Yaw: 175
     }
     Scale {
       X: 1
@@ -12643,7 +12846,7 @@ Objects {
     }
     Overrides {
       Name: "cs:AutomaticActivation"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:RespawnOnDeactivate"
@@ -12721,7 +12924,7 @@ Objects {
   Name: "Spawns"
   Transform {
     Location {
-      Z: 50
+      Z: 208.167969
     }
     Rotation {
       Yaw: 180
@@ -19520,11 +19723,11 @@ Objects {
   Name: "Victory Cam"
   Transform {
     Location {
-      X: -600
-      Y: -0.00048828125
-      Z: 150
+      X: -598.045044
+      Z: 118.091797
     }
     Rotation {
+      Pitch: -8.37387085
     }
     Scale {
       X: 1
