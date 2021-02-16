@@ -18,7 +18,8 @@ API.STORAGE = {
     CURRENCY = 4,
     EQUIPPED_COSMETIC = 5,
     DAILY_SHOP = 6,
-    PERKS = 7
+    PERKS = 7,
+    GAME_PLAYER_STATS = 8
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -127,6 +128,16 @@ API.COMBAT_STATS = {
     TOTAL_CAPTURE_POINTS = "TOTALCAP",
     CAPTURE_ASSISTS = "CAPASSISTS"
 }
+
+API.GAME_PLAYER_STATS = {
+    [1] = "GAMES_WON",
+    [2] = "GAMES_LOST",
+    [3] = "TOTAL_GAMES"
+}
+
+API.GAMES_WON = API.GAME_PLAYER_STATS[1]
+API.GAMES_LOST = API.GAME_PLAYER_STATS[2]
+API.TOTAL_GAMES = API.GAME_PLAYER_STATS[3]
 
 API.CURRENCY = {
     [1] = "GOLD",

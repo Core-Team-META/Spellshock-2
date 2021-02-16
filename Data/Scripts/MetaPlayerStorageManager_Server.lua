@@ -150,6 +150,38 @@ local function OnSaveCurrencyData(player, data)
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
 end
 
+
+--@param object player
+--@param table data
+local function OnLoadGamePlayStatsData(player, data)
+    local playerGameStats
+    if data[CONST.STORAGE.GAME_PLAYER_STATS] then
+        playerGameStats = UTIL.ConvertStringToTable(data[CONST.STORAGE.GAME_PLAYER_STATS], ",", "=")
+        for key, value in pairs(playerGameStats) do
+            if CONST.GAME_PLAYER_STATS[key] then
+                player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
+            end
+        end
+    else
+        for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
+            player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
+            warn(tostring(player:GetResource(name)))
+        end
+    end
+end
+
+--@param object player
+--@param table data
+local function OnSaveGamePlayStatsData(player, data)
+    local playerGameStats = {}
+    for index, resName in ipairs(CONST.GAME_PLAYER_STATS) do
+        playerGameStats[index] = player:GetResource(resName)
+    end
+
+    data[CONST.STORAGE.GAME_PLAYER_STATS] =
+        next(playerGameStats) ~= nil and UTIL.ConvertTableToString(playerGameStats, ",", "=") or ""
+end
+
 --@param object player
 --@param table data
 local function OnLoadEquippedCosmetic(player, data)
@@ -197,6 +229,7 @@ local function OnPlayerJoined(player)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
         OnLoadDailyShopData(player, data)
+        OnLoadGamePlayStatsData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -209,6 +242,7 @@ local function OnPlayerLeft(player)
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
+    OnSaveGamePlayStatsData(player, data)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
 
