@@ -66,10 +66,13 @@ function PlaceObject(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
 		
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
+			return 
+		end
 		
 		isPlacing = true
 
@@ -87,6 +90,10 @@ function PlaceObject(thisPlayer, position, rotation)
 		Task.Spawn(function ()
 			SupernovaEnding()
 		end, scaleDuration)
+		
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
 

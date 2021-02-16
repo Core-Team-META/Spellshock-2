@@ -70,16 +70,13 @@ function Teleport(thisPlayer, position, rotation)
 	if thisPlayer == Equipment.owner and Object.IsValid(SpecialAbility) then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		PrimaryAbility2.isEnabled = true
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-			return 
-		end
 		
-		-- check if the placement was canceled
-		if position == nil then
-			return
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
+			PrimaryAbility2.isEnabled = true
+			return 
 		end
 		
 		isPlacing = true
@@ -110,6 +107,11 @@ function Teleport(thisPlayer, position, rotation)
 			}
             COMBAT().ApplyDamage(attackData)
         end
+	
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
+		PrimaryAbility2.isEnabled = true
 	end
 end
 

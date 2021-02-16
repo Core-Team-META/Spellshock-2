@@ -61,19 +61,25 @@ function Teleport(thisPlayer, position, rotation)
 		--print("## Placement: "..SpecialAbility.name)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		
+
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-			--print("STOPPED BUG")
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
 			return 
 		end
 		
 		isPlacing = true
 		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 50))
 		META_AP().SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
+
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
+
+
 
 function OnPlayerDied(player, _)
 	isPreviewing = false

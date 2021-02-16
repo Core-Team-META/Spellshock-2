@@ -71,14 +71,12 @@ function PlaceObject(thisPlayer, position, rotation)
 		--CoreDebug.DrawSphere(position, DamageRadius, {duration = 5})
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
+		
 		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
+			warn("Failed") 
+			SpecialAbility.isEnabled = false
+			PrimaryAbility.isEnabled = true
 			return 
-		end
-		-- check if the placement was canceled
-		if position == nil or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then
-			return
 		end
 
 		isPlacing = true
@@ -124,6 +122,10 @@ function PlaceObject(thisPlayer, position, rotation)
 			COMBAT().ApplyDamage(attackData)
 			--API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id)
 		end
+		
+		Task.Wait()
+		SpecialAbility.isEnabled = false
+		PrimaryAbility.isEnabled = true
 	end
 end
 
