@@ -1,51 +1,228 @@
-﻿local ABGS = require(script:GetCustomProperty("API"))
-local SameTeam = script:GetCustomProperty("SameTeam")
+local ABGS = require( script:GetCustomProperty("GameStateAPI") )
+local PROGRESSION = require( script:GetCustomProperty("ProgressionAPI") )
+local DEBUG_SAME_TEAM = script:GetCustomProperty("DebugSameTeam")
 
-function OnPlayerJoin(player)
+local BASE_VALUE_PER_PLAYER = 100
+local TOTAL_CLASS_VALUE_EXPONENT = 0.5 -- Higher value means that ability leveling is ever-more powerful
+local TOTAL_CLASS_VALUE_COEFFICIENT = 6 -- Higher value means players with progression are considered much more powerful
+local WIN_RATE_MIN = 0.2
+local WIN_RATE_MAX = 0.8
+local WIN_RATE_EXPONENT = 1
+local WIN_RATE_COEFFICIENT = 100
+
+
+function ComputePlayerValue(player)
+	-- Return the cached value
+	if player.serverUserData.balanceValue then
+		return player.serverUserData.balanceValue
+	end
 	
-	if SameTeam then
-		player.team = 1
-		return
-	end 
+	-- Each player brings a base value to the team
+	local value = BASE_VALUE_PER_PLAYER
 	
-	local playerTeamPlayers = Game.GetPlayers({includeTeams=player.team})
-	local otherTeamPlayers = Game.GetPlayers({includeTeams=(3-player.team)})
+	-- Add the value of the player's total ability progression
+	local totalClassValue = player:GetResource(PROGRESSION.ACCOUNT_LEVEL)
+	totalClassValue = totalClassValue ^ TOTAL_CLASS_VALUE_EXPONENT
+	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
+	value = value + totalClassValue
 	
-	if #playerTeamPlayers - #otherTeamPlayers >= 2 then
-		player.team = 3-player.team
-		print(player.name.." was switched to team "..tostring(player.team))
-		player:Respawn()
+	-- Add the player's win rate
+	--[[
+	TODO: Win rate not tracked yet
+	
+	local winRateValue = player:GetResource(PROGRESSION.WIN_RATE) --TODO
+	winRateValue = CoreMath.Clamp(winRateValue, WIN_RATE_MIN, WIN_RATE_MAX)
+	winRateValue = winRateValue ^ WIN_RATE_EXPONENT
+	winRateValue = winRateValue * WIN_RATE_COEFFICIENT
+	value = value + winRateValue
+	--]]
+	
+	player.serverUserData.balanceValue = value
+	
+	return value
+end
+
+
+function ClearCachedPlayerValues()
+	for _,player in ipairs(Game.GetPlayers()) do
+		player.serverUserData.balanceValue = nil
 	end
 end
 
-function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-		print("-------------Checking for team balancing")
-		Task.Wait(0.05)
-		local Team1 = Game.GetPlayers({includeTeams=1})
-		local Team2 = Game.GetPlayers({includeTeams=2})
-		
-		print("Team1: "..#Team1.." | Team2: "..#Team2)
-		
-		while #Team1-#Team2 >= 2 do -- Team1 is bigger
-			local randomIndex = math.random(1, #Team1)
-			local randomPlayer = Team1[randomIndex]
-			randomPlayer.team = 2 -- change team to 2
-			Team1 = Game.GetPlayers({includeTeams=1})
-			Team2 = Game.GetPlayers({includeTeams=2})
-			print(randomPlayer.name.." was switched to Team 2")
+
+function ComputeTeamValue(teamOfPlayers)
+	local value = 0
+	for _,player in ipairs(teamOfPlayers) do
+		value = value + ComputePlayerValue(player)
+	end
+	return value
+end
+
+
+function ComputePlayersToSwitchTeam(playerToIgnore)
+	local playersThatCouldBeSwitched = {}
+	local bestDelta
+	
+	local team1 = Game.GetPlayers({includeTeams = 1, ignorePlayers = playerToIgnore})
+	local team2 = Game.GetPlayers({includeTeams = 2, ignorePlayers = playerToIgnore})
+	
+	local value1 = ComputeTeamValue(team1)
+	local value2 = ComputeTeamValue(team2)
+	
+	bestDelta = math.abs(value1 - value2)
+	
+	--print("ComputePlayersToSwitchTeam()")
+	--print("bestDelta = " .. bestDelta)
+	
+	-- Test moving players from team 1 to team 2
+	for _,player in ipairs(team1) do
+		local value = player.serverUserData.balanceValue
+		local v1 = value1 - value
+		local v2 = value2 + value
+		local delta = math.abs(v1 - v2)
+		if delta < bestDelta then
+			playersThatCouldBeSwitched = {player}
+			bestDelta = delta
+			
+		elseif delta == bestDelta and #playersThatCouldBeSwitched > 0 then
+			table.insert(playersThatCouldBeSwitched, player)
 		end
+	end
+	
+	-- Test moving players from team 2 to team 1
+	for _,player in ipairs(team2) do
+		local value = player.serverUserData.balanceValue
+		local v1 = value1 + value
+		local v2 = value2 - value
+		local delta = math.abs(v1 - v2)
+		if delta < bestDelta then
+			playersThatCouldBeSwitched = {player}
+			bestDelta = delta
+			
+		elseif delta == bestDelta and #playersThatCouldBeSwitched > 0 then
+			table.insert(playersThatCouldBeSwitched, player)
+		end
+	end
+	
+	--print("#playersThatCouldBeSwitched = " .. tostring(#playersThatCouldBeSwitched))
+	
+	return playersThatCouldBeSwitched
+end
+
+
+function SwitchTeam(player)
+	if player.team == 1 then
+		player.team = 2
+	else
+		player.team = 1
+	end
+	
+	player:Respawn()
+	
+	--print(player.name.." was switched to team "..tostring(player.team))
+end
+
+
+function IsLobby()
+	local gameState = ABGS.GetGameState()
+	return gameState == ABGS.GAME_STATE_LOBBY
+		or gameState == ABGS.GAME_STATE_REWARDS
+end
+
+
+function OfferSwitchChoice()
+	--[[
+		TODO
 		
-		while #Team2-#Team1 >= 2 do -- Team2 is bigger
-			local randomIndex = math.random(1, #Team2)
-			local randomPlayer = Team2[randomIndex]
-			randomPlayer.team = 1 -- change team to 1
-			Team1 = Game.GetPlayers({includeTeams=1})
-			Team2 = Game.GetPlayers({includeTeams=2})
-			print(randomPlayer.name.." was switched to Team 1")
+		The idea here would be to pop a UI offering players a choice, in the middle of
+		a round if they want to balance teams. We don't want to do that automatically
+		in the middle of a round.
+	--]]
+end
+
+
+function DoRebalance(playerToIgnore)
+	--print("DoRebalance()")
+	
+	for i = 1,3 do
+		local playersToSwitch = ComputePlayersToSwitchTeam(playerToIgnore)
+		
+		if #playersToSwitch == 0 then
+			return
+		
+		elseif #playersToSwitch == 1 then
+			local player = playersToSwitch[1]
+			SwitchTeam(player)
+			
+		else
+			local randomIndex = math.random(1, #playersToSwitch)
+			local randomPlayer = playersToSwitch[randomIndex]
+			SwitchTeam(randomPlayer)
+		end
+	end
+end
+
+
+function OnResourceChanged(player, resourceName, newValue)
+	--
+end
+
+
+function OnPlayerJoin(player)
+	if DEBUG_SAME_TEAM then
+		player.team = 1
+		return
+	end
+	
+	player.resourceChangedEvent:Connect(OnResourceChanged)
+	
+	Task.Wait(0.15)
+	if not Object.IsValid(player) then return end
+	
+	local playersToSwitch = ComputePlayersToSwitchTeam()
+	
+	if #playersToSwitch == 0 then
+		return
+	
+	elseif #playersToSwitch == 1 then
+		if playersToSwitch[1] == player or IsLobby() then
+			SwitchTeam(player)
+		else
+			OfferSwitchChoice()
+		end
+	end
+end
+
+
+function OnPlayerLeft(playerToIgnore)
+	--print("Player left")
+	
+	-- Does the leaving player still appear on list of GetPlayers() ?
+	-- If so, ignore them in the algorithm
+	
+	if IsLobby() then
+		DoRebalance(playerToIgnore)
+	else
+		local playersToSwitch = ComputePlayersToSwitchTeam(playerToIgnore)
+	
+		if #playersToSwitch > 0 then
+			OfferSwitchChoice()
 		end
 	end
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoin)
---Events.Connect("GameStateChanged", OnGameStateChanged)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
+
+
+function OnGameStateChanged(oldState, newState)
+	if newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+		ClearCachedPlayerValues()
+		DoRebalance()
+	end
+end
+Events.Connect("GameStateChanged", OnGameStateChanged)
+
+
+
+
