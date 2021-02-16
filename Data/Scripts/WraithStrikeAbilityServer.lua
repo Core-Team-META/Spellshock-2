@@ -51,8 +51,10 @@ function OnBindingPressed(player, binding)
 			ActiveAbilities = {}
 			for _, playerAbility in pairs(player:GetAbilities()) do
 				if playerAbility.isEnabled and playerAbility ~= SpecialAbility then
-					playerAbility.isEnabled = false
-					table.insert(ActiveAbilities, playerAbility)
+					if not playerAbility:GetCustomProperty("Binding") then
+						playerAbility.isEnabled = false
+						table.insert(ActiveAbilities, playerAbility)
+					end
 				end
 			end
 

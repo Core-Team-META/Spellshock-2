@@ -82,8 +82,12 @@ function Teleport(thisPlayer, position, rotation)
 		isPlacing = true
 		META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
 		Task.Wait(.4)
-		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
-		thisPlayer:ResetVelocity()
+
+		if not thisPlayer.isFlying then -- Allows for a quick Q-T combo without teleporting
+			thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
+			thisPlayer:ResetVelocity()
+		end
+
 		META_AP().SpawnAsset(PlayerVFX.Ending, {position = position, rotation = rotation})
         local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
         local enemiesInRange = Game.FindPlayersInSphere(thisPlayer:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = thisPlayer.team})
