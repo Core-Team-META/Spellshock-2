@@ -89,18 +89,16 @@ function OnAbilityExecute(thisAbility)
 	CurrentProjectile.lifeSpan = LIFE_SPAN
 	CurrentProjectile:MoveContinuous(VelocityVector)
 
-	Task.Spawn(
-		function()
-			OverlapEvent:Disconnect()
-			CurrentProjectile:StopMove()
-			--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
+	Task.Spawn(function()
+		if not Object.IsValid() then return end
+		OverlapEvent:Disconnect()
+		CurrentProjectile:StopMove()
+		--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
 
-			local newObject = META_AP().SpawnAsset(PlayerVFX.Ending, {position = CurrentProjectile:GetWorldPosition()})
-			CurrentProjectile.lifeSpan = 0.1
-			CurrentProjectile = nil
-		end,
-		MOVE_DURATION
-	)
+		local newObject = META_AP().SpawnAsset(PlayerVFX.Ending, {position = CurrentProjectile:GetWorldPosition()})
+		CurrentProjectile.lifeSpan = 0.1
+		CurrentProjectile = nil
+	end, MOVE_DURATION)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
