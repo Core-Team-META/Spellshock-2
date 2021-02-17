@@ -3,6 +3,12 @@ Assets {
   Name: "AutoShootClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:Class"
+        String: ""
+      }
+    }
   }
   SerializationVersion: 76
 }

@@ -1879,6 +1879,10 @@ Assets {
               SubObjectId: 1254248059045754243
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2585,7 +2589,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true

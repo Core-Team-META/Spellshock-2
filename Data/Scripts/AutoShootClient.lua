@@ -1,5 +1,10 @@
 local ShootAbility = script:GetCustomProperty("ShootAbility"):WaitForObject()
 local Equipment = script:FindAncestorByType("Equipment")
+local Class = script:GetCustomProperty("Class")
+
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local isShooting = false
@@ -27,7 +32,17 @@ function OnBindingReleased(player, bind)
     end
 end
 
+function OnShootCooldown(thisAbility)
+    local Cooldown = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[Class], META_AP().LMB, "mod6", 0.8, ShootAbility.name .. ": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnShootReady(thisAbility)
+    Task.Wait()
     if isShooting and ShootAbility.isEnabled then
         ShootAbility:Activate()
     end
@@ -41,6 +56,7 @@ function OnEquip(thisEquipment, player)
     table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
     table.insert(EventListeners, player.bindingReleasedEvent:Connect(OnBindingReleased))
     table.insert(EventListeners, ShootAbility.readyEvent:Connect(OnShootReady))
+    table.insert(EventListeners, ShootAbility.cooldownEvent:Connect(OnShootCooldown))
 end
 
 function OnUnequip(thisEquipment, player)

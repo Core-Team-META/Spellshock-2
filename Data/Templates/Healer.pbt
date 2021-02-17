@@ -1132,7 +1132,6 @@ Assets {
         ChildIds: 2176729734375800191
         ChildIds: 18116069161725040159
         ChildIds: 15778048683844327364
-        ChildIds: 15847174716734447560
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1798,6 +1797,10 @@ Assets {
               SubObjectId: 4620336145958381494
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1808,108 +1811,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 14074483271059500969
-          }
-        }
-      }
-      Objects {
-        Id: 15847174716734447560
-        Name: "Reticle"
-        Transform {
-          Location {
-            X: 135
-            Y: -150
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.999999881
-            Y: 0.999999881
-            Z: 1
-          }
-        }
-        ParentId: 14081494435077508625
-        ChildIds: 13316320016720773704
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 18270922159998676275
-            }
-          }
-          Overrides {
-            Name: "cs:MuzzleToLookTarget"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:ReticleTemplate"
-            AssetReference {
-              Id: 10414967070514943464
-            }
-          }
-          Overrides {
-            Name: "cs:Range"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:InRangeColor"
-            Color {
-              R: 0.919999957
-              G: 0.091390729
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:DefaultColor"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 13316320016720773704
-        Name: "ReticleHandler"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15847174716734447560
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Root"
-            ObjectReference {
-              SubObjectId: 15847174716734447560
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1665784526678537401
           }
         }
       }
@@ -2446,7 +2347,7 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true

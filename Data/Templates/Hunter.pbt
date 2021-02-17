@@ -1552,6 +1552,10 @@ Assets {
               SubObjectId: 10839953769775855596
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2301,7 +2305,7 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
