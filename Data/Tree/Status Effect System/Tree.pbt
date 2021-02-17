@@ -193,7 +193,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowOnSelf"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowOnTeammates"
