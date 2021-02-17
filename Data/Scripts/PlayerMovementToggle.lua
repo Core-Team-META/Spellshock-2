@@ -1,4 +1,5 @@
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 
 local previousState
 
@@ -8,6 +9,7 @@ function TogglePlayerMovement(mode)
             player.movementControlMode = MovementControlMode.LOOK_RELATIVE
             player.lookControlMode = LookControlMode.RELATIVE
         else 
+            API_SE.RemoveAllStatusEffects(player)
             player.movementControlMode = MovementControlMode.NONE
             player.lookControlMode = LookControlMode.NONE
         end

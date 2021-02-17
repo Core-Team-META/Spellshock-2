@@ -30,6 +30,7 @@ local isExecuting = false
 local isFlying = false
 local isEnabled = true
 local PlayerVFX = nil
+local OWNER = nil
 
 local CancelBindings = {
 	ability_extra_20 = true,
@@ -225,21 +226,14 @@ function DamageInArea()
 end
 
 function DisableFlying()
-	print("Disabling Flying")
-	local Owner = Equipment.owner
+	print("Disabling Wraith Strike")
 
-	for _, playerAbility in pairs(ActiveAbilities) do
-		if Object.IsValid(playerAbility) then
-			playerAbility.isEnabled = true
-		end
-	end
-	ActiveAbilities = {}
-
-	if Object.IsValid(Owner) and DefaultPlayerSetttings.movementControlMode then
-		Owner:ResetVelocity()
-		Owner:ActivateWalking()
-		Owner.gravityScale = DefaultPlayerSetttings.gravityScale
-        Owner.movementControlMode = DefaultPlayerSetttings.movementControlMode
+	if Object.IsValid(OWNER) and DefaultPlayerSetttings.movementControlMode then 
+		print("Resetting playe settings")
+		OWNER:ResetVelocity()
+		OWNER:ActivateWalking()
+		OWNER.gravityScale = DefaultPlayerSetttings.gravityScale
+        OWNER.movementControlMode = DefaultPlayerSetttings.movementControlMode
 		DefaultPlayerSetttings = {}
 	end
 	isFlying = false
@@ -250,6 +244,13 @@ function DisableFlying()
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
 	end
+
+	for _, playerAbility in pairs(ActiveAbilities) do
+		if Object.IsValid(playerAbility) then
+			playerAbility.isEnabled = true
+		end
+	end
+	ActiveAbilities = {}
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -300,6 +301,7 @@ function OnAbilityToggled(thisAbility, mode)
 end
 
 function OnEquip(equipment, player)
+	OWNER = player
 	isPreviewing = false
 	isExecuting = false
 	SetNetworkProperty(isPreviewing)
