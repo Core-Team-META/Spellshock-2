@@ -16,38 +16,35 @@ local TOTAL_GAME_WON_WEIGHT = 0.9 -- Higher value means the total games won is w
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
---@param float weightedWinRate
---@return float weightedWinRate
-local function CalculateWeightedRate(weightedWinRate, hasWon)
-    local won = hasWon and 1 or 0
-    return weightedWinRate * 0.9 + won * 0.1
-end
-
 --@param object player
 --@param int orcScore
 --@param int elfScore
 --@return bool
 local function SetPlayerWinLoss(player, orcScore, elfScore)
-
-    local weightedWinRate = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
-    local hasWon = false
-
-    if orcScore > elfScore and player.team == CONST.TEAM.ORC then
-        player:AddResource(CONST.GAMES_WON, 1)
-        hasWon = true
-    elseif orcScore < elfScore and player.team == CONST.TEAM.ELF then
-        player:AddResource(CONST.GAMES_WON, 1)
-        hasWon = true
-    elseif orcScore ~= elfScore then
-        player:AddResource(CONST.GAMES_LOST, 1)
-    end
-
-    weightedWinRate = CalculateWeightedRate(weightedWinRate, hasWon)
+	local STARTING_WEIGHT = 0.2
+	local NEW_GAME_WEIGHT = 0.1
 
     player:AddResource(CONST.TOTAL_GAMES, 1)
+    
+    if orcScore == elfScore then return end -- Draw!
+        
+    local weightedWinRate = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or STARTING_WEIGHT
+    local winValue = 1
+
+    if (orcScore > elfScore and player.team == CONST.TEAM.ORC)
+    or (orcScore < elfScore and player.team == CONST.TEAM.ELF) then
+        player:AddResource(CONST.GAMES_WON, 1)
+        
+    else
+        player:AddResource(CONST.GAMES_LOST, 1)
+        winValue = 0
+    end
+    
+    weightedWinRate = weightedWinRate * (1 - NEW_GAME_WEIGHT) + winValue * NEW_GAME_WEIGHT
+    
     player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = weightedWinRate
 
-    warn(player.name .. " Current Weighted Win Rate: " .. tostring(player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]))
+    --warn(player.name .. " Current Weighted Win Rate: " .. tostring(player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]))
 end
 
 local function CalculateGamePlayStats()
