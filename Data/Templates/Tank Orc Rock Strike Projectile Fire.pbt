@@ -7,7 +7,7 @@ Assets {
       RootId: 11813655372210226178
       Objects {
         Id: 11813655372210226178
-        Name: "Fire Orc Rock Strike Projectile"
+        Name: "Tank Orc Rock Strike Projectile Fire"
         Transform {
           Scale {
             X: 1
@@ -251,7 +251,7 @@ Assets {
           }
           Scale {
             X: 2.69999957
-            Y: 4.5
+            Y: 5.5
             Z: 2.4
           }
         }
