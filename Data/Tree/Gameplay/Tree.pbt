@@ -9518,7 +9518,7 @@ Objects {
 }
 Objects {
   Id: 17910728817571265557
-  Name: "Point AR"
+  Name: "Point M"
   Transform {
     Location {
       X: -5867.57422
@@ -9544,11 +9544,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "Ancient Ruins"
+      String: "Marketplace"
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "AR"
+      String: "M"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -13319,7 +13319,7 @@ Objects {
 }
 Objects {
   Id: 16321515820500395030
-  Name: "Point O"
+  Name: "Point A"
   Transform {
     Location {
       X: 8298.51074
@@ -13346,11 +13346,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "Overlook"
+      String: "Airship"
     }
     Overrides {
       Name: "cs:ShortName"
-      String: "O"
+      String: "A"
     }
     Overrides {
       Name: "cs:CaptureThreshold"
@@ -23324,7 +23324,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
@@ -23914,9 +23914,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -23019.373
-      Y: -31379.9238
-      Z: 6653.95166
+      X: -7089.24365
+      Y: -4662.65479
+      Z: 3580
     }
     Rotation {
     }
