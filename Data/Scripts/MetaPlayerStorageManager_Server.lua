@@ -150,7 +150,6 @@ local function OnSaveCurrencyData(player, data)
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
 end
 
-
 --@param object player
 --@param table data
 local function OnLoadGamePlayStatsData(player, data)
@@ -158,15 +157,17 @@ local function OnLoadGamePlayStatsData(player, data)
     if data[CONST.STORAGE.GAME_PLAYER_STATS] then
         playerGameStats = UTIL.ConvertStringToTable(data[CONST.STORAGE.GAME_PLAYER_STATS], ",", "=")
         for key, value in pairs(playerGameStats) do
-            if CONST.GAME_PLAYER_STATS[key] then
+            if CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ~= CONST.WEIGHTED_WINS then
                 player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
+            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ==  CONST.WEIGHTED_WINS then
+                player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value
             end
         end
     else
         for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
-            player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
-            warn(tostring(player:GetResource(name)))
+            player:SetResource(name, 0)
         end
+        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
     end
 end
 
@@ -175,7 +176,11 @@ end
 local function OnSaveGamePlayStatsData(player, data)
     local playerGameStats = {}
     for index, resName in ipairs(CONST.GAME_PLAYER_STATS) do
+        if index ~= CONST.WEIGHTED_WINS_KEY then
         playerGameStats[index] = player:GetResource(resName)
+        elseif index == CONST.WEIGHTED_WINS_KEY then 
+            playerGameStats[index] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]
+        end
     end
 
     data[CONST.STORAGE.GAME_PLAYER_STATS] =
