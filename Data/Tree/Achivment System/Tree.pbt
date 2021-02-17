@@ -1160,7 +1160,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Get A 10+ Kill Streak"
+      String: "Get A 10 Kill Streak"
     }
     Overrides {
       Name: "cs:Required"
