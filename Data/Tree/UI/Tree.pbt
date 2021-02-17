@@ -3835,7 +3835,8 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIY: -25
+    UIX: 835
+    UIY: 25
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3846,12 +3847,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -4511,8 +4512,8 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIX: 290
-    UIY: -25
+    UIX: 1105
+    UIY: 25
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4523,12 +4524,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomleft"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomleft"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -5188,8 +5189,8 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIX: 20
-    UIY: -25
+    UIX: 290
+    UIY: 365
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5200,12 +5201,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomleft"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomleft"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -5864,8 +5865,8 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIX: -20
-    UIY: 25
+    UIX: 560
+    UIY: 365
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5876,12 +5877,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -5889,7 +5890,7 @@ Objects {
 }
 Objects {
   Id: 6808304716017240559
-  Name: "Capture Points"
+  Name: "Capture Assists"
   Transform {
     Location {
       X: 31570
@@ -6541,7 +6542,7 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIX: -290
+    UIX: 560
     UIY: 25
     RenderTransformPivot {
       Anchor {
@@ -6553,12 +6554,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -7218,7 +7219,8 @@ Objects {
   Control {
     Width: 240
     Height: 300
-    UIY: 25
+    UIX: 20
+    UIY: 365
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7229,12 +7231,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:topleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -25342,7 +25344,7 @@ Objects {
 }
 Objects {
   Id: 15089798378009411560
-  Name: "TIMER"
+  Name: "Rewards Timer"
   Transform {
     Location {
     }
@@ -26706,6 +26708,12 @@ Objects {
       Name: "cs:MVP_PLAYER_NAME"
       ObjectReference {
         SelfId: 4538025785191071436
+      }
+    }
+    Overrides {
+      Name: "cs:CAPTURE_ASSISTS"
+      ObjectReference {
+        SelfId: 6808304716017240559
       }
     }
   }

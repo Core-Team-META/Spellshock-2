@@ -7,6 +7,7 @@ local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject(
 local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
 local TickSFX = script:GetCustomProperty("TickSFX"):WaitForObject()
 local ShopTimer = script:GetCustomProperty("ShopTimer"):WaitForObject()
+local RewardsTimer = script:GetCustomProperty("RewardsTimer"):WaitForObject()
 
 local PreviousSecond = 0
 
@@ -20,6 +21,7 @@ function UpdateTimeRemaining(remainingTime)
         local seconds = math.floor(remainingTime) % 60
         STATE_TIME_TEXT.text = string.format("%02d:%02d", minutes, seconds)
         ShopTimer:GetChildren()[2].text = string.format("%02d:%02d", minutes, seconds)
+        RewardsTimer.text = tostring(seconds)
     end
 end
 
@@ -55,17 +57,24 @@ function Tick(deltaTime)
         if currentState == ABGS.GAME_STATE_LOBBY then
             STATE_NAME_TEXT.text = "LOBBY"
             UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_ROUND then
+            STATE_NAME_TEXT.text = "BATTLE"
+            UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_REWARDS then
+            UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS then
             if not remainingTime then return end
             local currentSecond = math.ceil(remainingTime)
             if currentSecond <= 6 and currentSecond ~= PreviousSecond then
                 TickSFX:Play()
                 PreviousSecond = currentSecond
             end
-        end
-
-        if currentState == ABGS.GAME_STATE_ROUND then
-            STATE_NAME_TEXT.text = "BATTLE"
-            UpdateTimeRemaining(remainingTime)
         end
 
         --[[if currentState == ABGS.GAME_STATE_ROUND_END then

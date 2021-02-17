@@ -209,15 +209,19 @@ end
 function GetFriendliesPresent()
     local progressedTeam = script:GetCustomProperty("ProgressedTeam")
 
+    local friendlies = {}
     local count = 0
 
     for _, player in pairs(GetRelevantPlayersOnPoint()) do
         if player.team == progressedTeam then
             count = count + 1
+            if player ~= capturePlayer then
+                table.insert(friendlies, player)
+            end
         end
     end
 
-    return count
+    return count, friendlies
 end
 
 -- int GetEnemiesPresent()
@@ -372,6 +376,13 @@ function Tick(deltaTime)
     if newOwner ~= owningTeam then
         Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
         owningTeam = newOwner
+
+        local _, friendlies = GetFriendliesPresent()
+        -- Give cap assist to friendlies 
+        for _, friendly in ipairs(friendlies) do
+            friendly:AddResource("CAPASSISTS", 1)
+        end
+
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)
         Events.Broadcast("Stats.Helper.CapturePoint", script:GetCustomProperty("CapturePlayerID"))
         -- Disable if DisableOnCapture

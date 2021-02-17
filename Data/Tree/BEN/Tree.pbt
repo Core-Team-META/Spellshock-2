@@ -27895,6 +27895,12 @@ Objects {
         SelfId: 32397007172213840
       }
     }
+    Overrides {
+      Name: "cs:RewardsTimer"
+      ObjectReference {
+        SelfId: 15089798378009411560
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
