@@ -12,6 +12,7 @@
 
 -- Component dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 
 local function META_AP()
@@ -58,6 +59,18 @@ function OnTargetImpact(theWeapon, impactData)
 	}
 	COMBAT().ApplyDamage(attackData)
 	
+	if theWeapon.owner:GetResource("CLASS_MAP") == META_AP().HUNTER and impactData.targetObject:IsA("Player") then
+		local status = {duration = 1, damage = 0, multiplier = 0.5} --META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
+		API_SE.ApplyStatusEffect(
+			impactData.targetObject,
+			API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+			theWeapon.owner,
+			status.duration,
+			status.damage,
+			status.multiplier
+		)
+	end
+
 	--COMBAT().ApplyDamage(impactData.targetObject, dmg, dmg.sourcePlayer)
 	
 	--BroadcastDamageFeedback(dmg.amount, pos)

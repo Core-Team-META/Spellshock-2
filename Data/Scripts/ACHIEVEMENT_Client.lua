@@ -36,7 +36,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 function OnResourceChanged(player, resName, resAmt)
     if IsAchievement(resName) then
-        print(
+        --[[print(
             "resName " ..
                 resName ..
                     " resAmt " ..
@@ -45,7 +45,7 @@ function OnResourceChanged(player, resName, resAmt)
                                 _G.META_ACHIEVEMENTS.GetAchievementRequired(resName) ..
                                     " Passed? " ..
                                         tostring(resAmt == _G.META_ACHIEVEMENTS.GetAchievementRequired(resName))
-        )
+        )]]--
     end
     if
         player == LOCAL_PLAYER and IsAchievement(resName) and
