@@ -13012,31 +13012,6 @@ Objects {
   }
 }
 Objects {
-  Id: 12268067562203829015
-  Name: "ServerContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4362092203162598167
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: Server
-  }
-}
-Objects {
   Id: 13450014505785450251
   Name: "META_DailyShop_Server"
   Transform {

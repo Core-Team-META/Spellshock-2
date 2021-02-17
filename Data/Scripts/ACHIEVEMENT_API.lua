@@ -116,9 +116,11 @@ end
 function API.CollectReward(player, id)
     if achievements[id] then
         local achievement = achievements[id]
-        if (player:GetResource(id) + 1) >= API.GetAchievementRequired(id) then
+        if player:GetResource(id) >= API.GetAchievementRequired(id) then
             player:SetResource(id, 1)
-            player:AddResource(achievement.rewardName, achievement.rewardAmt)
+            if achievement.rewardName and achievement.rewardAmt then
+                player:AddResource(achievement.rewardName, achievement.rewardAmt)
+            end
         end
     end
 end
