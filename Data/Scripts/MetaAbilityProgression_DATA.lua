@@ -199,7 +199,7 @@ classTable = {
         --Pyroblast
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range, mod4 = Knockback
-            [1] = {mod1 = 180, mod2 = 800, mod3 = 3000, mod4 = 100000, mod5 = 0, mod6 = 90},
+            [1] = {mod1 = 180, mod2 = 800, mod3 = 3000, mod4 = 100000, mod5 = 0, mod6 = 10},
             [2] = {mod1 = 190, mod2 = 800, mod3 = 3200, mod4 = 100000, mod5 = 0, mod6 = 90},
             [3] = {mod1 = 200, mod2 = 800, mod3 = 3400, mod4 = 100000, mod5 = 0, mod6 = 87},
             [4] = {mod1 = 200, mod2 = 800, mod3 = 3600, mod4 = 100000, mod5 = 0, mod6 = 87},
@@ -496,7 +496,7 @@ classTable = {
         --Wraith Strike
         [CONST.BIND.T] = {
             -- mod1 = Damage Range, mod2 = Placement Range, mod3 = Damage Radius, mod4 = Flying Duration, mod 5 = Status Effect Stun
-            [1] = {mod1 = {min = 130, max = 150}, mod2 = 5200, mod3 = 600, mod4 = 4, mod5 = {duration = 5.0, damage = 0, multiplier = 0}, mod6 = 60},
+            [1] = {mod1 = {min = 130, max = 150}, mod2 = 5200, mod3 = 600, mod4 = 4, mod5 = {duration = 5.0, damage = 0, multiplier = 0}, mod6 = 10},
             [2] = {mod1 = {min = 140, max = 170}, mod2 = 5200, mod3 = 600, mod4 = 4, mod5 = {duration = 5.0, damage = 0, multiplier = 0}, mod6 = 60},
             [3] = {mod1 = {min = 145, max = 180}, mod2 = 5200, mod3 = 650, mod4 = 4, mod5 = {duration = 5.0, damage = 0, multiplier = 0}, mod6 = 60},
             [4] = {mod1 = {min = 150, max = 190}, mod2 = 5400, mod3 = 650, mod4 = 5, mod5 = {duration = 5.0, damage = 0, multiplier = 0}, mod6 = 58},

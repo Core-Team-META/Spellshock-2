@@ -235,7 +235,7 @@ end
 function Tick()
     if ABGS.IsGameStateManagerRegistered() then
         local currentState = ABGS.GetGameState()
-        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 8 and not PARENT_PANEL:IsVisibleInHierarchy() then
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 10 and not PARENT_PANEL:IsVisibleInHierarchy() then
             Events.Broadcast("HideVictoryPanels")
             PARENT_PANEL.visibility = Visibility.INHERIT
         elseif currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_LOBBY then
