@@ -381,6 +381,8 @@ function Tick(deltaTime)
         -- Give cap assist to friendlies 
         for _, friendly in ipairs(friendlies) do
             friendly:AddResource("CAPASSISTS", 1)
+            -- For achievement system
+            Events.Broadcast("AS.PlayerAssistPointCapture", friendly, 1)
         end
 
         script:SetNetworkedCustomProperty("OwningTeam", owningTeam)

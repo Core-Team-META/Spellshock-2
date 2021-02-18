@@ -160,7 +160,7 @@ local function OnLoadGamePlayStatsData(player, data)
             if CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ~= CONST.WEIGHTED_WINS then
                 player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
             elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ==  CONST.WEIGHTED_WINS then
-                player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value
+                player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value or 0
             end
         end
     else
@@ -169,6 +169,7 @@ local function OnLoadGamePlayStatsData(player, data)
         end
         player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
     end
+    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
 end
 
 --@param object player

@@ -102,6 +102,10 @@ function OnPlayerCapture(player, value)
     AddProgress(player, "AS_CAP1", value)
 end
 
+function OnPlayerAssistCapture(player,  value)
+    AddProgress(player, "AS_ASSISTCAP25", value)
+end
+
 function OnPlayerRespawn(player)
     player.serverUserData.ACH_killCredited = false
 end
@@ -184,5 +188,6 @@ Events.Connect("AS.LifeTimeDamage", OnPlayerDamage)
 Events.Connect("AS.LifeTimeHealing", OnPlayerHealing)
 Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
 Events.ConnectForPlayer("AS.RewardClaim", OnRewardCollected)
+Events.ConnectForPlayer("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 --Events.Connect("CombatWrapAPI.OnDamageTaken", OnDamageTaken)
 Int()

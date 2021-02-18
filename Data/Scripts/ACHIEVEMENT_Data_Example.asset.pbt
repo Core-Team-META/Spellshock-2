@@ -34,6 +34,12 @@ Assets {
           Id: 841534158063459245
         }
       }
+      Overrides {
+        Name: "cs:REWARD_ICON"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
     }
   }
   SerializationVersion: 76
