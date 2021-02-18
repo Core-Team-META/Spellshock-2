@@ -70,7 +70,7 @@ function Teleport(thisPlayer, position, rotation)
 		end
 		
 		isPlacing = true
-		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 50))
+		thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 180))
 		META_AP().SpawnAsset(TeleportFX, {position = thisPlayer:GetWorldPosition()})
 
 		Task.Wait()

@@ -86,7 +86,7 @@ function Teleport(thisPlayer, position, rotation)
 		if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or Object.IsValid(SpecialAbility.owner) then return end
 
 		if not thisPlayer.isFlying then -- Allows for a quick Q-T combo without teleporting
-			thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 100))
+			thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 180))
 			thisPlayer:ResetVelocity()
 		end
 
