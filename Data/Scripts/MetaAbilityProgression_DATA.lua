@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression API
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/1/8
@@ -57,16 +57,16 @@ classTable = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-            [1] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 101, max = 125}, mod4 = 50000, mod5 = 1, mod6 = 7},
-            [2] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 103, max = 128}, mod4 = 50000, mod5 = 1, mod6 = 7},
-            [3] = {mod1 = 4000, mod2 = 1450, mod3 = {min = 105, max = 131}, mod4 = 55000, mod5 = 1, mod6 = 6},
-            [4] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 107, max = 135}, mod4 = 55000, mod5 = 1, mod6 = 6},
-            [5] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 110, max = 140}, mod4 = 60000, mod5 = 1, mod6 = 5},
-            [6] = {mod1 = 4000, mod2 = 1550, mod3 = {min = 113, max = 145}, mod4 = 60000, mod5 = 1, mod6 = 5},
-            [7] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 116, max = 150}, mod4 = 70000, mod5 = 1, mod6 = 5},
-            [8] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 120, max = 155}, mod4 = 70000, mod5 = 1, mod6 = 4},
-            [9] = {mod1 = 4000, mod2 = 1950, mod3 = {min = 125, max = 160}, mod4 = 80000, mod5 = 1, mod6 = 4},
-           [10] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 130, max = 170}, mod4 = 90000, mod5 = 1, mod6 = 4}
+            [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 115}, mod4 = 90000, mod5 = 1, mod6 = 8},
+            [2] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 93, max = 118}, mod4 = 90000, mod5 = 1, mod6 = 8},
+            [3] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 95, max = 121}, mod4 = 90000, mod5 = 1, mod6 = 7},
+            [4] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 97, max = 125}, mod4 = 90000, mod5 = 1, mod6 = 7},
+            [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 100, max = 130}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [6] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 103, max = 135}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [7] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 106, max = 140}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [8] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 110, max = 145}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 115, max = 150}, mod4 = 90000, mod5 = 1, mod6 = 5},
+           [10] = {mod1 = 4000, mod2 = 2250, mod3 = {min = 120, max = 160}, mod4 = 90000, mod5 = 1, mod6 = 5}
         },
         --Stone Wall
         [CONST.BIND.E] = {
@@ -85,9 +85,9 @@ classTable = {
         --Shield Dash
         [CONST.BIND.R] = {
             -- mod1 = Ending Radius, mod2 = Enemy Impulse, mod3 = Damage Amount
-            [1] = {mod1 = 200, mod2 = 150000, mod3 = 60, mod4 = 0, mod5 = 0, mod6 = 10},
-            [2] = {mod1 = 250, mod2 = 160000, mod3 = 61, mod4 = 0, mod5 = 0, mod6 = 10},
-            [3] = {mod1 = 300, mod2 = 170000, mod3 = 62, mod4 = 0, mod5 = 0, mod6 = 9},
+            [1] = {mod1 = 200, mod2 = 150000, mod3 = 60, mod4 = 0, mod5 = 0, mod6 = 12},
+            [2] = {mod1 = 250, mod2 = 160000, mod3 = 61, mod4 = 0, mod5 = 0, mod6 = 11},
+            [3] = {mod1 = 300, mod2 = 170000, mod3 = 62, mod4 = 0, mod5 = 0, mod6 = 10},
             [4] = {mod1 = 350, mod2 = 180000, mod3 = 63, mod4 = 0, mod5 = 0, mod6 = 9},
             [5] = {mod1 = 400, mod2 = 200000, mod3 = 64, mod4 = 0, mod5 = 0, mod6 = 8},
             [6] = {mod1 = 500, mod2 = 200000, mod3 = 65, mod4 = 0, mod5 = 0, mod6 = 8},
