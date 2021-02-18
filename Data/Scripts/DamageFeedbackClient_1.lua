@@ -24,6 +24,7 @@ local HEALTH_CHANGE_POST_PROCESS = script:GetCustomProperty("HealthChangePostPro
 local DAMAGE_TEXT_DURATION = COMPONENT_ROOT:GetCustomProperty("DamageTextDuration")
 local TARGET_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("TargetDamageTextColor")
 local SELF_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("SelfDamageTextColor")
+local EnemyDamageColor = COMPONENT_ROOT:GetCustomProperty("EnemyDamageColor")
 local HEAL_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("HealTextColor")
 local SHOW_FLY_UP_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowFlyUpText")
 local IS_BIG_TEXT = COMPONENT_ROOT:GetCustomProperty("DisplayBigText")
@@ -114,7 +115,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
 		-- Show text on targetPlayer
 		if Object.IsValid(targetPlayer) then
 			if damage >= 0 and targetPlayer.team ~= sourcePlayer.team then -- Show damage number on targetPlayer
-				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), SELF_DAMAGE_TEXT_COLOR)
+				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), EnemyDamageColor)
 				-- Play the damage feedback sound to the source player
 		        if HIT_FEEDBACK_SOUND then
 		            HIT_FEEDBACK_SOUND:Play()
@@ -145,11 +146,11 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
                 {duration = DAMAGE_TEXT_DURATION,
                 color = Color.CYAN,
                 isBig = IS_BIG_TEXT})]]
-        --[[else
+        else
             --if SHOW_HEALTH_CHANGE_EFFECT then
             TriggerHitPostProcess(Color.GREEN)
             ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition() + Vector3.New(0,0,-50), HEAL_TEXT_COLOR)
-            --end]]
+            --end
         end
     end
 end
