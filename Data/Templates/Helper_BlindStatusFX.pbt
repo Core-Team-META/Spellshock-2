@@ -7,7 +7,7 @@ Assets {
       RootId: 8862268323532329590
       Objects {
         Id: 8862268323532329590
-        Name: "BlindStatusFX"
+        Name: "Helper_BlindStatusFX"
         Transform {
           Scale {
             X: 1
@@ -263,7 +263,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Ramp Up Duration"
-            Float: 0.615338683
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Effect Strength"
+            Float: 1
           }
         }
         Collidable_v2 {

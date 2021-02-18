@@ -278,6 +278,9 @@ end
 
 -- Client and Server, returns index -> name, startTime table, may not have consecutive indices
 function API.GetStatusEffectsOnPlayer(player)
+	if not Object.IsValid(player) then
+		return
+	end
 	local tracker = API.GetStateTracker(player)
 	local result = {}
 
@@ -301,6 +304,9 @@ end
 
 -- Server only
 function API.ApplyStatusEffect(player, id, source, duration, damage, multiplier)
+	if not Object.IsValid(player) then
+		return
+	end
 	if player.isDead or player.serverUserData.DamageImmunity then
 		return
 	end
@@ -350,6 +356,9 @@ end
 
 -- Server only
 function API.RemoveStatusEffect(player, index)
+	if not Object.IsValid(player) then
+		return
+	end
 	local tracker = API.GetStateTracker(player)
 	local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(index)))
 	if trackerTbl and trackerTbl[ID_KEY] ~= "" then
@@ -374,6 +383,9 @@ function API.RemoveStatusEffect(player, index)
 end
 
 function API.DoesPlayerHaveStatusEffect(player, name)
+	if not Object.IsValid(player) then
+		return false
+	end
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
@@ -390,6 +402,9 @@ end
 
 -- Server only
 function API.RemoveStatusEffectByName(player, name)
+	if not Object.IsValid(player) then
+		return
+	end
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
@@ -404,6 +419,9 @@ end
 
 -- Server only
 function API.RemoveAllStatusEffects(player)
+	if not Object.IsValid(player) then
+		return
+	end
 	local tracker = API.GetStateTracker(player)
 	for i = 1, API.MAX_STATUS_EFFECTS do
 		local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
@@ -418,42 +436,44 @@ end
 function API.Tick(deltaTime)
 	local players = Game.GetPlayers()
 	for _, player in ipairs(players) do
-		local tracker = API.GetStateTracker(player)
+		if Object.IsValid(player) then
+			local tracker = API.GetStateTracker(player)
 
-		for i = 1, API.MAX_STATUS_EFFECTS do
-			local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
+			for i = 1, API.MAX_STATUS_EFFECTS do
+				local trackerTbl = GetStatusTbl(tracker:GetCustomProperty(API.GetSourceProperty(i)))
 
-			if trackerTbl and trackerTbl[ID_KEY] ~= "" then
-				local id = trackerTbl[ID_KEY]
-				local startTime = tonumber(trackerTbl[TIME_KEY])
-				local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
-				local sourcePlayer
+				if trackerTbl and trackerTbl[ID_KEY] ~= "" then
+					local id = trackerTbl[ID_KEY]
+					local startTime = tonumber(trackerTbl[TIME_KEY])
+					local statusEffectData = STATUS_EFFECT_ID_TABLE[id]
+					local sourcePlayer
 
-				for _, s in ipairs(players) do
-					if s.id == trackerTbl[SOURCE_KEY] then
-						sourcePlayer = s
-					end
-				end
-
-				if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM and statusEffectData.tickFunction then
-					local ticksExpected = math.floor(time() - startTime)
-
-					for j = tickCounts[player][i] + 1, ticksExpected do
-						tickCounts[player][i] = tickCounts[player][i] + 1
-						statusEffectData.tickFunction(player, sourcePlayer, trackerTbl[DAMAGE_KEY])
-
-						-- The tick might kill you, which removes all your status effects. The rest of this is no longer valid.
-						if player.isDead then
-							return
+					for _, s in ipairs(players) do
+						if s.id == trackerTbl[SOURCE_KEY] then
+							sourcePlayer = s
 						end
 					end
-				end
 
-				if
-					statusEffectData.duration and
-						time() > tonumber(startTime + (trackerTbl[DURATION_KEY] or statusEffectData.duration))
-				 then
-					API.RemoveStatusEffect(player, i)
+					if statusEffectData.type == API.STATUS_EFFECT_TYPE_CUSTOM and statusEffectData.tickFunction then
+						local ticksExpected = math.floor(time() - startTime)
+
+						for j = tickCounts[player][i] + 1, ticksExpected do
+							tickCounts[player][i] = tickCounts[player][i] + 1
+							statusEffectData.tickFunction(player, sourcePlayer, trackerTbl[DAMAGE_KEY])
+
+							-- The tick might kill you, which removes all your status effects. The rest of this is no longer valid.
+							if player.isDead then
+								return
+							end
+						end
+					end
+
+					if
+						statusEffectData.duration and
+							time() > tonumber(startTime + (trackerTbl[DURATION_KEY] or statusEffectData.duration))
+					 then
+						API.RemoveStatusEffect(player, i)
+					end
 				end
 			end
 		end
