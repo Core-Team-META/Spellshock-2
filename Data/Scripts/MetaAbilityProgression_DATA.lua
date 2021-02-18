@@ -1,4 +1,4 @@
-------------------------------------------------------------------------------------------------------------------------
+﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression API
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/1/8
@@ -199,16 +199,16 @@ classTable = {
         --Pyroblast
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range, mod4 = Knockback
-            [1] = {mod1 = 180, mod2 = 800, mod3 = 3000, mod4 = 100000, mod5 = 0, mod6 = 10},
-            [2] = {mod1 = 190, mod2 = 800, mod3 = 3200, mod4 = 100000, mod5 = 0, mod6 = 90},
-            [3] = {mod1 = 200, mod2 = 800, mod3 = 3400, mod4 = 100000, mod5 = 0, mod6 = 87},
-            [4] = {mod1 = 200, mod2 = 800, mod3 = 3600, mod4 = 100000, mod5 = 0, mod6 = 87},
-            [5] = {mod1 = 200, mod2 = 800, mod3 = 3800, mod4 = 100000, mod5 = 0, mod6 = 84},
-            [6] = {mod1 = 210, mod2 = 800, mod3 = 4000, mod4 = 100000, mod5 = 0, mod6 = 84},
-            [7] = {mod1 = 210, mod2 = 850, mod3 = 4200, mod4 = 100000, mod5 = 0, mod6 = 80},
-            [8] = {mod1 = 215, mod2 = 850, mod3 = 4400, mod4 = 100000, mod5 = 0, mod6 = 80},
-            [9] = {mod1 = 220, mod2 = 850, mod3 = 4600, mod4 = 100000, mod5 = 0, mod6 = 75},
-           [10] = {mod1 = 240, mod2 = 900, mod3 = 5000, mod4 = 100000, mod5 = 0, mod6 = 70}
+            [1] = {mod1 = 180, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 10},
+            [2] = {mod1 = 190, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 90},
+            [3] = {mod1 = 200, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 87},
+            [4] = {mod1 = 200, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 87},
+            [5] = {mod1 = 200, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 84},
+            [6] = {mod1 = 210, mod2 = 800, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 84},
+            [7] = {mod1 = 210, mod2 = 850, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 80},
+            [8] = {mod1 = 215, mod2 = 850, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 80},
+            [9] = {mod1 = 220, mod2 = 850, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 75},
+           [10] = {mod1 = 240, mod2 = 900, mod3 = 15000, mod4 = 100000, mod5 = 0, mod6 = 70}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
