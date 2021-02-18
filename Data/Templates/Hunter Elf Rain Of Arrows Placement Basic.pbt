@@ -22,8 +22,6 @@ Assets {
         ChildIds: 10196534748801832627
         ChildIds: 8924715806987519732
         ChildIds: 4721516643570585259
-        ChildIds: 4897304328749070742
-        ChildIds: 7641992138394465927
         ChildIds: 1363247449226109008
         ChildIds: 11259840731734710980
         ChildIds: 6392182371246603632
@@ -459,6 +457,8 @@ Assets {
         Name: "Explosion Kit Dust Ring VFX"
         Transform {
           Location {
+            X: 100
+            Y: 200
           }
           Rotation {
           }
@@ -469,6 +469,7 @@ Assets {
           }
         }
         ParentId: 521308411396895614
+        ChildIds: 6090859735008519066
         UnregisteredParameters {
           Overrides {
             Name: "bp:Initial Start Delay"
@@ -497,10 +498,42 @@ Assets {
           TeamSettings {
           }
           Vfx {
-            AutoPlay: true
             Relevance {
               Value: "mc:evfxrelevance:critical"
             }
+          }
+        }
+      }
+      Objects {
+        Id: 6090859735008519066
+        Name: "AudioDelay"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3496978688828119671
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
           }
         }
       }
@@ -509,8 +542,8 @@ Assets {
         Name: "Explosion Kit Dust Ring VFX"
         Transform {
           Location {
-            X: 175.165527
-            Y: -392.240234
+            X: -50
+            Y: -150
           }
           Rotation {
           }
@@ -521,6 +554,7 @@ Assets {
           }
         }
         ParentId: 521308411396895614
+        ChildIds: 6225593628229107687
         UnregisteredParameters {
           Overrides {
             Name: "bp:Initial Start Delay"
@@ -549,10 +583,44 @@ Assets {
           TeamSettings {
           }
           Vfx {
-            AutoPlay: true
             Relevance {
               Value: "mc:evfxrelevance:critical"
             }
+          }
+        }
+      }
+      Objects {
+        Id: 6225593628229107687
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            X: -75.1660156
+            Y: 592.240234
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10196534748801832627
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.4
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
           }
         }
       }
@@ -561,8 +629,8 @@ Assets {
         Name: "Explosion Kit Dust Ring VFX"
         Transform {
           Location {
-            X: -355.797852
-            Y: -233.899414
+            X: -300
+            Y: 400
           }
           Rotation {
           }
@@ -573,6 +641,7 @@ Assets {
           }
         }
         ParentId: 521308411396895614
+        ChildIds: 12103150093846908877
         UnregisteredParameters {
           Overrides {
             Name: "bp:Initial Start Delay"
@@ -601,10 +670,44 @@ Assets {
           TeamSettings {
           }
           Vfx {
-            AutoPlay: true
             Relevance {
               Value: "mc:evfxrelevance:critical"
             }
+          }
+        }
+      }
+      Objects {
+        Id: 12103150093846908877
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            X: 230.630859
+            Y: 676.140625
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8924715806987519732
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
           }
         }
       }
@@ -613,8 +716,8 @@ Assets {
         Name: "Explosion Kit Dust Ring VFX"
         Transform {
           Location {
-            X: -305.079102
-            Y: 273.462891
+            X: 300
+            Y: -400
           }
           Rotation {
           }
@@ -625,6 +728,7 @@ Assets {
           }
         }
         ParentId: 521308411396895614
+        ChildIds: 3357275961664798214
         UnregisteredParameters {
           Overrides {
             Name: "bp:Initial Start Delay"
@@ -653,7 +757,6 @@ Assets {
           TeamSettings {
           }
           Vfx {
-            AutoPlay: true
             Relevance {
               Value: "mc:evfxrelevance:critical"
             }
@@ -661,35 +764,26 @@ Assets {
         }
       }
       Objects {
-        Id: 4897304328749070742
-        Name: "Explosion Kit Dust Ring VFX"
+        Id: 3357275961664798214
+        Name: "AudioDelay"
         Transform {
           Location {
-            X: 179.07373
-            Y: 346.791016
+            X: -369.369141
+            Y: 1476.14063
           }
           Rotation {
           }
           Scale {
             X: 1
             Y: 1
-            Z: 0.339511722
+            Z: 1
           }
         }
-        ParentId: 521308411396895614
+        ParentId: 4721516643570585259
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 1
-              G: 0.408079445
-              B: 0.18
-              A: 1
-            }
+            Name: "cs:DURATION"
+            Float: 0.7
           }
         }
         Collidable_v2 {
@@ -698,69 +792,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-            Relevance {
-              Value: "mc:evfxrelevance:critical"
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7641992138394465927
-        Name: "Explosion Kit Dust Ring VFX"
-        Transform {
-          Location {
-            X: 415.757324
-            Y: -111.801758
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.339511722
-          }
-        }
-        ParentId: 521308411396895614
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Initial Start Delay"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 1
-              G: 0.408079445
-              B: 0.18
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8368756853707329605
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-            Relevance {
-              Value: "mc:evfxrelevance:critical"
-            }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
           }
         }
       }
@@ -1140,7 +1174,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DURATION"
-            Float: 1
+            Float: 0.8
           }
         }
         Collidable_v2 {
@@ -1531,7 +1565,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.8
+            Float: 0.6
           }
         }
         Collidable_v2 {
@@ -2313,7 +2347,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DURATION"
-            Float: 1.1
+            Float: 0.9
           }
         }
         Collidable_v2 {
