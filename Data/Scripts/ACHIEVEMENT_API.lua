@@ -240,7 +240,6 @@ end
 
 
 function API.FormatInt(number)
-    number = CoreMath.Round(number,0)
 	local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
 	int = int:reverse():gsub("(%d%d%d)", "%1,")
 	return minus .. int:reverse():gsub("^,", "") .. fraction
