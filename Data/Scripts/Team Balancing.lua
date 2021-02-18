@@ -8,7 +8,7 @@ local TOTAL_CLASS_VALUE_COEFFICIENT = 6 -- Higher value means players with progr
 local WIN_RATE_MIN = 0.2
 local WIN_RATE_MAX = 0.8
 local WIN_RATE_EXPONENT = 1
-local WIN_RATE_COEFFICIENT = 100
+local WIN_RATE_COEFFICIENT = 500
 
 
 function ComputePlayerValue(player)
@@ -21,23 +21,27 @@ function ComputePlayerValue(player)
 	local value = BASE_VALUE_PER_PLAYER
 	
 	-- Add the value of the player's total ability progression
-	local totalClassValue = player:GetResource(PROGRESSION.ACCOUNT_LEVEL)
+	local accountLevel = player:GetResource(PROGRESSION.ACCOUNT_LEVEL)
+	local totalClassValue = accountLevel
 	totalClassValue = totalClassValue ^ TOTAL_CLASS_VALUE_EXPONENT
 	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
 	value = value + totalClassValue
 	
 	-- Add the player's win rate
-	--[[
-	TODO: Win rate not tracked yet
-	
-	local winRateValue = player:GetResource(PROGRESSION.WIN_RATE) --TODO
-	winRateValue = CoreMath.Clamp(winRateValue, WIN_RATE_MIN, WIN_RATE_MAX)
-	winRateValue = winRateValue ^ WIN_RATE_EXPONENT
-	winRateValue = winRateValue * WIN_RATE_COEFFICIENT
-	value = value + winRateValue
-	--]]
-	
+	local weightedWinRate = player.serverUserData.weightedWinRate
+	local winRateValue = weightedWinRate
+	if winRateValue then
+		winRateValue = CoreMath.Clamp(winRateValue, WIN_RATE_MIN, WIN_RATE_MAX)
+		winRateValue = winRateValue ^ WIN_RATE_EXPONENT
+		winRateValue = winRateValue * WIN_RATE_COEFFICIENT
+		value = value + winRateValue
+	end
 	player.serverUserData.balanceValue = value
+	
+	print("[Balance] Player " .. player.name .. 
+		", classValue = " .. accountLevel .. "->" .. totalClassValue .. 
+		", winRateValue = " .. weightedWinRate .. "->" .. winRateValue .. 
+		", totalValue = " .. value)
 	
 	return value
 end

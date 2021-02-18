@@ -21,19 +21,30 @@ local TOTAL_GAME_WON_WEIGHT = 0.9 -- Higher value means the total games won is w
 --@param int elfScore
 --@return bool
 local function SetPlayerWinLoss(player, orcScore, elfScore)
-    local weightedWinRate = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
-    if orcScore > elfScore and player.team == CONST.TEAM.ORC then
-        player:AddResource(CONST.GAMES_WON, 1)
-        weightedWinRate = weightedWinRate * 0.9 + 1 * 0.1
-    elseif orcScore < elfScore and player.team == CONST.TEAM.ELF then
-        player:AddResource(CONST.GAMES_WON, 1)
-        weightedWinRate = weightedWinRate * 0.9 + 1 * 0.1
-    else
-        weightedWinRate = weightedWinRate * 0.9 + 0 * 0.1
-    end
+	local STARTING_WEIGHT = 0.2
+	local NEW_GAME_WEIGHT = 0.1
+
     player:AddResource(CONST.TOTAL_GAMES, 1)
+    
+    if orcScore == elfScore then return end -- Draw!
+        
+    local weightedWinRate = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or STARTING_WEIGHT
+    local winValue = 1
+
+    if (orcScore > elfScore and player.team == CONST.TEAM.ORC)
+    or (orcScore < elfScore and player.team == CONST.TEAM.ELF) then
+        player:AddResource(CONST.GAMES_WON, 1)
+        
+    else
+        player:AddResource(CONST.GAMES_LOST, 1)
+        winValue = 0
+    end
+    
+    weightedWinRate = weightedWinRate * (1 - NEW_GAME_WEIGHT) + winValue * NEW_GAME_WEIGHT
+    
     player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = weightedWinRate
-    print(player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]])
+
+    --warn(player.name .. " Current Weighted Win Rate: " .. tostring(player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]))
 end
 
 local function CalculateGamePlayStats()

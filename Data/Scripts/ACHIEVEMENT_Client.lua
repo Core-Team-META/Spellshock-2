@@ -35,18 +35,6 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 function OnResourceChanged(player, resName, resAmt)
-    if IsAchievement(resName) then
-        --[[print(
-            "resName " ..
-                resName ..
-                    " resAmt " ..
-                        resAmt ..
-                            " Required " ..
-                                _G.META_ACHIEVEMENTS.GetAchievementRequired(resName) ..
-                                    " Passed? " ..
-                                        tostring(resAmt == _G.META_ACHIEVEMENTS.GetAchievementRequired(resName))
-        )]]--
-    end
     if
         player == LOCAL_PLAYER and IsAchievement(resName) and
             resAmt == _G.META_ACHIEVEMENTS.GetAchievementRequired(resName)
