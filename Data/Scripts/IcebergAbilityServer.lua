@@ -64,6 +64,23 @@ function OnSpecialAbilityExecute(thisAbility)
 	local attachmentTemplate = PlayerVFX.Attachment
 	CurrentIceCube = META_AP().SpawnAsset(attachmentTemplate,  {position = spawnPosition})
 
+	-- Heal player
+	local dmg = Damage.New()
+	dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount")
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
+
+	local attackData = {
+		object = SpecialAbility.owner,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Mage_R"}
+	}
+	COMBAT().ApplyDamage(attackData)
+
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	

@@ -7,7 +7,7 @@ Assets {
       RootId: 5122760150921592246
       Objects {
         Id: 5122760150921592246
-        Name: "Hunter Orc Leap Placement Fire 2"
+        Name: "Hunter Orc Leap Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 3571856715145044979
         ChildIds: 13516580838183690228
         UnregisteredParameters {
@@ -54,9 +54,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.418735057
-            Y: 0.418735057
-            Z: 0.418735057
+            X: 0.0879343599
+            Y: 0.0879343599
+            Z: 0.0879343599
           }
         }
         ParentId: 5122760150921592246
@@ -9218,14 +9218,14 @@ Assets {
         Name: "Trigger"
         Transform {
           Location {
-            Z: 60
+            Z: 12.5999985
           }
           Rotation {
           }
           Scale {
-            X: 3.5
-            Y: 3.5
-            Z: 2
+            X: 0.734999955
+            Y: 0.734999955
+            Z: 0.42
           }
         }
         ParentId: 5122760150921592246

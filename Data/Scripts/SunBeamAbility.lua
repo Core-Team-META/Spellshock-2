@@ -90,7 +90,7 @@ function OnAbilityExecute(thisAbility)
 	CurrentProjectile:MoveContinuous(VelocityVector)
 
 	Task.Spawn(function()
-		if not Object.IsValid() then return end
+		if not CurrentProjectile or not Object.IsValid(CurrentProjectile) then return end
 		OverlapEvent:Disconnect()
 		CurrentProjectile:StopMove()
 		--World.SpawnAsset(EndingFX, {position = CurrentProjectile:GetWorldPosition()})
@@ -148,6 +148,7 @@ end
 function OnUnequip(thisEquipment, player)
 	if Object.IsValid(CurrentProjectile) then
 		CurrentProjectile:Destroy()
+		CurrentProjectile = nil
 	end
 end
 

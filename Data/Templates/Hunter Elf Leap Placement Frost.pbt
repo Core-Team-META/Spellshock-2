@@ -7,7 +7,7 @@ Assets {
       RootId: 10427827419758979090
       Objects {
         Id: 10427827419758979090
-        Name: "Hunter Elf Leap Placement Frost 2"
+        Name: "Hunter Elf Leap Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 4507967067679068394
         ChildIds: 16829347312513831577
         UnregisteredParameters {
@@ -54,9 +54,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.418735057
-            Y: 0.418735057
-            Z: 0.418735057
+            X: 0.0879343599
+            Y: 0.0879343599
+            Z: 0.0879343599
           }
         }
         ParentId: 10427827419758979090
@@ -9175,14 +9175,14 @@ Assets {
         Name: "Trigger"
         Transform {
           Location {
-            Z: 60
+            Z: 12.5999985
           }
           Rotation {
           }
           Scale {
-            X: 3.5
-            Y: 3.5
-            Z: 2
+            X: 0.734999955
+            Y: 0.734999955
+            Z: 0.42
           }
         }
         ParentId: 10427827419758979090

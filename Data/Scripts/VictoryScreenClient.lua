@@ -167,7 +167,6 @@ local function RestoreFromPodium()
 		local resourcePanel = panel:GetCustomProperty("ResourcePanel"):WaitForObject()
 		resourcePanel.visibility = Visibility.FORCE_OFF
 	end
-	
 end
 
 function OnHideVictoryPanels()

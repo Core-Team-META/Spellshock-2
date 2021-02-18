@@ -69,6 +69,14 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:EnemyDamageColor"
+      Color {
+        R: 0.802000046
+        G: 0.700158715
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:DamageTextDuration:tooltip"
       String: "Duration of the damage fly up text."
     }
@@ -23106,7 +23114,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:TeamScoreLimit"
-      Int: 5
+      Int: 100
     }
     Overrides {
       Name: "cs:TeamScoreLimit:tooltip"
@@ -23328,7 +23336,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 30
+      Float: 15
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
@@ -23914,9 +23922,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -7089.24365
-      Y: -4662.65479
-      Z: 3580
+      X: -23389.3516
+      Y: -32092.2109
+      Z: 6572.92236
     }
     Rotation {
     }
