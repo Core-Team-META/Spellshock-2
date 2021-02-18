@@ -24,6 +24,7 @@ local HEALTH_CHANGE_POST_PROCESS = script:GetCustomProperty("HealthChangePostPro
 local DAMAGE_TEXT_DURATION = COMPONENT_ROOT:GetCustomProperty("DamageTextDuration")
 local TARGET_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("TargetDamageTextColor")
 local SELF_DAMAGE_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("SelfDamageTextColor")
+local EnemyDamageColor = COMPONENT_ROOT:GetCustomProperty("EnemyDamageColor")
 local HEAL_TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("HealTextColor")
 local SHOW_FLY_UP_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowFlyUpText")
 local IS_BIG_TEXT = COMPONENT_ROOT:GetCustomProperty("DisplayBigText")
@@ -108,18 +109,18 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
     if sourcePlayer == LOCAL_PLAYER then
         --if position ~= Vector3.ZERO then
             -- Show fly up damage text at the specified position
-            ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), TARGET_DAMAGE_TEXT_COLOR)
+            --ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), TARGET_DAMAGE_TEXT_COLOR)
         --end
 		
 		-- Show text on targetPlayer
 		if Object.IsValid(targetPlayer) then
-			if damage > 0 then -- Show damage number on targetPlayer
-				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), SELF_DAMAGE_TEXT_COLOR)
+			if damage >= 0 and targetPlayer.team ~= sourcePlayer.team then -- Show damage number on targetPlayer
+				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), EnemyDamageColor)
 				-- Play the damage feedback sound to the source player
 		        if HIT_FEEDBACK_SOUND then
 		            HIT_FEEDBACK_SOUND:Play()
 		        end
-            elseif sourcePlayer ~= targetPlayer then-- Show heal number on targetPlayer
+            elseif damage < 0 and targetPlayer.team == sourcePlayer.team then-- Show heal number on targetPlayer
                 ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition(), HEAL_TEXT_COLOR)
 			end
 		end
@@ -129,7 +130,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
             TriggerHitIndicator()
         end
     elseif targetPlayer == LOCAL_PLAYER then
-        if damage > 0 then
+        if damage >= 0 then
             if Object.IsValid(sourcePlayer) then
                 UI.ShowDamageDirection(sourcePlayer)
             elseif position and position ~= Vector3.ZERO then
