@@ -4497,41 +4497,6 @@ Objects {
   }
 }
 Objects {
-  Id: 12481345003269002044
-  Name: "ClassSelectionServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ABGS"
-      AssetReference {
-        Id: 11974742996071064388
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1585716437870996774
-    }
-  }
-}
-Objects {
   Id: 11740795219228208423
   Name: "UI Client Context"
   Transform {
@@ -82277,6 +82242,41 @@ Objects {
   Script {
     ScriptAsset {
       Id: 14730659522932281457
+    }
+  }
+}
+Objects {
+  Id: 12481345003269002044
+  Name: "ClassSelectionServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1585716437870996774
     }
   }
 }

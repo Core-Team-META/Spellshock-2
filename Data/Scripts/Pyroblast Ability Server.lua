@@ -94,14 +94,14 @@ function OnSpecialAbilityExecute(thisAbility)
 	-- Spawn a new target object where the camera is looking
 	local viewRotation = thisAbility.owner:GetViewWorldRotation()
 	local viewPosition = thisAbility.owner:GetViewWorldPosition()
-	local targetingRange =
-		META_AP().GetAbilityMod(
+	local targetingRange = 100000
+		--[[META_AP().GetAbilityMod(
 		SpecialAbility.owner,
 		META_AP().T,
 		"mod3",
 		DEFAULT_TargetingRange,
 		SpecialAbility.name .. ": Targeting Range"
-	)
+	)]]
 	local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 	local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = thisAbility.owner.team})
 
@@ -109,30 +109,30 @@ function OnSpecialAbilityExecute(thisAbility)
 		endPoint = hitResult:GetImpactPosition()
 	end
 
-	CurrentTarget = META_AP().SpawnAsset(PlayerVFX.Target, {position = endPoint})
+	--CurrentTarget = META_AP().SpawnAsset(PlayerVFX.Target, {position = endPoint})
 
 	-- Spawn a new projectile and set its homingTarget to CurrentTarget
 	local playerPosition = thisAbility.owner:GetWorldPosition()
 	local playerRotation = thisAbility.owner:GetLookWorldRotation()
 	local forwardVector = playerRotation * Vector3.FORWARD
-	local spawnPosition = playerPosition + (forwardVector * 20)
+	local spawnPosition = playerPosition + Vector3.New(0, 0, 200) --+ (forwardVector * 20)
 	spawnPosition.z = spawnPosition.z + 50
 
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
 
 	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
-	local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
+	--local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 
 	CurrentProjectile.owner = thisAbility.owner
-	CurrentProjectile.speed = ProjectileSpeed
-	CurrentProjectile.lifeSpan = distanceVector.size / ProjectileSpeed + 1.5
+	CurrentProjectile.speed =  ProjectileSpeed
+	CurrentProjectile.lifeSpan = 10 --distanceVector.size / ProjectileSpeed + 1.5
 	CurrentProjectile.capsuleLength = 50
 	CurrentProjectile.capsuleRadius = 50
 	CurrentProjectile.gravityScale = 0
-	CurrentProjectile.homingTarget = CurrentTarget
-	CurrentProjectile.homingAcceleration = 5000
-	CurrentProjectile.drag = 0.5
+	--CurrentProjectile.homingTarget = CurrentTarget
+	--CurrentProjectile.homingAcceleration = 5000
+	CurrentProjectile.drag = -0.5
 	EventListeners["impactEvent"] = CurrentProjectile.impactEvent:Connect(OnProjectileImpact)
 	EventListeners["bindingPressedEvent"] = thisAbility.owner.bindingPressedEvent:Connect(OnBindingPressed)
 	EventListeners["bindingReleasedEvent"] = thisAbility.owner.bindingReleasedEvent:Connect(OnBindingReleased)
@@ -218,9 +218,9 @@ Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 
 function Tick(deltaTime)
-	if Object.IsValid(CurrentTarget) and Object.IsValid(CurrentProjectile) then
-		if MoveTarget then
-			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
+	if Object.IsValid(CurrentProjectile) and SpecialAbility.owner 
+	and Object.IsValid(SpecialAbility.owner) and MoveTarget then
+			--[[local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
 			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
 			local targetingRange =
 				META_AP().GetAbilityMod(
@@ -240,8 +240,13 @@ function Tick(deltaTime)
 			local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
 			CurrentProjectile.lifeSpan = distanceVector.size / ProjectileSpeed + 1.5
 		--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
-		--CurrentProjectile:SetVelocity(newVelocity)
-		end
+		--CurrentProjectile:SetVelocity(newVelocity)]]
+
+		local viewRotation = SpecialAbility.owner:GetViewWorldRotation()
+		local directionVector = viewRotation * Vector3.FORWARD 
+		local velocityVector = directionVector * ProjectileSpeed 
+		CurrentProjectile:SetVelocity(velocityVector)
 	end
 end
+
 SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute)
