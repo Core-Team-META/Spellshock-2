@@ -11,6 +11,7 @@ local LEFT_SHADOW = script:GetCustomProperty("LeftShadow"):WaitForObject()
 local ACTIVE_FRAME = script:GetCustomProperty("ActiveFrame"):WaitForObject()
 local ACTIVE_FLASH = script:GetCustomProperty("ActiveFlash"):WaitForObject()
 local DURATION_BAR = script:GetCustomProperty("DurationIndicator"):WaitForObject()
+local LEVEL_TEXT = script:GetCustomProperty("LevelText"):WaitForObject()
 
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
@@ -19,6 +20,14 @@ end
 -- User exposed properties
 local BINDING = PANEL:GetCustomProperty("Binding")
 local IGNORE_OVERRIDE = PANEL:GetCustomProperty("IgnoreOverride")
+
+local BINDS = {
+    ability_extra_12 = "SHIFT",
+    ability_extra_20 = "Q",
+    ability_extra_22 = "E",
+    ability_extra_23 = "R",
+    ability_extra_24 = "T"
+}
 
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -55,7 +64,6 @@ function OnAbilityIconSet(thisAbility, icon, color)
             ICON:SetColor(ICON_COLOR)
         end
 
-        NAME_TEXT.text = currentAbility.name
         executeDuration = currentAbility.executePhaseSettings.duration
         recoveryDuration = currentAbility.recoveryPhaseSettings.duration
         --local Class = LOCAL_PLAYER:GetResource("CLASS_MAP")
@@ -72,6 +80,11 @@ function Tick(deltaTime)
         local currentPhase = currentAbility:GetCurrentPhase()
         local phaseTime = currentAbility:GetPhaseTimeRemaining()
         PANEL.visibility = Visibility.INHERIT
+
+        -- Update the level text for the ability
+        NAME_TEXT.text = currentAbility.name
+        local classID = LOCAL_PLAYER:GetResource("CLASS_MAP")
+        LEVEL_TEXT.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[BINDS[BINDING]], classID))
 
         -- If the ability is a placement then show the indicator when it is active
         if currentAbility:GetCustomProperty("Binding") and currentAbility.isEnabled then

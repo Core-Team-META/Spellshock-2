@@ -108,18 +108,18 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
     if sourcePlayer == LOCAL_PLAYER then
         --if position ~= Vector3.ZERO then
             -- Show fly up damage text at the specified position
-            ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), TARGET_DAMAGE_TEXT_COLOR)
+            --ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition(), TARGET_DAMAGE_TEXT_COLOR)
         --end
 		
 		-- Show text on targetPlayer
 		if Object.IsValid(targetPlayer) then
-			if damage > 0 then -- Show damage number on targetPlayer
+			if damage >= 0 and targetPlayer.team ~= sourcePlayer.team then -- Show damage number on targetPlayer
 				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), SELF_DAMAGE_TEXT_COLOR)
 				-- Play the damage feedback sound to the source player
 		        if HIT_FEEDBACK_SOUND then
 		            HIT_FEEDBACK_SOUND:Play()
 		        end
-            elseif sourcePlayer ~= targetPlayer then-- Show heal number on targetPlayer
+            elseif damage < 0 and targetPlayer.team == sourcePlayer.team then-- Show heal number on targetPlayer
                 ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition(), HEAL_TEXT_COLOR)
 			end
 		end
@@ -129,7 +129,7 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
             TriggerHitIndicator()
         end
     elseif targetPlayer == LOCAL_PLAYER then
-        if damage > 0 then
+        if damage >= 0 then
             if Object.IsValid(sourcePlayer) then
                 UI.ShowDamageDirection(sourcePlayer)
             elseif position and position ~= Vector3.ZERO then
@@ -145,11 +145,11 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
                 {duration = DAMAGE_TEXT_DURATION,
                 color = Color.CYAN,
                 isBig = IS_BIG_TEXT})]]
-        else
+        --[[else
             --if SHOW_HEALTH_CHANGE_EFFECT then
             TriggerHitPostProcess(Color.GREEN)
             ShowFlyUpText(math.abs(damage), LOCAL_PLAYER:GetWorldPosition() + Vector3.New(0,0,-50), HEAL_TEXT_COLOR)
-            --end
+            --end]]
         end
     end
 end
