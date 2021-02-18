@@ -1,13 +1,4 @@
 Assets {
-  Id: 17066449609679557524
-  Name: "Frame Outline Thin 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameOutline_019"
-  }
-}
-Assets {
   Id: 16452085222527001410
   Name: "Fantasy Ability Red 013"
   PlatformAssetType: 9
@@ -17,39 +8,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13921698015760471530
-  Name: "Survival Money 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Survival_Equip_Money_002"
-  }
-}
-Assets {
   Id: 11074002944006108218
   Name: "Fantasy Ability Red 020"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Red_020"
-  }
-}
-Assets {
-  Id: 10258515349694145501
-  Name: "BG Flat 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_019"
-  }
-}
-Assets {
-  Id: 10071982093329629272
-  Name: "UI Basic Corners 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Corners_001"
   }
 }
 Assets {
@@ -104,6 +68,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Green_011"
+  }
+}
+Assets {
+  Id: 3385920120892313289
+  Name: "Fantasy Ability Purple 025"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_025"
+  }
+}
+Assets {
+  Id: 1283463588493558965
+  Name: "Fantasy Gold 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Gold_002"
   }
 }
 Assets {

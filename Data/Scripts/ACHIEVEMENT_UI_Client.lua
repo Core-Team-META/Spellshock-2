@@ -77,7 +77,9 @@ local function BuildAchievmentPanels()
         panel:GetCustomProperty("NAME"):WaitForObject().text = achievement.name
         panel:GetCustomProperty("DESC"):WaitForObject().text = achievement.description
         panel:GetCustomProperty("ICON"):WaitForObject():SetImage(achievement.icon)
-        panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().text = tostring(achievement.rewardAmt) .. " " .. achievement.rewardName
+        panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().text = ACH_API.FormatInt(achievement.rewardAmt) .. " " .. achievement.rewardName
+        panel:GetCustomProperty("REWARD_ICON"):WaitForObject():SetImage(achievement.rewardIcon)
+        panel:GetCustomProperty("PROGRESS_TEXT"):WaitForObject().text = tostring(ACH_API.FormatInt((currentResource == 0 and 0) or (currentResource > 0 and currentResource - 1))) .. " / " .. tostring(ACH_API.FormatInt(CoreMath.Round(requiredResource - 1, 0)))
 
         if currentResource < requiredResource and currentResource ~= 1 then
             CLAIM_BUTTON.isEnabled = false

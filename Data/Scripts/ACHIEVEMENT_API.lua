@@ -24,6 +24,7 @@ local function Split(s, delimiter)
     return result
 end
 
+
 ------------------------------------------------------------------------------------------------------------------------
 -- PUBLIC API
 ------------------------------------------------------------------------------------------------------------------------
@@ -39,6 +40,8 @@ function API.RegisterAchievements(list)
             local icon = child:GetCustomProperty("ICON")
             local rewardName = child:GetCustomProperty("REWARD_NAME")
             local rewardAmmount = child:GetCustomProperty("REWARD_AMMOUNT")
+            local rewardIcon = child:GetCustomProperty("REWARD_ICON")
+
 
             local achievement = {
                 id = id,
@@ -48,7 +51,8 @@ function API.RegisterAchievements(list)
                 description = description,
                 icon = icon,
                 rewardName = rewardName,
-                rewardAmt = rewardAmmount
+                rewardAmt = rewardAmmount,
+                rewardIcon = rewardIcon
             }
             if enabled then
                 sort = sort + 1
@@ -107,6 +111,14 @@ function API.GetAchievementIcon(id)
         return nil
     end
     return achievements[id].icon
+end
+
+function API.GetRewardIcon(id)
+    if not achievements then
+        warn("Achievement Icon Doesn't Exsist")
+        return nil
+    end
+    return achievements[id].rewardIcon
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -224,4 +236,11 @@ function API.TablePrint(tbl, indent)
             print(formatting .. v)
         end
     end
+end
+
+
+function API.FormatInt(number)
+	local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
+	int = int:reverse():gsub("(%d%d%d)", "%1,")
+	return minus .. int:reverse():gsub("^,", "") .. fraction
 end
