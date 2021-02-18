@@ -130,6 +130,7 @@ function OnCapturePointChanged(playerId)
                 CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS,
                 player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS) + 1
             )
+            Events.Broadcast("AS.PlayerPointCapture", player, 1)
         end
     end
 end
