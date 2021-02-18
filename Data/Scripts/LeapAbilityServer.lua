@@ -57,22 +57,22 @@ function OnAbilityExecute(thisAbility)
 		targetPosition.z = targetPosition.z - 100
 	end
 
+	local ImpulseRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, SpecialAbility.name .. ": Impulse Radius")
+	local vfxScale = Vector3.New(CoreMath.Round(ImpulseRadius / 50, 3))
+
 	local trapTemplate = PlayerVFX.Placement
-	local newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation})
-	newTrap.lifeSpan =
-		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
+	local newTrap = META_AP().SpawnAsset(trapTemplate, {position = targetPosition, rotation = targetRotation, scale = vfxScale})
+	newTrap.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_ThornLifeSpan, SpecialAbility.name .. ": LifeSpan")
 	newTrap:SetNetworkedCustomProperty("lifeSpan", newTrap.lifeSpan)
 
-	local ImpulseRadius =
-		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_ImpulseRadius, SpecialAbility.name .. ": Impulse Radius")
 	local nearbyEnemies =
 		Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	for _, enemy in pairs(nearbyEnemies) do
-		AddImpulse(enemy)
+		--AddImpulse(enemy)
 		API_SE.ApplyStatusEffect(
 			enemy,
-			API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id,
+			API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id,
 			SpecialAbility.owner,
 			status.duration,
 			status.damage,

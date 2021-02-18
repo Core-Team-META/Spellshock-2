@@ -62,9 +62,11 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY 
+	or not thisAbility.owner or not Object.IsValid(thisAbility.owner) then 
 		return 
 	end
+	
 	local player = thisAbility.owner
 	local ProjectileSpeed = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_ProjectileSpeed, SpecialAbility.name..": Projectile Speed")
 

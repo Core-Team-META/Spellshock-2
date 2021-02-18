@@ -24,14 +24,12 @@ local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local PlayerVFX = nil
 
 function OnProjectileImpacted(projectile, other, hitResult)
-	if other and SpecialAbility.owner then
+	if other and Object.IsValid(SpecialAbility) and SpecialAbility.owner then
 		--Play ImpactFX
 		local projectilePos = projectile:GetWorldPosition()
 		local impactRotation = Rotation.New(Vector3.FORWARD, hitResult:GetImpactNormal())
 		local impactTemplate = PlayerVFX.Impact
 		META_AP().SpawnAsset(impactTemplate, {position = projectile:GetWorldPosition(), rotation = impactRotation})
-
-		
 
 		-- init dmg object
 		local DamageAmount =
