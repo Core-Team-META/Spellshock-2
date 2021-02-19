@@ -1,12 +1,12 @@
 Assets {
-  Id: 1429104248892819753
-  Name: "Assassin Deaths Shadow Ending Basic"
+  Id: 6104934738115854315
+  Name: "Assassin Elf Deaths Shadow Ending Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12342735540760990105
+      RootId: 6542135040881979635
       Objects {
-        Id: 12342735540760990105
+        Id: 6542135040881979635
         Name: "Assassin Deaths Shadow Ending Basic"
         Transform {
           Scale {
@@ -16,11 +16,11 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 15758015435018765990
-        ChildIds: 2413557677383235308
-        ChildIds: 9090343743528800521
-        ChildIds: 12928281144420773742
-        ChildIds: 17870053726890118285
+        ChildIds: 7440641738508224141
+        ChildIds: 1723340165042949349
+        ChildIds: 982787970524321577
+        ChildIds: 2729499332434975188
+        ChildIds: 10881182150329978766
         Lifespan: 1.5
         WantsNetworking: true
         Collidable_v2 {
@@ -33,7 +33,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15758015435018765990
+        Id: 7440641738508224141
         Name: "Smoke Puff VFX"
         Transform {
           Location {
@@ -46,7 +46,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 6542135040881979635
         UnregisteredParameters {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
@@ -83,7 +83,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2413557677383235308
+        Id: 1723340165042949349
         Name: "Magic Deep Heavy Poof Whoosh 01 SFX"
         Transform {
           Location {
@@ -96,7 +96,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 6542135040881979635
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -117,7 +117,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9090343743528800521
+        Id: 982787970524321577
         Name: "Magic Dark Bolt Whoosh 01 SFX"
         Transform {
           Location {
@@ -130,7 +130,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 6542135040881979635
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -151,7 +151,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12928281144420773742
+        Id: 2729499332434975188
         Name: "Sword & Blade - Swings Swipes Air Swooshes Set 01 SFX"
         Transform {
           Location {
@@ -164,8 +164,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
-        ChildIds: 16317642206084595783
+        ParentId: 6542135040881979635
+        ChildIds: 17621625126769422553
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sword/Blade Type"
@@ -211,7 +211,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16317642206084595783
+        Id: 17621625126769422553
         Name: "AudioDelay"
         Transform {
           Location {
@@ -224,7 +224,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12928281144420773742
+        ParentId: 2729499332434975188
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
@@ -244,7 +244,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17870053726890118285
+        Id: 10881182150329978766
         Name: "Ground Explosion VFX"
         Transform {
           Location {
@@ -257,8 +257,8 @@ Assets {
             Z: 0.99999994
           }
         }
-        ParentId: 12342735540760990105
-        ChildIds: 17454994390599670321
+        ParentId: 6542135040881979635
+        ChildIds: 2809594401881943394
         UnregisteredParameters {
           Overrides {
             Name: "bp:Enable Flash"
@@ -357,7 +357,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17454994390599670321
+        Id: 2809594401881943394
         Name: "AudioDelay"
         Transform {
           Location {
@@ -372,7 +372,7 @@ Assets {
             Z: 1.57039487
           }
         }
-        ParentId: 17870053726890118285
+        ParentId: 10881182150329978766
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
