@@ -13,7 +13,8 @@ _G.MENU_TABLE = {
 	Tutorial = 2,
 	Respawn = 3,
 	Rewards = 4,
-	CosmeticStore = 5
+	CosmeticStore = 5,
+	ClassAbilities = 6
 }
 
 function SpamPrevent()
@@ -35,7 +36,7 @@ end
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
-	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+	elseif newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Rewards"])
@@ -63,6 +64,12 @@ function OnBindingPressed(whichPlayer, binding)
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["CosmeticStore"]) -- Show
 		elseif _G.CurrentMenu == _G.MENU_TABLE["CosmeticStore"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		end
+	elseif binding == "ability_extra_27" and CurrentGameState == ABGS.GAME_STATE_ROUND and SpamPrevent() then -- i
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"]) -- Show
+		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
 	end
