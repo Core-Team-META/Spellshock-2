@@ -260,9 +260,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.72
-              G: 0.972185493
-              B: 1
+              R: 0.375
+              G: 2
+              B: 1.38021362
               A: 1
             }
           }
@@ -308,10 +308,10 @@ Assets {
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.109514743
-              G: 0.58407861
-              B: 0.403076619
-              A: 1
+              R: 0.117
+              G: 0.624
+              B: 0.430626661
+              A: 0.478000015
             }
           }
           Overrides {
@@ -326,9 +326,9 @@ Assets {
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.103696756
-              G: 0.505208313
-              B: 0.434451669
+              R: 0.615766346
+              G: 3
+              B: 2.57983685
               A: 1
             }
           }
@@ -370,7 +370,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Collapse Funnel Amount"
-            Float: 0.38
+            Float: 0.154527485
           }
           Overrides {
             Name: "bp:Fade Length Bottom"
@@ -415,9 +415,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.5625
-              G: 0.999999881
-              B: 1
+              R: 0.375
+              G: 2
+              B: 1.38021362
               A: 1
             }
           }
@@ -441,6 +441,10 @@ Assets {
           Overrides {
             Name: "bp:Debris Scale Multiplier"
             Float: 2
+          }
+          Overrides {
+            Name: "bp:Dust Density"
+            Float: 0.1
           }
         }
         Collidable_v2 {
@@ -483,9 +487,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.5625
-              G: 0.999999881
-              B: 1
+              R: 0.375
+              G: 2
+              B: 1.38021362
               A: 1
             }
           }
@@ -509,6 +513,10 @@ Assets {
           Overrides {
             Name: "bp:Debris Scale Multiplier"
             Float: 2
+          }
+          Overrides {
+            Name: "bp:Dust Density"
+            Float: 0.1
           }
         }
         Collidable_v2 {
