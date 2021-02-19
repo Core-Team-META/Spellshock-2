@@ -24,6 +24,7 @@ local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"
 local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
+local CLOSE_BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -267,4 +268,7 @@ ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
+
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
+CLOSE_BUTTON.clickedEvent:Connect(function() ToggleUi(false) end)
+
