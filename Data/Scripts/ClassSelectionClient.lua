@@ -91,14 +91,15 @@ function OnMenuChanged(oldMenu, newMenu)
 		end
 		
 		local currentClass = LOCAL_PLAYER:GetResource("CLASS_MAP")
+		local newButton 
 		for _, classButton in ipairs(ClassButtons) do
 			local data = classButton.clientUserData.dataTable
 			if META_AP()[data.ClassID] == currentClass then
-				CurrentClassButton = classButton
+				newButton = classButton
 			end
 		end
 
-		OnClassClicked(CurrentClassButton)
+		OnClassClicked(newButton)
 		ClassSelectionCanvas.visibility = Visibility.INHERIT
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
@@ -637,8 +638,7 @@ Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Game.playerJoinedEvent:Connect(OnPlayerJoined
-)
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end

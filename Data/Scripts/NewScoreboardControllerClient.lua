@@ -101,8 +101,9 @@ end
 function OnGameStateChanged(oldState, newState)
     if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         HEADER.visibility = Visibility.FORCE_OFF
-    elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-        Events.Broadcast("TeamVictory_Client", "") -- Reset the network property
+    --[[elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+        print("Resetting Victory Property")
+        Events.BroadcastToServer("TeamVictory_Client", "") -- Reset the network property]]
     end
 end
 

@@ -138,7 +138,7 @@ function OnMenuChanged(oldMenu, newMenu)
     if newMenu == _G.MENU_TABLE["Achievements"] then
 		BuildAchievmentPanels()
         ToggleUI(true)
-	else -- hide
+	elseif oldMenu == _G.MENU_TABLE["Achievements"] then-- hide
 		ToggleUI(false)
         ClearAchievementPanels()
 	end
