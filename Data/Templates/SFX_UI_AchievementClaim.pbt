@@ -52,13 +52,11 @@ Assets {
           AudioAsset {
             Id: 785883126864424841
           }
+          AutoPlay: true
           Pitch: -243.626953
           Volume: 1
           Falloff: -1
           Radius: -1
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
         }
       }
     }

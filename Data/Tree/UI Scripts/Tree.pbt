@@ -77,6 +77,12 @@ Objects {
         SelfId: 9311735215209391115
       }
     }
+    Overrides {
+      Name: "cs:SFX_UI_OpenInventoryPanel"
+      AssetReference {
+        Id: 15148209995605876065
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

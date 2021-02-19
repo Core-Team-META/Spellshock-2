@@ -86,6 +86,24 @@ Objects {
         Id: 9930410147520302911
       }
     }
+    Overrides {
+      Name: "cs:SFX_UI_AchievementClaim"
+      AssetReference {
+        Id: 13957331580521171698
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_OpenInventoryPanel"
+      AssetReference {
+        Id: 15148209995605876065
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_Hover"
+      AssetReference {
+        Id: 13564860908462472063
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -120,7 +138,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceon"
   }
   Control {
     RenderTransformPivot {
@@ -700,7 +718,8 @@ Objects {
   }
   Control {
     Width: 650
-    Height: 525
+    Height: 584
+    UIY: 35
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -746,7 +765,7 @@ Objects {
   }
   Control {
     Width: 650
-    Height: 444
+    Height: 437
     UIY: 76.8798218
     RenderTransformPivot {
       Anchor {
