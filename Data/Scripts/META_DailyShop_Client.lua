@@ -202,6 +202,8 @@ local function BuildShopItems(slot, id, class, bind, reward)
             else
                 costText.text = "Bought"
                 costTextShadow.text = "Bought"
+                Button.isInteractable = false
+                Button:SetDisabledColor(Color.GRAY)
                 soldPanel.visibility = Visibility.FORCE_ON
             end
         end

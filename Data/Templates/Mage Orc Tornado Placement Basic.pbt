@@ -275,7 +275,7 @@ Assets {
         Name: "Tornado VFX_test"
         Transform {
           Location {
-            Z: 885.836914
+            Z: 853.129
           }
           Rotation {
             Yaw: -1.3660373e-05
@@ -293,27 +293,27 @@ Assets {
             Name: "bp:Color A"
             Color {
               R: 0.721568644
-              G: 0.155351341
-              B: 0.0939542353
-              A: 1
+              G: 0.325151622
+              B: 0.119838767
+              A: 0.383000016
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 0.541666687
-              G: 0.227339014
-              B: 0.189019099
-              A: 1
+              R: 1
+              G: 0.4
+              B: 0.189019084
+              A: 0.770000041
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.6875
-              G: 0.125403389
-              B: 0.064453125
-              A: 1
+              R: 4
+              G: 2.00000072
+              B: 0.415625095
+              A: 0.749
             }
           }
           Overrides {
@@ -354,7 +354,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Collapse Funnel Amount"
-            Float: 0.38
+            Float: 0.194955975
           }
           Overrides {
             Name: "bp:Fade Length Bottom"
