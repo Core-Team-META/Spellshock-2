@@ -4,14 +4,16 @@
 -- Date: 2021/2/8
 -- Version 0.0.1
 ------------------------------------------------------------------------------------------------------------------------
+local ACH_API = require(script:GetCustomProperty("ACH_API"))
+local EaseUI = require(script:GetCustomProperty("EaseUI"))
+
 local ACHIEVEMENT_LIST = script:GetCustomProperty("Achievement_List"):WaitForObject()
-while not _G.META_ACHIEVEMENTS do
-    Task.Wait()
-end
-local ACH_API = _G.META_ACHIEVEMENTS
+local NOTIFICATION = script:GetCustomProperty("NOTIFICATION"):WaitForObject()
+local NOTIFICATION_ICON = NOTIFICATION:GetCustomProperty("ICON"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-local SFX_Achievement = script:GetCustomProperty("SFX_PointCallout_UI")
+local SFX = script:GetCustomProperty("SFX")
+
 
 local achievementIds = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -37,10 +39,14 @@ end
 function OnResourceChanged(player, resName, resAmt)
     if
         player == LOCAL_PLAYER and IsAchievement(resName) and
-            resAmt == _G.META_ACHIEVEMENTS.GetAchievementRequired(resName)
+            resAmt == ACH_API.GetAchievementRequired(resName)
      then
-        --#TODO Achievement Unlocked
-        World.SpawnAsset(SFX_Achievement)
+        NOTIFICATION_ICON:SetImage(ACH_API.GetAchievementIcon(resName))
+        EaseUI.EaseX(NOTIFICATION, 10, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+        Task.Wait(0.5)
+        World.SpawnAsset(SFX)
+        Task.Wait(5)
+        EaseUI.EaseX(NOTIFICATION, 400, 1, EaseUI.EasingEquation.SINE, EaseUI.EasingDirection.OUT)
     elseif player == LOCAL_PLAYER and IsAchievement(resName) and resAmt == 1 then
     --#TODO Achievement Claimed
     --World.SpawnAsset(SFX_Achievement)
