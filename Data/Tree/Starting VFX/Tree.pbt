@@ -361,6 +361,12 @@ Objects {
         Id: 4450848993927554778
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 6104934738115854315
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -694,6 +700,12 @@ Objects {
       Name: "cs:04_WraithStrike_Costume"
       AssetReference {
         Id: 6376604265419333521
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 1429104248892819753
       }
     }
   }
