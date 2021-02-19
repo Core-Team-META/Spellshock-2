@@ -74,8 +74,9 @@ Assets {
           Overrides {
             Name: "bp:Stroke Color"
             Color {
-              G: 0.87500006
-              B: 0.543919146
+              R: 0.15625
+              G: 0.497101903
+              B: 1
               A: 0.5
             }
           }
@@ -98,6 +99,15 @@ Assets {
           Overrides {
             Name: "bp:Fade Time"
             Float: 0
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.15625
+              G: 0.497101903
+              B: 1
+              A: 0.5
+            }
           }
         }
         Collidable_v2 {
