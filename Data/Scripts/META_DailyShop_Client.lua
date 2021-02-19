@@ -304,7 +304,7 @@ end
 
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
-        local currentTime = tonumber(refreshTime - os.time(os.date("!*t")))
+        local currentTime = tonumber(refreshTime- os.time(os.date("!*t")))
         if currentTime >= 0 then
             local hours = math.floor(currentTime / 3600)
             local minutes = math.floor((currentTime % 3600) / 60)
