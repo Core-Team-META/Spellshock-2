@@ -204,6 +204,8 @@ Assets {
         ChildIds: 7023041220421724838
         ChildIds: 12847545999498186394
         ChildIds: 6211093722283724177
+        ChildIds: 11720350313279069551
+        ChildIds: 167185274098413939
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -219,8 +221,8 @@ Assets {
         Name: "Tornado VFX_test"
         Transform {
           Location {
-            Y: -9.95013397e-05
-            Z: 781.501953
+            Y: -0.000122070313
+            Z: 853.129
           }
           Rotation {
             Roll: -179.999954
@@ -237,26 +239,26 @@ Assets {
             Name: "bp:Color A"
             Color {
               R: 0.15625
-              G: 0.497102082
-              B: 1
-              A: 1
+              G: 0.497100949
+              B: 0.728000045
+              A: 0.54
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 0.0113977222
-              G: 0.00802083686
+              R: 0.0113977157
+              G: 0.00802083
               B: 0.110000014
-              A: 1
+              A: 0.629
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.0354166515
-              G: 0.142135382
-              B: 0.679999948
+              R: 0.521
+              G: 2
+              B: 2
               A: 1
             }
           }
@@ -298,7 +300,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Collapse Funnel Amount"
-            Float: 0.38
+            Float: 0.08
           }
           Overrides {
             Name: "bp:Fade Length Bottom"
@@ -518,9 +520,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.459999979
-              G: 0.688874125
-              B: 1
+              R: 0.4
+              G: 0.6
+              B: 0.9
               A: 1
             }
           }
@@ -611,6 +613,116 @@ Assets {
         Blueprint {
           BlueprintAsset {
             Id: 8598699987776668464
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11720350313279069551
+        Name: "Fire Volume VFX"
+        Transform {
+          Location {
+            Z: -17.3798828
+          }
+          Rotation {
+          }
+          Scale {
+            X: 8.49241257
+            Y: 6.43424368
+            Z: 3.16851139
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.516000032
+              G: 1.4
+              B: 2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2494920176024075778
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 167185274098413939
+        Name: "Fire Volume VFX"
+        Transform {
+          Location {
+            Z: 492.379395
+          }
+          Rotation {
+          }
+          Scale {
+            X: 4.92895603
+            Y: 3.73440456
+            Z: 5.10656738
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.516000032
+              G: 1.4
+              B: 2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2494920176024075778
           }
           TeamSettings {
           }
@@ -735,6 +847,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_swirling_dust"
+      }
+    }
+    Assets {
+      Id: 2494920176024075778
+      Name: "Fire Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_fire_volume_vfx"
       }
     }
     Assets {

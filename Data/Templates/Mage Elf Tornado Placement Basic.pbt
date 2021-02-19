@@ -292,7 +292,8 @@ Assets {
         Name: "Tornado VFX_test"
         Transform {
           Location {
-            Z: 1045.4043
+            Y: -0.000183367636
+            Z: 853.129395
           }
           Rotation {
             Roll: -179.999954

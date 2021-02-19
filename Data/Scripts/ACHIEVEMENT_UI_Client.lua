@@ -5,6 +5,7 @@
 -- Version 0.0.2
 ------------------------------------------------------------------------------------------------------------------------
 local ACH_API = require(script:GetCustomProperty("ACH_API"))
+--while not _G.CurrentMenu do Task.Wait() end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -121,7 +122,7 @@ function Int()
     ClearAchievementPanels()
 end
 
-function OnBindingPressed(player, keybind)
+--[[function OnBindingPressed(player, keybind)
     if player == LOCAL_PLAYER then
         if keybind == KEYPRESS and not PRIMARY_PANEL:IsVisibleInHierarchy() then
             BuildAchievmentPanels()
@@ -131,10 +132,21 @@ function OnBindingPressed(player, keybind)
             ClearAchievementPanels()
         end
     end
+end]]
+
+function OnMenuChanged(oldMenu, newMenu)
+    if newMenu == _G.MENU_TABLE["Achievements"] then
+		BuildAchievmentPanels()
+        ToggleUI(true)
+	else -- hide
+		ToggleUI(false)
+        ClearAchievementPanels()
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENER
 ------------------------------------------------------------------------------------------------------------------------
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+--LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Int()
+Events.Connect("Menu Changed", OnMenuChanged)

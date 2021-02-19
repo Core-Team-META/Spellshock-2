@@ -14,7 +14,8 @@ _G.MENU_TABLE = {
 	Respawn = 3,
 	Rewards = 4,
 	CosmeticStore = 5,
-	ClassAbilities = 6
+	ClassAbilities = 6,
+	Achievements = 7
 }
 
 function SpamPrevent()
@@ -70,6 +71,12 @@ function OnBindingPressed(whichPlayer, binding)
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"]) -- Show
 		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		end
+	elseif binding == "ability_extra_37" and (CurrentGameState == ABGS.GAME_STATE_LOBBY or CurrentGameState == ABGS.GAME_STATE_ROUND) and SpamPrevent() then
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["Achievements"]) -- Show
+		elseif _G.CurrentMenu == _G.MENU_TABLE["Achievements"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
 	end
