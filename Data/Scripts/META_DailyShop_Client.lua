@@ -186,7 +186,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 end
                 costText.text = FormatInt(cost)
                 costTextShadow.text = FormatInt(cost)
-
+                Button.isInteractable = true
                 Button.clientUserData.id = slotId
                 Button.clientUserData.slot = slot
                 soldPanel.visibility = Visibility.FORCE_OFF
