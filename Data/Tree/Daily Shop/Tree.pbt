@@ -62,12 +62,12 @@ Objects {
   Name: "ELF_DAILY_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40210.2656
-      Y: 51799.0078
+      X: 40001.9844
+      Y: 51604.4219
       Z: 1051.16553
     }
     Rotation {
-      Yaw: 33.1580811
+      Yaw: 48.6015
     }
     Scale {
       X: 5.69476271
@@ -97,12 +97,12 @@ Objects {
   Name: "ELF_DAILY_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 40210.2656
-      Y: 51799.0078
+      X: 40001.9844
+      Y: 51604.4219
       Z: 1051.16553
     }
     Rotation {
-      Yaw: 33.1580811
+      Yaw: 48.6015
     }
     Scale {
       X: 1.12097239
