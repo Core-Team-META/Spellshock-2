@@ -125,21 +125,21 @@ Assets {
   }
 }
 Assets {
-  Id: 8769843262922969299
-  Name: "Fantasy Coins 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_002"
-  }
-}
-Assets {
   Id: 7615847344375253670
   Name: "UI Basic Frame 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Frame_001"
+  }
+}
+Assets {
+  Id: 7585529932942736913
+  Name: "Fantasy Coins 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_009"
   }
 }
 Assets {
