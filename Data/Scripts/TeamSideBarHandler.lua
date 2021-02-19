@@ -33,7 +33,8 @@ end
 function OnBindingPressed(player, binding)
     -- U key
     if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] 
-    or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
+    or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] 
+    and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
         if TeamInfoPanel.visibility == Visibility.INHERIT then
             TeamInfoPanel.visibility = Visibility.FORCE_OFF
         else
