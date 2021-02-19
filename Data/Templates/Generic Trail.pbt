@@ -15,7 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
+        ChildIds: 2420967072182582937
         ChildIds: 7928271528055639521
         UnregisteredParameters {
         }
@@ -27,6 +28,64 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 2420967072182582937
+        Name: "Spark Trail Wavy VFX"
+        Transform {
+          Location {
+            X: -172.75
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11388592286874595498
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.49
+              B: 0.0364900529
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 15
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "bp:Spawn Radius"
+            Float: 0.15
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 5891367910865939212
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
         }
       }
       Objects {
@@ -109,6 +168,15 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 5891367910865939212
+      Name: "Spark Trail Wavy VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_spark_trail_wavy"
       }
     }
     Assets {
