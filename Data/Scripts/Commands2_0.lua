@@ -28,6 +28,24 @@ end
 function Commands.tp(player, message) 
     if not message[3] then return "No Player was found"  end
     local tpplayer = ReturnPlayerByName(message[3]) 
+    if(not tpplayer) and message[3] ~= "base" then return "No Player was found" end
+    if message[3] ~= "base" then
+        player:SetWorldPosition(tpplayer:GetWorldPosition())
+        return "teleported to "..player.name 
+    else
+        if player.team == 1 then
+            player:SetWorldPosition(Vector3.New(-22034, -33200, 7749))
+            return "teleported " .. player.name .. " to orc base"
+        else
+            player:SetWorldPosition(Vector3.New(18746, 19500, 7537))
+            return "teleported " .. player.name .. " to elf base"
+        end
+    end
+end
+
+function Commands.ttp(player, message) 
+    if not message[3] then return "No Player was found"  end
+    local tpplayer = ReturnPlayerByName(message[3]) 
     if(not tpplayer) then return "No Player was found" end
     player:SetWorldPosition(tpplayer:GetWorldPosition()) 
     return "teleported to "..player.name 

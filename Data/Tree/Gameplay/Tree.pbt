@@ -1355,9 +1355,9 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 11.9000053
-      Y: 11.9000053
-      Z: 11.9000053
+      X: 35.8
+      Y: 35.8
+      Z: 35.8
     }
   }
   ParentId: 4559935034785672696
@@ -5520,9 +5520,9 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 11.9000053
-      Y: 11.9000053
-      Z: 11.9000053
+      X: 35.8
+      Y: 35.8
+      Z: 35.8
     }
   }
   ParentId: 16313267587009276285
@@ -9685,9 +9685,9 @@ Objects {
       Roll: -0.0062255403
     }
     Scale {
-      X: 11.9000053
-      Y: 11.9000053
-      Z: 11.9000053
+      X: 35.8
+      Y: 35.8
+      Z: 35.8
     }
   }
   ParentId: 17910728817571265557
@@ -13487,9 +13487,9 @@ Objects {
       Roll: -0.0062255403
     }
     Scale {
-      X: 11.9000053
-      Y: 11.9000053
-      Z: 11.9000053
+      X: 35.8
+      Y: 35.8
+      Z: 35.8
     }
   }
   ParentId: 16321515820500395030
@@ -17652,9 +17652,9 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 11.9000053
-      Y: 11.9000053
-      Z: 11.9000053
+      X: 35.8
+      Y: 35.8
+      Z: 35.8
     }
   }
   ParentId: 13392592636105101133
@@ -23114,7 +23114,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:TeamScoreLimit"
-      Int: 200
+      Int: 5
     }
     Overrides {
       Name: "cs:TeamScoreLimit:tooltip"
@@ -23332,11 +23332,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 60
+      Float: 5
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"

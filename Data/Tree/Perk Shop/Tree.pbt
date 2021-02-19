@@ -303,9 +303,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 301
+    Width: 117
     Height: 68
-    UIY: 98.149353
+    UIX: 52.9654465
+    UIY: 40.5245857
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -316,12 +317,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:topright"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:topright"
         }
       }
     }
@@ -347,7 +348,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 404
@@ -360,7 +361,7 @@ Objects {
       }
     }
     Text {
-      Label: "CLOSE PERK SHOP"
+      Label: "CLOSE "
       Color {
         R: 0.181164265
         G: 0.088655591
@@ -417,7 +418,7 @@ Objects {
       }
     }
     Text {
-      Label: "CLOSE PERK SHOP"
+      Label: "CLOSE "
       Color {
         A: 1
       }
@@ -466,8 +467,8 @@ Objects {
   Control {
     Width: 42
     Height: 42
-    UIX: 5.06907272
-    UIY: -29.3556118
+    UIX: 27.326973
+    UIY: -32.0094261
     RotationAngle: 45
     RenderTransformPivot {
       Anchor {
@@ -576,7 +577,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 300
+    Width: 60
     Height: 60
     UIY: -5.37615967
     RenderTransformPivot {
@@ -654,7 +655,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 300
+    Width: 60
     Height: 60
     UIY: 2.57946777
     RenderTransformPivot {

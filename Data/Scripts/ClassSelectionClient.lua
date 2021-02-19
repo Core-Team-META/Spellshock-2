@@ -62,27 +62,55 @@ local ResourceChangedEventListener = nil
 local LevelResourceName = nil
 local isUpgrading = false
 local ResourceListeners = {}
+local ClassButtons = {}
 
 ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 
 function OnMenuChanged(oldMenu, newMenu)
-	if newMenu == _G.MENU_TABLE["ClassSelection"] then -- show
+	if newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then -- show
 		Task.Wait()
-		if LOCAL_PLAYER.team == 1 then
-			LOCAL_PLAYER:SetOverrideCamera(Orc_Camera)
+
+		if newMenu == _G.MENU_TABLE["ClassSelection"] then
+			if LOCAL_PLAYER.team == 1 then
+				LOCAL_PLAYER:SetOverrideCamera(Orc_Camera)
+			else
+				LOCAL_PLAYER:SetOverrideCamera(Elf_Camera)
+			end
+
+			for _, child in ipairs(ClassSelectionCanvas:GetChildren()) do
+				child.visibility = Visibility.INHERIT
+			end
 		else
-			LOCAL_PLAYER:SetOverrideCamera(Elf_Camera)
+			for _, child in ipairs(ClassSelectionCanvas:GetChildren()) do
+				if child.name == "Right Panel" then
+					child.visibility = Visibility.INHERIT
+				else
+					child.visibility = Visibility.FORCE_OFF
+				end
+			end
 		end
+		
+		local currentClass = LOCAL_PLAYER:GetResource("CLASS_MAP")
+		for _, classButton in ipairs(ClassButtons) do
+			local data = classButton.clientUserData.dataTable
+			if META_AP()[data.ClassID] == currentClass then
+				CurrentClassButton = classButton
+			end
+		end
+
 		OnClassClicked(CurrentClassButton)
 		ClassSelectionCanvas.visibility = Visibility.INHERIT
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
-	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] then -- hide
+	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] or oldMenu == _G.MENU_TABLE["ClassAbilities"] then -- hide
 		--print(">> Hiding Class Selection Menu")
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
 		UI.SetCanCursorInteractWithUI(false)
-		LOCAL_PLAYER:ClearOverrideCamera()
+
+		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
+			LOCAL_PLAYER:ClearOverrideCamera()
+		end
 	end
 end
 
@@ -240,7 +268,7 @@ function UpdateAbilityInfo(thisButton)
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
-	if currentShards >= shardCost and currentGold >= goldCost then
+	if currentShards >= shardCost and currentGold >= goldCost and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
 	else
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
@@ -568,6 +596,8 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 	buttonComponent.clickedEvent:Connect(OnClassClicked)
 	buttonComponent.hoveredEvent:Connect(OnClassHovered)
 	buttonComponent.unhoveredEvent:Connect(OnClassUnhovered)
+
+	table.insert(ClassButtons, buttonComponent)
 
 	if CurrentClassButton == nil then
 		CurrentClassButton = buttonComponent

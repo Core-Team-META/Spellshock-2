@@ -24,6 +24,17 @@ local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"
 local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"):WaitForObject()
 local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
+local CLOSE_BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
+local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObject()
+
+local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
+local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
+
+
+local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenDailyShop")
+local SFX_CLOSE = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
+local SFX_REFRESH = script:GetCustomProperty("SFX_UI_RefreshDailyShop")
+local SFX_HOVER = script:GetCustomProperty("SFX_UI_Hover")
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -31,6 +42,7 @@ local dailyRewards = {}
 local listeners = {}
 local npcTriggers = {}
 local spamPrevent
+local refreshTime, refreshCount
 local closeButtonLisener = nil
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
 ------------------------------------------------------------------------------------------------------------------------
@@ -48,6 +60,13 @@ local function isAllowed(time)
     return true
 end
 
+local function DisconnectButtonListener()
+    for _, listener in ipairs(listeners) do
+        listener:Disconnect()
+    end
+    listeners = {}
+end
+
 local function ToggleUi(bool)
     UI.SetCursorVisible(bool)
     UI.SetCanCursorInteractWithUI(bool)
@@ -57,13 +76,25 @@ local function ToggleUi(bool)
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_DAILY_SHOP_TRIGGER.isInteractable = false
         ELF_DAILY_SHOP_TRIGGER.isInteractable = false
+
+        --SFX
+        World.SpawnAsset(SFX_OPEN)
     else
         --PARENT_UI.isEnabled = false
+        World.SpawnAsset(SFX_CLOSE)
         PARENT_UI.visibility = Visibility.FORCE_OFF
         Task.Wait()
         ORC_DAILY_SHOP_TRIGGER.isInteractable = true
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
+        DisconnectButtonListener()
     end
+end
+
+
+local function FormatInt(number)
+    local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
+    int = int:reverse():gsub("(%d%d%d)", "%1,")
+    return minus .. int:reverse():gsub("^,", "") .. fraction
 end
 
 local function GetBindInfo(value)
@@ -105,6 +136,8 @@ local function GetCosmeticInfo(value)
 end
 
 local function BuildShopItems(slot, id, class, bind, reward)
+    -- TIME^R~0^T~1613694203
+
     local table = SHOP_ITEMS:GetChildren()
     local panel = table[slot]
     if panel.name ~= "Background" then
@@ -136,6 +169,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local Button = panel:GetCustomProperty("Button"):WaitForObject()
             local costText = panel:GetCustomProperty("AMOUNT"):WaitForObject()
             local costTextShadow = panel:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
+            local soldPanel = panel:GetCustomProperty("SOLD_PANEL"):WaitForObject()
 
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(reward)
@@ -152,17 +186,23 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 else
                     costText:SetColor(Color.BLACK)
                 end
-                costText.text = tostring(cost)
-                costTextShadow.text = tostring(cost)
+                costText.text = FormatInt(cost)
+                costTextShadow.text = FormatInt(cost)
 
                 Button.clientUserData.id = slotId
                 Button.clientUserData.slot = slot
-                if #listeners < 6 then -- #TODO WHY!?
-                    listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
-                end
+                soldPanel.visibility = Visibility.FORCE_OFF
+                listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
+                listeners[#listeners + 1] =
+                    Button.hoveredEvent:Connect(
+                    function()
+                        World.SpawnAsset(SFX_HOVER)
+                    end
+                )
             else
                 costText.text = "Bought"
                 costTextShadow.text = "Bought"
+                soldPanel.visibility = Visibility.FORCE_ON
             end
         end
     end
@@ -170,7 +210,7 @@ end
 
 --@param tabl tbl -- Nested table reward
 local function BuildRewardSlots(tbl)
-    for slot, value in ipairs(tbl) do
+    for slot, value in pairs(tbl) do
         local id, class, bind, reward
         for rewardType, rewards in pairs(value) do
             if type(rewardType) == "number" then
@@ -182,12 +222,18 @@ local function BuildRewardSlots(tbl)
             elseif rewardType == "C" then
                 id = CONST.REWARDS.COSMETIC
                 bind, reward = GetCosmeticInfo(value)
+            elseif rewardType == "T" then --Refresh Timestamp
+                refreshTime = rewards
+            elseif rewardType == "R" then
+                refreshCount = rewards
             end
         end
         if id and bind and reward then
             BuildShopItems(slot, id, class, bind, reward)
         end
     end
+    AMOUNT.text = "Refresh Now For: " .. FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount)) .. " Gold"
+    AMOUNT_SHADOW.text = "Refresh Now For: " .. FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount)) .. " Gold"
 end
 
 local function DisconnectNpcListener()
@@ -222,8 +268,10 @@ function OnDataObjectAdded(parent, object)
             Task.Wait()
         until dataStr and dataStr ~= ""
         dailyRewards = UTIL.DailyShopConvertToTable(dataStr)
+        DisconnectButtonListener()
         BuildRewardSlots(dailyRewards)
         Events.BroadcastToServer(NAMESPACE .. "DESTROY")
+        World.SpawnAsset(SFX_REFRESH)
     end
 end
 
@@ -237,7 +285,6 @@ end
 function OnDailyShopOpen(player, keybind)
     if keybind == "ability_extra_33" and PARENT_UI:IsVisibleInHierarchy() and isAllowed(0.5) then
         ToggleUi(false)
-        
     end
 end
 
@@ -255,6 +302,17 @@ function OnEndOverlap(trigger, player)
     end
 end
 
+function Tick()
+    if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
+        local currentTime = os.time(os.date("!*t")) - refreshTime
+        currentTime = (24 * 60 * 60) - currentTime
+        local hours = math.floor(currentTime / 3600)
+        local minutes = math.floor((currentTime % 3600) / 60)
+        local seconds = (currentTime % 3600) % 60
+        REFRESH_IN_TEXT.text = string.format("Free Refresh In: %02d:%02d:%02d", hours, minutes, seconds)
+    end
+end
+
 --REWARD_UTIL.CalculateDailyShopItemCost(key, value)
 PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
@@ -267,4 +325,10 @@ ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
+
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
+CLOSE_BUTTON.clickedEvent:Connect(
+    function()
+        ToggleUi(false)
+    end
+)

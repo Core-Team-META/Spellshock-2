@@ -20,6 +20,8 @@ local ORC_PERK_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_PERK_SHOP_LEAV
 local ELF_PERK_SHOP_TRIGGER = script:GetCustomProperty("ELF_PERK_SHOP_TRIGGER"):WaitForObject()
 local ELF_PERK_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_PERK_SHOP_LEAVE_TRIGGER"):WaitForObject()
 
+
+local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -46,6 +48,7 @@ local function ToggleUi(bool)
     UI.SetCursorVisible(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
+    World.SpawnAsset(SFX_OPEN)
     if bool then
         -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON

@@ -11,6 +11,10 @@ local ACH_API = require(script:GetCustomProperty("ACH_API"))
 local PRIMARY_PANEL = script:GetCustomProperty("PRIMARY"):WaitForObject()
 local ACHIEVEMENT_LIST = script:GetCustomProperty("ACHIEVEMENT_LIST"):WaitForObject()
 
+local SFX_CLAIM = script:GetCustomProperty("SFX_UI_AchievementClaim")
+local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
+local SFX_HOVER = script:GetCustomProperty("SFX_UI_Hover")
+
 local KEYPRESS = "ability_extra_37"
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -50,8 +54,10 @@ local function ToggleUI(bool)
     UI.SetCursorLockedToViewport(bool)
     if bool then
         PRIMARY_PANEL.visibility = Visibility.FORCE_ON
+        World.SpawnAsset(SFX_OPEN)
     else
         PRIMARY_PANEL.visibility = Visibility.FORCE_OFF
+        World.SpawnAsset(SFX_OPEN)
     end
 end
 
@@ -61,6 +67,7 @@ local function OnClaimButtonPressed(button)
     panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().visibility = Visibility.FORCE_OFF
     panel:GetCustomProperty("CLAIMED_TEXT"):WaitForObject().visibility = Visibility.FORCE_ON
     Events.BroadcastToServer("AS.RewardClaim", button.clientUserData.key)
+    World.SpawnAsset(SFX_CLAIM)
 end
 
 local function BuildAchievmentPanels()
@@ -76,9 +83,12 @@ local function BuildAchievmentPanels()
         panel:GetCustomProperty("NAME"):WaitForObject().text = achievement.name
         panel:GetCustomProperty("DESC"):WaitForObject().text = achievement.description
         panel:GetCustomProperty("ICON"):WaitForObject():SetImage(achievement.icon)
-        panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().text = ACH_API.FormatInt(achievement.rewardAmt) .. " " .. achievement.rewardName
+        panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().text =
+            ACH_API.FormatInt(achievement.rewardAmt) .. " " .. achievement.rewardName
         panel:GetCustomProperty("REWARD_ICON"):WaitForObject():SetImage(achievement.rewardIcon)
-        panel:GetCustomProperty("PROGRESS_TEXT"):WaitForObject().text = tostring(ACH_API.FormatInt((currentResource == 0 and 0) or (currentResource > 0 and currentResource - 1))) .. " / " .. tostring(ACH_API.FormatInt(CoreMath.Round(requiredResource - 1, 0)))
+        panel:GetCustomProperty("PROGRESS_TEXT"):WaitForObject().text =
+            tostring(ACH_API.FormatInt((currentResource == 0 and 0) or (currentResource > 0 and currentResource - 1))) ..
+            " / " .. tostring(ACH_API.FormatInt(CoreMath.Round(requiredResource - 1, 0)))
 
         if currentResource < requiredResource and currentResource ~= 1 then
             CLAIM_BUTTON.isEnabled = false
@@ -89,6 +99,12 @@ local function BuildAchievmentPanels()
             CLAIM_BUTTON.clientUserData.panel = panel
             CLAIM_BUTTON.clientUserData.key = achievement.id
             listeners[#listeners + 1] = CLAIM_BUTTON.clickedEvent:Connect(OnClaimButtonPressed)
+            listeners[#listeners + 1] =
+                CLAIM_BUTTON.hoveredEvent:Connect(
+                function()
+                    World.SpawnAsset(SFX_HOVER)
+                end
+            )
         elseif currentResource == 1 then
             PROGRESS.visibility = Visibility.FORCE_OFF
             panel:GetCustomProperty("REWARD_TEXT"):WaitForObject().visibility = Visibility.FORCE_OFF

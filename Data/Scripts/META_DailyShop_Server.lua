@@ -48,7 +48,7 @@ end
 --@return bool
 --(24 * 60 * 60)
 local function Has24HoursPassed(time)
-    return time + (24 * 60 * 60) <= os.time()
+    return time + (24 * 60 * 60) <= os.time(os.date("!*t"))
 end
 
 --@param object player
@@ -87,7 +87,7 @@ local function GenerateShopItems(player, forced)
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
     end
-    local time = os.time()
+    local time = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1

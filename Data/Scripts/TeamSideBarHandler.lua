@@ -43,7 +43,7 @@ function OnBindingPressed(player, binding)
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] then -- show
+    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] then -- show
         TeamLeftSideBar.visibility = Visibility.INHERIT
     else
 		TeamLeftSideBar.visibility = Visibility.FORCE_OFF
