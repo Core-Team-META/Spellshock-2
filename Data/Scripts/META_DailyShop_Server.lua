@@ -48,7 +48,7 @@ end
 --@return bool
 --(24 * 60 * 60)
 local function Has24HoursPassed(time)
-    return time + (24 * 60 * 60) <= os.time(os.date("!*t"))
+    return tonumber(time) <= os.time(os.date("!*t"))
 end
 
 --@param object player
@@ -92,7 +92,8 @@ local function GenerateShopItems(player, forced)
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
     end
-    tempTbl["TIME"] = {T = time, R = CoreMath.Round(player.serverUserData.DS_REFRESH)}
+    local refreshTime = time + (24 * 60 * 60)
+    tempTbl["TIME"] = {T = refreshTime, R = CoreMath.Round(player.serverUserData.DS_REFRESH)}
     dailyRewards[player.id] = tempTbl
 end
 
