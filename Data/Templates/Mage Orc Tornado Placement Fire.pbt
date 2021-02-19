@@ -218,7 +218,7 @@ Assets {
         Name: "Tornado VFX_test"
         Transform {
           Location {
-            Z: 885.836914
+            Z: 853.129
           }
           Rotation {
             Yaw: -1.3660373e-05
@@ -235,25 +235,25 @@ Assets {
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.830000043
-              A: 1
+              R: 0.690000057
+              G: 0.0274170842
+              A: 0.567000031
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 0.541666687
-              G: 0.0788554475
-              B: 0.0896326229
-              A: 1
+              R: 1
+              G: 0.3
+              B: 0.0896326303
+              A: 0.770000041
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.6875
-              G: 0.125403389
-              B: 0.064453125
+              R: 2
+              G: 0.429139048
               A: 1
             }
           }
@@ -295,7 +295,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Collapse Funnel Amount"
-            Float: 0.38
+            Float: 0.11
           }
           Overrides {
             Name: "bp:Fade Length Bottom"
@@ -397,9 +397,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.609536409
-              B: 0.329999983
+              R: 3
+              G: 1.19999981
+              B: 0.329999924
               A: 1
             }
           }
@@ -426,7 +426,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Dust Density"
-            Float: 0.683518052
+            Float: 0.484
           }
           Overrides {
             Name: "bp:Debris Density"
@@ -458,14 +458,14 @@ Assets {
         Name: "Swirling Dust VFX"
         Transform {
           Location {
-            Z: 265.606445
+            Z: 335.874268
           }
           Rotation {
           }
           Scale {
-            X: 1.13145816
-            Y: 1.13145816
-            Z: 1.13145816
+            X: 1.04856122
+            Y: 1.04856122
+            Z: 1.04856122
           }
         }
         ParentId: 8418099526985560233
@@ -473,9 +473,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.609536409
-              B: 0.329999983
+              R: 3
+              G: 1.19999981
+              B: 0.329999924
               A: 1
             }
           }
@@ -502,7 +502,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Dust Density"
-            Float: 0.683518052
+            Float: 0.484
           }
           Overrides {
             Name: "bp:Debris Density"
