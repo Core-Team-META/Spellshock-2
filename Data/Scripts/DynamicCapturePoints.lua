@@ -36,8 +36,8 @@ function OnRoundStart()
     end
 
     if NewBases then
-        CapturePointColliders[tostring(NewBases[1])]:WaitForObject().collision = Collision.INHERIT
-        CapturePointColliders[tostring(NewBases[2])]:WaitForObject().collision = Collision.INHERIT
+        --CapturePointColliders[tostring(NewBases[1])]:WaitForObject().collision = Collision.INHERIT
+        --CapturePointColliders[tostring(NewBases[2])]:WaitForObject().collision = Collision.INHERIT
 
         Task.Wait(1)
         Events.Broadcast("ToggleLoadScreen", true)
