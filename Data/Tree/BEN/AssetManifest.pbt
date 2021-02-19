@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17587880652047825598
-  Name: "Cylinder - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -275,15 +266,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameHighlighted_020"
-  }
-}
-Assets {
-  Id: 9722663739032956639
-  Name: "Fantasy Coins 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_004"
   }
 }
 Assets {
@@ -599,15 +581,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_001"
-  }
-}
-Assets {
-  Id: 3110766469218200335
-  Name: "Edge Line Sharp"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_add_edgeline_sharpline"
   }
 }
 Assets {
