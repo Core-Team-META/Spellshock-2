@@ -1,13 +1,13 @@
 Assets {
-  Id: 1429104248892819753
-  Name: "Assassin Deaths Shadow Ending Basic"
+  Id: 13238733542099491570
+  Name: "Assassin Orc Deaths Shadow Ending Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12342735540760990105
+      RootId: 12380482949772686091
       Objects {
-        Id: 12342735540760990105
-        Name: "Assassin Deaths Shadow Ending Basic"
+        Id: 12380482949772686091
+        Name: "Assassin Elf Deaths Shadow Ending Basic"
         Transform {
           Scale {
             X: 1
@@ -16,11 +16,11 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
-        ChildIds: 15758015435018765990
-        ChildIds: 2413557677383235308
-        ChildIds: 9090343743528800521
-        ChildIds: 12928281144420773742
-        ChildIds: 17870053726890118285
+        ChildIds: 10918112663763725228
+        ChildIds: 13222516553618691803
+        ChildIds: 6568228807741330569
+        ChildIds: 13388359896138618811
+        ChildIds: 11633502993970766080
         Lifespan: 1.5
         WantsNetworking: true
         Collidable_v2 {
@@ -33,7 +33,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15758015435018765990
+        Id: 10918112663763725228
         Name: "Smoke Puff VFX"
         Transform {
           Location {
@@ -46,7 +46,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 12380482949772686091
         UnregisteredParameters {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
@@ -83,7 +83,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2413557677383235308
+        Id: 13222516553618691803
         Name: "Magic Deep Heavy Poof Whoosh 01 SFX"
         Transform {
           Location {
@@ -96,7 +96,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 12380482949772686091
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -117,7 +117,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9090343743528800521
+        Id: 6568228807741330569
         Name: "Magic Dark Bolt Whoosh 01 SFX"
         Transform {
           Location {
@@ -130,7 +130,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
+        ParentId: 12380482949772686091
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -151,7 +151,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12928281144420773742
+        Id: 13388359896138618811
         Name: "Sword & Blade - Swings Swipes Air Swooshes Set 01 SFX"
         Transform {
           Location {
@@ -164,8 +164,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12342735540760990105
-        ChildIds: 16317642206084595783
+        ParentId: 12380482949772686091
+        ChildIds: 9527737977024325891
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sword/Blade Type"
@@ -211,7 +211,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16317642206084595783
+        Id: 9527737977024325891
         Name: "AudioDelay"
         Transform {
           Location {
@@ -224,7 +224,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12928281144420773742
+        ParentId: 13388359896138618811
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
@@ -244,7 +244,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17870053726890118285
+        Id: 11633502993970766080
         Name: "Ground Explosion VFX"
         Transform {
           Location {
@@ -257,8 +257,8 @@ Assets {
             Z: 0.99999994
           }
         }
-        ParentId: 12342735540760990105
-        ChildIds: 17454994390599670321
+        ParentId: 12380482949772686091
+        ChildIds: 4817774263442376855
         UnregisteredParameters {
           Overrides {
             Name: "bp:Enable Flash"
@@ -299,36 +299,32 @@ Assets {
           Overrides {
             Name: "bp:Shockwave Color"
             Color {
-              R: 0.0600000024
-              G: 1
-              B: 0.589139283
-              A: 0.520000041
+              R: 0.98
+              G: 0.292053074
+              A: 0.483
             }
           }
           Overrides {
             Name: "bp:Smoke Color"
             Color {
-              R: 0.0600000024
-              G: 1
-              B: 0.589139104
+              R: 0.98
+              G: 0.292053
               A: 1
             }
           }
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              R: 0.0600000024
-              G: 1
-              B: 0.589139104
+              R: 0.98
+              G: 0.292053
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.0600000024
-              G: 1
-              B: 0.589139104
+              R: 0.98
+              G: 0.292053
               A: 1
             }
           }
@@ -357,7 +353,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17454994390599670321
+        Id: 4817774263442376855
         Name: "AudioDelay"
         Transform {
           Location {
@@ -372,7 +368,7 @@ Assets {
             Z: 1.57039487
           }
         }
-        ParentId: 17870053726890118285
+        ParentId: 11633502993970766080
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"

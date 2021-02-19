@@ -79,4 +79,4 @@ function OnBindingPress(player, key)
     end
 end
 
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPress)
+--LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPress)
