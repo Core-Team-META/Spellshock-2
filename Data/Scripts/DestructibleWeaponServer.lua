@@ -60,7 +60,7 @@ function OnTargetImpact(theWeapon, impactData)
 	COMBAT().ApplyDamage(attackData)
 	
 	if theWeapon.owner:GetResource("CLASS_MAP") == META_AP().HUNTER and impactData.targetObject:IsA("Player") then
-		local status = {duration = 1, damage = 0, multiplier = 0.5} --META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
+		local status = META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
 		API_SE.ApplyStatusEffect(
 			impactData.targetObject,
 			API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
