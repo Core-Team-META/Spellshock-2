@@ -4,8 +4,8 @@
 -- Date: 2021/2/15
 -- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
-local API = _G.META_ACHIEVEMENTS or {}
-_G.META_ACHIEVEMENTS = API
+local API = {}
+
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -24,6 +24,23 @@ local function Split(s, delimiter)
     return result
 end
 
+local function SetProgress(player, key, value)
+    local currentProgress = player:GetResource(key)
+    if currentProgress == 1 then
+        return
+    end
+    value = value + 1
+    local required = API.GetAchievementRequired(key)
+    if value < required then
+        player:SetResource(key, value)
+    elseif value >= required then
+        player:SetResource(key, required)
+    end
+end
+
+local function IsValidPlayer(object)
+    return Object.IsValid(object) and object:IsA("Player")
+end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- PUBLIC API
@@ -33,15 +50,14 @@ function API.RegisterAchievements(list)
     if not next(achievements) then
         local sort = 0
         for _, child in ipairs(list:GetChildren()) do
-            local enabled = child:GetCustomProperty("ENABLED")
+            local enabled = child:GetCustomProperty("Enabled")
             local id = child:GetCustomProperty("ID")
             local required = child:GetCustomProperty("Required")
             local description = child:GetCustomProperty("Description")
-            local icon = child:GetCustomProperty("ICON")
-            local rewardName = child:GetCustomProperty("REWARD_NAME")
-            local rewardAmmount = child:GetCustomProperty("REWARD_AMMOUNT")
-            local rewardIcon = child:GetCustomProperty("REWARD_ICON")
-
+            local icon = child:GetCustomProperty("Icon")
+            local rewardName = child:GetCustomProperty("RewardName")
+            local rewardAmmount = child:GetCustomProperty("RewardAmount")
+            local rewardIcon = child:GetCustomProperty("RewardIcon")
 
             local achievement = {
                 id = id,
@@ -89,9 +105,10 @@ function API.GetAchievementName(id)
     return achievements[id].name
 end
 
+-- Goal,
 function API.GetAchievementRequired(id)
     if not achievements then
-        warn("Achievement Requirements Don't Exsist")
+        warn("Achievement Requirements Don't Exsist id: " .. id)
         return nil
     end
     return achievements[id].required
@@ -99,7 +116,7 @@ end
 
 function API.GetAchievementDescription(id)
     if not achievements then
-        warn("Achievement Description Doesn't Exsist")
+        warn("Achievement Description Doesn't Exsist for id: " .. id)
         return nil
     end
     return achievements[id].description
@@ -107,7 +124,7 @@ end
 
 function API.GetAchievementIcon(id)
     if not achievements then
-        warn("Achievement Icon Doesn't Exsist")
+        warn("Achievement Icon Doesn't Exsist id: " .. id)
         return nil
     end
     return achievements[id].icon
@@ -115,7 +132,7 @@ end
 
 function API.GetRewardIcon(id)
     if not achievements then
-        warn("Achievement Icon Doesn't Exsist")
+        warn("Achievement Reward Icon Doesn't Exsist")
         return nil
     end
     return achievements[id].rewardIcon
@@ -136,6 +153,68 @@ function API.CollectReward(player, id)
         end
     end
 end
+
+function API.GetCurrentProgress(player, id)
+    if IsValidPlayer(player) then
+        return player:GetResource(id)
+    end
+end
+
+function API.IsUnlocked(player, id)
+    if IsValidPlayer(player) and API.GetCurrentProgress(player, id) >= API.GetAchievementRequired(id) then
+        return true
+    else
+        return false
+    end
+end
+
+function API.UnlockAchievement(player, id)
+    if IsValidPlayer(player) then
+        SetProgress(player, id, API.GetAchievementRequired(id))
+    end
+end
+
+function API.AddProgress(player, key, value)
+    if IsValidPlayer(player) then
+        local currentProgress = player:GetResource(key)
+
+        --Return if achievement finished
+        if currentProgress == 1 then
+            return
+        end
+
+        local required = API.GetAchievementRequired(key)
+        if currentProgress == 0 then
+            player:SetResource(key, value + 1)
+        elseif currentProgress + value < required then
+            player:AddResource(key, value)
+        elseif currentProgress + value >= required then
+            player:SetResource(key, required)
+        end
+    end
+end
+
+function API.LoadAchievementStorage(player)
+    local data = Storage.GetPlayerData(player)
+    if data.ACHIEVEMENT then
+        local achievementData = data.ACHIEVEMENT
+        for key, value in pairs(achievementData) do
+            player:SetResource(key, value)
+        end
+    end
+end
+function API.SaveAchievementStorage(player)
+    local data = Storage.GetPlayerData(player)
+    local tempTbl = {}
+    for id, achievement in pairs(API.GetAchievements()) do
+        tempTbl[id] = player:GetResource(id)
+    end
+    
+    data.ACHIEVEMENT = tempTbl
+    Storage.SetPlayerData(player, data)
+end
+
+--#TODO Get progress, unlock and isUnlocked functions
 ------------------------------------------------------------------------------------------------------------------------
 -- STORAGE API
 ------------------------------------------------------------------------------------------------------------------------
@@ -238,9 +317,11 @@ function API.TablePrint(tbl, indent)
     end
 end
 
-
 function API.FormatInt(number)
-	local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
-	int = int:reverse():gsub("(%d%d%d)", "%1,")
-	return minus .. int:reverse():gsub("^,", "") .. fraction
+    local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
+    int = int:reverse():gsub("(%d%d%d)", "%1,")
+    return minus .. int:reverse():gsub("^,", "") .. fraction
 end
+
+
+return API

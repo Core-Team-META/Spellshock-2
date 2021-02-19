@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15450196944859968109
+  Name: "Crosshair 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_021"
+  }
+}
+Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
