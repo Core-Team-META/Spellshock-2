@@ -69,7 +69,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -147,7 +146,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -233,7 +231,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -247,8 +244,8 @@ Objects {
   Name: "\"Heroic Fantasy Adventure\" Music Construction Kit (Sections) 01"
   Transform {
     Location {
-      X: 8515.74805
-      Y: -14325.7939
+      X: 9195.37402
+      Y: -16071.084
     }
     Rotation {
     }
@@ -285,7 +282,7 @@ Objects {
       Repeat: true
       Volume: 0.35
       Falloff: 2600
-      Radius: 8500
+      Radius: 9500
       IsAttenuationEnabled: true
     }
   }
@@ -319,7 +316,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -398,7 +394,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -476,7 +471,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -563,7 +557,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     StaticMesh {
       Physics {
         Mass: 100
