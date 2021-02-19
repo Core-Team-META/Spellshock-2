@@ -30,7 +30,6 @@ local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObjec
 local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
 local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
 
-
 local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenDailyShop")
 local SFX_CLOSE = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 local SFX_REFRESH = script:GetCustomProperty("SFX_UI_RefreshDailyShop")
@@ -89,7 +88,6 @@ local function ToggleUi(bool)
         DisconnectButtonListener()
     end
 end
-
 
 local function FormatInt(number)
     local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
@@ -306,12 +304,15 @@ end
 
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
-        local currentTime = os.time(os.date("!*t")) - refreshTime
-        currentTime = (24 * 60 * 60) - currentTime
-        local hours = math.floor(currentTime / 3600)
-        local minutes = math.floor((currentTime % 3600) / 60)
-        local seconds = (currentTime % 3600) % 60
-        REFRESH_IN_TEXT.text = string.format("Free Refresh In: %02d:%02d:%02d", hours, minutes, seconds)
+        local currentTime = tonumber(refreshTime - os.time(os.date("!*t")))
+        if currentTime >= 0 then
+            local hours = math.floor(currentTime / 3600)
+            local minutes = math.floor((currentTime % 3600) / 60)
+            local seconds = (currentTime % 3600) % 60
+            REFRESH_IN_TEXT.text = string.format("Free Refresh In: %02d:%02d:%02d", hours, minutes, seconds)
+        else
+            REFRESH_IN_TEXT.text = "Refresh Avaliable"
+        end
     end
 end
 
