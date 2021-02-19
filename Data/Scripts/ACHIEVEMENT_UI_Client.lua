@@ -4,16 +4,15 @@
 -- Date: 2021/2/15
 -- Version 0.0.2
 ------------------------------------------------------------------------------------------------------------------------
-local ACH_API
-repeat
-    Task.Wait()
-    ACH_API = _G.META_ACHIEVEMENTS
-until ACH_API
+local ACH_API = require(script:GetCustomProperty("ACH_API"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local PRIMARY_PANEL = script:GetCustomProperty("PRIMARY"):WaitForObject()
 local ACHIEVEMENT_LIST = script:GetCustomProperty("ACHIEVEMENT_LIST"):WaitForObject()
+
+local KEYPRESS = "ability_extra_37"
+
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local ACHIEVEMENT_PANEL_TEMPLATE = script:GetCustomProperty("ACHIEVEMENT_Panel_Template")
@@ -108,10 +107,10 @@ end
 
 function OnBindingPressed(player, keybind)
     if player == LOCAL_PLAYER then
-        if keybind == "ability_extra_27" and not PRIMARY_PANEL:IsVisibleInHierarchy() then
+        if keybind == KEYPRESS and not PRIMARY_PANEL:IsVisibleInHierarchy() then
             BuildAchievmentPanels()
             ToggleUI(true)
-        elseif keybind == "ability_extra_27" then
+        elseif keybind == KEYPRESS then
             ToggleUI(false)
             ClearAchievementPanels()
         end
