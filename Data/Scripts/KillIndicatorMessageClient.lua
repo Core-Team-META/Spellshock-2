@@ -95,13 +95,13 @@ function OnPlayerDied(sourcePlayer)
 	comboCount = comboCount + 1
 	if (comboCount >= 2) then
 		COMBO_LABEL.visibility = Visibility.FORCE_ON
-		COMBO_LABEL.text = string.format("x%d POINTS ADDED TO TEAM", comboCount)
+		COMBO_LABEL.text = string.format("1 POINT ADDED TO TEAM", 1)
 	else
 		COMBO_LABEL.visibility = Visibility.FORCE_ON
 		if SHOW_MAX_KILL then
 			COMBO_LABEL.text = string.format("%d / %d KILLS", LOCAL_PLAYER.kills  + 1, MAX_KILL)
 		else
-			COMBO_LABEL.text = string.format("+%d POINT TO TEAM", LOCAL_PLAYER.kills  + 1)
+			COMBO_LABEL.text = string.format("1 POINT ADDED TO TEAM", 1)
 		end
 	end
 end
