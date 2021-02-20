@@ -1516,6 +1516,7 @@ Assets {
         ChildIds: 15540843134272266616
         ChildIds: 354566938322484678
         ChildIds: 4362377662528572463
+        ChildIds: 13676282958894221574
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1656,6 +1657,47 @@ Assets {
         Script {
           ScriptAsset {
             Id: 696201589024105337
+          }
+        }
+      }
+      Objects {
+        Id: 13676282958894221574
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 1254248059045754243
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
           }
         }
       }
@@ -2062,6 +2104,7 @@ Assets {
           Value: "mc:evisibilitysetting:forceoff"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5
@@ -2096,9 +2139,8 @@ Assets {
             CanRotate: true
           }
           Animation: "unarmed_magic_up"
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2277,7 +2319,6 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
           }
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }
@@ -2386,6 +2427,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.1
@@ -2422,7 +2464,7 @@ Assets {
           }
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2600,7 +2642,7 @@ Assets {
           Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }

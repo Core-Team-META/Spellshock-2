@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
@@ -31,7 +31,7 @@ local CancelBindings = {
 	ability_extra_24 = true, 
 	ability_primary = true,
 	ability_secondary = true,
-	ability_extra_12 = true,
+	--ability_extra_12 = true,
 	ability_extra_17 = true
 }
 

@@ -1,4 +1,4 @@
-﻿local function META_AP()
+local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
@@ -14,7 +14,7 @@ local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
 local EventName = ServerScript:GetCustomProperty("EventName")
 local abilityPreview = script:GetCustomProperty("PreviewString")
-local isPreviewing = Equipment:GetCustomProperty(abilityPreview)
+local isPreviewing = false
 
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
@@ -32,44 +32,54 @@ local lastValidPlacement = {position = nil, rotation = nil}
 local durationTimer = 0
 local totalDuration = 0
 
-function OnNetworkedPropertyChanged(thisObject, name)
-	if name == abilityPreview then
-		if SpecialAbility.owner ~= LOCAL_PLAYER then
-			return
+local CancelBindings = {
+	ability_extra_20 = true,
+	ability_extra_22 = true,
+	ability_extra_23 = true,
+	ability_extra_24 = true,
+	ability_secondary = true,
+	ability_extra_12 = true
+}
+
+
+function SetPreviewing(value)
+	isPreviewing = value
+	
+	Equipment.clientUserData.isPreviewing = value
+
+	if isPreviewing then
+		local previewScale = Vector3.ONE
+		if RadiusMod then
+			local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
+			local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
+			previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 		end
-		isPreviewing = Equipment:GetCustomProperty(name)
 
-		if isPreviewing then
-			local previewScale = Vector3.ONE
-			if RadiusMod then
-				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
-				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
-				previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
-			end
-
-			local ObjectTemplate
-			if PreviewObjectTemplate then
-				ObjectTemplate = PreviewObjectTemplate
-			else
-				ObjectTemplate = PlayerVFX.Preview
-			end
-
-			local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
-
-			objectHalogram = newObject
-			AllHalograms[objectHalogram.id] = objectHalogram
+		local ObjectTemplate
+		if PreviewObjectTemplate then
+			ObjectTemplate = PreviewObjectTemplate
 		else
-			if objectHalogram and Object.IsValid(objectHalogram) then
-				AllHalograms[objectHalogram.id] = nil
-				objectHalogram:Destroy()
-				objectHalogram = nil
-			end
+			ObjectTemplate = PlayerVFX.Preview
+		end
+
+		local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
+
+		objectHalogram = newObject
+		AllHalograms[objectHalogram.id] = objectHalogram
+	else
+		if objectHalogram and Object.IsValid(objectHalogram) then
+			AllHalograms[objectHalogram.id] = nil
+			objectHalogram:Destroy()
+			objectHalogram = nil
 		end
 	end
 end
 
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary" and SpecialAbility.isEnabled and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
+	if not isPreviewing and binding == AbilityBinding and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		SetPreviewing(true)
+		
+	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
 		placementTable.rotation = objectHalogram:GetWorldRotation()
 
@@ -77,42 +87,31 @@ function OnBindingPressed(player, binding)
 		if not placementTable.position or not placementTable.isVisible then
 			return
 		end
-
-		--[[
-		isPreviewing = false
-
-		-- Destroy hologram
-		AllHalograms[objectHalogram.id] = nil
-		objectHalogram:Destroy()
-		objectHalogram = nil
-		]]
-
+		
 		SpecialAbility:Activate()
+		SetPreviewing(false)
+		
+	elseif isPreviewing and binding ~= AbilityBinding and CancelBindings[binding] then
+		SetPreviewing(false)
 	end
 end
 
+
+function OnSpecialAbilityCast(thisAbility)
+	local targetData = thisAbility:GetTargetData()
+	
+	targetData:SetHitPosition(lastValidPlacement.position)
+	
+	thisAbility:SetTargetData(targetData)
+end
+
+
 function OnSpecialAbilityExecute(thisAbility)
-	--[[if objectHalogram and Object.IsValid(objectHalogram) then
-		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
-		placementTable.rotation = objectHalogram:GetWorldRotation()
-	end]]
 	Task.Wait()
 
 	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 		print("Placement Failed: was in Ready phase during Execute")
 		return
-	end
-
-	isPreviewing = false
-
-	-- Destroy hologram
-	AllHalograms[objectHalogram.id] = nil
-	objectHalogram:Destroy()
-	objectHalogram = nil
-
-	while Events.BroadcastToServer(EventName, lastValidPlacement.position, lastValidPlacement.rotation) ==
-		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
-		Task.Wait()
 	end
 
 	-- Activate duration bar UI if DurationMod was set
@@ -125,6 +124,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	end
 end
 
+
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then
 		script:Destroy()
@@ -133,6 +133,7 @@ function OnEquip(equipment, player)
 	if not PreviewObjectTemplate then
 		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
 	end
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end
@@ -251,4 +252,4 @@ end
 
 Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
-Equipment.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
+
