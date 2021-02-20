@@ -152,7 +152,7 @@ end
 
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
+	local playerViewPosition = LOCAL_PLAYER:GetWorldPosition() + Vector3.New(0,0,50)--LOCAL_PLAYER:GetViewWorldPosition()
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
 	local PlacementRange
 	if AbilityMod == "NONE" then

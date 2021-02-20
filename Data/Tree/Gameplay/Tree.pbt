@@ -23784,8 +23784,9 @@ Objects {
     UseAsDefault: true
     AttachToLocalPlayer: true
     InitialDistance: 800
-    MinDistance: 400
-    MaxDistance: 800
+    IsDistanceAdjustable: true
+    MinDistance: 800
+    MaxDistance: 1200
     PositionOffset {
       Z: 130
     }
