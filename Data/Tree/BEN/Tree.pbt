@@ -1962,6 +1962,9 @@ Objects {
   Name: "Equipment Spawners"
   Transform {
     Location {
+      X: -24625
+      Y: -31825.2695
+      Z: 6415
     }
     Rotation {
     }
