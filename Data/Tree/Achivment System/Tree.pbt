@@ -268,6 +268,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -327,6 +329,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -383,6 +387,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -949,6 +955,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1104,6 +1112,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1293,6 +1303,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1359,6 +1371,8 @@ Objects {
       }
       AutoWrapText: true
       ClipTextToSize: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1424,6 +1438,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1742,6 +1758,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1836,6 +1854,10 @@ Objects {
   ChildIds: 9299662965625373958
   ChildIds: 6001054042930127631
   ChildIds: 5084245701231461171
+  ChildIds: 4524289181133775947
+  ChildIds: 16775025412678082468
+  ChildIds: 3931248218289113732
+  ChildIds: 289623102097583981
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1844,6 +1866,266 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 289623102097583981
+  Name: "The Legend"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Play 500 Matches In Spell Shock 2"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "TESTING3"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 16452085222527001410
+      }
+    }
+    Overrides {
+      Name: "cs:RewardName"
+      String: "Gold"
+    }
+    Overrides {
+      Name: "cs:RewardAmount"
+      Int: 10000
+    }
+    Overrides {
+      Name: "cs:RewardIcon"
+      AssetReference {
+        Id: 1283463588493558965
+      }
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 3931248218289113732
+  Name: " Unkillable"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Get a kill and play entire round without dying"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "TESTING2"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 9084852752205607158
+      }
+    }
+    Overrides {
+      Name: "cs:RewardName"
+      String: "Gold"
+    }
+    Overrides {
+      Name: "cs:RewardAmount"
+      Int: 10000
+    }
+    Overrides {
+      Name: "cs:RewardIcon"
+      AssetReference {
+        Id: 1283463588493558965
+      }
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 16775025412678082468
+  Name: "I Got It"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: " Complete capture of 1 capture point"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "TESTING1"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:RewardName"
+      String: "Gold"
+    }
+    Overrides {
+      Name: "cs:RewardAmount"
+      Int: 10000
+    }
+    Overrides {
+      Name: "cs:RewardIcon"
+      AssetReference {
+        Id: 1283463588493558965
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
+  }
+}
+Objects {
+  Id: 4524289181133775947
+  Name: "I Got It"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9939745752120650993
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: " Complete capture of 1 capture point"
+    }
+    Overrides {
+      Name: "cs:Required"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "AS_CAP2"
+    }
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 5485640623370883304
+      }
+    }
+    Overrides {
+      Name: "cs:RewardName"
+      String: "Gold"
+    }
+    Overrides {
+      Name: "cs:RewardAmount"
+      Int: 10000
+    }
+    Overrides {
+      Name: "cs:RewardIcon"
+      AssetReference {
+        Id: 1283463588493558965
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4954130354820301591
+    }
   }
 }
 Objects {
@@ -2566,6 +2848,18 @@ Objects {
       Name: "cs:SFX"
       AssetReference {
         Id: 13370056914916577395
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:BasicGameStateManagerServer"
+      ObjectReference {
+        SelfId: 8656291602532955231
       }
     }
   }

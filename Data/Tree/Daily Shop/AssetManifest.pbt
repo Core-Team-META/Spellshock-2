@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11504927847843683737
+  Name: "Center Arrow 003 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_003Wedge"
+  }
+}
+Assets {
   Id: 11067005555803527386
   Name: "Fantasy Corners 005"
   PlatformAssetType: 9
@@ -122,6 +131,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFi_Frame_006"
+  }
+}
+Assets {
+  Id: 8578995028087510781
+  Name: "UI Gradient Circular 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_001"
   }
 }
 Assets {
@@ -179,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4309468084196940741
+  Name: "Fantasy Ability Red 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_016"
+  }
+}
+Assets {
   Id: 3483798833601977176
   Name: "Fantasy Shape 003"
   PlatformAssetType: 9
@@ -203,6 +230,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_015"
+  }
+}
+Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {

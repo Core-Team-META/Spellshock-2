@@ -70,7 +70,11 @@ end
 --@param int value
 --@return int cost
 function API.CalculateRefreshCost(value)
-    return CoreMath.Round(value * 100)
+    if value == 0 then
+        return 500
+    else
+        return CoreMath.Round((2 ^ value) * 500)
+    end
 end
 
 function API.GetRewardCost(dailyRewards)

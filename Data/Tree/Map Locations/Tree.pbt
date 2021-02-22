@@ -113,7 +113,7 @@ Objects {
     }
     DisableCastShadows: true
     DisableReceiveDecals: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -301,7 +301,7 @@ Objects {
     }
     DisableCastShadows: true
     DisableReceiveDecals: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }

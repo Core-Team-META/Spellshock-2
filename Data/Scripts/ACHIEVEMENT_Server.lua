@@ -60,6 +60,7 @@ end
 
 function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
+    ACH_API.AddProgress(player, "AS_CAP2", value)
 end
 
 function OnPlayerAssistCapture(player, value)
@@ -101,7 +102,9 @@ function OnRoundEnd()
          then
             ACH_API.AddProgress(player, "AS_UNKILLABLE", 1)
         end
-
+        ACH_API.AddProgress(player, "TESTING1", 1)
+        ACH_API.AddProgress(player, "TESTING2", 1)
+        ACH_API.AddProgress(player, "TESTING3", 1)
         player.serverUserData.ACH_killCount = 0
         player.serverUserData.ACH_diedInRound = false
     end

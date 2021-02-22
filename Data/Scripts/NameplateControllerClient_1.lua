@@ -17,6 +17,8 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Internal custom properties
 local AS = require(script:GetCustomProperty("API"))
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local NAMEPLATE_TEMPLATE = script:GetCustomProperty("NameplateTemplate")
 local STATUS_EFFECT_TEMPLATE = script:GetCustomProperty("StatusEffectTemplate")
@@ -45,6 +47,8 @@ local ENEMY_HEALTH_COLOR = COMPONENT_ROOT:GetCustomProperty("EnemyHealthColor")
 local DAMAGE_CHANGE_COLOR = COMPONENT_ROOT:GetCustomProperty("DamageChangeColor")
 local HEAL_CHANGE_COLOR = COMPONENT_ROOT:GetCustomProperty("HealChangeColor")
 local HEALTH_NUMBER_COLOR = COMPONENT_ROOT:GetCustomProperty("HealthNumberColor")
+
+local shouldShow = true
 
 -- Check user properties
 if MAX_DISTANCE_ON_TEAMMATES < 0.0 then
@@ -165,8 +169,10 @@ function OnPlayerJoined(player)
 
 	-- Static properties on pieces
 	if player == LOCAL_PLAYER then
+		local LOCAL_PLAYER_SCALE = SCALE / 1.5
+		nameplateRoot:SetScale(Vector3.New(LOCAL_PLAYER_SCALE, LOCAL_PLAYER_SCALE, LOCAL_PLAYER_SCALE))
 		nameplates[player].borderPiece:SetScale(
-			Vector3.New(NAMEPLATE_LAYER_THICKNESS * 0.75, HEALTHBAR_WIDTH + 2.0 * BORDER_WIDTH, HEALTHBAR_HEIGHT / 3 * BORDER_WIDTH)
+			Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH + 2.0 * BORDER_WIDTH, HEALTHBAR_HEIGHT + 2.0 * BORDER_WIDTH)
 		)
 	else
 		nameplateRoot:SetScale(Vector3.New(SCALE, SCALE, SCALE))
@@ -268,7 +274,7 @@ function Tick(deltaTime)
 	for _, player in pairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
 
-		if nameplate and Object.IsValid(player) then
+		if nameplate and Object.IsValid(player) and shouldShow then
 			-- We calculate visibility every frame to handle when teams change
 			local visible = IsNameplateVisible(player)
 
@@ -325,7 +331,8 @@ function Tick(deltaTime)
 					nameplate.panel.x = screenPosition.x
 					nameplate.panel.y = screenPosition.y
 				end
-
+				--
+				--[[			
 				local statusEffects = API_SE.GetStatusEffectsOnPlayer(player)
 				local targetDistance =
 					LOCAL_PLAYER:GetViewWorldRotation() * Vector3.FORWARD .. (nameplatePosition - LOCAL_PLAYER:GetViewWorldPosition())
@@ -374,8 +381,9 @@ function Tick(deltaTime)
 				else
 					nameplate.panel.visibility = Visibility.FORCE_OFF
 				end
-
-				if SHOW_HEALTHBARS then
+				]] if
+					SHOW_HEALTHBARS
+				 then
 					local healthFraction = player.hitPoints / player.maxHitPoints
 					local visibleHealthFraction = healthFraction -- For animating changes
 
@@ -444,10 +452,25 @@ function Tick(deltaTime)
 				--nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 				end
 			end
+		elseif not shouldShow and nameplate.templateRoot:IsVisibleInHierarchy() then
+			nameplate.templateRoot.visibility = Visibility.FORCE_OFF
 		end
 	end
+end
+
+function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
+	if newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_LOBBY then
+		shouldShow = true
+	else
+		shouldShow = false
+	end
+end
+
+if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND or ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY then
+	shouldShow = false
 end
 
 -- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+Events.Connect("GameStateChanged", OnGameStateChanged)

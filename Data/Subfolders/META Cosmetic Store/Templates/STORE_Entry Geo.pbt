@@ -171,7 +171,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
             AnimationPlaybackRateMultiplier: 1
@@ -272,7 +272,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           AnimatedMesh {
             AnimationStance: "unarmed_idle_relaxed"
             AnimationPlaybackRateMultiplier: 1
@@ -351,7 +351,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

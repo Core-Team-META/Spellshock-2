@@ -1,4 +1,4 @@
-﻿local NAMESPACE = "METADS."
+local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
@@ -26,6 +26,9 @@ local ELF_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_TRIGGER"
 local ELF_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ELF_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
 local CLOSE_BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
 local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObject()
+local REFRESH_IN_TEXT_HIGHLIGHT = script:GetCustomProperty("REFRESH_IN_TEXT_HIGHLIGHT"):WaitForObject()
+local REFRESH_IN_TEXT_SHADOW = script:GetCustomProperty("REFRESH_IN_TEXT_SHADOW"):WaitForObject()
+local GOLD_TXT = script:GetCustomProperty("GOLD"):WaitForObject()
 
 local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
 local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
@@ -232,8 +235,8 @@ local function BuildRewardSlots(tbl)
             BuildShopItems(slot, id, class, bind, reward)
         end
     end
-    AMOUNT.text = "Refresh Now For: " .. FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount)) .. " Gold"
-    AMOUNT_SHADOW.text = "Refresh Now For: " .. FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount)) .. " Gold"
+    AMOUNT.text = FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount))
+    AMOUNT_SHADOW.text = FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount))
 end
 
 local function DisconnectNpcListener()
@@ -304,15 +307,24 @@ end
 
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
-        local currentTime = tonumber(refreshTime- os.time(os.date("!*t")))
+        local currentTime = tonumber(refreshTime - os.time(os.date("!*t")))
         if currentTime >= 0 then
             local hours = math.floor(currentTime / 3600)
             local minutes = math.floor((currentTime % 3600) / 60)
             local seconds = (currentTime % 3600) % 60
-            REFRESH_IN_TEXT.text = string.format("Free Refresh In: %02d:%02d:%02d", hours, minutes, seconds)
+
+            local timeText = string.format("Free Refresh In: %02d:%02d:%02d", hours, minutes, seconds)
+            REFRESH_IN_TEXT.text = timeText
+            REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
+            REFRESH_IN_TEXT_SHADOW.text = timeText
         else
-            REFRESH_IN_TEXT.text = "Refresh Avaliable"
+            local timeText = "Refresh Avaliable"
+            REFRESH_IN_TEXT.text = timeText
+            REFRESH_IN_TEXT_HIGHLIGHT.text = timeText
+            REFRESH_IN_TEXT_SHADOW.text = timeText
         end
+        -- UPDATE GOLD (Added by KonzZwodrei, better check this) -- checked
+        GOLD_TXT.text = FormatInt(LOCAL_PLAYER:GetResource("Gold"))
     end
 end
 

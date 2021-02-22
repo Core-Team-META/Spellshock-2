@@ -244,6 +244,19 @@ function OnNetworkedPropertyChanged(thisObject, name)
         end
     elseif name == "IsEnabled" then
         previousCaptureProgress = 0
+        
+   
+        local isEnabled = thisObject:GetCustomProperty("IsEnabled")
+
+        if isEnabled ~= previousEnabledState then
+            SetGeometryEnabledColor(isEnabled)
+            Events.Broadcast("CapturePointEnabledStateChanged", ORDER, previousEnabledState, isEnabled)
+
+            previousEnabledState = isEnabled
+        else
+            SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
+        end
+   
     elseif name == "ProgressedTeam" or name == "CapturePlayerID" then
         for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
             vfx.visibility = Visibility.FORCE_OFF
@@ -317,27 +330,8 @@ SERVER_SCRIPT.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
 -- nil Tick(float)
 -- Handles firing events and changing the visual state
 function Tick(deltaTime)
-    -- Check for enabled state changed
-    if CHANGE_COLOR_WHEN_DISABLED then
-        local isEnabled = SERVER_SCRIPT:GetCustomProperty("IsEnabled")
-
-        if isEnabled ~= previousEnabledState then
-            SetGeometryEnabledColor(isEnabled)
-            Events.Broadcast("CapturePointEnabledStateChanged", ORDER, previousEnabledState, isEnabled)
-
-            previousEnabledState = isEnabled
-        else
-            SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
-        end
-    end
-
     -- Update pitch of ChargeUpSFX
     ChargeUpSFX.pitch = GetCaptureProgress() * 1000
-
-    if NAME == "War Camp" then
-    --print("~ Capture progress: "..tostring(GetCaptureProgress()))
-    --print("~ Progress team: "..script:GetCustomProperty("ProgressedTeam"))
-    end
 end
 
 CategorizeVisualGeometry()

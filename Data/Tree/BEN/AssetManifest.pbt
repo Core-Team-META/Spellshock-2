@@ -404,6 +404,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6727874825486779400
+  Name: "Fantasy Chest 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_001"
+  }
+}
+Assets {
   Id: 6724534832103276994
   Name: "BG Flat 006"
   PlatformAssetType: 9

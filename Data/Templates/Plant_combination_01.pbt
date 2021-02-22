@@ -84,7 +84,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -131,7 +131,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -187,7 +187,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -227,7 +227,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -269,7 +269,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -309,7 +309,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -349,7 +349,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -389,7 +389,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -429,7 +429,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -469,7 +469,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -509,7 +509,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -549,7 +549,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -589,7 +589,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -629,7 +629,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -669,7 +669,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -709,7 +709,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -749,7 +749,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -789,7 +789,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
