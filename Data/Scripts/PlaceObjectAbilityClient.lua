@@ -1,4 +1,4 @@
-﻿local function META_AP()
+local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
@@ -142,7 +142,15 @@ end
 
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-	local playerViewPosition = LOCAL_PLAYER:GetWorldPosition() + Vector3.New(0,0,50)--LOCAL_PLAYER:GetViewWorldPosition()
+	
+	-- Projection of the player's position onto the camera's vector, as starting point for the raycast
+	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
+	local playerViewDirection = Quaternion.New(playerViewRotation):GetForwardVector()
+	local playerPosition = LOCAL_PLAYER:GetWorldPosition()
+	local AP = playerPosition - playerViewPosition
+	local AB = playerViewDirection
+	playerViewPosition = playerViewPosition + (AP .. AB) / (AB .. AB) * AB
+	
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
 	local PlacementRange
 	if AbilityMod == "NONE" then
