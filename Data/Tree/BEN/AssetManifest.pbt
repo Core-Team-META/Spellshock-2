@@ -179,15 +179,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12804716500201279526
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
-  }
-}
-Assets {
   Id: 12750511709314430191
   Name: "Fantasy Ticket 001"
   PlatformAssetType: 9
@@ -635,15 +626,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_015"
-  }
-}
-Assets {
-  Id: 1852271979069689657
-  Name: "Fantasy Chest 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chest_001"
   }
 }
 Assets {
