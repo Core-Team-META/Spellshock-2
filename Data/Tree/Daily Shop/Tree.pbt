@@ -328,19 +328,31 @@ Objects {
     Overrides {
       Name: "cs:AMOUNT_SHADOW"
       ObjectReference {
-        SelfId: 8272534679305926565
+        SelfId: 2919984221221331345
       }
     }
     Overrides {
       Name: "cs:AMOUNT"
       ObjectReference {
-        SelfId: 13306995837332023087
+        SelfId: 3506126519980677388
       }
     }
     Overrides {
       Name: "cs:GOLD"
       ObjectReference {
         SelfId: 9921149938682060216
+      }
+    }
+    Overrides {
+      Name: "cs:REFRESH_IN_TEXT_HIGHLIGHT"
+      ObjectReference {
+        SelfId: 15331722996089801223
+      }
+    }
+    Overrides {
+      Name: "cs:REFRESH_IN_TEXT_SHADOW"
+      ObjectReference {
+        SelfId: 17225828781020951356
       }
     }
   }
@@ -14976,7 +14988,7 @@ Objects {
 }
 Objects {
   Id: 15331722996089801223
-  Name: "REFRESH_IN_TEXT"
+  Name: "REFRESH_IN_TEXT_HIGHLIGHT"
   Transform {
     Location {
     }
@@ -15037,7 +15049,7 @@ Objects {
 }
 Objects {
   Id: 15972530427091579886
-  Name: "REFRESH_IN_TEXT"
+  Name: "REFRESH_IN_TEXT_TOP"
   Transform {
     Location {
     }
@@ -15096,7 +15108,7 @@ Objects {
 }
 Objects {
   Id: 17225828781020951356
-  Name: "REFRESH_IN_TEXT"
+  Name: "REFRESH_IN_TEXT_SHADOW"
   Transform {
     Location {
     }
@@ -18383,9 +18395,9 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 90
+    Width: 105
     Height: 34
-    UIX: -16.6011429
+    UIX: -56.4198608
     UIY: -6.30084229
     RenderTransformPivot {
       Anchor {
@@ -18393,7 +18405,7 @@ Objects {
       }
     }
     Text {
-      Label: "999"
+      Label: "888,888"
       Color {
         R: 0.181164265
         G: 0.088655591
@@ -18443,7 +18455,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 90
+    Width: 105
     Height: 34
     UIY: -2
     RenderTransformPivot {
@@ -18452,7 +18464,7 @@ Objects {
       }
     }
     Text {
-      Label: "999"
+      Label: "888,888"
       Color {
         A: 1
       }
@@ -18503,7 +18515,7 @@ Objects {
   Control {
     Width: 45
     Height: 45
-    UIX: -76.4828186
+    UIX: -8.83607483
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -18617,7 +18629,7 @@ Objects {
   Control {
     Width: 200
     Height: 34
-    UIX: 93.1796875
+    UIX: 67.7915192
     UIY: -6.45135498
     RenderTransformPivot {
       Anchor {
