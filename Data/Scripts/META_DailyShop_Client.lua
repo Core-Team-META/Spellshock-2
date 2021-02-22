@@ -1,4 +1,4 @@
-﻿local NAMESPACE = "METADS."
+local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
@@ -314,6 +314,13 @@ function Tick()
             REFRESH_IN_TEXT.text = "Refresh Avaliable"
         end
     end
+    -- UPDATE GOLD (Added by KonzZwodrei, better check this)
+    local GOLD_TXT = script:GetCustomProperty("GOLD"):WaitForObject()
+    local player = Game.GetLocalPlayer()
+    local GOLD = player:GetResource("Gold")
+    local displayString = ""..tostring(GOLD) .. ""
+    GOLD_TXT.text = displayString  
+    
 end
 
 --REWARD_UTIL.CalculateDailyShopItemCost(key, value)

@@ -337,6 +337,12 @@ Objects {
         SelfId: 13306995837332023087
       }
     }
+    Overrides {
+      Name: "cs:GOLD"
+      ObjectReference {
+        SelfId: 9921149938682060216
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
