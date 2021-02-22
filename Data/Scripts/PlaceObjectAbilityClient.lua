@@ -43,7 +43,7 @@ local CancelBindings = {
 
 function SetPreviewing(value)
 	isPreviewing = value
-	
+	SpecialAbility.clientUserData.isPreviewing = value -- for UI
 	if value then
 		Equipment.clientUserData.isPreviewing = SpecialAbility
 	elseif Equipment.clientUserData.isPreviewing == SpecialAbility then

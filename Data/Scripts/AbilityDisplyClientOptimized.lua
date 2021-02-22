@@ -87,7 +87,7 @@ function Tick(deltaTime)
         LEVEL_TEXT.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[BINDS[BINDING]], classID))
 
         -- If the ability is a placement then show the indicator when it is active
-        if currentAbility:GetCustomProperty("Binding") and currentAbility.isEnabled then
+        if currentAbility.clientUserData.isPreviewing then
             ACTIVE_FRAME.visibility = Visibility.INHERIT
             ACTIVE_FLASH.visibility = Visibility.INHERIT
 		else
