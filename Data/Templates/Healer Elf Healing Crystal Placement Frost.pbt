@@ -444,7 +444,6 @@ Assets {
           DisableCastShadows: true
           DisableReceiveDecals: true
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -769,7 +768,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -955,7 +953,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1182,7 +1179,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1409,7 +1405,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

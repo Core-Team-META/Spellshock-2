@@ -140,7 +140,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           AnimatedMesh {
             AnimationStancePlaybackRate: 2
             AnimationStanceShouldLoop: true

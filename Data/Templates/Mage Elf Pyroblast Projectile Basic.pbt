@@ -285,7 +285,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100

@@ -126,7 +126,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -182,7 +181,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -242,7 +240,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -303,7 +300,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -364,7 +360,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -425,7 +420,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -481,7 +475,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -530,7 +523,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -579,7 +571,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -642,7 +633,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -705,7 +695,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -764,7 +753,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -814,7 +802,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -855,7 +842,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -896,7 +882,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -937,7 +922,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -996,7 +980,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1062,7 +1045,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1103,7 +1085,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1153,7 +1134,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1224,7 +1204,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1279,7 +1258,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1327,7 +1305,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1375,7 +1352,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1423,7 +1399,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1471,7 +1446,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1509,7 +1483,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1579,7 +1552,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1649,7 +1621,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1706,7 +1677,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1763,7 +1733,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1820,7 +1789,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1876,7 +1844,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1949,7 +1916,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2015,7 +1981,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2085,7 +2050,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2155,7 +2119,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2225,7 +2188,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2295,7 +2257,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2362,7 +2323,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2429,7 +2389,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2496,7 +2455,6 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2567,7 +2525,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2638,7 +2595,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2709,7 +2665,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

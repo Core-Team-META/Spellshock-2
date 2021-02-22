@@ -16,6 +16,10 @@ Objects {
   }
   ParentId: 783937512602456512
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:DebugSameTeam"
+      Bool: true
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -113,7 +113,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -208,7 +207,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -439,7 +437,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -536,7 +533,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
