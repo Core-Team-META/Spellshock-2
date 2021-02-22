@@ -149,7 +149,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

@@ -132,7 +132,7 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -260,7 +260,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -322,7 +322,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -384,7 +384,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -446,7 +446,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -508,7 +508,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -570,7 +570,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -632,7 +632,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -694,7 +694,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -756,7 +756,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -821,7 +821,7 @@ Assets {
           Teams {
           }
           DisableDistanceFieldLighting: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

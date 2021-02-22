@@ -291,6 +291,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -355,6 +357,8 @@ Objects {
       Size: 17
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -804,6 +808,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -868,6 +874,8 @@ Objects {
       Size: 20
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -2072,6 +2080,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2129,6 +2139,8 @@ Objects {
       Size: 21
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -2476,6 +2488,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2533,6 +2547,8 @@ Objects {
       Size: 21
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -2880,6 +2896,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2937,6 +2955,8 @@ Objects {
       Size: 21
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -3284,6 +3304,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -3341,6 +3363,8 @@ Objects {
       Size: 21
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {

@@ -755,6 +755,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -833,6 +835,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1158,6 +1162,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1726,6 +1732,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2071,6 +2079,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2142,6 +2152,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4272,6 +4284,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4339,6 +4353,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4403,6 +4419,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4467,6 +4485,8 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5241,6 +5261,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5303,6 +5325,8 @@ Objects {
       Size: 18
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -5740,6 +5764,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5805,6 +5831,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -8381,6 +8409,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -8446,6 +8476,8 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -11919,7 +11951,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -11964,7 +11996,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12009,7 +12041,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12054,7 +12086,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12099,7 +12131,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12143,7 +12175,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12224,7 +12256,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationPlaybackRateMultiplier: 1
@@ -12308,7 +12340,7 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationPlaybackRateMultiplier: 1
@@ -12804,7 +12836,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12858,7 +12890,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12910,7 +12942,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -12962,7 +12994,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -13013,7 +13045,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -13142,7 +13174,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }
@@ -13187,7 +13219,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
+    InteractWithTriggers: false
     StaticMesh {
       Physics {
       }

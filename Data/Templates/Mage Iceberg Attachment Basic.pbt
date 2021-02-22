@@ -216,7 +216,7 @@ Assets {
           Teams {
           }
           DisableDistanceFieldLighting: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

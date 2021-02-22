@@ -358,6 +358,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -419,6 +421,8 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -754,6 +758,8 @@ Assets {
               Value: "mc:etextjustify:right"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -813,6 +819,8 @@ Assets {
               Value: "mc:etextjustify:right"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -872,6 +880,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -931,6 +941,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -1048,6 +1060,8 @@ Assets {
               Value: "mc:etextjustify:left"
             }
             AutoWrapText: true
+            Font {
+            }
           }
           AnchorLayout {
             SelfAnchor {

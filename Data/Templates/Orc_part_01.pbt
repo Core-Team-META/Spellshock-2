@@ -88,7 +88,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -135,7 +135,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -184,7 +184,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -246,7 +246,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -308,7 +308,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -370,7 +370,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -421,7 +421,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -481,7 +481,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -535,7 +535,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
