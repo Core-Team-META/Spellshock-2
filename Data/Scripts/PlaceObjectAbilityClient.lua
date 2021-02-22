@@ -43,7 +43,12 @@ local CancelBindings = {
 
 function SetPreviewing(value)
 	isPreviewing = value
-	Equipment.clientUserData.isPreviewing = value
+	
+	if value then
+		Equipment.clientUserData.isPreviewing = SpecialAbility
+	elseif Equipment.clientUserData.isPreviewing == SpecialAbility then
+		Equipment.clientUserData.isPreviewing = nil
+	end
 
 	if isPreviewing then
 		local previewScale = Vector3.ONE
@@ -80,6 +85,7 @@ function OnBindingPressed(player, binding)
 	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and objectHalogram and Object.IsValid(objectHalogram) then
 		SpecialAbility:Activate()
 		SetPreviewing(false)
+		
 	elseif isPreviewing and binding ~= AbilityBinding and CancelBindings[binding] then
 		SetPreviewing(false)
 	end
