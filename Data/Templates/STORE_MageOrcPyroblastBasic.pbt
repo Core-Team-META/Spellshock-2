@@ -240,7 +240,7 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -300,7 +300,7 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100

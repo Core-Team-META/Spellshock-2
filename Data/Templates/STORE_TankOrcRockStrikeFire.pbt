@@ -135,7 +135,7 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -236,7 +236,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -301,7 +301,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -366,7 +366,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -431,7 +431,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -496,7 +496,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -597,7 +597,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -662,7 +662,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -727,7 +727,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -792,7 +792,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -857,7 +857,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -958,7 +958,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1023,7 +1023,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1088,7 +1088,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1153,7 +1153,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1218,7 +1218,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1319,7 +1319,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1384,7 +1384,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1449,7 +1449,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1514,7 +1514,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1579,7 +1579,7 @@ Assets {
           }
           Teams {
           }
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100

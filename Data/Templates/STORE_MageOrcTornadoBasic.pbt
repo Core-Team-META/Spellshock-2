@@ -132,7 +132,7 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: true
+          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
