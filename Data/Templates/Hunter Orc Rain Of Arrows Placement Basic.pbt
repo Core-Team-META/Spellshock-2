@@ -169,10 +169,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -270,7 +267,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -338,7 +334,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -404,7 +399,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -560,10 +554,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -661,7 +652,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -729,7 +719,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -795,7 +784,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -951,10 +939,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -1052,7 +1037,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1120,7 +1104,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1186,7 +1169,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1342,10 +1324,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -1443,7 +1422,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1511,7 +1489,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1577,7 +1554,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1733,10 +1709,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -1834,7 +1807,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1902,7 +1874,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1968,7 +1939,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2124,10 +2094,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -2225,7 +2192,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2293,7 +2259,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2359,7 +2324,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2515,10 +2479,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -2616,7 +2577,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2684,7 +2644,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2750,7 +2709,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -2906,10 +2864,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -3007,7 +2962,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3075,7 +3029,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3141,7 +3094,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3332,10 +3284,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -3433,7 +3382,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3501,7 +3449,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3567,7 +3514,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3723,10 +3669,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -3824,7 +3767,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3892,7 +3834,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -3958,7 +3899,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4114,10 +4054,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -4215,7 +4152,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4283,7 +4219,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4349,7 +4284,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4505,10 +4439,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -4606,7 +4537,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4674,7 +4604,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4740,7 +4669,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -4896,10 +4824,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -4997,7 +4922,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5065,7 +4989,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5131,7 +5054,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5287,10 +5209,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -5388,7 +5307,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5456,7 +5374,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5522,7 +5439,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5678,10 +5594,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -5779,7 +5692,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5847,7 +5759,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -5913,7 +5824,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6069,10 +5979,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -6170,7 +6077,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6238,7 +6144,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6304,7 +6209,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6457,10 +6361,7 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 1
-              G: 0.79733336
-              B: 0.62
-              A: 0.4
+              A: 1
             }
           }
           Overrides {
@@ -6558,7 +6459,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6626,7 +6526,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -6692,7 +6591,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
