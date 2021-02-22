@@ -1,4 +1,4 @@
-local function META_AP()
+﻿local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
@@ -27,7 +27,6 @@ local PlayerVFX = nil
 local AllHalograms = {}
 local objectHalogram = nil
 local EventListeners = {}
-local placementTable = {position = nil, rotation = nil, isVisible = nil}
 local lastValidPlacement = {position = nil, rotation = nil}
 local durationTimer = 0
 local totalDuration = 0
@@ -44,7 +43,6 @@ local CancelBindings = {
 
 function SetPreviewing(value)
 	isPreviewing = value
-	
 	Equipment.clientUserData.isPreviewing = value
 
 	if isPreviewing then
@@ -80,17 +78,8 @@ function OnBindingPressed(player, binding)
 		SetPreviewing(true)
 		
 	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and objectHalogram and Object.IsValid(objectHalogram) then
-		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
-		placementTable.rotation = objectHalogram:GetWorldRotation()
-
-		-- if the hologram position is nil or not visible then do not activate the ability; this means the placement position is invalid
-		if not placementTable.position or not placementTable.isVisible then
-			return
-		end
-		
 		SpecialAbility:Activate()
 		SetPreviewing(false)
-		
 	elseif isPreviewing and binding ~= AbilityBinding and CancelBindings[binding] then
 		SetPreviewing(false)
 	end

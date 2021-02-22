@@ -19,7 +19,7 @@ local CancelBindings = {
 }
 
 function OnBindingPressed(player, bind)
-    if bind == ShootAbility.actionBinding and ShootAbility.isEnabled then
+    if bind == "ability_primary" and ShootAbility.isEnabled then
         isShooting = true
     elseif CancelBindings[bind] then
         isShooting = false
@@ -27,7 +27,7 @@ function OnBindingPressed(player, bind)
 end
 
 function OnBindingReleased(player, bind)
-    if bind == ShootAbility.actionBinding then
+    if bind == "ability_primary" then
         isShooting = false
     end
 end
