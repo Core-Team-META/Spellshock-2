@@ -169,7 +169,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -557,7 +560,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -945,7 +951,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -1333,7 +1342,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -1721,7 +1733,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -2109,7 +2124,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -2497,7 +2515,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -2885,7 +2906,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -3308,7 +3332,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -3696,7 +3723,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -4084,7 +4114,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -4472,7 +4505,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -4860,7 +4896,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -5248,7 +5287,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -5636,7 +5678,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -6024,7 +6069,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
@@ -6409,7 +6457,10 @@ Assets {
           Overrides {
             Name: "bp:ColorC"
             Color {
-              A: 1
+              R: 1
+              G: 0.79733336
+              B: 0.62
+              A: 0.4
             }
           }
           Overrides {
