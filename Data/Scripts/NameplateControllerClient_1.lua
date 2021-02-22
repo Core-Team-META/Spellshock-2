@@ -165,8 +165,10 @@ function OnPlayerJoined(player)
 
 	-- Static properties on pieces
 	if player == LOCAL_PLAYER then
+		local LOCAL_PLAYER_SCALE = SCALE / 1.5
+		nameplateRoot:SetScale(Vector3.New(LOCAL_PLAYER_SCALE, LOCAL_PLAYER_SCALE, LOCAL_PLAYER_SCALE))
 		nameplates[player].borderPiece:SetScale(
-			Vector3.New(NAMEPLATE_LAYER_THICKNESS * 0.75, HEALTHBAR_WIDTH + 2.0 * BORDER_WIDTH, HEALTHBAR_HEIGHT / 3 * BORDER_WIDTH)
+			Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH + 2.0 * BORDER_WIDTH, HEALTHBAR_HEIGHT + 2.0 * BORDER_WIDTH)
 		)
 	else
 		nameplateRoot:SetScale(Vector3.New(SCALE, SCALE, SCALE))
