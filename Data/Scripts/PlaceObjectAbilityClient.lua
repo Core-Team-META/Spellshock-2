@@ -87,10 +87,14 @@ end
 
 
 function OnSpecialAbilityCast(thisAbility)
+	-- Get the target data, to modify it before it's sent over the network
 	local targetData = thisAbility:GetTargetData()
-	
+	-- Position
 	targetData:SetHitPosition(lastValidPlacement.position)
-	
+	-- Rotation
+	local r = lastValidPlacement.rotation
+	targetData:SetAimDirection(Vector3.New(r.x, r.y, r.z))
+	-- Set the target data back
 	thisAbility:SetTargetData(targetData)
 end
 

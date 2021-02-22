@@ -30,8 +30,11 @@ function PlaceObject(thisAbility)
 	if not Object.IsValid(player) then return end
 	
 	local targetData = thisAbility:GetTargetData()
+	-- Position
 	local position = targetData:GetHitPosition()
-	local rotation = Rotation.New() -- TODO
+	-- Rotation
+	local v = targetData:GetAimDirection()
+	local rotation = Rotation.New(v.x, v.y, v.z)
 
 	local tornadoTemplate = PlayerVFX.Placement
 	CurrentTornado = META_AP().SpawnAsset(tornadoTemplate, {position = position, rotation = rotation})
