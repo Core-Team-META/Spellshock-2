@@ -15,7 +15,7 @@ local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
 local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
 local DEFAULT_TargetingRange = script:GetCustomProperty("TargetingRange")
-local HOMING_ACCELERATION = 30000
+local HOMING_ACCELERATION = 20000
 
 local EventListeners = {}
 local ProjectileImpactEvent = nil
