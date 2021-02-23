@@ -13588,7 +13588,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -15
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14809,7 +14809,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -95
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -16030,7 +16030,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -175
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17251,7 +17251,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -260
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -18461,7 +18461,7 @@ Objects {
   Control {
     Width: 256
     Height: 35
-    UIX: -334.1362
+    UIX: -35
     UIY: -4.05228424
     RenderTransformPivot {
       Anchor {
