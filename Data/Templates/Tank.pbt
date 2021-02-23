@@ -45,16 +45,8 @@ Assets {
             Int: 1
           }
           Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "1hand_melee_stance"
-          }
-          Overrides {
-            Name: "cs:E_isPreviewing:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -917,6 +909,7 @@ Assets {
         ChildIds: 11057856131540664296
         ChildIds: 14358940177883270596
         ChildIds: 8138751453774018183
+        ChildIds: 16454321747945464989
         ChildIds: 8465538153470191218
         WantsNetworking: true
         Collidable_v2 {
@@ -1523,6 +1516,50 @@ Assets {
         }
       }
       Objects {
+        Id: 16454321747945464989
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+            X: 13534.7744
+            Y: 14815.2598
+            Z: -16.4165039
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4127929006948487058
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 13977688717675933557
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
+          }
+        }
+      }
+      Objects {
         Id: 8465538153470191218
         Name: "Shield Bash"
         Transform {
@@ -1772,6 +1809,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5
@@ -1810,7 +1848,7 @@ Assets {
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2131,7 +2169,7 @@ Assets {
           Animation: "1hand_melee_slash_right"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
