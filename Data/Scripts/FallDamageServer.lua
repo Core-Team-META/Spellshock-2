@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Copyright 2020 Manticore Games, Inc. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -57,6 +57,7 @@ end
 function Tick(deltaTime)
 	for _, player in pairs(Game.GetPlayers()) do
 		if(player.serverUserData.immuneToFallDamage) then return end
+		if(player:GetResource("CLASS_MAP") == 5) then return end --Assassin, immune to fall damage
 		
 		local fallingSpeed = math.max(0.0, -player:GetVelocity().z)
 		local isGrounded = player.isGrounded
