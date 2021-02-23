@@ -89,20 +89,20 @@ function Tick(deltaTime)
     CANVAS.visibility = Visibility.FORCE_ON
 
     -- Update name
-    if SHOW_POINT_NAME then
-        NAME_TEXT.text = capturePointState.name
-        NAME_TEXT:SetColor(Color.WHITE)
-    end
-    
+    NAME_TEXT.text = capturePointState.name
+    NAME_TEXT:GetChildren()[1].text = capturePointState.name
+      
     if capturePointState.capturePlayer ~= "" then
     	if LOCAL_PLAYER.id == capturePointState.capturePlayer then
-    		NAME_TEXT.text = NAME_TEXT.text.." | Capturing"
-    		NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
+    		NAME_TEXT.text = capturePointState.name.." | Capturing"
+            NAME_TEXT:GetChildren()[1].text = capturePointState.name.." | Capturing"
+    		--NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
     	else -- see if Local Player is on the same team as capturePlayer
     		for _, otherPlayer in pairs(Game.GetPlayers({includeTeams = LOCAL_PLAYER.team, ignoreDead = true})) do
     			if otherPlayer.id == capturePointState.capturePlayer then
-    				NAME_TEXT.text = NAME_TEXT.text.." | Assisting"
-    				NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
+    				NAME_TEXT.text = capturePointState.name.." | Assisting"
+                    NAME_TEXT:GetChildren()[1].text = capturePointState.name.." | Assisting"
+    				--NAME_TEXT:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
     				break
     			end
     		end
@@ -180,8 +180,10 @@ function Tick(deltaTime)
     -- Show contested message
     if capturePointState.friendliesPresent > 0 and capturePointState.enemiesPresent > 0 then
         CONTESTED_TEXT.text = CONTESTED_MESSAGE
+        CONTESTED_TEXT:GetChildren()[1].text = CONTESTED_MESSAGE
     else
         CONTESTED_TEXT.text = ""
+        CONTESTED_TEXT:GetChildren()[1].text = ""
     end
 end
 

@@ -1,6 +1,34 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
+  Id: 527033524674069522
+  Name: "Capture Point UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Capture Point UI"
+  }
+}
+Objects {
   Id: 4189845317229286629
   Name: "OnJoinRoundEndGame"
   Transform {
@@ -13588,7 +13616,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -15
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14809,7 +14837,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -95
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -16030,7 +16058,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -175
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17251,7 +17279,7 @@ Objects {
     Width: 60
     Height: 60
     UIX: -260
-    UIY: -10
+    UIY: -50
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -18461,7 +18489,7 @@ Objects {
   Control {
     Width: 256
     Height: 35
-    UIX: -334.1362
+    UIX: -35
     UIY: -4.05228424
     RenderTransformPivot {
       Anchor {
