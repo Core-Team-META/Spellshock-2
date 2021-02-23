@@ -209,7 +209,6 @@ Objects {
   ChildIds: 3806163934278572543
   ChildIds: 2203334349956171415
   ChildIds: 2950563345152682948
-  ChildIds: 1657366738582570864
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -250,7 +249,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1657366738582570864
+  Id: 2950563345152682948
   Name: "ContestedText"
   Transform {
     Location {
@@ -264,6 +263,7 @@ Objects {
     }
   }
   ParentId: 519909361420409257
+  ChildIds: 1657366738582570864
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -275,7 +275,8 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIY: 51.8274536
+    UIX: 2
+    UIY: 53
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -284,8 +285,9 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.789999962
-        A: 1
+        R: 0.0299999714
+        G: 0.000596023805
+        A: 0.791
       }
       Size: 17
       Justification {
@@ -315,7 +317,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2950563345152682948
+  Id: 1657366738582570864
   Name: "ContestedText"
   Transform {
     Location {
@@ -328,7 +330,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 519909361420409257
+  ParentId: 2950563345152682948
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -340,8 +342,8 @@ Objects {
   Control {
     Width: 200
     Height: 40
-    UIX: 2
-    UIY: 53
+    UIX: -2
+    UIY: -1.17254639
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -350,9 +352,8 @@ Objects {
     Text {
       Label: "ContestedText"
       Color {
-        R: 0.0299999714
-        G: 0.000596023805
-        A: 0.791
+        R: 0.789999962
+        A: 1
       }
       Size: 17
       Justification {
