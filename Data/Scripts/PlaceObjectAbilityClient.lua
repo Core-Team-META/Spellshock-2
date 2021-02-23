@@ -2,6 +2,9 @@ local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
+local FallbackPreviewElf = script:GetCustomProperty("FallbackPreviewElf")
+local FallbackPreviewOrc = script:GetCustomProperty("FallbackPreviewOrc")
+
 local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
 local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
@@ -58,8 +61,16 @@ function SetPreviewing(value)
 		local ObjectTemplate
 		if PreviewObjectTemplate then
 			ObjectTemplate = PreviewObjectTemplate
-		else
+			
+		elseif PlayerVFX.Preview then
 			ObjectTemplate = PlayerVFX.Preview
+			
+		else
+			warn("No objectHalogram setup for " .. script.name .. ". Falling back to default.")
+			ObjectTemplate = FallbackPreviewElf
+			if Equipment.owner and Equipment.owner.team == 1 then
+				ObjectTemplate = FallbackPreviewOrc
+			end
 		end
 
 		local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})

@@ -3,6 +3,20 @@ Assets {
   Name: "PlaceObjectAbilityClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:FallbackPreviewElf"
+        AssetReference {
+          Id: 3392388590054420013
+        }
+      }
+      Overrides {
+        Name: "cs:FallbackPreviewOrc"
+        AssetReference {
+          Id: 18349665107832834494
+        }
+      }
+    }
   }
   SerializationVersion: 76
 }
