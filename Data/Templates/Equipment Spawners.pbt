@@ -249,7 +249,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -474,7 +473,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -698,7 +696,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -923,7 +920,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }
@@ -1148,7 +1144,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

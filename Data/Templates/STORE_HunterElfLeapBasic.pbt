@@ -132,7 +132,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -331,7 +330,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -400,7 +398,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -469,7 +466,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -534,7 +530,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -666,7 +661,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -735,7 +729,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -804,7 +797,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -863,7 +855,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -996,7 +987,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1065,7 +1055,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1134,7 +1123,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1193,7 +1181,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1326,7 +1313,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1395,7 +1381,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1464,7 +1449,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1523,7 +1507,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1656,7 +1639,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1725,7 +1707,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1794,7 +1775,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1853,7 +1833,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -1986,7 +1965,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2055,7 +2033,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2124,7 +2101,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2183,7 +2159,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2314,7 +2289,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2383,7 +2357,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2452,7 +2425,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2511,7 +2483,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2643,7 +2614,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2712,7 +2682,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2781,7 +2750,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -2840,7 +2808,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3008,7 +2975,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3077,7 +3043,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3146,7 +3111,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3211,7 +3175,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3343,7 +3306,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3412,7 +3374,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3481,7 +3442,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3540,7 +3500,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3673,7 +3632,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3742,7 +3700,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3811,7 +3768,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -3870,7 +3826,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4003,7 +3958,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4072,7 +4026,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4141,7 +4094,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4200,7 +4152,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4333,7 +4284,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4402,7 +4352,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4471,7 +4420,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4530,7 +4478,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4663,7 +4610,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4732,7 +4678,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4801,7 +4746,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4860,7 +4804,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -4991,7 +4934,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5060,7 +5002,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5129,7 +5070,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5188,7 +5128,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5320,7 +5259,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5389,7 +5327,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5458,7 +5395,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5517,7 +5453,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5685,7 +5620,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5754,7 +5688,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5823,7 +5756,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -5888,7 +5820,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6020,7 +5951,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6089,7 +6019,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6158,7 +6087,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6217,7 +6145,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6350,7 +6277,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6419,7 +6345,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6488,7 +6413,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6547,7 +6471,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6680,7 +6603,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6749,7 +6671,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6818,7 +6739,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -6877,7 +6797,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7010,7 +6929,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7079,7 +6997,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7148,7 +7065,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7207,7 +7123,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7340,7 +7255,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7409,7 +7323,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7478,7 +7391,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7537,7 +7449,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7668,7 +7579,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7737,7 +7647,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7806,7 +7715,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7865,7 +7773,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -7997,7 +7904,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -8066,7 +7972,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -8135,7 +8040,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -8194,7 +8098,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -8244,7 +8147,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100

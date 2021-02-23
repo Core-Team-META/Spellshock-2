@@ -83119,6 +83119,45 @@ Objects {
   }
 }
 Objects {
+  Id: 2172740764341022870
+  Name: "TeamHasNoPlayers"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsEnabled"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ABGS"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13919140539407308331
+    }
+  }
+}
+Objects {
   Id: 14570647703378092628
   Name: "DynamicCapturePoints"
   Transform {

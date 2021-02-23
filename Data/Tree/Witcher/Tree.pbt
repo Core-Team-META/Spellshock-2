@@ -12539,7 +12539,6 @@ Objects {
     DisableCastShadows: true
     DisableReceiveDecals: true
     EnableCameraCollision: true
-    InteractWithTriggers: false
     StaticMesh {
       Physics {
         Mass: 100

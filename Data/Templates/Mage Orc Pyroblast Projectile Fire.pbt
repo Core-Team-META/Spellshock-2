@@ -439,7 +439,6 @@ Assets {
           Teams {
           }
           DisableReceiveDecals: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
             }

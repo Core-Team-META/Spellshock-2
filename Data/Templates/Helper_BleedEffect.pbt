@@ -160,7 +160,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -210,7 +209,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -260,7 +258,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
@@ -310,7 +307,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: false
           StaticMesh {
             Physics {
               Mass: 100
