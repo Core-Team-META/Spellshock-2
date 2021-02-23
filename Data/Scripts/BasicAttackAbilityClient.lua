@@ -15,11 +15,11 @@ local EventListeners = {}
 function OnBindingPressed(player, binding)
 	if binding == "ability_primary"
 	and not Equipment.clientUserData.isPreviewing then
-		if SpecialAbility.owner then
+		if SpecialAbility.owner and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		end
 		
-		if Ability2 and Ability2.owner then
+		if Ability2 and Ability2.owner and Ability2:GetCurrentPhase() == AbilityPhase.READY then
 			Ability2:Activate()
 		end
 	end
