@@ -105,32 +105,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4197521803680757974
-  Name: "EndScreen UI (Reward & Match)"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
-  }
-}
-Objects {
   Id: 4683464414535277849
   Name: "Combat Stats Scoreboard"
   Transform {
