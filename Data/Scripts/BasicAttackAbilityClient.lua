@@ -2,6 +2,12 @@
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 
+local Ability2Ref = script:GetCustomProperty("Ability2")
+local Ability2
+if Ability2Ref then
+	Ability2 = Ability2Ref:WaitForObject()
+end
+
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local EventListeners = {}
 
@@ -9,7 +15,13 @@ local EventListeners = {}
 function OnBindingPressed(player, binding)
 	if binding == "ability_primary"
 	and not Equipment.clientUserData.isPreviewing then
-		SpecialAbility:Activate()
+		if SpecialAbility.owner then
+			SpecialAbility:Activate()
+		end
+		
+		if Ability2 and Ability2.owner then
+			Ability2:Activate()
+		end
 	end
 end
 

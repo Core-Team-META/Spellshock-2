@@ -4,120 +4,59 @@ function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
 local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
-local PrimaryAbility = AbilitySettings:GetCustomProperty("PrimaryAbility"):WaitForObject()
-local PrimaryAbility2 = AbilitySettings:GetCustomProperty("PrimaryAbility2"):WaitForObject()
 local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local TeleportFX = AbilitySettings:GetCustomProperty("TeleportFX")
-local EventName = AbilitySettings:GetCustomProperty("EventName")
 local EventListeners = {}
-
-local isPreviewing = false
-local isPlacing = false
 local PlayerVFX = nil
 
 local DamageRange = AbilitySettings:GetCustomProperty("DamageRange")
 local DEFAULT_DamageRange = {min=DamageRange.x, max=DamageRange.y}
 local DEFAULT_DamageRadius = AbilitySettings:GetCustomProperty("DamageRadius")
 
-local CancelBindings = {
-	ability_extra_20 = true,
-	ability_extra_22 = true,
-	ability_extra_23 = true,
-	ability_extra_24 = true,
-	ability_secondary = true,
-	ability_extra_12 = true
-}
 
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
-local function SetNetworkProperty(bool)
-	Equipment:SetNetworkedCustomProperty("Q_isPreviewing", bool)
-end
+function Teleport(thisAbility)
+	local targetData = thisAbility:GetTargetData()
+	local position = targetData:GetHitPosition()
+	local v = targetData:GetAimDirection()
+	local rotation = Rotation.New(v.x, v.y, v.z)
 
-function OnBindingPressed(player, binding)
-	if not isPlacing and not player.isDead then
-		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
-			isPreviewing = true
-			SetNetworkProperty(isPreviewing)
-			PrimaryAbility.isEnabled = false
-			PrimaryAbility2.isEnabled = false
-			SpecialAbility.isEnabled = true
-		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-			isPreviewing = false
-			SetNetworkProperty(isPreviewing)
-			PrimaryAbility.isEnabled = true
-			PrimaryAbility2.isEnabled = true
-			SpecialAbility.isEnabled = false
-		end
+	META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+	Task.Wait(.4)
+
+	if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
+
+	if not SpecialAbility.owner.isFlying then -- Allows for a quick Q-T combo without teleporting
+		SpecialAbility.owner:SetWorldPosition(position + Vector3.New(0, 0, 180))
+		SpecialAbility.owner:ResetVelocity()
 	end
-end
 
-function OnSpecialAbilityCast(thisAbility)
-	if isPreviewing == false or isPlacing then
-		SpecialAbility:Interrupt()
-	end
-end
+	META_AP().SpawnAsset(PlayerVFX.Ending, {position = position, rotation = rotation})
+	local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
+	local enemiesInRange = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = SpecialAbility.owner.team})
+	--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 5})
 
-function OnSpecialAbilityReady(thisAbility)
-	isPlacing = false
-end
+	local dmgMod = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, SpecialAbility.name..": Damage Amount")
+	local dmg = Damage.New()
+	dmg.amount = math.random(dmgMod.min, dmgMod.max)
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
 
-function Teleport(thisPlayer, position, rotation)
-	if thisPlayer == Equipment.owner and Object.IsValid(SpecialAbility) then
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-		
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-			warn("Failed") 
-			SpecialAbility.isEnabled = false
-			PrimaryAbility.isEnabled = true
-			PrimaryAbility2.isEnabled = true
-			return 
-		end
-		
-		isPlacing = true
-		META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
-		Task.Wait(.4)
-
-		if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner or not Object.IsValid(SpecialAbility.owner) then return end
-
-		if not thisPlayer.isFlying then -- Allows for a quick Q-T combo without teleporting
-			thisPlayer:SetWorldPosition(position + Vector3.New(0, 0, 180))
-			thisPlayer:ResetVelocity()
-		end
-
-		META_AP().SpawnAsset(PlayerVFX.Ending, {position = position, rotation = rotation})
-        local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRadius, SpecialAbility.name..": Damage Amount")
-        local enemiesInRange = Game.FindPlayersInSphere(thisPlayer:GetWorldPosition(), radius, {ignoreDead = true, ignoreTeams = thisPlayer.team})
-        --CoreDebug.DrawSphere(thisPlayer:GetWorldPosition(), DamageRadius, {duration = 5})
-
-		local dmgMod = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod1", DEFAULT_DamageRange, SpecialAbility.name..": Damage Amount")
-		local dmg = Damage.New()
-		dmg.amount = math.random(dmgMod.min, dmgMod.max)
-		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = thisPlayer
-		dmg.sourceAbility = SpecialAbility
-
-		for _, enemy in ipairs(enemiesInRange) do
-			local attackData = {
-				object = enemy,
-				damage = dmg,
-				source = thisPlayer,
-				position = nil,
-				rotation = nil,
-				tags = {id = "Assassin_Q"}
-			}
-            COMBAT().ApplyDamage(attackData)
-        end
-	
-		Task.Wait()
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-		PrimaryAbility2.isEnabled = true
+	for _, enemy in ipairs(enemiesInRange) do
+		local attackData = {
+			object = enemy,
+			damage = dmg,
+			source = SpecialAbility.owner,
+			position = nil,
+			rotation = nil,
+			tags = {id = "Assassin_Q"}
+		}
+		COMBAT().ApplyDamage(attackData)
 	end
 end
 
@@ -130,48 +69,10 @@ function OnSpecialAbilityCooldown(thisAbility)
 	end, Cooldown)
 end
 
-function OnAbilityToggled(abilityID, mode)
-	if abilityID == SpecialAbility.id or abilityID == "ALL" then
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		if abilityID == SpecialAbility.id then
-			PrimaryAbility.isEnabled = true
-			PrimaryAbility2.isEnabled = true
-		end
-	end
-end
-
-function OnPlayerDied(player, _)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	PrimaryAbility.isEnabled = true
-	PrimaryAbility2.isEnabled = true
-	SpecialAbility.isEnabled = false
-end
-
-function OnPlayerRespawn(player)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	PrimaryAbility.isEnabled = true
-	PrimaryAbility2.isEnabled = true
-	SpecialAbility.isEnabled = false
-end
-
-function OnEquip(equipment, player)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	
-	if(EventName) then
-		table.insert(EventListeners, Events.ConnectForPlayer(EventName, Teleport))
-	end
-		
-	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
-	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
+function OnEquip(equipment, player)		
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(Teleport))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
-	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q, META_AP().ASSASSIN)
 end
 

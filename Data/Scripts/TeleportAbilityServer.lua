@@ -1,13 +1,13 @@
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
 
-local TeleportFX = script:GetCustomProperty("TeleportFX")
+local TeleportFX = AbilitySettings:GetCustomProperty("TeleportFX")
 local EventListeners = {}
 
 local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
-
 
 function Teleport(thisAbility)
 	local player = thisAbility.owner

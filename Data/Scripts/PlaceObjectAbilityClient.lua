@@ -12,9 +12,6 @@ local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
 local DEFAULT_Duration = ServerScript:GetCustomProperty("Duration")
 local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
 local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
-local EventName = ServerScript:GetCustomProperty("EventName")
-local abilityPreview = script:GetCustomProperty("PreviewString")
-local isPreviewing = false
 
 local Class = ServerScript:GetCustomProperty("Class")
 local BindingName = ServerScript:GetCustomProperty("BindingName")
@@ -23,6 +20,7 @@ local RadiusMod = ServerScript:GetCustomProperty("RadiusMod")
 local DurationMod = ServerScript:GetCustomProperty("DurationMod")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
+local isPreviewing = false
 local PlayerVFX = nil
 local AllHalograms = {}
 local objectHalogram = nil
@@ -39,7 +37,6 @@ local CancelBindings = {
 	ability_secondary = true,
 	ability_extra_12 = true
 }
-
 
 function SetPreviewing(value)
 	isPreviewing = value

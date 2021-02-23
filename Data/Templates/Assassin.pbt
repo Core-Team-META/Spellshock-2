@@ -45,10 +45,6 @@ Assets {
             Int: 5
           }
           Overrides {
-            Name: "cs:Q_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:T_isPreviewing"
             Bool: false
           }
@@ -59,10 +55,6 @@ Assets {
           Overrides {
             Name: "cs:AnimationStance"
             String: "unarmed_ready"
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing:isrep"
-            Bool: true
           }
           Overrides {
             Name: "cs:T_isPreviewing:isrep"
@@ -151,16 +143,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Blink"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2500
           }
@@ -189,12 +171,6 @@ Assets {
             Vector2 {
               X: 30
               Y: 50
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility2"
-            ObjectReference {
-              SubObjectId: 3230213687525692580
             }
           }
           Overrides {
@@ -976,6 +952,7 @@ Assets {
         ChildIds: 12637696742421662481
         ChildIds: 15505641406647177733
         ChildIds: 2240986400692986383
+        ChildIds: 3456609236666824797
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1638,10 +1615,6 @@ Assets {
               SubObjectId: 15817725685703269186
             }
           }
-          Overrides {
-            Name: "cs:PreviewString"
-            String: "Q_isPreviewing"
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1840,6 +1813,56 @@ Assets {
         }
       }
       Objects {
+        Id: 3456609236666824797
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+            X: -10610.2256
+            Y: -26569.7402
+            Z: 2978.5835
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 6522519753598108575
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+          Overrides {
+            Name: "cs:Ability2"
+            ObjectReference {
+              SubObjectId: 3230213687525692580
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
+          }
+        }
+      }
+      Objects {
         Id: 15969373231472315619
         Name: "Load Out"
         Transform {
@@ -1902,6 +1925,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.1
@@ -2404,7 +2428,7 @@ Assets {
           Animation: "unarmed_punch_left"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2470,7 +2494,7 @@ Assets {
           Animation: "unarmed_punch_right"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }

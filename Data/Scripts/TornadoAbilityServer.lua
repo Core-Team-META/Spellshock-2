@@ -7,22 +7,20 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
 
-local OrcObjectTemplate = script:GetCustomProperty("OrcObjectTemplate")
-local ElfObjectTemplate = script:GetCustomProperty("ElfObjectTemplate")
-local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
-local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
-local DEFAULT_DOT = script:GetCustomProperty("DOT")
-local DEFAULT_Duration = script:GetCustomProperty("Duration")
+local DEFAULT_DamageAmount = AbilitySettings:GetCustomProperty("DamageAmount")
+local DEFAULT_DamageRadius = AbilitySettings:GetCustomProperty("DamageRadius")
+local DEFAULT_DOT = AbilitySettings:GetCustomProperty("DOT")
+local DEFAULT_Duration = AbilitySettings:GetCustomProperty("Duration")
 
 local EventListeners = {}
 
 local Timer = -1
 local CurrentTornado = nil
 local PlayerVFX = nil
-
 
 function PlaceObject(thisAbility)
 	local player = thisAbility.owner
@@ -80,7 +78,6 @@ function OnSpecialAbilityCooldown(thisAbility)
 		end
 	end, Cooldown)
 end
-
 
 function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))

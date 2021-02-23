@@ -45,32 +45,8 @@ Assets {
             Int: 2
           }
           Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "2hand_staff_ready"
-          }
-          Overrides {
-            Name: "cs:E_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -146,22 +122,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Tornado"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
           }
           Overrides {
             Name: "cs:DamageAmount"
@@ -190,10 +152,6 @@ Assets {
             AssetReference {
               Id: 9770511928359673738
             }
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:AbilityMod"
@@ -257,12 +215,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
               Id: 500164608151091677
@@ -275,16 +227,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:EventName"
-            String: "Mage Teleport"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2500
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -578,82 +522,10 @@ Assets {
         ParentId: 18222319590489236690
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 12470675891570633924
+              SubObjectId: 15107115459971592988
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 17789038938063754529
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Tornado"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 600
-          }
-          Overrides {
-            Name: "cs:DOT"
-            Int: 5
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "Q"
-          }
-          Overrides {
-            Name: "cs:RadiusMod"
-            String: "mod3"
           }
         }
         Collidable_v2 {
@@ -902,58 +774,10 @@ Assets {
         ParentId: 18222319590489236690
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 12470675891570633924
+              SubObjectId: 15746345843771633212
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 2988604534664961180
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 500164608151091677
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Mage Teleport"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "SHIFT"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
           }
         }
         Collidable_v2 {
