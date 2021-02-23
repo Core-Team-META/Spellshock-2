@@ -193,11 +193,11 @@ function Reset(hardReset)
 end
 
 function OnPlayerDied(player, _)
-	Reset(true)
+	Reset(false)
 end
 
 function OnPlayerRespawn(player)
-	Reset(true)
+	Reset(false)
 end
 
 function OnEquip(equipment, player)
@@ -221,7 +221,7 @@ Equipment.unequippedEvent:Connect(OnUnequip)
 function Tick(deltaTime)
 	if Object.IsValid(CurrentProjectile) and SpecialAbility.owner 
 	and Object.IsValid(SpecialAbility.owner) then
-		if MoveTarget then
+		if MoveTarget and CurrentTarget and Object.IsValid(CurrentTarget) then
 			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
 			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
 			local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_TargetingRange, SpecialAbility.name .. ": Targeting Range")
