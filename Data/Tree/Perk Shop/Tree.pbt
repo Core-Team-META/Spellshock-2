@@ -199,7 +199,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     RenderTransformPivot {
@@ -7774,7 +7774,9 @@ Objects {
   ChildIds: 8962198806747082109
   ChildIds: 2466548067694053355
   ChildIds: 16137351465295225942
-  ChildIds: 9565577097203536547
+  ChildIds: 2231136783842430535
+  ChildIds: 8224649733122879692
+  ChildIds: 15888013299131737209
   ChildIds: 14590170213978408700
   ChildIds: 1528602986886572200
   ChildIds: 7391238583532718628
@@ -8154,7 +8156,65 @@ Objects {
   }
 }
 Objects {
-  Id: 9565577097203536547
+  Id: 15888013299131737209
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13122122412212688942
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 65
+    Height: 65
+    UIX: -1.0748291
+    UIY: 88.8930817
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 0.956933379
+        B: 0.353999972
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8224649733122879692
   Name: "Icon"
   Transform {
     Location {
@@ -8177,7 +8237,8 @@ Objects {
   Control {
     Width: 90
     Height: 90
-    UIY: 58.7870636
+    UIX: 8.59838867
+    UIY: 45.8845367
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8185,12 +8246,70 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1283463588493558965
+        Id: 955340689223569148
       }
       Color {
         R: 1
-        G: 1
-        B: 1
+        G: 0.956933379
+        B: 0.353999972
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2231136783842430535
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13122122412212688942
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 45
+    Height: 45
+    UIX: -34.3930664
+    UIY: 75.9905243
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 0.956933379
+        B: 0.353999972
         A: 1
       }
       TeamSettings {
@@ -8856,7 +8975,8 @@ Objects {
   ChildIds: 9624258546591429572
   ChildIds: 13107759763587422977
   ChildIds: 11405218922890899127
-  ChildIds: 209449633142090352
+  ChildIds: 2735546125779599901
+  ChildIds: 11902998006784696262
   ChildIds: 7215899340915841911
   ChildIds: 421011934075207882
   ChildIds: 17210797557542808599
@@ -9236,7 +9356,7 @@ Objects {
   }
 }
 Objects {
-  Id: 209449633142090352
+  Id: 11902998006784696262
   Name: "Icon"
   Transform {
     Location {
@@ -9257,9 +9377,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 90
-    Height: 90
-    UIY: 58.7870636
+    Width: 85
+    Height: 85
+    UIX: 13.7036743
+    UIY: 63.8930511
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -9267,12 +9388,70 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1283463588493558965
+        Id: 7585529932942736913
       }
       Color {
         R: 1
-        G: 1
-        B: 1
+        G: 0.956933379
+        B: 0.353999972
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2735546125779599901
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7512787459346827098
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 65
+    Height: 65
+    UIX: -22.8391724
+    UIY: 54.2161407
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 0.956933379
+        B: 0.353999972
         A: 1
       }
       TeamSettings {
@@ -10339,9 +10518,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 90
-    Height: 90
-    UIY: 58.7870636
+    Width: 95
+    Height: 95
+    UIX: 2.1496582
+    UIY: 54.4862213
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -10349,12 +10529,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1283463588493558965
+        Id: 7585529932942736913
       }
       Color {
         R: 1
-        G: 1
-        B: 1
+        G: 0.956933379
+        B: 0.353999972
         A: 1
       }
       TeamSettings {
@@ -11021,6 +11201,11 @@ Objects {
   ChildIds: 13727629176135559670
   ChildIds: 7049620426580737530
   ChildIds: 1588279702830741962
+  ChildIds: 14491012727042309263
+  ChildIds: 9030850152831801806
+  ChildIds: 1533870575865777976
+  ChildIds: 13686305605486517093
+  ChildIds: 12391244059088563209
   ChildIds: 9584699139804012847
   ChildIds: 3571165996925364878
   ChildIds: 6055285752053378617
@@ -11400,6 +11585,301 @@ Objects {
   }
 }
 Objects {
+  Id: 12391244059088563209
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 327447313308952660
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 60
+    Height: 60
+    UIX: 17.1966553
+    UIY: 60.2321129
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9722663739032956639
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13686305605486517093
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 327447313308952660
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 60
+    Height: 60
+    UIX: 17.1966553
+    UIY: 69.7753601
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9722663739032956639
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1533870575865777976
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 327447313308952660
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 60
+    Height: 60
+    UIX: 17.1966553
+    UIY: 78.1410065
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9722663739032956639
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 9030850152831801806
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 327447313308952660
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 60
+    Height: 60
+    UIX: 8.59832764
+    UIY: 70.6144867
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9722663739032956639
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14491012727042309263
+  Name: "Icon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 327447313308952660
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 60
+    Height: 60
+    UIX: 47.2907104
+    UIY: 89.9683685
+    RotationAngle: 45
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9722663739032956639
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 1588279702830741962
   Name: "Icon"
   Transform {
@@ -11421,9 +11901,11 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 90
-    Height: 90
-    UIY: 58.7870636
+    Width: 60
+    Height: 60
+    UIX: 1.07476807
+    UIY: 106.096573
+    RotationAngle: 45
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11431,7 +11913,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1283463588493558965
+        Id: 9722663739032956639
       }
       Color {
         R: 1

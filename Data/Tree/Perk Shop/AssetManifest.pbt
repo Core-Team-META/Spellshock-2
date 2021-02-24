@@ -107,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9722663739032956639
+  Name: "Fantasy Coins 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_004"
+  }
+}
+Assets {
   Id: 9154708136365239881
   Name: "Fantasy Ability Blue 048"
   PlatformAssetType: 9
@@ -131,6 +140,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Frame_001"
+  }
+}
+Assets {
+  Id: 7585529932942736913
+  Name: "Fantasy Coins 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_009"
   }
 }
 Assets {
@@ -230,6 +248,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_018"
+  }
+}
+Assets {
+  Id: 955340689223569148
+  Name: "Fantasy Coins 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_010"
   }
 }
 Assets {
