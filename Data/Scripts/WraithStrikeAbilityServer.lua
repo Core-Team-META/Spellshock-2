@@ -225,8 +225,8 @@ function DisableFlying()
 		print("Resetting playe settings")
 		OWNER:ResetVelocity()
 		OWNER:ActivateWalking()
-		player.movementControlMode = MovementControlMode.LOOK_RELATIVE
-		player.gravityScale = 1.9
+		OWNER.movementControlMode = MovementControlMode.LOOK_RELATIVE
+		OWNER.gravityScale = 1.9
 	end
 	isFlying = false
 
