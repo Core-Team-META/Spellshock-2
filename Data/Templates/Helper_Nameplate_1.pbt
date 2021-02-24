@@ -350,6 +350,7 @@ Assets {
         Text {
           Text: "HELLO WORLD"
           FontAsset {
+            Id: 16670222695632479546
           }
           Color {
             R: 1
@@ -392,6 +393,7 @@ Assets {
         Text {
           Text: "HELLO WORLD"
           FontAsset {
+            Id: 16670222695632479546
           }
           Color {
             R: 1
@@ -743,6 +745,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_opaque_emissive"
+      }
+    }
+    Assets {
+      Id: 16670222695632479546
+      Name: "Play Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "PlayBold_ref"
       }
     }
     PrimaryAssetId {
