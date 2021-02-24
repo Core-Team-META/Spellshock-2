@@ -179,6 +179,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4727080213227783003
+  Name: "Fantasy Craft Crystal 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Crystal_007"
+  }
+}
+Assets {
   Id: 3622280845155549501
   Name: "Fantasy Book 001"
   PlatformAssetType: 9
@@ -224,12 +233,12 @@ Assets {
   }
 }
 Assets {
-  Id: 1283463588493558965
-  Name: "Fantasy Gold 001"
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Gold_002"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
