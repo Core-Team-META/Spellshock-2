@@ -59,10 +59,6 @@ function OnBindingPressed(player, binding)
 				end
 			end
 
-			-- Store default player settings
-			DefaultPlayerSetttings.movementControlMode = player.movementControlMode
-            DefaultPlayerSetttings.gravityScale = player.gravityScale
-
 			-- Change player settings for flying effect
 			player.movementControlMode = MovementControlMode.NONE
             
@@ -157,8 +153,8 @@ function OnTargetChosen(player, targetPos)
 
         -- Grounded
         player:ResetVelocity()
-        player.movementControlMode = DefaultPlayerSetttings.movementControlMode
-		player.gravityScale = DefaultPlayerSetttings.gravityScale
+        player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+		player.gravityScale = 1.9
 		isFlying = false
         player.serverUserData.immuneToFallDamage = false
 
