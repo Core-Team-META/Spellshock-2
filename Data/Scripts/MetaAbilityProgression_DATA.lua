@@ -298,16 +298,16 @@ classTable = {
         --Hawk
         [CONST.BIND.T] = {
             -- mod1 = Hawk Speed, mod2 = LifeSpan, mod3 = Damage Amount, mod4 = Attack Range, mod 5 = Status Effect Slow
-            [1] = {mod1 = 800, mod2 = 8, mod3 = 50, mod4 = 800, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [2] = {mod1 = 900, mod2 = 8, mod3 = 55, mod4 = 900, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [3] = {mod1 = 1000, mod2 = 9, mod3 = 60, mod4 = 1000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [4] = {mod1 = 1100, mod2 = 9, mod3 = 65, mod4 = 1100, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [5] = {mod1 = 1200, mod2 = 10, mod3 = 70, mod4 = 1200, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [6] = {mod1 = 1300, mod2 = 10, mod3 = 75, mod4 = 1300, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [7] = {mod1 = 1400, mod2 = 11, mod3 = 80, mod4 = 1400, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [8] = {mod1 = 1500, mod2 = 11, mod3 = 85, mod4 = 1500, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [9] = {mod1 = 1600, mod2 = 12, mod3 = 90, mod4 = 1600, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20},
-            [10] = {mod1 = 1700, mod2 = 12, mod3 = 100, mod4 = 1700, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20}
+            [1] = {mod1 = 1200, mod2 = 8, mod3 = 50, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 25},
+            [2] = {mod1 = 1200, mod2 = 8, mod3 = 52, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 24},
+            [3] = {mod1 = 1200, mod2 = 9, mod3 = 54, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 23},
+            [4] = {mod1 = 1200, mod2 = 9, mod3 = 56, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 23},
+            [5] = {mod1 = 1200, mod2 = 10, mod3 = 58, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 22},
+            [6] = {mod1 = 1300, mod2 = 10, mod3 = 60, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 22},
+            [7] = {mod1 = 1400, mod2 = 11, mod3 = 62, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 21},
+            [8] = {mod1 = 1500, mod2 = 11, mod3 = 64, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 21},
+            [9] = {mod1 = 1600, mod2 = 12, mod3 = 67, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 21},
+            [10] = {mod1 = 1700, mod2 = 12, mod3 = 70, mod4 = 2000, mod5 = {duration = 5, damage = 0, multiplier = 0.5}, mod6 = 20}
         },
         --Roll
         [CONST.BIND.SHIFT] = {

@@ -141,9 +141,9 @@ function OnPlayerJoined(player)
 		Vector3.New(50.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, -100.0 * (HEALTHBAR_HEIGHT + BORDER_WIDTH))
 	) -- Text must be 50 units ahead as it doesn't have thickness
 
-	nameplates[player].statusEffectIcons = {}
+	--nameplates[player].statusEffectIcons = {}
 	nameplates[player].panel = nameplateRoot:GetCustomProperty("Panel"):WaitForObject()
-
+--[[
 	if not STATUS_EFFECT_X_STEP then
 		STATUS_EFFECT_X_STEP = nameplates[player].panel.width / API_SE.MAX_STATUS_EFFECTS
 	end
@@ -154,7 +154,7 @@ function OnPlayerJoined(player)
 		iconTemplate.x = STATUS_EFFECT_X_STEP * (i - (API_SE.MAX_STATUS_EFFECTS + 1) / 2)
 		iconTemplate.y = 0
 		nameplates[player].statusEffectIcons[i] = iconTemplate
-	end
+	end]]--
 
 	-- For animating changes. Each change clobbers the previous state.
 	nameplates[player].lastHealthFraction = 1.0
@@ -271,7 +271,7 @@ end
 -- nil Tick(float)
 -- Update dynamic properties (ex. team, health, and health animation) of every nameplate
 function Tick(deltaTime)
-	for _, player in pairs(Game.GetPlayers()) do
+	for _, player in ipairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
 
 		if nameplate and Object.IsValid(player) and shouldShow then
@@ -461,14 +461,15 @@ end
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
 	if newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_LOBBY then
 		shouldShow = true
+		
 	else
 		shouldShow = false
 	end
 end
 
-if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND or ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY then
+--[[if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND or ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY then
 	shouldShow = false
-end
+end]]--
 
 -- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

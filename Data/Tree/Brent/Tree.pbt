@@ -286,28 +286,6 @@ Objects {
   }
 }
 Objects {
-  Id: 17296953895266496212
-  Name: "Achievement System"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Achivment System"
-  }
-}
-Objects {
   Id: 15158778296469342239
   Name: "Chat Hook Commands"
   Transform {
@@ -331,6 +309,32 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Chat Hook Commands"
+  }
+}
+Objects {
+  Id: 15766608560554198711
+  Name: "RewardSystem"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "RewardSystem"
   }
 }
 Objects {
@@ -405,32 +409,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Status Effect System"
-  }
-}
-Objects {
-  Id: 15766608560554198711
-  Name: "RewardSystem"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "RewardSystem"
   }
 }
 Objects {

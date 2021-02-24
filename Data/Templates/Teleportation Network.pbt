@@ -165,6 +165,8 @@ Assets {
         }
         Text {
           Text: "TELEPORT"
+          FontAsset {
+          }
           Color {
             R: 1
             G: 1
@@ -485,6 +487,8 @@ Assets {
         }
         Text {
           Text: "TELEPORT"
+          FontAsset {
+          }
           Color {
             R: 1
             G: 1

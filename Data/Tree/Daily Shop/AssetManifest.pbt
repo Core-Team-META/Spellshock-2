@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11711350196513819217
+  Name: "Fantasy Chest 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_004"
+  }
+}
+Assets {
   Id: 11569271256789181933
   Name: "Fantasy Craft Crystal 005"
   PlatformAssetType: 9
@@ -176,15 +185,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
-  Id: 5464433298795183394
-  Name: "Coffee"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Urban_Icon_032"
   }
 }
 Assets {

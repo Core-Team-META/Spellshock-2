@@ -24,17 +24,23 @@ local HawkTarget = nil
 local PreviousTarget = nil
 local Timer = 0
 local PlayerVFX = nil
+local hasFoundTarget = false
+local ownerCameraRotation
+local ownerVectorForward
 
 function OnAbilityExecute(thisAbility)
-	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then 
-		return 
+	if thisAbility:GetCurrentPhase() == AbilityPhase.READY then
+		return
 	end
 	local OwnerPosition = thisAbility.owner:GetWorldPosition()
 	local startingPosition = OwnerPosition + Vector3.New(0, 0, 200)
 	local startingRotation = thisAbility.owner:GetWorldRotation()
+	ownerCameraRotation = thisAbility.owner:GetViewWorldRotation()
+	ownerVectorForward = ownerCameraRotation * Vector3.FORWARD
 	HitPlayers = {}
 	PreviousTarget = nil
 	HawkTarget = nil
+	hasFoundTarget = nil
 
 	local hawkTemplate = PlayerVFX.Template
 	CurrentHawk = META_AP().SpawnAsset(hawkTemplate, {position = startingPosition, rotation = startingRotation})
@@ -44,18 +50,28 @@ function OnAbilityExecute(thisAbility)
 	CurrentHawk:SetNetworkedCustomProperty("Owner", thisAbility.owner.id)
 	Task.Wait(1)
 	if Object.IsValid(SpecialAbility) then
-		Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_LifeSpan, SpecialAbility.name .. ": LifeSpan")
+		Timer =
+			META_AP().GetAbilityMod(
+			SpecialAbility.owner,
+			META_AP().T,
+			"mod2",
+			DEFAULT_LifeSpan,
+			SpecialAbility.name .. ": LifeSpan"
+		)
 		CurrentHawk.lifeSpan = Timer + 5
 	end
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
-	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name..": Cooldown")
-	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
-			thisAbility:AdvancePhase()
-		end
-	end, Cooldown)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name .. ": Cooldown")
+	Task.Spawn(
+		function()
+			if Object.IsValid(thisAbility) then
+				thisAbility:AdvancePhase()
+			end
+		end,
+		Cooldown
+	)
 end
 
 function OnPlayerRespawn(player)
@@ -103,12 +119,13 @@ function Tick(deltaTime)
 
 		if HawkTarget and Object.IsValid(HawkTarget) and not HawkTarget.isDead and CurrentHawk and Object.IsValid(CurrentHawk) then
 			CurrentHawk:LookAtContinuous(HawkTarget, true)
-
+			hasFoundTarget = true
 			local DistanceVector = HawkTarget:GetWorldPosition() - CurrentHawk:GetWorldPosition()
 			--print("DISTANCE: "..tostring(DistanceVector.size))
 
 			if DistanceVector.size < 150 then
-				local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
+				local status =
+					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", {}, SpecialAbility.name .. ": Status")
 				API_SE.ApplyStatusEffect(
 					HawkTarget,
 					API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
@@ -160,7 +177,13 @@ function Tick(deltaTime)
 				--local velocityVector = (DistanceVector/DistanceVector.size) * HawkSpeed
 				--CurrentHawk:MoveContinuous(velocityVector)
 				local HawkSpeed =
-					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, SpecialAbility.name .. ": Speed")
+					META_AP().GetAbilityMod(
+					SpecialAbility.owner,
+					META_AP().T,
+					"mod1",
+					DEFAULT_HawkSpeed,
+					SpecialAbility.name .. ": Speed"
+				)
 				CurrentHawk:MoveTo(HawkTarget:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
 			end
 		else
@@ -170,7 +193,13 @@ function Tick(deltaTime)
 			end
 			-- Check for enemies in the area
 			local HawkRange =
-				META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", DEFAULT_HawkRange, SpecialAbility.name .. ": Range")
+				META_AP().GetAbilityMod(
+				SpecialAbility.owner,
+				META_AP().T,
+				"mod4",
+				DEFAULT_HawkRange,
+				SpecialAbility.name .. ": Range"
+			)
 			local neabyEnemies =
 				Game.FindPlayersInSphere(
 				CurrentHawk:GetWorldPosition(),
@@ -192,12 +221,43 @@ function Tick(deltaTime)
 
 			if HawkTarget == nil and PreviousTarget ~= nil and Object.IsValid(PreviousTarget) and not PreviousTarget.isDead then
 				HawkTarget = PreviousTarget
+			elseif hasFoundTarget then
+				local HawkSpeed =
+					META_AP().GetAbilityMod(
+					SpecialAbility.owner,
+					META_AP().T,
+					"mod1",
+					DEFAULT_HawkSpeed,
+					SpecialAbility.name .. ": Speed"
+				)
+				local DistanceVector = SpecialAbility.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
+				CurrentHawk:MoveTo(
+					SpecialAbility.owner:GetWorldPosition() + Vector3.New(0, 0, 130),
+					DistanceVector.size / HawkSpeed
+				)
+				CurrentHawk:LookAtContinuous(SpecialAbility.owner, true)
 			else
 				local HawkSpeed =
-					META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_HawkSpeed, SpecialAbility.name .. ": Speed")
-				local DistanceVector = SpecialAbility.owner:GetWorldPosition() - CurrentHawk:GetWorldPosition()
-				CurrentHawk:MoveTo(SpecialAbility.owner:GetWorldPosition() + Vector3.New(0, 0, 130), DistanceVector.size / HawkSpeed)
-				CurrentHawk:LookAtContinuous(SpecialAbility.owner, true)
+					META_AP().GetAbilityMod(
+					SpecialAbility.owner,
+					META_AP().T,
+					"mod1",
+					DEFAULT_HawkSpeed,
+					SpecialAbility.name .. ": Speed"
+				)
+				ownerVectorForward.z = 0
+				
+				local newPos = ownerVectorForward * HawkSpeed
+				local hawkPos = CurrentHawk:GetWorldPosition()
+				local groundPos = CurrentHawk:GetWorldPosition()
+				groundPos.z = groundPos.z - 10000
+				local hitResult = World.Raycast(hawkPos, groundPos, {ignorePlayers = true})
+				if hitResult then
+					local hitPos = hitResult:GetImpactPosition()
+					hitPos.z = hitPos.z + 400
+					CurrentHawk:SetWorldPosition(hitPos)
+				end
+				CurrentHawk:MoveContinuous(newPos)
 			end
 		end
 	end
