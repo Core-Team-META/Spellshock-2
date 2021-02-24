@@ -44,7 +44,7 @@ function OnKillStreak(player, value)
 end
 
 function OnPlayerKill(player)
-    player.serverUserData.ACH_killCount = player.serverUserData.ACH_killCount + 1
+    player.serverUserData.ACH_killCount = player.serverUserData.ACH_killCount and player.serverUserData.ACH_killCount + 1 or 1
 
     ACH_API.AddProgress(player, "AS_25KILL", 1)
     ACH_API.AddProgress(player, "AS_5KILL", 1)

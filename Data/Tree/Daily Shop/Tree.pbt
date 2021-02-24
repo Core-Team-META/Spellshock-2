@@ -15563,6 +15563,7 @@ Objects {
   ChildIds: 950422368440069121
   ChildIds: 7687002256737374689
   ChildIds: 11347132908669809659
+  ChildIds: 11778013134628366842
   ChildIds: 15993650598101417985
   ChildIds: 13134585021328533812
   ChildIds: 10294875154329826474
@@ -16310,12 +16311,69 @@ Objects {
     }
     Image {
       Brush {
-        Id: 5464433298795183394
+        Id: 11711350196513819217
       }
       Color {
         R: 1
         G: 1
         B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11778013134628366842
+  Name: "ICON_DAILY_SHOP_GLOW"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3295918065168998366
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 95
+    Height: 95
+    UIY: 16.519
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 8578995028087510781
+      }
+      Color {
+        R: 1
+        G: 0.7880795
+        B: 0.199999988
         A: 1
       }
       TeamSettings {
@@ -16367,7 +16425,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 5464433298795183394
+        Id: 11711350196513819217
       }
       Color {
         R: 0.0700000525
