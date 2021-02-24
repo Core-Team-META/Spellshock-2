@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Copyright 2019 Manticore Games, Inc. 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -35,7 +35,7 @@ local SHOW_NUMBERS = COMPONENT_ROOT:GetCustomProperty("ShowNumbers")
 local ANIMATE_CHANGES = COMPONENT_ROOT:GetCustomProperty("AnimateChanges")
 local CHANGE_ANIMATION_TIME = COMPONENT_ROOT:GetCustomProperty("ChangeAnimationTime")
 local SHOW_SEGMENTS = COMPONENT_ROOT:GetCustomProperty("ShowSegments")
-local SEGMENT_SIZE = COMPONENT_ROOT:GetCustomProperty("SegmentSize")
+local SEGMENT_SIZE = COMPONENT_ROOT:GetCustomProperty("SegmentSize") or 20.0
 
 -- User exposed properties (colors)
 local FRIENDLY_NAME_COLOR = COMPONENT_ROOT:GetCustomProperty("FriendlyNameColor")
@@ -118,7 +118,7 @@ function OnPlayerJoined(player)
 	nameplates[player].lastHealthFraction = 1.0
 	nameplates[player].lastHealthTime = 0.0
 	nameplates[player].lastFrameHealthFraction = 1.0
-	
+
 	-- Setup static properties
 	nameplateRoot:AttachToPlayer(player, "nameplate")
 
@@ -237,7 +237,7 @@ end
 -- nil Tick(float)
 -- Update dynamic properties (ex. team, health, and health animation) of every nameplate
 function Tick(deltaTime)
-	for _, player in pairs(Game.GetPlayers()) do
+	for _, player in ipairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
 		local visible = IsNameplateVisible(player)
 

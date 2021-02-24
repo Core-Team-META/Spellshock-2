@@ -1,6 +1,6 @@
 ﻿-- Internal custom properties
 local WEAPON = script:GetCustomProperty("Weapon"):WaitForObject()
-if not WEAPON:IsA('Weapon') then
+if not WEAPON:IsA("Weapon") then
     error(script.name .. " should be part of Weapon object hierarchy.")
 end
 local SERVER_SCRIPT = script:GetCustomProperty("ServerScript"):WaitForObject()
@@ -26,8 +26,9 @@ local spreadLerpTime = 0
 local activeCamera = nil
 
 function Tick(deltaTime)
-
-    if not Object.IsValid(WEAPON) then return end
+    if not Object.IsValid(WEAPON) then
+        return
+    end
 
     -- Setup the new camera weapon owner
     if WEAPON and WEAPON.owner and not Object.IsValid(activeCamera) then
@@ -40,8 +41,12 @@ function Tick(deltaTime)
 end
 
 function LerpCameraDistance(deltaTime)
-    if lerpTime >= 1 then return end
-    if not Object.IsValid(activeCamera) then return end
+    if lerpTime >= 1 then
+        return
+    end
+    if not Object.IsValid(activeCamera) then
+        return
+    end
 
     if cameraTargetDistance == ZOOM_DISTANCE then
         lerpTime = lerpTime + deltaTime * ZOOM_SPEED
@@ -52,9 +57,15 @@ function LerpCameraDistance(deltaTime)
 end
 
 function LerpSpread(deltaTime)
-    if spreadLerpTime >= 1 then return end
-    if not Object.IsValid(WEAPON) then return end
-    if not Object.IsValid(WEAPON.owner) then return end
+    if spreadLerpTime >= 1 then
+        return
+    end
+    if not Object.IsValid(WEAPON) then
+        return
+    end
+    if not Object.IsValid(WEAPON.owner) then
+        return
+    end
 
     if spreadTarget == SPREAD_ZOOM then
         spreadLerpTime = spreadLerpTime + deltaTime * ZOOM_SPEED
@@ -79,7 +90,9 @@ function GetPlayerActiveCamera(player)
 end
 
 function EnableScoping(player)
-    if player.isDead then return end
+    if player.isDead then
+        return
+    end
     cameraTargetDistance = ZOOM_DISTANCE
     spreadTarget = SPREAD_ZOOM
     lerpTime = 0
@@ -96,13 +109,13 @@ end
 function OnBindingPressed(player, actionName)
     if actionName == AIM_BINDING then
         EnableScoping(player)
-	end
+    end
 end
 
 function OnBindingReleased(player, actionName)
     if actionName == AIM_BINDING then
         ResetScoping(player)
-	end
+    end
 end
 
 function OnPlayerDied(player, damage)
@@ -126,18 +139,26 @@ function OnEquipped(weapon, player)
 end
 
 function OnUnequipped(weapon, player)
-	if (pressedHandle) then pressedHandle:Disconnect() end
-	if (releasedHandle) then releasedHandle:Disconnect() end
-    if (playerDieHandle) then playerDieHandle:Disconnect() end
-
-    ResetScoping(player)
-
-    -- Remove the reference to the camera
-    if Object.IsValid(activeCamera) then
-        activeCamera.currentDistance = cameraResetDistance
-        activeCamera = nil
+    if (pressedHandle) then
+        pressedHandle:Disconnect()
     end
-    player.spreadModifier = spreadReset
+    if (releasedHandle) then
+        releasedHandle:Disconnect()
+    end
+    if (playerDieHandle) then
+        playerDieHandle:Disconnect()
+    end
+    if player and Object.IsValid(player) then
+        ResetScoping(player)
+
+        -- Remove the reference to the camera
+        if Object.IsValid(activeCamera) then
+            activeCamera.currentDistance = cameraResetDistance
+            activeCamera = nil
+        end
+
+        player.spreadModifier = spreadReset
+    end
 end
 
 -- Connecting weapon event to a function

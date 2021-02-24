@@ -24,7 +24,7 @@ function AttachCostume(player)
 end
 
 function DestroyCostume(player)
-	if player.clientUserData.PlayerCostume then
+	if player and Object.IsValid(player) and player.clientUserData.PlayerCostume then
 		for _, attachment in ipairs(player.clientUserData.PlayerCostume) do
 			attachment:Detach()
 			attachment:Destroy()

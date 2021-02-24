@@ -125,7 +125,10 @@ local function ComparePlayerCaptureAssists(player1, player2)
 end
 
 local function ComparePlayersForMVP(player1, player2)
-    if player1.clientUserData.MVP_Stats ~= player2.clientUserData.MVP_Stats then
+    if
+        player1.clientUserData.MVP_Stats and player2.clientUserData.MVP_Stats and
+            player1.clientUserData.MVP_Stats ~= player2.clientUserData.MVP_Stats
+     then
         return player1.clientUserData.MVP_Stats > player2.clientUserData.MVP_Stats
     end
     SortByPlayerName(player1, player2)
@@ -235,7 +238,10 @@ end
 function Tick()
     if ABGS.IsGameStateManagerRegistered() then
         local currentState = ABGS.GetGameState()
-        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 10 and not PARENT_PANEL:IsVisibleInHierarchy() then
+        if
+            currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 10 and
+                not PARENT_PANEL:IsVisibleInHierarchy()
+         then
             Events.Broadcast("HideVictoryPanels")
             PARENT_PANEL.visibility = Visibility.INHERIT
         elseif currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_LOBBY then
