@@ -176,12 +176,6 @@ Assets {
             Name: "cs:RadiusMod"
             String: "mod3"
           }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 3392388590054420013
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
