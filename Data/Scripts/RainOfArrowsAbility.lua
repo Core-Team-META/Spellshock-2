@@ -22,7 +22,7 @@ local PlayerVFX = nil
 function PlaceObject(thisAbility)
 	local targetData = thisAbility:GetTargetData()
 	local position = targetData:GetHitPosition()
-	local v = targetData:GetAimDirection()
+	local v = targetData:GetAimPosition()
 	local rotation = Rotation.New(v.x, v.y, v.z)
 	
 	local radius =

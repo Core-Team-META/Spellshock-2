@@ -64,7 +64,6 @@ function SetPreviewing(value)
 			
 		elseif PlayerVFX.Preview then
 			ObjectTemplate = PlayerVFX.Preview
-			
 		else
 			warn("No objectHalogram setup for " .. script.name .. ". Falling back to default.")
 			ObjectTemplate = FallbackPreviewElf
@@ -108,7 +107,7 @@ function OnSpecialAbilityCast(thisAbility)
 	targetData:SetHitPosition(lastValidPlacement.position)
 	-- Rotation
 	local r = lastValidPlacement.rotation
-	targetData:SetAimDirection(Vector3.New(r.x, r.y, r.z))
+	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))
 	-- Set the target data back
 	thisAbility:SetTargetData(targetData)
 end

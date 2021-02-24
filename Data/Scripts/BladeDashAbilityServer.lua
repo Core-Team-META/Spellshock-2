@@ -22,7 +22,7 @@ end
 function Teleport(thisAbility)
 	local targetData = thisAbility:GetTargetData()
 	local position = targetData:GetHitPosition()
-	local v = targetData:GetAimDirection()
+	local v = targetData:GetAimPosition()
 	local rotation = Rotation.New(v.x, v.y, v.z)
 
 	META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})

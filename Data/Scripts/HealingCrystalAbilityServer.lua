@@ -31,7 +31,7 @@ function PlaceObject(thisAbility)
 	-- Position
 	local position = targetData:GetHitPosition()
 	-- Rotation
-	local v = targetData:GetAimDirection()
+	local v = targetData:GetAimPosition()
 	local rotation = Rotation.New(v.x, v.y, v.z)
 	
 	local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
