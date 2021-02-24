@@ -1,4 +1,4 @@
-﻿local Drone = script:GetCustomProperty("Drone"):WaitForObject()
+local Drone = script:GetCustomProperty("Drone"):WaitForObject()
 local Beam = script:GetCustomProperty("Beam"):WaitForObject()
 local Ease3D = require(script:GetCustomProperty("Ease3D"))
 
