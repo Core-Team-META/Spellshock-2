@@ -34,7 +34,7 @@ local currentSwipe = nil
 local canAttack = false
 local bindingReleasedEvent
 
-local MAX_CHARGE = 2
+local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
 local chargeStart = 1 
 
 function Tick(deltaTime)

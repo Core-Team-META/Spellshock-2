@@ -87,11 +87,13 @@ local SWIPE_POSITION = script:GetCustomProperty("SwipePosition")
 local PLAYER_IMPACT_VFX = script:GetCustomProperty("PlayerImpactVFX")
 local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 
+local ChargeReleaseEffect = script:GetCustomProperty("ChargeReleaseEffect")
+local FullChargeEffect = script:GetCustomProperty("FullChargeEffect")
 local ChargeUITemp = "76202E0057632269:ChargeUpBar"
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local isCharging = false
-local MAX_CHARGE = 2
+local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
 local chargeStart = 1
 local ChargePanel 
 local ChargeBar
@@ -105,6 +107,11 @@ function Tick()
 		ChargePanel.visibility = Visibility.INHERIT
 		local chargeAmount = time() - chargeStart
 		ChargeBar.progress = chargeAmount / MAX_CHARGE
+
+		if chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+			World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
+			isCharging = false
+		end
 	elseif Object.IsValid(ChargePanel) then
 		ChargePanel.visibility = Visibility.FORCE_OFF
 	end
@@ -120,13 +127,20 @@ end
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
 	isCharging = false
-	
+	local chargeAmount = time() - chargeStart
+
 	local playerPos = EQUIPMENT.owner:GetWorldPosition()
 	local playerQ = Quaternion.New(EQUIPMENT.owner:GetWorldRotation())
 	local rot = Rotation.New(playerQ * Quaternion.New(SWIPE_ROTATION))
 	local pos = playerPos + playerQ * SWIPE_POSITION
-	currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot})
-     
+
+	if IS_CHARGE_ATTACK and chargeAmount > MAX_CHARGE then
+		currentSwipe = World.SpawnAsset(ChargeReleaseEffect, {position = pos, rotation = rot})
+	else
+		-- #TODO: calaculate scale
+		currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot})
+	end
+
 	if CALIBRATE_SWIPE then
 		BeginSwipeCalibration()
 	end

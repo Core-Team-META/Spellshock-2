@@ -1371,13 +1371,25 @@ Assets {
           Overrides {
             Name: "cs:SwipeEffect"
             AssetReference {
-              Id: 8798478507278226874
+              Id: 10354475835429315773
             }
           }
           Overrides {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 13709554481697835406
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeReleaseEffect"
+            AssetReference {
+              Id: 8798478507278226874
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 6147896150544354150
             }
           }
         }
@@ -2062,6 +2074,10 @@ Assets {
           Overrides {
             Name: "cs:IsChargeAttack"
             Bool: true
+          }
+          Overrides {
+            Name: "cs:ChargeDuration"
+            Float: 1.5
           }
         }
         WantsNetworking: true
