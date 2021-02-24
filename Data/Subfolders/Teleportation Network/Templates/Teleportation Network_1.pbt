@@ -156,6 +156,8 @@ Assets {
         }
         Text {
           Text: "DESTINATION A"
+          FontAsset {
+          }
           Color {
             R: 1
             G: 1
@@ -354,6 +356,8 @@ Assets {
         }
         Text {
           Text: "DESTINATION B"
+          FontAsset {
+          }
           Color {
             R: 1
             G: 1
