@@ -274,6 +274,8 @@ Objects {
   }
   Text {
     Text: "TELEPORT"
+    FontAsset {
+    }
     Color {
       R: 1
       G: 1
@@ -600,6 +602,8 @@ Objects {
   }
   Text {
     Text: "TELEPORT"
+    FontAsset {
+    }
     Color {
       R: 1
       G: 1

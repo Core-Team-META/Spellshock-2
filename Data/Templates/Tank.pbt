@@ -1345,9 +1345,9 @@ Assets {
           Overrides {
             Name: "cs:SwipeRotation"
             Rotator {
-              Pitch: 15.016
-              Yaw: 35.807
-              Roll: -13.081
+              Pitch: 3.016
+              Yaw: 8.807
+              Roll: -3.081
             }
           }
           Overrides {
@@ -1371,7 +1371,7 @@ Assets {
           Overrides {
             Name: "cs:SwipeEffect"
             AssetReference {
-              Id: 10354475835429315773
+              Id: 8798478507278226874
             }
           }
           Overrides {
@@ -2127,7 +2127,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
