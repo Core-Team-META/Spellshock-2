@@ -22940,7 +22940,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:TeamScoreLimit"
-      Int: 5
+      Int: 500
     }
     Overrides {
       Name: "cs:TeamScoreLimit:tooltip"
@@ -23158,11 +23158,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 1
+      Int: 2
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 5
+      Float: 40
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"

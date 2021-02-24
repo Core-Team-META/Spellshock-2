@@ -51,11 +51,8 @@ function OnBindingPressed(player, binding)
             --Disable active abilities
 			ActiveAbilities = {}
 			for _, playerAbility in pairs(player:GetAbilities()) do
-				if playerAbility.isEnabled and playerAbility ~= SpecialAbility then
-					if not playerAbility:GetCustomProperty("Binding") then
-						playerAbility.isEnabled = false
-						table.insert(ActiveAbilities, playerAbility)
-					end
+				if playerAbility ~= SpecialAbility then
+					table.insert(ActiveAbilities, playerAbility)
 				end
 			end
 
@@ -224,13 +221,12 @@ end
 function DisableFlying()
 	print("Disabling Wraith Strike")
 
-	if Object.IsValid(OWNER) and DefaultPlayerSetttings.movementControlMode then 
+	if Object.IsValid(OWNER) then 
 		print("Resetting playe settings")
 		OWNER:ResetVelocity()
 		OWNER:ActivateWalking()
-		OWNER.gravityScale = DefaultPlayerSetttings.gravityScale
-        OWNER.movementControlMode = DefaultPlayerSetttings.movementControlMode
-		DefaultPlayerSetttings = {}
+		player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+		player.gravityScale = 1.9
 	end
 	isFlying = false
 
