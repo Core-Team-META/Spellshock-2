@@ -90,13 +90,14 @@ function OnBindingPressed(player, binding)
 	if not isPreviewing and binding == AbilityBinding and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 		SetPreviewing(true)
 		
-	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and objectHalogram and Object.IsValid(objectHalogram) then
+	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and Object.IsValid(objectHalogram) then
 		SpecialAbility:Activate()
+		Task.Wait()
 		SetPreviewing(false)
 		
 	elseif isPreviewing and binding ~= AbilityBinding and CancelBindings[binding] then
 		SetPreviewing(false)
-	end
+	end	
 end
 
 
