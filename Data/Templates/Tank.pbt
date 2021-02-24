@@ -2059,6 +2059,10 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "cs:IsChargeAttack"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2098,7 +2102,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 1000
             CanMove: true
             CanJump: true
             CanRotate: true

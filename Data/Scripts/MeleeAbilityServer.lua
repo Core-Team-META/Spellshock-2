@@ -24,6 +24,7 @@ local ATTACK_IMPULSE = script:GetCustomProperty("AttackImpulse") or 50000
 local VERTICAL_IMPULSE = script:GetCustomProperty("VerticalImpulse") or 20000
 
 local DEFAULT_DamageRange = {min=DAMAGE_RANGE.x, max=DAMAGE_RANGE.y}
+local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 
 local BindingName = script:GetCustomProperty("BindingName")
 local AbilityMod = script:GetCustomProperty("AbilityMod")
@@ -31,6 +32,10 @@ local AbilityMod = script:GetCustomProperty("AbilityMod")
 local ignoreList = {}
 local currentSwipe = nil
 local canAttack = false
+local bindingReleasedEvent
+
+local MAX_CHARGE = 2
+local chargeStart = 1 
 
 function Tick(deltaTime)
 	if Object.IsValid(ABILITY) and ABILITY.owner and not ABILITY.owner.isDead and canAttack then
@@ -71,9 +76,21 @@ function MeleeAttack(other)
 	if ignoreList[other] ~= 1 then
 		ignoreList[other] = 1
 
+		local dmgMultiplier = 1
+
+		if IS_CHARGE_ATTACK then
+			local totalChargeTime = time() - chargeStart
+			if totalChargeTime > 0.3 then
+				dmgMultiplier = (totalChargeTime / MAX_CHARGE) + 1
+				dmgMultiplier = CoreMath.Clamp(dmgMultiplier, 1, 2)
+			end
+		end
+
+		print("Multiplier: "..tostring(dmgMultiplier))
+
 		local dmg = Damage.New()
 		local rangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, ABILITY.name..": Damage Range")
-		dmg.amount = math.random(rangeTable.min, rangeTable.max)
+		dmg.amount = math.random(rangeTable.min, rangeTable.max) * dmgMultiplier
 		dmg.reason = DamageReason.COMBAT
 		dmg.sourcePlayer = ABILITY.owner
 		dmg.sourceAbility = ABILITY
@@ -123,6 +140,17 @@ function OnEquipped(equipment, player)
 	end
 end
 
+function OnBindingReleased(player, bind)
+	if ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
+		ABILITY:AdvancePhase()
+	end
+end
+
+function OnCast(thisAbility)
+	chargeStart = time()
+	bindingReleasedEvent = thisAbility.owner.bindingReleasedEvent:Connect(OnBindingReleased)
+end
+
 function OnExecute(ability)
 	ignoreList = {}
 	canAttack = true
@@ -136,6 +164,9 @@ function ResetMelee(ability)
 	-- Forget anything we hit this swing
 	ignoreList = {}
 	canAttack = false
+	if bindingReleasedEvent then
+		bindingReleasedEvent:Disconnect()
+	end
 end
 
 -- Registering equipment events
@@ -144,4 +175,7 @@ EQUIPMENT.unequippedEvent:Connect(ResetMelee)
 HIT_BOX.beginOverlapEvent:Connect(OnBeginOverlap)
 
 ABILITY.executeEvent:Connect(OnExecute)
+if IS_CHARGE_ATTACK then
+	ABILITY.castEvent:Connect(OnCast)
+end
 ABILITY.recoveryEvent:Connect(ResetMelee)

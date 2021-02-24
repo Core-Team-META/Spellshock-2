@@ -74,8 +74,7 @@
 	9. Delete the weapon from the hierarchy when you are done.
 --]]
 
-local EQUIPMENT = script:FindAncestorByType("Equipment")
-
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
 local CALIBRATE_SWIPE = script:GetCustomProperty("CalibrateSwipe") -- A debug flag
@@ -86,17 +85,42 @@ local SWIPE_ROTATION = script:GetCustomProperty("SwipeRotation")
 local SWIPE_POSITION = script:GetCustomProperty("SwipePosition")
 
 local PLAYER_IMPACT_VFX = script:GetCustomProperty("PlayerImpactVFX")
+local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 
+local ChargeUITemp = "76202E0057632269:ChargeUpBar"
+
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+local isCharging = false
+local MAX_CHARGE = 2
+local chargeStart = 1
+local ChargePanel 
+local ChargeBar
 
 function Tick()
 	if CALIBRATE_SWIPE then
 		UpdateSwipeCalibration()
 	end
+
+	if isCharging and Object.IsValid(ChargePanel) then
+		ChargePanel.visibility = Visibility.INHERIT
+		local chargeAmount = time() - chargeStart
+		ChargeBar.progress = chargeAmount / MAX_CHARGE
+	elseif Object.IsValid(ChargePanel) then
+		ChargePanel.visibility = Visibility.FORCE_OFF
+	end
+end
+
+function OnCast(thisAbility)
+	if IS_CHARGE_ATTACK then
+		chargeStart = time()
+		isCharging = true
+	end
 end
 
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
-		
+	isCharging = false
+	
 	local playerPos = EQUIPMENT.owner:GetWorldPosition()
 	local playerQ = Quaternion.New(EQUIPMENT.owner:GetWorldRotation())
 	local rot = Rotation.New(playerQ * Quaternion.New(SWIPE_ROTATION))
@@ -114,8 +138,30 @@ function OnRecovery(ability)
 	end
 end
 
+function OnEquipped(equipment, player)
+	if player == LOCAL_PLAYER and IS_CHARGE_ATTACK then
+		ChargePanel = World.SpawnAsset(ChargeUITemp)
+		ChargeBar = ChargePanel:GetCustomProperty("ProgressBar"):WaitForObject()
+	end
+end
+
+function OnUnequip(equipment, player)
+	if ChargePanel then
+		ChargePanel:Destroy()
+	end
+end
+
+if EQUIPMENT.owner then
+	OnEquipped(EQUIPMENT, EQUIPMENT.owner)
+else
+	EQUIPMENT.equippedEvent:Connect(OnEquipped)
+end
+EQUIPMENT.unequippedEvent:Connect(OnUnequip)
 ABILITY.executeEvent:Connect(OnExecute)
 ABILITY.recoveryEvent:Connect(OnRecovery)
+if IS_CHARGE_ATTACK then
+	ABILITY.castEvent:Connect(OnCast)
+end
 
 function OnMeleeImpact(abilityId, pos, rot)
 	if PLAYER_IMPACT_VFX and Object.IsValid(ABILITY) and abilityId == ABILITY.id then
