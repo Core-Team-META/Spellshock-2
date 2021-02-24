@@ -199,9 +199,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.8
-            Y: 0.8
-            Z: 0.8
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 6339643438101885973
@@ -1446,15 +1446,15 @@ Assets {
         Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            Z: -535.211426
+            Z: -535.211609
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 2.37913251
-            Y: 2.37912083
-            Z: 18.7931767
+            X: 5.5822835
+            Y: 5.5822897
+            Z: 20.9992046
           }
         }
         ParentId: 4656506542533561003
@@ -1470,9 +1470,8 @@ Assets {
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 1
-              G: 0.473499954
-              B: 0.189999938
+              R: 0.39200002
+              G: 0.038347844
               A: 1
             }
           }
@@ -1483,17 +1482,14 @@ Assets {
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.49
-              G: 0.1225
+              R: 0.39200002
+              G: 0.038347844
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 1
-              G: 0.873500049
-              B: 0.31
               A: 1
             }
           }
@@ -1524,7 +1520,7 @@ Assets {
           Overrides {
             Name: "bp:Type"
             Enum {
-              Value: "mc:ethrustermeshvar:4"
+              Value: "mc:ethrustermeshvar:1"
             }
           }
           Overrides {
@@ -1553,7 +1549,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Enable Inner Core Layer"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Enable Mid Layer"

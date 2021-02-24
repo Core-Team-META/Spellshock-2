@@ -1,6 +1,79 @@
 Name: "Witcher"
 RootId: 14162296025304194376
 Objects {
+  Id: 16980210002526345765
+  Name: "Rock Flat 01"
+  Transform {
+    Location {
+      X: 38764.3867
+      Y: 29769.3906
+      Z: 2206.45264
+    }
+    Rotation {
+      Pitch: -1.52960205
+      Yaw: 109.963264
+      Roll: -178.35202
+    }
+    Scale {
+      X: 1.63184392
+      Y: 3.88338351
+      Z: 2.04239035
+    }
+  }
+  ParentId: 14162296025304194376
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13065655182320038362
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.88500005
+        G: 0.774169922
+        B: 0.61065
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2.61012125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.61012125
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4842806961858489681
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 5280935401388171125
   Name: "Rock Flat 01"
   Transform {
@@ -15,9 +88,9 @@ Objects {
       Roll: -159.680023
     }
     Scale {
-      X: 2.95013809
-      Y: 3.7499938
-      Z: 3.49930024
+      X: 2.95013547
+      Y: 5.37211
+      Z: 3.49929571
     }
   }
   ParentId: 14162296025304194376
@@ -80,9 +153,9 @@ Objects {
       Roll: -169.080948
     }
     Scale {
-      X: 2.95013785
-      Y: 3.74999166
-      Z: 6.67155886
+      X: 2.95013738
+      Y: 5.70107794
+      Z: 6.67156935
     }
   }
   ParentId: 14162296025304194376
@@ -135,9 +208,9 @@ Objects {
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: 38932.2891
-      Y: 29576.127
-      Z: 2103.96436
+      X: 38784.6641
+      Y: 29724.8086
+      Z: 2121.67529
     }
     Rotation {
       Pitch: -4.85256958
@@ -145,9 +218,9 @@ Objects {
       Roll: -169.081009
     }
     Scale {
-      X: 2.50000548
-      Y: 3.74999809
-      Z: 2.04238892
+      X: 2.50000334
+      Y: 5.372118
+      Z: 2.04238605
     }
   }
   ParentId: 14162296025304194376
@@ -10172,10 +10245,10 @@ Objects {
   ChildIds: 6408905260295144167
   ChildIds: 3075184271881805343
   ChildIds: 12338177664323810263
-  ChildIds: 713905896997721129
-  ChildIds: 15481148716723326991
   ChildIds: 14493132290779803639
   ChildIds: 5341131626927997607
+  ChildIds: 713905896997721129
+  ChildIds: 15481148716723326991
   ChildIds: 6100781853705067113
   ChildIds: 9687886825386178366
   ChildIds: 8777211559642771132
@@ -11643,170 +11716,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5341131626927997607
-  Name: "STORE_TankElfCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6211165977381076390
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Tank"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Tank_Elf_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Tank"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 4749402639707591408
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Legendary"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 17459582866457614450
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 3191591647685321622
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 14493132290779803639
-  Name: "STORE_TankOrcCostumeLegendary"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6211165977381076390
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Legendary Tank"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Tank_Orc_Legendary_Outfit"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Tank"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Outfit"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "Head"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 13121404178247294828
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Legendary"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 17459582866457614450
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 3191591647685321622
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
   Id: 15481148716723326991
   Name: "STORE_TankElfCostumeFrost"
   Transform {
@@ -11869,7 +11778,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "Legendary"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -11952,6 +11861,170 @@ Objects {
     Overrides {
       Name: "cs:PlayerVisibility"
       Bool: true
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Legendary"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 5341131626927997607
+  Name: "STORE_TankElfCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6211165977381076390
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Tank"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Elf_Epic_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Tank"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 4749402639707591408
+      }
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Epic"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 17459582866457614450
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 3191591647685321622
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 14493132290779803639
+  Name: "STORE_TankOrcCostumeLegendary"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6211165977381076390
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Epic Tank"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Tank_Orc_Epic_Outfit"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 20
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Tank"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Outfit"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "Head"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 13121404178247294828
+      }
     }
     Overrides {
       Name: "cs:Team"
@@ -12808,9 +12881,9 @@ Objects {
   Name: "Victory Screen"
   Transform {
     Location {
-      X: 39094.1172
+      X: 39035.6211
       Y: 29633.4336
-      Z: 2402.58643
+      Z: 2369.18115
     }
     Rotation {
       Yaw: 175
@@ -19838,7 +19911,6 @@ Objects {
       Z: 118.091797
     }
     Rotation {
-      Pitch: -8.37387085
     }
     Scale {
       X: 1

@@ -10,9 +10,9 @@ Assets {
         Name: "STORE_HealerOrcSunBeamFire"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 20
+            Y: 20
+            Z: 20
           }
         }
         ParentId: 14162296025304194376
@@ -161,7 +161,7 @@ Assets {
         ChildIds: 16237015862679424591
         ChildIds: 6625325256121154909
         ChildIds: 2033525803202524806
-        ChildIds: 18229826181029870010
+        ChildIds: 10147663352339478608
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1398,54 +1398,120 @@ Assets {
         }
       }
       Objects {
-        Id: 18229826181029870010
-        Name: "Beam"
+        Id: 10147663352339478608
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            Z: -0.637206912
+            Z: -0.982364416
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 0.144565672
-            Y: 0.144565895
-            Z: 0.0365436263
+            X: 0.866960585
+            Y: 0.866963506
+            Z: 1.81374669
           }
         }
         ParentId: 12135521369961781036
         UnregisteredParameters {
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color B"
             Color {
-              R: 0.73
-              G: 0.159536436
+              R: 1
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Spiral Color"
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color A"
             Color {
-              R: 5
-              G: 0.189999938
-              B: 0.189999938
+              R: 1
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Beam Width Scale"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Spiral Width Multiplier"
-            Float: 0.234051526
-          }
-          Overrides {
-            Name: "bp:Color"
+            Name: "bp:Color C"
             Color {
-              R: 0.559999943
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Core End Pinch"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Top Layer Fade Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Core Fade Length"
+            Float: 0.223169759
+          }
+          Overrides {
+            Name: "bp:Core Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Core Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Top Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Mid Layer"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Mid Layer Fade Length"
+            Float: 0
           }
         }
         Collidable_v2 {
@@ -1456,7 +1522,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1317716397706920983
+            Id: 2426790310185116976
           }
           TeamSettings {
           }
@@ -1560,12 +1626,12 @@ Assets {
       }
     }
     Assets {
-      Id: 1317716397706920983
-      Name: "Laser Beam VFX"
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Laser_Beam"
+        AssetId: "fxbp_thruster_var"
       }
     }
     PrimaryAssetId {
