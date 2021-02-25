@@ -332,7 +332,11 @@ function Tick(deltaTime)
 				nameplate.dirty = false
 				nameplate.isVisible = visible
 
-				nameplate.templateRoot.visibility = Visibility.INHERIT
+				if not visible then
+					nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+				else
+					nameplate.templateRoot.visibility = Visibility.INHERIT
+				end
 
 				if SHOW_HEALTHBARS then
 					local healthFraction = player.hitPoints / player.maxHitPoints
