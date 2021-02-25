@@ -15,17 +15,30 @@ Assets {
             Z: 0.480833977
           }
         }
-        ParentId: 7183471705418217801
+        ParentId: 4781671109827199097
         ChildIds: 16288016639616168729
         ChildIds: 14791299909526739295
         ChildIds: 1516166720981538048
         ChildIds: 4750940172771595625
         ChildIds: 7350830441349903189
-        ChildIds: 14038412116305476658
+        ChildIds: 18136936266971859185
+        ChildIds: 11679352533154562918
+        ChildIds: 4005506813621150745
+        ChildIds: 6812053147987184090
+        ChildIds: 14690576106929655043
         ChildIds: 14231937286726052713
         ChildIds: 2719183743061191438
         ChildIds: 13804557278732432527
-        ChildIds: 17112449797027102209
+        ChildIds: 12370469347298376030
+        ChildIds: 11924146575484597547
+        ChildIds: 9856339796595047870
+        ChildIds: 17402812940126797448
+        ChildIds: 6028480657209507669
+        ChildIds: 1246180148186247954
+        ChildIds: 10107819541710239316
+        ChildIds: 821127345448872461
+        ChildIds: 4239170335277746348
+        ChildIds: 10008337995470282888
         ChildIds: 13375671215131043456
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -55,35 +68,6 @@ Assets {
           }
         }
         ParentId: 700686040892271832
-        ChildIds: 10135633431724403938
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 10135633431724403938
-        Name: "Group"
-        Transform {
-          Location {
-            X: 6.9168992
-            Y: -6.28225374
-            Z: -44.3206367
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.791419
-            Y: 0.791419
-            Z: 0.791419
-          }
-        }
-        ParentId: 16288016639616168729
         ChildIds: 4662264559304323132
         ChildIds: 13068458576607320479
         ChildIds: 18405242943172759517
@@ -108,22 +92,22 @@ Assets {
         Name: "pier_light"
         Transform {
           Location {
-            X: 0.0392172299
-            Y: 3.07564783
-            Z: 116.794533
+            X: 6.94778681
+            Y: -3.84835243
+            Z: 48.1128769
           }
           Rotation {
             Pitch: -1.58590841
-            Yaw: 64.9138184
+            Yaw: 64.9138336
             Roll: -0.0347289145
           }
           Scale {
-            X: 5.28450918
-            Y: 5.28450918
-            Z: 5.28450918
+            X: 4.18226147
+            Y: 4.18226147
+            Z: 4.18226147
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         ChildIds: 10428170271771638220
         ChildIds: 8548366288652775979
         ChildIds: 10509895330431509710
@@ -240,6 +224,14 @@ Assets {
             Name: "bp:Emissive Boost"
             Float: 0.761457264
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 3
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -254,7 +246,7 @@ Assets {
           Vfx {
             AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:critical"
+              Value: "mc:evfxrelevance:low"
             }
           }
         }
@@ -372,21 +364,21 @@ Assets {
         Name: "Pyramid - 8-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.0131139988
-            Y: -1.47340906
-            Z: 82.4706421
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 20.9481792
           }
           Rotation {
             Yaw: -179.999954
             Roll: -179.999954
           }
           Scale {
-            X: 1.00000083
-            Y: 0.999999583
-            Z: 1.05449224
+            X: 0.791419744
+            Y: 0.791418731
+            Z: 0.834545195
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -434,20 +426,20 @@ Assets {
         Name: "Fantasy Castle Accessory Roof 01 "
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 42.9312401
+            X: 6.92731667
+            Y: -7.44824171
+            Z: -10.3440351
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 0.0800000057
-            Y: 0.0800000504
-            Z: 0.0533447191
+            X: 0.0633135289
+            Y: 0.0633135587
+            Z: 0.0422180258
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -576,21 +568,21 @@ Assets {
         Name: "Fantasy Pommel 05"
         Transform {
           Location {
-            X: 0.0207364988
-            Y: -1.41810894
-            Z: 134.511871
+            X: 6.93296337
+            Y: -7.40447855
+            Z: 62.1347961
           }
           Rotation {
-            Yaw: -90
-            Roll: -179.999985
+            Yaw: -89.9999847
+            Roll: -179.999969
           }
           Scale {
-            X: 4.64485788
-            Y: 4.64485788
-            Z: 4.64485788
+            X: 3.67602897
+            Y: 3.67602897
+            Z: 3.67602897
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -616,19 +608,19 @@ Assets {
         Name: "Pipe - 8-Sided"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 106.280579
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 39.7918358
           }
           Rotation {
           }
           Scale {
-            X: 0.646854281
-            Y: 0.643930256
-            Z: 0.177496776
+            X: 0.51193279
+            Y: 0.50961864
+            Z: 0.140474334
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -684,19 +676,19 @@ Assets {
         Name: "Fantasy Castle Accessory Roof 01 "
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 80.284584
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 19.2181149
           }
           Rotation {
           }
           Scale {
-            X: 0.161577404
-            Y: 0.161577493
-            Z: 0.0471479744
+            X: 0.127875432
+            Y: 0.127875507
+            Z: 0.037313804
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -815,20 +807,20 @@ Assets {
         Name: "Fantasy Pommel 01"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 111.733604
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 44.1074677
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 8.64958858
-            Y: 8.64957619
-            Z: 3.2755332
+            X: 6.84544897
+            Y: 6.84543943
+            Z: 2.59231925
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -938,19 +930,19 @@ Assets {
         Name: "Pipe - 8-Sided"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 106.280579
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 39.7918358
           }
           Rotation {
           }
           Scale {
-            X: 0.699379921
-            Y: 0.696218371
-            Z: 0.191909775
+            X: 0.553502619
+            Y: 0.551000476
+            Z: 0.151881054
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -997,21 +989,21 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 82.4706192
+            X: 6.92731667
+            Y: -7.44824171
+            Z: 20.9481792
           }
           Rotation {
             Yaw: -179.999954
             Roll: -179.999954
           }
           Scale {
-            X: 1.06915116
-            Y: 1.06914973
-            Z: 1.12741041
+            X: 0.846146584
+            Y: 0.846145511
+            Z: 0.892254055
           }
         }
-        ParentId: 10135633431724403938
+        ParentId: 16288016639616168729
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1255,55 +1247,24 @@ Assets {
         }
       }
       Objects {
-        Id: 14038412116305476658
-        Name: "Group"
-        Transform {
-          Location {
-            X: -0.00203097635
-            Y: 0.00507744076
-            Z: -184.451752
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.878000498
-            Y: 0.878000498
-            Z: 0.878000498
-          }
-        }
-        ParentId: 700686040892271832
-        ChildIds: 18136936266971859185
-        ChildIds: 11679352533154562918
-        ChildIds: 4005506813621150745
-        ChildIds: 6812053147987184090
-        ChildIds: 14690576106929655043
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 18136936266971859185
         Name: "Ellipsoid - Truncated"
         Transform {
           Location {
-            Z: -95.7669678
+            X: -0.00203097635
+            Y: 0.0040619527
+            Z: -268.534668
           }
           Rotation {
             Yaw: 4.26448605e-06
           }
           Scale {
-            X: 2.47870326
-            Y: 2.47870326
-            Z: 0.235223785
+            X: 2.17630243
+            Y: 2.17630243
+            Z: 0.206526577
           }
         }
-        ParentId: 14038412116305476658
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1337,18 +1298,20 @@ Assets {
         Name: "Ellipsoid - Truncated"
         Transform {
           Location {
-            Z: -194.817505
+            X: -0.00203097635
+            Y: 0.0040619527
+            Z: -355.501099
           }
           Rotation {
             Yaw: 1.87688079e-06
           }
           Scale {
-            X: 3.23018694
-            Y: 3.23018694
-            Z: 0.560206473
+            X: 2.83610559
+            Y: 2.83610559
+            Z: 0.491861522
           }
         }
-        ParentId: 14038412116305476658
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1382,18 +1345,20 @@ Assets {
         Name: "Ellipsoid - Truncated"
         Transform {
           Location {
-            Z: 60.1589737
+            X: -0.00203097635
+            Y: 0.0040619527
+            Z: -131.631638
           }
           Rotation {
             Yaw: 8.03543969e-07
           }
           Scale {
-            X: 2.71997571
-            Y: 2.71997571
-            Z: 0.572283685
+            X: 2.38814
+            Y: 2.38814
+            Z: 0.502465308
           }
         }
-        ParentId: 14038412116305476658
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1429,18 +1394,20 @@ Assets {
         Name: "Ellipsoid - Truncated"
         Transform {
           Location {
-            Z: -153.221832
+            X: -0.00203097635
+            Y: 0.0040619527
+            Z: -318.980072
           }
           Rotation {
             Yaw: 1.31783395e-06
           }
           Scale {
-            X: 2.97931957
-            Y: 2.97931957
-            Z: 0.696894288
+            X: 2.61584377
+            Y: 2.61584377
+            Z: 0.611873448
           }
         }
-        ParentId: 14038412116305476658
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1474,20 +1441,20 @@ Assets {
         Name: "Ellipsoid - Truncated"
         Transform {
           Location {
-            Y: -0.00462636771
-            Z: 45.2666931
+            X: -0.00203097635
+            Z: -144.707062
           }
           Rotation {
             Yaw: -179.999756
             Roll: -179.999893
           }
           Scale {
-            X: 2.59259367
-            Y: 2.59259367
-            Z: 3.35465264
+            X: 2.27629828
+            Y: 2.27629828
+            Z: 2.94538641
           }
         }
-        ParentId: 14038412116305476658
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1692,121 +1659,26 @@ Assets {
         }
       }
       Objects {
-        Id: 17112449797027102209
-        Name: "pattern_small_01"
-        Transform {
-          Location {
-            X: 3.69536138
-            Y: -0.698655844
-            Z: 787.034302
-          }
-          Rotation {
-            Yaw: -89.9998703
-            Roll: -90
-          }
-          Scale {
-            X: 0.677212536
-            Y: 0.677212536
-            Z: 0.677212536
-          }
-        }
-        ParentId: 700686040892271832
-        ChildIds: 13105540729507805326
-        ChildIds: 14553533433934317080
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 13105540729507805326
-        Name: "pattern_01"
-        Transform {
-          Location {
-            X: 188.118225
-            Y: -1.17149357e-05
-            Z: -0.000357305544
-          }
-          Rotation {
-            Pitch: 6.83018879e-05
-            Yaw: -156.419861
-            Roll: 8.2435281e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17112449797027102209
-        ChildIds: 2921901821188246634
-        ChildIds: 16038970874260106594
-        ChildIds: 6028480657209507669
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 2921901821188246634
-        Name: "decor_01"
-        Transform {
-          Location {
-            X: -135.416016
-            Y: 59.3632813
-          }
-          Rotation {
-            Yaw: -19.0383949
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13105540729507805326
-        ChildIds: 12370469347298376030
-        ChildIds: 11924146575484597547
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 12370469347298376030
         Name: "Text 04: ,"
         Transform {
           Location {
-            X: 23.1054688
-            Y: 26.347168
+            X: 3.69840789
+            Y: -214.038498
+            Z: 767.849182
           }
           Rotation {
-            Pitch: 0.000136603776
-            Yaw: 107.746361
-            Roll: -89.9982147
+            Pitch: -67.7118607
+            Yaw: -90.0001602
+            Roll: -179.997803
           }
           Scale {
-            X: 0.704270601
-            Y: 0.896802783
-            Z: 0.735494256
+            X: 0.4769409
+            Y: 0.60732615
+            Z: 0.498085976
           }
         }
-        ParentId: 2921901821188246634
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -1853,20 +1725,22 @@ Assets {
         Name: "Text 05: 6"
         Transform {
           Location {
-            X: -23.1054688
-            Y: -26.3476563
-            Z: 22.2822266
+            X: -11.3917465
+            Y: -242.407181
+            Z: 805.900574
           }
           Rotation {
-            Roll: 89.9999771
+            Pitch: -4.54172707
+            Yaw: 90.0001907
+            Roll: 179.999908
           }
           Scale {
-            X: 1.65722597
-            Y: 1.00000048
-            Z: 1.37320364
+            X: 1.12229431
+            Y: 0.677212894
+            Z: 0.929950774
           }
         }
-        ParentId: 2921901821188246634
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -1906,55 +1780,26 @@ Assets {
         }
       }
       Objects {
-        Id: 16038970874260106594
-        Name: "decor_01"
-        Transform {
-          Location {
-            X: 206.779297
-            Y: 179.873047
-          }
-          Rotation {
-            Yaw: 124.704987
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13105540729507805326
-        ChildIds: 9856339796595047870
-        ChildIds: 17402812940126797448
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 9856339796595047870
         Name: "Text 04: ,"
         Transform {
           Location {
-            X: 23.1054688
-            Y: 26.347168
+            X: 3.69840789
+            Y: -71.1715
+            Z: 626.327698
           }
           Rotation {
-            Pitch: 0.000136603776
-            Yaw: 107.746361
-            Roll: -89.9982147
+            Pitch: 76.0313568
+            Yaw: -90.0002747
+            Roll: -179.998703
           }
           Scale {
-            X: 0.704270601
-            Y: 0.896802783
-            Z: 0.735494256
+            X: 0.4769409
+            Y: 0.60732615
+            Z: 0.498085976
           }
         }
-        ParentId: 16038970874260106594
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2001,20 +1846,22 @@ Assets {
         Name: "Text 05: 6"
         Transform {
           Location {
-            X: -23.1054688
-            Y: -26.3476563
-            Z: 22.2822266
+            X: -11.3917465
+            Y: -25.7913685
+            Z: 612.421631
           }
           Rotation {
-            Roll: 89.9999771
+            Pitch: -31.7148952
+            Yaw: -89.9997864
+            Roll: -3.41238701e-05
           }
           Scale {
-            X: 1.65722597
-            Y: 1.00000048
-            Z: 1.37320364
+            X: 1.12229431
+            Y: 0.677212894
+            Z: 0.929950774
           }
         }
-        ParentId: 16038970874260106594
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2058,22 +1905,22 @@ Assets {
         Name: "Text 05: )"
         Transform {
           Location {
-            X: -59.3084564
-            Y: 153.44371
-            Z: -1.15771484
+            X: 4.48033381
+            Y: -206.473114
+            Z: 707.863281
           }
           Rotation {
-            Pitch: 3.4150944e-05
-            Yaw: 21.384964
-            Roll: -89.9998169
+            Pitch: -44.9651184
+            Yaw: 90.000267
+            Roll: 0.000144802063
           }
           Scale {
-            X: 2.84197021
-            Y: 0.915416777
-            Z: 1.2541461
+            X: 1.92461789
+            Y: 0.619931757
+            Z: 0.849323452
           }
         }
-        ParentId: 13105540729507805326
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2113,89 +1960,26 @@ Assets {
         }
       }
       Objects {
-        Id: 14553533433934317080
-        Name: "pattern_01"
-        Transform {
-          Location {
-            X: -192.682739
-            Y: 1.17149357e-05
-            Z: 0.00033387568
-          }
-          Rotation {
-            Pitch: 6.14717e-05
-            Yaw: -23.6456299
-            Roll: -3.05175781e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17112449797027102209
-        ChildIds: 3054459239643032336
-        ChildIds: 821127345448872461
-        ChildIds: 475899236564886115
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3054459239643032336
-        Name: "decor_01"
-        Transform {
-          Location {
-            X: -137.787109
-            Y: -52.0913086
-          }
-          Rotation {
-            Yaw: -165.118164
-          }
-          Scale {
-            X: -1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14553533433934317080
-        ChildIds: 1246180148186247954
-        ChildIds: 10107819541710239316
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 1246180148186247954
         Name: "Text 04: ,"
         Transform {
           Location {
-            X: 23.1054688
-            Y: 26.347168
+            X: 3.68945313
+            Y: 216.664063
+            Z: 772.124
           }
           Rotation {
-            Pitch: 0.000136603776
-            Yaw: 107.746361
-            Roll: -89.9982147
+            Pitch: 63.4898682
+            Yaw: -89.9996414
+            Roll: -179.997925
           }
           Scale {
-            X: 0.704270601
-            Y: 0.896802783
-            Z: 0.735494256
+            X: -0.4769409
+            Y: 0.607326031
+            Z: 0.498085916
           }
         }
-        ParentId: 3054459239643032336
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2242,20 +2026,22 @@ Assets {
         Name: "Text 05: 6"
         Transform {
           Location {
-            X: -23.1054688
-            Y: -26.3476563
-            Z: 22.2822266
+            X: -11.4003906
+            Y: 242.158203
+            Z: 812.161133
           }
           Rotation {
-            Roll: 89.9999771
+            Pitch: 8.76380157
+            Yaw: 90.000061
+            Roll: 179.999954
           }
           Scale {
-            X: 1.65722597
-            Y: 1.00000048
-            Z: 1.37320364
+            X: -1.12229407
+            Y: 0.677212775
+            Z: 0.929950774
           }
         }
-        ParentId: 3054459239643032336
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2299,22 +2085,22 @@ Assets {
         Name: "Text 05: )"
         Transform {
           Location {
-            X: -60.0371094
-            Y: -150.111328
-            Z: -1.13427734
+            X: 4.4609375
+            Y: 207.804688
+            Z: 710.217773
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: -20.6755981
-            Roll: 89.9993439
+            Pitch: -44.3211746
+            Yaw: -89.9999771
+            Roll: -0.000642029685
           }
           Scale {
-            X: 2.84197021
-            Y: -0.915416777
-            Z: 1.2541461
+            X: 1.92461789
+            Y: -0.619931757
+            Z: 0.849323452
           }
         }
-        ParentId: 14553533433934317080
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2354,55 +2140,26 @@ Assets {
         }
       }
       Objects {
-        Id: 475899236564886115
-        Name: "decor_01"
-        Transform {
-          Location {
-            X: 200.099609
-            Y: -165.459961
-          }
-          Rotation {
-            Yaw: -118.282043
-          }
-          Scale {
-            X: 1
-            Y: -1
-            Z: 1
-          }
-        }
-        ParentId: 14553533433934317080
-        ChildIds: 4239170335277746348
-        ChildIds: 10008337995470282888
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
         Id: 4239170335277746348
         Name: "Text 04: ,"
         Transform {
           Location {
-            X: 23.1054688
-            Y: 26.347168
+            X: 3.69140625
+            Y: 73.9160156
+            Z: 634.436523
           }
           Rotation {
-            Pitch: 0.000136603776
-            Yaw: 107.746361
-            Roll: -89.9982147
+            Pitch: 69.6740417
+            Yaw: 90.0004883
+            Roll: 179.998596
           }
           Scale {
-            X: 0.704270601
-            Y: 0.896802783
-            Z: 0.735494256
+            X: 0.4769409
+            Y: -0.607326031
+            Z: 0.498085916
           }
         }
-        ParentId: 475899236564886115
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
@@ -2449,20 +2206,22 @@ Assets {
         Name: "Text 05: 6"
         Transform {
           Location {
-            X: -23.1054688
-            Y: -26.3476563
-            Z: 22.2822266
+            X: -11.4003906
+            Y: 27.2695313
+            Z: 625.641602
           }
           Rotation {
-            Roll: 89.9999771
+            Pitch: -38.0723228
+            Yaw: 90
+            Roll: 6.94095797e-05
           }
           Scale {
-            X: 1.65722597
-            Y: 1.00000048
-            Z: 1.37320364
+            X: 1.12229407
+            Y: -0.677212775
+            Z: 0.929950774
           }
         }
-        ParentId: 475899236564886115
+        ParentId: 700686040892271832
         UnregisteredParameters {
           Overrides {
             Name: "ma:Font.Bevel:id"
