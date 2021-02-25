@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7585529932942736913
+  Name: "Fantasy Coins 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_009"
+  }
+}
+Assets {
   Id: 6740841731187914198
   Name: "Center Arrow 002 Wedge"
   PlatformAssetType: 9
