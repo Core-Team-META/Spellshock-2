@@ -1,5 +1,5 @@
 Assets {
-  Id: 15436478629864918866
+  Id: 18199302755054554368
   Name: "WraithStrikeAbilityServer"
   PlatformAssetType: 3
   TextAsset {
@@ -13,10 +13,10 @@ Assets {
       Overrides {
         Name: "cs:APIStatusEffects"
         AssetReference {
-          Id: 14748071004312265457
+          Id: 6140123420589022677
         }
       }
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

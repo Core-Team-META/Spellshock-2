@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/7
--- Version 0.1.13
+-- Date: 2021/2/16
+-- Version 0.1.14
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -152,6 +152,44 @@ end
 
 --@param object player
 --@param table data
+local function OnLoadGamePlayStatsData(player, data)
+    local playerGameStats
+    if data[CONST.STORAGE.GAME_PLAYER_STATS] then
+        playerGameStats = UTIL.ConvertStringToTable(data[CONST.STORAGE.GAME_PLAYER_STATS], ",", "=")
+        for key, value in pairs(playerGameStats) do
+            if CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ~= CONST.WEIGHTED_WINS then
+                player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
+            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ==  CONST.WEIGHTED_WINS then
+                player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value or 0
+            end
+        end
+    else
+        for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
+            player:SetResource(name, 0)
+        end
+        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
+    end
+    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
+end
+
+--@param object player
+--@param table data
+local function OnSaveGamePlayStatsData(player, data)
+    local playerGameStats = {}
+    for index, resName in ipairs(CONST.GAME_PLAYER_STATS) do
+        if index ~= CONST.WEIGHTED_WINS_KEY then
+        playerGameStats[index] = player:GetResource(resName)
+        elseif index == CONST.WEIGHTED_WINS_KEY then 
+            playerGameStats[index] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]
+        end
+    end
+
+    data[CONST.STORAGE.GAME_PLAYER_STATS] =
+        next(playerGameStats) ~= nil and UTIL.ConvertTableToString(playerGameStats, ",", "=") or ""
+end
+
+--@param object player
+--@param table data
 local function OnLoadEquippedCosmetic(player, data)
     local cosmetic
     if data[CONST.STORAGE.EQUIPPED_COSMETIC] then
@@ -197,6 +235,7 @@ local function OnPlayerJoined(player)
         OnLoadCurrencyData(player, data)
         OnLoadEquippedCosmetic(player, data)
         OnLoadDailyShopData(player, data)
+        OnLoadGamePlayStatsData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -209,6 +248,7 @@ local function OnPlayerLeft(player)
     OnSaveProgressionData(player, data)
     OnSaveCostumeData(player, data)
     OnSaveCurrencyData(player, data)
+    OnSaveGamePlayStatsData(player, data)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
 

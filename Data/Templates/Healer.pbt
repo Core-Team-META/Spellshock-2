@@ -45,32 +45,8 @@ Assets {
             Int: 4
           }
           Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:T_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "2hand_staff_stance"
-          }
-          Overrides {
-            Name: "cs:E_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:T_isPreviewing:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -199,12 +175,6 @@ Assets {
           Overrides {
             Name: "cs:RadiusMod"
             String: "mod3"
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 3392388590054420013
-            }
           }
         }
         Collidable_v2 {
@@ -350,12 +320,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
               Id: 500164608151091677
@@ -368,16 +332,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:EventName"
-            String: "Healer Teleport"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -390,10 +346,6 @@ Assets {
           Overrides {
             Name: "cs:AbilityMod"
             String: "mod1"
-          }
-          Overrides {
-            Name: "cs:isPreviewing:isrep"
-            Bool: true
           }
         }
         Collidable_v2 {
@@ -757,7 +709,7 @@ Assets {
       }
       Objects {
         Id: 1175861072708434832
-        Name: "LightWaveAbilityServer"
+        Name: "DivineLightAbilityServer"
         Transform {
           Location {
             X: -747.460938
@@ -781,12 +733,6 @@ Assets {
             Name: "cs:APIStatusEffects"
             AssetReference {
               Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:VFX_Template"
-            AssetReference {
-              Id: 841534158063459245
             }
           }
           Overrides {
@@ -986,58 +932,10 @@ Assets {
         ParentId: 17566732273178486209
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 1551665899132109167
+              SubObjectId: 5311961891427463671
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 12132236651039923972
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 500164608151091677
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Healer Teleport"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HEALER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "SHIFT"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
           }
         }
         Collidable_v2 {
@@ -1240,6 +1138,7 @@ Assets {
         ChildIds: 7575872334836133316
         ChildIds: 4017261440786260585
         ChildIds: 15759265484500681867
+        ChildIds: 632464087035937151
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1361,6 +1260,50 @@ Assets {
         Script {
           ScriptAsset {
             Id: 17529172217946308633
+          }
+        }
+      }
+      Objects {
+        Id: 632464087035937151
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+            X: 13534.7744
+            Y: 14815.2598
+            Z: -16.4165039
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11626540599974007922
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
           }
         }
       }
@@ -1803,6 +1746,10 @@ Assets {
               SubObjectId: 4620336145958381494
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "HEALER"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1906,7 +1853,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 7
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1946,6 +1893,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.3
@@ -1976,14 +1924,14 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 10
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2040,7 +1988,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 6
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2077,6 +2025,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 1
@@ -2108,14 +2057,14 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 60
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           Animation: "2hand_staff_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2149,6 +2098,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.1
@@ -2187,7 +2137,7 @@ Assets {
             CanRotate: true
           }
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_71"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2349,13 +2299,16 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.8
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
         }
       }
       Objects {
@@ -2512,5 +2465,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

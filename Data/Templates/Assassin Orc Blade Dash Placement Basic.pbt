@@ -7,7 +7,7 @@ Assets {
       RootId: 7387936531278224842
       Objects {
         Id: 7387936531278224842
-        Name: "Assassin Orc Blade Dash Placement Basic 2"
+        Name: "Assassin Orc Blade Dash Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -95,6 +95,7 @@ Assets {
           Location {
           }
           Rotation {
+            Yaw: 45
           }
           Scale {
             X: 1
@@ -239,7 +240,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -310,7 +310,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -400,7 +399,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -476,5 +474,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

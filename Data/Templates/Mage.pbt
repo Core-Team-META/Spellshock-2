@@ -45,32 +45,8 @@ Assets {
             Int: 2
           }
           Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "2hand_staff_ready"
-          }
-          Overrides {
-            Name: "cs:E_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -146,22 +122,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Tornado"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
           }
           Overrides {
             Name: "cs:DamageAmount"
@@ -190,10 +152,6 @@ Assets {
             AssetReference {
               Id: 9770511928359673738
             }
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:AbilityMod"
@@ -257,12 +215,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
             Name: "cs:PrimerObjectTemplate"
             AssetReference {
               Id: 500164608151091677
@@ -275,16 +227,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:EventName"
-            String: "Mage Teleport"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2500
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -578,82 +522,10 @@ Assets {
         ParentId: 18222319590489236690
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 12470675891570633924
+              SubObjectId: 15107115459971592988
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 17789038938063754529
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Tornado"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 20
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 600
-          }
-          Overrides {
-            Name: "cs:DOT"
-            Int: 5
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:APIStatusEffects"
-            AssetReference {
-              Id: 6140123420589022677
-            }
-          }
-          Overrides {
-            Name: "cs:ModuleManager"
-            AssetReference {
-              Id: 9770511928359673738
-            }
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "Q"
-          }
-          Overrides {
-            Name: "cs:RadiusMod"
-            String: "mod3"
           }
         }
         Collidable_v2 {
@@ -902,58 +774,10 @@ Assets {
         ParentId: 18222319590489236690
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 12470675891570633924
+              SubObjectId: 15746345843771633212
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 2988604534664961180
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:PrimerObjectTemplate"
-            AssetReference {
-              Id: 500164608151091677
-            }
-          }
-          Overrides {
-            Name: "cs:TeleportFX"
-            AssetReference {
-              Id: 9636751773392762976
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Mage Teleport"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2500
-          }
-          Overrides {
-            Name: "cs:S_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "SHIFT"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
           }
         }
         Collidable_v2 {
@@ -1516,6 +1340,7 @@ Assets {
         ChildIds: 15540843134272266616
         ChildIds: 354566938322484678
         ChildIds: 4362377662528572463
+        ChildIds: 13676282958894221574
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1660,6 +1485,47 @@ Assets {
         }
       }
       Objects {
+        Id: 13676282958894221574
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 1254248059045754243
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
+          }
+        }
+      }
+      Objects {
         Id: 7617081542033333176
         Name: "Wand"
         Transform {
@@ -1681,6 +1547,7 @@ Assets {
         ChildIds: 12781921330556252170
         ChildIds: 719838432390101910
         ChildIds: 4906948746998877600
+        ChildIds: 5904571599766240539
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1878,6 +1745,10 @@ Assets {
               SubObjectId: 1254248059045754243
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1888,6 +1759,109 @@ Assets {
         Script {
           ScriptAsset {
             Id: 14074483271059500969
+          }
+        }
+      }
+      Objects {
+        Id: 5904571599766240539
+        Name: "Reticle"
+        Transform {
+          Location {
+            X: -755
+            Y: 335
+            Z: 225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        ChildIds: 16743815792358495293
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 14738406619974674146
+            }
+          }
+          Overrides {
+            Name: "cs:MuzzleToLookTarget"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:ReticleTemplate"
+            AssetReference {
+              Id: 10414967070514943464
+            }
+          }
+          Overrides {
+            Name: "cs:Range"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:InRangeColor"
+            Color {
+              R: 0.919999957
+              G: 0.091390729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:DefaultColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16743815792358495293
+        Name: "ReticleHandler"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5904571599766240539
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Root"
+            ObjectReference {
+              SubObjectId: 5904571599766240539
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1665784526678537401
           }
         }
       }
@@ -1954,6 +1928,7 @@ Assets {
           Value: "mc:evisibilitysetting:forceoff"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5
@@ -1982,15 +1957,14 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 15
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           Animation: "unarmed_magic_up"
-          CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2053,7 +2027,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 20
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2163,13 +2137,12 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 40
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
             PreventOtherAbilities: true
           }
-          CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_33"
           }
@@ -2233,7 +2206,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 90
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2278,6 +2251,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.1
@@ -2314,7 +2288,7 @@ Assets {
           }
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2481,7 +2455,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.8
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2492,7 +2466,7 @@ Assets {
           Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2647,5 +2621,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

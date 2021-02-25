@@ -169,6 +169,9 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -257,7 +260,7 @@ Assets {
           }
           Scale {
             X: 2.69999957
-            Y: 4.5
+            Y: 5.5
             Z: 2.4
           }
         }
@@ -312,5 +315,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

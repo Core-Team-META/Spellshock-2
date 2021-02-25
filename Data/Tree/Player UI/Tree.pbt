@@ -37,6 +37,10 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:MaxKill"
+          Int: 1
+        }
       }
     }
     ParameterOverrideMap {

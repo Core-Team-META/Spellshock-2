@@ -50,7 +50,7 @@ end
 -- nil Tick(float)
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
-	if AS.IsRespawning() or AS.IsSpectating() then
+	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
 		PANEL.visibility = Visibility.FORCE_OFF
 		return
 	else

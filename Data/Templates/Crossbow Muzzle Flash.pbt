@@ -90,6 +90,7 @@ Assets {
             Id: 15870650808192187890
           }
           AutoPlay: true
+          Volume: 0.3
           Falloff: -1
           Radius: -1
           IsSpatializationEnabled: true
@@ -133,10 +134,11 @@ Assets {
           }
           AudioBP {
             AutoPlay: true
-            Pitch: 800
-            Volume: 1
+            Pitch: 1500
+            Volume: 0.5
             Falloff: 3600
             Radius: 400
+            FadeInTime: 0.12
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
           }
@@ -175,5 +177,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

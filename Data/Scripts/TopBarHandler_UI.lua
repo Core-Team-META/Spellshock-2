@@ -5,21 +5,30 @@ while not _G.CurrentMenu do Task.Wait() end
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
 local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
+local TickSFX = script:GetCustomProperty("TickSFX"):WaitForObject()
+local ShopTimer = script:GetCustomProperty("ShopTimer"):WaitForObject()
+local RewardsTimer = script:GetCustomProperty("RewardsTimer"):WaitForObject()
+
+local PreviousSecond = 0
 
 -- nil UpdateTimeRemaining(int)
 -- Displays time remaining in hh:mm:ss format
 function UpdateTimeRemaining(remainingTime)
     if remainingTime then
         STATE_TIME_TEXT.visibility = Visibility.FORCE_ON
+        ShopTimer.visibility = Visibility.INHERIT
         local minutes = math.floor(remainingTime) // 60 % 60
         local seconds = math.floor(remainingTime) % 60
         STATE_TIME_TEXT.text = string.format("%02d:%02d", minutes, seconds)
+        ShopTimer:GetChildren()[2].text = string.format("%02d:%02d", minutes, seconds)
+        RewardsTimer.text = tostring(seconds)
     end
 end
 
 function OnMenuChanged(oldMenu, newMenu)
     local currentState = ABGS.GetGameState()
-    if newMenu == _G.MENU_TABLE["NONE"] and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND) then -- show
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.MENU_TABLE["ClassSelection"]) 
+    and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND) then -- show
 		TopBar.visibility = Visibility.INHERIT
 	else -- hide
 		TopBar.visibility = Visibility.FORCE_OFF
@@ -41,6 +50,7 @@ function Tick(deltaTime)
         -- Hide things by default, let specific logic show it when needed
         STATE_NAME_TEXT.text = ""
         STATE_TIME_TEXT.visibility = Visibility.FORCE_OFF
+        ShopTimer.visibility = Visibility.FORCE_OFF
         local currentState = ABGS.GetGameState()
         local remainingTime = ABGS.GetTimeRemainingInState()
 
@@ -52,6 +62,19 @@ function Tick(deltaTime)
         if currentState == ABGS.GAME_STATE_ROUND then
             STATE_NAME_TEXT.text = "BATTLE"
             UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_REWARDS then
+            UpdateTimeRemaining(remainingTime)
+        end
+
+        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS then
+            if not remainingTime then return end
+            local currentSecond = math.ceil(remainingTime)
+            if currentSecond <= 6 and currentSecond ~= PreviousSecond then
+                TickSFX:Play()
+                PreviousSecond = currentSecond
+            end
         end
 
         --[[if currentState == ABGS.GAME_STATE_ROUND_END then
@@ -71,6 +94,11 @@ function Tick(deltaTime)
     end
 end
 
-TopBar.visibility = Visibility.FORCE_OFF
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+
+if _G.CurrentMenu == _G.MENU_TABLE["Respawn"] then
+    TopBar.visibility = Visibility.INHERIT
+else
+    TopBar.visibility = Visibility.FORCE_OFF
+end

@@ -115,6 +115,11 @@ Objects {
         MinContactOffset: 2
         MaxContactOffset: 8
       }
+      VfxSettings {
+        LowDistance: 4500
+        MediumDistance: 7000
+        HighDistance: 9000
+      }
     }
   }
 }

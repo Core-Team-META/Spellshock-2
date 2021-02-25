@@ -613,11 +613,12 @@ Objects {
   ChildIds: 12342842787787294506
   ChildIds: 2164216698044686535
   ChildIds: 12523467810014353075
+  ChildIds: 32397007172213840
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     RenderTransformPivot {
@@ -643,6 +644,220 @@ Objects {
   InstanceHistory {
     SelfId: 14783742013657790731
     SubobjectId: 3742761001269711465
+    InstanceId: 5821724278744846916
+    TemplateId: 1749998263944627932
+  }
+}
+Objects {
+  Id: 32397007172213840
+  Name: "ShopTimer"
+  Transform {
+    Location {
+      X: 2012.30103
+      Y: -25076.834
+      Z: -3070
+    }
+    Rotation {
+      Yaw: 144.999969
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14783742013657790731
+  ChildIds: 3722047255660530529
+  ChildIds: 6390707606815940797
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 90
+    UIX: 1275
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6390707606815940797
+  Name: "Timer"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.70754709e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 32397007172213840
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Female"
+      ObjectReference {
+        SelfId: 5408664582770108325
+      }
+    }
+    Overrides {
+      Name: "cs:Male"
+      ObjectReference {
+        SelfId: 16979900639233972758
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    UIY: 6.54873
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "10"
+      Color {
+        R: 1
+        G: 0.854992807
+        B: 0.610495746
+        A: 1
+      }
+      Size: 24
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15387623722233427332
+    SubobjectId: 3121346917491154662
+    InstanceId: 5821724278744846916
+    TemplateId: 1749998263944627932
+  }
+}
+Objects {
+  Id: 3722047255660530529
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 3.4150944e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 32397007172213840
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Female"
+      ObjectReference {
+        SelfId: 5408664582770108325
+      }
+    }
+    Overrides {
+      Name: "cs:Male"
+      ObjectReference {
+        SelfId: 16979900639233972758
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 570
+    Height: 49
+    UIY: 3.22666287
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Until Battle"
+      Color {
+        R: 1
+        G: 0.854992807
+        B: 0.610495746
+        A: 1
+      }
+      Size: 24
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15387623722233427332
+    SubobjectId: 3121346917491154662
     InstanceId: 5821724278744846916
     TemplateId: 1749998263944627932
   }
@@ -929,7 +1144,7 @@ Objects {
   }
   Control {
     UIX: 18.4808025
-    UIY: 7.09067583
+    UIY: 14.5376835
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -951,6 +1166,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1497,7 +1715,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    UIY: 10
+    UIY: 16.720768
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1519,6 +1737,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1846,7 +2067,7 @@ Objects {
     Width: 85
     Height: 41
     UIX: 0.448608398
-    UIY: 10
+    UIY: 16.5676765
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1864,6 +2085,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1935,6 +2159,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -2206,7 +2433,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIX: 160
+    UIX: -925
     UIY: -270
     RenderTransformPivot {
       Anchor {
@@ -2223,7 +2450,7 @@ Objects {
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:bottomright"
         }
       }
     }
@@ -4045,8 +4272,8 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: 3.4486084
-    UIY: -10.225647
+    UIX: -9.44885254
+    UIY: -5.92478943
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4065,6 +4292,9 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4112,8 +4342,8 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: 3.4486084
-    UIY: 21.2256546
+    UIX: -9.44885254
+    UIY: 25.5265121
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4132,6 +4362,9 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4179,8 +4412,8 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: 0.448608398
-    UIY: 24.2256546
+    UIX: -12.4488525
+    UIY: 28.5265121
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4196,6 +4429,9 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -4243,8 +4479,8 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: 0.448608398
-    UIY: -7.22564697
+    UIX: -12.4488525
+    UIY: -2.92478943
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4260,6 +4496,9 @@ Objects {
         Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5034,6 +5273,8 @@ Objects {
       Justification {
         Value: "mc:etextjustify:center"
       }
+      Font {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5096,6 +5337,8 @@ Objects {
       Size: 18
       Justification {
         Value: "mc:etextjustify:center"
+      }
+      Font {
       }
     }
     AnchorLayout {
@@ -5515,7 +5758,7 @@ Objects {
   Control {
     Width: 55
     Height: 38
-    UIY: 11.2989149
+    UIY: 15.6009007
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5533,6 +5776,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -5598,6 +5844,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -8155,8 +8404,8 @@ Objects {
   Control {
     Width: 604
     Height: 38
-    UIX: 347.614258
-    UIY: 11.2989149
+    UIX: 247.137421
+    UIY: 2.91714191
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8174,6 +8423,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -8239,6 +8491,9 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -11712,7 +11967,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -11757,7 +12011,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -11802,7 +12055,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -11847,7 +12099,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -11892,7 +12143,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -11936,7 +12186,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12017,7 +12266,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationPlaybackRateMultiplier: 1
@@ -12101,7 +12349,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
     AnimatedMesh {
       AnimationStance: "unarmed_idle_relaxed"
       AnimationPlaybackRateMultiplier: 1
@@ -12597,7 +12844,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12651,7 +12897,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12703,7 +12948,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12755,7 +12999,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12806,7 +13049,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12935,7 +13177,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -12980,7 +13221,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }

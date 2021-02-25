@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/8
--- Version 0.1.4
+-- Date: 2021/2/16
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -18,7 +18,8 @@ API.STORAGE = {
     CURRENCY = 4,
     EQUIPPED_COSMETIC = 5,
     DAILY_SHOP = 6,
-    PERKS = 7
+    PERKS = 7,
+    GAME_PLAYER_STATS = 8
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -124,8 +125,24 @@ API.COMBAT_STATS = {
     CURRENT_KILL_STREAK = "CKSTREAK",
     LARGEST_KILL_STREAK = "LKSTREAK",
     ULTIMATE_KILL = "ULTKILL",
-    TOTAL_CAPTURE_POINTS = "TOTALCAP"
+    TOTAL_CAPTURE_POINTS = "TOTALCAP",
+    CAPTURE_ASSISTS = "CAPASSISTS"
 }
+
+API.GAME_PLAYER_STATS = {
+    [1] = "GAMES_WON",
+    [2] = "GAMES_LOST",
+    [3] = "TOTAL_GAMES",
+    [4] = "weightedWinRate"
+}
+
+API.WEIGHTED_WINS_KEY = 4
+
+API.GAMES_WON = API.GAME_PLAYER_STATS[1]
+API.GAMES_LOST = API.GAME_PLAYER_STATS[2]
+API.TOTAL_GAMES = API.GAME_PLAYER_STATS[3]
+API.WEIGHTED_WINS = API.GAME_PLAYER_STATS[4]
+
 
 API.CURRENCY = {
     [1] = "GOLD",

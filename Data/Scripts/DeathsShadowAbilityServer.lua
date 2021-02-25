@@ -8,7 +8,7 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local Ability = script:GetCustomProperty("MainAbility"):WaitForObject()
+local SpecialAbility = script:GetCustomProperty("MainAbility"):WaitForObject()
 local WeaponAbility = script:GetCustomProperty("WeaponAbility"):WaitForObject()
 
 local DEFAULT_Duration = script:GetCustomProperty("Duration")
@@ -21,7 +21,6 @@ local Timer = -1
 local isInvisible = false
 local OriginalWalkSpeed
 local PlayerVFX = nil
-local abilityName = string.gsub(Ability.name, " ", "_")
 
 local CancelKeys = {
 	ability_extra_20 = true, 
@@ -38,20 +37,20 @@ local function SetNetworkProperty(bool)
 end
 
 function Attack()
-	if not Object.IsValid(Ability) or not Ability.owner then return end
+	if not Object.IsValid(SpecialAbility) or not SpecialAbility.owner then return end
 	
-	local playerFacingDirection = Ability.owner:GetWorldRotation() * Vector3.FORWARD
-	local spherePosition = Ability.owner:GetWorldPosition() + (playerFacingDirection * 100)
-	local AttackRadius = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, Ability.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = Ability.owner.team, ignoreDead = true})
+	local playerFacingDirection = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
+	local spherePosition = SpecialAbility.owner:GetWorldPosition() + (playerFacingDirection * 100)
+	local AttackRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_AttackRadius, SpecialAbility.name..": Radius")
+	local nearbyEnemies = Game.FindPlayersInSphere(spherePosition, AttackRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(spherePosition, AttackRadius, {duration = 5})
 	
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
-		dmg.amount = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod1", DEFAULT_DamageAmount, Ability.name..": Damage Amount")
+		dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod1", DEFAULT_DamageAmount, SpecialAbility.name..": Damage Amount")
 		dmg.reason = DamageReason.COMBAT
-		dmg.sourcePlayer = Ability.owner
-		dmg.sourceAbility = Ability
+		dmg.sourcePlayer = SpecialAbility.owner
+		dmg.sourceAbility = SpecialAbility
 				
 		local attackData = {
 			object = enemy,
@@ -62,8 +61,8 @@ function Attack()
 			tags = {id = "Assassin_E"}
 			}
 		COMBAT().ApplyDamage(attackData)
-		local status = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod5", {}, Ability.name .. ": Status")
-		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, Ability.owner, status.duration, status.damage, status.multiplier)
+		local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
+		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Bleed"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 		return
 	end	
 end	
@@ -91,21 +90,30 @@ function OnAbilityExecute(thisAbility)
 	META_AP().SpawnAsset(PlayerVFX.Beginning, {position = thisAbility.owner:GetWorldPosition()})
 	thisAbility.owner:SetVisibility(false)
 	isInvisible = true
-	Ability.serverUserData.OriginalStance = Ability.owner.animationStance
-	Ability.owner.animationStance = "unarmed_sit_chair_upright"
-	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, Ability.name..": Speed Boost")
-	Timer = META_AP().GetAbilityMod(Ability.owner, META_AP().E, "mod3", DEFAULT_Duration, Ability.name..": Duration")
+	SpecialAbility.serverUserData.OriginalStance = SpecialAbility.owner.animationStance
+	SpecialAbility.owner.animationStance = "unarmed_sit_chair_upright"
+	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, SpecialAbility.name..": Speed Boost")
+	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	SetNetworkProperty(isInvisible)
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 30, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function DisableInvisility()
 	if isInvisible then
 		--print("Disable Invis")
-		Ability.owner.animationStance = Ability.serverUserData.OriginalStance
-		META_AP().SpawnAsset(PlayerVFX.Ending, {position = Ability.owner:GetWorldPosition()})
-		Ability.owner:SetVisibility(true)
+		SpecialAbility.owner.animationStance = SpecialAbility.serverUserData.OriginalStance
+		META_AP().SpawnAsset(PlayerVFX.Ending, {position = SpecialAbility.owner:GetWorldPosition()})
+		SpecialAbility.owner:SetVisibility(true)
 		isInvisible = false
-		Ability.owner.maxWalkSpeed = OriginalWalkSpeed
+		META_AP().AdjustPlayerMovment(SpecialAbility.owner, META_AP().ASSASSIN)
 		SetNetworkProperty(isInvisible)
 		WeaponAbility.isEnabled = true
 	end
@@ -121,7 +129,8 @@ end
 
 function OnEquip(thisEquipment, player)
 	OriginalWalkSpeed = player.maxWalkSpeed
-	table.insert(EventListeners, Ability.executeEvent:Connect(OnAbilityExecute))
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnAbilityExecute))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
@@ -130,7 +139,8 @@ function OnEquip(thisEquipment, player)
 end
 
 function OnUnequip(thisEquipment, player)
-	player.maxWalkSpeed = OriginalWalkSpeed
+	if not Object.IsValid(player) then return end
+	META_AP().AdjustPlayerMovment(player, META_AP().ASSASSIN)
 	player:SetVisibility(true)
 	isInvisible = false
 	if Object.IsValid(script) then

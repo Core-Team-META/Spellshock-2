@@ -158,7 +158,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -225,7 +224,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -292,7 +290,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -350,7 +347,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -415,7 +411,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -482,7 +477,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -584,7 +578,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -651,7 +644,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -718,7 +710,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -785,7 +776,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -852,7 +842,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1025,7 +1014,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1272,7 +1260,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1375,7 +1362,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1464,7 +1450,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1545,7 +1530,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1730,7 +1714,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1833,7 +1816,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1922,7 +1904,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2003,7 +1984,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -2124,5 +2104,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

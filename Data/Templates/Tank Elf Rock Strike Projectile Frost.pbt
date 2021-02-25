@@ -7,7 +7,7 @@ Assets {
       RootId: 7226289949459798434
       Objects {
         Id: 7226289949459798434
-        Name: "Frost Elf Rock Strike Projectile"
+        Name: "Tank Elf Rock Strike Projectile Frost"
         Transform {
           Scale {
             X: 1
@@ -165,6 +165,9 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -253,7 +256,7 @@ Assets {
           }
           Scale {
             X: 2.69999957
-            Y: 4.5
+            Y: 5.5
             Z: 2.4
           }
         }
@@ -308,5 +311,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

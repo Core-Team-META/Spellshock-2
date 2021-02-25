@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta End Rewards Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/6
--- Version 0.1.4
+-- Date: 2021/2/10
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -278,6 +278,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 
     if ABGS.GAME_STATE_LOBBY == newState then
         ToggleUI(false)
+        HideClaimed()
         ANIMATION.context.OnRewardHide()
         --Send First Reward Select
         Events.BroadcastToServer(NAMESPACE .. "RewardSelect", 1)

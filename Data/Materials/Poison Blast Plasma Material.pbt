@@ -2,7 +2,7 @@ Assets {
   Id: 11805553451547936753
   Name: "Poison Blast Plasma Material"
   PlatformAssetType: 13
-  SerializationVersion: 75
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 1951593977860928200
     ParameterOverrides {

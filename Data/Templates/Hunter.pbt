@@ -45,24 +45,8 @@ Assets {
             Int: 3
           }
           Overrides {
-            Name: "cs:Q_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:R_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "2hand_rifle_aim_shoulder"
-          }
-          Overrides {
-            Name: "cs:Q_isPreviewing:isrep"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:R_isPreviewing:isrep"
-            Bool: true
           }
         }
         WantsNetworking: true
@@ -137,22 +121,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 10839953769775855596
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Rain of Arrows"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
           }
           Overrides {
             Name: "cs:DamageAmount"
@@ -161,10 +131,6 @@ Assets {
           Overrides {
             Name: "cs:DamageRadius"
             Int: 650
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -224,16 +190,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 10839953769775855596
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Place Bear Trap"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 1500
           }
@@ -244,10 +200,6 @@ Assets {
           Overrides {
             Name: "cs:MaxTraps"
             Int: 1
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:Class"
@@ -579,62 +531,10 @@ Assets {
         ParentId: 7137406222810709920
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 2069545901692075652
+              SubObjectId: 3493467970047565540
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 6922611339924357768
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 10839953769775855596
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Rain of Arrows"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 4000
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:DamageAmount"
-            Int: 60
-          }
-          Overrides {
-            Name: "cs:DamageRadius"
-            Int: 650
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HUNTER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "Q"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod3"
-          }
-          Overrides {
-            Name: "cs:RadiusMod"
-            String: "mod2"
           }
         }
         Collidable_v2 {
@@ -725,54 +625,10 @@ Assets {
         ParentId: 7137406222810709920
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 2069545901692075652
+              SubObjectId: 10572375518235026021
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 1433284731599134094
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 10839953769775855596
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Place Bear Trap"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 1500
-          }
-          Overrides {
-            Name: "cs:MatchNormal"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:MaxTraps"
-            Int: 1
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "HUNTER"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "R"
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
           }
         }
         Collidable_v2 {
@@ -1324,10 +1180,6 @@ Assets {
               SubObjectId: 3493467970047565540
             }
           }
-          Overrides {
-            Name: "cs:PreviewString"
-            String: "Q_isPreviewing"
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1513,10 +1365,10 @@ Assets {
         }
         ParentId: 5361708159967945625
         ChildIds: 10814169424989923108
+        ChildIds: 8423088236831540030
         ChildIds: 1231559079360679353
         ChildIds: 7905627217205649232
         ChildIds: 2695547812234798459
-        ChildIds: 2726600085118415138
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1552,6 +1404,10 @@ Assets {
               SubObjectId: 10839953769775855596
             }
           }
+          Overrides {
+            Name: "cs:Class"
+            String: "HUNTER"
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1562,6 +1418,50 @@ Assets {
         Script {
           ScriptAsset {
             Id: 14074483271059500969
+          }
+        }
+      }
+      Objects {
+        Id: 8423088236831540030
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+            X: 12914.7744
+            Y: 14575.2598
+            Z: 43.5834961
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4017735643055830044
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 10839953769775855596
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2069545901692075652
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
           }
         }
       }
@@ -1698,106 +1598,6 @@ Assets {
         }
       }
       Objects {
-        Id: 2726600085118415138
-        Name: "Reticle"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.999999881
-            Y: 0.999999881
-            Z: 1
-          }
-        }
-        ParentId: 4017735643055830044
-        ChildIds: 12352649972463341139
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 13944462686745880869
-            }
-          }
-          Overrides {
-            Name: "cs:MuzzleToLookTarget"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:ReticleTemplate"
-            AssetReference {
-              Id: 10414967070514943464
-            }
-          }
-          Overrides {
-            Name: "cs:Range"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:InRangeColor"
-            Color {
-              R: 0.919999957
-              G: 0.091390729
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "cs:DefaultColor"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 12352649972463341139
-        Name: "ReticleHandler"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2726600085118415138
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Root"
-            ObjectReference {
-              SubObjectId: 2726600085118415138
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1665784526678537401
-          }
-        }
-      }
-      Objects {
         Id: 406380117814010332
         Name: "Load Out"
         Transform {
@@ -1861,6 +1661,7 @@ Assets {
           Value: "mc:evisibilitysetting:forceoff"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.3
@@ -1869,7 +1670,7 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           ExecutePhaseSettings {
@@ -1879,7 +1680,7 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
@@ -1889,7 +1690,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 30
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1897,7 +1698,7 @@ Assets {
           Animation: "unarmed_magic_up"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -1914,10 +1715,6 @@ Assets {
         }
         ParentId: 406380117814010332
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1958,7 +1755,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 4
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -1985,10 +1782,6 @@ Assets {
         ParentId: 406380117814010332
         UnregisteredParameters {
           Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:Binding"
             String: "ability_extra_23"
           }
@@ -2001,6 +1794,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.3
@@ -2031,7 +1825,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 8
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2039,7 +1833,7 @@ Assets {
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2080,7 +1874,7 @@ Assets {
             PreventOtherAbilities: true
           }
           CooldownPhaseSettings {
-            Duration: 20
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2107,10 +1901,6 @@ Assets {
         }
         ParentId: 406380117814010332
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2237,7 +2027,7 @@ Assets {
               Id: 14373757464648078715
             }
             ReticleType {
-              Value: "mc:ereticletype:none"
+              Value: "mc:ereticletype:crosshair"
             }
             MaxAmmo: -1
             AmmoType: "rounds"
@@ -2301,13 +2091,16 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 0.8
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
           }
           Animation: "2hand_rifle_shoot"
           CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
         }
       }
       Objects {
@@ -2458,5 +2251,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

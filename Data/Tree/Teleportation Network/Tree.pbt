@@ -113,7 +113,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -208,7 +207,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -276,6 +274,8 @@ Objects {
   }
   Text {
     Text: "TELEPORT"
+    FontAsset {
+    }
     Color {
       R: 1
       G: 1
@@ -439,7 +439,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -536,7 +535,6 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
       }
@@ -604,6 +602,8 @@ Objects {
   }
   Text {
     Text: "TELEPORT"
+    FontAsset {
+    }
     Color {
       R: 1
       G: 1

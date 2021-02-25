@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/8
--- Version 0.1.4
+-- Date: 2021/2/15
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -34,9 +34,11 @@ local function UpdateKillStreak(attackData)
     local largestKillStreak = source:GetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK)
     currentKillStreak = currentKillStreak + 1
     source:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, currentKillStreak)
-    if currentKillStreak > largestKillStreak then
+    if currentKillStreak >= largestKillStreak then
         source:SetResource(CONST.COMBAT_STATS.LARGEST_KILL_STREAK, currentKillStreak)
     end
+    Events.Broadcast("AS.KillStreak", source, currentKillStreak)
+    Events.Broadcast("AS.LifeTimeKill", source, 1)
 end
 
 local function UpdateCombatAmmount(attackData)
@@ -45,9 +47,11 @@ local function UpdateCombatAmmount(attackData)
     local ammount = attackData.damage.amount
     if ammount > 0 then
         source:AddResource(CONST.COMBAT_STATS.TOTAL_DAMAGE_RES, CoreMath.Round(ammount))
+        Events.Broadcast("AS.LifeTimeDamage", source, CoreMath.Round(ammount))
     else
         ammount = ammount * -1
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
+        Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(ammount))
     end
 end
 
@@ -126,6 +130,7 @@ function OnCapturePointChanged(playerId)
                 CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS,
                 player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS) + 1
             )
+            Events.Broadcast("AS.PlayerPointCapture", player, 1)
         end
     end
 end

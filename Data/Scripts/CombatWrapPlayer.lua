@@ -43,6 +43,9 @@ end
 
 -- ApplyDamage()
 function wrapper.ApplyDamage(attackData)
+	if attackData.tags.id and attackData.tags.id == "StatusEffect" then
+		attackData.object.serverUserData.killedByStatusEffect = true
+	end
 	attackData.object:ApplyDamage(attackData.damage)
 end
 

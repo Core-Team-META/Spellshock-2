@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 6691584294084928103
         ChildIds: 12092837317964936151
         ChildIds: 8867897979800354681
@@ -199,9 +199,13 @@ Assets {
           }
         }
         ParentId: 811390275251659663
-        ChildIds: 13125240322143721881
-        ChildIds: 8596987154260651344
+        ChildIds: 1181749468374618719
         ChildIds: 12806099471688273787
+        ChildIds: 7023041220421724838
+        ChildIds: 12847545999498186394
+        ChildIds: 6211093722283724177
+        ChildIds: 11720350313279069551
+        ChildIds: 167185274098413939
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -213,116 +217,98 @@ Assets {
         }
       }
       Objects {
-        Id: 13125240322143721881
-        Name: "Tornado VFX"
+        Id: 1181749468374618719
+        Name: "Tornado VFX_test"
         Transform {
           Location {
-            Z: 885.836914
+            Y: -0.000122070313
+            Z: 853.129
           }
           Rotation {
-            Pitch: 180
+            Roll: -179.999954
           }
           Scale {
-            X: 0.701039672
-            Y: 0.701039493
-            Z: 1.06856287
+            X: 1.3
+            Y: 1.3
+            Z: 1.10040045
           }
         }
         ParentId: 8867897979800354681
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Color C"
-            Color {
-              R: 0.099
-              G: 0.0701840147
-              B: 0.0340559967
-              A: 0.6
-            }
-          }
-          Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.199999988
-              G: 0.856953621
-              B: 1
-              A: 1
+              R: 0.15625
+              G: 0.497100949
+              B: 0.728000045
+              A: 0.54
             }
           }
           Overrides {
-            Name: "bp:Wiggle Offset Amount"
-            Float: 0.0599341914
+            Name: "bp:Color C"
+            Color {
+              R: 0.0113977157
+              G: 0.00802083
+              B: 0.110000014
+              A: 0.629
+            }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              G: 0.528483272
-              B: 0.857000053
+              R: 0.521
+              G: 2
+              B: 2
               A: 1
             }
-          }
-          Overrides {
-            Name: "bp:color c"
-            Color {
-              G: 0.708
-              B: 0.440108269
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Body Fade"
-            Float: 0.247263923
-          }
-          Overrides {
-            Name: "bp:Bottom Fade"
-            Float: 0.63738215
-          }
-          Overrides {
-            Name: "bp:Edge Shredding"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Fade Length Top"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Pin Top Amount"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Pin Bottom Amount"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Enable Shadows"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Wiggle Speed"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Color By Height"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Cross Section Width"
-            Float: 5
           }
           Overrides {
             Name: "bp:Surface Speed"
-            Float: 1
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Wiggle Offset Amount"
+            Float: 0.732905686
+          }
+          Overrides {
+            Name: "bp:Wiggle Speed"
+            Float: 0.21
           }
           Overrides {
             Name: "bp:Wiggle Waves Frequency"
-            Float: 0.8
+            Float: 0.881139219
+          }
+          Overrides {
+            Name: "bp:Body Fade"
+            Float: 0.147646487
           }
           Overrides {
             Name: "bp:Top Fade"
             Float: 0
           }
           Overrides {
+            Name: "bp:Bottom Fade"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Edge Shredding"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Cross Section Width"
+            Float: 0.23
+          }
+          Overrides {
+            Name: "bp:Collapse Funnel Amount"
+            Float: 0.08
+          }
+          Overrides {
             Name: "bp:Fade Length Bottom"
-            Float: 0.0687382668
+            Float: 0.0944233239
+          }
+          Overrides {
+            Name: "bp:Fade Length Top"
+            Float: 0.058941219
           }
         }
         Collidable_v2 {
@@ -333,56 +319,9 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 7897514575113664858
+            Id: 15599228502728747198
           }
           TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 8596987154260651344
-        Name: "Snow Volume VFX"
-        Transform {
-          Location {
-            Z: 102.586426
-          }
-          Rotation {
-          }
-          Scale {
-            X: 4.9
-            Y: 5.59999895
-            Z: 1
-          }
-        }
-        ParentId: 8867897979800354681
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Curl Offset"
-            Vector {
-              X: 200
-              Y: 200
-              Z: 50
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1165672060587372127
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
           }
         }
       }
@@ -438,6 +377,360 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7023041220421724838
+        Name: "Electrical Arc Volume"
+        Transform {
+          Location {
+            Z: 294
+          }
+          Rotation {
+          }
+          Scale {
+            X: 5.18112946
+            Y: 5.18112946
+            Z: 9.21196747
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Start Plane Z"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Start Plane X"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:End Plane X"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:End Plane Z"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.0974833146
+              B: 0.919999957
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Secondary Color"
+            Color {
+              G: 0.533774674
+              B: 0.62
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Tertiary Color"
+            Color {
+              R: 0.809999943
+              G: 0.434503287
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Beam Appearance"
+            Enum {
+              Value: "mc:ebeamtexturetype:2"
+            }
+          }
+          Overrides {
+            Name: "bp:Use Origin as Spawn Source"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Start Plane Select"
+            Enum {
+              Value: "mc:efx_planeselector:newenumerator0"
+            }
+          }
+          Overrides {
+            Name: "bp:End Plane Y"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Control Tangents"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Source Tangent"
+            Vector {
+              X: 5
+            }
+          }
+          Overrides {
+            Name: "bp:Target Tangent"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 12
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 784760632288801666
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 12847545999498186394
+        Name: "Swirling Dust VFX"
+        Transform {
+          Location {
+            Z: -178.789063
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.74059868
+            Y: 1.74059868
+            Z: 1.74059868
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.4
+              G: 0.6
+              B: 0.9
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Debris Color"
+            Color {
+              R: 0.6
+              G: 0.737748265
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8598699987776668464
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6211093722283724177
+        Name: "Swirling Dust VFX"
+        Transform {
+          Location {
+            Z: 205
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.13145816
+            Y: 1.13145816
+            Z: 1.13145816
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.459999979
+              G: 0.688874125
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Debris Color"
+            Color {
+              R: 0.149999976
+              G: 0.442715
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Debris Scale Multiplier"
+            Float: 2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8598699987776668464
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11720350313279069551
+        Name: "Fire Volume VFX"
+        Transform {
+          Location {
+            Z: -17.3798828
+          }
+          Rotation {
+          }
+          Scale {
+            X: 8.49241257
+            Y: 6.43424368
+            Z: 3.16851139
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.516000032
+              G: 1.4
+              B: 2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2494920176024075778
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 167185274098413939
+        Name: "Fire Volume VFX"
+        Transform {
+          Location {
+            Z: 492.379395
+          }
+          Rotation {
+          }
+          Scale {
+            X: 4.92895603
+            Y: 3.73440456
+            Z: 5.10656738
+          }
+        }
+        ParentId: 8867897979800354681
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.516000032
+              G: 1.4
+              B: 2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2494920176024075778
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
           }
         }
       }
@@ -521,21 +814,12 @@ Assets {
       }
     }
     Assets {
-      Id: 7897514575113664858
+      Id: 15599228502728747198
       Name: "Tornado VFX"
       PlatformAssetType: 6
       PrimaryAsset {
         AssetType: "BlueprintAssetRef"
         AssetId: "fxbp_tornado"
-      }
-    }
-    Assets {
-      Id: 1165672060587372127
-      Name: "Snow Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_snow_volume"
       }
     }
     Assets {
@@ -545,6 +829,33 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_smoke_puff_radial"
+      }
+    }
+    Assets {
+      Id: 784760632288801666
+      Name: "Electrical Arc Volume"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_Electrical_Arc_Volume"
+      }
+    }
+    Assets {
+      Id: 8598699987776668464
+      Name: "Swirling Dust VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_swirling_dust"
+      }
+    }
+    Assets {
+      Id: 2494920176024075778
+      Name: "Fire Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_fire_volume_vfx"
       }
     }
     Assets {
@@ -570,5 +881,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

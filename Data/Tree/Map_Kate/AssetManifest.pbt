@@ -197,6 +197,24 @@ Assets {
   }
 }
 Assets {
+  Id: 17105483186841445735
+  Name: "Fantasy Sack Open"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_001_ref"
+  }
+}
+Assets {
+  Id: 17091160006555877630
+  Name: "Cube - Rounded"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_rounded_002"
+  }
+}
+Assets {
   Id: 17076031360332202797
   Name: "Terrain - Desert"
   PlatformAssetType: 2
@@ -458,6 +476,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15240646233324917545
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
+  }
+}
+Assets {
   Id: 15223421943927964872
   Name: "Cube - Arched"
   PlatformAssetType: 1
@@ -629,6 +656,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14629909211943041809
+  Name: "Metal Gold 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_001"
+  }
+}
+Assets {
   Id: 14580885173560146840
   Name: "Sphere - Half Quarter"
   PlatformAssetType: 1
@@ -644,6 +680,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_pommel_001"
+  }
+}
+Assets {
+  Id: 14541980029145667132
+  Name: "Fantasy Sack Laying"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_003_ref"
   }
 }
 Assets {
@@ -1115,6 +1160,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12148720894562039167
+  Name: "Fantasy Book Collection 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_003_ref"
+  }
+}
+Assets {
   Id: 12115992092291607111
   Name: "Plane Hexagon - One Sided"
   PlatformAssetType: 1
@@ -1448,6 +1502,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10727817675464078874
+  Name: "Arch Fancy 3m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_fancy_3m_001"
+  }
+}
+Assets {
   Id: 10634098119816284342
   Name: "Wood Planks Dark"
   PlatformAssetType: 2
@@ -1682,6 +1745,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9364533443650044160
+  Name: "Fantasy Book Collection 05"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_004_ref"
+  }
+}
+Assets {
   Id: 9338910762992902201
   Name: "Craftsman Stairs 01 Railing"
   PlatformAssetType: 1
@@ -1733,6 +1805,33 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_hq_003"
+  }
+}
+Assets {
+  Id: 9199751096616988864
+  Name: "Candle Flame VFX"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "fxsm_candleflame"
+  }
+}
+Assets {
+  Id: 9146532306811306174
+  Name: "Ring - Beveled Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_faceted_002"
+  }
+}
+Assets {
+  Id: 9129172925362125493
+  Name: "Urban Plank Debris 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urban_destruction_debris_plank_01_ref"
   }
 }
 Assets {
@@ -2321,6 +2420,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6358034599651012933
+  Name: "Fantasy Book Collection 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_002_ref"
+  }
+}
+Assets {
   Id: 6289363088155023181
   Name: "Decal Elven Symbols"
   PlatformAssetType: 14
@@ -2393,6 +2501,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6084079896259528281
+  Name: "Fantasy Book Pile 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_pile_003_ref"
+  }
+}
+Assets {
   Id: 6054953119424435965
   Name: "Fantasy Human Guy 2"
   PlatformAssetType: 17
@@ -2444,6 +2561,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_reflector_hex_001"
+  }
+}
+Assets {
+  Id: 5729905043926227526
+  Name: "Fantasy Sack Tied"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_sack_002_ref"
   }
 }
 Assets {
@@ -2528,12 +2654,30 @@ Assets {
   }
 }
 Assets {
+  Id: 5253804418413104983
+  Name: "Decal Rubble Concrete 01"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_mil_rubble_concrete_001_ref"
+  }
+}
+Assets {
   Id: 5117326109845707677
   Name: "Plane 4m - One Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_plane_4m_001"
+  }
+}
+Assets {
+  Id: 5026846565116306924
+  Name: "Pipe - Half Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_003"
   }
 }
 Assets {
@@ -2606,6 +2750,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_bottle_003"
+  }
+}
+Assets {
+  Id: 4603740449467706689
+  Name: "Fantasy Book Open 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_open_001_ref"
   }
 }
 Assets {
@@ -3104,6 +3257,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2211930898932802599
+  Name: "Pyramid - 4-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_truncated_001"
+  }
+}
+Assets {
   Id: 2140913818093261140
   Name: "Sci-fi Trim 01 bend 90"
   PlatformAssetType: 1
@@ -3140,6 +3302,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1982661357157207299
+  Name: "Ring - Quarter Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter_torus_001"
+  }
+}
+Assets {
   Id: 1978759747315071937
   Name: "Donut"
   PlatformAssetType: 1
@@ -3167,6 +3338,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1909548803215530403
+  Name: "Fantasy Bookshelf Middle"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_bookshelf_middle_001_ref"
+  }
+}
+Assets {
   Id: 1890184376442337231
   Name: "Metal Old Beaten Gold 02"
   PlatformAssetType: 2
@@ -3191,6 +3371,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_gear_001_spoke5x"
+  }
+}
+Assets {
+  Id: 1676531612695025637
+  Name: "Fantasy Book Collection 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_book_collection_001_ref"
   }
 }
 Assets {

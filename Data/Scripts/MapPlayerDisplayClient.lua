@@ -86,7 +86,7 @@ end
 function Tick()
 
 	-- Display map functionality
-	if AS.IsSpectating() then
+	if AS.IsViewingMap() then
 		MAP_CONTAINER.visibility = Visibility.INHERIT
 
 		for _, player in ipairs(Game.GetPlayers()) do

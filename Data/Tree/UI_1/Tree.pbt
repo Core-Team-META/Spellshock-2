@@ -102,34 +102,6 @@ Objects {
   }
 }
 Objects {
-  Id: 527033524674069522
-  Name: "Capture Point UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13334626079586580612
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Capture Point UI"
-  }
-}
-Objects {
   Id: 1202107626836939879
   Name: "Player UI"
   Transform {

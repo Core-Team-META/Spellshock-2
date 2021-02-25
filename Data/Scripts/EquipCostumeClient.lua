@@ -2,6 +2,8 @@
 local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local ClassID = ParentEquipment:GetCustomProperty("ClassID")
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
 end
@@ -22,7 +24,7 @@ function AttachCostume(player)
 end
 
 function DestroyCostume(player)
-	if player.clientUserData.PlayerCostume then
+	if player and Object.IsValid(player) and player.clientUserData.PlayerCostume then
 		for _, attachment in ipairs(player.clientUserData.PlayerCostume) do
 			attachment:Detach()
 			attachment:Destroy()

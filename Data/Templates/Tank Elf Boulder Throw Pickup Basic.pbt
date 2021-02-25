@@ -15,10 +15,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 10401052584630691944
-        ChildIds: 6476730550929530250
         ChildIds: 8220988803279777573
+        ChildIds: 16184900909776783544
         Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
@@ -65,22 +65,58 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
       Objects {
-        Id: 6476730550929530250
-        Name: "Rock 03"
+        Id: 8220988803279777573
+        Name: "Heavy Ground Rocky Impact 01 SFX"
         Transform {
           Location {
-            Z: 195
           }
           Rotation {
           }
           Scale {
-            X: 1.7
-            Y: 1.7
-            Z: 1.7
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17666739317002180979
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 16184900909776783544
+        Name: "Rock 03"
+        Transform {
+          Location {
+            Z: 45
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.399967521
+            Y: 0.399967521
+            Z: 0.399967521
           }
         }
         ParentId: 17666739317002180979
@@ -110,48 +146,10 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
           }
-        }
-      }
-      Objects {
-        Id: 8220988803279777573
-        Name: "Heavy Ground Rocky Impact 01 SFX"
-        Transform {
-          Location {
-            X: 160
-            Z: 255
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17666739317002180979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 888725854457039636
-          }
-          AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
         }
       }
     }
@@ -165,15 +163,6 @@ Assets {
       }
     }
     Assets {
-      Id: 6981536508008379085
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
       Id: 888725854457039636
       Name: "Big Hammer Huge Ground Impact 01 SFX"
       PlatformAssetType: 7
@@ -182,10 +171,19 @@ Assets {
         AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
+    Assets {
+      Id: 6981536508008379085
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

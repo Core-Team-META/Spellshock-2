@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15683169359350375517
+  Name: "Capsule"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_capsule_001"
+  }
+}
+Assets {
   Id: 15671591457305353788
   Name: "Chain Link 01"
   PlatformAssetType: 2
@@ -251,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8834933182589795814
+  Name: "Wedge - Corner Complex"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_corelogo_shape_001"
+  }
+}
+Assets {
   Id: 8539981025625262831
   Name: "Decal Painted Lines 01"
   PlatformAssetType: 14
@@ -350,6 +368,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6523387363685404996
+  Name: "Text 03: !"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F5_Text_037"
+  }
+}
+Assets {
   Id: 6293838519925911015
   Name: "Horn"
   PlatformAssetType: 1
@@ -410,6 +437,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_half-pipe_003"
+  }
+}
+Assets {
+  Id: 4533424030597734882
+  Name: "Lens"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_lense_001"
   }
 }
 Assets {

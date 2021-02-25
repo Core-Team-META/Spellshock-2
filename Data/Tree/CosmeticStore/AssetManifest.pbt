@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15165554833363844727
+  Name: "Amarante"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "AmaranteRegular_ref"
+  }
+}
+Assets {
   Id: 14659414155711643810
   Name: "Frame Outlined 006"
   PlatformAssetType: 9

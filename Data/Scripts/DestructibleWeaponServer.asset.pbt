@@ -21,7 +21,13 @@ Assets {
           Y: 20
         }
       }
+      Overrides {
+        Name: "cs:APIStatusEffects"
+        AssetReference {
+          Id: 6140123420589022677
+        }
+      }
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

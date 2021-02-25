@@ -1,13 +1,13 @@
 Assets {
-  Id: 4152617433700755742
+  Id: 10282757879352826607
   Name: "Tank Orc Boulder Throw Projectile Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11505666779171707469
+      RootId: 11569940419982232802
       Objects {
-        Id: 11505666779171707469
-        Name: "Tank Orc Boulder Throw Projectile Basic"
+        Id: 11569940419982232802
+        Name: "Boulder Throw Projectile TEST"
         Transform {
           Scale {
             X: 1
@@ -15,14 +15,28 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
-        ChildIds: 14182206178707156308
-        ChildIds: 2566810676855196869
+        ParentId: 4781671109827199097
+        ChildIds: 289101705919115896
+        ChildIds: 11347987939879458996
+        ChildIds: 3847761231457257003
+        ChildIds: 9740625229921452422
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Trigger"
+            Name: "cs:BoulderTrigger"
             ObjectReference {
-              SubObjectId: 2566810676855196869
+              SubObjectId: 3847761231457257003
+            }
+          }
+          Overrides {
+            Name: "cs:Collision"
+            ObjectReference {
+              SubObjectId: 289101705919115896
+            }
+          }
+          Overrides {
+            Name: "cs:StunTrigger"
+            ObjectReference {
+              SubObjectId: 9740625229921452422
             }
           }
         }
@@ -33,23 +47,53 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        PhysicsObject {
-          PhysicsShape {
-            Value: "mc:ephysicsshape:sphere"
-          }
-          Settings {
-            IsEnabled: true
-            OverrideMass: true
-            Mass: 2000
-            LinearDamping: 0.1
-            AngularDamping: 0.5
-          }
-          Radius: 180
-          Length: 200
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
-        Id: 14182206178707156308
+        Id: 289101705919115896
+        Name: "Collision"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999918759
+            Y: 0.999918759
+            Z: 0.999918759
+          }
+        }
+        ParentId: 11569940419982232802
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5760915064523727563
+          }
+          Teams {
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11347987939879458996
         Name: "ClientContext"
         Transform {
           Location {
@@ -57,15 +101,14 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.235275
+            Y: 0.235275
+            Z: 0.235275
           }
         }
-        ParentId: 11505666779171707469
-        ChildIds: 13414360101649384300
-        ChildIds: 14256219835201485047
-        ChildIds: 5914423432301324697
+        ParentId: 11569940419982232802
+        ChildIds: 12817460719437484724
+        ChildIds: 18281038988412194241
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -77,7 +120,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13414360101649384300
+        Id: 12817460719437484724
         Name: "BoulderBreakHandler"
         Transform {
           Location {
@@ -93,18 +136,24 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14182206178707156308
+        ParentId: 11347987939879458996
         UnregisteredParameters {
           Overrides {
             Name: "cs:Root"
             ObjectReference {
-              SubObjectId: 11505666779171707469
+              SubObjectId: 11569940419982232802
             }
           }
           Overrides {
             Name: "cs:FX_Template"
             AssetReference {
               Id: 13459923181472021410
+            }
+          }
+          Overrides {
+            Name: "cs:Geo"
+            ObjectReference {
+              SubObjectId: 18281038988412194241
             }
           }
         }
@@ -121,7 +170,35 @@ Assets {
         }
       }
       Objects {
-        Id: 14256219835201485047
+        Id: 18281038988412194241
+        Name: "Geo"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11347987939879458996
+        ChildIds: 6877703761899189104
+        ChildIds: 12727878388272797501
+        ChildIds: 18007309827199832936
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6877703761899189104
         Name: "Rock 03"
         Transform {
           Location {
@@ -134,7 +211,7 @@ Assets {
             Z: 1.7
           }
         }
-        ParentId: 14182206178707156308
+        ParentId: 18281038988412194241
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -161,8 +238,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -170,7 +245,50 @@ Assets {
         }
       }
       Objects {
-        Id: 5914423432301324697
+        Id: 12727878388272797501
+        Name: "Swirling Dust VFX"
+        Transform {
+          Location {
+            X: -191.265533
+            Z: -191.265533
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18281038988412194241
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Burst"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8598699987776668464
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:medium"
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18007309827199832936
         Name: "Nature Rocks Debris Falling Heavy 01 SFX"
         Transform {
           Location {
@@ -183,7 +301,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14182206178707156308
+        ParentId: 18281038988412194241
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -205,20 +323,20 @@ Assets {
         }
       }
       Objects {
-        Id: 2566810676855196869
-        Name: "Trigger"
+        Id: 3847761231457257003
+        Name: "BoulderTrigger"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 4.80000114
-            Y: 4.80000114
-            Z: 4.80000114
+            X: 1.12932026
+            Y: 1.12932026
+            Z: 1.12932026
           }
         }
-        ParentId: 11505666779171707469
+        ParentId: 11569940419982232802
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
@@ -236,6 +354,48 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 9740625229921452422
+        Name: "StunTrigger"
+        Transform {
+          Location {
+            X: 275
+          }
+          Rotation {
+          }
+          Scale {
+            X: 5
+            Y: 1.1
+            Z: 1.1
+          }
+        }
+        ParentId: 11569940419982232802
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
+          }
+        }
+      }
+    }
+    Assets {
+      Id: 5760915064523727563
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
     }
     Assets {
       Id: 6981536508008379085
@@ -244,6 +404,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rock_generic_003"
+      }
+    }
+    Assets {
+      Id: 8598699987776668464
+      Name: "Swirling Dust VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_swirling_dust"
       }
     }
     Assets {
@@ -260,5 +429,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

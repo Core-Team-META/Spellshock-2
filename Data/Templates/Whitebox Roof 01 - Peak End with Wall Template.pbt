@@ -59,7 +59,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -96,7 +95,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -133,7 +131,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -173,5 +170,5 @@ Assets {
       AssetId: "Whitebox_Roof_01_-_Peak_End_with_Wall_Template"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

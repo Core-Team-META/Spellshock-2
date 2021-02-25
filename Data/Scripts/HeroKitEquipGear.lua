@@ -16,13 +16,13 @@ function OnEquipped(_, player)
 end
 
 function OnUnequipped(_, player)
+    if not Object.IsValid(player) then return end
     for _, gear in pairs(player.serverUserData.gear) do
         if (Object.IsValid(gear)) then
             gear:Unequip()
             gear:Destroy()
         end
     end
-
 end
 
 -- Registering equipment events

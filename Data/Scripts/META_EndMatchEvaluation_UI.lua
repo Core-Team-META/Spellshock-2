@@ -22,6 +22,8 @@ local MOST_CAPPED = script:GetCustomProperty("MOST_CAPPED"):WaitForObject()
 local HEALING_GIVEN = script:GetCustomProperty("HEALING_GIVEN"):WaitForObject()
 local MOST_DAMAGE = script:GetCustomProperty("MOST_DAMAGE"):WaitForObject()
 local MVP_PLAYER_NAME = script:GetCustomProperty("MVP_PLAYER_NAME"):WaitForObject()
+local CAPTURE_ASSISTS = script:GetCustomProperty("CAPTURE_ASSISTS"):WaitForObject()
+
 ------------------------------------------------------------------------------------------------------------------------
 -- TEMPLATES
 ------------------------------------------------------------------------------------------------------------------------
@@ -113,8 +115,20 @@ local function ComparePlayerTotalCaptures(player1, player2)
     SortByPlayerName(player1, player2)
 end
 
+local function ComparePlayerCaptureAssists(player1, player2)
+    local player1Stats = player1:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
+    local player2Stats = player2:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
+    if player1Stats ~= player2Stats then
+        return player1Stats > player2Stats
+    end
+    SortByPlayerName(player1, player2)
+end
+
 local function ComparePlayersForMVP(player1, player2)
-    if player1.clientUserData.MVP_Stats ~= player2.clientUserData.MVP_Stats then
+    if
+        player1.clientUserData.MVP_Stats and player2.clientUserData.MVP_Stats and
+            player1.clientUserData.MVP_Stats ~= player2.clientUserData.MVP_Stats
+     then
         return player1.clientUserData.MVP_Stats > player2.clientUserData.MVP_Stats
     end
     SortByPlayerName(player1, player2)
@@ -155,8 +169,12 @@ local function BuildStats(players, parentPanel)
                 local value = player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS)
                 stats.text = tostring(value)
                 player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
+            elseif parentPanel == CAPTURE_ASSISTS then
+                local value = player:GetResource(CONST.COMBAT_STATS.CAPTURE_ASSISTS)
+                stats.text = tostring(value)
+                player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
             end
-            playerStats.y = (i - 1) * 30 + 52
+            playerStats.y = (i - 1) * 30 --+ 52
             statPanels[#statPanels + 1] = playerStats
         end
     end
@@ -195,11 +213,14 @@ local function BuildRoundEndStats()
     table.sort(players, ComparePlayerTotalCaptures)
     BuildStats(players, MOST_CAPPED)
 
+    -- Most Capture Assists
+    table.sort(players, ComparePlayerCaptureAssists)
+    BuildStats(players, CAPTURE_ASSISTS)
+
     -- MVP
     table.sort(players, ComparePlayersForMVP)
     MVP_PLAYER_NAME.text = players[1].name
     MVP_PLAYER_NAME:SetColor(_G.TeamColors[players[1].team])
-    PARENT_PANEL.visibility = Visibility.FORCE_ON
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -207,12 +228,25 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if ABGS.GAME_STATE_PLAYER_SHOWCASE == newState then
+    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         BuildRoundEndStats()
-    end
-    if ABGS.GAME_STATE_PLAYER_SHOWCASE ~= newState then
-        PARENT_PANEL.visibility = Visibility.FORCE_OFF
+    elseif newState == ABGS.GAME_STATE_REWARDS then
         ResetStats()
+    end
+end
+
+function Tick()
+    if ABGS.IsGameStateManagerRegistered() then
+        local currentState = ABGS.GetGameState()
+        if
+            currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 10 and
+                not PARENT_PANEL:IsVisibleInHierarchy()
+         then
+            Events.Broadcast("HideVictoryPanels")
+            PARENT_PANEL.visibility = Visibility.INHERIT
+        elseif currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_LOBBY then
+            PARENT_PANEL.visibility = Visibility.FORCE_OFF
+        end
     end
 end
 

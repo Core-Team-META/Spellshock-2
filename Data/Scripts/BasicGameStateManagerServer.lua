@@ -78,10 +78,10 @@ function SetGameState(newState)
 		stateDuration = ROUND_END_DURATION
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
-		stateDuration = 8
+		stateDuration = 25
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 10
+		stateDuration = 15
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -102,6 +102,7 @@ function SetGameState(newState)
 
 	-- Set replicator fields
 	--print(">> Setting Game State: "..tostring(newState))
+	script:SetNetworkedCustomProperty("OldState", oldState)
 	script:SetNetworkedCustomProperty("State", newState)
 	script:SetNetworkedCustomProperty("StateHasDuration", stateHasduration)
 	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)
@@ -109,7 +110,6 @@ function SetGameState(newState)
 
 	-- Broadcast basic game state event
 	Events.Broadcast("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
-	while Events.BroadcastToAllPlayers("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 end
 
 -- nil SetTimeRemainingInState(float)
@@ -120,7 +120,6 @@ function SetTimeRemainingInState(remainingTime)
 
 	-- We broadcast the event because the time changed, even though we are still in the same state
 	Events.Broadcast("GameStateChanged", currentState, currentState, true, stateEndTime)
-	while Events.BroadcastToAllPlayers("GameStateChanged", currentState, currentState, true, stateEndTime) == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do Task.Wait() end
 
 	script:SetNetworkedCustomProperty("StateHasDuration", true)
 	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)

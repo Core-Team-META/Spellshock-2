@@ -25,35 +25,33 @@ local MAP_BINDING = COMPONENT_ROOT:GetCustomProperty("MapBinding")
 
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
+while not _G.CurrentMenu do Task.Wait() end
+
+function OnMenuChanged(oldMenu, newMenu)
+	if LOCAL_PLAYER:GetOverrideCamera() == CAMERA and AS.IsViewingMap() then
+		LOCAL_PLAYER:ClearOverrideCamera()
+		AS.SetIsViewingMap(false)
+	end
+end
 
 -- nil OnBindingPressed(Player, string)
 -- Trigger the map when the map binding is pressed
 function OnBindingPressed(player, binding)
-	-- Only activate this spectator map on local player
-	if player ~= LOCAL_PLAYER then
-		return
-	end
-
-	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and not LOCAL_PLAYER:GetOverrideCamera() then
+	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and 
+	not LOCAL_PLAYER:GetOverrideCamera() and _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 		LOCAL_PLAYER:SetOverrideCamera(CAMERA)
-		AS.SetIsSpectating(true)
+		AS.SetIsViewingMap(true)
 	end
 end
 
 function OnBindingReleased(player, binding)
-
-	-- Only activate this spectator map on local player
-	if player ~= LOCAL_PLAYER then
-		return
-	end
-
-	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and LOCAL_PLAYER:GetOverrideCamera() == CAMERA and AS.IsSpectating() then
-		print("MAP MODE: CLEARING CAM")
+	if not LOCAL_PLAYER.isDead and binding == MAP_BINDING and LOCAL_PLAYER:GetOverrideCamera() == CAMERA and AS.IsViewingMap() then
 		LOCAL_PLAYER:ClearOverrideCamera()
-		AS.SetIsSpectating(false)
+		AS.SetIsViewingMap(false)
 	end
 end
 
 -- Initialize
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnBindingReleased)
+Events.Connect("Menu Changed", OnMenuChanged)

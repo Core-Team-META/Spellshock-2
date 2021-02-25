@@ -193,7 +193,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowOnSelf"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowOnTeammates"
@@ -470,6 +470,12 @@ Objects {
       Name: "cs:StatusEffectTemplate"
       AssetReference {
         Id: 14193068822760167103
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
   }

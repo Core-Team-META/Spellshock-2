@@ -41,6 +41,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:04_Supernova_Preview"
+        AssetReference {
+          Id: 18349665107832834494
+        }
+      }
+      Overrides {
         Name: "cs:04_Supernova_Charge"
         AssetReference {
           Id: 841534158063459245
@@ -58,5 +64,5 @@ Assets {
       }
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

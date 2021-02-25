@@ -7,7 +7,7 @@ Assets {
       RootId: 20733000479149637
       Objects {
         Id: 20733000479149637
-        Name: "Tank Orc Shield Dash FX Basic"
+        Name: "Tank Elf Shield Dash FX Basic"
         Transform {
           Scale {
             X: 1
@@ -203,6 +203,9 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -263,6 +266,9 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -322,6 +328,9 @@ Assets {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -363,7 +372,7 @@ Assets {
           Location {
             X: -190
             Y: -9
-            Z: 161.053711
+            Z: -130
           }
           Rotation {
             Pitch: -41.4007568
@@ -411,7 +420,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -425,7 +433,7 @@ Assets {
           Location {
             X: -190
             Y: 30
-            Z: 161.053711
+            Z: -130
           }
           Rotation {
             Pitch: -46.0680542
@@ -473,7 +481,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -487,7 +494,7 @@ Assets {
           Location {
             X: -120
             Y: -15
-            Z: 146.053711
+            Z: -145
           }
           Rotation {
             Pitch: -51.1052856
@@ -535,7 +542,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -549,7 +555,7 @@ Assets {
           Location {
             X: -140
             Y: -14
-            Z: 141.053711
+            Z: -150
           }
           Rotation {
             Pitch: -49.2194214
@@ -597,7 +603,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -611,7 +616,7 @@ Assets {
           Location {
             X: -119
             Y: 7
-            Z: 114.053711
+            Z: -177
           }
           Rotation {
             Pitch: -49.016449
@@ -659,7 +664,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -709,7 +713,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -759,7 +762,6 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -826,5 +828,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

@@ -7,7 +7,7 @@ Assets {
       RootId: 15974195753258975621
       Objects {
         Id: 15974195753258975621
-        Name: "Healer Elf Sun Beam Projectile Basic 2"
+        Name: "Healer Orc Sun Beam Projectile Basic"
         Transform {
           Scale {
             X: 1
@@ -55,7 +55,6 @@ Assets {
         }
         ParentId: 15974195753258975621
         ChildIds: 4042228099227444144
-        ChildIds: 15428124087787063122
         ChildIds: 15621908834788881397
         ChildIds: 13191795154844109010
         ChildIds: 4656506542533561003
@@ -95,7 +94,7 @@ Assets {
           Overrides {
             Name: "cs:Beam"
             ObjectReference {
-              SubObjectId: 4278771881894550805
+              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -114,69 +113,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 10637708964052836847
-          }
-        }
-      }
-      Objects {
-        Id: 15428124087787063122
-        Name: "Basic Sparks"
-        Transform {
-          Location {
-            Z: 1000
-          }
-          Rotation {
-          }
-          Scale {
-            X: 2
-            Y: 2
-            Z: 2
-          }
-        }
-        ParentId: 6339643438101885973
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Density"
-            Float: 1.5
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 31.1621342
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 1.47800398
-          }
-          Overrides {
-            Name: "bp:Gravity"
-            Float: -8.73745441
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 13851085631735900235
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
           }
         }
       }
@@ -263,14 +199,14 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.8
-            Y: 0.8
-            Z: 0.8
+            X: 0.9
+            Y: 0.9
+            Z: 0.9
           }
         }
         ParentId: 6339643438101885973
-        ChildIds: 4278771881894550805
         ChildIds: 8297035135627670579
+        ChildIds: 11786478783282034180
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -279,75 +215,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4278771881894550805
-        Name: "Beam"
-        Transform {
-          Location {
-            Z: -502.54715
-          }
-          Rotation {
-            Roll: -179.999954
-          }
-          Scale {
-            X: 0.893713
-            Y: 0.893713
-            Z: 0.777102888
-          }
-        }
-        ParentId: 4656506542533561003
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.73
-              G: 0.159536436
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Spiral Color"
-            Color {
-              R: 5
-              G: 1.71316683
-              B: 0.189999938
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Beam Width Scale"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Spiral Width Multiplier"
-            Float: 0.234051526
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.721568644
-              G: 0.0705882385
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1317716397706920983
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
         }
       }
       Objects {
@@ -490,7 +357,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -640,7 +506,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -699,7 +564,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -758,7 +622,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -830,7 +693,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -982,7 +844,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1041,7 +902,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1100,7 +960,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1172,7 +1031,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1324,7 +1182,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1383,7 +1240,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1442,7 +1298,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1514,7 +1369,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1581,9 +1435,147 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11786478783282034180
+        Name: "Layered Thrusters VFX"
+        Transform {
+          Location {
+            Z: -535.211609
+          }
+          Rotation {
+            Roll: -179.999954
+          }
+          Scale {
+            X: 5.5822835
+            Y: 5.5822897
+            Z: 20.9992046
+          }
+        }
+        ParentId: 4656506542533561003
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              R: 0.39200002
+              G: 0.038347844
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              R: 0.39200002
+              G: 0.038347844
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Core End Pinch"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Top Layer Fade Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Core Fade Length"
+            Float: 0.223169759
+          }
+          Overrides {
+            Name: "bp:Core Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Core Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Top Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Mid Layer"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Mid Layer Fade Length"
+            Float: 0
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 2426790310185116976
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
             }
           }
         }
@@ -1623,15 +1615,6 @@ Assets {
       }
     }
     Assets {
-      Id: 13851085631735900235
-      Name: "Basic Sparks"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_basic_sparks"
-      }
-    }
-    Assets {
       Id: 507070303409715994
       Name: "Sci-fi Electric Laser Tractor Beam Loop 01 SFX"
       PlatformAssetType: 7
@@ -1647,15 +1630,6 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_electricity_power_beam_low_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 1317716397706920983
-      Name: "Laser Beam VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Laser_Beam"
       }
     }
     Assets {
@@ -1721,10 +1695,19 @@ Assets {
         AssetId: "mi_invisible_001"
       }
     }
+    Assets {
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_thruster_var"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

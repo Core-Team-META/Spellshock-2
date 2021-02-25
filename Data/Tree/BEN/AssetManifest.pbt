@@ -17,24 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17589500154826526248
-  Name: "Radial Blur Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_ppm_radial_blur"
-  }
-}
-Assets {
-  Id: 17587880652047825598
-  Name: "Cylinder - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -104,15 +86,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_006"
-  }
-}
-Assets {
-  Id: 15683169359350375517
-  Name: "Capsule"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_capsule_001"
   }
 }
 Assets {
@@ -278,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10577491396371571795
+  Name: "Depth of Field Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_DOF"
+  }
+}
+Assets {
   Id: 10304004596054394633
   Name: "Frame Highlighted 001"
   PlatformAssetType: 9
@@ -287,21 +269,21 @@ Assets {
   }
 }
 Assets {
-  Id: 9722663739032956639
-  Name: "Fantasy Coins 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_004"
-  }
-}
-Assets {
   Id: 9008238566657320754
   Name: "Sci-fi Frame 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFi_Frame_006"
+  }
+}
+Assets {
+  Id: 8933537604162373856
+  Name: "Plane 1m - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_001"
   }
 }
 Assets {
@@ -329,6 +311,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Scroll_001"
+  }
+}
+Assets {
+  Id: 8383064983738244106
+  Name: "Ship Boat Bell Ring 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ship_boat_bell_ring_01_Cue_ref"
   }
 }
 Assets {
@@ -368,12 +359,12 @@ Assets {
   }
 }
 Assets {
-  Id: 7302246634419215840
-  Name: "Bullet Body Flesh 02 Impact SFX"
-  PlatformAssetType: 7
+  Id: 7585529932942736913
+  Name: "Fantasy Coins 009"
+  PlatformAssetType: 9
   PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_bullet_impact_body_flesh_02_Cue_ref"
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_009"
   }
 }
 Assets {
@@ -401,6 +392,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_26"
+  }
+}
+Assets {
+  Id: 6747614045051753376
+  Name: "Cylinder - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_001"
+  }
+}
+Assets {
+  Id: 6727874825486779400
+  Name: "Fantasy Chest 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_001"
   }
 }
 Assets {
@@ -503,21 +512,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4998159696449081601
-  Name: "Wireframe"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "wireframe_glow_001"
-  }
-}
-Assets {
-  Id: 4948247749987491170
-  Name: "Crosshair 020"
+  Id: 4727080213227783003
+  Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "Crosshair_020"
+    AssetId: "UI_Fantasy_Crafting_Crystal_007"
   }
 }
 Assets {
@@ -593,15 +593,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3110766469218200335
-  Name: "Edge Line Sharp"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_add_edgeline_sharpline"
-  }
-}
-Assets {
   Id: 2813404828707589716
   Name: "Fantasy Ability Blue 031"
   PlatformAssetType: 9
@@ -644,6 +635,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_015"
+  }
+}
+Assets {
+  Id: 1814707273787853473
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {

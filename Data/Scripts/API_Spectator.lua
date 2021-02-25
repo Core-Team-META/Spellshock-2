@@ -38,11 +38,19 @@ function API.SetIsSpectating(isSpectating)
 	_G.APISpectator_IsSpectating = isSpectating
 end
 
+function API.SetIsViewingMap(isViewingMap)
+	_G.APISpectator_IsViewingMap = isViewingMap
+end
+
 function API.SetIsRespawning(isRespawning)
 	_G.APISpectator_IsRespawning = isRespawning
 	if isRespawning then
 		_G.APISpectator_IsSpectating = false 
 	end
+end
+
+function API.SetIsJoiningMidgame(isJoiningMidgame)
+	_G.APISpectator_IsJoiningMidgame = isJoiningMidgame
 end
 
 -- bool IsPlayerSpectating() [Client]
@@ -55,12 +63,27 @@ function API.IsSpectating()
 	return _G.APISpectator_IsSpectating
 end
 
+function API.IsViewingMap()
+	if not _G.APISpectator_IsViewingMap then
+		return false
+	end
+
+	return _G.APISpectator_IsViewingMap
+end
+
 function API.IsRespawning()
 	if not _G.APISpectator_IsRespawning then
 		return false
 	end
 
 	return _G.APISpectator_IsRespawning
+end
+
+function API.IsJoiningMidgame()
+	if not _G.APISpectator_IsJoiningMidgame then
+		return false
+	end
+	return _G.APISpectator_IsJoiningMidgame
 end
 
 -- nil SetPlayerSpectatorTarget(<Player>) [Client]

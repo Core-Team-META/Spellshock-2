@@ -1009,7 +1009,7 @@ Assets {
           Width: 151
           Height: 36
           UIX: 2
-          UIY: 8
+          UIY: 9.06572
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1025,6 +1025,9 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+              Id: 15165554833363844727
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -1084,6 +1087,9 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             AutoWrapText: true
+            Font {
+              Id: 15165554833363844727
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -2544,6 +2550,15 @@ Assets {
       }
     }
     Assets {
+      Id: 15165554833363844727
+      Name: "Amarante"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "AmaranteRegular_ref"
+      }
+    }
+    Assets {
       Id: 16072726743892194472
       Name: "Fantasy Corners 006"
       PlatformAssetType: 9
@@ -2602,5 +2617,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

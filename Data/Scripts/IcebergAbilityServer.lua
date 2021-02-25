@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
@@ -31,7 +31,7 @@ local CancelBindings = {
 	ability_extra_24 = true, 
 	ability_primary = true,
 	ability_secondary = true,
-	ability_extra_12 = true,
+	--ability_extra_12 = true,
 	ability_extra_17 = true
 }
 
@@ -64,6 +64,23 @@ function OnSpecialAbilityExecute(thisAbility)
 	local attachmentTemplate = PlayerVFX.Attachment
 	CurrentIceCube = META_AP().SpawnAsset(attachmentTemplate,  {position = spawnPosition})
 
+	-- Heal player
+	local dmg = Damage.New()
+	dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount")
+	dmg.reason = DamageReason.COMBAT
+	dmg.sourcePlayer = SpecialAbility.owner
+	dmg.sourceAbility = SpecialAbility
+
+	local attackData = {
+		object = SpecialAbility.owner,
+		damage = dmg,
+		source = dmg.sourcePlayer,
+		position = nil,
+		rotation = nil,
+		tags = {id = "Mage_R"}
+	}
+	COMBAT().ApplyDamage(attackData)
+
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	
@@ -72,6 +89,15 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
+end
+
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 40, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
 end
 
 function OnBindingPressed(thisPlayer, binding)
@@ -123,6 +149,7 @@ end
 function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().MAGE)
 end
 

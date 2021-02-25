@@ -1,8 +1,8 @@
 Name: "KONZ"
 RootId: 8983380287600545020
 Objects {
-  Id: 5611420104663390633
-  Name: "Perk Shop"
+  Id: 4197521803680757974
+  Name: "EndScreen UI (Reward & Match)"
   Transform {
     Location {
     }
@@ -19,16 +19,16 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Perk Shop"
+    FilePartitionName: "UI"
   }
 }
 Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
+  Id: 17296953895266496212
+  Name: "Achievement System"
   Transform {
     Location {
     }
@@ -45,10 +45,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Daily Shop"
+    FilePartitionName: "Achivment System"
   }
 }

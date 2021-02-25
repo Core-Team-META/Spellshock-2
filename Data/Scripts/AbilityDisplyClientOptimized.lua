@@ -1,7 +1,6 @@
 ﻿-- Internal custom properties --
 local AOI = require(script:GetCustomProperty("API"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local ICON = script:GetCustomProperty("Icon"):WaitForObject()
 local COUNTDOWN_TEXT = script:GetCustomProperty("CountdownText"):WaitForObject()
@@ -12,10 +11,23 @@ local LEFT_SHADOW = script:GetCustomProperty("LeftShadow"):WaitForObject()
 local ACTIVE_FRAME = script:GetCustomProperty("ActiveFrame"):WaitForObject()
 local ACTIVE_FLASH = script:GetCustomProperty("ActiveFlash"):WaitForObject()
 local DURATION_BAR = script:GetCustomProperty("DurationIndicator"):WaitForObject()
+local LEVEL_TEXT = script:GetCustomProperty("LevelText"):WaitForObject()
+
+local function META_AP()
+	return _G["Meta.Ability.Progression"]
+end
 
 -- User exposed properties
-local BINDING = COMPONENT_ROOT:GetCustomProperty("Binding")
-local IGNORE_OVERRIDE = COMPONENT_ROOT:GetCustomProperty("IgnoreOverride")
+local BINDING = PANEL:GetCustomProperty("Binding")
+local IGNORE_OVERRIDE = PANEL:GetCustomProperty("IgnoreOverride")
+
+local BINDS = {
+    ability_extra_12 = "SHIFT",
+    ability_extra_20 = "Q",
+    ability_extra_22 = "E",
+    ability_extra_23 = "R",
+    ability_extra_24 = "T"
+}
 
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -52,10 +64,10 @@ function OnAbilityIconSet(thisAbility, icon, color)
             ICON:SetColor(ICON_COLOR)
         end
 
-        NAME_TEXT.text = currentAbility.name
         executeDuration = currentAbility.executePhaseSettings.duration
         recoveryDuration = currentAbility.recoveryPhaseSettings.duration
-        cooldownDuration = currentAbility.cooldownPhaseSettings.duration
+        --local Class = LOCAL_PLAYER:GetResource("CLASS_MAP")
+        --cooldownDuration = META_AP().GetAbilityMod(currentAbility.owner, Class, META_AP()[string.upper(PANEL.name)], "mod6", 10, "Ability Display: Cooldown")
         DURATION_BAR.progress = 0
         currentAbility.clientUserData.durationBar = DURATION_BAR
     end
@@ -64,13 +76,18 @@ end
 -- nil Tick(float)
 -- Checks for changes to the players abiltiies, or icons on those abilities
 function Tick(deltaTime)
-    if Object.IsValid(currentAbility) then
+    if Object.IsValid(currentAbility) and currentAbility.owner and Object.IsValid(currentAbility.owner) then
         local currentPhase = currentAbility:GetCurrentPhase()
         local phaseTime = currentAbility:GetPhaseTimeRemaining()
         PANEL.visibility = Visibility.INHERIT
 
+        -- Update the level text for the ability
+        NAME_TEXT.text = currentAbility.name
+        local classID = LOCAL_PLAYER:GetResource("CLASS_MAP")
+        LEVEL_TEXT.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[BINDS[BINDING]], classID))
+
         -- If the ability is a placement then show the indicator when it is active
-        if currentAbility:GetCustomProperty("Binding") and currentAbility.isEnabled then
+        if currentAbility.clientUserData.isPreviewing then
             ACTIVE_FRAME.visibility = Visibility.INHERIT
             ACTIVE_FLASH.visibility = Visibility.INHERIT
 		else
@@ -94,10 +111,15 @@ function Tick(deltaTime)
             --COUNTDOWN_TEXT.visibility = Visibility.INHERIT
             PROGRESS_INDICATOR.visibility = Visibility.INHERIT
 
+            local Class = LOCAL_PLAYER:GetResource("CLASS_MAP")
+            cooldownDuration = META_AP().GetAbilityMod(currentAbility.owner, Class, META_AP()[string.upper(PANEL.name)], "mod6", 10, "Ability Display: Cooldown")
+
             -- For a player, recovery, cooldown and execute phases all constitute an ability's cooldown
             local playerCooldownRemaining = phaseTime
 
-            if currentPhase ~= AbilityPhase.COOLDOWN then   -- Execute or recovery
+            if currentPhase == AbilityPhase.COOLDOWN then   
+                playerCooldownRemaining = cooldownDuration - (currentAbility.cooldownPhaseSettings.duration - phaseTime)
+            else -- Execute or recovery
                 playerCooldownRemaining = playerCooldownRemaining + cooldownDuration
             end
 

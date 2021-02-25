@@ -61,27 +61,57 @@ local spamPrevent = nil
 local ResourceChangedEventListener = nil
 local LevelResourceName = nil
 local isUpgrading = false
+local ResourceListeners = {}
+local ClassButtons = {}
 
 ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 
 function OnMenuChanged(oldMenu, newMenu)
-	if newMenu == _G.MENU_TABLE["ClassSelection"] then -- show
+	if newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["ClassAbilities"] then -- show
 		Task.Wait()
-		if LOCAL_PLAYER.team == 1 then
-			LOCAL_PLAYER:SetOverrideCamera(Orc_Camera)
+
+		if newMenu == _G.MENU_TABLE["ClassSelection"] then
+			if LOCAL_PLAYER.team == 1 then
+				LOCAL_PLAYER:SetOverrideCamera(Orc_Camera)
+			else
+				LOCAL_PLAYER:SetOverrideCamera(Elf_Camera)
+			end
+
+			for _, child in ipairs(ClassSelectionCanvas:GetChildren()) do
+				child.visibility = Visibility.INHERIT
+			end
 		else
-			LOCAL_PLAYER:SetOverrideCamera(Elf_Camera)
+			for _, child in ipairs(ClassSelectionCanvas:GetChildren()) do
+				if child.name == "Right Panel" then
+					child.visibility = Visibility.INHERIT
+				else
+					child.visibility = Visibility.FORCE_OFF
+				end
+			end
 		end
-		OnClassClicked(CurrentClassButton)
+		
+		local currentClass = LOCAL_PLAYER:GetResource("CLASS_MAP")
+		local newButton 
+		for _, classButton in ipairs(ClassButtons) do
+			local data = classButton.clientUserData.dataTable
+			if META_AP()[data.ClassID] == currentClass then
+				newButton = classButton
+			end
+		end
+
+		OnClassClicked(newButton)
 		ClassSelectionCanvas.visibility = Visibility.INHERIT
 		UI.SetCursorVisible(true)
 		UI.SetCanCursorInteractWithUI(true)
-	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] then -- hide
+	elseif oldMenu == _G.MENU_TABLE["ClassSelection"] or oldMenu == _G.MENU_TABLE["ClassAbilities"] then -- hide
 		--print(">> Hiding Class Selection Menu")
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
 		UI.SetCanCursorInteractWithUI(false)
-		LOCAL_PLAYER:ClearOverrideCamera()
+
+		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
+			LOCAL_PLAYER:ClearOverrideCamera()
+		end
 	end
 end
 
@@ -239,7 +269,7 @@ function UpdateAbilityInfo(thisButton)
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
-	if currentShards >= shardCost and currentGold >= goldCost then
+	if currentShards >= shardCost and currentGold >= goldCost and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
 	else
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
@@ -325,7 +355,7 @@ function OnUpgradeButtonClicked(thisButton)
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
 
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
-	ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+	ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnLocalResourceChanged)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
 
 	-- Make the animated mesh do an animation
@@ -341,7 +371,7 @@ function OnUpgradeButtonClicked(thisButton)
 	World.SpawnAsset(UpgradeVFX, {position = AnimMesh:GetWorldPosition()-Vector3.New(0,0,105)})
 end
 
-function OnResourceChanged(player, resName, resAmount)
+function OnLocalResourceChanged(player, resName, resAmount)
 	if resName ~= LevelResourceName then return end -- Check resource name
 	
 	ResourceChangedEventListener:Disconnect()
@@ -385,16 +415,15 @@ end
 
 function AttachCostumeToPlayer(player)
 	if not player.clientUserData.CurrentClass then
-		player.clientUserData.CurrentClass = META_AP().TANK
+		player.clientUserData.CurrentClass = player:GetResource("CLASS_MAP")
+		if player.clientUserData.CurrentClass == 0 then
+			player.clientUserData.CurrentClass = META_AP().TANK
+		end
 	end
 
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
-		if player.clientUserData.LobbyCostume then
-			for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
-				attachment:Destroy()
-			end
-		end
+		DetachCostumeFromPlayer(player)
 		
 		-- Equip new costume
 		local attachmentTable = {}
@@ -406,7 +435,7 @@ function AttachCostumeToPlayer(player)
 		end
 		player.clientUserData.LobbyCostume = attachmentTable
 		newCostume:Destroy()
-	end
+	--end
 end
 
 function DetachCostumeFromPlayer(player)
@@ -418,7 +447,29 @@ function DetachCostumeFromPlayer(player)
 	end
 end
 
-function OnClassChanged(player, Class)
+function OnResourceChanged(player, name, amount)
+	if name == "CLASS_MAP" then
+		player.clientUserData.CurrentClass = amount
+		if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+			AttachCostumeToPlayer(player)
+		end
+
+		-- If the local player changed their class then close the menu and make the button interactable
+		if player == LOCAL_PLAYER then --and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+			if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+			end
+			ConfirmChoiceButton.isInteractable = true
+		end
+	elseif name == "CLOSE_CLASS_SELECTION" and player == LOCAL_PLAYER then
+		if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+		end
+		ConfirmChoiceButton.isInteractable = true
+	end
+end
+
+function OnClassChanged(player, Class, InitClass)
 	player.clientUserData.CurrentClass = Class
 	
 	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
@@ -426,7 +477,7 @@ function OnClassChanged(player, Class)
 	end
 
 	-- If the local player changed their class then close the menu and make the button interactable
-	if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+	if not InitClass and player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		ConfirmChoiceButton.isInteractable = true
 	end
@@ -440,15 +491,13 @@ function OnConfirmChoiceClicked(thisButton)
 	Audio_ClassConfirmed_3:Play()
 
 	local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
-	Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
-	--LOCAL_PLAYER.clientUserData.CurrentClass = META_AP()[dataTable["ClassID"]]
-	--AttachCostumeToPlayer(META_AP()[dataTable["ClassID"]])
+	Events.BroadcastToServer("ClassChanged_SERVER", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
 end
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+	if newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
 		--print("Equipping costume in lobby")
-		while ABGS.GetGameState() ~= ABGS.GAME_STATE_LOBBY do Task.Wait() end
+		while ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND_END do Task.Wait() end
 
 		for _, player in ipairs(Game.GetPlayers()) do
 			AttachCostumeToPlayer(player)
@@ -461,7 +510,17 @@ function OnGameStateChanged(oldState, newState)
 	end
 end
 
+function OnPlayerJoined(player)
+	player.clientUserData.CurrentClass = META_AP().TANK
+	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+		AttachCostumeToPlayer(player)
+	end
+end
+
 function OnPlayerLeft(player)
+	ResourceListeners[player]:Disconnect()
+	ResourceListeners[player] = nil
 	DetachCostumeFromPlayer(player)
 end
 
@@ -539,6 +598,8 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 	buttonComponent.hoveredEvent:Connect(OnClassHovered)
 	buttonComponent.unhoveredEvent:Connect(OnClassUnhovered)
 
+	table.insert(ClassButtons, buttonComponent)
+
 	if CurrentClassButton == nil then
 		CurrentClassButton = buttonComponent
 	end
@@ -572,14 +633,23 @@ end)
 SpinnerTask.repeatCount = -1
 SpinnerTask.repeatInterval = 0
 
---LOCAL_PLAYER.clientUserData.CurrentClass = META_AP().TANK
-
 OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
-Events.Connect("Class Changed", OnClassChanged)
+--Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
 --function Tick()
 	--print("CURSOR: "..tostring(UI.CanCursorInteractWithUI()))
 --end
+
+-- Check to see if the Class Selection should be turned on
+OnMenuChanged(nil, _G.CurrentMenu) 
+ 
+for _, player in ipairs(Game.GetPlayers()) do
+	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
+
+	if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
+		AttachCostumeToPlayer(player)
+	end
+end

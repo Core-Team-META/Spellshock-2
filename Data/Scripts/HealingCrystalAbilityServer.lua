@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 
@@ -7,11 +7,8 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local PrimaryAbility = script:GetCustomProperty("PrimaryAbility"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
-local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
 
-local EventName = script:GetCustomProperty("EventName")
 local DEFAULT_HealAmount = script:GetCustomProperty("HealAmount")
 local DEFAULT_Duration = script:GetCustomProperty("Duration")
 local DEFAULT_Delay = script:GetCustomProperty("DelayBetweenHeals")
@@ -22,123 +19,40 @@ local HealTrigger = nil
 local EventListeners = {}
 local DestroyedEventListener = nil
 
-local isPreviewing = false
-local isPlacing = false
-local isEnabled = true
 local PlayerVFX = nil
 
-local CancelBindings = {
-	ability_extra_20 = true,
-	ability_extra_22 = true,
-	ability_extra_23 = true,
-	ability_extra_24 = true,
-	ability_secondary = true,
-	ability_extra_12 = true
-}
 
-local function SetNetworkProperty(bool)
-	Equipment:SetNetworkedCustomProperty("E_isPreviewing", bool)
+function PlaceObject(thisAbility)
+	local player = thisAbility.owner
+	
+	if not Object.IsValid(player) then return end
+	
+	local targetData = thisAbility:GetTargetData()
+	-- Position
+	local position = targetData:GetHitPosition()
+	-- Rotation
+	local v = targetData:GetAimPosition()
+	local rotation = Rotation.New(v.x, v.y, v.z)
+	
+	local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
+	local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
+	newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
+	HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
+	newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
 end
 
-function OnBindingPressed(player, binding)
-	if isEnabled and not isPlacing and not player.isDead then
-		if binding == AbilityBinding and not isPreviewing and META_AP().AbilitySpamPreventer() then
-			isPreviewing = true
-			SetNetworkProperty(isPreviewing)
-			PrimaryAbility.isEnabled = false
-			SpecialAbility.isEnabled = true
-		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
-			isPreviewing = false
-			SetNetworkProperty(isPreviewing)
-			PrimaryAbility.isEnabled = true
-			SpecialAbility.isEnabled = false
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 10, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
 		end
-	end
-end
-
-function OnSpecialAbilityCast(thisAbility)
-	if isPreviewing == false or isPlacing then
-		--print("INTERRUPTING")
-		SpecialAbility:Interrupt()
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-	end
-end
-
-function OnSpecialAbilityReady(thisAbility)
-	isPlacing = false
-end
-
-function PlaceObject(thisPlayer, position, rotation)
-	if thisPlayer == Equipment.owner then
-		--print("## Placement: "..SpecialAbility.name)
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		PrimaryAbility.isEnabled = true
-
-		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
-		
-		isPlacing = true
-			
-		local newObject = META_AP().SpawnAsset(PlayerVFX.Placement, {position = position, rotation = rotation})
-		local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", DEFAULT_Radius, SpecialAbility.name..": Radius")
-		newObject:SetWorldScale(Vector3.New( CoreMath.Round(radius / DEFAULT_Radius, 3) ))
-		HealTrigger = newObject:GetCustomProperty("Trigger"):WaitForObject()
-		newObject.lifeSpan = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod2", DEFAULT_Duration, SpecialAbility.name..": Duration")
-	end
-end
-
-function OnPlayerDied(player, _)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	PrimaryAbility.isEnabled = true
-	SpecialAbility.isEnabled = false
-end
-
-function OnPlayerRespawn(player)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	PrimaryAbility.isEnabled = true
-	SpecialAbility.isEnabled = false
-end
-
-function OnAbilityToggled(abilityID, mode)
-	if abilityID == SpecialAbility.id or abilityID == "ALL" then
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		isEnabled = mode
-		if abilityID == SpecialAbility.id then
-			PrimaryAbility.isEnabled = true
-		end
-	end
-end
-
-function OnAbilityToggled(abilityID, mode)
-	if abilityID == SpecialAbility.id or abilityID == "ALL" then
-		isPreviewing = false
-		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
-		isEnabled = mode
-		if abilityID == SpecialAbility.id then
-			PrimaryAbility.isEnabled = true
-		end
-	end
+	end, Cooldown)
 end
 
 function OnEquip(equipment, player)
-	isPreviewing = false
-	SetNetworkProperty(isPreviewing)
-	
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName, PlaceObject))
-	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
-	table.insert(EventListeners, SpecialAbility.readyEvent:Connect( OnSpecialAbilityReady ))
-	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
-	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
-	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
-	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
+	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HEALER)
 end
@@ -148,6 +62,9 @@ function OnUnequip(equipment, player)
 		listener:Disconnect()
 	end
 end
+
+Equipment.equippedEvent:Connect(OnEquip)
+Equipment.unequippedEvent:Connect(OnUnequip)
 
 function Tick(dTime)
 	Timer = Timer - dTime 
@@ -190,8 +107,4 @@ function Tick(dTime)
 		Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_Delay, SpecialAbility.name..": Delay")
 	end
 end
-
-Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)
-
 

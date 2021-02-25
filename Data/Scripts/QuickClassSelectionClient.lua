@@ -22,8 +22,6 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local DEFAULT_COLOR = Color.WHITE
 local HOVER_COLOR = Color.New(1,1,1, 0.5) -- transparent white
 
---Events.BroadcastToServer("Class Changed", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
-
 function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["Respawn"] then -- show
         local classID = LOCAL_PLAYER:GetResource("CLASS_MAP")
@@ -37,7 +35,7 @@ function OnMenuChanged(oldMenu, newMenu)
         Respawn_UI.visibility = Visibility.FORCE_OFF
 		UI.SetCursorVisible(false)
         UI.SetCanCursorInteractWithUI(false)
-        Events.BroadcastToServer("Class Changed", CurrentClassButton.clientUserData.classID) -- broadcast to server the player's selected class
+        Events.BroadcastToServer("ClassChanged_SERVER", CurrentClassButton.clientUserData.classID) -- broadcast to server the player's selected class
 	end
 end
 
@@ -110,3 +108,7 @@ for index, classData in ipairs(ClassMenuData:GetChildren()) do
 end
 
 Events.Connect("Menu Changed", OnMenuChanged)
+
+if _G.CurrentMenu == _G.MENU_TABLE["Respawn"] then
+	OnMenuChanged(nil, _G.CurrentMenu)
+end

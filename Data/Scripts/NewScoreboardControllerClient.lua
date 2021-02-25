@@ -16,10 +16,12 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 --]]
 
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
 
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
-local CANVAS = script:GetCustomProperty("Canvas"):WaitForObject()
+local HEADER = script:GetCustomProperty("Header"):WaitForObject()
+local TEAM_NAME = HEADER:GetCustomProperty("TeamName"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local LINE_TEMPLATE = script:GetCustomProperty("LineTemplate")
 
@@ -51,6 +53,13 @@ local atRoundEnd = false
 local roundEndTime = 0.0
 local bindingDown = false
 
+function OnTeamVictory(messsage)
+    if messsage == "" then return end
+    TEAM_NAME.text = messsage
+    TEAM_NAME:GetChildren()[1].text = messsage
+    HEADER.visibility = Visibility.INHERIT
+end
+
 -- nil OnBindingPressed(Player, string)
 -- Keep track of the binding state to show the scoreboard 
 function OnBindingPressed(player, binding)
@@ -71,7 +80,7 @@ end
 -- Add a line to the scoreboard when a player joins
 function OnPlayerJoined(player)
     local newLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
-    newLine.y = newLine.height * (#playerLines + 1)
+    newLine.y = 26.5 * (#playerLines + 1)
     table.insert(playerLines, newLine)
 end
 
@@ -87,6 +96,15 @@ end
 function OnRoundEnd()
     roundEndTime = time()
     atRoundEnd = true
+end
+
+function OnGameStateChanged(oldState, newState)
+    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+        HEADER.visibility = Visibility.FORCE_OFF
+    --[[elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+        print("Resetting Victory Property")
+        Events.BroadcastToServer("TeamVictory_Client", "") -- Reset the network property]]
+    end
 end
 
 -- bool ComparePlayers(Player, Player)
@@ -120,7 +138,7 @@ function Tick(deltaTime)
     end
 
     if bindingDown or atRoundEnd then
-        CANVAS.visibility = Visibility.FORCE_ON
+        PANEL.visibility = Visibility.INHERIT
 
         local players = Game.GetPlayers() 
         table.sort(players, ComparePlayers)
@@ -146,12 +164,12 @@ function Tick(deltaTime)
             line:GetCustomProperty("Killstreak"):WaitForObject().text = tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
         end
     else
-        CANVAS.visibility = Visibility.FORCE_OFF
+        PANEL.visibility = Visibility.FORCE_OFF
     end
 end
 
 -- Initialize
-CANVAS.visibility = Visibility.FORCE_OFF
+PANEL.visibility = Visibility.FORCE_OFF
 
 headerLine = World.SpawnAsset(LINE_TEMPLATE, {parent = PANEL})
 --headerLine:GetCustomProperty("PlayerImage"):WaitForObject().visibility = Visibility.FORCE_OFF
@@ -169,6 +187,8 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnBindingReleased)
+Events.Connect("TeamVictory_Client", OnTeamVictory)
+Events.Connect("GameStateChanged", OnGameStateChanged)
 
 if SHOW_AT_ROUND_END then
     Game.roundEndEvent:Connect(OnRoundEnd)

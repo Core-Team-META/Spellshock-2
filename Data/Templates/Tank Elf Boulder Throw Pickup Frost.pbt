@@ -15,10 +15,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 9063692935374466722
-        ChildIds: 16078465803850313000
         ChildIds: 9454595683614550360
+        ChildIds: 15198159416073869188
         Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
@@ -65,55 +65,8 @@ Assets {
           }
           Vfx {
             AutoPlay: true
-          }
-        }
-      }
-      Objects {
-        Id: 16078465803850313000
-        Name: "Rock 03"
-        Transform {
-          Location {
-            Z: 195
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.7
-            Y: 1.7
-            Z: 1.7
-          }
-        }
-        ParentId: 2799309084415734705
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1007126261426868767
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6981536508008379085
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
             }
           }
         }
@@ -154,6 +107,54 @@ Assets {
           IsAttenuationEnabled: true
         }
       }
+      Objects {
+        Id: 15198159416073869188
+        Name: "Rock 03"
+        Transform {
+          Location {
+            Z: 45
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.399967521
+            Y: 0.399967521
+            Z: 0.399967521
+          }
+        }
+        ParentId: 2799309084415734705
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 926391387561774024
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6981536508008379085
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
     }
     Assets {
       Id: 3902609303942155418
@@ -165,15 +166,6 @@ Assets {
       }
     }
     Assets {
-      Id: 6981536508008379085
-      Name: "Rock 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_003"
-      }
-    }
-    Assets {
       Id: 888725854457039636
       Name: "Big Hammer Huge Ground Impact 01 SFX"
       PlatformAssetType: 7
@@ -182,10 +174,19 @@ Assets {
         AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
+    Assets {
+      Id: 6981536508008379085
+      Name: "Rock 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_rock_generic_003"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

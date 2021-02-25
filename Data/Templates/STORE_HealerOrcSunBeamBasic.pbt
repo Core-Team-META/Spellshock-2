@@ -7,7 +7,7 @@ Assets {
       RootId: 9169989479902790140
       Objects {
         Id: 9169989479902790140
-        Name: "STORE_HealerOrcSunBeamFire"
+        Name: "STORE_HealerOrcSunBeamBasic"
         Transform {
           Scale {
             X: 20
@@ -132,7 +132,6 @@ Assets {
           Teams {
           }
           DisableCastShadows: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -162,7 +161,7 @@ Assets {
         ChildIds: 12080026545548404909
         ChildIds: 7003804466485748977
         ChildIds: 392562242898639810
-        ChildIds: 12922797078677905663
+        ChildIds: 15351918515087970197
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -282,7 +281,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -432,7 +430,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -491,7 +488,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -550,7 +546,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -622,7 +617,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -774,7 +768,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -833,7 +826,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -892,7 +884,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -964,7 +955,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1116,7 +1106,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1175,7 +1164,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1234,7 +1222,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1306,7 +1293,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1373,7 +1359,6 @@ Assets {
           }
           DisableCastShadows: true
           DisableReceiveDecals: true
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -1381,55 +1366,122 @@ Assets {
         }
       }
       Objects {
-        Id: 12922797078677905663
-        Name: "Beam"
+        Id: 15351918515087970197
+        Name: "Layered Thrusters VFX"
         Transform {
           Location {
-            Z: -0.637274742
+            Z: -0.982364416
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 0.144565672
-            Y: 0.144565895
-            Z: 0.0365436263
+            X: 0.866960585
+            Y: 0.866963506
+            Z: 1.81374669
           }
         }
         ParentId: 11256761102134136120
         UnregisteredParameters {
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Bend Thrust Cone"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color B"
             Color {
-              R: 0.73
-              G: 0.159536436
+              R: 0.39200002
+              G: 0.038347844
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Spiral Color"
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Color A"
             Color {
-              R: 5
-              G: 1.71316683
-              B: 0.189999938
+              R: 0.39200002
+              G: 0.038347844
               A: 1
             }
           }
           Overrides {
-            Name: "bp:Beam Width Scale"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Spiral Width Multiplier"
-            Float: 0.234051526
-          }
-          Overrides {
-            Name: "bp:Color"
+            Name: "bp:Color C"
             Color {
-              R: 0.721568644
-              G: 0.0705882385
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Mid Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Core End Pinch"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer End Pinch"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Top Layer Fade Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Core Fade Length"
+            Float: 0.223169759
+          }
+          Overrides {
+            Name: "bp:Core Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:ethrustermeshvar:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Core Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Mid Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Hot Spot Length"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Top Layer Texture Style Morph"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Top Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core Layer"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Mid Layer"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Mid Layer Fade Length"
+            Float: 0
           }
         }
         Collidable_v2 {
@@ -1440,12 +1492,15 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 1317716397706920983
+            Id: 2426790310185116976
           }
           TeamSettings {
           }
           Vfx {
             AutoPlay: true
+            Relevance {
+              Value: "mc:evfxrelevance:critical"
+            }
           }
         }
       }
@@ -1532,12 +1587,12 @@ Assets {
       }
     }
     Assets {
-      Id: 1317716397706920983
-      Name: "Laser Beam VFX"
+      Id: 2426790310185116976
+      Name: "Layered Thrusters VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Laser_Beam"
+        AssetId: "fxbp_thruster_var"
       }
     }
     PrimaryAssetId {
@@ -1545,5 +1600,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

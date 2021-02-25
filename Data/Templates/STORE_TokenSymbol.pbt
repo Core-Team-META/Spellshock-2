@@ -34,7 +34,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14108921733462450899
+              Id: 4727080213227783003
             }
             Color {
               R: 1
@@ -61,12 +61,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14108921733462450899
-      Name: "Fantasy Rune 002"
+      Id: 4727080213227783003
+      Name: "Fantasy Craft Crystal 007"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Equip_Rune_002"
+        AssetId: "UI_Fantasy_Crafting_Crystal_007"
       }
     }
     PrimaryAssetId {
@@ -74,5 +74,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }

@@ -42,6 +42,15 @@ function OnPickupExecute(thisAbility)
 	ThrowAbility.isEnabled = true
 end
 
+function OnSpecialAbilityCooldown(thisAbility)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name..": Cooldown")
+	Task.Spawn(function ()
+		if Object.IsValid(thisAbility) then
+			thisAbility:AdvancePhase()
+		end
+	end, Cooldown)
+end
+
 function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(PickupAbility) or not other:IsA("Player")
 	or other == PickupAbility.owner then return end
@@ -124,6 +133,7 @@ Equipment.equippedEvent:Connect(OnEquip)
 Equipment.unequippedEvent:Connect(OnUnequip)
 PickupAbility.castEvent:Connect( OnPickupCast )
 PickupAbility.executeEvent:Connect(OnPickupExecute)
+PickupAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown)
 ThrowAbility.executeEvent:Connect(OnThrowExecute)
 ThrowAbility.recoveryEvent:Connect(OnThrowAbilityRecovery)
 ThrowAbility.interruptedEvent:Connect(OnInterrupted)

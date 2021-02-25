@@ -14,14 +14,13 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 -- nil OnPlayerDied(Player, Damage)
 -- Fires an event for the client to add a line to the kill feed
 function OnPlayerDied(player, damage)
 	if damage.sourceAbility then
-		Events.BroadcastToAllPlayers("AddKillFeedKill_Internal", damage.sourcePlayer, player, damage.sourceAbility.name)
-	else
-		Events.BroadcastToAllPlayers("AddKillFeedKill_Internal", damage.sourcePlayer, player, nil)
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name)
+	elseif not player.serverUserData.killedByStatusEffect then
+		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, nil)
 	end
 end
 

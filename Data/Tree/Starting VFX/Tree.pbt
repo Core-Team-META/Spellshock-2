@@ -361,6 +361,12 @@ Objects {
         Id: 4450848993927554778
       }
     }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 6104934738115854315
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -694,6 +700,12 @@ Objects {
       Name: "cs:04_WraithStrike_Costume"
       AssetReference {
         Id: 6376604265419333521
+      }
+    }
+    Overrides {
+      Name: "cs:02_DeathsShadow_Ending"
+      AssetReference {
+        Id: 1429104248892819753
       }
     }
   }
@@ -1662,7 +1674,7 @@ Objects {
     Overrides {
       Name: "cs:03_BearTrap_Placement"
       AssetReference {
-        Id: 6835319675050620528
+        Id: 1772477994984263747
       }
     }
   }
@@ -2099,7 +2111,7 @@ Objects {
     Overrides {
       Name: "cs:01_Tornado_Preview"
       AssetReference {
-        Id: 15421457792109044896
+        Id: 3392388590054420013
       }
     }
   }
@@ -2396,7 +2408,7 @@ Objects {
     Overrides {
       Name: "cs:01_Tornado_Preview"
       AssetReference {
-        Id: 5674955556886786459
+        Id: 18349665107832834494
       }
     }
     Overrides {
@@ -2750,7 +2762,7 @@ Objects {
     Overrides {
       Name: "cs:04_BoulderThrow_Projectile"
       AssetReference {
-        Id: 1273489800256864344
+        Id: 10645225087435509623
       }
     }
   }
@@ -2951,6 +2963,12 @@ Objects {
         Id: 3596751211212476151
       }
     }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Projectile"
+      AssetReference {
+        Id: 8525502969444381336
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3045,12 +3063,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:04_BoulderThrow_Projectile"
-      AssetReference {
-        Id: 2607136788901765941
-      }
-    }
-    Overrides {
       Name: "cs:03_ShieldDash_Bash"
       AssetReference {
         Id: 716049939813205708
@@ -3072,6 +3084,12 @@ Objects {
       Name: "cs:02_StoneWall_Placement"
       AssetReference {
         Id: 5934541114304810566
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Projectile"
+      AssetReference {
+        Id: 10914726185538134190
       }
     }
   }
@@ -3270,6 +3288,12 @@ Objects {
       Name: "cs:03_ShieldDash_Attachment"
       AssetReference {
         Id: 8644628869217574717
+      }
+    }
+    Overrides {
+      Name: "cs:04_BoulderThrow_Projectile"
+      AssetReference {
+        Id: 10282757879352826607
       }
     }
   }

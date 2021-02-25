@@ -13,7 +13,7 @@ Assets {
       Overrides {
         Name: "cs:01_RockStrike_Projectile"
         AssetReference {
-          Id: 13331124737271784681
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -49,7 +49,7 @@ Assets {
       Overrides {
         Name: "cs:04_BoulderThrow_Projectile"
         AssetReference {
-          Id: 4152617433700755742
+          Id: 841534158063459245
         }
       }
       Overrides {
@@ -58,5 +58,5 @@ Assets {
       }
     }
   }
-  SerializationVersion: 75
+  SerializationVersion: 76
 }
