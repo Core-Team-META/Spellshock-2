@@ -94,4 +94,3 @@ elseif ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
 else
 	_G.CurrentMenu = _G.MENU_TABLE["NONE"]
 end
-
