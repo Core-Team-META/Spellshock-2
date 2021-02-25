@@ -168,7 +168,7 @@ function OnPlayerJoined(player)
 			nameplates[player].changePiece.visibility = Visibility.INHERIT
 		end
 
-		if SHOW_NUMBERS then
+		if SHOW_NUMBERS and player ~= LOCAL_PLAYER  then
 			nameplates[player].healthText.visibility = Visibility.INHERIT
 		end
 	end

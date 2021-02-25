@@ -47,35 +47,6 @@ Assets {
           }
         }
         ParentId: 17824622782524843049
-        ChildIds: 4906367193525544248
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4906367193525544248
-        Name: "Group"
-        Transform {
-          Location {
-            X: 6.9168992
-            Y: -6.28225374
-            Z: -44.3206367
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.791419
-            Y: 0.791419
-            Z: 0.791419
-          }
-        }
-        ParentId: 13823380249715800211
         ChildIds: 2620403149191836451
         ChildIds: 1297735751727010585
         ChildIds: 16420424056841996008
@@ -104,21 +75,22 @@ Assets {
         Name: "Ring - Beveled Thick"
         Transform {
           Location {
-            X: -6.04259
-            Y: -0.147988901
-            Z: 203.243317
+            X: 2.13391495
+            Y: -6.39935827
+            Z: 116.530296
           }
           Rotation {
-            Pitch: 101.668106
-            Roll: -2.737854
+            Pitch: 78.3318939
+            Yaw: -180
+            Roll: 177.262146
           }
           Scale {
-            X: 0.524431646
-            Y: 0.524433732
-            Z: 0.945262253
+            X: 0.415045202
+            Y: 0.415046841
+            Z: 0.748098552
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -154,21 +126,21 @@ Assets {
         Name: "Ring - Beveled Thick"
         Transform {
           Location {
-            X: -0.677597344
-            Y: -0.00351868058
-            Z: 175.316254
+            X: 6.38026285
+            Y: -6.28518343
+            Z: 94.4281311
           }
           Rotation {
             Pitch: 90
-            Roll: 101.606895
+            Roll: 101.606934
           }
           Scale {
-            X: 0.336906344
-            Y: 0.336903125
-            Z: 0.814053595
+            X: 0.266634107
+            Y: 0.266631544
+            Z: 0.644257486
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -204,22 +176,22 @@ Assets {
         Name: "pier_light"
         Transform {
           Location {
-            X: 0.0392172299
-            Y: 3.07564783
-            Z: 116.794533
+            X: 6.9475565
+            Y: -3.84812832
+            Z: 48.1129417
           }
           Rotation {
             Pitch: -1.58590841
-            Yaw: 64.9138184
+            Yaw: 64.9138336
             Roll: -0.0347289145
           }
           Scale {
-            X: 5.28450918
-            Y: 5.28450918
-            Z: 5.28450918
+            X: 4.18226099
+            Y: 4.18226099
+            Z: 4.18226099
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         ChildIds: 6587282814606506516
         ChildIds: 6512192706118765983
         ChildIds: 13842924675335456738
@@ -336,6 +308,14 @@ Assets {
             Name: "bp:Emissive Boost"
             Float: 0.761457264
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 2
+              B: 3
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -350,7 +330,7 @@ Assets {
           Vfx {
             AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:critical"
+              Value: "mc:evfxrelevance:low"
             }
           }
         }
@@ -468,21 +448,21 @@ Assets {
         Name: "Pyramid - 8-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.0131139988
-            Y: -1.47340906
-            Z: 82.4706421
+            X: 6.92687
+            Y: -7.44841385
+            Z: 20.9484901
           }
           Rotation {
             Yaw: -179.999954
             Roll: -179.999954
           }
           Scale {
-            X: 1.00000083
-            Y: 0.999999583
-            Z: 1.05449224
+            X: 0.791419744
+            Y: 0.791418731
+            Z: 0.834545195
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -529,20 +509,20 @@ Assets {
         Name: "Fantasy Castle Accessory Roof 01 "
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 42.9312401
+            X: 6.92687
+            Y: -7.44841385
+            Z: -10.3437595
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 0.0800000057
-            Y: 0.0800000504
-            Z: 0.0533447191
+            X: 0.0633135289
+            Y: 0.0633135661
+            Z: 0.0422180295
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -670,20 +650,20 @@ Assets {
         Name: "Fantasy Pommel 05"
         Transform {
           Location {
-            X: 0.0207364988
-            Y: -1.41810894
-            Z: 9.52095127
+            X: 6.93323469
+            Y: -7.40465355
+            Z: -36.7853699
           }
           Rotation {
-            Yaw: -91.0216064
+            Yaw: -91.0216
           }
           Scale {
-            X: 4.64485836
-            Y: 4.64485836
-            Z: 4.64485836
+            X: 3.67602921
+            Y: 3.67602921
+            Z: 3.67602921
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -709,19 +689,19 @@ Assets {
         Name: "Pipe - 8-Sided"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 106.280579
+            X: 6.92687
+            Y: -7.44841385
+            Z: 39.7921066
           }
           Rotation {
           }
           Scale {
-            X: 0.646854281
-            Y: 0.643930256
-            Z: 0.177496776
+            X: 0.51193285
+            Y: 0.5096187
+            Z: 0.140474334
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -774,22 +754,22 @@ Assets {
         Name: "Ring - Beveled Thick"
         Transform {
           Location {
-            X: 0.902595103
-            Y: -0.501243532
-            Z: 145.188492
+            X: 7.63101387
+            Y: -6.6790266
+            Z: 70.5842896
           }
           Rotation {
-            Pitch: 86.4177704
-            Yaw: -155.415573
-            Roll: 116.558731
+            Pitch: 86.4178238
+            Yaw: -155.415619
+            Roll: 116.558784
           }
           Scale {
-            X: 0.276312053
-            Y: 0.276312053
-            Z: 0.276312053
+            X: 0.218678623
+            Y: 0.218678623
+            Z: 0.218678623
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -834,19 +814,19 @@ Assets {
         Name: "Fantasy Castle Accessory Roof 01 "
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 80.284584
+            X: 6.92687
+            Y: -7.44841385
+            Z: 19.2183628
           }
           Rotation {
           }
           Scale {
-            X: 0.161577404
-            Y: 0.161577493
-            Z: 0.0471479744
+            X: 0.127875432
+            Y: 0.127875507
+            Z: 0.0373138078
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -965,20 +945,20 @@ Assets {
         Name: "Fantasy Castle Accessory Roof 01 "
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 111.733604
+            X: 6.92687
+            Y: -7.44841385
+            Z: 44.1076736
           }
           Rotation {
             Roll: -179.999954
           }
           Scale {
-            X: 8.64958858
-            Y: 8.64957619
-            Z: 3.2755332
+            X: 6.84544897
+            Y: 6.84544
+            Z: 2.59231925
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Roof:id"
@@ -1088,19 +1068,19 @@ Assets {
         Name: "Pipe - 8-Sided"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 106.280579
+            X: 6.92687
+            Y: -7.44841385
+            Z: 39.7921066
           }
           Rotation {
           }
           Scale {
-            X: 0.699379921
-            Y: 0.696218371
-            Z: 0.191909775
+            X: 0.553502619
+            Y: 0.551000476
+            Z: 0.151881054
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1145,21 +1125,21 @@ Assets {
         Name: "Pyramid - 8-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.0131554129
-            Y: -1.47340631
-            Z: 82.4706192
+            X: 6.92687
+            Y: -7.44841385
+            Z: 20.9484901
           }
           Rotation {
             Yaw: -179.999954
             Roll: -179.999954
           }
           Scale {
-            X: 1.06915116
-            Y: 1.06914973
-            Z: 1.12741041
+            X: 0.846146643
+            Y: 0.846145451
+            Z: 0.892254114
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1208,21 +1188,21 @@ Assets {
         Name: "Ring - Beveled Thick"
         Transform {
           Location {
-            X: -0.677597344
-            Y: -0.00351868058
-            Z: 156.71701
+            X: 6.38026285
+            Y: -6.28518343
+            Z: 79.7083282
           }
           Rotation {
             Pitch: 90
-            Roll: 3.21656799
+            Roll: 3.21656775
           }
           Scale {
-            X: 0.32868576
-            Y: 0.328686982
-            Z: 0.62138319
+            X: 0.26012817
+            Y: 0.260129154
+            Z: 0.491774499
           }
         }
-        ParentId: 4906367193525544248
+        ParentId: 13823380249715800211
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
