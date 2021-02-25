@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16220021570841012759
+  Name: "Icon Present"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Present"
+  }
+}
+Assets {
   Id: 16072726743892194472
   Name: "Fantasy Corners 006"
   PlatformAssetType: 9
@@ -95,6 +104,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Gem_027"
+  }
+}
+Assets {
+  Id: 12804716500201279526
+  Name: "BG Highlighted 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_020"
   }
 }
 Assets {
