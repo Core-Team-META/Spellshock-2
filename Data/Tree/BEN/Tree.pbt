@@ -25722,7 +25722,7 @@ Objects {
       }
       Color {
         R: 0.651405811
-        G: 0.351532698
+        G: 0.351532787
         A: 1
       }
       TeamSettings {
@@ -50542,6 +50542,7 @@ Objects {
     }
   }
   ParentId: 15771304803184698707
+  ChildIds: 11811937839480482248
   ChildIds: 7184058270249852478
   ChildIds: 10990884285772070380
   ChildIds: 16199659426813533688
@@ -50550,6 +50551,7 @@ Objects {
   ChildIds: 18368982484421075211
   ChildIds: 5561678651485108447
   ChildIds: 5162266364739568233
+  ChildIds: 4089256168730659979
   ChildIds: 1412153332137428816
   UnregisteredParameters {
     Overrides {
@@ -50567,9 +50569,9 @@ Objects {
   }
   Control {
     Width: 80
-    Height: 60
+    Height: 80
     UIX: 10
-    UIY: -5
+    UIY: -25
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -50617,7 +50619,7 @@ Objects {
     Width: 79
     Height: 15
     UIX: 10.658
-    UIY: 19.3968887
+    UIY: 37.5961304
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -50705,6 +50707,62 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 4089256168730659979
+  Name: "GLOW"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9190913040196979602
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 158
+    Height: 28
+    UIY: 10.1690702
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 8578995028087510781
+      }
+      Color {
+        R: 0.87
+        G: 0.691390872
+        A: 0.582
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -51177,6 +51235,41 @@ Objects {
           Value: "mc:euianchor:bottomcenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 11811937839480482248
+  Name: "ButtonBounce"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9190913040196979602
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:EaseUI"
+      AssetReference {
+        Id: 12045507068401926921
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17876192670668521259
     }
   }
 }
@@ -56202,10 +56295,7 @@ Objects {
     }
   }
   ParentId: 6501700728675779084
-  ChildIds: 13946008571094046993
-  ChildIds: 9682418634539807570
-  ChildIds: 1352101106986134833
-  ChildIds: 6526582877051539473
+  ChildIds: 10504812117774102641
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56215,8 +56305,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -56239,7 +56328,188 @@ Objects {
   }
 }
 Objects {
-  Id: 6526582877051539473
+  Id: 10504812117774102641
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.34766
+      Y: -39106.7813
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6382513985830048068
+  ChildIds: 1705064331555927326
+  ChildIds: 1905653899464033686
+  ChildIds: 3427718912378895130
+  ChildIds: 459505289849376237
+  ChildIds: 14248894103776720179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14248894103776720179
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10504812117774102641
+  ChildIds: 1035729231848485264
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1035729231848485264
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14248894103776720179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 459505289849376237
   Name: "BG_FADE"
   Transform {
     Location {
@@ -56253,7 +56523,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6382513985830048068
+  ParentId: 10504812117774102641
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56261,9 +56531,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -56271,12 +56542,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -56296,16 +56567,13 @@ Objects {
   }
 }
 Objects {
-  Id: 1352101106986134833
-  Name: "Upgrade"
+  Id: 3427718912378895130
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -56313,7 +56581,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6382513985830048068
+  ParentId: 10504812117774102641
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56321,55 +56589,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 9682418634539807570
-  Name: "Upgrade_SHADOW"
+  Id: 1905653899464033686
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -56377,7 +56639,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6382513985830048068
+  ParentId: 10504812117774102641
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56385,44 +56647,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 13946008571094046993
+  Id: 1705064331555927326
   Name: "BG_FADE"
   Transform {
     Location {
@@ -56435,7 +56696,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6382513985830048068
+  ParentId: 10504812117774102641
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56443,9 +56704,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -56453,12 +56715,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -56502,7 +56764,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -56550,7 +56812,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -56610,7 +56872,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -56674,7 +56936,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -56736,7 +56998,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -56800,7 +57062,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -56858,7 +57120,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -57937,10 +58199,7 @@ Objects {
     }
   }
   ParentId: 1804652100783243884
-  ChildIds: 12438464120638232119
-  ChildIds: 1591617033845455290
-  ChildIds: 15788887250851293437
-  ChildIds: 10748510836206838991
+  ChildIds: 14143712698301435329
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -57950,8 +58209,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -57974,7 +58232,188 @@ Objects {
   }
 }
 Objects {
-  Id: 10748510836206838991
+  Id: 14143712698301435329
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.7969
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10649538141768359779
+  ChildIds: 10187342736459441197
+  ChildIds: 6347852337734725257
+  ChildIds: 18111804242593740625
+  ChildIds: 13800147013200128010
+  ChildIds: 8119840395986958032
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8119840395986958032
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14143712698301435329
+  ChildIds: 16576791587254656873
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16576791587254656873
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8119840395986958032
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13800147013200128010
   Name: "BG_FADE"
   Transform {
     Location {
@@ -57988,7 +58427,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10649538141768359779
+  ParentId: 14143712698301435329
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -57996,9 +58435,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -58006,12 +58446,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -58031,16 +58471,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15788887250851293437
-  Name: "Upgrade"
+  Id: 18111804242593740625
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -58048,7 +58485,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10649538141768359779
+  ParentId: 14143712698301435329
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -58056,55 +58493,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 1591617033845455290
-  Name: "Upgrade_SHADOW"
+  Id: 6347852337734725257
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -58112,7 +58543,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10649538141768359779
+  ParentId: 14143712698301435329
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -58120,44 +58551,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 12438464120638232119
+  Id: 10187342736459441197
   Name: "BG_FADE"
   Transform {
     Location {
@@ -58170,7 +58600,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10649538141768359779
+  ParentId: 14143712698301435329
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -58178,9 +58608,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -58188,12 +58619,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -58237,7 +58668,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -58285,7 +58716,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -58345,7 +58776,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -58409,7 +58840,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -58471,7 +58902,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -58535,7 +58966,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -58593,7 +59024,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -59672,10 +60103,7 @@ Objects {
     }
   }
   ParentId: 9649670263420983071
-  ChildIds: 6513172568273412672
-  ChildIds: 2255172023586008271
-  ChildIds: 14001093556208701485
-  ChildIds: 101072581235856832
+  ChildIds: 828650745653940153
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59685,8 +60113,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -59709,7 +60136,188 @@ Objects {
   }
 }
 Objects {
-  Id: 101072581235856832
+  Id: 828650745653940153
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.35938
+      Y: -39106.8047
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11619445494374545587
+  ChildIds: 6397070317641668118
+  ChildIds: 15113289230884476139
+  ChildIds: 15699445332008938812
+  ChildIds: 2815232371929592070
+  ChildIds: 17824237747669960733
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17824237747669960733
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 828650745653940153
+  ChildIds: 7352387207760796973
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7352387207760796973
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17824237747669960733
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2815232371929592070
   Name: "BG_FADE"
   Transform {
     Location {
@@ -59723,7 +60331,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11619445494374545587
+  ParentId: 828650745653940153
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59731,9 +60339,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -59741,12 +60350,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -59766,16 +60375,13 @@ Objects {
   }
 }
 Objects {
-  Id: 14001093556208701485
-  Name: "Upgrade"
+  Id: 15699445332008938812
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -59783,7 +60389,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11619445494374545587
+  ParentId: 828650745653940153
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59791,55 +60397,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 2255172023586008271
-  Name: "Upgrade_SHADOW"
+  Id: 15113289230884476139
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -59847,7 +60447,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11619445494374545587
+  ParentId: 828650745653940153
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59855,44 +60455,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 6513172568273412672
+  Id: 6397070317641668118
   Name: "BG_FADE"
   Transform {
     Location {
@@ -59905,7 +60504,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11619445494374545587
+  ParentId: 828650745653940153
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59913,9 +60512,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -59923,12 +60523,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -59972,7 +60572,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -60020,7 +60620,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -60080,7 +60680,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -60144,7 +60744,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -60206,7 +60806,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -60270,7 +60870,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -60328,7 +60928,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -61407,10 +62007,7 @@ Objects {
     }
   }
   ParentId: 6806077132485854249
-  ChildIds: 14712296734805875746
-  ChildIds: 16642039835421934942
-  ChildIds: 4051542522269540545
-  ChildIds: 3675234965342584183
+  ChildIds: 7768542199595358223
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61420,8 +62017,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -61444,7 +62040,188 @@ Objects {
   }
 }
 Objects {
-  Id: 3675234965342584183
+  Id: 7768542199595358223
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.35156
+      Y: -39106.8125
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4451940636816331188
+  ChildIds: 856928899119296973
+  ChildIds: 13289307974015569103
+  ChildIds: 4735887721282182988
+  ChildIds: 273242275503908134
+  ChildIds: 10908856496295537662
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10908856496295537662
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7768542199595358223
+  ChildIds: 16278265587791867848
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16278265587791867848
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10908856496295537662
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 273242275503908134
   Name: "BG_FADE"
   Transform {
     Location {
@@ -61458,7 +62235,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4451940636816331188
+  ParentId: 7768542199595358223
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61466,9 +62243,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -61476,12 +62254,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -61501,16 +62279,13 @@ Objects {
   }
 }
 Objects {
-  Id: 4051542522269540545
-  Name: "Upgrade"
+  Id: 4735887721282182988
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -61518,7 +62293,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4451940636816331188
+  ParentId: 7768542199595358223
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61526,55 +62301,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 16642039835421934942
-  Name: "Upgrade_SHADOW"
+  Id: 13289307974015569103
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -61582,7 +62351,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4451940636816331188
+  ParentId: 7768542199595358223
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61590,44 +62359,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 14712296734805875746
+  Id: 856928899119296973
   Name: "BG_FADE"
   Transform {
     Location {
@@ -61640,7 +62408,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4451940636816331188
+  ParentId: 7768542199595358223
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61648,9 +62416,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -61658,12 +62427,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -61707,7 +62476,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -61755,7 +62524,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -61815,7 +62584,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -61879,7 +62648,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -61941,7 +62710,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -62005,7 +62774,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -62063,7 +62832,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -63142,10 +63911,7 @@ Objects {
     }
   }
   ParentId: 11277716157660864228
-  ChildIds: 16166052174368353416
-  ChildIds: 17775325634706645048
-  ChildIds: 15106692707644797424
-  ChildIds: 14927482937824569107
+  ChildIds: 15984477462097896952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63155,8 +63921,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -63179,7 +63944,188 @@ Objects {
   }
 }
 Objects {
-  Id: 14927482937824569107
+  Id: 15984477462097896952
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.35156
+      Y: -39106.8125
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12196098843929940904
+  ChildIds: 2793454433066997803
+  ChildIds: 11547600000527328213
+  ChildIds: 8685393153306780834
+  ChildIds: 11367584412225283505
+  ChildIds: 6339711460451340645
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6339711460451340645
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15984477462097896952
+  ChildIds: 12692883494676722422
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12692883494676722422
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6339711460451340645
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11367584412225283505
   Name: "BG_FADE"
   Transform {
     Location {
@@ -63193,7 +64139,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12196098843929940904
+  ParentId: 15984477462097896952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63201,9 +64147,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -63211,12 +64158,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -63236,16 +64183,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15106692707644797424
-  Name: "Upgrade"
+  Id: 8685393153306780834
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -63253,7 +64197,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12196098843929940904
+  ParentId: 15984477462097896952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63261,55 +64205,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 17775325634706645048
-  Name: "Upgrade_SHADOW"
+  Id: 11547600000527328213
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -63317,7 +64255,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12196098843929940904
+  ParentId: 15984477462097896952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63325,44 +64263,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 16166052174368353416
+  Id: 2793454433066997803
   Name: "BG_FADE"
   Transform {
     Location {
@@ -63375,7 +64312,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12196098843929940904
+  ParentId: 15984477462097896952
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63383,9 +64320,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -63393,12 +64331,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -63442,7 +64380,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -63490,7 +64428,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -63550,7 +64488,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -63614,7 +64552,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -63676,7 +64614,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -63740,7 +64678,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -63798,7 +64736,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -64877,10 +65815,7 @@ Objects {
     }
   }
   ParentId: 4864105585190310735
-  ChildIds: 10617280898120980403
-  ChildIds: 2045465766793891543
-  ChildIds: 3188018812730039750
-  ChildIds: 335509200171593202
+  ChildIds: 2123133273768718410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -64890,8 +65825,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.149
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -64914,7 +65848,188 @@ Objects {
   }
 }
 Objects {
-  Id: 335509200171593202
+  Id: 2123133273768718410
+  Name: "UI Panel"
+  Transform {
+    Location {
+      X: 3155.35938
+      Y: -39106.832
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16450796671411982767
+  ChildIds: 5858562216538541758
+  ChildIds: 15706640535766380793
+  ChildIds: 10342633552780593061
+  ChildIds: 1542285854602352320
+  ChildIds: 3873750339823860895
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3873750339823860895
+  Name: "Upgrade_SHADOW"
+  Transform {
+    Location {
+      X: 3155.35547
+      Y: -39106.8203
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423233
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2123133273768718410
+  ChildIds: 5732883395448248048
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: 15.5808764
+    UIY: 2.71601582
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        A: 0.671
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5732883395448248048
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3873750339823860895
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1542285854602352320
   Name: "BG_FADE"
   Transform {
     Location {
@@ -64928,7 +66043,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16450796671411982767
+  ParentId: 2123133273768718410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -64936,9 +66051,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -64946,12 +66062,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 14060330023043759337
+        Id: 48307754774318265
       }
       Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
       }
       TeamSettings {
       }
@@ -64971,16 +66087,13 @@ Objects {
   }
 }
 Objects {
-  Id: 3188018812730039750
-  Name: "Upgrade"
+  Id: 10342633552780593061
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.36328
-      Y: -39106.8438
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423248
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -64988,7 +66101,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16450796671411982767
+  ParentId: 2123133273768718410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -64996,55 +66109,49 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        R: 0.97
-        G: 0.539602697
+        R: 0.99
+        G: 0.570397377
         A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 2045465766793891543
-  Name: "Upgrade_SHADOW"
+  Id: 15706640535766380793
+  Name: "BG_FADE"
   Transform {
     Location {
-      X: 3155.35547
-      Y: -39106.8203
-      Z: -6969.58887
     }
     Rotation {
-      Yaw: -136.423233
+      Yaw: -1.02452832e-05
     }
     Scale {
       X: 1
@@ -65052,7 +66159,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16450796671411982767
+  ParentId: 2123133273768718410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -65060,44 +66167,43 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
       Color {
-        A: 0.384
+        R: 0.99
+        G: 0.570397377
+        A: 1
       }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
+      TeamSettings {
       }
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
   }
 }
 Objects {
-  Id: 10617280898120980403
+  Id: 5858562216538541758
   Name: "BG_FADE"
   Transform {
     Location {
@@ -65110,7 +66216,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16450796671411982767
+  ParentId: 2123133273768718410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -65118,9 +66224,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -65128,12 +66235,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -65177,7 +66284,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -65225,7 +66332,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -65285,7 +66392,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -65349,7 +66456,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -65411,7 +66518,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -65475,7 +66582,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -65533,7 +66640,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
@@ -66611,10 +67718,7 @@ Objects {
     }
   }
   ParentId: 16376370866370709051
-  ChildIds: 9505060329964978054
-  ChildIds: 287191662286131838
-  ChildIds: 11213166491550411950
-  ChildIds: 12042190862442100258
+  ChildIds: 15280004754413555469
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -66624,8 +67728,7 @@ Objects {
   Control {
     Width: 82
     Height: 24
-    UIX: 4.29931641
-    UIY: 21.9334412
+    UIY: -13.1489544
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -66648,69 +67751,12 @@ Objects {
   }
 }
 Objects {
-  Id: 12042190862442100258
-  Name: "BG_FADE"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -1.02452832e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9302093935189977525
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 86
-    Height: 1
-    UIY: -18.5604782
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 14060330023043759337
-      }
-      Color {
-        R: 0.909999967
-        G: 0.614702
-        A: 0.869
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomcenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 11213166491550411950
-  Name: "Upgrade"
+  Id: 15280004754413555469
+  Name: "UI Panel"
   Transform {
     Location {
       X: 3155.36328
-      Y: -39106.8438
+      Y: -39106.8516
       Z: -6969.58887
     }
     Rotation {
@@ -66723,6 +67769,11 @@ Objects {
     }
   }
   ParentId: 9302093935189977525
+  ChildIds: 9505060329964978054
+  ChildIds: 8473030444969616191
+  ChildIds: 13585523523597740816
+  ChildIds: 8301124445692695093
+  ChildIds: 287191662286131838
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -66730,29 +67781,14 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 70
-    Height: 17
-    UIX: 1.25
-    UIY: 5.3760376
+    Width: 100
+    Height: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    Text {
-      Label: "UPGRADE"
-      Color {
-        R: 0.97
-        G: 0.539602697
-        A: 1
-      }
-      Size: 10
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-      }
+    Panel {
     }
     AnchorLayout {
       SelfAnchor {
@@ -66786,7 +67822,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9302093935189977525
+  ParentId: 15280004754413555469
+  ChildIds: 11213166491550411950
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -66796,8 +67833,8 @@ Objects {
   Control {
     Width: 70
     Height: 17
-    UIX: 2.88065338
-    UIY: 6.5014
+    UIX: 15.5808764
+    UIY: 2.71601582
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -66806,9 +67843,9 @@ Objects {
     Text {
       Label: "UPGRADE"
       Color {
-        A: 0.384
+        A: 0.671
       }
-      Size: 10
+      Size: 11
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -66831,6 +67868,244 @@ Objects {
   }
 }
 Objects {
+  Id: 11213166491550411950
+  Name: "Upgrade"
+  Transform {
+    Location {
+      X: 3155.36328
+      Y: -39106.8438
+      Z: -6969.58887
+    }
+    Rotation {
+      Yaw: -136.423248
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 287191662286131838
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 70
+    Height: 17
+    UIX: -1.63065338
+    UIY: 0.452301025
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "UPGRADE"
+      Color {
+        R: 0.97
+        G: 0.539602697
+        A: 1
+      }
+      Size: 11
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8301124445692695093
+  Name: "BG_FADE"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15280004754413555469
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 120
+    Height: 21
+    UIX: -9
+    UIY: -74
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
+      Color {
+        R: 0.0399999619
+        G: 0.00397350639
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13585523523597740816
+  Name: "BG_FADE"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15280004754413555469
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -78
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
+      Color {
+        R: 0.99
+        G: 0.570397377
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8473030444969616191
+  Name: "BG_FADE"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15280004754413555469
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 160
+    Height: 19
+    UIX: -9
+    UIY: -72
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 48307754774318265
+      }
+      Color {
+        R: 0.99
+        G: 0.570397377
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 9505060329964978054
   Name: "BG_FADE"
   Transform {
@@ -66844,7 +68119,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9302093935189977525
+  ParentId: 15280004754413555469
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -66852,9 +68127,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 120
-    Height: 23
-    UIY: 2.94385576
+    Width: 160
+    Height: 160
+    UIX: -9
+    UIY: 1.44044495
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -66862,12 +68138,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 48307754774318265
+        Id: 8578995028087510781
       }
       Color {
         R: 0.100000024
-        G: 0.0278145969
-        A: 0.869
+        G: 0.0238410644
+        A: 1
       }
       TeamSettings {
       }
@@ -66911,7 +68187,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 82
@@ -66959,7 +68235,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 86
@@ -67019,7 +68295,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -67083,7 +68359,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -67145,7 +68421,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -67209,7 +68485,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 70
@@ -67267,7 +68543,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 120
