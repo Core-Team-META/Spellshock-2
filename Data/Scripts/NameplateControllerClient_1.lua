@@ -403,4 +403,4 @@ end
 -- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Events.Connect("GameStateChanged", OnGameStateChanged)
+--Events.Connect("GameStateChanged", OnGameStateChanged)
