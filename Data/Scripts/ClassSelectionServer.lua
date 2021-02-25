@@ -118,4 +118,5 @@ end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
+Events.Connect("CH_ClassChanged_SERVER", OnClassChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
