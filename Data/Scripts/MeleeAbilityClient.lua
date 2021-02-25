@@ -89,10 +89,14 @@ local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 
 local ChargeReleaseEffect = script:GetCustomProperty("ChargeReleaseEffect")
 local FullChargeEffect = script:GetCustomProperty("FullChargeEffect")
+local ChargeupSFX = script:GetCustomProperty("ChargeupSFX"):WaitForObject()
 local ChargeUITemp = "76202E0057632269:ChargeUpBar"
 
+local defaultPitch = ChargeupSFX.pitch
+
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local isCharging = false
+local isCharging = 0 -- 0: not charging  1: charging  2: full charge
+local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
 local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
 local chargeStart = 1
 local ChargePanel 
@@ -103,30 +107,54 @@ function Tick()
 		UpdateSwipeCalibration()
 	end
 
-	if isCharging and Object.IsValid(ChargePanel) then
+	if LOCAL_PLAYER == EQUIPMENT.owner and isCharging > 0 and Object.IsValid(ChargePanel) and time() - chargeStart > MIN_CHARGE then
+		local chargeText = ChargeBar.clientUserData.text
 		ChargePanel.visibility = Visibility.INHERIT
+		
 		local chargeAmount = time() - chargeStart
 		ChargeBar.progress = chargeAmount / MAX_CHARGE
 
-		if chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+		if not ChargeupSFX.isPlaying and isCharging == 1 then
+			ChargeupSFX:Play()
+			ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
+			chargeText.text = "Charging..."
+		end
+
+		ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
+
+		if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+			ChargeupSFX:Stop()
 			World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
-			isCharging = false
+			ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
+			chargeText.text = "Ready!"
+			isCharging = 2
 		end
 	elseif Object.IsValid(ChargePanel) then
 		ChargePanel.visibility = Visibility.FORCE_OFF
 	end
 end
 
+function OnReady()
+	isCharging = 0
+	ChargeupSFX:Stop()
+end
+
+function OnInterrupted()
+	isCharging = 0
+	ChargeupSFX:Stop()
+end
+
 function OnCast(thisAbility)
 	if IS_CHARGE_ATTACK then
 		chargeStart = time()
-		isCharging = true
+		isCharging = 1
 	end
 end
 
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
-	isCharging = false
+	isCharging = 0
+	ChargeupSFX:Stop()
 	local chargeAmount = time() - chargeStart
 
 	local playerPos = EQUIPMENT.owner:GetWorldPosition()
@@ -156,6 +184,9 @@ function OnEquipped(equipment, player)
 	if player == LOCAL_PLAYER and IS_CHARGE_ATTACK then
 		ChargePanel = World.SpawnAsset(ChargeUITemp)
 		ChargeBar = ChargePanel:GetCustomProperty("ProgressBar"):WaitForObject()
+		ChargeBar.clientUserData.defaultColor = ChargeBar:GetFillColor()
+		ChargeBar.clientUserData.chargedColor = ChargePanel:GetCustomProperty("FullChargeColor")
+		ChargeBar.clientUserData.text = ChargePanel:GetCustomProperty("Text"):WaitForObject()
 	end
 end
 
@@ -175,6 +206,8 @@ ABILITY.executeEvent:Connect(OnExecute)
 ABILITY.recoveryEvent:Connect(OnRecovery)
 if IS_CHARGE_ATTACK then
 	ABILITY.castEvent:Connect(OnCast)
+	ABILITY.readyEvent:Connect(OnReady)
+	ABILITY.interruptedEvent:Connect(OnInterrupted)
 end
 
 function OnMeleeImpact(abilityId, pos, rot)

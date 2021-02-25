@@ -45,12 +45,12 @@ Assets {
             Int: 1
           }
           Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:AnimationStance"
             String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:E_isPreviewing"
+            Bool: false
           }
           Overrides {
             Name: "cs:E_isPreviewing:isrep"
@@ -913,6 +913,7 @@ Assets {
         ChildIds: 7161437949086862621
         ChildIds: 285787547396984869
         ChildIds: 7744017418315419898
+        ChildIds: 4370689124046492802
         ChildIds: 12141073967094505460
         ChildIds: 11057856131540664296
         ChildIds: 14358940177883270596
@@ -1314,6 +1315,37 @@ Assets {
         }
       }
       Objects {
+        Id: 4370689124046492802
+        Name: "Magic Sparkle Glitter Loop 02 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4127929006948487058
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7193292322058698384
+          }
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+        }
+      }
+      Objects {
         Id: 12141073967094505460
         Name: "MeleeAbilityClient"
         Transform {
@@ -1390,6 +1422,12 @@ Assets {
             Name: "cs:FullChargeEffect"
             AssetReference {
               Id: 6147896150544354150
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupSFX"
+            ObjectReference {
+              SubObjectId: 4370689124046492802
             }
           }
         }
@@ -2076,8 +2114,18 @@ Assets {
             Bool: true
           }
           Overrides {
+            Name: "cs:MinCharge"
+            Float: 0.3
+          }
+          Overrides {
             Name: "cs:ChargeDuration"
             Float: 1.5
+          }
+          Overrides {
+            Name: "cs:HitBox"
+            ObjectReference {
+              SubObjectId: 793349449599853437
+            }
           }
         }
         WantsNetworking: true
@@ -2517,6 +2565,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Yellow_005"
+      }
+    }
+    Assets {
+      Id: 7193292322058698384
+      Name: "Magic Sparkle Glitter Loop 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_sparkle_glitter_loop_02_Cue_ref"
       }
     }
     Assets {

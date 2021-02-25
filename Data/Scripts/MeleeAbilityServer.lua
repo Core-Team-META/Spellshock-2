@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Melee Ability - Server
 	v1.2-b
 	by: standardcombo
@@ -25,6 +25,7 @@ local VERTICAL_IMPULSE = script:GetCustomProperty("VerticalImpulse") or 20000
 
 local DEFAULT_DamageRange = {min=DAMAGE_RANGE.x, max=DAMAGE_RANGE.y}
 local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
+local HitBoxTrigger
 
 local BindingName = script:GetCustomProperty("BindingName")
 local AbilityMod = script:GetCustomProperty("AbilityMod")
@@ -34,8 +35,14 @@ local currentSwipe = nil
 local canAttack = false
 local bindingReleasedEvent
 
+local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
 local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
+local isCharging = 0 -- 0: not charging  1: charging  2: full charge
 local chargeStart = 1 
+
+if IS_CHARGE_ATTACK then
+	HitBoxTrigger = EQUIPMENT:GetCustomProperty("HitBox"):WaitForObject()
+end
 
 function Tick(deltaTime)
 	if Object.IsValid(ABILITY) and ABILITY.owner and not ABILITY.owner.isDead and canAttack then
@@ -50,6 +57,21 @@ function Tick(deltaTime)
 				MeleeAttack(other)
 			end
 		end
+	end
+
+	if isCharging == 1 and time() - chargeStart > MIN_CHARGE then		
+		local chargeAmount = time() - chargeStart
+
+		if isCharging == 1 then
+		
+		end
+
+		if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+			
+			isCharging = 2
+		end
+	elseif Object.IsValid(ChargePanel) then
+		ChargePanel.visibility = Visibility.FORCE_OFF
 	end
 end
 
@@ -80,8 +102,11 @@ function MeleeAttack(other)
 
 		if IS_CHARGE_ATTACK then
 			local totalChargeTime = time() - chargeStart
-			if totalChargeTime > 0.3 then
-				dmgMultiplier = (totalChargeTime / MAX_CHARGE) + 1
+			if totalChargeTime > MAX_CHARGE then
+				dmgMultiplier = 2
+			elseif totalChargeTime > MIN_CHARGE then
+				local chargeAmount = totalChargeTime - MIN_CHARGE
+				dmgMultiplier = (chargeAmount / (MAX_CHARGE-MIN_CHARGE)) * 0.5 + 1
 				dmgMultiplier = CoreMath.Clamp(dmgMultiplier, 1, 2)
 			end
 		end
@@ -148,6 +173,7 @@ end
 
 function OnCast(thisAbility)
 	chargeStart = time()
+	isCharging = 1
 	bindingReleasedEvent = thisAbility.owner.bindingReleasedEvent:Connect(OnBindingReleased)
 end
 
