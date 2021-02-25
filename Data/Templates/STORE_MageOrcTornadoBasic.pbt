@@ -254,7 +254,6 @@ Assets {
           Overrides {
             Name: "bp:Source Tangent"
             Vector {
-              X: 5
             }
           }
           Overrides {
@@ -265,6 +264,27 @@ Assets {
           Overrides {
             Name: "bp:Beam Maximum Life"
             Float: 0.660797894
+          }
+          Overrides {
+            Name: "bp:Texture Scale"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Beam Width"
+            Float: 5.3121295
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Beam Source Effects"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Displacement Axis Scale"
+            Vector {
+            }
           }
         }
         Collidable_v2 {

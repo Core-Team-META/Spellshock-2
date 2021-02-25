@@ -1009,7 +1009,7 @@ Assets {
           Width: 151
           Height: 36
           UIX: 2
-          UIY: 8
+          UIY: 9.06572
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1026,6 +1026,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 15165554833363844727
             }
           }
           AnchorLayout {
@@ -1087,6 +1088,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 15165554833363844727
             }
           }
           AnchorLayout {
@@ -2545,6 +2547,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_SciFi_Frame_006"
+      }
+    }
+    Assets {
+      Id: 15165554833363844727
+      Name: "Amarante"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "AmaranteRegular_ref"
       }
     }
     Assets {

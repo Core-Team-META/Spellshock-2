@@ -257,11 +257,31 @@ Assets {
           Overrides {
             Name: "bp:Source Tangent"
             Vector {
-              X: 5
             }
           }
           Overrides {
             Name: "bp:Target Tangent"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Texture Scale"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Beam Width"
+            Float: 5.3121295
+          }
+          Overrides {
+            Name: "bp:Displacement Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Enable Beam Source Effects"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Displacement Axis Scale"
             Vector {
             }
           }
