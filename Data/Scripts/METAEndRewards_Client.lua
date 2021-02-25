@@ -164,6 +164,9 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 local REWARD_AMOUNT = panel:GetCustomProperty("REWARD_AMOUNT"):WaitForObject()
                 local ITEM_DESCRIPTION = panel:GetCustomProperty("ITEM_DESCRIPTION"):WaitForObject()
                 local ITEM_DESCRIPTION2 = panel:GetCustomProperty("ITEM_DESCRIPTION2"):WaitForObject()
+
+                --#TODO need to get the progress bar refrence for the new UI
+
                 local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
                 PROGRESS_BARS.visibility = Visibility.FORCE_OFF
                 if reqXp then
@@ -247,6 +250,9 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
+---#TODO will need a new button listener for when a reward is highlighted and stored on player.clientUserdata, then niled out on confirm
+
+--#FIXME this will change to one button to send to the server.
 function OnRewardSelected(button)
     if not isAllowed(1) then
         return
@@ -257,6 +263,7 @@ function OnRewardSelected(button)
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.id)
         Task.Wait(0.3)
     until result == BroadcastEventResultCode.SUCCESS
+
     local claimed = button:GetCustomProperty("CLAIMED"):WaitForObject()
     claimed.visibility = Visibility.FORCE_ON
 end
