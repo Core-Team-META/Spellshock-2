@@ -13526,6 +13526,7 @@ Objects {
   ChildIds: 8893314247983841474
   ChildIds: 5550909460353518874
   ChildIds: 5064810778337373081
+  ChildIds: 12313508127527921090
   UnregisteredParameters {
     Overrides {
       Name: "cs:SLOT"
@@ -13534,7 +13535,7 @@ Objects {
     Overrides {
       Name: "cs:UIButton"
       ObjectReference {
-        SelfId: 3873836165726404327
+        SelfId: 12313508127527921090
       }
     }
     Overrides {
@@ -13552,13 +13553,13 @@ Objects {
     Overrides {
       Name: "cs:REWARD_OWNED"
       ObjectReference {
-        SelfId: 14317983235494287745
+        SelfId: 5319277269591637267
       }
     }
     Overrides {
       Name: "cs:REWARD_AMOUNT"
       ObjectReference {
-        SelfId: 12329695267823822990
+        SelfId: 11314583786169298802
       }
     }
     Overrides {
@@ -13594,7 +13595,31 @@ Objects {
     Overrides {
       Name: "cs:PROGRESS_BARS"
       ObjectReference {
-        SelfId: 841534158063459245
+        SelfId: 8893314247983841474
+      }
+    }
+    Overrides {
+      Name: "cs:CLASS_TEXT"
+      ObjectReference {
+        SelfId: 1263567090311126639
+      }
+    }
+    Overrides {
+      Name: "cs:SELECTED"
+      ObjectReference {
+        SelfId: 5064810778337373081
+      }
+    }
+    Overrides {
+      Name: "cs:SHARD_AMMOUNTS"
+      ObjectReference {
+        SelfId: 13232123119491484504
+      }
+    }
+    Overrides {
+      Name: "cs:IF_GOLD"
+      ObjectReference {
+        SelfId: 3595521673154851673
       }
     }
   }
@@ -13625,6 +13650,89 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12313508127527921090
+  Name: "SELECT_BUTTON"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2202239703406122424
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Height: 100
+    UIY: -75
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Button {
+      FontColor {
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        R: 1
+        G: 1
+        B: 1
+      }
+      HoveredColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 841534158063459245
+      }
+      IsButtonEnabled: true
+      OnlyUseMainColor: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -14062,7 +14170,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 246
@@ -16948,11 +17056,25 @@ Objects {
   ChildIds: 1794423150879225270
   ChildIds: 12938312451527984637
   ChildIds: 15128729397447132835
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:REWARD_AMOUNT"
+      ObjectReference {
+        SelfId: 7411000843057224075
+      }
+    }
+    Overrides {
+      Name: "cs:TOTAL_AMOUNT"
+      ObjectReference {
+        SelfId: 4438320007107786863
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     Width: 240
@@ -17027,7 +17149,7 @@ Objects {
 }
 Objects {
   Id: 4438320007107786863
-  Name: "AMOUNT"
+  Name: "TOTAL_AMOUNT"
   Transform {
     Location {
     }
@@ -17049,6 +17171,7 @@ Objects {
   Control {
     Width: 200
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17062,7 +17185,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -17134,7 +17257,7 @@ Objects {
 }
 Objects {
   Id: 7411000843057224075
-  Name: "AMOUNT"
+  Name: "CURRENT_AMOUNT"
   Transform {
     Location {
     }
@@ -17154,13 +17277,15 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 10
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
       Label: "+ 123"
@@ -17169,7 +17294,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -17319,7 +17444,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 208
@@ -19128,6 +19253,7 @@ Objects {
   ChildIds: 7120519931371153593
   ChildIds: 8374627882684772195
   ChildIds: 17649337815781154118
+  ChildIds: 7403265333828365523
   UnregisteredParameters {
     Overrides {
       Name: "cs:SLOT"
@@ -19136,7 +19262,7 @@ Objects {
     Overrides {
       Name: "cs:UIButton"
       ObjectReference {
-        SelfId: 8296619188972776737
+        SelfId: 7403265333828365523
       }
     }
     Overrides {
@@ -19154,13 +19280,13 @@ Objects {
     Overrides {
       Name: "cs:REWARD_OWNED"
       ObjectReference {
-        SelfId: 2140570285787137274
+        SelfId: 4447892084169852882
       }
     }
     Overrides {
       Name: "cs:REWARD_AMOUNT"
       ObjectReference {
-        SelfId: 10448300449209464436
+        SelfId: 1137111890001001054
       }
     }
     Overrides {
@@ -19196,7 +19322,31 @@ Objects {
     Overrides {
       Name: "cs:PROGRESS_BARS"
       ObjectReference {
-        SelfId: 841534158063459245
+        SelfId: 7120519931371153593
+      }
+    }
+    Overrides {
+      Name: "cs:CLASS_TEXT"
+      ObjectReference {
+        SelfId: 702486974995598720
+      }
+    }
+    Overrides {
+      Name: "cs:SELECTED"
+      ObjectReference {
+        SelfId: 17649337815781154118
+      }
+    }
+    Overrides {
+      Name: "cs:SHARD_AMMOUNTS"
+      ObjectReference {
+        SelfId: 2766598499691079599
+      }
+    }
+    Overrides {
+      Name: "cs:IF_GOLD"
+      ObjectReference {
+        SelfId: 16898275472705887536
       }
     }
   }
@@ -19232,6 +19382,89 @@ Objects {
   }
 }
 Objects {
+  Id: 7403265333828365523
+  Name: "SELECT_BUTTON"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7397882062375156290
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Height: 100
+    UIY: -75
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Button {
+      FontColor {
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        R: 1
+        G: 1
+        B: 1
+      }
+      HoveredColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 841534158063459245
+      }
+      IsButtonEnabled: true
+      OnlyUseMainColor: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 17649337815781154118
   Name: "SELECTED"
   Transform {
@@ -19253,7 +19486,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     Width: 246
@@ -19663,7 +19896,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 246
@@ -22551,11 +22784,25 @@ Objects {
   ChildIds: 1361408430059865683
   ChildIds: 8123011067258928647
   ChildIds: 6013426871300966018
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:REWARD_AMOUNT"
+      ObjectReference {
+        SelfId: 9638023958451449762
+      }
+    }
+    Overrides {
+      Name: "cs:TOTAL_AMOUNT"
+      ObjectReference {
+        SelfId: 13455744212538843811
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     Width: 240
@@ -22630,7 +22877,7 @@ Objects {
 }
 Objects {
   Id: 13455744212538843811
-  Name: "AMOUNT"
+  Name: "TOTAL_AMOUNT"
   Transform {
     Location {
     }
@@ -22652,6 +22899,7 @@ Objects {
   Control {
     Width: 200
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -22665,7 +22913,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -22737,7 +22985,7 @@ Objects {
 }
 Objects {
   Id: 9638023958451449762
-  Name: "AMOUNT"
+  Name: "REWARD_AMOUNT"
   Transform {
     Location {
     }
@@ -22757,13 +23005,15 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 10
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
       Label: "+ 123"
@@ -22772,7 +23022,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -24731,6 +24981,7 @@ Objects {
   ChildIds: 3751229203465124918
   ChildIds: 4910549894055503906
   ChildIds: 3709961286940799049
+  ChildIds: 1028052102126210325
   UnregisteredParameters {
     Overrides {
       Name: "cs:SLOT"
@@ -24739,7 +24990,7 @@ Objects {
     Overrides {
       Name: "cs:UIButton"
       ObjectReference {
-        SelfId: 8837862803298370064
+        SelfId: 1028052102126210325
       }
     }
     Overrides {
@@ -24799,7 +25050,31 @@ Objects {
     Overrides {
       Name: "cs:PROGRESS_BARS"
       ObjectReference {
-        SelfId: 841534158063459245
+        SelfId: 3751229203465124918
+      }
+    }
+    Overrides {
+      Name: "cs:CLASS_TEXT"
+      ObjectReference {
+        SelfId: 9336815328151425552
+      }
+    }
+    Overrides {
+      Name: "cs:SELECTED"
+      ObjectReference {
+        SelfId: 3709961286940799049
+      }
+    }
+    Overrides {
+      Name: "cs:SHARD_AMMOUNTS"
+      ObjectReference {
+        SelfId: 15926916896656645084
+      }
+    }
+    Overrides {
+      Name: "cs:IF_GOLD"
+      ObjectReference {
+        SelfId: 5011677139941405644
       }
     }
   }
@@ -24820,6 +25095,89 @@ Objects {
       }
     }
     Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1028052102126210325
+  Name: "SELECT_BUTTON"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14321908686649885733
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Height: 100
+    UIY: -75
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Button {
+      FontColor {
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        R: 1
+        G: 1
+        B: 1
+      }
+      HoveredColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 841534158063459245
+      }
+      IsButtonEnabled: true
+      OnlyUseMainColor: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -25267,7 +25625,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 246
@@ -28153,11 +28511,25 @@ Objects {
   ChildIds: 9735460692105783969
   ChildIds: 17723542741788810683
   ChildIds: 8315080259046769834
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:REWARD_AMOUNT"
+      ObjectReference {
+        SelfId: 7995104033684363889
+      }
+    }
+    Overrides {
+      Name: "cs:TOTAL_AMOUNT"
+      ObjectReference {
+        SelfId: 15360346900698472332
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     Width: 240
@@ -28232,7 +28604,7 @@ Objects {
 }
 Objects {
   Id: 15360346900698472332
-  Name: "AMOUNT"
+  Name: "TOTAL_AMOUNT"
   Transform {
     Location {
     }
@@ -28252,8 +28624,9 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 225
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28267,7 +28640,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -28339,7 +28712,7 @@ Objects {
 }
 Objects {
   Id: 7995104033684363889
-  Name: "AMOUNT"
+  Name: "REWARD_AMOUNT"
   Transform {
     Location {
     }
@@ -28359,13 +28732,15 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 10
     Height: 40
+    UIX: -10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
       Label: "+ 123"
@@ -28374,7 +28749,7 @@ Objects {
         G: 0.392582804
         A: 1
       }
-      Size: 20
+      Size: 17
       Justification {
         Value: "mc:etextjustify:left"
       }
@@ -28524,7 +28899,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Control {
     Width: 208
