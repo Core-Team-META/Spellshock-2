@@ -7,7 +7,7 @@ Assets {
       RootId: 11519314118505250681
       Objects {
         Id: 11519314118505250681
-        Name: "Helper_AbilityStatPanel"
+        Name: "Helper_AbilityModPanel"
         Transform {
           Scale {
             X: 1
@@ -65,6 +65,7 @@ Assets {
         Control {
           Width: 551
           Height: 66
+          UIY: 341.464905
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -858,7 +859,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 60
+          Width: 320
           Height: 17
           UIX: 85
           UIY: -5
@@ -919,7 +920,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 60
+          Width: 320
           Height: 17
           UIX: 85
           UIY: 15
