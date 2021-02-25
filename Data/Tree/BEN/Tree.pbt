@@ -1903,201 +1903,6 @@ Objects {
   }
 }
 Objects {
-  Id: 527033524674069522
-  Name: "Capture Point UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Capture Point UI"
-  }
-}
-Objects {
-  Id: 14627895278568143676
-  Name: "Team Colors"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  ChildIds: 14584701404703053389
-  ChildIds: 18184784424705387062
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Orc"
-      Color {
-        R: 0.72
-        G: 0.0715231895
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "cs:Elf"
-      Color {
-        G: 0.580000043
-        B: 0.361059815
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 18184784424705387062
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14627895278568143676
-  ChildIds: 7992205345288076574
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 7992205345288076574
-  Name: "InitializeTeamColors"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18184784424705387062
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 14627895278568143676
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11088639787073807518
-    }
-  }
-}
-Objects {
-  Id: 14584701404703053389
-  Name: "InitializeTeamColors"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14627895278568143676
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 14627895278568143676
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11088639787073807518
-    }
-  }
-}
-Objects {
-  Id: 2644148728258825907
-  Name: "RespawnPlayerServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 13105738520187544040
-    }
-  }
-}
-Objects {
   Id: 11740795219228208423
   Name: "UI Client Context"
   Transform {
@@ -17130,7 +16935,7 @@ Objects {
 }
 Objects {
   Id: 12829437207759391818
-  Name: "DailyShop"
+  Name: "Cosmetic Shop"
   Transform {
     Location {
     }
@@ -17273,7 +17078,7 @@ Objects {
       }
     }
     Text {
-      Label: "J"
+      Label: "P"
       Color {
         R: 1
         G: 0.609006643
@@ -17334,7 +17139,7 @@ Objects {
       }
     }
     Text {
-      Label: "J"
+      Label: "P"
       Color {
         A: 0.321
       }
@@ -82808,6 +82613,201 @@ Objects {
   Script {
     ScriptAsset {
       Id: 14730659522932281457
+    }
+  }
+}
+Objects {
+  Id: 527033524674069522
+  Name: "Capture Point UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Capture Point UI"
+  }
+}
+Objects {
+  Id: 14627895278568143676
+  Name: "Team Colors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  ChildIds: 14584701404703053389
+  ChildIds: 18184784424705387062
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Orc"
+      Color {
+        R: 0.72
+        G: 0.0715231895
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:Elf"
+      Color {
+        G: 0.580000043
+        B: 0.361059815
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18184784424705387062
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14627895278568143676
+  ChildIds: 7992205345288076574
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 7992205345288076574
+  Name: "InitializeTeamColors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18184784424705387062
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 14627895278568143676
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11088639787073807518
+    }
+  }
+}
+Objects {
+  Id: 14584701404703053389
+  Name: "InitializeTeamColors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14627895278568143676
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Root"
+      ObjectReference {
+        SelfId: 14627895278568143676
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11088639787073807518
+    }
+  }
+}
+Objects {
+  Id: 2644148728258825907
+  Name: "RespawnPlayerServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12935185397369316502
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13105738520187544040
     }
   }
 }
