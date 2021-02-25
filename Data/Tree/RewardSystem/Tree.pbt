@@ -210,6 +210,12 @@ Objects {
         SelfId: 15333338177699358443
       }
     }
+    Overrides {
+      Name: "cs:CLAIM_BUTTON"
+      ObjectReference {
+        SelfId: 741833750366236423
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

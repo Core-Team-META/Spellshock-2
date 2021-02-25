@@ -1,34 +1,6 @@
 Name: "BEN"
 RootId: 12935185397369316502
 Objects {
-  Id: 527033524674069522
-  Name: "Capture Point UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Capture Point UI"
-  }
-}
-Objects {
   Id: 4189845317229286629
   Name: "OnJoinRoundEndGame"
   Transform {
@@ -1931,13 +1903,12 @@ Objects {
   }
 }
 Objects {
-  Id: 9214649830315504141
-  Name: "Teleportation Network"
+  Id: 527033524674069522
+  Name: "Capture Point UI"
   Transform {
     Location {
-      X: 19320.3125
-      Y: 21821.3027
-      Z: 7515.50293
+    }
+    Rotation {
     }
     Scale {
       X: 1
@@ -1956,36 +1927,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Teleportation Network"
-  }
-}
-Objects {
-  Id: 123859506608758126
-  Name: "Equipment Spawners"
-  Transform {
-    Location {
-      X: -24625
-      Y: -31825.2695
-      Z: 6415
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Equipment Spawners"
+    FilePartitionName: "Capture Point UI"
   }
 }
 Objects {
@@ -2125,35 +2067,6 @@ Objects {
   Script {
     ScriptAsset {
       Id: 11088639787073807518
-    }
-  }
-}
-Objects {
-  Id: 1060733293873182918
-  Name: "KillPlayer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12935185397369316502
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11136575513709345767
     }
   }
 }

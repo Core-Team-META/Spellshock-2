@@ -37,6 +37,13 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Public API
 ------------------------------------------------------------------------------------------------------------------------
+
+function API.FormatInt(number)
+    local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
+    int = int:reverse():gsub("(%d%d%d)", "%1,")
+    return minus .. int:reverse():gsub("^,", "") .. fraction
+end
+
 function API.StringSplit(delimiter, text)
     local tbl = {}
     if delimiter == "" then -- this would result in endless loops

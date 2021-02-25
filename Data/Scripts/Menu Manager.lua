@@ -60,7 +60,7 @@ function OnBindingPressed(whichPlayer, binding)
 			newState = _G.MENU_TABLE["NONE"]
 		end
 		Events.Broadcast("Changing Menu", newState)	
-	elseif binding == "ability_extra_29" and CurrentGameState == ABGS.GAME_STATE_LOBBY and SpamPrevent() then -- P
+	elseif binding == "ability_extra_29" and SpamPrevent() then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		--print(">> COSMETIC SHOP")
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["CosmeticStore"]) -- Show

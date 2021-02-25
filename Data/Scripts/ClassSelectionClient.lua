@@ -295,8 +295,41 @@ function UpdateAbilityInfo(thisButton)
 		local currentMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "")
 		local nextMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "", true)
 		if type(currentMod) == "table" then
-			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%d - %d", currentMod.min, currentMod.max)
-			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%d - %d", nextMod.min, nextMod.max)
+			if modData["IsStatusEffect"] then
+				local currentText = ""
+				local nextText = ""
+
+				if currentMod.damage ~= 0 then
+					currentText = string.format("Damage [%s]", tostring(currentMod.damage))
+					nextText = string.format("Damage [%s]", tostring(nextMod.damage))
+				end
+				if currentMod.duration ~= 0 then
+					if currentText ~= "" then
+						currentText = currentText.."  |  "
+						nextText = nextText.."  |  "
+					end
+					
+					currentText = currentText..string.format("Duration [%s]", tostring(currentMod.duration))
+					nextText = nextText..string.format("Duration [%s]", tostring(nextMod.duration))
+				end
+				if currentMod.multiplier ~= 0 then
+					if currentText ~= "" then
+						currentText = currentText.."  |  "
+						nextText = nextText.."  |  "
+					end
+					currentText = string.format("Multiplier [%s]", tostring(currentMod.multiplier))
+					nextText = string.format("Multiplier [%s]", tostring(nextMod.multiplier))
+				end
+
+				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText
+				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
+			elseif currentMod.dotDamage then
+				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("Damage [%s]  |  Duration [%s]", tostring(currentMod.dotDamage), tostring(currentMod.duration))
+				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("Damage [%s]  |  Duration [%s]", tostring(nextMod.dotDamage), tostring(nextMod.duration))
+			else
+				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%s - %s", tostring(currentMod.min), tostring(currentMod.max))
+				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%s - %s", tostring(nextMod.min), tostring(nextMod.max))
+			end
 		else
 			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = tostring(currentMod)
 			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = tostring(nextMod)
@@ -586,6 +619,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 			modData["Icon"] = childMod:GetCustomProperty("Icon")
 			modData["Description"] = childMod:GetCustomProperty("Description")
 			modData["Mod"] = childMod:GetCustomProperty("Mod")
+			modData["IsStatusEffect"] = childMod:GetCustomProperty("IsStatusEffect")
 			table.insert(abilityData["ModData"], modData)
 		end
 		
