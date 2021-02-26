@@ -90,6 +90,7 @@ local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 local ChargeReleaseEffect = script:GetCustomProperty("ChargeReleaseEffect")
 local FullChargeEffect = script:GetCustomProperty("FullChargeEffect")
 local ChargeupSFX = script:GetCustomProperty("ChargeupSFX"):WaitForObject()
+local ChargeupVFX = script:GetCustomProperty("ChargeupVFX"):WaitForObject()
 local ChargeUITemp = "76202E0057632269:ChargeUpBar"
 
 local defaultPitch = ChargeupSFX.pitch
@@ -115,6 +116,8 @@ function Tick()
 		ChargeBar.progress = chargeAmount / MAX_CHARGE
 
 		if not ChargeupSFX.isPlaying and isCharging == 1 then
+			ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
+			ChargeupVFX:Play()
 			ChargeupSFX:Play()
 			ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
 			chargeText.text = "Charging..."
@@ -123,6 +126,7 @@ function Tick()
 		ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
 
 		if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+			ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
 			ChargeupSFX:Stop()
 			World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
 			ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
@@ -137,11 +141,13 @@ end
 function OnReady()
 	isCharging = 0
 	ChargeupSFX:Stop()
+	ChargeupVFX:Stop()
 end
 
 function OnInterrupted()
 	isCharging = 0
 	ChargeupSFX:Stop()
+	ChargeupVFX:Stop()
 end
 
 function OnCast(thisAbility)
@@ -155,6 +161,7 @@ function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
 	isCharging = 0
 	ChargeupSFX:Stop()
+	ChargeupVFX:Stop()
 	local chargeAmount = time() - chargeStart
 
 	local playerPos = EQUIPMENT.owner:GetWorldPosition()
