@@ -12,6 +12,7 @@ local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PARENT_PANEL = script:GetCustomProperty("PARENT_PANEL"):WaitForObject()
 local MOST_KILLS = script:GetCustomProperty("MOST_KILLS"):WaitForObject()
 local MOST_DEATHS = script:GetCustomProperty("MOST_DEATHS"):WaitForObject()
@@ -32,6 +33,9 @@ local PLAYER_RESULT_TEMP = script:GetCustomProperty("PLAYER_RESULT_TEMP")
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local statPanels = {}
+while not LOCAL_PLAYER.clientUserData.HasPlayedRound do
+    Task.Wait()
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -228,7 +232,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and LOCAL_PLAYER.clientUserData.HasPlayedRound then
         BuildRoundEndStats()
     elseif newState == ABGS.GAME_STATE_REWARDS then
         ResetStats()
@@ -240,7 +244,7 @@ function Tick()
         local currentState = ABGS.GetGameState()
         if
             currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE and ABGS.GetTimeRemainingInState() < 10 and
-                not PARENT_PANEL:IsVisibleInHierarchy()
+                not PARENT_PANEL:IsVisibleInHierarchy() and LOCAL_PLAYER.clientUserData.HasPlayedRound
          then
             Events.Broadcast("HideVictoryPanels")
             PARENT_PANEL.visibility = Visibility.INHERIT
