@@ -180,7 +180,7 @@ function UpdateClassInfo(thisButton)
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
 
-		if currentShards >= shardCost and currentGold >= goldCost then
+		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			UpgradePanel.visibility = Visibility.INHERIT
 			ShowMorePanel.visibility = Visibility.FORCE_OFF
 		else
@@ -294,6 +294,7 @@ function UpdateAbilityInfo(thisButton)
 
 		local currentMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "")
 		local nextMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "", true)
+		
 		if type(currentMod) == "table" then
 			if modData["IsStatusEffect"] then
 				local currentText = ""
@@ -323,9 +324,6 @@ function UpdateAbilityInfo(thisButton)
 
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
-			elseif currentMod.dotDamage then
-				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("Damage [%s]  |  Duration [%s]", tostring(currentMod.dotDamage), tostring(currentMod.duration))
-				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("Damage [%s]  |  Duration [%s]", tostring(nextMod.dotDamage), tostring(nextMod.duration))
 			else
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%s - %s", tostring(currentMod.min), tostring(currentMod.max))
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%s - %s", tostring(nextMod.min), tostring(nextMod.max))
@@ -333,6 +331,10 @@ function UpdateAbilityInfo(thisButton)
 		else
 			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = tostring(currentMod)
 			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = tostring(nextMod)
+		end
+
+		if currentMod == nextMod or abilityLevel == 10 then
+			newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject().visibility = Visibility.FORCE_OFF
 		end
 	end
 

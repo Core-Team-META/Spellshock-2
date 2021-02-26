@@ -156,17 +156,17 @@ classTable = {
     [CONST.CLASS.MAGE] = {
         --Tornado
         [CONST.BIND.Q] = {
-            -- mod1 = Placement Range, mod2 = Damage Amount, mod3 = Damage Radius, mod4 = Duration / dotDamage, mod5 = Slow Status
-            [1] = {mod1 = 4000, mod2 = 25, mod3 = 700, mod4 = {duration = 8, dotDamage = 25}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 12},
-            [2] = {mod1 = 4000, mod2 = 27, mod3 = 700, mod4 = {duration = 8, dotDamage = 27}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 12},
-            [3] = {mod1 = 4000, mod2 = 29, mod3 = 700, mod4 = {duration = 8, dotDamage = 29}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 11},
-            [4] = {mod1 = 4000, mod2 = 31, mod3 = 800, mod4 = {duration = 8, dotDamage = 31}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 11},
-            [5] = {mod1 = 4000, mod2 = 33, mod3 = 800, mod4 = {duration = 8, dotDamage = 33}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
-            [6] = {mod1 = 4300, mod2 = 34, mod3 = 800, mod4 = {duration = 8, dotDamage = 34}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
-            [7] = {mod1 = 4300, mod2 = 35, mod3 = 800, mod4 = {duration = 8, dotDamage = 35}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
-            [8] = {mod1 = 4300, mod2 = 36, mod3 = 800, mod4 = {duration = 9, dotDamage = 36}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9},
-            [9] = {mod1 = 4300, mod2 = 37, mod3 = 800, mod4 = {duration = 9, dotDamage = 37}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9},
-            [10] = {mod1 = 4300, mod2 = 38, mod3 = 900, mod4 = {duration = 9, dotDamage = 38}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9}
+            -- mod1 = Placement Range, mod2 = NOT USED, mod3 = Damage Radius, mod4 = DOT (not status effect), mod5 = Slow Status
+            [1] = {mod1 = 4000, mod2 = 0, mod3 = 700, mod4 = {duration = 8, damage = 25, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 12},
+            [2] = {mod1 = 4000, mod2 = 0, mod3 = 700, mod4 = {duration = 8, damage = 27, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 12},
+            [3] = {mod1 = 4000, mod2 = 0, mod3 = 700, mod4 = {duration = 8, damage = 29, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 11},
+            [4] = {mod1 = 4000, mod2 = 0, mod3 = 800, mod4 = {duration = 8, damage = 31, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 11},
+            [5] = {mod1 = 4000, mod2 = 0, mod3 = 800, mod4 = {duration = 8, damage = 33, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
+            [6] = {mod1 = 4300, mod2 = 0, mod3 = 800, mod4 = {duration = 8, damage = 34, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
+            [7] = {mod1 = 4300, mod2 = 0, mod3 = 800, mod4 = {duration = 8, damage = 35, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 10},
+            [8] = {mod1 = 4300, mod2 = 0, mod3 = 800, mod4 = {duration = 9, damage = 36, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9},
+            [9] = {mod1 = 4300, mod2 = 0, mod3 = 800, mod4 = {duration = 9, damage = 37, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9},
+           [10] = {mod1 = 4300, mod2 = 0, mod3 = 900, mod4 = {duration = 9, damage = 38, multiplier = 0}, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 9}
         },
         --Animorph Potion
         [CONST.BIND.E] = {

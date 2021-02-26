@@ -41518,10 +41518,6 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "UIY"
-          Float: 0
-        }
       }
     }
     TemplateAsset {
@@ -41730,7 +41726,7 @@ Objects {
     Width: 79
     Height: 15
     UIX: 10.658
-    UIY: 37.5961304
+    UIY: 41
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
