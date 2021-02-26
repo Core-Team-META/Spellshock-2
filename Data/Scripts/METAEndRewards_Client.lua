@@ -41,6 +41,9 @@ local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
 local roundTime = 0
 local currentSelect = 2
+while not LOCAL_PLAYER.clientUserData.HasPlayedRound do
+    Task.Wait()
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -193,7 +196,6 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 local IF_GOLD = panel:GetCustomProperty("IF_GOLD"):WaitForObject()
                 local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
 
-
                 PROGRESS_BARS.visibility = Visibility.FORCE_OFF
                 SHARD_AMMOUNTS.visibility = Visibility.FORCE_OFF
                 IF_GOLD.visibility = Visibility.FORCE_OFF
@@ -340,17 +342,19 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    if newMenu == _G.MENU_TABLE["Rewards"] then -- show
-        HideSelected()
-        ToggleUI(true)
-        ANIMATION.context.OnRewardShow()
-    else -- hide
-        CLAIM_BUTTON.isInteractable = true
-        BUTTON_TEXT.text = "CLAIM SELECTED REWARD"
-        BUTTON_TEXT_SHADOW.text = "CLAIM SELECTED REWARD"
-        ToggleUI(false)
-        ANIMATION.context.OnRewardHide()
-        HideSelected()
+    if LOCAL_PLAYER.clientUserData.HasPlayedRound then
+        if newMenu == _G.MENU_TABLE["Rewards"] then -- show
+            HideSelected()
+            ToggleUI(true)
+            ANIMATION.context.OnRewardShow()
+        else -- hide
+            CLAIM_BUTTON.isInteractable = true
+            BUTTON_TEXT.text = "CLAIM SELECTED REWARD"
+            BUTTON_TEXT_SHADOW.text = "CLAIM SELECTED REWARD"
+            ToggleUI(false)
+            ANIMATION.context.OnRewardHide()
+            HideSelected()
+        end
     end
 end
 

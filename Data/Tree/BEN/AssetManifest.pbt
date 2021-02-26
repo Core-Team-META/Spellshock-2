@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8250221790891313171
+  Name: "Fantasy Shape 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Shape_003"
+  }
+}
+Assets {
   Id: 7999341358091324120
   Name: "Fantasy Ability Blue 039"
   PlatformAssetType: 9
