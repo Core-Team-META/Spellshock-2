@@ -755,6 +755,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14168145723829607898
+  Name: "Fantasy Clay Pot 03 Damaged 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_broken_006_ref"
+  }
+}
+Assets {
   Id: 14089497421580664888
   Name: "Stone Block Small Broken"
   PlatformAssetType: 1
@@ -995,15 +1004,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_half-pipe_002"
-  }
-}
-Assets {
-  Id: 12739861598754122677
-  Name: "Grass and Soil"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_grass_003_uv"
   }
 }
 Assets {
@@ -1511,6 +1511,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10718538370904281203
+  Name: "Fantasy Clay Pot Debris 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_debris_001_ref"
+  }
+}
+Assets {
   Id: 10634098119816284342
   Name: "Wood Planks Dark"
   PlatformAssetType: 2
@@ -1859,6 +1868,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_03"
+  }
+}
+Assets {
+  Id: 8985846431173858098
+  Name: "Fantasy Clay Pot 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_002_ref"
   }
 }
 Assets {
@@ -2669,6 +2687,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_plane_4m_001"
+  }
+}
+Assets {
+  Id: 5077890242058173313
+  Name: "Fantasy Clay Pot 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fantasy_clay_pot_003_ref"
   }
 }
 Assets {
