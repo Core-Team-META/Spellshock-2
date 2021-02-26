@@ -1,4 +1,4 @@
-﻿-- Module dependencies
+-- Module dependencies
 local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
 	return MODULE:Get("standardcombo.Combat.Wrap")
@@ -140,8 +140,15 @@ function OnSpecialAbilityExecute(thisAbility)
 	EventListeners["lifeSpanEndedEvent"] = CurrentProjectile.lifeSpanEndedEvent:Connect(OnLifespanEnded)
 end
 
+function SetCooldownOverride(value)
+	SpecialAbility:SetNetworkedCustomProperty("CooldownOverride", value)
+end
+
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 90, thisAbility.name..": Cooldown")
+	
+	SetCooldownOverride(Cooldown)
+	
 	Task.Spawn(function ()
 		if Object.IsValid(thisAbility) then
 			thisAbility:AdvancePhase()

@@ -2164,6 +2164,14 @@ Assets {
         }
         ParentId: 10663446143340725464
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:CooldownOverride"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:CooldownOverride:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
