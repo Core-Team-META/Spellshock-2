@@ -17,11 +17,11 @@ Assets {
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0.0696543306
+        Float: 0.177128211
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.319003135
+        Float: 0.600533783
       }
     }
     Assets {

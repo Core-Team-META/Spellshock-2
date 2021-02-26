@@ -737,6 +737,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14287349269321119691
+  Name: "Ring"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_004"
+  }
+}
+Assets {
   Id: 14281826121533999733
   Name: "Coral Tubes Small"
   PlatformAssetType: 1
@@ -1619,15 +1628,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10222256584730616192
-  Name: "Pipe - 90-Degree Short"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_curve90_001"
-  }
-}
-Assets {
   Id: 10184847056121543272
   Name: "Basic Material"
   PlatformAssetType: 2
@@ -1781,15 +1781,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9242571079105582533
-  Name: "Pipe - 90-Degree Long"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_curve90_002"
-  }
-}
-Assets {
   Id: 9241339813623090261
   Name: "Ivy 04"
   PlatformAssetType: 1
@@ -1853,6 +1844,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9081085500199892623
+  Name: "Bricks Worn Stone 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_stone_worn_001"
+  }
+}
+Assets {
   Id: 9005202394387316338
   Name: "Craftsman Wall Interior 02 Corner"
   PlatformAssetType: 1
@@ -1904,6 +1904,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_fabric_burlap_002_uv"
+  }
+}
+Assets {
+  Id: 8967718814469894689
+  Name: "Fantasy Castle Accessory Tower 01 - 12m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_acc_tower_001_12m"
   }
 }
 Assets {
@@ -2285,6 +2294,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7142068506126400895
+  Name: "Energy Tube Glow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "Energy_Tube_Glow"
+  }
+}
+Assets {
   Id: 7136798186812893292
   Name: "Tree Birch 01"
   PlatformAssetType: 1
@@ -2327,6 +2345,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
+  Id: 6974691488986623650
+  Name: "Barrier LIght"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_barrier_light_001"
   }
 }
 Assets {
@@ -2555,6 +2582,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5932463333294610544
+  Name: "Frame Medium Straight - Neon Double 2 Sided Ending"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_Neon2_Ender_2s_db"
+  }
+}
+Assets {
   Id: 5931224016695282927
   Name: "Liquid Decal"
   PlatformAssetType: 14
@@ -2579,6 +2615,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_reflector_hex_001"
+  }
+}
+Assets {
+  Id: 5747878422189521828
+  Name: "Frame Small Straight - Neon Double 2 Sided Ending"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_Neon1_Ender_2s_db"
   }
 }
 Assets {
