@@ -24,6 +24,8 @@ local CLAIMED1 = script:GetCustomProperty("CLAIMED1"):WaitForObject()
 local CLAIMED2 = script:GetCustomProperty("CLAIMED2"):WaitForObject()
 local CLAIMED3 = script:GetCustomProperty("CLAIMED3"):WaitForObject()
 local CLAIM_BUTTON = script:GetCustomProperty("CLAIM_BUTTON"):WaitForObject()
+local BUTTON_TEXT_SHADOW = script:GetCustomProperty("BUTTON_TEXT_SHADOW"):WaitForObject()
+local BUTTON_TEXT = script:GetCustomProperty("BUTTON_TEXT"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- UI OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -302,6 +304,9 @@ function OnRewardLockedIn(button)
         result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", currentSelect)
         Task.Wait(0.3)
     until result == BroadcastEventResultCode.SUCCESS
+    CLAIM_BUTTON.isInteractable = false
+    BUTTON_TEXT.text = "REWARD CLAIMED"
+    BUTTON_TEXT_SHADOW.text = "REWARD CLAIMED"
 end
 
 function OnRewardSelected(button)
@@ -336,9 +341,13 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     if newMenu == _G.MENU_TABLE["Rewards"] then -- show
+        HideSelected()
         ToggleUI(true)
         ANIMATION.context.OnRewardShow()
     else -- hide
+        CLAIM_BUTTON.isInteractable = true
+        BUTTON_TEXT.text = "CLAIM SELECTED REWARD"
+        BUTTON_TEXT_SHADOW.text = "CLAIM SELECTED REWARD"
         ToggleUI(false)
         ANIMATION.context.OnRewardHide()
         HideSelected()

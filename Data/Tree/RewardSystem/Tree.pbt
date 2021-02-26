@@ -216,6 +216,18 @@ Objects {
         SelfId: 741833750366236423
       }
     }
+    Overrides {
+      Name: "cs:BUTTON_TEXT_SHADOW"
+      ObjectReference {
+        SelfId: 17705554952526960780
+      }
+    }
+    Overrides {
+      Name: "cs:BUTTON_TEXT"
+      ObjectReference {
+        SelfId: 350650599917443619
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

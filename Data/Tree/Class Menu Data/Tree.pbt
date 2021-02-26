@@ -1044,7 +1044,6 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 12761103757713680055
-  ChildIds: 7770550853757671688
   ChildIds: 12638170253327895416
   ChildIds: 13747008662516060626
   UnregisteredParameters {
@@ -1143,47 +1142,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7770550853757671688
-  Name: "Heal Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6603056763990519431
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The range of possible healing that will be applied to allies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8854358530398708523
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -1623,7 +1581,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod4"
     }
   }
   Collidable_v2 {
@@ -2128,7 +2086,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod3"
     }
   }
   Collidable_v2 {
@@ -2804,7 +2762,6 @@ Objects {
   ParentId: 12532102525843773576
   ChildIds: 1213528147311858714
   ChildIds: 2570670983790894657
-  ChildIds: 14752344196097225024
   ChildIds: 14321516369806913395
   UnregisteredParameters {
     Overrides {
@@ -2874,47 +2831,6 @@ Objects {
   }
 }
 Objects {
-  Id: 14752344196097225024
-  Name: "Targeting Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1035228531856370199
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can target"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 2570670983790894657
   Name: "Damage Radius"
   Transform {
@@ -2942,7 +2858,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod3"
+      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -3014,7 +2930,6 @@ Objects {
   ChildIds: 7663790721216425677
   ChildIds: 13314183402486245606
   ChildIds: 6726917288573614718
-  ChildIds: 15502727987250462925
   ChildIds: 12675666979630358360
   UnregisteredParameters {
     Overrides {
@@ -3071,47 +2986,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod6"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15502727987250462925
-  Name: "Block Percentage"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13864681128795171441
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The percentage of damage that will be blocked"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 804681952734696509
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
     }
   }
   Collidable_v2 {

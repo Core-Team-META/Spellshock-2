@@ -269,7 +269,7 @@ function UpdateAbilityInfo(thisButton)
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
-	if currentShards >= shardCost and currentGold >= goldCost and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
 	else
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
