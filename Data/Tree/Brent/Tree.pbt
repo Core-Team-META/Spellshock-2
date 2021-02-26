@@ -1,6 +1,32 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 4642779706241753116
+  Name: "Client Joined Logic"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Client Joined Logic"
+  }
+}
+Objects {
   Id: 4197521803680757974
   Name: "EndScreen UI (Reward & Match)"
   Transform {
