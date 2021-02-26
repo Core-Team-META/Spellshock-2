@@ -452,11 +452,63 @@ Objects {
   ChildIds: 9317908899082958423
   ChildIds: 16570130589881934452
   ChildIds: 5597773532884989523
+  ChildIds: 10449399042096694855
+  ChildIds: 3907128587181353519
+  ChildIds: 6767174966540122181
+  ChildIds: 16204908995359705037
+  ChildIds: 10278615549870504412
+  ChildIds: 1827441317276640568
+  ChildIds: 4295464787109344068
+  ChildIds: 7773828127413433611
+  ChildIds: 6773113966073145428
+  ChildIds: 4785241531723205662
+  ChildIds: 11337956190181097848
+  ChildIds: 1391953679795268599
+  ChildIds: 4756767573772457704
+  ChildIds: 147749174719188931
+  ChildIds: 10740613061388345643
+  ChildIds: 18135890092140753796
+  ChildIds: 9514464463464253963
+  ChildIds: 11351939188458601342
+  ChildIds: 14058144869867017869
+  ChildIds: 716060166563642352
+  ChildIds: 4375068365365969376
+  ChildIds: 5523111421545089250
+  ChildIds: 384799927769710161
+  ChildIds: 7486110308796568692
+  ChildIds: 4369817693876614161
+  ChildIds: 97550069580079168
+  ChildIds: 12685933146596500261
+  ChildIds: 11828228532203016016
+  ChildIds: 7603636742978698533
+  ChildIds: 18338686368926109582
+  ChildIds: 5945587459684567342
+  ChildIds: 9560309044088540101
+  ChildIds: 7173591342213411319
+  ChildIds: 14774866906404790366
+  ChildIds: 4046064391003028358
+  ChildIds: 18379255411303342047
+  ChildIds: 14324796059939329556
+  ChildIds: 2950190733303376713
+  ChildIds: 1503243522101151043
+  ChildIds: 10777895005053763971
+  ChildIds: 11359627523759041595
+  ChildIds: 274006201349502686
+  ChildIds: 5763056748128562818
+  ChildIds: 13760866928949463983
+  ChildIds: 8130595707561493412
+  ChildIds: 15197473293957559162
+  ChildIds: 5599484086159570570
+  ChildIds: 9930349722678955312
+  ChildIds: 5747357536107475206
+  ChildIds: 17304863257198314899
+  ChildIds: 265334879435791487
+  ChildIds: 2150915792730544228
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Folder {
     IsGroup: true
@@ -464,6 +516,2970 @@ Objects {
   InstanceHistory {
     SelfId: 11730430372855574168
     SubobjectId: 15838078513517990989
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 2150915792730544228
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -28905.3438
+      Y: -18122.207
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -34.1976
+    }
+    Scale {
+      X: 14.1064453
+      Y: 25.3657131
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 265334879435791487
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -27983.2344
+      Y: -16027.1621
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -16.1379395
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 17304863257198314899
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -27719.916
+      Y: -16262.4619
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -28.4555054
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 5747357536107475206
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -26572.3379
+      Y: -14144.9658
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -28.4555054
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 9930349722678955312
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -27070.4414
+      Y: -13875.0176
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -28.4555054
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 5599484086159570570
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -24952.3633
+      Y: -12649.5234
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -130.050827
+    }
+    Scale {
+      X: 12.3044767
+      Y: 17.9067764
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 15197473293957559162
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -25953.6641
+      Y: -12468.8223
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -2.60980225
+    }
+    Scale {
+      X: 13.6333113
+      Y: 17.906805
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 8130595707561493412
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -26588.8848
+      Y: -12986.4551
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: -28.4555054
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 13760866928949463983
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 13901.1973
+      Y: 8791.70703
+      Z: -2115.89233
+    }
+    Rotation {
+      Yaw: -29.8244934
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 5763056748128562818
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 12712.7383
+      Y: 7013.2959
+      Z: -2115.89233
+    }
+    Rotation {
+      Yaw: -37.6680908
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 274006201349502686
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 11295.4873
+      Y: 5455.10303
+      Z: -2115.89233
+    }
+    Rotation {
+      Yaw: -46.9403687
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 11359627523759041595
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 9622.43
+      Y: 4201.76172
+      Z: -2115.89233
+    }
+    Rotation {
+      Yaw: -59.594574
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 10777895005053763971
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -836.563232
+      Y: -7504.67
+      Z: -2692.00781
+    }
+    Rotation {
+      Yaw: 154.939926
+    }
+    Scale {
+      X: 12.3813744
+      Y: 21.0076561
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 1503243522101151043
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -17051.7461
+      Y: -12936.7949
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: 50.3411942
+    }
+    Scale {
+      X: 10.9545488
+      Y: 14.8304806
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 2950190733303376713
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -16014.4639
+      Y: -12492.5088
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: 50.3411636
+    }
+    Scale {
+      X: 10.954565
+      Y: 24.7911491
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 14324796059939329556
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -16906.5352
+      Y: -10628.7197
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: 5.01054478
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 18379255411303342047
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -17036.7227
+      Y: -7802.36914
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: 0.0395731
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4046064391003028358
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -16598.459
+      Y: -5172.11816
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: -19.5165405
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 14774866906404790366
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -25451.1211
+      Y: -12925.3994
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 83.292366
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 7173591342213411319
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -22593.3828
+      Y: -13261.4922
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 83.292366
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 9560309044088540101
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -20210.4707
+      Y: -13404.5068
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 89.7455063
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 5945587459684567342
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -17780.375
+      Y: -13415.3018
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 89.7455063
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 18338686368926109582
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -15730.7764
+      Y: -13604.249
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 81.8582
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 7603636742978698533
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -15411.5898
+      Y: -13309.0928
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 65.2670593
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 11828228532203016016
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -13217.8623
+      Y: -14010.2617
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 80.6070557
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 12685933146596500261
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -10835.3125
+      Y: -14316.668
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 85.3011322
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 97550069580079168
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -8746.7207
+      Y: -14212.9717
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 105.761078
+    }
+    Scale {
+      X: 13.6333084
+      Y: 25.3657169
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4369817693876614161
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -6636.56104
+      Y: -13617.4053
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 105.761063
+    }
+    Scale {
+      X: 13.6333218
+      Y: 19.3895073
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 7486110308796568692
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -5061.29
+      Y: -12780.543
+      Z: -2669.34814
+    }
+    Rotation {
+      Yaw: 128.318054
+    }
+    Scale {
+      X: 12.7919798
+      Y: 25.365696
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 384799927769710161
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -3359.08521
+      Y: -11257.8496
+      Z: -2685.99658
+    }
+    Rotation {
+      Yaw: 135.515823
+    }
+    Scale {
+      X: 12.536788
+      Y: 22.5021038
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 5523111421545089250
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -1961.05908
+      Y: -9506.49805
+      Z: -2684.05688
+    }
+    Rotation {
+      Yaw: 146.569016
+    }
+    Scale {
+      X: 12.5671892
+      Y: 25.3657
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4375068365365969376
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -834.120117
+      Y: -7614.05078
+      Z: -2692.00781
+    }
+    Rotation {
+      Yaw: 152.600891
+    }
+    Scale {
+      X: 12.5796452
+      Y: 21.0076637
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 716060166563642352
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 171.500732
+      Y: -5603.44141
+      Z: -2646.24585
+    }
+    Rotation {
+      Yaw: 152.600876
+    }
+    Scale {
+      X: 13.7179604
+      Y: 25.365694
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 14058144869867017869
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 770.394531
+      Y: -3609.77954
+      Z: -2630.20142
+    }
+    Rotation {
+      Yaw: 176.546021
+    }
+    Scale {
+      X: 15.2993507
+      Y: 23.6566906
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 11351939188458601342
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 7799.72852
+      Y: 3666.95044
+      Z: -2115.89233
+    }
+    Rotation {
+      Yaw: -88.5318909
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 9514464463464253963
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 5657.68164
+      Y: 3515.60156
+      Z: -2115.89209
+    }
+    Rotation {
+      Yaw: -82.8922424
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 18135890092140753796
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 4596.74219
+      Y: 3318.82959
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -71.541687
+    }
+    Scale {
+      X: 9.88696766
+      Y: 22.4961758
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 10740613061388345643
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 4563.69141
+      Y: 3414.08179
+      Z: -2105.43921
+    }
+    Rotation {
+      Yaw: -83.6498413
+    }
+    Scale {
+      X: 9.48887539
+      Y: 25.3656826
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 147749174719188931
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 747.773438
+      Y: -1291.96472
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -173.44075
+    }
+    Scale {
+      X: 15.7036343
+      Y: 25.3656921
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4756767573772457704
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 2.3828125
+      Y: 634.47876
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -146.718399
+    }
+    Scale {
+      X: 16.5686493
+      Y: 25.3656845
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 1391953679795268599
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 2501.54688
+      Y: 2869.73926
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -74.4978638
+    }
+    Scale {
+      X: 13.3612871
+      Y: 25.3656902
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 11337956190181097848
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: 226.611816
+      Y: 2238.75195
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -74.4979248
+    }
+    Scale {
+      X: 13.537014
+      Y: 25.3656769
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4785241531723205662
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -1826.39185
+      Y: 2048.9375
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -127.416626
+    }
+    Scale {
+      X: 10.1764088
+      Y: 25.3656712
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 6773113966073145428
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -1414.27881
+      Y: 2232.23755
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -113.667206
+    }
+    Scale {
+      X: 10.1764088
+      Y: 25.3656712
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 7773828127413433611
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -3489.28833
+      Y: 3141.68579
+      Z: -2656.72021
+    }
+    Rotation {
+      Yaw: -113.667267
+    }
+    Scale {
+      X: 10.6951227
+      Y: 25.3656578
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 4295464787109344068
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -5781.20557
+      Y: 3959.79297
+      Z: -2656.72
+    }
+    Rotation {
+      Yaw: -105.27832
+    }
+    Scale {
+      X: 10.6951227
+      Y: 25.3656578
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 1827441317276640568
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -8040.21143
+      Y: 4119.1875
+      Z: -2665.33667
+    }
+    Rotation {
+      Yaw: -82.8912659
+    }
+    Scale {
+      X: 10.6951227
+      Y: 25.3656578
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 10278615549870504412
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -10151.8438
+      Y: 3375.50977
+      Z: -2665.09692
+    }
+    Rotation {
+      Yaw: -58.1098633
+    }
+    Scale {
+      X: 10.6951227
+      Y: 25.3656578
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 16204908995359705037
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -11943.2607
+      Y: 1688.27539
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: -36.8520813
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 6767174966540122181
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -13800.8291
+      Y: -442.834412
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: -45.2308044
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 3907128587181353519
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -15445.2012
+      Y: -2612.87427
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: -28.934021
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
+    InstanceId: 9691459242913363000
+    TemplateId: 3694720619791929425
+  }
+}
+Objects {
+  Id: 10449399042096694855
+  Name: "Plane 1m"
+  Transform {
+    Location {
+      X: -16598.459
+      Y: -5172.11816
+      Z: -2670.31
+    }
+    Rotation {
+      Yaw: -19.5165405
+    }
+    Scale {
+      X: 10.6951218
+      Y: 29.2197266
+      Z: 1
+    }
+  }
+  ParentId: 11730430372855574168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tint"
+      Color {
+        G: 0.223095775
+        B: 0.6875
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8933537604162373856
+    }
+    Teams {
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 15225100575834220038
+    SubobjectId: 12271350718363819219
     InstanceId: 9691459242913363000
     TemplateId: 3694720619791929425
   }
@@ -481,8 +3497,8 @@ Objects {
       Yaw: -33.7097473
     }
     Scale {
-      X: 15.4248896
-      Y: 15.4425669
+      X: 14.4176416
+      Y: 16.1269741
       Z: 1
     }
   }
@@ -539,8 +3555,8 @@ Objects {
       Yaw: 91.7397308
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -597,8 +3613,8 @@ Objects {
       Yaw: 80.489624
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -655,8 +3671,8 @@ Objects {
       Yaw: 1.73934436
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -713,8 +3729,8 @@ Objects {
       Yaw: 69.2396317
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -771,8 +3787,8 @@ Objects {
       Yaw: 57.9893684
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -829,8 +3845,8 @@ Objects {
       Yaw: 46.7394753
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -887,8 +3903,8 @@ Objects {
       Yaw: 35.4894562
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -945,8 +3961,8 @@ Objects {
       Yaw: 24.2392044
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1003,8 +4019,8 @@ Objects {
       Yaw: 12.9895096
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1061,8 +4077,8 @@ Objects {
       Yaw: 91.7397308
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1119,8 +4135,8 @@ Objects {
       Yaw: 80.489624
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1177,8 +4193,8 @@ Objects {
       Yaw: 1.7393446
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1235,8 +4251,8 @@ Objects {
       Yaw: 69.2396317
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1293,8 +4309,8 @@ Objects {
       Yaw: 57.9894218
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1351,8 +4367,8 @@ Objects {
       Yaw: 46.7394753
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1409,8 +4425,8 @@ Objects {
       Yaw: 35.4894562
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1467,8 +4483,8 @@ Objects {
       Yaw: 24.2392464
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1525,8 +4541,8 @@ Objects {
       Yaw: 12.9894705
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1583,8 +4599,8 @@ Objects {
       Yaw: 91.7397308
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1641,8 +4657,8 @@ Objects {
       Yaw: 80.489624
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1699,8 +4715,8 @@ Objects {
       Yaw: 1.73934484
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1757,8 +4773,8 @@ Objects {
       Yaw: 69.2396317
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1815,8 +4831,8 @@ Objects {
       Yaw: 57.9894638
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1873,8 +4889,8 @@ Objects {
       Yaw: 46.7394753
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1931,8 +4947,8 @@ Objects {
       Yaw: 35.4894562
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -1989,8 +5005,8 @@ Objects {
       Yaw: 24.2392864
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2047,8 +5063,8 @@ Objects {
       Yaw: 12.9894323
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2105,8 +5121,8 @@ Objects {
       Yaw: 91.7397308
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2163,8 +5179,8 @@ Objects {
       Yaw: 80.4896393
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2221,8 +5237,8 @@ Objects {
       Yaw: 1.73934507
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2279,8 +5295,8 @@ Objects {
       Yaw: 69.2396317
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2337,8 +5353,8 @@ Objects {
       Yaw: 57.9895058
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2395,8 +5411,8 @@ Objects {
       Yaw: 46.7394753
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2453,8 +5469,8 @@ Objects {
       Yaw: 35.4894562
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2511,8 +5527,8 @@ Objects {
       Yaw: 24.2393284
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2569,8 +5585,8 @@ Objects {
       Yaw: 12.9893942
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2627,8 +5643,8 @@ Objects {
       Yaw: 1.73934531
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2685,8 +5701,8 @@ Objects {
       Yaw: 12.9893541
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2743,8 +5759,8 @@ Objects {
       Yaw: 24.2393742
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2801,8 +5817,8 @@ Objects {
       Yaw: 35.4894562
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2859,8 +5875,8 @@ Objects {
       Yaw: 46.7394943
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2917,8 +5933,8 @@ Objects {
       Yaw: 57.9895477
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -2975,8 +5991,8 @@ Objects {
       Yaw: 69.239624
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -3033,8 +6049,8 @@ Objects {
       Yaw: 80.4896698
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -3091,8 +6107,8 @@ Objects {
       Yaw: 91.7397308
     }
     Scale {
-      X: 26.735178
-      Y: 24.0199471
+      X: 24.9893608
+      Y: 25.084507
       Z: 1
     }
   }
@@ -3149,8 +6165,8 @@ Objects {
       Yaw: -29.9951172
     }
     Scale {
-      X: 15.4248934
-      Y: 16.3519363
+      X: 14.4176455
+      Y: 17.0766449
       Z: 1
     }
   }
@@ -3207,8 +6223,8 @@ Objects {
       Yaw: -35.8428345
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3265,8 +6281,8 @@ Objects {
       Yaw: -43.9607544
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3323,8 +6339,8 @@ Objects {
       Yaw: -57.6376343
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3381,8 +6397,8 @@ Objects {
       Yaw: -70.8493652
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3439,8 +6455,8 @@ Objects {
       Yaw: -85.9406128
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3497,8 +6513,8 @@ Objects {
       Yaw: -101.235962
     }
     Scale {
-      X: 15.424881
-      Y: 26.5523701
+      X: 14.4176331
+      Y: 27.7291679
       Z: 1
     }
   }
@@ -3555,8 +6571,8 @@ Objects {
       Yaw: -37.3300781
     }
     Scale {
-      X: 15.4248867
-      Y: 13.4327774
+      X: 14.4176388
+      Y: 14.0281134
       Z: 1
     }
   }
@@ -3613,8 +6629,8 @@ Objects {
       Yaw: -29.4983521
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3671,8 +6687,8 @@ Objects {
       Yaw: -20.1916199
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3729,8 +6745,8 @@ Objects {
       Yaw: -20.1916199
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3787,8 +6803,8 @@ Objects {
       Yaw: -12.4710388
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3845,8 +6861,8 @@ Objects {
       Yaw: 8.65884304
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3903,8 +6919,8 @@ Objects {
       Yaw: 17.1360168
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -3961,8 +6977,8 @@ Objects {
       Yaw: 91.7397385
     }
     Scale {
-      X: 15.4248924
-      Y: 17.5991154
+      X: 14.4176445
+      Y: 18.379097
       Z: 1
     }
   }
@@ -4019,8 +7035,8 @@ Objects {
       Yaw: 95.4756546
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4077,8 +7093,8 @@ Objects {
       Yaw: 17.7956486
     }
     Scale {
-      X: 15.4249058
-      Y: 9.29077816
+      X: 14.4176559
+      Y: 9.70254135
       Z: 1
     }
   }
@@ -4135,8 +7151,8 @@ Objects {
       Yaw: 17.7956257
     }
     Scale {
-      X: 15.4248905
-      Y: 21.4519329
+      X: 14.4176426
+      Y: 22.4026642
       Z: 1
     }
   }
@@ -4193,8 +7209,8 @@ Objects {
       Yaw: 35.1990318
     }
     Scale {
-      X: 15.4248934
-      Y: 28.6747532
+      X: 14.4176455
+      Y: 29.9456024
       Z: 1
     }
   }
@@ -4251,8 +7267,8 @@ Objects {
       Yaw: -20.0657043
     }
     Scale {
-      X: 15.4248867
-      Y: 14.5171585
+      X: 14.4176388
+      Y: 15.1605511
       Z: 1
     }
   }
@@ -4309,8 +7325,8 @@ Objects {
       Yaw: 15.5776014
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -4367,8 +7383,8 @@ Objects {
       Yaw: 72.1325302
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4425,8 +7441,8 @@ Objects {
       Yaw: 64.5181656
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4483,8 +7499,8 @@ Objects {
       Yaw: 64.5181274
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4541,8 +7557,8 @@ Objects {
       Yaw: 54.8240738
     }
     Scale {
-      X: 15.4248486
-      Y: 12.22754
+      X: 14.4176025
+      Y: 12.7694607
       Z: 1
     }
   }
@@ -4599,8 +7615,8 @@ Objects {
       Yaw: 34.1336441
     }
     Scale {
-      X: 15.4248466
-      Y: 18.1631241
+      X: 14.4176006
+      Y: 18.9681072
       Z: 1
     }
   }
@@ -4649,16 +7665,16 @@ Objects {
   Name: "Plane 1m"
   Transform {
     Location {
-      X: -25889.5195
-      Y: -28988.3906
-      Z: 817.717285
+      X: -26011.9648
+      Y: -28786.8418
+      Z: 630.245605
     }
     Rotation {
       Yaw: 31.2797928
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176054
+      Y: 17.5166569
       Z: 1
     }
   }
@@ -4715,8 +7731,8 @@ Objects {
       Yaw: 16.4782047
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4773,8 +7789,8 @@ Objects {
       Yaw: 16.4781761
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4831,8 +7847,8 @@ Objects {
       Yaw: -15.4429626
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4889,8 +7905,8 @@ Objects {
       Yaw: -20.4579773
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -4947,8 +7963,8 @@ Objects {
       Yaw: -9.65008545
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5005,8 +8021,8 @@ Objects {
       Yaw: -3.07424927
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5063,8 +8079,8 @@ Objects {
       Yaw: -16.2261963
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5121,8 +8137,8 @@ Objects {
       Yaw: -32.694458
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5179,8 +8195,8 @@ Objects {
       Yaw: -26.116394
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5237,8 +8253,8 @@ Objects {
       Yaw: -6.98425293
     }
     Scale {
-      X: 15.4248028
-      Y: 16.46661
+      X: 14.4175596
+      Y: 17.1964
       Z: 1
     }
   }
@@ -5295,8 +8311,8 @@ Objects {
       Yaw: 0.52618438
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5353,8 +8369,8 @@ Objects {
       Yaw: 0.52618438
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5411,8 +8427,8 @@ Objects {
       Yaw: -13.2275085
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5469,8 +8485,8 @@ Objects {
       Yaw: -29.338623
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5527,8 +8543,8 @@ Objects {
       Yaw: -41.190918
     }
     Scale {
-      X: 15.4248829
-      Y: 21.02001
+      X: 14.417635
+      Y: 21.9516048
       Z: 1
     }
   }
@@ -5585,8 +8601,8 @@ Objects {
       Yaw: -45.8411255
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5643,8 +8659,8 @@ Objects {
       Yaw: -41.5764465
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5701,8 +8717,8 @@ Objects {
       Yaw: -35.2565
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5759,8 +8775,8 @@ Objects {
       Yaw: -35.190979
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5817,8 +8833,8 @@ Objects {
       Yaw: -44.9733887
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5875,8 +8891,8 @@ Objects {
       Yaw: -44.9733887
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5933,8 +8949,8 @@ Objects {
       Yaw: -35.0487976
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -5991,8 +9007,8 @@ Objects {
       Yaw: -35.0487976
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6049,8 +9065,8 @@ Objects {
       Yaw: -35.0487976
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6107,8 +9123,8 @@ Objects {
       Yaw: -38.1111145
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6165,8 +9181,8 @@ Objects {
       Yaw: -51.2081909
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6223,8 +9239,8 @@ Objects {
       Yaw: -66.7782898
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6281,8 +9297,8 @@ Objects {
       Yaw: -11.2944031
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6339,8 +9355,8 @@ Objects {
       Yaw: -11.2943726
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6397,8 +9413,8 @@ Objects {
       Yaw: 2.32207656
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6455,8 +9471,8 @@ Objects {
       Yaw: 2.32207608
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6513,8 +9529,8 @@ Objects {
       Yaw: 10.3898306
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6571,8 +9587,8 @@ Objects {
       Yaw: 10.3897991
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6629,8 +9645,8 @@ Objects {
       Yaw: -13.3076782
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6687,8 +9703,8 @@ Objects {
       Yaw: -40.421875
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6745,8 +9761,8 @@ Objects {
       Yaw: -71.3247681
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6803,8 +9819,8 @@ Objects {
       Yaw: -74.121521
     }
     Scale {
-      X: 15.4248953
-      Y: 22.2180252
+      X: 14.4176474
+      Y: 23.2027168
       Z: 1
     }
   }
@@ -6861,8 +9877,8 @@ Objects {
       Yaw: -111.227493
     }
     Scale {
-      X: 15.4248829
-      Y: 33.171402
+      X: 14.417635
+      Y: 34.6415405
       Z: 1
     }
   }
@@ -6919,8 +9935,8 @@ Objects {
       Yaw: -74.4732666
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -6977,8 +9993,8 @@ Objects {
       Yaw: -53.8330078
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7035,8 +10051,8 @@ Objects {
       Yaw: -48.1414795
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7093,8 +10109,8 @@ Objects {
       Yaw: -48.1415405
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7151,8 +10167,8 @@ Objects {
       Yaw: -45.7796326
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7209,8 +10225,8 @@ Objects {
       Yaw: -57.0369873
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7267,8 +10283,8 @@ Objects {
       Yaw: -57.0370483
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7325,8 +10341,8 @@ Objects {
       Yaw: -87.1405945
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7383,8 +10399,8 @@ Objects {
       Yaw: -95.2275391
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -7441,8 +10457,8 @@ Objects {
       Yaw: -88.0308228
     }
     Scale {
-      X: 15.4248877
-      Y: 35.4932632
+      X: 14.4176397
+      Y: 37.0663033
       Z: 1
     }
   }
@@ -7499,8 +10515,8 @@ Objects {
       Yaw: -60.9639587
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7557,8 +10573,8 @@ Objects {
       Yaw: -60.9639587
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7615,8 +10631,8 @@ Objects {
       Yaw: -50.839386
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7673,8 +10689,8 @@ Objects {
       Yaw: -50.8393555
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7731,8 +10747,8 @@ Objects {
       Yaw: -25.894928
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7789,8 +10805,8 @@ Objects {
       Yaw: -25.8949585
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7847,8 +10863,8 @@ Objects {
       Yaw: -36.1713562
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7905,8 +10921,8 @@ Objects {
       Yaw: -36.1713562
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -7963,8 +10979,8 @@ Objects {
       Yaw: -43.6387939
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8021,8 +11037,8 @@ Objects {
       Yaw: -51.0683594
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8079,8 +11095,8 @@ Objects {
       Yaw: -42.0917664
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8137,8 +11153,8 @@ Objects {
       Yaw: -52.0288086
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8195,8 +11211,8 @@ Objects {
       Yaw: -70.0892944
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8253,8 +11269,8 @@ Objects {
       Yaw: -80.0467834
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8311,8 +11327,8 @@ Objects {
       Yaw: -93.9731445
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8369,8 +11385,8 @@ Objects {
       Yaw: 15.5775671
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8427,8 +11443,8 @@ Objects {
       Yaw: 8.38057804
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8485,8 +11501,8 @@ Objects {
       Yaw: 4.34425735
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8543,8 +11559,8 @@ Objects {
       Yaw: 4.34425354
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8601,8 +11617,8 @@ Objects {
       Yaw: 4.34424973
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8659,8 +11675,8 @@ Objects {
       Yaw: 2.59877777
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8717,8 +11733,8 @@ Objects {
       Yaw: -28.5500488
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8775,8 +11791,8 @@ Objects {
       Yaw: -28.5500488
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8833,8 +11849,8 @@ Objects {
       Yaw: -19.72229
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -8891,8 +11907,8 @@ Objects {
       Yaw: 2.40101957
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -8949,8 +11965,8 @@ Objects {
       Yaw: -0.640533447
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9007,8 +12023,8 @@ Objects {
       Yaw: -21.2085571
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9065,8 +12081,8 @@ Objects {
       Yaw: -27.5348816
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9123,8 +12139,8 @@ Objects {
       Yaw: -27.5349121
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9181,8 +12197,8 @@ Objects {
       Yaw: -4.88064575
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9239,8 +12255,8 @@ Objects {
       Yaw: -3.07754517
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9297,8 +12313,8 @@ Objects {
       Yaw: -42.2297974
     }
     Scale {
-      X: 15.4248896
-      Y: 15.4425669
+      X: 14.4176416
+      Y: 16.1269741
       Z: 1
     }
   }
@@ -9355,8 +12371,8 @@ Objects {
       Yaw: -49.0760498
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9413,8 +12429,8 @@ Objects {
       Yaw: -58.9645386
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9471,8 +12487,8 @@ Objects {
       Yaw: -68.8748169
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9529,8 +12545,8 @@ Objects {
       Yaw: 2.282161
     }
     Scale {
-      X: 15.4248848
-      Y: 20.5854759
+      X: 14.4176369
+      Y: 21.4978104
       Z: 1
     }
   }
@@ -9587,8 +12603,8 @@ Objects {
       Yaw: -3.07754517
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9645,8 +12661,8 @@ Objects {
       Yaw: -34.5746155
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9703,8 +12719,8 @@ Objects {
       Yaw: -21.1948547
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9761,8 +12777,8 @@ Objects {
       Yaw: -26.8288574
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9819,8 +12835,8 @@ Objects {
       Yaw: -3.13739014
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9877,8 +12893,8 @@ Objects {
       Yaw: 9.84005
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -9935,8 +12951,8 @@ Objects {
       Yaw: 19.5979366
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -9993,8 +13009,8 @@ Objects {
       Yaw: -1.42236328
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -10051,8 +13067,8 @@ Objects {
       Yaw: -16.7229309
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -10109,8 +13125,8 @@ Objects {
       Yaw: -23.0649719
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -10167,8 +13183,8 @@ Objects {
       Yaw: -17.6567383
     }
     Scale {
-      X: 15.424984
-      Y: 18.4537449
+      X: 14.4177294
+      Y: 19.2716064
       Z: 1
     }
   }
@@ -10225,8 +13241,8 @@ Objects {
       Yaw: -7.36413574
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -10283,8 +13299,8 @@ Objects {
       Yaw: -96.7316284
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10341,8 +13357,8 @@ Objects {
       Yaw: -100.799377
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10399,8 +13415,8 @@ Objects {
       Yaw: -100.799347
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10457,8 +13473,8 @@ Objects {
       Yaw: -88.2098694
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10515,8 +13531,8 @@ Objects {
       Yaw: -85.7305603
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10573,8 +13589,8 @@ Objects {
       Yaw: -80.2685242
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10631,8 +13647,8 @@ Objects {
       Yaw: -72.2342529
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10689,8 +13705,8 @@ Objects {
       Yaw: -62.3755493
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10747,8 +13763,8 @@ Objects {
       Yaw: -69.0441589
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10805,8 +13821,8 @@ Objects {
       Yaw: -76.3982849
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10863,8 +13879,8 @@ Objects {
       Yaw: -57.48526
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10921,8 +13937,8 @@ Objects {
       Yaw: -51.8352051
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -10979,8 +13995,8 @@ Objects {
       Yaw: -51.8351746
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -11037,8 +14053,8 @@ Objects {
       Yaw: -17.2234497
     }
     Scale {
-      X: 15.4248734
-      Y: 17.7292099
+      X: 14.4176264
+      Y: 18.5149536
       Z: 1
     }
   }
@@ -11095,8 +14111,8 @@ Objects {
       Yaw: -17.2234192
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -11153,8 +14169,8 @@ Objects {
       Yaw: -50.1200867
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -11211,8 +14227,8 @@ Objects {
       Yaw: -65.4205933
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -11269,8 +14285,8 @@ Objects {
       Yaw: -80.3141479
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -11319,16 +14335,16 @@ Objects {
   Name: "Plane 1m"
   Transform {
     Location {
-      X: -25253.4531
-      Y: -29716.4063
-      Z: 893.414063
+      X: -25339.3965
+      Y: -29616.2324
+      Z: 1203.11182
     }
     Rotation {
-      Yaw: -45
+      Yaw: -55.2007446
     }
     Scale {
-      X: 15.4249907
-      Y: 13.4853354
+      X: 14.4177361
+      Y: 14.0830021
       Z: 1
     }
   }
@@ -11379,14 +14395,14 @@ Objects {
     Location {
       X: -24163.6133
       Y: -29031.9453
-      Z: 748.137207
+      Z: 1203.2417
     }
     Rotation {
       Yaw: -65.000061
     }
     Scale {
-      X: 15.4248524
-      Y: 21.5107059
+      X: 14.4176064
+      Y: 22.4640465
       Z: 1
     }
   }
@@ -11495,9 +14511,10 @@ Objects {
     Overrides {
       Name: "cs:BorderColor"
       Color {
-        R: 0.0642246157
-        G: 0.0989583358
-        A: 0.755000055
+        R: 0.0520833321
+        G: 0.0199061036
+        B: 0.00350602274
+        A: 0.896
       }
     }
     Overrides {

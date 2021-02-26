@@ -123,7 +123,11 @@ for _,shape in ipairs(worldShapes) do
 		local posZ = shape:GetWorldPosition().z
 		local heightNormalized = (posZ - boundsLow) / (boundsHigh - boundsLow)
 		local color = Color.Lerp(COLOR_LOW, COLOR_HIGH, heightNormalized)
-		mapPiece:SetColor(color * baseColor)
+		if (baseColor == Color.WHITE) then
+			mapPiece:SetColor(color * baseColor)
+		else
+			mapPiece:SetColor(baseColor)
+		end
 	else
 		mapPiece:SetColor(baseColor)
 	end
