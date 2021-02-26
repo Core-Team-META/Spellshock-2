@@ -24,13 +24,13 @@ function AddImpulse(player)
 		impulseVector =
 			oppositeVector *
 			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_OwnerImpulse, SpecialAbility.name .. ": Owner Impulse")
-	else
+	--[[else
 		local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 		directionVector = directionVector / directionVector.size
 		directionVector.z = 0.7
 		impulseVector =
 			directionVector *
-			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", DEFAULT_EnemyImpulse, SpecialAbility.name .. ": Enemy Impulse")
+			META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", DEFAULT_EnemyImpulse, SpecialAbility.name .. ": Enemy Impulse")]]
 	end
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)
@@ -69,7 +69,6 @@ function OnAbilityExecute(thisAbility)
 		Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), ImpulseRadius, {ignoreTeams = thisAbility.owner.team})
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	for _, enemy in pairs(nearbyEnemies) do
-		--AddImpulse(enemy)
 		API_SE.ApplyStatusEffect(
 			enemy,
 			API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id,

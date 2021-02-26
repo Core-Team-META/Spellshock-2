@@ -1,13 +1,13 @@
 Assets {
-  Id: 1745987770005120759
-  Name: "Hunter Orc Leap Placement Fire"
+  Id: 1213996206729767403
+  Name: "Hunter Elf Entangle Placement Basic"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5122760150921592246
+      RootId: 2298231852152351130
       Objects {
-        Id: 5122760150921592246
-        Name: "Hunter Orc Leap Placement Fire"
+        Id: 2298231852152351130
+        Name: "Hunter Elf Leap Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3571856715145044979
-        ChildIds: 13516580838183690228
+        ChildIds: 349614687134748181
+        ChildIds: 11522869291797001704
         UnregisteredParameters {
           Overrides {
             Name: "cs:lifeSpan"
@@ -26,7 +26,7 @@ Assets {
           Overrides {
             Name: "cs:Trigger"
             ObjectReference {
-              SubObjectId: 13516580838183690228
+              SubObjectId: 11522869291797001704
             }
           }
           Overrides {
@@ -46,7 +46,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3571856715145044979
+        Id: 349614687134748181
         Name: "GEO"
         Transform {
           Location {
@@ -59,24 +59,16 @@ Assets {
             Z: 0.0879343599
           }
         }
-        ParentId: 5122760150921592246
-        ChildIds: 2231047042536627344
-        ChildIds: 17283066777707562420
-        ChildIds: 1926222307620426479
-        ChildIds: 5144351366328063719
-        ChildIds: 9025856597641087224
-        ChildIds: 4374634304708148293
-        ChildIds: 9992598276363702736
-        ChildIds: 9605240185399298210
-        ChildIds: 10496277778867338065
-        ChildIds: 12892444189877794968
-        ChildIds: 6971346169456655106
-        ChildIds: 16779519598372346191
-        ChildIds: 15157572889712412489
-        ChildIds: 11375736061534485689
-        ChildIds: 14498764810510134341
-        ChildIds: 10226278528005609961
-        ChildIds: 10382483133275399319
+        ParentId: 2298231852152351130
+        ChildIds: 11411242560224795266
+        ChildIds: 11859106576971169170
+        ChildIds: 605809853574755247
+        ChildIds: 14327976518073953374
+        ChildIds: 11625680850959854698
+        ChildIds: 2843845436370067768
+        ChildIds: 12272283418017978485
+        ChildIds: 4353601023383421329
+        ChildIds: 9173976089813228574
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -88,7 +80,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2231047042536627344
+        Id: 11411242560224795266
         Name: "Group"
         Transform {
           Location {
@@ -107,9 +99,9 @@ Assets {
             Z: 1.39999974
           }
         }
-        ParentId: 3571856715145044979
-        ChildIds: 7291598466216280745
-        ChildIds: 9379943082034382697
+        ParentId: 349614687134748181
+        ChildIds: 2624434544604201449
+        ChildIds: 11682816610462108869
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -121,7 +113,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7291598466216280745
+        Id: 2624434544604201449
         Name: "StunMovement"
         Transform {
           Location {
@@ -134,7 +126,7 @@ Assets {
             Z: 0.714285851
           }
         }
-        ParentId: 2231047042536627344
+        ParentId: 11411242560224795266
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -148,7 +140,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9379943082034382697
+        Id: 11682816610462108869
         Name: "Group"
         Transform {
           Location {
@@ -166,10 +158,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2231047042536627344
-        ChildIds: 8337614436501695078
-        ChildIds: 7377366700556336972
-        ChildIds: 13124332496885166990
+        ParentId: 11411242560224795266
+        ChildIds: 832579192886978881
+        ChildIds: 9795564364960204025
+        ChildIds: 16603248680283799035
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -181,7 +173,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8337614436501695078
+        Id: 832579192886978881
         Name: "Thorns"
         Transform {
           Location {
@@ -200,10 +192,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9379943082034382697
-        ChildIds: 1411270657521770672
-        ChildIds: 6185638786605975703
-        ChildIds: 15219103748509125319
+        ParentId: 11682816610462108869
+        ChildIds: 883512341811261555
+        ChildIds: 3988313401317503714
+        ChildIds: 11796839413344011978
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -215,7 +207,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1411270657521770672
+        Id: 883512341811261555
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -234,12 +226,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 8337614436501695078
+        ParentId: 832579192886978881
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -249,18 +241,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -277,8 +266,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -288,7 +275,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6185638786605975703
+        Id: 3988313401317503714
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -307,12 +294,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 8337614436501695078
+        ParentId: 832579192886978881
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -322,18 +309,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -350,8 +334,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -361,7 +343,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15219103748509125319
+        Id: 11796839413344011978
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -380,12 +362,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 8337614436501695078
+        ParentId: 832579192886978881
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -395,18 +377,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -423,8 +402,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -434,7 +411,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7377366700556336972
+        Id: 9795564364960204025
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -453,12 +430,12 @@ Assets {
             Z: 1.06288218
           }
         }
-        ParentId: 9379943082034382697
+        ParentId: 11682816610462108869
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -466,12 +443,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -498,7 +475,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13124332496885166990
+        Id: 16603248680283799035
         Name: "Group"
         Transform {
           Location {
@@ -516,10 +493,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9379943082034382697
-        ChildIds: 12994393295423620953
-        ChildIds: 16638850287813114672
-        ChildIds: 270395376658869860
+        ParentId: 11682816610462108869
+        ChildIds: 6117720119939332557
+        ChildIds: 13362426734991065546
+        ChildIds: 3514780431230506197
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -531,7 +508,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12994393295423620953
+        Id: 6117720119939332557
         Name: "Thorns"
         Transform {
           Location {
@@ -546,10 +523,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13124332496885166990
-        ChildIds: 15949468938108309552
-        ChildIds: 13885580649605128545
-        ChildIds: 6010911830369693450
+        ParentId: 16603248680283799035
+        ChildIds: 7956768255220952578
+        ChildIds: 8658678470679350659
+        ChildIds: 4375434894861722579
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -561,7 +538,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15949468938108309552
+        Id: 7956768255220952578
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -580,12 +557,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 12994393295423620953
+        ParentId: 6117720119939332557
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -595,18 +572,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -623,8 +597,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -634,7 +606,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13885580649605128545
+        Id: 8658678470679350659
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -653,12 +625,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 12994393295423620953
+        ParentId: 6117720119939332557
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -668,18 +640,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -696,8 +665,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -707,7 +674,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6010911830369693450
+        Id: 4375434894861722579
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -726,12 +693,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 12994393295423620953
+        ParentId: 6117720119939332557
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -741,18 +708,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -769,8 +733,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -780,7 +742,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16638850287813114672
+        Id: 13362426734991065546
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -793,12 +755,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13124332496885166990
+        ParentId: 16603248680283799035
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -806,12 +768,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -838,7 +800,7 @@ Assets {
         }
       }
       Objects {
-        Id: 270395376658869860
+        Id: 3514780431230506197
         Name: "Group"
         Transform {
           Location {
@@ -857,10 +819,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13124332496885166990
-        ChildIds: 9485395752863483104
-        ChildIds: 6469818665970345072
-        ChildIds: 11783652564749772323
+        ParentId: 16603248680283799035
+        ChildIds: 9874312102177242622
+        ChildIds: 6034983691569754904
+        ChildIds: 8395840724638588925
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -872,7 +834,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9485395752863483104
+        Id: 9874312102177242622
         Name: "Thorns"
         Transform {
           Location {
@@ -887,10 +849,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 270395376658869860
-        ChildIds: 5178267816807030769
-        ChildIds: 5284950592382152319
-        ChildIds: 17085475314242505464
+        ParentId: 3514780431230506197
+        ChildIds: 12538872589147530285
+        ChildIds: 17119414537291642078
+        ChildIds: 2706534934475862188
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -902,7 +864,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5178267816807030769
+        Id: 12538872589147530285
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -921,12 +883,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 9485395752863483104
+        ParentId: 9874312102177242622
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -936,18 +898,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -964,8 +923,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -975,7 +932,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5284950592382152319
+        Id: 17119414537291642078
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -994,12 +951,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 9485395752863483104
+        ParentId: 9874312102177242622
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1009,18 +966,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1037,8 +991,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1048,7 +1000,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17085475314242505464
+        Id: 2706534934475862188
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1067,12 +1019,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 9485395752863483104
+        ParentId: 9874312102177242622
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1082,18 +1034,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1110,8 +1059,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1121,7 +1068,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6469818665970345072
+        Id: 6034983691569754904
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -1134,12 +1081,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 270395376658869860
+        ParentId: 3514780431230506197
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -1147,12 +1094,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1179,7 +1126,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11783652564749772323
+        Id: 8395840724638588925
         Name: "Group"
         Transform {
           Location {
@@ -1198,10 +1145,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 270395376658869860
-        ChildIds: 3729718464064424263
-        ChildIds: 4878183832301979303
-        ChildIds: 7153318638414153587
+        ParentId: 3514780431230506197
+        ChildIds: 4319672047607612220
+        ChildIds: 15646083033746366672
+        ChildIds: 13381599757309083813
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1213,7 +1160,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3729718464064424263
+        Id: 4319672047607612220
         Name: "Thorns"
         Transform {
           Location {
@@ -1228,10 +1175,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11783652564749772323
-        ChildIds: 11415236422781020728
-        ChildIds: 15157187397126232632
-        ChildIds: 4400533751514580399
+        ParentId: 8395840724638588925
+        ChildIds: 4499978533248128589
+        ChildIds: 16592666149028303105
+        ChildIds: 6246539369952222141
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1243,7 +1190,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11415236422781020728
+        Id: 4499978533248128589
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1262,12 +1209,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 3729718464064424263
+        ParentId: 4319672047607612220
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1277,18 +1224,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1305,8 +1249,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1316,7 +1258,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15157187397126232632
+        Id: 16592666149028303105
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1335,12 +1277,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 3729718464064424263
+        ParentId: 4319672047607612220
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1350,18 +1292,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1378,8 +1317,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1389,7 +1326,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4400533751514580399
+        Id: 6246539369952222141
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1408,12 +1345,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 3729718464064424263
+        ParentId: 4319672047607612220
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1423,18 +1360,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1451,8 +1385,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1462,7 +1394,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4878183832301979303
+        Id: 15646083033746366672
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -1475,12 +1407,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11783652564749772323
+        ParentId: 8395840724638588925
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -1488,12 +1420,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1520,7 +1452,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7153318638414153587
+        Id: 13381599757309083813
         Name: "Group"
         Transform {
           Location {
@@ -1539,10 +1471,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11783652564749772323
-        ChildIds: 16502020458420219369
-        ChildIds: 4024220302273548583
-        ChildIds: 5056772354836004692
+        ParentId: 8395840724638588925
+        ChildIds: 47224352149657796
+        ChildIds: 12713272340298711619
+        ChildIds: 5909583403445569788
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1554,7 +1486,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16502020458420219369
+        Id: 47224352149657796
         Name: "Thorns"
         Transform {
           Location {
@@ -1569,10 +1501,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7153318638414153587
-        ChildIds: 4742076800235779333
-        ChildIds: 2301324185237879969
-        ChildIds: 1064812709665066855
+        ParentId: 13381599757309083813
+        ChildIds: 15794349671085035844
+        ChildIds: 2083695529118381794
+        ChildIds: 10420677273604016586
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1584,7 +1516,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4742076800235779333
+        Id: 15794349671085035844
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1603,12 +1535,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 16502020458420219369
+        ParentId: 47224352149657796
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1618,18 +1550,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1646,8 +1575,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1657,7 +1584,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2301324185237879969
+        Id: 2083695529118381794
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1676,12 +1603,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 16502020458420219369
+        ParentId: 47224352149657796
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1691,18 +1618,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1719,8 +1643,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1730,7 +1652,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1064812709665066855
+        Id: 10420677273604016586
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1749,12 +1671,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 16502020458420219369
+        ParentId: 47224352149657796
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1764,18 +1686,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1792,8 +1711,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1803,7 +1720,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4024220302273548583
+        Id: 12713272340298711619
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -1816,12 +1733,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7153318638414153587
+        ParentId: 13381599757309083813
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -1829,12 +1746,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -1861,7 +1778,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5056772354836004692
+        Id: 5909583403445569788
         Name: "Group"
         Transform {
           Location {
@@ -1880,10 +1797,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7153318638414153587
-        ChildIds: 14283058283166694036
-        ChildIds: 2263309734283294779
-        ChildIds: 16265726236127638691
+        ParentId: 13381599757309083813
+        ChildIds: 18389807222615405337
+        ChildIds: 5947318922079300162
+        ChildIds: 17092059404425895124
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1895,7 +1812,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14283058283166694036
+        Id: 18389807222615405337
         Name: "Thorns"
         Transform {
           Location {
@@ -1910,10 +1827,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5056772354836004692
-        ChildIds: 2885959584890660561
-        ChildIds: 16234604154576490078
-        ChildIds: 3774367676654658635
+        ParentId: 5909583403445569788
+        ChildIds: 15318267339148934929
+        ChildIds: 17861482949008793782
+        ChildIds: 15089670882504909227
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1925,7 +1842,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2885959584890660561
+        Id: 15318267339148934929
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -1944,12 +1861,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 14283058283166694036
+        ParentId: 18389807222615405337
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -1959,18 +1876,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -1987,8 +1901,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -1998,7 +1910,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16234604154576490078
+        Id: 17861482949008793782
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2017,12 +1929,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 14283058283166694036
+        ParentId: 18389807222615405337
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2032,18 +1944,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2060,8 +1969,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2071,7 +1978,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3774367676654658635
+        Id: 15089670882504909227
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2090,12 +1997,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 14283058283166694036
+        ParentId: 18389807222615405337
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2105,18 +2012,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2133,8 +2037,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2144,7 +2046,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2263309734283294779
+        Id: 5947318922079300162
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -2157,12 +2059,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5056772354836004692
+        ParentId: 5909583403445569788
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -2170,12 +2072,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2202,7 +2104,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16265726236127638691
+        Id: 17092059404425895124
         Name: "Group"
         Transform {
           Location {
@@ -2219,10 +2121,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5056772354836004692
-        ChildIds: 16324399307484326794
-        ChildIds: 4187798713952050261
-        ChildIds: 1207861468240574627
+        ParentId: 5909583403445569788
+        ChildIds: 14992315227001500678
+        ChildIds: 5836913406884943962
+        ChildIds: 9409157153915691065
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2234,7 +2136,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16324399307484326794
+        Id: 14992315227001500678
         Name: "Thorns"
         Transform {
           Location {
@@ -2249,10 +2151,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 16265726236127638691
-        ChildIds: 4681758982614974265
-        ChildIds: 2266471556653492096
-        ChildIds: 17784147635544981916
+        ParentId: 17092059404425895124
+        ChildIds: 11532009666744548016
+        ChildIds: 16385364792693921214
+        ChildIds: 18015239224390897455
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2264,7 +2166,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4681758982614974265
+        Id: 11532009666744548016
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2283,12 +2185,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 16324399307484326794
+        ParentId: 14992315227001500678
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2298,18 +2200,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2326,8 +2225,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2337,7 +2234,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2266471556653492096
+        Id: 16385364792693921214
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2356,12 +2253,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 16324399307484326794
+        ParentId: 14992315227001500678
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2371,18 +2268,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2399,8 +2293,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2410,7 +2302,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17784147635544981916
+        Id: 18015239224390897455
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2429,12 +2321,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 16324399307484326794
+        ParentId: 14992315227001500678
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2444,18 +2336,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2472,8 +2361,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2483,7 +2370,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4187798713952050261
+        Id: 5836913406884943962
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -2496,12 +2383,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 16265726236127638691
+        ParentId: 17092059404425895124
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -2509,12 +2396,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2541,7 +2428,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1207861468240574627
+        Id: 9409157153915691065
         Name: "Group"
         Transform {
           Location {
@@ -2560,9 +2447,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 16265726236127638691
-        ChildIds: 453428942406540491
-        ChildIds: 17888955963883195497
+        ParentId: 17092059404425895124
+        ChildIds: 17570023022098052879
+        ChildIds: 1829561276090068057
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2574,7 +2461,7 @@ Assets {
         }
       }
       Objects {
-        Id: 453428942406540491
+        Id: 17570023022098052879
         Name: "Thorns"
         Transform {
           Location {
@@ -2589,10 +2476,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1207861468240574627
-        ChildIds: 11573975981582951345
-        ChildIds: 1321682219539265163
-        ChildIds: 16858457814181592847
+        ParentId: 9409157153915691065
+        ChildIds: 8619731409939930169
+        ChildIds: 102754012056929534
+        ChildIds: 12553753153291918705
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2604,7 +2491,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11573975981582951345
+        Id: 8619731409939930169
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2623,12 +2510,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 453428942406540491
+        ParentId: 17570023022098052879
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2638,18 +2525,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2666,8 +2550,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2677,7 +2559,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1321682219539265163
+        Id: 102754012056929534
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2696,12 +2578,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 453428942406540491
+        ParentId: 17570023022098052879
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2711,18 +2593,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2739,8 +2618,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2750,7 +2627,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16858457814181592847
+        Id: 12553753153291918705
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -2769,12 +2646,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 453428942406540491
+        ParentId: 17570023022098052879
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -2784,18 +2661,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -2812,8 +2686,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -2823,7 +2695,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17888955963883195497
+        Id: 1829561276090068057
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -2836,12 +2708,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1207861468240574627
+        ParentId: 9409157153915691065
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -2849,12 +2721,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -2881,7 +2753,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17283066777707562420
+        Id: 11859106576971169170
         Name: "Group"
         Transform {
           Location {
@@ -2900,9 +2772,9 @@ Assets {
             Z: 1.39999974
           }
         }
-        ParentId: 3571856715145044979
-        ChildIds: 17240288881695200190
-        ChildIds: 14405358008305309451
+        ParentId: 349614687134748181
+        ChildIds: 916052982639424142
+        ChildIds: 4480541736493200290
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2914,7 +2786,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17240288881695200190
+        Id: 916052982639424142
         Name: "StunMovement"
         Transform {
           Location {
@@ -2927,7 +2799,7 @@ Assets {
             Z: 0.714285851
           }
         }
-        ParentId: 17283066777707562420
+        ParentId: 11859106576971169170
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2941,7 +2813,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14405358008305309451
+        Id: 4480541736493200290
         Name: "Group"
         Transform {
           Location {
@@ -2959,10 +2831,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17283066777707562420
-        ChildIds: 13822474792429708985
-        ChildIds: 9113514195748346339
-        ChildIds: 10662318371856612823
+        ParentId: 11859106576971169170
+        ChildIds: 7163058223820285595
+        ChildIds: 11096785467027072302
+        ChildIds: 15374574296390934478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2974,7 +2846,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13822474792429708985
+        Id: 7163058223820285595
         Name: "Thorns"
         Transform {
           Location {
@@ -2993,10 +2865,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14405358008305309451
-        ChildIds: 17538373936646747641
-        ChildIds: 8862641680106859316
-        ChildIds: 17126317540632396542
+        ParentId: 4480541736493200290
+        ChildIds: 15815379471637138410
+        ChildIds: 4809319604599113909
+        ChildIds: 17380563808039194582
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3008,7 +2880,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17538373936646747641
+        Id: 15815379471637138410
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3027,12 +2899,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 13822474792429708985
+        ParentId: 7163058223820285595
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3042,18 +2914,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3070,8 +2939,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3081,7 +2948,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8862641680106859316
+        Id: 4809319604599113909
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3100,12 +2967,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 13822474792429708985
+        ParentId: 7163058223820285595
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3115,18 +2982,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3143,8 +3007,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3154,7 +3016,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17126317540632396542
+        Id: 17380563808039194582
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3173,12 +3035,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 13822474792429708985
+        ParentId: 7163058223820285595
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3188,18 +3050,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3216,8 +3075,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3227,7 +3084,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9113514195748346339
+        Id: 11096785467027072302
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -3246,12 +3103,12 @@ Assets {
             Z: 1.06288218
           }
         }
-        ParentId: 14405358008305309451
+        ParentId: 4480541736493200290
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -3259,12 +3116,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -3291,7 +3148,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10662318371856612823
+        Id: 15374574296390934478
         Name: "Group"
         Transform {
           Location {
@@ -3309,10 +3166,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14405358008305309451
-        ChildIds: 10892972433736422887
-        ChildIds: 8071169271616425341
-        ChildIds: 14153518873744799502
+        ParentId: 4480541736493200290
+        ChildIds: 39242870093201188
+        ChildIds: 8759539366822245716
+        ChildIds: 16341895555220995097
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3324,7 +3181,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10892972433736422887
+        Id: 39242870093201188
         Name: "Thorns"
         Transform {
           Location {
@@ -3339,10 +3196,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10662318371856612823
-        ChildIds: 15516380146223623404
-        ChildIds: 7520326236042342192
-        ChildIds: 11240703100523499208
+        ParentId: 15374574296390934478
+        ChildIds: 15152426993210564929
+        ChildIds: 16577561091964862477
+        ChildIds: 16272083657277518011
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3354,7 +3211,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15516380146223623404
+        Id: 15152426993210564929
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3373,12 +3230,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 10892972433736422887
+        ParentId: 39242870093201188
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3388,18 +3245,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3416,8 +3270,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3427,7 +3279,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7520326236042342192
+        Id: 16577561091964862477
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3446,12 +3298,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 10892972433736422887
+        ParentId: 39242870093201188
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3461,18 +3313,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3489,8 +3338,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3500,7 +3347,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11240703100523499208
+        Id: 16272083657277518011
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3519,12 +3366,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 10892972433736422887
+        ParentId: 39242870093201188
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3534,18 +3381,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3562,8 +3406,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3573,7 +3415,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8071169271616425341
+        Id: 8759539366822245716
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -3586,12 +3428,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10662318371856612823
+        ParentId: 15374574296390934478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -3599,12 +3441,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -3631,7 +3473,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14153518873744799502
+        Id: 16341895555220995097
         Name: "Group"
         Transform {
           Location {
@@ -3650,10 +3492,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10662318371856612823
-        ChildIds: 558754007691705148
-        ChildIds: 1866945975925776541
-        ChildIds: 2340304948283308813
+        ParentId: 15374574296390934478
+        ChildIds: 13057387216107395667
+        ChildIds: 11671084045522183228
+        ChildIds: 4512700103523682366
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3665,7 +3507,7 @@ Assets {
         }
       }
       Objects {
-        Id: 558754007691705148
+        Id: 13057387216107395667
         Name: "Thorns"
         Transform {
           Location {
@@ -3680,10 +3522,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14153518873744799502
-        ChildIds: 12663596927310850199
-        ChildIds: 7279472408433421955
-        ChildIds: 10665656622572296273
+        ParentId: 16341895555220995097
+        ChildIds: 17708392942492923136
+        ChildIds: 14241690431122025985
+        ChildIds: 4182544284272976597
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3695,7 +3537,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12663596927310850199
+        Id: 17708392942492923136
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3714,12 +3556,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 558754007691705148
+        ParentId: 13057387216107395667
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3729,18 +3571,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3757,8 +3596,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3768,7 +3605,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7279472408433421955
+        Id: 14241690431122025985
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3787,12 +3624,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 558754007691705148
+        ParentId: 13057387216107395667
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3802,18 +3639,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3830,8 +3664,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3841,7 +3673,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10665656622572296273
+        Id: 4182544284272976597
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -3860,12 +3692,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 558754007691705148
+        ParentId: 13057387216107395667
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -3875,18 +3707,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -3903,8 +3732,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -3914,7 +3741,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1866945975925776541
+        Id: 11671084045522183228
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -3927,12 +3754,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14153518873744799502
+        ParentId: 16341895555220995097
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -3940,12 +3767,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -3972,7 +3799,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2340304948283308813
+        Id: 4512700103523682366
         Name: "Group"
         Transform {
           Location {
@@ -3991,10 +3818,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14153518873744799502
-        ChildIds: 10995237393843299227
-        ChildIds: 10267149639731992423
-        ChildIds: 6657396054405400765
+        ParentId: 16341895555220995097
+        ChildIds: 10810499845542615844
+        ChildIds: 11496884566322342302
+        ChildIds: 7914699941725810360
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4006,7 +3833,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10995237393843299227
+        Id: 10810499845542615844
         Name: "Thorns"
         Transform {
           Location {
@@ -4021,10 +3848,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2340304948283308813
-        ChildIds: 1820000732497072865
-        ChildIds: 3319725076848549715
-        ChildIds: 12130825896848076534
+        ParentId: 4512700103523682366
+        ChildIds: 17037715582480952403
+        ChildIds: 17161962147250140559
+        ChildIds: 7584659124736664758
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4036,7 +3863,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1820000732497072865
+        Id: 17037715582480952403
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4055,12 +3882,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 10995237393843299227
+        ParentId: 10810499845542615844
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4070,18 +3897,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4098,8 +3922,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4109,7 +3931,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3319725076848549715
+        Id: 17161962147250140559
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4128,12 +3950,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 10995237393843299227
+        ParentId: 10810499845542615844
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4143,18 +3965,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4171,8 +3990,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4182,7 +3999,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12130825896848076534
+        Id: 7584659124736664758
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4201,12 +4018,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 10995237393843299227
+        ParentId: 10810499845542615844
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4216,18 +4033,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4244,8 +4058,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4255,7 +4067,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10267149639731992423
+        Id: 11496884566322342302
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -4268,12 +4080,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2340304948283308813
+        ParentId: 4512700103523682366
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -4281,12 +4093,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4313,7 +4125,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6657396054405400765
+        Id: 7914699941725810360
         Name: "Group"
         Transform {
           Location {
@@ -4332,10 +4144,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2340304948283308813
-        ChildIds: 7998167223267294829
-        ChildIds: 5922039341239880337
-        ChildIds: 12551435685027388207
+        ParentId: 4512700103523682366
+        ChildIds: 4898254046016260388
+        ChildIds: 3138133669517930545
+        ChildIds: 9977039178228526770
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4347,7 +4159,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7998167223267294829
+        Id: 4898254046016260388
         Name: "Thorns"
         Transform {
           Location {
@@ -4362,10 +4174,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6657396054405400765
-        ChildIds: 11715603086193640035
-        ChildIds: 17529693725321206715
-        ChildIds: 250206204294865621
+        ParentId: 7914699941725810360
+        ChildIds: 10804961177203140907
+        ChildIds: 16826160190129091589
+        ChildIds: 16281349727510569402
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4377,7 +4189,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11715603086193640035
+        Id: 10804961177203140907
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4396,12 +4208,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 7998167223267294829
+        ParentId: 4898254046016260388
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4411,18 +4223,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4439,8 +4248,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4450,7 +4257,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17529693725321206715
+        Id: 16826160190129091589
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4469,12 +4276,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 7998167223267294829
+        ParentId: 4898254046016260388
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4484,18 +4291,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4512,8 +4316,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4523,7 +4325,7 @@ Assets {
         }
       }
       Objects {
-        Id: 250206204294865621
+        Id: 16281349727510569402
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4542,12 +4344,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 7998167223267294829
+        ParentId: 4898254046016260388
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4557,18 +4359,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4585,8 +4384,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4596,7 +4393,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5922039341239880337
+        Id: 3138133669517930545
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -4609,12 +4406,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6657396054405400765
+        ParentId: 7914699941725810360
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -4622,12 +4419,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4654,7 +4451,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12551435685027388207
+        Id: 9977039178228526770
         Name: "Group"
         Transform {
           Location {
@@ -4673,10 +4470,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6657396054405400765
-        ChildIds: 4690870589118103537
-        ChildIds: 152525101333087397
-        ChildIds: 14926961372544792341
+        ParentId: 7914699941725810360
+        ChildIds: 16485431109241310227
+        ChildIds: 1558859204443277186
+        ChildIds: 10694991601689612476
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4688,7 +4485,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4690870589118103537
+        Id: 16485431109241310227
         Name: "Thorns"
         Transform {
           Location {
@@ -4703,10 +4500,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12551435685027388207
-        ChildIds: 4409259182281609121
-        ChildIds: 2885435550264879218
-        ChildIds: 2857598068868973543
+        ParentId: 9977039178228526770
+        ChildIds: 14883145309140137802
+        ChildIds: 5515151662554835908
+        ChildIds: 16599795015929208741
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4718,7 +4515,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4409259182281609121
+        Id: 14883145309140137802
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4737,12 +4534,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 4690870589118103537
+        ParentId: 16485431109241310227
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4752,18 +4549,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4780,8 +4574,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4791,7 +4583,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2885435550264879218
+        Id: 5515151662554835908
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4810,12 +4602,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 4690870589118103537
+        ParentId: 16485431109241310227
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4825,18 +4617,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4853,8 +4642,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4864,7 +4651,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2857598068868973543
+        Id: 16599795015929208741
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -4883,12 +4670,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 4690870589118103537
+        ParentId: 16485431109241310227
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -4898,18 +4685,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -4926,8 +4710,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -4937,7 +4719,7 @@ Assets {
         }
       }
       Objects {
-        Id: 152525101333087397
+        Id: 1558859204443277186
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -4950,12 +4732,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12551435685027388207
+        ParentId: 9977039178228526770
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -4963,12 +4745,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -4995,7 +4777,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14926961372544792341
+        Id: 10694991601689612476
         Name: "Group"
         Transform {
           Location {
@@ -5012,10 +4794,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12551435685027388207
-        ChildIds: 981310770814841640
-        ChildIds: 14746190654498873659
-        ChildIds: 10319631237994994016
+        ParentId: 9977039178228526770
+        ChildIds: 15318937886006688245
+        ChildIds: 8608504475958092052
+        ChildIds: 10864919504337672692
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5027,7 +4809,7 @@ Assets {
         }
       }
       Objects {
-        Id: 981310770814841640
+        Id: 15318937886006688245
         Name: "Thorns"
         Transform {
           Location {
@@ -5042,10 +4824,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14926961372544792341
-        ChildIds: 12438783686514895910
-        ChildIds: 14276238469570866065
-        ChildIds: 15400459772528637365
+        ParentId: 10694991601689612476
+        ChildIds: 10029527311682110102
+        ChildIds: 2531632270094028385
+        ChildIds: 4153695021788482415
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5057,7 +4839,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12438783686514895910
+        Id: 10029527311682110102
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5076,12 +4858,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 981310770814841640
+        ParentId: 15318937886006688245
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5091,18 +4873,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5119,8 +4898,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5130,7 +4907,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14276238469570866065
+        Id: 2531632270094028385
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5149,12 +4926,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 981310770814841640
+        ParentId: 15318937886006688245
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5164,18 +4941,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5192,8 +4966,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5203,7 +4975,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15400459772528637365
+        Id: 4153695021788482415
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5222,12 +4994,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 981310770814841640
+        ParentId: 15318937886006688245
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5237,18 +5009,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5265,8 +5034,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5276,7 +5043,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14746190654498873659
+        Id: 8608504475958092052
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -5289,12 +5056,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14926961372544792341
+        ParentId: 10694991601689612476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -5302,12 +5069,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -5334,7 +5101,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10319631237994994016
+        Id: 10864919504337672692
         Name: "Group"
         Transform {
           Location {
@@ -5353,9 +5120,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14926961372544792341
-        ChildIds: 16455580200196426800
-        ChildIds: 9403610645460124166
+        ParentId: 10694991601689612476
+        ChildIds: 18023872203492033046
+        ChildIds: 11556159256773043537
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5367,7 +5134,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16455580200196426800
+        Id: 18023872203492033046
         Name: "Thorns"
         Transform {
           Location {
@@ -5382,10 +5149,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10319631237994994016
-        ChildIds: 11068172552783676073
-        ChildIds: 3892337563929190304
-        ChildIds: 16978806169029746229
+        ParentId: 10864919504337672692
+        ChildIds: 15362174093544065938
+        ChildIds: 7431341662635522670
+        ChildIds: 10982899907389672966
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5397,7 +5164,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11068172552783676073
+        Id: 15362174093544065938
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5416,12 +5183,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 16455580200196426800
+        ParentId: 18023872203492033046
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5431,18 +5198,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5459,8 +5223,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5470,7 +5232,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3892337563929190304
+        Id: 7431341662635522670
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5489,12 +5251,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 16455580200196426800
+        ParentId: 18023872203492033046
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5504,18 +5266,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5532,8 +5291,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5543,7 +5300,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16978806169029746229
+        Id: 10982899907389672966
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5562,12 +5319,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 16455580200196426800
+        ParentId: 18023872203492033046
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5577,18 +5334,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5605,8 +5359,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5616,7 +5368,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9403610645460124166
+        Id: 11556159256773043537
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -5629,12 +5381,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10319631237994994016
+        ParentId: 10864919504337672692
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -5642,12 +5394,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -5674,7 +5426,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1926222307620426479
+        Id: 605809853574755247
         Name: "Group"
         Transform {
           Location {
@@ -5693,9 +5445,9 @@ Assets {
             Z: 1.39999974
           }
         }
-        ParentId: 3571856715145044979
-        ChildIds: 5943937037836393997
-        ChildIds: 4792135814164538264
+        ParentId: 349614687134748181
+        ChildIds: 2476133080755076384
+        ChildIds: 7998000581568083131
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5707,7 +5459,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5943937037836393997
+        Id: 2476133080755076384
         Name: "StunMovement"
         Transform {
           Location {
@@ -5720,7 +5472,7 @@ Assets {
             Z: 0.714285851
           }
         }
-        ParentId: 1926222307620426479
+        ParentId: 605809853574755247
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5734,7 +5486,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4792135814164538264
+        Id: 7998000581568083131
         Name: "Group"
         Transform {
           Location {
@@ -5752,10 +5504,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1926222307620426479
-        ChildIds: 18059766871309529270
-        ChildIds: 5638709318291890531
-        ChildIds: 2557843993419871157
+        ParentId: 605809853574755247
+        ChildIds: 1640890472744192001
+        ChildIds: 10209701258304744686
+        ChildIds: 5990762264694368016
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5767,7 +5519,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18059766871309529270
+        Id: 1640890472744192001
         Name: "Thorns"
         Transform {
           Location {
@@ -5786,10 +5538,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4792135814164538264
-        ChildIds: 9452900675645744285
-        ChildIds: 3970510523402704392
-        ChildIds: 9239355615788983542
+        ParentId: 7998000581568083131
+        ChildIds: 7174387575468526120
+        ChildIds: 17619037924504467353
+        ChildIds: 9835761508384265301
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5801,7 +5553,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9452900675645744285
+        Id: 7174387575468526120
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5820,12 +5572,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 18059766871309529270
+        ParentId: 1640890472744192001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5835,18 +5587,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5863,8 +5612,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5874,7 +5621,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3970510523402704392
+        Id: 17619037924504467353
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5893,12 +5640,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 18059766871309529270
+        ParentId: 1640890472744192001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5908,18 +5655,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -5936,8 +5680,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -5947,7 +5689,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9239355615788983542
+        Id: 9835761508384265301
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -5966,12 +5708,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 18059766871309529270
+        ParentId: 1640890472744192001
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -5981,18 +5723,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6009,8 +5748,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6020,7 +5757,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5638709318291890531
+        Id: 10209701258304744686
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -6039,12 +5776,12 @@ Assets {
             Z: 1.06288218
           }
         }
-        ParentId: 4792135814164538264
+        ParentId: 7998000581568083131
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -6052,12 +5789,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6084,7 +5821,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2557843993419871157
+        Id: 5990762264694368016
         Name: "Group"
         Transform {
           Location {
@@ -6102,10 +5839,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4792135814164538264
-        ChildIds: 18369442568733121862
-        ChildIds: 4484960482714398436
-        ChildIds: 15565326113837329602
+        ParentId: 7998000581568083131
+        ChildIds: 13031798742720147718
+        ChildIds: 9482169964540059458
+        ChildIds: 13385890571470608154
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6117,7 +5854,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18369442568733121862
+        Id: 13031798742720147718
         Name: "Thorns"
         Transform {
           Location {
@@ -6132,10 +5869,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2557843993419871157
-        ChildIds: 18209944212885935471
-        ChildIds: 2279368232575750539
-        ChildIds: 16189678543171084790
+        ParentId: 5990762264694368016
+        ChildIds: 9642541976193223245
+        ChildIds: 10485608457171526333
+        ChildIds: 12081409535117283451
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6147,7 +5884,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18209944212885935471
+        Id: 9642541976193223245
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6166,12 +5903,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 18369442568733121862
+        ParentId: 13031798742720147718
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6181,18 +5918,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6209,8 +5943,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6220,7 +5952,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2279368232575750539
+        Id: 10485608457171526333
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6239,12 +5971,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 18369442568733121862
+        ParentId: 13031798742720147718
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6254,18 +5986,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6282,8 +6011,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6293,7 +6020,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16189678543171084790
+        Id: 12081409535117283451
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6312,12 +6039,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 18369442568733121862
+        ParentId: 13031798742720147718
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6327,18 +6054,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6355,8 +6079,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6366,7 +6088,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4484960482714398436
+        Id: 9482169964540059458
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -6379,12 +6101,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2557843993419871157
+        ParentId: 5990762264694368016
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -6392,12 +6114,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6424,7 +6146,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15565326113837329602
+        Id: 13385890571470608154
         Name: "Group"
         Transform {
           Location {
@@ -6443,10 +6165,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2557843993419871157
-        ChildIds: 10108482052660663774
-        ChildIds: 8098379724081643701
-        ChildIds: 1142306551869340755
+        ParentId: 5990762264694368016
+        ChildIds: 130631266282357114
+        ChildIds: 10295459421956337894
+        ChildIds: 18398183927517363457
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6458,7 +6180,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10108482052660663774
+        Id: 130631266282357114
         Name: "Thorns"
         Transform {
           Location {
@@ -6473,10 +6195,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15565326113837329602
-        ChildIds: 3705245722297051306
-        ChildIds: 1655343886850029798
-        ChildIds: 16144981366151981003
+        ParentId: 13385890571470608154
+        ChildIds: 11045044858924711112
+        ChildIds: 15311675469262311745
+        ChildIds: 18199993198667975608
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6488,7 +6210,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3705245722297051306
+        Id: 11045044858924711112
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6507,12 +6229,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 10108482052660663774
+        ParentId: 130631266282357114
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6522,18 +6244,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6550,8 +6269,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6561,7 +6278,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1655343886850029798
+        Id: 15311675469262311745
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6580,12 +6297,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 10108482052660663774
+        ParentId: 130631266282357114
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6595,18 +6312,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6623,8 +6337,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6634,7 +6346,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16144981366151981003
+        Id: 18199993198667975608
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6653,12 +6365,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 10108482052660663774
+        ParentId: 130631266282357114
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6668,18 +6380,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6696,8 +6405,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6707,7 +6414,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8098379724081643701
+        Id: 10295459421956337894
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -6720,12 +6427,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15565326113837329602
+        ParentId: 13385890571470608154
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -6733,12 +6440,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6765,7 +6472,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1142306551869340755
+        Id: 18398183927517363457
         Name: "Group"
         Transform {
           Location {
@@ -6784,10 +6491,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15565326113837329602
-        ChildIds: 15140123080959628297
-        ChildIds: 11358214006146538950
-        ChildIds: 11924374087700507975
+        ParentId: 13385890571470608154
+        ChildIds: 5334248580049151247
+        ChildIds: 9136023280180333007
+        ChildIds: 1279519789837341556
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6799,7 +6506,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15140123080959628297
+        Id: 5334248580049151247
         Name: "Thorns"
         Transform {
           Location {
@@ -6814,10 +6521,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1142306551869340755
-        ChildIds: 15897889375729960859
-        ChildIds: 12842012972029601481
-        ChildIds: 9783931595304907202
+        ParentId: 18398183927517363457
+        ChildIds: 4078613798353013662
+        ChildIds: 12228964945937073813
+        ChildIds: 5984980408300328836
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6829,7 +6536,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15897889375729960859
+        Id: 4078613798353013662
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6848,12 +6555,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 15140123080959628297
+        ParentId: 5334248580049151247
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6863,18 +6570,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6891,8 +6595,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6902,7 +6604,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12842012972029601481
+        Id: 12228964945937073813
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6921,12 +6623,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 15140123080959628297
+        ParentId: 5334248580049151247
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -6936,18 +6638,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -6964,8 +6663,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -6975,7 +6672,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9783931595304907202
+        Id: 5984980408300328836
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -6994,12 +6691,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 15140123080959628297
+        ParentId: 5334248580049151247
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7009,18 +6706,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7037,8 +6731,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7048,7 +6740,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11358214006146538950
+        Id: 9136023280180333007
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7061,12 +6753,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1142306551869340755
+        ParentId: 18398183927517363457
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -7074,12 +6766,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7106,7 +6798,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11924374087700507975
+        Id: 1279519789837341556
         Name: "Group"
         Transform {
           Location {
@@ -7125,10 +6817,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1142306551869340755
-        ChildIds: 4990895494786796726
-        ChildIds: 3026082619797428596
-        ChildIds: 6415732467765418266
+        ParentId: 18398183927517363457
+        ChildIds: 17670723601080610949
+        ChildIds: 734572024243171698
+        ChildIds: 17445976244678421546
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7140,7 +6832,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4990895494786796726
+        Id: 17670723601080610949
         Name: "Thorns"
         Transform {
           Location {
@@ -7155,10 +6847,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11924374087700507975
-        ChildIds: 11504724941046374914
-        ChildIds: 547366347167883482
-        ChildIds: 16769172265110825624
+        ParentId: 1279519789837341556
+        ChildIds: 10589251561035095473
+        ChildIds: 12769761822885160607
+        ChildIds: 12535728903550910785
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7170,7 +6862,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11504724941046374914
+        Id: 10589251561035095473
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7189,12 +6881,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 4990895494786796726
+        ParentId: 17670723601080610949
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7204,18 +6896,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7232,8 +6921,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7243,7 +6930,7 @@ Assets {
         }
       }
       Objects {
-        Id: 547366347167883482
+        Id: 12769761822885160607
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7262,12 +6949,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 4990895494786796726
+        ParentId: 17670723601080610949
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7277,18 +6964,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7305,8 +6989,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7316,7 +6998,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16769172265110825624
+        Id: 12535728903550910785
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7335,12 +7017,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 4990895494786796726
+        ParentId: 17670723601080610949
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7350,18 +7032,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7378,8 +7057,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7389,7 +7066,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3026082619797428596
+        Id: 734572024243171698
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7402,12 +7079,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11924374087700507975
+        ParentId: 1279519789837341556
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -7415,12 +7092,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7447,7 +7124,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6415732467765418266
+        Id: 17445976244678421546
         Name: "Group"
         Transform {
           Location {
@@ -7466,10 +7143,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11924374087700507975
-        ChildIds: 13463229236279764263
-        ChildIds: 16644134388233863715
-        ChildIds: 6058466061099503521
+        ParentId: 1279519789837341556
+        ChildIds: 7009463139471632995
+        ChildIds: 17999242506153887488
+        ChildIds: 1571526336659678569
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7481,7 +7158,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13463229236279764263
+        Id: 7009463139471632995
         Name: "Thorns"
         Transform {
           Location {
@@ -7496,10 +7173,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6415732467765418266
-        ChildIds: 13909190560802381429
-        ChildIds: 16652618048479488725
-        ChildIds: 7271462338797960797
+        ParentId: 17445976244678421546
+        ChildIds: 4133981915796778733
+        ChildIds: 14869803855167955579
+        ChildIds: 1413799431677986062
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7511,7 +7188,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13909190560802381429
+        Id: 4133981915796778733
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7530,12 +7207,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 13463229236279764263
+        ParentId: 7009463139471632995
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7545,18 +7222,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7573,8 +7247,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7584,7 +7256,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16652618048479488725
+        Id: 14869803855167955579
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7603,12 +7275,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 13463229236279764263
+        ParentId: 7009463139471632995
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7618,18 +7290,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7646,8 +7315,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7657,7 +7324,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7271462338797960797
+        Id: 1413799431677986062
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7676,12 +7343,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 13463229236279764263
+        ParentId: 7009463139471632995
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7691,18 +7358,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7719,8 +7383,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7730,7 +7392,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16644134388233863715
+        Id: 17999242506153887488
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7743,12 +7405,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6415732467765418266
+        ParentId: 17445976244678421546
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -7756,12 +7418,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7788,7 +7450,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6058466061099503521
+        Id: 1571526336659678569
         Name: "Group"
         Transform {
           Location {
@@ -7805,10 +7467,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6415732467765418266
-        ChildIds: 8428652711006275450
-        ChildIds: 13919317825821736930
-        ChildIds: 7098559582797131093
+        ParentId: 17445976244678421546
+        ChildIds: 14369079195641763240
+        ChildIds: 16058899971957742968
+        ChildIds: 9032375929954632245
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7820,7 +7482,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8428652711006275450
+        Id: 14369079195641763240
         Name: "Thorns"
         Transform {
           Location {
@@ -7835,10 +7497,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6058466061099503521
-        ChildIds: 1622056659083937746
-        ChildIds: 118743991386798728
-        ChildIds: 8182362630844495828
+        ParentId: 1571526336659678569
+        ChildIds: 15186684908304156537
+        ChildIds: 13642145001975893367
+        ChildIds: 3943291777675614926
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -7850,7 +7512,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1622056659083937746
+        Id: 15186684908304156537
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7869,12 +7531,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 8428652711006275450
+        ParentId: 14369079195641763240
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7884,18 +7546,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7912,8 +7571,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7923,7 +7580,7 @@ Assets {
         }
       }
       Objects {
-        Id: 118743991386798728
+        Id: 13642145001975893367
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -7942,12 +7599,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 8428652711006275450
+        ParentId: 14369079195641763240
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -7957,18 +7614,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -7985,8 +7639,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -7996,7 +7648,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8182362630844495828
+        Id: 3943291777675614926
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -8015,12 +7667,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 8428652711006275450
+        ParentId: 14369079195641763240
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -8030,18 +7682,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -8058,8 +7707,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -8069,7 +7716,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13919317825821736930
+        Id: 16058899971957742968
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8082,12 +7729,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6058466061099503521
+        ParentId: 1571526336659678569
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -8095,12 +7742,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8127,7 +7774,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7098559582797131093
+        Id: 9032375929954632245
         Name: "Group"
         Transform {
           Location {
@@ -8146,9 +7793,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6058466061099503521
-        ChildIds: 18446669473668497012
-        ChildIds: 12016297613085789833
+        ParentId: 1571526336659678569
+        ChildIds: 12772635761615993801
+        ChildIds: 15528072091065475681
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8160,7 +7807,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18446669473668497012
+        Id: 12772635761615993801
         Name: "Thorns"
         Transform {
           Location {
@@ -8175,10 +7822,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7098559582797131093
-        ChildIds: 11684790055741681760
-        ChildIds: 13363653336423020961
-        ChildIds: 8704754208425497282
+        ParentId: 9032375929954632245
+        ChildIds: 13600732220901395256
+        ChildIds: 3610835925180305476
+        ChildIds: 13811565911687153096
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8190,7 +7837,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11684790055741681760
+        Id: 13600732220901395256
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -8209,12 +7856,12 @@ Assets {
             Z: 0.409093827
           }
         }
-        ParentId: 18446669473668497012
+        ParentId: 12772635761615993801
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -8224,18 +7871,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -8252,8 +7896,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -8263,7 +7905,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13363653336423020961
+        Id: 3610835925180305476
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -8282,12 +7924,12 @@ Assets {
             Z: 0.645404518
           }
         }
-        ParentId: 18446669473668497012
+        ParentId: 12772635761615993801
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -8297,18 +7939,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -8325,8 +7964,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -8336,7 +7973,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8704754208425497282
+        Id: 13811565911687153096
         Name: "Pyramid - 3-Sided"
         Transform {
           Location {
@@ -8355,12 +7992,12 @@ Assets {
             Z: 0.473172784
           }
         }
-        ParentId: 18446669473668497012
+        ParentId: 12772635761615993801
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14793205094176453575
+              Id: 12799335253603312313
             }
           }
           Overrides {
@@ -8370,18 +8007,15 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 10
-              G: 1
+              R: 1
+              G: 0.139999986
+              B: 0.139999986
               A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.428441852
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.211730599
+            Float: 0.325465322
           }
         }
         Collidable_v2 {
@@ -8398,8 +8032,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -8409,7 +8041,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12016297613085789833
+        Id: 15528072091065475681
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8422,12 +8054,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7098559582797131093
+        ParentId: 9032375929954632245
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 17763375775449008280
+              Id: 15498075899340950546
             }
           }
           Overrides {
@@ -8435,12 +8067,12 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.419108093
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.193874225
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.299999952
+              G: 0.262251616
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8467,193 +8099,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5144351366328063719
-        Name: "CenterThorns"
-        Transform {
-          Location {
-            X: -19
-            Y: 32
-            Z: -312
-          }
-          Rotation {
-            Pitch: -4
-            Yaw: -130
-            Roll: 2
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9025856597641087224
-        Name: "FrontThorns"
-        Transform {
-          Location {
-            X: 27
-            Y: 231
-            Z: -277
-          }
-          Rotation {
-            Pitch: -30
-            Yaw: -160
-            Roll: 40
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4374634304708148293
-        Name: "FrontLeftThorns"
-        Transform {
-          Location {
-            X: 365
-            Y: -17
-            Z: -271
-          }
-          Rotation {
-            Pitch: 28
-            Yaw: 72
-            Roll: 55
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9992598276363702736
-        Name: "FrontRightThorns"
-        Transform {
-          Location {
-            X: -154
-            Y: 152
-            Z: -281
-          }
-          Rotation {
-            Pitch: 26
-            Yaw: -154
-            Roll: 43
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 9605240185399298210
-        Name: "BackLeftThorns"
-        Transform {
-          Location {
-            X: 193
-            Y: -220
-            Z: -298
-          }
-          Rotation {
-            Pitch: 24
-            Yaw: 14
-            Roll: 47
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 10496277778867338065
-        Name: "BackRightThorns"
-        Transform {
-          Location {
-            X: -88
-            Y: -218
-            Z: -270
-          }
-          Rotation {
-            Pitch: -34
-            Yaw: 117
-            Roll: -36
-          }
-          Scale {
-            X: 0.1
-            Y: 0.1
-            Z: 0.1
-          }
-        }
-        ParentId: 3571856715145044979
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 12892444189877794968
+        Id: 14327976518073953374
         Name: "RumbleSFX"
         Transform {
           Location {
@@ -8662,12 +8108,12 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 0.99999994
+            X: 0.999999702
+            Y: 0.999999702
+            Z: 0.999999702
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
@@ -8702,7 +8148,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6971346169456655106
+        Id: 11625680850959854698
         Name: "CrunchSFX"
         Transform {
           Location {
@@ -8715,7 +8161,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -8735,7 +8181,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16779519598372346191
+        Id: 2843845436370067768
         Name: "RumbleSFX"
         Transform {
           Location {
@@ -8749,7 +8195,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
@@ -8783,7 +8229,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15157572889712412489
+        Id: 12272283418017978485
         Name: "DustVFX"
         Transform {
           Location {
@@ -8797,7 +8243,7 @@ Assets {
             Z: 1.30000007
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         UnregisteredParameters {
           Overrides {
             Name: "bp:Density"
@@ -8828,7 +8274,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11375736061534485689
+        Id: 4353601023383421329
         Name: "ThornMovement"
         Transform {
           Location {
@@ -8841,7 +8287,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ease3D"
@@ -8854,63 +8300,27 @@ Assets {
             Float: 4
           }
           Overrides {
-            Name: "cs:CenterThorns"
-            ObjectReference {
-              SubObjectId: 5144351366328063719
-            }
-          }
-          Overrides {
-            Name: "cs:FrontThorns"
-            ObjectReference {
-              SubObjectId: 9025856597641087224
-            }
-          }
-          Overrides {
-            Name: "cs:FrontLeftThorns"
-            ObjectReference {
-              SubObjectId: 4374634304708148293
-            }
-          }
-          Overrides {
-            Name: "cs:FrontRightThorns"
-            ObjectReference {
-              SubObjectId: 9992598276363702736
-            }
-          }
-          Overrides {
-            Name: "cs:BackLeftThorns"
-            ObjectReference {
-              SubObjectId: 9605240185399298210
-            }
-          }
-          Overrides {
-            Name: "cs:BackRightThorns"
-            ObjectReference {
-              SubObjectId: 10496277778867338065
-            }
-          }
-          Overrides {
             Name: "cs:DustVFX"
             ObjectReference {
-              SubObjectId: 15157572889712412489
+              SubObjectId: 12272283418017978485
             }
           }
           Overrides {
             Name: "cs:CrunchSFX"
             ObjectReference {
-              SubObjectId: 6971346169456655106
+              SubObjectId: 11625680850959854698
             }
           }
           Overrides {
             Name: "cs:RumbleSFX"
             ObjectReference {
-              SubObjectId: 16779519598372346191
+              SubObjectId: 2843845436370067768
             }
           }
           Overrides {
             Name: "cs:Root"
             ObjectReference {
-              SubObjectId: 5122760150921592246
+              SubObjectId: 2298231852152351130
             }
           }
         }
@@ -8927,7 +8337,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14498764810510134341
+        Id: 9173976089813228574
         Name: "Cylinder"
         Transform {
           Location {
@@ -8942,19 +8352,12 @@ Assets {
             Z: 9.75
           }
         }
-        ParentId: 3571856715145044979
+        ParentId: 349614687134748181
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7535229294616165836
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.53
-              A: 0.389000028
+              Id: 925672138032122417
             }
           }
         }
@@ -8969,7 +8372,7 @@ Assets {
             Id: 13950225922132296555
           }
           Teams {
-            TeamInt: 1
+            TeamInt: 2
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
@@ -8982,142 +8385,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10226278528005609961
-        Name: "Fire Volume VFX"
-        Transform {
-          Location {
-            Z: -64.5452118
-          }
-          Rotation {
-          }
-          Scale {
-            X: 7.77396059
-            Y: 7.77396059
-            Z: 1.33029592
-          }
-        }
-        ParentId: 3571856715145044979
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 1.04119647
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 3.97001648
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-              X: 50
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.6
-              G: 0.0715231821
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.74
-              G: 0.0147019355
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 413457027974115672
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-            Relevance {
-              Value: "mc:evfxrelevance:critical"
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10382483133275399319
-        Name: "Decal Stone Cracks Variants 01"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.96875465
-            Y: 2.01945829
-            Z: 2.92477274
-          }
-        }
-        ParentId: 3571856715145044979
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 2
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Color Emissive"
-            Color {
-              R: 0.669999957
-              G: 0.0399337932
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.52
-              G: 0.222119182
-              B: 0.070199959
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.39
-              G: 0.00774834026
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 16699070101455136403
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 13516580838183690228
+        Id: 11522869291797001704
         Name: "Trigger"
         Transform {
           Location {
@@ -9131,7 +8399,7 @@ Assets {
             Z: 0.42
           }
         }
-        ParentId: 5122760150921592246
+        ParentId: 2298231852152351130
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9157,15 +8425,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pyramid_threesided_001"
-      }
-    }
-    Assets {
-      Id: 14793205094176453575
-      Name: "Rock Obsidian 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fresnel_rock_obsidian_001_uv"
       }
     }
     Assets {
@@ -9211,24 +8470,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 413457027974115672
-      Name: "Fire Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_fire_volume_vfx"
-      }
-    }
-    Assets {
-      Id: 16699070101455136403
-      Name: "Decal Stone Cracks Variants 01"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_stone_cracks_001"
       }
     }
     PrimaryAssetId {

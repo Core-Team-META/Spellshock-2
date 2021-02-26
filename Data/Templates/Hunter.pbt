@@ -551,7 +551,7 @@ Assets {
       }
       Objects {
         Id: 2760011268594344962
-        Name: "LeapAbilityServer"
+        Name: "EntangleAbilityServer"
         Transform {
           Location {
           }
@@ -834,7 +834,6 @@ Assets {
         ParentId: 5361708159967945625
         ChildIds: 16686133452027158721
         ChildIds: 2616006816711334649
-        ChildIds: 4846120483526496886
         ChildIds: 16566479844955403044
         ChildIds: 5360959966865021584
         ChildIds: 6295360298408892720
@@ -924,65 +923,7 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 15619941488256063062
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 4846120483526496886
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-            X: 90
-            Y: -40
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10631699742497799838
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SelfId: 13431718485495361640
-            }
-          }
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 7508041128758836201
+              Id: 11538694490835792735
             }
           }
           Overrides {
@@ -1704,7 +1645,7 @@ Assets {
       }
       Objects {
         Id: 10679331535669617236
-        Name: "Leap"
+        Name: "Entangle"
         Transform {
           Location {
           }
@@ -2184,21 +2125,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15619941488256063062
-      Name: "Fantasy Ability Teal 024"
+      Id: 11538694490835792735
+      Name: "Fantasy Ability Green 016"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Teal_024"
-      }
-    }
-    Assets {
-      Id: 7508041128758836201
-      Name: "Fantasy Ability Blue 053"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Blue_053"
+        AssetId: "UI_Fantasy_Ability_Green_016"
       }
     }
     Assets {

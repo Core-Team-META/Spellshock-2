@@ -7834,7 +7834,7 @@ Objects {
 }
 Objects {
   Id: 16655123933273012343
-  Name: "STORE_HunterElfLeapFrost"
+  Name: "STORE_HunterElfEntangleFrost"
   Transform {
     Location {
       X: -12835.8828
@@ -7853,7 +7853,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Leap"
+      String: "Frost Entangle"
     }
     Overrides {
       Name: "cs:ID"
@@ -7924,7 +7924,7 @@ Objects {
 }
 Objects {
   Id: 14131850654878188788
-  Name: "STORE_HunterOrcLeapFire"
+  Name: "STORE_HunterOrcEntangleFire"
   Transform {
     Location {
       X: -12835.8828
@@ -7943,7 +7943,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Leap"
+      String: "Fire Entangle"
     }
     Overrides {
       Name: "cs:ID"
@@ -8014,7 +8014,7 @@ Objects {
 }
 Objects {
   Id: 2214416505927885173
-  Name: "STORE_HunterElfLeapBasic"
+  Name: "STORE_HunterElfEntangleBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -8033,7 +8033,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Leap"
+      String: "Common Entangle"
     }
     Overrides {
       Name: "cs:ID"
@@ -8104,7 +8104,7 @@ Objects {
 }
 Objects {
   Id: 1663647621941274473
-  Name: "STORE_HunterOrcLeapBasic"
+  Name: "STORE_HunterOrcEntangleBasic"
   Transform {
     Location {
       X: -12835.8828
@@ -8123,7 +8123,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Leap"
+      String: "Common Entangle"
     }
     Overrides {
       Name: "cs:ID"
