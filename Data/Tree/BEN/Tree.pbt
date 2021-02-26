@@ -13351,7 +13351,6 @@ Objects {
   ChildIds: 9523399524937799418
   ChildIds: 10674866817263595707
   ChildIds: 11957674035243578709
-  ChildIds: 1515101890303513706
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13385,6 +13384,66 @@ Objects {
   }
 }
 Objects {
+  Id: 11957674035243578709
+  Name: "MAKRO_TEXT_SHADOW"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15188400136981675426
+  ChildIds: 1515101890303513706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 29
+    Height: 35
+    UIX: 2
+    UIY: 5.7
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "M"
+      Color {
+        A: 0.321
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 1515101890303513706
   Name: "MAKRO_TEXT"
   Transform {
@@ -13398,7 +13457,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15188400136981675426
+  ParentId: 11957674035243578709
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13408,7 +13467,8 @@ Objects {
   Control {
     Width: 29
     Height: 35
-    UIY: 3.22564697
+    UIX: -2
+    UIY: -0.774353
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -13428,64 +13488,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 11957674035243578709
-  Name: "MAKRO_TEXT_SHADOW"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15188400136981675426
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 29
-    Height: 35
-    UIX: 2
-    UIY: 4
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "M"
-      Color {
-        A: 0.321
-      }
-      Size: 14
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
+        Id: 15165554833363844727
       }
     }
     AnchorLayout {
@@ -14572,7 +14575,6 @@ Objects {
   ChildIds: 3603902161977625498
   ChildIds: 6770351018579931954
   ChildIds: 4040777859642934345
-  ChildIds: 11751162444982300827
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -14606,8 +14608,8 @@ Objects {
   }
 }
 Objects {
-  Id: 11751162444982300827
-  Name: "MAKRO_TEXT"
+  Id: 4040777859642934345
+  Name: "MAKRO_TEXT_SHADOW"
   Transform {
     Location {
     }
@@ -14620,6 +14622,7 @@ Objects {
     }
   }
   ParentId: 13391572410033061346
+  ChildIds: 11751162444982300827
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -14629,19 +14632,17 @@ Objects {
   Control {
     Width: 29
     Height: 35
-    UIY: 3.22564697
+    UIX: 2
+    UIY: 5.7
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "i"
+      Label: "I"
       Color {
-        R: 1
-        G: 0.609006643
-        B: 0.279999971
-        A: 1
+        A: 0.321
       }
       Size: 14
       Justification {
@@ -14649,6 +14650,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 15165554833363844727
       }
     }
     AnchorLayout {
@@ -14666,8 +14668,8 @@ Objects {
   }
 }
 Objects {
-  Id: 4040777859642934345
-  Name: "MAKRO_TEXT_SHADOW"
+  Id: 11751162444982300827
+  Name: "MAKRO_TEXT"
   Transform {
     Location {
     }
@@ -14679,7 +14681,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13391572410033061346
+  ParentId: 4040777859642934345
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -14689,17 +14691,20 @@ Objects {
   Control {
     Width: 29
     Height: 35
-    UIX: 2
-    UIY: 4
+    UIX: -2
+    UIY: -0.540172577
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "i"
+      Label: "I"
       Color {
-        A: 0.321
+        R: 1
+        G: 0.609006643
+        B: 0.279999971
+        A: 1
       }
       Size: 14
       Justification {
@@ -14707,6 +14712,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 15165554833363844727
       }
     }
     AnchorLayout {
@@ -15793,7 +15799,6 @@ Objects {
   ChildIds: 10695660596498299486
   ChildIds: 9540190361806399434
   ChildIds: 10786718657736138301
-  ChildIds: 878030520297218866
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15827,6 +15832,66 @@ Objects {
   }
 }
 Objects {
+  Id: 10786718657736138301
+  Name: "MAKRO_TEXT_SHADOW"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7935072011238125705
+  ChildIds: 878030520297218866
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 29
+    Height: 35
+    UIX: 2
+    UIY: 5.7
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "K"
+      Color {
+        A: 0.321
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 878030520297218866
   Name: "MAKRO_TEXT"
   Transform {
@@ -15840,7 +15905,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7935072011238125705
+  ParentId: 10786718657736138301
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -15850,7 +15915,8 @@ Objects {
   Control {
     Width: 29
     Height: 35
-    UIY: 3.22564697
+    UIX: -2
+    UIY: -0.774353
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -15870,64 +15936,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 10786718657736138301
-  Name: "MAKRO_TEXT_SHADOW"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7935072011238125705
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 29
-    Height: 35
-    UIX: 2
-    UIY: 4
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "K"
-      Color {
-        A: 0.321
-      }
-      Size: 14
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
+        Id: 15165554833363844727
       }
     }
     AnchorLayout {
@@ -17014,7 +17023,6 @@ Objects {
   ChildIds: 171935627401775802
   ChildIds: 7131922865031806597
   ChildIds: 5646951611773231462
-  ChildIds: 2724764113250252043
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -17048,6 +17056,66 @@ Objects {
   }
 }
 Objects {
+  Id: 5646951611773231462
+  Name: "MAKRO_TEXT_SHADOW"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4353991398021423902
+  ChildIds: 2724764113250252043
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Control {
+    Width: 29
+    Height: 35
+    UIX: 2
+    UIY: 5.7
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "P"
+      Color {
+        A: 0.321
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 15165554833363844727
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 2724764113250252043
   Name: "MAKRO_TEXT"
   Transform {
@@ -17061,7 +17129,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4353991398021423902
+  ParentId: 5646951611773231462
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -17071,7 +17139,8 @@ Objects {
   Control {
     Width: 29
     Height: 35
-    UIY: 3.22564697
+    UIX: -2
+    UIY: -0.774353
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17091,64 +17160,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 5646951611773231462
-  Name: "MAKRO_TEXT_SHADOW"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4353991398021423902
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 29
-    Height: 35
-    UIX: 2
-    UIY: 4
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "P"
-      Color {
-        A: 0.321
-      }
-      Size: 14
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
+        Id: 15165554833363844727
       }
     }
     AnchorLayout {
@@ -41742,7 +41754,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     RenderTransformPivot {
@@ -45566,7 +45578,7 @@ Objects {
   Control {
     Width: 465
     Height: 100
-    UIX: 305.23938
+    UIX: -90.5229797
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46220,7 +46232,7 @@ Objects {
 }
 Objects {
   Id: 684993143251912379
-  Name: "R"
+  Name: "ACHIEVEMENTS"
   Transform {
     Location {
     }
@@ -46238,7 +46250,6 @@ Objects {
   ChildIds: 14440166245095113437
   ChildIds: 14046515148653579278
   ChildIds: 16920271332786296454
-  ChildIds: 844522175375697480
   ChildIds: 2097764734181268898
   ChildIds: 4646761656841685629
   Collidable_v2 {
@@ -46248,9 +46259,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 465
+    Width: 250
     Height: 100
-    UIX: -50.5148926
+    UIX: 256.223358
+    UIY: 78.1658707
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46294,7 +46306,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 437
+    Width: 240
     Height: 60
     UIX: 11
     UIY: 43.0298424
@@ -46304,7 +46316,7 @@ Objects {
       }
     }
     Text {
-      Label: "USE THIS SKILL TO DUCKROLL. YOU CAN USE THIS TO AVOID ENEMY ATTACKS OR GET TO A CLOSER RANGE TO SUCCESSFULLY HIT YOUR TARGET."
+      Label: "PRESS \"K\" TO VIEW ACHIEVEMENTS AND CLAIM REWARDS."
       Color {
         R: 1
         G: 0.783841074
@@ -46358,6 +46370,7 @@ Objects {
   Control {
     Width: 108
     Height: 212
+    UIX: 167.118347
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46402,7 +46415,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 282
+    Height: 54
     UIX: 59.5423431
     UIY: 98.0475311
     RenderTransformPivot {
@@ -46420,67 +46433,6 @@ Objects {
         A: 1
       }
       TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 844522175375697480
-  Name: "TITLE_2"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 684993143251912379
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 31
-    UIX: 130.581757
-    UIY: 1.26134467
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "R"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 15
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
       }
     }
     AnchorLayout {
@@ -46529,7 +46481,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "ACHIEVEMENTS"
       Color {
         R: 0.929999948
         G: 0.406490058
@@ -46589,7 +46541,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "ACHIEVEMENTS"
       Color {
         R: 0.0299999714
         G: 0.00715231104
@@ -46787,7 +46739,7 @@ Objects {
 }
 Objects {
   Id: 11206332872530651603
-  Name: "E"
+  Name: "MAP"
   Transform {
     Location {
     }
@@ -46805,7 +46757,6 @@ Objects {
   ChildIds: 13443592524556184644
   ChildIds: 11349668064164940995
   ChildIds: 16552140535501662727
-  ChildIds: 9759637197690646206
   ChildIds: 17164742612634270067
   ChildIds: 18324103100798746505
   Collidable_v2 {
@@ -46815,9 +46766,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 465
+    Width: 220
     Height: 100
-    UIX: 121.450928
+    UIX: 907.805237
+    UIY: -2.1039772
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46871,7 +46823,7 @@ Objects {
       }
     }
     Text {
-      Label: "USE THIS SKILL TO DUCKROLL. YOU CAN USE THIS TO AVOID ENEMY ATTACKS OR GET TO A CLOSER RANGE TO SUCCESSFULLY HIT YOUR TARGET."
+      Label: "HOLD \"M\" TO VIEW THE FULL MAP."
       Color {
         R: 1
         G: 0.783841074
@@ -46925,6 +46877,7 @@ Objects {
   Control {
     Width: 463
     Height: 212
+    UIX: -252.090027
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46969,8 +46922,8 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 282
-    UIX: 164.817184
+    Height: 268
+    UIX: 454.182739
     UIY: 98.0475311
     RenderTransformPivot {
       Anchor {
@@ -46987,67 +46940,6 @@ Objects {
         A: 1
       }
       TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 9759637197690646206
-  Name: "TITLE_2"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11206332872530651603
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 31
-    UIX: 130.581757
-    UIY: 1.26134467
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "E"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 15
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
       }
     }
     AnchorLayout {
@@ -47096,7 +46988,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "MAP"
       Color {
         R: 0.929999948
         G: 0.406490058
@@ -47156,7 +47048,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "MAP"
       Color {
         R: 0.0299999714
         G: 0.00715231104
@@ -47319,7 +47211,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 100
     Height: 200
     RenderTransformPivot {
       Anchor {
@@ -47354,7 +47246,7 @@ Objects {
 }
 Objects {
   Id: 6505819307641674171
-  Name: "Q"
+  Name: "CLASS ABILITIES"
   Transform {
     Location {
     }
@@ -47372,7 +47264,6 @@ Objects {
   ChildIds: 10130453849703407463
   ChildIds: 5129356682511683742
   ChildIds: 16635878935301750553
-  ChildIds: 16978173962715213217
   ChildIds: 16209907951380572493
   ChildIds: 6630324943142274305
   Collidable_v2 {
@@ -47382,9 +47273,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 465
+    Width: 251
     Height: 100
-    UIX: 143.395599
+    UIX: 1296.30237
+    UIY: -26.450922
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -47428,7 +47320,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 437
+    Width: 240
     Height: 60
     UIX: 11
     UIY: 43.0298424
@@ -47438,7 +47330,7 @@ Objects {
       }
     }
     Text {
-      Label: "USE THIS SKILL TO DUCKROLL. YOU CAN USE THIS TO AVOID ENEMY ATTACKS OR GET TO A CLOSER RANGE TO SUCCESSFULLY HIT YOUR TARGET."
+      Label: "PRESS \"I\" TO VIEW AND UPGRADE SKILLS FOR YOUR CURRENTLY SELECTED CLASS."
       Color {
         R: 1
         G: 0.783841074
@@ -47492,7 +47384,8 @@ Objects {
   Control {
     Width: 463
     Height: 212
-    UIY: 1.07519531
+    UIX: -185.324188
+    UIY: 3.24112129
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -47537,7 +47430,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 190
+    Height: 157
     UIX: 422.647156
     UIY: 96.7415314
     RenderTransformPivot {
@@ -47555,67 +47448,6 @@ Objects {
         A: 1
       }
       TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 16978173962715213217
-  Name: "TITLE_2"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6505819307641674171
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 31
-    UIX: 130.581757
-    UIY: 1.26134467
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "Q"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 15
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
       }
     }
     AnchorLayout {
@@ -47664,7 +47496,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "CLASS ABILITIES"
       Color {
         R: 0.929999948
         G: 0.406490058
@@ -47724,7 +47556,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "CLASS ABILITIES"
       Color {
         R: 0.0299999714
         G: 0.00715231104
@@ -47922,7 +47754,7 @@ Objects {
 }
 Objects {
   Id: 14073753536989049975
-  Name: "SHIFT"
+  Name: "COSMETIC SHOP"
   Transform {
     Location {
     }
@@ -47940,7 +47772,6 @@ Objects {
   ChildIds: 11665233984781451259
   ChildIds: 12682279949759113044
   ChildIds: 8425789332189499567
-  ChildIds: 7327927486355494035
   ChildIds: 2536116825931589165
   ChildIds: 4603395320264551475
   Collidable_v2 {
@@ -47950,9 +47781,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 465
+    Width: 250
     Height: 100
-    UIX: -73.0855408
+    UIX: 966.300049
+    UIY: 277.559387
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -47996,7 +47828,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 437
+    Width: 240
     Height: 60
     UIX: 11
     UIY: 43.0298424
@@ -48006,7 +47838,7 @@ Objects {
       }
     }
     Text {
-      Label: "USE THIS SKILL TO DUCKROLL. YOU CAN USE THIS TO AVOID ENEMY ATTACKS OR GET TO A CLOSER RANGE TO SUCCESSFULLY HIT YOUR TARGET."
+      Label: "PRESS \"P\" TO VIEW THE COSMETIC SHOP AND CURRENTLY EQUIPPED COSTUMES."
       Color {
         R: 1
         G: 0.783841074
@@ -48052,7 +47884,6 @@ Objects {
   ParentId: 14073753536989049975
   ChildIds: 3703110308359149578
   ChildIds: 4002485878627386603
-  ChildIds: 2413055717907679881
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -48069,63 +47900,6 @@ Objects {
       }
     }
     Panel {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 2413055717907679881
-  Name: "VERTICAL"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2536116825931589165
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 1
-    Height: 50
-    UIX: 537.759949
-    UIY: 297.884766
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 14060330023043759337
-      }
-      Color {
-        R: 0.93011117
-        G: 0.407240301
-        A: 1
-      }
-      TeamSettings {
-      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -48163,10 +47937,10 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 339
+    Width: 154
     Height: 1
     UIX: 199.46579
-    UIY: 297.613525
+    UIY: 151.1698
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -48221,7 +47995,7 @@ Objects {
   }
   Control {
     Width: 1
-    Height: 190
+    Height: 46
     UIX: 199.46579
     UIY: 107.521484
     RenderTransformPivot {
@@ -48239,67 +48013,6 @@ Objects {
         A: 1
       }
       TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 7327927486355494035
-  Name: "TITLE_2"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14073753536989049975
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 31
-    UIX: 130.581757
-    UIY: 1.26134467
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "SHIFT"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Size: 15
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
       }
     }
     AnchorLayout {
@@ -48348,7 +48061,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "COSMETIC SHOP"
       Color {
         R: 0.93011117
         G: 0.407240301
@@ -48408,7 +48121,7 @@ Objects {
       }
     }
     Text {
-      Label: "ABILITY NAME:"
+      Label: "COSMETIC SHOP"
       Color {
         R: 0.0299999714
         G: 0.00715231104
