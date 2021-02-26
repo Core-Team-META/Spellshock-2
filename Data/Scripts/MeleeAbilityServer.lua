@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	Melee Ability - Server
 	v1.2-b
 	by: standardcombo
@@ -115,6 +115,9 @@ end
 
 function OnEquipped(equipment, player)
 	Task.Wait(0.1)
+	if not Object.IsValid(EQUIPMENT) then return end
+	if not Object.IsValid(player) then return end
+	
 	EQUIPMENT.collision = Collision.INHERIT
 
 	local pickupTrigger = EQUIPMENT:FindChildByName("Pickup Trigger")
