@@ -54,7 +54,6 @@ Objects {
   }
   ParentId: 9597028236690644535
   ChildIds: 9965063428950877959
-  ChildIds: 8883747977300177744
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -90,54 +89,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8883747977300177744
-  Name: "MinimapPlayer"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14713303313848721751
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13851484905233708050
-      value {
-        Overrides {
-          Name: "Name"
-          String: "MinimapPlayer"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -11235.9277
-            Y: 6554.88281
-            Z: -2810
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -135
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12173945279129936817
-    }
-  }
-}
-Objects {
   Id: 9965063428950877959
   Name: "UI Panel"
   Transform {
@@ -166,7 +117,7 @@ Objects {
   Control {
     Width: 325
     Height: 325
-    UIX: -45
+    UIX: -65
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -14483,7 +14434,7 @@ Objects {
     Overrides {
       Name: "cs:MinimapPlayer"
       AssetReference {
-        Id: 12173945279129936817
+        Id: 6467423135620645257
       }
     }
     Overrides {

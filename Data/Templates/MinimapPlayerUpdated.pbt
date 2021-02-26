@@ -1,13 +1,13 @@
 Assets {
-  Id: 12173945279129936817
-  Name: "MinimapPlayer"
+  Id: 6467423135620645257
+  Name: "MinimapPlayerUpdated"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 13851484905233708050
       Objects {
         Id: 13851484905233708050
-        Name: "MinimapPlayer"
+        Name: "MinimapPlayerUpdated"
         Transform {
           Scale {
             X: 1
@@ -28,8 +28,8 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 17
-          Height: 17
+          Width: 25
+          Height: 25
           UIX: 100
           UIY: 840
           RenderTransformPivot {
@@ -114,7 +114,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13826517115236341878
+            Id: 11351878629987660199
           }
         }
       }
@@ -144,18 +144,19 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 21
-          Height: 21
-          UIX: -2
-          UIY: -2
+          Width: 6
+          Height: 6
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
           Image {
             Brush {
-              Id: 17476121550048471155
+              Id: 6724534832103276994
             }
             Color {
               R: 1
@@ -164,18 +165,17 @@ Assets {
               A: 1
             }
             TeamSettings {
-              UseTeamColor: true
             }
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -208,37 +208,33 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 200
-          Height: 200
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17476121550048471155
+              Id: 6724534832103276994
             }
             Color {
-              G: 0.475363851
-              B: 0.74
-              A: 1
+              A: 0.707
             }
             TeamSettings {
-              UseTeamColor: true
             }
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -334,19 +330,17 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 200
-          Height: 200
-          RotationAngle: 45
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           UseParentHeight: true
           Image {
             Brush {
-              Id: 9967237144566667750
+              Id: 18159336325577157925
             }
             Color {
               R: 1
@@ -355,7 +349,6 @@ Assets {
               A: 1
             }
             TeamSettings {
-              UseTeamColor: true
             }
           }
           AnchorLayout {
@@ -399,13 +392,14 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 17
-          Height: 17
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
           Panel {
           }
           AnchorLayout {
@@ -497,9 +491,9 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Control {
-          Width: 19
-          Height: 9
-          UIY: -12
+          Width: 15
+          Height: 15
+          UIY: -20.7612247
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -507,7 +501,7 @@ Assets {
           }
           Image {
             Brush {
-              Id: 9532585046617020932
+              Id: 16759978556497479664
             }
             Color {
               R: 1
@@ -534,30 +528,30 @@ Assets {
       }
     }
     Assets {
-      Id: 17476121550048471155
-      Name: "Center Circle 001"
+      Id: 6724534832103276994
+      Name: "BG Flat 006"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "CenterCircle_001"
+        AssetId: "BackgroundNoOutline_015"
       }
     }
     Assets {
-      Id: 9967237144566667750
-      Name: "Icon Add"
+      Id: 18159336325577157925
+      Name: "Icon Skull"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Add"
+        AssetId: "Icon_Skull"
       }
     }
     Assets {
-      Id: 9532585046617020932
-      Name: "Center Arrow 004 Wedge"
+      Id: 16759978556497479664
+      Name: "Center Arrow 005 Wedge"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "CenterArrow_004Wedge"
+        AssetId: "CenterArrow_005Wedge"
       }
     }
     PrimaryAssetId {

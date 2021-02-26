@@ -171,6 +171,7 @@ function Tick()
 end
 
 function GetIndicatorForPlayer(player)
+	print("WORKED HERE")
 	-- Return already created indicator
 	if player.clientUserData.minimap then
 		-- Give the UI script a reference to player (probably happens on second update tick)

@@ -17,9 +17,10 @@ function SetPlayer(player)
 	initialized = true
 	
 	ROOT.visibility = Visibility.INHERIT
-	
+
 	CIRCLE_BG.isEnabled = (player == Game.GetLocalPlayer())
-	
+	CIRCLE_BG:SetColor(_G.TeamColors[myPlayer.team])
+	ARROW:SetColor(_G.TeamColors[myPlayer.team])
 	-- Set player's initial name letter
 	NAME.text = string.sub(player.name, 1, 1)
 	
@@ -31,7 +32,7 @@ function UpdateContent()
 	CIRCLE.team = myPlayer.team
 	DEAD.team = myPlayer.team
 	ARROW.team = myPlayer.team
-	
+
 	-- Dead/Alive
 	CIRCLE.isEnabled = (not myPlayer.isDead)
 	DEAD.isEnabled = myPlayer.isDead
