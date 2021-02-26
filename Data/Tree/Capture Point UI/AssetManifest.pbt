@@ -53,24 +53,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1814707273787853473
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 162096517754002387
-  Name: "Emblem 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Military_Icon_058"
-  }
-}
-Assets {
   Id: 48307754774318265
   Name: "UI Gradient Rectangular 001"
   PlatformAssetType: 9

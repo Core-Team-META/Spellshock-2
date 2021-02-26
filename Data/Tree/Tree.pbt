@@ -21,6 +21,7 @@ Objects {
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
+  ChildIds: 16625053971837530583
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
@@ -400,6 +401,32 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "BEN"
+  }
+}
+Objects {
+  Id: 16625053971837530583
+  Name: "Kurtis"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Kurtis"
   }
 }
 Objects {
