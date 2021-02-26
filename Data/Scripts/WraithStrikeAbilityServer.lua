@@ -124,7 +124,7 @@ function OnTargetChosen(thisAbility)
             return
 		end
 
-		print("Wraith Strike ACTIVATE")
+		--print("Wraith Strike ACTIVATE")
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		
@@ -152,14 +152,15 @@ function OnTargetChosen(thisAbility)
         Task.Wait()
         
 		player:SetVelocity(launchVector)
-        print("LAUNCH: "..tostring(player.isGrounded))
+        --print("LAUNCH: "..tostring(player.isGrounded))
 
         -- Wait until the player hits the ground or dies or the launchTimer runs out
 		while (player.isGrounded == false) and player.isDead == false and time() < launchTimer do --and reachedMaxTime == false --and player.isDead == false
-            print("waiting")
+            --print("waiting")
             Task.Wait()
+			if not Object.IsValid(player) then return end
 		end
-
+		
         -- Grounded
         player:ResetVelocity()
         player.movementControlMode = MovementControlMode.LOOK_RELATIVE
@@ -167,7 +168,7 @@ function OnTargetChosen(thisAbility)
 		isFlying = false
         player.serverUserData.immuneToFallDamage = false
 
-        print("Grounded")
+        --print("Grounded")
         -- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
 			playerAbility.isEnabled = true
@@ -177,12 +178,12 @@ function OnTargetChosen(thisAbility)
         if not player.isDead then
             META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
             DamageInArea()
-            print("Finished damage")
+            --print("Finished damage")
         end
 
 		Task.Wait()
         SpecialAbility.isEnabled = false
-        print("Wraith Strike Finished\n")
+        --print("Wraith Strike Finished\n")
 	end
 end
 
@@ -270,12 +271,17 @@ function GoOnShortCooldown()
 	goingIntoShortCooldown = false
 end
 
+function SetCooldownOverride(value)
+	SpecialAbility:SetNetworkedCustomProperty("CooldownOverride", value)
+end
+
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 60, thisAbility.name .. ": Cooldown")
 	
 	if goingIntoShortCooldown then
 		Cooldown = Cooldown / 3
 	end
+	SetCooldownOverride(Cooldown)
 	
 	Task.Spawn(
 		function()

@@ -1,4 +1,4 @@
-﻿-- Internal custom properties --
+-- Internal custom properties --
 local AOI = require(script:GetCustomProperty("API"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
@@ -40,6 +40,9 @@ local executeDuration = 0.0
 local recoveryDuration = 0.0
 local cooldownDuration = 0.0
 
+local cooldownOverride = nil
+local networkedEventListener = nil
+
 function OnAbilityIconSet(thisAbility, icon, color)
     if not thisAbility:IsA("Ability") then return end
     
@@ -66,11 +69,21 @@ function OnAbilityIconSet(thisAbility, icon, color)
 
         executeDuration = currentAbility.executePhaseSettings.duration
         recoveryDuration = currentAbility.recoveryPhaseSettings.duration
-        --local Class = LOCAL_PLAYER:GetResource("CLASS_MAP")
-        --cooldownDuration = META_AP().GetAbilityMod(currentAbility.owner, Class, META_AP()[string.upper(PANEL.name)], "mod6", 10, "Ability Display: Cooldown")
+        cooldownDuration = currentAbility.cooldownPhaseSettings.duration
+
         DURATION_BAR.progress = 0
         currentAbility.clientUserData.durationBar = DURATION_BAR
+        
+        -- Listen for networked property changes
+        if networkedEventListener then
+        	networkedEventListener:Disconnect()
+        end
+        networkedEventListener = currentAbility.networkedPropertyChangedEvent:Connect(OnNetworkedPropertyChanged)
     end
+end
+
+function OnNetworkedPropertyChanged(obj, propertyName)
+	cooldownOverride = obj:GetCustomProperty("CooldownOverride")
 end
 
 -- nil Tick(float)
@@ -78,7 +91,7 @@ end
 function Tick(deltaTime)
     if Object.IsValid(currentAbility) and currentAbility.owner and Object.IsValid(currentAbility.owner) then
         local currentPhase = currentAbility:GetCurrentPhase()
-        local phaseTime = currentAbility:GetPhaseTimeRemaining()
+        local phaseTimeRemaining = currentAbility:GetPhaseTimeRemaining()
         PANEL.visibility = Visibility.INHERIT
 
         -- Update the level text for the ability
@@ -112,27 +125,41 @@ function Tick(deltaTime)
             PROGRESS_INDICATOR.visibility = Visibility.INHERIT
 
             local Class = LOCAL_PLAYER:GetResource("CLASS_MAP")
-            cooldownDuration = META_AP().GetAbilityMod(currentAbility.owner, Class, META_AP()[string.upper(PANEL.name)], "mod6", 10, "Ability Display: Cooldown")
+            
+            local cd
+            if cooldownOverride and cooldownOverride > 0 then
+            	cd = cooldownOverride
+            else
+	            cd = META_AP().GetAbilityMod(currentAbility.owner, Class, META_AP()[string.upper(PANEL.name)], "mod6", 10, "Ability Display: Cooldown")
+			end
+			if cd > cooldownDuration then
+				cd = cooldownDuration
+			end
+			
+            -- For a player, execute, recovery and cooldown are together displayed as the ability's cooldown
+            local cooldownRemaining
 
-            -- For a player, recovery, cooldown and execute phases all constitute an ability's cooldown
-            local playerCooldownRemaining = phaseTime
-
-            if currentPhase == AbilityPhase.COOLDOWN then   
-                playerCooldownRemaining = cooldownDuration - (currentAbility.cooldownPhaseSettings.duration - phaseTime)
-            else -- Execute or recovery
-                playerCooldownRemaining = playerCooldownRemaining + cooldownDuration
+            if currentPhase == AbilityPhase.COOLDOWN then
+            	local elapsedPhaseTime = cooldownDuration - phaseTimeRemaining
+                cooldownRemaining = cd - elapsedPhaseTime
+                
+            elseif currentPhase == AbilityPhase.EXECUTE then
+            	cooldownRemaining = cd + recoveryDuration + phaseTimeRemaining
+            	
+            else -- Recovery
+                cooldownRemaining = cd + phaseTimeRemaining
+            end
+            
+            if cooldownRemaining < 0 then
+            	cooldownRemaining = 0
             end
 
-            if currentPhase == AbilityPhase.EXECUTE then
-                playerCooldownRemaining = playerCooldownRemaining + recoveryDuration
-            end
-
-            local totalPlayerCooldown = executeDuration + recoveryDuration + cooldownDuration
-            COUNTDOWN_TEXT.text = string.format("%.1f", playerCooldownRemaining)
+            local totalCooldown = executeDuration + recoveryDuration + cd
+            COUNTDOWN_TEXT.text = string.format("%.1f", cooldownRemaining)
 
             -- Update the shadow
-            if totalPlayerCooldown > 0.3 then
-                local shadowAngle = CoreMath.Clamp(1.0 - playerCooldownRemaining / totalPlayerCooldown, 0.0, 1.0) * 360.0
+            if totalCooldown > 0.3 then
+                local shadowAngle = CoreMath.Clamp(1.0 - cooldownRemaining / totalCooldown, 0.0, 1.0) * 360.0
 
                 if shadowAngle <= 180.0 then
                     LEFT_SHADOW.rotationAngle = 0.0
