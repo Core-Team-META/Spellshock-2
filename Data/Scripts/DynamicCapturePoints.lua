@@ -21,7 +21,7 @@ function OnRoundStart()
     local CP_Configuration = {} -- all capture points will be enabled
     local NewBases
     if #AllPlayers < 9 then -- two capture points will be disabled
-        local randIndex = math.random(2)
+        local randIndex = 1 --math.random(2)
         CP_Configuration = configTable[randIndex]
         NewBases = basesTable[randIndex]
     end
