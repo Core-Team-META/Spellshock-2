@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15165554833363844727
+  Name: "Amarante"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "AmaranteRegular_ref"
+  }
+}
+Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -266,6 +275,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Shape_003"
+  }
+}
+Assets {
+  Id: 3469815303062501792
+  Name: "Fantasy Ability Purple 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_004"
   }
 }
 Assets {
