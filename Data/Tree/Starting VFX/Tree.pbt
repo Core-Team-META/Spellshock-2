@@ -364,7 +364,7 @@ Objects {
     Overrides {
       Name: "cs:02_DeathsShadow_Ending"
       AssetReference {
-        Id: 6104934738115854315
+        Id: 1429104248892819753
       }
     }
   }

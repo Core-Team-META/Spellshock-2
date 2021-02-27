@@ -465,7 +465,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 11538694490835792735
+        Id: 8500926758797605639
       }
     }
     Overrides {
@@ -3345,9 +3345,8 @@ Objects {
     }
   }
   ParentId: 12532102525843773576
-  ChildIds: 13969292046951653603
-  ChildIds: 16063742305336464745
   ChildIds: 8232108779492403583
+  ChildIds: 16063742305336464745
   ChildIds: 15322954216054029842
   ChildIds: 12378093595996074328
   UnregisteredParameters {
@@ -3459,47 +3458,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8232108779492403583
-  Name: "DOT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of damage applied to enemies in the Damage Radius"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 15330066822177902891
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 16063742305336464745
   Name: "Damage Radius"
   Transform {
@@ -3541,8 +3499,8 @@ Objects {
   }
 }
 Objects {
-  Id: 13969292046951653603
-  Name: "Damage"
+  Id: 8232108779492403583
+  Name: "DOT"
   Transform {
     Location {
     }
@@ -3558,7 +3516,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage initially applied to enemies"
+      String: "The amount of damage applied to enemies in the Damage Radius"
     }
     Overrides {
       Name: "cs:Icon"
@@ -3568,7 +3526,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod4"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -4121,6 +4083,7 @@ Objects {
   ChildIds: 14552168326025627377
   ChildIds: 1562841866394584675
   ChildIds: 8959336810333047804
+  ChildIds: 11687984352410726181
   ChildIds: 2897540318327134445
   UnregisteredParameters {
     Overrides {
@@ -4177,6 +4140,51 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11687984352410726181
+  Name: "Stun"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18445814534937137316
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long an enemy will be stunned"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8500926758797605639
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -4314,7 +4322,7 @@ Objects {
 }
 Objects {
   Id: 7308866633911095885
-  Name: "Leap"
+  Name: "Entangle"
   Transform {
     Location {
     }
@@ -4330,13 +4338,13 @@ Objects {
   ChildIds: 4885990649472038852
   ChildIds: 5806805477895482878
   ChildIds: 6562934852835390606
-  ChildIds: 6010184548936949561
+  ChildIds: 1234445642780183423
   ChildIds: 16181215288139751250
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 15619941488256063062
+        Id: 11538694490835792735
       }
     }
     Overrides {
@@ -4400,8 +4408,8 @@ Objects {
   }
 }
 Objects {
-  Id: 6010184548936949561
-  Name: "Bleed"
+  Id: 1234445642780183423
+  Name: "Stun"
   Transform {
     Location {
     }
@@ -4417,12 +4425,12 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
+      String: "How long an enemy will be stunned"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 7227656168876650477
+        Id: 8500926758797605639
       }
     }
     Overrides {

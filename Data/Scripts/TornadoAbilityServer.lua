@@ -45,7 +45,7 @@ function PlaceObject(thisAbility)
 	CurrentTornado:SetNetworkedCustomProperty("DecalScale", decalScale)
 	CurrentTornado:SetNetworkedCustomProperty("LifeSpan", CurrentTornado.lifeSpan)
 	
-	-- Damage enemies
+	--[[ Damage enemies
 	local nearbyEnemies = Game.FindPlayersInSphere(position, DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	for _, enemy in pairs(nearbyEnemies) do
 		local dmg = Damage.New()
@@ -65,9 +65,9 @@ function PlaceObject(thisAbility)
 		COMBAT().ApplyDamage(attackData)
 		local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
-	end	
+	end	]]
 	
-	Timer = 1
+	Timer = 0
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -105,7 +105,7 @@ function Tick(deltaTime)
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
 				local mod4 = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod4", DEFAULT_DOT, SpecialAbility.name..": DOT")
-				dmg.amount = mod4.dotDamage
+				dmg.amount = mod4.damage
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
@@ -120,7 +120,6 @@ function Tick(deltaTime)
 				}
 				COMBAT().ApplyDamage(attackData)
 						
-				
 				if not API_SE.DoesPlayerHaveStatusEffect(enemy, "Slow") then
 					local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", {}, SpecialAbility.name .. ": Status")
 					API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
