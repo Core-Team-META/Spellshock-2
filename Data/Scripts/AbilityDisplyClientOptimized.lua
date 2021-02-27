@@ -12,6 +12,12 @@ local ACTIVE_FRAME = script:GetCustomProperty("ActiveFrame"):WaitForObject()
 local ACTIVE_FLASH = script:GetCustomProperty("ActiveFlash"):WaitForObject()
 local DURATION_BAR = script:GetCustomProperty("DurationIndicator"):WaitForObject()
 local LEVEL_TEXT = script:GetCustomProperty("LevelText"):WaitForObject()
+local RMBIndicator_REF = script:GetCustomProperty("RMBIndicator")
+local RMB_INDICATOR
+
+if RMBIndicator_REF then
+    RMB_INDICATOR = RMBIndicator_REF:WaitForObject()
+end
 
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
@@ -90,6 +96,12 @@ function Tick(deltaTime)
         if currentAbility.clientUserData.isPreviewing then
             ACTIVE_FRAME.visibility = Visibility.INHERIT
             ACTIVE_FLASH.visibility = Visibility.INHERIT
+        elseif RMB_INDICATOR and currentAbility.clientUserData.isSteering then
+            RMB_INDICATOR.visibility = Visibility.INHERIT
+            ACTIVE_FLASH.visibility = Visibility.INHERIT
+        elseif RMB_INDICATOR then
+            RMB_INDICATOR.visibility = Visibility.FORCE_OFF
+            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
 		else
             ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
             ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
