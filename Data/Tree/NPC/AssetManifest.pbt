@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15223421943927964872
+  Name: "Cube - Arched"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_arched_001"
+  }
+}
+Assets {
   Id: 14868655637861176575
   Name: "Ring - Thin"
   PlatformAssetType: 1
@@ -197,6 +206,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12377676071953128633
+  Name: "Pipe - Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_004"
+  }
+}
+Assets {
   Id: 12324597429549854992
   Name: "Teardrop - Truncated"
   PlatformAssetType: 1
@@ -302,6 +320,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_lines_001"
+  }
+}
+Assets {
+  Id: 8353147935132205805
+  Name: "Prism - 6-Sided Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_hexagon_001"
   }
 }
 Assets {
