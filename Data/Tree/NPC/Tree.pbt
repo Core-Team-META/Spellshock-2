@@ -36,9 +36,9 @@ Objects {
   Name: "Elf_Merchant_02"
   Transform {
     Location {
-      X: 20159.2051
-      Y: 25985.7012
-      Z: 948.155273
+      X: 20047.3574
+      Y: 25881.7207
+      Z: 948.945801
     }
     Rotation {
       Yaw: -39.561554
@@ -10408,8 +10408,8 @@ Objects {
   Name: "Elf_Merchant_01"
   Transform {
     Location {
-      X: 20481.668
-      Y: 26293.873
+      X: 20373.0488
+      Y: 26134.1484
       Z: 944.123535
     }
     Rotation {
@@ -31002,9 +31002,9 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: 43750.7891
-      Y: 52352.0938
-      Z: 929.075195
+      X: 43635.75
+      Y: 52205.5703
+      Z: 923.125
     }
     Rotation {
     }
@@ -31051,8 +31051,8 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: 43418.7266
-      Y: 52035.7109
+      X: 43311.1406
+      Y: 51936.7188
       Z: 929.075195
     }
     Rotation {
