@@ -538,7 +538,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
@@ -588,7 +588,7 @@ Objects {
       Asset {
         Id: 16388825162191980240
       }
-      DistanceBetweenInstances: 1500
+      DistanceBetweenInstances: 2500
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -837,7 +837,7 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -887,7 +887,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 400
+      DistanceBetweenInstances: 700
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -937,7 +937,7 @@ Objects {
       Asset {
         Id: 6981536508008379085
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 500
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -988,7 +988,7 @@ Objects {
       Asset {
         Id: 6981536508008379085
       }
-      DistanceBetweenInstances: 200
+      DistanceBetweenInstances: 400
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -1039,7 +1039,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 500
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {

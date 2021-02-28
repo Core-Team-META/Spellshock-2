@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 18170165071821342874
+  Name: "Fantasy Chest Lid 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_chest_lid_003_ref"
+  }
+}
+Assets {
   Id: 18141993204830915813
   Name: "Fantasy Castle Accessory Roof 01 "
   PlatformAssetType: 1
@@ -203,15 +212,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fantasy_sack_001_ref"
-  }
-}
-Assets {
-  Id: 17091160006555877630
-  Name: "Cube - Rounded"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_rounded_002"
   }
 }
 Assets {
@@ -476,15 +476,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15240646233324917545
-  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
-  }
-}
-Assets {
   Id: 15223421943927964872
   Name: "Cube - Arched"
   PlatformAssetType: 1
@@ -656,15 +647,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14629909211943041809
-  Name: "Metal Gold 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_gold_001"
-  }
-}
-Assets {
   Id: 14580885173560146840
   Name: "Sphere - Half Quarter"
   PlatformAssetType: 1
@@ -779,6 +761,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_broken_02"
+  }
+}
+Assets {
+  Id: 14080263485477216753
+  Name: "Gem - Diamond 8-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_diamond_8_sided_polished_001"
   }
 }
 Assets {
@@ -1448,6 +1439,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11228299035028749551
+  Name: "Leafy Patch 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_leafy_groundcover_002"
+  }
+}
+Assets {
   Id: 11162297399913732681
   Name: "Cube - Polished"
   PlatformAssetType: 1
@@ -1508,15 +1508,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_scap_01_ref"
-  }
-}
-Assets {
-  Id: 10727817675464078874
-  Name: "Arch Fancy 3m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_arch_fancy_3m_001"
   }
 }
 Assets {
@@ -1709,15 +1700,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9571902954734362392
-  Name: "Moss 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_moss_001_uv"
-  }
-}
-Assets {
   Id: 9564538927409393589
   Name: "Stone Basic"
   PlatformAssetType: 2
@@ -1814,6 +1796,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "fxsm_candleflame"
+  }
+}
+Assets {
+  Id: 9188351867310556903
+  Name: "Fantasy Chest Lid 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_chest_lid_001_ref"
   }
 }
 Assets {
@@ -2744,15 +2735,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5026846565116306924
-  Name: "Pipe - Half Thick"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_half-pipe_003"
-  }
-}
-Assets {
   Id: 4956137530833491633
   Name: "Bone Human Pile Straight 01"
   PlatformAssetType: 1
@@ -2867,15 +2849,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_portcullis_001"
-  }
-}
-Assets {
-  Id: 4533424030597734882
-  Name: "Lens"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_lense_001"
   }
 }
 Assets {
@@ -3059,6 +3032,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3753434009625901326
+  Name: "Fantasy Chest Base 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_chest_001_ref"
+  }
+}
+Assets {
   Id: 3735447043741744555
   Name: "Coral Table 01"
   PlatformAssetType: 1
@@ -3221,6 +3203,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2731670266486457381
+  Name: "Fantasy Chest Base 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_chest_003_ref"
+  }
+}
+Assets {
   Id: 2715939630273116812
   Name: "Ceramic Terracotta Pots Old 01"
   PlatformAssetType: 2
@@ -3371,15 +3362,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_kelp_bush_02"
-  }
-}
-Assets {
-  Id: 1982661357157207299
-  Name: "Ring - Quarter Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_quarter_torus_001"
   }
 }
 Assets {
@@ -3659,15 +3641,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_pommel_005"
-  }
-}
-Assets {
-  Id: 705109368338738633
-  Name: "Bark Dead 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bark_dead_001_uv"
   }
 }
 Assets {
