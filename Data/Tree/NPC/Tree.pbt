@@ -197,9 +197,9 @@ Objects {
       Z: 31.5313892
     }
     Rotation {
-      Pitch: 84.8724365
-      Yaw: 106.33255
-      Roll: -89.9949875
+      Pitch: 75.9488525
+      Yaw: 106.329231
+      Roll: -89.9978638
     }
     Scale {
       X: 0.655387878
@@ -428,14 +428,14 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: 12.1986523
-      Y: 1.39846981
-      Z: 30.5739
+      X: 12.2425823
+      Y: 1.2401377
+      Z: 30.4329052
     }
     Rotation {
-      Pitch: 85.3713531
-      Yaw: 106.33242
-      Roll: -89.9981308
+      Pitch: 76.4479446
+      Yaw: 106.328995
+      Roll: -90
     }
     Scale {
       X: 0.62247479
@@ -787,9 +787,9 @@ Objects {
       Z: 36.6389
     }
     Rotation {
-      Pitch: -83.7673
-      Yaw: -73.6674118
-      Roll: 89.9998398
+      Pitch: -76.8135681
+      Yaw: -73.6669617
+      Roll: 90
     }
     Scale {
       X: 0.655387878
@@ -1018,14 +1018,14 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: 11.9535284
-      Y: 2.2211504
-      Z: 37.5968437
+      X: 11.9204121
+      Y: 2.33197117
+      Z: 37.7110901
     }
     Rotation {
-      Pitch: -83.6462708
-      Yaw: -73.6673813
-      Roll: 89.9998169
+      Pitch: -76.6926
+      Yaw: -73.6671143
+      Roll: 90
     }
     Scale {
       X: 0.62247479
@@ -16503,14 +16503,14 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: 1.1744374
-      Y: -0.0274259783
-      Z: -0.147619829
+      X: 1.17443717
+      Y: -0.0274260696
+      Z: -0.137828708
     }
     Rotation {
-      Pitch: 84.8720932
-      Yaw: -179.999817
-      Roll: -89.9946823
+      Pitch: 76.5711823
+      Yaw: 180
+      Roll: -90
     }
     Scale {
       X: 0.544398963
@@ -16739,19 +16739,19 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: 0.356669128
-      Y: -0.0313353501
-      Z: -0.942959309
+      X: 0.480662674
+      Y: -0.0291111227
+      Z: -1.0435065
     }
     Rotation {
-      Pitch: 85.3711853
-      Yaw: -179.999786
-      Roll: -89.9980545
+      Pitch: 77.0700912
+      Yaw: 180
+      Roll: -90
     }
     Scale {
       X: 0.517059684
       Y: 0.517059684
-      Z: 0.0533947237
+      Z: 0.0533947088
     }
   }
   ParentId: 6750906425397816868
@@ -17093,14 +17093,13 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: -1.1719799
-      Y: -0.0269342884
+      X: -1.17197978
+      Y: -0.0269341972
       Z: 4.094944
     }
     Rotation {
-      Pitch: -83.767395
-      Yaw: -1.57287413e-05
-      Roll: 89.9998779
+      Pitch: -74.8703918
+      Roll: 90
     }
     Scale {
       X: 0.544398963
@@ -17328,18 +17327,18 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: -0.355446488
-      Y: -0.0317208953
-      Z: 4.89066
+      X: -0.4885782
+      Y: -0.0284727924
+      Z: 5.00551701
     }
     Rotation {
-      Pitch: -83.6465149
+      Pitch: -74.7497559
       Roll: 90
     }
     Scale {
       X: 0.517059684
       Y: 0.517059684
-      Z: 0.0533947237
+      Z: 0.0533947088
     }
   }
   ParentId: 6750906425397816868
@@ -17445,12 +17444,12 @@ Objects {
   Name: "Pipe - Half Thick"
   Transform {
     Location {
-      X: -0.355446488
-      Y: -0.0317208953
-      Z: 4.89066
+      X: -0.355446458
+      Y: -0.0317208506
+      Z: 5.05635548
     }
     Rotation {
-      Pitch: -24.0420055
+      Pitch: -24.0419922
       Yaw: 9.3487705e-07
       Roll: 89.9999695
     }
@@ -17623,11 +17622,11 @@ Objects {
   Transform {
     Location {
       X: 0.00170313695
-      Y: -0.0265951268
-      Z: 3.93866253
+      Y: -0.0265951212
+      Z: 4.1043582
     }
     Rotation {
-      Pitch: -5.48222351
+      Pitch: -5.48223877
       Yaw: 8.57696818e-07
       Roll: 89.9999695
     }
