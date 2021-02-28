@@ -8,39 +8,12 @@ Assets {
   }
 }
 Assets {
-  Id: 16388825162191980240
-  Name: "Rock Pile 002"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rocks_small_002"
-  }
-}
-Assets {
-  Id: 14270419193600238466
-  Name: "Hill 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_002"
-  }
-}
-Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 13802195091322210055
-  Name: "Plastic Matte"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "plastic_matte_001"
   }
 }
 Assets {
@@ -71,15 +44,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8021476752120115971
-  Name: "Rock 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_001"
-  }
-}
-Assets {
   Id: 7362232965091765999
   Name: "Bricks Mortar Thick 01"
   PlatformAssetType: 2
@@ -89,30 +53,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4842806961858489681
-  Name: "Rock Flat 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_004"
-  }
-}
-Assets {
   Id: 3191591647685321622
   Name: "Helm"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Icon_Helm"
-  }
-}
-Assets {
-  Id: 2754963224534021958
-  Name: "Invisible"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_invisible_001"
   }
 }
 Assets {

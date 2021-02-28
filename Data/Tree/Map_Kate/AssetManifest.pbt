@@ -737,6 +737,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14270419193600238466
+  Name: "Hill 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_002"
+  }
+}
+Assets {
   Id: 14231809728886464860
   Name: "Wood Raw White"
   PlatformAssetType: 2
