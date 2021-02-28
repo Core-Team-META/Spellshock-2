@@ -2020,7 +2020,6 @@ Assets {
           CastPhaseSettings {
             Duration: 1
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:movement"
             }
@@ -2030,7 +2029,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2040,7 +2038,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -2050,7 +2047,6 @@ Assets {
             CanMove: true
             CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
           }
           Animation: "unarmed_roll"
           CanBePrevented: true
