@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3728874800817007101
+        ParentId: 4781671109827199097
         ChildIds: 1185094513198328420
         ChildIds: 14757145270151401195
         ChildIds: 16091115587772679803
@@ -28,7 +28,7 @@ Assets {
         ChildIds: 6662185868305497936
         ChildIds: 16174780183904494540
         ChildIds: 18129462205816876575
-        ChildIds: 14341378670874480437
+        ChildIds: 7244410053288423133
         ChildIds: 15267675063839883686
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -62,9 +62,6 @@ Assets {
         ChildIds: 9945895892705970138
         ChildIds: 3204884780667172337
         ChildIds: 14479550921942652707
-        ChildIds: 18024885226314705899
-        ChildIds: 12376937182900408364
-        ChildIds: 1606035891505869451
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -96,6 +93,17 @@ Assets {
           }
         }
         ParentId: 1185094513198328420
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -133,6 +141,17 @@ Assets {
           }
         }
         ParentId: 1185094513198328420
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -170,6 +189,17 @@ Assets {
           }
         }
         ParentId: 1185094513198328420
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -207,117 +237,17 @@ Assets {
           }
         }
         ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
+              A: 1
+            }
           }
         }
-      }
-      Objects {
-        Id: 18024885226314705899
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -153.540588
-            Y: 250.271606
-            Z: 123.002022
-          }
-          Rotation {
-            Pitch: 6.70929432
-            Yaw: -3.56201315
-            Roll: 89.5457
-          }
-          Scale {
-            X: 0.279399782
-            Y: 0.307667673
-            Z: 0.279401481
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 12376937182900408364
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 198.301697
-            Y: 179.480545
-            Z: 121.929893
-          }
-          Rotation {
-            Pitch: 10.8428288
-            Yaw: -90.0002899
-            Roll: 89.9998093
-          }
-          Scale {
-            X: 0.288645625
-            Y: 0.378258198
-            Z: 0.232351467
-          }
-        }
-        ParentId: 1185094513198328420
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 1606035891505869451
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 152.874329
-            Y: 247.956573
-            Z: 121.687477
-          }
-          Rotation {
-            Pitch: -6.28631449
-            Yaw: 3.72008324
-            Roll: 89.5896912
-          }
-          Scale {
-            X: 0.290518492
-            Y: 0.291230708
-            Z: 0.220579222
-          }
-        }
-        ParentId: 1185094513198328420
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -571,35 +501,38 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 141.937317
-            Y: 322.944214
-            Z: 208.790039
+            X: 160.1875
+            Y: 300.904297
+            Z: 223.845215
           }
           Rotation {
-            Pitch: -6.32360744
-            Yaw: 3.72032619
-            Roll: -90.4103241
+            Pitch: -0.397735596
+            Yaw: -86.4150696
+            Roll: -83.6750488
           }
           Scale {
-            X: 0.445906371
-            Y: 0.447146982
-            Z: 1.20096397
+            X: 0.70553112
+            Y: 0.567774475
+            Z: 0.567766964
           }
         }
         ParentId: 17276108741514373437
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12484798020569700940
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.379
+              G: 0.31414333
+              B: 0.250139982
+              A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.379
-              G: 0.31414333
-              B: 0.250139982
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
               A: 1
             }
           }
@@ -612,7 +545,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16701925266063006038
+            Id: 4437160827424791669
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -656,9 +589,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.379
-              G: 0.31414333
-              B: 0.250139982
+              R: 0.244791672
+              G: 0.202901497
+              B: 0.161562502
               A: 1
             }
           }
@@ -689,19 +622,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -207.298386
-            Y: 256.439911
+            X: -188.345215
+            Y: 256.439941
             Z: 209.584473
           }
           Rotation {
-            Pitch: -8.82173538
+            Pitch: -8.82174683
             Yaw: 89.9995804
-            Roll: -89.9999619
+            Roll: -89.9999695
           }
           Scale {
-            X: 0.348077625
-            Y: 0.44714573
-            Z: 0.787785053
+            X: 0.348082453
+            Y: 0.447146475
+            Z: 0.683331966
           }
         }
         ParentId: 17276108741514373437
@@ -748,35 +681,38 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -164.877396
-            Y: 321.873047
-            Z: 210.806152
+            X: -157.597168
+            Y: 303.417
+            Z: 221.848389
           }
           Rotation {
-            Pitch: 7.31735897
-            Yaw: -3.56686711
-            Roll: -90.4547729
+            Pitch: -0.0159606934
+            Yaw: -92.819
+            Roll: -97.3225708
           }
           Scale {
-            X: 0.445909113
-            Y: 0.447146267
-            Z: 1.18981826
+            X: 0.718967199
+            Y: 0.543602288
+            Z: 0.543602407
           }
         }
         ParentId: 17276108741514373437
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12484798020569700940
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.379
+              G: 0.31414333
+              B: 0.250139982
+              A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.379
-              G: 0.31414333
-              B: 0.250139982
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
               A: 1
             }
           }
@@ -789,7 +725,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16701925266063006038
+            Id: 4437160827424791669
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -996,44 +932,51 @@ Assets {
         }
       }
       Objects {
-        Id: 14341378670874480437
-        Name: "Craftsman Stairs 01 Pillar"
+        Id: 7244410053288423133
+        Name: "Cube"
         Transform {
           Location {
-            X: 147.01857
-            Y: 35.6828194
-            Z: 87.7226563
+            X: -9.54492188
+            Y: 39.2021484
+            Z: 88.1691895
           }
           Rotation {
-            Pitch: 90
-            Yaw: -3.55739e-08
+            Yaw: 90.3468857
           }
           Scale {
-            X: 0.267068356
-            Y: 6.30958128
-            Z: 0.644693911
+            X: 3.9512465
+            Y: 3.15796232
+            Z: 0.107685551
           }
         }
         ParentId: 17276108741514373437
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_Detail1:id"
+            Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12484798020569700940
+              Id: 7613660189645541274
             }
           }
           Overrides {
-            Name: "ma:Shared_Detail1:color"
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1.07817972
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.596549034
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.71875
-              G: 0.512406826
-              B: 0.352187514
+              R: 0.564235687
+              G: 0.467680395
+              B: 0.372395545
               A: 1
             }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:utile"
-            Float: 5.23761415
           }
         }
         Collidable_v2 {
@@ -1044,7 +987,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16701925266063006038
+            Id: 12095835209017042614
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1053,6 +996,8 @@ Assets {
           EnableCameraCollision: true
           StaticMesh {
             Physics {
+              Mass: 100
+              LinearDamping: 0.01
             }
           }
         }
@@ -3881,31 +3826,34 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -154.487747
-            Y: 113.49054
-            Z: 84.0808105
+            X: -136.702148
+            Y: 113.674072
+            Z: 93.8325195
           }
           Rotation {
-            Pitch: 6.39762592
-            Yaw: -1.73397779
-            Roll: -90.1929779
+            Pitch: -0.282989502
+            Yaw: -92.5258789
+            Roll: -96.3942566
           }
           Scale {
-            X: 0.348077297
-            Y: 0.447146386
-            Z: 1.04926825
+            X: 0.658149183
+            Y: 0.497977138
+            Z: 0.49797833
           }
         }
         ParentId: 15267675063839883686
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12484798020569700940
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.720486
+              G: 0.597192228
+              B: 0.47552073
+              A: 1
             }
           }
           Overrides {
-            Name: "ma:Shared_Detail1:color"
+            Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 0.379
               G: 0.31414333
@@ -3922,7 +3870,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16701925266063006038
+            Id: 4437160827424791669
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4062,35 +4010,38 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 142.563721
-            Y: 113.489578
-            Z: 84.0808105
+            X: 156.118164
+            Y: 114.437256
+            Z: 92.7026367
           }
           Rotation {
-            Pitch: -6.07672358
-            Yaw: 2.94493651
-            Roll: -90.3119736
+            Pitch: -0.282867432
+            Yaw: -87.3451538
+            Roll: -83.9223328
           }
           Scale {
-            X: 0.348077297
-            Y: 0.447146386
-            Z: 1.04926825
+            X: 0.650974631
+            Y: 0.516818404
+            Z: 0.516810656
           }
         }
         ParentId: 15267675063839883686
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 12484798020569700940
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.379
+              G: 0.31414333
+              B: 0.250139982
+              A: 1
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.379
-              G: 0.31414333
-              B: 0.250139982
+              R: 0.599000037
+              G: 0.496495664
+              B: 0.39534
               A: 1
             }
           }
@@ -4103,7 +4054,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16701925266063006038
+            Id: 4437160827424791669
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -4121,8 +4072,8 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 175.691833
-            Y: 75.5967
+            X: 147.268555
+            Y: 75.5966797
             Z: 77.6064453
           }
           Rotation {
@@ -4133,7 +4084,7 @@ Assets {
           Scale {
             X: 0.348077923
             Y: 0.44714576
-            Z: 0.733510196
+            Z: 0.613959432
           }
         }
         ParentId: 15267675063839883686
@@ -5179,6 +5130,15 @@ Assets {
       }
     }
     Assets {
+      Id: 4437160827424791669
+      Name: "Large Wood Beam 8m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_large_beam_6m"
+      }
+    }
+    Assets {
       Id: 16701925266063006038
       Name: "Craftsman Stairs 01 Pillar"
       PlatformAssetType: 1
@@ -5194,6 +5154,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_wood_raw_001_uv"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
       }
     }
     Assets {

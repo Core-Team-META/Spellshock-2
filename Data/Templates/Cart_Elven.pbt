@@ -1359,12 +1359,6 @@ Assets {
         ChildIds: 1807531397123377238
         ChildIds: 10772712381054818127
         ChildIds: 5533195921894805406
-        ChildIds: 6220245551156875002
-        ChildIds: 12728209873753266187
-        ChildIds: 11625900939268346335
-        ChildIds: 7431914607876742737
-        ChildIds: 18356059349247747884
-        ChildIds: 12860126441890636258
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1385,8 +1379,8 @@ Assets {
             Z: 176.301941
           }
           Rotation {
-            Pitch: -6.93036032
-            Yaw: -0.645599186
+            Pitch: -6.93035889
+            Yaw: -0.645599365
             Roll: 8.55222797
           }
           Scale {
@@ -1399,6 +1393,15 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "bp:color"
+            Color {
+              R: 0.682291687
+              G: 0.547254801
+              B: 0.547254801
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color"
             Color {
               R: 0.682291687
               G: 0.547254801
@@ -1454,6 +1457,15 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.682291687
+              G: 0.547254801
+              B: 0.547254801
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1502,6 +1514,15 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.682291687
+              G: 0.547254801
+              B: 0.547254801
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1524,9 +1545,9 @@ Assets {
         Name: "Decal Wood Ends Variations"
         Transform {
           Location {
-            X: -158.466
-            Y: 190.160065
-            Z: 183.866272
+            X: -158.46582
+            Y: 189.812668
+            Z: 181.489105
           }
           Rotation {
             Roll: 8.33404827
@@ -1548,287 +1569,8 @@ Assets {
               A: 1
             }
           }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 6220245551156875002
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 189.472412
-            Y: -354.044464
-            Z: 116.656441
-          }
-          Rotation {
-            Pitch: 4.09711599
-            Yaw: -176.295654
-            Roll: 90.4089
-          }
-          Scale {
-            X: 0.415919393
-            Y: 0.383689463
-            Z: 0.0661595
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
           Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.682291687
-              G: 0.547254801
-              B: 0.547254801
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 12728209873753266187
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -190.118347
-            Y: -354.422211
-            Z: 118.670387
-          }
-          Rotation {
-            Pitch: -7.77157307
-            Yaw: 176.429276
-            Roll: 90.4550552
-          }
-          Scale {
-            X: 0.366006911
-            Y: 0.376981884
-            Z: 0.332357079
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.682291687
-              G: 0.547254801
-              B: 0.547254801
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 11625900939268346335
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -195.590881
-            Y: 179.178467
-            Z: 122.01429
-          }
-          Rotation {
-            Pitch: -8.77987289
-            Yaw: 89.9995
-            Roll: 89.9998779
-          }
-          Scale {
-            X: 0.232346922
-            Y: 0.29452467
-            Z: 0.232351989
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.682291687
-              G: 0.547254801
-              B: 0.547254801
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 7431914607876742737
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: -153.540588
-            Y: 250.271606
-            Z: 123.002022
-          }
-          Rotation {
-            Pitch: 6.70929432
-            Yaw: -3.56201315
-            Roll: 89.5457
-          }
-          Scale {
-            X: 0.279399782
-            Y: 0.307667673
-            Z: 0.279401481
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.682291687
-              G: 0.547254801
-              B: 0.547254801
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 18356059349247747884
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 198.301697
-            Y: 179.480545
-            Z: 121.929893
-          }
-          Rotation {
-            Pitch: 10.8428288
-            Yaw: -90.0002899
-            Roll: 89.9998093
-          }
-          Scale {
-            X: 0.288645625
-            Y: 0.378258198
-            Z: 0.232351467
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
-            Color {
-              R: 0.682291687
-              G: 0.547254801
-              B: 0.547254801
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1012196051933563749
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-      }
-      Objects {
-        Id: 12860126441890636258
-        Name: "Decal Wood Ends Variations"
-        Transform {
-          Location {
-            X: 152.874329
-            Y: 247.956573
-            Z: 121.687477
-          }
-          Rotation {
-            Pitch: -6.28631449
-            Yaw: 3.72008324
-            Roll: 89.5896912
-          }
-          Scale {
-            X: 0.290518492
-            Y: 0.291230708
-            Z: 0.220579222
-          }
-        }
-        ParentId: 18367561327199609420
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:color"
+            Name: "bp:Color"
             Color {
               R: 0.682291687
               G: 0.547254801
@@ -2264,9 +2006,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.755208313
-              G: 0.625972688
-              B: 0.498437464
+              R: 0.380208343
+              G: 0.315144867
+              B: 0.250937492
               A: 1
             }
           }
@@ -2297,19 +2039,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 141.937469
-            Y: 322.944427
-            Z: 208.790176
+            X: 145.521851
+            Y: 267.147156
+            Z: 208.392273
           }
           Rotation {
-            Pitch: -6.32360744
+            Pitch: -6.3236084
             Yaw: 3.72032523
-            Roll: -90.4103241
+            Roll: -90.4103394
           }
           Scale {
-            X: 0.445906371
-            Y: 0.447146982
-            Z: 1.20096397
+            X: 0.445905477
+            Y: 0.447145224
+            Z: 0.983264565
           }
         }
         ParentId: 12039831467135997956
@@ -2356,19 +2098,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -207.298569
+            X: -185.389526
             Y: 256.43988
             Z: 209.584503
           }
           Rotation {
-            Pitch: -8.82174206
+            Pitch: -8.82174683
             Yaw: 89.9996185
-            Roll: -89.9999847
+            Roll: -90
           }
           Scale {
             X: 0.348077625
             Y: 0.44714573
-            Z: 0.787785053
+            Z: 0.684806585
           }
         }
         ParentId: 12039831467135997956
@@ -2415,19 +2157,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -164.876968
-            Y: 321.872437
-            Z: 210.806183
+            X: -168.638077
+            Y: 260.531769
+            Z: 210.322342
           }
           Rotation {
             Pitch: 7.31735897
-            Yaw: -3.56686592
+            Yaw: -3.56686401
             Roll: -90.4547729
           }
           Scale {
-            X: 0.445909113
-            Y: 0.447146267
-            Z: 1.18981826
+            X: 0.445910782
+            Y: 0.447147191
+            Z: 0.97411412
           }
         }
         ParentId: 12039831467135997956
@@ -5537,19 +5279,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: -143.16301
-            Y: 133.800049
-            Z: 84.080986
+            X: -144.225327
+            Y: 98.2787399
+            Z: 83.9622
           }
           Rotation {
             Pitch: 6.39763308
-            Yaw: -1.73397839
-            Roll: -90.1929855
+            Yaw: -1.73397827
+            Roll: -90.1929932
           }
           Scale {
-            X: 0.348077297
-            Y: 0.447146386
-            Z: 1.04926825
+            X: 0.348079652
+            Y: 0.447149038
+            Z: 0.904241681
           }
         }
         ParentId: 14115145939038955729
@@ -5714,19 +5456,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 153.888641
-            Y: 133.800049
-            Z: 84.080986
+            X: 155.602371
+            Y: 100.108841
+            Z: 83.8982162
           }
           Rotation {
-            Pitch: -6.07672358
+            Pitch: -6.07672119
             Yaw: 2.94493699
             Roll: -90.3119812
           }
           Scale {
-            X: 0.348077297
-            Y: 0.447146386
-            Z: 1.04926825
+            X: 0.348067909
+            Y: 0.447145551
+            Z: 0.930264771
           }
         }
         ParentId: 14115145939038955729
@@ -5773,19 +5515,19 @@ Assets {
         Name: "Craftsman Stairs 01 Pillar"
         Transform {
           Location {
-            X: 187.016815
+            X: 167.392258
             Y: 95.9078217
             Z: 77.6065826
           }
           Rotation {
             Pitch: 13.3900795
-            Yaw: -89.9999771
-            Roll: -89.9999771
+            Yaw: -89.9999695
+            Roll: -89.9999695
           }
           Scale {
             X: 0.348077923
             Y: 0.44714576
-            Z: 0.733510196
+            Z: 0.638900816
           }
         }
         ParentId: 14115145939038955729
@@ -6205,19 +5947,19 @@ Assets {
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: 192.159439
-            Y: -367.076355
-            Z: 177.817551
+            X: 192.9953
+            Y: -368.180206
+            Z: 193.624252
           }
           Rotation {
-            Pitch: -3.01110244
+            Pitch: -3.0111084
             Yaw: 0.210550055
-            Roll: -4.00171041
+            Roll: -4.00170898
           }
           Scale {
-            X: 0.328907371
-            Y: 0.31094709
-            Z: 0.0596897192
+            X: 0.328910291
+            Y: 0.310925752
+            Z: 0.235631198
           }
         }
         ParentId: 14115145939038955729
@@ -6263,19 +6005,19 @@ Assets {
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: -175.99469
-            Y: -365.209564
-            Z: 180.041672
+            X: -178.504196
+            Y: -366.35495
+            Z: 196.435791
           }
           Rotation {
             Pitch: 8.66187477
             Yaw: -0.609771729
-            Roll: -4.04235935
+            Roll: -4.0423584
           }
           Scale {
-            X: 0.328907371
-            Y: 0.31094709
-            Z: 0.0596897192
+            X: 0.328908205
+            Y: 0.310955673
+            Z: 0.219145983
           }
         }
         ParentId: 14115145939038955729

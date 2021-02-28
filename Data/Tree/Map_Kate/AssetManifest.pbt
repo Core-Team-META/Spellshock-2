@@ -737,6 +737,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14287349269321119691
+  Name: "Ring"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_004"
+  }
+}
+Assets {
   Id: 14281826121533999733
   Name: "Coral Tubes Small"
   PlatformAssetType: 1
@@ -1835,6 +1844,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9081085500199892623
+  Name: "Bricks Worn Stone 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_brick_stone_worn_001"
+  }
+}
+Assets {
   Id: 9005202394387316338
   Name: "Craftsman Wall Interior 02 Corner"
   PlatformAssetType: 1
@@ -1886,6 +1904,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_fabric_burlap_002_uv"
+  }
+}
+Assets {
+  Id: 8967718814469894689
+  Name: "Fantasy Castle Accessory Tower 01 - 12m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_acc_tower_001_12m"
   }
 }
 Assets {
