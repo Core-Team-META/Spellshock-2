@@ -114,8 +114,8 @@ Objects {
   Name: "ELF_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40206.3672
-      Y: 51797.4961
+      X: 40441.1797
+      Y: 51877.2578
       Z: 1051.16553
     }
     Rotation {
@@ -151,8 +151,8 @@ Objects {
   Name: "ELF_PERK_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 40206.3672
-      Y: 51797.4961
+      X: 40449.3359
+      Y: 51881.6719
       Z: 1051.16553
     }
     Rotation {
@@ -190,7 +190,7 @@ Objects {
   Name: "ORC_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 110.304688
+      X: 28.2832031
       Y: -378.185547
       Z: 28.0961914
     }
@@ -226,8 +226,8 @@ Objects {
   Name: "ORC_PERK_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 110.304688
-      Y: -378.185547
+      X: 63.65625
+      Y: -374.203125
       Z: 28.0961914
     }
     Rotation {

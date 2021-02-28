@@ -62,8 +62,8 @@ Objects {
   Name: "ELF_DAILY_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40001.9844
-      Y: 51604.4219
+      X: 40116.1328
+      Y: 51623.3516
       Z: 1051.16553
     }
     Rotation {
@@ -97,8 +97,8 @@ Objects {
   Name: "ELF_DAILY_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 40001.9844
-      Y: 51604.4219
+      X: 40109.9336
+      Y: 51633.4453
       Z: 1051.16553
     }
     Rotation {
@@ -168,8 +168,8 @@ Objects {
   Name: "ORC_DAILY_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 31.9257813
-      Y: 6.31445313
+      X: -34.9648438
+      Y: -33.15625
       Z: 18.9360352
     }
     Rotation {
