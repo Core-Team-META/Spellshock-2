@@ -23,7 +23,7 @@ function SetPlayer(player)
 	ARROW:SetColor(_G.TeamColors[myPlayer.team])
 	-- Set player's initial name letter
 	NAME.text = string.sub(player.name, 1, 1)
-	
+
 	UpdateContent()
 end
 
@@ -40,7 +40,10 @@ function UpdateContent()
 	
 	-- Direction arrow
 	local rot = myPlayer:GetWorldRotation()
-	DIRECTION_ROOT.rotationAngle = rot.z
+	DIRECTION_ROOT.rotationAngle = rot.z + ROOT.parent.rotationAngle
+
+	CIRCLE_BG:SetColor(_G.TeamColors[myPlayer.team])
+	ARROW:SetColor(_G.TeamColors[myPlayer.team])
 end
 
 function Tick()

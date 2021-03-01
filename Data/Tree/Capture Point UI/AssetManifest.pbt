@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11846162225910715126
-  Name: "Frame Outlined Thick 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameFlat_024"
-  }
-}
-Assets {
   Id: 8264648425790578274
   Name: "Fantasy Banner 007"
   PlatformAssetType: 9
@@ -41,15 +32,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
-  }
-}
-Assets {
-  Id: 2905198102128315844
-  Name: "BG Flat 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_24"
   }
 }
 Assets {

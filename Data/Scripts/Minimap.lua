@@ -13,7 +13,7 @@ Tips:
 - When not working on the minimap geometry, toggle its visibility and lock it in the hierarchy.
 
 --]]
-
+local ABGS = require(script:GetCustomProperty("ABGS"))
 local ROOT = script.parent
 local MAP_PANEL = script:GetCustomProperty("UIPanel"):WaitForObject()
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
@@ -24,6 +24,8 @@ local COLOR_LOW = script:GetCustomProperty("ColorLow")
 local COLOR_HIGH = script:GetCustomProperty("ColorHigh")
 local BORDER_COLOR = script:GetCustomProperty("BorderColor")
 local BORDER_SIZE = script:GetCustomProperty("BorderSize")
+local PLAYER_PANEL = script:GetCustomProperty("PlayerPanel"):WaitForObject()
+local WORLD_SHAPES = script:GetCustomProperty("WorldShapes"):WaitForObject()
 
 local worldShapes = ROOT:FindDescendantsByType("StaticMesh")
 local worldTexts = ROOT:FindDescendantsByType("WorldText")
@@ -32,6 +34,12 @@ if #worldShapes <= 0 then
 	error("Minimap needs at least one 3D shape placed in-world.")
 	return
 end
+
+PLAYER_PANEL.width = MAP_PANEL.width
+PLAYER_PANEL.height = MAP_PANEL.height
+PLAYER_PANEL.x = MAP_PANEL.x
+PLAYER_PANEL.y = MAP_PANEL.y
+PLAYER_PANEL.rotationAngle = MAP_PANEL.rotationAngle
 
 -- Establish 3D bounds
 local boundsLeft
@@ -152,6 +160,8 @@ for _,text in ipairs(worldTexts) do
 	label:SetColor(text:GetColor())
 end
 
+WORLD_SHAPES:Destroy()
+
 function Tick()
 	local localPlayer = Game.GetLocalPlayer()
 	local allPlayers = Game.GetPlayers()
@@ -185,7 +195,8 @@ function GetIndicatorForPlayer(player)
 		return player.clientUserData.minimap
 	end
 	-- Spawn new indicator for this player
-	local minimapPlayer = World.SpawnAsset(PLAYER_TEMPLATE, {parent = MAP_PANEL})
+	local minimapPlayer = World.SpawnAsset(PLAYER_TEMPLATE, {parent = PLAYER_PANEL})
+	minimapPlayer.rotationAngle = -PLAYER_PANEL.rotationAngle
 	player.clientUserData.minimap = minimapPlayer
 	return minimapPlayer
 end
