@@ -159,6 +159,7 @@ Objects {
   }
   ParentId: 4187184517148048425
   ChildIds: 12339254670262005637
+  ChildIds: 10214143562767828285
   ChildIds: 11599957882329937433
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1511,6 +1512,52 @@ Objects {
         Mass: 100
         LinearDamping: 0.01
       }
+    }
+  }
+}
+Objects {
+  Id: 10214143562767828285
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 11.0856466
+      Y: -18.8900394
+      Z: -7.72143364
+    }
+    Rotation {
+      Yaw: -126.126556
+    }
+    Scale {
+      X: 0.618166745
+      Y: 0.618166745
+      Z: 0.618166745
+    }
+  }
+  ParentId: 12291039679276221737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Daily Shop"
+    FontAsset {
+      Id: 16670222695632479546
+    }
+    Color {
+      R: 1
+      G: 0.866761684
+      B: 0.659
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
 }
@@ -11922,22 +11969,23 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: -1.13715279
-      Y: -1.78074086
+      X: -1.13715291
+      Y: -1.78074157
       Z: -2.48100185
     }
     Rotation {
       Pitch: 0.0448675118
-      Yaw: -1.72263122
+      Yaw: -1.72262573
       Roll: 2.98458266
     }
     Scale {
-      X: 0.964528143
-      Y: 0.964528143
-      Z: 0.964528143
+      X: 0.899137
+      Y: 0.899137
+      Z: 0.899137
     }
   }
   ParentId: 13897030684941904556
+  ChildIds: 5463798633426052388
   ChildIds: 3614515111469327209
   ChildIds: 18119512539825156449
   ChildIds: 12801902460516912103
@@ -12670,6 +12718,54 @@ Objects {
         Mass: 100
         LinearDamping: 0.01
       }
+    }
+  }
+}
+Objects {
+  Id: 5463798633426052388
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 71.5064316
+      Y: 3.12642717
+      Z: -0.175803
+    }
+    Rotation {
+      Pitch: 1.38200676
+      Yaw: 90.7980347
+      Roll: 120.009613
+    }
+    Scale {
+      X: 0.772662
+      Y: 0.772662
+      Z: 0.772662
+    }
+  }
+  ParentId: 11755400747474214245
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Perk Shop"
+    FontAsset {
+      Id: 16670222695632479546
+    }
+    Color {
+      R: 1
+      G: 0.866761684
+      B: 0.659
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
 }
@@ -17815,6 +17911,7 @@ Objects {
     }
   }
   ParentId: 1800172549103872497
+  ChildIds: 16159202376643545404
   ChildIds: 13751068357760011049
   ChildIds: 3824626514608650492
   Collidable_v2 {
@@ -20397,6 +20494,52 @@ Objects {
         Mass: 100
         LinearDamping: 0.01
       }
+    }
+  }
+}
+Objects {
+  Id: 16159202376643545404
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 11.8788948
+      Y: -18.201149
+      Z: -7.51823807
+    }
+    Rotation {
+      Yaw: -126.55027
+    }
+    Scale {
+      X: 0.618166745
+      Y: 0.618166745
+      Z: 0.618166745
+    }
+  }
+  ParentId: 15854707247158741528
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Daily Shop"
+    FontAsset {
+      Id: 16670222695632479546
+    }
+    Color {
+      R: 1
+      G: 0.866761684
+      B: 0.659
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
 }
@@ -27808,6 +27951,7 @@ Objects {
     }
   }
   ParentId: 16912656809604354517
+  ChildIds: 7516432538023216501
   ChildIds: 5208319275711166440
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -27824,9 +27968,9 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 1.12454057
-      Y: 2.86751
-      Z: 0.83442682
+      X: -7.5932
+      Y: 2.86751056
+      Z: -4.19875574
     }
     Rotation {
       Pitch: 29.9611015
@@ -27834,9 +27978,9 @@ Objects {
       Roll: -177.732498
     }
     Scale {
-      X: 1.04052687
-      Y: 1.04052687
-      Z: 1.04052687
+      X: 0.94
+      Y: 0.94
+      Z: 0.94
     }
   }
   ParentId: 3524201682030951346
@@ -28559,6 +28703,54 @@ Objects {
         Mass: 100
         LinearDamping: 0.01
       }
+    }
+  }
+}
+Objects {
+  Id: 7516432538023216501
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 55.6838684
+      Y: 3.53624749
+      Z: -5.36166811
+    }
+    Rotation {
+      Pitch: 1.82158399
+      Yaw: 91.0527496
+      Roll: 120.016624
+    }
+    Scale {
+      X: 0.720278621
+      Y: 0.720278621
+      Z: 0.720278621
+    }
+  }
+  ParentId: 3524201682030951346
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "Perk Shop"
+    FontAsset {
+      Id: 16670222695632479546
+    }
+    Color {
+      R: 1
+      G: 0.866761684
+      B: 0.659
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
 }

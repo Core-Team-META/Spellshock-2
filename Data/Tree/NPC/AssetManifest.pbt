@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16670222695632479546
+  Name: "Play Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "PlayBold_ref"
+  }
+}
+Assets {
   Id: 16426010434330318338
   Name: "Pipe - 6-Sided Thick"
   PlatformAssetType: 1
