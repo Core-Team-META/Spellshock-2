@@ -70,8 +70,8 @@ Assets {
           Overrides {
             Name: "bp:Size"
             Vector {
-              X: 5.5
-              Y: 5.5
+              X: 3.5
+              Y: 3.5
               Z: 1
             }
           }
@@ -97,7 +97,7 @@ Assets {
           Vfx {
             AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:critical"
+              Value: "mc:evfxrelevance:high"
             }
           }
         }
@@ -165,9 +165,8 @@ Assets {
             Id: 860140904207434054
           }
           Vfx {
-            AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:critical"
+              Value: "mc:evfxrelevance:high"
             }
           }
         }

@@ -2336,6 +2336,8 @@ Assets {
           ExecutePhaseSettings {
             Duration: 0.3
             CanMove: true
+            CanJump: true
+            CanRotate: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
             }

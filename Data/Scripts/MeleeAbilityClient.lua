@@ -168,12 +168,18 @@ function OnExecute(ability)
 	local playerQ = Quaternion.New(EQUIPMENT.owner:GetWorldRotation())
 	local rot = Rotation.New(playerQ * Quaternion.New(SWIPE_ROTATION))
 	local pos = playerPos + playerQ * SWIPE_POSITION
+	local scale = 1
+
+	if chargeAmount > MIN_CHARGE then
+		scale = chargeAmount + 1
+		scale = CoreMath.Clamp(scale, 1, 2)
+	end
 
 	if IS_CHARGE_ATTACK and chargeAmount > MAX_CHARGE then
 		currentSwipe = World.SpawnAsset(ChargeReleaseEffect, {position = pos, rotation = rot})
 	else
 		-- #TODO: calaculate scale
-		currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot})
+		currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot, scale = Vector3.New(scale)})
 	end
 
 	if CALIBRATE_SWIPE then

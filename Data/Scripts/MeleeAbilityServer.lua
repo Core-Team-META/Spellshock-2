@@ -26,6 +26,7 @@ local VERTICAL_IMPULSE = script:GetCustomProperty("VerticalImpulse") or 20000
 local DEFAULT_DamageRange = {min=DAMAGE_RANGE.x, max=DAMAGE_RANGE.y}
 local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
 local HitBoxTrigger
+local hitBoxScale
 
 local BindingName = script:GetCustomProperty("BindingName")
 local AbilityMod = script:GetCustomProperty("AbilityMod")
@@ -37,11 +38,14 @@ local bindingReleasedEvent
 
 local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
 local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
+local HOLD_LIMIT = 2
 local isCharging = 0 -- 0: not charging  1: charging  2: full charge
 local chargeStart = 1 
+local holdTimer = 0
 
 if IS_CHARGE_ATTACK then
 	HitBoxTrigger = EQUIPMENT:GetCustomProperty("HitBox"):WaitForObject()
+	hitBoxScale = HitBoxTrigger:GetWorldScale()
 end
 
 function Tick(deltaTime)
@@ -60,15 +64,14 @@ function Tick(deltaTime)
 	end
 
 	if isCharging == 1 and time() - chargeStart > MIN_CHARGE then		
-		local chargeAmount = time() - chargeStart
-
-		if isCharging == 1 then
-		
-		end
-
-		if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
-			
-			isCharging = 2
+		local scale = (time() - chargeStart) + 3.5
+		scale = CoreMath.Clamp(scale, 3.5, 4.5)
+		HitBoxTrigger:SetWorldScale(Vector3.New(scale))
+	elseif isCharging == 2 then
+		holdTimer = holdTimer + deltaTime
+		if holdTimer > HOLD_LIMIT then
+			isCharging = 0
+			ABILITY:AdvancePhase()
 		end
 	elseif Object.IsValid(ChargePanel) then
 		ChargePanel.visibility = Visibility.FORCE_OFF
@@ -167,13 +170,25 @@ end
 
 function OnBindingReleased(player, bind)
 	if ABILITY:GetCurrentPhase() == AbilityPhase.CAST and bind == "ability_primary" then
+		isCharging = 0
 		ABILITY:AdvancePhase()
 	end
+end
+
+function OnReady()
+	isCharging = 0
+	HitBoxTrigger:SetWorldScale(hitBoxScale)
+end
+
+function OnInterrupted()
+	isCharging = 0
+	HitBoxTrigger:SetWorldScale(hitBoxScale)
 end
 
 function OnCast(thisAbility)
 	chargeStart = time()
 	isCharging = 1
+	holdTimer = 0
 	bindingReleasedEvent = thisAbility.owner.bindingReleasedEvent:Connect(OnBindingReleased)
 end
 
@@ -193,6 +208,7 @@ function ResetMelee(ability)
 	if bindingReleasedEvent then
 		bindingReleasedEvent:Disconnect()
 	end
+	HitBoxTrigger:SetWorldScale(hitBoxScale)
 end
 
 -- Registering equipment events
@@ -203,5 +219,7 @@ HIT_BOX.beginOverlapEvent:Connect(OnBeginOverlap)
 ABILITY.executeEvent:Connect(OnExecute)
 if IS_CHARGE_ATTACK then
 	ABILITY.castEvent:Connect(OnCast)
+	ABILITY.interruptedEvent:Connect(OnInterrupted)
+	ABILITY.readyEvent:Connect(OnReady)
 end
 ABILITY.recoveryEvent:Connect(ResetMelee)
