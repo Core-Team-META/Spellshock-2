@@ -502,11 +502,11 @@ Objects {
         Scaling: Free
         ScaleX {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleY {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleZ {
           Min: 0.5
@@ -703,11 +703,11 @@ Objects {
         Scaling: Free
         ScaleX {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleY {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleZ {
           Min: 0.5
