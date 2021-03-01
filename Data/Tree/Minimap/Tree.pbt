@@ -15391,6 +15391,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:AS"
+      AssetReference {
+        Id: 13062533657555781867
+      }
+    }
+    Overrides {
       Name: "cs:GradientHeight:tooltip"
       String: "If true, the minimap pieces will be colored based on their Z position relative to the rest of the map."
     }

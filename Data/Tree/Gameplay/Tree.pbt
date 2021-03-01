@@ -4919,6 +4919,12 @@ Objects {
             Z: -163.031
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -9050,6 +9056,12 @@ Objects {
             Z: -886.165
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -12819,6 +12831,12 @@ Objects {
           Name: "Position"
           Vector {
             Z: 210
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
           }
         }
       }
@@ -16947,6 +16965,12 @@ Objects {
             Z: 106.492188
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -21042,7 +21066,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   Folder {
     IsGroup: true
@@ -22078,7 +22102,7 @@ Objects {
   }
   ParentId: 6139923059512821780
   ChildIds: 6594135902565661872
-  ChildIds: 331960150577104941
+  ChildIds: 8262735017410123780
   ChildIds: 6134814848155409596
   ChildIds: 4821486034769759147
   ChildIds: 8746288417949254922
@@ -22894,34 +22918,6 @@ Objects {
   }
 }
 Objects {
-  Id: 331960150577104941
-  Name: "Round End Rules"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14852734758551696487
-  ChildIds: 8262735017410123780
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 8262735017410123780
   Name: "Round Teamscore Limit"
   Transform {
@@ -22935,17 +22931,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 331960150577104941
+  ParentId: 14852734758551696487
   ChildIds: 9974091882436901008
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:TeamScoreLimit"
-      Int: 500
-    }
-    Overrides {
-      Name: "cs:TeamScoreLimit:tooltip"
-      String: "When a team reaches this many points, the round ends"
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -22983,6 +22971,12 @@ Objects {
       Name: "cs:ComponentRoot"
       ObjectReference {
         SelfId: 8262735017410123780
+      }
+    }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
       }
     }
   }
@@ -23162,7 +23156,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 5
+      Float: 10
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"

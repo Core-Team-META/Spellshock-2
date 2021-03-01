@@ -14,6 +14,7 @@ Tips:
 
 --]]
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local AS = require(script:GetCustomProperty("AS"))
 local ROOT = script.parent
 local MAP_PANEL = script:GetCustomProperty("UIPanel"):WaitForObject()
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
@@ -177,6 +178,14 @@ function Tick()
 		else
 			indicator.visibility = Visibility.FORCE_OFF
 		end
+	end
+
+	if ABGS.IsGameStateManagerRegistered() and _G.CurrentMenu and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and 
+	(ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND) and 
+	not AS.IsRespawning() and not AS.IsViewingMap() and not AS.IsJoiningMidgame() then
+		ROOT.visibility = Visibility.INHERIT
+	else
+		ROOT.visibility = Visibility.FORCE_OFF
 	end
 end
 

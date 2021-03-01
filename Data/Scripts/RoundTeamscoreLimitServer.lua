@@ -24,16 +24,8 @@ TieVictory()
 
 -- Internal custom properties
 local ABGS = require(script:GetCustomProperty("API"))
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
+local DynamicCapturePoints = script:GetCustomProperty("DynamicCapturePoints"):WaitForObject()
 
--- User exposed properties
-local TEAM_SCORE_LIMIT = COMPONENT_ROOT:GetCustomProperty("TeamScoreLimit")
-
--- Check user properties
-if TEAM_SCORE_LIMIT <= 0 then
-    warn("TeamScoreLimit must be positive")
-    TEAM_SCORE_LIMIT = 100
-end
 
 -- nil Tick(float)
 -- Watches for a team hitting the maximum score and ends the round
@@ -46,7 +38,7 @@ function Tick(deltaTime)
 		local winningTeam = nil
 
 		for i = 0, 4 do
-			if Game.GetTeamScore(i) >= TEAM_SCORE_LIMIT then
+			if Game.GetTeamScore(i) >= DynamicCapturePoints:GetCustomProperty("ScoreLimit") then
 				if winningTeam then
 					Events.Broadcast("TieVictory")
 					ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)

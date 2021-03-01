@@ -25375,6 +25375,12 @@ Objects {
         SelfId: 8262735017410123780
       }
     }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -26126,6 +26132,12 @@ Objects {
       Name: "cs:RoundTeamscoreLimit"
       ObjectReference {
         SelfId: 8262735017410123780
+      }
+    }
+    Overrides {
+      Name: "cs:DynamicCapturePoints"
+      ObjectReference {
+        SelfId: 14570647703378092628
       }
     }
   }

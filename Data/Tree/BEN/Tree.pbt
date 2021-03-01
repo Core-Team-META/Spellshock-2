@@ -2412,7 +2412,28 @@ Objects {
         SelfId: 14067136948649209529
       }
     }
+    Overrides {
+      Name: "cs:RequiredPlayers"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:SmallMapScore"
+      Int: 300
+    }
+    Overrides {
+      Name: "cs:BigMapScore"
+      Int: 500
+    }
+    Overrides {
+      Name: "cs:ScoreLimit"
+      Int: 300
+    }
+    Overrides {
+      Name: "cs:ScoreLimit:isrep"
+      Bool: true
+    }
   }
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

@@ -1,6 +1,9 @@
 local ABCP = require(script:GetCustomProperty("ABCP"))
 local BaseCollision = script:GetCustomProperty("BaseCollision"):WaitForObject()
 local CapturePointColliders = BaseCollision:GetCustomProperties()
+local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
+local SmallMapScore = script:GetCustomProperty("SmallMapScore")
+local BigMapScore = script:GetCustomProperty("BigMapScore")
 
 local Configuration_A = {[1]=true, [5]=true} -- these would get disabled; based off of "order"
 local Configuration_B = {[4]=true, [2]=true}
@@ -20,10 +23,13 @@ function OnRoundStart()
     local AllPlayers = Game.GetPlayers()
     local CP_Configuration = {} -- all capture points will be enabled
     local NewBases
-    if #AllPlayers < 9 then -- two capture points will be disabled
+    if #AllPlayers < RequiredPlayers then -- two capture points will be disabled
         local randIndex = 1 --math.random(2)
         CP_Configuration = configTable[randIndex]
         NewBases = basesTable[randIndex]
+        script:SetNetworkedCustomProperty("ScoreLimit", SmallMapScore)
+    else
+        script:SetNetworkedCustomProperty("ScoreLimit", BigMapScore)
     end
 
     for _, id in ipairs(ABCP.GetCapturePoints()) do

@@ -66,7 +66,7 @@ end
 -- broadcast events and change colors.
 local owningTeam = 0
 
-local previousEnabledState = true
+local previousEnabledState
 
 local teamColoredGeometry = {} -- We manually set isTeamColorUsed = false when the point is neutral
 local otherGeometry = {} -- We darken these when the point is disabled
@@ -241,22 +241,19 @@ function OnNetworkedPropertyChanged(thisObject, name)
                 CapturedSFX:Play()
                 POINT_CAPTURED_VFX:GetChildren()[owningTeam]:Play()
             end
+            owningTeam = newOwner
         end
     elseif name == "IsEnabled" then
         previousCaptureProgress = 0
-        
-   
         local isEnabled = thisObject:GetCustomProperty("IsEnabled")
-
+        
         if isEnabled ~= previousEnabledState then
             SetGeometryEnabledColor(isEnabled)
             Events.Broadcast("CapturePointEnabledStateChanged", ORDER, previousEnabledState, isEnabled)
 
             previousEnabledState = isEnabled
-        else
-            SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
         end
-   
+        SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))   
     elseif name == "ProgressedTeam" or name == "CapturePlayerID" then
         for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
             vfx.visibility = Visibility.FORCE_OFF
@@ -336,6 +333,7 @@ end
 
 CategorizeVisualGeometry()
 SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))
+SetGeometryEnabledColor(SERVER_SCRIPT:GetCustomProperty("IsEnabled"))
 
 local functionTable = {}
 functionTable.GetState = GetState
