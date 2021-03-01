@@ -208,7 +208,10 @@ function ResetMelee(ability)
 	if bindingReleasedEvent then
 		bindingReleasedEvent:Disconnect()
 	end
-	HitBoxTrigger:SetWorldScale(hitBoxScale)
+
+	if IS_CHARGE_ATTACK then
+		HitBoxTrigger:SetWorldScale(hitBoxScale)
+	end
 end
 
 -- Registering equipment events
