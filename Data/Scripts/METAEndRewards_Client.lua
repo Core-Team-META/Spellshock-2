@@ -114,6 +114,7 @@ local function ToggleUI(isTrue)
     else
         REWARD_PARENT_UI.visibility = Visibility.FORCE_OFF
         TOP_CENTER.visibility = Visibility.FORCE_OFF
+        DisconnectListeners()
     end
 end
 
@@ -231,9 +232,8 @@ local function BuildSlotInfo(slot, id, class, bind, reward)
                 Button.clientUserData.id = slotId
                 Button.clientUserData.selected = SELECTED
                 rewardSelect[#rewardSelect + 1] = SELECTED
-                if #listeners < 3 then
-                    listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
-                end
+
+                listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
             end
         end
     end
