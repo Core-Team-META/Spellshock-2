@@ -243,7 +243,6 @@ end
 function Tick(deltaTime)
 	for _, player in ipairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
-		local visible = IsNameplateVisible(player)
 
 		if nameplate and Object.IsValid(player) then
 			-- We calculate visibility every frame to handle when teams change
@@ -253,9 +252,17 @@ function Tick(deltaTime)
 				if nameplate.isVisible == true then
 					nameplate.dirty = true
 				end
+				-- due to player:setVisibility, enforce this each tick
+				if nameplate.templateRoot.visibility ~= Visibility.FORCE_OFF then
+					nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+				end
 			else
 				if nameplate.isVisible == false then
 					nameplate.dirty = true
+				end
+				-- due to player:setVisibility, enforce this each tick
+				if nameplate.templateRoot.visibility ~= Visibility.INHERIT then
+					nameplate.templateRoot.visibility = Visibility.INHERIT
 				end
 
 				if player.team ~= nameplate.lastTeam then
@@ -333,59 +340,59 @@ function Tick(deltaTime)
 				nameplate.isVisible = visible
 
 				if not visible then
-					nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+					--nameplate.templateRoot.visibility = Visibility.FORCE_OFF
 				else
-					nameplate.templateRoot.visibility = Visibility.INHERIT
-				end
+					--nameplate.templateRoot.visibility = Visibility.INHERIT
 
-				if SHOW_HEALTHBARS then
-					local healthFraction = player.hitPoints / player.maxHitPoints
-					local visibleHealthFraction = healthFraction -- For animating changes
+					if SHOW_HEALTHBARS then
+						local healthFraction = player.hitPoints / player.maxHitPoints
+						local visibleHealthFraction = healthFraction -- For animating changes
 
-					-- Set size and position of change piece
-					if ANIMATE_CHANGES then
-						local changeFraction = nameplate.changeFraction
-						nameplate.changePiece:SetScale(
-							Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH * math.abs(nameplate.changeFraction), HEALTHBAR_HEIGHT)
-						)
+						-- Set size and position of change piece
+						if ANIMATE_CHANGES then
+							local changeFraction = nameplate.changeFraction
+							nameplate.changePiece:SetScale(
+								Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH * math.abs(nameplate.changeFraction), HEALTHBAR_HEIGHT)
+							)
 
-						if changeFraction == 0.0 then
-							nameplate.changePiece.visibility = Visibility.FORCE_OFF
-						else
-							nameplate.changePiece.visibility = Visibility.INHERIT
+							if changeFraction == 0.0 then
+								nameplate.changePiece.visibility = Visibility.FORCE_OFF
+							else
+								nameplate.changePiece.visibility = Visibility.INHERIT
 
-							if changeFraction > 0.0 then -- Player took damage
-								local changePieceOffset =
-									50.0 * HEALTHBAR_WIDTH * (1.0 - changeFraction) - 100.0 * HEALTHBAR_WIDTH * healthFraction
-								nameplate.changePiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, changePieceOffset, 0.0))
-								nameplate.changePiece:SetColor(DAMAGE_CHANGE_COLOR)
-							else -- Player was healed
-								visibleHealthFraction = visibleHealthFraction + changeFraction
-								local changePieceOffset =
-									50.0 * HEALTHBAR_WIDTH * (1.0 + changeFraction) - 100.0 * HEALTHBAR_WIDTH * visibleHealthFraction
-								nameplate.changePiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, changePieceOffset, 0.0))
-								nameplate.changePiece:SetColor(HEAL_CHANGE_COLOR)
+								if changeFraction > 0.0 then -- Player took damage
+									local changePieceOffset =
+										50.0 * HEALTHBAR_WIDTH * (1.0 - changeFraction) - 100.0 * HEALTHBAR_WIDTH * healthFraction
+									nameplate.changePiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, changePieceOffset, 0.0))
+									nameplate.changePiece:SetColor(DAMAGE_CHANGE_COLOR)
+								else -- Player was healed
+									visibleHealthFraction = visibleHealthFraction + changeFraction
+									local changePieceOffset =
+										50.0 * HEALTHBAR_WIDTH * (1.0 + changeFraction) - 100.0 * HEALTHBAR_WIDTH * visibleHealthFraction
+									nameplate.changePiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, changePieceOffset, 0.0))
+									nameplate.changePiece:SetColor(HEAL_CHANGE_COLOR)
+								end
 							end
+						end
+
+						-- Set size and position of health bar
+						local healthPieceOffset = 50.0 * HEALTHBAR_WIDTH * (1.0 - visibleHealthFraction)
+						nameplate.healthPiece:SetScale(
+							Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH * visibleHealthFraction, HEALTHBAR_HEIGHT)
+						)
+						nameplate.healthPiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, healthPieceOffset, 0.0))
+
+						-- Update hit point number
+						if SHOW_NUMBERS then
+							nameplate.healthText.text = string.format("%.0f / %.0f", player.hitPoints, player.maxHitPoints)
 						end
 					end
 
-					-- Set size and position of health bar
-					local healthPieceOffset = 50.0 * HEALTHBAR_WIDTH * (1.0 - visibleHealthFraction)
-					nameplate.healthPiece:SetScale(
-						Vector3.New(NAMEPLATE_LAYER_THICKNESS, HEALTHBAR_WIDTH * visibleHealthFraction, HEALTHBAR_HEIGHT)
-					)
-					nameplate.healthPiece:SetPosition(Vector3.New(-2.0 * NAMEPLATE_LAYER_THICKNESS, healthPieceOffset, 0.0))
-
-					-- Update hit point number
-					if SHOW_NUMBERS then
-						nameplate.healthText.text = string.format("%.0f / %.0f", player.hitPoints, player.maxHitPoints)
+					-- Update name and health color based on teams
+					if SHOW_NAMES then
+						nameplate.nameText:SetColor(_G.TeamColors[player.team])
+						nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 					end
-				end
-
-				-- Update name and health color based on teams
-				if SHOW_NAMES then
-					nameplate.nameText:SetColor(_G.TeamColors[player.team])
-					nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 				end
 			end
 		end
@@ -403,4 +410,4 @@ end
 -- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
---Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("GameStateChanged", OnGameStateChanged)
