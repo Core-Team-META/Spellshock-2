@@ -1,8 +1,6 @@
 ﻿-- Internal custom properties --
 local ABCP = require(script:GetCustomProperty("ABCP"))
 local AS = require(script:GetCustomProperty("AS"))
-local AML = require(script:GetCustomProperty("AML"))
-local ABGS = require(script:GetCustomProperty("ABGS"))
 
 --local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
@@ -11,6 +9,8 @@ local BASE_INDICATOR = script:GetCustomProperty("BaseIndicator")
 local RESPAWN_TIMER_PANEL = script:GetCustomProperty("RespawnTimerPanel"):WaitForObject()
 local TIMER = RESPAWN_TIMER_PANEL:GetCustomProperty("Timer"):WaitForObject()
 local TimerTickSFX = script:GetCustomProperty("TimerTickSFX"):WaitForObject()
+local DynamicCapturePoints = script:GetCustomProperty("DynamicCapturePoints"):WaitForObject()
+local BaseLocations = script:GetCustomProperty("BaseLocations"):WaitForObject()
 
 while not _G.CurrentMenu do Task.Wait() end
 
@@ -29,10 +29,9 @@ local PreviousSecond = 0
 local CurrentButton = nil
 local BaseButton = nil
 
-local Orc_Alt_Bases = {[1]=true, [4]=true}
-local Elf_Alt_Bases = {[2]=true, [5]=true}
-local Alt_Bases = {Orc_Alt_Bases, Elf_Alt_Bases}
+local Alt_Bases = {1, 5}
 local BASE_BUTTONS = {}
+local ALT_BASE_POSITION
 --RESPAWN_TIMER_PANEL.visibility = Visibility.FORCE_OFF
 
 -- Wait for team colors
@@ -99,54 +98,36 @@ function OnButtonPressed(thisButton)
 	selectedIcon.visibility = Visibility.INHERIT
 end
 
+function OnRoundStart()
+	Task.Wait(1)
+	local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
+	local capturePointState = ABCP.GetCapturePointState(Alt_Bases[LOCAL_PLAYER.team])
+
+	if scoreLimit == 300 then
+		ALT_BASE_POSITION = capturePointState.worldPosition
+		BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
+		BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
+	end
+end
+
 function OnRoundEnd()
-    if #BASE_BUTTONS >= 2 then
-		BASE_BUTTONS[1].clientUserData.stateID = nil
-		BASE_BUTTONS[2].clientUserData.stateID = nil
-	end
+	ALT_BASE_POSITION = nil
+	BASE_BUTTONS[1].clientUserData.stateID = nil
+	BASE_BUTTONS[2].clientUserData.stateID = nil
 end
 
--- bool CompareStates(table, table)
--- Helpers to sort capture point states by their order property
-function CompareStates(state1, state2)
-	return state1.order < state2.order
-end
-
--- nil Tick(float)
--- Updates the state, position and count of capture point indicators
-function Tick(DeltaTime)	
-	-- Add indicators for new points
-	local capturePointIds = ABCP.GetCapturePoints()
-	for _, id in pairs(capturePointIds) do
-		if not indicators[id] then
-			indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = PANEL})
-			local iconButton = indicators[id]:GetCustomProperty("IconButton"):WaitForObject()
-			local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()
-			selectedIcon.visibility = Visibility.FORCE_OFF
-			iconButton.clientUserData.stateID = id
-			iconButton.pressedEvent:Connect(OnButtonPressed)
-		end
-	end
-
+function UpdateCapturePointIndicators()
 	-- Get states and sort by order
 	local capturePointStates = {}
+	local capturePointIds = ABCP.GetCapturePoints()
 	for _, id in pairs(capturePointIds) do
 		table.insert(capturePointStates, ABCP.GetCapturePointState(id))
 	end
 
-	table.sort(capturePointStates, CompareStates)
+	--table.sort(capturePointStates, CompareStates)
 
-	local altBasePosition = nil
 	-- Update indicators
 	for i, capturePointState in pairs(capturePointStates) do
-		if #BASE_BUTTONS >= 2 and not capturePointState.isEnabled and ABGS.IsGameStateManagerRegistered() and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
-			if Alt_Bases[LOCAL_PLAYER.team][capturePointState.id] then
-				altBasePosition = capturePointState.worldPosition
-				BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
-				BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
-			end
-		end
-		
 		local indicator = indicators[capturePointState.id]
 		local iconImage = indicator:GetCustomProperty("IconImage"):WaitForObject()
 		local iconBackground = indicator:GetCustomProperty("IconBackground"):WaitForObject()
@@ -176,10 +157,6 @@ function Tick(DeltaTime)
 				indicator.visibility = Visibility.INHERIT
 			else
 				indicator.visibility = Visibility.FORCE_OFF
-				--[[iconImage.isTeamColorUsed = false
-				iconBackground.isTeamColorUsed = false
-				iconImage:SetColor(DISABLED_COLOR)
-				iconBackground:SetColor(DISABLED_COLOR)]]
 			end
 		end
 
@@ -201,63 +178,49 @@ function Tick(DeltaTime)
     	indicator.x = screenPos.x
 		indicator.y = screenPos.y
 	end
-	
+end
+
+function UpdateBaseIndicators()
 	-- Update base indicators
-	for _, locationTable in ipairs(AML.GetMapLocations()) do
-		-- Add base indicators
-        if not baseIndicators[locationTable.root] and locationTable.team ~= 0 then
-            baseIndicators[locationTable.root] = World.SpawnAsset(BASE_INDICATOR, {parent = PANEL})
-            local iconButton = baseIndicators[locationTable.root]:GetCustomProperty("IconButton"):WaitForObject()
-			local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()
-			local iconImage = baseIndicators[locationTable.root]:GetCustomProperty("IconImage"):WaitForObject()
-			local iconBackground = baseIndicators[locationTable.root]:GetCustomProperty("IconBackground"):WaitForObject()
-			
-			selectedIcon.visibility = Visibility.FORCE_OFF
-			iconImage:SetColor(_G.TeamColors[locationTable.team])
-			iconBackground:SetColor(_G.TeamColors[locationTable.team])
-			selectedIcon:SetColor(_G.TeamColors[locationTable.team])
-			
-			iconButton.pressedEvent:Connect(OnButtonPressed)
-			table.insert(BASE_BUTTONS, iconButton)
-        end
-        
-        if locationTable.team ~= 0 then
-        	local baseIndicator = baseIndicators[locationTable.root]
-        	
-        	-- Set visibility
-        	if locationTable.team == LOCAL_PLAYER.team then
-        		baseIndicator.visibility = Visibility.INHERIT
-        		local iconButton = baseIndicator:GetCustomProperty("IconButton"):WaitForObject()
-        		if BaseButton ~= iconButton then
-        			BaseButton = iconButton
-        			OnButtonPressed(BaseButton)
-        		end
-        	else
-        		baseIndicator.visibility = Visibility.FORCE_OFF
-        	end
-        	
-        	-- Set position	
-			local screenPos 
-			if altBasePosition then
-				screenPos = UI.GetScreenPosition(altBasePosition)
-			else
-				screenPos = UI.GetScreenPosition(locationTable.root:GetWorldPosition())
+	for i, baseIndicator in ipairs(baseIndicators) do
+		-- Set visibility
+		if i == LOCAL_PLAYER.team then
+			baseIndicator.visibility = Visibility.INHERIT
+			local iconButton = baseIndicator:GetCustomProperty("IconButton"):WaitForObject()
+			if BaseButton ~= iconButton then
+				BaseButton = iconButton
+				OnButtonPressed(BaseButton)
 			end
+		else
+			baseIndicator.visibility = Visibility.FORCE_OFF
+		end
+		
+		-- Set position	
+		local screenPos 
+		if ALT_BASE_POSITION then
+			screenPos = UI.GetScreenPosition(ALT_BASE_POSITION)
+		else
+			screenPos = UI.GetScreenPosition(baseIndicator.clientUserData.worldPosition)
+		end
 
-
-	    	if not screenPos then
-	    		return
-	    	end
-	    	baseIndicator.x = screenPos.x
-			baseIndicator.y = screenPos.y
-	    end
+		if not screenPos then
+			return
+		end
+		baseIndicator.x = screenPos.x
+		baseIndicator.y = screenPos.y
     end
+end
 
+-- nil Tick(float)
+-- Updates the state, position and count of capture point indicators
+function Tick(DeltaTime)	
 	if not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() then
 		RespawnTimer = -1 -- disable timer
 	end
 	
 	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
+		UpdateCapturePointIndicators()
+		UpdateBaseIndicators()
 		PANEL.visibility = Visibility.INHERIT
 		
 		if (AS.IsRespawning() or AS.IsJoiningMidgame()) and RespawnTimer == -1 then
@@ -288,4 +251,51 @@ function Tick(DeltaTime)
 	end
 end
 
+-- Add base indicators
+for i, baseLocation in ipairs(BaseLocations:GetChildren()) do
+	baseIndicators[i] = World.SpawnAsset(BASE_INDICATOR, {parent = PANEL})
+	local iconButton = baseIndicators[i]:GetCustomProperty("IconButton"):WaitForObject()
+	local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()
+	local iconImage = baseIndicators[i]:GetCustomProperty("IconImage"):WaitForObject()
+	local iconBackground = baseIndicators[i]:GetCustomProperty("IconBackground"):WaitForObject()
+	
+	baseIndicators[i].clientUserData.worldPosition = baseLocation:GetWorldPosition()
+
+	selectedIcon.visibility = Visibility.FORCE_OFF
+	iconImage:SetColor(_G.TeamColors[i])
+	iconBackground:SetColor(_G.TeamColors[i])
+	selectedIcon:SetColor(_G.TeamColors[i])
+	
+	iconButton.pressedEvent:Connect(OnButtonPressed)
+	BASE_BUTTONS[i] = iconButton
+end
+
+-- Add indicators for new points
+local capturePointIds = ABCP.GetCapturePoints()
+while #capturePointIds < 5 do -- wait for all CPs to be registered
+	Task.Wait()
+	capturePointIds = ABCP.GetCapturePoints()
+end
+
+for _, id in pairs(capturePointIds) do
+	if not indicators[id] then
+		indicators[id] = World.SpawnAsset(INDICATOR_COMPONENT, {position = Vector3.ZERO, parent = PANEL})
+		local iconButton = indicators[id]:GetCustomProperty("IconButton"):WaitForObject()
+		local selectedIcon = iconButton:GetCustomProperty("SelectedIcon"):WaitForObject()
+		selectedIcon.visibility = Visibility.FORCE_OFF
+		iconButton.clientUserData.stateID = id
+		iconButton.pressedEvent:Connect(OnButtonPressed)
+	end
+end
+
+local scoreLimit = DynamicCapturePoints:GetCustomProperty("ScoreLimit")
+local capturePointState = ABCP.GetCapturePointState(Alt_Bases[LOCAL_PLAYER.team])
+
+if scoreLimit == 300 then
+	ALT_BASE_POSITION = capturePointState.worldPosition
+	BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
+	BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
+end
+
+Game.roundStartEvent:Connect(OnRoundStart)
 Game.roundEndEvent:Connect(OnRoundEnd)
