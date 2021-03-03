@@ -38,7 +38,7 @@ local bindingReleasedEvent
 
 local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
 local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
-local HOLD_LIMIT = 2
+local HOLD_LIMIT = EQUIPMENT:GetCustomProperty("HoldLimit")
 local isCharging = 0 -- 0: not charging  1: charging  2: full charge
 local chargeStart = 1 
 local holdTimer = 0
@@ -63,18 +63,21 @@ function Tick(deltaTime)
 		end
 	end
 
-	if isCharging == 1 and time() - chargeStart > MIN_CHARGE then		
-		local scale = (time() - chargeStart) + 3.5
-		scale = CoreMath.Clamp(scale, 3.5, 4.5)
-		HitBoxTrigger:SetWorldScale(Vector3.New(scale))
+	if isCharging == 1 then
+		if time() - chargeStart > MIN_CHARGE then
+			local scale = (time() - chargeStart) + 3.5
+			scale = CoreMath.Clamp(scale, 3.5, 5)
+			HitBoxTrigger:SetWorldScale(Vector3.New(scale))
+		end
+		if time() - chargeStart > MAX_CHARGE then
+			isCharging = 2
+		end
 	elseif isCharging == 2 then
 		holdTimer = holdTimer + deltaTime
 		if holdTimer > HOLD_LIMIT then
 			isCharging = 0
 			ABILITY:AdvancePhase()
 		end
-	elseif Object.IsValid(ChargePanel) then
-		ChargePanel.visibility = Visibility.FORCE_OFF
 	end
 end
 
@@ -113,8 +116,6 @@ function MeleeAttack(other)
 				dmgMultiplier = CoreMath.Clamp(dmgMultiplier, 1, 2)
 			end
 		end
-
-		print("Multiplier: "..tostring(dmgMultiplier))
 
 		local dmg = Damage.New()
 		local rangeTable = META_AP().GetAbilityMod(ABILITY.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, ABILITY.name..": Damage Range")
@@ -183,6 +184,10 @@ end
 function OnInterrupted()
 	isCharging = 0
 	HitBoxTrigger:SetWorldScale(hitBoxScale)
+	if bindingReleasedEvent then
+		bindingReleasedEvent:Disconnect()
+		bindingReleasedEvent = nil
+	end
 end
 
 function OnCast(thisAbility)
@@ -201,12 +206,14 @@ function OnExecute(ability)
 	ability.owner:AddImpulse(Vector3.New(v.x * ATTACK_IMPULSE, v.y * ATTACK_IMPULSE, VERTICAL_IMPULSE))
 end
 
+-- Fired on Recovery and Unequip
 function ResetMelee(ability)
 	-- Forget anything we hit this swing
 	ignoreList = {}
 	canAttack = false
 	if bindingReleasedEvent then
 		bindingReleasedEvent:Disconnect()
+		bindingReleasedEvent = nil
 	end
 
 	if IS_CHARGE_ATTACK then

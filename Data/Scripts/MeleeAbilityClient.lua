@@ -113,30 +113,42 @@ function Tick()
 		UpdateSwipeCalibration()
 	end
 
-	if LOCAL_PLAYER == EQUIPMENT.owner and isCharging > 0 and Object.IsValid(ChargePanel) and time() - chargeStart > MIN_CHARGE then
-		local chargeText = ChargeBar.clientUserData.text
-		ChargePanel.visibility = Visibility.INHERIT
-		
+	if isCharging > 0 and time() - chargeStart > MIN_CHARGE then
 		local chargeAmount = time() - chargeStart
-		ChargeBar.progress = chargeAmount / MAX_CHARGE
+		
+		if LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
+			local chargeText = ChargeBar.clientUserData.text
+			ChargePanel.visibility = Visibility.INHERIT
+			ChargeBar.progress = chargeAmount / MAX_CHARGE
 
-		if not ChargeupSFX.isPlaying and isCharging == 1 then
-			ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
-			ChargeupVFX:Play()
-			ChargeupSFX:Play()
-			ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
-			chargeText.text = "Charging..."
-		end
+			if not ChargeupSFX.isPlaying and isCharging == 1 then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
+				ChargeupVFX:Play()
+				ChargeupSFX:Play()
+				ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
+				chargeText.text = "Charging..."
+			end
 
-		ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
+			ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
 
-		if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
-			ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
-			ChargeupSFX:Stop()
-			World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
-			ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
-			chargeText.text = "Ready!"
-			isCharging = 2
+			if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
+				ChargeupSFX:Stop()
+				World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
+				ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
+				chargeText.text = "Ready!"
+				isCharging = 2
+			end
+		else
+			if isCharging == 1 then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
+				ChargeupVFX:Play()
+
+				if chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+					ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
+					isCharging = 2
+				end
+			end
 		end
 	elseif Object.IsValid(ChargePanel) then
 		ChargePanel.visibility = Visibility.FORCE_OFF

@@ -2281,6 +2281,10 @@ Assets {
             Float: 1.5
           }
           Overrides {
+            Name: "cs:HoldLimit"
+            Float: 2
+          }
+          Overrides {
             Name: "cs:HitBox"
             ObjectReference {
               SubObjectId: 793349449599853437
