@@ -34,7 +34,8 @@ end
 --@param object player
 --@return bool
 local function IsTeamWinner(player)
-    local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
+    return true
+    --[[local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
     local elfScore = Game.GetTeamScore(CONST.TEAM.ELF)
     if orcScore > elfScore and player.team == CONST.TEAM.ORC then
         return true
@@ -42,7 +43,7 @@ local function IsTeamWinner(player)
         return true
     else
         return false
-    end
+    end --]]
 end
 
 --@param object player
@@ -82,7 +83,7 @@ local function GetPlayerRewards(player)
         --Random to determine slot 3 reward
         local random = math.random(1, 100)
         --90% chance to be a random class bind shards
-        if random >= 10 then
+        if random >= 90 then -- #FIXME 10 
             tempTable[3] = {
                 [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
 
@@ -131,7 +132,7 @@ function OnGameStateChanged(object, string)
         if state == GAME_STATE_API.GAME_STATE_REWARDS then
             CalculateRewards()
         end
-        if state == GAME_STATE_API.GAME_STATE_LOBBY then
+        if state == GAME_STATE_API.GAME_STATE_REWARDS_END then
             GivePlayerRewards()
         end
     end

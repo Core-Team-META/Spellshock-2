@@ -17,6 +17,7 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("Networking"):WaitForObject()
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
+local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
 local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
@@ -46,7 +47,7 @@ local npcTriggers = {}
 local spamPrevent
 local refreshTime, refreshCount
 local closeButtonLisener = nil
-local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
+local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------

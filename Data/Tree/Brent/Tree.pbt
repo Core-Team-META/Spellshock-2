@@ -28,7 +28,7 @@ Objects {
 }
 Objects {
   Id: 4197521803680757974
-  Name: "EndScreen UI (Reward & Match)"
+  Name: "Round Evaluations"
   Transform {
     Location {
     }
@@ -361,32 +361,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Chat Hook Commands"
-  }
-}
-Objects {
-  Id: 15766608560554198711
-  Name: "RewardSystem"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "RewardSystem"
   }
 }
 Objects {

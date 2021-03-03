@@ -244,7 +244,7 @@ Objects {
     Overrides {
       Name: "cs:Reward_Icons"
       ObjectReference {
-        SelfId: 12153954283957030340
+        SelfId: 14843588929187107669
       }
     }
     Overrides {
@@ -353,6 +353,12 @@ Objects {
       Name: "cs:REFRESH_IN_TEXT_SHADOW"
       ObjectReference {
         SelfId: 17225828781020951356
+      }
+    }
+    Overrides {
+      Name: "cs:ClassMenuData"
+      ObjectReference {
+        SelfId: 14151859424388630810
       }
     }
   }

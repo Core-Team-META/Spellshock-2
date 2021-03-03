@@ -301,25 +301,32 @@ end
 
 --@param object list => VFX object
 --@return table cosmeticTable
-function API.BuildRewardsTable(list)
+function API.BuildRewardsTable(list, classData)
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
         local id = rewardType:GetCustomProperty("ID")
-        if id == CONST.REWARDS.SHARDS then
-            tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
-            for classId, class in ipairs(rewardType:GetChildren()) do
-                tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
-                for _, bind in ipairs(class:GetChildren()) do
-                    tempTable[CONST.REWARDS.SHARDS][classId] =
-                        GetRewardInfo(tempTable[CONST.REWARDS.SHARDS][classId], bind)
-                end
-            end
-        elseif id == CONST.REWARDS.GOLD then
+        if id == CONST.REWARDS.GOLD then
             tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
             tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
         elseif id == CONST.REWARDS.COSMETIC then
             tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
             tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
+        end
+    end
+
+    if classData then
+        tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
+        for _, class in ipairs(classData:GetChildren()) do
+            local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
+            tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
+            for _, bind in ipairs(class:GetChildren()) do 
+                local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
+                local icon = bind:GetCustomProperty("Icon")
+
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
+            end
         end
     end
     return tempTable

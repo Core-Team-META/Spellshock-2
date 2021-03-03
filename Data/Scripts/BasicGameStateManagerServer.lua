@@ -82,6 +82,9 @@ function SetGameState(newState)
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
 		stateDuration = 15
+	elseif newState == ABGS.GAME_STATE_REWARDS_END then
+		stateHasduration = true
+		stateDuration = 10
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -91,8 +94,7 @@ function SetGameState(newState)
 		stateEndTime = time() + stateDuration
 	end
 
-	local oldState = GetGameState()
-
+	local oldState = GetGameState() 
 	-- Broadcast built-in round events
 	if oldState ~= ABGS.GAME_STATE_ROUND and newState == ABGS.GAME_STATE_ROUND then
 		Game.StartRound()
@@ -140,6 +142,8 @@ function Tick(deltaTime)
 		elseif previousState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 			nextState = ABGS.GAME_STATE_REWARDS
 		elseif previousState == ABGS.GAME_STATE_REWARDS then
+			nextState = ABGS.GAME_STATE_REWARDS_END
+		elseif previousState == ABGS.GAME_STATE_REWARDS_END then
 			nextState = ABGS.GAME_STATE_LOBBY
 		end
 
