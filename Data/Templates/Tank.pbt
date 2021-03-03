@@ -48,14 +48,6 @@ Assets {
             Name: "cs:AnimationStance"
             String: "1hand_melee_stance"
           }
-          Overrides {
-            Name: "cs:E_isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:E_isPreviewing:isrep"
-            Bool: true
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
