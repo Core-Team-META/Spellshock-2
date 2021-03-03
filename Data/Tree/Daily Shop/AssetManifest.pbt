@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16759978556497479664
+  Name: "Center Arrow 005 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_005Wedge"
+  }
+}
+Assets {
   Id: 16469333663941198075
   Name: "Fantasy Book 003"
   PlatformAssetType: 9
@@ -80,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12804716500201279526
+  Name: "BG Highlighted 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_020"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9
@@ -104,6 +122,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
+  }
+}
+Assets {
+  Id: 11538694490835792735
+  Name: "Fantasy Ability Green 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Green_016"
   }
 }
 Assets {
@@ -194,6 +221,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
+  }
+}
+Assets {
+  Id: 4727080213227783003
+  Name: "Fantasy Craft Crystal 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Crystal_007"
   }
 }
 Assets {

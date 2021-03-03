@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15165554833363844727
+  Name: "Amarante"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "AmaranteRegular_ref"
+  }
+}
+Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -131,6 +140,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFi_Frame_006"
+  }
+}
+Assets {
+  Id: 8277338959376334210
+  Name: "Frame Outline Thin 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_025"
   }
 }
 Assets {
@@ -266,6 +284,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
+  Id: 73478753972977788
+  Name: "BG Flat 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_25"
   }
 }
 Assets {
