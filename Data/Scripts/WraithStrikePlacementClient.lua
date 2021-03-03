@@ -91,6 +91,18 @@ function OnBindingPressed(player, binding)
 	end
 end
 
+function OnSpecialAbilityCast(thisAbility)
+	-- Get the target data, to modify it before it's sent over the network
+	local targetData = thisAbility:GetTargetData()
+	-- Position
+	targetData:SetHitPosition(lastValidPlacement.position)
+	-- Rotation
+	local r = lastValidPlacement.rotation
+	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))
+	-- Set the target data back
+	thisAbility:SetTargetData(targetData)
+end
+
 function OnSpecialAbilityExecute(thisAbility)
 	--[[if objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
@@ -106,14 +118,15 @@ function OnSpecialAbilityExecute(thisAbility)
 	isPreviewing = false
 
 	-- Destroy hologram
-	AllHalograms[objectHalogram.id] = nil
-	objectHalogram:Destroy()
-	objectHalogram = nil
-
-	while Events.BroadcastToServer(EventName, lastValidPlacement.position, lastValidPlacement.rotation) ==
-		BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
-		Task.Wait()
+	if objectHalogram then
+		AllHalograms[objectHalogram.id] = nil
+		objectHalogram:Destroy()
+		objectHalogram = nil
 	end
+	--while Events.BroadcastToServer(EventName, lastValidPlacement.position, lastValidPlacement.rotation) ==
+	--	BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
+	--	Task.Wait()
+	--end
 
 	-- Activate duration bar UI if DurationMod was set
 	if DurationMod then
@@ -133,6 +146,7 @@ function OnEquip(equipment, player)
 	if not PreviewObjectTemplate then
 		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
 	end
+	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
 end

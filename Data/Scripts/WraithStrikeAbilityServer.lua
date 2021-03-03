@@ -31,6 +31,7 @@ local isFlying = false
 local isEnabled = true
 local PlayerVFX = nil
 local OWNER = nil
+local goingIntoShortCooldown = false
 
 local CancelBindings = {
 	ability_extra_20 = true,
@@ -47,7 +48,8 @@ end
 
 function OnBindingPressed(player, binding)
 	if isEnabled and not isExecuting and not player.isDead then
-		if binding == AbilityBinding and not isPreviewing and player.isGrounded and META_AP().AbilitySpamPreventer() then
+		if binding == AbilityBinding and not isPreviewing and player.isGrounded and META_AP().AbilitySpamPreventer() 
+		and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
             --Disable active abilities
 			ActiveAbilities = {}
 			for _, playerAbility in pairs(player:GetAbilities()) do
@@ -92,6 +94,7 @@ function OnBindingPressed(player, binding)
 end
 
 function OnSpecialAbilityCast(thisAbility)
+	if goingIntoShortCooldown then return end
 	if isPreviewing == false or isExecuting then
 		--print("INTERRUPTING")
 		SpecialAbility:Interrupt()
@@ -104,7 +107,16 @@ function OnSpecialAbilityReady(thisAbility)
 	isExecuting = false
 end
 
-function OnTargetChosen(player, targetPos)
+function OnTargetChosen(thisAbility)
+	if goingIntoShortCooldown then return end
+	
+	local player = thisAbility.owner
+	
+	if not Object.IsValid(player) then return end
+		
+	local targetData = thisAbility:GetTargetData()
+	local position = targetData:GetHitPosition()
+	
 	if player == Equipment.owner then
 		--Task.Wait()
         if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
@@ -112,7 +124,7 @@ function OnTargetChosen(player, targetPos)
             return
 		end
 
-		print("Wraith Strike ACTIVATE")
+		--print("Wraith Strike ACTIVATE")
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		
@@ -120,11 +132,11 @@ function OnTargetChosen(player, targetPos)
 		local playerPos = player:GetWorldPosition()
 
         local launchSpeed = 10000
-		local distanceVector = (targetPos - playerPos) 
+		local distanceVector = (position - playerPos)
         local launchVector = distanceVector / distanceVector.size
         launchVector = launchVector * launchSpeed --1000000
         local launchTimer = (distanceVector.size / launchSpeed) + time() + 0.5
-        --CoreDebug.DrawLine(playerPos, targetPos, {duration = 5})
+        --CoreDebug.DrawLine(playerPos, position, {duration = 5})
 
 		--print(launchVector)
 		player.serverUserData.immuneToFallDamage = true
@@ -140,14 +152,15 @@ function OnTargetChosen(player, targetPos)
         Task.Wait()
         
 		player:SetVelocity(launchVector)
-        print("LAUNCH: "..tostring(player.isGrounded))
+        --print("LAUNCH: "..tostring(player.isGrounded))
 
         -- Wait until the player hits the ground or dies or the launchTimer runs out
 		while (player.isGrounded == false) and player.isDead == false and time() < launchTimer do --and reachedMaxTime == false --and player.isDead == false
-            print("waiting")
+            --print("waiting")
             Task.Wait()
+			if not Object.IsValid(player) then return end
 		end
-
+		
         -- Grounded
         player:ResetVelocity()
         player.movementControlMode = MovementControlMode.LOOK_RELATIVE
@@ -155,7 +168,7 @@ function OnTargetChosen(player, targetPos)
 		isFlying = false
         player.serverUserData.immuneToFallDamage = false
 
-        print("Grounded")
+        --print("Grounded")
         -- reactive other abilities
 		for _, playerAbility in pairs(ActiveAbilities) do
 			playerAbility.isEnabled = true
@@ -165,12 +178,12 @@ function OnTargetChosen(player, targetPos)
         if not player.isDead then
             META_AP().SpawnAsset(PlayerVFX.Impact, {position = player:GetWorldPosition() - Vector3.UP * 50})
             DamageInArea()
-            print("Finished damage")
+            --print("Finished damage")
         end
 
 		Task.Wait()
         SpecialAbility.isEnabled = false
-        print("Wraith Strike Finished\n")
+        --print("Wraith Strike Finished\n")
 	end
 end
 
@@ -235,6 +248,7 @@ function DisableFlying()
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		SpecialAbility.isEnabled = false
+		GoOnShortCooldown()
 	end
 
 	for _, playerAbility in pairs(ActiveAbilities) do
@@ -245,8 +259,30 @@ function DisableFlying()
 	ActiveAbilities = {}
 end
 
+function GoOnShortCooldown()
+	goingIntoShortCooldown = true
+	while SpecialAbility:GetCurrentPhase() ~= AbilityPhase.COOLDOWN do
+		if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+			SpecialAbility:Activate()
+			Task.Wait()
+		end
+		SpecialAbility:AdvancePhase()
+	end
+	goingIntoShortCooldown = false
+end
+
+function SetCooldownOverride(value)
+	SpecialAbility:SetNetworkedCustomProperty("CooldownOverride", value)
+end
+
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 60, thisAbility.name .. ": Cooldown")
+	
+	if goingIntoShortCooldown then
+		Cooldown = Cooldown / 3
+	end
+	SetCooldownOverride(Cooldown)
+	
 	Task.Spawn(
 		function()
 			if Object.IsValid(thisAbility) then
@@ -280,6 +316,7 @@ function OnAbilityToggled(thisAbility, mode)
 	if thisAbility.id == SpecialAbility.id or thisAbility == "ALL" then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
+		GoOnShortCooldown()
 		SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility.id == SpecialAbility.id then
@@ -298,7 +335,7 @@ function OnEquip(equipment, player)
 	isExecuting = false
 	SetNetworkProperty(isPreviewing)
 
-	table.insert(EventListeners, Events.ConnectForPlayer(EventName, OnTargetChosen))
+	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnTargetChosen))
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.readyEvent:Connect(OnSpecialAbilityReady))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown))
