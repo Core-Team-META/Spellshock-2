@@ -34,8 +34,8 @@ end
 --@param object player
 --@return bool
 local function IsTeamWinner(player)
-    return true
-    --[[local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
+    --return true
+    local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
     local elfScore = Game.GetTeamScore(CONST.TEAM.ELF)
     if orcScore > elfScore and player.team == CONST.TEAM.ORC then
         return true
@@ -83,7 +83,7 @@ local function GetPlayerRewards(player)
         --Random to determine slot 3 reward
         local random = math.random(1, 100)
         --90% chance to be a random class bind shards
-        if random >= 90 then -- #FIXME 10 
+        if random >= 10 then -- #FIXME 10 
             tempTable[3] = {
                 [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
 

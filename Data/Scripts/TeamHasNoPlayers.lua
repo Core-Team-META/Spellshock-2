@@ -19,6 +19,8 @@ end
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
+-- #TODO Remove everthing below this line
+
 function OnBindingPressed(whichPlayer, binding)
 	if (binding == "ability_extra_0") then 
         ABGS.SetGameState(ABGS.GAME_STATE_REWARDS)
