@@ -1,13 +1,13 @@
 Assets {
-  Id: 10354475835429315773
-  Name: "Mace And Shield Swipe Effect Half Circle"
+  Id: 8798478507278226874
+  Name: "Mace And Shield Swipe Effect Charge Full"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15091078494902121850
+      RootId: 3544921944241795140
       Objects {
-        Id: 15091078494902121850
-        Name: "Mace And Shield Swipe Effect Half Circle"
+        Id: 3544921944241795140
+        Name: "Mace And Shield Swipe Effect Charge Full"
         Transform {
           Scale {
             X: 1
@@ -16,9 +16,10 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 6957492376920746330
-        ChildIds: 2835619420751485310
-        ChildIds: 18038901244023329432
+        ChildIds: 6984579495654318320
+        ChildIds: 15215786438479687910
+        ChildIds: 27628962476274812
+        ChildIds: 5630081238220319931
         UnregisteredParameters {
         }
         Lifespan: 3
@@ -33,13 +34,13 @@ Assets {
         }
       }
       Objects {
-        Id: 6957492376920746330
-        Name: "Sword Swipe Half Circle VFX"
+        Id: 6984579495654318320
+        Name: "Sword Swipe Full Circle"
         Transform {
           Location {
           }
           Rotation {
-            Roll: -179.999939
+            Roll: -180
           }
           Scale {
             X: 1
@@ -47,41 +48,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15091078494902121850
+        ParentId: 3544921944241795140
         UnregisteredParameters {
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Color"
             Color {
-              R: 0.761000216
-              G: 1
-              B: 2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              R: 1
-              G: 0.920529842
-              B: 0.52
+              R: 2
+              G: 0.999999642
+              B: 0.2
               A: 1
             }
           }
           Overrides {
             Name: "bp:Size"
             Vector {
-              X: 3.5
-              Y: 3.5
+              X: 5.6
+              Y: 5.6
               Z: 1
             }
           }
           Overrides {
-            Name: "bp:Life"
-            Float: 0.35
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 6
+            Name: "bp:Edge Color"
+            Color {
+              G: 0.0292714965
+              B: 0.13
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -92,24 +84,26 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 860140904207434054
+            Id: 9938032908948478830
+          }
+          TeamSettings {
           }
           Vfx {
             AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:high"
+              Value: "mc:evfxrelevance:medium"
             }
           }
         }
       }
       Objects {
-        Id: 2835619420751485310
-        Name: "Sword Swipe Half Circle VFX"
+        Id: 15215786438479687910
+        Name: "Sword Swipe Full Circle"
         Transform {
           Location {
           }
           Rotation {
-            Roll: -179.999939
+            Roll: -180
           }
           Scale {
             X: 1
@@ -117,41 +111,36 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15091078494902121850
+        ParentId: 3544921944241795140
         UnregisteredParameters {
           Overrides {
-            Name: "bp:color"
+            Name: "bp:Color"
             Color {
-              R: 0.614583313
-              G: 0.525041461
-              B: 0.479374975
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Edge Color"
-            Color {
-              R: 1
-              G: 0.627019882
-              B: 0.36
+              R: 2
+              G: 0.999999642
+              B: 0.2
               A: 1
             }
           }
           Overrides {
             Name: "bp:Size"
             Vector {
-              X: 4.2
-              Y: 4.2
+              X: 4.7
+              Y: 4.7
               Z: 1
             }
           }
           Overrides {
-            Name: "bp:Life"
-            Float: 0.28
+            Name: "bp:Emissive Boost"
+            Float: 25
           }
           Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 1
+            Name: "bp:Edge Color"
+            Color {
+              G: 0.0292714965
+              B: 0.13
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -162,17 +151,20 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 860140904207434054
+            Id: 9938032908948478830
+          }
+          TeamSettings {
           }
           Vfx {
+            AutoPlay: true
             Relevance {
-              Value: "mc:evfxrelevance:high"
+              Value: "mc:evfxrelevance:medium"
             }
           }
         }
       }
       Objects {
-        Id: 18038901244023329432
+        Id: 27628962476274812
         Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
         Transform {
           Location {
@@ -185,7 +177,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15091078494902121850
+        ParentId: 3544921944241795140
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
@@ -217,14 +209,48 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 5630081238220319931
+        Name: "Flamethrower Activate Firing 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3544921944241795140
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 16400484220542877853
+          }
+          AutoPlay: true
+          Transient: true
+          Volume: 1.2
+          Falloff: 4000
+          Radius: 1200
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
-      Id: 860140904207434054
-      Name: "Sword Swipe Half Circle"
+      Id: 9938032908948478830
+      Name: "Sword Swipe Full Circle"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_sword_swipe_01"
+        AssetId: "fxbp_sword_swipe_02"
       }
     }
     Assets {
@@ -234,6 +260,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
         AssetId: "sfxabp_melee_air_swooshes_ref"
+      }
+    }
+    Assets {
+      Id: 16400484220542877853
+      Name: "Flamethrower Activate Firing 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_flamethrower_activate_01_Cue_ref"
       }
     }
     PrimaryAssetId {
