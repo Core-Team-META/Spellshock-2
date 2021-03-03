@@ -383,7 +383,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	--if not isAllowed(0.5) then return end
+	if not isAllowed(0.5) then return end
 	RightPanel_UpgradeButton.isInteractable = false
 	isUpgrading = true
 	local classData = CurrentClassButton.clientUserData.dataTable

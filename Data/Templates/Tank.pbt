@@ -193,26 +193,12 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 13977688717675933557
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Place Wall"
-          }
-          Overrides {
             Name: "cs:MaxPlacementRange"
             Int: 2000
           }
           Overrides {
             Name: "cs:Duration"
             Float: 7
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
           }
           Overrides {
             Name: "cs:AbilityMod"
@@ -494,50 +480,10 @@ Assets {
         ParentId: 4159325021862714735
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Equipment"
+            Name: "cs:AbilitySettings"
             ObjectReference {
-              SubObjectId: 7855160156328725233
+              SubObjectId: 13702976538736563756
             }
-          }
-          Overrides {
-            Name: "cs:SpecialAbility"
-            ObjectReference {
-              SubObjectId: 743168345218125817
-            }
-          }
-          Overrides {
-            Name: "cs:PrimaryAbility"
-            ObjectReference {
-              SubObjectId: 13977688717675933557
-            }
-          }
-          Overrides {
-            Name: "cs:EventName"
-            String: "Place Wall"
-          }
-          Overrides {
-            Name: "cs:MaxPlacementRange"
-            Int: 2000
-          }
-          Overrides {
-            Name: "cs:Duration"
-            Float: 7
-          }
-          Overrides {
-            Name: "cs:isPreviewing"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:AbilityMod"
-            String: "mod1"
-          }
-          Overrides {
-            Name: "cs:Class"
-            String: "TANK"
-          }
-          Overrides {
-            Name: "cs:BindingName"
-            String: "E"
           }
         }
         Collidable_v2 {
@@ -907,6 +853,7 @@ Assets {
         ChildIds: 7744017418315419898
         ChildIds: 4370689124046492802
         ChildIds: 12141073967094505460
+        ChildIds: 11608906771778473422
         ChildIds: 8484312664012694213
         ChildIds: 11057856131540664296
         ChildIds: 14358940177883270596
@@ -1017,10 +964,6 @@ Assets {
             ObjectReference {
               SubObjectId: 13702976538736563756
             }
-          }
-          Overrides {
-            Name: "cs:PreviewString"
-            String: "E_isPreviewing"
           }
         }
         Collidable_v2 {
@@ -1440,6 +1383,47 @@ Assets {
         Script {
           ScriptAsset {
             Id: 17016092657626258489
+          }
+        }
+      }
+      Objects {
+        Id: 11608906771778473422
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4127929006948487058
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 13977688717675933557
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
           }
         }
       }
@@ -1973,6 +1957,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5
@@ -2011,7 +1996,7 @@ Assets {
           }
           Animation: "unarmed_magic_up"
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }
@@ -2356,7 +2341,7 @@ Assets {
           Animation: "1hand_melee_slash_right"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:invalid"
           }
         }
       }

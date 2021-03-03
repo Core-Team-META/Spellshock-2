@@ -109,14 +109,16 @@ function Tick(deltaTime)
         if currentAbility.clientUserData.isPreviewing then
             ACTIVE_FRAME.visibility = Visibility.INHERIT
             ACTIVE_FLASH.visibility = Visibility.INHERIT
-        elseif RMB_INDICATOR and currentAbility.clientUserData.isSteering then
+        else
+            ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
+            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
+        end
+
+        if RMB_INDICATOR and currentAbility.clientUserData.isSteering then
             RMB_INDICATOR.visibility = Visibility.INHERIT
             ACTIVE_FLASH.visibility = Visibility.INHERIT
-        elseif RMB_INDICATOR then
+        elseif RMB_INDICATOR and currentAbility.clientUserData.isSteering == false then
             RMB_INDICATOR.visibility = Visibility.FORCE_OFF
-            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
-		else
-            ACTIVE_FRAME.visibility = Visibility.FORCE_OFF
             ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
 		end
 
