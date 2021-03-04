@@ -14,7 +14,7 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     --local currentState = ABGS.GetGameState()
-    if newMenu == _G.MENU_TABLE["NONE"] then
+    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Rewards"]then
 		ParentPanel.visibility = Visibility.INHERIT
 	else -- hide
 		ParentPanel.visibility = Visibility.FORCE_OFF

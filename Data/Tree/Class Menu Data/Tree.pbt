@@ -121,6 +121,7 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 11849857975967017671
+  ChildIds: 9182481905067773040
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -135,6 +136,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 9182481905067773040
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16964737736516394105
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -204,6 +246,7 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 4896055284479103675
+  ChildIds: 10826108066709165769
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -218,6 +261,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "SHIFT"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 10826108066709165769
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14339626899672504924
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -289,6 +373,8 @@ Objects {
   ChildIds: 18362008314686307681
   ChildIds: 1360347109686458122
   ChildIds: 17108055071189208160
+  ChildIds: 2044664573943021847
+  ChildIds: 17141894458158052416
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -303,6 +389,92 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17141894458158052416
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2044664573943021847
+  Name: "Stun"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long an enemy will be stunned"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8500926758797605639
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -455,6 +627,7 @@ Objects {
   ParentId: 12124708511639495803
   ChildIds: 1315606167183961674
   ChildIds: 2368931382467744602
+  ChildIds: 3472045051803980741
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -469,6 +642,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3472045051803980741
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7866126941647045844
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -582,7 +796,7 @@ Objects {
   ChildIds: 3120514432720301169
   ChildIds: 16177311068279106477
   ChildIds: 12362116761555344674
-  ChildIds: 451794062987978635
+  ChildIds: 13014998593383806922
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -610,8 +824,8 @@ Objects {
   }
 }
 Objects {
-  Id: 451794062987978635
-  Name: "Placement Range"
+  Id: 13014998593383806922
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -627,17 +841,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How far the wall can be placed"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 10392517578151200132
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod4"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -830,8 +1044,8 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 12761103757713680055
-  ChildIds: 7770550853757671688
   ChildIds: 12638170253327895416
+  ChildIds: 13747008662516060626
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -846,6 +1060,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 13747008662516060626
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6603056763990519431
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -887,47 +1142,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7770550853757671688
-  Name: "Heal Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6603056763990519431
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The range of possible healing that will be applied to allies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8854358530398708523
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -1102,6 +1316,7 @@ Objects {
   }
   ParentId: 837517277244744736
   ChildIds: 11934659969873097983
+  ChildIds: 4370834221599377445
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1116,6 +1331,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4370834221599377445
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16496804219486441168
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -1229,6 +1485,7 @@ Objects {
   ChildIds: 15339289212531332482
   ChildIds: 13816951105555564383
   ChildIds: 2770197239029822294
+  ChildIds: 11021992287971171432
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1243,6 +1500,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11021992287971171432
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17507077983078006761
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -1283,7 +1581,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod4"
     }
   }
   Collidable_v2 {
@@ -1436,6 +1734,8 @@ Objects {
   ParentId: 837517277244744736
   ChildIds: 16037613412710680742
   ChildIds: 3074752349398664074
+  ChildIds: 14441027740739943
+  ChildIds: 11489993345626439756
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1450,6 +1750,92 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11489993345626439756
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15882469756563991493
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14441027740739943
+  Name: "Poison"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15882469756563991493
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Poison DOT that is applied to enemies"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8151890660996388781
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -1563,6 +1949,7 @@ Objects {
   ChildIds: 4559944181589896695
   ChildIds: 2501884905764305196
   ChildIds: 18019913923763692998
+  ChildIds: 3022053924916738624
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1577,6 +1964,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3022053924916738624
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -1658,7 +2086,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod3"
     }
   }
   Collidable_v2 {
@@ -1771,6 +2199,7 @@ Objects {
   ChildIds: 6180741710619077583
   ChildIds: 5825215787427395226
   ChildIds: 8295886532193173621
+  ChildIds: 9763119785346265410
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1785,6 +2214,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 9763119785346265410
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2041,6 +2511,7 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 15672601001082038311
+  ChildIds: 2100149664327673084
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2055,6 +2526,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2100149664327673084
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15120668890933236329
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2124,6 +2636,7 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 6386186559256232463
+  ChildIds: 12146732750660035160
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2138,6 +2651,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "SHIFT"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12146732750660035160
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5833689127479481271
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2208,7 +2762,7 @@ Objects {
   ParentId: 12532102525843773576
   ChildIds: 1213528147311858714
   ChildIds: 2570670983790894657
-  ChildIds: 14752344196097225024
+  ChildIds: 14321516369806913395
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2236,8 +2790,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14752344196097225024
-  Name: "Targeting Range"
+  Id: 14321516369806913395
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -2253,17 +2807,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The farthest distance you can target"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 10392517578151200132
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod3"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2304,7 +2858,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod3"
+      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -2376,7 +2930,7 @@ Objects {
   ChildIds: 7663790721216425677
   ChildIds: 13314183402486245606
   ChildIds: 6726917288573614718
-  ChildIds: 15502727987250462925
+  ChildIds: 12675666979630358360
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2404,8 +2958,8 @@ Objects {
   }
 }
 Objects {
-  Id: 15502727987250462925
-  Name: "Block Percentage"
+  Id: 12675666979630358360
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -2421,17 +2975,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The percentage of damage that will be blocked"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 804681952734696509
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod4"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2585,6 +3139,7 @@ Objects {
   ChildIds: 1554326895912005281
   ChildIds: 5750346782341937766
   ChildIds: 16970580691964614208
+  ChildIds: 16411053739338122464
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2599,6 +3154,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16411053739338122464
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11344707536976870440
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2749,11 +3345,10 @@ Objects {
     }
   }
   ParentId: 12532102525843773576
-  ChildIds: 13969292046951653603
-  ChildIds: 16063742305336464745
   ChildIds: 8232108779492403583
+  ChildIds: 16063742305336464745
   ChildIds: 15322954216054029842
-  ChildIds: 15115772702311277417
+  ChildIds: 12378093595996074328
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2781,8 +3376,8 @@ Objects {
   }
 }
 Objects {
-  Id: 15115772702311277417
-  Name: "Duration"
+  Id: 12378093595996074328
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -2798,7 +3393,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long the Tornado will last before disappearing"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
@@ -2808,7 +3403,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod4"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -2863,47 +3458,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8232108779492403583
-  Name: "DOT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of damage applied to enemies in the Damage Radius"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 15330066822177902891
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod5"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 16063742305336464745
   Name: "Damage Radius"
   Transform {
@@ -2945,8 +3499,8 @@ Objects {
   }
 }
 Objects {
-  Id: 13969292046951653603
-  Name: "Damage"
+  Id: 8232108779492403583
+  Name: "DOT"
   Transform {
     Location {
     }
@@ -2962,7 +3516,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage initially applied to enemies"
+      String: "The amount of damage applied to enemies in the Damage Radius"
     }
     Overrides {
       Name: "cs:Icon"
@@ -2972,7 +3526,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod4"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -3106,6 +3664,7 @@ Objects {
   }
   ParentId: 10980313450103268903
   ChildIds: 3476371213677220383
+  ChildIds: 6918803888502819830
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3120,6 +3679,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6918803888502819830
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15584454778672282218
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -3233,6 +3833,7 @@ Objects {
   ChildIds: 6306724175806483619
   ChildIds: 8291059155082126557
   ChildIds: 7134503530989510278
+  ChildIds: 13115313745008892479
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3247,6 +3848,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 13115313745008892479
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12324244977302229919
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -3441,6 +4083,8 @@ Objects {
   ChildIds: 14552168326025627377
   ChildIds: 1562841866394584675
   ChildIds: 8959336810333047804
+  ChildIds: 11687984352410726181
+  ChildIds: 2897540318327134445
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3455,6 +4099,92 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2897540318327134445
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18445814534937137316
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11687984352410726181
+  Name: "Stun"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18445814534937137316
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long an enemy will be stunned"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8500926758797605639
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -3592,7 +4322,7 @@ Objects {
 }
 Objects {
   Id: 7308866633911095885
-  Name: "Leap"
+  Name: "Entangle"
   Transform {
     Location {
     }
@@ -3605,15 +4335,16 @@ Objects {
     }
   }
   ParentId: 10980313450103268903
-  ChildIds: 5655755597075544515
   ChildIds: 4885990649472038852
   ChildIds: 5806805477895482878
   ChildIds: 6562934852835390606
+  ChildIds: 1234445642780183423
+  ChildIds: 16181215288139751250
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 15619941488256063062
+        Id: 11538694490835792735
       }
     }
     Overrides {
@@ -3623,6 +4354,92 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16181215288139751250
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7308866633911095885
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 1234445642780183423
+  Name: "Stun"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7308866633911095885
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long an enemy will be stunned"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8500926758797605639
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -3759,47 +4576,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5655755597075544515
-  Name: "Duration"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7308866633911095885
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long the thorns last before retracting"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 5991922501775596303
   Name: "Rain of Arrows"
   Transform {
@@ -3817,6 +4593,7 @@ Objects {
   ChildIds: 13053078901636615346
   ChildIds: 16866776982984953891
   ChildIds: 13079818976737109102
+  ChildIds: 12181989338779408196
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3831,6 +4608,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12181989338779408196
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5991922501775596303
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4046,6 +4864,7 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 15177331121946215993
+  ChildIds: 17459968718863181327
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4060,6 +4879,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "RMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17459968718863181327
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2403920086148004064
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4129,6 +4989,7 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 6522337446254046630
+  ChildIds: 17175002916368485517
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4143,6 +5004,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17175002916368485517
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14701107593300770011
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4253,9 +5155,8 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 9006941907224233549
-  ChildIds: 15752144502771568902
-  ChildIds: 8026791084679399165
   ChildIds: 3930774630977671147
+  ChildIds: 2765680301533735529
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4270,6 +5171,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "T"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2765680301533735529
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16578245697224756288
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4311,88 +5253,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8026791084679399165
-  Name: "Boulder Speed"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16578245697224756288
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The starting velocity of the boulder"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17014020883779663477
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15752144502771568902
-  Name: "Lifespan"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16578245697224756288
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long the boulder will stay in play"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -4464,6 +5324,7 @@ Objects {
   ChildIds: 9916371572812895565
   ChildIds: 4409908759046854365
   ChildIds: 9130860613752878780
+  ChildIds: 11509082342992096050
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4478,6 +5339,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11509082342992096050
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17629457103822685970
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4630,6 +5532,7 @@ Objects {
   ParentId: 6935863718337197916
   ChildIds: 7213048206987524742
   ChildIds: 15084163098125495889
+  ChildIds: 8468635351901243783
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4644,6 +5547,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8468635351901243783
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6127985047122735081
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4756,6 +5700,7 @@ Objects {
   ChildIds: 6001039744217689773
   ChildIds: 14266258991773394199
   ChildIds: 6668258429221614608
+  ChildIds: 17826971475584939403
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4770,6 +5715,47 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "Q"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17826971475584939403
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14887134874349022204
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {

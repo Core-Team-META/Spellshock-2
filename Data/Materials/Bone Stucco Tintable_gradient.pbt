@@ -21,7 +21,7 @@ Assets {
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.319003135
+        Float: 0.710527956
       }
     }
     Assets {

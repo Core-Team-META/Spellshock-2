@@ -40,12 +40,6 @@ Objects {
       Id: 13924640470113397992
     }
   }
-  InstanceHistory {
-    SelfId: 11200952152838182516
-    SubobjectId: 7326042570379492630
-    InstanceId: 5821724278744846916
-    TemplateId: 1749998263944627932
-  }
 }
 Objects {
   Id: 17845565622137171158
@@ -86,11 +80,5 @@ Objects {
     ScriptAsset {
       Id: 13924640470113397992
     }
-  }
-  InstanceHistory {
-    SelfId: 17845565622137171158
-    SubobjectId: 680814466667005876
-    InstanceId: 5821724278744846916
-    TemplateId: 1749998263944627932
   }
 }

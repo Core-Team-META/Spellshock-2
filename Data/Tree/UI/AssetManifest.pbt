@@ -35,15 +35,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16532880832873788683
-  Name: "BG Flat 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_019"
-  }
-}
-Assets {
   Id: 16259713446874198849
   Name: "Military Frame 006"
   PlatformAssetType: 9
@@ -125,24 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9614194847790393795
-  Name: "Fantasy Chain 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chain_001"
-  }
-}
-Assets {
-  Id: 9008238566657320754
-  Name: "Sci-fi Frame 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Frame_006"
-  }
-}
-Assets {
   Id: 8885537733943985189
   Name: "Sci-fi Ability Purple 030"
   PlatformAssetType: 9
@@ -161,75 +134,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8578995028087510781
-  Name: "UI Gradient Circular 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Shape_001"
-  }
-}
-Assets {
-  Id: 7615847344375253670
-  Name: "UI Basic Frame 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Frame_001"
-  }
-}
-Assets {
-  Id: 6740841731187914198
-  Name: "Center Arrow 002 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_002Wedge"
-  }
-}
-Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
-  }
-}
-Assets {
-  Id: 5178103781732415435
-  Name: "Fantasy Ability Blue 035"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_035"
-  }
-}
-Assets {
-  Id: 4820900810946534472
-  Name: "Sci-fi Corners 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Corners_001"
-  }
-}
-Assets {
-  Id: 4339187070157083790
-  Name: "Icon Diamond"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Diamond"
-  }
-}
-Assets {
-  Id: 3769656768987755493
-  Name: "Sci-fi Ability Red 033"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Ability_Red_033"
   }
 }
 Assets {
@@ -248,24 +158,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
-  }
-}
-Assets {
-  Id: 3128978607050070161
-  Name: "Fantasy Ability Blue 025"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_025"
-  }
-}
-Assets {
-  Id: 2764905514123890102
-  Name: "Frame Outlined 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_020"
   }
 }
 Assets {
@@ -293,15 +185,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Blue_012"
-  }
-}
-Assets {
-  Id: 1250518445608309889
-  Name: "Warp"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_018"
   }
 }
 Assets {

@@ -168,7 +168,7 @@ function OnPlayerJoined(player)
 			nameplates[player].changePiece.visibility = Visibility.INHERIT
 		end
 
-		if SHOW_NUMBERS then
+		if SHOW_NUMBERS and player ~= LOCAL_PLAYER then
 			nameplates[player].healthText.visibility = Visibility.INHERIT
 		end
 	end
@@ -198,6 +198,10 @@ end
 -- bool IsNameplateVisible(Player)
 -- Can we see this player's nameplate given team and distance properties?
 function IsNameplateVisible(player)
+	if not shouldShow then
+		return false
+	end
+
 	if player.isDead and not SHOW_ON_DEAD_PLAYERS then
 		return false
 	end
@@ -239,9 +243,8 @@ end
 function Tick(deltaTime)
 	for _, player in ipairs(Game.GetPlayers()) do
 		local nameplate = nameplates[player]
-		local visible = IsNameplateVisible(player)
 
-		if nameplate and Object.IsValid(player) and shouldShow then
+		if nameplate and Object.IsValid(player) then
 			-- We calculate visibility every frame to handle when teams change
 			local visible = IsNameplateVisible(player)
 
@@ -249,9 +252,17 @@ function Tick(deltaTime)
 				if nameplate.isVisible == true then
 					nameplate.dirty = true
 				end
+				-- due to player:setVisibility, enforce this each tick
+				if nameplate.templateRoot.visibility ~= Visibility.FORCE_OFF then
+					nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+				end
 			else
 				if nameplate.isVisible == false then
 					nameplate.dirty = true
+				end
+				-- due to player:setVisibility, enforce this each tick
+				if nameplate.templateRoot.visibility ~= Visibility.INHERIT then
+					nameplate.templateRoot.visibility = Visibility.INHERIT
 				end
 
 				if player.team ~= nameplate.lastTeam then
@@ -329,9 +340,9 @@ function Tick(deltaTime)
 				nameplate.isVisible = visible
 
 				if not visible then
-					nameplate.templateRoot.visibility = Visibility.FORCE_OFF
+					--nameplate.templateRoot.visibility = Visibility.FORCE_OFF
 				else
-					nameplate.templateRoot.visibility = Visibility.INHERIT
+					--nameplate.templateRoot.visibility = Visibility.INHERIT
 
 					if SHOW_HEALTHBARS then
 						local healthFraction = player.hitPoints / player.maxHitPoints
@@ -384,8 +395,6 @@ function Tick(deltaTime)
 					end
 				end
 			end
-		elseif not shouldShow and nameplate.templateRoot:IsVisibleInHierarchy() then
-			nameplate.templateRoot.visibility = Visibility.FORCE_OFF
 		end
 	end
 end

@@ -97,7 +97,9 @@ function Reset()
     script:SetNetworkedCustomProperty("EnemiesPresent", 0)
     script:SetNetworkedCustomProperty("LastCaptureProgress", 0.0)
     script:SetNetworkedCustomProperty("LastUpdateTime", time())
+    script:SetNetworkedCustomProperty("OwningTeam", 0)
     script:SetNetworkedCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
+    
     lastProgress = 0
     ResetCapturePlayer()
 end

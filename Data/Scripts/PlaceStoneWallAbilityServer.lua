@@ -2,13 +2,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
-local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
-local SpecialAbility = script:GetCustomProperty("SpecialAbility"):WaitForObject()
---local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
-
---local ObjectTemplate = script:GetCustomProperty("ObjectTemplate")
-
-local DEFAULT_Duration = script:GetCustomProperty("Duration")
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
+local DEFAULT_Duration = AbilitySettings:GetCustomProperty("Duration")
 
 local EventListeners = {}
 

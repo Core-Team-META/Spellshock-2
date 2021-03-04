@@ -11,12 +11,17 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("Networking"):WaitForObject()
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
+local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
 local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
@@ -29,6 +34,8 @@ local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObjec
 local REFRESH_IN_TEXT_HIGHLIGHT = script:GetCustomProperty("REFRESH_IN_TEXT_HIGHLIGHT"):WaitForObject()
 local REFRESH_IN_TEXT_SHADOW = script:GetCustomProperty("REFRESH_IN_TEXT_SHADOW"):WaitForObject()
 local GOLD_TXT = script:GetCustomProperty("GOLD"):WaitForObject()
+local GemIcon = script:GetCustomProperty("GemIcon")
+local ShardIcon = script:GetCustomProperty("ShardIcon")
 
 local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
 local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
@@ -46,7 +53,7 @@ local npcTriggers = {}
 local spamPrevent
 local refreshTime, refreshCount
 local closeButtonLisener = nil
-local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO)
+local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -144,7 +151,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
     if panel.name ~= "Background" then
         local slotId = panel:GetCustomProperty("SLOT")
         local infoTable = nil
-        local currentAmmount = nil
+        local currentAmmount, requiredAmount = nil
         local cost = nil
         if slotId and slotId == slot then
             if id == 1 then
@@ -152,6 +159,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 cost = REWARD_UTIL.CalculateShardCost(reward)
                 infoTable = rewardAssets[id][class][bind]
                 currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+                requiredAmount = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
             else
                 if id == 2 then
                     currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
@@ -171,6 +179,8 @@ local function BuildShopItems(slot, id, class, bind, reward)
             local costText = panel:GetCustomProperty("AMOUNT"):WaitForObject()
             local costTextShadow = panel:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
             local soldPanel = panel:GetCustomProperty("SOLD_PANEL"):WaitForObject()
+            local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
+            local RewardCurrencyIcon = panel:GetCustomProperty("RewardCurrencyIcon"):WaitForObject()
 
             Icon:SetImage(infoTable.Image)
             Value.text = tostring(reward)
@@ -179,6 +189,20 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 Name.text = CONST.CLASS_NAME[class] .. " " .. tostring(infoTable.Name)
             else
                 Name.text = tostring(infoTable.Name)
+            end
+
+            PROGRESS_BARS.visibility = Visibility.FORCE_OFF
+            if id == 1 then
+                --Progress Bars
+                local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
+                local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
+                
+                RewardCurrencyIcon:SetImage(ShardIcon)
+                CURRENT_BAR.progress = currentAmmount / requiredAmount
+                REWARD_BAR.progress = (currentAmmount + reward) / requiredAmount
+                PROGRESS_BARS.visibility = Visibility.FORCE_ON
+            else
+                RewardCurrencyIcon:SetImage(GemIcon)
             end
 
             if tonumber(dailyRewards[slot].P) == 0 then

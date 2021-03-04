@@ -23,7 +23,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:02_Leap_Placement"
+        Name: "cs:02_Entangle_Placement"
         AssetReference {
           Id: 841534158063459245
         }

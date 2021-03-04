@@ -180,7 +180,7 @@ function UpdateClassInfo(thisButton)
 		local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 		local goldCost = SHARD_COSTS[level].reqGold
 
-		if currentShards >= shardCost and currentGold >= goldCost then
+		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			UpgradePanel.visibility = Visibility.INHERIT
 			ShowMorePanel.visibility = Visibility.FORCE_OFF
 		else
@@ -269,7 +269,7 @@ function UpdateAbilityInfo(thisButton)
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
-	if currentShards >= shardCost and currentGold >= goldCost and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
 	else
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
@@ -294,12 +294,47 @@ function UpdateAbilityInfo(thisButton)
 
 		local currentMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "")
 		local nextMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "", true)
+		
 		if type(currentMod) == "table" then
-			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%d - %d", currentMod.min, currentMod.max)
-			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%d - %d", nextMod.min, nextMod.max)
+			if modData["IsStatusEffect"] then
+				local currentText = ""
+				local nextText = ""
+
+				if currentMod.damage ~= 0 then
+					currentText = string.format("Damage [%s]", tostring(currentMod.damage))
+					nextText = string.format("Damage [%s]", tostring(nextMod.damage))
+				end
+				if currentMod.duration ~= 0 then
+					if currentText ~= "" then
+						currentText = currentText.."  |  "
+						nextText = nextText.."  |  "
+					end
+					
+					currentText = currentText..string.format("Duration [%s]", tostring(currentMod.duration))
+					nextText = nextText..string.format("Duration [%s]", tostring(nextMod.duration))
+				end
+				if currentMod.multiplier ~= 0 then
+					if currentText ~= "" then
+						currentText = currentText.."  |  "
+						nextText = nextText.."  |  "
+					end
+					currentText = string.format("Multiplier [%s]", tostring(currentMod.multiplier))
+					nextText = string.format("Multiplier [%s]", tostring(nextMod.multiplier))
+				end
+
+				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText
+				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
+			else
+				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%s - %s", tostring(currentMod.min), tostring(currentMod.max))
+				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%s - %s", tostring(nextMod.min), tostring(nextMod.max))
+			end
 		else
 			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = tostring(currentMod)
 			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = tostring(nextMod)
+		end
+
+		if currentMod == nextMod or abilityLevel == 10 then
+			newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject().visibility = Visibility.FORCE_OFF
 		end
 	end
 
@@ -348,7 +383,7 @@ function OnAbilityUnhovered(thisButton)
 end
 
 function OnUpgradeButtonClicked(thisButton)
-	--if not isAllowed(0.5) then return end
+	if not isAllowed(0.5) then return end
 	RightPanel_UpgradeButton.isInteractable = false
 	isUpgrading = true
 	local classData = CurrentClassButton.clientUserData.dataTable
@@ -586,6 +621,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 			modData["Icon"] = childMod:GetCustomProperty("Icon")
 			modData["Description"] = childMod:GetCustomProperty("Description")
 			modData["Mod"] = childMod:GetCustomProperty("Mod")
+			modData["IsStatusEffect"] = childMod:GetCustomProperty("IsStatusEffect")
 			table.insert(abilityData["ModData"], modData)
 		end
 		

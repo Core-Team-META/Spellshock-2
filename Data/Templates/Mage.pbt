@@ -1341,6 +1341,7 @@ Assets {
         ChildIds: 354566938322484678
         ChildIds: 4362377662528572463
         ChildIds: 13676282958894221574
+        ChildIds: 676216352836022284
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1522,6 +1523,50 @@ Assets {
         Script {
           ScriptAsset {
             Id: 1407559862931273718
+          }
+        }
+      }
+      Objects {
+        Id: 676216352836022284
+        Name: "PyroblastAbilityClient"
+        Transform {
+          Location {
+            X: 10193.9072
+            Y: 15006.2402
+            Z: -6163.08447
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 12470675891570633924
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialAbility"
+            ObjectReference {
+              SubObjectId: 9844938775364500632
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15754255766989875810
           }
         }
       }
@@ -2164,6 +2209,14 @@ Assets {
         }
         ParentId: 10663446143340725464
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:CooldownOverride"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:CooldownOverride:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {

@@ -2205,6 +2205,14 @@ Assets {
             Name: "cs:Binding"
             String: "ability_extra_24"
           }
+          Overrides {
+            Name: "cs:CooldownOverride"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:CooldownOverride:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {

@@ -21,6 +21,7 @@ Objects {
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
+  ChildIds: 16625053971837530583
   ChildIds: 12935185397369316502
   ChildIds: 10661356697076551539
   ChildIds: 14162296025304194376
@@ -30,7 +31,6 @@ Objects {
   ChildIds: 6356897330857931981
   ChildIds: 5874015840417789592
   ChildIds: 3612684566017260609
-  ChildIds: 5763622543987818276
   ChildIds: 783937512602456512
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
@@ -121,35 +121,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Gabe"
-  }
-}
-Objects {
-  Id: 5763622543987818276
-  Name: "CosmeticStore"
-  Transform {
-    Location {
-      X: -35780
-      Y: 24160
-      Z: 6910
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "CosmeticStore"
   }
 }
 Objects {
@@ -403,6 +374,32 @@ Objects {
   }
 }
 Objects {
+  Id: 16625053971837530583
+  Name: "Kurtis"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Kurtis"
+  }
+}
+Objects {
   Id: 1551213308783341965
   Name: "Map_Kate"
   Transform {
@@ -475,11 +472,11 @@ Objects {
         Scaling: Free
         ScaleX {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleY {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleZ {
           Min: 0.5
@@ -511,7 +508,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 24000
       CullDistance {
@@ -561,7 +558,7 @@ Objects {
       Asset {
         Id: 16388825162191980240
       }
-      DistanceBetweenInstances: 1500
+      DistanceBetweenInstances: 2500
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -676,11 +673,11 @@ Objects {
         Scaling: Free
         ScaleX {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleY {
           Min: 0.5
-          Max: 1
+          Max: 0.7
         }
         ScaleZ {
           Min: 0.5
@@ -810,7 +807,7 @@ Objects {
       Asset {
         Id: 8021476752120115971
       }
-      DistanceBetweenInstances: 500
+      DistanceBetweenInstances: 700
       MaterialChannel: 3
       SpawnDistance: 28800
       CullDistance {
@@ -860,7 +857,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 400
+      DistanceBetweenInstances: 700
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -910,7 +907,7 @@ Objects {
       Asset {
         Id: 6981536508008379085
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 500
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -961,7 +958,7 @@ Objects {
       Asset {
         Id: 6981536508008379085
       }
-      DistanceBetweenInstances: 200
+      DistanceBetweenInstances: 400
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {
@@ -1012,7 +1009,7 @@ Objects {
       Asset {
         Id: 14293176668765266901
       }
-      DistanceBetweenInstances: 300
+      DistanceBetweenInstances: 500
       MaterialChannel: 1
       SpawnDistance: 24000
       CullDistance {

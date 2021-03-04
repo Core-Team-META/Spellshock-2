@@ -73,8 +73,8 @@
 	   changes final.
 	9. Delete the weapon from the hierarchy when you are done.
 --]]
-local EQUIPMENT = script:FindAncestorByType("Equipment")
 
+local EQUIPMENT = script:GetCustomProperty("Equipment"):WaitForObject()
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
 
 local CALIBRATE_SWIPE = script:GetCustomProperty("CalibrateSwipe") -- A debug flag
@@ -85,23 +85,122 @@ local SWIPE_ROTATION = script:GetCustomProperty("SwipeRotation")
 local SWIPE_POSITION = script:GetCustomProperty("SwipePosition")
 
 local PLAYER_IMPACT_VFX = script:GetCustomProperty("PlayerImpactVFX")
+local IS_CHARGE_ATTACK = EQUIPMENT:GetCustomProperty("IsChargeAttack")
+
+local ChargeReleaseEffect = script:GetCustomProperty("ChargeReleaseEffect")
+local FullChargeEffect = script:GetCustomProperty("FullChargeEffect")
+local ChargeupSFX
+local ChargeupVFX
+local ChargeUITemp = "76202E0057632269:ChargeUpBar"
+local defaultPitch
+
+if IS_CHARGE_ATTACK then
+	ChargeupSFX = script:GetCustomProperty("ChargeupSFX"):WaitForObject()
+	ChargeupVFX = script:GetCustomProperty("ChargeupVFX"):WaitForObject()
+	defaultPitch = ChargeupSFX.pitch
+end
+
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+local isCharging = 0 -- 0: not charging  1: charging  2: full charge
+local MIN_CHARGE = EQUIPMENT:GetCustomProperty("MinCharge")
+local MAX_CHARGE = EQUIPMENT:GetCustomProperty("ChargeDuration")
+local chargeStart = 1
+local ChargePanel 
+local ChargeBar
 
 function Tick()
 	if CALIBRATE_SWIPE then
 		UpdateSwipeCalibration()
 	end
+
+	if isCharging > 0 and time() - chargeStart > MIN_CHARGE then
+		local chargeAmount = time() - chargeStart
+		
+		if LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
+			local chargeText = ChargeBar.clientUserData.text
+			ChargePanel.visibility = Visibility.INHERIT
+			ChargeBar.progress = chargeAmount / MAX_CHARGE
+
+			if not ChargeupSFX.isPlaying and isCharging == 1 then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
+				ChargeupVFX:Play()
+				ChargeupSFX:Play()
+				ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
+				chargeText.text = "Charging..."
+			end
+
+			ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
+
+			if isCharging ~= 2 and chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
+				ChargeupSFX:Stop()
+				World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
+				ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
+				chargeText.text = "Ready!"
+				isCharging = 2
+			end
+		else
+			if isCharging == 1 then
+				ChargeupVFX:SetSmartProperty("Enable Arc Rings", false)
+				ChargeupVFX:Play()
+
+				if chargeAmount > MAX_CHARGE and Object.IsValid(EQUIPMENT.owner) then
+					ChargeupVFX:SetSmartProperty("Enable Arc Rings", true)
+					isCharging = 2
+				end
+			end
+		end
+	elseif Object.IsValid(ChargePanel) then
+		ChargePanel.visibility = Visibility.FORCE_OFF
+	end
+end
+
+function OnReady()
+	isCharging = 0
+	ChargeupSFX:Stop()
+	ChargeupVFX:Stop()
+end
+
+function OnInterrupted()
+	isCharging = 0
+	ChargeupSFX:Stop()
+	ChargeupVFX:Stop()
+end
+
+function OnCast(thisAbility)
+	if IS_CHARGE_ATTACK then
+		chargeStart = time()
+		isCharging = 1
+	end
 end
 
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
-	if EQUIPMENT and not Object.IsValid(EQUIPMENT) then
-		return
+	isCharging = 0
+
+	if IS_CHARGE_ATTACK then
+		ChargeupSFX:Stop()
+		ChargeupVFX:Stop()
 	end
+
+	local chargeAmount = time() - chargeStart
+
 	local playerPos = EQUIPMENT.owner:GetWorldPosition()
 	local playerQ = Quaternion.New(EQUIPMENT.owner:GetWorldRotation())
 	local rot = Rotation.New(playerQ * Quaternion.New(SWIPE_ROTATION))
 	local pos = playerPos + playerQ * SWIPE_POSITION
-	currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot})
+	local scale = 1
+
+	if IS_CHARGE_ATTACK and chargeAmount > MIN_CHARGE then
+		scale = chargeAmount + 1
+		scale = CoreMath.Clamp(scale, 1, 2)
+	end
+
+	if IS_CHARGE_ATTACK and chargeAmount > MAX_CHARGE then
+		currentSwipe = World.SpawnAsset(ChargeReleaseEffect, {position = pos, rotation = rot})
+	else
+		currentSwipe = World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot, scale = Vector3.New(scale)})
+	end
 
 	if CALIBRATE_SWIPE then
 		BeginSwipeCalibration()
@@ -114,22 +213,48 @@ function OnRecovery(ability)
 	end
 end
 
+function OnEquipped(equipment, player)
+	if player == LOCAL_PLAYER and IS_CHARGE_ATTACK then
+		ChargePanel = World.SpawnAsset(ChargeUITemp)
+		ChargeBar = ChargePanel:GetCustomProperty("ProgressBar"):WaitForObject()
+		ChargeBar.clientUserData.defaultColor = ChargeBar:GetFillColor()
+		ChargeBar.clientUserData.chargedColor = ChargePanel:GetCustomProperty("FullChargeColor")
+		ChargeBar.clientUserData.text = ChargePanel:GetCustomProperty("Text"):WaitForObject()
+	end
+end
+
+function OnUnequip(equipment, player)
+	if ChargePanel then
+		ChargePanel:Destroy()
+	end
+end
+
+if EQUIPMENT.owner then
+	OnEquipped(EQUIPMENT, EQUIPMENT.owner)
+else
+	EQUIPMENT.equippedEvent:Connect(OnEquipped)
+end
+EQUIPMENT.unequippedEvent:Connect(OnUnequip)
 ABILITY.executeEvent:Connect(OnExecute)
 ABILITY.recoveryEvent:Connect(OnRecovery)
+if IS_CHARGE_ATTACK then
+	ABILITY.castEvent:Connect(OnCast)
+	ABILITY.readyEvent:Connect(OnReady)
+	ABILITY.interruptedEvent:Connect(OnInterrupted)
+end
 
 function OnMeleeImpact(abilityId, pos, rot)
 	if PLAYER_IMPACT_VFX and Object.IsValid(ABILITY) and abilityId == ABILITY.id then
-		World.SpawnAsset(PLAYER_IMPACT_VFX, {position = pos, rotation = rot})
-	end
+        World.SpawnAsset(PLAYER_IMPACT_VFX, {position = pos, rotation = rot})
+    end
 end
 
 Events.Connect("MeleeImpact", OnMeleeImpact)
 
+
 -- Swipe Calibration:
 
-if not CALIBRATE_SWIPE then
-	return
-end
+if not CALIBRATE_SWIPE then return end
 
 local DEBUG_WEAPON_LENGTH = 190
 
@@ -153,16 +278,17 @@ local positionModifierKeyPressed = false
 local lastDebugStart
 local lastDebugEnd
 
+
 function BeginSwipeCalibration()
 	swipePositions = {}
 	swipeRotations = {}
-
+	
 	startPlayerPos = EQUIPMENT.owner:GetWorldPosition()
 	startPlayerRot = EQUIPMENT.owner:GetWorldRotation()
-
+	
 	lastDebugStart = nil
 	lastDebugEnd = nil
-
+	
 	if not bindingPressedListener then
 		bindingPressedListener = EQUIPMENT.owner.bindingPressedEvent:Connect(OnCalibrationBindingPressed)
 		bindingReleasedListener = EQUIPMENT.owner.bindingReleasedEvent:Connect(OnCalibrationBindingReleased)
@@ -173,30 +299,30 @@ function UpdateSwipeCalibration()
 	if swipeRotations then
 		local pos = script:GetWorldPosition()
 		table.insert(swipePositions, pos)
-
+		
 		local rot = script:GetWorldRotation()
 		table.insert(swipeRotations, rot)
-
+				
 		DrawDebugRotation(pos, rot, Color.YELLOW, true)
 	end
 end
 
-function EndSwipeCalibration()
+function EndSwipeCalibration()	
 	local midIndex = 1 + CoreMath.Round(#swipeRotations * 0.5)
 	local midPos = swipePositions[midIndex]
 	local midRot = swipeRotations[midIndex]
-
+	
 	--print("Middle rotation for swipe = " .. tostring(midRot))
 	local A = Quaternion.New(swipeRotations[1])
 	local B = Quaternion.New(midRot)
 	local C = B * -A -- The relative rotation that's needed to go from A to B
 	--print("Quaternion for swipe VFX = " .. tostring(C))
 	--print("Rotation for swipe VFX = " .. tostring(Rotation.New(C)))
-
+		
 	DrawDebugRotation(swipePositions[1], swipeRotations[1], Color.GREEN)
 	DrawDebugRotation(midPos, midRot, Color.MAGENTA)
 	DrawDebugRotation(swipePositions[#swipePositions], swipeRotations[#swipeRotations], Color.RED)
-
+	
 	swipeRotations = nil
 end
 
@@ -206,74 +332,62 @@ function DrawDebugRotation(pos, rot, color, connectToPrevious)
 	local debugEnd = debugStart + debugDirection * DEBUG_WEAPON_LENGTH
 	CoreDebug.DrawLine(debugStart, debugEnd, {duration = 99999, color = color, thickness = 2})
 	CoreDebug.DrawSphere(debugEnd, 5, {duration = 99999, color = color})
-
+	
 	if connectToPrevious and lastDebugStart ~= nil then
 		CoreDebug.DrawLine(debugStart, lastDebugStart, {duration = 99999, color = color, thickness = 1})
 		CoreDebug.DrawLine(debugEnd, lastDebugEnd, {duration = 99999, color = color, thickness = 2})
 	end
-
+	
 	lastDebugStart = debugStart
 	lastDebugEnd = debugEnd
 end
 
 function OnCalibrationBindingPressed(player, action)
 	--print("Action = " .. action)
-
+	
 	if action == CALIBRATE_POSITION_MODIFIER_KEY then
 		positionModifierKeyPressed = true
 		print("Now adjusting position")
 	end
-
+	
 	-- Change positional adjustment amount
 	if action == "ability_extra_46" then -- Up Arrow
 		posIncrement = posIncrement * 2
 		print("Adjust position by = " .. posIncrement)
 	end
 	if action == "ability_extra_47" then -- Down Arrow
-		posIncrement = posIncrement / 2
+		posIncrement = posIncrement / 2 
 		print("Adjust position by = " .. posIncrement)
 	end
-
+	
 	-- Change rotational adjustment amount
 	if action == "ability_extra_49" then -- Right Arrow
 		rotIncrement = rotIncrement * 2
 		print("Adjust rotation by = " .. rotIncrement)
 	end
 	if action == "ability_extra_48" then -- Left Arrow
-		rotIncrement = rotIncrement / 2
+		rotIncrement = rotIncrement / 2 
 		print("Adjust rotation by = " .. rotIncrement)
 	end
-
+	
 	local doSpawnVfx = false
-
+	
 	local x = 0
 	local y = 0
 	local z = 0
-	if action == "ability_extra_26" then
-		x = 1
-	end -- U
-	if action == "ability_extra_36" then
-		x = -1
-	end -- J
-	if action == "ability_extra_37" then
-		y = 1
-	end -- H
-	if action == "ability_extra_35" then
-		y = -1
-	end -- K
-	if action == "ability_extra_27" then
-		z = 1
-	end -- I
-	if action == "ability_extra_25" then
-		z = -1
-	end -- Y
-
+	if action == "ability_extra_26" then x = 1 end   -- U
+	if action == "ability_extra_36" then x = -1 end  -- J
+	if action == "ability_extra_37" then y = 1 end   -- H
+	if action == "ability_extra_35" then y = -1 end  -- K
+	if action == "ability_extra_27" then z = 1 end   -- I
+	if action == "ability_extra_25" then z = -1 end  -- Y
+	
 	if action == "ability_extra_45" then -- M
 		print("VFX Spawn offset position = " .. tostring(spawnOffsetPos))
 		print("VFX Spawn offset rotation = " .. tostring(spawnOffsetRot))
 		doSpawnVfx = true
 	end
-
+		
 	if x ~= 0 or y ~= 0 or z ~= 0 then
 		if positionModifierKeyPressed then
 			spawnOffsetPos = spawnOffsetPos + Vector3.New(x, y, z) * posIncrement
@@ -285,12 +399,12 @@ function OnCalibrationBindingPressed(player, action)
 		end
 		doSpawnVfx = true
 	end
-
+	
 	if doSpawnVfx then
 		local playerQ = Quaternion.New(startPlayerRot)
 		local rot = Rotation.New(playerQ * Quaternion.New(spawnOffsetRot))
 		local pos = startPlayerPos + playerQ * spawnOffsetPos
-
+		
 		World.SpawnAsset(SWIPE_ASSET, {position = pos, rotation = rot})
 	end
 end
@@ -301,6 +415,8 @@ function OnCalibrationBindingReleased(player, action)
 		print("Back to adjusting rotation")
 	end
 end
+
+
 
 --[[
 function TestRotationTheory()
@@ -333,3 +449,4 @@ TestRotationTheory()
 TestRotationTheory()
 TestRotationTheory()
 --]]
+

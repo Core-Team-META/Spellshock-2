@@ -19,9 +19,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
 local TEAM = script:GetCustomProperty("Team")
 local ProgressBar = script:GetCustomProperty("ProgressBar"):WaitForObject()
-local RoundTeamscoreLimit = script:GetCustomProperty("RoundTeamscoreLimit"):WaitForObject()
-
-local MAX_SCORE = RoundTeamscoreLimit:GetCustomProperty("TeamScoreLimit")
+local DynamicCapturePoints = script:GetCustomProperty("DynamicCapturePoints"):WaitForObject()
 
 -- Check user properties
 if TEAM < 0 or TEAM > 4 then
@@ -33,6 +31,6 @@ end
 -- Update the display
 function Tick(deltaTime)
     local score = Game.GetTeamScore(TEAM)
-    TEXT_BOX.text = string.format("%d / %d", score, MAX_SCORE)
-    ProgressBar.progress = score / MAX_SCORE
+    TEXT_BOX.text = string.format("%d / %d", score, DynamicCapturePoints:GetCustomProperty("ScoreLimit"))
+    ProgressBar.progress = score / DynamicCapturePoints:GetCustomProperty("ScoreLimit")
 end

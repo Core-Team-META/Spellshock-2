@@ -17,17 +17,8 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 11451759639687643389
-        ChildIds: 7112538091043746868
-        ChildIds: 1227941595346243076
-        ChildIds: 1340834243676990861
-        ChildIds: 12603229749514878481
+        ChildIds: 17923148130403822269
         ChildIds: 4165413510720361440
-        ChildIds: 136390115492113174
-        ChildIds: 4761490028659518878
-        ChildIds: 14385847806822526825
-        ChildIds: 14159726057510458202
-        ChildIds: 7510400789195034267
-        ChildIds: 772980377864193597
         ChildIds: 6356077436701631487
         ChildIds: 10544857628778053916
         ChildIds: 7444484252626685369
@@ -44,6 +35,7 @@ Assets {
         ChildIds: 16314371789353632275
         ChildIds: 2987376541468878305
         ChildIds: 13621417251271377984
+        ChildIds: 2818471812531687207
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -100,23 +92,23 @@ Assets {
         }
       }
       Objects {
-        Id: 7112538091043746868
-        Name: "Stone Block Standard"
+        Id: 17923148130403822269
+        Name: "Stone Wall End Corner 2m 001"
         Transform {
           Location {
-            X: -242.105469
-            Y: 12.1015625
-            Z: -350.235352
+            X: 255.706116
+            Y: -9.70540428
+            Z: -237.444672
           }
           Rotation {
-            Pitch: -0.051356189
-            Yaw: -90.9457092
-            Roll: -178.330246
+            Pitch: -89.1345215
+            Yaw: -10.8022156
+            Roll: -171.772903
           }
           Scale {
-            X: 3.72758389
-            Y: 2.7353816
-            Z: 2.73534155
+            X: 2.04958916
+            Y: 1.83778799
+            Z: 2.5589385
           }
         }
         ParentId: 15007661289914600826
@@ -139,7 +131,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12891613213664917379
+            Id: 13263895099928006297
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -148,165 +140,8 @@ Assets {
           EnableCameraCollision: true
           StaticMesh {
             Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1227941595346243076
-        Name: "Stone Block Big Broken"
-        Transform {
-          Location {
-            X: -2.29296875
-            Y: -7.12695313
-            Z: -289.3125
-          }
-          Rotation {
-            Pitch: -1.66957819
-            Yaw: -0.944500923
-            Roll: -0.0513303801
-          }
-          Scale {
-            X: 1.84320092
-            Y: 2.39343691
-            Z: 2.05151415
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6476226809204619067
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 1340834243676990861
-        Name: "Stone Block Big Broken"
-        Transform {
-          Location {
-            X: -162.601563
-            Y: -5.2578125
-            Z: -283.401855
-          }
-          Rotation {
-            Pitch: -1.66957819
-            Yaw: -0.944439352
-            Roll: -0.0513305254
-          }
-          Scale {
-            X: 2.39343
-            Y: 2.39343
-            Z: 2.05151129
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 12603229749514878481
-        Name: "Stone Block Big Broken"
-        Transform {
-          Location {
-            X: -167.902344
-            Y: -3.41015625
-            Z: -203.666992
-          }
-          Rotation {
-            Pitch: -1.66957819
-            Yaw: -0.944378495
-            Roll: 179.948242
-          }
-          Scale {
-            X: 2.19713783
-            Y: 2.06658959
-            Z: 1.93836451
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
+              Mass: 100
+              LinearDamping: 0.01
             }
           }
         }
@@ -316,13 +151,13 @@ Assets {
         Name: "Stone Block Long Broken"
         Transform {
           Location {
-            X: -172.648438
-            Y: 105.681641
-            Z: -278.921875
+            X: -13.5796452
+            Y: 99.3077316
+            Z: -286.710632
           }
           Rotation {
-            Pitch: -1.67433882
-            Yaw: -0.000842572306
+            Pitch: -1.67434692
+            Yaw: -0.000854492188
             Roll: 0.0758929327
           }
           Scale {
@@ -352,324 +187,6 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 3948711934400020999
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 136390115492113174
-        Name: "Stone Block Standard"
-        Transform {
-          Location {
-            X: 80.5371094
-            Y: 6.9765625
-            Z: -352.305176
-          }
-          Rotation {
-            Pitch: -0.051356189
-            Yaw: -90.9456863
-            Roll: -178.330246
-          }
-          Scale {
-            X: 3.72757363
-            Y: 2.4955821
-            Z: 2.73533964
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4761490028659518878
-        Name: "Stone Block Standard"
-        Transform {
-          Location {
-            X: -72.9921875
-            Y: -18.0664063
-            Z: -353.638672
-          }
-          Rotation {
-            Pitch: -0.051356189
-            Yaw: -90.9456863
-            Roll: -178.330246
-          }
-          Scale {
-            X: 3.72758389
-            Y: 2.7353816
-            Z: 2.73534155
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14385847806822526825
-        Name: "Stone Block Big Broken"
-        Transform {
-          Location {
-            X: 147.982422
-            Y: 0.375
-            Z: -273.152832
-          }
-          Rotation {
-            Pitch: -1.66957819
-            Yaw: -0.944483757
-            Roll: -0.0513304658
-          }
-          Scale {
-            X: 2.39343
-            Y: 2.39343
-            Z: 2.05151129
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14159726057510458202
-        Name: "Stone Block Big Broken"
-        Transform {
-          Location {
-            X: 152.6875
-            Y: -5.78515625
-            Z: -199.191895
-          }
-          Rotation {
-            Pitch: -1.67019284
-            Yaw: -2.05716634
-            Roll: 179.980637
-          }
-          Scale {
-            X: 2.26143456
-            Y: 2.06658959
-            Z: 1.93836451
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 7510400789195034267
-        Name: "Stone Block Standard"
-        Transform {
-          Location {
-            X: 408.845703
-            Y: 12.1015625
-            Z: -350.235352
-          }
-          Rotation {
-            Pitch: -0.051356189
-            Yaw: -90.9457092
-            Roll: -178.330246
-          }
-          Scale {
-            X: 3.72758389
-            Y: 2.7353816
-            Z: 2.73534155
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12891613213664917379
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 772980377864193597
-        Name: "Stone Block Standard"
-        Transform {
-          Location {
-            X: 236.798828
-            Y: -32.9238281
-            Z: -358.466309
-          }
-          Rotation {
-            Pitch: -0.051356189
-            Yaw: -90.9457321
-            Roll: 1.66964436
-          }
-          Scale {
-            X: 3.72758389
-            Y: 2.7353816
-            Z: 2.73534155
-          }
-        }
-        ParentId: 15007661289914600826
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1.2
-              G: 1.15757179
-              B: 0.996514797
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1147296945445517997
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -820,9 +337,9 @@ Assets {
         Name: "Large Round Wood Beam 6m"
         Transform {
           Location {
-            X: -107.212891
-            Y: -9.61523438
-            Z: -169.376953
+            X: -107.213005
+            Y: -9.61534309
+            Z: -193.562561
           }
           Rotation {
             Pitch: 90
@@ -830,8 +347,8 @@ Assets {
             Roll: -35.2644348
           }
           Scale {
-            X: 0.479774475
-            Y: 0.479774475
+            X: 0.508998096
+            Y: 0.479774594
             Z: 0.479774475
           }
         }
@@ -953,9 +470,9 @@ Assets {
         Name: "Large Round Wood Beam 6m"
         Transform {
           Location {
-            X: -209.845703
-            Y: -9.61523438
-            Z: -169.376953
+            X: -209.845657
+            Y: -9.61534309
+            Z: -172.7173
           }
           Rotation {
             Pitch: 90
@@ -963,7 +480,7 @@ Assets {
             Roll: -35.2644348
           }
           Scale {
-            X: 0.479774475
+            X: 0.489408225
             Y: 0.479774475
             Z: 0.479774475
           }
@@ -1220,16 +737,16 @@ Assets {
         Name: "Large Round Wood Beam 6m"
         Transform {
           Location {
-            X: 195.056641
-            Y: -9.61523438
-            Z: -169.376953
+            X: 195.056702
+            Y: -9.61534309
+            Z: -181.435562
           }
           Rotation {
             Pitch: 90
             Roll: 1.44890191e-05
           }
           Scale {
-            X: 0.479774475
+            X: 0.498719811
             Y: 0.479774475
             Z: 0.479774475
           }
@@ -1647,6 +1164,61 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 2818471812531687207
+        Name: "Stone Wall End Corner 2m 001"
+        Transform {
+          Location {
+            X: 397.419586
+            Y: -45.0385208
+            Z: -346.554382
+          }
+          Rotation {
+            Pitch: -175.064178
+            Yaw: -92.6487122
+            Roll: -89.140625
+          }
+          Scale {
+            X: 3.24585104
+            Y: 1.58921349
+            Z: 3.5897069
+          }
+        }
+        ParentId: 15007661289914600826
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.567708313
+              G: 0.547635913
+              B: 0.471441418
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13263895099928006297
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
     }
     Assets {
       Id: 12095835209017042614
@@ -1667,21 +1239,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12891613213664917379
-      Name: "Stone Block Standard"
+      Id: 13263895099928006297
+      Name: "Stone Wall End Corner 2m 001"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fantasy_block_01"
-      }
-    }
-    Assets {
-      Id: 6476226809204619067
-      Name: "Stone Block Big Broken"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fantasy_block_broken_04"
+        AssetId: "sm_stone-edge_corner_2m_001"
       }
     }
     Assets {
@@ -1691,15 +1254,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_fantasy_block_broken_03"
-      }
-    }
-    Assets {
-      Id: 1147296945445517997
-      Name: "Stone Block Standard Broken"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fantasy_block_broken_01"
       }
     }
     Assets {

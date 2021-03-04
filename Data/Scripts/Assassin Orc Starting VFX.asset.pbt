@@ -47,6 +47,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:02_DeathsShadow_Attack"
+        AssetReference {
+          Id: 13238733542099491570
+        }
+      }
+      Overrides {
         Name: "cs:03_VenomBomb_Projectile"
         AssetReference {
           Id: 17990456245832998922

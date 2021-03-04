@@ -230,6 +230,7 @@ local currentRarity = {
 
 local typeFilterButtonData = {}
 local filterButtonData = {}
+local classID_TO_filterButton = {}
 
 local defaultColor = Color.FromLinearHex("63F3FFFF")
 
@@ -313,7 +314,13 @@ function ShowStore_ClientHelper()
 	UI.SetCursorVisible(true)
 	UI.SetCanCursorInteractWithUI(true)
 	storePos = 0
-	FilterStoreItems()
+
+	local currentClassID = player:GetResource("CLASS_MAP")
+	if currentClassID ~= 0 then
+		OnClassFilterButtonSelected(classID_TO_filterButton[currentClassID])
+	else
+		FilterStoreItems()
+	end
 	UpdateCurrencyDisplay()
 
 	for k, v in pairs(StoreUIButtons) do
@@ -1409,6 +1416,10 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 			selectedPanel = SelectedPanel,
 			position = position
 		}
+
+		if displayName == "CLASS" then
+			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+		end
 	end
 end
 

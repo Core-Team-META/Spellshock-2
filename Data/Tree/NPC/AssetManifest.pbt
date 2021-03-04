@@ -17,6 +17,33 @@ Assets {
   }
 }
 Assets {
+  Id: 16967182821200846753
+  Name: "Pipe - Quarter Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_quarter-pipe_003"
+  }
+}
+Assets {
+  Id: 16670222695632479546
+  Name: "Play Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "PlayBold_ref"
+  }
+}
+Assets {
+  Id: 16426010434330318338
+  Name: "Pipe - 6-Sided Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_sixsided_003"
+  }
+}
+Assets {
   Id: 16372496464315477095
   Name: "Ring - Beveled Thick"
   PlatformAssetType: 1
@@ -68,6 +95,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_hollow_convex_001"
+  }
+}
+Assets {
+  Id: 15223421943927964872
+  Name: "Cube - Arched"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_arched_001"
   }
 }
 Assets {
@@ -152,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13034447861452970386
+  Name: "Pipe - 6-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_sixsided_002"
+  }
+}
+Assets {
   Id: 12806717230968640779
   Name: "Pipe - Half Thin"
   PlatformAssetType: 1
@@ -170,12 +215,30 @@ Assets {
   }
 }
 Assets {
+  Id: 12377676071953128633
+  Name: "Pipe - Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_004"
+  }
+}
+Assets {
   Id: 12324597429549854992
   Name: "Teardrop - Truncated"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_truncated_teardrop_001"
+  }
+}
+Assets {
+  Id: 12095835209017042614
+  Name: "Cube"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_002"
   }
 }
 Assets {
@@ -224,21 +287,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11162297399913732681
-  Name: "Cube - Polished"
+  Id: 10230959292029196430
+  Name: "Prism - 3-Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_hq_test_001"
-  }
-}
-Assets {
-  Id: 10373577859092754191
-  Name: "Bone Raw"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_bone_raw_001_uv_ref"
+    AssetId: "sm_prism_001"
   }
 }
 Assets {
@@ -260,12 +314,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8834933182589795814
-  Name: "Wedge - Corner Complex"
+  Id: 8619830679695120720
+  Name: "Prism - 6-Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_corelogo_shape_001"
+    AssetId: "sm_prism_hexagon_001"
   }
 }
 Assets {
@@ -278,12 +332,30 @@ Assets {
   }
 }
 Assets {
+  Id: 8353147935132205805
+  Name: "Prism - 6-Sided Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_hexagon_001"
+  }
+}
+Assets {
   Id: 8075281776410522047
   Name: "Curtains Straight"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_curtain_02"
+  }
+}
+Assets {
+  Id: 7774843852490252610
+  Name: "Pipe - 6-Sided Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_sixsided_001"
   }
 }
 Assets {
@@ -359,24 +431,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6582948763113902438
-  Name: "Metal 9 Slice Frame 006"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_frames_9slice_006"
-  }
-}
-Assets {
-  Id: 6523387363685404996
-  Name: "Text 03: !"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "F5_Text_037"
-  }
-}
-Assets {
   Id: 6293838519925911015
   Name: "Horn"
   PlatformAssetType: 1
@@ -440,12 +494,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4533424030597734882
-  Name: "Lens"
+  Id: 4773371599379213519
+  Name: "Fantasy Book 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_lense_001"
+    AssetId: "sm_prop_fan_book_002_ref"
   }
 }
 Assets {
@@ -545,6 +599,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_shield_strap_001"
+  }
+}
+Assets {
+  Id: 675563715440209277
+  Name: "Emissive Glow Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_emissive_001"
   }
 }
 Assets {

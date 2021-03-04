@@ -1,6 +1,32 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 15445562359925381868
+  Name: "PlayerJoinedManager"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "PlayerJoinedManager"
+  }
+}
+Objects {
   Id: 5186187592674502771
   Name: "NPC Triggers"
   Transform {
@@ -62,8 +88,8 @@ Objects {
   Name: "ELF_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40206.3672
-      Y: 51797.4961
+      X: 40441.1797
+      Y: 51877.2578
       Z: 1051.16553
     }
     Rotation {
@@ -99,8 +125,8 @@ Objects {
   Name: "ELF_PERK_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 40206.3672
-      Y: 51797.4961
+      X: 40449.3359
+      Y: 51881.6719
       Z: 1051.16553
     }
     Rotation {
@@ -138,7 +164,7 @@ Objects {
   Name: "ORC_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 110.304688
+      X: 28.2832031
       Y: -378.185547
       Z: 28.0961914
     }
@@ -174,8 +200,8 @@ Objects {
   Name: "ORC_PERK_SHOP_TRIGGER"
   Transform {
     Location {
-      X: 110.304688
-      Y: -378.185547
+      X: 63.65625
+      Y: -374.203125
       Z: 28.0961914
     }
     Rotation {
@@ -205,32 +231,6 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
-  }
-}
-Objects {
-  Id: 2182911302899227888
-  Name: "UI Scripts"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI Scripts"
   }
 }
 Objects {
@@ -309,32 +309,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Chat Hook Commands"
-  }
-}
-Objects {
-  Id: 15766608560554198711
-  Name: "RewardSystem"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "RewardSystem"
   }
 }
 Objects {
@@ -461,31 +435,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Skills"
-  }
-}
-Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Daily Shop"
   }
 }
