@@ -182,6 +182,9 @@ headerLine:GetCustomProperty("Damage"):WaitForObject().text = "Damage"
 headerLine:GetCustomProperty("Healing"):WaitForObject().text = "Healing"
 headerLine:GetCustomProperty("Killstreak"):WaitForObject().text = "Kill Streak"
 
+for _, player in ipairs(Game.GetPlayers()) do
+    OnPlayerJoined(player)
+end
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

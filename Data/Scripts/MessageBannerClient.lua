@@ -23,12 +23,11 @@ BannerMessage(String message, float duration)
 --]]
 
 -- Internal custom properties
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
 
 -- User exposed properties
-local DEFAULT_DURATION = COMPONENT_ROOT:GetCustomProperty("DefaultDuration")
+local DEFAULT_DURATION = 5
 
 -- Check user properties
 if DEFAULT_DURATION <= 0.0 then

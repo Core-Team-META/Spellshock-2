@@ -27,32 +27,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4197521803680757974
-  Name: "Round Evaluations"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
-  }
-}
-Objects {
   Id: 5186187592674502771
   Name: "NPC Triggers"
   Transform {
@@ -260,32 +234,6 @@ Objects {
   }
 }
 Objects {
-  Id: 2182911302899227888
-  Name: "UI Scripts"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI Scripts"
-  }
-}
-Objects {
   Id: 12502215343179190632
   Name: "TEMP Spawn Protect"
   Transform {
@@ -487,31 +435,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Skills"
-  }
-}
-Objects {
-  Id: 4362092203162598167
-  Name: "Daily Shop"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3612684566017260609
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Daily Shop"
   }
 }
