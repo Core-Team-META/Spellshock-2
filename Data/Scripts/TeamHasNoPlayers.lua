@@ -19,7 +19,7 @@ end
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
--- #TODO Remove everthing below this line
+--[[ #TODO Remove everthing below this line
 
 function OnBindingPressed(whichPlayer, binding)
 	if (binding == "ability_extra_0") then 
@@ -33,4 +33,4 @@ function OnPlayerJoined(player)
 end
 
 -- on player joined/left functions need to be defined before calling event:Connect()
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerJoinedEvent:Connect(OnPlayerJoined)]]
