@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15165554833363844727
+  Name: "Amarante"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "AmaranteRegular_ref"
+  }
+}
+Assets {
   Id: 14263710291750082864
   Name: "Player Selection Core 01 SFX"
   PlatformAssetType: 7

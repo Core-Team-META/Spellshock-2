@@ -46,14 +46,14 @@ end
 
 function OnBindingPressed(whichPlayer, binding)
 	local CurrentGameState = ABGS.GetGameState()
-	if CurrentGameState == ABGS.GAME_STATE_LOBBY and (binding == "ability_extra_50") and SpamPrevent() then --F1
+	--[[if CurrentGameState == ABGS.GAME_STATE_LOBBY and (binding == "ability_extra_50") and SpamPrevent() then --F1
 		--print(">> CLASS SELECTION MENU")
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"]) -- Show
 		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
-		end
-	elseif (binding == "ability_extra_51") and SpamPrevent() then --F2
+		end]]
+	if (binding == "ability_extra_51") and SpamPrevent() then --F2
 		--print(">> TUTORIAL MENU")
 		local newState = _G.MENU_TABLE["Tutorial"] 
 		if _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
@@ -67,11 +67,15 @@ function OnBindingPressed(whichPlayer, binding)
 		elseif _G.CurrentMenu == _G.MENU_TABLE["CosmeticStore"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
-	elseif binding == "ability_extra_27" and CurrentGameState == ABGS.GAME_STATE_ROUND and SpamPrevent() then -- i
-		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
-			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"]) -- Show
-		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] then
-			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+	elseif binding == "ability_extra_27" and SpamPrevent() then -- i
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] and CurrentGameState == ABGS.GAME_STATE_ROUND then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassAbilities"])
+		elseif _G.CurrentMenu == _G.MENU_TABLE["NONE"] and CurrentGameState == ABGS.GAME_STATE_LOBBY then
+			Events.Broadcast("Changing Menu", _G.MENU_TABLE["ClassSelection"])
+		else
+			if _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] or _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
+				Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+			end
 		end
 	elseif binding == "ability_extra_37" and (CurrentGameState == ABGS.GAME_STATE_LOBBY or CurrentGameState == ABGS.GAME_STATE_ROUND) and SpamPrevent() then
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then

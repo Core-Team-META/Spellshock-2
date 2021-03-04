@@ -294,12 +294,12 @@ function UpdateAbilityInfo(thisButton)
 
 		local currentMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "")
 		local nextMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "", true)
-		
+		local nextText = ""
+		local usingHyphen
 		if type(currentMod) == "table" then
 			if modData["IsStatusEffect"] then
 				local currentText = ""
-				local nextText = ""
-
+				
 				if currentMod.damage ~= 0 then
 					currentText = string.format("Damage [%s]", tostring(currentMod.damage))
 					nextText = string.format("Damage [%s]", tostring(nextMod.damage))
@@ -325,19 +325,29 @@ function UpdateAbilityInfo(thisButton)
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
 			else
+				usingHyphen = true
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%s - %s", tostring(currentMod.min), tostring(currentMod.max))
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%s - %s", tostring(nextMod.min), tostring(nextMod.max))
 			end
 		else
+			nextText = tostring(nextMod)
 			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = tostring(currentMod)
-			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = tostring(nextMod)
+			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
 		end
 
+		local NextLevelPanel = newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject()
 		if currentMod == nextMod or abilityLevel == 10 then
-			newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject().visibility = Visibility.FORCE_OFF
+			NextLevelPanel.visibility = Visibility.FORCE_OFF
+		else
+			local glowLength = 150
+			if not usingHyphen then
+				glowLength = CoreMath.Clamp(85 + (7 * string.len(nextText)), 1, 360)
+			end
+			NextLevelPanel:GetCustomProperty("Glow1"):WaitForObject().height = glowLength
+			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength
 		end
 	end
-
+	print("\n")
 	RightPanel_AbilityStatsPanel.visibility = Visibility.INHERIT
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.INHERIT
