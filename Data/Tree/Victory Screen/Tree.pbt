@@ -7032,10 +7032,12 @@ Objects {
   Name: "Victory Cam"
   Transform {
     Location {
-      X: -598.045044
-      Z: 118.091797
+      X: -598.04541
+      Y: -7.62939453e-06
+      Z: 250
     }
     Rotation {
+      Pitch: -10
     }
     Scale {
       X: 1
@@ -7056,6 +7058,7 @@ Objects {
     PositionOffset {
     }
     RotationOffset {
+      Pitch: -10
     }
     FieldOfView: 90
     ViewWidth: 1200

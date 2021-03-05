@@ -178,7 +178,7 @@ function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
 	isCharging = 0
 
-	if IS_CHARGE_ATTACK then
+	if IS_CHARGE_ATTACK and Object.IsValid(ChargeupSFX) then
 		ChargeupSFX:Stop()
 		ChargeupVFX:Stop()
 	end
