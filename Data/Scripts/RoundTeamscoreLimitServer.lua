@@ -43,8 +43,11 @@ function Tick(deltaTime)
 					--Events.Broadcast("TieVictory")
 					--ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
 					
-					-- In the case of a tie, which ever team gets the next kill will win
-					return
+					if Game.GetTeamScore(i) > Game.GetTeamScore(winningTeam) then
+						winningTeam = i
+					else -- In the case of a tie, which ever team gets the next kill will win
+						return
+					end	
 				else
 					winningTeam = i
 				end
