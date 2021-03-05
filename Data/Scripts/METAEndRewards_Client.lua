@@ -17,9 +17,6 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
-local TOP_CENTER = script:GetCustomProperty("2__3_TOP_CENTER"):WaitForObject()
-local ACTIVE_TEAM_NAME = script:GetCustomProperty("ACTIVE_TEAM_NAME"):WaitForObject()
-local MATCH_TIME = script:GetCustomProperty("MATCH_TIME"):WaitForObject()
 local ANIMATION = script:GetCustomProperty("EoR_Animation"):WaitForObject()
 local CLAIM_BUTTON = script:GetCustomProperty("CLAIM_BUTTON"):WaitForObject()
 local BUTTON_TEXT_SHADOW = script:GetCustomProperty("BUTTON_TEXT_SHADOW"):WaitForObject()
@@ -101,21 +98,8 @@ local function ToggleUI(isTrue)
     UI.SetCursorLockedToViewport(isTrue)
     if isTrue then
         REWARD_PARENT_UI.visibility = Visibility.FORCE_ON
-        TOP_CENTER.visibility = Visibility.FORCE_ON
-        local teamName
-        if LOCAL_PLAYER.team == 1 then
-            teamName = "Dark Devout"
-        elseif LOCAL_PLAYER.team == 2 then
-            teamName = "Legion of Light"
-        end
-        local minutes = math.floor(roundTime) // 60 % 60
-        local seconds = math.floor(roundTime) % 60
-        MATCH_TIME.text = "MATCH TIME: " .. string.format("%02d:%02d", minutes, seconds)
-        ACTIVE_TEAM_NAME.text = teamName
-        ACTIVE_TEAM_NAME:SetColor(_G.TeamColors[LOCAL_PLAYER.team])
     else
         REWARD_PARENT_UI.visibility = Visibility.FORCE_OFF
-        TOP_CENTER.visibility = Visibility.FORCE_OFF
         DisconnectListeners()
     end
 end
@@ -379,25 +363,6 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         ANIMATION.context.Reset()
     end
 end
-
---[[function OnMenuChanged(oldMenu, newMenu)
-    print("And here")
-    --if LOCAL_PLAYER.clientUserData.HasPlayedRound then
-        if newMenu == _G.MENU_TABLE["Rewards"] then -- show
-            
-            HideSelected()
-            ToggleUI(true)
-            ANIMATION.context.OnRewardShow()
-        else -- hide
-            CLAIM_BUTTON.isInteractable = true
-            BUTTON_TEXT.text = "CLAIM SELECTED REWARD"
-            BUTTON_TEXT_SHADOW.text = "CLAIM SELECTED REWARD"
-            ToggleUI(false)
-            ANIMATION.context.OnRewardHide(currentSelect.slotID)
-            HideSelected()
-        end
-    --end
-end]]
 
 --#TODO TEMP FUNCTIONS
 function OnTriggerReward(player, keybind)

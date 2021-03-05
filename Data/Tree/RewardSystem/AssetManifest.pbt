@@ -1,4 +1,13 @@
 Assets {
+  Id: 18306033672834061437
+  Name: "Fantasy Craft Crystal 043"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Crystal_043"
+  }
+}
+Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
@@ -161,6 +170,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7615847344375253670
+  Name: "UI Basic Frame 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Frame_001"
+  }
+}
+Assets {
   Id: 7585529932942736913
   Name: "Fantasy Coins 009"
   PlatformAssetType: 9
@@ -176,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "CenterArrow_002Wedge"
+  }
+}
+Assets {
+  Id: 6569410210520716887
+  Name: "Fantasy Ability Teal 014"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_014"
   }
 }
 Assets {
@@ -275,6 +302,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_020"
+  }
+}
+Assets {
+  Id: 2245538709031651504
+  Name: "Emblem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_055"
   }
 }
 Assets {

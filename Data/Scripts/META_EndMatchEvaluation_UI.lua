@@ -239,7 +239,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
     end
 end
 
-function Tick()
+--[[function Tick()
     if ABGS.IsGameStateManagerRegistered() then
         local currentState = ABGS.GetGameState()
         if
@@ -252,6 +252,6 @@ function Tick()
             PARENT_PANEL.visibility = Visibility.FORCE_OFF
         end
     end
-end
+end]]
 
 Events.Connect("GameStateChanged", OnGameStateChanged)

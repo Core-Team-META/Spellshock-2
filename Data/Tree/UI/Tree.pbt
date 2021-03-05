@@ -98,7 +98,7 @@ Objects {
   Control {
     Width: 1127
     Height: 620
-    UIY: 186.234192
+    UIY: 272.363312
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -9675,7 +9675,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 163598988004345801
+        Id: 6262345458031684017
       }
       Color {
         R: 1

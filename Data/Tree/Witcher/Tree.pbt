@@ -11960,37 +11960,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1802783527496580588
-  Name: "Victory Screen"
-  Transform {
-    Location {
-      X: 39036
-      Y: 29633
-      Z: 2369
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14162296025304194376
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Victory Screen"
-  }
-}
-Objects {
   Id: 14237155299322317803
   Name: "NemesisTracker"
   Transform {

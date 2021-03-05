@@ -50,6 +50,7 @@ end
 local headerLine = nil
 local playerLines = {}
 local atRoundEnd = false
+local atPlayerShowcase
 local roundEndTime = 0.0
 local bindingDown = false
 
@@ -99,11 +100,17 @@ function OnRoundEnd()
 end
 
 function OnGameStateChanged(oldState, newState)
-    if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+    if newState == ABGS.GAME_STATE_ROUND_END then
+        atRoundEnd = true
+    elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         HEADER.visibility = Visibility.FORCE_OFF
-    --[[elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-        print("Resetting Victory Property")
-        Events.BroadcastToServer("TeamVictory_Client", "") -- Reset the network property]]
+        atRoundEnd = false
+        atPlayerShowcase = true
+        Task.Wait()
+        PANEL.visibility = Visibility.FORCE_OFF
+    else
+        atRoundEnd = false
+        atPlayerShowcase = false
     end
 end
 
@@ -133,23 +140,17 @@ end
 -- nil Tick(float)
 -- Update visibility and displayed information
 function Tick(deltaTime)
-    if atRoundEnd and time() - roundEndTime > ROUND_END_DURATION then
-        atRoundEnd = false
-    end
-
     if bindingDown or atRoundEnd then
         PANEL.visibility = Visibility.INHERIT
+    elseif not atPlayerShowcase then
+        PANEL.visibility = Visibility.FORCE_OFF
+    end
 
+    if PANEL.visibility == Visibility.INHERIT then
         local players = Game.GetPlayers() 
         table.sort(players, ComparePlayers)
 
         for i, player in ipairs(players) do
-            --local teamColor = FRIENDLY_COLOR
-
-            --if player ~= LOCAL_PLAYER and Teams.AreTeamsEnemies(player.team, LOCAL_PLAYER.team) then
-                --teamColor = ENEMY_COLOR
-            --end
-
             local line = playerLines[i]
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
@@ -163,8 +164,6 @@ function Tick(deltaTime)
             line:GetCustomProperty("Healing"):WaitForObject().text = tostring(player:GetResource(RES.TOTAL_HEALING_RES))
             line:GetCustomProperty("Killstreak"):WaitForObject().text = tostring(player:GetResource(RES.LARGEST_KILL_STREAK))
         end
-    else
-        PANEL.visibility = Visibility.FORCE_OFF
     end
 end
 

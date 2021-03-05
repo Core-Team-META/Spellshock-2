@@ -347,7 +347,6 @@ function UpdateAbilityInfo(thisButton)
 			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength
 		end
 	end
-	print("\n")
 	RightPanel_AbilityStatsPanel.visibility = Visibility.INHERIT
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.INHERIT

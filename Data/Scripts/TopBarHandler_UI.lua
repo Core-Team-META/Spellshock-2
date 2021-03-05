@@ -64,11 +64,15 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+            UpdateTimeRemaining(remainingTime)
+        end
+
         if currentState == ABGS.GAME_STATE_REWARDS then
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS then
+        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
             if not remainingTime then return end
             local currentSecond = math.ceil(remainingTime)
             if currentSecond <= 6 and currentSecond ~= PreviousSecond then
