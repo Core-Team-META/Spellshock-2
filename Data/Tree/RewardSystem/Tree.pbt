@@ -6169,7 +6169,7 @@ Objects {
   ChildIds: 16264729456294121700
   ChildIds: 16006704997633300355
   ChildIds: 10987944908602048183
-  ChildIds: 5514056527243723117
+  ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6254,8 +6254,59 @@ Objects {
   }
 }
 Objects {
+  Id: 6841025574180223538
+  Name: "Chest Panel"
+  Transform {
+    Location {
+      X: -1887.97461
+      Y: 27753.9453
+      Z: -8130
+    }
+    Rotation {
+      Yaw: -135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4542412189343657266
+  ChildIds: 5514056527243723117
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    UIY: 110
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 5514056527243723117
-  Name: "Chest"
+  Name: "Chest Icon"
   Transform {
     Location {
     }
@@ -6267,7 +6318,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4542412189343657266
+  ParentId: 6841025574180223538
   ChildIds: 6436033508262356213
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6278,7 +6329,7 @@ Objects {
   Control {
     Width: 200
     Height: 200
-    UIY: 390
+    UIY: -200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6857,7 +6908,7 @@ Objects {
     Overrides {
       Name: "cs:REWARD_OWNED"
       ObjectReference {
-        SelfId: 16545126467908733713
+        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -6901,7 +6952,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
     Width: 294
@@ -7179,7 +7230,7 @@ Objects {
       }
     }
     Text {
-      Label: "NOTHING"
+      Label: "LOCKED"
       Color {
         R: 0.179999948
         G: 0.0643708408
@@ -7238,7 +7289,7 @@ Objects {
       }
     }
     Text {
-      Label: "NOTHING"
+      Label: "LOCKED"
       Color {
         R: 1
         G: 0.857218564
@@ -7507,8 +7558,6 @@ Objects {
     }
   }
   ParentId: 7437996180687149024
-  ChildIds: 13477109959771591846
-  ChildIds: 16545126467908733713
   ChildIds: 16418970775936956687
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7565,67 +7614,7 @@ Objects {
   Control {
     Width: 200
     Height: 30
-    UIY: -34.2274933
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "LOCKED"
-      Color {
-        R: 1
-        G: 0.547019958
-        B: 0.100000024
-        A: 1
-      }
-      Size: 17
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      AutoWrapText: true
-      Font {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomcenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 16545126467908733713
-  Name: "REWARD_OWNED"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16945303996519039777
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 30
-    UIY: -9.94339943
+    UIY: -24.0016537
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7635,8 +7624,7 @@ Objects {
       Label: "WINNING TEAM ONLY"
       Color {
         R: 1
-        G: 0.733377516
-        B: 0.339999974
+        G: 0.516556323
         A: 1
       }
       Size: 17
@@ -7656,61 +7644,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomcenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 13477109959771591846
-  Name: "UI Image"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16945303996519039777
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 200
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 16532880832873788683
-      }
-      Color {
-        A: 0.54
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -8970,9 +8903,8 @@ Objects {
         Id: 16259713446874198849
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.651405811
+        G: 0.351532698
         A: 1
       }
       TeamSettings {
@@ -26702,7 +26634,10 @@ Objects {
     }
   }
   ParentId: 4519890512238287661
+  ChildIds: 8024260957448592755
   ChildIds: 11103123690946997835
+  ChildIds: 9018268040939940198
+  ChildIds: 7910816560908123138
   UnregisteredParameters {
     Overrides {
       Name: "cs:EaseUI"
@@ -26788,6 +26723,24 @@ Objects {
         Id: 8568066535552400044
       }
     }
+    Overrides {
+      Name: "cs:RewardCardMovementSFX"
+      AssetReference {
+        Id: 10915691077603094036
+      }
+    }
+    Overrides {
+      Name: "cs:HideCardsSFX"
+      ObjectReference {
+        SelfId: 8024260957448592755
+      }
+    }
+    Overrides {
+      Name: "cs:RewardShimmerSFX"
+      ObjectReference {
+        SelfId: 9018268040939940198
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -26799,6 +26752,66 @@ Objects {
     ScriptAsset {
       Id: 13505058819200996876
     }
+  }
+}
+Objects {
+  Id: 7910816560908123138
+  Name: "Meta Fantasy Treasure 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16753970550728364913
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 13990916659029667342
+    }
+    Volume: 1
+    Falloff: -1
+    Radius: -1
+  }
+}
+Objects {
+  Id: 9018268040939940198
+  Name: "Shine Star Shimmer 04 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16753970550728364913
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 4545703222389595688
+    }
+    Volume: 1.5
+    Falloff: -1
+    Radius: -1
   }
 }
 Objects {
@@ -26838,6 +26851,52 @@ Objects {
     }
     AudioBP {
       Volume: 1
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 8024260957448592755
+  Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
+  Transform {
+    Location {
+      X: -22866
+      Y: -30479
+      Z: 6229
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16753970550728364913
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_airswooshes:12"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 5784792452233078693
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Pitch: -500
+      Volume: 0.5
       Falloff: 3600
       Radius: 400
     }

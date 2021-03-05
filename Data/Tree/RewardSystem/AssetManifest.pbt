@@ -71,6 +71,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13990916659029667342
+  Name: "Meta Fantasy Treasure 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_meta_fantasy_treasure_01_Cue_ref"
+  }
+}
+Assets {
   Id: 12804716500201279526
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
@@ -206,6 +215,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5784792452233078693
+  Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_melee_air_swooshes_ref"
+  }
+}
+Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
@@ -239,6 +257,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_007"
+  }
+}
+Assets {
+  Id: 4545703222389595688
+  Name: "Shine Star Shimmer 04 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_shine_star_shimmer_04_Cue_ref"
   }
 }
 Assets {

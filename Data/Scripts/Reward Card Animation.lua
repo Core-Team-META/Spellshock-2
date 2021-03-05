@@ -13,6 +13,9 @@ local Help_RewardDropSFX = script:GetCustomProperty("Help_RewardDropSFX")
 local GoldIcon = script:GetCustomProperty("GoldIcon")
 local GemIcon = script:GetCustomProperty("GemIcon")
 local ShardIcon = script:GetCustomProperty("ShardIcon")
+local RewardCardMovementSFX = script:GetCustomProperty("RewardCardMovementSFX")
+local HideCardsSFX = script:GetCustomProperty("HideCardsSFX"):WaitForObject()
+local RewardShimmerSFX = script:GetCustomProperty("RewardShimmerSFX"):WaitForObject()
 
 RewardSlot1.clientUserData.X = RewardSlot1.x
 RewardSlot2.clientUserData.X = RewardSlot2.x
@@ -34,41 +37,36 @@ end
 
 function OnRewardShow()
     REWARDS.visibility = Visibility.FORCE_ON
-    RewardSlot1.visibility = Visibility.FORCE_OFF
-    RewardSlot2.visibility = Visibility.FORCE_OFF
-    RewardSlot3.visibility = Visibility.FORCE_OFF
-    Task.Wait(.5)
     Stinger:Play()
+
+    Task.Wait(1)
     EaseUI.EaseY(RewardSlot1, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    Task.Wait(.2)
-    RewardSlot1.visibility = Visibility.FORCE_ON
+    World.SpawnAsset(RewardCardMovementSFX)
+
+    Task.Wait(.5)
     EaseUI.EaseY(RewardSlot2, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    Task.Wait(.2)
-    RewardSlot2.visibility = Visibility.FORCE_ON
-    RewardSlot3Loss.visibility = Visibility.INHERIT
+    World.SpawnAsset(RewardCardMovementSFX)
+    
+    Task.Wait(.5)
     EaseUI.EaseY(RewardSlot3, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
     EaseUI.EaseY(RewardSlot3Loss, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    Task.Wait(.2)
-    RewardSlot3.visibility = Visibility.FORCE_ON
+    World.SpawnAsset(RewardCardMovementSFX)
 end
 
 function RevealChest(selectedIndex, rewardID)
-    --[[REWARDS.visibility = Visibility.FORCE_OFF
-    EaseUI.EaseY(RewardSlot1, -1000, .5, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    EaseUI.EaseY(RewardSlot2, -1000, .5, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    EaseUI.EaseY(RewardSlot3, -1000, .5, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)]]
-
     for index, card in ipairs(Cards) do
         if index ~= selectedIndex then
             EaseUI.EaseY(card, -1000, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
         end
     end
-    
-    if selectedIndex ~= 2 then
-        Task.Wait(0.2)
+    HideCardsSFX:Play()
+
+    Task.Wait(0.2)
+    if selectedIndex ~= 2 then        
         EaseUI.EaseY(Cards[selectedIndex], 160, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
         EaseUI.EaseX(Cards[selectedIndex], 0, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
     end
+    RewardShimmerSFX:Play()
     --EaseUI.EaseY(Chest, 110, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
     Task.Wait(1)
 
