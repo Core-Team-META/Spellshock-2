@@ -107,6 +107,10 @@ function OnRoundStart()
 		ALT_BASE_POSITION = capturePointState.worldPosition
 		BASE_BUTTONS[1].clientUserData.stateID = capturePointState.id
 		BASE_BUTTONS[2].clientUserData.stateID = capturePointState.id
+	else
+		ALT_BASE_POSITION = nil
+		BASE_BUTTONS[1].clientUserData.stateID = nil
+		BASE_BUTTONS[2].clientUserData.stateID = nil
 	end
 end
 

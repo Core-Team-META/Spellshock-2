@@ -88,8 +88,8 @@ Objects {
   Name: "ELF_PERK_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40441.1797
-      Y: 51877.2578
+      X: 40486.4141
+      Y: 51907.3125
       Z: 1051.16553
     }
     Rotation {
@@ -165,7 +165,7 @@ Objects {
   Transform {
     Location {
       X: 28.2832031
-      Y: -378.185547
+      Y: -441.6875
       Z: 28.0961914
     }
     Rotation {

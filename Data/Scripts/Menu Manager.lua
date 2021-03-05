@@ -15,7 +15,9 @@ _G.MENU_TABLE = {
 	Rewards = 4,
 	CosmeticStore = 5,
 	ClassAbilities = 6,
-	Achievements = 7
+	Achievements = 7, 
+	PerkShop = 8,
+	DailyShop = 9
 }
 
 function SpamPrevent()
@@ -54,12 +56,12 @@ function OnBindingPressed(whichPlayer, binding)
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end]]
 	if (binding == "ability_extra_51") and SpamPrevent() then --F2
-		--print(">> TUTORIAL MENU")
+		--[[print(">> TUTORIAL MENU")
 		local newState = _G.MENU_TABLE["Tutorial"] 
 		if _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
 			newState = _G.MENU_TABLE["NONE"]
 		end
-		Events.Broadcast("Changing Menu", newState)	
+		Events.Broadcast("Changing Menu", newState)	]]
 	elseif binding == "ability_extra_29" and SpamPrevent() then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		--print(">> COSMETIC SHOP")
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then

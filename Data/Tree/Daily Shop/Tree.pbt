@@ -62,17 +62,17 @@ Objects {
   Name: "ELF_DAILY_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 40116.1328
-      Y: 51623.3516
+      X: 40088.4141
+      Y: 51592.3125
       Z: 1051.16553
     }
     Rotation {
       Yaw: 48.6015
     }
     Scale {
-      X: 5.69476271
-      Y: 4.21105146
-      Z: 4.60918236
+      X: 4.70000029
+      Y: 4.20000029
+      Z: 4.6
     }
   }
   ParentId: 12438902226095385717
@@ -134,8 +134,8 @@ Objects {
   Name: "ORC_DAILY_SHOP_LEAVE_TRIGGER"
   Transform {
     Location {
-      X: 31.9257813
-      Y: 6.31445313
+      X: -27.5839844
+      Y: 33.3125
       Z: 18.9360352
     }
     Rotation {

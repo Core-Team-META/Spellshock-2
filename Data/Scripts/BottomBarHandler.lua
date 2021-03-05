@@ -31,7 +31,9 @@ function OnClassIconSet(name, icon)
 end
 
 function Tick()
-    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap() then
+    
+    if _G.CurrentMenu and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"]) 
+    and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap() then
         BottomBar.visibility = Visibility.INHERIT
     else
         BottomBar.visibility = Visibility.FORCE_OFF
