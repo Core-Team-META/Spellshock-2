@@ -864,6 +864,12 @@ Objects {
         Id: 3493372388929023277
       }
     }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 3392388590054420013
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1167,6 +1173,12 @@ Objects {
       Name: "cs:04_Supernova_Ending"
       AssetReference {
         Id: 11548624648656035757
+      }
+    }
+    Overrides {
+      Name: "cs:02_HealingCrystal_Preview"
+      AssetReference {
+        Id: 18349665107832834494
       }
     }
   }
