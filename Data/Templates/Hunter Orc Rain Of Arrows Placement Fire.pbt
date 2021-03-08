@@ -63,8 +63,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 4500
+          Radius: 2000
           IsAttenuationEnabled: true
         }
       }
@@ -130,8 +130,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 0.75
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 4500
+          Radius: 2000
           IsAttenuationEnabled: true
         }
       }
@@ -6981,8 +6981,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1.5
-          Falloff: 2500
-          Radius: 1000
+          Falloff: 4500
+          Radius: 2000
           IsAttenuationEnabled: true
         }
       }

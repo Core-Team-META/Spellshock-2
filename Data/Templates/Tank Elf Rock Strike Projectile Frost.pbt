@@ -200,7 +200,7 @@ Assets {
           AutoPlay: true
           Repeat: true
           Pitch: 600
-          Volume: 1
+          Volume: 1.3
           Falloff: 6300
           Radius: 1050
           FadeOutTime: 1
@@ -236,7 +236,7 @@ Assets {
           }
           AutoPlay: true
           Repeat: true
-          Volume: 1
+          Volume: 1.3
           Falloff: -1
           Radius: -1
           FadeOutTime: 1

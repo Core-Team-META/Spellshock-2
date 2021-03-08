@@ -68,6 +68,7 @@ Assets {
         ChildIds: 15778148727769829913
         ChildIds: 6052001670107830827
         ChildIds: 1777835773080908227
+        ChildIds: 839753757619572782
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -4349,6 +4350,79 @@ Assets {
           IsAttenuationEnabled: true
         }
       }
+      Objects {
+        Id: 839753757619572782
+        Name: "Cloth Fabric Flap Bright Rustle 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9466170304747628340
+        ChildIds: 18062063028639241136
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 175983598887838075
+          }
+          AutoPlay: true
+          Repeat: true
+          Pitch: 300
+          Volume: 1
+          Falloff: 3000
+          Radius: 1000
+          FadeInTime: 0.5
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 18062063028639241136
+        Name: "LoopAudio"
+        Transform {
+          Location {
+            X: 9860
+            Y: 20020
+            Z: -3570
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 839753757619572782
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Period"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11929697437890047657
+          }
+        }
+      }
     }
     Assets {
       Id: 11594524757616528940
@@ -4474,6 +4548,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_bird_hawk_cry_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 175983598887838075
+      Name: "Cloth Fabric Flap Bright Rustle 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_cloth_fabric_flap_bright_rustle_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
