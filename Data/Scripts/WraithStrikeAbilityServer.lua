@@ -49,7 +49,7 @@ end
 function OnBindingPressed(player, binding)
 	if isEnabled and not isExecuting and not player.isDead then
 		if binding == AbilityBinding and not isPreviewing and player.isGrounded and META_AP().AbilitySpamPreventer() 
-		and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		and Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
             --Disable active abilities
 			ActiveAbilities = {}
 			for _, playerAbility in pairs(player:GetAbilities()) do
@@ -69,7 +69,7 @@ function OnBindingPressed(player, binding)
 
 			isPreviewing = true
 			SetNetworkProperty(isPreviewing)
-			print("Phase 1")
+			--print("Phase 1")
 			--Task.Wait(1)
 
             local launchTime = time() + 1
@@ -84,8 +84,8 @@ function OnBindingPressed(player, binding)
 				return
 			end
 			
-			SpecialAbility.isEnabled = true
-			print("Phase 2")
+			----SpecialAbility.isEnabled = true
+			--print("Phase 2")
 		elseif CancelBindings[binding] and binding ~= AbilityBinding and isPreviewing then
 			--print("Canceling Wraith Strike")
 			DisableFlying()
@@ -182,7 +182,7 @@ function OnTargetChosen(thisAbility)
         end
 
 		Task.Wait()
-        SpecialAbility.isEnabled = false
+        --SpecialAbility.isEnabled = false
         --print("Wraith Strike Finished\n")
 	end
 end
@@ -247,7 +247,7 @@ function DisableFlying()
 	if Object.IsValid(SpecialAbility) then
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
-		SpecialAbility.isEnabled = false
+		--SpecialAbility.isEnabled = false
 		GoOnShortCooldown()
 	end
 
@@ -318,7 +318,7 @@ function OnAbilityToggled(thisAbility, mode)
 		isPreviewing = false
 		SetNetworkProperty(isPreviewing)
 		GoOnShortCooldown()
-		SpecialAbility.isEnabled = false
+		--SpecialAbility.isEnabled = false
 		isEnabled = mode
 		if thisAbility.id == SpecialAbility.id then
 			-- reactive other abilities
@@ -348,7 +348,7 @@ function OnEquip(equipment, player)
 
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
 	Task.Wait()
-	SpecialAbility.isEnabled = false
+	--SpecialAbility.isEnabled = false
 end
 
 function OnUnequip(equipment, player)

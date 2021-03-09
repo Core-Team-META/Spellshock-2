@@ -1497,7 +1497,7 @@ Assets {
         ParentId: 14326137833624201234
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ServerScript"
+            Name: "cs:AbilitySettings"
             ObjectReference {
               SubObjectId: 17515797633147736346
             }
@@ -2222,6 +2222,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Ability {
+          IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
             Duration: 0.5

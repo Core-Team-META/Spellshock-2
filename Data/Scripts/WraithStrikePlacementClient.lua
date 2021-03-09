@@ -2,25 +2,24 @@ local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
-local ServerScript = script:GetCustomProperty("ServerScript"):WaitForObject()
-local Equipment = ServerScript:GetCustomProperty("Equipment"):WaitForObject()
-local SpecialAbility = ServerScript:GetCustomProperty("SpecialAbility"):WaitForObject()
+local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
+local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
+local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
+local DEFAULT_FlyingDuration = AbilitySettings:GetCustomProperty("FlyingDuration")
+local FlyingDuration = DEFAULT_FlyingDuration
 local AbilityBinding = SpecialAbility:GetCustomProperty("Binding")
-local PreviewObjectTemplate = ServerScript:GetCustomProperty("PrimerObjectTemplate")
 
-local DEFAULT_Range = ServerScript:GetCustomProperty("MaxPlacementRange")
-local DEFAULT_Duration = ServerScript:GetCustomProperty("Duration")
-local MatchNormal = ServerScript:GetCustomProperty("MatchNormal")
-local MatchPlayerRotation = ServerScript:GetCustomProperty("MatchPlayerRotation")
-local EventName = ServerScript:GetCustomProperty("EventName")
+local DEFAULT_Range = AbilitySettings:GetCustomProperty("MaxPlacementRange")
+local DEFAULT_Duration = AbilitySettings:GetCustomProperty("Duration")
+local MatchNormal = AbilitySettings:GetCustomProperty("MatchNormal")
+local MatchPlayerRotation = AbilitySettings:GetCustomProperty("MatchPlayerRotation")
+local EventName = AbilitySettings:GetCustomProperty("EventName")
 local abilityPreview = script:GetCustomProperty("PreviewString")
 local isPreviewing = Equipment:GetCustomProperty(abilityPreview)
 
-local Class = ServerScript:GetCustomProperty("Class")
-local BindingName = ServerScript:GetCustomProperty("BindingName")
-local AbilityMod = ServerScript:GetCustomProperty("AbilityMod")
-local RadiusMod = ServerScript:GetCustomProperty("RadiusMod")
-local DurationMod = ServerScript:GetCustomProperty("DurationMod")
+local Class = AbilitySettings:GetCustomProperty("Class")
+local BindingName = AbilitySettings:GetCustomProperty("BindingName")
+local AbilityMod = AbilitySettings:GetCustomProperty("AbilityMod")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PlayerVFX = nil
@@ -29,8 +28,7 @@ local objectHalogram = nil
 local EventListeners = {}
 local placementTable = {position = nil, rotation = nil, isVisible = nil}
 local lastValidPlacement = {position = nil, rotation = nil}
-local durationTimer = 0
-local totalDuration = 0
+local flyingTimer = 0
 
 function OnNetworkedPropertyChanged(thisObject, name)
 	if name == abilityPreview then
@@ -40,25 +38,16 @@ function OnNetworkedPropertyChanged(thisObject, name)
 		isPreviewing = Equipment:GetCustomProperty(name)
 
 		if isPreviewing then
+			lastValidPlacement = {}
 			local previewScale = Vector3.ONE
-			if RadiusMod then
-				local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
-				local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
-				previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
-			end
 
-			local ObjectTemplate
-			if PreviewObjectTemplate then
-				ObjectTemplate = PreviewObjectTemplate
-			else
-				ObjectTemplate = PlayerVFX.Preview
-			end
+			FlyingDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().ASSASSIN, META_AP().T, "mod4", DEFAULT_FlyingDuration, SpecialAbility.name .. ": Fly Duration")
+			flyingTimer = FlyingDuration
 
-			local newObject = World.SpawnAsset(ObjectTemplate, {scale = previewScale})
-
-			objectHalogram = newObject
+			objectHalogram = World.SpawnAsset(PlayerVFX.Preview, {scale = previewScale})
 			AllHalograms[objectHalogram.id] = objectHalogram
 		else
+			flyingTimer = -1
 			if objectHalogram and Object.IsValid(objectHalogram) then
 				AllHalograms[objectHalogram.id] = nil
 				objectHalogram:Destroy()
@@ -69,24 +58,16 @@ function OnNetworkedPropertyChanged(thisObject, name)
 end
 
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary" and SpecialAbility.isEnabled and isPreviewing and objectHalogram and Object.IsValid(objectHalogram) then
+	if binding == "ability_primary" and SpecialAbility.isEnabled and isPreviewing and 
+	lastValidPlacement.position and objectHalogram and Object.IsValid(objectHalogram) then
 		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
-		placementTable.rotation = objectHalogram:GetWorldRotation()
 
 		-- if the hologram position is nil or not visible then do not activate the ability; this means the placement position is invalid
 		if not placementTable.position or not placementTable.isVisible then
 			return
 		end
 
-		--[[
 		isPreviewing = false
-
-		-- Destroy hologram
-		AllHalograms[objectHalogram.id] = nil
-		objectHalogram:Destroy()
-		objectHalogram = nil
-		]]
-
 		SpecialAbility:Activate()
 	end
 end
@@ -104,37 +85,18 @@ function OnSpecialAbilityCast(thisAbility)
 end
 
 function OnSpecialAbilityExecute(thisAbility)
-	--[[if objectHalogram and Object.IsValid(objectHalogram) then
-		placementTable.position, _, placementTable.isVisible = CalculatePlacement()
-		placementTable.rotation = objectHalogram:GetWorldRotation()
-	end]]
-	Task.Wait()
+	--Task.Wait()
 
 	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
-		print("Placement Failed: was in Ready phase during Execute")
+		warn("Placement Failed: was in Ready phase during Execute")
 		return
 	end
-
-	isPreviewing = false
 
 	-- Destroy hologram
 	if objectHalogram then
 		AllHalograms[objectHalogram.id] = nil
 		objectHalogram:Destroy()
 		objectHalogram = nil
-	end
-	--while Events.BroadcastToServer(EventName, lastValidPlacement.position, lastValidPlacement.rotation) ==
-	--	BroadcastEventResultCode.EXCEEDED_RATE_LIMIT do
-	--	Task.Wait()
-	--end
-
-	-- Activate duration bar UI if DurationMod was set
-	if DurationMod then
-		totalDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], DurationMod, DEFAULT_Range, SpecialAbility.name .. ": Duration")
-		if type(totalDuration) == "table" then
-			totalDuration = totalDuration.duration
-		end
-		durationTimer = totalDuration
 	end
 end
 
@@ -143,9 +105,9 @@ function OnEquip(equipment, player)
 		script:Destroy()
 		return
 	end
-	if not PreviewObjectTemplate then
-		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
-	end
+	
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+	
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
 	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
@@ -201,15 +163,18 @@ function CalculatePlacement()
 	end
 end
 
---if LOCAL_PLAYER == Equipment.owner then
+if Equipment.owner then
+	OnEquip(Equipment, Equipment.owner)
+end
+
 function Tick(deltaTime)
-	for id, halogram in pairs(AllHalograms) do
+	--[[for id, halogram in pairs(AllHalograms) do
 		if halogram ~= objectHalogram and Object.IsValid(halogram) then
 			print("REMOVING LEFT OVER HALOGRAM")
 			halogram:Destroy()
 			AllHalograms[id] = nil
 		end
-	end
+	end]]
 
 	if objectHalogram and Object.IsValid(objectHalogram) then
 		if SpecialAbility.owner == nil or LOCAL_PLAYER.isDead then
@@ -246,21 +211,29 @@ function Tick(deltaTime)
 
 	-- Update the duration bar UI
 	local DurationBar = SpecialAbility.clientUserData.durationBar
-	if durationTimer > 0 then
-		durationTimer = durationTimer - deltaTime
+	if flyingTimer > 0 then
+		flyingTimer = flyingTimer - deltaTime
 
 		--Update duration bar
 		if DurationBar and Object.IsValid(DurationBar) then
-			DurationBar.progress = durationTimer / totalDuration
+			DurationBar.progress = flyingTimer / FlyingDuration
+		end
+
+		-- Check if timer has run out
+		if flyingTimer < 0 and isPreviewing and SpecialAbility.isEnabled then
+			if not lastValidPlacement.position then
+				local playerPosition = LOCAL_PLAYER:GetWorldPosition()
+				local rayEnd = playerPosition - Vector3.New(0, 0, 10000)
+				local hr = World.Raycast(playerPosition, rayEnd, {ignorePlayers = true})
+				lastValidPlacement.position = hr:GetImpactPosition()
+				lastValidPlacement.rotation = objectHalogram:GetWorldRotation()
+			end
+
+			SpecialAbility:Activate()
 		end
 	elseif DurationBar and Object.IsValid(DurationBar) then
 		DurationBar.progress = 0
 	end
-end
-
-
-if Equipment.owner then
-	OnEquip(Equipment, Equipment.owner)
 end
 
 Equipment.equippedEvent:Connect(OnEquip)
