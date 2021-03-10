@@ -518,7 +518,7 @@ Objects {
     Overrides {
       Name: "cs:MapPlayerIndicator"
       AssetReference {
-        Id: 15577483575707105487
+        Id: 6467423135620645257
       }
     }
     Overrides {

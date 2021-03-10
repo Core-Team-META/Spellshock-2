@@ -54,7 +54,7 @@ function UpdatePlayerIndicator(player, indicator)
 	indicator.x = playerScreenPos.x
 	indicator.y = playerScreenPos.y
 	
-	-- Set indicator rotation
+	--[[ Set indicator rotation
 	local LookWorldRotation = player:GetWorldRotation()
 	indicator.rotationAngle = LookWorldRotation.z
 	
@@ -74,11 +74,20 @@ function UpdatePlayerIndicator(player, indicator)
 		playerName.text = player.name
 		--playerIndicator:SetImage(player)
 	end
-	
+	]]
 	--if player.isDead then
 		--playerIndicator:SetImage(DEAD_PLAYER_ICON)
 		--playerIndicator:SetColor(DEAD_PLAYER_COLOR)
 	--end
+end
+
+function CreatePlayerIndicator(player)
+	playerIndicators[player] = World.SpawnAsset(MAP_PLAYER_INDICATOR, {parent = MAP_CONTAINER})
+	local minimapScript = playerIndicators[player]:FindDescendantByType("Script")
+	Task.Wait()
+	if minimapScript and minimapScript.context then
+		minimapScript.context.SetPlayer(player)
+	end
 end
 
 -- nil Tick()
@@ -91,7 +100,7 @@ function Tick()
 
 		for _, player in ipairs(Game.GetPlayers()) do
 			if not playerIndicators[player] and Object.IsValid(player) then
-				playerIndicators[player] = World.SpawnAsset(MAP_PLAYER_INDICATOR, {parent = MAP_CONTAINER})
+				CreatePlayerIndicator(player)
 			end
 
 			if playerIndicators[player] and Object.IsValid(player) then
@@ -107,7 +116,7 @@ end
 -- Add new player indicator to the table
 function OnPlayerJoined(player)
 	if not playerIndicators[player] and Object.IsValid(player) then
-		playerIndicators[player] = World.SpawnAsset(MAP_PLAYER_INDICATOR, {parent = MAP_CONTAINER})
+		CreatePlayerIndicator(player)
 	end
 end
 

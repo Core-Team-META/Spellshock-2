@@ -40,7 +40,11 @@ function UpdateContent()
 	
 	-- Direction arrow
 	local rot = myPlayer:GetWorldRotation()
-	DIRECTION_ROOT.rotationAngle = rot.z + ROOT.parent.rotationAngle
+	if ROOT.parent.rotationAngle ~= 0 then
+		DIRECTION_ROOT.rotationAngle = rot.z + ROOT.parent.rotationAngle
+	else
+		DIRECTION_ROOT.rotationAngle = rot.z - 60
+	end
 
 	CIRCLE_BG:SetColor(_G.TeamColors[myPlayer.team])
 	ARROW:SetColor(_G.TeamColors[myPlayer.team])
