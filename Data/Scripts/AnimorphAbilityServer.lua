@@ -86,10 +86,10 @@ function OnAbilityExecute(thisAbility)
 	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then return end
 	
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
-	local lookQuaternion = Quaternion.New(lookRotation)
-	local forwardVector = lookQuaternion:GetForwardVector()
+	--local lookQuaternion = Quaternion.New(lookRotation)
+	local forwardVector = (thisAbility.owner:GetViewWorldRotation() + Rotation.New(0, 0, 0)) * Vector3.FORWARD
 	forwardVector.z = forwardVector.z + 0.2
-	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector * 20)
+	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector * 20) + (lookRotation * Vector3.RIGHT * 30)
 	worldPosition.z = worldPosition.z + 50
 	local projectileTemplate = PlayerVFX.Projectile
 	local projectileSpeed =
@@ -100,14 +100,14 @@ function OnAbilityExecute(thisAbility)
 		DEFAULT_ProjectileSpeed,
 		SpecialAbility.name .. ": Projectile Speed"
 	)
-	local projectileGravity =
-		META_AP().GetAbilityMod(
+	local projectileGravity = 1.5
+		--[[META_AP().GetAbilityMod(
 		SpecialAbility.owner,
 		META_AP().E,
 		"mod4",
 		DEFAULT_ProjectileGravity,
 		SpecialAbility.name .. ": Projectile Gravity"
-	)
+	)]]
 
 	local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
 	grenadeProjectile.lifeSpan = 10

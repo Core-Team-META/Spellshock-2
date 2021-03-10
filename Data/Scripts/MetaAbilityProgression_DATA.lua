@@ -171,16 +171,16 @@ classTable = {
         --Animorph Potion
         [CONST.BIND.E] = {
             -- mod1 = Impact Radius, mod2 = Damage Amount, mod3 = Projectile Speed, mod4 = Projectile Gravity, mod5 = Duration
-            [1] = {mod1 = 400, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 3, mod6 = 20},
-            [2] = {mod1 = 400, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 3.2, mod6 = 19},
-            [3] = {mod1 = 400, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 3.4, mod6 = 19},
-            [4] = {mod1 = 500, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 3.6, mod6 = 18},
-            [5] = {mod1 = 500, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 3.8, mod6 = 17},
-            [6] = {mod1 = 500, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 4, mod6 = 17},
-            [7] = {mod1 = 600, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 4.2, mod6 = 16},
-            [8] = {mod1 = 600, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 4.4, mod6 = 15},
-            [9] = {mod1 = 700, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 4.6, mod6 = 15},
-            [10] = {mod1 = 700, mod2 = 0, mod3 = 2500, mod4 = 1.5, mod5 = 5, mod6 = 15}
+            [1] = {mod1 = 400, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 3, mod6 = 20},
+            [2] = {mod1 = 400, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 3.2, mod6 = 19},
+            [3] = {mod1 = 400, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 3.4, mod6 = 19},
+            [4] = {mod1 = 500, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 3.6, mod6 = 18},
+            [5] = {mod1 = 500, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 3.8, mod6 = 17},
+            [6] = {mod1 = 500, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 4, mod6 = 17},
+            [7] = {mod1 = 600, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 4.2, mod6 = 16},
+            [8] = {mod1 = 600, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 4.4, mod6 = 15},
+            [9] = {mod1 = 700, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 4.6, mod6 = 15},
+           [10] = {mod1 = 700, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 5, mod6 = 15}
         },
         --Iceberg
         [CONST.BIND.R] = {

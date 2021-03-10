@@ -1342,6 +1342,7 @@ Assets {
         ChildIds: 4362377662528572463
         ChildIds: 13676282958894221574
         ChildIds: 676216352836022284
+        ChildIds: 12042713232408151725
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1567,6 +1568,68 @@ Assets {
         Script {
           ScriptAsset {
             Id: 15754255766989875810
+          }
+        }
+      }
+      Objects {
+        Id: 12042713232408151725
+        Name: "AnimorphAimLine"
+        Transform {
+          Location {
+            X: -13990.0615
+            Y: -14657.7129
+            Z: 20.8095703
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1297799432452933319
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Aim"
+            ObjectReference {
+              SubObjectId: 1109302873163087110
+            }
+          }
+          Overrides {
+            Name: "cs:Throw"
+            ObjectReference {
+              SubObjectId: 10172696059144661061
+            }
+          }
+          Overrides {
+            Name: "cs:AimLineTemplate"
+            AssetReference {
+              Id: 2532691792263391124
+            }
+          }
+          Overrides {
+            Name: "cs:Class"
+            String: "MAGE"
+          }
+          Overrides {
+            Name: "cs:Bind"
+            String: "E"
+          }
+          Overrides {
+            Name: "cs:SpeedMod"
+            String: "mod3"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 6342549352078680519
           }
         }
       }
@@ -2031,6 +2094,7 @@ Assets {
           }
         }
         ParentId: 10663446143340725464
+        ChildIds: 10172696059144661061
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -2044,7 +2108,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.3
+            Duration: 20
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2082,6 +2146,80 @@ Assets {
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_32"
+          }
+        }
+      }
+      Objects {
+        Id: 10172696059144661061
+        Name: "Throw"
+        Transform {
+          Location {
+            X: 10291.4883
+            Y: 10104.7227
+            Z: 3395.93311
+          }
+          Rotation {
+            Yaw: 28.2081738
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1109302873163087110
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.15
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "unarmed_throw"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
           }
         }
       }
