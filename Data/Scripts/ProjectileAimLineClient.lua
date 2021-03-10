@@ -78,12 +78,11 @@ function AbilityTick(ability, deltaTime)
             table.insert(points, position)
         end
 
-  
-
         for i = 1, nPoints do
 			lines[i]:SetWorldPosition((points[i] + points[i + 1]) / 2.0)
 			lines[i]:SetWorldRotation(Rotation.New(Quaternion.New(Vector3.UP, ((points[i + 1] - points[i])):GetNormalized())))
-			lines[i]:SetWorldScale(Vector3.New(0.04, 0.04, (points[i + 1] - points[i]).size / 100.0 + 0.005))
+			local xyScale = 0.03 + ((i-1) * 0.01)
+            lines[i]:SetWorldScale(Vector3.New(xyScale, xyScale, (points[i + 1] - points[i]).size / 100.0 + 0.005))
 		end
     end
 
@@ -97,6 +96,7 @@ function OnExecuteAbility(ability)
     THROW_ABILITY:Activate()
     if Object.IsValid(aimLine) then
         aimLine.visibility = Visibility.FORCE_OFF
+        ability.owner.clientUserData.usingAimLine = false
     end
 end
 
@@ -115,6 +115,7 @@ function OnCastAbility(ability)
     if ability:GetCurrentPhase() == AbilityPhase.CAST then
         if Object.IsValid(aimLine) then
             aimLine.visibility = Visibility.INHERIT
+            ability.owner.clientUserData.usingAimLine = true
         end
     end
 end
@@ -122,6 +123,7 @@ end
 function OnInterruptAbility(ability)
     if Object.IsValid(aimLine) then
         aimLine.visibility = Visibility.FORCE_OFF
+        ability.owner.clientUserData.usingAimLine = false
     end
 end
 

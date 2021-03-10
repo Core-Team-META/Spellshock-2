@@ -482,16 +482,16 @@ classTable = {
         --Venom Bomb
         [CONST.BIND.R] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Projectile Speed, mod4 = Status Effect Slow, mod 5 = Status Effect Poison
-            [1] = {mod1 = 35, mod2 = 600, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}, mod6 = 17},
-            [2] = {mod1 = 40, mod2 = 650, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 6, multiplier = 0}, mod6 = 16},
-            [3] = {mod1 = 40, mod2 = 700, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 7, multiplier = 0}, mod6 = 15},
-            [4] = {mod1 = 45, mod2 = 725, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 8, multiplier = 0}, mod6 = 14},
-            [5] = {mod1 = 45, mod2 = 750, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 9, multiplier = 0}, mod6 = 13},
-            [6] = {mod1 = 50, mod2 = 775, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [7] = {mod1 = 50, mod2 = 800, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [8] = {mod1 = 60, mod2 = 800, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [9] = {mod1 = 60, mod2 = 800, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 11, multiplier = 0}, mod6 = 11},
-           [10] = {mod1 = 65, mod2 = 800, mod3 = 2500, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 12, multiplier = 0}, mod6 = 10}
+            [1] = {mod1 = 35, mod2 = 600, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}, mod6 = 17},
+            [2] = {mod1 = 40, mod2 = 650, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 6, multiplier = 0}, mod6 = 16},
+            [3] = {mod1 = 40, mod2 = 700, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 7, multiplier = 0}, mod6 = 15},
+            [4] = {mod1 = 45, mod2 = 725, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 8, multiplier = 0}, mod6 = 14},
+            [5] = {mod1 = 45, mod2 = 750, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 9, multiplier = 0}, mod6 = 13},
+            [6] = {mod1 = 50, mod2 = 775, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
+            [7] = {mod1 = 50, mod2 = 800, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
+            [8] = {mod1 = 60, mod2 = 800, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
+            [9] = {mod1 = 60, mod2 = 800, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 11, multiplier = 0}, mod6 = 11},
+           [10] = {mod1 = 65, mod2 = 800, mod3 = 3000, mod4 = {duration = 4, damage = 0, multiplier = 0.75}, mod5 = {duration = 10.0, damage = 12, multiplier = 0}, mod6 = 10}
         },
         --Wraith Strike
         [CONST.BIND.T] = {

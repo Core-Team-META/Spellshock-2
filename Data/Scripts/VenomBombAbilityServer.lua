@@ -63,10 +63,9 @@ function OnAbilityExecute(thisAbility)
 		return 
 	end
 	local lookRotation = thisAbility.owner:GetViewWorldRotation()
-	local lookQuaternion = Quaternion.New(lookRotation)
-    local forwardVector = lookQuaternion:GetForwardVector()
-    forwardVector.z = forwardVector.z + 0.2
-	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*20)
+    local forwardVector = (lookRotation + Rotation.New(0, 0, 0)) * Vector3.FORWARD
+	forwardVector.z = forwardVector.z + 0.2
+	local worldPosition = thisAbility.owner:GetWorldPosition() + (forwardVector*20) + (lookRotation * Vector3.RIGHT * 30)
 	worldPosition.z = worldPosition.z + 50
     local grenadeProjectile = Projectile.Spawn(PlayerVFX.Projectile, worldPosition, forwardVector)
     grenadeProjectile.owner = SpecialAbility.owner

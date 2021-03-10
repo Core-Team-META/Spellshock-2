@@ -206,6 +206,10 @@ function IsNameplateVisible(player)
 		return false
 	end
 
+	if player == Game.GetLocalPlayer() and player.clientUserData.usingAimLine then
+		return false
+	end
+
 	if player == GetViewedPlayer() then
 		return SHOW_ON_SELF
 	end
