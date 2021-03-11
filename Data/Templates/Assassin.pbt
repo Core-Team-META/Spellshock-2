@@ -1764,7 +1764,7 @@ Assets {
           Overrides {
             Name: "cs:PlayerImpactVFX"
             AssetReference {
-              Id: 14373757464648078715
+              Id: 1116952164133996881
             }
           }
           Overrides {
@@ -1831,13 +1831,13 @@ Assets {
           Overrides {
             Name: "cs:PlayerImpactVFX"
             AssetReference {
-              Id: 14373757464648078715
+              Id: 1116952164133996881
             }
           }
           Overrides {
             Name: "cs:SwipeEffect"
             AssetReference {
-              Id: 5027751934724785496
+              Id: 14567992748388082871
             }
           }
           Overrides {

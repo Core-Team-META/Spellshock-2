@@ -1415,7 +1415,7 @@ Assets {
           Overrides {
             Name: "cs:PlayerImpactVFX"
             AssetReference {
-              Id: 14373757464648078715
+              Id: 723958063109556260
             }
           }
           Overrides {
