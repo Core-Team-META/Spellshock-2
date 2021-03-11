@@ -27,8 +27,8 @@ Assets {
           Overrides {
             Name: "cs:FullChargeColor"
             Color {
-              R: 0.334857315
-              G: 0.586000085
+              G: 0.234159395
+              B: 0.922000051
               A: 1
             }
           }

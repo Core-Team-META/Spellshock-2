@@ -136,7 +136,7 @@ function Tick()
 				ChargeupSFX:Stop()
 				World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
 				ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
-				chargeText.text = "Ready!"
+				chargeText.text = "READY!"
 				isCharging = 2
 			end
 		else
