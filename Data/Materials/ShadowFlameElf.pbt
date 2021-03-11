@@ -2,7 +2,7 @@ Assets {
   Id: 11734275128532210001
   Name: "ShadowFlameElf"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 7453479353301661059
     ParameterOverrides {
