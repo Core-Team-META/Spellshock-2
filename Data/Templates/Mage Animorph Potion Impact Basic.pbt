@@ -7,7 +7,7 @@ Assets {
       RootId: 9551012135744343244
       Objects {
         Id: 9551012135744343244
-        Name: "AnimorphPotionImpactVFX"
+        Name: "Mage Animorph Potion Impact Basic"
         Transform {
           Scale {
             X: 1
@@ -354,8 +354,8 @@ Assets {
           AudioBP {
             AutoPlay: true
             Volume: 1
-            Falloff: 3000
-            Radius: 500
+            Falloff: 5000
+            Radius: 1000
             EnableOcclusion: true
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
@@ -390,8 +390,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 3000
-          Radius: 500
+          Falloff: 5000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true

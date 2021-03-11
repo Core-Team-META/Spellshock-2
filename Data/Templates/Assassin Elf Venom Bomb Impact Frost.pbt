@@ -379,8 +379,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 3000
-          Radius: -1
+          Falloff: 5000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -414,8 +414,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 3000
-          Radius: 500
+          Falloff: 5000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true

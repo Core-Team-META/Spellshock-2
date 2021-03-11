@@ -54,7 +54,17 @@ function OnBindingPressed(player, binding)
 			ActiveAbilities = {}
 			for _, playerAbility in pairs(player:GetAbilities()) do
 				if playerAbility ~= SpecialAbility then
-					table.insert(ActiveAbilities, playerAbility)
+					if playerAbility:GetCurrentPhase() == AbilityPhase.READY or playerAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
+						table.insert(ActiveAbilities, playerAbility)
+					else
+						for _, playerAbility in pairs(ActiveAbilities) do
+							if Object.IsValid(playerAbility) then
+								playerAbility.isEnabled = true
+							end
+						end
+						ActiveAbilities = {}
+						return
+					end
 				end
 			end
 

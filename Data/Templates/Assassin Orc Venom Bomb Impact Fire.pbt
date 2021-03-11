@@ -7,7 +7,7 @@ Assets {
       RootId: 8932805897122197554
       Objects {
         Id: 8932805897122197554
-        Name: "Assassin Venom Bomb Impact Basic"
+        Name: "Assassin Orc Venom Bomb Impact Fire"
         Transform {
           Scale {
             X: 1
@@ -303,8 +303,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 3000
-          Radius: -1
+          Falloff: 5000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -338,8 +338,8 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 3000
-          Radius: 500
+          Falloff: 5000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
