@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12631208036329707850
+  Name: "Fantasy Ability Purple 036"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_036"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9

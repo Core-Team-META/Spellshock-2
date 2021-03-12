@@ -7,6 +7,7 @@ local RewardsTitle = script:GetCustomProperty("RewardsTitle"):WaitForObject()
 local ScoreboardPanel = script:GetCustomProperty("ScoreboardPanel"):WaitForObject()
 local EvaluationsPanel = script:GetCustomProperty("EvaluationsPanel"):WaitForObject()
 local ScoreboardBackground = script:GetCustomProperty("ScoreboardBackground"):WaitForObject()
+local NewsPanel = script:GetCustomProperty("NewsPanel"):WaitForObject()
 
 local VictoryDefeat = RoundInfo:GetCustomProperty("VictoryDefeat"):WaitForObject()
 local YourTeam = RoundInfo:GetCustomProperty("YourTeam"):WaitForObject()
@@ -18,6 +19,7 @@ local WaitIcon = TimerPanel:GetCustomProperty("WaitIcon"):WaitForObject()
 local TeamVictoryTab = VictoryTabs:GetCustomProperty("TeamVictoryTab"):WaitForObject()
 local ScoreboardTab = VictoryTabs:GetCustomProperty("ScoreboardTab"):WaitForObject()
 local EvaluationsTab = VictoryTabs:GetCustomProperty("EvaluationsTab"):WaitForObject()
+local NewsTab = VictoryTabs:GetCustomProperty("NewsTab"):WaitForObject()
 
 local victoryButton
 local CurrentTab = nil
@@ -157,5 +159,11 @@ local topPlayersSelected = EvaluationsTab:GetCustomProperty("Selected"):WaitForO
 topPlayersButton.clientUserData.selected = topPlayersSelected
 topPlayersButton.clientUserData.panel = EvaluationsPanel
 topPlayersButton.pressedEvent:Connect(OnTabClicked)
+
+local newsButton = NewsTab:GetCustomProperty("Button"):WaitForObject()
+local newsSelected = NewsTab:GetCustomProperty("Selected"):WaitForObject()
+newsButton.clientUserData.selected = newsSelected
+newsButton.clientUserData.panel = NewsPanel
+newsButton.pressedEvent:Connect(OnTabClicked)
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
