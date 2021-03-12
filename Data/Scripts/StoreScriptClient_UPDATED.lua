@@ -116,6 +116,8 @@ propStoreUIContainer.visibility = Visibility.INHERIT
 
 local controlsLocked = false
 local controlsLockedSecondary = false
+local cosmeticResourceChangeEvent
+local cosmeticResourceName
 
 local playerSockets = {
 	"left_clavicle",
@@ -388,6 +390,9 @@ function StoreItemUnhovered(button)
 end
 
 function StoreItemClicked(button)
+	if controlsLocked or controlsLockedSecondary then
+		return
+	end
 	local entry = StoreUIButtons[button]
 	if entry then
 		currentlySelected = entry
@@ -437,7 +442,6 @@ function PurchaseButtonClicked(button)
 	
 	if HasCosmetic(currentlySelected.data.id) then
 		-- EQUIP
-		propPurchaseButton.visibility = Visibility.FORCE_OFF
 		ApplyCosmetic(currentlySelected)
 	else
 		-- PURCHASE
@@ -445,6 +449,7 @@ function PurchaseButtonClicked(button)
 			if player:HasPerk(subscriptionPerkRef) then
 				expectedNewCurrency = currency
 				controlsLocked = true
+				propPurchaseButton.visibility = Visibility.FORCE_OFF
 				while Events.BroadcastToServer(
 					"BUYCOSMETIC",
 					currentlySelected.data.id,
@@ -464,7 +469,9 @@ function PurchaseButtonClicked(button)
 		else
 			expectedNewCurrency = currency - currentlySelected.data.cost
 			controlsLocked = true
-
+			propPurchaseButton.visibility = Visibility.FORCE_OFF
+			cosmeticResourceName = "COSMETIC_"..currentlySelected.data.id
+			cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
 			while Events.BroadcastToServer(
 				"BUYCOSMETIC",
 				currentlySelected.data.id,
@@ -477,7 +484,7 @@ function PurchaseButtonClicked(button)
 		end
 	end
 
-	SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
+	--SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
 	UpdateEntryButton(currentlySelected, false)
 	currentZoom = currentlySelected.data.zoom
 end
@@ -597,13 +604,31 @@ end
 -- BUY COSMETIC RESPONSE
 ----------------------------------------------------------------------------------------------------------------
 
-function BuyCosmeticResponse(storeId, success)
+function CosmeticResourceChange(_, name)
+	if name == cosmeticResourceName then
+		if string.find(name, "COSMETIC_") then
+			UpdateEntryButton(currentlySelected, false)
+			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+			purchaseText.text = "EQUIP"
+			purchaseText:GetChildren()[1].text = "EQUIP"
+			controlsLocked = false
+			propPurchaseButton.visibility = Visibility.INHERIT
+		else
+			ApplyCosmeticHelper()
+		end
+		cosmeticResourceChangeEvent:Disconnect()
+		cosmeticResourceChangeEvent = nil
+	end
+end
+
+--[[function BuyCosmeticResponse(storeId, success)
 	UpdateEntryButton(currentlySelected, false)
 	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 	purchaseText.text = "EQUIP"
 	purchaseText:GetChildren()[1].text = "EQUIP"
 	controlsLocked = false
-end
+	propPurchaseButton.visibility = Visibility.INHERIT
+end]]
 
 ----------------------------------------------------------------------------------------------------------------
 -- SETTING PREVIEWS
@@ -710,11 +735,20 @@ end
 
 function ApplyCosmetic(entry)
 	if entry == nil then
-		ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", nil, nil, true)
+		--ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", nil, nil, true)
 		return
 	end
 	--print("Requesting" .. entry.data.id)
 	--print(entry.data.visible)
+	propPurchaseButton.visibility = Visibility.FORCE_OFF
+	local id = entry.data.id
+
+	cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	local class = tonumber(id:sub(1, 1))
+	local team = tonumber(id:sub(2, 2))
+	local skin = tonumber(id:sub(3, 4))
+	local bind = tonumber(id:sub(5, 5))
+	cosmeticResourceName = "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
@@ -1591,8 +1625,6 @@ function OnTypeFilterButtonSelected(button)
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
-	print("Type: "..tag)
-
 	RemovePreview()
 
 	button:SetButtonColor(buttonData.clickedColor)
@@ -1930,8 +1962,8 @@ propBackButton.clickedEvent:Connect(ExitStoreClicked)
 
 --Events.Connect("SHOWSTORE_CLIENT", ShowStore_ClientHelper)
 --Events.Connect("HIDESTORE_CLIENT", HideStore_ClientHelper)
-Events.Connect("APPLYCOSMETIC", ApplyCosmeticHelper)
-Events.Connect("BUYCOSMETIC_RESPONSE", BuyCosmeticResponse)
+--Events.Connect("APPLYCOSMETIC", ApplyCosmeticHelper)
+--Events.Connect("BUYCOSMETIC_RESPONSE", BuyCosmeticResponse)
 Events.Connect("Menu Changed", OnMenuChanged)
 
 uiBackButton.clickedEvent:Connect(BackPageClicked)
