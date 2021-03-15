@@ -3,12 +3,18 @@ local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local CONST = require(script:GetCustomProperty("CONST"))
 
+local function META_AP()
+    return _G["Meta.Ability.Progression"]
+end
+
 local Equipment = script:FindAncestorByType("Equipment")
 local HealingPotionVFX = script:GetCustomProperty("HealingPotionVFX")
 
+local bindEvent
+
 function OnBindingPressed(player, bind)
     -- Health Potion
-    if bind == "ability_extra_1" and player:GetResource(CONST.CONSUMABLES.HEALTH_POTION.ResName) > 0 then 
+    if bind == "ability_extra_1" and player:GetResource(CONST.CONSUMABLES.HEALTH_POTION.ResName) > 0 and not player.isDead then 
         local MaxHitPoints = player.maxHitPoints * 0.75
         -- Check if the player is below 75% health
         if player.hitPoints >= MaxHitPoints then return end
@@ -31,18 +37,24 @@ function OnBindingPressed(player, bind)
             rotation = nil,
             tags = {}
         }
-        print("Using Potion")
+    
         player:RemoveResource(CONST.CONSUMABLES.HEALTH_POTION.ResName, 1)
 
-        local vfx = World.SpawnAsset(HealingPotionVFX, {position = player:GetWorldPosition() - Vector3.New(0,0,100)})
+        local vfx = META_AP().SpawnAsset(HealingPotionVFX, {position = player:GetWorldPosition() - Vector3.New(0,0,100)})
         vfx:AttachToPlayer(player, "root")
 
         COMBAT().ApplyDamage(attackData)
     end
 end
 
+function OnScriptDestroyed()
+    bindEvent:Disconnect()
+    bindEvent = nil
+end
+
 while not Equipment.owner do Task.Wait() end
 
 Equipment.owner:SetResource(CONST.CONSUMABLES.HEALTH_POTION.ResName, 5)
 
-Equipment.owner.bindingPressedEvent:Connect(OnBindingPressed)
+bindEvent = Equipment.owner.bindingPressedEvent:Connect(OnBindingPressed)
+script.destroyEvent:Connect(OnScriptDestroyed)
