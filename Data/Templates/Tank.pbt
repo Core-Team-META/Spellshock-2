@@ -319,6 +319,7 @@ Assets {
         ChildIds: 1412048591863833559
         ChildIds: 1059382485272021003
         ChildIds: 2626836070982711195
+        ChildIds: 3688459431311766187
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -909,6 +910,36 @@ Assets {
         Script {
           ScriptAsset {
             Id: 9086735305192144169
+          }
+        }
+      }
+      Objects {
+        Id: 3688459431311766187
+        Name: "PlayerConsumablesServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4159325021862714735
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3580804332177889778
           }
         }
       }

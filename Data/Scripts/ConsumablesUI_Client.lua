@@ -1,0 +1,1 @@
+local CONST = require(script:GetCustomProperty("CONST"))

@@ -323,6 +323,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9698423324862418785
+  Name: "Oswald Italic"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldItalic_ref"
+  }
+}
+Assets {
   Id: 9589982128664866219
   Name: "Fantasy Symbol 04"
   PlatformAssetType: 9
