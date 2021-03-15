@@ -43,6 +43,6 @@ end
 
 while not Equipment.owner do Task.Wait() end
 
-Equipment.owner:SetResource(CONST.CONSUMABLES.HEALTH_POTION.ResName, 10)
+Equipment.owner:SetResource(CONST.CONSUMABLES.HEALTH_POTION.ResName, 5)
 
 Equipment.owner.bindingPressedEvent:Connect(OnBindingPressed)
