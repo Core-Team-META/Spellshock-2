@@ -22,13 +22,9 @@ local classProgression = {}
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
 
-API.NAMESPACE = CONST.NAMESPACE
 API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
--- Currency Resource Names
-API.GOLD_RES = CONST.GOLD
-API.COSMETIC_TOKEN_RES = CONST.COSMETIC_TOKEN
 
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
@@ -58,7 +54,7 @@ local function SetClassXp(player, class, xp)
 end
 
 local function GetReqXp(level)
-    return API.ReqXp[level] or API.ReqXp[20]
+    return CONST.ReqXp[level] or CONST.ReqXp[20]
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
@@ -99,7 +95,7 @@ function ClassLevelUp(player, class)
     if xp >= reqXp and level < CONST.MAX_CLASS_LEVEL then
         level = CoreMath.Round(level + 1)
         xp = xp - reqXp
-        player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
+        API.SetClassLevel(player, class)
         SetClassLevel(player, class, level)
         SetClassXp(player, class, xp)
     end
@@ -123,18 +119,21 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetClassLevel(player, class)
-    return classProgression[player.id][class][CONST.PROGRESS.LEVEL]
+    return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetClassXP(player, class)
-    return classProgression[player.id][class][CONST.PROGRESS.XP]
+    return tonumber(classProgression[player.id][class][CONST.PROGRESS.XP])
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.AddXP(player, class, xp)
+    if classProgression[player.id][class][CONST.PROGRESS.LEVEL] == CONST.MAX_CLASS_LEVEL then
+        return
+    end
     classProgression[player.id][class][CONST.PROGRESS.XP] = CoreMath.Round(API.GetClassXP(player, class) + xp)
     ClassLevelUp(player, class)
 end
@@ -145,3 +144,4 @@ function API.SetClassLevel(player, class)
     local classLevel = API.GetClassLevel(player, class)
     player:SetResource(CONST.CLASS_LEVEL, classLevel)
 end
+
