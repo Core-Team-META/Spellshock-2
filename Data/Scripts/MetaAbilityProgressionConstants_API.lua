@@ -103,6 +103,13 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
+API.CONSUMABLES = {
+    HEALTH_POTION = {
+        ResName = "Health_Potion",
+        BaseHeal = 100
+    }
+}
+
 API.COSTUME_ID = 8
 
 API.STARTING_LEVEL = 1
