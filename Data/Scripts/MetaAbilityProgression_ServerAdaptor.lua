@@ -13,6 +13,7 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 -- Local Variables
 ------------------------------------------------------------------------------------------------------------------------
 local currentClass = {}
+local listeners = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL TABLE ACCESS
 ------------------------------------------------------------------------------------------------------------------------
@@ -58,13 +59,14 @@ end
 --Connected through a context call
 --@param object player
 function OnPlayerJoined(player)
-    player.resourceChangedEvent:Connect(OnResourceChanged)
+    listeners[player.id] = player.resourceChangedEvent:Connect(OnResourceChanged)
 end
 
 --Connected through a context call
 --@param object player
 function OnPlayerLeft(player)
     currentClass[player] = nil
+    listeners[player.id]:Disconnect()
 end
 
 

@@ -113,7 +113,7 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 local function AdjustPlayerHealth(player, class)
-    player.maxHitPoints = CONST.CLASS_HEALTH[class]
+    player.maxHitPoints = CONST.CLASS_HEALTH[class] + (_G["Class.Progression"].GetClassLevel(player, class) * 2)
     if not player.serverUserData.NotAdjustHp then
         player.hitPoints = player.maxHitPoints
     end
