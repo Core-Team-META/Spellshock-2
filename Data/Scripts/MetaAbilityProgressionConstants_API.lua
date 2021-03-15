@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/16
--- Version 0.1.5
+-- Date: 2021/3/15
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -13,13 +13,14 @@ local API = {}
 ------------------------------------------------------------------------------------------------------------------------
 API.STORAGE = {
     VERSION = 1,
-    PROGRESSION = 2,
+    ABILITY_PROGRESSION = 2,
     COSMETIC = 3,
     CURRENCY = 4,
     EQUIPPED_COSMETIC = 5,
     DAILY_SHOP = 6,
     PERKS = 7,
-    GAME_PLAYER_STATS = 8
+    GAME_PLAYER_STATS = 8,
+    CLASS_PROGRESSION = 9
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -106,6 +107,30 @@ API.COSTUME_ID = 8
 
 API.STARTING_LEVEL = 1
 API.MAX_LEVEL = 10
+API.MAX_CLASS_LEVEL = 50
+
+API.ReqXp = {
+    [1] = 0,
+    [2] = 2000,
+    [3] = 3500,
+    [4] = 5000,
+    [5] = 6500,
+    [6] = 7500,
+    [7] = 8500,
+    [8] = 9500,
+    [9] = 10500,
+    [10] = 11500,
+    [11] = 12500,
+    [12] = 13500,
+    [13] = 14500,
+    [14] = 15000,
+    [15] = 15500,
+    [16] = 16000,
+    [17] = 16500,
+    [18] = 17000,
+    [19] = 18500,
+    [20] = 20000
+}
 
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
@@ -114,7 +139,7 @@ API.DEFAULT_SKIN = 1
 -- RESOURCE NAMES
 ------------------------------------------------------------------------------------------------------------------------
 API.COSTUME_STRING = "08_Costume"
-API.PLAYER_LEVEL = "P_LEVEL"
+API.CLASS_LEVEL = "C_LEVEL"
 API.ACCOUNT_LEVEL = "A_LEVEL"
 API.CLASS_RES = "CLASS_MAP"
 API.SKIN_RES = "SKIN_MAP"
@@ -142,7 +167,6 @@ API.GAMES_WON = API.GAME_PLAYER_STATS[1]
 API.GAMES_LOST = API.GAME_PLAYER_STATS[2]
 API.TOTAL_GAMES = API.GAME_PLAYER_STATS[3]
 API.WEIGHTED_WINS = API.GAME_PLAYER_STATS[4]
-
 
 API.CURRENCY = {
     [1] = "GOLD",

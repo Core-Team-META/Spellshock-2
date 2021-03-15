@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/16
--- Version 0.1.14
+-- Date: 2021/3/15
+-- Version 0.1.15
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -16,6 +16,8 @@ local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerControlle
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
+local CLASS_PROGRSESION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
@@ -23,11 +25,12 @@ local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 -- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
 --Used for version control of data
 local versionControl = {
-    [CONST.STORAGE.PROGRESSION] = 1,
+    [CONST.STORAGE.ABILITY_PROGRESSION] = 1,
     [CONST.STORAGE.COSMETIC] = 1,
     [CONST.STORAGE.CURRENCY] = 1,
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
-    [CONST.STORAGE.DAILY_SHOP] = 1
+    [CONST.STORAGE.DAILY_SHOP] = 1,
+    [CONST.STORAGE.CLASS_PROGRESSION] = 1
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -88,8 +91,8 @@ end
 --@param table data
 local function OnLoadProgressionData(player, data)
     local progression
-    if data[CONST.STORAGE.PROGRESSION] then
-        progression = UTIL.AbilityConvertToTable(data[CONST.STORAGE.PROGRESSION])
+    if data[CONST.STORAGE.ABILITY_PROGRESSION] then
+        progression = UTIL.AbilityConvertToTable(data[CONST.STORAGE.ABILITY_PROGRESSION])
     end
     META_AP.context.BuildBindDataTable(player, progression)
     ADAPTOR.context.OnPlayerJoined(player)
@@ -99,7 +102,7 @@ end
 --@param table data
 local function OnSaveProgressionData(player, data)
     local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data[CONST.STORAGE.PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
+    data[CONST.STORAGE.ABILITY_PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
 end
 
 --@param object player
@@ -225,6 +228,28 @@ local function OnSaveDailyShopData(player, data)
     data[CONST.STORAGE.DAILY_SHOP] = next(dailyShopItems) ~= nil and UTIL.DailyShopConvertToString(dailyShopItems) or ""
 end
 
+
+--@param object player
+--@param table data
+local function OnLoadClassLevelData(player, data)
+    local progression
+    if data[CONST.STORAGE.CLASS_PROGRESSION] then
+        progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CLASS_PROGRESSION])
+    end
+    CLASS_PROGRSESION.context.BuildDataTable(player, progression)
+end
+
+--@param object player
+--@param table data
+local function OnSaveClassLeveData(player, data)
+    local playerProgression = CLASS_PROGRSESION.context.GetClassProgression(player)
+    data[CONST.STORAGE.CLASS_PROGRESSION] =
+    next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+end
+
+
+
+
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
@@ -236,6 +261,7 @@ local function OnPlayerJoined(player)
         OnLoadEquippedCosmetic(player, data)
         OnLoadDailyShopData(player, data)
         OnLoadGamePlayStatsData(player, data)
+        OnLoadClassLevelData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -251,6 +277,8 @@ local function OnPlayerLeft(player)
     OnSaveGamePlayStatsData(player, data)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
+    OnSaveClassLeveData(player, data)
+
 
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")

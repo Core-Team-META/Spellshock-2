@@ -154,7 +154,7 @@ function Tick(deltaTime)
             local line = playerLines[i]
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
-            line:GetCustomProperty("Name"):WaitForObject().text = "[" .. tostring(player:GetResource(CONST.PLAYER_LEVEL)) .. "] " .. player.name
+            line:GetCustomProperty("Name"):WaitForObject().text = "[" .. tostring(player:GetResource(CONST.CLASS_LEVEL)) .. "] " .. player.name
             line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
             line:GetCustomProperty("KillsText"):WaitForObject().text = tostring(player.kills)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)

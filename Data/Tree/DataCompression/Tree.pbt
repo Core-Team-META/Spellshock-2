@@ -70,6 +70,12 @@ Objects {
         Id: 10632890108449713432
       }
     }
+    Overrides {
+      Name: "cs:ClassProgression_Server"
+      ObjectReference {
+        SelfId: 8996996195043722014
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
