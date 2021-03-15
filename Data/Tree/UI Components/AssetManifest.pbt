@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 18131789805615030518
+  Name: "Navigation"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Navigation"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -32,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_026"
+  }
+}
+Assets {
+  Id: 17066449609679557524
+  Name: "Frame Outline Thin 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_019"
   }
 }
 Assets {
@@ -116,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14243015295265280770
+  Name: "Heal"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Heal"
+  }
+}
+Assets {
   Id: 14165644718560975210
   Name: "Metal Armor Hit Impact Klang 01 SFX"
   PlatformAssetType: 7
@@ -188,12 +215,30 @@ Assets {
   }
 }
 Assets {
+  Id: 12804716500201279526
+  Name: "BG Highlighted 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_020"
+  }
+}
+Assets {
   Id: 12750511709314430191
   Name: "Fantasy Ticket 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Ticket_001"
+  }
+}
+Assets {
+  Id: 12684968738269658065
+  Name: "Icon Add"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Add"
   }
 }
 Assets {
@@ -251,12 +296,39 @@ Assets {
   }
 }
 Assets {
+  Id: 10681891877591482545
+  Name: "Fantasy Spell Potion 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
   Id: 10304004596054394633
   Name: "Frame Highlighted 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameHighlighted_020"
+  }
+}
+Assets {
+  Id: 10258515349694145501
+  Name: "BG Flat 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_019"
+  }
+}
+Assets {
+  Id: 9589982128664866219
+  Name: "Fantasy Symbol 04"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Symbol_04"
   }
 }
 Assets {
@@ -356,6 +428,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_shine_star_shimmer_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 7206368218297899634
+  Name: "Fantasy Scroll 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Scroll_004"
   }
 }
 Assets {

@@ -156,6 +156,11 @@ function UpdateClassInfo(thisButton)
 	RightPanel_ClassName.text = dataTable["Name"]
 	RightPanel_ClassName:GetChildren()[1].text = dataTable["Name"]
 
+	-- Update Ability Name Text
+	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
+	AbilityName.text = "Overview"
+	AbilityName:GetChildren()[1].text = "Overview"
+
 	-- Update all ability buttons and reset them to their idle state
 	local classLevel = 0
 	for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
@@ -257,6 +262,11 @@ function UpdateAbilityInfo(thisButton)
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
 	local ShardCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("ShardCost"):WaitForObject()
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
+	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
+
+	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
+	local LevelProgressBar = LevelInfoPanel:GetCustomProperty("LevelProgressBar"):WaitForObject()
+	local NextLevelXP = LevelInfoPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
 
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[dataTable["BindID"]], META_AP()[dataTable["ClassID"]])
 	local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
@@ -264,10 +274,15 @@ function UpdateAbilityInfo(thisButton)
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
-	AbilityName.text = dataTable["Name"].." [Lv. "..tostring(abilityLevel).."]"
+	AbilityName.text = dataTable["Name"]
+	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
+
+	LevelText.text = tostring(abilityLevel)
+	LevelProgressBar.progress = currentShards / shardCost
+	NextLevelXP.text = tostring(shardCost)
 
 	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
