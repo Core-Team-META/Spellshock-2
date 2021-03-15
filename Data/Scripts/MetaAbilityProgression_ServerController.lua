@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/13
--- Version 0.1.11
+-- Date: 2021/3/15
+-- Version 0.1.12
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ local AbilitySpamTime = 0
 ------------------------------------------------------------------------------------------------------------------------
 
 API.NAMESPACE = CONST.NAMESPACE
-API.PLAYER_LEVEL = CONST.PLAYER_LEVEL
+API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
 -- Currency Resource Names
@@ -123,6 +123,8 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
+
+--#DEV TOOLS
 if DEV_TOOLS then
 
     --@param object player
@@ -159,6 +161,8 @@ if DEV_TOOLS then
     end
 end
 
+--#DEV TOOLS END
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
@@ -171,7 +175,7 @@ function BindLevelUp(player, class, bind)
         bindLevel = CoreMath.Round(bindLevel + 1)
         xp = xp - reqXp
         currentGold = currentGold - reqGold
-        player:SetResource(CONST.PLAYER_LEVEL, player:GetResource(CONST.PLAYER_LEVEL) + 1)
+        player:SetResource(CONST.CLASS_LEVEL, player:GetResource(CONST.CLASS_LEVEL) + 1)
         player:SetResource(CONST.ACCOUNT_LEVEL, player:GetResource(CONST.ACCOUNT_LEVEL) + 1)
         player:SetResource(CONST.GOLD, currentGold)
         SetBindLevel(player, class, bind, bindLevel)
@@ -271,7 +275,6 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.ChangeClass(player, class)
-    local playerLevel = 0
     for _, bind in pairs(CONST.BIND) do
         if playerProgression[player][class][bind][API.LEVEL] ~= nil then
             Events.Broadcast(
@@ -281,11 +284,9 @@ function API.ChangeClass(player, class)
                 bind,
                 playerProgression[player][class][bind][API.LEVEL]
             )
-            playerLevel = playerLevel + playerProgression[player][class][bind][API.LEVEL]
         end
     end
-    playerLevel = playerLevel - 6
-    player:SetResource(CONST.PLAYER_LEVEL, playerLevel)
+    --player:SetResource(CONST.CLASS_LEVEL, playerLevel)
 
     AdjustPlayerHealth(player, class)
     API.AdjustPlayerMovment(player, class)

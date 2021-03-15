@@ -122,7 +122,7 @@ function Tick()
                     local HealthBar = playerPanel:GetCustomProperty("HealthBar"):WaitForObject()
                     
                             
-                    local level = player:GetResource(CONST.PLAYER_LEVEL)
+                    local level = player:GetResource(CONST.CLASS_LEVEL)
 
                     -- set the panel Y offset
                     playerPanel.y = teamPanelCount * Y_Offset

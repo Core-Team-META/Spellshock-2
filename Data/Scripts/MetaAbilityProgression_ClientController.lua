@@ -20,7 +20,7 @@ _G["Meta.Ability.Progression"] = API
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
 API.NAMESPACE = CONST.NAMESPACE
-API.PLAYER_LEVEL = CONST.PLAYER_LEVEL
+API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
 -- Currency Resource Names
