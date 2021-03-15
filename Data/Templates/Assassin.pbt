@@ -391,6 +391,7 @@ Assets {
         ChildIds: 17585539102530407397
         ChildIds: 16793278118655160600
         ChildIds: 7466746896168637483
+        ChildIds: 12664533810910303685
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -973,6 +974,41 @@ Assets {
         Script {
           ScriptAsset {
             Id: 9748598691135565465
+          }
+        }
+      }
+      Objects {
+        Id: 12664533810910303685
+        Name: "HealthRegenServer"
+        Transform {
+          Location {
+            X: 6.96289063
+            Y: -159.097656
+            Z: 4.1484375
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3557475336528325194
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9086735305192144169
           }
         }
       }
