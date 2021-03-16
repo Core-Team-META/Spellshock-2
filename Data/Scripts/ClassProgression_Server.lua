@@ -54,7 +54,7 @@ local function SetClassXp(player, class, xp)
 end
 
 local function GetReqXp(level)
-    return CONST.ReqXp[level] or CONST.ReqXp[20]
+    return CONST.ReqXp[level] or CONST.ReqXp[#CONST.ReqXp]
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
