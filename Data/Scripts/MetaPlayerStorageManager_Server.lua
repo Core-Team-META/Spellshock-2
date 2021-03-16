@@ -72,15 +72,15 @@ end
 -- Builds default cosmetics
 --@params object player
 local function AddDefaultCosmetics(player)
-    for c = 1, 5 do
-        for t = 1, 2 do
-            for s = 1, 1 do
-                for b = 1, 5 do -- Costume Not saving with 4
-                    if b == 5 then
-                        b = 8 -- Used for costume ID
+    for class = 1, 5 do
+        for team = 1, 2 do
+            for skin = 1, 1 do
+                for bind = 1, 5 do -- Costume Not saving with 4
+                    if bind == 5 then
+                        bind = 8 -- Used for costume ID
                     end
 
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
                 end
             end
         end
