@@ -139,6 +139,13 @@ API.ReqXp = {
     [20] = 20000
 }
 
+API.CLASS_XP = {
+    Kills = 500,
+    Captures = 100,
+    CapAssists = 50,
+    Wins = 300
+}
+
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
 
