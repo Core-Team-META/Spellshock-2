@@ -7,6 +7,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function META_Consumables()
+    return _G["Consumables"]
+end
+
 local Equipment = script:FindAncestorByType("Equipment")
 local ConsumablesNetwork = script:GetCustomProperty("ConsumablesNetwork"):WaitForObject()
 local HealingPotionVFX = script:GetCustomProperty("HealingPotionVFX")
@@ -24,7 +28,7 @@ function OnBindingPressed(player, bind)
         if player.hitPoints >= MaxHitPoints then return end
 
         local dmg = Damage.New()
-        local HealAmount = 100
+        local HealAmount = META_Consumables().GetValue(player, META_Consumables().HEALTH_POTION)
         if MaxHitPoints - player.hitPoints < HealAmount then -- Check that we don't heal above 75%
             HealAmount = MaxHitPoints - player.hitPoints
         end
