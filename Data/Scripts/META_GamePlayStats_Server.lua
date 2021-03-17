@@ -34,7 +34,6 @@ local function SetPlayerWinLoss(player, orcScore, elfScore)
     if (orcScore > elfScore and player.team == CONST.TEAM.ORC)
     or (orcScore < elfScore and player.team == CONST.TEAM.ELF) then
         player:AddResource(CONST.GAMES_WON, 1)
-        
     else
         player:AddResource(CONST.GAMES_LOST, 1)
         winValue = 0

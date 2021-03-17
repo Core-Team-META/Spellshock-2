@@ -16,7 +16,10 @@ local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerControlle
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
-local CLASS_PROGRSESION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
+
+
 
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
@@ -30,7 +33,8 @@ local versionControl = {
     [CONST.STORAGE.CURRENCY] = 1,
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
     [CONST.STORAGE.DAILY_SHOP] = 1,
-    [CONST.STORAGE.CLASS_PROGRESSION] = 1
+    [CONST.STORAGE.CLASS_PROGRESSION] = 1,
+    [CONST.STORAGE.CONSUMABLE] = 1
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -72,15 +76,15 @@ end
 -- Builds default cosmetics
 --@params object player
 local function AddDefaultCosmetics(player)
-    for c = 1, 5 do
-        for t = 1, 2 do
-            for s = 1, 1 do
-                for b = 1, 5 do -- Costume Not saving with 4
-                    if b == 5 then
-                        b = 8 -- Used for costume ID
+    for class = 1, 5 do
+        for team = 1, 2 do
+            for skin = 1, 1 do
+                for bind = 1, 5 do -- Costume Not saving with 4
+                    if bind == 5 then
+                        bind = 8 -- Used for costume ID
                     end
 
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
                 end
             end
         end
@@ -170,7 +174,6 @@ local function OnLoadGamePlayStatsData(player, data)
         for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
             player:SetResource(name, 0)
         end
-        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
     end
     player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
 end
@@ -236,16 +239,35 @@ local function OnLoadClassLevelData(player, data)
     if data[CONST.STORAGE.CLASS_PROGRESSION] then
         progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CLASS_PROGRESSION])
     end
-    CLASS_PROGRSESION.context.BuildDataTable(player, progression)
+    CLASS_PROGRESSION.context.BuildDataTable(player, progression)
 end
 
 --@param object player
 --@param table data
 local function OnSaveClassLeveData(player, data)
-    local playerProgression = CLASS_PROGRSESION.context.GetClassProgression(player)
+    local playerProgression = CLASS_PROGRESSION.context.GetClassProgression(player)
     data[CONST.STORAGE.CLASS_PROGRESSION] =
     next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
 end
+
+--@param object player
+--@param table data
+local function OnLoadConsumableData(player, data)
+    local progression
+    if data[CONST.STORAGE.CONSUMABLE] then
+        progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CONSUMABLE])
+    end
+    CONSUMABLES.context.BuildDataTable(player, progression)
+end
+
+--@param object player
+--@param table data
+local function OnSaveConsumableData(player, data)
+    local playerProgression = CONSUMABLES.context.GetConsumables(player)
+    data[CONST.STORAGE.CONSUMABLE] =
+    next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+end
+
 
 
 
@@ -262,6 +284,7 @@ local function OnPlayerJoined(player)
         OnLoadDailyShopData(player, data)
         OnLoadGamePlayStatsData(player, data)
         OnLoadClassLevelData(player, data)
+        OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -278,7 +301,7 @@ local function OnPlayerLeft(player)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
     OnSaveClassLeveData(player, data)
-
+    OnSaveConsumableData(player, data)
 
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
@@ -290,6 +313,8 @@ local function OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
     DAILY_SHOP.context.OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
+    CLASS_PROGRESSION.context.OnPlayerLeft(player)
+    CONSUMABLES.context.OnPlayerLeft(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

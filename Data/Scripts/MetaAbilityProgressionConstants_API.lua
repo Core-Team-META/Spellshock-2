@@ -20,7 +20,8 @@ API.STORAGE = {
     DAILY_SHOP = 6,
     PERKS = 7,
     GAME_PLAYER_STATS = 8,
-    CLASS_PROGRESSION = 9
+    CLASS_PROGRESSION = 9,
+    CONSUMABLE = 10
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -103,12 +104,18 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
+API.CONSUMABLE_KEYS = {
+    HEALTH_POTION = 1
+}
+
 API.CONSUMABLES = {
-    HEALTH_POTION = {
-        ResName = "Health_Potion",
-        BaseHeal = 100
+    [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
+        BaseHeal = 100,
+        LevelMultiplier = 5
     }
 }
+
+API.MAX_CONSUMABLE_LEVEL = 10
 
 API.COSTUME_ID = 8
 
@@ -139,6 +146,13 @@ API.ReqXp = {
     [20] = 20000
 }
 
+API.CLASS_XP = {
+    Kills = 500,
+    Captures = 100,
+    CapAssists = 50,
+    Wins = 300
+}
+
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
 
@@ -165,9 +179,10 @@ API.GAME_PLAYER_STATS = {
     [1] = "GAMES_WON",
     [2] = "GAMES_LOST",
     [3] = "TOTAL_GAMES",
-    [4] = "weightedWinRate"
+    [4] = "weightedWinRate",
+    [5] = "winOfTheDayTimeStamp"
 }
-
+API.WIN_OF_THE_DAY_TIME = API.GAME_PLAYER_STATS[5]
 API.WEIGHTED_WINS_KEY = 4
 
 API.GAMES_WON = API.GAME_PLAYER_STATS[1]

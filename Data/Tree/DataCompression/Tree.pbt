@@ -76,6 +76,12 @@ Objects {
         SelfId: 8996996195043722014
       }
     }
+    Overrides {
+      Name: "cs:ConsumableProgression_Server"
+      ObjectReference {
+        SelfId: 10094054520663354760
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

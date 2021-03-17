@@ -60,9 +60,9 @@ local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
 --Used for spam prevention
 --@return bool
-local function isAllowed(time)
+local function isAllowed(currentTime)
     local timeNow = os.clock()
-    if spamPrevent ~= nil and (timeNow - spamPrevent) < time then
+    if spamPrevent ~= nil and (timeNow - spamPrevent) < currentTime then
         return false
     end
     spamPrevent = timeNow
@@ -333,7 +333,7 @@ end
 
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
-        local currentTime = tonumber(refreshTime - os.time(os.date("!*t")))
+        local currentTime = CoreMath.Round(LOCAL_PLAYER:GetResource("DS_REFRESHTIME") - time())
         if currentTime >= 0 then
             local hours = math.floor(currentTime / 3600)
             local minutes = math.floor((currentTime % 3600) / 60)

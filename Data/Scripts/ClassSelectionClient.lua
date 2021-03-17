@@ -333,8 +333,8 @@ function UpdateAbilityInfo(thisButton)
 						currentText = currentText.."  |  "
 						nextText = nextText.."  |  "
 					end
-					currentText = string.format("Multiplier [%s]", tostring(currentMod.multiplier))
-					nextText = string.format("Multiplier [%s]", tostring(nextMod.multiplier))
+					currentText = currentText..string.format("Multiplier [%s]", tostring(currentMod.multiplier))
+					nextText = nextText..string.format("Multiplier [%s]", tostring(nextMod.multiplier))
 				end
 
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText

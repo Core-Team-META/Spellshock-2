@@ -10,6 +10,10 @@
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ACH_API = require(script:GetCustomProperty("ACH_API"))
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -48,6 +52,7 @@ function OnPlayerKill(player)
 
     ACH_API.AddProgress(player, "AS_25KILL", 1)
     ACH_API.AddProgress(player, "AS_5KILL", 1)
+    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Kills)
 end
 
 function OnPlayerDamage(player, value)
@@ -61,10 +66,18 @@ end
 function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
     ACH_API.AddProgress(player, "AS_CAP2", value)
+    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Captures)
 end
 
 function OnPlayerAssistCapture(player, value)
     ACH_API.AddProgress(player, "AS_ASSISTCAP25", value)
+    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.CapAssists)
+end
+
+function OnTeamVictory(winningTeam)
+    for _, player in ipairs(Game.GetPlayers({includeTeams=winningTeam})) do
+        META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins)
+    end
 end
 
 function OnPlayerRespawn(player)
@@ -154,9 +167,10 @@ Events.Connect("AS.LifeTimeKill", OnPlayerKill)
 Events.Connect("AS.LifeTimeDamage", OnPlayerDamage)
 Events.Connect("AS.LifeTimeHealing", OnPlayerHealing)
 Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
+Events.Connect("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
+Events.Connect("TeamVictory", OnTeamVictory)
 
 -- Client Broadcast Listeners
 Events.ConnectForPlayer("AS.RewardClaim", OnRewardCollected)
-Events.ConnectForPlayer("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 
 ACH_API.RegisterAchievements(ACHIEVEMENT_LIST)
