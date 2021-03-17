@@ -20,6 +20,7 @@ Assets {
         ChildIds: 17566732273178486209
         ChildIds: 14081494435077508625
         ChildIds: 4708996743668767698
+        ChildIds: 2361839481426488992
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -1116,6 +1117,14 @@ Assets {
           }
         }
         ParentId: 17566732273178486209
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ConsumablesNetwork"
+            ObjectReference {
+              SubObjectId: 2361839481426488992
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1229,6 +1238,12 @@ Assets {
             Name: "cs:API"
             AssetReference {
               Id: 7445855579671141283
+            }
+          }
+          Overrides {
+            Name: "cs:ConsumablesNetwork"
+            ObjectReference {
+              SubObjectId: 2361839481426488992
             }
           }
         }
@@ -2575,6 +2590,48 @@ Assets {
           KeyBinding_v2 {
             Value: "mc:egameaction:secondaryaction"
           }
+        }
+      }
+      Objects {
+        Id: 2361839481426488992
+        Name: "Consumables Network"
+        Transform {
+          Location {
+            X: -945
+            Y: -360
+            Z: 10
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1551665899132109167
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:HealingPotion"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:HealingPotion:isrep"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
     }

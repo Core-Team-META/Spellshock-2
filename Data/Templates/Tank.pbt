@@ -20,6 +20,7 @@ Assets {
         ChildIds: 4159325021862714735
         ChildIds: 4127929006948487058
         ChildIds: 16112677035434330704
+        ChildIds: 10776915630417501158
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -928,6 +929,14 @@ Assets {
           }
         }
         ParentId: 4159325021862714735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ConsumablesNetwork"
+            ObjectReference {
+              SubObjectId: 10776915630417501158
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1046,6 +1055,12 @@ Assets {
             Name: "cs:API"
             AssetReference {
               Id: 7445855579671141283
+            }
+          }
+          Overrides {
+            Name: "cs:ConsumablesNetwork"
+            ObjectReference {
+              SubObjectId: 10776915630417501158
             }
           }
         }
@@ -1395,7 +1410,7 @@ Assets {
       }
       Objects {
         Id: 4370689124046492802
-        Name: "Magic Sparkle Glitter Loop 02 SFX"
+        Name: "Charge Up SFX"
         Transform {
           Location {
           }
@@ -2881,6 +2896,45 @@ Assets {
           TriggerShape_v2 {
             Value: "mc:etriggershape:box"
           }
+        }
+      }
+      Objects {
+        Id: 10776915630417501158
+        Name: "Consumables Network"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7855160156328725233
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:HealingPotion"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:HealingPotion:isrep"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
     }

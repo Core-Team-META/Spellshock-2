@@ -1,6 +1,6 @@
 Assets {
   Id: 8169778251771885403
-  Name: "ConsumablesUI_Client"
+  Name: "ConsumablesDisplayClient"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
