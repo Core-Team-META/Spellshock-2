@@ -179,9 +179,10 @@ API.GAME_PLAYER_STATS = {
     [1] = "GAMES_WON",
     [2] = "GAMES_LOST",
     [3] = "TOTAL_GAMES",
-    [4] = "weightedWinRate"
+    [4] = "weightedWinRate",
+    [5] = "winOfTheDayTimeStamp"
 }
-
+API.WIN_OF_THE_DAY_TIME = API.GAME_PLAYER_STATS[5]
 API.WEIGHTED_WINS_KEY = 4
 
 API.GAMES_WON = API.GAME_PLAYER_STATS[1]

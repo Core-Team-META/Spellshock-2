@@ -174,7 +174,6 @@ local function OnLoadGamePlayStatsData(player, data)
         for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
             player:SetResource(name, 0)
         end
-        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
     end
     player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
 end

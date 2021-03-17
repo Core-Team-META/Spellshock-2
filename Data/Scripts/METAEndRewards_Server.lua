@@ -46,6 +46,15 @@ local function IsTeamWinner(player)
     end --]]
 end
 
+local function IsWinOfTheDay(player)
+    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        return true
+    end
+    return false
+end
+
 --@param object player
 --@return table tempTbl
 local function CalculateSlot1(player)
@@ -77,13 +86,17 @@ local function GetPlayerRewards(player)
     tempTable[1] = CalculateSlot1(player)
 
     if IsTeamWinner(player) then
+        if IsWinOfTheDay(player) then
+            --#TODO GIVE BONUSE
+        end
+
         --If winning team give large gold ammount
         tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
 
         --Random to determine slot 3 reward
         local random = math.random(1, 100)
         --90% chance to be a random class bind shards
-        if random >= 10 then -- #FIXME 10 
+        if random >= 10 then -- #FIXME 10
             tempTable[3] = {
                 [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
 
