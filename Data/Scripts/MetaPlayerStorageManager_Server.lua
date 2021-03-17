@@ -16,7 +16,10 @@ local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerControlle
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
-local CLASS_PROGRSESION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
+
+
 
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
@@ -30,7 +33,8 @@ local versionControl = {
     [CONST.STORAGE.CURRENCY] = 1,
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
     [CONST.STORAGE.DAILY_SHOP] = 1,
-    [CONST.STORAGE.CLASS_PROGRESSION] = 1
+    [CONST.STORAGE.CLASS_PROGRESSION] = 1,
+    [CONST.STORAGE.CONSUMABLE] = 1
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -236,16 +240,35 @@ local function OnLoadClassLevelData(player, data)
     if data[CONST.STORAGE.CLASS_PROGRESSION] then
         progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CLASS_PROGRESSION])
     end
-    CLASS_PROGRSESION.context.BuildDataTable(player, progression)
+    CLASS_PROGRESSION.context.BuildDataTable(player, progression)
 end
 
 --@param object player
 --@param table data
 local function OnSaveClassLeveData(player, data)
-    local playerProgression = CLASS_PROGRSESION.context.GetClassProgression(player)
+    local playerProgression = CLASS_PROGRESSION.context.GetClassProgression(player)
     data[CONST.STORAGE.CLASS_PROGRESSION] =
     next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
 end
+
+--@param object player
+--@param table data
+local function OnLoadConsumableData(player, data)
+    local progression
+    if data[CONST.STORAGE.CLASS_PROGRESSION] then
+        progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CONSUMABLE])
+    end
+    CONSUMABLES.context.BuildDataTable(player, progression)
+end
+
+--@param object player
+--@param table data
+local function OnSaveConsumableData(player, data)
+    local playerProgression = CONSUMABLES.context.GetConsumables(player)
+    data[CONST.STORAGE.CONSUMABLE] =
+    next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+end
+
 
 
 
@@ -262,6 +285,7 @@ local function OnPlayerJoined(player)
         OnLoadDailyShopData(player, data)
         OnLoadGamePlayStatsData(player, data)
         OnLoadClassLevelData(player, data)
+        OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -278,7 +302,7 @@ local function OnPlayerLeft(player)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
     OnSaveClassLeveData(player, data)
-
+    OnSaveConsumableData(player, data)
 
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
@@ -290,6 +314,8 @@ local function OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
     DAILY_SHOP.context.OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
+    CLASS_PROGRESSION.context.OnPlayerLeft(player)
+    CONSUMABLES.context.OnPlayerLeft(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

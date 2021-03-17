@@ -10,6 +10,7 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 local classTable = {}
+local cosumableTable = {}
 local statusEffects = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -45,9 +46,33 @@ function API.Exists(id)
     return classTable[id] ~= nil
 end
 
+function API.GetConsumableValue(id, level)
+    return cosumableTable[id][level].value
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA
 ------------------------------------------------------------------------------------------------------------------------
+
+--Consumable Values
+cosumableTable = {
+    -- Health Potion
+    [CONST.CONSUMABLE_KEYS.HEALTH_POTION] = {
+        
+        [1] = {value = 100},
+        [2] = {value = 105},
+        [3] = {value = 110},
+        [4] = {value = 115},
+        [5] = {value = 120},
+        [6] = {value = 125},
+        [7] = {value = 130},
+        [8] = {value = 135},
+        [9] = {value = 140},
+        [10] = {value = 150}
+    }
+
+}
+
 
 
 --Class Ability Values
