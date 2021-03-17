@@ -2,7 +2,7 @@ Assets {
   Id: 13049306395415917925
   Name: "Kelp Tile 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 9577313112409999312
     ParameterOverrides {

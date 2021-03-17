@@ -2,7 +2,7 @@ Assets {
   Id: 5784961500467902601
   Name: "Yellow Rock Pile"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 2454335212024899952
     ParameterOverrides {

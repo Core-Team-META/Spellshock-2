@@ -35,30 +35,12 @@ Assets {
   }
 }
 Assets {
-  Id: 17370828256945431127
-  Name: "Fantasy Ability Yellow 026"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_026"
-  }
-}
-Assets {
   Id: 17066449609679557524
   Name: "Frame Outline Thin 002"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_019"
-  }
-}
-Assets {
-  Id: 16806313330175629846
-  Name: "Frame Outlined Thick 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameFlat_020"
   }
 }
 Assets {
@@ -224,48 +206,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12750511709314430191
-  Name: "Fantasy Ticket 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Ticket_001"
-  }
-}
-Assets {
   Id: 12684968738269658065
   Name: "Icon Add"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Add"
-  }
-}
-Assets {
-  Id: 12368679724512819048
-  Name: "BG Flat 011"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_28"
-  }
-}
-Assets {
-  Id: 12302547594047116782
-  Name: "Fantasy Ability Purple 021"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Purple_021"
-  }
-}
-Assets {
-  Id: 12086971798166130178
-  Name: "BG Flat 010"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_27"
   }
 }
 Assets {
@@ -287,30 +233,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11033324172077849451
-  Name: "Fantasy Spell Ingredient 030"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ingredient_030"
-  }
-}
-Assets {
   Id: 10681891877591482545
   Name: "Fantasy Spell Potion 004"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Potion_004"
-  }
-}
-Assets {
-  Id: 10304004596054394633
-  Name: "Frame Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameHighlighted_020"
   }
 }
 Assets {
@@ -356,33 +284,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_001"
-  }
-}
-Assets {
-  Id: 8434473936653101930
-  Name: "Fantasy Scroll 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Scroll_001"
-  }
-}
-Assets {
-  Id: 8277338959376334210
-  Name: "Frame Outline Thin 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameOutline_025"
-  }
-}
-Assets {
-  Id: 8264648425790578274
-  Name: "Fantasy Banner 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Banner_007"
   }
 }
 Assets {
@@ -440,30 +341,12 @@ Assets {
   }
 }
 Assets {
-  Id: 7144188424269409394
-  Name: "Alert Triangle"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_029"
-  }
-}
-Assets {
   Id: 6782122311402690024
   Name: "BG Flat 009"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_26"
-  }
-}
-Assets {
-  Id: 6727874825486779400
-  Name: "Fantasy Chest 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chest_001"
   }
 }
 Assets {
@@ -485,24 +368,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6203847595979390649
-  Name: "Fantasy Book 011"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Book_011"
-  }
-}
-Assets {
-  Id: 6173243591385665392
-  Name: "Frame Outlined 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_025"
-  }
-}
-Assets {
   Id: 6116686186261477025
   Name: "Gear Movement Cloth Fast 01 SFX"
   PlatformAssetType: 7
@@ -521,57 +386,12 @@ Assets {
   }
 }
 Assets {
-  Id: 5879483734359299184
-  Name: "Frame Line 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameLine_001"
-  }
-}
-Assets {
-  Id: 5485640623370883304
-  Name: "Fantasy Ability Blue 029"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_029"
-  }
-}
-Assets {
-  Id: 5459426466684401753
-  Name: "Frame Outline Thin 011"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameOutline_028"
-  }
-}
-Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_020"
-  }
-}
-Assets {
-  Id: 5196377603841433560
-  Name: "BG Gradient 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundFlat_020"
-  }
-}
-Assets {
-  Id: 4727080213227783003
-  Name: "Fantasy Craft Crystal 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Crafting_Crystal_007"
   }
 }
 Assets {
@@ -635,15 +455,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_001"
-  }
-}
-Assets {
-  Id: 2813404828707589716
-  Name: "Fantasy Ability Blue 031"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_031"
   }
 }
 Assets {
@@ -716,24 +527,6 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfxui_hoverselect_core_02_Cue_ref"
-  }
-}
-Assets {
-  Id: 489188521779173368
-  Name: "Icon Alert"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Alert"
-  }
-}
-Assets {
-  Id: 73478753972977788
-  Name: "BG Flat 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_25"
   }
 }
 Assets {

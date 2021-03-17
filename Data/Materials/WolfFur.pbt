@@ -2,7 +2,7 @@ Assets {
   Id: 16936111728464854852
   Name: "WolfFur"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 12357757896131286157
     ParameterOverrides {

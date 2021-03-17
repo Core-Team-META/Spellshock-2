@@ -2,7 +2,7 @@ Assets {
   Id: 2781121172395306561
   Name: "Primer Healing Crystal Aura"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

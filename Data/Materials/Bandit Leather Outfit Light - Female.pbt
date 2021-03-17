@@ -2,7 +2,7 @@ Assets {
   Id: 4781592578556337814
   Name: "Bandit Leather Outfit Light - Female"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 3090596827184957478
     ParameterOverrides {

@@ -1,6 +1,35 @@
 Name: "UI_1"
 RootId: 13334626079586580612
 Objects {
+  Id: 4351061755930196403
+  Name: "Loading Screen"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13334626079586580612
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Loading Screen"
+  }
+}
+Objects {
   Id: 4197521803680757974
   Name: "Round Evaluations"
   Transform {
@@ -262,8 +291,66 @@ Objects {
   }
 }
 Objects {
+  Id: 10701854205104381264
+  Name: "Respawn & Quick Class Selection"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13334626079586580612
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Respawn _ Quick Class Selection"
+  }
+}
+Objects {
+  Id: 14536167750502055599
+  Name: "Midgame UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13334626079586580612
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Midgame UI"
+  }
+}
+Objects {
   Id: 3281734247870618909
-  Name: "UI Components"
+  Name: "Class Selection"
   Transform {
     Location {
     }

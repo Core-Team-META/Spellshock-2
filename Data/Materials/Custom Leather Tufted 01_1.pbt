@@ -2,7 +2,7 @@ Assets {
   Id: 15769318737476800682
   Name: "Custom Leather Tufted 01"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 79
   CustomMaterialAsset {
     BaseMaterialId: 15683261416245687687
     ParameterOverrides {
