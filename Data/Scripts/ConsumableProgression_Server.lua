@@ -9,6 +9,7 @@
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local COST_TABLE = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
+local AP_DATA = require(script:GetCustomProperty("MetaAbilityProgression_DATA"))
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
@@ -64,9 +65,8 @@ end
 --@param object player
 --@param int class => id of class (API.HEALTH_POTION)
 local function GetXp(player, consumable)
-    return consumables[player.id][consumable][API.XP] 
+    return consumables[player.id][consumable][API.XP]
 end
-
 
 --@param object player
 --@param int class => id of class (API.HEALTH_POTION)
@@ -111,7 +111,6 @@ function AddXp(player, consumable, ammount)
     end
 end
 
-
 --@param object player
 --@param table data
 function BuildDataTable(player, data)
@@ -137,8 +136,6 @@ function BuildDataTable(player, data)
         end
     end
 end
-
-
 
 --@param object player
 --@param table consumables
@@ -177,4 +174,7 @@ function API.AddXP(player, consumable, xp)
     --LevelUp(player, consumable)
 end
 
-
+function API.GetValue(player, consumable)
+    local level = GetLevel(player, consumable)
+    return AP_DATA.GetConsumableValue(consumable, level)
+end
