@@ -20,7 +20,8 @@ API.STORAGE = {
     DAILY_SHOP = 6,
     PERKS = 7,
     GAME_PLAYER_STATS = 8,
-    CLASS_PROGRESSION = 9
+    CLASS_PROGRESSION = 9,
+    CONSUMABLE = 10
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -103,12 +104,19 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
+API.CONSUMABLE_KEYS = {
+    HEALTH_POTION = 1
+}
+
 API.CONSUMABLES = {
-    HEALTH_POTION = {
+    [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
         ResName = "Health_Potion",
-        BaseHeal = 100
+        BaseHeal = 100,
+        LevelMultiplier = 5
     }
 }
+
+API.MAX_CONSUMABLE_LEVEL = 10
 
 API.COSTUME_ID = 8
 
