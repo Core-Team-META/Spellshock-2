@@ -255,7 +255,7 @@ end
 --@param table data
 local function OnLoadConsumableData(player, data)
     local progression
-    if data[CONST.STORAGE.CLASS_PROGRESSION] then
+    if data[CONST.STORAGE.CONSUMABLE] then
         progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CONSUMABLE])
     end
     CONSUMABLES.context.BuildDataTable(player, progression)
