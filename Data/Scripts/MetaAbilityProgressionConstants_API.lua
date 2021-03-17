@@ -110,7 +110,6 @@ API.CONSUMABLE_KEYS = {
 
 API.CONSUMABLES = {
     [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
-        ResName = "Health_Potion",
         BaseHeal = 100,
         LevelMultiplier = 5
     }
