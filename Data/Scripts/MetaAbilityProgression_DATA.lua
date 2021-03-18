@@ -83,15 +83,15 @@ classTable = {
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
             [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 115}, mod4 = 90000, mod5 = 1, mod6 = 8},
-            [2] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 93, max = 118}, mod4 = 90000, mod5 = 1, mod6 = 8},
-            [3] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 95, max = 121}, mod4 = 90000, mod5 = 1, mod6 = 7},
-            [4] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 97, max = 125}, mod4 = 90000, mod5 = 1, mod6 = 7},
-            [5] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 100, max = 130}, mod4 = 90000, mod5 = 1, mod6 = 6},
-            [6] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 103, max = 135}, mod4 = 90000, mod5 = 1, mod6 = 6},
-            [7] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 106, max = 140}, mod4 = 90000, mod5 = 1, mod6 = 6},
-            [8] = {mod1 = 4000, mod2 = 1850, mod3 = {min = 110, max = 145}, mod4 = 90000, mod5 = 1, mod6 = 6},
-            [9] = {mod1 = 4000, mod2 = 2050, mod3 = {min = 115, max = 150}, mod4 = 90000, mod5 = 1, mod6 = 5},
-           [10] = {mod1 = 4000, mod2 = 2250, mod3 = {min = 120, max = 160}, mod4 = 90000, mod5 = 1, mod6 = 5}
+            [2] = {mod1 = 4000, mod2 = 1670, mod3 = {min = 93, max = 118}, mod4 = 90000, mod5 = 1, mod6 = 8},
+            [3] = {mod1 = 4000, mod2 = 1690, mod3 = {min = 95, max = 121}, mod4 = 90000, mod5 = 1, mod6 = 7},
+            [4] = {mod1 = 4000, mod2 = 1710, mod3 = {min = 97, max = 125}, mod4 = 90000, mod5 = 1, mod6 = 7},
+            [5] = {mod1 = 4000, mod2 = 1730, mod3 = {min = 100, max = 130}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 103, max = 135}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [7] = {mod1 = 4000, mod2 = 1800, mod3 = {min = 106, max = 140}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [8] = {mod1 = 4000, mod2 = 1900, mod3 = {min = 110, max = 145}, mod4 = 90000, mod5 = 1, mod6 = 6},
+            [9] = {mod1 = 4000, mod2 = 2000, mod3 = {min = 115, max = 150}, mod4 = 90000, mod5 = 1, mod6 = 5},
+           [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 120, max = 160}, mod4 = 90000, mod5 = 1, mod6 = 5}
         },
         --Stone Wall
         [CONST.BIND.E] = {
@@ -165,16 +165,16 @@ classTable = {
         --Block
         [CONST.BIND.RMB] = {
             -- mod1 = Block %
-            [1] = {mod1 = 0.54, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
-            [2] = {mod1 = 0.56, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
-            [3] = {mod1 = 0.58, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
-            [4] = {mod1 = 0.60, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7},
-            [5] = {mod1 = 0.63, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7},
-            [6] = {mod1 = 0.64, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7},
-            [7] = {mod1 = 0.67, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 6},
-            [8] = {mod1 = 0.70, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 6},
-            [9] = {mod1 = 0.74, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 6},
-           [10] = {mod1 = 0.80, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 5}
+            [1] = {mod1 = 0.82, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 10},
+            [2] = {mod1 = 0.83, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9},
+            [3] = {mod1 = 0.84, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
+            [4] = {mod1 = 0.85, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
+            [5] = {mod1 = 0.86, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7},
+            [6] = {mod1 = 0.87, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7},
+            [7] = {mod1 = 0.88, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 6},
+            [8] = {mod1 = 0.89, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 6},
+            [9] = {mod1 = 0.90, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 5},
+           [10] = {mod1 = 0.91, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 4}
         }
     },
     -- Mage

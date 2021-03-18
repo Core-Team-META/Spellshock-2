@@ -4901,7 +4901,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings."
+      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack! Charge and hold for additional damage. Charge Damage = 2x maximum. Charge Time = .5 seconds"
     }
     Overrides {
       Name: "cs:Bind"
@@ -5079,7 +5079,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies."
+      String: "Instant \342\200\223 Press T to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5214,7 +5214,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge."
+      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge. Enemy Impulse = 200000."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5392,7 +5392,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press E to preview and LMB to summon a wall that stops allies, enemies, and targeted abilities."
+      String: "Placement \342\200\223 Press E to preview and LMB to summon a wall that stops allies, enemies, and targeted abilities. Placement Range = 2300."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5527,7 +5527,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you."
+      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you. Projectile Speed = 4000. Impulse Amount = 90000."
     }
     Overrides {
       Name: "cs:Bind"
