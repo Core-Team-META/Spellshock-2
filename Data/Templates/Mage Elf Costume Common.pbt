@@ -7,7 +7,7 @@ Assets {
       RootId: 11763332403905539087
       Objects {
         Id: 11763332403905539087
-        Name: "Mage Elf Costume Default"
+        Name: "Mage Elf Costume Common"
         Transform {
           Scale {
             X: 1
@@ -1890,15 +1890,13 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2339,15 +2337,13 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {

@@ -1,14 +1,14 @@
 Assets {
-  Id: 14060330023043759337
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
+  Id: 15165554833363844727
+  Name: "Amarante"
+  PlatformAssetType: 28
   PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
+    AssetType: "FontAssetRef"
+    AssetId: "AmaranteRegular_ref"
   }
 }
 Assets {
-  Id: 1814707273787853473
+  Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
   PrimaryAsset {
