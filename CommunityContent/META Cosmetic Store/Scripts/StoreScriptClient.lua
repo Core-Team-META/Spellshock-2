@@ -598,7 +598,7 @@ function HasCosmetic(storeId)
 	if OwnedCosmetics[storeId] == true then
 		return true
 	else
-		return player:GetResource("COSMETIC_" .. storeId) > 0
+		return player:GetResource("S" .. storeId) > 0
 	end
 end
 

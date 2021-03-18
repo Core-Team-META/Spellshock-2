@@ -470,7 +470,7 @@ function PurchaseButtonClicked(button)
 			expectedNewCurrency = currency - currentlySelected.data.cost
 			controlsLocked = true
 			propPurchaseButton.visibility = Visibility.FORCE_OFF
-			cosmeticResourceName = "COSMETIC_"..currentlySelected.data.id
+			cosmeticResourceName = "S"..currentlySelected.data.id
 			cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
 			while Events.BroadcastToServer(
 				"BUYCOSMETIC",
@@ -606,7 +606,7 @@ end
 
 function CosmeticResourceChange(_, name)
 	if name == cosmeticResourceName then
-		if string.find(name, "COSMETIC_") then
+		if string.find(name, "S") then
 			UpdateEntryButton(currentlySelected, false)
 			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 			purchaseText.text = "EQUIP"
@@ -711,7 +711,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function HasCosmetic(storeId)
-	return player:GetResource("COSMETIC_" .. storeId) > 0
+	return player:GetResource("S" .. storeId) > 0
 end
 
 function CosmeticIsEquipped(cosmeticId)
