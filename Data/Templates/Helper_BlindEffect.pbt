@@ -93,7 +93,6 @@ Assets {
             Id: 6801389668665319570
           }
           AutoPlay: true
-          Volume: 1
           Falloff: -1
           Radius: -1
           FadeOutTime: 2
