@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/7
--- Version 0.1.4
+-- Date: 2021/3/18
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -14,6 +14,7 @@ local BASE = require(script:GetCustomProperty("Base64"))
 ------------------------------------------------------------------------------------------------------------------------
 local VFX_LIST = script:GetCustomProperty("StartingVFX"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
+local STORE_CLIENT = script:GetCustomProperty("StoreScriptClient"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
@@ -26,6 +27,8 @@ local playerCosmetic = {}
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
+
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -35,7 +38,7 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
-    --[[repeat
+    repeat
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
             if child.name == LOCAL_PLAYER.id then
@@ -44,13 +47,27 @@ function Int()
             end
         end
     until playerCosmetic
-    Events.BroadcastToServer("OnDestroyPlayerDataObject")]]--
+    Events.BroadcastToServer("OnDestroyPlayerDataObject")
+    --UTIL.TablePrint(playerCosmetic)
+end
+
+
+function OnChildAdded(parent, object)
+    if parent == DATA_TRANSFER and object.name == LOCAL_PLAYER.id then
+        local dataStr = object:GetCustomProperty("data")
+        while dataStr == "" or not dataStr do
+            Task.Wait()
+            dataStr = object:GetCustomProperty("data")
+        end
+        playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
+        Events.BroadcastToServer("OnDestroyPlayerDataObject")
+        STORE_CLIENT.context.CosmeticPurchaseChange()
+    end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
-
 
 --@param int team
 --@param int skin
@@ -60,12 +77,20 @@ function API.IsCosmeticOwned(class, team, skin, bind)
     return UTIL.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
 end
 
+function API.IsCosmeticStrOwned(str)
+    local class, team, skin, bind = API.ConvertSkinStringToId(str)
+    return UTIL.IsCosmeticOwned(playerCosmetic, class, team, skin, bind)
+end
+
+function API.ConvertSkinStringToId(str)
+    return tonumber(str:sub(1, 1)), tonumber(str:sub(2, 2)), tonumber(str:sub(3, 4)), tonumber(str:sub(5, 5))
+end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind, team)
-    if not team then 
+    if not team then
         team = player.team
     end
     return player:GetResource(UTIL.GetSkinString(class, team, bind))
@@ -108,5 +133,4 @@ end
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
 Int()
-
-
+DATA_TRANSFER.childAddedEvent:Connect(OnChildAdded)

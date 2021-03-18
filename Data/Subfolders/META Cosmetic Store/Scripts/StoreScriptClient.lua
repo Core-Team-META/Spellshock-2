@@ -640,7 +640,7 @@ function HasCosmetic(storeId) --#TODO modify to use our systems to check if owne
 	if OwnedCosmetics[storeId] == true then
 		return true
 	else
-		return player:GetResource("S" .. storeId) > 0
+		return _G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
 	end
 end
 

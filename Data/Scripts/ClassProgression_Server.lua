@@ -119,7 +119,7 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetClassLevel(player, class)
-    return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
+    return classProgression[player.id][class][CONST.PROGRESS.LEVEL] and tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
 --@param object player

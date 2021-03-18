@@ -362,6 +362,31 @@ function API.CosmeticConvertToTable(str)
     return finalTbl
 end
 
+--@param string str => string of compressed data
+--@return table finalTbl => player data
+function API.CosmeticConvertAddToTable(str, startTbl)
+    if str == nil or str == "" then
+        return {}
+    end
+    local finalTbl = startTbl or {}
+    local tbl = API.StringSplit(",", str)
+    if next(tbl) then
+        for _, s in ipairs(tbl) do
+            --s = BASE.Decode24(s) or s
+            s = tostring(s)
+            local cId = tonumber(s:sub(1, 1))
+            local tId = tonumber(s:sub(2, 2))
+            local sId = tonumber(s:sub(3, 4))
+            local aId = tonumber(s:sub(5, 5))
+            finalTbl[cId] = finalTbl[cId] or {}
+            finalTbl[cId][tId] = finalTbl[cId][tId] or {}
+            finalTbl[cId][tId][sId] = finalTbl[cId][tId][sId] or {}
+            finalTbl[cId][tId][sId][aId] = 1
+        end
+    end
+    return finalTbl
+end
+
 --@param table tbl => player data to be stored
 --@return string str => string of compressed data
 function API.CosmeticConvertToString(tbl)

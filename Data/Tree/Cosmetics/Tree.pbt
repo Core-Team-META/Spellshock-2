@@ -56,6 +56,12 @@ Objects {
         Id: 14568273880639568162
       }
     }
+    Overrides {
+      Name: "cs:StoreScriptClient"
+      ObjectReference {
+        SelfId: 3133517331089498449
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -121,6 +127,12 @@ Objects {
       Name: "cs:VFX_LIST"
       ObjectReference {
         SelfId: 5874015840417789592
+      }
+    }
+    Overrides {
+      Name: "cs:DataTransfer"
+      ObjectReference {
+        SelfId: 14155398648855669178
       }
     }
   }
