@@ -7,7 +7,7 @@ Assets {
       RootId: 8933825174897608060
       Objects {
         Id: 8933825174897608060
-        Name: "Healer Elf Healing Crystal Placement Basic 3"
+        Name: "Healer Elf Healing Crystal Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -452,7 +452,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
