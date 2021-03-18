@@ -435,7 +435,7 @@ Assets {
       }
       Objects {
         Id: 9326815864443726021
-        Name: "DestructibleWeaponServer"
+        Name: "HunterCrossbowServer"
         Transform {
           Location {
           }
@@ -471,6 +471,37 @@ Assets {
               SubObjectId: 13944462686745880869
             }
           }
+          Overrides {
+            Name: "cs:ModuleManager"
+            AssetReference {
+              Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 15
+              Y: 20
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffect"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
+          Overrides {
+            Name: "cs:ShootAbility"
+            ObjectReference {
+              SubObjectId: 10839953769775855596
+            }
+          }
+          Overrides {
+            Name: "cs:ChargedProjectileBomb"
+            AssetReference {
+              Id: 5887319667457082430
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -483,7 +514,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 18154052875178810801
+            Id: 6894979976429832147
           }
         }
       }

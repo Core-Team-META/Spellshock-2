@@ -5,18 +5,28 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Shoot"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:CrossbowProjectile"
+        Name: "cs:ModuleManager"
         AssetReference {
           Id: 841534158063459245
         }
       }
       Overrides {
-        Name: "cs:Crossbow"
+        Name: "cs:DamageToObjects"
+        Int: 0
+      }
+      Overrides {
+        Name: "cs:DamageRange"
+        Vector2 {
+        }
+      }
+      Overrides {
+        Name: "cs:APIStatusEffect"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:ShootAbility"
         ObjectReference {
         }
       }

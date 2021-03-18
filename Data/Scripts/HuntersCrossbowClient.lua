@@ -188,7 +188,7 @@ end
 )
 
 WEAPON.equippedEvent:Connect(OnEquipped)
--- 
+
 if WEAPON.owner then
 	OnEquipped(WEAPON, WEAPON.owner)
 end
