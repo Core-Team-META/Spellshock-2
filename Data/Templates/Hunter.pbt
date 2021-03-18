@@ -1537,6 +1537,12 @@ Assets {
               Id: 6147896150544354150
             }
           }
+          Overrides {
+            Name: "cs:CrossbowChargedTrail"
+            AssetReference {
+              Id: 15322823562239517501
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
