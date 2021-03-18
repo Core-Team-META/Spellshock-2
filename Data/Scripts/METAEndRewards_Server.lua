@@ -79,13 +79,49 @@ local function CalculateSlot1(player)
     return tempTbl
 end
 
+local function CalculateRegularSlot()
+    local result
+    local random = math.random(1, 100)
+    --90% chance to be a random class bind shards
+    if random >= 10 then -- #FIXME 10
+        result = {
+            [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
+        }
+    else -- 10% chance to be costume tokens
+        result = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+    end
+    return result
+end
+
+--#TODO Need to actually write logic
+-- Should return 4-10
+local function GetNumberOfCards(player)
+    return 10
+end
+
 --#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
+    local numberOfCards = GetNumberOfCards(player) -- 4 to 10
     local tempTable = {}
+    
+    -- Slot one always has a higher chance of being an ability from the last used class
     tempTable[1] = CalculateSlot1(player)
 
+    -- Slot two is designated for gold
     if IsTeamWinner(player) then
+        --If winning team give large gold ammount
+        tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
+    else
+        --Losing team gets small gold amount.
+        tempTable[2] = {G = REWARD_UTIL.GetGoldSmallAmmount()}
+    end
+
+    for slot=3, numberOfCards, 1 do
+        tempTable[slot] = CalculateRegularSlot()
+    end
+
+    --[[if IsTeamWinner(player) then
         if IsWinOfTheDay(player) then
             --#TODO GIVE BONUSE
         end
@@ -98,16 +134,14 @@ local function GetPlayerRewards(player)
         --90% chance to be a random class bind shards
         if random >= 10 then -- #FIXME 10
             tempTable[3] = {
-                [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
-
-                )
+                [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
             }
         else -- 10% chance to be costume tokens
             tempTable[3] = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
         end
     else --Losing team only gets slot 1 and 2, slot 2 == Small gold amount.
         tempTable[2] = {G = REWARD_UTIL.GetGoldSmallAmmount()}
-    end
+    end]]
 
     return tempTable
 end
