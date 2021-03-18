@@ -7,7 +7,7 @@ Assets {
       RootId: 11692253327546951339
       Objects {
         Id: 11692253327546951339
-        Name: "Mage Orc Costume Default"
+        Name: "Mage Orc Costume Common"
         Transform {
           Scale {
             X: 1
@@ -1851,7 +1851,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -2331,7 +2331,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
