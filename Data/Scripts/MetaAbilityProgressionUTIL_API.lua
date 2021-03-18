@@ -202,7 +202,7 @@ function API.GetSkinString(class, team, bind)
 end
 
 function API.GetCosmeticIdString(class, team, skin, bind)
-    return "COSMETIC_" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
+    return "S" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
 end
 
 ------------------------------------------------------------------------------------------------------------------------

@@ -19,8 +19,6 @@ local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObje
 local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
 local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
 
-
-
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
@@ -78,13 +76,17 @@ end
 local function AddDefaultCosmetics(player)
     for class = 1, 5 do
         for team = 1, 2 do
-            for skin = 1, 1 do
+            for skin = 1, 5 do
                 for bind = 1, 5 do -- Costume Not saving with 4
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
                     end
-
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
+                    if skin == 2 and bind < 8 then
+                    elseif skin == 3 and bind < 8 then
+                    elseif skin == 4 and bind < 8 then
+                    else
+                        _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
+                    end
                 end
             end
         end
@@ -166,7 +168,7 @@ local function OnLoadGamePlayStatsData(player, data)
         for key, value in pairs(playerGameStats) do
             if CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ~= CONST.WEIGHTED_WINS then
                 player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
-            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ==  CONST.WEIGHTED_WINS then
+            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] == CONST.WEIGHTED_WINS then
                 player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value or 0
             end
         end
@@ -175,7 +177,8 @@ local function OnLoadGamePlayStatsData(player, data)
             player:SetResource(name, 0)
         end
     end
-    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
+    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] =
+        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
 end
 
 --@param object player
@@ -184,8 +187,8 @@ local function OnSaveGamePlayStatsData(player, data)
     local playerGameStats = {}
     for index, resName in ipairs(CONST.GAME_PLAYER_STATS) do
         if index ~= CONST.WEIGHTED_WINS_KEY then
-        playerGameStats[index] = player:GetResource(resName)
-        elseif index == CONST.WEIGHTED_WINS_KEY then 
+            playerGameStats[index] = player:GetResource(resName)
+        elseif index == CONST.WEIGHTED_WINS_KEY then
             playerGameStats[index] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]
         end
     end
@@ -231,7 +234,6 @@ local function OnSaveDailyShopData(player, data)
     data[CONST.STORAGE.DAILY_SHOP] = next(dailyShopItems) ~= nil and UTIL.DailyShopConvertToString(dailyShopItems) or ""
 end
 
-
 --@param object player
 --@param table data
 local function OnLoadClassLevelData(player, data)
@@ -247,7 +249,7 @@ end
 local function OnSaveClassLeveData(player, data)
     local playerProgression = CLASS_PROGRESSION.context.GetClassProgression(player)
     data[CONST.STORAGE.CLASS_PROGRESSION] =
-    next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
 end
 
 --@param object player
@@ -265,12 +267,8 @@ end
 local function OnSaveConsumableData(player, data)
     local playerProgression = CONSUMABLES.context.GetConsumables(player)
     data[CONST.STORAGE.CONSUMABLE] =
-    next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
 end
-
-
-
-
 
 --@param object player
 local function OnPlayerJoined(player)
