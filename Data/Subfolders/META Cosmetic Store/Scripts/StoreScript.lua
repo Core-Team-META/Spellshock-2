@@ -246,7 +246,7 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 	local bind = tonumber(cosmeticId:sub(5, 5))]]
 
 	local class, team, skin, bind = ID_Converter(cosmeticId, false)
-	player:SetResource("COSMETIC_" .. cosmeticId, 1)
+	player:SetResource("S" .. cosmeticId, 1)
 	META_VFX().UnlockCosmetic(player, class, team, skin, bind)
 
 	ReliableEvents.BroadcastToPlayer(player, "BUYCOSMETIC_RESPONSE", cosmeticId, true)
@@ -255,7 +255,7 @@ end
 
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).
 function GetCosmeticFromServer(player, cosmeticId)
-	player:SetResource("COSMETIC_" .. cosmeticId, 1)
+	player:SetResource("S" .. cosmeticId, 1)
 
 	if playerOwnedCosmetics[player.id] == nil then
 		playerOwnedCosmetics[player.id] = {}
@@ -266,7 +266,7 @@ function GetCosmeticFromServer(player, cosmeticId)
 end
 
 function IsCosmeticName(rscName)
-	return rscName:sub(1, 9) == "COSMETIC_"
+	return rscName:sub(1, 9) == "S"
 end
 
 function OnPlayerJoined(player)
@@ -369,9 +369,9 @@ function CheckSubscription(player)
 	if not player:HasPerk(subscriptionPerk) then
 		for k, v in pairs(data.COSMETICS.fromSubscription) do
 			--print(k)
-			--print(data.COSMETICS.owned["COSMETIC_" .. k])
-			if data.COSMETICS.owned["COSMETIC_" .. k] == 1 then
-				data.COSMETICS.owned["COSMETIC_" .. k] = nil
+			--print(data.COSMETICS.owned["S" .. k])
+			if data.COSMETICS.owned["S" .. k] == 1 then
+				data.COSMETICS.owned["S" .. k] = nil
 			end
 			if data.COSMETICS.equipped == k then
 				data.COSMETICS.equipped = nil

@@ -27,7 +27,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
   }
@@ -52,6 +52,7 @@ Objects {
   }
   ParentId: 4519890512238287661
   ChildIds: 4542412189343657266
+  ChildIds: 18393261942096671057
   ChildIds: 18072466856326533855
   ChildIds: 4851270004022125795
   ChildIds: 7920268170152413863
@@ -10099,6 +10100,171 @@ Objects {
         R: 0.00972121768
         G: 0.00402471703
         A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 18393261942096671057
+  Name: "NEW Reward Cards"
+  Transform {
+    Location {
+      X: -8969.64844
+      Y: 64668.457
+      Z: -690
+    }
+    Rotation {
+      Yaw: -135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4509724161207917958
+  ChildIds: 1917936312158066202
+  ChildIds: 12208683202691034075
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12208683202691034075
+  Name: "Helper_RewardCard"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18393261942096671057
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15767701222805894856
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Helper_RewardCard"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 39385.0117
+            Y: 52070.0117
+            Z: 690
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 135.000015
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 199494650754129245
+    }
+  }
+}
+Objects {
+  Id: 1917936312158066202
+  Name: "BG"
+  Transform {
+    Location {
+      X: 0.00048828125
+      Y: 0.00390625
+    }
+    Rotation {
+    }
+    Scale {
+      X: -1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18393261942096671057
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 1000
+    Height: 1000
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 14060330023043759337
+      }
+      Color {
+        R: 0.00972121768
+        G: 0.00402471703
+        A: 0.916000068
       }
       TeamSettings {
       }

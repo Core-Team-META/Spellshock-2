@@ -454,5 +454,5 @@ Assets {
       AssetId: "Fantasy_Castle_Stairs_-_300cm_Template"
     }
   }
-  SerializationVersion: 78
+  SerializationVersion: 79
 }

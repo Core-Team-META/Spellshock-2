@@ -7,7 +7,7 @@ Assets {
       RootId: 2424316390545199752
       Objects {
         Id: 2424316390545199752
-        Name: "Healer Orc Healing Crystal Placement Fire 3"
+        Name: "Healer Orc Healing Crystal Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -462,7 +462,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
@@ -5763,5 +5763,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 78
+  SerializationVersion: 79
 }
