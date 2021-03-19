@@ -1,11 +1,6 @@
 ﻿local EaseUI = require(script:GetCustomProperty("EaseUI"))
 
-local REWARDS = script:GetCustomProperty("REWARDS"):WaitForObject()
 local RewardDropPanel = script:GetCustomProperty("RewardDrop"):WaitForObject()
-local RewardSlot1 = script:GetCustomProperty("RewardSlot1"):WaitForObject()
-local RewardSlot2 = script:GetCustomProperty("RewardSlot2"):WaitForObject()
-local RewardSlot3 = script:GetCustomProperty("RewardSlot3"):WaitForObject()
-local RewardSlot3Loss = script:GetCustomProperty("RewardSlot3Loss"):WaitForObject()
 local Chest = script:GetCustomProperty("Chest"):WaitForObject()
 
 local Helper_RewardDrop = script:GetCustomProperty("Helper_RewardDrop")
@@ -17,12 +12,6 @@ local RewardCardMovementSFX = script:GetCustomProperty("RewardCardMovementSFX")
 local HideCardsSFX = script:GetCustomProperty("HideCardsSFX"):WaitForObject()
 local RewardShimmerSFX = script:GetCustomProperty("RewardShimmerSFX"):WaitForObject()
 
-RewardSlot1.clientUserData.X = RewardSlot1.x
-RewardSlot2.clientUserData.X = RewardSlot2.x
-RewardSlot3.clientUserData.X = RewardSlot3.x
-RewardSlot3Loss.clientUserData.X = RewardSlot3Loss.x
-
-local Cards = {RewardSlot1, RewardSlot2, RewardSlot3, RewardSlot3Loss}
 local DropIcons = {ShardIcon, GoldIcon, GemIcon}
 
 local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()

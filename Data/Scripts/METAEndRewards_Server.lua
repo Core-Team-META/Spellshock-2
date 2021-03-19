@@ -21,7 +21,7 @@ local GAME_STATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitF
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
 local choosenRewards = {}
-local TEMP_CardCount = 8
+local TEMP_CardCount = 10
 ------------------------------------------------------------------------------------------------------------------------
 -- SERVER LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -45,6 +45,15 @@ local function IsTeamWinner(player)
     else
         return false
     end --]]
+end
+
+local function IsFirstWinOfTheDay(player)
+    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        return true
+    end
+    return false
 end
 
 --@param object player
@@ -103,6 +112,7 @@ local function GetPlayerRewards(player)
     -- Slot two is designated for gold
     if IsTeamWinner(player) then
         --If winning team give large gold ammount
+        IsFirstWinOfTheDay(player)
         tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
     else
         --Losing team gets small gold amount.
@@ -161,6 +171,7 @@ GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
 
+-- FOR TESTING -----------------------
 function OnBindingPressed(whichPlayer, binding)
 	if (binding == "ability_extra_46") then 
         TEMP_CardCount = TEMP_CardCount + 1
@@ -174,3 +185,4 @@ end
 
 -- on player joined/left functions need to be defined before calling event:Connect()
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
+----------------------------------------------------------------------------------------------------

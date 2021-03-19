@@ -41,6 +41,7 @@ local listeners = {}
 local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
+local canSelect = false
 local SelectionCount = 0 -- determines how many cards the player can choose
 local SelectedCards = {} -- stores all the cards the player has chosen
 local CardPanels = {}
@@ -315,33 +316,31 @@ local function IsTeamWinner(player)
     end --]]
 end
 
+-- #TODO
 local function IsFirstWinOfTheDay(player)
-    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
-    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
-        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
-        return true
-    end
-    return false
+    return true
 end
 
-local function CalculateSelectionCount(player)
+local function CalculateSelectionCount()
     -- 1 by default
     SelectionCount = 1
     
     -- +1 for winning
-    if IsTeamWinner(player) then
+    if IsTeamWinner(LOCAL_PLAYER) then
         SelectionCount = SelectionCount + 1
     
         -- +1 for First Win of the Day
-        if IsFirstWinOfTheDay(player) then
+        if IsFirstWinOfTheDay(LOCAL_PLAYER) then
             SelectionCount = SelectionCount + 1
         end
     end
 
     -- +1 for Extra Reward Perk #TODO
     
+    -- For testing
+    --SelectionCount = 4
+
     --Set UI text
-    SelectionCount = 4
     if SelectionCount > 1 then 
         ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
     else
@@ -376,6 +375,23 @@ function OnRewardSelected(thisButton)
     end
 end
 
+-- If the player has a nonzero SelectionCount when the timer runs out, 
+-- choose the rest of their rewards for them
+function AutoSelectRewards()
+    canSelect = false
+    if SelectionCount == 0 then return end
+
+    for slot, card in ipairs(CardPanels) do
+        -- Stop when SelectionCount is zero
+        if SelectionCount == 0 then break end
+
+        -- If the card is not already selected, then select it for the player
+        if not SelectedCards[card.clientUserData.button] then
+            OnRewardSelected(card.clientUserData.button)
+        end
+    end
+end
+
 function OnRewardsChanged(object, string)
     if string == "rewards" then
         local str = object:GetCustomProperty(string)
@@ -388,13 +404,14 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         CalculateSelectionCount()
         Task.Wait(2)
         ToggleUI(true)
+        canSelect = true
         ANIMATION.context.OnRewardShow(CardPanels)
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
+        AutoSelectRewards()
         local playerRewards = {}
         for cardButton, slotID in pairs(SelectedCards) do
             table.insert(playerRewards, slotID)
         end
-        
         ANIMATION.context.RevealChosenCards(SelectedCards, CardPanels)
         Events.BroadcastToServer(NAMESPACE .. "GivePlayerRewards", playerRewards)
     elseif newState == ABGS.GAME_STATE_LOBBY then
