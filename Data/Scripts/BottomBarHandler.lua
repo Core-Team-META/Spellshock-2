@@ -1,5 +1,6 @@
 ﻿local ABGS = require(script:GetCustomProperty("ABGS"))
 local AS = require(script:GetCustomProperty("API_Spectator"))
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ClassInfo = script:GetCustomProperty("ClassInfo"):WaitForObject()
 local BottomBar = script:GetCustomProperty("BottomBar"):WaitForObject()
 
@@ -20,12 +21,13 @@ function OnClassIconSet(name, icon)
     Icon:SetImage(icon)
 
     local classID = META_AP()[string.upper(name)]
-    local level = 0
+    --[[local level = 0
     for i=1, 7, 1 do
         
         level = level + META_AP().GetBindLevel(LOCAL_PLAYER, i, classID)
     end
-    level = level - 6
+    level = level - 6]]--
+    local level = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(classID))
     ClassLevel.text = "Lv. "..tostring(level)
     ClassLevel:GetChildren()[1].text = "Lv. "..tostring(level)
 end
