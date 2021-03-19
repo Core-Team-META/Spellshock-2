@@ -108,6 +108,7 @@ function ClassLevelUp(player, class)
         API.SetClassLevel(player, class)
         SetClassLevel(player, class, level)
         SetClassXp(player, class, xp)
+        ClassLevelUp(player, class)
     end
 end
 
