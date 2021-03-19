@@ -318,7 +318,7 @@ end
 
 -- #TODO
 local function IsFirstWinOfTheDay(player)
-    return true
+    return false
 end
 
 local function CalculateSelectionCount()

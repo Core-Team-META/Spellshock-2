@@ -198,7 +198,7 @@ function UpdateClassInfo(thisButton)
 	-- Update the Class Description Panel
 	local ClassLevel = RightPanel_ClassDescriptionPanel:GetCustomProperty("ClassLevel"):WaitForObject()
 	local DescriptionText = RightPanel_ClassDescriptionPanel:GetCustomProperty("DescriptionText"):WaitForObject()
-	ClassLevel.text = tostring(classLevel-6)
+	ClassLevel.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]])) )
 	if LOCAL_PLAYER.team == 1 then
 		DescriptionText.text = dataTable["OrcDescription"]
 	else
