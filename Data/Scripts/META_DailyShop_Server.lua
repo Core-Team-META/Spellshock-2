@@ -87,13 +87,16 @@ local function GenerateShopItems(player, forced)
     for i = 1, 6 do
         tempTbl[i] = CalculateRewardSlot(player)
     end
-    local time = os.time(os.date("!*t"))
+    local currentTime = os.time(os.date("!*t"))
     player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH or 0
     if forced then
         player.serverUserData.DS_REFRESH = player.serverUserData.DS_REFRESH + 1
     end
-    local refreshTime = time + (24 * 60 * 60)
+    local refreshTime = currentTime + (24 * 60 * 60)
+    --player:SetResource("DS_REFRESH", CoreMath.Round(refreshTime))
     tempTbl["TIME"] = {T = refreshTime, R = CoreMath.Round(player.serverUserData.DS_REFRESH)}
+    local resourceTime = CoreMath.Round(refreshTime - os.time(os.date("!*t")))
+    player:SetResource("DS_REFRESHTIME", CoreMath.Round(resourceTime + time()))
     dailyRewards[player.id] = tempTbl
 end
 
@@ -112,6 +115,7 @@ function OnLoadPlayerDailyShop(player, data)
     if data and data["TIME"] and data["TIME"].T and not Has24HoursPassed(data["TIME"].T) then
         dailyRewards[player.id] = data
         player.serverUserData.DS_REFRESH = data["TIME"].R or 0
+        player:SetResource("DS_REFRESHTIME", CoreMath.Round(data["TIME"].T - os.time(os.date("!*t")) + time()))
     else
         GenerateShopItems(player, false)
     end

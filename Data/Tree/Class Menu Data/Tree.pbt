@@ -60,6 +60,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -100,6 +103,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -144,6 +150,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -184,6 +193,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -226,6 +238,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -245,7 +260,6 @@ Objects {
     }
   }
   ParentId: 12124708511639495803
-  ChildIds: 4896055284479103675
   ChildIds: 10826108066709165769
   UnregisteredParameters {
     Overrides {
@@ -256,7 +270,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance."
+      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance. Placement Range = 2500."
     }
     Overrides {
       Name: "cs:Bind"
@@ -268,6 +282,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -310,46 +327,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 4896055284479103675
-  Name: "Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14339626899672504924
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can teleport"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -371,10 +350,9 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 18362008314686307681
-  ChildIds: 1360347109686458122
-  ChildIds: 17108055071189208160
-  ChildIds: 2044664573943021847
   ChildIds: 17141894458158052416
+  ChildIds: 1360347109686458122
+  ChildIds: 2044664573943021847
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -384,7 +362,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to charge up a powerful explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are stunned."
+      String: "Instant \342\200\223 Press T to create powerful targeted explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are damaged and stunned."
     }
     Overrides {
       Name: "cs:Bind"
@@ -397,46 +375,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17141894458158052416
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11279935537839204400
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -483,46 +423,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17108055071189208160
-  Name: "Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11279935537839204400
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Radius of the effect area"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -565,6 +467,53 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17141894458158052416
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11279935537839204400
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -606,6 +555,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -625,9 +577,8 @@ Objects {
     }
   }
   ParentId: 12124708511639495803
-  ChildIds: 1315606167183961674
-  ChildIds: 2368931382467744602
   ChildIds: 3472045051803980741
+  ChildIds: 1315606167183961674
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -637,7 +588,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to release a wave of solar wind that pushes enemies away, briefly stunning them."
+      String: "Instant \342\200\223 Press R to release a wave of solar wind that blinds enemies and increases your movement speed temporarily. Blind Duration = 3s. Speed Boost = 60%. Speed Duration = 5s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -650,87 +601,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 3472045051803980741
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7866126941647045844
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 2368931382467744602
-  Name: "Impulse Amount"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7866126941647045844
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 626394604982656881
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -773,58 +645,15 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16235204025351921921
-  Name: "Healing Crystal"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12124708511639495803
-  ChildIds: 1507681565660438466
-  ChildIds: 3120514432720301169
-  ChildIds: 16177311068279106477
-  ChildIds: 12362116761555344674
-  ChildIds: 13014998593383806922
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17365393624783698083
-      }
-    }
-    Overrides {
-      Name: "cs:Description"
-      String: "Placement \342\200\223 Press E to preview and LMB to summon a crystal imbued with sunlight, healing allies and damaging enemies in its radius."
-    }
-    Overrides {
-      Name: "cs:Bind"
-      String: "E"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 13014998593383806922
+  Id: 3472045051803980741
   Name: "Cooldown"
   Transform {
     Location {
@@ -837,7 +666,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16235204025351921921
+  ParentId: 7866126941647045844
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -859,6 +688,57 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16235204025351921921
+  Name: "Healing Crystal"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12124708511639495803
+  ChildIds: 1507681565660438466
+  ChildIds: 13014998593383806922
+  ChildIds: 16177311068279106477
+  ChildIds: 12362116761555344674
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17365393624783698083
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Placement \342\200\223 Press E to preview and LMB to summon a crystal imbued with sunlight, healing allies and damaging enemies in its radius. Time Between Heals = .5s"
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -901,6 +781,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -942,13 +825,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 3120514432720301169
-  Name: "Heal Frequency"
+  Id: 13014998593383806922
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -964,17 +850,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The time between heals"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 6990601500245861752
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod3"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -982,6 +868,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1024,6 +913,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1044,7 +936,6 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 12761103757713680055
-  ChildIds: 12638170253327895416
   ChildIds: 13747008662516060626
   UnregisteredParameters {
     Overrides {
@@ -1055,7 +946,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to cast a beam of solar energy forward, damaging enemies caught in its path."
+      String: "Instant \342\200\223 Press Q to cast a beam of solar energy forward, damaging enemies caught in its path. Beam Range = 4000. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -1067,6 +958,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1109,46 +1003,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12638170253327895416
-  Name: "Beam Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6603056763990519431
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far the beam will travel"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1190,6 +1046,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1255,6 +1114,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1295,6 +1157,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1339,6 +1204,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1379,6 +1247,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1421,6 +1292,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1462,6 +1336,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1482,10 +1359,8 @@ Objects {
   }
   ParentId: 837517277244744736
   ChildIds: 8380954081570957251
-  ChildIds: 15339289212531332482
-  ChildIds: 13816951105555564383
-  ChildIds: 2770197239029822294
   ChildIds: 11021992287971171432
+  ChildIds: 2770197239029822294
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1495,7 +1370,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact."
+      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact. Placement Range = 6000. Damage Radius = 750. Stun Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1508,46 +1383,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11021992287971171432
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17507077983078006761
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1590,13 +1427,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 13816951105555564383
-  Name: "Targeting Range"
+  Id: 11021992287971171432
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -1612,17 +1452,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The farthest distance you can target"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 10392517578151200132
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -1631,46 +1471,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15339289212531332482
-  Name: "Damage Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17507077983078006761
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Radius of the damage area"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1713,6 +1515,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1733,9 +1538,9 @@ Objects {
   }
   ParentId: 837517277244744736
   ChildIds: 16037613412710680742
+  ChildIds: 11489993345626439756
   ChildIds: 3074752349398664074
   ChildIds: 14441027740739943
-  ChildIds: 11489993345626439756
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1745,7 +1550,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; teleporting you to the point of impact and damaging nearby enemies."
+      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1758,46 +1563,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11489993345626439756
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15882469756563991493
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1844,13 +1611,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
   Id: 3074752349398664074
-  Name: "Damage Radius"
+  Name: "Venom Radius"
   Transform {
     Location {
     }
@@ -1871,7 +1641,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 13298271364458101774
+        Id: 8194221724979934971
       }
     }
     Overrides {
@@ -1884,6 +1654,53 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11489993345626439756
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15882469756563991493
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -1926,6 +1743,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -1946,10 +1766,8 @@ Objects {
   }
   ParentId: 837517277244744736
   ChildIds: 7786687914104591703
-  ChildIds: 4559944181589896695
-  ChildIds: 2501884905764305196
-  ChildIds: 18019913923763692998
   ChildIds: 3022053924916738624
+  ChildIds: 2501884905764305196
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -1959,7 +1777,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect."
+      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect. Attack Damage Radius = 450."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1971,6 +1789,53 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2501884905764305196
+  Name: "Invisibility Duration"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 78469244364511293
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long you will stay invisible"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 12564406389319441522
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2013,128 +1878,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 18019913923763692998
-  Name: "Speed Boost"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 78469244364511293
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount your movement speed will increase"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 14065417185628223733
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 2501884905764305196
-  Name: "Duration"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 78469244364511293
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long you will stay invisible"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 4559944181589896695
-  Name: "Attack Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 78469244364511293
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far your ending attack will reach"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2177,6 +1922,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2197,9 +1945,8 @@ Objects {
   }
   ParentId: 837517277244744736
   ChildIds: 6180741710619077583
-  ChildIds: 5825215787427395226
-  ChildIds: 8295886532193173621
   ChildIds: 9763119785346265410
+  ChildIds: 5825215787427395226
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2209,7 +1956,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 TODO"
+      String: "Instant \342\200\223 Teleports you forward to a blade and damages enemies near the impact point. Placement Range = 2500."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2222,87 +1969,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 9763119785346265410
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7146157638163724227
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8295886532193173621
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7146157638163724227
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far this attack can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2345,6 +2013,53 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 9763119785346265410
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7146157638163724227
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2385,6 +2100,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2450,6 +2168,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2490,6 +2211,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2534,6 +2258,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2574,6 +2301,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2616,6 +2346,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2635,7 +2368,6 @@ Objects {
     }
   }
   ParentId: 12532102525843773576
-  ChildIds: 6386186559256232463
   ChildIds: 12146732750660035160
   UnregisteredParameters {
     Overrides {
@@ -2646,7 +2378,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance."
+      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance. Placement Range = 3200."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2658,6 +2390,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2700,46 +2435,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6386186559256232463
-  Name: "Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5833689127479481271
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can teleport"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2772,7 +2469,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant/Guided \342\200\223 Press T to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle."
+      String: "Instant/Guided \342\200\223 Press T to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -2784,6 +2481,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2826,6 +2526,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2866,6 +2569,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -2908,6 +2614,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -2928,9 +2637,9 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 7663790721216425677
-  ChildIds: 13314183402486245606
-  ChildIds: 6726917288573614718
   ChildIds: 12675666979630358360
+  ChildIds: 6726917288573614718
+  ChildIds: 12105217976073623068
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2940,7 +2649,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to summon a defensive chunk of ice that encases and protects, preventing movement and reducing damage while it is active."
+      String: "Instant \342\200\223 Press R to summon a encase yourself in ice damage nearby enemies, preventing your movement and reducing damage while it is active. Also heals when cast. Damage Radius = 800."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2953,13 +2662,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 12675666979630358360
-  Name: "Cooldown"
+  Id: 12105217976073623068
+  Name: "Heal"
   Transform {
     Location {
     }
@@ -2975,17 +2687,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long before the ability can be used again"
+      String: "How long enemies will stay animorphed before turning back"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17620327046583338598
+        Id: 8854358530398708523
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod6"
+      String: "mod5"
     }
   }
   Collidable_v2 {
@@ -2993,6 +2705,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3035,139 +2750,15 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13314183402486245606
-  Name: "Damage Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13864681128795171441
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Radius of the damage area"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 7663790721216425677
-  Name: "DOT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13864681128795171441
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of damage applied to enemies in the Damage Radius"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 15330066822177902891
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11344707536976870440
-  Name: "Animorph Potion"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12532102525843773576
-  ChildIds: 1554326895912005281
-  ChildIds: 5750346782341937766
-  ChildIds: 16970580691964614208
-  ChildIds: 16411053739338122464
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 1221213810114228531
-      }
-    }
-    Overrides {
-      Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to throw a small bottle filled with magical liquid that shatters when it lands, transforming nearby enemies into harmless chickens for a short time."
-    }
-    Overrides {
-      Name: "cs:Bind"
-      String: "E"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16411053739338122464
+  Id: 12675666979630358360
   Name: "Cooldown"
   Transform {
     Location {
@@ -3180,7 +2771,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11344707536976870440
+  ParentId: 13864681128795171441
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
@@ -3203,13 +2794,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 16970580691964614208
-  Name: "Damage"
+  Id: 7663790721216425677
+  Name: "Ice Damage"
   Transform {
     Location {
     }
@@ -3221,11 +2815,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11344707536976870440
+  ParentId: 13864681128795171441
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage applied to enemies"
+      String: "The amount of damage applied to enemies in the Damage Radius over time"
     }
     Overrides {
       Name: "cs:Icon"
@@ -3243,6 +2837,56 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11344707536976870440
+  Name: "Animorph Potion"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12532102525843773576
+  ChildIds: 1554326895912005281
+  ChildIds: 16411053739338122464
+  ChildIds: 5750346782341937766
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 1221213810114228531
+      }
+    }
+    Overrides {
+      Name: "cs:Description"
+      String: "Instant \342\200\223 Press E to throw a small bottle filled with magical liquid that shatters when it lands, transforming nearby enemies into harmless chickens for a short time."
+    }
+    Overrides {
+      Name: "cs:Bind"
+      String: "E"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3285,13 +2929,60 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16411053739338122464
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11344707536976870440
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
   Id: 1554326895912005281
-  Name: "Duration"
+  Name: "Chicken Duration"
   Transform {
     Location {
     }
@@ -3326,6 +3017,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -3346,9 +3040,8 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 8232108779492403583
-  ChildIds: 16063742305336464745
-  ChildIds: 15322954216054029842
   ChildIds: 12378093595996074328
+  ChildIds: 16063742305336464745
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3358,7 +3051,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press Q to preview and LMB to summon a powerful whirlwind that slows and damages enemies caught in its radius."
+      String: "Placement \342\200\223 Press Q to preview and LMB to summon a powerful whirlwind that slows and damages enemies caught in its radius. Placement Range = 4000."
     }
     Overrides {
       Name: "cs:Bind"
@@ -3370,6 +3063,53 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16063742305336464745
+  Name: "Damage Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 420839089989026474
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Radius of the damage area"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 13298271364458101774
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3412,87 +3152,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15322954216054029842
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far this attack can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16063742305336464745
-  Name: "Damage Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "Radius of the damage area"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3538,6 +3199,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3603,6 +3267,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -3644,6 +3311,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -3674,7 +3344,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages enemies."
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Slow Effect = 40%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
@@ -3686,6 +3356,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3728,6 +3401,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -3768,6 +3444,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3810,6 +3489,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -3830,10 +3512,8 @@ Objects {
   }
   ParentId: 10980313450103268903
   ChildIds: 14900438383312703483
-  ChildIds: 6306724175806483619
-  ChildIds: 8291059155082126557
-  ChildIds: 7134503530989510278
   ChildIds: 13115313745008892479
+  ChildIds: 8291059155082126557
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3843,7 +3523,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target."
+      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target. Hawk Attack Range = 2000. Slow Effect = 50%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -3855,6 +3535,53 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8291059155082126557
+  Name: "Duration"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12324244977302229919
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long the Hawk will last before retreating"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8384941166926733024
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -3897,128 +3624,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7134503530989510278
-  Name: "Speed"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12324244977302229919
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How fast the Hawk will fly to attack its target"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8384941166926733024
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8291059155082126557
-  Name: "Duration"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12324244977302229919
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long the Hawk will last before retreating"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6306724175806483619
-  Name: "Attack Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12324244977302229919
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far the Hawk will search for nearby enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4061,6 +3668,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4081,10 +3691,9 @@ Objects {
   }
   ParentId: 10980313450103268903
   ChildIds: 14552168326025627377
-  ChildIds: 1562841866394584675
-  ChildIds: 8959336810333047804
-  ChildIds: 11687984352410726181
+  ChildIds: 2284718048942926788
   ChildIds: 2897540318327134445
+  ChildIds: 11687984352410726181
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4094,7 +3703,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time."
+      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time. Placement Range = 3100. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -4107,46 +3716,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 2897540318327134445
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18445814534937137316
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4193,13 +3764,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 8959336810333047804
-  Name: "Max Traps"
+  Id: 2897540318327134445
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -4215,17 +3789,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The max number of traps you can have active on the map"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17941246008685149891
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -4234,13 +3808,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 1562841866394584675
-  Name: "Placement Range"
+  Id: 2284718048942926788
+  Name: "Bleed Damage"
   Transform {
     Location {
     }
@@ -4256,17 +3833,21 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How far your traps can be placed"
+      String: "The amount of damage applied to enemies"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 10392517578151200132
+        Id: 7227656168876650477
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod1"
+      String: "mod4"
+    }
+    Overrides {
+      Name: "cs:IsStatusEffect"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -4274,6 +3855,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4316,6 +3900,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4335,11 +3922,9 @@ Objects {
     }
   }
   ParentId: 10980313450103268903
-  ChildIds: 4885990649472038852
-  ChildIds: 5806805477895482878
-  ChildIds: 6562934852835390606
   ChildIds: 1234445642780183423
   ChildIds: 16181215288139751250
+  ChildIds: 4885990649472038852
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4349,7 +3934,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies take damage and are launched away from the point of impact."
+      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots are stunned."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4361,6 +3946,53 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4885990649472038852
+  Name: "Radius"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7308866633911095885
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 11538694490835792735
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4402,6 +4034,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4448,128 +4083,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6562934852835390606
-  Name: "Enemy Impulse"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7308866633911095885
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 626394604982656881
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 5806805477895482878
-  Name: "Owner Impulse"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7308866633911095885
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of impulse applied to you"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 626394604982656881
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 4885990649472038852
-  Name: "Impulse Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7308866633911095885
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: ""
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4591,9 +4106,8 @@ Objects {
   }
   ParentId: 10980313450103268903
   ChildIds: 13053078901636615346
-  ChildIds: 16866776982984953891
-  ChildIds: 13079818976737109102
   ChildIds: 12181989338779408196
+  ChildIds: 16866776982984953891
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4616,87 +4130,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12181989338779408196
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5991922501775596303
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13079818976737109102
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5991922501775596303
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far this attack can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4739,6 +4174,53 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12181989338779408196
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5991922501775596303
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4780,6 +4262,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4803,7 +4288,7 @@ Objects {
   ChildIds: 6127985047122735081
   ChildIds: 17629457103822685970
   ChildIds: 16578245697224756288
-  ChildIds: 9123383854985028990
+  ChildIds: 17694023430115842976
   ChildIds: 14701107593300770011
   ChildIds: 2403920086148004064
   UnregisteredParameters {
@@ -4843,6 +4328,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4887,6 +4375,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4927,6 +4418,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -4969,6 +4463,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -4999,7 +4496,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings."
+      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack! Charge and hold for additional damage. Charge Damage = 2x maximum. Charge Time = .5 seconds"
     }
     Overrides {
       Name: "cs:Bind"
@@ -5011,6 +4508,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5053,6 +4553,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5094,12 +4597,15 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 9123383854985028990
+  Id: 17694023430115842976
   Name: "Roll"
   Transform {
     Location {
@@ -5135,6 +4641,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5155,7 +4664,6 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 9006941907224233549
-  ChildIds: 3930774630977671147
   ChildIds: 2765680301533735529
   UnregisteredParameters {
     Overrides {
@@ -5166,7 +4674,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies."
+      String: "Instant \342\200\223 Press T to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5178,6 +4686,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5220,46 +4731,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 3930774630977671147
-  Name: "Boulder Size"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16578245697224756288
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How big the boulder will be"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 8975273285240916744
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5302,6 +4775,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5322,9 +4798,8 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 9916371572812895565
-  ChildIds: 4409908759046854365
-  ChildIds: 9130860613752878780
   ChildIds: 11509082342992096050
+  ChildIds: 9130860613752878780
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -5334,7 +4809,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge."
+      String: "Instant \342\200\223 Press R to charge forward, dealing damage and knocking back enemies. Activating another ability will interrupt the charge. Enemy Impulse = 200000."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5347,46 +4822,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11509082342992096050
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17629457103822685970
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5429,13 +4866,16 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
 }
 Objects {
-  Id: 4409908759046854365
-  Name: "Impulse Amount"
+  Id: 11509082342992096050
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -5451,17 +4891,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 626394604982656881
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod2"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -5469,6 +4909,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5511,6 +4954,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5530,7 +4976,6 @@ Objects {
     }
   }
   ParentId: 6935863718337197916
-  ChildIds: 7213048206987524742
   ChildIds: 15084163098125495889
   ChildIds: 8468635351901243783
   UnregisteredParameters {
@@ -5542,7 +4987,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press E to preview and LMB to summon a wall that stops allies, enemies, and targeted abilities."
+      String: "Placement \342\200\223 Press E to preview and LMB to summon a wall that stops allies, enemies, and targeted abilities. Placement Range = 2300."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5554,6 +4999,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5596,6 +5044,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5623,7 +5074,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17620327046583338598
+        Id: 1482412888080084402
       }
     }
     Overrides {
@@ -5637,46 +5088,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7213048206987524742
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6127985047122735081
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far the wall can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5698,9 +5111,8 @@ Objects {
   }
   ParentId: 6935863718337197916
   ChildIds: 6001039744217689773
-  ChildIds: 14266258991773394199
-  ChildIds: 6668258429221614608
   ChildIds: 17826971475584939403
+  ChildIds: 14266258991773394199
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -5710,7 +5122,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you."
+      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you. Projectile Speed = 4000. Impulse Amount = 90000."
     }
     Overrides {
       Name: "cs:Bind"
@@ -5723,87 +5135,8 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17826971475584939403
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14887134874349022204
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6668258429221614608
-  Name: "Impulse Amount"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14887134874349022204
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 626394604982656881
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -5846,6 +5179,53 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17826971475584939403
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14887134874349022204
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsGroup: true
   }
@@ -5886,6 +5266,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true

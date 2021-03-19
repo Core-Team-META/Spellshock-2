@@ -37,12 +37,17 @@ function Tick(deltaTime)
 	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
 		local winningTeam = nil
 
-		for i = 0, 4 do
+		for i = 0, 2 do
 			if Game.GetTeamScore(i) >= DynamicCapturePoints:GetCustomProperty("ScoreLimit") then
 				if winningTeam then
-					Events.Broadcast("TieVictory")
-					ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
-					return
+					--Events.Broadcast("TieVictory")
+					--ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
+					
+					if Game.GetTeamScore(i) > Game.GetTeamScore(winningTeam) then
+						winningTeam = i
+					else -- In the case of a tie, which ever team gets the next kill will win
+						return
+					end	
 				else
 					winningTeam = i
 				end

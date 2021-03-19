@@ -21,6 +21,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Script {
     ScriptAsset {
       Id: 16710408555258235694
@@ -67,12 +70,27 @@ Objects {
         Id: 10632890108449713432
       }
     }
+    Overrides {
+      Name: "cs:ClassProgression_Server"
+      ObjectReference {
+        SelfId: 8996996195043722014
+      }
+    }
+    Overrides {
+      Name: "cs:ConsumableProgression_Server"
+      ObjectReference {
+        SelfId: 10094054520663354760
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Script {
     ScriptAsset {
@@ -101,6 +119,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true

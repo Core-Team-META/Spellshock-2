@@ -27,8 +27,8 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     local currentState = ABGS.GetGameState()
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.MENU_TABLE["ClassSelection"]) 
-    and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND) then -- show
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) and newMenu ~= _G.MENU_TABLE["CosmeticStore"]
+    and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND or currentState == ABGS.GAME_STATE_ROUND_END) then -- show
 		TopBar.visibility = Visibility.INHERIT
 	else -- hide
 		TopBar.visibility = Visibility.FORCE_OFF
@@ -36,7 +36,7 @@ function OnMenuChanged(oldMenu, newMenu)
 end
 
 function OnGameStateChanged (oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY or newState == ABGS.GAME_STATE_ROUND then
+	if newState == ABGS.GAME_STATE_LOBBY or newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
         TopBar.visibility = Visibility.INHERIT
 	else -- hide
 		TopBar.visibility = Visibility.FORCE_OFF
@@ -64,11 +64,15 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+            UpdateTimeRemaining(remainingTime)
+        end
+
         if currentState == ABGS.GAME_STATE_REWARDS then
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS then
+        if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
             if not remainingTime then return end
             local currentSecond = math.ceil(remainingTime)
             if currentSecond <= 6 and currentSecond ~= PreviousSecond then

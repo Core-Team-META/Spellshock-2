@@ -11,7 +11,9 @@
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
-while not _G.CurrentMenu do Task.Wait() end
+while not _G.CurrentMenu do
+	Task.Wait()
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -116,6 +118,8 @@ propStoreUIContainer.visibility = Visibility.INHERIT
 
 local controlsLocked = false
 local controlsLockedSecondary = false
+local cosmeticResourceChangeEvent
+local cosmeticResourceName
 
 local playerSockets = {
 	"left_clavicle",
@@ -146,7 +150,7 @@ local playerSockets = {
 }
 
 local PreviewAnimationStances = {
-	Tank = "1hand_melee_idle_ready",
+	Warrior = "1hand_melee_idle_ready",
 	Hunter = "2hand_rifle_aim_shoulder",
 	Mage = "2hand_staff_idle_ready",
 	Assassin = "unarmed_idle_ready",
@@ -154,7 +158,7 @@ local PreviewAnimationStances = {
 }
 
 local ItemAnimationStances = {
-	Tank = "2hand_staff_idle_relaxed",
+	Warrior = "2hand_staff_idle_relaxed",
 	Hunter = "2hand_rifle_idle_relaxed",
 	Mage = "2hand_staff_idle_relaxed",
 	Assassin = "unarmed_idle_ready",
@@ -268,22 +272,30 @@ local function META_VFX()
 end
 
 function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Orc_Rare_Outfit
-    local infoTable = StringSplit(id, "_")
+	local infoTable = StringSplit(id, "_")
 
-    if not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] 
-    or not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or not CONST.COSMETIC_BIND[string.upper(infoTable[4])] then
-        error("Cosmetic Store - the ID property of "..hierarchyName.." is not formatted correctly")
-    end
+	if
+		not CONST.CLASS[string.upper(infoTable[1])] or not CONST.TEAM[string.upper(infoTable[2])] or
+			not CONST.COSMETIC_SKIN[string.upper(infoTable[3])] or
+			not CONST.COSMETIC_BIND[string.upper(infoTable[4])]
+	 then
+		error("Cosmetic Store - the ID property of " .. hierarchyName .. " is not formatted correctly")
+	end
 
-    local skin = CONST.COSMETIC_SKIN[string.upper(infoTable[3])]
-    if skin < 10 then
-        skin = "0"..tostring(skin)
-    else
-        skin = tostring(skin)
-    end
+	local skin = CONST.COSMETIC_SKIN[string.upper(infoTable[3])]
+	if skin < 10 then
+		skin = "0" .. tostring(skin)
+	else
+		skin = tostring(skin)
+	end
 
-    return string.format("%d%d%s%d", CONST.CLASS[string.upper(infoTable[1])], CONST.TEAM[string.upper(infoTable[2])],
-    skin, CONST.COSMETIC_BIND[string.upper(infoTable[4])])
+	return string.format(
+		"%d%d%s%d",
+		CONST.CLASS[string.upper(infoTable[1])],
+		CONST.TEAM[string.upper(infoTable[2])],
+		skin,
+		CONST.COSMETIC_BIND[string.upper(infoTable[4])]
+	)
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -291,7 +303,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 function ShowStore_ClientHelper()
 	ReliableEvents.BroadcastToServer("SHOWSTORE_SERVER")
-	
+
 	if propBaseUIContainer then
 		propBaseUIContainer.isEnabled = false
 	end
@@ -388,13 +400,16 @@ function StoreItemUnhovered(button)
 end
 
 function StoreItemClicked(button)
+	if controlsLocked or controlsLockedSecondary then
+		return
+	end
 	local entry = StoreUIButtons[button]
 	if entry then
 		currentlySelected = entry
 		--currentlyHovered = entry
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
-        currentZoom = entry.data.zoom
-		
+		currentZoom = entry.data.zoom
+
 		-- Change stance of preview animated mesh
 		if entry.data.class then
 			local newStance = PreviewAnimationStances[entry.data.class]
@@ -402,29 +417,29 @@ function StoreItemClicked(button)
 			propPreviewMesh2.animationStance = newStance
 		end
 
-        -- Update the Purchase button
-        if HasCosmetic(entry.data.id) then
-            if not CosmeticIsEquipped(entry.data.id) then
-                local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
-                purchaseText.text = "EQUIP"
-                purchaseText:GetChildren()[1].text = "EQUIP"
-                propPurchaseButton.visibility = Visibility.INHERIT
-            else
-                propPurchaseButton.visibility = Visibility.FORCE_OFF
-            end
-        else
-            local currency = player:GetResource(entry.data.currencyName)
-            if currency >= entry.data.cost then
-                local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
-                purchaseText.text = "PURCHASE"
-                purchaseText:GetChildren()[1].text = "PURCHASE"
-                propPurchaseButton.visibility = Visibility.INHERIT
-            else
-                propPurchaseButton.visibility = Visibility.FORCE_OFF
-            end
-        end
+		-- Update the Purchase button
+		if HasCosmetic(entry.data.id) then
+			if not CosmeticIsEquipped(entry.data.id) then
+				local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+				purchaseText.text = "EQUIP"
+				purchaseText:GetChildren()[1].text = "EQUIP"
+				propPurchaseButton.visibility = Visibility.INHERIT
+			else
+				propPurchaseButton.visibility = Visibility.FORCE_OFF
+			end
+		else
+			local currency = player:GetResource(entry.data.currencyName)
+			if currency >= entry.data.cost then
+				local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+				purchaseText.text = "PURCHASE"
+				purchaseText:GetChildren()[1].text = "PURCHASE"
+				propPurchaseButton.visibility = Visibility.INHERIT
+			else
+				propPurchaseButton.visibility = Visibility.FORCE_OFF
+			end
+		end
 	end
-end	
+end
 
 function PurchaseButtonClicked(button)
 	if controlsLocked or controlsLockedSecondary or currentlySelected == nil then
@@ -432,12 +447,11 @@ function PurchaseButtonClicked(button)
 	end
 
 	--SelectNothing() -- Clear everything.
-	
+
 	local currency = player:GetResource(currentlySelected.data.currencyName)
-	
+
 	if HasCosmetic(currentlySelected.data.id) then
 		-- EQUIP
-		propPurchaseButton.visibility = Visibility.FORCE_OFF
 		ApplyCosmetic(currentlySelected)
 	else
 		-- PURCHASE
@@ -445,6 +459,7 @@ function PurchaseButtonClicked(button)
 			if player:HasPerk(subscriptionPerkRef) then
 				expectedNewCurrency = currency
 				controlsLocked = true
+				propPurchaseButton.visibility = Visibility.FORCE_OFF
 				while Events.BroadcastToServer(
 					"BUYCOSMETIC",
 					currentlySelected.data.id,
@@ -464,7 +479,9 @@ function PurchaseButtonClicked(button)
 		else
 			expectedNewCurrency = currency - currentlySelected.data.cost
 			controlsLocked = true
-
+			propPurchaseButton.visibility = Visibility.FORCE_OFF
+			cosmeticResourceName = "S" .. currentlySelected.data.id
+			--cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
 			while Events.BroadcastToServer(
 				"BUYCOSMETIC",
 				currentlySelected.data.id,
@@ -477,7 +494,7 @@ function PurchaseButtonClicked(button)
 		end
 	end
 
-	SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
+	--SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
 	UpdateEntryButton(currentlySelected, false)
 	currentZoom = currentlySelected.data.zoom
 end
@@ -490,7 +507,7 @@ function SelectNothing()
 	currentZoom = equippedZoom
 	if currentlySelected ~= nil then
 		currentlySelected.BGMesh:SetColor(currentlySelected.BGMeshColor)
-    end
+	end
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
 	propPreviewMesh.animationStance = "unarmed_idle_relaxed"
 	propPreviewMesh2.animationStance = "unarmed_idle_relaxed"
@@ -501,12 +518,12 @@ function UpdateEntryButton(entry, highlighted)
 	if entry == nil then
 		return
 	end -- coming from LootboxGenerator
-    
-    function SetFramesColor(frames, color)
-        for _, frame in ipairs(frames) do
-            frame:SetColor(color)
-        end
-    end
+
+	function SetFramesColor(frames, color)
+		for _, frame in ipairs(frames) do
+			frame:SetColor(color)
+		end
+	end
 
 	local currencySymbol = entry.overlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
 	currencySymbol.visibility = Visibility.FORCE_OFF
@@ -523,7 +540,7 @@ function UpdateEntryButton(entry, highlighted)
 		local newColor = entry.geo:GetCustomProperty("EquippedColor")
 		entry.BGMesh:SetColor(newColor)
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
-		-- owned 
+		-- owned
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "OWNED"
 		entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
@@ -545,7 +562,7 @@ function UpdateEntryButton(entry, highlighted)
 		end
 
 		--entry.itemName:SetColor(entry.BGImageColor)
-        SetFramesColor(entry.frames, entry.frameDefaultColor)
+		SetFramesColor(entry.frames, entry.frameDefaultColor)
 		currencySymbol.visibility = Visibility.INHERIT
 
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
@@ -565,7 +582,6 @@ function UpdateEntryButton(entry, highlighted)
 		else
 			entry.price.text = "BUY IT!\n[" .. tostring(entry.data.cost) .. "]"
 		end]]
-
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
 			--entry.itemName:SetColor(Color.WHITE)
 			currencySymbol.visibility = Visibility.INHERIT
@@ -580,13 +596,13 @@ function UpdateEntryButton(entry, highlighted)
 
 			entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
 		end
-    end
-    
-    if highlighted then
-        SetFramesColor(entry.frames, entry.frameHoverColor)
-    else
-        SetFramesColor(entry.frames, entry.frameDefaultColor)
-    end
+	end
+
+	if highlighted then
+		SetFramesColor(entry.frames, entry.frameHoverColor)
+	else
+		SetFramesColor(entry.frames, entry.frameDefaultColor)
+	end
 
 	--[[if not highlighted then
 		entry.BGMesh:SetColor(entry.BGMeshColor)
@@ -597,14 +613,44 @@ end
 -- BUY COSMETIC RESPONSE
 ----------------------------------------------------------------------------------------------------------------
 
-function BuyCosmeticResponse(storeId, success)
+function CosmeticResourceChange(_, name)
+	if name == cosmeticResourceName then
+		if string.find(name, "S") then
+			ApplyCosmeticHelper()
+			UpdateEntryButton(currentlySelected, false)
+			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+			purchaseText.text = "EQUIP"
+			purchaseText:GetChildren()[1].text = "EQUIP"
+			controlsLocked = false
+			propPurchaseButton.visibility = Visibility.INHERIT
+		end
+		if cosmeticResourceChangeEvent then
+			cosmeticResourceChangeEvent:Disconnect()
+			cosmeticResourceChangeEvent = nil
+		end
+	end
+end
+
+function CosmeticPurchaseChange()
+	if not currentlySelected then
+		return
+	end
 	UpdateEntryButton(currentlySelected, false)
 	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 	purchaseText.text = "EQUIP"
 	purchaseText:GetChildren()[1].text = "EQUIP"
 	controlsLocked = false
+	propPurchaseButton.visibility = Visibility.INHERIT
 end
 
+--[[function BuyCosmeticResponse(storeId, success)
+	UpdateEntryButton(currentlySelected, false)
+	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+	purchaseText.text = "EQUIP"
+	purchaseText:GetChildren()[1].text = "EQUIP"
+	controlsLocked = false
+	propPurchaseButton.visibility = Visibility.INHERIT
+end]]
 ----------------------------------------------------------------------------------------------------------------
 -- SETTING PREVIEWS
 ----------------------------------------------------------------------------------------------------------------
@@ -648,7 +694,7 @@ function SpawnMiniPreview(templateId, newGeo)
 	local storeGraphic = previewItem:FindChildByName("store_graphic")
 	if storeGraphic ~= nil then
 		storeGraphic.parent = newGeo
-		storeGraphic:SetPosition(previewMesh:GetPosition()-Vector3.New(0,0,25))
+		storeGraphic:SetPosition(previewMesh:GetPosition() - Vector3.New(0, 0, 25))
 		storeGraphic:SetRotation(Rotation.New(0, 0, -90))
 		storeGraphic:SetScale(Vector3.ONE * 0.5)
 
@@ -674,7 +720,7 @@ function RemovePreview()
 		v:Destroy()
 	end
 	previewElements = {}
-	
+
 	setPreviewMesh:MoveTo(propDefaultZoomMarker:GetPosition(), 0.5, true)
 	setPreviewMesh:ScaleTo(Vector3.New(1, 1, 1), 0.5, true)
 	setPreviewMesh:RotateTo(Rotation.New(0, 0, -90), 0.5, true)
@@ -686,17 +732,17 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function HasCosmetic(storeId)
-	return player:GetResource("COSMETIC_" .. storeId) > 0
+	return _G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
 end
 
 function CosmeticIsEquipped(cosmeticId)
-    -- storeID = 11021
-    local class = tonumber(cosmeticId:sub(1, 1))
+	-- storeID = 11021
+	local class = tonumber(cosmeticId:sub(1, 1))
 	local team = tonumber(cosmeticId:sub(2, 2))
 	local skin = tonumber(cosmeticId:sub(3, 4))
 	local bind = tonumber(cosmeticId:sub(5, 5))
-    local currentSkin = META_VFX().GetCurrentCosmeticId(Game.GetLocalPlayer(), class, bind, team)
-    return skin == currentSkin
+	local currentSkin = META_VFX().GetCurrentCosmeticId(Game.GetLocalPlayer(), class, bind, team)
+	return skin == currentSkin
 end
 
 function RemoveCosmetic(playerId)
@@ -710,11 +756,20 @@ end
 
 function ApplyCosmetic(entry)
 	if entry == nil then
-		ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", nil, nil, true)
+		--ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", nil, nil, true)
 		return
 	end
 	--print("Requesting" .. entry.data.id)
 	--print(entry.data.visible)
+	propPurchaseButton.visibility = Visibility.FORCE_OFF
+	local id = entry.data.id
+
+	cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	local class = tonumber(id:sub(1, 1))
+	local team = tonumber(id:sub(2, 2))
+	local skin = tonumber(id:sub(3, 4))
+	local bind = tonumber(id:sub(5, 5))
+	cosmeticResourceName = "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
@@ -835,7 +890,11 @@ function PopulateStore(direction)
 			start = target
 		end
 
-		local newGeo = World.SpawnAsset(propSTORE_EntryGeo, {parent = propStoreGeoHolder, position = start, scale = Vector3.ONE * BUTTON_SCALE})
+		local newGeo =
+			World.SpawnAsset(
+			propSTORE_EntryGeo,
+			{parent = propStoreGeoHolder, position = start, scale = Vector3.ONE * BUTTON_SCALE}
+		)
 		local newOverlay = World.SpawnAsset(propSTORE_EntryOverlay, {parent = propButtonHolder})
 
 		local propItemName = newOverlay:GetCustomProperty("ItemName"):WaitForObject()
@@ -846,16 +905,16 @@ function PopulateStore(direction)
 		local propRarityOverlay = newOverlay:GetCustomProperty("PriceOverlay"):WaitForObject()
 		local propVIPImage = newOverlay:GetCustomProperty("VIPImage"):WaitForObject()
 		local propCurrencySymbol = newOverlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
-        local propTeamName = newOverlay:GetCustomProperty("TeamName"):WaitForObject()
-        local propFramePanel = newOverlay:GetCustomProperty("FramePanel"):WaitForObject()
-        local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
-        local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
-        local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
+		local propTeamName = newOverlay:GetCustomProperty("TeamName"):WaitForObject()
+		local propFramePanel = newOverlay:GetCustomProperty("FramePanel"):WaitForObject()
+		local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
+		local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
+		local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
 		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
 		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
 
-        local Frames = propFramePanel:GetChildren()
-        table.insert(Frames, propPriceFrame)
+		local Frames = propFramePanel:GetChildren()
+		table.insert(Frames, propPriceFrame)
 
 		for _, c in pairs(Currencies) do
 			if v.currencyName == c.resource then
@@ -891,7 +950,7 @@ function PopulateStore(direction)
 			if vv == propSubscriptionName then
 				partOfSubscription = true
 			end
-		end		
+		end
 
 		-- Set item name
 		propItemName.text = v.name
@@ -918,8 +977,8 @@ function PopulateStore(direction)
 			vipImage = propVIPImage,
 			rarityFin = propRarityFin,
 			rarityOverlay = propRarityOverlay,
-            price = propPrice,
-            priceColor = propPrice:GetColor(), --Color.FromStandardHex("FFD395FF"), --propPrice:GetColor(),
+			price = propPrice,
+			priceColor = propPrice:GetColor(), --Color.FromStandardHex("FFD395FF"), --propPrice:GetColor(),
 			listener = propButton.clickedEvent:Connect(StoreItemClicked),
 			listener2 = propButton.hoveredEvent:Connect(StoreItemHovered),
 			listener3 = propButton.unhoveredEvent:Connect(StoreItemUnhovered),
@@ -938,10 +997,10 @@ function PopulateStore(direction)
 			travelTime = 0.2 + 0.2 * timeOffset + 0.1 * gridY,
 			deleting = false,
 			gridX = gridX,
-            gridY = gridY,
-            frames = Frames,
-            frameDefaultColor = propFrameDefaultColor,
-            frameHoverColor = propFrameHoverColor
+			gridY = gridY,
+			frames = Frames,
+			frameDefaultColor = propFrameDefaultColor,
+			frameHoverColor = propFrameHoverColor
 		}
 		StoreUIButtons[propButton] = entry
 		UpdateEntryButton(entry, false)
@@ -952,7 +1011,7 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function Tick()
-    --print("Tokens: "..tostring(Game.GetLocalPlayer():GetResource("COSM_TOKEN")))
+	--print("Tokens: "..tostring(Game.GetLocalPlayer():GetResource("COSM_TOKEN")))
 	UpdateUIPos()
 	UpdateCurrencyDisplay()
 end
@@ -1035,7 +1094,6 @@ function UpdateUIPos()
 		v.root.x = v.root.width * v.position
 		v.root.y = 0
 	end]]
-
 	propRotateMarkerTopLeft.x = UI.GetScreenSize().x * 0.77
 	propRotateMarkerTopLeft.y = UI.GetScreenSize().y * 0.17
 
@@ -1141,7 +1199,6 @@ function InitStore()
 					OwnedCosmetics[propID] = true
 					ownedCount = ownedCount + 1
 				end]]
-
 				table.insert(StoreElements, entry)
 				table.insert(CurrentStoreElements, entry)
 			end
@@ -1203,7 +1260,7 @@ function InitStore()
 			TagDefs[v.name] = {
 				name = propDisplayName,
 				color = propTagColor,
-				number = propNumber, 
+				number = propNumber,
 				icon = propIcon
 			}
 			table.insert(TagList, v.name)
@@ -1252,7 +1309,7 @@ function InitStore()
 	SelectNothing()
 
 	OwnerShipDefs = {
-		Shop = {name = "Shop", number = 1}, 
+		Shop = {name = "Shop", number = 1},
 		Purchased = {name = "Purchased", number = 2},
 		Equipped = {name = "Equipped", number = 3}
 	}
@@ -1335,21 +1392,20 @@ end
 		position = position
 	}
 end]]
-
 function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunction, color)
 	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons, {parent = propFilterListHolder})
-	
+
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
-		local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
-		local TopFrame = TopPanel:GetCustomProperty("Frame"):WaitForObject()
+	local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
+	local TopFrame = TopPanel:GetCustomProperty("Frame"):WaitForObject()
 	local MainButtonPanel = newCollapsibleMenu:GetCustomProperty("MainButtonPanel"):WaitForObject()
-		local Background = MainButtonPanel:GetCustomProperty("Background"):WaitForObject()
-		local SelectedPanel = MainButtonPanel:GetCustomProperty("SelectedPanel"):WaitForObject()
-		local Title = MainButtonPanel:GetCustomProperty("Title"):WaitForObject()
+	local Background = MainButtonPanel:GetCustomProperty("Background"):WaitForObject()
+	local SelectedPanel = MainButtonPanel:GetCustomProperty("SelectedPanel"):WaitForObject()
+	local Title = MainButtonPanel:GetCustomProperty("Title"):WaitForObject()
 	local MainButton = newCollapsibleMenu:GetCustomProperty("MainButton"):WaitForObject()
 	local CollapsibleButtonTemplate = newCollapsibleMenu:GetCustomProperty("CollapsibleButtonTemplate")
 
-	newCollapsibleMenu.x = (newCollapsibleMenu.width * position) + (position+15)
+	newCollapsibleMenu.x = (newCollapsibleMenu.width * position) + (position + 15)
 	newCollapsibleMenu.y = 0
 
 	Title.text = displayName
@@ -1365,10 +1421,10 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		local propButton = newFilterPanel:GetCustomProperty("Button"):WaitForObject()
 		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
 		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
-		local position = data.number-1
-		
+		local position = data.number - 1
+
 		newFilterPanel.x = 0
-		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position) 
+		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position)
 		propTitle.text = data.name
 
 		if data.icon then
@@ -1400,7 +1456,6 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 			propButton:SetButtonColor(buttonColor)
 			propButton:SetHoveredColor(hoverColor)
 			propButton:SetPressedColor(clickedColor)]]
-
 			local buttonColor = Color.New(data.color)
 			buttonColor.a = 1
 			propIcon:GetChildren()[1]:SetColor(buttonColor)
@@ -1418,7 +1473,11 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		}
 
 		if displayName == "CLASS" then
-			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			if data.name == "Warrior" then
+				classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+			else
+				classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			end
 		end
 	end
 end
@@ -1444,7 +1503,7 @@ function OnClassFilterButtonSelected(button)
 		currentClass = {tag = nil}
 		button:SetButtonColor(buttonData.color)
 		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
-        FilterStoreItems()
+		FilterStoreItems()
 		return
 	elseif currentClass.tag ~= nil then -- if the current active filter is not this button, reset highlight color
 		local currentButton = currentClass.root:GetCustomProperty("Button"):WaitForObject()
@@ -1455,7 +1514,7 @@ function OnClassFilterButtonSelected(button)
 	currentClass = buttonData
 
 	-- Clear and repopulate store with filtered items
-    FilterStoreItems()
+	FilterStoreItems()
 end
 
 function OnRarityFilterButtonSelected(button)
@@ -1479,7 +1538,7 @@ function OnRarityFilterButtonSelected(button)
 		currentRarity = {tag = nil}
 		button:SetButtonColor(buttonData.color)
 		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
-        FilterStoreItems()
+		FilterStoreItems()
 		return
 	elseif currentRarity.tag ~= nil then -- if the current active filter is not this button, reset highlight color
 		local currentButton = currentRarity.root:GetCustomProperty("Button"):WaitForObject()
@@ -1490,7 +1549,7 @@ function OnRarityFilterButtonSelected(button)
 	currentRarity = buttonData
 
 	-- Clear and repopulate store with filtered items
-    FilterStoreItems()
+	FilterStoreItems()
 end
 
 --[[function OnFilterButtonSelected(button) 
@@ -1528,7 +1587,6 @@ end
 	-- Clear and repopulate store with filtered items
     FilterStoreItems()
 end]]
-
 ----------------------------------------------------------------------------------------------------------------
 -- FILTER TYPE FUNCTIONS
 ----------------------------------------------------------------------------------------------------------------
@@ -1582,7 +1640,6 @@ function SpawnTypeFilterButton(displayName, type, color, position)
 		position = position
 	}
 end]]
-
 function OnTypeFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
@@ -1590,8 +1647,6 @@ function OnTypeFilterButtonSelected(button)
 
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
-
-	print("Type: "..tag)
 
 	RemovePreview()
 
@@ -1602,7 +1657,7 @@ function OnTypeFilterButtonSelected(button)
 		currentType = {tag = nil}
 		button:SetButtonColor(buttonData.color)
 		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
-        FilterStoreItems()
+		FilterStoreItems()
 		return
 	elseif currentType.tag ~= nil then -- if the current active filter is not this button, reset highlight color
 		local currentButton = currentType.root:GetCustomProperty("Button"):WaitForObject()
@@ -1613,7 +1668,7 @@ function OnTypeFilterButtonSelected(button)
 	currentType = buttonData
 
 	-- Clear and repopulate store with filtered items
-    FilterStoreItems()
+	FilterStoreItems()
 end
 
 function OnOwnershipFilterButtonSelected(button)
@@ -1633,7 +1688,7 @@ function OnOwnershipFilterButtonSelected(button)
 		currentOwnership = {tag = nil}
 		button:SetButtonColor(buttonData.color)
 		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
-        FilterStoreItems()
+		FilterStoreItems()
 		return
 	elseif currentOwnership.tag ~= nil then -- if the current active filter is not this button, reset highlight color
 		local currentButton = currentOwnership.root:GetCustomProperty("Button"):WaitForObject()
@@ -1644,87 +1699,102 @@ function OnOwnershipFilterButtonSelected(button)
 	currentOwnership = buttonData
 
 	-- Clear and repopulate store with filtered items
-    FilterStoreItems()
+	FilterStoreItems()
 end
 
 function FilterStoreItems()
-    CurrentStoreElements = {}
-    local filterFunctions = {}
+	CurrentStoreElements = {}
+	local filterFunctions = {}
 
-    -- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
-    if currentClass.tag then
-        --print("Adding class filter")
-        table.insert(filterFunctions, function (thisItem)
-            if thisItem.tags[currentClass.tag] then
-                return true
-            else
-                return false
-            end
-        end)
-    end
+	-- Add tag filter | Tank, Hunter, Mage, Assassin, Healer
+	if currentClass.tag then
+		--print("Adding class filter")
+		table.insert(
+			filterFunctions,
+			function(thisItem)
+				if thisItem.tags[currentClass.tag] then
+					return true
+				else
+					return false
+				end
+			end
+		)
+	end
 
 	-- Add rarity filter | Uncommon, Common, Rare, Epic, Legendary
-    if currentRarity.tag then
-        table.insert(filterFunctions, function (thisItem)
-			if thisItem.rarity == currentRarity.tag then
-                return true
-            else
-                return false
-            end
-        end)
-    end
+	if currentRarity.tag then
+		table.insert(
+			filterFunctions,
+			function(thisItem)
+				if thisItem.rarity == currentRarity.tag then
+					return true
+				else
+					return false
+				end
+			end
+		)
+	end
 
-    -- Add type filter | Ability or Costume
-    if currentType.tag then
-        --print("Adding type filter")
-        table.insert(filterFunctions, function (thisItem)
-            if thisItem.types[currentType.tag] then
-                return true
-            else
-                return false
-            end
-        end)
-    end
+	-- Add type filter | Ability or Costume
+	if currentType.tag then
+		--print("Adding type filter")
+		table.insert(
+			filterFunctions,
+			function(thisItem)
+				if thisItem.types[currentType.tag] then
+					return true
+				else
+					return false
+				end
+			end
+		)
+	end
 
-    -- Add ownership filter | Shop or Purchased
-    if currentOwnership.tag then
-        --print("Adding ownership filter")
-        table.insert(filterFunctions, function (thisItem)
-			local owned = HasCosmetic(thisItem.id)
-			local equipped = CosmeticIsEquipped(thisItem.id)
+	-- Add ownership filter | Shop or Purchased
+	if currentOwnership.tag then
+		--print("Adding ownership filter")
+		table.insert(
+			filterFunctions,
+			function(thisItem)
+				local owned = HasCosmetic(thisItem.id)
+				local equipped = CosmeticIsEquipped(thisItem.id)
 
-			-- Shop, Purchased, Equipped
+				-- Shop, Purchased, Equipped
 
-			if (currentOwnership.tag == "Shop" and not owned) or 
-			(currentOwnership.tag == "Purchased" and owned and not equipped) or 
-			(currentOwnership.tag == "Equipped" and equipped) then
-                return true
-            else
-                return false
-            end
-        end)
-    end
+				if
+					(currentOwnership.tag == "Shop" and not owned) or (currentOwnership.tag == "Purchased" and owned and not equipped) or
+						(currentOwnership.tag == "Equipped" and equipped)
+				 then
+					return true
+				else
+					return false
+				end
+			end
+		)
+	end
 
-    -- Determine which items should appear in the store
-    for _, item in ipairs(StoreElements) do
-        local addItem = false
-        
-        -- If there are filters applied then do filtering
-        if #filterFunctions ~= 0 then
-            for _, filter in ipairs(filterFunctions) do
-                addItem = filter(item)
-                if not addItem then break end
-            end
-        else -- otherwise just add all items
-            addItem = true
-        end
+	-- Determine which items should appear in the store
+	for _, item in ipairs(StoreElements) do
+		local addItem = false
 
-        if addItem then
-            table.insert(CurrentStoreElements, item)
-        end
-    end
+		-- If there are filters applied then do filtering
+		if #filterFunctions ~= 0 then
+			for _, filter in ipairs(filterFunctions) do
+				addItem = filter(item)
+				if not addItem then
+					break
+				end
+			end
+		else -- otherwise just add all items
+			addItem = true
+		end
 
-    -- Repopulate store with filtered items
+		if addItem then
+			table.insert(CurrentStoreElements, item)
+		end
+	end
+
+	-- Repopulate store with filtered items
 	storePos = 0
 	PopulateStore(-1)
 end
@@ -1735,19 +1805,19 @@ function ClearFilters()
 		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
 		currentClass = {tag = nil}
 	end
-	
+
 	if currentType.tag then
 		currentType.button:SetButtonColor(currentType.color)
 		currentType.selectedPanel.visibility = Visibility.FORCE_OFF
 		currentType = {tag = nil}
 	end
-	
+
 	if currentRarity.tag then
 		currentRarity.button:SetButtonColor(currentRarity.color)
 		currentRarity.selectedPanel.visibility = Visibility.FORCE_OFF
 		currentRarity = {tag = nil}
 	end
-	
+
 	if currentOwnership.tag then
 		currentOwnership.button:SetButtonColor(currentOwnership.color)
 		currentOwnership.selectedPanel.visibility = Visibility.FORCE_OFF
@@ -1930,8 +2000,8 @@ propBackButton.clickedEvent:Connect(ExitStoreClicked)
 
 --Events.Connect("SHOWSTORE_CLIENT", ShowStore_ClientHelper)
 --Events.Connect("HIDESTORE_CLIENT", HideStore_ClientHelper)
-Events.Connect("APPLYCOSMETIC", ApplyCosmeticHelper)
-Events.Connect("BUYCOSMETIC_RESPONSE", BuyCosmeticResponse)
+--Events.Connect("APPLYCOSMETIC", ApplyCosmeticHelper)
+--Events.Connect("BUYCOSMETIC_RESPONSE", BuyCosmeticResponse)
 Events.Connect("Menu Changed", OnMenuChanged)
 
 uiBackButton.clickedEvent:Connect(BackPageClicked)

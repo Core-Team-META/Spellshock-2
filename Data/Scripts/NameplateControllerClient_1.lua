@@ -202,7 +202,11 @@ function IsNameplateVisible(player)
 		return false
 	end
 
-	if player.isDead and not SHOW_ON_DEAD_PLAYERS then
+	if not player:GetVisibility() or (player.isDead and not SHOW_ON_DEAD_PLAYERS) then
+		return false
+	end
+
+	if player == Game.GetLocalPlayer() and player.clientUserData.usingAimLine then
 		return false
 	end
 

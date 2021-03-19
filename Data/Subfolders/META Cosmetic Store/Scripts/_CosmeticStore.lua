@@ -27,7 +27,7 @@ end
 
 
 function IsItemOwned(player, storeId)
-	return player:GetResource("COSMETIC_" .. storeId) > 0
+	return _G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
 end
 
 

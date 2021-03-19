@@ -60,9 +60,9 @@ local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
 --Used for spam prevention
 --@return bool
-local function isAllowed(time)
+local function isAllowed(currentTime)
     local timeNow = os.clock()
-    if spamPrevent ~= nil and (timeNow - spamPrevent) < time then
+    if spamPrevent ~= nil and (timeNow - spamPrevent) < currentTime then
         return false
     end
     spamPrevent = timeNow
@@ -81,6 +81,7 @@ local function ToggleUi(bool)
     UI.SetCanCursorInteractWithUI(bool)
     UI.SetCursorLockedToViewport(bool)
     if bool then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["DailyShop"])
         -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_DAILY_SHOP_TRIGGER.isInteractable = false
@@ -96,6 +97,7 @@ local function ToggleUi(bool)
         ORC_DAILY_SHOP_TRIGGER.isInteractable = true
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
         DisconnectButtonListener()
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
 end
 
@@ -316,7 +318,7 @@ function OnDailyShopOpen(player, keybind)
 end
 
 function OnInteracted(trigger, player)
-    if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
+    if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and not PARENT_UI:IsVisibleInHierarchy() then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
         isAllowed(0.5)
@@ -331,7 +333,7 @@ end
 
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
-        local currentTime = tonumber(refreshTime - os.time(os.date("!*t")))
+        local currentTime = CoreMath.Round(LOCAL_PLAYER:GetResource("DS_REFRESHTIME") - time())
         if currentTime >= 0 then
             local hours = math.floor(currentTime / 3600)
             local minutes = math.floor((currentTime % 3600) / 60)

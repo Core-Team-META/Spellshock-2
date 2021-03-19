@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/16
--- Version 0.1.14
+-- Date: 2021/3/15
+-- Version 0.1.15
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -16,6 +16,9 @@ local META_AP = script:GetCustomProperty("MetaAbilityProgression_ServerControlle
 local META_COSMETIC = script:GetCustomProperty("MetaCostume_ServerController"):WaitForObject()
 local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
+local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
+local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
+
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
 -- DATA VERSIONS
@@ -23,11 +26,13 @@ local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 -- ## ONLY UPDATE ON PLAYER STORAGE CHANGES ##
 --Used for version control of data
 local versionControl = {
-    [CONST.STORAGE.PROGRESSION] = 1,
+    [CONST.STORAGE.ABILITY_PROGRESSION] = 1,
     [CONST.STORAGE.COSMETIC] = 1,
     [CONST.STORAGE.CURRENCY] = 1,
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
-    [CONST.STORAGE.DAILY_SHOP] = 1
+    [CONST.STORAGE.DAILY_SHOP] = 1,
+    [CONST.STORAGE.CLASS_PROGRESSION] = 1,
+    [CONST.STORAGE.CONSUMABLE] = 1
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -56,28 +61,24 @@ local function DoesDataVersionMatch(data)
     end
 end
 
---@param object player
-local function OnDeletePlayerDataObject(player)
-    for _, object in ipairs(playerData) do
-        if Object.IsValid(object) and object.name == player.id then
-            object:Destroy()
-        end
-    end
-end
 
 -- #TODO Currently used for adding multiple cosmetics to a player
 -- Builds default cosmetics
 --@params object player
 local function AddDefaultCosmetics(player)
-    for c = 1, 5 do
-        for t = 1, 2 do
-            for s = 1, 1 do
-                for b = 1, 5 do -- Costume Not saving with 4
-                    if b == 5 then
-                        b = 8 -- Used for costume ID
+    for class = 1, 5 do
+        for team = 1, 2 do
+            for skin = 1, 1 do
+                for bind = 1, 5 do -- Costume Not saving with 4
+                    if bind == 5 then
+                        bind = 8 -- Used for costume ID
                     end
-
-                    _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, c, t, s, b)
+                    if skin == 2 and bind < 8 then
+                    elseif skin == 3 and bind < 8 then
+                    elseif skin == 4 and bind < 8 then
+                    else
+                        _G["Meta.Ability.Progression"]["VFX"].UnlockCosmetic(player, class, team, skin, bind)
+                    end
                 end
             end
         end
@@ -88,8 +89,8 @@ end
 --@param table data
 local function OnLoadProgressionData(player, data)
     local progression
-    if data[CONST.STORAGE.PROGRESSION] then
-        progression = UTIL.AbilityConvertToTable(data[CONST.STORAGE.PROGRESSION])
+    if data[CONST.STORAGE.ABILITY_PROGRESSION] then
+        progression = UTIL.AbilityConvertToTable(data[CONST.STORAGE.ABILITY_PROGRESSION])
     end
     META_AP.context.BuildBindDataTable(player, progression)
     ADAPTOR.context.OnPlayerJoined(player)
@@ -99,7 +100,7 @@ end
 --@param table data
 local function OnSaveProgressionData(player, data)
     local playerProgression = META_AP.context.GetPlayerProgression(player)
-    data[CONST.STORAGE.PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
+    data[CONST.STORAGE.ABILITY_PROGRESSION] = UTIL.AbilityConvertToString(playerProgression)
 end
 
 --@param object player
@@ -108,6 +109,7 @@ local function OnLoadCostumeData(player, data)
     local cosmetics
     if data[CONST.STORAGE.COSMETIC] then
         cosmetics = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
+        META_COSMETIC.context.BuildCosmeticStringTable(player, data[CONST.STORAGE.COSMETIC])
     end
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetics)
 end
@@ -159,7 +161,7 @@ local function OnLoadGamePlayStatsData(player, data)
         for key, value in pairs(playerGameStats) do
             if CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ~= CONST.WEIGHTED_WINS then
                 player:SetResource(CONST.GAME_PLAYER_STATS[key], value)
-            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] ==  CONST.WEIGHTED_WINS then
+            elseif CONST.GAME_PLAYER_STATS[key] and CONST.GAME_PLAYER_STATS[key] == CONST.WEIGHTED_WINS then
                 player.serverUserData[CONST.GAME_PLAYER_STATS[key]] = value or 0
             end
         end
@@ -167,9 +169,9 @@ local function OnLoadGamePlayStatsData(player, data)
         for k, name in ipairs(CONST.GAME_PLAYER_STATS) do
             player:SetResource(name, 0)
         end
-        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
     end
-    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
+    player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] =
+        player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]] or 0
 end
 
 --@param object player
@@ -178,8 +180,8 @@ local function OnSaveGamePlayStatsData(player, data)
     local playerGameStats = {}
     for index, resName in ipairs(CONST.GAME_PLAYER_STATS) do
         if index ~= CONST.WEIGHTED_WINS_KEY then
-        playerGameStats[index] = player:GetResource(resName)
-        elseif index == CONST.WEIGHTED_WINS_KEY then 
+            playerGameStats[index] = player:GetResource(resName)
+        elseif index == CONST.WEIGHTED_WINS_KEY then
             playerGameStats[index] = player.serverUserData[CONST.GAME_PLAYER_STATS[CONST.WEIGHTED_WINS_KEY]]
         end
     end
@@ -226,6 +228,42 @@ local function OnSaveDailyShopData(player, data)
 end
 
 --@param object player
+--@param table data
+local function OnLoadClassLevelData(player, data)
+    local progression
+    if data[CONST.STORAGE.CLASS_PROGRESSION] then
+        progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CLASS_PROGRESSION])
+    end
+    CLASS_PROGRESSION.context.BuildDataTable(player, progression)
+end
+
+--@param object player
+--@param table data
+local function OnSaveClassLeveData(player, data)
+    local playerProgression = CLASS_PROGRESSION.context.GetClassProgression(player)
+    data[CONST.STORAGE.CLASS_PROGRESSION] =
+        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+end
+
+--@param object player
+--@param table data
+local function OnLoadConsumableData(player, data)
+    local progression
+    if data[CONST.STORAGE.CONSUMABLE] then
+        progression = UTIL.DailyShopConvertToTable(data[CONST.STORAGE.CONSUMABLE])
+    end
+    CONSUMABLES.context.BuildDataTable(player, progression)
+end
+
+--@param object player
+--@param table data
+local function OnSaveConsumableData(player, data)
+    local playerProgression = CONSUMABLES.context.GetConsumables(player)
+    data[CONST.STORAGE.CONSUMABLE] =
+        next(playerProgression) ~= nil and UTIL.DailyShopConvertToString(playerProgression, ",", "=") or ""
+end
+
+--@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     --data = {} --#TODO Testing
@@ -236,6 +274,8 @@ local function OnPlayerJoined(player)
         OnLoadEquippedCosmetic(player, data)
         OnLoadDailyShopData(player, data)
         OnLoadGamePlayStatsData(player, data)
+        OnLoadClassLevelData(player, data)
+        OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
     end
 end
@@ -251,6 +291,8 @@ local function OnPlayerLeft(player)
     OnSaveGamePlayStatsData(player, data)
     OnSaveEquippedCosmetic(player, data)
     OnSaveDailyShopData(player, data)
+    OnSaveClassLeveData(player, data)
+    OnSaveConsumableData(player, data)
 
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
@@ -262,6 +304,8 @@ local function OnPlayerLeft(player)
     META_COSMETIC.context.OnPlayerLeft(player)
     DAILY_SHOP.context.OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
+    CLASS_PROGRESSION.context.OnPlayerLeft(player)
+    CONSUMABLES.context.OnPlayerLeft(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -269,4 +313,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)
+

@@ -18,6 +18,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Internal custom properties
 local AOI = require(script:GetCustomProperty("API"))
 
+local ConsumablesNetwork = script:GetCustomProperty("ConsumablesNetwork"):WaitForObject()
 local EQUIPMENT = script:FindAncestorByType('Equipment')
 if not EQUIPMENT then
     error(script.name .. " should be part of Equipment object hierarchy.")
@@ -33,4 +34,5 @@ end
 
 if LOCAL_PLAYER == EQUIPMENT.owner then
     Events.Broadcast("Set Class Icon", EQUIPMENT.name, ICON)
+    Events.Broadcast("SetConsumablesNetworkObject", ConsumablesNetwork)
 end

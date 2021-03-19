@@ -97,6 +97,7 @@ function OnMenuChanged(oldMenu, newMenu)
 			if META_AP()[data.ClassID] == currentClass then
 				newButton = classButton
 			end
+			classButton.clientUserData.level.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[data.ClassID])) )
 		end
 
 		OnClassClicked(newButton)
@@ -155,6 +156,11 @@ function UpdateClassInfo(thisButton)
 	-- Update Class Name text
 	RightPanel_ClassName.text = dataTable["Name"]
 	RightPanel_ClassName:GetChildren()[1].text = dataTable["Name"]
+
+	-- Update Ability Name Text
+	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
+	AbilityName.text = "Overview"
+	AbilityName:GetChildren()[1].text = "Overview"
 
 	-- Update all ability buttons and reset them to their idle state
 	local classLevel = 0
@@ -257,6 +263,11 @@ function UpdateAbilityInfo(thisButton)
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
 	local ShardCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("ShardCost"):WaitForObject()
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
+	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
+
+	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
+	local LevelProgressBar = LevelInfoPanel:GetCustomProperty("LevelProgressBar"):WaitForObject()
+	local NextLevelXP = LevelInfoPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
 
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[dataTable["BindID"]], META_AP()[dataTable["ClassID"]])
 	local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
@@ -264,10 +275,15 @@ function UpdateAbilityInfo(thisButton)
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
-	AbilityName.text = dataTable["Name"].." [Lv. "..tostring(abilityLevel).."]"
+	AbilityName.text = dataTable["Name"]
+	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
 	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
+
+	LevelText.text = tostring(abilityLevel)
+	LevelProgressBar.progress = currentShards / shardCost
+	NextLevelXP.text = tostring(shardCost)
 
 	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
@@ -294,12 +310,12 @@ function UpdateAbilityInfo(thisButton)
 
 		local currentMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "")
 		local nextMod = META_AP().GetAbilityMod(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]], modData["Mod"], 0, "", true)
-		
+		local nextText = ""
+		local usingHyphen
 		if type(currentMod) == "table" then
 			if modData["IsStatusEffect"] then
 				local currentText = ""
-				local nextText = ""
-
+				
 				if currentMod.damage ~= 0 then
 					currentText = string.format("Damage [%s]", tostring(currentMod.damage))
 					nextText = string.format("Damage [%s]", tostring(nextMod.damage))
@@ -318,26 +334,35 @@ function UpdateAbilityInfo(thisButton)
 						currentText = currentText.."  |  "
 						nextText = nextText.."  |  "
 					end
-					currentText = string.format("Multiplier [%s]", tostring(currentMod.multiplier))
-					nextText = string.format("Multiplier [%s]", tostring(nextMod.multiplier))
+					currentText = currentText..string.format("Multiplier [%s]", tostring(currentMod.multiplier))
+					nextText = nextText..string.format("Multiplier [%s]", tostring(nextMod.multiplier))
 				end
 
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = currentText
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
 			else
+				usingHyphen = true
 				newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = string.format("%s - %s", tostring(currentMod.min), tostring(currentMod.max))
 				newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = string.format("%s - %s", tostring(nextMod.min), tostring(nextMod.max))
 			end
 		else
+			nextText = tostring(nextMod)
 			newModPanel:GetCustomProperty("CurrentStatValue"):WaitForObject().text = tostring(currentMod)
-			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = tostring(nextMod)
+			newModPanel:GetCustomProperty("NextStatValue"):WaitForObject().text = nextText
 		end
 
+		local NextLevelPanel = newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject()
 		if currentMod == nextMod or abilityLevel == 10 then
-			newModPanel:GetCustomProperty("NextLevelPanel"):WaitForObject().visibility = Visibility.FORCE_OFF
+			NextLevelPanel.visibility = Visibility.FORCE_OFF
+		else
+			local glowLength = 150
+			if not usingHyphen then
+				glowLength = CoreMath.Clamp(85 + (7 * string.len(nextText)), 1, 360)
+			end
+			NextLevelPanel:GetCustomProperty("Glow1"):WaitForObject().height = glowLength
+			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength
 		end
 	end
-
 	RightPanel_AbilityStatsPanel.visibility = Visibility.INHERIT
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.INHERIT
@@ -588,7 +613,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 	local newClassPanel = World.SpawnAsset(HelperClassButtonTemplate, {parent = LeftPanel_IdlePanel})
 	newClassPanel.x = LeftPanel_StartPosition.x
 	newClassPanel.y = LeftPanel_StartPosition.y + (LeftPanel_Y_Offset * (i-1))
-	
+
 	-- Set the name, skillset, icon and confirm icon
 	local nameText = newClassPanel:GetCustomProperty("ClassName"):WaitForObject()
 	nameText.text = string.upper( childClass.name )
@@ -640,6 +665,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 		CurrentClassButton = buttonComponent
 	end
 	
+	buttonComponent.clientUserData.level = newClassPanel:GetCustomProperty("Level"):WaitForObject()
 	buttonComponent.clientUserData.panel = newClassPanel
 	buttonComponent.clientUserData.dataTable = dataTable
 end

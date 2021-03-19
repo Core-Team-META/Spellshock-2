@@ -2,7 +2,7 @@ Assets {
   Id: 50827824561454473
   Name: "Custom Leaves from Leafy Patch 02_1"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 7682550380222779069
     ParameterOverrides {

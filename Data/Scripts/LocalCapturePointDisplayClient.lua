@@ -82,7 +82,7 @@ function Tick(deltaTime)
     local capturePointState = ABCP.GetCapturePointState(capturePointId)
 
     -- Don't show UI if there is no enabled point
-    if AS.IsViewingMap() or not capturePointState or not capturePointState.isEnabled then
+    if AS.IsViewingMap() or not _G.CurrentMenu or _G.CurrentMenu ~= _G.MENU_TABLE["NONE"] or not capturePointState or not capturePointState.isEnabled then
         return
     end
 

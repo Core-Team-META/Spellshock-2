@@ -2,7 +2,7 @@ Assets {
   Id: 13698917788564053945
   Name: "Skin"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 17117735896314006411
     ParameterOverrides {

@@ -15,9 +15,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 3424168573046142170
-        ChildIds: 4350617395674282453
+        ChildIds: 4887559896905009973
         UnregisteredParameters {
         }
         Lifespan: 1
@@ -27,6 +27,9 @@ Assets {
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         NetworkContext {
         }
@@ -99,6 +102,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:forceoff"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Blueprint {
           BlueprintAsset {
             Id: 16299999736663448218
@@ -107,15 +113,15 @@ Assets {
           }
           Vfx {
             AutoPlay: true
-            Relevance {
-              Value: "mc:evfxrelevance:critical"
-            }
           }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
-        Id: 4350617395674282453
-        Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
+        Id: 4887559896905009973
+        Name: "Sword & Blade - Swings Swipes Air Swooshes Set 01 SFX"
         Transform {
           Location {
           }
@@ -130,7 +136,13 @@ Assets {
         ParentId: 12506559699580332784
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Type"
+            Name: "bp:Sword/Blade Type"
+            Enum {
+              Value: "mc:esfx_swordbladeswipes:18"
+            }
+          }
+          Overrides {
+            Name: "bp:Air Swoosh Type"
             Enum {
               Value: "mc:esfx_airswooshes:12"
             }
@@ -142,16 +154,18 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Blueprint {
           BlueprintAsset {
-            Id: 5784792452233078693
+            Id: 5588725286865802105
           }
           TeamSettings {
           }
           AudioBP {
             AutoPlay: true
-            Transient: true
-            Volume: 0.8
+            Volume: 1
             Falloff: 3600
             Radius: 400
             IsSpatializationEnabled: true
@@ -170,12 +184,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5784792452233078693
-      Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
+      Id: 5588725286865802105
+      Name: "Sword & Blade - Swings Swipes Air Swooshes Set 01 SFX"
       PlatformAssetType: 10
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_melee_air_swooshes_ref"
+        AssetId: "sfxabp_sword_blade_swooshes_ref"
       }
     }
     PrimaryAssetId {
@@ -183,5 +197,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 76
+  SerializationVersion: 80
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 6811983864140427701
   Name: "Crossbow Wood Raw Material"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 7754470856388882901
     ParameterOverrides {

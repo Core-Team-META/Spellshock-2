@@ -194,8 +194,8 @@ function BuyCosmetic(player, cosmeticId, isPartOfSubscription, cost, currency)
 		return
 		
 	end
-	
-	player:SetResource("COSMETIC_" .. cosmeticId, 1)
+	--#TODO change to a unlock function
+	--player:SetResource("S" .. cosmeticId, 1)
 
 	if isPartOfSubscription then
 		if playerOwnedSubscriptionCosmetics[player.id] == nil then
@@ -217,7 +217,7 @@ end
 -- this function listens to events from the server, so no verification needed (used by lootbox and daily reward shop).
 function GetCosmeticFromServer(player, cosmeticId)
 	
-	player:SetResource("COSMETIC_" .. cosmeticId, 1)
+	--player:SetResource("S" .. cosmeticId, 1)
 
 	if playerOwnedCosmetics[player.id] == nil then
 		playerOwnedCosmetics[player.id] = {}
@@ -228,7 +228,7 @@ function GetCosmeticFromServer(player, cosmeticId)
 end
 
 function IsCosmeticName(rscName)
-	return rscName:sub(1, 9) == "COSMETIC_"
+	return rscName:sub(1, 1) == "S"
 end
 
 function OnPlayerJoined(player)
@@ -332,9 +332,9 @@ function CheckSubscription(player)
 	if not player:HasPerk(subscriptionPerk) then
 		for k, v in pairs(data.COSMETICS.fromSubscription) do
 			--print(k)
-			--print(data.COSMETICS.owned["COSMETIC_" .. k])
-			if data.COSMETICS.owned["COSMETIC_" .. k] == 1 then
-				data.COSMETICS.owned["COSMETIC_" .. k] = nil
+			--print(data.COSMETICS.owned["S" .. k])
+			if data.COSMETICS.owned[k] == 1 then
+				data.COSMETICS.owned[k] = nil
 			end
 			if data.COSMETICS.equipped == k then
 				data.COSMETICS.equipped = nil

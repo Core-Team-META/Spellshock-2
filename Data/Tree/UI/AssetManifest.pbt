@@ -134,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6262345458031684017
+  Name: "Fantasy Ability Yellow 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_006"
+  }
+}
+Assets {
   Id: 5223287246289902870
   Name: "Frame Outline Thin 001"
   PlatformAssetType: 9
@@ -203,15 +212,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFi_Ability_Red_009"
-  }
-}
-Assets {
-  Id: 163598988004345801
-  Name: "Fantasy Ability Blue 027"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_027"
   }
 }
 Assets {

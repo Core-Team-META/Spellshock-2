@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression Adaptor
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 1/4/2021
--- Version 0.1.2
+-- Date: 3/15/2021
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
@@ -13,11 +13,16 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 -- Local Variables
 ------------------------------------------------------------------------------------------------------------------------
 local currentClass = {}
+local listeners = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL TABLE ACCESS
 ------------------------------------------------------------------------------------------------------------------------
 local function META_AP()
     return _G["Meta.Ability.Progression"]
+end
+
+local function CLASS_P()
+    return _G["Class.Progression"]
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -42,8 +47,9 @@ end
 
 function OnResourceChanged(player, resName, resAmount)
     if resName == CONST.CLASS_RES then
-        META_AP().ChangeClass(player, player:GetResource(resName))
-
+        local classId = player:GetResource(resName)
+        META_AP().ChangeClass(player, classId)
+        CLASS_P().SetClassLevel(player, classId)
         --Used for determining rewards
         player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
         player.serverUserData.ClassesPlayed[player:GetResource(resName)] = true
@@ -53,13 +59,14 @@ end
 --Connected through a context call
 --@param object player
 function OnPlayerJoined(player)
-    player.resourceChangedEvent:Connect(OnResourceChanged)
+    listeners[player.id] = player.resourceChangedEvent:Connect(OnResourceChanged)
 end
 
 --Connected through a context call
 --@param object player
 function OnPlayerLeft(player)
     currentClass[player] = nil
+    listeners[player.id]:Disconnect()
 end
 
 

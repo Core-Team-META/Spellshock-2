@@ -85,7 +85,7 @@ function OnAbilityExecute(thisAbility)
 	if OverlapEvent then
 		OverlapEvent:Disconnect()
 	end
-	OverlapEvent = trapTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
+	--OverlapEvent = trapTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -97,7 +97,7 @@ function OnSpecialAbilityCooldown(thisAbility)
 	end, Cooldown)
 end
 
-function OnBeginOverlap(thisTrigger, other)
+--[[function OnBeginOverlap(thisTrigger, other)
 	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod5", {}, SpecialAbility.name .. ": Status")
 	if Object.IsValid(other) and other:IsA("Player") and other.team ~= SpecialAbility.owner.team then
 		API_SE.ApplyStatusEffect(
@@ -109,7 +109,7 @@ function OnBeginOverlap(thisTrigger, other)
 			status.multiplier
 		)
 	end
-end
+end]]
 
 function OnEquip(equipment, player)
 	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HUNTER)

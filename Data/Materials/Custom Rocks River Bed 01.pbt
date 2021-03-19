@@ -2,7 +2,7 @@ Assets {
   Id: 12226155755783125968
   Name: "Custom Rocks River Bed 01"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 16476630519103366502
     ParameterOverrides {

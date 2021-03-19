@@ -50,6 +50,7 @@ local function ToggleUi(bool)
     UI.SetCursorLockedToViewport(bool)
     World.SpawnAsset(SFX_OPEN)
     if bool then
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["PerkShop"])
         -- PARENT_UI.isEnabled = true
         PARENT_UI.visibility = Visibility.FORCE_ON
         ORC_PERK_SHOP_TRIGGER.isInteractable = false
@@ -60,6 +61,7 @@ local function ToggleUi(bool)
         Task.Wait()
         ORC_PERK_SHOP_TRIGGER.isInteractable = true
         ELF_PERK_SHOP_TRIGGER.isInteractable = true
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
 end
 
@@ -91,7 +93,7 @@ function OnDailyShopOpen(player, keybind)
 end
 
 function OnInteracted(trigger, player)
-    if player == LOCAL_PLAYER and not PARENT_UI:IsVisibleInHierarchy() then
+    if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and not PARENT_UI:IsVisibleInHierarchy() then
         ToggleUi(true)
         isAllowed(0.5)
     end

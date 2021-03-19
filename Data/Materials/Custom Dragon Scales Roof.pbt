@@ -2,7 +2,7 @@ Assets {
   Id: 18378364317942125375
   Name: "Custom Dragon Scales Roof"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 9343637653438665698
     ParameterOverrides {

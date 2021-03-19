@@ -73,7 +73,7 @@ Respawn_UI.visibility = Visibility.FORCE_OFF
 for index, classData in ipairs(ClassMenuData:GetChildren()) do
     -- Get class name and id
     local ClassName = classData.name
-    local ClassID = META_AP()[string.upper(ClassName)] -- int between 1 and the number of classes
+    local ClassID = META_AP()[string.upper(classData:GetCustomProperty("ClassID"))] -- int between 1 and the number of classes
     local ClassIcon = classData:GetCustomProperty("Icon")
 
     -- Check that there are enough panels

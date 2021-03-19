@@ -21,6 +21,7 @@ local GAME_STATE = script:GetCustomProperty("BasicGameStateManagerServer"):WaitF
 ------------------------------------------------------------------------------------------------------------------------
 local playerRewards = {}
 local choosenRewards = {}
+local TEMP_CardCount = 10
 ------------------------------------------------------------------------------------------------------------------------
 -- SERVER LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -44,6 +45,15 @@ local function IsTeamWinner(player)
     else
         return false
     end --]]
+end
+
+local function IsFirstWinOfTheDay(player)
+    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        return true
+    end
+    return false
 end
 
 --@param object player
@@ -70,30 +80,47 @@ local function CalculateSlot1(player)
     return tempTbl
 end
 
+local function CalculateRegularSlot()
+    local result
+    local random = math.random(1, 100)
+    --90% chance to be a random class bind shards
+    if random >= 10 then -- #FIXME 10
+        result = {
+            [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
+        }
+    else -- 10% chance to be costume tokens
+        result = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+    end
+    return result
+end
+
+--#TODO Need to actually write logic
+-- Should return 4-10
+local function GetNumberOfCards(player)
+    return TEMP_CardCount
+end
+
 --#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
+    local numberOfCards = GetNumberOfCards(player) -- 4 to 10
     local tempTable = {}
+    
+    -- Slot one always has a higher chance of being an ability from the last used class
     tempTable[1] = CalculateSlot1(player)
 
+    -- Slot two is designated for gold
     if IsTeamWinner(player) then
         --If winning team give large gold ammount
+        IsFirstWinOfTheDay(player)
         tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
-
-        --Random to determine slot 3 reward
-        local random = math.random(1, 100)
-        --90% chance to be a random class bind shards
-        if random >= 10 then -- #FIXME 10 
-            tempTable[3] = {
-                [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount(
-
-                )
-            }
-        else -- 10% chance to be costume tokens
-            tempTable[3] = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
-        end
-    else --Losing team only gets slot 1 and 2, slot 2 == Small gold amount.
+    else
+        --Losing team gets small gold amount.
         tempTable[2] = {G = REWARD_UTIL.GetGoldSmallAmmount()}
+    end
+
+    for slot=3, numberOfCards, 1 do
+        tempTable[slot] = CalculateRegularSlot()
     end
 
     return tempTable
@@ -104,6 +131,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function CalculateRewards()
+    playerRewards = {}
     for _, player in ipairs(Game.GetPlayers()) do
         if player.serverUserData.ClassesPlayed then
             playerRewards[player.id] = GetPlayerRewards(player)
@@ -119,21 +147,19 @@ function OnRewardSelect(player, rewardId)
     choosenRewards[player] = rewardId
 end
 
-function GivePlayerRewards()
-    for player, rewardId in pairs(choosenRewards) do
-        REWARD_UTIL.OnRewardSelect(player, rewardId, playerRewards)
+function GivePlayerRewards(player, rewardList)
+    for _, slotID in pairs(rewardList) do
+        REWARD_UTIL.OnRewardSelect(player, slotID, playerRewards)
     end
-    choosenRewards = {}
+    playerRewards[player.id] = nil
 end
 
 function OnGameStateChanged(object, string)
     if string == "State" then
         local state = object:GetCustomProperty(string)
+        --#TODO change to PLAYER_SHOWCASE
         if state == GAME_STATE_API.GAME_STATE_REWARDS then
             CalculateRewards()
-        end
-        if state == GAME_STATE_API.GAME_STATE_REWARDS_END then
-            GivePlayerRewards()
         end
     end
 end
@@ -142,5 +168,21 @@ end
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
-Events.ConnectForPlayer(NAMESPACE .. "RewardSelect", OnRewardSelect)
+Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
+
+-- FOR TESTING -----------------------
+function OnBindingPressed(whichPlayer, binding)
+	if (binding == "ability_extra_46") then 
+        TEMP_CardCount = TEMP_CardCount + 1
+	end
+end
+
+function OnPlayerJoined(player)
+	-- hook up binding in player joined event here, move to more appropriate place if needed
+	player.bindingPressedEvent:Connect(OnBindingPressed)
+end
+
+-- on player joined/left functions need to be defined before calling event:Connect()
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+----------------------------------------------------------------------------------------------------

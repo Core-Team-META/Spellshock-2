@@ -43,7 +43,8 @@ function OnBindingPressed(player, binding)
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] then -- show
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
+    and (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) then -- show
         TeamLeftSideBar.visibility = Visibility.INHERIT
     else
 		TeamLeftSideBar.visibility = Visibility.FORCE_OFF
@@ -121,7 +122,7 @@ function Tick()
                     local HealthBar = playerPanel:GetCustomProperty("HealthBar"):WaitForObject()
                     
                             
-                    local level = player:GetResource(CONST.PLAYER_LEVEL)
+                    local level = player:GetResource(CONST.CLASS_LEVEL)
 
                     -- set the panel Y offset
                     playerPanel.y = teamPanelCount * Y_Offset

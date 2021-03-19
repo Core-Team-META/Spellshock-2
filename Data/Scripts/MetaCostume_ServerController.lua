@@ -3,8 +3,8 @@ local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/7
--- Version 0.1.7
+-- Date: 2021/3/18
+-- Version 0.1.8
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -14,6 +14,8 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
 local VFX_LIST = script:GetCustomProperty("VFX_LIST"):WaitForObject()
+local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
+local DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
@@ -23,6 +25,7 @@ local cosmeticTable = {} -- Used for all cosmetic MUIDs
 local cosmeticNames = {} -- Table of all Cosmetic names
 local playerCosmetic = {} -- Unlocked Table Player Cosmetics
 local playerEquippedCosmetic = {} -- Unlocked Table Player Cosmetics
+local playerCosmeticStrings = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -96,6 +99,17 @@ local function SetBindCosmetic(player, class, team, bind, skin)
     print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
 end
 
+
+--@param object player
+local function OnDeletePlayerDataObject(player)
+    for _, object in ipairs(DATA_TRANSFER:GetChildren()) do
+        if Object.IsValid(object) and object.name == player.id then
+            object:Destroy()
+        end
+    end
+end
+
+
 --@param object player
 --@param table playerCosmetic
 function GetPlayerCosmetic(player)
@@ -112,6 +126,15 @@ end
 function OnPlayerLeft(player)
     playerCosmetic[player] = nil
     playerEquippedCosmetic[player] = nil
+    playerCosmeticStrings[player] = nil
+end
+
+function BuildCosmeticStringTable(player, str)
+    local dataObject = World.SpawnAsset(DATA_TEMP)
+    dataObject.name = player.id
+    dataObject:SetNetworkedCustomProperty("data", str)
+    Task.Wait()
+    dataObject.parent = DATA_TRANSFER
 end
 
 --Note data comes in as 1021,2011,3021 => classId, skinId, abilityId
@@ -119,7 +142,7 @@ end
 --@param table data
 function BuildCosmeticDataTable(player, data)
     playerCosmetic[player] = data or {}
-    if data then
+    --[[if data then
         for class, classes in ipairs(data) do
             for team, teams in ipairs(classes) do
                 for skin, skins in pairs(teams) do
@@ -142,7 +165,7 @@ function BuildCosmeticDataTable(player, data)
                 end
             end
         end
-    end
+    end]]--
 end
 
 --@param object player
@@ -198,6 +221,10 @@ function API.IsCosmeticOwned(player, class, team, skin, bind)
     return UTIL.IsCosmeticOwned(playerCosmetic[player], class, team, skin, bind)
 end
 
+function API.ConvertSkinStringToId(str)
+    return tonumber(str:sub(1, 1)), tonumber(str:sub(2, 2)), tonumber(str:sub(3, 4)), tonumber(str:sub(5, 5))
+end
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int skin
@@ -240,6 +267,11 @@ function API.GetCurrentCosmetic(player, bind, class)
     return cosmeticTable[class][player.team][skinId][bind]
 end
 
+
+function API.BuildCosmeticStringTable(player, str)
+    BuildCosmeticStringTable(player, str)
+end
+
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
@@ -259,3 +291,4 @@ Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end
+Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)

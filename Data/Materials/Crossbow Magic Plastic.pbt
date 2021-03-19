@@ -2,7 +2,7 @@ Assets {
   Id: 15522783656940277257
   Name: "Crossbow Magic Plastic"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 13802195091322210055
     ParameterOverrides {

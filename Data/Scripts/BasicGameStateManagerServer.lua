@@ -78,13 +78,13 @@ function SetGameState(newState)
 		stateDuration = ROUND_END_DURATION
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
-		stateDuration = 25
+		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 15
+		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
-		stateDuration = 10
+		stateDuration = 5
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end
@@ -109,7 +109,7 @@ function SetGameState(newState)
 	script:SetNetworkedCustomProperty("StateHasDuration", stateHasduration)
 	script:SetNetworkedCustomProperty("StateEndTime", stateEndTime)
 	--Task.Wait()
-
+	while GetGameState() ~= newState do Task.Wait() end
 	-- Broadcast basic game state event
 	Events.Broadcast("GameStateChanged", oldState, newState, stateHasDuration, stateEndTime)
 end
