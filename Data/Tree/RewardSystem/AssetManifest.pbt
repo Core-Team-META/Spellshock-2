@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17776588082654941215
-  Name: "3D Frame Basic Circle"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_3D_Frame_BasicCircle"
-  }
-}
-Assets {
   Id: 16759978556497479664
   Name: "Center Arrow 005 Wedge"
   PlatformAssetType: 9
@@ -68,6 +59,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_meta_fantasy_treasure_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 13462854128336502995
+  Name: "Center Circle 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001Outline"
   }
 }
 Assets {
