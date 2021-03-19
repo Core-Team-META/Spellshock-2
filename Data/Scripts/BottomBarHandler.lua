@@ -20,7 +20,10 @@ end
 
 function OnClassIconSet(name, icon)
     ClassName.text = name
-    ClassName:GetChildren()[1].text = name
+    if name == "Tank" then
+        ClassName.text = "Warrior"
+    end
+    ClassName:GetChildren()[1].text  = ClassName.text
     Icon:SetImage(icon)
 
     local classID = META_AP()[string.upper(name)]
