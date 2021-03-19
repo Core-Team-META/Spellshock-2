@@ -15,10 +15,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
+        ChildIds: 6692537383379622831
         ChildIds: 1934945512424372475
         ChildIds: 376276497193745113
-        ChildIds: 6692537383379622831
+        ChildIds: 459819328024711435
         ChildIds: 18380577290523527856
         ChildIds: 553165762812746632
         ChildIds: 12187401942740579224
@@ -35,6 +36,81 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 6692537383379622831
+        Name: "Projectile Fire Arrow 01 SFX"
+        Transform {
+          Location {
+            Z: 80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 521308411396895614
+        ChildIds: 12875827407947202417
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 2721088161473172859
+          }
+          Pitch: -400
+          Volume: 0.75
+          Falloff: 4500
+          Radius: 2000
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 12875827407947202417
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            Z: -32.5864258
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.339511722
+          }
+        }
+        ParentId: 6692537383379622831
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -67,10 +143,11 @@ Assets {
           AudioAsset {
             Id: 2721088161473172859
           }
-          AutoPlay: true
+          Pitch: -400
           Volume: 1
           Falloff: 4500
           Radius: 2000
+          IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
@@ -93,7 +170,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.15
+            Float: 0.3
           }
         }
         Collidable_v2 {
@@ -141,10 +218,11 @@ Assets {
           AudioAsset {
             Id: 2721088161473172859
           }
-          AutoPlay: true
+          Pitch: -400
           Volume: 1.5
           Falloff: 4500
           Radius: 2000
+          IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
@@ -167,7 +245,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.3
+            Float: 0.4
           }
         }
         Collidable_v2 {
@@ -186,11 +264,10 @@ Assets {
         }
       }
       Objects {
-        Id: 6692537383379622831
-        Name: "Projectile Fire Arrow 01 SFX"
+        Id: 459819328024711435
+        Name: "Ground Shaking Deep Impact Hit 01 SFX"
         Transform {
           Location {
-            Z: 80
           }
           Rotation {
           }
@@ -201,6 +278,7 @@ Assets {
           }
         }
         ParentId: 521308411396895614
+        ChildIds: 8748260527973937623
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -212,13 +290,51 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 2721088161473172859
+            Id: 13628860689832226857
           }
-          AutoPlay: true
-          Volume: 0.75
-          Falloff: 4500
-          Radius: 2000
+          Pitch: 800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 8748260527973937623
+        Name: "AudioDelay"
+        Transform {
+          Location {
+            Z: 47.4135742
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.339511722
+          }
+        }
+        ParentId: 459819328024711435
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:DURATION"
+            Float: 0.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 4511050349143547769
+          }
         }
       }
       Objects {
@@ -7236,7 +7352,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.4
+            Float: 0.25
           }
         }
         Collidable_v2 {
@@ -7345,7 +7461,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:DURATION"
-            Float: 0.4
+            Float: 0.25
           }
         }
         Collidable_v2 {
@@ -7371,6 +7487,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_projectile_fire_arrow_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 13628860689832226857
+      Name: "Ground Shaking Deep Impact Hit 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_designer_ground_shaking_deep_impact_hit_01_Cue_ref"
       }
     }
     Assets {
