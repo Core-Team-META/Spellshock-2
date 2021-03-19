@@ -150,7 +150,7 @@ local playerSockets = {
 }
 
 local PreviewAnimationStances = {
-	Tank = "1hand_melee_idle_ready",
+	Warrior = "1hand_melee_idle_ready",
 	Hunter = "2hand_rifle_aim_shoulder",
 	Mage = "2hand_staff_idle_ready",
 	Assassin = "unarmed_idle_ready",
@@ -158,7 +158,7 @@ local PreviewAnimationStances = {
 }
 
 local ItemAnimationStances = {
-	Tank = "2hand_staff_idle_relaxed",
+	Warrior = "2hand_staff_idle_relaxed",
 	Hunter = "2hand_rifle_idle_relaxed",
 	Mage = "2hand_staff_idle_relaxed",
 	Assassin = "unarmed_idle_ready",
@@ -1473,7 +1473,11 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		}
 
 		if displayName == "CLASS" then
-			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			if data.name == "Warrior" then
+				classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+			else
+				classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			end
 		end
 	end
 end
