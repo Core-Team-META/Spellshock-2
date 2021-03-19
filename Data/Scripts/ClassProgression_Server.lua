@@ -25,7 +25,6 @@ local classProgression = {}
 API.CLASS_LEVEL = CONST.CLASS_LEVEL
 API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
 
-
 -- Builds class keys into the global table for easy access
 -- EX => API.TANK = 1
 for class, key in pairs(CONST.CLASS) do
@@ -42,9 +41,18 @@ end
 -- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
 --@param object player
+--@param table tbl => classProgression
+local function SetClassLevelResources(player, tbl)
+    for class, data in pairs(tbl) do
+        player:SetResource(UTIL.GetClassLevelString(class), data[CONST.PROGRESS.LEVEL])
+    end
+end
+
+--@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 local function SetClassLevel(player, class, level)
     classProgression[player.id][class][API.LEVEL] = level
+    SetClassLevelResources(player, classProgression[player.id])
 end
 
 --@param object player
@@ -56,6 +64,7 @@ end
 local function GetReqXp(level)
     return CONST.ReqXp[level] or CONST.ReqXp[#CONST.ReqXp]
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
@@ -84,6 +93,7 @@ function BuildDataTable(player, data)
             end
         end
     end
+    SetClassLevelResources(player, classProgression[player.id])
 end
 
 --@param object player
@@ -119,7 +129,8 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetClassLevel(player, class)
-    return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
+    return classProgression[player.id][class][CONST.PROGRESS.LEVEL] and
+        tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
 --@param object player
@@ -144,4 +155,3 @@ function API.SetClassLevel(player, class)
     local classLevel = API.GetClassLevel(player, class)
     player:SetResource(CONST.CLASS_LEVEL, classLevel)
 end
-

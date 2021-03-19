@@ -2,7 +2,7 @@ Assets {
   Id: 8733081506576970003
   Name: "ChickenWhiteEmissiveOpaque"
   PlatformAssetType: 13
-  SerializationVersion: 79
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 5351428073291024820
     ParameterOverrides {

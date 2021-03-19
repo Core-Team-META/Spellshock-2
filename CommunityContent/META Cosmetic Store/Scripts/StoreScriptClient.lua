@@ -221,6 +221,10 @@ local function StringSplit(s, delimiter)
 	return result
 end
 
+local function META_AP()
+	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
 ----------------------------------------------------------------------------------------------------------------
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
@@ -598,7 +602,7 @@ function HasCosmetic(storeId)
 	if OwnedCosmetics[storeId] == true then
 		return true
 	else
-		return player:GetResource("S" .. storeId) > 0
+		return _G["Meta.Ability.Progression"]["VFX"].IsCosmeticStrOwned(storeId)
 	end
 end
 

@@ -2330,8 +2330,6 @@ Assets {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -2392,8 +2390,6 @@ Assets {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3338,8 +3334,6 @@ Assets {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -3400,8 +3394,6 @@ Assets {
             Id: 6004600651541798525
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           StaticMesh {
             Physics {
@@ -5086,5 +5078,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 79
+  SerializationVersion: 80
 }

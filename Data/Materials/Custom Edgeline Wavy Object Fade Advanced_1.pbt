@@ -2,7 +2,7 @@ Assets {
   Id: 925672138032122417
   Name: "Elf Healing Crystal Aura"
   PlatformAssetType: 13
-  SerializationVersion: 79
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

@@ -73,6 +73,7 @@ function OnRewards()
     VictoryTabs.visibility = Visibility.FORCE_OFF
 
     -- Show rewards title
+    VictoryHeader.visibility = Visibility.INHERIT
     RewardsTitle.visibility = Visibility.INHERIT
 
     -- Set TimerPanel info

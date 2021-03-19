@@ -197,6 +197,10 @@ function API.GetXpString(class, bind)
     return "C" .. tostring(class) .. "B" .. tostring(bind) .. "X"
 end
 
+function API.GetClassLevelString(class)
+    return "C" .. tostring(class) .. "L"
+end
+
 function API.GetSkinString(class, team, bind)
     return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
@@ -322,10 +326,15 @@ function API.BuildRewardsTable(list, classData)
             for _, bind in ipairs(class:GetChildren()) do 
                 local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
                 local icon = bind:GetCustomProperty("Icon")
+                local description = bind:GetCustomProperty("Description")
+                local classIcon = class:GetCustomProperty("Icon")
 
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Description = description
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassIcon = classIcon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassName = class.name
             end
         end
     end
@@ -348,6 +357,31 @@ function API.CosmeticConvertToTable(str)
     if next(tbl) then
         for _, s in ipairs(tbl) do
             s = BASE.Decode24(s)
+            s = tostring(s)
+            local cId = tonumber(s:sub(1, 1))
+            local tId = tonumber(s:sub(2, 2))
+            local sId = tonumber(s:sub(3, 4))
+            local aId = tonumber(s:sub(5, 5))
+            finalTbl[cId] = finalTbl[cId] or {}
+            finalTbl[cId][tId] = finalTbl[cId][tId] or {}
+            finalTbl[cId][tId][sId] = finalTbl[cId][tId][sId] or {}
+            finalTbl[cId][tId][sId][aId] = 1
+        end
+    end
+    return finalTbl
+end
+
+--@param string str => string of compressed data
+--@return table finalTbl => player data
+function API.CosmeticConvertAddToTable(str, startTbl)
+    if str == nil or str == "" then
+        return {}
+    end
+    local finalTbl = startTbl or {}
+    local tbl = API.StringSplit(",", str)
+    if next(tbl) then
+        for _, s in ipairs(tbl) do
+            --s = BASE.Decode24(s) or s
             s = tostring(s)
             local cId = tonumber(s:sub(1, 1))
             local tId = tonumber(s:sub(2, 2))

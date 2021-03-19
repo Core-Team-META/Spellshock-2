@@ -61,14 +61,6 @@ local function DoesDataVersionMatch(data)
     end
 end
 
---@param object player
-local function OnDeletePlayerDataObject(player)
-    for _, object in ipairs(playerData) do
-        if Object.IsValid(object) and object.name == player.id then
-            object:Destroy()
-        end
-    end
-end
 
 -- #TODO Currently used for adding multiple cosmetics to a player
 -- Builds default cosmetics
@@ -76,7 +68,7 @@ end
 local function AddDefaultCosmetics(player)
     for class = 1, 5 do
         for team = 1, 2 do
-            for skin = 1, 5 do
+            for skin = 1, 1 do
                 for bind = 1, 5 do -- Costume Not saving with 4
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
@@ -117,6 +109,7 @@ local function OnLoadCostumeData(player, data)
     local cosmetics
     if data[CONST.STORAGE.COSMETIC] then
         cosmetics = UTIL.CosmeticConvertToTable(data[CONST.STORAGE.COSMETIC])
+        META_COSMETIC.context.BuildCosmeticStringTable(player, data[CONST.STORAGE.COSMETIC])
     end
     META_COSMETIC.context.BuildCosmeticDataTable(player, cosmetics)
 end
@@ -320,4 +313,4 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-Events.ConnectForPlayer("OnDestroyPlayerDataObject", OnDeletePlayerDataObject)
+

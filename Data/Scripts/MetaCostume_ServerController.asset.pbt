@@ -21,7 +21,13 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:META_Player_Cosmetic_Data"
+        AssetReference {
+          Id: 10632890108449713432
+        }
+      }
     }
   }
-  SerializationVersion: 79
+  SerializationVersion: 80
 }

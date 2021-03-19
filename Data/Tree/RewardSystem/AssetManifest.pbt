@@ -35,30 +35,12 @@ Assets {
   }
 }
 Assets {
-  Id: 16220021570841012759
-  Name: "Icon Present"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Present"
-  }
-}
-Assets {
   Id: 16072726743892194472
   Name: "Fantasy Corners 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_006"
-  }
-}
-Assets {
-  Id: 15165554833363844727
-  Name: "Amarante"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "AmaranteRegular_ref"
   }
 }
 Assets {
@@ -77,15 +59,6 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_meta_fantasy_treasure_01_Cue_ref"
-  }
-}
-Assets {
-  Id: 12804716500201279526
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
   }
 }
 Assets {
@@ -134,15 +107,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10560212515319968181
-  Name: "BG Flat 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_23"
-  }
-}
-Assets {
   Id: 10477657774098762667
   Name: "Orchestral Victory Achievement Music Stinger Set 01"
   PlatformAssetType: 10
@@ -158,24 +122,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_004"
-  }
-}
-Assets {
-  Id: 9614194847790393795
-  Name: "Fantasy Chain 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Chain_001"
-  }
-}
-Assets {
-  Id: 9008238566657320754
-  Name: "Sci-fi Frame 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Frame_006"
   }
 }
 Assets {
@@ -206,15 +152,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6740841731187914198
-  Name: "Center Arrow 002 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_002Wedge"
-  }
-}
-Assets {
   Id: 6569410210520716887
   Name: "Fantasy Ability Teal 014"
   PlatformAssetType: 9
@@ -242,24 +179,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5178103781732415435
-  Name: "Fantasy Ability Blue 035"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_035"
-  }
-}
-Assets {
-  Id: 4820900810946534472
-  Name: "Sci-fi Corners 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Corners_001"
-  }
-}
-Assets {
   Id: 4727080213227783003
   Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9
@@ -278,24 +197,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4339187070157083790
-  Name: "Icon Diamond"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Diamond"
-  }
-}
-Assets {
-  Id: 3769656768987755493
-  Name: "Sci-fi Ability Red 033"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Ability_Red_033"
-  }
-}
-Assets {
   Id: 3483798833601977176
   Name: "Fantasy Shape 003"
   PlatformAssetType: 9
@@ -305,39 +206,12 @@ Assets {
   }
 }
 Assets {
-  Id: 3469815303062501792
-  Name: "Fantasy Ability Purple 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Purple_004"
-  }
-}
-Assets {
   Id: 3436198721449977543
   Name: "Fantasy Craft Crystal 009"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_009"
-  }
-}
-Assets {
-  Id: 3128978607050070161
-  Name: "Fantasy Ability Blue 025"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_025"
-  }
-}
-Assets {
-  Id: 2764905514123890102
-  Name: "Frame Outlined 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_020"
   }
 }
 Assets {
@@ -356,24 +230,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_015"
-  }
-}
-Assets {
-  Id: 1814707273787853473
-  Name: "BG Flat 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 1653769258472556796
-  Name: "Fantasy Ability Blue 012"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Blue_012"
   }
 }
 Assets {
