@@ -12,6 +12,7 @@ end
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 
 local EXPLOSION_VFX = script:GetCustomProperty("HunterChargedArrowExplosionVFX")
+local EXPLOSION_SOURCE = script:GetCustomProperty("ExplosionSource"):WaitForObject()
 
 Task.Wait(2)
 
@@ -22,7 +23,7 @@ local sourceTeam = ROOT.serverUserData.sourceTeam
 
 local radius = 200
 
-local explosionPosition = ROOT:GetWorldPosition()
+local explosionPosition = EXPLOSION_SOURCE:GetWorldPosition()
 
 if EXPLOSION_VFX then
     META_AP().SpawnAsset(EXPLOSION_VFX, {position = explosionPosition})

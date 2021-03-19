@@ -137,10 +137,12 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	local sourcePlayer = WEAPON.owner
 	local sourceAbility = SHOOT_ABILITY
 
+	local position = hitResult:GetImpactPosition()
+	local normal = projectile:GetVelocity()
+	local rotation = Rotation.New(normal, Vector3.UP)
+
 	CROSS_CONTEXT_CALLER().Call(function()
-		local position = hitResult:GetImpactPosition()
-		local normal = hitResult:GetImpactNormal()
-		local rotation = Rotation.New(-normal, Vector3.UP)
+	
 		local bomb = World.SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
 
 		bomb.serverUserData.damageRange = damageRange

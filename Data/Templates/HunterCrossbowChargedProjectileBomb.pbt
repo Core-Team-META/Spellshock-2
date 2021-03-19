@@ -265,7 +265,7 @@ Assets {
         Name: "ChargeUpVFX"
         Transform {
           Location {
-            X: -55.8965187
+            X: -34.8546524
           }
           Rotation {
           }
@@ -399,6 +399,7 @@ Assets {
         }
         ParentId: 3656167645066593102
         ChildIds: 7468554764990820232
+        ChildIds: 8120003842811184474
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -447,6 +448,12 @@ Assets {
               Id: 2093703942921456330
             }
           }
+          Overrides {
+            Name: "cs:ExplosionSource"
+            ObjectReference {
+              SubObjectId: 8120003842811184474
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -461,6 +468,35 @@ Assets {
           ScriptAsset {
             Id: 16790649529753844313
           }
+        }
+      }
+      Objects {
+        Id: 8120003842811184474
+        Name: "ExplosionSource"
+        Transform {
+          Location {
+            X: -30.9971409
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2099981729286439210
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
     }
