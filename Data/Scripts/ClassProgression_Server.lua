@@ -108,6 +108,7 @@ function ClassLevelUp(player, class)
         API.SetClassLevel(player, class)
         SetClassLevel(player, class, level)
         SetClassXp(player, class, xp)
+        ClassLevelUp(player, class)
     end
 end
 
@@ -129,8 +130,13 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetClassLevel(player, class)
-    return classProgression[player.id][class][CONST.PROGRESS.LEVEL] and
-        tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
+    if
+        not classProgression[player.id] or not classProgression[player.id][class] or
+            not classProgression[player.id][class][CONST.PROGRESS.LEVEL]
+     then
+        return 1
+    end
+    return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
 --@param object player
