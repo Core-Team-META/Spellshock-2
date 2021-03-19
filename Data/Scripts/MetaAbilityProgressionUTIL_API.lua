@@ -197,6 +197,10 @@ function API.GetXpString(class, bind)
     return "C" .. tostring(class) .. "B" .. tostring(bind) .. "X"
 end
 
+function API.GetClassLevelString(class)
+    return "C" .. tostring(class) .. "L"
+end
+
 function API.GetSkinString(class, team, bind)
     return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
