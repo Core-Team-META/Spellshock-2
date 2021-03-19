@@ -8162,12 +8162,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 17776588082654941215
+        Id: 13462854128336502995
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.436000019
+        G: 0.320792079
+        B: 0.187480018
         A: 1
       }
       TeamSettings {
@@ -10338,7 +10338,6 @@ Objects {
   }
   ParentId: 4509724161207917958
   ChildIds: 1917936312158066202
-  ChildIds: 12208683202691034075
   ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
   Collidable_v2 {
@@ -10602,52 +10601,6 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
-    }
-  }
-}
-Objects {
-  Id: 12208683202691034075
-  Name: "Helper_RewardCard"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18393261942096671057
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 15767701222805894856
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Helper_RewardCard"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 39385.0117
-            Y: 52070.0117
-            Z: 690
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 135.000015
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 199494650754129245
     }
   }
 }

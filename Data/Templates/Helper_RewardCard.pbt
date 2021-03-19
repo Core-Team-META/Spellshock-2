@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 8135997125524212698
         ChildIds: 9166886723920556442
         ChildIds: 17507666159714812191
         UnregisteredParameters {
@@ -44,7 +44,6 @@ Assets {
         Control {
           Width: 300
           Height: 387
-          UIX: 29.626709
           UIY: -500
           RenderTransformPivot {
             Anchor {
@@ -241,7 +240,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -647,8 +646,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 116
-          Height: 208
+          Width: 234
+          Height: 226
           UIY: -175.255
           RenderTransformPivot {
             Anchor {
@@ -660,13 +659,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 5196377603841433560
+              Id: 14343216197126221006
             }
             Color {
               R: 0.75
-              G: 1
-              B: 0.766556323
-              A: 1
+              G: 0.417218417
+              A: 0.828000069
             }
             TeamSettings {
             }
@@ -8406,7 +8404,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 12753469920005434968
+              Id: 14369306021799089619
             }
             Color {
               R: 0.0499999523
@@ -8468,7 +8466,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 12753469920005434968
+              Id: 14369306021799089619
             }
             Color {
               R: 0.896269679
@@ -16895,12 +16893,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5196377603841433560
-      Name: "BG Gradient 001"
+      Id: 14343216197126221006
+      Name: "Emblem 4"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundFlat_020"
+        AssetId: "UI_Japan_Icon_017"
       }
     }
     Assets {
@@ -17030,12 +17028,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12753469920005434968
-      Name: "BG Gradient 002"
+      Id: 14369306021799089619
+      Name: "BG Highlighted 003"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundFlat_019"
+        AssetId: "BackgroundHighlighted_021"
       }
     }
     Assets {
@@ -17090,6 +17088,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "BackgroundNoOutline_015"
+      }
+    }
+    Assets {
+      Id: 5196377603841433560
+      Name: "BG Gradient 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundFlat_020"
       }
     }
     Assets {
