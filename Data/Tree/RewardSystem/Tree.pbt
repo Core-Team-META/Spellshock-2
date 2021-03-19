@@ -4906,7 +4906,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8090,7 +8090,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8651,7 +8651,7 @@ Objects {
 }
 Objects {
   Id: 12728164660628082286
-  Name: "GAME_OVER"
+  Name: "ChooseReward"
   Transform {
     Location {
     }
@@ -8683,7 +8683,7 @@ Objects {
       }
     }
     Text {
-      Label: "Choose a reward"
+      Label: "Choose 4 rewards"
       Color {
         R: 1
         G: 0.65668875
@@ -10143,7 +10143,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -32238,31 +32238,13 @@ Objects {
     Overrides {
       Name: "cs:RoundEndRewardUI"
       ObjectReference {
-        SelfId: 4542412189343657266
+        SelfId: 18393261942096671057
       }
     }
     Overrides {
       Name: "cs:EoR_Animation"
       ObjectReference {
         SelfId: 16753970550728364913
-      }
-    }
-    Overrides {
-      Name: "cs:CLAIM_BUTTON"
-      ObjectReference {
-        SelfId: 741833750366236423
-      }
-    }
-    Overrides {
-      Name: "cs:BUTTON_TEXT_SHADOW"
-      ObjectReference {
-        SelfId: 17705554952526960780
-      }
-    }
-    Overrides {
-      Name: "cs:BUTTON_TEXT"
-      ObjectReference {
-        SelfId: 350650599917443619
       }
     }
     Overrides {
@@ -32281,6 +32263,24 @@ Objects {
       Name: "cs:ClassMenuData"
       ObjectReference {
         SelfId: 14151859424388630810
+      }
+    }
+    Overrides {
+      Name: "cs:Helper_RewardCard"
+      AssetReference {
+        Id: 199494650754129245
+      }
+    }
+    Overrides {
+      Name: "cs:AbilityUpgradeCosts"
+      AssetReference {
+        Id: 3686805858911968991
+      }
+    }
+    Overrides {
+      Name: "cs:ChooseRewardText"
+      ObjectReference {
+        SelfId: 12728164660628082286
       }
     }
   }

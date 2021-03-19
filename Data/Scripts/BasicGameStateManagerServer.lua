@@ -81,7 +81,7 @@ function SetGameState(newState)
 		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 15
+		stateDuration = 20
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
 		stateDuration = 10

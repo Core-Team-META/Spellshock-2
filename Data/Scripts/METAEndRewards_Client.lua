@@ -10,6 +10,12 @@
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
+
+local function META_AP()
+    while not _G["Meta.Ability.Progression"] do Task.Wait() end
+    return _G["Meta.Ability.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -18,9 +24,9 @@ local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObjec
 local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local ANIMATION = script:GetCustomProperty("EoR_Animation"):WaitForObject()
-local CLAIM_BUTTON = script:GetCustomProperty("CLAIM_BUTTON"):WaitForObject()
-local BUTTON_TEXT_SHADOW = script:GetCustomProperty("BUTTON_TEXT_SHADOW"):WaitForObject()
-local BUTTON_TEXT = script:GetCustomProperty("BUTTON_TEXT"):WaitForObject()
+local ChooseRewardText = script:GetCustomProperty("ChooseRewardText"):WaitForObject()
+
+local Helper_RewardCard = script:GetCustomProperty("Helper_RewardCard")
 local GemIcon = script:GetCustomProperty("GemIcon")
 local GoldIcon = script:GetCustomProperty("GoldIcon")
 
@@ -31,14 +37,16 @@ local REWARD_PARENT_UI = script:GetCustomProperty("RoundEndRewardUI"):WaitForObj
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
-local playerRewards = {}
 local listeners = {}
-local rewardSelect = {}
 local spamPrevent
 local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
-local roundTime = 0
-local currentSelect = {}
+
+local SelectionCount = 0 -- determines how many cards the player can choose
+local SelectedCards = {} -- stores all the cards the player has chosen
+local CardPanels = {}
 local CardButtons = {}
+
+-- #TODO need to implement this in a different way
 --[[while not LOCAL_PLAYER.clientUserData.HasPlayedRound do
     Task.Wait()
 end]]
@@ -49,13 +57,17 @@ local CardDescriptions = {
     "Use gems in the Cosmetic Shop to purchase different ability skins and costumes."
 }
 
+local ClassColors = { -- Hex sRGB
+    [META_AP().TANK] = "DE99003B",
+    [META_AP().HUNTER] = "00AA1527",
+    [META_AP().MAGE] = "004BAF5F",
+    [META_AP().ASSASSIN] = "BD00DD3F",
+    [META_AP().HEALER] = "A235003F"
+}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-local function META_AP()
-    return _G["Meta.Ability.Progression"]
-end
 
 --Used for spam prevention
 --@return bool
@@ -74,20 +86,21 @@ local function DisconnectListeners()
             listener:Disconnect()
         end
     end
+    listeners = {}
+end
+
+local function RemoveAllCards()
+    for _, card in pairs(CardPanels) do
+        card:Destroy()
+    end
+    CardPanels = {}
+    SelectedCards = {}
 end
 
 local function FindClassNameById(classId)
     for name, id in pairs(CONST.CLASS) do
         if id == classId then
             return name
-        end
-    end
-end
-
-local function HideSelected()
-    for _, object in ipairs(rewardSelect) do
-        if Object.IsValid(object) then
-            object.visibility = Visibility.FORCE_OFF
         end
     end
 end
@@ -100,6 +113,7 @@ local function ToggleUI(isTrue)
         REWARD_PARENT_UI.visibility = Visibility.FORCE_ON
     else
         REWARD_PARENT_UI.visibility = Visibility.FORCE_OFF
+        RemoveAllCards()
         DisconnectListeners()
     end
 end
@@ -110,7 +124,7 @@ local function GetBindInfo(value)
         shardId = tostring(shardId)
         class = tonumber(shardId:sub(1, 1))
         bind = tonumber(shardId:sub(2, 2))
-        print("Class ID " .. class .. " | Bind ID " .. bind .. " | Reward " .. reward)
+        --print("Class ID " .. class .. " | Bind ID " .. bind .. " | Reward " .. reward)
         return class, bind, reward
     end
 end
@@ -137,129 +151,127 @@ local function GetCosmeticInfo(value)
     end
 end
 
---@param int slot -- UI Slot ID
---@param int class
---@param int bind
---@param int reward
-local function BuildSlotInfo(slot, id, class, bind, reward)
-    for _, panel in ipairs(REWARD_PARENT_UI:GetChildren()) do
-        if panel.name ~= "BG" and panel.name ~= "TITLE" and panel.name ~= "RewardSlot3-Loss" then
-            local slotId = panel:GetCustomProperty("SLOT")
-            local infoTable = nil
-            local currentAmmount = nil
-            local reqXp, isGold, isCosmetic
-            if slotId and slotId == slot then
-                local RARITY_SHINE = panel:GetCustomProperty("RARITY_SHINE"):WaitForObject()
-                if id == 1 then -- Shards
-                    RARITY_SHINE:SetColor(Color.New(0, 0.28816, 0.626, 0.615686))
-                    infoTable = rewardAssets[id][class][bind]
-                    currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
-                    reqXp = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
-                else
-                    if id == 2 then -- Gold
-                        RARITY_SHINE:SetColor(Color.New(0.713907, 0.77, 0, 0.615686))
-                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
-                        isGold = true
-                    elseif id == 3 then -- Cosmetic Tokens
-                        RARITY_SHINE:SetColor(Color.New(0.994, 0, 0, 0.615686))
-                        currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
-                        isCosmetic = true
-                    end
-                    infoTable = rewardAssets[id][bind]
-                end
+local function BuildCardInfo(slot, id, class, bind, reward)
+    -- Spawn new card
+    local newCardParent = World.SpawnAsset(Helper_RewardCard, {parent=REWARD_PARENT_UI})
+    newCardParent.x = 0 
+    newCardParent.y = -500
 
-                local Button = panel:GetCustomProperty("UIButton"):WaitForObject()
-                local ICON = panel:GetCustomProperty("ICON"):WaitForObject()
-                local ICON_SHADOW = panel:GetCustomProperty("ICON_SHADOW"):WaitForObject()
-                local ITEMNAME = panel:GetCustomProperty("ITEMNAME"):WaitForObject()
-                local ITEMNAME2 = panel:GetCustomProperty("ITEMNAME2"):WaitForObject()
-                local ITEM_DESCRIPTION = panel:GetCustomProperty("ITEM_DESCRIPTION"):WaitForObject()
-                local ITEM_DESCRIPTION2 = panel:GetCustomProperty("ITEM_DESCRIPTION2"):WaitForObject()
-                local CLASS_NAME = panel:GetCustomProperty("ClassName"):WaitForObject()
-                local SELECTED = panel:GetCustomProperty("SELECTED"):WaitForObject()
-                local SHARD_AMMOUNTS = panel:GetCustomProperty("SHARD_AMMOUNTS"):WaitForObject()
-                local SHARD_AMOUNT_TEXT = panel:GetCustomProperty("SHARD_AMOUNT"):WaitForObject()
-                local IF_GOLD = panel:GetCustomProperty("IF_GOLD"):WaitForObject()
-                local PROGRESS_BARS = panel:GetCustomProperty("PROGRESS_BARS"):WaitForObject()
+    -- Get the two card types
+    local AbilityCard = newCardParent:GetCustomProperty("AbilityCard"):WaitForObject()
+    local NormalCard = newCardParent:GetCustomProperty("NormalCard"):WaitForObject()
 
-                CLASS_NAME.visibility = Visibility.FORCE_OFF
-                PROGRESS_BARS.visibility = Visibility.FORCE_OFF
-                SHARD_AMMOUNTS.visibility = Visibility.FORCE_OFF
-                IF_GOLD.visibility = Visibility.FORCE_OFF
+    local infoTable
+    local CardButton
 
-                if reqXp then
-                    --Progress Bars
-                    local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
-                    local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
-                    PROGRESS_BARS.visibility = Visibility.FORCE_ON
-                    CURRENT_BAR.progress = currentAmmount / reqXp
-                    REWARD_BAR.progress = (currentAmmount + reward) / reqXp
-                    CLASS_NAME.visibility = Visibility.INHERIT
-                    local ClassNameText = CLASS_NAME:GetCustomProperty("ClassNameText"):WaitForObject()
-                    ClassNameText.text = FindClassNameById(class)
-                    ClassNameText:GetChildren()[1].text = FindClassNameById(class)
-                    SHARD_AMMOUNTS.visibility = Visibility.FORCE_ON
-                end
+    -- Ability card or Normal card?
+    if id == 1 then
+        NormalCard:Destroy() -- Destroy normal card
+        AbilityCard.visibility = Visibility.INHERIT
 
-                if isGold or isCosmetic then
-                    IF_GOLD.visibility = Visibility.FORCE_ON
-                    local REWARD_AMOUNT = IF_GOLD:GetCustomProperty("REWARD_AMOUNT"):WaitForObject()
-                    REWARD_AMOUNT.text = string.format("+ %s = %s", UTIL.FormatInt(reward), UTIL.FormatInt(currentAmmount + reward))
-                    local icon = GoldIcon
-                    if isCosmetic then
-                        icon = GemIcon
-                    end
-                    local CurrencyIcon = IF_GOLD:GetCustomProperty("CurrencyIcon"):WaitForObject()
-                    CurrencyIcon:SetImage(icon)
-                end
+        -- Get UI components
+        local ClassIcon = AbilityCard:GetCustomProperty("ClassIcon"):WaitForObject()
+        local ClassName = AbilityCard:GetCustomProperty("ClassName"):WaitForObject()
+        local Title = AbilityCard:GetCustomProperty("Title"):WaitForObject()
+        local AbilityIcon = AbilityCard:GetCustomProperty("AbilityIcon"):WaitForObject()
+        local Level = AbilityCard:GetCustomProperty("Level"):WaitForObject()
+        local CurrentPoints = AbilityCard:GetCustomProperty("CurrentPoints"):WaitForObject()
+        local RewardPoints = AbilityCard:GetCustomProperty("RewardPoints"):WaitForObject()
+        local CurrentProgress = AbilityCard:GetCustomProperty("CurrentProgress"):WaitForObject()
+        local RewardProgress = AbilityCard:GetCustomProperty("RewardProgress"):WaitForObject()
+        local UpgradePanel = AbilityCard:GetCustomProperty("UpgradePanel"):WaitForObject()
+        local LeftGlow = AbilityCard:GetCustomProperty("LeftGlow"):WaitForObject()
+        local RightGlow = AbilityCard:GetCustomProperty("RightGlow"):WaitForObject()
+        CardButton = AbilityCard:GetCustomProperty("CardButton"):WaitForObject()
+        local InfoPanel = AbilityCard:GetCustomProperty("InfoPanel"):WaitForObject()
+        local Selected = AbilityCard:GetCustomProperty("Selected"):WaitForObject()
 
-                ICON:SetImage(infoTable.Image)
-                ICON_SHADOW:SetImage(infoTable.Image)
-                ITEMNAME.text = infoTable.Name
-                ITEMNAME2.text = infoTable.Name
-                if id == 1 then
-                    ITEMNAME.text = ITEMNAME.text .. " Shards"
-                    ITEMNAME2.text = ITEMNAME2.text .. " Shards"
-                end
-                ITEM_DESCRIPTION.text = CardDescriptions[id]
-                ITEM_DESCRIPTION2.text = CardDescriptions[id]
+        local UpgradeButton = UpgradePanel:GetCustomProperty("UpgradeButton"):WaitForObject()
+        local UpgradeCost = UpgradePanel:GetCustomProperty("Cost"):WaitForObject()
+        local InfoTitle = InfoPanel:GetCustomProperty("InfoTitle"):WaitForObject()
+        local InfoDescription = InfoPanel:GetCustomProperty("InfoDescription"):WaitForObject()
+        
+        -- Get data
+        infoTable = rewardAssets[id][class][bind]
+        local currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+        local reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
 
-                local currentShardText = string.format("%d", currentAmmount):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
-                local rewardShardText = string.format("%d", reward):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
-                local newTotalShards = string.format("%d", currentAmmount + reward):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+        -- Set all the stuff
+        ClassIcon:SetImage(infoTable.ClassIcon)
+        ClassName.text = infoTable.ClassName
+        Title.text = infoTable.Name
+        AbilityIcon:SetImage(infoTable.Image)
+        Level.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, bind, class))
+        CurrentPoints.text = tostring(currentAmmount)
+        RewardPoints.text = tostring(reward)
+        CurrentProgress.progress = currentAmmount / reqXp
+        RewardProgress.progress = (currentAmmount + reward) / reqXp
+        LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
+        RightGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
+        InfoTitle.text = infoTable.Name
+        InfoDescription.text = infoTable.Description
 
-                SHARD_AMOUNT_TEXT.text = currentShardText.." + "..rewardShardText.." = "..newTotalShards
-                Button.clientUserData.slotID = slotId
-                Button.clientUserData.rewardID = id
-                Button.clientUserData.selected = SELECTED
-                rewardSelect[#rewardSelect + 1] = SELECTED
+        -- Is an upgrade available?
+        --[[if (currentAmmount + reward) >= reqXp then
+            UpgradePanel.visibility = Visibility.INHERIT
+            UpgradeCost.text = tostring(reqGold)
+            UpgradeCost:GetChildren()[1].text = tostring(reqGold)
+            -- #TODO need to hookup the UpgradeButton
+        end]]
 
-                listeners[#listeners + 1] = Button.clickedEvent:Connect(OnRewardSelected)
-                CardButtons[slotId] = Button
-            end
-        end
+        CardButton.clientUserData.selected = Selected
+    else -- Normal card
+        AbilityCard:Destroy()
+        NormalCard.visibility = Visibility.INHERIT
+
+        local Selected = NormalCard:GetCustomProperty("Selected"):WaitForObject()
+        local Title = NormalCard:GetCustomProperty("Title"):WaitForObject()
+        local Icon = NormalCard:GetCustomProperty("Icon"):WaitForObject()
+        local Amount = NormalCard:GetCustomProperty("Amount"):WaitForObject()
+        local ShortDescription = NormalCard:GetCustomProperty("ShortDescription"):WaitForObject()
+        local InfoPanel = NormalCard:GetCustomProperty("InfoPanel"):WaitForObject()
+        CardButton = NormalCard:GetCustomProperty("CardButton"):WaitForObject()
+        
+        local InfoTitle = InfoPanel:GetCustomProperty("Title"):WaitForObject()
+        local InfoDescription = InfoPanel:GetCustomProperty("Description"):WaitForObject()        
+
+        -- Get data
+        --[[local currentAmmount 
+        if id == 2 then -- Gold
+            currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
+        elseif id == 3 then -- Cosmetic Tokens
+            currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
+        end]]
+        infoTable = rewardAssets[id][bind]
+
+        -- Set all the stuff
+        Title.text = infoTable.Name
+        Icon:SetImage(infoTable.Image)
+        Amount.text = "+"..tostring(reward)
+        Amount:GetChildren()[1].text = Amount.text
+        ShortDescription.visibility = Visibility.FORCE_OFF
+        --ShortDescription.text = CardDescriptions[id]
+        --InfoTitle.text = 
+        InfoDescription.text = CardDescriptions[id]
+
+        CardButton.clientUserData.selected = Selected
     end
-end
 
-local function ThirdSlotEnabled(bool)
-    for _, panel in ipairs(REWARD_PARENT_UI:GetChildren()) do
-        if panel.name == "RewardSlot3" then
-            panel.isEnabled = false
-            if bool then
-                panel.isEnabled = true
-            end
-        elseif panel.name == "RewardSlot3-Loss" then
-            panel.isEnabled = true
-            if bool then
-                panel.isEnabled = false
-            end
-        end
-    end
+    newCardParent.clientUserData.button = CardButton
+
+    CardButton.clientUserData.rewardID = id
+    CardButton.clientUserData.slotID = slot
+    CardButton.clientUserData.panel = newCardParent
+    listeners[#listeners + 1] = CardButton.clickedEvent:Connect(OnRewardSelected)
+    CardPanels[#CardPanels+1] = newCardParent
+
+    --[[if slot == 1 then
+        OnRewardSelected(CardButton) -- Select the first card by default
+    end]]
 end
 
 --@param tabl tbl -- Nested table reward
 local function BuildRewardSlots(tbl)
-    local slot2Reward
     for slot, value in ipairs(tbl) do
         local id, class, bind, reward
         for rewardType, rewards in pairs(value) do
@@ -275,26 +287,65 @@ local function BuildRewardSlots(tbl)
             end
         end
         
-        if slot == 2 then
-            slot2Reward = id
-        elseif slot == 3 then
-            ThirdSlotEnabled(true)
-        end
-
-        BuildSlotInfo(slot, id, class, bind, reward)
+        BuildCardInfo(slot, id, class, bind, reward)
     end
-    
-    OnRewardSelected(CardButtons[2]) -- Select the middle card by default
 end
 
 -- d1073dbcc404405cbef8ce728e53d380^1~15=17^2~G=934
 --@param table tbl -- playerRewards from networked property
 local function GetPlayerRewards(tbl)
     for playerId, rewards in pairs(tbl) do
+        -- Find the rewards that belong to LOCAL_PLAYER
         if playerId == LOCAL_PLAYER.id then
-            ThirdSlotEnabled(false)
             BuildRewardSlots(rewards)
         end
+    end
+end
+
+local function IsTeamWinner(player)
+    --return true
+    local orcScore = Game.GetTeamScore(CONST.TEAM.ORC)
+    local elfScore = Game.GetTeamScore(CONST.TEAM.ELF)
+    if orcScore > elfScore and player.team == CONST.TEAM.ORC then
+        return true
+    elseif orcScore < elfScore and player.team == CONST.TEAM.ELF then
+        return true
+    else
+        return false
+    end --]]
+end
+
+local function IsFirstWinOfTheDay(player)
+    local currentTime = os.time(os.date("!*t")) + (24 * 60 * 60)
+    if player:GetResource(CONST.WIN_OF_THE_DAY_TIME) <= currentTime then
+        player:SetResource(CONST.WIN_OF_THE_DAY_TIME, CoreMath.Round(currentTime))
+        return true
+    end
+    return false
+end
+
+local function CalculateSelectionCount(player)
+    -- 1 by default
+    SelectionCount = 1
+    
+    -- +1 for winning
+    if IsTeamWinner(player) then
+        SelectionCount = SelectionCount + 1
+    
+        -- +1 for First Win of the Day
+        if IsFirstWinOfTheDay(player) then
+            SelectionCount = SelectionCount + 1
+        end
+    end
+
+    -- +1 for Extra Reward Perk #TODO
+    
+    --Set UI text
+    SelectionCount = 4
+    if SelectionCount > 1 then 
+        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+    else
+        ChooseRewardText.text = string.format("Choose 1 reward")
     end
 end
 
@@ -302,29 +353,27 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
----#TODO will need a new button listener for when a reward is highlighted and stored on player.clientUserdata, then niled out on confirm
-
---#FIXME this will change to one button to send to the server.
-function OnRewardLockedIn(button)
-    if not isAllowed(1) then
-        return
+function OnRewardSelected(thisButton)
+    if SelectedCards[thisButton] then
+        -- Deselect
+        thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
+        SelectedCards[thisButton] = nil
+        SelectionCount = SelectionCount + 1 
+    elseif SelectionCount > 0 then
+        -- Add card to SelectedCards
+        thisButton.clientUserData.selected.visibility = Visibility.INHERIT
+        SelectedCards[thisButton] = thisButton.clientUserData.slotID
+        SelectionCount = SelectionCount - 1
     end
-    local result, message
-    repeat
-        result, message = Events.BroadcastToServer(NAMESPACE .. "RewardSelect", currentSelect)
-        Task.Wait(0.3)
-    until result == BroadcastEventResultCode.SUCCESS
-    CLAIM_BUTTON.isInteractable = false
-    BUTTON_TEXT.text = "REWARD CLAIMED"
-    BUTTON_TEXT_SHADOW.text = "REWARD CLAIMED"
-end
 
-function OnRewardSelected(button)
-    HideSelected()
-    button.clientUserData.selected.visibility = Visibility.FORCE_ON
-    currentSelect.slotID = button.clientUserData.slotID
-    currentSelect.rewardID = button.clientUserData.rewardID
-    Events.BroadcastToServer(NAMESPACE .. "RewardSelect", button.clientUserData.slotID)
+    -- Update UI
+    if SelectionCount > 1 then 
+        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+    elseif SelectionCount == 1 then
+        ChooseRewardText.text = string.format("Choose 1 reward")
+    else
+        ChooseRewardText.text = "0"
+    end
 end
 
 function OnRewardsChanged(object, string)
@@ -335,39 +384,21 @@ function OnRewardsChanged(object, string)
 end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if ABGS.GAME_STATE_ROUND == newState then
-        roundTime = time()
-    end
-    if ABGS.GAME_STATE_ROUND_END == newState then
-        roundTime = time() - roundTime
-    end
-
     if newState == ABGS.GAME_STATE_REWARDS then
-        ANIMATION.context.Reset()
+        CalculateSelectionCount()
+        Task.Wait(2)
         ToggleUI(true)
-        ANIMATION.context.OnRewardShow()
+        ANIMATION.context.OnRewardShow(CardPanels)
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
-        --[[ToggleUI(false)
-        ANIMATION.context.OnRewardHide(currentSelect)
-        --Send First Reward Select
-        Events.BroadcastToServer(NAMESPACE .. "RewardSelect", 1)]]
-
+        local playerRewards = {}
+        for cardButton, slotID in pairs(SelectedCards) do
+            table.insert(playerRewards, slotID)
+        end
         
-        --ToggleUI(false)
-        --Events.BroadcastToServer(NAMESPACE .. "RewardSelect", currentSelect.slotID) 
-        HideSelected()
-        ANIMATION.context.RevealChest(currentSelect.slotID, currentSelect.rewardID)
+        ANIMATION.context.RevealChosenCards(SelectedCards, CardPanels)
+        Events.BroadcastToServer(NAMESPACE .. "GivePlayerRewards", playerRewards)
     elseif newState == ABGS.GAME_STATE_LOBBY then
         ToggleUI(false)
-        HideSelected()
-        ANIMATION.context.Reset()
-    end
-end
-
---#TODO TEMP FUNCTIONS
-function OnTriggerReward(player, keybind)
-    if keybind == "ability_extra_63" then
-        Events.BroadcastToServer(NAMESPACE .. "TriggerReward")
     end
 end
 
@@ -375,8 +406,4 @@ end
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 NETWORKED.networkedPropertyChangedEvent:Connect(OnRewardsChanged)
---CLAIM_BUTTON.clickedEvent:Connect(OnRewardLockedIn)
 Events.Connect("GameStateChanged", OnGameStateChanged)
---Events.Connect("Menu Changed", OnMenuChanged)
---UTIL.TablePrint(rewardAssets)
---LOCAL_PLAYER.bindingPressedEvent:Connect(OnTriggerReward) -- Used for testing

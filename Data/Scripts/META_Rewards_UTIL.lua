@@ -138,7 +138,7 @@ function API.OnRewardSelect(player, rewardId, tbl, bool)
             end
         end
         if not bool then
-            tbl[player.id] = nil
+            --tbl[player.id] = nil
         else
             tbl[player.id][rewardId].P = 1
         end

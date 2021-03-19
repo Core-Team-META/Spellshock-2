@@ -27,6 +27,30 @@ local DropIcons = {ShardIcon, GoldIcon, GemIcon}
 
 local Stinger = script:GetCustomProperty("Stinger"):WaitForObject()
 
+-- Row1: 140Y
+-- Row2: 630y
+-- Single: 400y
+-- 360x Offset
+
+-- For a given number of cards, returns the layout
+local CardLayouts = {
+    [1] = {{x=0, y=400}},
+    [2] = {{x=-180, y=400}, {x=180, y=400}},
+    [3] = {{x=-360, y=400}, {x=0, y=400}, {x=360, y=400}},
+    [4] = {{x=-540, y=400}, {x=-180, y=400}, {x=180, y=400}, {x=540, y=400}},
+    [5] = {{x=-720, y=400}, {x=-360, y=400}, {x=0, y=400}, {x=360, y=400}, {x=720, y=400}},
+    [6] = {{x=-360, y=140}, {x=0, y=140}, {x=360, y=140}, 
+           {x=-360, y=630}, {x=0, y=630}, {x=360, y=630}},
+    [7] = {{x=-360, y=140}, {x=0, y=140}, {x=360, y=140},
+           {x=-540, y=630}, {x=-180, y=630}, {x=180, y=630}, {x=540, y=630}},
+    [8] = {{x=-540, y=140}, {x=-180, y=140}, {x=180, y=140}, {x=540, y=140},
+           {x=-540, y=630}, {x=-180, y=630}, {x=180, y=630}, {x=540, y=630}},
+    [9] = {{x=-540, y=140}, {x=-180, y=140}, {x=180, y=140}, {x=540, y=140},
+           {x=-720, y=630}, {x=-360, y=630}, {x=0, y=630}, {x=360, y=630}, {x=720, y=630}},
+   [10] = {{x=-720, y=140}, {x=-360, y=140}, {x=0, y=140}, {x=360, y=140}, {x=720, y=140},
+           {x=-720, y=630}, {x=-360, y=630}, {x=0, y=630}, {x=360, y=630}, {x=720, y=630}}
+}
+
 function Reset()
     for index, card in ipairs(Cards) do
         card.y = -1000
@@ -35,45 +59,50 @@ function Reset()
     Chest.y = 350
 end
 
-function OnRewardShow()
-    REWARDS.visibility = Visibility.FORCE_ON
+function OnRewardShow(CardPanels)
     Stinger:Play()
 
-    Task.Wait(1)
-    EaseUI.EaseY(RewardSlot1, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    World.SpawnAsset(RewardCardMovementSFX)
+    local layout = CardLayouts[#CardPanels]
+    for slot, card in ipairs(CardPanels) do
+        Task.Wait(.3)
+        --card.x = layout[slot].x
+        --card.y = layout[slot].y
 
-    Task.Wait(.5)
-    EaseUI.EaseY(RewardSlot2, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    World.SpawnAsset(RewardCardMovementSFX)
-    
-    Task.Wait(.5)
-    EaseUI.EaseY(RewardSlot3, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    EaseUI.EaseY(RewardSlot3Loss, 71, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    World.SpawnAsset(RewardCardMovementSFX)
+        EaseUI.EaseX(card, layout[slot].x, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+        EaseUI.EaseY(card, layout[slot].y, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+        World.SpawnAsset(RewardCardMovementSFX)
+    end
 end
 
-function RevealChest(selectedIndex, rewardID)
-    for index, card in ipairs(Cards) do
-        if index ~= selectedIndex then
-            EaseUI.EaseY(card, -1000, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+function RevealChosenCards(SelectedCards, AllCards)
+    local selectedCount = 1
+    local selectedAmount = 0
+    for button, _ in pairs(SelectedCards) do
+        button.clientUserData.selected.visibility = Visibility.FORCE_OFF
+        selectedAmount = selectedAmount + 1
+    end
+    
+    local layout = CardLayouts[selectedAmount]
+
+    for index, card in ipairs(AllCards) do
+        if SelectedCards[card.clientUserData.button] then -- is a selected card
+            EaseUI.EaseX(card, layout[selectedCount].x, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+            EaseUI.EaseY(card, layout[selectedCount].y, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
+            selectedCount = selectedCount + 1
+        else -- not a selected card
+            EaseUI.EaseY(card, -500, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
         end
     end
     HideCardsSFX:Play()
 
-    Task.Wait(0.2)
-    if selectedIndex ~= 2 then        
-        EaseUI.EaseY(Cards[selectedIndex], 160, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-        EaseUI.EaseX(Cards[selectedIndex], 0, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
-    end
+    Task.Wait(1.2)
     RewardShimmerSFX:Play()
-    --EaseUI.EaseY(Chest, 110, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
     Task.Wait(1)
 
     local screenSize = UI.GetScreenSize()
     local xTarget = (screenSize.x / 2) - 95 
 
-    -- Drop stuff       
+    --[[ Drop stuff       
     local droppedItems = {}
     local cleanupTask = Task.Spawn(function ()
         for index, drop in ipairs(droppedItems) do
@@ -102,6 +131,6 @@ function RevealChest(selectedIndex, rewardID)
     cleanupTask:Cancel()
     for _, drop in ipairs(RewardDropPanel:GetChildren()) do
         drop:Destroy()
-    end
+    end]]
 end
 

@@ -43,6 +43,8 @@ function OnGameStateChanged (oldState, newState)
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Rewards"])
+	elseif newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END then
+		Events.Broadcast("Changing Menu", "ShowIcons")
 	end
 end
 

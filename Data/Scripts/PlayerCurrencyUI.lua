@@ -15,7 +15,16 @@ end
 function OnMenuChanged(oldMenu, newMenu)
     --local currentState = ABGS.GetGameState()
     if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Rewards"]then
-		ParentPanel.visibility = Visibility.INHERIT
+		for _, panel in ipairs(script.parent:GetChildren()) do
+            if panel.name ~= "Currencies" then
+                panel.visibility = Visibility.FORCE_OFF
+            end
+        end
+        ParentPanel.visibility = Visibility.INHERIT
+    elseif newMenu == "ShowIcons" then
+        for _, panel in ipairs(script.parent:GetChildren()) do
+            panel.visibility = Visibility.INHERIT
+        end
 	else -- hide
 		ParentPanel.visibility = Visibility.FORCE_OFF
 	end

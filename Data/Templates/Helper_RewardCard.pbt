@@ -44,7 +44,7 @@ Assets {
         Control {
           Width: 300
           Height: 387
-          UIY: 140
+          UIY: -500
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -172,6 +172,12 @@ Assets {
             Name: "cs:InfoPanel"
             ObjectReference {
               SubObjectId: 2129854784462765674
+            }
+          }
+          Overrides {
+            Name: "cs:Selected"
+            ObjectReference {
+              SubObjectId: 13788989816343347396
             }
           }
         }
@@ -3808,7 +3814,7 @@ Assets {
         ChildIds: 17444509324531222558
         UnregisteredParameters {
           Overrides {
-            Name: "cs:UpgradeIButton"
+            Name: "cs:UpgradeButton"
             ObjectReference {
               SubObjectId: 17444509324531222558
             }
