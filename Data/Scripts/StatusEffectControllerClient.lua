@@ -42,27 +42,29 @@ end
 
 function Tick(deltaTime)
 	for _, player in ipairs(Game.GetPlayers()) do
-		local effects = API_SE.GetStatusEffectsOnPlayer(player)
+		if Object.IsValid(player) then
+			local effects = API_SE.GetStatusEffectsOnPlayer(player)
 
-		for i = 1, API_SE.MAX_STATUS_EFFECTS do
-			local effectObject = effectObjects[player][i]
+			for i = 1, API_SE.MAX_STATUS_EFFECTS do
+				local effectObject = effectObjects[player][i]
 
-			if effects[i] and not effectObject then
-				local statusEffectData = API_SE.STATUS_EFFECT_DEFINITIONS[effects[i].name]
-				effectObjects[player][i] = World.SpawnAsset(statusEffectData.effectTemplate)
-				effectObjects[player][i]:AttachToPlayer(player, "root")
+				if effects[i] and not effectObject then
+					local statusEffectData = API_SE.STATUS_EFFECT_DEFINITIONS[effects[i].name]
+					effectObjects[player][i] = World.SpawnAsset(statusEffectData.effectTemplate)
+					effectObjects[player][i]:AttachToPlayer(player, "root")
 
-				if effects[i].name == "Blind" and effects[i].source and player == LOCAL_PLAYER and effects[i].source ~= LOCAL_PLAYER.id then
-					local blind = effectObjects[player][i]:GetCustomProperty("Blind"):WaitForObject() 
-					blind:SetSmartProperty("Hold Duration", effects[i].duration)
-					blind:Play()
+					if effects[i].name == "Blind" and effects[i].source and player == LOCAL_PLAYER and effects[i].source ~= LOCAL_PLAYER.id then
+						local blind = effectObjects[player][i]:GetCustomProperty("Blind"):WaitForObject() 
+						blind:SetSmartProperty("Hold Duration", effects[i].duration)
+						blind:Play()
+					end
+				elseif not effects[i] and effectObject then
+					if Object.IsValid(effectObject) then
+						FadeOutEffect(effectObject)
+					end
+
+					effectObjects[player][i] = nil
 				end
-			elseif not effects[i] and effectObject then
-				if Object.IsValid(effectObject) then
-					FadeOutEffect(effectObject)
-				end
-
-				effectObjects[player][i] = nil
 			end
 		end
 	end
