@@ -37,7 +37,7 @@ API.CLASS = {
 }
 
 API.CLASS_NAME = {
-    [API.CLASS.TANK] = "Tank",
+    [API.CLASS.TANK] = "Warrior",
     [API.CLASS.MAGE] = "Mage",
     [API.CLASS.HUNTER] = "Hunter",
     [API.CLASS.HEALER] = "Healer",
@@ -124,7 +124,7 @@ API.MAX_LEVEL = 10
 API.MAX_CLASS_LEVEL = 50
 
 API.ReqXp = {
-    [1] = 0,
+    [1] = 500,
     [2] = 2000,
     [3] = 3500,
     [4] = 5000,

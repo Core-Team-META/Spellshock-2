@@ -97,6 +97,7 @@ function OnMenuChanged(oldMenu, newMenu)
 			if META_AP()[data.ClassID] == currentClass then
 				newButton = classButton
 			end
+			classButton.clientUserData.level.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[data.ClassID])) )
 		end
 
 		OnClassClicked(newButton)
@@ -612,7 +613,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 	local newClassPanel = World.SpawnAsset(HelperClassButtonTemplate, {parent = LeftPanel_IdlePanel})
 	newClassPanel.x = LeftPanel_StartPosition.x
 	newClassPanel.y = LeftPanel_StartPosition.y + (LeftPanel_Y_Offset * (i-1))
-	
+
 	-- Set the name, skillset, icon and confirm icon
 	local nameText = newClassPanel:GetCustomProperty("ClassName"):WaitForObject()
 	nameText.text = string.upper( childClass.name )
@@ -664,6 +665,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 		CurrentClassButton = buttonComponent
 	end
 	
+	buttonComponent.clientUserData.level = newClassPanel:GetCustomProperty("Level"):WaitForObject()
 	buttonComponent.clientUserData.panel = newClassPanel
 	buttonComponent.clientUserData.dataTable = dataTable
 end
