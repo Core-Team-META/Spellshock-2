@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16388825162191980240
+  Name: "Rock Pile 002"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rocks_small_002"
+  }
+}
+Assets {
   Id: 16072726743892194472
   Name: "Fantasy Corners 006"
   PlatformAssetType: 9
@@ -215,15 +224,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8197503148267063602
-  Name: "Fantasy Castle Wall 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_wall_002"
-  }
-}
-Assets {
   Id: 7701522665120399714
   Name: "Frame Outlined 007"
   PlatformAssetType: 9
@@ -233,21 +233,21 @@ Assets {
   }
 }
 Assets {
-  Id: 7362232965091765999
-  Name: "Bricks Mortar Thick 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_bricks_mortar_001_uv"
-  }
-}
-Assets {
   Id: 6724534832103276994
   Name: "BG Flat 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
+  }
+}
+Assets {
+  Id: 6476226809204619067
+  Name: "Stone Block Big Broken"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fantasy_block_broken_04"
   }
 }
 Assets {
@@ -350,30 +350,12 @@ Assets {
   }
 }
 Assets {
-  Id: 1626097446304398136
-  Name: "Stucco Tintable"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_stucco_tint_001_uv"
-  }
-}
-Assets {
   Id: 1046635934407451220
   Name: "Fantasy Craft Crystal 018"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_018"
-  }
-}
-Assets {
-  Id: 125457281986470150
-  Name: "Bricks Stone Floor Large 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_brick_stone_floor_large_001"
   }
 }
 Assets {

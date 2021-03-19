@@ -78,7 +78,6 @@ Objects {
   ChildIds: 4598412272264715444
   ChildIds: 16223040169054749634
   ChildIds: 9832731735981833309
-  ChildIds: 3886707144223941666
   ChildIds: 354285136108517247
   UnregisteredParameters {
     Overrides {
@@ -96,7 +95,7 @@ Objects {
     Overrides {
       Name: "cs:4"
       ObjectReference {
-        SelfId: 3886707144223941666
+        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -160,57 +159,6 @@ Objects {
     }
     Teams {
       TeamInt: 2
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 3886707144223941666
-  Name: "Old Mines Collider"
-  Transform {
-    Location {
-      X: -13720
-      Y: 14805
-      Z: -6575
-    }
-    Rotation {
-      Yaw: -40
-    }
-    Scale {
-      X: 170.3
-      Y: 246.699951
-      Z: 149.5
-    }
-  }
-  ParentId: 14067136948649209529
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsBaseCollider"
-      Bool: true
-    }
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6747614045051753376
-    }
-    Teams {
-      TeamInt: 1
       IsEnemyCollisionEnabled: true
     }
     StaticMesh {
