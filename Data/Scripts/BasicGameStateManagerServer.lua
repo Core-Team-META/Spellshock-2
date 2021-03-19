@@ -81,10 +81,10 @@ function SetGameState(newState)
 		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 15
+		stateDuration = 30
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
-		stateDuration = 10
+		stateDuration = 5
 	else
 		error("Tried to set game state to unknown state %d", newState)
 	end

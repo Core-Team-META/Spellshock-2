@@ -322,10 +322,15 @@ function API.BuildRewardsTable(list, classData)
             for _, bind in ipairs(class:GetChildren()) do 
                 local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
                 local icon = bind:GetCustomProperty("Icon")
+                local description = bind:GetCustomProperty("Description")
+                local classIcon = class:GetCustomProperty("Icon")
 
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
                 tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Description = description
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassIcon = classIcon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassName = class.name
             end
         end
     end
