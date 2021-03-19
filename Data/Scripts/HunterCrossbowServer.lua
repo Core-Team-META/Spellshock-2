@@ -153,7 +153,9 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 		if Object.IsValid(other) then
 			if other:IsA("Player") then
 				local socket = hitResult.socketName
+				local worldTransform = bomb:GetWorldTransform()
 				bomb:AttachToPlayer(other, socket)
+				bomb:SetWorldTransform(worldTransform)
 			end
 		end
 
