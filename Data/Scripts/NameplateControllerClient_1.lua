@@ -17,6 +17,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- Internal custom properties
 local AS = require(script:GetCustomProperty("API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local NAMEPLATE_TEMPLATE = script:GetCustomProperty("NameplateTemplate")
 local SEGMENT_SEPARATOR_TEMPLATE = script:GetCustomProperty("SegmentSeparatorTemplate")
@@ -394,6 +395,9 @@ function Tick(deltaTime)
 
 					-- Update name and health color based on teams
 					if SHOW_NAMES then
+						local currentClass = player:GetResource("CLASS_MAP")
+						local classLevel = player:GetResource(UTIL.GetClassLevelString(currentClass))
+						nameplate.nameText.text = string.format("[%d] %s", classLevel, player.name)
 						nameplate.nameText:SetColor(_G.TeamColors[player.team])
 						nameplate.healthPiece:SetColor(_G.TeamColors[player.team])
 					end
