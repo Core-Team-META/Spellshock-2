@@ -2,7 +2,7 @@ Assets {
   Id: 2152887979477253565
   Name: "Elven Leaves from Kelp Bush 02_1"
   PlatformAssetType: 13
-  SerializationVersion: 79
+  SerializationVersion: 80
   CustomMaterialAsset {
     BaseMaterialId: 9577313112409999312
     ParameterOverrides {

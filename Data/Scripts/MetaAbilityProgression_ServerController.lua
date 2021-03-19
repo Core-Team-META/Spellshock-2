@@ -286,8 +286,7 @@ function API.ChangeClass(player, class)
             )
         end
     end
-    --player:SetResource(CONST.CLASS_LEVEL, playerLevel)
-
+    player:SetResource(CONST.CLASS_LEVEL, _G["Class.Progression"].GetClassLevel(player, class))
     AdjustPlayerHealth(player, class)
     API.AdjustPlayerMovment(player, class)
 end
