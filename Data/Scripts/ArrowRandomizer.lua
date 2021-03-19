@@ -6,7 +6,7 @@ local ARROW = script.parent
 local ARC = script.parent.parent
 
 Task.Wait()
-Ease3D.EasePosition(ARROW, Vector3.New(0, 0, -100), DURATION, Ease3D.EasingEquation.ELASTIC, Ease3D.EasingDirection.INOUT)
+Ease3D.EasePosition(ARROW, Vector3.New(0, 0, -100), DURATION, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.INOUT)
 --Ease3D.EaseRotation(ARROW, Rotation.New(0, 0, 360), DURATION, Ease3D.EasingEquation.SINE, Ease3D.EasingDirection.INOUT)
 --Ease3D.EasePosition(ARC, TARGET, DURATION, Ease3D.EasingEquation.CUBIC, Ease3D.EasingDirection.IN)
 Task.Wait(DURATION + .3)

@@ -174,7 +174,7 @@ Objects {
 }
 Objects {
   Id: 8708515630698603364
-  Name: "Warrior"
+  Name: "Tank"
   Transform {
     Location {
     }

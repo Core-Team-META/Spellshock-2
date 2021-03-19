@@ -27,6 +27,8 @@ local playerCosmetic = {}
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
+
+
 ------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -49,6 +51,7 @@ function Int()
     --UTIL.TablePrint(playerCosmetic)
 end
 
+
 function OnChildAdded(parent, object)
     if parent == DATA_TRANSFER and object.name == LOCAL_PLAYER.id then
         local dataStr = object:GetCustomProperty("data")
@@ -58,12 +61,7 @@ function OnChildAdded(parent, object)
         end
         playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
         Events.BroadcastToServer("OnDestroyPlayerDataObject")
-        Task.Spawn(
-            function()
-                STORE_CLIENT.context.CosmeticPurchaseChange()
-            end,
-            1
-        )
+        STORE_CLIENT.context.CosmeticPurchaseChange()
     end
 end
 

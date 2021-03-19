@@ -616,13 +616,14 @@ end
 function CosmeticResourceChange(_, name)
 	if name == cosmeticResourceName then
 		if string.find(name, "S") then
-			ApplyCosmeticHelper()
 			UpdateEntryButton(currentlySelected, false)
 			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 			purchaseText.text = "EQUIP"
 			purchaseText:GetChildren()[1].text = "EQUIP"
 			controlsLocked = false
 			propPurchaseButton.visibility = Visibility.INHERIT
+		else
+			ApplyCosmeticHelper()
 		end
 		if cosmeticResourceChangeEvent then
 			cosmeticResourceChangeEvent:Disconnect()

@@ -8204,17 +8204,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 3572973441900576158
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 4137738316238168700
       value {
         Overrides {
@@ -8244,61 +8233,6 @@ Objects {
         }
       }
     }
-    ParameterOverrideMap {
-      key: 5207518042932427826
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9338269498777302214
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9592143972325852580
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 17165211897140797991
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 17212955378837482682
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
     TemplateAsset {
       Id: 15098451683578824339
     }
@@ -8319,28 +8253,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 4182307201867080222
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10143524279940654328
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 16295755683547083001
       value {
@@ -12209,39 +12121,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5652087806941531378
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6894922659357543217
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 13596306798365901416
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 15917029441460979278
       value {
         Overrides {
@@ -14891,39 +14770,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 332376740116708933
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6229405622172869471
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 7359047989305185374
-      value {
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 8006897166724501526
       value {

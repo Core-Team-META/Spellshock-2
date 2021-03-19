@@ -1,4 +1,4 @@
--- Module dependencies
+﻿-- Module dependencies
 local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
 	return MODULE:Get("standardcombo.Combat.Wrap")
@@ -37,7 +37,7 @@ function PlaceObject(thisAbility)
 
 	local placementTemplate = PlayerVFX.Placement
 	META_AP().SpawnAsset(placementTemplate, {position = position, rotation = rotation, scale = vfxScale})
-	Task.Wait(0.25)
+
 	-- Damage enemies
 	local nearbyEnemies = Game.FindPlayersInSphere(position, radius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 	--CoreDebug.DrawSphere(position, DEFAULT_DamageRadius, {duration=5})

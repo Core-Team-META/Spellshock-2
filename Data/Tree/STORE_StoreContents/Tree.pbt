@@ -9819,7 +9819,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -9912,7 +9912,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10005,7 +10005,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10098,7 +10098,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10191,7 +10191,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10284,7 +10284,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10377,7 +10377,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10470,7 +10470,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10563,7 +10563,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10656,7 +10656,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10749,7 +10749,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10842,7 +10842,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -10935,7 +10935,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11028,7 +11028,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11121,7 +11121,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11214,7 +11214,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11295,7 +11295,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Warrior"
+      String: "Frost Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11307,7 +11307,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11388,7 +11388,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Warrior"
+      String: "Fire Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11400,7 +11400,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11481,7 +11481,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Epic Warrior"
+      String: "Epic Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11493,7 +11493,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11566,7 +11566,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Epic Warrior"
+      String: "Epic Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11578,7 +11578,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11651,7 +11651,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Rare Warrior"
+      String: "Rare Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11663,7 +11663,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11744,7 +11744,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Rare Warrior"
+      String: "Rare Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11756,7 +11756,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11837,7 +11837,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Uncommon Warrior"
+      String: "Uncommon Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11849,7 +11849,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -11922,7 +11922,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Uncommon Warrior"
+      String: "Uncommon Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -11934,7 +11934,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -12007,7 +12007,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Warrior"
+      String: "Common Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -12019,7 +12019,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
@@ -12092,7 +12092,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Warrior"
+      String: "Common Tank"
     }
     Overrides {
       Name: "cs:ID"
@@ -12104,7 +12104,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Tags"
-      String: "Warrior"
+      String: "Tank"
     }
     Overrides {
       Name: "cs:Types"
