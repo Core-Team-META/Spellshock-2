@@ -14,7 +14,7 @@ local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local EXPLOSION_VFX = script:GetCustomProperty("HunterChargedArrowExplosionVFX")
 local EXPLOSION_SOURCE = script:GetCustomProperty("ExplosionSource"):WaitForObject()
 
-Task.Wait(2)
+Task.Wait(0.25)
 
 local damageRange = ROOT.serverUserData.damageRange
 local sourcePlayer = ROOT.serverUserData.sourcePlayer

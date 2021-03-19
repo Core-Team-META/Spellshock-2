@@ -231,7 +231,7 @@ Assets {
         }
         Control {
           Width: 4
-          Height: 30
+          Height: 16
           UIX: -80
           RotationAngle: 90
           RenderTransformPivot {
@@ -292,7 +292,7 @@ Assets {
         }
         Control {
           Width: 4
-          Height: 30
+          Height: 16
           UIX: 80
           RotationAngle: -90
           RenderTransformPivot {
@@ -412,8 +412,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 3
-          Height: 3
+          Width: 2
+          Height: 2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
