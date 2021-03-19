@@ -53,12 +53,14 @@ end
 local function SetClassLevel(player, class, level)
     classProgression[player.id][class][API.LEVEL] = level
     SetClassLevelResources(player, classProgression[player.id])
+    player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class)))
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 local function SetClassXp(player, class, xp)
     classProgression[player.id][class][API.XP] = xp
+    player:SetResource("CLASS_XP", xp)
 end
 
 local function GetReqXp(level)
@@ -136,6 +138,7 @@ function API.GetClassLevel(player, class)
      then
         return 1
     end
+    player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class)))
     return tonumber(classProgression[player.id][class][CONST.PROGRESS.LEVEL])
 end
 
@@ -152,6 +155,7 @@ function API.AddXP(player, class, xp)
         return
     end
     classProgression[player.id][class][CONST.PROGRESS.XP] = CoreMath.Round(API.GetClassXP(player, class) + xp)
+    player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class) + xp))
     ClassLevelUp(player, class)
 end
 

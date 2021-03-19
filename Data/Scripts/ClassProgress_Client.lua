@@ -12,6 +12,9 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 -- Objects
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
+local PROGRESS_BAR = script:GetCustomProperty("UIProgressBar"):WaitForObject()
+local XP_TEXT_BOX = script:GetCustomProperty("UITextBox"):WaitForObject()
+local XP_TEXT_BOX2 = script:GetCustomProperty("HM_AMOUNT"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- Custom Properties
 ------------------------------------------------------------------------------------------------------------------------
@@ -40,6 +43,17 @@ function OnPlayerLeft(player)
             listener:Disconnect()
             listener = nil
         end
+    end
+end
+
+function Tick()
+    local xp = LOCAL_PLAYER:GetResource("CLASS_XP")
+    local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL) + 1
+    if xp and level and level >= 1 then
+        local reqXp = CONST.ReqXp[level]
+        PROGRESS_BAR.progress = xp / reqXp
+        XP_TEXT_BOX.text = UTIL.FormatInt(xp) .. " / " .. UTIL.FormatInt(reqXp)
+        XP_TEXT_BOX2.text = UTIL.FormatInt(xp) .. " / " .. UTIL.FormatInt(reqXp)
     end
 end
 
