@@ -52,7 +52,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 function OnResourceChanged(player, resName, resAmt)
     if player == LOCAL_PLAYER and IsAchievement(resName) and resAmt == ACH_API.GetAchievementRequired(resName) then
-        achievementQueue[#achievementQueue + 1] = resName
+        --achievementQueue[#achievementQueue + 1] = resName
     elseif player == LOCAL_PLAYER and IsAchievement(resName) and resAmt == 1 then
     --#TODO Achievement Claimed
     --World.SpawnAsset(SFX_Achievement)
