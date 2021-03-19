@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6105314292304768964
+        ParentId: 4781671109827199097
         ChildIds: 9166886723920556442
         ChildIds: 17507666159714812191
         UnregisteredParameters {
@@ -44,6 +44,7 @@ Assets {
         Control {
           Width: 300
           Height: 387
+          UIX: 29.626709
           UIY: -500
           RenderTransformPivot {
             Anchor {
@@ -288,6 +289,7 @@ Assets {
         ChildIds: 17992064986333445014
         ChildIds: 14498925198243784158
         ChildIds: 6755042159048865836
+        ChildIds: 16606988221798621136
         ChildIds: 4271569963182933425
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -600,6 +602,70 @@ Assets {
             Color {
               R: 1
               G: 0.539652526
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16606988221798621136
+        Name: "SELECTED_HIGHLIGHT"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -1.36603776e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3105779701003679967
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceon"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 116
+          Height: 208
+          UIY: -175.255
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 5196377603841433560
+            }
+            Color {
+              R: 0.75
+              G: 1
+              B: 0.766556323
               A: 1
             }
             TeamSettings {
@@ -11668,6 +11734,7 @@ Assets {
         ChildIds: 14654515458868365689
         ChildIds: 18370920895080551582
         ChildIds: 274124369082817609
+        ChildIds: 4012880212010872084
         ChildIds: 17019345361324427341
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11979,6 +12046,70 @@ Assets {
             Color {
               R: 1
               G: 0.539652526
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4012880212010872084
+        Name: "SELECTED_HIGHLIGHT"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -1.36603776e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4564567030173495414
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceon"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 116
+          Height: 187
+          UIY: -147
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 5196377603841433560
+            }
+            Color {
+              R: 0.75
+              G: 1
+              B: 0.766556323
               A: 1
             }
             TeamSettings {
@@ -16761,6 +16892,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Corners_006"
+      }
+    }
+    Assets {
+      Id: 5196377603841433560
+      Name: "BG Gradient 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundFlat_020"
       }
     }
     Assets {

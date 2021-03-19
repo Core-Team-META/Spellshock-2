@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16568858775813686676
+  Name: "Emblem 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_056"
+  }
+}
+Assets {
   Id: 16532880832873788683
   Name: "BG Flat 002"
   PlatformAssetType: 9
@@ -140,15 +149,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 14016723922600970733
-  Name: "Icon Plaque"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Plaque"
   }
 }
 Assets {
