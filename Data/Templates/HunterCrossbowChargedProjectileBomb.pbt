@@ -265,6 +265,7 @@ Assets {
         Name: "ChargeUpVFX"
         Transform {
           Location {
+            X: -55.8965187
           }
           Rotation {
           }
