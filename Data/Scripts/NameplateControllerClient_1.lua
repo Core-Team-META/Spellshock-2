@@ -404,6 +404,10 @@ function Tick(deltaTime)
 				end
 			end
 		end
+		if player.clientUserData.lastLevel ~= player:GetResource("CLASS_MAP") then
+			player.clientUserData.lastLevel = player:GetResource("CLASS_MAP")
+			nameplates[player].dirty = true
+		end
 	end
 end
 
