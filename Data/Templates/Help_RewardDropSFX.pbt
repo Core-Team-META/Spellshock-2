@@ -1,6 +1,6 @@
 Assets {
   Id: 8568066535552400044
-  Name: "Helper_RewardDropSFX"
+  Name: "Help_RewardDropSFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
