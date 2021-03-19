@@ -1,10 +1,14 @@
 local LOCAL_PLAYER = Game.GetLocalPlayer()
     
+local AS = require(script:GetCustomProperty("API"))
+local ABGS = require(script:GetCustomProperty("ABGS"))
+
 local CIRCLE = script:GetCustomProperty("Circle"):WaitForObject()
 local LEFT_ARROW = script:GetCustomProperty("LeftArrow"):WaitForObject()
 local RIGHT_ARROW = script:GetCustomProperty("RightArrow"):WaitForObject()
 local CROSS = script:GetCustomProperty("Cross"):WaitForObject()
 local DOT = script:GetCustomProperty("Dot"):WaitForObject()
+local ROOT = script.parent
 
 CROSS.visibility = Visibility.FORCE_OFF
 CIRCLE.visibility = Visibility.FORCE_OFF
@@ -15,7 +19,16 @@ local arrowDistance = 1
 
 local isCasting = false
 
+
 function Tick(dt)
+  
+    local reticleVisible = not (AS.IsViewingMap() or AS.IsRespawning() or AS.IsJoiningMidgame() or LOCAL_PLAYER.isDead )
+    if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
+        reticleVisible = false
+    end
+
+    ROOT.visibility = reticleVisible and Visibility.INHERIT or Visibility.FORCE_OFF
+
     local size = LOCAL_PLAYER.currentSpread * 1.4 + 10
 
     CIRCLE.width = math.floor(size+0.5)
@@ -62,7 +75,6 @@ local onCrossbowFiredHandler = Events.Connect("OnCrossbowFired", function()
     
 
     CIRCLE.visibility = Visibility.FORCE_OFF
-    --CROSS.visibility = Visibility.INHERIT
 
     Task.Wait(0.5)
     CROSS.visibility = Visibility.FORCE_OFF

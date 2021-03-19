@@ -440,6 +440,12 @@ Assets {
               Id: 9770511928359673738
             }
           }
+          Overrides {
+            Name: "cs:HunterChargedArrowExplosionVFX"
+            AssetReference {
+              Id: 2093703942921456330
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -498,5 +504,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 79
+  SerializationVersion: 80
 }

@@ -29,6 +29,9 @@ function AbilityTick(ability, deltaTime)
     end
 
     if SHOOT_ABILITY:GetCurrentPhase() == AbilityPhase.CAST then
+        if LOCAL_PLAYER.isDead then
+            SHOOT_ABILITY:Interrupt()
+        end
         if not LOCAL_PLAYER:IsBindingPressed(SHOOT_BINDING) then
             LOCAL_PLAYER.spreadModifier = 0
             SHOOT_ABILITY:AdvancePhase()
@@ -112,6 +115,9 @@ function OnInterruptAbility(ability)
     LOCAL_PLAYER.spreadModifier = 0
     Events.Broadcast("OnCrossbowInterrupt")
     ChargePanel.visibility = Visibility.FORCE_OFF
+    CHARGE_UP_VFX:Stop()
+    CHARGE_UP_SFX:Stop()
+    CHARGE_UP_VFX.visibility = Visibility.FORCE_OFF
 end
 
 
