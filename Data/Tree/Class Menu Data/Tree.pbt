@@ -3749,7 +3749,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages enemies."
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Slow Effect = 40%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
@@ -3928,7 +3928,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target."
+      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target. Hawk Attack Range = 2000. Slow Effect = 50%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4108,7 +4108,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time."
+      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time. Placement Range = 3100. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -4339,7 +4339,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies take damage and are launched away from the point of impact."
+      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots are stunned.."
     }
     Overrides {
       Name: "cs:Bind"
