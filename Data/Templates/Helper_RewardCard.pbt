@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8135997125524212698
+        ParentId: 18393261942096671057
         ChildIds: 9166886723920556442
         ChildIds: 17507666159714812191
         UnregisteredParameters {
@@ -105,7 +105,7 @@ Assets {
           Overrides {
             Name: "cs:Title"
             ObjectReference {
-              SubObjectId: 9342720390053170206
+              SubObjectId: 497474703560217920
             }
           }
           Overrides {
@@ -118,6 +118,12 @@ Assets {
             Name: "cs:Level"
             ObjectReference {
               SubObjectId: 17944120657035847651
+            }
+          }
+          Overrides {
+            Name: "cs:NextLevel"
+            ObjectReference {
+              SubObjectId: 4707625847759957188
             }
           }
           Overrides {
@@ -2631,7 +2637,7 @@ Assets {
       }
       Objects {
         Id: 497474703560217920
-        Name: "TITLE"
+        Name: "Ability Name"
         Transform {
           Location {
             X: -1887.9707
@@ -4520,7 +4526,7 @@ Assets {
       }
       Objects {
         Id: 4707625847759957188
-        Name: "LVL"
+        Name: "Next Level"
         Transform {
           Location {
           }
@@ -4835,7 +4841,7 @@ Assets {
       }
       Objects {
         Id: 9342720390053170206
-        Name: "TITLE"
+        Name: "Ability Skill Points"
         Transform {
           Location {
             X: -1887.97266
@@ -4871,7 +4877,7 @@ Assets {
             }
           }
           Text {
-            Label: "Ability Skill Point"
+            Label: "Ability Skill Points"
             Color {
               R: 0.812000036
               G: 0.542265475
@@ -11732,7 +11738,7 @@ Assets {
         ChildIds: 14654515458868365689
         ChildIds: 18370920895080551582
         ChildIds: 274124369082817609
-        ChildIds: 4012880212010872084
+        ChildIds: 11530037795992194490
         ChildIds: 17019345361324427341
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -12064,13 +12070,12 @@ Assets {
         }
       }
       Objects {
-        Id: 4012880212010872084
+        Id: 11530037795992194490
         Name: "SELECTED_HIGHLIGHT"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -1.36603776e-05
           }
           Scale {
             X: 1
@@ -12089,9 +12094,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 116
-          Height: 187
-          UIY: -147
+          Width: 234
+          Height: 226
+          UIY: -150
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -12102,13 +12107,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 5196377603841433560
+              Id: 14343216197126221006
             }
             Color {
               R: 0.75
-              G: 1
-              B: 0.766556323
-              A: 1
+              G: 0.417218417
+              A: 0.828000069
             }
             TeamSettings {
             }
@@ -17088,15 +17092,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "BackgroundNoOutline_015"
-      }
-    }
-    Assets {
-      Id: 5196377603841433560
-      Name: "BG Gradient 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundFlat_020"
       }
     }
     Assets {

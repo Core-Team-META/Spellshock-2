@@ -176,6 +176,7 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         local Title = AbilityCard:GetCustomProperty("Title"):WaitForObject()
         local AbilityIcon = AbilityCard:GetCustomProperty("AbilityIcon"):WaitForObject()
         local Level = AbilityCard:GetCustomProperty("Level"):WaitForObject()
+        local NextLevel = AbilityCard:GetCustomProperty("NextLevel"):WaitForObject()
         local CurrentPoints = AbilityCard:GetCustomProperty("CurrentPoints"):WaitForObject()
         local RewardPoints = AbilityCard:GetCustomProperty("RewardPoints"):WaitForObject()
         local CurrentProgress = AbilityCard:GetCustomProperty("CurrentProgress"):WaitForObject()
@@ -202,9 +203,11 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         ClassName.text = infoTable.ClassName
         Title.text = infoTable.Name
         AbilityIcon:SetImage(infoTable.Image)
-        Level.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, bind, class))
+        local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
+        Level.text = tostring(abilityLevel)
+        NextLevel.text = tostring(abilityLevel+1)
         CurrentPoints.text = tostring(currentAmmount)
-        RewardPoints.text = tostring(reward)
+        RewardPoints.text = "+"..tostring(reward)
         CurrentProgress.progress = currentAmmount / reqXp
         RewardProgress.progress = (currentAmmount + reward) / reqXp
         LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
