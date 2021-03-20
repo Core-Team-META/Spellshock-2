@@ -1,5 +1,6 @@
 ﻿local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 
 local MenuData = script:GetCustomProperty("MenuData"):WaitForObject()
@@ -163,7 +164,6 @@ function UpdateClassInfo(thisButton)
 	AbilityName:GetChildren()[1].text = "Overview"
 
 	-- Update all ability buttons and reset them to their idle state
-	local classLevel = 0
 	for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
 		local ConfirmIcon = abilityPanel:GetCustomProperty("ConfirmIcon"):WaitForObject()
@@ -179,7 +179,6 @@ function UpdateClassInfo(thisButton)
 		local bind = dataTable["Abilities"][i]["BindID"]
 		local level = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[bind], META_AP()[class])
 		Level.text = tostring(level)
-		classLevel = classLevel + level
 
 		local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[class], META_AP()[bind])
 		local shardCost = SHARD_COSTS[level].reqXP
@@ -198,12 +197,24 @@ function UpdateClassInfo(thisButton)
 	-- Update the Class Description Panel
 	local ClassLevel = RightPanel_ClassDescriptionPanel:GetCustomProperty("ClassLevel"):WaitForObject()
 	local DescriptionText = RightPanel_ClassDescriptionPanel:GetCustomProperty("DescriptionText"):WaitForObject()
-	ClassLevel.text = tostring( LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]])) )
+	local BaseHealth = RightPanel_ClassDescriptionPanel:GetCustomProperty("BaseHealth"):WaitForObject()
+	local HealthRegen = RightPanel_ClassDescriptionPanel:GetCustomProperty("HealthRegen"):WaitForObject()
+
 	if LOCAL_PLAYER.team == 1 then
 		DescriptionText.text = dataTable["OrcDescription"]
 	else
 		DescriptionText.text = dataTable["ElfDescription"]
 	end
+
+	local classLevel = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
+	ClassLevel.text = tostring(classLevel)
+
+	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
+	BaseHealth.text = tostring(classHealth)
+
+	local regenAmount = 0.06 + (0.04 * classLevel)
+    if regenAmount > 2 then regenAmount = 2 end
+	HealthRegen.text = string.format("+%s / 1s", tostring(regenAmount))
 
 	-- Change the costume on the animated mesh
 	local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
@@ -261,34 +272,32 @@ function UpdateAbilityInfo(thisButton)
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
-	local ShardCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("ShardCost"):WaitForObject()
+	local AbilityXP = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityXP"):WaitForObject()
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
 	local LevelProgressBar = LevelInfoPanel:GetCustomProperty("LevelProgressBar"):WaitForObject()
-	local NextLevelXP = LevelInfoPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
 
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[dataTable["BindID"]], META_AP()[dataTable["ClassID"]])
-	local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
-	local shardCost = SHARD_COSTS[abilityLevel].reqXP
+	local currentXP = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
+	local reqXP = SHARD_COSTS[abilityLevel].reqXP
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
 	AbilityName.text = dataTable["Name"]
 	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
-	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
+	AbilityXP.text = string.format("%d / %d XP", currentXP, reqXP)
 	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
 	LevelText.text = tostring(abilityLevel)
-	LevelProgressBar.progress = currentShards / shardCost
-	NextLevelXP.text = tostring(shardCost)
+	LevelProgressBar.progress = currentXP / reqXP
 
-	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
+	if currentXP >= reqXP and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
+		RightPanel_UpgradeButton.isInteractable = true
 	else
-		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+		RightPanel_UpgradeButton.isInteractable = false
 	end
 
 	-- Remove any previous mod panels 
@@ -433,7 +442,8 @@ end
 
 function OnLocalResourceChanged(player, resName, resAmount)
 	if resName ~= LevelResourceName then return end -- Check resource name
-	
+	Task.Wait()
+	print("Upgrade complete: "..tostring(resAmount))
 	ResourceChangedEventListener:Disconnect()
 	ResourceChangedEventListener = nil
 	LevelResourceName = nil
@@ -460,17 +470,17 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	if currentShards >= shardCost and currentGold >= goldCost then
 		UpgradePanel.visibility = Visibility.INHERIT
 		ShowMorePanel.visibility = Visibility.FORCE_OFF
+		RightPanel_UpgradeButton.isInteractable = true
 	else
 		UpgradePanel.visibility = Visibility.FORCE_OFF
 		ShowMorePanel.visibility = Visibility.INHERIT
+		RightPanel_UpgradeButton.isInteractable = false
 	end
 
 	isUpgrading = false -- turn upgradin off
 
 	-- Force the clicked event so the text updates with the new values
 	OnAbilityClicked(CurrentAbilityButton)
-	
-	RightPanel_UpgradeButton.isInteractable = true -- turn Upgrade button back on
 end
 
 function AttachCostumeToPlayer(player)
@@ -685,7 +695,7 @@ end
 
 -- Setup the Upgrade button
 RightPanel_UpgradeButton.clickedEvent:Connect(OnUpgradeButtonClicked)
-RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+--RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
 
 -- Setup the Confirm Choice button
 ConfirmChoiceButton.clickedEvent:Connect(OnConfirmChoiceClicked)

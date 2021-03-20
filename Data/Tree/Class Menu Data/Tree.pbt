@@ -4300,7 +4300,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Close combat warrior"
+      String: "Close combat brawler"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -4308,7 +4308,7 @@ Objects {
     }
     Overrides {
       Name: "cs:OrcDescription"
-      String: "\342\200\234These harsh lands are our birthright, warrior. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
+      String: "\342\200\234These harsh lands are our birthright, guardian. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
     }
     Overrides {
       Name: "cs:ElfDescription"
