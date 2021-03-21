@@ -89,12 +89,16 @@ if boundsHeight > boundsWidth then
 	scaleX = scaleY
 end
 local scaleLabels = scaleY * 0.15
+
+local disableShaped = true
 --local offsetX = 0
 --local offsetY = 0
 --if boundsWidth > boundsHeight then
 --	offsetY = 
 
 -- Spawn 2D shapes
+
+
 function AddForShape(shape)
 	local pos = shape:GetWorldPosition()
 	local rot = shape:GetWorldRotation()
@@ -113,7 +117,7 @@ function AddForShape(shape)
 	
 	return mapPiece
 end
-
+if not disableShaped then
 -- Border
 for _,shape in ipairs(worldShapes) do
 	local mapPiece = AddForShape(shape)
@@ -141,7 +145,7 @@ for _,shape in ipairs(worldShapes) do
 		mapPiece:SetColor(baseColor)
 	end
 end
-
+end
 -- Labels
 for _,text in ipairs(worldTexts) do
 	text.isEnabled = false

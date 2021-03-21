@@ -16,6 +16,9 @@ Objects {
   }
   ParentId: 7371117519618108034
   ChildIds: 15037917156129200834
+  ChildIds: 12376446809326323862
+  ChildIds: 6136183747213178366
+  ChildIds: 15612543836867272128
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -26,6 +29,364 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 15612543836867272128
+  Name: "Minimap Panel"
+  Transform {
+    Location {
+      X: -3310
+      Y: 12580
+      Z: 2810
+    }
+    Rotation {
+      Yaw: 135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9597028236690644535
+  ChildIds: 16275981557829634173
+  ChildIds: 7954357053584507090
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7954357053584507090
+  Name: "HideAndShowUI"
+  Transform {
+    Location {
+      X: -11235.9277
+      Y: 6554.88281
+      Z: -2810
+    }
+    Rotation {
+      Yaw: -135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15612543836867272128
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6101574587735603905
+    }
+  }
+}
+Objects {
+  Id: 16275981557829634173
+  Name: "MiniMap Panel"
+  Transform {
+    Location {
+      X: -9864.88184
+      Y: 1344.07031
+      Z: 5620
+    }
+    Rotation {
+      Yaw: -90.0000076
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15612543836867272128
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 500
+    Height: 500
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6136183747213178366
+  Name: "ScreenObjectGroup"
+  Transform {
+    Location {
+      Z: 3828.15405
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.01
+      Y: 0.01
+      Z: 0.01
+    }
+  }
+  ParentId: 9597028236690644535
+  ChildIds: 17095004783059303815
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17095004783059303815
+  Name: "Game Portal"
+  Transform {
+    Location {
+      Y: -500
+      Z: -307
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.5625
+    }
+  }
+  ParentId: 6136183747213178366
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Portal Shape"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Edge Distance"
+      Float: 0.169120297
+    }
+    Overrides {
+      Name: "bp:Portal Spread"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:View Distortion Amount"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Intersection Distance"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Unlit"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Disable Swirl and Edge"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Mask Range"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Rotation"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Swirl Element Distance"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Edge Distortion"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Use World Capture"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Color Offset A"
+      Float: 0.0261588935
+    }
+    Overrides {
+      Name: "bp:Color Offset B"
+      Float: 0.170215309
+    }
+    Overrides {
+      Name: "bp:Color Offset C"
+      Float: 0.364886165
+    }
+    Overrides {
+      Name: "bp:Intensity Color Blend"
+      Float: 0.325952
+    }
+    Overrides {
+      Name: "bp:Game ID"
+      String: "47cb81/screenshottestdivide"
+    }
+    Overrides {
+      Name: "bp:Screenshot Index"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Speed"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Cast Shadows"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Use Radial Mask"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Mask Hardness"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:U Scale"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Horizontal Bend Amount"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Vertical Bend Amount"
+      Float: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 17413793273080869839
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 12376446809326323862
+  Name: "MinimapScreenObject"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9597028236690644535
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ScreenObject"
+      AssetReference {
+        Id: 1676661402537418123
+      }
+    }
+    Overrides {
+      Name: "cs:MiniMapPanel"
+      ObjectReference {
+        SelfId: 16275981557829634173
+      }
+    }
+    Overrides {
+      Name: "cs:ScreenObjectGroup"
+      ObjectReference {
+        SelfId: 6136183747213178366
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4822191344238976801
+    }
   }
 }
 Objects {
