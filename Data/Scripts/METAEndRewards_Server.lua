@@ -127,16 +127,16 @@ local function GetNumberOfCards(player)
     elseif topRanks[1] >= 25 or topRanks[2] >= 25 then
         cardCount = 8
     
-    -- Any class rank 15
-    elseif topRanks[1] >= 15 or topRanks[2] >= 15 then
+    -- Any two classes rank 10
+    elseif topRanks[1] >= 10 and topRanks[2] >= 10 then
         cardCount = 7
+
+    -- Any class rank 10
+    elseif topRanks[1] >= 10 or topRanks[2] >= 10 then
+        cardCount = 6
 
     -- Any class rank 5
     elseif topRanks[1] >= 5 or topRanks[2] >= 5 then
-        cardCount = 6
-
-    -- Any class rank 2
-    elseif topRanks[1] >= 2 or topRanks[2] >= 2 then
         cardCount = 5
     end
     --print("Card count: "..tostring(cardCount))
