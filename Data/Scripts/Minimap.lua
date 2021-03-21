@@ -26,15 +26,15 @@ local COLOR_HIGH = script:GetCustomProperty("ColorHigh")
 local BORDER_COLOR = script:GetCustomProperty("BorderColor")
 local BORDER_SIZE = script:GetCustomProperty("BorderSize")
 local PLAYER_PANEL = script:GetCustomProperty("PlayerPanel"):WaitForObject()
-local WORLD_SHAPES = script:GetCustomProperty("WorldShapes"):WaitForObject()
+--local WORLD_SHAPES = script:GetCustomProperty("WorldShapes"):WaitForObject()
 
-local worldShapes = ROOT:FindDescendantsByType("StaticMesh")
+--[[local worldShapes = ROOT:FindDescendantsByType("StaticMesh")
 local worldTexts = ROOT:FindDescendantsByType("WorldText")
 
 if #worldShapes <= 0 then
 	error("Minimap needs at least one 3D shape placed in-world.")
 	return
-end
+end]]
 
 PLAYER_PANEL.width = MAP_PANEL.width
 PLAYER_PANEL.height = MAP_PANEL.height
@@ -43,13 +43,13 @@ PLAYER_PANEL.y = MAP_PANEL.y
 PLAYER_PANEL.rotationAngle = MAP_PANEL.rotationAngle
 
 -- Establish 3D bounds
-local boundsLeft
+local boundsLeft = -25930.666015625
 local boundsRight
-local boundsTop
+local boundsTop = -30030.382507324
 local boundsBottom
 local boundsHigh
 local boundsLow
-for _,shape in ipairs(worldShapes) do
+--[[for _,shape in ipairs(worldShapes) do
 	shape.isEnabled = false
 	
 	local pos = shape:GetWorldPosition()
@@ -80,11 +80,12 @@ for _,shape in ipairs(worldShapes) do
 end
 local boundsWidth = boundsRight - boundsLeft
 local boundsHeight = boundsBottom - boundsTop
+]]
 
 -- Precompute coeficients
-local scaleX = MAP_PANEL.width / boundsWidth
+local scaleX = 0.0066580799259107 --MAP_PANEL.width / boundsWidth
 local scaleY = scaleX
-if boundsHeight > boundsWidth then
+--[[if boundsHeight > boundsWidth then
 	scaleY = MAP_PANEL.height / boundsHeight
 	scaleX = scaleY
 end
@@ -166,6 +167,7 @@ for _,text in ipairs(worldTexts) do
 end
 
 WORLD_SHAPES:Destroy()
+]]
 
 function Tick()
 	local localPlayer = Game.GetLocalPlayer()
