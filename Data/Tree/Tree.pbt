@@ -34,7 +34,6 @@ Objects {
   ChildIds: 783937512602456512
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
-  ChildIds: 5209011936578678726
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -47,38 +46,6 @@ Objects {
     Value: "mc:ecollisionsetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 5209011936578678726
-  Name: "Divided"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6084069762722310794
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Divided"
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15612098926276690525
-    }
   }
 }
 Objects {
