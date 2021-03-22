@@ -58,9 +58,9 @@ API.BIND = {
     E = 2,
     R = 3,
     T = 4,
-    SHIFT = 5,
-    LMB = 6,
-    RMB = 7
+    LMB = 5,
+    RMB = 6,
+    SHIFT = 7
 }
 
 -- BINDING KEYS

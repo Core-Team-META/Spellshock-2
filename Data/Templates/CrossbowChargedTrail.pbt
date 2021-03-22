@@ -95,11 +95,19 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.5
+            Float: 0.3
           }
           Overrides {
             Name: "bp:Spawn Radius"
             Float: 0.15
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.5
           }
         }
         Collidable_v2 {

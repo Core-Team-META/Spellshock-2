@@ -17,7 +17,7 @@ Objects {
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
-  ChildIds: 7332626658021963653
+  ChildIds: 8870859726532759777
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
@@ -1553,8 +1553,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7332626658021963653
-  Name: "Environment_v8"
+  Id: 8870859726532759777
+  Name: "Environment_v11"
   Transform {
     Scale {
       X: 1
@@ -1563,30 +1563,47 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  CameraCollidable {
+  Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 2690972611223122670
+      key: 383455669828436557
       value {
         Overrides {
-          Name: "Name"
-          String: "Environment_v8"
+          Name: "bp:Light Shaft Bloom Scale"
+          Float: 2
+        }
+        Overrides {
+          Name: "bp:Light Shaft Mask Darkness"
+          Float: 0.7
         }
       }
     }
     ParameterOverrideMap {
-      key: 6849253983036855207
+      key: 10519002396590049864
       value {
         Overrides {
-          Name: "bp:Light Absorption Amount"
-          Float: 1.2
+          Name: "Name"
+          String: "Environment_v11"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
     TemplateAsset {
-      Id: 12982727639299389883
+      Id: 6409085658745970630
     }
   }
 }

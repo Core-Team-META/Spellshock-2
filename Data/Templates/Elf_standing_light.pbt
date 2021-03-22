@@ -154,7 +154,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -173,7 +173,7 @@ Assets {
           Light {
             Temperature: 2313.85107
             LocalLight {
-              AttenuationRadius: 580.061523
+              AttenuationRadius: 853.639771
               PointLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20

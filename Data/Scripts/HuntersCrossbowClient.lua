@@ -19,7 +19,7 @@ local ChargeUITemp = "76202E0057632269:ChargeUpBar"
 local ChargePanel = nil
 local ChargeBar = nil
 
-local CHARGE_DELAY = 0.3
+local CHARGE_DELAY = 0.1
 local CHARGE_DURATION = 0.5
 
 

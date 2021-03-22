@@ -14,7 +14,7 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     --local currentState = ABGS.GetGameState()
-    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Rewards"]then
+    if newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Rewards"] or newMenu == _G.MENU_TABLE["Tutorial"] then
 		if newMenu == _G.MENU_TABLE["Rewards"] then
             for _, panel in ipairs(script.parent:GetChildren()) do
                 if panel.name ~= "Currencies" then

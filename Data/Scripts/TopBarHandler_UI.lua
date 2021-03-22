@@ -27,7 +27,7 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     local currentState = ABGS.GetGameState()
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"]) and newMenu ~= _G.MENU_TABLE["CosmeticStore"]
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or newMenu == _G.MENU_TABLE["Tutorial"]) and newMenu ~= _G.MENU_TABLE["CosmeticStore"]
     and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND or currentState == ABGS.GAME_STATE_ROUND_END) then -- show
 		TopBar.visibility = Visibility.INHERIT
 	else -- hide
