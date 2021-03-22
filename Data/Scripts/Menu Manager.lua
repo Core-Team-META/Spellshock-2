@@ -57,13 +57,17 @@ function OnBindingPressed(whichPlayer, binding)
 		elseif _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end]]
-	if (binding == "ability_extra_51") and SpamPrevent() then --F2
-		--[[print(">> TUTORIAL MENU")
-		local newState = _G.MENU_TABLE["Tutorial"] 
-		if _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
+	if (binding == "ability_extra_50") and CurrentGameState == ABGS.GAME_STATE_ROUND and SpamPrevent() then --F1
+		--print(">> TUTORIAL MENU")
+		local newState
+		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+		 	newState = _G.MENU_TABLE["Tutorial"] 
+		elseif _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] then
 			newState = _G.MENU_TABLE["NONE"]
+		else
+			return
 		end
-		Events.Broadcast("Changing Menu", newState)	]]
+		Events.Broadcast("Changing Menu", newState)
 	elseif binding == "ability_extra_29" and SpamPrevent() then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		--print(">> COSMETIC SHOP")
 		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then

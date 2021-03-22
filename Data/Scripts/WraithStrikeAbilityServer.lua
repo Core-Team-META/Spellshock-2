@@ -242,10 +242,10 @@ function DamageInArea()
 end
 
 function DisableFlying()
-	print("Disabling Wraith Strike")
+	--print("Disabling Wraith Strike")
 
 	if Object.IsValid(OWNER) then 
-		print("Resetting playe settings")
+		--print("Resetting playe settings")
 		OWNER:ResetVelocity()
 		OWNER:ActivateWalking()
 		OWNER.movementControlMode = MovementControlMode.LOOK_RELATIVE
@@ -306,10 +306,10 @@ end
 
 function PrintAbilities(player)
 	for _, thisAbility in pairs(player:GetAbilities()) do
-		print(thisAbility.name)
-		print(thisAbility.actionBinding)
-		print(thisAbility.isEnabled)
-		print("\n")
+		--print(thisAbility.name)
+		--print(thisAbility.actionBinding)
+		--print(thisAbility.isEnabled)
+		--print("\n")
 	end
 end
 

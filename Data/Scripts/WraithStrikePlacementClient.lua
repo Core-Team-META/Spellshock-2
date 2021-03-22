@@ -73,6 +73,11 @@ function OnBindingPressed(player, binding)
 end
 
 function OnSpecialAbilityCast(thisAbility)
+	if lastValidPlacement.position == nil then
+		-- If this happens, then all other failsafes didn't work. This is a last resort. 
+		lastValidPlacement.position = LOCAL_PLAYER:GetWorldPosition() - Vector3.New(0, 0, 1000)
+	end
+	
 	-- Get the target data, to modify it before it's sent over the network
 	local targetData = thisAbility:GetTargetData()
 	-- Position

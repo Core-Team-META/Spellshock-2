@@ -270,6 +270,8 @@ function SetEnabled(enabled)
     end
 
     CAPTURE_TRIGGER.isInteractable = enabled
+    CAPTURE_TRIGGER.team = 0
+    CAPTURE_TRIGGER.isTeamCollisionEnabled = true
 end
 
 -- nil OnRoundEnd()
@@ -354,7 +356,6 @@ function Tick(deltaTime)
         if newProgressTeam ~= script:GetCustomProperty("ProgressedTeam") then
             -- This depends on the old team so must be first
             UpdateReplicatedProgress()
-
             script:SetNetworkedCustomProperty("ProgressedTeam", newProgressTeam)
         end
     end
@@ -375,10 +376,16 @@ function Tick(deltaTime)
         newOwner = 0
     end
 
+    if GetCaptureProgress() < CAPTURE_THRESHOLD then
+        CAPTURE_TRIGGER.isTeamCollisionEnabled = true
+        CAPTURE_TRIGGER.team = 0
+    end
+
     if newOwner ~= owningTeam then
         Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
         owningTeam = newOwner
-
+        CAPTURE_TRIGGER.team = owningTeam
+        CAPTURE_TRIGGER.isTeamCollisionEnabled = false
         local _, friendlies = GetFriendliesPresent()
         -- Give cap assist to friendlies 
         for _, friendly in ipairs(friendlies) do

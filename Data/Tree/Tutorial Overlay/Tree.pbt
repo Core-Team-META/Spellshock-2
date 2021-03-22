@@ -15,6 +15,7 @@ Objects {
     }
   }
   ParentId: 1204198035822590699
+  ChildIds: 9489477850397335514
   ChildIds: 8351820270940681377
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -4925,6 +4926,44 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 9489477850397335514
+  Name: "TutorialOverlayToggle"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12491675207370721137
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:TutorialOverlay"
+      ObjectReference {
+        SelfId: 8351820270940681377
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16118095897711037062
     }
   }
 }
