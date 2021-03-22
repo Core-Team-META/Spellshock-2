@@ -8085,6 +8085,9 @@ Objects {
   ChildIds: 11331280521014229671
   ChildIds: 5860927184686726876
   ChildIds: 4180173236900349390
+  ChildIds: 8997160190224475481
+  ChildIds: 7814102458695660420
+  ChildIds: 17525894095634484296
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -8114,6 +8117,204 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17525894095634484296
+  Name: "MoreRewards"
+  Transform {
+    Location {
+      X: -10250.0469
+      Y: 62101.4414
+      Z: 819.944336
+    }
+    Rotation {
+      Yaw: -131.822418
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3207273852177407646
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 29
+    Height: 29
+    UIX: 199.6
+    UIY: 31.5072174
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 13462854128336502995
+      }
+      Color {
+        R: 0.436000019
+        G: 0.320792079
+        B: 0.187480018
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7814102458695660420
+  Name: "MoreRewards"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3207273852177407646
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 250
+    Height: 35
+    UIX: 200
+    UIY: 33.0345764
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "?"
+      Color {
+        R: 0.436000019
+        G: 0.320792079
+        B: 0.187480018
+        A: 1
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8997160190224475481
+  Name: "MoreRewards"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3207273852177407646
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 550
+    Height: 35
+    UIY: 33.0345764
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "INCREASE CLASS LEVEL FOR MORE REWARD CHOICES"
+      Color {
+        R: 0.436000019
+        G: 0.320792079
+        B: 0.187480018
+        A: 1
+      }
+      Size: 14
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
         }
       }
     }
@@ -10137,7 +10338,6 @@ Objects {
   }
   ParentId: 4509724161207917958
   ChildIds: 1917936312158066202
-  ChildIds: 12208683202691034075
   ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
   Collidable_v2 {
@@ -10401,52 +10601,6 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
-    }
-  }
-}
-Objects {
-  Id: 12208683202691034075
-  Name: "Helper_RewardCard"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18393261942096671057
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 15767701222805894856
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Helper_RewardCard"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 39385.0117
-            Y: 52070.0117
-            Z: 690
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 135.000015
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 199494650754129245
     }
   }
 }

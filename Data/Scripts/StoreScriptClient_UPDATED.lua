@@ -150,7 +150,7 @@ local playerSockets = {
 }
 
 local PreviewAnimationStances = {
-	Tank = "1hand_melee_idle_ready",
+	Warrior = "1hand_melee_idle_ready",
 	Hunter = "2hand_rifle_aim_shoulder",
 	Mage = "2hand_staff_idle_ready",
 	Assassin = "unarmed_idle_ready",
@@ -158,7 +158,7 @@ local PreviewAnimationStances = {
 }
 
 local ItemAnimationStances = {
-	Tank = "2hand_staff_idle_relaxed",
+	Warrior = "2hand_staff_idle_relaxed",
 	Hunter = "2hand_rifle_idle_relaxed",
 	Mage = "2hand_staff_idle_relaxed",
 	Assassin = "unarmed_idle_ready",
@@ -616,14 +616,13 @@ end
 function CosmeticResourceChange(_, name)
 	if name == cosmeticResourceName then
 		if string.find(name, "S") then
+			ApplyCosmeticHelper()
 			UpdateEntryButton(currentlySelected, false)
 			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 			purchaseText.text = "EQUIP"
 			purchaseText:GetChildren()[1].text = "EQUIP"
 			controlsLocked = false
 			propPurchaseButton.visibility = Visibility.INHERIT
-		else
-			ApplyCosmeticHelper()
 		end
 		if cosmeticResourceChangeEvent then
 			cosmeticResourceChangeEvent:Disconnect()
@@ -1474,7 +1473,11 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		}
 
 		if displayName == "CLASS" then
-			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			if data.name == "Warrior" then
+				classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+			else
+				classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+			end
 		end
 	end
 end

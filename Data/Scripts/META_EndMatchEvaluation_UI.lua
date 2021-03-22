@@ -145,7 +145,13 @@ local function BuildStats(players, parentPanel)
             local playerStats = World.SpawnAsset(PLAYER_RESULT_TEMP, {parent = parentPanel})
             local name = playerStats:GetCustomProperty("PLAYER_NAME"):WaitForObject()
             name.text = player.name
-            name:SetColor(_G.TeamColors[player.team])
+            if player == LOCAL_PLAYER then
+                local myColor = Color.FromStandardHex("FFD624FF")
+                name:SetColor(myColor)
+            else
+                name:SetColor(_G.TeamColors[player.team])
+            end
+            
             local stats = playerStats:GetCustomProperty("PLAYER_RESULT"):WaitForObject()
             if parentPanel == MOST_DEATHS then
                 stats.text = tostring(player.deaths)

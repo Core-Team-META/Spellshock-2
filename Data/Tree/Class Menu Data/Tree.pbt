@@ -260,7 +260,6 @@ Objects {
     }
   }
   ParentId: 12124708511639495803
-  ChildIds: 4896055284479103675
   ChildIds: 10826108066709165769
   UnregisteredParameters {
     Overrides {
@@ -271,7 +270,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance."
+      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance. Placement Range = 2500."
     }
     Overrides {
       Name: "cs:Bind"
@@ -336,50 +335,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4896055284479103675
-  Name: "Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14339626899672504924
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can teleport"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 11279935537839204400
   Name: "Supernova"
   Transform {
@@ -407,7 +362,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to charge up a powerful explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are stunned."
+      String: "Instant \342\200\223 Press T to create powerful targeted explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are damaged and stunned."
     }
     Overrides {
       Name: "cs:Bind"
@@ -624,7 +579,6 @@ Objects {
   ParentId: 12124708511639495803
   ChildIds: 3472045051803980741
   ChildIds: 1315606167183961674
-  ChildIds: 2368931382467744602
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -634,55 +588,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to release a wave of solar wind that pushes enemies away, briefly stunning them."
+      String: "Instant \342\200\223 Press R to release a wave of solar wind that blinds enemies and increases your movement speed temporarily. Blind Duration = 3s. Speed Boost = 60%. Speed Duration = 5s."
     }
     Overrides {
       Name: "cs:Bind"
       String: "R"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 2368931382467744602
-  Name: "Impulse Amount"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7866126941647045844
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of impulse applied to enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 626394604982656881
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
     }
   }
   Collidable_v2 {
@@ -814,7 +724,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press E to preview and LMB to summon a crystal imbued with sunlight, healing allies and damaging enemies in its radius."
+      String: "Placement \342\200\223 Press E to preview and LMB to summon a crystal imbued with sunlight, healing allies and damaging enemies in its radius. Time Between Heals = .5s"
     }
     Overrides {
       Name: "cs:Bind"
@@ -1026,7 +936,6 @@ Objects {
   }
   ParentId: 12124708511639495803
   ChildIds: 12761103757713680055
-  ChildIds: 12638170253327895416
   ChildIds: 13747008662516060626
   UnregisteredParameters {
     Overrides {
@@ -1037,7 +946,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to cast a beam of solar energy forward, damaging enemies caught in its path."
+      String: "Instant \342\200\223 Press Q to cast a beam of solar energy forward, damaging enemies caught in its path. Beam Range = 4000. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -1086,50 +995,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod6"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12638170253327895416
-  Name: "Beam Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6603056763990519431
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far the beam will travel"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod4"
     }
   }
   Collidable_v2 {
@@ -1495,7 +1360,6 @@ Objects {
   ParentId: 837517277244744736
   ChildIds: 8380954081570957251
   ChildIds: 11021992287971171432
-  ChildIds: 13816951105555564383
   ChildIds: 2770197239029822294
   UnregisteredParameters {
     Overrides {
@@ -1506,7 +1370,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact."
+      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact. Placement Range = 6000. Damage Radius = 750. Stun Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1555,50 +1419,6 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod4"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13816951105555564383
-  Name: "Targeting Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17507077983078006761
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can target"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -1730,7 +1550,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; teleporting you to the point of impact and damaging nearby enemies."
+      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1800,7 +1620,7 @@ Objects {
 }
 Objects {
   Id: 3074752349398664074
-  Name: "Damage Radius"
+  Name: "Venom Radius"
   Transform {
     Location {
     }
@@ -1821,7 +1641,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 13298271364458101774
+        Id: 8194221724979934971
       }
     }
     Overrides {
@@ -1947,7 +1767,6 @@ Objects {
   ParentId: 837517277244744736
   ChildIds: 7786687914104591703
   ChildIds: 3022053924916738624
-  ChildIds: 4559944181589896695
   ChildIds: 2501884905764305196
   UnregisteredParameters {
     Overrides {
@@ -1958,7 +1777,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect."
+      String: "Instant \342\200\223 Press E to disappear to the shadow realm for a short duration. Attacking while invisible will deal extra damage and end the effect. Attack Damage Radius = 450."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1980,7 +1799,7 @@ Objects {
 }
 Objects {
   Id: 2501884905764305196
-  Name: "Duration"
+  Name: "Invisibility Duration"
   Transform {
     Location {
     }
@@ -2001,56 +1820,12 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17620327046583338598
+        Id: 12564406389319441522
       }
     }
     Overrides {
       Name: "cs:Mod"
       String: "mod3"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 4559944181589896695
-  Name: "Attack Radius"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 78469244364511293
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far your ending attack will reach"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 13298271364458101774
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -2172,7 +1947,6 @@ Objects {
   ChildIds: 6180741710619077583
   ChildIds: 9763119785346265410
   ChildIds: 5825215787427395226
-  ChildIds: 8295886532193173621
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2182,55 +1956,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 TODO"
+      String: "Instant \342\200\223 Teleports you forward to a blade and damages enemies near the impact point. Placement Range = 2500."
     }
     Overrides {
       Name: "cs:Bind"
       String: "Q"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8295886532193173621
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7146157638163724227
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far this attack can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -2638,7 +2368,6 @@ Objects {
     }
   }
   ParentId: 12532102525843773576
-  ChildIds: 6386186559256232463
   ChildIds: 12146732750660035160
   UnregisteredParameters {
     Overrides {
@@ -2649,7 +2378,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance."
+      String: "Placement \342\200\223 Press SHIFT to preview and LMB to instantly teleport a short distance. Placement Range = 3200."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2714,50 +2443,6 @@ Objects {
   }
 }
 Objects {
-  Id: 6386186559256232463
-  Name: "Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5833689127479481271
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The farthest distance you can teleport"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
   Id: 1035228531856370199
   Name: "Pyroblast"
   Transform {
@@ -2784,7 +2469,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant/Guided \342\200\223 Press T to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle."
+      String: "Instant/Guided \342\200\223 Press T to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -2952,9 +2637,9 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 7663790721216425677
-  ChildIds: 13314183402486245606
-  ChildIds: 6726917288573614718
   ChildIds: 12675666979630358360
+  ChildIds: 6726917288573614718
+  ChildIds: 12105217976073623068
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2964,7 +2649,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press R to summon a defensive chunk of ice that encases and protects, preventing movement and reducing damage while it is active."
+      String: "Instant \342\200\223 Press R to summon a encase yourself in ice damage nearby enemies, preventing your movement and reducing damage while it is active. Also heals when cast. Damage Radius = 800."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2985,8 +2670,8 @@ Objects {
   }
 }
 Objects {
-  Id: 12675666979630358360
-  Name: "Cooldown"
+  Id: 12105217976073623068
+  Name: "Heal"
   Transform {
     Location {
     }
@@ -3002,17 +2687,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long before the ability can be used again"
+      String: "How long enemies will stay animorphed before turning back"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17620327046583338598
+        Id: 8854358530398708523
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod6"
+      String: "mod5"
     }
   }
   Collidable_v2 {
@@ -3073,8 +2758,8 @@ Objects {
   }
 }
 Objects {
-  Id: 13314183402486245606
-  Name: "Damage Radius"
+  Id: 12675666979630358360
+  Name: "Cooldown"
   Transform {
     Location {
     }
@@ -3090,17 +2775,17 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Radius of the damage area"
+      String: "How long before the ability can be used again"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 13298271364458101774
+        Id: 17620327046583338598
       }
     }
     Overrides {
       Name: "cs:Mod"
-      String: "mod1"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -3118,7 +2803,7 @@ Objects {
 }
 Objects {
   Id: 7663790721216425677
-  Name: "DOT"
+  Name: "Ice Damage"
   Transform {
     Location {
     }
@@ -3134,7 +2819,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage applied to enemies in the Damage Radius"
+      String: "The amount of damage applied to enemies in the Damage Radius over time"
     }
     Overrides {
       Name: "cs:Icon"
@@ -3176,9 +2861,8 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 1554326895912005281
-  ChildIds: 5750346782341937766
-  ChildIds: 16970580691964614208
   ChildIds: 16411053739338122464
+  ChildIds: 5750346782341937766
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3193,94 +2877,6 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "E"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16411053739338122464
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11344707536976870440
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16970580691964614208
-  Name: "Damage"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11344707536976870440
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "The amount of damage applied to enemies"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 15330066822177902891
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -3341,8 +2937,52 @@ Objects {
   }
 }
 Objects {
+  Id: 16411053739338122464
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11344707536976870440
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 1554326895912005281
-  Name: "Duration"
+  Name: "Chicken Duration"
   Transform {
     Location {
     }
@@ -3400,9 +3040,8 @@ Objects {
   }
   ParentId: 12532102525843773576
   ChildIds: 8232108779492403583
-  ChildIds: 16063742305336464745
-  ChildIds: 15322954216054029842
   ChildIds: 12378093595996074328
+  ChildIds: 16063742305336464745
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3412,99 +3051,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press Q to preview and LMB to summon a powerful whirlwind that slows and damages enemies caught in its radius."
+      String: "Placement \342\200\223 Press Q to preview and LMB to summon a powerful whirlwind that slows and damages enemies caught in its radius. Placement Range = 4000."
     }
     Overrides {
       Name: "cs:Bind"
       String: "Q"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12378093595996074328
-  Name: "Cooldown"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How long before the ability can be used again"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 17620327046583338598
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod6"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15322954216054029842
-  Name: "Placement Range"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 420839089989026474
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Description"
-      String: "How far this attack can be placed"
-    }
-    Overrides {
-      Name: "cs:Icon"
-      AssetReference {
-        Id: 10392517578151200132
-      }
-    }
-    Overrides {
-      Name: "cs:Mod"
-      String: "mod1"
     }
   }
   Collidable_v2 {
@@ -3549,6 +3100,50 @@ Objects {
     Overrides {
       Name: "cs:Mod"
       String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12378093595996074328
+  Name: "Cooldown"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 420839089989026474
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "How long before the ability can be used again"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 17620327046583338598
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod6"
     }
   }
   Collidable_v2 {
@@ -3749,7 +3344,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages enemies."
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Slow Effect = 40%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
@@ -3928,7 +3523,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target."
+      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target. Hawk Attack Range = 2000. Slow Effect = 50%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4108,7 +3703,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time."
+      String: "Placement \342\200\223 Press R to preview and LMB to place a trap that is only visible to you. Enemies that step on it take damage and are stunned for a short time. Placement Range = 3100. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -4339,7 +3934,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies take damage and are launched away from the point of impact."
+      String: "Instant \342\200\223 Press E to summon a mass of roots and thorns that launches you backwards. Nearby enemies caught in the roots are stunned."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4676,7 +4271,7 @@ Objects {
 }
 Objects {
   Id: 6935863718337197916
-  Name: "Tank"
+  Name: "Warrior"
   Transform {
     Location {
     }
@@ -4705,7 +4300,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Skillset"
-      String: "Close combat warrior"
+      String: "Close combat brawler"
     }
     Overrides {
       Name: "cs:ClassID"
@@ -4713,7 +4308,7 @@ Objects {
     }
     Overrides {
       Name: "cs:OrcDescription"
-      String: "\342\200\234These harsh lands are our birthright, warrior. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
+      String: "\342\200\234These harsh lands are our birthright, guardian. You are the first and last line of defense; crush these invaders and defend our homes.\342\200\235"
     }
     Overrides {
       Name: "cs:ElfDescription"

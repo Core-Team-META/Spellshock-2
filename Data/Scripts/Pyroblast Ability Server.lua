@@ -15,7 +15,7 @@ local ProjectileSpeed = script:GetCustomProperty("ProjectileSpeed")
 local DEFAULT_DamageAmount = script:GetCustomProperty("DamageAmount")
 local DEFAULT_DamageRadius = script:GetCustomProperty("DamageRadius")
 local DEFAULT_TargetingRange = script:GetCustomProperty("TargetingRange")
-local HOMING_ACCELERATION = 20000
+local HOMING_ACCELERATION = 50000
 
 local EventListeners = {}
 local ProjectileImpactEvent = nil
@@ -127,7 +127,7 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	CurrentProjectile.owner = thisAbility.owner
 	CurrentProjectile.speed = ProjectileSpeed
-	CurrentProjectile.lifeSpan = 10 --distanceVector.size / ProjectileSpeed + 1.5
+	CurrentProjectile.lifeSpan = 20 --distanceVector.size / ProjectileSpeed + 1.5
 	CurrentProjectile.capsuleLength = 50
 	CurrentProjectile.capsuleRadius = 50
 	CurrentProjectile.gravityScale = 0

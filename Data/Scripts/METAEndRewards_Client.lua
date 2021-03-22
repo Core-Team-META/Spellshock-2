@@ -58,6 +58,15 @@ local CardDescriptions = {
     "Use gems in the Cosmetic Shop to purchase different ability skins and costumes."
 }
 
+local LockedCardDescriptions = {
+    [5] = "Get any Class to level 5 to unlock this slot",
+    [6] = "Get any Class to level 10 to unlock this slot",
+    [7] = "Get any two Classes to level 10 to unlock this slot",
+    [8] = "Get any Class to level 25 to unlock this slot",
+    [9] = "Get any two Classes to level 25 to unlock this slot",
+   [10] = "Get any Class to level 50 to unlock this slot"
+}
+
 local ClassColors = { -- Hex sRGB
     [META_AP().TANK] = "DE99003B",
     [META_AP().HUNTER] = "00AA1527",
@@ -161,13 +170,34 @@ local function BuildCardInfo(slot, id, class, bind, reward)
     -- Get the two card types
     local AbilityCard = newCardParent:GetCustomProperty("AbilityCard"):WaitForObject()
     local NormalCard = newCardParent:GetCustomProperty("NormalCard"):WaitForObject()
+    local LockedCard = newCardParent:GetCustomProperty("LockedCard"):WaitForObject()
 
     local infoTable
     local CardButton
 
-    -- Ability card or Normal card?
-    if id == 1 then
+    -- Locked card, Ability card or Normal card?
+    if id == 0 then -- Locked card
+        AbilityCard:Destroy()
+        NormalCard:Destroy()
+        LockedCard.visibility = Visibility.INHERIT
+
+        local Description = LockedCard:GetCustomProperty("Description"):WaitForObject()
+        -- In this case "reward" is the number of slots the player has unlocked 
+        if reward == 4 then -- Only show reveal description of 1st locked card
+            if slot == 5 then
+                Description.text = LockedCardDescriptions[slot]
+                Description:GetChildren()[1].text = LockedCardDescriptions[slot]
+            else
+                Description.text = "???"
+                Description:GetChildren()[1].text = "???"
+            end
+        else -- Reveal all descriptions of locked cards
+            Description.text = LockedCardDescriptions[slot]
+            Description:GetChildren()[1].text = LockedCardDescriptions[slot]
+        end
+    elseif id == 1 then
         NormalCard:Destroy() -- Destroy normal card
+        LockedCard:Destroy()
         AbilityCard.visibility = Visibility.INHERIT
 
         -- Get UI components
@@ -176,6 +206,7 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         local Title = AbilityCard:GetCustomProperty("Title"):WaitForObject()
         local AbilityIcon = AbilityCard:GetCustomProperty("AbilityIcon"):WaitForObject()
         local Level = AbilityCard:GetCustomProperty("Level"):WaitForObject()
+        local NextLevel = AbilityCard:GetCustomProperty("NextLevel"):WaitForObject()
         local CurrentPoints = AbilityCard:GetCustomProperty("CurrentPoints"):WaitForObject()
         local RewardPoints = AbilityCard:GetCustomProperty("RewardPoints"):WaitForObject()
         local CurrentProgress = AbilityCard:GetCustomProperty("CurrentProgress"):WaitForObject()
@@ -202,9 +233,11 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         ClassName.text = infoTable.ClassName
         Title.text = infoTable.Name
         AbilityIcon:SetImage(infoTable.Image)
-        Level.text = tostring(META_AP().GetBindLevel(LOCAL_PLAYER, bind, class))
+        local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
+        Level.text = tostring(abilityLevel)
+        NextLevel.text = tostring(abilityLevel+1)
         CurrentPoints.text = tostring(currentAmmount)
-        RewardPoints.text = tostring(reward)
+        RewardPoints.text = "+"..tostring(reward)
         CurrentProgress.progress = currentAmmount / reqXp
         RewardProgress.progress = (currentAmmount + reward) / reqXp
         LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
@@ -223,6 +256,7 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         CardButton.clientUserData.selected = Selected
     else -- Normal card
         AbilityCard:Destroy()
+        LockedCard:Destroy()
         NormalCard.visibility = Visibility.INHERIT
 
         local Selected = NormalCard:GetCustomProperty("Selected"):WaitForObject()
@@ -258,12 +292,13 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         CardButton.clientUserData.selected = Selected
     end
 
-    newCardParent.clientUserData.button = CardButton
-
-    CardButton.clientUserData.rewardID = id
-    CardButton.clientUserData.slotID = slot
-    CardButton.clientUserData.panel = newCardParent
-    listeners[#listeners + 1] = CardButton.clickedEvent:Connect(OnRewardSelected)
+    if id ~= 0 then
+        newCardParent.clientUserData.button = CardButton
+        CardButton.clientUserData.rewardID = id
+        CardButton.clientUserData.slotID = slot
+        CardButton.clientUserData.panel = newCardParent
+        listeners[#listeners + 1] = CardButton.clickedEvent:Connect(OnRewardSelected)
+    end
     CardPanels[#CardPanels+1] = newCardParent
 
     --[[if slot == 1 then
@@ -289,6 +324,14 @@ local function BuildRewardSlots(tbl)
         end
         
         BuildCardInfo(slot, id, class, bind, reward)
+    end
+
+    if #tbl < 10 then
+        local cardsUnlocked = #tbl
+        -- Fill the rest of the slots with empty cards
+        for slot = #tbl+1, 10, 1 do
+            BuildCardInfo(slot, 0, nil, nil, cardsUnlocked)
+        end
     end
 end
 
@@ -318,7 +361,7 @@ end
 
 -- #TODO
 local function IsFirstWinOfTheDay(player)
-    return true
+    return false
 end
 
 local function CalculateSelectionCount()

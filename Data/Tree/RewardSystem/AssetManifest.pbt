@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13462854128336502995
+  Name: "Center Circle 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001Outline"
+  }
+}
+Assets {
   Id: 12631208036329707850
   Name: "Fantasy Ability Purple 036"
   PlatformAssetType: 9

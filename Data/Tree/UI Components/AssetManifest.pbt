@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16568858775813686676
+  Name: "Emblem 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_056"
+  }
+}
+Assets {
   Id: 16532880832873788683
   Name: "BG Flat 002"
   PlatformAssetType: 9
@@ -140,15 +149,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 14016723922600970733
-  Name: "Icon Plaque"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Plaque"
   }
 }
 Assets {
@@ -251,15 +251,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9589982128664866219
-  Name: "Fantasy Symbol 04"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Symbol_04"
-  }
-}
-Assets {
   Id: 9008238566657320754
   Name: "Sci-fi Frame 006"
   PlatformAssetType: 9
@@ -329,15 +320,6 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_shine_star_shimmer_01_Cue_ref"
-  }
-}
-Assets {
-  Id: 7206368218297899634
-  Name: "Fantasy Scroll 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Scroll_004"
   }
 }
 Assets {

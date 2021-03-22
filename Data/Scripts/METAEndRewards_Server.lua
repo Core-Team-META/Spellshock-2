@@ -11,6 +11,10 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -97,7 +101,46 @@ end
 --#TODO Need to actually write logic
 -- Should return 4-10
 local function GetNumberOfCards(player)
-    return TEMP_CardCount
+    local cardCount = 4 
+    local topRanks= {0, 0}
+
+    -- Need to loop through all the classes and track the two highest ranking ones
+    for _, classID in pairs(CONST.CLASS) do
+        local classRank = META_CP().GetClassLevel(player, classID)
+        if classRank > topRanks[1] then
+            topRanks[1] = classRank
+        elseif classRank > topRanks[2] then
+            topRanks[2] = classRank
+        end
+    end
+    --print(string.format("Top ranks: %d %d", topRanks[1], topRanks[2]))
+
+    -- Any class rank 50 and one other other class rank 25
+    if (topRanks[1] >= 50 and topRanks[2] >= 25) or (topRanks[2] >= 50 and topRanks[1] >= 25) then
+        cardCount = 10
+    
+    -- At least 2 classes rank 25
+    elseif topRanks[1] >= 25 and topRanks[2] >= 25 then
+        cardCount = 9
+    
+    -- Any class rank 25
+    elseif topRanks[1] >= 25 or topRanks[2] >= 25 then
+        cardCount = 8
+    
+    -- Any two classes rank 10
+    elseif topRanks[1] >= 10 and topRanks[2] >= 10 then
+        cardCount = 7
+
+    -- Any class rank 10
+    elseif topRanks[1] >= 10 or topRanks[2] >= 10 then
+        cardCount = 6
+
+    -- Any class rank 5
+    elseif topRanks[1] >= 5 or topRanks[2] >= 5 then
+        cardCount = 5
+    end
+    --print("Card count: "..tostring(cardCount))
+    return cardCount
 end
 
 --#TODO NEEDS WORK
@@ -184,5 +227,5 @@ function OnPlayerJoined(player)
 end
 
 -- on player joined/left functions need to be defined before calling event:Connect()
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
 ----------------------------------------------------------------------------------------------------
