@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 14573219079105421002
+        ChildIds: 8377394277095346290
         ChildIds: 5553642398976084048
         Lifespan: 1
         WantsNetworking: true
@@ -41,9 +42,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 2
-            Y: 2
-            Z: 2
+            X: 1.3
+            Y: 1.3
+            Z: 1.3
           }
         }
         ParentId: 15178655356682460362
@@ -59,11 +60,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Enable Lightning Arc"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Enable Plasma Core"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Enable Lightning Ball"
@@ -75,7 +76,15 @@ Assets {
           }
           Overrides {
             Name: "bp:Enable Flare"
-            Bool: false
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 12
+          }
+          Overrides {
+            Name: "bp:Enable Impact Ring"
+            Bool: true
           }
         }
         Collidable_v2 {
@@ -90,6 +99,66 @@ Assets {
         Blueprint {
           BlueprintAsset {
             Id: 15862839354445934362
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 8377394277095346290
+        Name: "Impact Sparks VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.2
+            Y: 1.2
+            Z: 1.2
+          }
+        }
+        ParentId: 15178655356682460362
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Spark Lines"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0648342595
+              G: 0.89
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 8
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11887549032181544333
           }
           TeamSettings {
           }
@@ -146,6 +215,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_plasma_impact"
+      }
+    }
+    Assets {
+      Id: 11887549032181544333
+      Name: "Impact Sparks VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_impact_sparks"
       }
     }
     Assets {
