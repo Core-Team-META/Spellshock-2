@@ -46,9 +46,9 @@ function API.GetCostumeTokenAmmount()
     return math.random(1, 3)
 end
 
---#TODO Currently Turned off RMB
+--#TODO Currently Turned off RMB and SHIFT
 function API.GetRandomBind()
-    return math.random(1, 6)
+    return math.random(1, 5)
 end
 
 function API.GetRandomClass()
