@@ -285,7 +285,7 @@ Objects {
       Pitch: -53.2585754
       Yaw: -36.7458496
     }
-    FieldOfView: 85
+    FieldOfView: 90
     ViewWidth: 12000
     RotationMode {
       Value: "mc:erotationmode:fixed"
