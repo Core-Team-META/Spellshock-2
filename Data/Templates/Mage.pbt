@@ -426,7 +426,6 @@ Assets {
         ChildIds: 17441912587668400096
         ChildIds: 8228187279433582210
         ChildIds: 3773820494088276868
-        ChildIds: 1852349643762610454
         ChildIds: 6012454820415092162
         ChildIds: 14293992110905083350
         WantsNetworking: true
@@ -886,72 +885,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 18154052875178810801
-          }
-        }
-      }
-      Objects {
-        Id: 1852349643762610454
-        Name: "WeaponAimServer"
-        Transform {
-          Location {
-            X: 545.232422
-            Y: 972.691406
-            Z: -225
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18222319590489236690
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:AimBinding"
-            String: "ability_secondary"
-          }
-          Overrides {
-            Name: "cs:AimWalkSpeedPercentage"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "cs:AimActiveStance"
-            String: "unarmed_carry_object_heavy"
-          }
-          Overrides {
-            Name: "cs:AimZoomDistance"
-            Float: 150
-          }
-          Overrides {
-            Name: "cs:SpreadZoom"
-            Float: -2
-          }
-          Overrides {
-            Name: "cs:ZoomSpeed"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 14738406619974674146
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6703712560572080575
           }
         }
       }
@@ -1832,8 +1765,6 @@ Assets {
           }
         }
         ParentId: 11747234676183721272
-        ChildIds: 5931065898975178281
-        ChildIds: 12781921330556252170
         ChildIds: 719838432390101910
         ChildIds: 4906948746998877600
         ChildIds: 5904571599766240539
@@ -1848,115 +1779,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 5931065898975178281
-        Name: "WeaponAimClient"
-        Transform {
-          Location {
-            X: -49.7675781
-            Y: 1327.69141
-          }
-          Rotation {
-            Yaw: -94.9999695
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7617081542033333176
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ServerScript"
-            ObjectReference {
-              SubObjectId: 17347115782364650425
-            }
-          }
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 14738406619974674146
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 11130398207020823026
-          }
-        }
-      }
-      Objects {
-        Id: 12781921330556252170
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-            X: 535.835938
-            Y: -845
-            Z: 227.03125
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7617081542033333176
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 9549032318106308816
-            }
-          }
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 3134265528574068078
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 0.120000005
-              G: 0.265695095
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
-          }
         }
       }
       Objects {
@@ -2722,7 +2544,6 @@ Assets {
         }
         ParentId: 10663446143340725464
         ChildIds: 1254248059045754243
-        ChildIds: 9549032318106308816
         UnregisteredParameters {
           Overrides {
             Name: "cs:EquipmentIcon"
@@ -2891,73 +2712,6 @@ Assets {
         }
       }
       Objects {
-        Id: 9549032318106308816
-        Name: "Aim"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14738406619974674146
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          CastPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          KeyBinding_v2 {
-            Value: "mc:egameaction:secondaryaction"
-          }
-        }
-      }
-      Objects {
         Id: 14620430753636308205
         Name: "Consumables Network"
         Transform {
@@ -3051,15 +2805,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Teal_010"
-      }
-    }
-    Assets {
-      Id: 3134265528574068078
-      Name: "Icon Target"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Target"
       }
     }
     Assets {
