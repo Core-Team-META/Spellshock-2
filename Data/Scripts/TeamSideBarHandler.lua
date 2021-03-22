@@ -32,7 +32,7 @@ end
 
 function OnBindingPressed(player, binding)
     -- U key
-    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] 
+    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"]
     or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
         if TeamInfoPanel.visibility == Visibility.INHERIT then
             TeamInfoPanel.visibility = Visibility.FORCE_OFF
@@ -43,7 +43,7 @@ function OnBindingPressed(player, binding)
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
+    if (newMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] or  newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
     and (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) then -- show
         TeamLeftSideBar.visibility = Visibility.INHERIT
     else
@@ -177,6 +177,6 @@ for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, 
     AddNewPanel(player)
 end
 
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+--LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
