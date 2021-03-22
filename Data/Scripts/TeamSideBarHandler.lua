@@ -70,8 +70,10 @@ function AddNewPanel(player)
 end
 
 function RemovePanel(player)
-    local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
-    panel:Destroy()
+    if AllPanels[player.clientUserData.panelIndex] then
+        local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
+        panel:Destroy()
+    end
 end
 
 function OnPlayerJoined(player)
@@ -167,14 +169,14 @@ end
 
 OnMenuChanged(nil, _G.CurrentMenu)
 TeamInfoPanel.visibility = Visibility.FORCE_OFF
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 -- Add a new panel for every player already in the server
 for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, includeTeams = LOCAL_PLAYER.team
     AddNewPanel(player)
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
 LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
