@@ -128,7 +128,7 @@ SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
 SHOOT_ABILITY.interruptedEvent:Connect(OnInterruptAbility)
 
 function OnEquipped(_, player)
-    print ("On equipped")
+    --print ("On equipped")
     if player == LOCAL_PLAYER then
         DestroyReticle()
         reticleInstance = World.SpawnAsset(RETICLE_TEMPLATE, {parent = World.GetRootObject()})

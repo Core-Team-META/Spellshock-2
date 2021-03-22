@@ -128,7 +128,7 @@ function OnProjectileSpawned(weapon, projectile)
 end
 
 function OnChargedProjectileImpacted(projectile, other, hitResult)
-	print ("We hit ... something")
+	--print ("We hit ... something")
 
 
 	
