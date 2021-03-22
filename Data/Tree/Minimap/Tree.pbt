@@ -373,6 +373,12 @@ Objects {
         SelfId: 6136183747213178366
       }
     }
+    Overrides {
+      Name: "cs:MinimapVisibilitySource"
+      ObjectReference {
+        SelfId: 15037917156129200834
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
