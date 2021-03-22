@@ -27,6 +27,19 @@ Assets {
         Name: "gradient_shift"
         Float: 0
       }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.458333343
+          G: 0.458333343
+          B: 0.458333343
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "roughness_multiplier"
+        Float: 1
+      }
     }
     Assets {
       Id: 10313519700874090434

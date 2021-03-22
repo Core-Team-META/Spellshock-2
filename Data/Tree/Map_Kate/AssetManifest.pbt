@@ -512,6 +512,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15121749094906828004
+  Name: "Simple Depth Blur Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_simple_depthblur"
+  }
+}
+Assets {
   Id: 15100497118567945550
   Name: "Pyramid - 8-Sided Truncated Polished"
   PlatformAssetType: 1
@@ -680,6 +689,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_coupling_001_ref"
+  }
+}
+Assets {
+  Id: 14465316728247841933
+  Name: "Plane 1m - Two Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_002"
   }
 }
 Assets {
@@ -1085,6 +1103,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_raw_001_uv"
+  }
+}
+Assets {
+  Id: 12476654224073211161
+  Name: "Rock Hexagonal"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_008"
   }
 }
 Assets {
@@ -3275,6 +3302,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2494920176024075778
+  Name: "Fire Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_fire_volume_vfx"
+  }
+}
+Assets {
   Id: 2452465297983906772
   Name: "Fantasy Castle Wall 03 Half"
   PlatformAssetType: 1
@@ -3335,6 +3371,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_truncated_001"
+  }
+}
+Assets {
+  Id: 2143996029754697336
+  Name: "Pyramid - 6-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_sixsided_truncated_001"
   }
 }
 Assets {
@@ -3662,6 +3707,15 @@ Assets {
   }
 }
 Assets {
+  Id: 674459473947709713
+  Name: "Pyramid - 6-Sided Truncated Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_sixsided_truncated_hq_001"
+  }
+}
+Assets {
   Id: 551966555971815703
   Name: "Fantasy Castle Floor 02 - Corner 01"
   PlatformAssetType: 1
@@ -3758,15 +3812,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_wedge_002"
-  }
-}
-Assets {
-  Id: 207164075973335940
-  Name: "Chromatic Aberration Post Process Volume"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_post_process_chromatic_abberation"
   }
 }
 Assets {

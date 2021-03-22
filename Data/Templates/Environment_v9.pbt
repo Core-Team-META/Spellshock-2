@@ -1,13 +1,13 @@
 Assets {
-  Id: 12982727639299389883
-  Name: "Environment_v8"
+  Id: 7182028189848758945
+  Name: "Environment_v9"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 2690972611223122670
+      RootId: 7054026980627614499
       Objects {
-        Id: 2690972611223122670
-        Name: "Environment_v8"
+        Id: 7054026980627614499
+        Name: "Environment_v9"
         Transform {
           Scale {
             X: 1
@@ -16,13 +16,13 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 13649969586501291014
-        ChildIds: 11763741218777686138
-        ChildIds: 10312913774595271310
-        ChildIds: 1270526390794002064
-        ChildIds: 13147661645021811251
-        ChildIds: 204962640550872527
-        ChildIds: 6849253983036855207
+        ChildIds: 17318158330440681357
+        ChildIds: 1760678866186445379
+        ChildIds: 14862806464492390435
+        ChildIds: 4186683237859226833
+        ChildIds: 14314121459400153640
+        ChildIds: 11934082352342342346
+        ChildIds: 8925586711585120800
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -39,7 +39,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13649969586501291014
+        Id: 17318158330440681357
         Name: "Sky Dome"
         Transform {
           Location {
@@ -56,7 +56,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Cloud Shape"
@@ -219,7 +219,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11763741218777686138
+        Id: 1760678866186445379
         Name: "Sun Light"
         Transform {
           Location {
@@ -237,7 +237,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Light Color"
@@ -277,8 +277,8 @@ Assets {
             Name: "bp:Sun Disc Color"
             Color {
               R: 50
-              G: 10
-              B: 2
+              G: 22.791666
+              B: 17.3499966
               A: 1
             }
           }
@@ -288,7 +288,9 @@ Assets {
           }
           Overrides {
             Name: "bp:Shape"
-            Int: 0
+            Enum {
+              Value: "mc:esundiscshapes:1"
+            }
           }
           Overrides {
             Name: "bp:Dynamic Shadow Distance"
@@ -310,6 +312,14 @@ Assets {
             Name: "bp:Indirect Lighting Intensity"
             Float: 2
           }
+          Overrides {
+            Name: "bp:Soft Distance Shadows"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Intensity"
+            Float: 3.5
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -327,7 +337,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10312913774595271310
+        Id: 14862806464492390435
         Name: "Ambient Occlusion Post Process"
         Transform {
           Location {
@@ -340,7 +350,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Quality"
@@ -372,7 +382,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Radius"
-            Float: 350
+            Float: 247.344482
           }
         }
         Collidable_v2 {
@@ -393,7 +403,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1270526390794002064
+        Id: 4186683237859226833
         Name: "Advanced Color Grading Post Process"
         Transform {
           Location {
@@ -410,7 +420,7 @@ Assets {
             Z: 200
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color Contrast"
@@ -428,14 +438,14 @@ Assets {
           Overrides {
             Name: "bp:Shadow Gain"
             Color {
-              G: 0.0574833788
-              B: 0.309999943
+              G: 0.148408577
+              B: 0.80034703
               A: 1
             }
           }
           Overrides {
             Name: "bp:Shadow Max"
-            Float: 0.04
+            Float: 0.01466987
           }
           Overrides {
             Name: "bp:Color Saturation"
@@ -474,7 +484,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13147661645021811251
+        Id: 14314121459400153640
         Name: "Simple Exposure Post Process"
         Transform {
           Location {
@@ -487,7 +497,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Exposure"
@@ -512,7 +522,7 @@ Assets {
         }
       }
       Objects {
-        Id: 204962640550872527
+        Id: 11934082352342342346
         Name: "Skylight"
         Transform {
           Location {
@@ -527,7 +537,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Index"
@@ -574,7 +584,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6849253983036855207
+        Id: 8925586711585120800
         Name: "Environment Fog Default VFX"
         Transform {
           Location {
@@ -587,24 +597,24 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2690972611223122670
+        ParentId: 7054026980627614499
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 1
-              G: 0.814116061
-              B: 0.520833373
+              R: 0.583333373
+              G: 0.710264802
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "bp:Start"
-            Float: 0
+            Float: 1000
           }
           Overrides {
             Name: "bp:Volumetric Fog"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "bp:Directional Inscattering Color"
@@ -617,7 +627,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Layered Fog Offset Height"
-            Float: 15.5264587
+            Float: 20.4708481
           }
           Overrides {
             Name: "bp:Directional Inscattering Exponent"
@@ -625,15 +635,15 @@ Assets {
           }
           Overrides {
             Name: "bp:Falloff"
-            Float: 0.05
+            Float: 0.0633853599
           }
           Overrides {
             Name: "bp:Layered Fog Density"
-            Float: 3.72912765
+            Float: 1.27398789
           }
           Overrides {
             Name: "bp:Layered Fog Falloff"
-            Float: 0.5
+            Float: 0.314307302
           }
           Overrides {
             Name: "bp:Light Absorption Amount"
@@ -641,7 +651,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Fog Density"
-            Float: 2.8
+            Float: 1.4157517
           }
           Overrides {
             Name: "bp:Albedo"

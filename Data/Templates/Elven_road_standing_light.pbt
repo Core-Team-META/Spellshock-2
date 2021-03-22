@@ -250,7 +250,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Light {
-          Intensity: 28.9722328
+          Intensity: 15
           Color {
             R: 0.955231905
             G: 0.74
@@ -270,7 +270,7 @@ Assets {
                 FallOffExponent: 8
               }
             }
-            MaxDrawDistance: 10000
+            MaxDrawDistance: 6000
             MaxDistanceFadeRange: 2000
           }
         }
