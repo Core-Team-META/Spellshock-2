@@ -311,7 +311,7 @@ Objects {
     }
     Overrides {
       Name: "bp:U Scale"
-      Float: 1
+      Float: 0.96
     }
     Overrides {
       Name: "bp:Horizontal Bend Amount"
@@ -320,6 +320,14 @@ Objects {
     Overrides {
       Name: "bp:Vertical Bend Amount"
       Float: 0
+    }
+    Overrides {
+      Name: "bp:V Scale"
+      Float: 0.96
+    }
+    Overrides {
+      Name: "bp:V Offset"
+      Float: -0.0157483611
     }
   }
   Collidable_v2 {
@@ -1190,7 +1198,7 @@ Objects {
     Width: 40
     Height: 40
     UIX: 5
-    UIY: -8
+    UIY: -12
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1616,7 +1624,7 @@ Objects {
     Width: 40
     Height: 40
     UIX: -3
-    UIY: 12
+    UIY: 11
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
