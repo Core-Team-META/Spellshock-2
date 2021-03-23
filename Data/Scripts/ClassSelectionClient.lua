@@ -54,6 +54,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function META_Consumables()
+    return _G["Consumables"]
+end
+
 while not _G.CurrentMenu do Task.Wait() end
 
 local HelperClassButtonTemplate = script:GetCustomProperty("Helper_Class_Button")
@@ -185,6 +189,9 @@ function OnGlobalStatsClicked(thisButton)
 
 	local HealthBonus = RightPanel_GlobalStats:GetCustomProperty("HealthBonus"):WaitForObject()
 	local HealingPotion = RightPanel_GlobalStats:GetCustomProperty("HealingPotion"):WaitForObject()
+
+	-- #TODO
+	--HealingPotion = tostring( META_Consumables().GetValue(LOCAL_PLAYER, META_Consumables().HEALTH_POTION) )
 end
 
 function UpdateClassInfo(thisButton)

@@ -179,5 +179,5 @@ Assets {
       AssetId: "Whitebox_Roof_01_-_Peak_End_with_Wall_Template"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }
