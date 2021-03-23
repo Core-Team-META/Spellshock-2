@@ -229,7 +229,7 @@ function CalculatePlacement()
 end
 
 function OnPlayerLeft(player)
-	if player == Equipment.owner then
+	if Object.IsValid(Equipment) and player == Equipment.owner then
 		DisconnectListeners()
 	end
 end

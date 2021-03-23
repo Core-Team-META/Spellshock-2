@@ -57,7 +57,7 @@ if Equipment.owner then
 end
 
 function OnPlayerLeft(player)
-	if player == Equipment.owner then
+	if Object.IsValid(Equipment) and player == Equipment.owner then
 		DisconnectListeners()
 	end
 end

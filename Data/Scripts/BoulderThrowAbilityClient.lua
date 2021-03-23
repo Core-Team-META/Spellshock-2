@@ -27,7 +27,7 @@ function OnPickupAbilityRecovery(thisAbility)
 end
 
 function OnPlayerLeft(player)
-	if player == PickupAbility.owner then
+	if Object.IsValid(PickupAbility) and player == PickupAbility.owner then
 		DisconnectListeners()
 	end
 end
