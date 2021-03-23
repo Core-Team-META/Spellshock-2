@@ -19,6 +19,8 @@ Objects {
   ParentId: 15681536267438714432
   ChildIds: 12652278405279320986
   ChildIds: 3395137385791868017
+  ChildIds: 8625504559866801273
+  ChildIds: 14874357977701351238
   ChildIds: 15558592490157347513
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -78,6 +80,18 @@ Objects {
         Id: 15718075383189814537
       }
     }
+    Overrides {
+      Name: "cs:ElfSongs"
+      ObjectReference {
+        SelfId: 14874357977701351238
+      }
+    }
+    Overrides {
+      Name: "cs:OrcSongs"
+      ObjectReference {
+        SelfId: 8625504559866801273
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -91,6 +105,296 @@ Objects {
   Script {
     ScriptAsset {
       Id: 18257600764595131732
+    }
+  }
+}
+Objects {
+  Id: 14874357977701351238
+  Name: "ElfSongs"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7699960455379020988
+  ChildIds: 15388158343451086821
+  ChildIds: 7968011078272738388
+  ChildIds: 15689220480337951964
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15689220480337951964
+  Name: "RoundEnd"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 7968011078272738388
+  Name: "Round"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 945024203867131124
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 15388158343451086821
+  Name: "Lobby"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 1778773841650752877
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 8625504559866801273
+  Name: "OrcSongs"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7699960455379020988
+  ChildIds: 9519070195028333978
+  ChildIds: 9138659101811640313
+  ChildIds: 15835756206661839636
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15835756206661839636
+  Name: "RoundEnd"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 9138659101811640313
+  Name: "Round"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 7533910292317192694
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 9519070195028333978
+  Name: "Lobby"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 12407423805149081047
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
     }
   }
 }
