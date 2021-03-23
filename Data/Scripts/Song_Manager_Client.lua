@@ -23,12 +23,17 @@ local orcSongs, elfSongs = {}, {}
 -- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
 local function StopCurrentSong()
+    if not currentSong then
+        return
+    end
     currentSong:Stop()
     currentSong = nil
 end
 
 local function ChangeCurrentSong(newSong)
-    if not newSong then return end
+    if not newSong then
+        return
+    end
     if currentSong ~= newSong then
         if currentSong then
             currentSong:Stop()
@@ -83,4 +88,3 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Int()
 Events.Connect("GameStateChanged", OnGameStateChanged)
-
