@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Consumable Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.1
+-- Date: 2021/3/23
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -45,8 +45,9 @@ end
 
 ------------------------------------------------------------------------------------------------------------------------
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.HEALTH_POTION)
 local function SetLevel(player, consumable, level)
+    player:SetResource(UTIL.GetConsumableIdString(consumable), level)
     consumables[player.id][consumable][API.LEVEL] = level
 end
 
@@ -93,6 +94,7 @@ function DoLevelUp(player, consumable)
         xp = xp - reqXp
         currentGold = currentGold - reqGold
         player:SetResource(CONST.GOLD, currentGold)
+        player:SetResource(UTIL.GetConsumableIdString(consumable), level)
         SetLevel(player, consumable, level)
         SetXp(player, consumable, xp)
     end
@@ -120,6 +122,7 @@ function BuildDataTable(player, data)
             consumables[player.id][consumable] = {}
             for key, value in pairs(consumableData) do
                 consumables[player.id][consumable][key] = value
+                player:SetResource(UTIL.GetConsumableIdString(consumable), value)
             end
         end
     end
@@ -129,6 +132,7 @@ function BuildDataTable(player, data)
             for _, key in pairs(CONST.PROGRESS) do
                 if key == CONST.PROGRESS.LEVEL then
                     consumables[player.id][consumable][key] = CONST.STARTING_LEVEL
+                    player:SetResource(UTIL.GetConsumableIdString(consumable), CONST.STARTING_LEVEL)
                 else
                     consumables[player.id][consumable][key] = 0
                 end

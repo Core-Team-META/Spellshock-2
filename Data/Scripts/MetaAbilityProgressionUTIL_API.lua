@@ -209,6 +209,14 @@ function API.GetCosmeticIdString(class, team, skin, bind)
     return "S" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
 end
 
+function API.GetConsumableIdString(consumable)
+    return "CS" .. tostring(consumable) 
+end
+
+function API.GetMountIdString(mount)
+    return "M" .. tostring(mount) 
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- ABILITY PROGRESSION DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
