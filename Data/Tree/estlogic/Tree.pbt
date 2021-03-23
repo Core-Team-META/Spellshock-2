@@ -1,6 +1,156 @@
 Name: "estlogic"
 RootId: 1672145936829432866
 Objects {
+  Id: 14237155299322317803
+  Name: "NemesisTracker"
+  Transform {
+    Location {
+      X: -22944.1172
+      Y: -31676.127
+      Z: 6397.41357
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1672145936829432866
+  ChildIds: 14875930949579151972
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14875930949579151972
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14237155299322317803
+  ChildIds: 9286080460226456581
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 9286080460226456581
+  Name: "NemesisTrackerClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14875930949579151972
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:EaseUI"
+      AssetReference {
+        Id: 12045507068401926921
+      }
+    }
+    Overrides {
+      Name: "cs:PlayerKilledEvent"
+      String: "AKI"
+    }
+    Overrides {
+      Name: "cs:YourNemesisText"
+      ObjectReference {
+        SelfId: 14698468600538133779
+      }
+    }
+    Overrides {
+      Name: "cs:YourNemesisKillsText"
+      ObjectReference {
+        SelfId: 2344863400105103918
+      }
+    }
+    Overrides {
+      Name: "cs:NemesisOfText"
+      ObjectReference {
+        SelfId: 12755197281558524576
+      }
+    }
+    Overrides {
+      Name: "cs:NemesisOfKillsText"
+      ObjectReference {
+        SelfId: 5111648794313959499
+      }
+    }
+    Overrides {
+      Name: "cs:VictoryScreenContainer"
+      ObjectReference {
+        SelfId: 16766948595417691007
+      }
+    }
+    Overrides {
+      Name: "cs:NemesisVictoryScreenMarker"
+      AssetReference {
+        Id: 9653194334873660604
+      }
+    }
+    Overrides {
+      Name: "cs:RollTextTickSFX"
+      AssetReference {
+        Id: 3523787590995695701
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13015194634821144853
+    }
+  }
+}
+Objects {
   Id: 5125932527311443849
   Name: "PointsFeedback"
   Transform {
