@@ -9,6 +9,7 @@ local RightPanel = script:GetCustomProperty("RightPanel"):WaitForObject()
 local ConfirmChoicePanel = script:GetCustomProperty("ConfirmChoicePanel"):WaitForObject()
 local Audio = script:GetCustomProperty("Audio"):WaitForObject()
 local ClassSelectionCanvas = script.parent
+local GlobalStatsButton = script:GetCustomProperty("GlobalStatsButton"):WaitForObject()
 
 local OrcClassSelection = script:GetCustomProperty("OrcClassSelection"):WaitForObject()
 local ElfClassSelection = script:GetCustomProperty("ElfClassSelection"):WaitForObject()
@@ -21,8 +22,12 @@ local LeftPanel_HoverPanel = LeftPanel:GetCustomProperty("HoverPanel"):WaitForOb
 local RightPanel_Icon = RightPanel:GetCustomProperty("Icon"):WaitForObject()
 local RightPanel_ClassName = RightPanel:GetCustomProperty("ClassName"):WaitForObject()
 local RightPanel_AbilitiesPanel = RightPanel:GetCustomProperty("AbilitiesPanel"):WaitForObject()
+local RightPanel_AbilityButtons = RightPanel:GetCustomProperty("AbilityButtons"):WaitForObject()
 local RightPanel_ClassDescriptionPanel = RightPanel:GetCustomProperty("ClassDescriptionPanel"):WaitForObject()
 local RightPanel_AbilityOverviewPanel = RightPanel:GetCustomProperty("AbilityOverviewPanel"):WaitForObject()
+local RightPanel_GlobalStats = RightPanel:GetCustomProperty("GlobalStats"):WaitForObject()
+local RightPanel_AbilitiesLabel = RightPanel:GetCustomProperty("AbilitiesLabel"):WaitForObject()
+local RightPanel_ClassLevelPanel = RightPanel:GetCustomProperty("ClassLevelPanel"):WaitForObject()
 
 local RightPanel_UpgradeButtonPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
 local RightPanel_UpgradeButton = RightPanel_UpgradeButtonPanel:GetCustomProperty("UpgradeButton"):WaitForObject()
@@ -146,10 +151,47 @@ function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation
 	AnimMesh:PlayAnimation(Animation, {playbackRate=0.6})
 end
 
+function OnGlobalStatsClicked(thisButton)
+	-- return CurrentClassButton to idle state
+	if CurrentClassButton then
+		CurrentClassButton.clientUserData.panel.parent = LeftPanel_IdlePanel 
+		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.FORCE_OFF
+		CurrentClassButton = nil
+	end
+
+	-- return CurrentAbilityButton to idle state
+	if CurrentAbilityButton then
+		local ConfirmIcon = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject()
+		ConfirmIcon.visibility = Visibility.FORCE_OFF
+		ConfirmIcon:SetColor(Color.New(1,1,1, 0.5))
+		CurrentAbilityButton = nil -- reset to nil
+	end
+	
+	-- Update Class Name text
+	RightPanel_ClassName.text = "Global Stats"
+	RightPanel_ClassName:GetChildren()[1].text = RightPanel_ClassName.text
+
+	-- Update Ability Name Text
+	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
+	AbilityName.text = "Overview"
+	AbilityName:GetChildren()[1].text = "Overview"
+
+	RightPanel_GlobalStats.visibility = Visibility.INHERIT
+	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilitiesPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
+	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
+
+	local HealthBonus = RightPanel_GlobalStats:GetCustomProperty("HealthBonus"):WaitForObject()
+	local HealingPotion = RightPanel_GlobalStats:GetCustomProperty("HealingPotion"):WaitForObject()
+end
+
 function UpdateClassInfo(thisButton)
 	local dataTable = thisButton.clientUserData.dataTable
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_GlobalStats.visibility = Visibility.FORCE_OFF
 
 	-- Update Class Icon
 	RightPanel_Icon:SetImage(dataTable["Icon"])
@@ -164,7 +206,7 @@ function UpdateClassInfo(thisButton)
 	AbilityName:GetChildren()[1].text = "Overview"
 
 	-- Update all ability buttons and reset them to their idle state
-	for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
+	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
 		local ConfirmIcon = abilityPanel:GetCustomProperty("ConfirmIcon"):WaitForObject()
 		local Level = abilityPanel:GetCustomProperty("Level"):WaitForObject()
@@ -246,6 +288,10 @@ function OnClassClicked(thisButton)
 	end
 	CurrentAbilityButton = nil -- reset to nil
 	
+	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
+	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
+	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
+
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT
 	UpdateClassInfo(thisButton)
@@ -681,7 +727,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 end
 
 -- Connect ability buttons
-for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
+for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 	local buttonComponent = abilityPanel:GetCustomProperty("Button"):WaitForObject()
 	buttonComponent.clickedEvent:Connect(OnAbilityClicked)
 	buttonComponent.hoveredEvent:Connect(OnAbilityHovered)
@@ -708,6 +754,7 @@ SpinnerTask.repeatInterval = 0
 OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

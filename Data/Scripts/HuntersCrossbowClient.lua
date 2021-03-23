@@ -6,7 +6,7 @@ local CHARGE_UP_VFX = script:GetCustomProperty("ChargeUpVFX"):WaitForObject()
 local CHARGE_UP_SFX = script:GetCustomProperty("ChargeUpSFX"):WaitForObject()
 local FULL_CHARGE_EFFECT = script:GetCustomProperty("FullChargeEffect")
 local CROSSBOW_CHARGED_TRAIL = script:GetCustomProperty("CrossbowChargedTrail")
-
+local BIG_CHARGE = script:GetCustomProperty("BigCharge")
 
 local defaultPitch = CHARGE_UP_SFX.pitch
 
@@ -82,6 +82,7 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then 
         Events.Broadcast("OnCrossbowFired")
+        World.SpawnAsset(BIG_CHARGE, {position = WEAPON.owner:GetWorldPosition()})        
         ChargePanel.visibility = Visibility.FORCE_OFF
         CHARGE_UP_SFX:Stop()
     end

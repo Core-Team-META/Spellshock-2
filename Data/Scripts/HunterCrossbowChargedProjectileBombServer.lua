@@ -21,7 +21,7 @@ local sourcePlayer = ROOT.serverUserData.sourcePlayer
 local sourceAbility = ROOT.serverUserData.sourceAbility
 local sourceTeam = ROOT.serverUserData.sourceTeam
 
-local radius = 200
+local radius = 700
 
 local explosionPosition = EXPLOSION_SOURCE:GetWorldPosition()
 

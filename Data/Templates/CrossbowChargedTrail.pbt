@@ -48,6 +48,7 @@ Assets {
         }
         ParentId: 11388592286874595498
         ChildIds: 2420967072182582937
+        ChildIds: 2505067963028959062
         ChildIds: 7928271528055639521
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -91,11 +92,11 @@ Assets {
           }
           Overrides {
             Name: "bp:Emissive Boost"
-            Float: 15
+            Float: 12
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.3
+            Float: 0.25
           }
           Overrides {
             Name: "bp:Spawn Radius"
@@ -103,11 +104,85 @@ Assets {
           }
           Overrides {
             Name: "bp:Density"
+            Float: 0.8
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.4
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 5891367910865939212
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 2505067963028959062
+        Name: "Spark Trail Wavy VFX"
+        Transform {
+          Location {
+            X: -172.75
+          }
+          Rotation {
+          }
+          Scale {
+            X: 5
+            Y: 5
+            Z: 5
+          }
+        }
+        ParentId: 16570276597982554554
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.5625
+              G: 0.261514634
+              B: 0.0538130924
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 8
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.35
+          }
+          Overrides {
+            Name: "bp:Spawn Radius"
+            Float: 0.28
+          }
+          Overrides {
+            Name: "bp:Density"
             Float: 1
           }
           Overrides {
             Name: "bp:Particle Scale Multiplier"
-            Float: 0.5
+            Float: 0.35
+          }
+          Overrides {
+            Name: "bp:Chaos"
+            Float: 0.38
           }
         }
         Collidable_v2 {

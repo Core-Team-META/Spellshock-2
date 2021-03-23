@@ -27,7 +27,7 @@ local AbilityMod = script:GetCustomProperty("AbilityMod")
 
 local startChargingTime = 0
 
-local CHARGE_DELAY = 0.3
+local CHARGE_DELAY = 0.1
 local CHARGE_DURATION = 0.5
 
 
@@ -40,8 +40,25 @@ function OnTargetImpact(theWeapon, impactData)
 	else 
 		return
 	end
+
+--	local totalChargeTime = time() - startChargingTime
+	local charge_multi = 1.3
+	local charge_super = 0
+	local chargeTime = time() - startChargingTime
+	
+
+    local chargeAmount = CoreMath.Clamp((chargeTime - CHARGE_DELAY) / CHARGE_DURATION)
+    local lastShotChargedAmount = chargeAmount
+--    print ("We hit ... something" .. (chargeAmount+CHARGE_DELAY))
+	if chargeAmount >= 0.97 then
+		charge_super = 30
+	end	
+	local charge_bonus = (1+chargeAmount+CHARGE_DELAY)^charge_multi
+	amount = charge_bonus*amount+charge_super
 	
 	local dmg = Damage.New(amount)
+
+--    print ("We got damage " .. amount)
 		
 	dmg:SetHitResult(impactData:GetHitResult())
 	dmg.reason = DamageReason.COMBAT
@@ -119,8 +136,10 @@ end
 
 function OnProjectileSpawned(weapon, projectile)
     local chargeTime = time() - startChargingTime
+
     local chargeAmount = CoreMath.Clamp((chargeTime - CHARGE_DELAY) / CHARGE_DURATION)
     local lastShotChargedAmount = chargeAmount
+--    print ("We hit ... something" .. (chargeAmount+CHARGE_DELAY))
 
     if lastShotChargedAmount >= 1 then
 		projectile.impactEvent:Connect(OnChargedProjectileImpacted)
@@ -130,7 +149,7 @@ end
 function OnChargedProjectileImpacted(projectile, other, hitResult)
 	--print ("We hit ... something")
 
-
+--[[
 	
 	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 	local damageRange = Vector2.New(rangeTable.min, rangeTable.max)
@@ -161,6 +180,8 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 
 
 	end)
+	
+--]]
 end
 
 
