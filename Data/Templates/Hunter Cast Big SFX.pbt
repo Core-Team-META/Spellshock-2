@@ -1,13 +1,13 @@
 Assets {
-  Id: 6147896150544354150
-  Name: "Mace and Shield Full Charge SFX"
+  Id: 15718917274813081166
+  Name: "Hunter Cast Big SFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15321246977556953383
+      RootId: 13349735284941005103
       Objects {
-        Id: 15321246977556953383
-        Name: "Mace and Shield Full Charge SFX"
+        Id: 13349735284941005103
+        Name: "Hunter Cast Big SFX"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,9 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 16393863943545406515
-        Lifespan: 1.3
+        ChildIds: 6918717413567632102
+        Lifespan: 2
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -31,8 +32,8 @@ Assets {
         }
       }
       Objects {
-        Id: 16393863943545406515
-        Name: "Sword Blade Hits Klangs Set 01 SFX"
+        Id: 6918717413567632102
+        Name: "Fire Chunk Whoosh Throw 01 SFX"
         Transform {
           Location {
           }
@@ -44,15 +45,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15321246977556953383
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:esfx_swordklangshits:15"
-            }
-          }
-        }
+        ParentId: 13349735284941005103
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -62,30 +55,26 @@ Assets {
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        Blueprint {
-          BlueprintAsset {
-            Id: 4435399724034107698
+        AudioInstance {
+          AudioAsset {
+            Id: 4912420516731848444
           }
-          TeamSettings {
-          }
-          AudioBP {
-            AutoPlay: true
-            Pitch: 200
-            Falloff: 3600
-            Radius: 400
-            IsSpatializationEnabled: true
-            IsAttenuationEnabled: true
-          }
+          AutoPlay: true
+          Volume: 0.672437608
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
     }
     Assets {
-      Id: 4435399724034107698
-      Name: "Sword Blade Hits Klangs Set 01 SFX"
-      PlatformAssetType: 10
+      Id: 4912420516731848444
+      Name: "Fire Chunk Whoosh Throw 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_sword_hit_klangs_ref"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_fire_chunk_whoosh_throw_01_Cue_ref"
       }
     }
     PrimaryAssetId {

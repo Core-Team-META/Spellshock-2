@@ -1502,13 +1502,19 @@ Assets {
           Overrides {
             Name: "cs:FullChargeEffect"
             AssetReference {
-              Id: 6147896150544354150
+              Id: 4708628973238390037
             }
           }
           Overrides {
             Name: "cs:CrossbowChargedTrail"
             AssetReference {
               Id: 15322823562239517501
+            }
+          }
+          Overrides {
+            Name: "cs:BigCharge"
+            AssetReference {
+              Id: 15718917274813081166
             }
           }
         }
