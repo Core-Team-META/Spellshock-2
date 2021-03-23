@@ -2385,7 +2385,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
