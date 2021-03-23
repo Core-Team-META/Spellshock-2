@@ -152,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14012817403198044743
+  Name: "Globe"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_019"
+  }
+}
+Assets {
   Id: 14002637459053075183
   Name: "4 Point Star"
   PlatformAssetType: 9
@@ -320,6 +329,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_shine_star_shimmer_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 7243817981913966754
+  Name: "Fantasy Shape 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Shape_005"
   }
 }
 Assets {
