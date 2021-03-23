@@ -47,7 +47,7 @@ Assets {
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "1hand_melee_stance"
+            String: "2hand_melee_stance"
           }
         }
         WantsNetworking: true
@@ -2408,7 +2408,7 @@ Assets {
             CanJump: true
             CanRotate: true
           }
-          Animation: "1hand_melee_slash_right"
+          Animation: "2hand_melee_slash_right"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:invalid"
