@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17081271930865778008
+        ParentId: 4781671109827199097
         ChildIds: 12417214448193997821
         ChildIds: 9135895041219395310
         ChildIds: 7174222016834209919
@@ -24,7 +24,7 @@ Assets {
           Overrides {
             Name: "cs:NemesisText"
             ObjectReference {
-              SubObjectId: 13030357336969879765
+              SubObjectId: 9135895041219395310
             }
           }
           Overrides {
@@ -36,7 +36,7 @@ Assets {
           Overrides {
             Name: "cs:NemesisOfText"
             ObjectReference {
-              SubObjectId: 10948693670690151605
+              SubObjectId: 7174222016834209919
             }
           }
           Overrides {
