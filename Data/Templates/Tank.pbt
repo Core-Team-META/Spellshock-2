@@ -631,7 +631,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DamageAmount"
-            Int: 50
+            Int: 125
           }
           Overrides {
             Name: "cs:ProjectileSpeed"

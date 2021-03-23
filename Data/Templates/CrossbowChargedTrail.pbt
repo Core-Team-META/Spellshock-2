@@ -50,6 +50,7 @@ Assets {
         ChildIds: 2420967072182582937
         ChildIds: 2505067963028959062
         ChildIds: 7928271528055639521
+        ChildIds: 18207777608041598695
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -131,7 +132,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -205,7 +206,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:medium"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -218,9 +219,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 5
-            Y: 5
-            Z: 5
+            X: 3
+            Y: 3
+            Z: 3
           }
         }
         ParentId: 16570276597982554554
@@ -244,7 +245,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Emissive Boost"
-            Float: 4.52167749
+            Float: 2.522
           }
           Overrides {
             Name: "bp:Color"
@@ -292,6 +293,73 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
+      Objects {
+        Id: 18207777608041598695
+        Name: "Tracer VFX"
+        Transform {
+          Location {
+            X: -170
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16570276597982554554
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Shape Index"
+            Int: 13
+          }
+          Overrides {
+            Name: "bp:Width"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Length"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Height"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              G: 0.710000038
+              B: 0.103443772
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              R: 0.0158940163
+              G: 0.299999952
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 7714779464812125433
+          }
+          TeamSettings {
+          }
+        }
+      }
     }
     Assets {
       Id: 5891367910865939212
@@ -309,6 +377,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_basic_projectile_trail"
+      }
+    }
+    Assets {
+      Id: 7714779464812125433
+      Name: "Tracer VFX"
+      PlatformAssetType: 6
+      PrimaryAsset {
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_tracer"
       }
     }
     PrimaryAssetId {
