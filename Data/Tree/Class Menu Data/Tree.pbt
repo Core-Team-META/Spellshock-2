@@ -4316,11 +4316,11 @@ Objects {
     }
     Overrides {
       Name: "cs:AM_Stance"
-      String: "1hand_melee_idle_ready"
+      String: "2hand_melee_idle_ready"
     }
     Overrides {
       Name: "cs:AM_Animation"
-      String: "1hand_melee_shield_bash"
+      String: "2hand_melee_slash_right"
     }
   }
   Collidable_v2 {
