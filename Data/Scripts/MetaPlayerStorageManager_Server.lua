@@ -32,7 +32,8 @@ local versionControl = {
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
     [CONST.STORAGE.DAILY_SHOP] = 1,
     [CONST.STORAGE.CLASS_PROGRESSION] = 1,
-    [CONST.STORAGE.CONSUMABLE] = 1
+    [CONST.STORAGE.CONSUMABLE] = 1,
+    ["TIME"] = os.time(os.date("!*t"))
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -48,7 +49,7 @@ local function DoesDataVersionMatch(data)
     if data[CONST.STORAGE.VERSION] then
         local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
         for id, version in pairs(versionControl) do
-            if tbl[id] and tbl[id] ~= version then
+            if tbl[id] and tbl[id] ~= version and id ~= "TIME" then
                 -- Return false if version mismatch
                 return false
             end
