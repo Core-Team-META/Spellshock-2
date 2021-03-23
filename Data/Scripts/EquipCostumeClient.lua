@@ -1,11 +1,20 @@
 ﻿--if true then return end
 local ParentEquipment = script:GetCustomProperty("ParentEquipment"):WaitForObject()
 local ClassID = ParentEquipment:GetCustomProperty("ClassID")
+local listeners = {}
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local function META_VFX()
 	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
 end
 
 function AttachCostume(player)
@@ -44,6 +53,7 @@ end
 function OnPlayerLeft(player)
 	if Object.IsValid(ParentEquipment) and player == ParentEquipment.owner then
 		DestroyCostume(player)
+		DisconnectListeners()
 	end
 end
 
@@ -53,8 +63,8 @@ if ParentEquipment.owner then
 	AttachCostume(ParentEquipment.owner)
 end
 
-ParentEquipment.equippedEvent:Connect( OnEquipped )
-ParentEquipment.unequippedEvent:Connect( OnUnequipped )
+listeners[#listeners + 1] = ParentEquipment.equippedEvent:Connect( OnEquipped )
+listeners[#listeners + 1] = ParentEquipment.unequippedEvent:Connect( OnUnequipped )
 Game.playerLeftEvent:Connect( OnPlayerLeft )
 
 

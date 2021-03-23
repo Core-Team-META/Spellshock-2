@@ -307,6 +307,13 @@ local function OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
     CLASS_PROGRESSION.context.OnPlayerLeft(player)
     CONSUMABLES.context.OnPlayerLeft(player)
+
+    for _, equipment in ipairs(player:GetEquipment()) do
+		if Object.IsValid(equipment) then
+			equipment:Unequip()
+			equipment:Destroy()
+		end
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------

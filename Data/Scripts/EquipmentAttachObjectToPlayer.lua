@@ -40,6 +40,16 @@ local ORIGINAL_LOCAL_TRANSFORM = OBJECT:GetTransform()
 -- Internal variables
 local attached = false
 
+local listeners = {}
+
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
+
 -- nil OnEquipped(Equipment, Player)
 -- Attach to equipment owner's socket and set a new local position
 function OnEquipped(equipment, player)
@@ -65,10 +75,17 @@ function OnUnequipped()
     end
 end
 
+function OnPlayerLeft(player)
+	if Object.IsValid(EQUIPMENT) and player == EQUIPMENT.owner then
+		DisconnectListeners()
+	end
+end
+
 -- Initialize
-EQUIPMENT.equippedEvent:Connect(OnEquipped)
-EQUIPMENT.unequippedEvent:Connect(OnUnequipped)
+listeners[#listeners + 1] = EQUIPMENT.equippedEvent:Connect(OnEquipped)
+listeners[#listeners + 1] = EQUIPMENT.unequippedEvent:Connect(OnUnequipped)
 
 if not attached and Object.IsValid(EQUIPMENT.owner) then
     OnEquipped(EQUIPMENT, EQUIPMENT.owner)
 end
+Game.playerLeftEvent:Connect(OnPlayerLeft)

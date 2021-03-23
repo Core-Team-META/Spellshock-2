@@ -1,4 +1,3 @@
-
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 
@@ -10,15 +9,22 @@ end
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local EventListeners = {}
+local listeners = {}
 
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
 
 function OnBindingPressed(player, binding)
-	if binding == "ability_primary"
-	and not Equipment.clientUserData.isPreviewing then
+	if binding == "ability_primary" and not Equipment.clientUserData.isPreviewing then
 		if SpecialAbility.owner and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		end
-		
+
 		if Ability2 and Ability2.owner and Ability2:GetCurrentPhase() == AbilityPhase.READY then
 			Ability2:Activate()
 		end
@@ -30,7 +36,9 @@ function OnEquip(equipment, player)
 		script:Destroy()
 		return
 	end
-	table.insert(EventListeners, player.bindingPressedEvent:Connect(OnBindingPressed))
+	local listener = player.bindingPressedEvent:Connect(OnBindingPressed)
+	table.insert(EventListeners, listener)
+	listeners[#listeners + 1] = listener
 end
 
 function OnUnequip(equipment, player)
@@ -38,12 +46,22 @@ function OnUnequip(equipment, player)
 		return
 	end
 	for _, listener in ipairs(EventListeners) do
-		listener:Disconnect()
+		if listener.isConnected then
+			listener:Disconnect()
+		end
 	end
 end
 
 if Equipment.owner then
 	OnEquip(Equipment, Equipment.owner)
 end
-Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)
+
+function OnPlayerLeft(player)
+	if player == Equipment.owner then
+		DisconnectListeners()
+	end
+end
+
+listeners[#listeners + 1] = Equipment.equippedEvent:Connect(OnEquip)
+listeners[#listeners + 1] = Equipment.unequippedEvent:Connect(OnUnequip)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
