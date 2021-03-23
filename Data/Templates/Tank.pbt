@@ -631,7 +631,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DamageAmount"
-            Int: 50
+            Int: 125
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -2385,7 +2385,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true

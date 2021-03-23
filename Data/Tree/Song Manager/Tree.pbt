@@ -196,7 +196,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 945024203867131124
+        SelfId: 17601287680247368645
       }
     }
   }
@@ -341,7 +341,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 7533910292317192694
+        SelfId: 12407423805149081047
       }
     }
   }
@@ -379,7 +379,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 945024203867131124
       }
     }
   }
@@ -770,6 +770,7 @@ Objects {
   ChildIds: 4023576004789637134
   ChildIds: 945024203867131124
   ChildIds: 7533910292317192694
+  ChildIds: 17601287680247368645
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -781,6 +782,44 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 17601287680247368645
+  Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 695690695652039968
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 0.35
+      Falloff: 3600
+      Radius: 400
+    }
   }
 }
 Objects {
@@ -1142,6 +1181,12 @@ Objects {
   }
   ParentId: 12652278405279320986
   ChildIds: 4522482355251314432
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Tonal Instruments Volume"
+      Float: 12
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
