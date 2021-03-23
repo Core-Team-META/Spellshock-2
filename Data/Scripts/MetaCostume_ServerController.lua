@@ -3,8 +3,8 @@ local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/18
--- Version 0.1.8
+-- Date: 2021/3/23
+-- Version 0.1.9
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -127,6 +127,8 @@ function OnPlayerLeft(player)
     playerCosmetic[player] = nil
     playerEquippedCosmetic[player] = nil
     playerCosmeticStrings[player] = nil
+    --Check to make sure the player has no data transfers pending
+    OnDeletePlayerDataObject(player)
 end
 
 function BuildCosmeticStringTable(player, str)
