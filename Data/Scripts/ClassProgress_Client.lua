@@ -50,7 +50,7 @@ function Tick()
     local xp = LOCAL_PLAYER:GetResource("CLASS_XP")
     local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL) + 1
     if xp and level and level >= 1 then
-        local reqXp = CONST.ReqXp[level]
+        local reqXp = CONST.ReqXp[level] or 0
         PROGRESS_BAR.progress = xp / reqXp
         XP_TEXT_BOX.text = UTIL.FormatInt(xp) .. " / " .. UTIL.FormatInt(reqXp)
         XP_TEXT_BOX2.text = UTIL.FormatInt(xp) .. " / " .. UTIL.FormatInt(reqXp)

@@ -332,6 +332,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4941923027931780178
+  Name: "Horse"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Horse"
+  }
+}
+Assets {
   Id: 4727080213227783003
   Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9

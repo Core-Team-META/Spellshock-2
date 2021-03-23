@@ -5,8 +5,8 @@ local RequiredPlayers = script:GetCustomProperty("RequiredPlayers")
 local SmallMapScore = script:GetCustomProperty("SmallMapScore")
 local BigMapScore = script:GetCustomProperty("BigMapScore")
 
-local Configuration_A = {[1]=true, [5]=true} -- these would get disabled; based off of "order"
-local Configuration_B = {[4]=true, [2]=true}
+local Configuration_A = {[1] = true, [5] = true} -- these would get disabled; based off of "order"
+local Configuration_B = {[4] = true, [2] = true}
 local A_Bases = {1, 5} -- first index is Orc, second is Elf
 local B_Bases = {4, 2}
 local configTable = {Configuration_A, Configuration_B}
@@ -51,12 +51,14 @@ function OnRoundStart()
 
         -- Move all players to the new base locations
         for _, player in ipairs(AllPlayers) do
-            local id = NewBases[player.team]
-            local capturePointState = ABCP.GetCapturePointState(id)
-            local SpawnPoints = capturePointState.baseSpawn:GetChildren()
-            local RandomSP = SpawnPoints[math.random(1, #SpawnPoints)]
-            player:SetWorldPosition(RandomSP:GetWorldPosition())
-            player:SetWorldRotation(RandomSP:GetWorldRotation())
+            if Object.IsValid(player) then
+                local id = NewBases[player.team]
+                local capturePointState = ABCP.GetCapturePointState(id)
+                local SpawnPoints = capturePointState.baseSpawn:GetChildren()
+                local RandomSP = SpawnPoints[math.random(1, #SpawnPoints)]
+                player:SetWorldPosition(RandomSP:GetWorldPosition())
+                player:SetWorldRotation(RandomSP:GetWorldRotation())
+            end
         end
 
         Events.Broadcast("ToggleLoadScreen", false)
