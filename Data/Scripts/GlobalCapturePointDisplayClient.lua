@@ -123,15 +123,15 @@ function Tick(DeltaTime)
 		end
 
 		-- Set name text
-		if SHOW_CAPTURE_POINT_NAMES and nameText and nameText.text ~= capturePointState.shortName then
+		if SHOW_CAPTURE_POINT_NAMES and nameText then
 			nameText.text = capturePointState.shortName
 			nameText:GetChildren()[1].text = capturePointState.shortName
-			if capturePointState.isEnabled and nameText.visibility ~= Visibility.FORCE_ON then
+			if capturePointState.isEnabled then
 				nameText.visibility = Visibility.FORCE_ON
-			elseif nameText.visibility ~= Visibility.FORCE_OFF then
+			else
 				nameText.visibility = Visibility.FORCE_OFF
 			end
-		elseif nameText.visibility ~= Visibility.FORCE_OFF then
+		else
 			nameText.visibility = Visibility.FORCE_OFF
 		end
 	end
