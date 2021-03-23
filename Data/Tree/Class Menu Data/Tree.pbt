@@ -3335,6 +3335,8 @@ Objects {
   ParentId: 10980313450103268903
   ChildIds: 3476371213677220383
   ChildIds: 6918803888502819830
+  ChildIds: 3438177076390056663
+  ChildIds: 7195657300355699397
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -3344,11 +3346,99 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Slow Effect = 40%. Slow Duration = 1.5s"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Charge and hold for an empowered attack!Slow Effect = 40%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7195657300355699397
+  Name: "Charge Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15584454778672282218
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Additional damage multiplier based on the charge time"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 7153307292795837090
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3438177076390056663
+  Name: "Full Charge Bonus"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15584454778672282218
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Additional damage applied from a fully charged attack"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 3423917662938093696
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod2"
     }
   }
   Collidable_v2 {
@@ -4487,6 +4577,7 @@ Objects {
   ParentId: 6935863718337197916
   ChildIds: 6522337446254046630
   ChildIds: 17175002916368485517
+  ChildIds: 4163559377844863923
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -4496,11 +4587,55 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack! Charge and hold for additional damage. Charge Damage = 2x maximum. Charge Time = .5 seconds"
+      String: "Melee Weapon \342\200\223 Press LMB to strike nearby enemies with slow, powerful swings. Charge and hold for a more powerful attack! Charge and hold for additional damage. Charge Radius =  500. Full Charge Time = 1.5 seconds"
     }
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4163559377844863923
+  Name: "Charge Damage"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14701107593300770011
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Additional damage multiplier applied from charging the attack."
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 16410397760598587364
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod5"
     }
   }
   Collidable_v2 {
