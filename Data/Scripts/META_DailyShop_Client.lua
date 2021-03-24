@@ -147,7 +147,6 @@ end
 
 local function BuildShopItems(slot, id, class, bind, reward)
     -- TIME^R~0^T~1613694203
-
     local table = SHOP_ITEMS:GetChildren()
     local panel = table[slot]
     if panel.name ~= "Background" then
@@ -243,7 +242,7 @@ local function BuildRewardSlots(tbl)
         local id, class, bind, reward
         for rewardType, rewards in pairs(value) do
             if type(rewardType) == "number" then
-                id = REWARD_UTIL.REWARD_TYPES.SHARDS
+                id = REWARD_UTIL.REWARD_TYPES.SKILLPOINTS
                 class, bind, reward = GetBindInfo(value)
             elseif rewardType == "G" then
                 id = REWARD_UTIL.REWARD_TYPES.GOLD
@@ -257,6 +256,7 @@ local function BuildRewardSlots(tbl)
                 refreshCount = rewards
             end
         end
+    
         if id and bind and reward then
             BuildShopItems(slot, id, class, bind, reward)
         end
