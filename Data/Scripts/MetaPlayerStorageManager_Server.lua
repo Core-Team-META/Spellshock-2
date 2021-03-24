@@ -278,9 +278,8 @@ local function OnPlayerJoined(player)
         OnLoadClassLevelData(player, data)
         OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
+        MOUNT_MANAGER.context.OnPlayerJoined(player, data[CONST.STORAGE.MOUNT_SPEED])
     end
-    -- Make sure this is last as it has a Task.Wait
-    MOUNT_MANAGER.context.OnPlayerJoined(player)
 end
 
 --@param object player
@@ -297,6 +296,8 @@ local function OnPlayerLeft(player)
     OnSaveClassLeveData(player, data)
     OnSaveConsumableData(player, data)
 
+    data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
+
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
@@ -309,6 +310,7 @@ local function OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
     CLASS_PROGRESSION.context.OnPlayerLeft(player)
     CONSUMABLES.context.OnPlayerLeft(player)
+    MOUNT_MANAGER.context.OnPlayerLeft(player)
 
     for _, equipment in ipairs(player:GetEquipment()) do
 		if Object.IsValid(equipment) then

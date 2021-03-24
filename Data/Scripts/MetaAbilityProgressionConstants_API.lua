@@ -21,7 +21,8 @@ API.STORAGE = {
     PERKS = 7,
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
-    CONSUMABLE = 10
+    CONSUMABLE = 10,
+    MOUNT_SPEED = 11
 }
 
 
@@ -130,8 +131,7 @@ API.CLASS_XP = {
 ------------------------------------------------------------------------------------------------------------------------
 
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1,
-    MOUNT_SPEED = 2
+    HEALTH_POTION = 1
 }
 
 API.CONSUMABLES = {
