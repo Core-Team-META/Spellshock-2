@@ -137,7 +137,8 @@ API.CLASS_XP = {
 ------------------------------------------------------------------------------------------------------------------------
 
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
+    HEALTH_POTION = 1,
+    MOUNT_SPEED = 2
 }
 
 API.CONSUMABLES = {

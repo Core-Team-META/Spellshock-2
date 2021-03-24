@@ -888,3 +888,76 @@ Objects {
     TemplateId: 425347663873707340
   }
 }
+Objects {
+  Id: 7181858312778661679
+  Name: "ServerContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13143194677747676118
+  ChildIds: 5659926504011352444
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: Server
+  }
+}
+Objects {
+  Id: 5659926504011352444
+  Name: "MountManager_Server"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7181858312778661679
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:MountLevels"
+      ObjectReference {
+        SelfId: 17424699769896010276
+      }
+    }
+    Overrides {
+      Name: "cs:ConsumableProgression_Server"
+      ObjectReference {
+        SelfId: 10094054520663354760
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3266292934643434662
+    }
+  }
+}

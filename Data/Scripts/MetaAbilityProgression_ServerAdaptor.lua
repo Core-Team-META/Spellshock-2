@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression Adaptor
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 3/15/2021
--- Version 0.1.3
+-- Date: 2021/3/23
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
@@ -34,6 +34,9 @@ end
 function ApplySkillStats(player, class, bind, bindLevel)
     if currentClass[player] ~= class then
         Task.Wait()
+    end
+    if not Object.IsValid(player) then
+        return
     end
     currentClass[player] = class
     local data = DATA.GetClassTable()
@@ -67,8 +70,8 @@ end
 function OnPlayerLeft(player)
     currentClass[player] = nil
     listeners[player.id]:Disconnect()
+    listeners[player.id] = nil
 end
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Listeners

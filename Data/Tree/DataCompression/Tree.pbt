@@ -82,6 +82,12 @@ Objects {
         SelfId: 10094054520663354760
       }
     }
+    Overrides {
+      Name: "cs:MountManager_Server"
+      ObjectReference {
+        SelfId: 5659926504011352444
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

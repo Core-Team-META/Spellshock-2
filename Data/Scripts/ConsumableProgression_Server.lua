@@ -97,6 +97,9 @@ function DoLevelUp(player, consumable)
         player:SetResource(UTIL.GetConsumableIdString(consumable), level)
         SetLevel(player, consumable, level)
         SetXp(player, consumable, xp)
+        if consumable == API.MOUNT_SPEED then
+            _G.MOUNT_SPEED.SetMountSpeed(player, level)
+        end
     end
 end
 
@@ -122,7 +125,9 @@ function BuildDataTable(player, data)
             consumables[player.id][consumable] = {}
             for key, value in pairs(consumableData) do
                 consumables[player.id][consumable][key] = value
-                player:SetResource(UTIL.GetConsumableIdString(consumable), value)
+                if key == CONST.PROGRESS.LEVEL then
+                    player:SetResource(UTIL.GetConsumableIdString(consumable), value)
+                end
             end
         end
     end

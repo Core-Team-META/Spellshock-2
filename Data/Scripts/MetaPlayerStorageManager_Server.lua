@@ -18,6 +18,7 @@ local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
 local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
 local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
+local MOUNT_MANAGER = script:GetCustomProperty("MountManager_Server"):WaitForObject()
 
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
@@ -209,7 +210,7 @@ local function OnSaveEquippedCosmetic(player, data)
         next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
 end
 
---#TODO Needs to be written
+
 --@param object player
 --@param table data
 local function OnLoadDailyShopData(player, data)
@@ -220,7 +221,6 @@ local function OnLoadDailyShopData(player, data)
     DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
 end
 
---#TODO Needs to be written
 --@param object player
 --@param table data
 local function OnSaveDailyShopData(player, data)
@@ -279,6 +279,8 @@ local function OnPlayerJoined(player)
         OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
     end
+    -- Make sure this is last as it has a Task.Wait
+    MOUNT_MANAGER.context.OnPlayerJoined(player)
 end
 
 --@param object player
