@@ -47,7 +47,7 @@ Assets {
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "1hand_melee_stance"
+            String: "2hand_melee_stance"
           }
         }
         WantsNetworking: true
@@ -631,7 +631,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DamageAmount"
-            Int: 50
+            Int: 125
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -2385,7 +2385,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.3
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2408,7 +2408,7 @@ Assets {
             CanJump: true
             CanRotate: true
           }
-          Animation: "1hand_melee_slash_right"
+          Animation: "2hand_melee_slash_right"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:invalid"

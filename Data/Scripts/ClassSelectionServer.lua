@@ -14,7 +14,7 @@ local ClassTemplates = {
 }
 
 local Class_Stances = {
-	[META_AP().TANK] = "1hand_melee_stance",
+	[META_AP().TANK] = "2hand_melee_stance",
 	[META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
 	[META_AP().MAGE] = "2hand_staff_ready",
 	[META_AP().ASSASSIN] = "unarmed_ready",
@@ -100,6 +100,7 @@ end
 function OnPlayerJoined(player)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
+    player.animationStance = Class_Stances[META_AP().TANK]
 
     if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])

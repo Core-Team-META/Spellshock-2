@@ -204,15 +204,15 @@ Objects {
   Name: "Game Portal"
   Transform {
     Location {
-      Y: -500
-      Z: -307
+      Y: -438.26
+      Z: -317.432
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 0.5625
+      X: 1.429
+      Y: 1.429
+      Z: 0.802
     }
   }
   ParentId: 6136183747213178366
@@ -227,7 +227,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Portal Spread"
-      Float: 1
+      Float: 0.898
     }
     Overrides {
       Name: "bp:View Distortion Amount"
@@ -283,11 +283,11 @@ Objects {
     }
     Overrides {
       Name: "bp:Game ID"
-      String: "47cb81/screenshottestdivide"
+      String: "3d44f5/dividesscreenshots"
     }
     Overrides {
       Name: "bp:Screenshot Index"
-      Int: 1
+      Int: 2
     }
     Overrides {
       Name: "bp:Speed"
@@ -311,7 +311,7 @@ Objects {
     }
     Overrides {
       Name: "bp:U Scale"
-      Float: 0.96
+      Float: 0.9
     }
     Overrides {
       Name: "bp:Horizontal Bend Amount"
@@ -323,11 +323,15 @@ Objects {
     }
     Overrides {
       Name: "bp:V Scale"
-      Float: 0.96
+      Float: 0.9
     }
     Overrides {
       Name: "bp:V Offset"
-      Float: -0.0157483611
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:U Offset"
+      Float: 0.05
     }
   }
   Collidable_v2 {

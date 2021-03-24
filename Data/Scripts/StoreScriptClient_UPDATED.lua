@@ -150,7 +150,7 @@ local playerSockets = {
 }
 
 local PreviewAnimationStances = {
-	Warrior = "1hand_melee_idle_ready",
+	Warrior = "2hand_melee_idle_ready",
 	Hunter = "2hand_rifle_aim_shoulder",
 	Mage = "2hand_staff_idle_ready",
 	Assassin = "unarmed_idle_ready",
@@ -158,7 +158,7 @@ local PreviewAnimationStances = {
 }
 
 local ItemAnimationStances = {
-	Warrior = "2hand_staff_idle_relaxed",
+	Warrior = "2hand_melee_idle_ready",
 	Hunter = "2hand_rifle_idle_relaxed",
 	Mage = "2hand_staff_idle_relaxed",
 	Assassin = "unarmed_idle_ready",
