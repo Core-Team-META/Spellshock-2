@@ -16,13 +16,14 @@ _G.MOUNT_SPEED = API
 while not _G["Consumables"] do
     Task.Wait()
 end
+local CONSUMABLE = _G["Consumables"]
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
 
 local function SetPlayerMountSpeed(player, level)
-    local level = level or API.GetLevel(player, API.MOUNT_SPEED) or 1
+    local level = level or CONSUMABLE.GetLevel(player, CONSUMABLE.MOUNT_SPEED) or 1
     local mountSpeed = MOUNT_LEVELS:GetChildren()[level]
     if mountSpeed then
         mountSpeed:ApplyToPlayer(player)
