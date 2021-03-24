@@ -15541,3 +15541,93 @@ Objects {
     }
   }
 }
+Objects {
+  Id: 12898380952190572091
+  Name: "Orc_totem_big"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17916078698815467549
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Orc_totem_big"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -13746.4893
+            Y: -18351.0254
+            Z: 3286.24146
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15301608356116954551
+    }
+  }
+}
+Objects {
+  Id: 17723757178116825547
+  Name: "Elf_fontaine"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16227534043720893935
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7931376690481461533
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Elf_fontaine"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6683.16309
+            Y: 7596.87549
+            Z: 3135.60132
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15384479673473392993
+    }
+  }
+}
