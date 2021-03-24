@@ -1121,7 +1121,7 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1370,7 +1370,7 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 15
+            Size: 13
             Justification {
               Value: "mc:etextjustify:center"
             }

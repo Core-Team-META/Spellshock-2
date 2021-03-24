@@ -598,7 +598,7 @@ Objects {
   Control {
     Width: 150
     Height: 150
-    UIX: -740
+    UIX: -770
     UIY: -220
     RenderTransformPivot {
       Anchor {
@@ -1358,7 +1358,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 15
+      Size: 14
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -1445,7 +1445,7 @@ Objects {
   Control {
     Width: 160
     Height: 160
-    UIX: 565
+    UIX: 605
     UIY: -210
     RenderTransformPivot {
       Anchor {
@@ -2205,7 +2205,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 16
+      Size: 15
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -2292,7 +2292,7 @@ Objects {
   Control {
     Width: 160
     Height: 160
-    UIX: -565
+    UIX: -595
     UIY: -210
     RenderTransformPivot {
       Anchor {
@@ -3052,7 +3052,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 16
+      Size: 15
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -3139,7 +3139,7 @@ Objects {
   Control {
     Width: 180
     Height: 180
-    UIX: 370
+    UIX: 400
     UIY: -190
     RenderTransformPivot {
       Anchor {
@@ -3899,7 +3899,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 17
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -3986,7 +3986,7 @@ Objects {
   Control {
     Width: 180
     Height: 180
-    UIX: -370
+    UIX: -395
     UIY: -190
     RenderTransformPivot {
       Anchor {
@@ -4746,7 +4746,7 @@ Objects {
         B: 1
         A: 1
       }
-      Size: 17
+      Size: 16
       Justification {
         Value: "mc:etextjustify:center"
       }
@@ -4832,7 +4832,7 @@ Objects {
   Control {
     Width: 210
     Height: 210
-    UIX: 145
+    UIX: 165
     UIY: -160
     RenderTransformPivot {
       Anchor {
@@ -5678,7 +5678,7 @@ Objects {
   Control {
     Width: 210
     Height: 210
-    UIX: -145
+    UIX: -160
     UIY: -160
     RenderTransformPivot {
       Anchor {
