@@ -17,7 +17,7 @@ Objects {
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
-  ChildIds: 8870859726532759777
+  ChildIds: 7942565228071284537
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
@@ -1583,8 +1583,8 @@ Objects {
   }
 }
 Objects {
-  Id: 8870859726532759777
-  Name: "Environment_v11"
+  Id: 7942565228071284537
+  Name: "Environment_v12"
   Transform {
     Scale {
       X: 1
@@ -1601,39 +1601,16 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 383455669828436557
-      value {
-        Overrides {
-          Name: "bp:Light Shaft Bloom Scale"
-          Float: 2
-        }
-        Overrides {
-          Name: "bp:Light Shaft Mask Darkness"
-          Float: 0.7
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10519002396590049864
+      key: 18071166912119165262
       value {
         Overrides {
           Name: "Name"
-          String: "Environment_v11"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
+          String: "Environment_v12"
         }
       }
     }
     TemplateAsset {
-      Id: 6409085658745970630
+      Id: 10083459288577079857
     }
   }
 }
