@@ -7590,7 +7590,7 @@ Objects {
     TemplateId: 10298965103520888440
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:high"
   }
 }
 Objects {
@@ -7639,7 +7639,7 @@ Objects {
     TemplateId: 10298965103520888440
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:high"
   }
 }
 Objects {
@@ -7688,7 +7688,7 @@ Objects {
     TemplateId: 10298965103520888440
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:high"
   }
 }
 Objects {
@@ -11529,7 +11529,7 @@ Objects {
     }
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:medium"
   }
 }
 Objects {
