@@ -24,6 +24,15 @@ API.STORAGE = {
     CONSUMABLE = 10
 }
 
+
+------------------------------------------------------------------------------------------------------------------------
+-- GAME INFO KEYS
+------------------------------------------------------------------------------------------------------------------------
+API.TEAM = {
+    ORC = 1,
+    ELF = 2
+}
+
 ------------------------------------------------------------------------------------------------------------------------
 -- PROGRESS KEYS
 ------------------------------------------------------------------------------------------------------------------------
@@ -36,22 +45,6 @@ API.CLASS = {
     ASSASSIN = 5
 }
 
-API.CLASS_NAME = {
-    [API.CLASS.TANK] = "Warrior",
-    [API.CLASS.MAGE] = "Mage",
-    [API.CLASS.HUNTER] = "Hunter",
-    [API.CLASS.HEALER] = "Healer",
-    [API.CLASS.ASSASSIN] = "Assassin"
-}
-
-API.CLASS_HEALTH = {
-    [API.CLASS.TANK] = 500,
-    [API.CLASS.MAGE] = 300,
-    [API.CLASS.HUNTER] = 350,
-    [API.CLASS.HEALER] = 400,
-    [API.CLASS.ASSASSIN] = 300
-}
-
 -- BINDING KEYS
 API.BIND = {
     Q = 1,
@@ -61,24 +54,6 @@ API.BIND = {
     LMB = 5,
     RMB = 6,
     SHIFT = 7
-}
-
--- BINDING KEYS
-API.COSMETIC_BIND = {
-    Q = 1,
-    E = 2,
-    R = 3,
-    T = 4,
-    OUTFIT = 8
-}
-
--- COSMETIC SKINS
-API.COSMETIC_SKIN = {
-    COMMON = 1,
-    UNCOMMON = 2,
-    RARE = 3,
-    LEGENDARY = 4,
-    ELEMENTAL = 5
 }
 
 -- PROGRESS KEYS
@@ -104,24 +79,27 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
-API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
-}
-
-API.CONSUMABLES = {
-    [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
-        BaseHeal = 100,
-        LevelMultiplier = 5
-    }
-}
-
-API.MAX_CONSUMABLE_LEVEL = 10
-
-API.COSTUME_ID = 8
 
 API.STARTING_LEVEL = 1
 API.MAX_LEVEL = 10
 API.MAX_CLASS_LEVEL = 50
+
+
+API.CLASS_NAME = {
+    [API.CLASS.TANK] = "Warrior",
+    [API.CLASS.MAGE] = "Mage",
+    [API.CLASS.HUNTER] = "Hunter",
+    [API.CLASS.HEALER] = "Healer",
+    [API.CLASS.ASSASSIN] = "Assassin"
+}
+
+API.CLASS_HEALTH = {
+    [API.CLASS.TANK] = 500,
+    [API.CLASS.MAGE] = 300,
+    [API.CLASS.HUNTER] = 350,
+    [API.CLASS.HEALER] = 400,
+    [API.CLASS.ASSASSIN] = 300
+}
 
 API.ReqXp = {
     [1] = 500,
@@ -153,8 +131,50 @@ API.CLASS_XP = {
     Wins = 300
 }
 
+
+------------------------------------------------------------------------------------------------------------------------
+-- CONSUMABLE KEYS
+------------------------------------------------------------------------------------------------------------------------
+
+API.CONSUMABLE_KEYS = {
+    HEALTH_POTION = 1
+}
+
+API.CONSUMABLES = {
+    [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
+        BaseHeal = 100,
+        LevelMultiplier = 5
+    }
+}
+
+API.MAX_CONSUMABLE_LEVEL = 10
+
+------------------------------------------------------------------------------------------------------------------------
+-- COSMETIC KEYS
+------------------------------------------------------------------------------------------------------------------------
+
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
+API.COSTUME_ID = 8
+
+-- COSMETIC SKINS
+API.COSMETIC_SKIN = {
+    COMMON = 1,
+    UNCOMMON = 2,
+    RARE = 3,
+    LEGENDARY = 4,
+    ELEMENTAL = 5
+}
+
+-- BINDING KEYS
+API.COSMETIC_BIND = {
+    Q = 1,
+    E = 2,
+    R = 3,
+    T = 4,
+    OUTFIT = 8
+}
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- RESOURCE NAMES
@@ -198,9 +218,5 @@ API.CURRENCY = {
 API.GOLD = API.CURRENCY[1]
 API.COSMETIC_TOKEN = API.CURRENCY[2]
 
-API.TEAM = {
-    ORC = 1,
-    ELF = 2
-}
 ------------------------------------------------------------------------------------------------------------------------
 return API

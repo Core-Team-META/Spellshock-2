@@ -6,8 +6,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
-local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
-local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local COST_TABLE = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup

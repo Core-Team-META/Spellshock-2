@@ -592,4 +592,4 @@ function API.DailyShopConvertToString(tbl)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
-return API
+return API, CONST
