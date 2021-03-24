@@ -20,14 +20,143 @@ local function META_AP()
 end
 
 ------------------------------------------------------------------------------------------------------------------------
+-- Constants
+------------------------------------------------------------------------------------------------------------------------
+
+-- REWARD KEYS
+API.REWARD_TYPES = {
+    LOCKED = 0,
+    SKILLPOINTS = 1,
+    GOLD = 2,
+    COSMETIC = 3
+}
+
+API.RARITY = {
+    UNCOMMON = 1,
+    RARE = 2,
+    EPIC = 3,
+    LEGENDARY = 4
+}
+
+local SKILL_AMOUNT = {
+    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
+    [API.RARITY.RARE] =      {min = 20, max = 30},
+    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
+}
+
+local COSMETIC_AMOUNT = {
+    [API.RARITY.UNCOMMON] =  {min = 2, max = 4},
+    [API.RARITY.RARE] =      {min = 4, max = 6},
+    [API.RARITY.EPIC] =      {min = 6, max = 8},
+    [API.RARITY.LEGENDARY] = {min = 8, max = 10}
+}
+
+local GOLD_AMOUNT = {
+    [API.RARITY.UNCOMMON] =  {min = 100, max = 200},
+    [API.RARITY.RARE] =      {min = 200, max = 300},
+    [API.RARITY.EPIC] =      {min = 300, max = 400},
+    [API.RARITY.LEGENDARY] = {min = 400, max = 500}
+}
+
+------------------------------------------------------------------------------------------------------------------------
 -- Public API
 ------------------------------------------------------------------------------------------------------------------------
-function API.GetGoldSmallAmmount()
-    return math.random(100, 200)
+function API.GetSkillReward()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 90 then
+        reward.rarity = API.RARITY.LEGENDARY
+    elseif randomChance <= 90 and randomChance > 70 then
+        reward.rarity = API.RARITY.EPIC
+    elseif randomChance <= 70 and randomChance > 40 then
+        reward.rarity = API.RARITY.RARE
+    else -- randomChance <= 40    
+        reward.rarity = API.RARITY.UNCOMMON
+    end
+
+    local amountsTable = SKILL_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.SKILLPOINTS
+
+    return reward
 end
 
-function API.GetGoldLargeAmmount()
-    return math.random(800, 1000)
+function API.GetCosmeticReward()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 90 then
+        reward.rarity = API.RARITY.LEGENDARY
+    elseif randomChance <= 90 and randomChance > 70 then
+        reward.rarity = API.RARITY.EPIC
+    elseif randomChance <= 70 and randomChance > 40 then
+        reward.rarity = API.RARITY.RARE
+    else -- randomChance <= 40    
+        reward.rarity = API.RARITY.UNCOMMON
+    end
+
+    local amountsTable = COSMETIC_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.COSMETIC
+
+    return reward
+end
+
+function API.GetGoldReward()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 90 then
+        reward.rarity = API.RARITY.LEGENDARY
+    elseif randomChance <= 90 and randomChance > 70 then
+        reward.rarity = API.RARITY.EPIC
+    elseif randomChance <= 70 and randomChance > 40 then
+        reward.rarity = API.RARITY.RARE
+    else -- randomChance <= 40    
+        reward.rarity = API.RARITY.UNCOMMON
+    end
+
+    local amountsTable = GOLD_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.GOLD
+
+    return reward
+end
+
+function API.GetLoserGoldAmmount()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 80 then
+        reward.rarity = API.RARITY.RARE
+    else -- randomChance <= 80    
+        reward.rarity = API.RARITY.UNCOMMON
+    end
+
+    local amountsTable = GOLD_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.GOLD
+
+    return reward
+end
+
+function API.GetWinnerGoldAmmount()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 80 then
+        reward.rarity = API.RARITY.LEGENDARY
+    else -- randomChance <= 80 
+        reward.rarity = API.RARITY.EPIC
+    end
+
+    local amountsTable = GOLD_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.GOLD
+
+    return reward
 end
 
 function API.GetSkillSmallAmmount()
@@ -115,6 +244,54 @@ function API.CalculateDailyShopCost(player, slot, id, class, bind, reward)
         end
         return infoTable
     end
+end
+
+local function GetRewardInfo(tempTable, list)
+    local bindId = list:GetCustomProperty("Bind")
+    local name = list:GetCustomProperty("Name")
+    local image = list:GetCustomProperty("Image")
+    tempTable[bindId] = tempTable[bindId] or {}
+    tempTable[bindId].Name = name
+    tempTable[bindId].Image = image
+    return tempTable
+end
+
+--@param object list => VFX object
+--@return table cosmeticTable
+function API.BuildRewardsTable(list, classData) -- #FIXME
+    local tempTable = {}
+    for _, rewardType in ipairs(list:GetChildren()) do
+        local id = rewardType:GetCustomProperty("ID")
+        if id == CONST.REWARDS.GOLD then
+            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
+            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
+        elseif id == CONST.REWARDS.COSMETIC then
+            tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
+            tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
+        end
+    end
+
+    if classData then
+        tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
+        for _, class in ipairs(classData:GetChildren()) do
+            local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
+            tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
+            for _, bind in ipairs(class:GetChildren()) do 
+                local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
+                local icon = bind:GetCustomProperty("Icon")
+                local description = bind:GetCustomProperty("Description")
+                local classIcon = class:GetCustomProperty("Icon")
+
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Description = description
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassIcon = classIcon
+                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassName = class.name
+            end
+        end
+    end
+    return tempTable
 end
 
 --@param object player

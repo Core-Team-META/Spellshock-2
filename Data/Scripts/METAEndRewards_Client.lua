@@ -8,6 +8,7 @@
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
@@ -39,7 +40,7 @@ local REWARD_PARENT_UI = script:GetCustomProperty("RoundEndRewardUI"):WaitForObj
 ------------------------------------------------------------------------------------------------------------------------
 local listeners = {}
 local spamPrevent
-local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
+local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
 local canSelect = false
 local SelectionCount = 0 -- determines how many cards the player can choose
@@ -67,12 +68,11 @@ local LockedCardDescriptions = {
    [10] = "Get any Class to level 50 to unlock this slot"
 }
 
-local ClassColors = { -- Hex sRGB
-    [META_AP().TANK] = "DE99003B",
-    [META_AP().HUNTER] = "00AA1527",
-    [META_AP().MAGE] = "004BAF5F",
-    [META_AP().ASSASSIN] = "BD00DD3F",
-    [META_AP().HEALER] = "A235003F"
+local RarityColors = { -- Hex sRGB
+    [1] = "1CCC27FF", -- Green 
+    [2] = "1C5ECCFF", -- Blue
+    [3] = "BB2AE4FF", -- Purple
+    [4] = "F49A17FF" -- Orange
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -128,15 +128,13 @@ local function ToggleUI(isTrue)
     end
 end
 
-local function GetBindInfo(value)
+local function GetBindInfo(shardId)
     local class, bind
-    for shardId, reward in pairs(value) do
-        shardId = tostring(shardId)
-        class = tonumber(shardId:sub(1, 1))
-        bind = tonumber(shardId:sub(2, 2))
-        --print("Class ID " .. class .. " | Bind ID " .. bind .. " | Reward " .. reward)
-        return class, bind, reward
-    end
+    shardId = tostring(shardId)
+    class = tonumber(shardId:sub(1, 1))
+    bind = tonumber(shardId:sub(2, 2))
+    --print("Class ID " .. class .. " | Bind ID " .. bind .. " | Reward " .. reward)
+    return class, bind
 end
 
 local function GetGoldInfo(value)
@@ -161,13 +159,22 @@ local function GetCosmeticInfo(value)
     end
 end
 
-local function BuildCardInfo(slot, id, class, bind, reward)
+function SetRarityColor(CardRoot, rarity)
+    for _, object in ipairs(CardRoot:FindDescendantsByName("RARITY_COLOR")) do
+        local color = object:GetColor()
+        local newColor = Color.FromStandardHex(RarityColors[rarity])
+        newColor.a = color.a
+        object:SetColor(newColor)
+    end
+end
+
+local function BuildCardInfo(slot, type, class, bind, rarity, amount)
     -- Spawn new card
     local newCardParent = World.SpawnAsset(Helper_RewardCard, {parent=REWARD_PARENT_UI})
     newCardParent.x = 0 
     newCardParent.y = -500
 
-    -- Get the two card types
+    -- Get the card types
     local AbilityCard = newCardParent:GetCustomProperty("AbilityCard"):WaitForObject()
     local NormalCard = newCardParent:GetCustomProperty("NormalCard"):WaitForObject()
     local LockedCard = newCardParent:GetCustomProperty("LockedCard"):WaitForObject()
@@ -176,14 +183,14 @@ local function BuildCardInfo(slot, id, class, bind, reward)
     local CardButton
 
     -- Locked card, Ability card or Normal card?
-    if id == 0 then -- Locked card
+    if type == REWARD_UTIL.REWARD_TYPES.LOCKED then -- Locked card
         AbilityCard:Destroy()
         NormalCard:Destroy()
         LockedCard.visibility = Visibility.INHERIT
 
         local Description = LockedCard:GetCustomProperty("Description"):WaitForObject()
-        -- In this case "reward" is the number of slots the player has unlocked 
-        if reward == 4 then -- Only show reveal description of 1st locked card
+        -- In this case "amount" is the number of slots the player has unlocked 
+        if amount == 4 then -- Only show reveal description of 1st locked card
             if slot == 5 then
                 Description.text = LockedCardDescriptions[slot]
                 Description:GetChildren()[1].text = LockedCardDescriptions[slot]
@@ -195,7 +202,7 @@ local function BuildCardInfo(slot, id, class, bind, reward)
             Description.text = LockedCardDescriptions[slot]
             Description:GetChildren()[1].text = LockedCardDescriptions[slot]
         end
-    elseif id == 1 then
+    elseif type == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
         NormalCard:Destroy() -- Destroy normal card
         LockedCard:Destroy()
         AbilityCard.visibility = Visibility.INHERIT
@@ -224,7 +231,7 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         local InfoDescription = InfoPanel:GetCustomProperty("InfoDescription"):WaitForObject()
         
         -- Get data
-        infoTable = rewardAssets[id][class][bind]
+        infoTable = rewardAssets[type][class][bind]
         local currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
         local reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
 
@@ -237,22 +244,23 @@ local function BuildCardInfo(slot, id, class, bind, reward)
         Level.text = tostring(abilityLevel)
         NextLevel.text = tostring(abilityLevel+1)
         CurrentPoints.text = tostring(currentAmmount)
-        RewardPoints.text = "+"..tostring(reward)
+        RewardPoints.text = "+"..tostring(amount)
         CurrentProgress.progress = currentAmmount / reqXp
-        RewardProgress.progress = (currentAmmount + reward) / reqXp
-        LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
-        RightGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
+        RewardProgress.progress = (currentAmmount + amount) / reqXp
+        --LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
+        --RightGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
         InfoTitle.text = infoTable.Name
         InfoDescription.text = infoTable.Description
 
         -- Is an upgrade available?
-        --[[if (currentAmmount + reward) >= reqXp then
+        --[[if (currentAmmount + amount) >= reqXp then
             UpgradePanel.visibility = Visibility.INHERIT
             UpgradeCost.text = tostring(reqGold)
             UpgradeCost:GetChildren()[1].text = tostring(reqGold)
             -- #TODO need to hookup the UpgradeButton
         end]]
-
+        SetRarityColor(newCardParent, rarity)
+        Selected.visibility = Visibility.FORCE_OFF
         CardButton.clientUserData.selected = Selected
     else -- Normal card
         AbilityCard:Destroy()
@@ -272,29 +280,30 @@ local function BuildCardInfo(slot, id, class, bind, reward)
 
         -- Get data
         --[[local currentAmmount 
-        if id == 2 then -- Gold
+        if type == 2 then -- Gold
             currentAmmount = LOCAL_PLAYER:GetResource(CONST.GOLD)
-        elseif id == 3 then -- Cosmetic Tokens
+        elseif type == 3 then -- Cosmetic Tokens
             currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
         end]]
-        infoTable = rewardAssets[id][bind]
+        infoTable = rewardAssets[type][bind]
 
         -- Set all the stuff
         Title.text = infoTable.Name
         Icon:SetImage(infoTable.Image)
-        Amount.text = "+"..tostring(reward)
+        Amount.text = "+"..tostring(amount)
         Amount:GetChildren()[1].text = Amount.text
         ShortDescription.visibility = Visibility.FORCE_OFF
-        --ShortDescription.text = CardDescriptions[id]
+        --ShortDescription.text = CardDescriptions[type]
         --InfoTitle.text = 
-        InfoDescription.text = CardDescriptions[id]
+        InfoDescription.text = CardDescriptions[type]
 
+        Selected.visibility = Visibility.FORCE_OFF
         CardButton.clientUserData.selected = Selected
     end
 
-    if id ~= 0 then
+    if type ~= 0 then
         newCardParent.clientUserData.button = CardButton
-        CardButton.clientUserData.rewardID = id
+        CardButton.clientUserData.rewardID = type
         CardButton.clientUserData.slotID = slot
         CardButton.clientUserData.panel = newCardParent
         listeners[#listeners + 1] = CardButton.clickedEvent:Connect(OnRewardSelected)
@@ -308,8 +317,14 @@ end
 
 --@param tabl tbl -- Nested table reward
 local function BuildRewardSlots(tbl)
-    for slot, value in ipairs(tbl) do
-        local id, class, bind, reward
+    for slot, reward in ipairs(tbl) do
+        -- reward.amount
+        -- reward.type
+        -- reward.rarity
+        -- reward.class
+        -- reward.bind
+        
+        --[[local id, class, bind, reward
         for rewardType, rewards in pairs(value) do
             if type(rewardType) == "number" then
                 id = CONST.REWARDS.SHARDS
@@ -321,16 +336,16 @@ local function BuildRewardSlots(tbl)
                 id = CONST.REWARDS.COSMETIC
                 bind, reward = GetCosmeticInfo(value)
             end
-        end
-        
-        BuildCardInfo(slot, id, class, bind, reward)
+        end]]
+
+        BuildCardInfo(slot, reward.type, reward.class, reward.bind, reward.rarity, reward.amount)
     end
 
     if #tbl < 10 then
         local cardsUnlocked = #tbl
         -- Fill the rest of the slots with empty cards
         for slot = #tbl+1, 10, 1 do
-            BuildCardInfo(slot, 0, nil, nil, cardsUnlocked)
+            BuildCardInfo(slot, 0, nil, nil, nil, cardsUnlocked)
         end
     end
 end

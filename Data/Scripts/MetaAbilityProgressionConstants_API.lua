@@ -62,13 +62,6 @@ API.PROGRESS = {
     XP = 2
 }
 
--- REWARD KEYS
-API.REWARDS = {
-    SHARDS = 1,
-    GOLD = 2,
-    COSMETIC = 3
-}
-
 -- STATUS EFFECT KEYS
 API.STATUS_EFFECT = {
     BLEED = 1,

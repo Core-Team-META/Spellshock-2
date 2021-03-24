@@ -22,6 +22,12 @@ Assets {
           Id: 11974742996071064388
         }
       }
+      Overrides {
+        Name: "cs:META_Rewards_UTIL"
+        AssetReference {
+          Id: 2433320775435313890
+        }
+      }
     }
   }
   SerializationVersion: 81
