@@ -35,6 +35,7 @@ Objects {
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
   ChildIds: 1672145936829432866
+  ChildIds: 10980449195489382391
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -47,6 +48,46 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 10980449195489382391
+  Name: "NemesisVictoryScreenMarker"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2725466387286679747
+      value {
+        Overrides {
+          Name: "Name"
+          String: "NemesisVictoryScreenMarker"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23680
+            Y: -33575
+            Z: 7365
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9653194334873660604
+    }
   }
 }
 Objects {

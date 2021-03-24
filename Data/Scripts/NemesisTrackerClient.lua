@@ -406,6 +406,10 @@ end
 
 function InitializeVictoryScreenMarkers()
 
+	local entryNumber = 0
+	local entryNemesis = nil
+	local entryNemesisOf = nil
+
 	for _, entry in pairs(victoryScreenContainer:GetChildren()) do
 	
 		local marker = World.SpawnAsset(nemesisMarker, {parent = entry})
@@ -416,6 +420,41 @@ function InitializeVictoryScreenMarkers()
 		marker.y = -94
 		
 		table.insert(markerList, marker)
+		
+		entryNumber = tonumber(string.sub(entry.name, -1))
+		
+		print("Entry number: " .. tostring(entryNumber))
+		
+		entryNemesis = marker:GetCustomProperty("NemesisNameText"):WaitForObject()
+		
+		entryNemesisOf = marker:GetCustomProperty("NemesisOfNameText"):WaitForObject()	
+		
+		if entryNumber == 1 then
+		
+			entryNemesis.fontSize = 14
+			entryNemesisOf.fontSize = 14		
+		
+		elseif entryNumber <= 3 then
+		
+			entryNemesis.fontSize = 13
+			entryNemesisOf.fontSize = 13
+		
+		elseif entryNumber <= 5 then
+		
+			entryNemesis.fontSize = 12
+			entryNemesisOf.fontSize = 12
+			
+		elseif  entryNumber <= 7 then
+		
+			entryNemesis.fontSize = 11
+			entryNemesisOf.fontSize = 11
+			
+		elseif entryNumber <= 8 then
+		
+			entryNemesis.fontSize = 10
+			entryNemesisOf.fontSize = 10
+			
+		end
 	
 	end
 	
