@@ -10340,12 +10340,12 @@ Objects {
   ChildIds: 1917936312158066202
   ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
-  ChildIds: 12640469123405423053
+  ChildIds: 4179091296725665014
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10377,8 +10377,8 @@ Objects {
   }
 }
 Objects {
-  Id: 12640469123405423053
-  Name: "Helper_RewardCard"
+  Id: 4179091296725665014
+  Name: "NEW_Helper_RewardCard"
   Transform {
     Scale {
       X: 1
@@ -10395,11 +10395,11 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5803624323247121117
+      key: 12332305553483113519
       value {
         Overrides {
           Name: "Name"
-          String: "Helper_RewardCard"
+          String: "NEW_Helper_RewardCard"
         }
         Overrides {
           Name: "Position"
@@ -10413,16 +10413,10 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
-      Id: 199494650754129245
+      Id: 13336148153644952711
     }
   }
 }
@@ -11329,7 +11323,7 @@ Objects {
     Overrides {
       Name: "cs:Helper_RewardCard"
       AssetReference {
-        Id: 199494650754129245
+        Id: 13336148153644952711
       }
     }
     Overrides {

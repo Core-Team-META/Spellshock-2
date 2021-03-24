@@ -212,6 +212,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
         local ClassName = AbilityCard:GetCustomProperty("ClassName"):WaitForObject()
         local Title = AbilityCard:GetCustomProperty("Title"):WaitForObject()
         local AbilityIcon = AbilityCard:GetCustomProperty("AbilityIcon"):WaitForObject()
+        local BigRewardPoints = AbilityCard:GetCustomProperty("BigRewardPoints"):WaitForObject()
         local Level = AbilityCard:GetCustomProperty("Level"):WaitForObject()
         local NextLevel = AbilityCard:GetCustomProperty("NextLevel"):WaitForObject()
         local CurrentPoints = AbilityCard:GetCustomProperty("CurrentPoints"):WaitForObject()
@@ -224,6 +225,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
         CardButton = AbilityCard:GetCustomProperty("CardButton"):WaitForObject()
         local InfoPanel = AbilityCard:GetCustomProperty("InfoPanel"):WaitForObject()
         local Selected = AbilityCard:GetCustomProperty("Selected"):WaitForObject()
+        local RarityComponents = AbilityCard:GetCustomProperty("RarityComponents"):WaitForObject()
 
         local UpgradeButton = UpgradePanel:GetCustomProperty("UpgradeButton"):WaitForObject()
         local UpgradeCost = UpgradePanel:GetCustomProperty("Cost"):WaitForObject()
@@ -240,6 +242,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
         ClassName.text = infoTable.ClassName
         Title.text = infoTable.Name
         AbilityIcon:SetImage(infoTable.Image)
+        BigRewardPoints.text = tostring(amount)
         local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
         Level.text = tostring(abilityLevel)
         NextLevel.text = tostring(abilityLevel+1)
@@ -259,7 +262,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
             UpgradeCost:GetChildren()[1].text = tostring(reqGold)
             -- #TODO need to hookup the UpgradeButton
         end]]
-        SetRarityColor(newCardParent, rarity)
+        SetRarityColor(RarityComponents, rarity)
         Selected.visibility = Visibility.FORCE_OFF
         CardButton.clientUserData.selected = Selected
     else -- Normal card
@@ -285,6 +288,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
         elseif type == 3 then -- Cosmetic Tokens
             currentAmmount = LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN)
         end]]
+        
         infoTable = rewardAssets[type][bind]
 
         -- Set all the stuff

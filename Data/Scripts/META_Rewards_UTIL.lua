@@ -100,6 +100,7 @@ function API.GetCosmeticReward()
     local amountsTable = COSMETIC_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
     reward.type = API.REWARD_TYPES.COSMETIC
+    reward.bind = 1
 
     return reward
 end
@@ -110,12 +111,16 @@ function API.GetGoldReward()
 
     if randomChance > 90 then
         reward.rarity = API.RARITY.LEGENDARY
+        reward.bind = 2
     elseif randomChance <= 90 and randomChance > 70 then
         reward.rarity = API.RARITY.EPIC
+        reward.bind = 2
     elseif randomChance <= 70 and randomChance > 40 then
         reward.rarity = API.RARITY.RARE
+        reward.bind = 1
     else -- randomChance <= 40    
         reward.rarity = API.RARITY.UNCOMMON
+        reward.bind = 1
     end
 
     local amountsTable = GOLD_AMOUNT[reward.rarity]
@@ -131,8 +136,10 @@ function API.GetLoserGoldAmmount()
 
     if randomChance > 80 then
         reward.rarity = API.RARITY.RARE
+        reward.bind = 1
     else -- randomChance <= 80    
         reward.rarity = API.RARITY.UNCOMMON
+        reward.bind = 1
     end
 
     local amountsTable = GOLD_AMOUNT[reward.rarity]
@@ -148,8 +155,10 @@ function API.GetWinnerGoldAmmount()
 
     if randomChance > 80 then
         reward.rarity = API.RARITY.LEGENDARY
+        reward.bind = 2
     else -- randomChance <= 80 
         reward.rarity = API.RARITY.EPIC
+        reward.bind = 2
     end
 
     local amountsTable = GOLD_AMOUNT[reward.rarity]
@@ -262,32 +271,32 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
         local id = rewardType:GetCustomProperty("ID")
-        if id == CONST.REWARDS.GOLD then
-            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
-            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
-        elseif id == CONST.REWARDS.COSMETIC then
-            tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
-            tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
+        if id == API.REWARD_TYPES.GOLD then
+            tempTable[API.REWARD_TYPES.GOLD] = tempTable[API.REWARD_TYPES.GOLD] or {}
+            tempTable[API.REWARD_TYPES.GOLD] = GetRewardInfo(tempTable[API.REWARD_TYPES.GOLD], rewardType)
+        elseif id == API.REWARD_TYPES.COSMETIC then
+            tempTable[API.REWARD_TYPES.COSMETIC] = tempTable[API.REWARD_TYPES.COSMETIC] or {}
+            tempTable[API.REWARD_TYPES.COSMETIC] = GetRewardInfo(tempTable[API.REWARD_TYPES.COSMETIC], rewardType)
         end
     end
 
     if classData then
-        tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
+        tempTable[API.REWARD_TYPES.SKILLPOINTS] = tempTable[API.REWARD_TYPES.SKILLPOINTS] or {}
         for _, class in ipairs(classData:GetChildren()) do
             local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
-            tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
+            tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] or {}
             for _, bind in ipairs(class:GetChildren()) do 
                 local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
                 local icon = bind:GetCustomProperty("Icon")
                 local description = bind:GetCustomProperty("Description")
                 local classIcon = class:GetCustomProperty("Icon")
 
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Description = description
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassIcon = classIcon
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassName = class.name
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] or {}
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Name = bind.name
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Image = icon
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Description = description
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].ClassIcon = classIcon
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].ClassName = class.name
             end
         end
     end
@@ -297,12 +306,13 @@ end
 --@param object player
 --@param int rewardId
 --@param tbl
-function API.OnRewardSelect(player, rewardId, tbl, bool)
+function API.OnRewardSelect(player, slotID, tbl, bool)
     if not Object.IsValid(player) then
         return
     end
-    if tbl[player.id] and tbl[player.id][rewardId] then
-        for key, value in pairs(tbl[player.id][rewardId]) do
+    -- Daily shop #FIXME
+    if bool and tbl[player.id] and tbl[player.id][slotID] then
+        for key, value in pairs(tbl[player.id][slotID]) do
             if type(key) == "number" then
                 local bindId = tostring(key)
                 local class = tonumber(bindId:sub(1, 1))
@@ -314,10 +324,15 @@ function API.OnRewardSelect(player, rewardId, tbl, bool)
                 player:AddResource(CONST.COSMETIC_TOKEN, value)
             end
         end
-        if not bool then
-            --tbl[player.id] = nil
-        else
-            tbl[player.id][rewardId].P = 1
+        tbl[player.id][slotID].P = 1
+    elseif tbl[player.id] and tbl[player.id][slotID] then -- Rewards
+        local reward = tbl[player.id][slotID]
+        if reward.type == API.REWARD_TYPES.SKILLPOINTS then
+            META_AP().AddBindXp(player, reward.class, reward.bind, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.GOLD then
+            player:AddResource(CONST.GOLD, reward.amount)
+        elseif reward.type == API.REWARD_TYPES.COSMETIC then
+            player:AddResource(CONST.COSMETIC_TOKEN, reward.amount)
         end
     end
 end

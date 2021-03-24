@@ -93,7 +93,7 @@ local function CalculateRegularSlot()
     local random = math.random(1, 100)
     
     if random > 95 then
-        reward = REWARD_UTIL.GetCosmeticRewardReward()
+        reward = REWARD_UTIL.GetCosmeticReward()
     elseif random <=95 and random > 90 then
         reward = REWARD_UTIL.GetGoldReward()
     else
@@ -106,7 +106,6 @@ local function CalculateRegularSlot()
     return reward
 end
 
---#TODO Need to actually write logic
 -- Should return 4-10
 local function GetNumberOfCards(player)
     local cardCount = 4 
@@ -151,7 +150,6 @@ local function GetNumberOfCards(player)
     return cardCount
 end
 
---#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local numberOfCards = GetNumberOfCards(player) -- 4 to 10
@@ -190,12 +188,6 @@ function CalculateRewards()
         end
     end
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
-end
-
---@param object player
---@param int rewardId
-function OnRewardSelect(player, rewardId)
-    choosenRewards[player] = rewardId
 end
 
 function GivePlayerRewards(player, rewardList)
