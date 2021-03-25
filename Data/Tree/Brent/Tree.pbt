@@ -359,6 +359,12 @@ Objects {
     }
   }
   ParentId: 3612684566017260609
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Enabled"
+      Bool: false
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
