@@ -9,35 +9,12 @@
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 ------------------------------------------------------------------------------------------------------------------------
--- Global Table Setup
-------------------------------------------------------------------------------------------------------------------------
-local API = _G["Class.Progression"] or {}
-_G["Class.Progression"] = API
-------------------------------------------------------------------------------------------------------------------------
 -- Objects
 ------------------------------------------------------------------------------------------------------------------------
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PROGRESS_BAR = script:GetCustomProperty("UIProgressBar"):WaitForObject()
 local XP_TEXT_BOX = script:GetCustomProperty("UITextBox"):WaitForObject()
 local XP_TEXT_BOX2 = script:GetCustomProperty("HM_AMOUNT"):WaitForObject()
-------------------------------------------------------------------------------------------------------------------------
--- CONSTANTS
-------------------------------------------------------------------------------------------------------------------------
-
-API.CLASS_LEVEL = CONST.CLASS_LEVEL
-API.ACCOUNT_LEVEL = CONST.ACCOUNT_LEVEL
-
--- Builds class keys into the global table for easy access
--- EX => API.TANK = 1
-for class, key in pairs(CONST.CLASS) do
-    API[class] = key
-end
-
--- Builds progress keys into the global table for easy access
--- EX => API.LEVEL = 1
-for progress, key in pairs(CONST.PROGRESS) do
-    API[progress] = key
-end
 ------------------------------------------------------------------------------------------------------------------------
 -- Custom Properties
 ------------------------------------------------------------------------------------------------------------------------
@@ -79,24 +56,6 @@ function Tick()
         XP_TEXT_BOX2.text = UTIL.FormatInt(xp) .. " / " .. UTIL.FormatInt(reqXp)
     end
 end
-
-------------------------------------------------------------------------------------------------------------------------
--- PUBLIC SERVER API
-------------------------------------------------------------------------------------------------------------------------
-
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
-function API.GetCurrentClassLevel(player)
-    return LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
-end
-
---@param object player
---@param int class => id of class (API.TANK, API.MAGE)
-function API.GetClassLevel(player, class)
-    return player:GetResource(UTIL.GetClassLevelString(class))
-end
-
-
 
 listener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)

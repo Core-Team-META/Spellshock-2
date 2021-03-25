@@ -146,10 +146,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 375
-    Height: 375
-    UIX: -82
-    UIY: 35
+    Width: 500
+    Height: 500
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -697,7 +695,7 @@ Objects {
   Control {
     Width: 300
     Height: 250
-    UIX: -106.485
+    UIX: -86.4847
     UIY: 38.0293465
     RenderTransformPivot {
       Anchor {
@@ -1204,7 +1202,7 @@ Objects {
     Width: 40
     Height: 40
     UIX: 5
-    UIY: -39.9970627
+    UIY: -12
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1630,7 +1628,7 @@ Objects {
     Width: 40
     Height: 40
     UIX: -3
-    UIY: 2
+    UIY: 11
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2056,7 +2054,6 @@ Objects {
   Control {
     Width: 40
     Height: 40
-    UIY: 22.2025776
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3036,9 +3033,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 244
-    Height: 244
-    UIX: -248
+    Width: 325
+    Height: 325
+    UIX: -228
     UIY: 143
     RotationAngle: -52.25
     RenderTransformPivot {

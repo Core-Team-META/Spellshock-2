@@ -1,13 +1,10 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Mount Manager Server
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/24
--- Version 0.1.2
+-- Date: 2021/3/23
+-- Version 0.1.1
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
-------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
--- Objects
 ------------------------------------------------------------------------------------------------------------------------
 local MOUNT_LEVELS = script:GetCustomProperty("MountLevels"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
@@ -15,19 +12,19 @@ local MOUNT_LEVELS = script:GetCustomProperty("MountLevels"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 _G.MOUNT_SPEED = API
-------------------------------------------------------------------------------------------------------------------------
--- Local Variables
-------------------------------------------------------------------------------------------------------------------------
-local mountSpeed = {}
-local MOUNT_LEVELS = MOUNT_LEVELS:GetChildren()
-local MAX_MOUNT_LEVEL = #MOUNT_LEVELS
+
+while not _G["Consumables"] do
+    Task.Wait()
+end
+local CONSUMABLE = _G["Consumables"]
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
 
 local function SetPlayerMountSpeed(player, level)
-    local level = level or 1
-    local mountSpeed = MOUNT_LEVELS[level]
+    local level = level or CONSUMABLE.GetLevel(player, CONSUMABLE.MOUNT_SPEED) or 1
+    local mountSpeed = MOUNT_LEVELS:GetChildren()[level]
     if mountSpeed then
         mountSpeed:ApplyToPlayer(player)
     end
@@ -36,28 +33,14 @@ end
 -- Global Functions
 ------------------------------------------------------------------------------------------------------------------------
 
-function GetMountLevel(player)
-    return mountSpeed[player]
-end
-
-function OnPlayerJoined(player, level)
+function OnPlayerJoined(player)
     Task.Wait()
-    mountSpeed[player] = level or 1
-    SetPlayerMountSpeed(player, level)
-end
-
-function OnPlayerLeft(player)
-    mountSpeed[player] = nil
+    SetPlayerMountSpeed(player)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public API
 ------------------------------------------------------------------------------------------------------------------------
-
-function API.AddLevel(player)
-    local currentLevel = mountSpeed[player]
-    if currentLevel < MAX_MOUNT_LEVEL then
-        mountSpeed[player] = currentLevel + 1
-    end
-    SetPlayerMountSpeed(player, mountSpeed[player])
+function API.SetMountSpeed(player, level)
+    SetPlayerMountSpeed(player, level)
 end

@@ -21,8 +21,7 @@ API.STORAGE = {
     PERKS = 7,
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
-    CONSUMABLE = 10,
-    MOUNT_SPEED = 11
+    CONSUMABLE = 10
 }
 
 
@@ -61,6 +60,13 @@ API.BIND = {
 API.PROGRESS = {
     LEVEL = 1,
     XP = 2
+}
+
+-- REWARD KEYS
+API.REWARDS = {
+    SHARDS = 1,
+    GOLD = 2,
+    COSMETIC = 3
 }
 
 -- STATUS EFFECT KEYS
@@ -131,7 +137,8 @@ API.CLASS_XP = {
 ------------------------------------------------------------------------------------------------------------------------
 
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
+    HEALTH_POTION = 1,
+    MOUNT_SPEED = 2
 }
 
 API.CONSUMABLES = {
