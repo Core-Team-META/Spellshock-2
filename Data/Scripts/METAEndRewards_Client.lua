@@ -69,10 +69,10 @@ local LockedCardDescriptions = {
 }
 
 local RarityColors = { -- Hex sRGB
-    [1] = "1CCC27FF", -- Green 
-    [2] = "1C5ECCFF", -- Blue
-    [3] = "BB2AE4FF", -- Purple
-    [4] = "F49A17FF" -- Orange
+    [REWARD_UTIL.RARITY.UNCOMMON] = Color.FromStandardHex("55F700FF"), -- Green 
+    [REWARD_UTIL.RARITY.RARE] = Color.FromStandardHex("0099F0FF"), -- Blue
+    [REWARD_UTIL.RARITY.EPIC] = Color.FromStandardHex("C400F0FF"), -- Purple
+    [REWARD_UTIL.RARITY.LEGENDARY] = Color.FromStandardHex("F36900FF") -- Orange
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -162,7 +162,7 @@ end
 function SetRarityColor(CardRoot, rarity)
     for _, object in ipairs(CardRoot:FindDescendantsByName("RARITY_COLOR")) do
         local color = object:GetColor()
-        local newColor = Color.FromStandardHex(RarityColors[rarity])
+        local newColor = RarityColors[rarity]
         newColor.a = color.a
         object:SetColor(newColor)
     end
@@ -202,59 +202,82 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
             Description.text = LockedCardDescriptions[slot]
             Description:GetChildren()[1].text = LockedCardDescriptions[slot]
         end
-    elseif type == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
+    elseif type == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS or type == REWARD_UTIL.REWARD_TYPES.CONSUMABLES then
         NormalCard:Destroy() -- Destroy normal card
         LockedCard:Destroy()
         AbilityCard.visibility = Visibility.INHERIT
 
         -- Get UI components
-        local ClassIcon = AbilityCard:GetCustomProperty("ClassIcon"):WaitForObject()
-        local ClassName = AbilityCard:GetCustomProperty("ClassName"):WaitForObject()
-        local Title = AbilityCard:GetCustomProperty("Title"):WaitForObject()
-        local AbilityIcon = AbilityCard:GetCustomProperty("AbilityIcon"):WaitForObject()
-        local BigRewardPoints = AbilityCard:GetCustomProperty("BigRewardPoints"):WaitForObject()
-        local Level = AbilityCard:GetCustomProperty("Level"):WaitForObject()
+        local ClassPanel = AbilityCard:GetCustomProperty("ClassPanel"):WaitForObject()
+            local ClassName = ClassPanel:GetCustomProperty("ClassName"):WaitForObject()
+            local ClassIcon = ClassPanel:GetCustomProperty("ClassIcon"):WaitForObject()
+        local CardTitle = AbilityCard:GetCustomProperty("CardTitle"):WaitForObject()
+        local AbilityPanel = AbilityCard:GetCustomProperty("AbilityPanel"):WaitForObject()
+            local AbilityIcon = AbilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
+            local AbilityName = AbilityPanel:GetCustomProperty("AbilityName"):WaitForObject()
+        local RarityPanels = AbilityCard:GetCustomProperty("RarityPanels"):WaitForObject()
+            local RarityTextOutline = RarityPanels:GetCustomProperty("RarityTextOutline"):WaitForObject()
+            local SkillPointsAmount = RarityPanels:GetCustomProperty("SkillPointsAmount"):WaitForObject()
+        local CurrentLevel = AbilityCard:GetCustomProperty("CurrentLevel"):WaitForObject()
         local NextLevel = AbilityCard:GetCustomProperty("NextLevel"):WaitForObject()
         local CurrentPoints = AbilityCard:GetCustomProperty("CurrentPoints"):WaitForObject()
-        local RewardPoints = AbilityCard:GetCustomProperty("RewardPoints"):WaitForObject()
         local CurrentProgress = AbilityCard:GetCustomProperty("CurrentProgress"):WaitForObject()
         local RewardProgress = AbilityCard:GetCustomProperty("RewardProgress"):WaitForObject()
         local UpgradePanel = AbilityCard:GetCustomProperty("UpgradePanel"):WaitForObject()
-        local LeftGlow = AbilityCard:GetCustomProperty("LeftGlow"):WaitForObject()
-        local RightGlow = AbilityCard:GetCustomProperty("RightGlow"):WaitForObject()
+            local UpgradeButton = UpgradePanel:GetCustomProperty("UpgradeButton"):WaitForObject()
+            local UpgradeCost = UpgradePanel:GetCustomProperty("Cost"):WaitForObject()
         CardButton = AbilityCard:GetCustomProperty("CardButton"):WaitForObject()
         local InfoPanel = AbilityCard:GetCustomProperty("InfoPanel"):WaitForObject()
+            local InfoTitle = InfoPanel:GetCustomProperty("InfoTitle"):WaitForObject()
+            local InfoDescription = InfoPanel:GetCustomProperty("InfoDescription"):WaitForObject()
         local Selected = AbilityCard:GetCustomProperty("Selected"):WaitForObject()
-        local RarityComponents = AbilityCard:GetCustomProperty("RarityComponents"):WaitForObject()
-
-        local UpgradeButton = UpgradePanel:GetCustomProperty("UpgradeButton"):WaitForObject()
-        local UpgradeCost = UpgradePanel:GetCustomProperty("Cost"):WaitForObject()
-        local InfoTitle = InfoPanel:GetCustomProperty("InfoTitle"):WaitForObject()
-        local InfoDescription = InfoPanel:GetCustomProperty("InfoDescription"):WaitForObject()
         
-        -- Get data
-        infoTable = rewardAssets[type][class][bind]
-        local currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
-        local reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
+        local currentAmmount 
+        local reqXp, reqGold 
 
         -- Set all the stuff
-        ClassIcon:SetImage(infoTable.ClassIcon)
-        ClassName.text = infoTable.ClassName
-        Title.text = infoTable.Name
+        if type == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
+            infoTable = rewardAssets[type][class][bind]
+            currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+            reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
+            
+            ClassIcon:SetImage(infoTable.ClassIcon)
+            ClassName.text = infoTable.ClassName
+            AbilityName.text = infoTable.Name
+            AbilityName:SetColor(RarityColors[rarity])
+
+            local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
+            CurrentLevel.text = tostring(abilityLevel)
+            NextLevel.text = tostring(abilityLevel+1)
+
+            InfoTitle.text = infoTable.Name.." ["..infoTable.ClassName.."]"
+            InfoDescription.text = infoTable.Description
+        else
+            infoTable = rewardAssets[type][bind]
+            --currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+            --reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
+            CardTitle.text = infoTable.Name
+            AbilityName.parent.visibility = Visibility.FORCE_OFF
+            InfoTitle.text = infoTable.Name
+            InfoDescription.text = CardDescriptions[type]
+        end
+        
         AbilityIcon:SetImage(infoTable.Image)
-        BigRewardPoints.text = tostring(amount)
-        local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, bind, class)
-        Level.text = tostring(abilityLevel)
-        NextLevel.text = tostring(abilityLevel+1)
-        CurrentPoints.text = tostring(currentAmmount)
-        RewardPoints.text = "+"..tostring(amount)
+        CurrentPoints.text = UTIL.FormatInt(currentAmmount).."/"..UTIL.FormatInt(reqXp)
         CurrentProgress.progress = currentAmmount / reqXp
         RewardProgress.progress = (currentAmmount + amount) / reqXp
-        --LeftGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
-        --RightGlow:SetColor(Color.FromStandardHex(ClassColors[class]))
-        InfoTitle.text = infoTable.Name
-        InfoDescription.text = infoTable.Description
+     
+        for _, rarityOutline in ipairs(RarityTextOutline:GetChildren()) do
+            rarityOutline:SetColor(RarityColors[rarity])
+            rarityOutline.text = tostring(amount)
+        end
+        SkillPointsAmount.text = tostring(amount)
 
+        for i=1, 4, 1 do
+            RarityPanels:GetCustomProperty(tostring(i)):WaitForObject().visibility = Visibility.FORCE_OFF
+        end
+        RarityPanels:GetCustomProperty(tostring(rarity)):WaitForObject().visibility = Visibility.INHERIT
+        SetRarityColor(AbilityPanel, rarity)
         -- Is an upgrade available?
         --[[if (currentAmmount + amount) >= reqXp then
             UpgradePanel.visibility = Visibility.INHERIT
@@ -262,7 +285,7 @@ local function BuildCardInfo(slot, type, class, bind, rarity, amount)
             UpgradeCost:GetChildren()[1].text = tostring(reqGold)
             -- #TODO need to hookup the UpgradeButton
         end]]
-        SetRarityColor(RarityComponents, rarity)
+    
         Selected.visibility = Visibility.FORCE_OFF
         CardButton.clientUserData.selected = Selected
     else -- Normal card

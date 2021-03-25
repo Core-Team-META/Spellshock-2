@@ -10340,7 +10340,6 @@ Objects {
   ChildIds: 1917936312158066202
   ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
-  ChildIds: 4179091296725665014
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -10373,50 +10372,6 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
-    }
-  }
-}
-Objects {
-  Id: 4179091296725665014
-  Name: "NEW_Helper_RewardCard"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18393261942096671057
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 12332305553483113519
-      value {
-        Overrides {
-          Name: "Name"
-          String: "NEW_Helper_RewardCard"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.00390625
-            Y: -0.00390625
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13336148153644952711
     }
   }
 }
@@ -10730,6 +10685,7 @@ Objects {
   ChildIds: 1722489346644697345
   ChildIds: 4790564697029531833
   ChildIds: 6162272171672063087
+  ChildIds: 17409896878513179242
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -10741,6 +10697,56 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 17409896878513179242
+  Name: "Healing Potion"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14843588929187107669
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Name"
+      String: "Healing Potion Points"
+    }
+    Overrides {
+      Name: "cs:Image"
+      AssetReference {
+        Id: 6494160000227737456
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14699549414970058459
+    }
   }
 }
 Objects {
@@ -11323,7 +11329,7 @@ Objects {
     Overrides {
       Name: "cs:Helper_RewardCard"
       AssetReference {
-        Id: 13336148153644952711
+        Id: 7703952912120018959
       }
     }
     Overrides {

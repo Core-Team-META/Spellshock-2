@@ -28,7 +28,8 @@ API.REWARD_TYPES = {
     LOCKED = 0,
     SKILLPOINTS = 1,
     GOLD = 2,
-    COSMETIC = 3
+    COSMETIC = 3,
+    CONSUMABLES = 4
 }
 
 API.RARITY = {
@@ -57,6 +58,13 @@ local GOLD_AMOUNT = {
     [API.RARITY.RARE] =      {min = 200, max = 300},
     [API.RARITY.EPIC] =      {min = 300, max = 400},
     [API.RARITY.LEGENDARY] = {min = 400, max = 500}
+}
+
+local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the healing potion
+    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
+    [API.RARITY.RARE] =      {min = 20, max = 30},
+    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -164,6 +172,28 @@ function API.GetWinnerGoldAmmount()
     local amountsTable = GOLD_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
     reward.type = API.REWARD_TYPES.GOLD
+
+    return reward
+end
+
+function API.GetHealingPotionReward()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    if randomChance > 90 then
+        reward.rarity = API.RARITY.LEGENDARY
+    elseif randomChance <= 90 and randomChance > 70 then
+        reward.rarity = API.RARITY.EPIC
+    elseif randomChance <= 70 and randomChance > 40 then
+        reward.rarity = API.RARITY.RARE
+    else -- randomChance <= 40    
+        reward.rarity = API.RARITY.UNCOMMON
+    end
+
+    local amountsTable = HEALING_POTION_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.CONSUMABLES
+    reward.bind = CONST.CONSUMABLE_KEYS.HEALTH_POTION -- Consumable type
 
     return reward
 end
@@ -333,6 +363,10 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
             player:AddResource(CONST.GOLD, reward.amount)
         elseif reward.type == API.REWARD_TYPES.COSMETIC then
             player:AddResource(CONST.COSMETIC_TOKEN, reward.amount)
+        elseif reward.typ == API.REWARD_TYPES.CONSUMABLES then
+            if reward.bind == CONST.CONSUMABLE_KEYS.HEALTH_POTION then
+                
+            end
         end
     end
 end

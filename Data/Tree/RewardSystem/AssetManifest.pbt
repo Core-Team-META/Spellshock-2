@@ -170,6 +170,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6494160000227737456
+  Name: "Fantasy Spell Potion 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
   Id: 5784792452233078693
   Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
   PlatformAssetType: 10
