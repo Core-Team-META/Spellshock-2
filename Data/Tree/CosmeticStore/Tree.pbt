@@ -11836,6 +11836,9 @@ Objects {
   }
   ParentId: 15258054203697325885
   ChildIds: 15684288314587949020
+  ChildIds: 3356036280910274036
+  ChildIds: 2004122679987357594
+  ChildIds: 5020868727418778532
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -11847,6 +11850,313 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 5020868727418778532
+  Name: "Fantasy Castle Wall 01"
+  Transform {
+    Location {
+      X: -87.5114441
+      Y: -81.0012054
+      Z: 592.489258
+    }
+    Rotation {
+      Pitch: 90
+      Roll: 159.786285
+    }
+    Scale {
+      X: 0.492154866
+      Y: 0.787586093
+      Z: 0.746487141
+    }
+  }
+  ParentId: 9118416374632693704
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Building_WallInner:id"
+      AssetReference {
+        Id: 1626097446304398136
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:id"
+      AssetReference {
+        Id: 16311163195241644230
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Building_LowerTrimOuter:id"
+      AssetReference {
+        Id: 7362232965091765999
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_TrimOuter:id"
+      AssetReference {
+        Id: 125457281986470150
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallInner:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:utile"
+      Float: 1.75821388
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:vtile"
+      Float: 3.53832531
+    }
+    Overrides {
+      Name: "ma:Shared_TrimInner:utile"
+      Float: 5.27837
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:color"
+      Color {
+        R: 0.373000026
+        G: 0.373000026
+        B: 0.373000026
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8197503148267063602
+    }
+    Teams {
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 2004122679987357594
+  Name: "Fantasy Castle Wall 01"
+  Transform {
+    Location {
+      X: -87.779213
+      Y: -95.9829102
+      Z: 594.150391
+    }
+    Rotation {
+      Yaw: 111.501488
+    }
+    Scale {
+      X: 0.263071656
+      Y: 0.541062772
+      Z: 0.655482829
+    }
+  }
+  ParentId: 9118416374632693704
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Building_WallInner:id"
+      AssetReference {
+        Id: 1626097446304398136
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:id"
+      AssetReference {
+        Id: 17291073892603629501
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Building_LowerTrimOuter:id"
+      AssetReference {
+        Id: 7362232965091765999
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_TrimOuter:id"
+      AssetReference {
+        Id: 125457281986470150
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallInner:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:utile"
+      Float: 10.1002951
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:vtile"
+      Float: 7.30158567
+    }
+    Overrides {
+      Name: "ma:Shared_TrimInner:utile"
+      Float: 5.27837
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.242000014
+        G: 0.242000014
+        B: 0.242000014
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13186791447862463406
+    }
+    Teams {
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 3356036280910274036
+  Name: "Fantasy Castle Wall 01"
+  Transform {
+    Location {
+      X: -87.5114441
+      Y: -81.0012054
+      Z: 592.489258
+    }
+    Rotation {
+      Yaw: -159.786499
+    }
+    Scale {
+      X: 0.371871948
+      Y: 0.787569284
+      Z: 0.661908627
+    }
+  }
+  ParentId: 9118416374632693704
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Building_WallInner:id"
+      AssetReference {
+        Id: 1626097446304398136
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:id"
+      AssetReference {
+        Id: 2426845962304686405
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Building_LowerTrimOuter:id"
+      AssetReference {
+        Id: 7362232965091765999
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_TrimOuter:id"
+      AssetReference {
+        Id: 125457281986470150
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallInner:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:utile"
+      Float: 1.42112803
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:vtile"
+      Float: 2.17525387
+    }
+    Overrides {
+      Name: "ma:Shared_TrimInner:utile"
+      Float: 5.27837
+    }
+    Overrides {
+      Name: "ma:Building_WallOuter:color"
+      Color {
+        R: 0.274000019
+        G: 0.274000019
+        B: 0.274000019
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8197503148267063602
+    }
+    Teams {
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    StaticMesh {
+      Physics {
+      }
+    }
   }
 }
 Objects {
