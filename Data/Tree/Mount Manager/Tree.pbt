@@ -93,7 +93,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 2080
+      MountedWalkSpeed: 2000
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -178,7 +178,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 2060
+      MountedWalkSpeed: 1980
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -263,7 +263,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 2040
+      MountedWalkSpeed: 1960
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -348,7 +348,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 2020
+      MountedWalkSpeed: 1940
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -433,7 +433,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 2000
+      MountedWalkSpeed: 1920
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -518,7 +518,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1980
+      MountedWalkSpeed: 1900
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -603,7 +603,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1960
+      MountedWalkSpeed: 1880
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -688,7 +688,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1940
+      MountedWalkSpeed: 1860
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -773,7 +773,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1920
+      MountedWalkSpeed: 1840
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true
@@ -858,7 +858,7 @@ Objects {
         Value: "mc:eprojectionplane:xy"
       }
       MountedMaxAcceleration: 1800
-      MountedWalkSpeed: 1900
+      MountedWalkSpeed: 1820
       MountedJumpMaxCount: 1
       MountedJumpVelocity: 900
       DismountWhenDamaged: true

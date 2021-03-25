@@ -96,6 +96,10 @@ local function CalculateRegularSlot()
         reward = REWARD_UTIL.GetCosmeticReward()
     elseif random <=95 and random > 90 then
         reward = REWARD_UTIL.GetGoldReward()
+    elseif random <=90 and random > 85 then
+        reward = REWARD_UTIL.GetHealingPotionReward()
+    elseif random <=85 and random > 80 then
+        reward = REWARD_UTIL.GetMountSpeedReward()
     else
         --local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
         reward = REWARD_UTIL.GetSkillReward()

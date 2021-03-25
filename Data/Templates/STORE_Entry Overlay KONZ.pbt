@@ -113,6 +113,22 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:FrameOwnedColor"
+            Color {
+              R: 0.008940381
+              G: 0.269999981
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:FrameEquippedColor"
+            Color {
+              R: 0.200000048
+              B: 0.186754942
+              A: 1
+            }
+          }
+          Overrides {
             Name: "cs:ClassIcon"
             ObjectReference {
               SubObjectId: 4739751513587226671
@@ -122,6 +138,44 @@ Assets {
             Name: "cs:TypeIcon"
             ObjectReference {
               SubObjectId: 17316770183776865867
+            }
+          }
+          Overrides {
+            Name: "cs:PriceBG"
+            ObjectReference {
+              SubObjectId: 15844982292105173146
+            }
+          }
+          Overrides {
+            Name: "cs:PriceBGDefaultColor"
+            Color {
+              R: 0.0599999428
+              G: 0.0178807788
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:PriceBGHoverColor"
+            Color {
+              G: 0.0717217103
+              B: 0.570000052
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:PriceBGOwnedColor"
+            Color {
+              R: 0.008940381
+              G: 0.269999981
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:PriceBGEquippedColor"
+            Color {
+              R: 0.200000048
+              B: 0.186754942
+              A: 1
             }
           }
           Overrides {
