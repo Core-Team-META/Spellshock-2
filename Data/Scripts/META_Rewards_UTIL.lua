@@ -207,6 +207,17 @@ function API.GetHealingPotionReward()
     return reward
 end
 
+function API.GetMountSpeedReward()
+    local reward = {}
+    local randomChance = math.random(1, 100)
+
+    reward.rarity = API.RARITY.LEGENDARY
+    reward.type = API.REWARD_TYPES.MOUNT_SPEED
+    reward.bind = 1
+
+    return reward
+end
+
 function API.GetSkillSmallAmmount()
     return math.random(3, 4)
 end
@@ -298,9 +309,11 @@ local function GetRewardInfo(tempTable, list)
     local bindId = list:GetCustomProperty("Bind")
     local name = list:GetCustomProperty("Name")
     local image = list:GetCustomProperty("Image")
+    local color = list:GetCustomProperty("Color")
     tempTable[bindId] = tempTable[bindId] or {}
     tempTable[bindId].Name = name
     tempTable[bindId].Image = image
+    tempTable[bindId].Color = color
     return tempTable
 end
 
@@ -310,12 +323,10 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
         local id = rewardType:GetCustomProperty("ID")
-        if id == API.REWARD_TYPES.GOLD then
-            tempTable[API.REWARD_TYPES.GOLD] = tempTable[API.REWARD_TYPES.GOLD] or {}
-            tempTable[API.REWARD_TYPES.GOLD] = GetRewardInfo(tempTable[API.REWARD_TYPES.GOLD], rewardType)
-        elseif id == API.REWARD_TYPES.COSMETIC then
-            tempTable[API.REWARD_TYPES.COSMETIC] = tempTable[API.REWARD_TYPES.COSMETIC] or {}
-            tempTable[API.REWARD_TYPES.COSMETIC] = GetRewardInfo(tempTable[API.REWARD_TYPES.COSMETIC], rewardType)
+        if id == API.REWARD_TYPES.GOLD or id == API.REWARD_TYPES.COSMETIC or 
+        id == API.REWARD_TYPES.CONSUMABLES or id == API.REWARD_TYPES.MOUNT_SPEED then
+            tempTable[id] = tempTable[id] or {}
+            tempTable[id] = GetRewardInfo(tempTable[id], rewardType)
         end
     end
 
