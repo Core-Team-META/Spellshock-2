@@ -576,12 +576,12 @@ function UpdateEntryButton(entry, highlighted)
 		-- currently equipped
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
+		--entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
 		-- owned
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "OWNED"
-		entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
+		--entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
 	elseif not highlighted then
 		--entry.itemName:SetColor(Color.WHITE)
 
@@ -600,10 +600,10 @@ function UpdateEntryButton(entry, highlighted)
 		end
 
 		--entry.itemName:SetColor(entry.BGImageColor)
-		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		--SetFramesColor(entry.frames, entry.frameDefaultColor)
 		currencySymbol.visibility = Visibility.INHERIT
 
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
+		--entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
 		local currency = player:GetResource(entry.data.currencyName)
 		if entry.data.cost > currency then
 			entry.price:SetColor(Color.RED)
@@ -623,7 +623,7 @@ function UpdateEntryButton(entry, highlighted)
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
 			--entry.itemName:SetColor(Color.WHITE)
 			currencySymbol.visibility = Visibility.INHERIT
-			entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
+			--entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
 		else
 			--entry.itemName:SetColor(Color.RED)
 			if entry.PartOfSubscription then
@@ -632,27 +632,28 @@ function UpdateEntryButton(entry, highlighted)
 				entry.price.text = "NOT ENOUGH FUNDS"
 			end
 
-			entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
+			--entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
 		end
 	end
 
 	if highlighted then
 		SetFramesColor(entry.frames, entry.frameHoverColor)
-		local newColor = entry.geo:GetCustomProperty("HighlightColor")
-		entry.BGMesh:SetColor(newColor)
+		entry.priceBG:SetColor(entry.priceBGHoverColor)
+		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("HighlightColor"))		
 	elseif  CosmeticIsEquipped(entry.data.id) then
-		SetFramesColor(entry.frames, entry.frameDefaultColor)
-		local newColor = entry.geo:GetCustomProperty("EquippedColor")
-		entry.BGMesh:SetColor(newColor)
+		SetFramesColor(entry.frames, entry.frameEquippedColor)
+		entry.priceBG:SetColor(entry.priceBGEquippedColor)
+		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor"))
+	elseif  HasCosmetic(entry.data.id) then
+		SetFramesColor(entry.frames, entry.frameOwnedColor)
+		entry.priceBG:SetColor(entry.priceBGOwnedColor)
+		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor"))	
 	else 
 		SetFramesColor(entry.frames, entry.frameDefaultColor)
-		local newColor = entry.geo:GetCustomProperty("DefaultColor")
-		entry.BGMesh:SetColor(newColor)
+		entry.priceBG:SetColor(entry.priceBGDefaultColor)
+		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("DefaultColor"))
 	end
-
-	--[[if not highlighted then
-		entry.BGMesh:SetColor(entry.BGMeshColor)
-	end]]
+	
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -956,8 +957,15 @@ function PopulateStore(direction)
 		local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
 		local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
 		local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
+		local propFrameOwnedColor = newOverlay:GetCustomProperty("FrameOwnedColor")
+		local propFrameEquippedColor = newOverlay:GetCustomProperty("FrameEquippedColor")	
 		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
 		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
+		local propPriceBG = newOverlay:GetCustomProperty("PriceBG"):WaitForObject()
+		local propPriceBGDefaultColor = newOverlay:GetCustomProperty("PriceBGDefaultColor")
+		local propPriceBGHoverColor = newOverlay:GetCustomProperty("PriceBGHoverColor")
+		local propPriceBGOwnedColor = newOverlay:GetCustomProperty("PriceBGOwnedColor")
+		local propPriceBGEquippedColor = newOverlay:GetCustomProperty("PriceBGEquippedColor")
 		local propLockedMessage = newOverlay:GetCustomProperty("LockedMessage"):WaitForObject()
 		local propLockedPanel = newOverlay:GetCustomProperty("LockedPanel"):WaitForObject()
 		
@@ -1066,7 +1074,14 @@ function PopulateStore(direction)
 			gridY = gridY,
 			frames = Frames,
 			frameDefaultColor = propFrameDefaultColor,
-			frameHoverColor = propFrameHoverColor
+			frameHoverColor = propFrameHoverColor,
+			frameEquippedColor = propFrameEquippedColor,
+			frameOwnedColor = propFrameOwnedColor,
+			priceBG = propPriceBG,
+			priceBGDefaultColor = propPriceBGDefaultColor,
+			priceBGHoverColor = propPriceBGHoverColor,
+			priceBGOwnedColor = propPriceBGOwnedColor,
+			priceBGEquippedColor = propPriceBGEquippedColor
 		}
 		StoreUIButtons[propButton] = entry
 		UpdateEntryButton(entry, false)
