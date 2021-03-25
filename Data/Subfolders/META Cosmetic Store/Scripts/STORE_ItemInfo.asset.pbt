@@ -41,6 +41,10 @@ Assets {
         String: ""
       }
       Overrides {
+        Name: "cs:LockedUntil"
+        Int: 0
+      }
+      Overrides {
         Name: "cs:Types"
         String: ""
       }

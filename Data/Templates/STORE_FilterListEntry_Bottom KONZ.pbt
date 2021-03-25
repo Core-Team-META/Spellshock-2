@@ -487,6 +487,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -551,6 +552,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -2119,6 +2121,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_SciFi_Frame_006"
+      }
+    }
+    Assets {
+      Id: 11336346532215892341
+      Name: "Germania One"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     Assets {

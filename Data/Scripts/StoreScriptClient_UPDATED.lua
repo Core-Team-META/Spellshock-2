@@ -14,6 +14,12 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 while not _G.CurrentMenu do
 	Task.Wait()
 end
+local CP_API
+repeat
+	CP_API = _G["Class.Progression"]
+	Task.Wait()
+until CP_API
+
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -298,6 +304,40 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 	)
 end
 
+function CheckIfLocked(class, requiredLvl)
+
+	local localPlayer = Game.GetLocalPlayer()
+	
+	local selectedClass = 0
+	
+	if class == "Warrior" then
+		
+		selectedClass = CP_API.TANK
+		
+	elseif class == "Hunter" then
+	
+		selectedClass = CP_API.HUNTER
+		
+	elseif class == "Mage" then
+	
+		selectedClass = CP_API.MAGE
+		
+	elseif class == "Healer" then
+	
+		selectedClass = CP_API.HEALER
+		
+	elseif class == "Assassin" then
+	
+		selectedClass = CP_API.ASSASSIN
+		
+	end
+	
+	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(localPlayer, selectedClass) .. " vs " .. tostring(requiredLvl))
+	
+	return CP_API.GetClassLevel(localPlayer, selectedClass) >= requiredLvl
+
+end
+
 ----------------------------------------------------------------------------------------------------------------
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
@@ -429,7 +469,7 @@ function StoreItemClicked(button)
 			end
 		else
 			local currency = player:GetResource(entry.data.currencyName)
-			if currency >= entry.data.cost then
+			if currency >= entry.data.cost and not entry.locked then
 				local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 				purchaseText.text = "PURCHASE"
 				purchaseText:GetChildren()[1].text = "PURCHASE"
@@ -912,6 +952,25 @@ function PopulateStore(direction)
 		local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
 		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
 		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
+		local propLockedMessage = newOverlay:GetCustomProperty("LockedMessage"):WaitForObject()
+		local propLockedPanel = newOverlay:GetCustomProperty("LockedPanel"):WaitForObject()
+		
+		local locked = true
+		
+		if CheckIfLocked(v.class, v.requirement) then
+		
+			propLockedPanel.visibility = Visibility.FORCE_OFF
+			
+			locked = false
+			
+		else 
+		
+			propLockedPanel.visibility = Visibility.INHERIT
+			
+			propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
+			
+		end
+
 
 		local Frames = propFramePanel:GetChildren()
 		table.insert(Frames, propPriceFrame)
@@ -988,6 +1047,7 @@ function PopulateStore(direction)
 			BGImage = propBGImage,
 			BGImageColor = BGImageColor,
 			PartOfSubscription = partOfSubscription,
+			locked = locked,
 			data = v,
 			-- Stuff for sliding around and being cool.
 			startPos = Vector3.New(gridX * -ITEM_PADDING, 0, gridY * -ITEM_PADDING) + Vector3.FORWARD * -1000 * direction +
@@ -1146,6 +1206,7 @@ function InitStore()
 				local propTags = storeInfo:GetCustomProperty("Tags")
 				local propTypes = storeInfo:GetCustomProperty("Types")
 				local propRarity = storeInfo:GetCustomProperty("Rarity")
+				local propLockedUntil = storeInfo:GetCustomProperty("LockedUntil")
 				local propZoomView = storeInfo:GetCustomProperty("ZoomView")
 				local propPlayerVisibility = storeInfo:GetCustomProperty("PlayerVisibility")
 				local propClassIcon = storeInfo:GetCustomProperty("ClassIcon")
@@ -1188,6 +1249,7 @@ function InitStore()
 					tags = tagList,
 					class = propTags,
 					rarity = propRarity,
+					requirement = propLockedUntil,
 					types = typeList,
 					visible = propPlayerVisibility,
 					zoom = propZoomView,
