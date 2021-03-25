@@ -246,7 +246,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -310,7 +310,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -374,7 +374,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -438,7 +438,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -500,7 +500,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -622,7 +622,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -686,7 +686,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -750,7 +750,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -814,7 +814,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -876,7 +876,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1107,7 +1107,7 @@ Assets {
         Control {
           Width: 200
           Height: 40
-          UIY: 6.67010689
+          UIY: 10
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1126,7 +1126,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 10698833128597864431
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1356,7 +1356,7 @@ Assets {
         Control {
           Width: 200
           Height: 60
-          UIY: 15.6659346
+          UIY: 20
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1375,7 +1375,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
-              Id: 10698833128597864431
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1394,21 +1394,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15165554833363844727
-      Name: "Amarante"
+      Id: 11336346532215892341
+      Name: "Germania One"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "AmaranteRegular_ref"
-      }
-    }
-    Assets {
-      Id: 10698833128597864431
-      Name: "Play Bold"
-      PlatformAssetType: 28
-      PrimaryAsset {
-        AssetType: "FontAssetRef"
-        AssetId: "PlayBold_ref"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     PrimaryAssetId {

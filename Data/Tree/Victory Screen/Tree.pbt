@@ -6445,6 +6445,9 @@ Objects {
       ClipTextToSize: true
       Font {
       }
+      VerticalJustification {
+        Value: "mc:none:none"
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -6715,6 +6718,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -6783,6 +6790,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -6906,6 +6917,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -6974,6 +6989,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -7097,6 +7116,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -7165,6 +7188,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -7267,6 +7294,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7288,6 +7316,10 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
