@@ -11925,9 +11925,9 @@ Objects {
     Overrides {
       Name: "ma:Building_WallOuter:color"
       Color {
-        R: 0.530000031
-        G: 0.530000031
-        B: 0.530000031
+        R: 0.373000026
+        G: 0.373000026
+        B: 0.373000026
         A: 1
       }
     }
@@ -12027,9 +12027,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.420000017
-        G: 0.420000017
-        B: 0.420000017
+        R: 0.242000014
+        G: 0.242000014
+        B: 0.242000014
         A: 1
       }
     }
@@ -12129,9 +12129,9 @@ Objects {
     Overrides {
       Name: "ma:Building_WallOuter:color"
       Color {
-        R: 0.634
-        G: 0.634
-        B: 0.634
+        R: 0.274000019
+        G: 0.274000019
+        B: 0.274000019
         A: 1
       }
     }

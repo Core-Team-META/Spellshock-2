@@ -121,7 +121,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -214,7 +214,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Common"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -493,7 +493,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -586,7 +586,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -865,7 +865,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -958,7 +958,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -1237,7 +1237,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -1330,7 +1330,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "Epic"
+      String: "20"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -1623,6 +1623,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1715,6 +1719,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
     }
   }
   Collidable_v2 {
@@ -1809,6 +1817,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1902,6 +1914,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1986,6 +2002,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -2072,6 +2092,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2157,6 +2181,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2241,6 +2269,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -2563,6 +2595,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2655,6 +2691,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -2935,6 +2975,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3027,6 +3071,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -3307,6 +3355,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3399,6 +3451,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -3679,6 +3735,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3771,6 +3831,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -4051,6 +4115,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4144,6 +4212,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4229,6 +4301,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4313,6 +4389,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -4407,6 +4487,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4500,6 +4584,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4585,6 +4673,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4669,6 +4761,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -5007,6 +5103,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5099,6 +5199,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -5379,6 +5483,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5471,6 +5579,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -5751,6 +5863,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5843,6 +5959,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -6123,6 +6243,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6215,6 +6339,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -6495,6 +6623,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6587,6 +6719,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
     }
   }
   Collidable_v2 {
@@ -6681,6 +6817,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6774,6 +6914,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6858,6 +7002,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -6944,6 +7092,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7029,6 +7181,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7113,6 +7269,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -7435,6 +7595,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7527,6 +7691,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -7807,6 +7975,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7899,6 +8071,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -8179,6 +8355,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8271,6 +8451,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -8551,6 +8735,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8643,6 +8831,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -8923,6 +9115,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9016,6 +9212,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 40
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9101,6 +9301,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9185,6 +9389,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -9279,6 +9487,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9372,6 +9584,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9457,6 +9673,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9541,6 +9761,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -9865,7 +10089,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -9962,7 +10186,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -10243,6 +10467,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10335,6 +10563,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -10615,6 +10847,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10707,6 +10943,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -10987,6 +11227,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11079,6 +11323,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -11361,7 +11609,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 8
+      Int: 40
     }
   }
   Collidable_v2 {
@@ -11458,7 +11706,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 8
+      Int: 40
     }
   }
   Collidable_v2 {
@@ -11547,7 +11795,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 6
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -11636,7 +11884,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 6
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -11733,7 +11981,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 4
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -11830,7 +12078,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 4
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -11919,7 +12167,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 2
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -12008,7 +12256,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 2
+      Int: 10
     }
   }
   Collidable_v2 {

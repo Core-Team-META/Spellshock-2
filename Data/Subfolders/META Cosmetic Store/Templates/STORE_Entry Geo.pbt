@@ -41,34 +41,35 @@ Assets {
           Overrides {
             Name: "cs:DefaultColor"
             Color {
-              R: 0.05
-              G: 0.0284712017
-              B: 0.00885000266
+              R: 0.063
+              G: 0.0550053
+              B: 0.052794002
               A: 1
             }
           }
           Overrides {
             Name: "cs:HighlightColor"
             Color {
-              R: 0.18900001
-              G: 0.0756000131
-              A: 1
+              R: 0.02
+              G: 0.02
+              B: 0.02
+              A: 0.1
             }
           }
           Overrides {
             Name: "cs:EquippedColor"
             Color {
-              R: 0.0920000076
-              G: 0.052387014
-              B: 0.016284
+              R: 0.286
+              G: 0.166833356
               A: 1
             }
           }
           Overrides {
             Name: "cs:OwnedColor"
             Color {
-              G: 0.320000052
-              B: 0.0084768692
+              R: 0.116000004
+              G: 0.0722042
+              B: 0.018675996
               A: 1
             }
           }

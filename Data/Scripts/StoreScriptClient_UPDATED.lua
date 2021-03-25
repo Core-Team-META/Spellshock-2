@@ -567,7 +567,7 @@ function UpdateEntryButton(entry, highlighted)
 
 	local currencySymbol = entry.overlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
 	currencySymbol.visibility = Visibility.FORCE_OFF
-	entry.BGMesh:SetColor(entry.BGMeshColor)
+	--entry.BGMesh:SetColor(entry.BGMeshColor)
 	local rarityColor = RarityDefs[entry.data.rarity].color
 	entry.rarityFin:SetColor(rarityColor)
 	entry.rarityOverlay:SetColor(rarityColor)
@@ -637,9 +637,9 @@ function UpdateEntryButton(entry, highlighted)
 	end
 
 	if highlighted then
-		SetFramesColor(entry.frames, entry.frameHoverColor)
-		entry.priceBG:SetColor(entry.priceBGHoverColor)
-		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("HighlightColor"))		
+		SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor)
+		--entry.priceBG:SetColor(entry.priceBGHoverColor)
+		entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor"))		
 	elseif  CosmeticIsEquipped(entry.data.id) then
 		SetFramesColor(entry.frames, entry.frameEquippedColor)
 		entry.priceBG:SetColor(entry.priceBGEquippedColor)
