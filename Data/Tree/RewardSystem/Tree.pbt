@@ -10344,7 +10344,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10625,7 +10625,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10669,7 +10669,7 @@ Objects {
 }
 Objects {
   Id: 14843588929187107669
-  Name: "Currency Icons"
+  Name: "Reward Icons"
   Transform {
     Location {
     }
@@ -10686,6 +10686,7 @@ Objects {
   ChildIds: 4790564697029531833
   ChildIds: 6162272171672063087
   ChildIds: 17409896878513179242
+  ChildIds: 4015403082813133684
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -10697,6 +10698,64 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 4015403082813133684
+  Name: "Mount Speed"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14843588929187107669
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Name"
+      String: "Mount Speed"
+    }
+    Overrides {
+      Name: "cs:Image"
+      AssetReference {
+        Id: 4941923027931780178
+      }
+    }
+    Overrides {
+      Name: "cs:ID"
+      Int: 5
+    }
+    Overrides {
+      Name: "cs:Color"
+      Color {
+        R: 0.791666687
+        G: 0.427224934
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:ID:tooltip"
+      String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14699549414970058459
+    }
   }
 }
 Objects {
