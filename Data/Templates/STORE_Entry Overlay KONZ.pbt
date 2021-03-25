@@ -98,17 +98,17 @@ Assets {
           Overrides {
             Name: "cs:FrameDefaultColor"
             Color {
-              R: 0.651405811
-              G: 0.351532698
+              R: 0.14
+              G: 0.0710733309
+              B: 0.0218399949
               A: 1
             }
           }
           Overrides {
             Name: "cs:FrameHoverColor"
             Color {
-              R: 1
-              G: 0.6685431
-              B: 0.0899999738
+              R: 0.192
+              G: 0.0640000105
               A: 1
             }
           }
