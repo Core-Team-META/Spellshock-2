@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Achievement System Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/24-SS2
--- Version 0.1.5
+-- Date: 2021/3/25-SS2
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
@@ -139,10 +139,12 @@ end
 -- GLOBAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
 
-function PlayerDamaged(player, target, weaponType, isHeadShot)
-    if IsValidPlayer(player) and IsValidPlayer(target) then
+function PlayerDamaged(attackData)
+    local target = attackData.object
+    local source = attackData.source
+    if IsValidPlayer(source) and IsValidPlayer(target) then
         if (target.isDead) and not target.serverUserData.ACH_killCredited then
-            PlayerKilled(player, target, weaponType, isHeadShot)
+            PlayerKilled(source, target)
         end
     end
 end
@@ -223,9 +225,6 @@ GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 -- Server (Same Context) Broadcast Listeners
 Events.Connect("AS.PlayerDamaged", PlayerDamaged)
 Events.Connect("AS.KillStreak", OnKillStreak)
-Events.Connect("AS.LifeTimeKill", OnPlayerKill)
-Events.Connect("AS.LifeTimeDamage", OnPlayerDamage)
-Events.Connect("AS.LifeTimeHealing", OnPlayerHealing)
 Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
 Events.Connect("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 

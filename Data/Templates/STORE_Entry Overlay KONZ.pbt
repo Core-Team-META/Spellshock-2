@@ -98,33 +98,35 @@ Assets {
           Overrides {
             Name: "cs:FrameDefaultColor"
             Color {
-              R: 0.651405811
-              G: 0.351532698
+              R: 0.0950000063
+              G: 0.0783306733
+              B: 0.0737200081
               A: 1
             }
           }
           Overrides {
             Name: "cs:FrameHoverColor"
             Color {
-              R: 1
-              G: 0.6685431
-              B: 0.0899999738
-              A: 1
+              R: 0.02
+              G: 0.02
+              B: 0.02
+              A: 0.1
             }
           }
           Overrides {
             Name: "cs:FrameOwnedColor"
             Color {
-              R: 0.008940381
-              G: 0.269999981
+              R: 0.205000013
+              G: 0.0961518437
+              B: 0.0129149938
               A: 1
             }
           }
           Overrides {
             Name: "cs:FrameEquippedColor"
             Color {
-              R: 0.200000048
-              B: 0.186754942
+              R: 0.398000032
+              G: 0.24512586
               A: 1
             }
           }
@@ -149,32 +151,30 @@ Assets {
           Overrides {
             Name: "cs:PriceBGDefaultColor"
             Color {
-              R: 0.0599999428
-              G: 0.0178807788
+              R: 0.480000019
+              B: 0.00953613315
               A: 1
             }
           }
           Overrides {
             Name: "cs:PriceBGHoverColor"
             Color {
-              G: 0.0717217103
-              B: 0.570000052
               A: 1
             }
           }
           Overrides {
             Name: "cs:PriceBGOwnedColor"
             Color {
-              R: 0.008940381
-              G: 0.269999981
+              R: 0.409999967
+              G: 0.130331114
               A: 1
             }
           }
           Overrides {
             Name: "cs:PriceBGEquippedColor"
             Color {
-              R: 0.200000048
-              B: 0.186754942
+              R: 0.398000032
+              G: 0.24512586
               A: 1
             }
           }

@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13186791447862463406
+  Name: "Stone Wall End 6m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_stone-edge_6m_001"
+  }
+}
+Assets {
   Id: 12997925938585460975
   Name: "Fantasy Shape 004"
   PlatformAssetType: 9

@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/15
--- Version 0.1.5
+-- Date: 2021/3/25
+-- Version 0.1.6
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -53,6 +53,7 @@ local function UpdateCombatAmmount(attackData)
         source:AddResource(CONST.COMBAT_STATS.TOTAL_HEALING_RES, CoreMath.Round(ammount))
         Events.Broadcast("AS.LifeTimeHealing", source, CoreMath.Round(ammount))
     end
+    Events.Broadcast("AS.PlayerDamaged", attackData)
 end
 
 local function UpdateUltimateKillAmmount(attackData)
