@@ -19,6 +19,14 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function CONSUMABLE()
+    return _G["Consumables"]
+end
+
+local function MOUNT()
+    return _G.MOUNT_SPEED
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Constants
 ------------------------------------------------------------------------------------------------------------------------
@@ -29,7 +37,8 @@ API.REWARD_TYPES = {
     SKILLPOINTS = 1,
     GOLD = 2,
     COSMETIC = 3,
-    CONSUMABLES = 4
+    CONSUMABLES = 4,
+    MOUNT_SPEED = 5
 }
 
 API.RARITY = {
@@ -363,10 +372,12 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
             player:AddResource(CONST.GOLD, reward.amount)
         elseif reward.type == API.REWARD_TYPES.COSMETIC then
             player:AddResource(CONST.COSMETIC_TOKEN, reward.amount)
-        elseif reward.typ == API.REWARD_TYPES.CONSUMABLES then
+        elseif reward.type == API.REWARD_TYPES.CONSUMABLES then
             if reward.bind == CONST.CONSUMABLE_KEYS.HEALTH_POTION then
-                
+                CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.HEALTH_POTION, reward.amount)
             end
+        elseif reward.type == API.REWARD_TYPES.MOUNT_SPEED then
+            MOUNT().AddLevel(player)
         end
     end
 end
