@@ -162,6 +162,7 @@ Objects {
   Control {
     Width: 600
     Height: 70
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -183,6 +184,10 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
       }
     }
     AnchorLayout {
