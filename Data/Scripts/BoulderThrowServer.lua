@@ -75,7 +75,7 @@ function OnBoulderBeginOverlap(thisTrigger, other)
 	Events.BroadcastToPlayer(other, "Camera Shake", 2, 90, 5)
 			
 	local dmg = Damage.New()
-	dmg.amount = DEFAULT_DamageAmount --META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
+	dmg.amount = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = PickupAbility.owner
 	dmg.sourceAbility = PickupAbility
