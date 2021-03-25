@@ -63,7 +63,7 @@ end
 --@param object player
 --@return table tempTbl
 local function CalculateSlot1(player)
-    local tempTbl = {}
+    local reward = {}
     local classesPlayedCount = 0
     local randomChance = math.random(1, 100)
     local classTable = {}
@@ -71,34 +71,41 @@ local function CalculateSlot1(player)
         classesPlayedCount = classesPlayedCount + 1
         classTable[classesPlayedCount] = classId
     end
-    if randomChance < 50 then
-        local randomClass = math.random(1, #classTable)
-        local bindId = tonumber(tostring(classTable[randomClass]) .. tostring(REWARD_UTIL.GetRandomBind()))
-        tempTbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount()}
+    if randomChance < 50 then -- #FIXME
+        --local randomClass =
+        --local bindId = tonumber(tostring(classTable[randomClass]) .. tostring(REWARD_UTIL.GetRandomBind()))
+        reward = REWARD_UTIL.GetSkillReward()
+        reward.bind = REWARD_UTIL.GetRandomBind()
+        reward.class = math.random(1, #classTable)
     elseif randomChance > 50 and randomChance < 98 then
-        local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
-        tempTbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount()}
+        --local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
+        reward = REWARD_UTIL.GetSkillReward()
+        reward.bind = REWARD_UTIL.GetRandomBind()
+        reward.class = REWARD_UTIL.GetRandomClass()
     else
-        tempTbl = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+        reward = REWARD_UTIL.GetCosmeticReward()
     end
-    return tempTbl
+    return reward
 end
 
 local function CalculateRegularSlot()
-    local result
+    local reward
     local random = math.random(1, 100)
-    --90% chance to be a random class bind shards
-    if random >= 10 then -- #FIXME 10
-        result = {
-            [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
-        }
-    else -- 10% chance to be costume tokens
-        result = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+    
+    if random > 95 then
+        reward = REWARD_UTIL.GetCosmeticReward()
+    elseif random <=95 and random > 90 then
+        reward = REWARD_UTIL.GetGoldReward()
+    else
+        --local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
+        reward = REWARD_UTIL.GetSkillReward()
+        reward.bind = REWARD_UTIL.GetRandomBind()
+        reward.class = REWARD_UTIL.GetRandomClass()
     end
-    return result
+
+    return reward
 end
 
---#TODO Need to actually write logic
 -- Should return 4-10
 local function GetNumberOfCards(player)
     local cardCount = 4 
@@ -143,7 +150,6 @@ local function GetNumberOfCards(player)
     return cardCount
 end
 
---#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local numberOfCards = GetNumberOfCards(player) -- 4 to 10
@@ -156,10 +162,10 @@ local function GetPlayerRewards(player)
     if IsTeamWinner(player) then
         --If winning team give large gold ammount
         IsFirstWinOfTheDay(player)
-        tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
+        tempTable[2] = REWARD_UTIL.GetWinnerGoldAmmount()
     else
         --Losing team gets small gold amount.
-        tempTable[2] = {G = REWARD_UTIL.GetGoldSmallAmmount()}
+        tempTable[2] = REWARD_UTIL.GetLoserGoldAmmount()
     end
 
     for slot=3, numberOfCards, 1 do
@@ -182,12 +188,6 @@ function CalculateRewards()
         end
     end
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
-end
-
---@param object player
---@param int rewardId
-function OnRewardSelect(player, rewardId)
-    choosenRewards[player] = rewardId
 end
 
 function GivePlayerRewards(player, rewardList)

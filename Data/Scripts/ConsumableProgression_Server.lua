@@ -97,9 +97,6 @@ function DoLevelUp(player, consumable)
         player:SetResource(UTIL.GetConsumableIdString(consumable), level)
         SetLevel(player, consumable, level)
         SetXp(player, consumable, xp)
-        if consumable == API.MOUNT_SPEED then
-            _G.MOUNT_SPEED.SetMountSpeed(player, level)
-        end
     end
 end
 
@@ -180,7 +177,7 @@ function API.AddXP(player, consumable, xp)
         return
     end
     consumables[player.id][consumable][CONST.PROGRESS.XP] = CoreMath.Round(GetXp(player, consumable) + xp)
-    --LevelUp(player, consumable)
+    DoLevelUp(player, consumable)
 end
 
 function API.GetValue(player, consumable)

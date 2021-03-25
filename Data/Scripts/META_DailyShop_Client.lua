@@ -53,7 +53,7 @@ local npcTriggers = {}
 local spamPrevent
 local refreshTime, refreshCount
 local closeButtonLisener = nil
-local rewardAssets = UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
+local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -147,7 +147,6 @@ end
 
 local function BuildShopItems(slot, id, class, bind, reward)
     -- TIME^R~0^T~1613694203
-
     local table = SHOP_ITEMS:GetChildren()
     local panel = table[slot]
     if panel.name ~= "Background" then
@@ -243,13 +242,13 @@ local function BuildRewardSlots(tbl)
         local id, class, bind, reward
         for rewardType, rewards in pairs(value) do
             if type(rewardType) == "number" then
-                id = CONST.REWARDS.SHARDS
+                id = REWARD_UTIL.REWARD_TYPES.SKILLPOINTS
                 class, bind, reward = GetBindInfo(value)
             elseif rewardType == "G" then
-                id = CONST.REWARDS.GOLD
+                id = REWARD_UTIL.REWARD_TYPES.GOLD
                 bind, reward = GetGoldInfo(value)
             elseif rewardType == "C" then
-                id = CONST.REWARDS.COSMETIC
+                id = REWARD_UTIL.REWARD_TYPES.COSMETIC
                 bind, reward = GetCosmeticInfo(value)
             elseif rewardType == "T" then --Refresh Timestamp
                 refreshTime = rewards
@@ -257,6 +256,7 @@ local function BuildRewardSlots(tbl)
                 refreshCount = rewards
             end
         end
+    
         if id and bind and reward then
             BuildShopItems(slot, id, class, bind, reward)
         end

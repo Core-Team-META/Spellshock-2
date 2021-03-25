@@ -10340,6 +10340,7 @@ Objects {
   ChildIds: 1917936312158066202
   ChildIds: 6841025574180223538
   ChildIds: 9545143733124033119
+  ChildIds: 4179091296725665014
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -10372,6 +10373,50 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 4179091296725665014
+  Name: "NEW_Helper_RewardCard"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18393261942096671057
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12332305553483113519
+      value {
+        Overrides {
+          Name: "Name"
+          String: "NEW_Helper_RewardCard"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00390625
+            Y: -0.00390625
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13336148153644952711
     }
   }
 }
@@ -11278,7 +11323,7 @@ Objects {
     Overrides {
       Name: "cs:Helper_RewardCard"
       AssetReference {
-        Id: 199494650754129245
+        Id: 13336148153644952711
       }
     }
     Overrides {
