@@ -2687,7 +2687,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long enemies will stay animorphed before turning back"
+      String: "Total healing applied while inside the Iceberg"
     }
     Overrides {
       Name: "cs:Icon"
@@ -2731,12 +2731,12 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "How long enemies will stay animorphed before turning back"
+      String: "How long Iceberg will last"
     }
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 17620327046583338598
+        Id: 184567298233856480
       }
     }
     Overrides {
@@ -2819,7 +2819,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage applied to enemies in the Damage Radius over time"
+      String: "Damage applied to nearby enemies"
     }
     Overrides {
       Name: "cs:Icon"
@@ -4919,7 +4919,7 @@ Objects {
 }
 Objects {
   Id: 17629457103822685970
-  Name: "Shield Dash"
+  Name: "Landslide"
   Transform {
     Location {
     }
@@ -4939,7 +4939,7 @@ Objects {
     Overrides {
       Name: "cs:Icon"
       AssetReference {
-        Id: 12880357743881602078
+        Id: 5751567816530114738
       }
     }
     Overrides {
@@ -4982,7 +4982,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "Radius of the ending shield bash"
+      String: "Radius of the ending damage area"
     }
     Overrides {
       Name: "cs:Icon"

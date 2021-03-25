@@ -1740,16 +1740,7 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 12880357743881602078
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
+              Id: 5751567816530114738
             }
           }
         }
@@ -2455,7 +2446,7 @@ Assets {
       }
       Objects {
         Id: 14809710803316002615
-        Name: "Shield Dash"
+        Name: "Landslide"
         Transform {
           Location {
             Z: -55
@@ -2507,7 +2498,7 @@ Assets {
       }
       Objects {
         Id: 15328715113681216029
-        Name: "Shield Dash"
+        Name: "Landslide"
         Transform {
           Location {
           }
@@ -2784,12 +2775,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12880357743881602078
-      Name: "Fantasy Ability Red 008"
+      Id: 5751567816530114738
+      Name: "Fantasy Ability Red 029"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_008"
+        AssetId: "UI_Fantasy_Ability_Red_029"
       }
     }
     Assets {

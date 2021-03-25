@@ -577,8 +577,6 @@ function UpdateEntryButton(entry, highlighted)
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
 		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
-		local newColor = entry.geo:GetCustomProperty("EquippedColor")
-		entry.BGMesh:SetColor(newColor)
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
 		-- owned
 		entry.price:SetColor(entry.priceColor)
@@ -640,8 +638,16 @@ function UpdateEntryButton(entry, highlighted)
 
 	if highlighted then
 		SetFramesColor(entry.frames, entry.frameHoverColor)
-	else
+		local newColor = entry.geo:GetCustomProperty("HighlightColor")
+		entry.BGMesh:SetColor(newColor)
+	elseif  CosmeticIsEquipped(entry.data.id) then
 		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		local newColor = entry.geo:GetCustomProperty("EquippedColor")
+		entry.BGMesh:SetColor(newColor)
+	else 
+		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		local newColor = entry.geo:GetCustomProperty("DefaultColor")
+		entry.BGMesh:SetColor(newColor)
 	end
 
 	--[[if not highlighted then

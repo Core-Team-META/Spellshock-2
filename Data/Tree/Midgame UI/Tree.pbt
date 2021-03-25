@@ -14938,7 +14938,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 104.955795
-    UIY: 13.5487423
+    UIY: 18.549
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -15005,7 +15005,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 107.925171
-    UIY: 15.5487423
+    UIY: 20.549
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -15744,7 +15744,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 184.714
-    UIY: 13.5487423
+    UIY: 18.549
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -15811,7 +15811,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 186.684
-    UIY: 15.5487423
+    UIY: 20.549
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -19630,7 +19630,7 @@ Objects {
     Width: 85
     Height: 25
     UIX: 2
-    UIY: 8.87125683
+    UIY: 10.871
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -19647,6 +19647,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -19691,7 +19692,7 @@ Objects {
     Width: 85
     Height: 30
     UIX: -2
-    UIY: -1
+    UIY: 1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -19711,6 +19712,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -19988,7 +19990,7 @@ Objects {
     Width: 85
     Height: 12
     UIX: 2
-    UIY: -0.121958733
+    UIY: 1.88
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20005,7 +20007,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 14100456703306476565
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -20050,7 +20052,7 @@ Objects {
     Width: 85
     Height: 12
     UIX: -2
-    UIY: -0.774353
+    UIY: 1.33
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -20070,7 +20072,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 14100456703306476565
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -22565,7 +22567,7 @@ Objects {
   Control {
     Width: 100
     Height: 35
-    UIY: 57
+    UIY: 59
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -22585,6 +22587,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -22689,7 +22692,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: 1
-    UIY: -19
+    UIY: -17
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -22708,6 +22711,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -22752,7 +22756,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: -1.16870117
-    UIY: -1.15052795
+    UIY: 0.85
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -22772,6 +22776,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -24464,7 +24469,7 @@ Objects {
   Control {
     Width: 100
     Height: 35
-    UIY: 57
+    UIY: 59
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -24484,6 +24489,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -24588,7 +24594,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: 1
-    UIY: -19
+    UIY: -17
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -24607,6 +24613,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -24651,7 +24658,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: -1.16870117
-    UIY: -1.15052795
+    UIY: 0.85
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -24671,6 +24678,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -26357,7 +26365,7 @@ Objects {
   Control {
     Width: 100
     Height: 35
-    UIY: 57
+    UIY: 59
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -26377,6 +26385,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -26481,7 +26490,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: 1
-    UIY: -19
+    UIY: -17
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -26500,6 +26509,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -26544,7 +26554,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: -1.16870117
-    UIY: -1.15052795
+    UIY: 0.85
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -26564,6 +26574,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -28250,7 +28261,7 @@ Objects {
   Control {
     Width: 100
     Height: 35
-    UIY: 57
+    UIY: 59
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28270,6 +28281,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -28374,7 +28386,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: 1
-    UIY: -19
+    UIY: -17
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28393,6 +28405,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -28437,7 +28450,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: -1.16870117
-    UIY: -1.15052795
+    UIY: 0.85
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -28457,6 +28470,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -30143,7 +30157,7 @@ Objects {
   Control {
     Width: 100
     Height: 35
-    UIY: 57
+    UIY: 59
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -30163,6 +30177,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -30267,7 +30282,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: 1
-    UIY: -19
+    UIY: -17
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -30286,6 +30301,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -30330,7 +30346,7 @@ Objects {
     Width: 66
     Height: 23
     UIX: -1.16870117
-    UIY: -1.15052795
+    UIY: 0.85
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -30350,6 +30366,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
