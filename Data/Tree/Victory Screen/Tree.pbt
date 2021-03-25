@@ -960,6 +960,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -981,6 +982,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1028,6 +1030,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1049,6 +1052,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1151,6 +1155,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1172,6 +1177,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1219,6 +1225,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1240,6 +1247,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1342,7 +1350,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1807,6 +1815,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1828,6 +1837,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1875,6 +1885,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1896,6 +1907,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1998,6 +2010,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2019,6 +2032,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2066,6 +2080,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2087,6 +2102,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2189,7 +2205,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2211,6 +2227,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2654,6 +2671,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2675,6 +2693,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2722,6 +2741,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2743,6 +2763,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2845,6 +2866,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2866,6 +2888,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2913,6 +2936,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2934,6 +2958,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3036,7 +3061,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3058,6 +3083,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3501,6 +3527,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3522,6 +3549,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3569,6 +3597,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3590,6 +3619,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3692,6 +3722,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3713,6 +3744,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3760,6 +3792,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3781,6 +3814,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3883,7 +3917,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3905,6 +3939,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4348,6 +4383,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4369,6 +4405,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4416,6 +4453,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4437,6 +4475,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4539,6 +4578,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4560,6 +4600,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4607,6 +4648,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4628,6 +4670,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4730,7 +4773,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4752,6 +4795,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5194,6 +5238,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5215,6 +5260,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5262,6 +5308,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5283,6 +5330,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5385,6 +5433,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5406,6 +5455,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5453,6 +5503,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5474,6 +5525,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5576,7 +5628,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5598,6 +5650,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6040,6 +6093,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6061,6 +6115,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6108,6 +6163,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6129,6 +6185,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6231,6 +6288,7 @@ Objects {
   Control {
     Width: 75
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6252,6 +6310,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6299,6 +6358,7 @@ Objects {
   Control {
     Width: -115
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6320,6 +6380,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6422,7 +6483,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 6
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6444,6 +6505,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:none:none"
@@ -6896,6 +6958,7 @@ Objects {
   Control {
     Width: 100
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6917,7 +6980,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
@@ -6968,6 +7031,7 @@ Objects {
   Control {
     Width: -150
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6989,7 +7053,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
@@ -7095,6 +7159,7 @@ Objects {
   Control {
     Width: 100
     UIX: -20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7116,7 +7181,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
@@ -7167,6 +7232,7 @@ Objects {
   Control {
     Width: -150
     UIX: 20
+    UIY: 5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7188,7 +7254,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
@@ -7294,7 +7360,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    UIY: 5
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7316,7 +7382,7 @@ Objects {
       }
       ClipTextToSize: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
