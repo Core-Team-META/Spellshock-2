@@ -685,6 +685,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -706,6 +707,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -870,6 +872,7 @@ Assets {
         Control {
           Width: -150
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -891,6 +894,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -938,6 +942,7 @@ Assets {
         Control {
           Width: 100
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -959,6 +964,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1061,6 +1067,7 @@ Assets {
         Control {
           Width: -150
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1082,6 +1089,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1129,6 +1137,7 @@ Assets {
         Control {
           Width: 100
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1150,6 +1159,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1530,7 +1540,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          UIY: 6
+          UIY: 11
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1552,6 +1562,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1716,6 +1727,7 @@ Assets {
         Control {
           Width: -115
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1737,6 +1749,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1784,6 +1797,7 @@ Assets {
         Control {
           Width: 75
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1805,6 +1819,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1907,6 +1922,7 @@ Assets {
         Control {
           Width: -115
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1928,6 +1944,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1975,6 +1992,7 @@ Assets {
         Control {
           Width: 75
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1996,6 +2014,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -2376,7 +2395,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          UIY: 6
+          UIY: 11
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2398,6 +2417,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -2562,6 +2582,7 @@ Assets {
         Control {
           Width: -115
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2630,6 +2651,7 @@ Assets {
         Control {
           Width: 75
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2753,6 +2775,7 @@ Assets {
         Control {
           Width: -115
           UIX: 20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2821,6 +2844,7 @@ Assets {
         Control {
           Width: 75
           UIX: -20
+          UIY: 5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -7406,6 +7430,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_fog_volume_vfx"
+      }
+    }
+    Assets {
+      Id: 11336346532215892341
+      Name: "Germania One"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     Assets {
