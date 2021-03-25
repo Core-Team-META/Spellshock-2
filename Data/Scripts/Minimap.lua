@@ -83,7 +83,7 @@ local boundsHeight = boundsBottom - boundsTop
 ]]
 
 -- Precompute coeficients
-local scaleX = 0.0066580799259107 --MAP_PANEL.width / boundsWidth
+local scaleX = 0.0066580799259107 * 0.75 --MAP_PANEL.width / boundsWidth
 local scaleY = scaleX
 --[[if boundsHeight > boundsWidth then
 	scaleY = MAP_PANEL.height / boundsHeight

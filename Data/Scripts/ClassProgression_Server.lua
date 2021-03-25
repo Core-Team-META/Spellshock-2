@@ -165,3 +165,8 @@ function API.SetClassLevel(player, class)
     local classLevel = API.GetClassLevel(player, class)
     player:SetResource(CONST.CLASS_LEVEL, classLevel)
 end
+
+--@param object player
+function API.GetCurrentClassLevel(player)
+    return player:GetResource(CONST.CLASS_LEVEL)
+end
