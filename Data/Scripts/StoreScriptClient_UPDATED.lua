@@ -304,7 +304,7 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 	)
 end
 
-function CheckIfLocked(class, requiredLvl)
+function CheckIfLocked(class, requiredLvl, id)
 
 	local localPlayer = Game.GetLocalPlayer()
 	
@@ -334,7 +334,7 @@ function CheckIfLocked(class, requiredLvl)
 	
 	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(localPlayer, selectedClass) .. " vs " .. tostring(requiredLvl))
 	
-	return CP_API.GetClassLevel(localPlayer, selectedClass) >= requiredLvl
+	return CP_API.GetClassLevel(localPlayer, selectedClass) >= requiredLvl or HasCosmetic(id)
 
 end
 
@@ -971,7 +971,7 @@ function PopulateStore(direction)
 		
 		local locked = true
 		
-		if CheckIfLocked(v.class, v.requirement) then
+		if CheckIfLocked(v.class, v.requirement, v.id) then
 		
 			propLockedPanel.visibility = Visibility.FORCE_OFF
 			
