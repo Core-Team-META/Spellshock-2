@@ -901,7 +901,7 @@ Objects {
     Width: 393
     Height: 38
     UIX: -2
-    UIY: -2.42047119
+    UIY: 4
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -919,6 +919,7 @@ Objects {
         Value: "mc:etextjustify:center"
       }
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {

@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 8264648425790578274
   Name: "Fantasy Banner 007"
   PlatformAssetType: 9

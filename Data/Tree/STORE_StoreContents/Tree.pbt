@@ -9863,6 +9863,10 @@ Objects {
         Id: 2200816922913628269
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9955,6 +9959,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -11351,6 +11359,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 8
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11444,6 +11456,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 8
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11529,6 +11545,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 6
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11613,6 +11633,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 6
     }
   }
   Collidable_v2 {
@@ -11707,6 +11731,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 4
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11800,6 +11828,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 4
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11885,6 +11917,10 @@ Objects {
         Id: 3191591647685321622
       }
     }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 2
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11969,6 +12005,10 @@ Objects {
       AssetReference {
         Id: 3191591647685321622
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 2
     }
   }
   Collidable_v2 {

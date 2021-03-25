@@ -799,7 +799,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1112,7 +1112,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1658,7 +1658,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1993,7 +1993,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2064,7 +2064,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4103,7 +4103,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4170,7 +4170,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4234,7 +4234,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4298,7 +4298,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5518,7 +5518,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5583,7 +5583,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -8041,7 +8041,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -8106,7 +8106,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -12581,6 +12581,12 @@ Objects {
       Name: "cs:MetaAbilityProgressionConstants_API"
       AssetReference {
         Id: 15718075383189814537
+      }
+    }
+    Overrides {
+      Name: "cs:ClassProgress_Client"
+      AssetReference {
+        Id: 13253515396306391960
       }
     }
     Overrides {

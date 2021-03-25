@@ -1083,7 +1083,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1148,7 +1148,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -2687,12 +2687,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15165554833363844727
-      Name: "Amarante"
+      Id: 11336346532215892341
+      Name: "Germania One"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "AmaranteRegular_ref"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     Assets {
