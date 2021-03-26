@@ -32,6 +32,9 @@ end
 
 local function ChangeCurrentSong(newSong)
     if not newSong then
+        if currentSong then
+            currentSong:Stop()
+        end
         return
     end
     if currentSong ~= newSong then
@@ -67,7 +70,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime)
     elseif newState == ABGS.GAME_STATE_REWARDS then
         FindTeamSong(newState)
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
-        FindTeamSong(newState)
+        --FindTeamSong(newState)
     else
         StopCurrentSong()
     end

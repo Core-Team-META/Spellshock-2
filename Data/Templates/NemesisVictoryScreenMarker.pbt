@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 17081271930865778008
         ChildIds: 12417214448193997821
         ChildIds: 9135895041219395310
         ChildIds: 7174222016834209919
@@ -107,6 +107,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
+          Height: 25
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -120,9 +121,9 @@ Assets {
               Id: 841534158063459245
             }
             Color {
-              R: 0.651405811
-              G: 0.351532787
-              A: 0.587
+              R: 0.0570000038
+              G: 0.0248571374
+              A: 0.852000058
             }
             TeamSettings {
             }
@@ -130,12 +131,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:topcenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:topcenter"
               }
             }
           }
@@ -177,7 +178,7 @@ Assets {
         Control {
           Width: 100
           Height: 38
-          UIY: 3.39878845
+          UIY: 0.395931
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -235,13 +236,13 @@ Assets {
             }
           }
           Text {
-            Label: "Your Nemesis"
+            Label: "Nemesis"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.046875
+              G: 0.020441724
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -299,13 +300,13 @@ Assets {
             }
           }
           Text {
-            Label: "Your Nemesis"
+            Label: "Nemesis"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.046875
+              G: 0.020441724
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -363,13 +364,13 @@ Assets {
             }
           }
           Text {
-            Label: "Your Nemesis"
+            Label: "Nemesis"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.046875
+              G: 0.020441724
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -427,13 +428,13 @@ Assets {
             }
           }
           Text {
-            Label: "Your Nemesis"
+            Label: "Nemesis"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.046875
+              G: 0.020441724
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -489,13 +490,13 @@ Assets {
             }
           }
           Text {
-            Label: "Your Nemesis"
+            Label: "Nemesis"
             Color {
               R: 1
               G: 0.539652526
               A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -552,7 +553,7 @@ Assets {
         Control {
           Width: 100
           Height: 38
-          UIY: -6.33092833
+          UIY: -9.68389606
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -611,13 +612,13 @@ Assets {
             }
           }
           Text {
-            Label: "You Destroyed"
+            Label: "Destroyed"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.104166664
+              G: 0.0454260521
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -675,13 +676,13 @@ Assets {
             }
           }
           Text {
-            Label: "You Destroyed"
+            Label: "Destroyed"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.104166664
+              G: 0.0454260521
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -739,13 +740,13 @@ Assets {
             }
           }
           Text {
-            Label: "You Destroyed"
+            Label: "Destroyed"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.104166664
+              G: 0.0454260521
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -803,13 +804,13 @@ Assets {
             }
           }
           Text {
-            Label: "You Destroyed"
+            Label: "Destroyed"
             Color {
-              R: 0.138431624
-              G: 0.0409152322
-              A: 0.561000049
+              R: 0.104166664
+              G: 0.0454260521
+              A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -865,13 +866,13 @@ Assets {
             }
           }
           Text {
-            Label: "You Destroyed"
+            Label: "Destroyed"
             Color {
               R: 1
               G: 0.539652526
               A: 1
             }
-            Size: 18
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -912,7 +913,6 @@ Assets {
           }
         }
         ParentId: 2725466387286679747
-        ChildIds: 3642652157028904663
         ChildIds: 2796967342691073190
         ChildIds: 9531156281858654472
         Collidable_v2 {
@@ -935,135 +935,6 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3642652157028904663
-        Name: "UI Image"
-        Transform {
-          Location {
-            X: -0.00149618008
-            Y: 0.00125544495
-          }
-          Rotation {
-            Yaw: -3.41509394e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3815556921112686880
-        ChildIds: 9702420296638551757
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: -23
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 841534158063459245
-            }
-            Color {
-              R: 0.371237785
-              G: 0.132868275
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 9702420296638551757
-        Name: "UI Image"
-        Transform {
-          Location {
-            X: -0.00149618
-            Y: 0.00125544495
-          }
-          Rotation {
-            Yaw: -3.41509372e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3642652157028904663
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: -12
-          Height: -6
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 841534158063459245
-            }
-            Color {
-              R: 0.025
-              G: 0.00945083704
-              B: 0.000227782133
-              A: 1
-            }
-            TeamSettings {
-            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -1162,7 +1033,6 @@ Assets {
           }
         }
         ParentId: 3815556921112686880
-        ChildIds: 10876622886637215037
         ChildIds: 4325908509345674039
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1184,135 +1054,6 @@ Assets {
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 10876622886637215037
-        Name: "UI Image"
-        Transform {
-          Location {
-            X: -0.00149618008
-            Y: 0.00125544495
-          }
-          Rotation {
-            Yaw: -3.41509394e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9531156281858654472
-        ChildIds: 14022077954604262610
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: -23
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 841534158063459245
-            }
-            Color {
-              R: 0.371237785
-              G: 0.132868275
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14022077954604262610
-        Name: "UI Image"
-        Transform {
-          Location {
-            X: -0.00149618
-            Y: 0.00125544495
-          }
-          Rotation {
-            Yaw: -3.41509372e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10876622886637215037
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: -12
-          Height: -6
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 841534158063459245
-            }
-            Color {
-              R: 0.025
-              G: 0.00945083704
-              B: 0.000227782133
-              A: 1
-            }
-            TeamSettings {
-            }
           }
           AnchorLayout {
             SelfAnchor {
