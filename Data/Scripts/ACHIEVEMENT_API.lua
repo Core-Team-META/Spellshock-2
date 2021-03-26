@@ -392,6 +392,7 @@ end
 
 
 function API.FormatInt(number)
+    if not tonumber(number) then return end
     local i, j, minus, int, fraction = tostring(number):find("([-]?)(%d+)([.]?%d*)")
     int = int:reverse():gsub("(%d%d%d)", "%1,")
     return minus .. int:reverse():gsub("^,", "") .. fraction
