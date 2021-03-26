@@ -41,9 +41,9 @@ Objects {
   ChildIds: 5406729310960805884
   ChildIds: 4816487705258454670
   ChildIds: 8244042242827809535
-  ChildIds: 2322105053870675862
   ChildIds: 17916730922327064934
   ChildIds: 16263814942962717128
+  ChildIds: 2322105053870675862
   ChildIds: 16392966220296593278
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -121,7 +121,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -135,191 +135,9 @@ Objects {
         Id: 2200816922913628269
       }
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 16263814942962717128
-  Name: "STORE_HealerElfSupernovaBasic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14040370941955306933
-  UnregisteredParameters {
     Overrides {
-      Name: "cs:StoreName"
-      String: "Common Supernova"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Elf_Common_T"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 17941598659925820297
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Elf"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "20"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 8178901969581781700
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 2200816922913628269
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5461895297082359166
-    }
-  }
-}
-Objects {
-  Id: 17916730922327064934
-  Name: "STORE_HealerOrcSupernovaBasic"
-  Transform {
-    Location {
-      X: -12835.8828
-      Y: 55836.125
-      Z: 512.586426
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14040370941955306933
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:StoreName"
-      String: "Common Supernova"
-    }
-    Overrides {
-      Name: "cs:ID"
-      String: "Healer_Orc_Common_T"
-    }
-    Overrides {
-      Name: "cs:Cost"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:Tags"
-      String: "Healer"
-    }
-    Overrides {
-      Name: "cs:Types"
-      String: "Ability"
-    }
-    Overrides {
-      Name: "cs:ZoomView"
-      String: "LowerBody"
-    }
-    Overrides {
-      Name: "cs:MUID"
-      AssetReference {
-        Id: 7920514909013070739
-      }
-    }
-    Overrides {
-      Name: "cs:Info"
-      String: "Mouseover For Info"
-    }
-    Overrides {
-      Name: "cs:PlayerVisibility"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Team"
-      String: "Orc"
-    }
-    Overrides {
-      Name: "cs:Rarity"
-      String: "Common"
-    }
-    Overrides {
-      Name: "cs:ClassIcon"
-      AssetReference {
-        Id: 8178901969581781700
-      }
-    }
-    Overrides {
-      Name: "cs:TypeIcon"
-      AssetReference {
-        Id: 2200816922913628269
-      }
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -431,6 +249,196 @@ Objects {
   }
 }
 Objects {
+  Id: 16263814942962717128
+  Name: "STORE_HealerElfSupernovaBasic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Supernova"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Elf_Common_T"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 17941598659925820297
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Elf"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
+  Id: 17916730922327064934
+  Name: "STORE_HealerOrcSupernovaBasic"
+  Transform {
+    Location {
+      X: -12835.8828
+      Y: 55836.125
+      Z: 512.586426
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14040370941955306933
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StoreName"
+      String: "Common Supernova"
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Healer_Orc_Common_T"
+    }
+    Overrides {
+      Name: "cs:Cost"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:Tags"
+      String: "Healer"
+    }
+    Overrides {
+      Name: "cs:Types"
+      String: "Ability"
+    }
+    Overrides {
+      Name: "cs:ZoomView"
+      String: "LowerBody"
+    }
+    Overrides {
+      Name: "cs:MUID"
+      AssetReference {
+        Id: 7920514909013070739
+      }
+    }
+    Overrides {
+      Name: "cs:Info"
+      String: "Mouseover For Info"
+    }
+    Overrides {
+      Name: "cs:PlayerVisibility"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Team"
+      String: "Orc"
+    }
+    Overrides {
+      Name: "cs:Rarity"
+      String: "Common"
+    }
+    Overrides {
+      Name: "cs:ClassIcon"
+      AssetReference {
+        Id: 8178901969581781700
+      }
+    }
+    Overrides {
+      Name: "cs:TypeIcon"
+      AssetReference {
+        Id: 2200816922913628269
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461895297082359166
+    }
+  }
+}
+Objects {
   Id: 8244042242827809535
   Name: "STORE_HealerElfDivineLightFrost"
   Transform {
@@ -493,7 +501,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -506,6 +514,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -586,7 +598,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -599,6 +611,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -865,7 +881,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -878,6 +894,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -958,7 +978,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -971,6 +991,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -1237,7 +1261,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -1250,6 +1274,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -1330,7 +1358,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Rarity"
-      String: "20"
+      String: "Epic"
     }
     Overrides {
       Name: "cs:ClassIcon"
@@ -1343,6 +1371,10 @@ Objects {
       AssetReference {
         Id: 2200816922913628269
       }
+    }
+    Overrides {
+      Name: "cs:LockedUntil"
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -1625,7 +1657,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -1722,7 +1754,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -1819,7 +1851,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -1916,7 +1948,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -2005,7 +2037,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -2094,7 +2126,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -2183,7 +2215,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -2272,7 +2304,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -4117,7 +4149,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -4214,7 +4246,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -4303,7 +4335,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -4392,7 +4424,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -4489,7 +4521,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -4586,7 +4618,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -4675,7 +4707,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -4764,7 +4796,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -6625,7 +6657,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -6722,7 +6754,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -6819,7 +6851,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -6916,7 +6948,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -7005,7 +7037,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -7094,7 +7126,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -7183,7 +7215,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -7272,7 +7304,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -9117,7 +9149,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -9214,7 +9246,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -9303,7 +9335,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -9392,7 +9424,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -9489,7 +9521,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -9586,7 +9618,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -9675,7 +9707,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -9764,7 +9796,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -11171,7 +11203,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Rock Strike"
+      String: "Frost Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11268,7 +11300,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Rock Strike"
+      String: "Fire Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11365,7 +11397,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Rock Strike"
+      String: "Common Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11458,7 +11490,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Rock Strike"
+      String: "Common Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11609,7 +11641,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -11706,7 +11738,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 40
+      Int: 30
     }
   }
   Collidable_v2 {
@@ -11795,7 +11827,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -11884,7 +11916,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 30
+      Int: 20
     }
   }
   Collidable_v2 {
@@ -11981,7 +12013,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -12078,7 +12110,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 10
     }
   }
   Collidable_v2 {
@@ -12167,7 +12199,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {
@@ -12256,7 +12288,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 10
+      Int: 0
     }
   }
   Collidable_v2 {

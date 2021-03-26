@@ -1333,7 +1333,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CaptureTime"
-      Float: 8
+      Float: 12
     }
     Overrides {
       Name: "cs:DecaySpeed"
@@ -9227,7 +9227,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CaptureTime"
-      Float: 8
+      Float: 12
     }
     Overrides {
       Name: "cs:DecaySpeed"
@@ -13570,7 +13570,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CaptureTime"
-      Float: 8
+      Float: 12
     }
     Overrides {
       Name: "cs:DecaySpeed"
@@ -17535,7 +17535,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CaptureTime"
-      Float: 8
+      Float: 12
     }
     Overrides {
       Name: "cs:DecaySpeed"
@@ -21877,7 +21877,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CaptureTime"
-      Float: 8
+      Float: 12
     }
     Overrides {
       Name: "cs:DecaySpeed"
@@ -33131,7 +33131,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 1
+      Int: 2
     }
     Overrides {
       Name: "cs:CountdownTime"
@@ -33763,9 +33763,9 @@ Objects {
   Name: "Teleport Players Settings"
   Transform {
     Location {
-      X: -23389.3516
-      Y: -32092.2109
-      Z: 6572.92236
+      X: -7395.19287
+      Y: -4523.94141
+      Z: 3532
     }
     Rotation {
     }

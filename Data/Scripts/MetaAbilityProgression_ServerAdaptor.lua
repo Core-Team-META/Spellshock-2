@@ -53,9 +53,6 @@ function OnResourceChanged(player, resName, resAmount)
         local classId = player:GetResource(resName)
         META_AP().ChangeClass(player, classId)
         CLASS_P().SetClassLevel(player, classId)
-        --Used for determining rewards
-        player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
-        player.serverUserData.ClassesPlayed[player:GetResource(resName)] = true
     end
 end
 

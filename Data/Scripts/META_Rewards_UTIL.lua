@@ -19,6 +19,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function META_CP()
+    return _G["Class.Progression"]
+end
+
 local function CONSUMABLE()
     return _G["Consumables"]
 end
@@ -38,7 +42,8 @@ API.REWARD_TYPES = {
     GOLD = 2,
     COSMETIC = 3,
     CONSUMABLES = 4,
-    MOUNT_SPEED = 5
+    MOUNT_SPEED = 5,
+    CLASS_XP = 6
 }
 
 API.RARITY = {
@@ -76,11 +81,18 @@ local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the 
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
+local CLASS_XP_AMOUNT = {
+    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
+    [API.RARITY.RARE] =      {min = 20, max = 30},
+    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
+}
+
 ------------------------------------------------------------------------------------------------------------------------
--- Public API
+-- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
-function API.GetSkillReward()
-    local reward = {}
+
+local function GetDefaultRarity(reward)
     local randomChance = math.random(1, 100)
 
     if randomChance > 90 then
@@ -92,27 +104,40 @@ function API.GetSkillReward()
     else -- randomChance <= 40    
         reward.rarity = API.RARITY.UNCOMMON
     end
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- Public API
+------------------------------------------------------------------------------------------------------------------------
+function API.GetSkillReward()
+    local reward = {}
+    GetDefaultRarity(reward)    
 
     local amountsTable = SKILL_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
     reward.type = API.REWARD_TYPES.SKILLPOINTS
+    reward.bind = API.GetRandomBind()
+    reward.class = API.GetRandomClass()
+
+    return reward
+end
+
+function API.GetClassXPReward()
+    local reward = {}
+    GetDefaultRarity(reward)
+
+    local amountsTable = CLASS_XP_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
+    reward.type = API.REWARD_TYPES.CLASS_XP
+    reward.class = API.GetRandomClass()
+    reward.bind = 1
 
     return reward
 end
 
 function API.GetCosmeticReward()
     local reward = {}
-    local randomChance = math.random(1, 100)
-
-    if randomChance > 90 then
-        reward.rarity = API.RARITY.LEGENDARY
-    elseif randomChance <= 90 and randomChance > 70 then
-        reward.rarity = API.RARITY.EPIC
-    elseif randomChance <= 70 and randomChance > 40 then
-        reward.rarity = API.RARITY.RARE
-    else -- randomChance <= 40    
-        reward.rarity = API.RARITY.UNCOMMON
-    end
+    GetDefaultRarity(reward)
 
     local amountsTable = COSMETIC_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
@@ -124,21 +149,7 @@ end
 
 function API.GetGoldReward()
     local reward = {}
-    local randomChance = math.random(1, 100)
-
-    if randomChance > 90 then
-        reward.rarity = API.RARITY.LEGENDARY
-        reward.bind = 2
-    elseif randomChance <= 90 and randomChance > 70 then
-        reward.rarity = API.RARITY.EPIC
-        reward.bind = 2
-    elseif randomChance <= 70 and randomChance > 40 then
-        reward.rarity = API.RARITY.RARE
-        reward.bind = 1
-    else -- randomChance <= 40    
-        reward.rarity = API.RARITY.UNCOMMON
-        reward.bind = 1
-    end
+    GetDefaultRarity(reward)
 
     local amountsTable = GOLD_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
@@ -187,17 +198,7 @@ end
 
 function API.GetHealingPotionReward()
     local reward = {}
-    local randomChance = math.random(1, 100)
-
-    if randomChance > 90 then
-        reward.rarity = API.RARITY.LEGENDARY
-    elseif randomChance <= 90 and randomChance > 70 then
-        reward.rarity = API.RARITY.EPIC
-    elseif randomChance <= 70 and randomChance > 40 then
-        reward.rarity = API.RARITY.RARE
-    else -- randomChance <= 40    
-        reward.rarity = API.RARITY.UNCOMMON
-    end
+    GetDefaultRarity(reward)
 
     local amountsTable = HEALING_POTION_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
@@ -389,6 +390,8 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
             end
         elseif reward.type == API.REWARD_TYPES.MOUNT_SPEED then
             MOUNT().AddLevel(player)
+        elseif reward.type == API.REWARD_TYPES.CLASS_XP then
+            META_CP().AddXP(player, reward.class, reward.amount)
         end
     end
 end

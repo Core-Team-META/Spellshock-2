@@ -151,8 +151,10 @@ end
 local function RestoreFromPodium()
 	inVictory = false
 	Events.Broadcast("ShowUI")
-	--LocalPlayer:ClearOverrideCamera()
-	--LocalPlayer.lookSensitivity = 1
+	if LocalPlayer.clientUserData.hasSkippedReward then
+		LocalPlayer:ClearOverrideCamera()
+		LocalPlayer.lookSensitivity = 1
+	end
 		
 	if UpdateUITask then
 	
@@ -222,3 +224,4 @@ WINNER_SORT_TYPE = GetProperty(WINNER_SORT_TYPE, WINNER_SORT_TYPES)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("SendToVictoryScreen", SendToVictoryScreen)
 Events.Connect("HideVictoryPanels", OnHideVictoryPanels)
+Events.Connect("RestoreFromPodium", RestoreFromPodium)

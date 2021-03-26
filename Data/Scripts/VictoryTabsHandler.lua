@@ -168,3 +168,4 @@ newsButton.clientUserData.panel = NewsPanel
 newsButton.pressedEvent:Connect(OnTabClicked)
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("RestoreFromPodium", OnLobby)

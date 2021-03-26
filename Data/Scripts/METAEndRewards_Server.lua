@@ -64,27 +64,26 @@ end
 --@return table tempTbl
 local function CalculateSlot1(player)
     local reward = {}
-    local classesPlayedCount = 0
+    local mostPlayedClass = REWARD_UTIL.GetRandomClass()
     local randomChance = math.random(1, 100)
-    local classTable = {}
-    for classId, _ in pairs(player.serverUserData.ClassesPlayed) do
-        classesPlayedCount = classesPlayedCount + 1
-        classTable[classesPlayedCount] = classId
+    
+    if player.serverUserData.ClassesPlayed then
+        local mostPlays = 0
+        for classId, count in pairs(player.serverUserData.ClassesPlayed) do
+            if count > mostPlays then
+                mostPlays = count
+                mostPlayedClass = classId
+                --print("Most played: "..tostring(classId))
+            end
+        end
     end
-    if randomChance < 50 then -- #FIXME
-        --local randomClass =
-        --local bindId = tonumber(tostring(classTable[randomClass]) .. tostring(REWARD_UTIL.GetRandomBind()))
-        reward = REWARD_UTIL.GetSkillReward()
-        reward.bind = REWARD_UTIL.GetRandomBind()
-        reward.class = math.random(1, #classTable)
-    elseif randomChance > 50 and randomChance < 98 then
-        --local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
-        reward = REWARD_UTIL.GetSkillReward()
-        reward.bind = REWARD_UTIL.GetRandomBind()
-        reward.class = REWARD_UTIL.GetRandomClass()
+
+    if randomChance > 85 then 
+        reward = REWARD_UTIL.GetClassXPReward()
     else
-        reward = REWARD_UTIL.GetCosmeticReward()
+        reward = REWARD_UTIL.GetSkillReward()
     end
+    reward.class = mostPlayedClass
     return reward
 end
 
@@ -100,14 +99,13 @@ local function CalculateRegularSlot()
         reward = REWARD_UTIL.GetHealingPotionReward()
     elseif random <=85 and random > 80 then
         reward = REWARD_UTIL.GetMountSpeedReward()
+    elseif random <=80 and random > 75 then
+        reward = REWARD_UTIL.GetClassXPReward()
     else
-        --local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
         reward = REWARD_UTIL.GetSkillReward()
-        reward.bind = REWARD_UTIL.GetRandomBind()
-        reward.class = REWARD_UTIL.GetRandomClass()
     end
 
-    return reward --REWARD_UTIL.GetHealingPotionReward()
+    return reward --REWARD_UTIL.GetClassXPReward()
 end
 
 -- Should return 4-10

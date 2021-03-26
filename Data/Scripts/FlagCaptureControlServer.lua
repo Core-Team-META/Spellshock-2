@@ -133,16 +133,15 @@ function GetCaptureSpeed()
     end
 
     local multiplier = 1
+    local playerMultiplier = 0.2
 
     if capturePlayer.team ~= progressedTeam then
-        multiplier = -1
-
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = -1 * enemiesPresent
+            multiplier = -1 - (enemiesPresent-1)*playerMultiplier
         end
     else
         if MULTIPLY_WITH_PLAYERS then
-            multiplier = friendliesPresent
+            multiplier = 1 + (friendliesPresent-1)*playerMultiplier
         end
     end
 
@@ -152,8 +151,8 @@ function GetCaptureSpeed()
         lastCaptureSpeed = newCaptureSpeed
         script:SetNetworkedCustomProperty("LastCaptureSpeed", newCaptureSpeed)
     end
-
-    return multiplier / CAPTURE_TIME
+    
+    return newCaptureSpeed
 end
 
 -- float GetCaptureProgress()

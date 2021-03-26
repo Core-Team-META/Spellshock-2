@@ -51,6 +51,15 @@ function OnClassChanged(player, classID)
         player.animationStance = Class_Stances[classID]
         local newClass = World.SpawnAsset(ClassTemplates[classID])
         newClass:Equip(player)
+
+        -- Used for determining which class is used during the round; used for calculating reward slot 1
+        player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
+        local current = player.serverUserData.ClassesPlayed[classID]
+        if current then
+            player.serverUserData.ClassesPlayed[classID] = current + 1
+        else
+            player.serverUserData.ClassesPlayed[classID] = 1
+        end
     end
 end
 
@@ -76,6 +85,9 @@ function OnGameStateChanged(oldState, newState)
 
             local newClass = World.SpawnAsset(ClassTemplates[classID])
 	        newClass:Equip(player)
+
+            player.serverUserData.ClassesPlayed = {}
+            player.serverUserData.ClassesPlayed[classID] = 1
         end
     elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
         Task.Wait()
