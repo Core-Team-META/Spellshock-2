@@ -201,6 +201,10 @@ function API.GetClassLevelString(class)
     return "C" .. tostring(class) .. "L"
 end
 
+function API.GetClassXPString(class)
+    return "C" .. tostring(class) .. "XP"
+end
+
 function API.GetSkinString(class, team, bind)
     return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
@@ -209,9 +213,14 @@ function API.GetCosmeticIdString(class, team, skin, bind)
     return "S" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
 end
 
-function API.GetConsumableIdString(consumable)
-    return "CS" .. tostring(consumable) 
+function API.GetConsumableLevelString(consumable)
+    return "CS" .. tostring(consumable)
 end
+
+function API.GetConsumableXpString(consumable)
+    return "CS" .. tostring(consumable) .. "XP"
+end
+
 
 function API.GetMountIdString(mount)
     return "M" .. tostring(mount) 
