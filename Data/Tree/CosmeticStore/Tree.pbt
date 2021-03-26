@@ -12911,6 +12911,48 @@ Objects {
         SelfId: 2003014273858288950
       }
     }
+    Overrides {
+      Name: "cs:SFX_UI_Hover"
+      AssetReference {
+        Id: 13564860908462472063
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_BuyGeneric"
+      AssetReference {
+        Id: 17427715677023329960
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_PurchaseFailure"
+      AssetReference {
+        Id: 14153526073733528906
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_ChangeOutfit"
+      AssetReference {
+        Id: 72631227658125152
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_PageTurnSelect"
+      AssetReference {
+        Id: 16966136970412206279
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_OpenInventoryPanel"
+      AssetReference {
+        Id: 15148209995605876065
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_PurchaseSkinConfirm"
+      AssetReference {
+        Id: 12158755182003592593
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

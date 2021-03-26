@@ -63,9 +63,9 @@ Objects {
     Overrides {
       Name: "cs:TypeColor"
       Color {
-        G: 0.223227978
-        B: 0.356400251
-        A: 0.800000072
+        G: 0.222031385
+        B: 0.356666565
+        A: 0.8
       }
     }
     Overrides {
