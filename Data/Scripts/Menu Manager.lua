@@ -95,11 +95,11 @@ function OnBindingPressed(whichPlayer, binding)
 			(CurrentGameState == ABGS.GAME_STATE_LOBBY or CurrentGameState == ABGS.GAME_STATE_ROUND) and
 			SpamPrevent()
 	 then
-		if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
+		--[[if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["Achievements"]) -- Show
 		elseif _G.CurrentMenu == _G.MENU_TABLE["Achievements"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
-		end
+		end]]--
 	end
 end
 

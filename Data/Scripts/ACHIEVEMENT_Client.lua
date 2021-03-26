@@ -4,6 +4,10 @@
 -- Date: 2021/3/24
 -- Version 0.1.4-SS2
 ------------------------------------------------------------------------------------------------------------------------
+if true then
+    return
+end
+
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
 ------------------------------------------------------------------------------------------------------------------------
@@ -134,7 +138,7 @@ end
 
 local function AnimateNotification(id)
     NOTIFICATION_ICON:SetImage(ACH_API.GetAchievementIcon(id))
-    NOTIFICATION_ICON_BG:SetImage(ACH_API.GetAchievementIconBG(id))    
+    NOTIFICATION_ICON_BG:SetImage(ACH_API.GetAchievementIconBG(id))
     ACHIEVEMENT_NAME_TEXT.text = (ACH_API.GetAchievementName(id))
     EaseUI.EaseX(NOTIFICATION, 10, 1, EaseUI.EasingEquation.BACK, EaseUI.EasingDirection.OUT)
     Task.Wait(0.5)
