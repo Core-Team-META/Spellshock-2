@@ -8,21 +8,21 @@ Assets {
   }
 }
 Assets {
-  Id: 18131789805615030518
-  Name: "Navigation"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Icon_Navigation"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Yellow_027"
+  }
+}
+Assets {
+  Id: 17568320209395937032
+  Name: "Center Rect 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterRect_001"
   }
 }
 Assets {
