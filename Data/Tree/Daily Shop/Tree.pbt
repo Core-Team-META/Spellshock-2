@@ -3943,7 +3943,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3959,7 +3959,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1
@@ -8076,7 +8076,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8092,7 +8092,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1
@@ -12209,7 +12209,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -12225,7 +12225,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1
@@ -16341,7 +16341,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -16357,7 +16357,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1
@@ -20473,7 +20473,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -20489,7 +20489,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1
@@ -24605,7 +24605,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -24621,7 +24621,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 1046635934407451220
+        Id: 15450196944859968109
       }
       Color {
         R: 1

@@ -121,7 +121,7 @@ function OnPlayerJoined(player)
     end
 
     Task.Wait(2)
-    player:SetResource("GOLD", 100000)
+    player:SetResource("GOLD", 10)
     player:SetResource("COSM_TOKEN", 100000)
 end
 
