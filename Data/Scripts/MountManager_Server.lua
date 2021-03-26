@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
--- Mount Manager Server
+-- Mount Manager Client
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/24
--- Version 0.1.2
+-- Date: 2021/3/26
+-- Version 0.1.0
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -18,46 +18,19 @@ _G.MOUNT_SPEED = API
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Variables
 ------------------------------------------------------------------------------------------------------------------------
-local mountSpeed = {}
 local MOUNT_LEVELS = MOUNT_LEVELS:GetChildren()
 local MAX_MOUNT_LEVEL = #MOUNT_LEVELS
 ------------------------------------------------------------------------------------------------------------------------
 -- Local Functions
 ------------------------------------------------------------------------------------------------------------------------
 
-local function SetPlayerMountSpeed(player, level)
-    local level = level or 1
-    local mountSpeed = MOUNT_LEVELS[level]
-    if mountSpeed then
-        mountSpeed:ApplyToPlayer(player)
-    end
-end
-------------------------------------------------------------------------------------------------------------------------
--- Global Functions
-------------------------------------------------------------------------------------------------------------------------
-
-function GetMountLevel(player)
-    return mountSpeed[player]
-end
-
-function OnPlayerJoined(player, level)
-    Task.Wait()
-    mountSpeed[player] = level or 1
-    SetPlayerMountSpeed(player, level)
-end
-
-function OnPlayerLeft(player)
-    mountSpeed[player] = nil
-end
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Public API
 ------------------------------------------------------------------------------------------------------------------------
 
-function API.AddLevel(player)
-    local currentLevel = mountSpeed[player]
-    if currentLevel < MAX_MOUNT_LEVEL then
-        mountSpeed[player] = currentLevel + 1
-    end
-    SetPlayerMountSpeed(player, mountSpeed[player])
+--@params object player
+--@return string mountSpeed
+function API.GetSpeed(player)
+    return tostring(player:GetResource("MOUNT_LEVEL"))
 end
