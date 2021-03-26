@@ -62,6 +62,12 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime)
         FindTeamSong(newState)
     elseif newState == ABGS.GAME_STATE_ROUND_END then
         FindTeamSong(newState)
+    elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+        FindTeamSong(newState)
+    elseif newState == ABGS.GAME_STATE_REWARDS then
+        FindTeamSong(newState)
+    elseif newState == ABGS.GAME_STATE_REWARDS_END then
+        FindTeamSong(newState)
     else
         StopCurrentSong()
     end

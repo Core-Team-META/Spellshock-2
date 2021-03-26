@@ -126,6 +126,9 @@ Objects {
   ChildIds: 15388158343451086821
   ChildIds: 7968011078272738388
   ChildIds: 15689220480337951964
+  ChildIds: 2650796006863474876
+  ChildIds: 3273537084234371144
+  ChildIds: 16930035066363036695
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -137,6 +140,120 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 16930035066363036695
+  Name: "Rewards End"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 3273537084234371144
+  Name: "Rewards"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 2650796006863474876
+  Name: "PlayerShowcase"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14874357977701351238
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
   }
 }
 Objects {
@@ -271,6 +388,9 @@ Objects {
   ChildIds: 9519070195028333978
   ChildIds: 9138659101811640313
   ChildIds: 15835756206661839636
+  ChildIds: 4989067313359477920
+  ChildIds: 670640835919610410
+  ChildIds: 9992087328077118893
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -282,6 +402,120 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 9992087328077118893
+  Name: "Rewards End"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 670640835919610410
+  Name: "Rewards"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
+  }
+}
+Objects {
+  Id: 4989067313359477920
+  Name: "PlayerShowcase"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8625504559866801273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFX"
+      ObjectReference {
+        SelfId: 8159300865285051927
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17212890371797311132
+    }
   }
 }
 Objects {

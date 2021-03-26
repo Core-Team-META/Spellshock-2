@@ -97,6 +97,12 @@ function API.GetClassLevel(player, class)
 end
 
 
+--@param object player
+--@param int class => id of class (API.TANK, API.MAGE)
+function API.GetClassXp(player, class)
+    return player:GetResource(UTIL.GetClassXPString(class))
+end
+
 
 listener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
