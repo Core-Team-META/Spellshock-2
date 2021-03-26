@@ -232,6 +232,8 @@ function Tick(deltaTime)
 			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
 			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
 			local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_TargetingRange, SpecialAbility.name .. ": Targeting Range")
+			local projectileDistance = (CurrentProjectile:GetWorldPosition() - viewPosition).size
+			targetingRange = math.min(targetingRange, projectileDistance + 1000)
 			local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 			local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = CurrentProjectile.owner.team})
 
@@ -242,6 +244,7 @@ function Tick(deltaTime)
 
 			CurrentProjectile.homingTarget = CurrentTarget
 			CurrentProjectile.homingAcceleration = HOMING_ACCELERATION
+			CurrentProjectile.drag = 10
 			
 			--local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
 			--CurrentProjectile.lifeSpan = distanceVector.size / ProjectileSpeed + 1.5
@@ -250,6 +253,7 @@ function Tick(deltaTime)
 			CurrentProjectile.homingTarget = nil
 			CurrentProjectile.homingAcceleration = 0
 			CurrentProjectile.speed = ProjectileSpeed
+			CurrentProjectile.drag = -0.1
 		end
 
 		--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
