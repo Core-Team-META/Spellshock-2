@@ -890,7 +890,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -993,11 +993,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 11614984211351205505
+  ChildIds: 14796256833909855847
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 11614984211351205505
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 14796256833909855847
       }
     }
   }
@@ -1031,6 +1038,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14796256833909855847
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13203278664486088247
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1115,11 +1181,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 11170508395413198871
+  ChildIds: 953236834933509180
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 11170508395413198871
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 953236834933509180
       }
     }
   }
@@ -1153,6 +1226,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 953236834933509180
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18188951867222756270
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1237,11 +1369,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 6634773146648523617
+  ChildIds: 9840466516938569782
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 6634773146648523617
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 9840466516938569782
       }
     }
   }
@@ -1275,6 +1414,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 9840466516938569782
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14091674099240728291
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1359,11 +1557,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 3376397964628274729
+  ChildIds: 8236618170910816576
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 3376397964628274729
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 8236618170910816576
       }
     }
   }
@@ -1397,6 +1602,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8236618170910816576
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8357885581108465053
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1481,11 +1745,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 6671371134051838917
+  ChildIds: 14053876392593340146
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 6671371134051838917
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 14053876392593340146
       }
     }
   }
@@ -1519,6 +1790,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14053876392593340146
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15190141058599635140
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1603,11 +1933,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 11284528995619028295
+  ChildIds: 1102505450798032844
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 11284528995619028295
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 1102505450798032844
       }
     }
   }
@@ -1640,6 +1977,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1102505450798032844
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8021854946719997153
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1724,11 +2120,18 @@ Objects {
   }
   ParentId: 7323646638537806906
   ChildIds: 16126766089941479089
+  ChildIds: 243206281635838655
   UnregisteredParameters {
     Overrides {
       Name: "cs:ReasonText"
       ObjectReference {
         SelfId: 16126766089941479089
+      }
+    }
+    Overrides {
+      Name: "cs:CoinIcon"
+      ObjectReference {
+        SelfId: 243206281635838655
       }
     }
   }
@@ -1762,6 +2165,65 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 243206281635838655
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11243305063337024093
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 40
+    Height: 40
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 7585529932942736913
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2047,6 +2509,12 @@ Objects {
       Name: "cs:APIBasicGameState"
       AssetReference {
         Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_UI_BuyGeneric"
+      AssetReference {
+        Id: 17427715677023329960
       }
     }
     Overrides {
