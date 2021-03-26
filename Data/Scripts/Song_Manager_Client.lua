@@ -68,6 +68,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime)
     elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         FindTeamSong(newState)
     elseif newState == ABGS.GAME_STATE_REWARDS then
+		Task.Wait(1.5)
         FindTeamSong(newState)
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
         --FindTeamSong(newState)

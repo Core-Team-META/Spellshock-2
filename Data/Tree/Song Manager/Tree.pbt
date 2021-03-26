@@ -199,7 +199,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 5898451590886041447
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -461,7 +461,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 5898451590886041447
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -575,7 +575,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 8688153027707487342
       }
     }
   }
@@ -1012,6 +1012,8 @@ Objects {
   ChildIds: 14478094395057186831
   ChildIds: 2382138765438154874
   ChildIds: 5898451590886041447
+  ChildIds: 3157584536586350236
+  ChildIds: 8688153027707487342
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1023,6 +1025,84 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 8688153027707487342
+  Name: "\"Heroic Fantasy Battle\" Music Construction Kit (Sections) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_heroic_fantasy_battle_kit:39"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16728797618954551096
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.4
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 3157584536586350236
+  Name: "Meta Fantasy Treasure 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 13990916659029667342
+    }
+    Volume: 0.817564428
+    Falloff: -1
+    Radius: -1
   }
 }
 Objects {
