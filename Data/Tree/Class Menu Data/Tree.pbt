@@ -3923,7 +3923,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Description"
-      String: "The amount of damage applied to enemies"
+      String: "The amount of damage applied to enemies per second"
     }
     Overrides {
       Name: "cs:Icon"
