@@ -78,10 +78,10 @@ function SetGameState(newState)
 		stateDuration = ROUND_END_DURATION
 	elseif newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		stateHasduration = true
-		stateDuration = 30
+		stateDuration = 25
 	elseif newState == ABGS.GAME_STATE_REWARDS then
 		stateHasduration = true
-		stateDuration = 40
+		stateDuration = 60
 	elseif newState == ABGS.GAME_STATE_REWARDS_END then
 		stateHasduration = true
 		stateDuration = 5
