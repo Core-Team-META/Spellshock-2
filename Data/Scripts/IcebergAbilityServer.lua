@@ -39,6 +39,9 @@ function OnGoingToTakeDamage(attackData)
     if attackData.tags and attackData.tags.id and attackData.tags.id == "StatusEffect" then
         return
     end
+	if attackData.damage.amount < 0 then
+		return
+	end
 
     if attackData.object == Equipment.owner then
         local BlockPercentage = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_BlockPercentage, SpecialAbility.name..": Block %")
@@ -64,22 +67,22 @@ function OnSpecialAbilityExecute(thisAbility)
 	local attachmentTemplate = PlayerVFX.Attachment
 	CurrentIceCube = META_AP().SpawnAsset(attachmentTemplate,  {position = spawnPosition})
 
-	-- Heal player
-	local dmg = Damage.New()
-	dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount")
-	dmg.reason = DamageReason.COMBAT
-	dmg.sourcePlayer = SpecialAbility.owner
-	dmg.sourceAbility = SpecialAbility
+	-- Heal player (moved into the timer)
+	--local dmg = Damage.New()
+	--dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount")
+	--dmg.reason = DamageReason.COMBAT
+	--dmg.sourcePlayer = SpecialAbility.owner
+	--dmg.sourceAbility = SpecialAbility
 
-	local attackData = {
-		object = SpecialAbility.owner,
-		damage = dmg,
-		source = dmg.sourcePlayer,
-		position = nil,
-		rotation = nil,
-		tags = {id = "Mage_R"}
-	}
-	COMBAT().ApplyDamage(attackData)
+	--local attackData = {
+	--	object = SpecialAbility.owner,
+	--	damage = dmg,
+	--	source = dmg.sourcePlayer,
+	--	position = nil,
+	--	rotation = nil,
+	--	tags = {id = "Mage_R"}
+	--}
+	--COMBAT().ApplyDamage(attackData)
 
 	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
@@ -201,6 +204,26 @@ function Tick(deltaTime)
 	
 			end	
 			damageTimer = 1
+
+			-- heal every second as
+			local dmg = Damage.New()
+			local healDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
+			local heal = math.ceil(META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount") / (healDuration))
+			print (heal)
+			dmg.amount = -heal
+			dmg.reason = DamageReason.COMBAT
+			dmg.sourcePlayer = SpecialAbility.owner
+			dmg.sourceAbility = SpecialAbility
+		
+			local attackData = {
+				object = SpecialAbility.owner,
+				damage = dmg,
+				source = dmg.sourcePlayer,
+				position = nil,
+				rotation = nil,
+				tags = {id = "Mage_R"}
+			}
+			COMBAT().ApplyDamage(attackData)
 		end
 	end
 end

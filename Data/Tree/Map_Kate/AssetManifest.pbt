@@ -242,15 +242,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16845241941935487831
-  Name: "Glass 01 (no distortion)"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_glass_001"
-  }
-}
-Assets {
   Id: 16825643228001246048
   Name: "Gem - Pear Polished"
   PlatformAssetType: 1

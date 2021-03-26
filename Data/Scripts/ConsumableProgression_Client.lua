@@ -43,7 +43,7 @@ end
 --@param object player
 --@param int class => id of class (API.HEALTH_POTION)
 local function GetLevel(player, consumable)
-    return player:GetResource(UTIL.GetConsumableIdString(consumable))
+    return player:GetResource(UTIL.GetConsumableLevelString(consumable))
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -54,6 +54,12 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 function API.GetLevel(player, consumable)
     return GetLevel(player, consumable)
+end
+
+--@param object player
+--@param int class => id of class (API.HEALTH_POTION)
+function API.GetXp(player, consumable)
+    return player:GetResource(UTIL.GetConsumableXpString(consumable))
 end
 
 
