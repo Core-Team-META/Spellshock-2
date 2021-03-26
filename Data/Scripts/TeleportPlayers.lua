@@ -4,9 +4,9 @@ local PositionPoint = script:GetCustomProperty("PositionPoint"):WaitForObject()
 local IsEnabled = Root:GetCustomProperty("IsEnabled")
 
 function OnGameStateChanged(oldState, newState)
-    if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
-        OnTeleport()
-    end
+	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+		OnTeleport()
+	end
 end
 
 function OnTeleport()
@@ -17,5 +17,11 @@ function OnTeleport()
 	end
 end
 
+function Teleport(player)
+	warn(tostring(player.name))
+	player:SetWorldPosition(PositionPoint:GetWorldPosition())
+end
+
 --Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("Teleport", OnTeleport)
+Events.Connect("TeleportPlayer", Teleport)
