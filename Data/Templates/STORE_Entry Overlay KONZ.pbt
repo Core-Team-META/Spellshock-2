@@ -107,9 +107,9 @@ Assets {
           Overrides {
             Name: "cs:FrameHoverColor"
             Color {
-              R: 0.02
-              G: 0.02
-              B: 0.02
+              R: 0.0300000012
+              G: 0.0239820015
+              B: 0.00876000058
               A: 0.1
             }
           }
@@ -176,8 +176,8 @@ Assets {
           Overrides {
             Name: "cs:PriceBGEquippedColor"
             Color {
-              G: 0.601854205
-              B: 0.64
+              R: 0.470000029
+              G: 0.24278149
               A: 1
             }
           }
@@ -2055,7 +2055,6 @@ Assets {
         Control {
           Width: -2
           Height: -41
-          UIX: -1
           UIY: -2.20830536
           RenderTransformPivot {
             Anchor {
@@ -2178,9 +2177,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: -2
-          Height: 257
-          UIY: -104.611313
+          Width: -3
+          Height: 233
+          UIY: -92.0072174
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2193,7 +2192,7 @@ Assets {
               Id: 15602681661189935351
             }
             Color {
-              A: 0.76000005
+              A: 0.65
             }
             TeamSettings {
             }
