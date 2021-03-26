@@ -1,4 +1,4 @@
-﻿local NAMESPACE = "METADS."
+local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
@@ -59,14 +59,14 @@ local function CalculateRewardSlot(player)
     if randomChance < 98 then
         local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
         if randomChance > 85 then
-            tbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount() * 10, P = 0}
+            tbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount() * 5, P = 0}
         elseif randomChance > 40 then
-            tbl = {[bindId] = REWARD_UTIL.GetSkillMediumAmmount() * 10, P = 0}
+            tbl = {[bindId] = REWARD_UTIL.GetSkillMediumAmmount() * 5, P = 0}
         else
-            tbl = {[bindId] = REWARD_UTIL.GetSkillSmallAmmount() * 10, P = 0}
+            tbl = {[bindId] = REWARD_UTIL.GetSkillSmallAmmount() * 5, P = 0}
         end
     else
-        tbl = {C = REWARD_UTIL.GetCostumeTokenAmmount() * 10, P = 0}
+        tbl = {C = REWARD_UTIL.GetCostumeTokenAmmount() * 3, P = 0}
     end
     return tbl
 end
