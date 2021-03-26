@@ -1,16 +1,37 @@
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local END_REWARDS = script:GetCustomProperty("METAEndRewards_Client"):WaitForObject()
 local BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
-
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
+local shouldShow = false
+
 function OnGameStateChanged(oldState, newState, hasDuration, time)
-    if newState == ABGS.GAME_STATE_REWARDS then
+    if newState ~= ABGS.GAME_STATE_REWARDS then
+        shouldShow = false
+        BUTTON.visibility = Visibility.FORCE_OFF
+    end
+end
+
+--#FIXME Very sketchy code
+function OnRewardSelected(bool)
+    if not ABGS.GetGameState() == ABGS.GAME_STATE_REWARDS then
+        return
+    end
+    local timeRemaining = ABGS.GetTimeRemainingInState()
+    shouldShow = bool
+    if bool and timeRemaining < 50 then
+        BUTTON.visibility = Visibility.FORCE_ON
+    elseif bool and timeRemaining > 50 then
         Task.Spawn(
             function()
-                BUTTON.visibility = Visibility.FORCE_ON
+                while timeRemaining > 50 do
+                    Task.Wait()
+                end
+                if shouldShow then
+                    BUTTON.visibility = Visibility.FORCE_ON
+                end
             end,
-            10
+            0
         )
     else
         BUTTON.visibility = Visibility.FORCE_OFF
@@ -32,3 +53,4 @@ BUTTON.clickedEvent:Connect(
 )
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("SRC.OnRewardSelected", OnRewardSelected)

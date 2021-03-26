@@ -1601,11 +1601,38 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 3655646741166042187
+      value {
+        Overrides {
+          Name: "bp:Radius"
+          Float: 300
+        }
+        Overrides {
+          Name: "bp:Quality"
+          Float: 76
+        }
+        Overrides {
+          Name: "bp:Intensity"
+          Float: 0.7
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 18071166912119165262
       value {
         Overrides {
           Name: "Name"
           String: "Environment_v12"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
