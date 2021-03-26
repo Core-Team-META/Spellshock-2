@@ -12,6 +12,7 @@ local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
+local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 
 local function META_AP()
     while not _G["Meta.Ability.Progression"] do
@@ -269,15 +270,15 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             InfoDescription.text = infoTable.Description
         elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
             infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
-            currentAmmount = 50 --#FIXME
-            reqXp = 100
+            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class)
+            currentAmmount = META_CP().GetClassXp(LOCAL_PLAYER, class)
+            reqXp = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
 
             CardTitle.text = infoTable.ClassName.." XP"
             ClassPanel:Destroy()
             AbilityName.text = infoTable.ClassName
             AbilityName:SetColor(RarityColors[rarity])
-
-            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class)
+            
             CurrentLevel.text = tostring(classLevel)
             NextLevel.text = tostring(classLevel + 1)
 
@@ -307,10 +308,10 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
                     return _G["Consumables"]
                 end
 
-                currentAmmount = 50 -- #FIXME
-                reqXp = 100
-
                 local Level = CONSUMABLE().GetLevel(LOCAL_PLAYER, bind)
+                currentAmmount = CONSUMABLE().GetXp(LOCAL_PLAYER, bind)
+                reqXp = CONSUMABLES_COSTS[Level].reqXP
+
                 CurrentLevel.text = tostring(Level)
                 NextLevel.text = tostring(Level + 1)
             elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then

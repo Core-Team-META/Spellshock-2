@@ -3,12 +3,38 @@ local END_REWARDS = script:GetCustomProperty("METAEndRewards_Client"):WaitForObj
 local BUTTON = script:GetCustomProperty("BUTTON"):WaitForObject()
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
+local BUTTON_PANEL = script:GetCustomProperty("BUTTON_PANEL"):WaitForObject()
+
+local spamPrevent
+
 local shouldShow = false
+
+local function TurnOnButton()
+    shouldShow = true
+    BUTTON.isInteractable = true
+    BUTTON_PANEL.visibility = Visibility.FORCE_ON
+end
+
+local function TurnOffButton()
+    shouldShow = false
+    BUTTON.isInteractable = false
+    BUTTON_PANEL.visibility = Visibility.FORCE_OFF
+end
+
+--Used for spam prevention
+--@return bool
+local function isAllowed(time)
+    local timeNow = os.clock()
+    if spamPrevent ~= nil and (timeNow - spamPrevent) < time then
+        return false
+    end
+    spamPrevent = timeNow
+    return true
+end
 
 function OnGameStateChanged(oldState, newState, hasDuration, time)
     if newState ~= ABGS.GAME_STATE_REWARDS then
-        shouldShow = false
-        BUTTON.visibility = Visibility.FORCE_OFF
+        TurnOffButton()
     end
 end
 
@@ -17,38 +43,33 @@ function OnRewardSelected(bool)
     if not ABGS.GetGameState() == ABGS.GAME_STATE_REWARDS then
         return
     end
-    local timeRemaining = ABGS.GetTimeRemainingInState()
     shouldShow = bool
-    if bool and timeRemaining < 50 then
-        BUTTON.visibility = Visibility.FORCE_ON
-    elseif bool and timeRemaining > 50 then
-        Task.Spawn(
-            function()
-                while timeRemaining > 50 do
-                    Task.Wait()
-                end
-                if shouldShow then
-                    BUTTON.visibility = Visibility.FORCE_ON
-                end
-            end,
-            0
-        )
+    if bool then
+        while ABGS.GetTimeRemainingInState() > 50 do
+            Task.Wait()
+        end
+        if shouldShow then
+            TurnOnButton()
+        end
     else
-        BUTTON.visibility = Visibility.FORCE_OFF
+        TurnOffButton()
     end
 end
 
 -- handler params: UIButton_
 BUTTON.clickedEvent:Connect(
     function()
-        END_REWARDS.context.OnRewardSelect()
-        LOCAL_PLAYER.clientUserData.hasSkippedReward = true
-        Events.BroadcastToServer("RewardSelected")
-        Task.Wait(3)
-        Events.Broadcast("RestoreFromPodium")
-        BUTTON.visibility = Visibility.FORCE_OFF
-        Events.Broadcast("Changing Menu", "ShowIcons")
-        Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
+        if isAllowed(5) then
+            BUTTON.isInteractable = false
+            END_REWARDS.context.OnRewardSelect()
+            LOCAL_PLAYER.clientUserData.hasSkippedReward = true
+            Events.BroadcastToServer("RewardSelected")
+            Task.Wait(3)
+            Events.Broadcast("RestoreFromPodium")
+            Events.Broadcast("Changing Menu", "ShowIcons")
+            Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
+            TurnOffButton()
+        end
     end
 )
 

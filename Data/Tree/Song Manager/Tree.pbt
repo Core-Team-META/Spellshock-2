@@ -161,7 +161,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 2382138765438154874
       }
     }
   }
@@ -199,7 +199,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -237,7 +237,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 14478094395057186831
       }
     }
   }
@@ -275,7 +275,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 6993845471095540870
       }
     }
   }
@@ -423,7 +423,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 13291684878578525064
       }
     }
   }
@@ -461,7 +461,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 3157584536586350236
       }
     }
   }
@@ -499,7 +499,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 14478094395057186831
       }
     }
   }
@@ -537,7 +537,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8159300865285051927
+        SelfId: 6993845471095540870
       }
     }
   }
@@ -575,7 +575,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 8688153027707487342
       }
     }
   }
@@ -1005,6 +1005,15 @@ Objects {
   ChildIds: 945024203867131124
   ChildIds: 7533910292317192694
   ChildIds: 17601287680247368645
+  ChildIds: 6993845471095540870
+  ChildIds: 935252118520641425
+  ChildIds: 12204854251400153961
+  ChildIds: 13291684878578525064
+  ChildIds: 14478094395057186831
+  ChildIds: 2382138765438154874
+  ChildIds: 5898451590886041447
+  ChildIds: 3157584536586350236
+  ChildIds: 8688153027707487342
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1016,6 +1025,433 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 8688153027707487342
+  Name: "\"Heroic Fantasy Battle\" Music Construction Kit (Sections) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_heroic_fantasy_battle_kit:39"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16728797618954551096
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.4
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 3157584536586350236
+  Name: "Meta Fantasy Treasure 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 13990916659029667342
+    }
+    Volume: 0.817564428
+    Falloff: -1
+    Radius: -1
+  }
+}
+Objects {
+  Id: 5898451590886041447
+  Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01_Drums"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Timpani Swell Middle Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Cymbal Swell Middle Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Cymbal Swell Beginning Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Taiko Drums Volume"
+      Float: 25
+    }
+    Overrides {
+      Name: "bp:Epic Drums 2 Volume"
+      Float: 15
+    }
+    Overrides {
+      Name: "bp:Epic Drums 1 Volume"
+      Float: 15
+    }
+    Overrides {
+      Name: "bp:Harp Gliss Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Strings Melody Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Vocals Melody Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Ethereal Vocals Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Low Brass Bram Volume"
+      Float: 25
+    }
+    Overrides {
+      Name: "bp:High Strings Volume"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Low Strings Volume"
+      Float: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 695690695652039968
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 0.35
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 2382138765438154874
+  Name: "Fantasy Music Score Set 01_11"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_fantasymusic:37"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 8870697233053839801
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 0.5
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 14478094395057186831
+  Name: "Fantasy Music Score Set 01_07"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_fantasymusic:19"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 8870697233053839801
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 0.5
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 13291684878578525064
+  Name: "\"Epic Fantasy Jungle Adventure\" Music Construction Kit (Sections) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9053062345285984539
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.5
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 12204854251400153961
+  Name: "\"Woodland Fantasy\" Music Construction Kit (Sections) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_woodland_fantasy_sections_kit:55"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 5501725696326881885
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.5
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 935252118520641425
+  Name: "Orchestral Adventurous Victory Fanfare Music Stinger Set 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_orchestral_adventourus_victory_fanfare_stinger_01:54"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16085353815402461357
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Repeat: true
+      Volume: 0.4
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
+  Id: 6993845471095540870
+  Name: "Orchestral Adventurous Victory Fanfare Music Stinger Set 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 16085353815402461357
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.5
+      Falloff: 3600
+      Radius: 400
+    }
   }
 }
 Objects {

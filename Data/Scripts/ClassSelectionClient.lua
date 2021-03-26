@@ -54,6 +54,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function META_CP()
+    return _G["Class.Progression"]
+end
+
 local function META_Consumables()
     return _G["Consumables"]
 end
@@ -248,6 +252,8 @@ function UpdateClassInfo(thisButton)
 	local DescriptionText = RightPanel_ClassDescriptionPanel:GetCustomProperty("DescriptionText"):WaitForObject()
 	local BaseHealth = RightPanel_ClassDescriptionPanel:GetCustomProperty("BaseHealth"):WaitForObject()
 	local HealthRegen = RightPanel_ClassDescriptionPanel:GetCustomProperty("HealthRegen"):WaitForObject()
+	local XP_Progress = RightPanel_ClassDescriptionPanel:GetCustomProperty("XP_Progress"):WaitForObject()
+	local ClassXP = RightPanel_ClassDescriptionPanel:GetCustomProperty("ClassXP"):WaitForObject()
 
 	if LOCAL_PLAYER.team == 1 then
 		DescriptionText.text = dataTable["OrcDescription"]
@@ -255,8 +261,13 @@ function UpdateClassInfo(thisButton)
 		DescriptionText.text = dataTable["ElfDescription"]
 	end
 
-	local classLevel = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
+	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]]) --LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
 	ClassLevel.text = tostring(classLevel)
+
+	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
+	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
+	XP_Progress.progress = currentXP / reqXP
+	ClassXP.text = UTIL.FormatInt(currentXP).."/"..UTIL.FormatInt(reqXP)
 
 	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
 	BaseHealth.text = tostring(classHealth)
@@ -327,6 +338,7 @@ function UpdateAbilityInfo(thisButton)
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
 	local AbilityXP = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityXP"):WaitForObject()
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
+	local UpgradeLabel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeLabel"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
@@ -355,8 +367,10 @@ function UpdateAbilityInfo(thisButton)
 
 	if currentXP >= reqXP and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButton.isInteractable = true
+		UpgradeLabel:SetColor(Color.FromStandardHex("FFC200FF"))
 	else
 		RightPanel_UpgradeButton.isInteractable = false
+		UpgradeLabel:SetColor(Color.FromStandardHex("CBCBCBFF"))
 	end
 
 	-- Remove any previous mod panels 
