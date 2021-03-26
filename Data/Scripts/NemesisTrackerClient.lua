@@ -244,7 +244,7 @@ function MarkNemesis()
 		
 		local nemesisOfNameText = marker:GetCustomProperty("NemesisOfNameText"):WaitForObject()
 			
-		marker.y = -1000
+		marker.y = 1000
 			
 		nemesisNameText.text = ""
 			
@@ -252,7 +252,7 @@ function MarkNemesis()
 		
 		marker.visibility = Visibility.FORCE_ON
 						
-		EaseUI.EaseY(marker, -94, 1, EaseUI.EasingEquation.ELASTIC, EaseUI.EasingDirection.OUT)
+		EaseUI.EaseY(marker, marker.parent.height - 50, 1, EaseUI.EasingEquation.ELASTIC, EaseUI.EasingDirection.OUT)
 			
 		if theirNemesisOfEntryText[number] then
 				
@@ -417,7 +417,7 @@ function InitializeVictoryScreenMarkers()
 		marker.visibility = Visibility.FORCE_OFF
 		
 		marker.x = 0
-		marker.y = -94
+		marker.y = 200
 		
 		table.insert(markerList, marker)
 		
