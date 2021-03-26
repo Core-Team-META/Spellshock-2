@@ -154,6 +154,10 @@ function API.GetGoldReward()
     local amountsTable = GOLD_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
     reward.type = API.REWARD_TYPES.GOLD
+    reward.bind = 1
+    if reward.rarity > 2 then
+        reward.bind = 2
+    end
 
     return reward
 end

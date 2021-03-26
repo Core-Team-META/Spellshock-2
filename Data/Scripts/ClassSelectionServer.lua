@@ -120,9 +120,10 @@ function OnPlayerJoined(player)
         player:SetVisibility(false)
     end
 
-    Task.Wait(2)
+    --[[Task.Wait(2)
     player:SetResource("GOLD", 10)
     player:SetResource("COSM_TOKEN", 100000)
+    ]]
 end
 
 if Environment.IsSinglePlayerPreview() then
