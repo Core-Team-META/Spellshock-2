@@ -156,7 +156,7 @@ function FadeOut()
 		end
 		
 		for _, image in ipairs(allImages) do
-			if i > 1 then
+			if i > 1 and image:GetColor().a > 0 then
 				image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, alpha))
 			else 
 				allowIcon[image.id] = false
