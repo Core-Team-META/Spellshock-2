@@ -22,12 +22,12 @@ BUTTON.clickedEvent:Connect(
     function()
         END_REWARDS.context.OnRewardSelect()
         LOCAL_PLAYER.clientUserData.hasSkippedReward = true
-        Events.Broadcast("Changing Menu", _G.MENU_TABLE.NONE)
         Events.BroadcastToServer("RewardSelected")
         Task.Wait(3)
         Events.Broadcast("RestoreFromPodium")
         BUTTON.visibility = Visibility.FORCE_OFF
         Events.Broadcast("Changing Menu", "ShowIcons")
+        Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
     end
 )
 
