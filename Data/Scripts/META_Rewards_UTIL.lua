@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Rewards UTIL
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/2/10
@@ -54,10 +54,10 @@ API.RARITY = {
 }
 
 local SKILL_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
-    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
+    [API.RARITY.UNCOMMON] =  {min = 5, max = 8},
+    [API.RARITY.RARE] =      {min = 10, max = 15},
+    [API.RARITY.EPIC] =      {min = 30, max = 35},
+    [API.RARITY.LEGENDARY] = {min = 50, max = 75}
 }
 
 local COSMETIC_AMOUNT = {
@@ -68,10 +68,10 @@ local COSMETIC_AMOUNT = {
 }
 
 local GOLD_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 100, max = 200},
-    [API.RARITY.RARE] =      {min = 200, max = 300},
-    [API.RARITY.EPIC] =      {min = 300, max = 400},
-    [API.RARITY.LEGENDARY] = {min = 400, max = 500}
+    [API.RARITY.UNCOMMON] =  {min = 150, max = 250},
+    [API.RARITY.RARE] =      {min = 400, max = 500},
+    [API.RARITY.EPIC] =      {min = 800, max = 950},
+    [API.RARITY.LEGENDARY] = {min = 1500, max = 1500}
 }
 
 local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the healing potion
@@ -82,10 +82,10 @@ local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the 
 }
 
 local CLASS_XP_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
-    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
+    [API.RARITY.UNCOMMON] =  {min = 200, max = 200},
+    [API.RARITY.RARE] =      {min = 350, max = 350},
+    [API.RARITY.EPIC] =      {min = 700, max = 700},
+    [API.RARITY.LEGENDARY] = {min = 1000, max = 1000}
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -220,7 +220,7 @@ function API.GetMountSpeedReward()
 end
 
 function API.GetSkillSmallAmmount()
-    return math.random(3, 4)
+    return math.random(4, 5)
 end
 
 function API.GetSkillMediumAmmount()
@@ -228,7 +228,7 @@ function API.GetSkillMediumAmmount()
 end
 
 function API.GetSkillLargeAmmount()
-    return math.random(15, 20)
+    return math.random(7, 9)
 end
 
 function API.GetCostumeTokenAmmount()

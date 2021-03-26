@@ -1027,23 +1027,9 @@ Assets {
           }
         }
         ParentId: 8532801541281951842
-        ChildIds: 14303008768230323774
-        ChildIds: 5714523196440372922
         ChildIds: 6443221498617606140
         ChildIds: 13684587190824894676
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Glow1"
-            ObjectReference {
-              SubObjectId: 14303008768230323774
-            }
-          }
-          Overrides {
-            Name: "cs:Glow2"
-            ObjectReference {
-              SubObjectId: 5714523196440372922
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1068,130 +1054,6 @@ Assets {
             SelfAnchor {
               Anchor {
                 Value: "mc:euianchor:topleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14303008768230323774
-        Name: "Glow1"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1594311194531063505
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 20
-          Height: 150
-          UIX: 4
-          UIY: 15.7507019
-          RotationAngle: 90
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 12804716500201279526
-            }
-            Color {
-              R: 0.346000016
-              G: 0.205217049
-              B: 0.0138400076
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 5714523196440372922
-        Name: "Glow2"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 1.36603776e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1594311194531063505
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 32
-          Height: 150
-          UIX: 3
-          UIY: 10
-          RotationAngle: 90
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 48307754774318265
-            }
-            Color {
-              R: 0.346000075
-              G: 0.0713968351
-              A: 0.8
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
               }
             }
             TargetAnchor {
@@ -1239,8 +1101,8 @@ Assets {
           Text {
             Label: "NEXT LEVEL:"
             Color {
-              G: 0.427682728
-              B: 0.842
+              G: 0.82745105
+              B: 0.211764723
               A: 1
             }
             Size: 11
@@ -1300,10 +1162,10 @@ Assets {
             }
           }
           Text {
-            Label: "1200000"
+            Label: "100 - 100"
             Color {
-              G: 0.427682728
-              B: 0.842
+              G: 0.82745105
+              B: 0.211764723
               A: 1
             }
             Size: 11
@@ -1424,24 +1286,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Corners_004"
-      }
-    }
-    Assets {
-      Id: 12804716500201279526
-      Name: "BG Highlighted 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundHighlighted_020"
-      }
-    }
-    Assets {
-      Id: 48307754774318265
-      Name: "UI Gradient Rectangular 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Basic_Shape_002"
       }
     }
     PrimaryAssetId {
