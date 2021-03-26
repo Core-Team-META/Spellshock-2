@@ -342,10 +342,16 @@ function UpdateAbilityInfo(thisButton)
 	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
 	AbilityXP.text = string.format("%d / %d XP", currentXP, reqXP)
-	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
+	GoldCost.text = UTIL.FormatInt(goldCost)
 
 	LevelText.text = tostring(abilityLevel)
 	LevelProgressBar.progress = currentXP / reqXP
+
+	if currentGold >= goldCost then
+		GoldCost:SetColor(Color.FromStandardHex("FFC200FF"))
+	else
+		GoldCost:SetColor(Color.FromStandardHex("F81818FF"))
+	end
 
 	if currentXP >= reqXP and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
 		RightPanel_UpgradeButton.isInteractable = true
@@ -417,12 +423,12 @@ function UpdateAbilityInfo(thisButton)
 		if currentMod == nextMod or abilityLevel == 10 then
 			NextLevelPanel.visibility = Visibility.FORCE_OFF
 		else
-			local glowLength = 150
+			--[[local glowLength = 150
 			if not usingHyphen then
 				glowLength = CoreMath.Clamp(85 + (7 * string.len(nextText)), 1, 360)
 			end
 			NextLevelPanel:GetCustomProperty("Glow1"):WaitForObject().height = glowLength
-			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength
+			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength]]
 		end
 	end
 	RightPanel_AbilityStatsPanel.visibility = Visibility.INHERIT

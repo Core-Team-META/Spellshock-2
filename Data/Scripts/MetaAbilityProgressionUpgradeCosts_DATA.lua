@@ -1,42 +1,42 @@
-﻿local API = {
+local API = {
     [1] = {
-        reqXP = 5,
-        reqGold = 5
+        reqXP = 15,
+        reqGold = 50
     },
     [2] = {
-        reqXP = 10,
-        reqGold = 25
+        reqXP = 50,
+        reqGold = 200
     },
     [3] = {
-        reqXP = 25,
-        reqGold = 100
+        reqXP = 125,
+        reqGold = 700
     },
     [4] = {
-        reqXP = 50,
-        reqGold = 500
+        reqXP = 250,
+        reqGold = 2500
     },
     [5] = {
-        reqXP = 100,
-        reqGold = 1000
+        reqXP = 350,
+        reqGold = 4000
     },
     [6] = {
-        reqXP = 250,
-        reqGold = 3500
+        reqXP = 500,
+        reqGold = 7500
     },
     [7] = {
-        reqXP = 500,
-        reqGold = 10000
+        reqXP = 700,
+        reqGold = 14500
     },
     [8] = {
         reqXP = 1000,
-        reqGold = 25000
+        reqGold = 35000
     },
     [9] = {
-        reqXP = 2000,
+        reqXP = 1500,
         reqGold = 50000
     },
     [10] = {
-        reqXP = 4000,
+        reqXP = 2000,
         reqGold = 100000
     }
 }
