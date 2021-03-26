@@ -19,6 +19,10 @@ local function META_AP()
     end
     return _G["Meta.Ability.Progression"]
 end
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -60,7 +64,8 @@ local CardDescriptions = {
     [REWARD_UTIL.REWARD_TYPES.CONSUMABLES] = {
         [CONST.CONSUMABLE_KEYS.HEALTH_POTION] = "Use a healing potion in the heat of battle to recover some health up to 75%."
     },
-    [REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED] = "If you take this reward, your mount speed will automatically be improved."
+    [REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED] = "If you claim this reward, your mount speed will automatically be improved.",
+    [REWARD_UTIL.REWARD_TYPES.CLASS_XP] = "If you claim this reward, the XP of the class will be increased by the amount shown on the card."
 }
 
 local LockedCardDescriptions = {
@@ -262,6 +267,24 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
 
             InfoTitle.text = infoTable.Name .. " [" .. infoTable.ClassName .. "]"
             InfoDescription.text = infoTable.Description
+        elseif rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
+            infoTable = rewardAssets[REWARD_UTIL.REWARD_TYPES.SKILLPOINTS][class][bind]
+            currentAmmount = 50 --#FIXME
+            reqXp = 100
+
+            CardTitle.text = infoTable.ClassName.." XP"
+            ClassPanel:Destroy()
+            AbilityName.text = infoTable.ClassName
+            AbilityName:SetColor(RarityColors[rarity])
+
+            local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, class)
+            CurrentLevel.text = tostring(classLevel)
+            NextLevel.text = tostring(classLevel + 1)
+
+            GlobalStatsIcon:Destroy()
+
+            InfoTitle.text = infoTable.ClassName.." XP"
+            InfoDescription.text = CardDescriptions[rewardType]
         else
             infoTable = rewardAssets[rewardType][bind]
 
@@ -284,7 +307,7 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
                     return _G["Consumables"]
                 end
 
-                currentAmmount = 50
+                currentAmmount = 50 -- #FIXME
                 reqXp = 100
 
                 local Level = CONSUMABLE().GetLevel(LOCAL_PLAYER, bind)
@@ -305,7 +328,12 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             end
         end
 
-        AbilityIcon:SetImage(infoTable.Image)
+        if rewardType == REWARD_UTIL.REWARD_TYPES.CLASS_XP then
+            AbilityIcon:SetImage(infoTable.ClassIcon)
+        else
+            AbilityIcon:SetImage(infoTable.Image)
+        end
+        
         if infoTable.Color then
             AbilityIcon:SetColor(infoTable.Color)
         end
