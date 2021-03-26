@@ -477,10 +477,13 @@ function OnRewardSelected(thisButton)
     -- Update UI
     if SelectionCount > 1 then
         ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+        Events.Broadcast("SRC.OnRewardSelected", false)
     elseif SelectionCount == 1 then
         ChooseRewardText.text = string.format("Choose 1 reward")
+        Events.Broadcast("SRC.OnRewardSelected", false)
     else
         ChooseRewardText.text = "0"
+        Events.Broadcast("SRC.OnRewardSelected", true)
     end
 end
 
