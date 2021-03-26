@@ -2,6 +2,7 @@
 local ABGS = require(script:GetCustomProperty("API"))
 while not _G.CurrentMenu do Task.Wait() end
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 local STATE_NAME_TEXT = script:GetCustomProperty("StateNameText"):WaitForObject()
 local STATE_TIME_TEXT = script:GetCustomProperty("StateTimeText"):WaitForObject()
 local TopBar = script:GetCustomProperty("TopBar"):WaitForObject()
@@ -72,6 +73,9 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
+        if LOCAL_PLAYER.clientUserData.hasSkippedReward then
+            TopBar.visibility = Visibility.INHERIT
+        end
         if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
             if not remainingTime then return end
             local currentSecond = math.ceil(remainingTime)
