@@ -2044,6 +2044,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+    Overrides {
       Name: "cs:MainMessage"
       ObjectReference {
         SelfId: 3272754711611253912
