@@ -94,6 +94,17 @@ local propUIMarkersAndPreviews = script:GetCustomProperty("UIMarkersAndPreviews"
 local propBaseUIContainer = propStoreRoot:GetCustomProperty("BaseUIContainer"):WaitForObject()
 
 ------------------------------------------------------------------------------------------------------------------------
+-- SFX
+------------------------------------------------------------------------------------------------------------------------
+local propSFX_UI_Hover = script:GetCustomProperty("SFX_UI_Hover")
+local propSFX_UI_BuyGeneric = script:GetCustomProperty("SFX_UI_BuyGeneric")
+local propSFX_UI_PurchaseFailure = script:GetCustomProperty("SFX_UI_PurchaseFailure")
+local propSFX_UI_ChangeOutfit = script:GetCustomProperty("SFX_UI_ChangeOutfit")
+local propSFX_UI_PageTurnSelect = script:GetCustomProperty("SFX_UI_PageTurnSelect")
+local propSFX_UI_OpenInventoryPanel = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
+local propSFX_UI_PurchaseSkinConfirm = script:GetCustomProperty("SFX_UI_PurchaseSkinConfirm")
+
+------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM PROPERTIES
 ------------------------------------------------------------------------------------------------------------------------
 local propAllowSubscriptionPurchase = propStoreRoot:GetCustomProperty("AllowSubscriptionPurchase")
@@ -305,37 +316,46 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 end
 
 function CheckIfLocked(class, requiredLvl, id)
-
 	local localPlayer = Game.GetLocalPlayer()
-	
 	local selectedClass = 0
 	
 	if class == "Warrior" then
-		
 		selectedClass = CP_API.TANK
-		
 	elseif class == "Hunter" then
-	
 		selectedClass = CP_API.HUNTER
-		
 	elseif class == "Mage" then
-	
 		selectedClass = CP_API.MAGE
-		
 	elseif class == "Healer" then
-	
 		selectedClass = CP_API.HEALER
-		
 	elseif class == "Assassin" then
-	
 		selectedClass = CP_API.ASSASSIN
-		
 	end
 	
 	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(localPlayer, selectedClass) .. " vs " .. tostring(requiredLvl))
-	
 	return CP_API.GetClassLevel(localPlayer, selectedClass) >= requiredLvl or HasCosmetic(id)
+end
 
+function PlaySFX(requestedSFX)
+	local sfx = nil
+	
+	if requestedSFX == "Hover" then
+		sfx = propSFX_UI_Hover
+	elseif requestedSFX == "Buy" then
+		sfx = propSFX_UI_PurchaseSkinConfirm
+	elseif requestedSFX == "Fail" then
+		sfx = propSFX_UI_PurchaseFailure
+	elseif requestedSFX == "Change" then
+		sfx = propSFX_UI_ChangeOutfit
+	elseif requestedSFX == "Page" then
+		sfx = propSFX_UI_PageTurnSelect
+	elseif requestedSFX == "Open" then
+		sfx = propSFX_UI_OpenInventoryPanel
+	end
+	
+	if sfx then
+		local playingSFX = World.SpawnAsset(sfx)
+		playingSFX.lifeSpan = 3	
+	end
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -403,8 +423,10 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["CosmeticStore"] then -- show
+		PlaySFX("Open")
 		ShowStore_ClientHelper()
 	elseif oldMenu == _G.MENU_TABLE["CosmeticStore"] then -- hide
+		PlaySFX("Open")
 		HideStore_ClientHelper()
 	end
 end
@@ -431,6 +453,7 @@ function StoreItemHovered(button)
 	if entry then
 		currentlyHovered = entry
 		UpdateEntryButton(StoreUIButtons[button], true)
+		PlaySFX("Hover")
 	end
 end
 
@@ -445,6 +468,7 @@ function StoreItemClicked(button)
 	end
 	local entry = StoreUIButtons[button]
 	if entry then
+		PlaySFX("Change")
 		currentlySelected = entry
 		--currentlyHovered = entry
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
@@ -492,6 +516,7 @@ function PurchaseButtonClicked(button)
 
 	if HasCosmetic(currentlySelected.data.id) then
 		-- EQUIP
+		PlaySFX("Change")
 		ApplyCosmetic(currentlySelected)
 	else
 		-- PURCHASE
@@ -514,9 +539,11 @@ function PurchaseButtonClicked(button)
 				return
 			end
 		elseif currency < currentlySelected.data.cost then
+			PlaySFX("Fail")
 			currentlySelected = nil
 			return
 		else
+			PlaySFX("Buy")
 			expectedNewCurrency = currency - currentlySelected.data.cost
 			controlsLocked = true
 			propPurchaseButton.visibility = Visibility.FORCE_OFF
@@ -835,7 +862,8 @@ function BackPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	storePos = storePos - ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
 		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
@@ -852,7 +880,8 @@ function NextPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	storePos = storePos + ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
 		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
@@ -1569,7 +1598,8 @@ function OnClassFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1604,7 +1634,8 @@ function OnRarityFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1727,7 +1758,8 @@ function OnTypeFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1759,6 +1791,7 @@ function OnOwnershipFilterButtonSelected(button)
 		return
 	end
 
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1883,6 +1916,7 @@ function FilterStoreItems()
 end
 
 function ClearFilters()
+	PlaySFX("Page")
 	if currentClass.tag then
 		currentClass.button:SetButtonColor(currentClass.color)
 		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
@@ -2016,6 +2050,7 @@ end
 
 function SwapMannequin(button)
 	--print("Swapping")
+	PlaySFX("Page")
 
 	local oldSetMesh = setPreviewMesh
 	local femaleIcon = propSwapText:GetCustomProperty("Female"):WaitForObject()
