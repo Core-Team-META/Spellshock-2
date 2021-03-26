@@ -45,7 +45,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -623,7 +623,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: -188.08783
-    UIY: -90.1319809
+    UIY: -88.132
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -642,7 +642,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -687,7 +687,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: -185.835693
-    UIY: -88.3933258
+    UIY: -86.393
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -706,7 +706,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2144,7 +2144,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 15.0470581
-    UIY: 6.63738251
+    UIY: 8.637
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2163,7 +2163,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2208,7 +2208,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 17.2991943
-    UIY: 8.3760376
+    UIY: 10.376
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2227,7 +2227,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2740,7 +2740,7 @@ Objects {
     Width: 344
     Height: 31
     UIX: 15.0471802
-    UIY: 7.71265411
+    UIY: 9.713
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2759,7 +2759,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -2804,7 +2804,7 @@ Objects {
     Width: 344
     Height: 31
     UIX: 17.2993164
-    UIY: 9.4513092
+    UIY: 11.451
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2823,7 +2823,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3574,7 +3574,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 11.8226318
-    UIY: 5.56221
+    UIY: 7.562
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3593,7 +3593,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3638,7 +3638,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 14.0747681
-    UIY: 7.30086517
+    UIY: 9.301
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3657,7 +3657,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4593,7 +4593,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 11.8226929
-    UIY: 6.63738251
+    UIY: 8.637
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4612,7 +4612,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -4657,7 +4657,7 @@ Objects {
     Width: 200
     Height: 31
     UIX: 14.0748291
-    UIY: 8.3760376
+    UIY: 10.376
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4676,7 +4676,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
