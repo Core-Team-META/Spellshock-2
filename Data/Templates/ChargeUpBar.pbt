@@ -224,7 +224,6 @@ Assets {
         }
         Control {
           Width: 4
-          UIY: -1
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -247,7 +246,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 10653258846101664349
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -275,12 +274,12 @@ Assets {
       }
     }
     Assets {
-      Id: 10653258846101664349
-      Name: "Amarante"
+      Id: 11336346532215892341
+      Name: "Germania One"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "AmaranteRegular_ref"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     PrimaryAssetId {

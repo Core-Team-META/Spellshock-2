@@ -3439,8 +3439,8 @@ Objects {
   Control {
     Width: 478
     Height: 37
-    UIX: -8.38878918
-    UIY: 9.40422058
+    UIX: -13.389
+    UIY: 7.404
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3459,7 +3459,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -3505,7 +3505,7 @@ Objects {
   Control {
     Width: 292
     Height: 37
-    UIY: -4.3008728
+    UIY: -0.301
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3526,7 +3526,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6803,7 +6803,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6823,6 +6823,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -8200,7 +8201,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -8220,6 +8221,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -10312,14 +10314,14 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "Jewel Pack I"
+      Label: "Jewel Pack II"
       Color {
         R: 1
         G: 1
@@ -10332,6 +10334,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -11630,14 +11633,14 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "Jewel Pack II"
+      Label: "Jewel Pack I"
       Color {
         R: 1
         G: 1
@@ -11650,6 +11653,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -13141,7 +13145,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -13161,6 +13165,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -14949,7 +14954,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14969,6 +14974,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -16575,7 +16581,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -16595,6 +16601,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -17780,7 +17787,7 @@ Objects {
   Control {
     Width: 200
     Height: 60
-    UIY: 9.14255524
+    UIY: 14.143
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -17800,6 +17807,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -18520,6 +18528,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 841534158063459245
       }
     }
     AnchorLayout {
@@ -18583,6 +18592,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 841534158063459245
       }
     }
     AnchorLayout {

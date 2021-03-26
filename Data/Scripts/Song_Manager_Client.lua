@@ -32,6 +32,9 @@ end
 
 local function ChangeCurrentSong(newSong)
     if not newSong then
+        if currentSong then
+            currentSong:Stop()
+        end
         return
     end
     if currentSong ~= newSong then
