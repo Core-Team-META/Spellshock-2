@@ -4,6 +4,16 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 local PropertyChangeEvent
 local INDICATORS = {HealingPotionIndicator}
 
+while not _G.CurrentMenu do Task.Wait() end
+
+function OnMenuChanged(oldMenu, newMenu)
+	if newMenu == _G.MENU_TABLE["ClassAbilities"] then
+        script.parent.visibility = Visibility.FORCE_OFF
+    else
+        script.parent.visibility = Visibility.INHERIT
+    end
+end
+
 function OnNetworkPropertyChanged(thisObject, name)
     local indicator
     local newTime
@@ -56,4 +66,5 @@ function SetConsumablesNetworkObject(thisObject)
     PropertyChangeEvent = thisObject.destroyEvent:Connect(OnNetworkObjectDestroyed)
 end
 
+Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("SetConsumablesNetworkObject", SetConsumablesNetworkObject)
