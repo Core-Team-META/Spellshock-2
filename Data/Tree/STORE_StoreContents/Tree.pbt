@@ -11203,7 +11203,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Frost Rock Strike"
+      String: "Frost Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11300,7 +11300,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Fire Rock Strike"
+      String: "Fire Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11397,7 +11397,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Rock Strike"
+      String: "Common Landslide"
     }
     Overrides {
       Name: "cs:ID"
@@ -11490,7 +11490,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:StoreName"
-      String: "Common Rock Strike"
+      String: "Common Landslide"
     }
     Overrides {
       Name: "cs:ID"
