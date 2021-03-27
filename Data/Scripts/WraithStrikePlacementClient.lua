@@ -82,9 +82,9 @@ function OnSpecialAbilityCast(thisAbility)
 	local targetData = thisAbility:GetTargetData()
 	-- Position
 	targetData:SetHitPosition(lastValidPlacement.position)
-	-- Rotation
+	--[[ Rotation
 	local r = lastValidPlacement.rotation
-	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))
+	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))]]
 	-- Set the target data back
 	thisAbility:SetTargetData(targetData)
 end
@@ -154,13 +154,13 @@ function CalculatePlacement()
 	--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 
-	if hr ~= nil then
+	if hr ~= nil and hr.other ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
-		if hr ~= nil then
+		if hr ~= nil and hr.other ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
 			return nil
