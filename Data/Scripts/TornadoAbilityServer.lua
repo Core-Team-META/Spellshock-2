@@ -67,7 +67,7 @@ function PlaceObject(thisAbility)
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 	end	]]
 	
-	Timer = 0
+	Timer = 0.1
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
@@ -109,6 +109,8 @@ function Tick(deltaTime)
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
+
+				print(tostring(mod4.damage))
 
 				local attackData = {
 					object = enemy,
