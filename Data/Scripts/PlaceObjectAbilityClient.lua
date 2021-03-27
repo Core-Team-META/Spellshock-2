@@ -214,13 +214,13 @@ function CalculatePlacement()
 	--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 
-	if hr ~= nil then
+	if hr ~= nil and hr.other ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
-		if hr ~= nil then
+		if hr ~= nil and hr.other ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
 			return nil

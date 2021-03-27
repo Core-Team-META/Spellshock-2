@@ -535,7 +535,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
         ToggleUI(true)
         canSelect = true
         ANIMATION.context.OnRewardShow(CardPanels)
-    elseif newState == ABGS.GAME_STATE_REWARDS_END then
+    elseif newState == ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         AutoSelectRewards()
         local playerRewards = {}
         for cardButton, slotID in pairs(SelectedCards) do

@@ -423,7 +423,7 @@ function InitializeVictoryScreenMarkers()
 		
 		entryNumber = tonumber(string.sub(entry.name, -1))
 		
-		print("Entry number: " .. tostring(entryNumber))
+		--print("Entry number: " .. tostring(entryNumber))
 		
 		entryNemesis = marker:GetCustomProperty("NemesisNameText"):WaitForObject()
 		

@@ -150,7 +150,7 @@ function OnSpecialAbilityCooldown(thisAbility)
 	SetCooldownOverride(Cooldown)
 	
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
