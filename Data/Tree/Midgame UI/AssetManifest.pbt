@@ -242,15 +242,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7585529932942736913
-  Name: "Fantasy Coins 009"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_009"
-  }
-}
-Assets {
   Id: 7144188424269409394
   Name: "Alert Triangle"
   PlatformAssetType: 9
@@ -401,6 +392,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 955340689223569148
+  Name: "Fantasy Coins 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_010"
   }
 }
 Assets {

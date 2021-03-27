@@ -452,7 +452,7 @@ local function CalculateSelectionCount()
 
     --Set UI text
     if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCount)
     else
         ChooseRewardText.text = string.format("Choose 1 reward")
     end
@@ -463,6 +463,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(thisButton)
+    local selectionCountMax = SelectionCount
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -477,7 +478,7 @@ function OnRewardSelected(thisButton)
 
     -- Update UI
     if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, selectionCountMax)
         Events.Broadcast("SRC.OnRewardSelected", false)
     elseif SelectionCount == 1 then
         ChooseRewardText.text = string.format("Choose 1 reward")
