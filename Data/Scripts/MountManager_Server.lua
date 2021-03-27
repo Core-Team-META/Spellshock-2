@@ -43,9 +43,11 @@ end
 
 function OnPlayerJoined(player, level)
     Task.Wait()
-    mountSpeed[player] = level or 1
-    player:SetResource("MOUNT_LEVEL", level)
-    SetPlayerMountSpeed(player, level)
+    if Object.IsValid(player) then
+        mountSpeed[player] = tonumber(level) or 1
+        player:SetResource("MOUNT_LEVEL", mountSpeed[player])
+        SetPlayerMountSpeed(player, mountSpeed[player])
+    end
 end
 
 function OnPlayerLeft(player)
