@@ -445,14 +445,16 @@ local function CalculateSelectionCount()
         end
     end
 
+    local selectionCountMax = SelectionCount
+
     -- +1 for Extra Reward Perk #TODO
 
     -- For testing
     --SelectionCount = 4
 
     --Set UI text
-    if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCount)
+    if SelectionCount >= 1 then
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, selectionCountMax)
     else
         ChooseRewardText.text = string.format("Choose 1 reward")
     end
@@ -464,6 +466,7 @@ end
 
 function OnRewardSelected(thisButton)
     local selectionCountMax = SelectionCount
+
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -476,15 +479,23 @@ function OnRewardSelected(thisButton)
         SelectionCount = SelectionCount - 1
     end
 
+    -- KB's fix
+    if (selectionCountMax < SelectionCount) then
+        selectionCountMax = SelectionCount
+    end
+
     -- Update UI
-    if SelectionCount > 1 then
+    if SelectionCount >= 1 then
+        ChooseRewardText.fontSize = 34
         ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, selectionCountMax)
         Events.Broadcast("SRC.OnRewardSelected", false)
     elseif SelectionCount == 1 then
-        ChooseRewardText.text = string.format("Choose 1 reward")
+        ChooseRewardText.fontSize = 34
+        ChooseRewardText.text = string.format("Choose 1 of reward")
         Events.Broadcast("SRC.OnRewardSelected", false)
     else
-        ChooseRewardText.text = "0"
+        ChooseRewardText.fontSize = 20
+        ChooseRewardText.text = tostring("All Rewards Selected!\nClick the cards again to unselect")
         Events.Broadcast("SRC.OnRewardSelected", true)
     end
 end
