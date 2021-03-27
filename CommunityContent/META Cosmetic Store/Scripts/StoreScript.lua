@@ -252,7 +252,8 @@ function SaveOwnedCosmeticsAndMoney(player)
 		saveTable.COSMETICS.fromSubscription = playerOwnedSubscriptionCosmetics[player.id]
 		
 		local ownedCosmetics = {}
-		for k, v in pairs(player:GetResources()) do
+		--for k, v in pairs(player:GetResources()) do
+		for k, v in pairs(_G.PerPlayerDictionary.GetCollection(player)) do
 			if IsCosmeticName(k) then
 				ownedCosmetics[k] = 1
 			end
@@ -288,7 +289,8 @@ function LoadOwnedCosmeticsAndMoney(player)
 
 				if data.COSMETICS.owned then
 					for k, v in pairs(data.COSMETICS.owned) do
-						player:SetResource(k, 1)
+						--player:SetResource(k, 1)
+						_G.PerPlayerDictionary.Set(player, k, 1)
 					end
 				end
 				
@@ -347,9 +349,12 @@ function CheckSubscription(player)
 end
 
 function ResetPurchases(player)
-	for k, v in pairs(player:GetResources()) do
+	--for k, v in pairs(player:GetResources()) do
+	--	if IsCosmeticName(k) then
+	--		player:SetResource(v, 0)
+	for k, v in pairs(_G.PerPlayerDictionary.GetCollection(player)) do
 		if IsCosmeticName(k) then
-			player:SetResource(v, 0)
+			_G.PerPlayerDictionary.Set(player, k, 0)
 		end
 	end
 end

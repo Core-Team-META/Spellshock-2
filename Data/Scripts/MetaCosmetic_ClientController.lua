@@ -95,14 +95,17 @@ function API.GetCurrentCosmeticId(player, class, bind, team)
     if not team then
         team = player.team
     end
-    return player:GetResource(UTIL.GetSkinString(class, team, bind))
+    --return player:GetResource(UTIL.GetSkinString(class, team, bind))
+    local key = UTIL.GetSkinString(class, team, bind)
+    return _G.PerPlayerDictionary.GetNumber(player, key)
 end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
-    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = API.GetCurrentCosmeticId(player, class, bind)
     if skinId == 0 then
         skinId = 1
     end
@@ -119,7 +122,8 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
-    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    local skinId = API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end
