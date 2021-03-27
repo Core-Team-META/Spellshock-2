@@ -1601,6 +1601,27 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1802962906714921640
+      value {
+        Overrides {
+          Name: "bp:Soft Distance Shadows"
+          Bool: true
+        }
+        Overrides {
+          Name: "bp:Dynamic Shadow Distance"
+          Float: 2.5
+        }
+        Overrides {
+          Name: "bp:Shadow Cascade Count"
+          Int: 2
+        }
+        Overrides {
+          Name: "bp:Cascade Distribution Adjustment"
+          Float: 1.5
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3655646741166042187
       value {
         Overrides {
