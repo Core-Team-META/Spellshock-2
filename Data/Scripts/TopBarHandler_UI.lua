@@ -74,6 +74,7 @@ function Tick(deltaTime)
         end
 
         if LOCAL_PLAYER.clientUserData.hasSkippedReward then
+            STATE_NAME_TEXT.text = "REWARDS"
             TopBar.visibility = Visibility.INHERIT
         end
         if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then

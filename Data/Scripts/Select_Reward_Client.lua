@@ -62,9 +62,9 @@ BUTTON.clickedEvent:Connect(
         if isAllowed(5) then
             BUTTON.isInteractable = false
             END_REWARDS.context.OnRewardSelect()
-            LOCAL_PLAYER.clientUserData.hasSkippedReward = true
             Events.BroadcastToServer("RewardSelected")
             Task.Wait(3)
+            LOCAL_PLAYER.clientUserData.hasSkippedReward = true
             Events.Broadcast("RestoreFromPodium")
             Events.Broadcast("Changing Menu", "ShowIcons")
             Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
