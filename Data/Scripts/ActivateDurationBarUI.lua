@@ -4,6 +4,9 @@ local Class = script:GetCustomProperty("Class")
 local BindingName = script:GetCustomProperty("BindingName")
 local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 local DEFAULT_Duration
+
+local listeners = {}
+
 if AbilitySettings ~= nil then
     DEFAULT_Duration = AbilitySettings:GetCustomProperty("Duration")
 else
@@ -14,6 +17,14 @@ local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
+
 local durationTimer = 0
 local totalDuration = 0
 
@@ -22,6 +33,12 @@ function OnSpecialAbilityExecute(thisAbility)
         totalDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], DurationMod, DEFAULT_Duration, SpecialAbility.name .. ": Duration")
 		durationTimer = totalDuration
     end
+end
+
+function OnPlayerLeft(player)
+	if Object.IsValid(SpecialAbility) and player == SpecialAbility.owner then
+		DisconnectListeners()
+	end
 end
 
 function Tick(deltaTime)
@@ -39,4 +56,5 @@ function Tick(deltaTime)
 	end
 end
 
-SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute)
+listeners[#listeners + 1] = SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
