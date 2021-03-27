@@ -7,7 +7,7 @@ Assets {
       RootId: 14906872731711980010
       Objects {
         Id: 14906872731711980010
-        Name: "Boulder Break FX"
+        Name: "Tank Boulder Throw Break Basic"
         Transform {
           Scale {
             X: 1
@@ -77,7 +77,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

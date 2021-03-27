@@ -7,7 +7,7 @@ Assets {
       RootId: 14679648249631178598
       Objects {
         Id: 14679648249631178598
-        Name: "Assassin Blade Dash Ending FX Basic"
+        Name: "Assassin Orc Blade Dash Ending FX Basic"
         Transform {
           Scale {
             X: 1
@@ -174,7 +174,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

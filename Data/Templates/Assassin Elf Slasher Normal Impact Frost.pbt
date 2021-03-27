@@ -7,7 +7,7 @@ Assets {
       RootId: 17292239110841655330
       Objects {
         Id: 17292239110841655330
-        Name: "Assassin Slasher Normal Impact Basic"
+        Name: "Assassin Elf Slasher Normal Impact Frost"
         Transform {
           Scale {
             X: 1
@@ -106,7 +106,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

@@ -7,7 +7,7 @@ Assets {
       RootId: 7030485081946316771
       Objects {
         Id: 7030485081946316771
-        Name: "Frost Elf Boulder Break FX"
+        Name: "Tank Elf Boulder Throw Break Frost"
         Transform {
           Scale {
             X: 1
@@ -86,7 +86,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

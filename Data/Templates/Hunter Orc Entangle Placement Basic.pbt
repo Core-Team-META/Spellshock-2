@@ -7,7 +7,7 @@ Assets {
       RootId: 1404575228675216371
       Objects {
         Id: 1404575228675216371
-        Name: "Hunter Orc Leap Placement Basic"
+        Name: "Hunter Orc Entangle Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -8690,7 +8690,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
