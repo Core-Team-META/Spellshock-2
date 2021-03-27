@@ -8098,7 +8098,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 380
+    Width: 492
     Height: 80
     UIY: 21.0372162
     RenderTransformPivot {
@@ -8883,7 +8883,7 @@ Objects {
       }
     }
     Text {
-      Label: "Choose 4 rewards"
+      Label: "Choose 4 of 4 rewards"
       Color {
         R: 1
         G: 0.65668875
