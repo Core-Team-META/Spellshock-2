@@ -7,7 +7,7 @@ Assets {
       RootId: 7941987683440599429
       Objects {
         Id: 7941987683440599429
-        Name: "Fire Orc Hunter Trap Activation"
+        Name: "Hunter Orc Bear Trap Activation Fire"
         Transform {
           Scale {
             X: 1
@@ -2370,7 +2370,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -2481,7 +2481,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }

@@ -7,7 +7,7 @@ Assets {
       RootId: 5603416260674808117
       Objects {
         Id: 5603416260674808117
-        Name: "Hunter Orc Bear Trap Placement Basic"
+        Name: "Hunter Elf Bear Trap Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -2463,7 +2463,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

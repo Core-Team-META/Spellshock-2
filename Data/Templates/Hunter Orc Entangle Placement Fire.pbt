@@ -7,7 +7,7 @@ Assets {
       RootId: 5122760150921592246
       Objects {
         Id: 5122760150921592246
-        Name: "Hunter Orc Leap Placement Fire"
+        Name: "Hunter Orc Entangle Placement Fire"
         Transform {
           Scale {
             X: 1
@@ -9310,7 +9310,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -9542,7 +9542,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

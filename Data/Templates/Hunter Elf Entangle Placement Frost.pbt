@@ -7,7 +7,7 @@ Assets {
       RootId: 10427827419758979090
       Objects {
         Id: 10427827419758979090
-        Name: "Hunter Elf Leap Placement Frost"
+        Name: "Hunter Elf Entangle Placement Frost"
         Transform {
           Scale {
             X: 1
@@ -9310,7 +9310,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -9571,7 +9571,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

@@ -7,7 +7,7 @@ Assets {
       RootId: 11081336369673789545
       Objects {
         Id: 11081336369673789545
-        Name: "PoisonBombVFX"
+        Name: "Assassin Venom Bomb Impact Basic"
         Transform {
           Scale {
             X: 1
@@ -255,7 +255,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -320,7 +320,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
