@@ -44,8 +44,8 @@ end
 --@param table tbl => classProgression
 local function SetClassLevelResources(player, tbl)
     for class, data in pairs(tbl) do
-        player:SetResource(UTIL.GetClassLevelString(class), data[CONST.PROGRESS.LEVEL])
-        player:SetResource(UTIL.GetClassXPString(class), data[CONST.PROGRESS.XP])
+        player:SetResource(UTIL.GetClassLevelString(class), data[API.LEVEL])
+        player:SetResource(UTIL.GetClassXPString(class), data[API.XP])
     end
 end
 
@@ -55,7 +55,8 @@ local function SetClassLevel(player, class, level)
     classProgression[player.id][class][API.LEVEL] = level
     SetClassLevelResources(player, classProgression[player.id])
     player:SetResource("CLASS_XP", CoreMath.Round(API.GetClassXP(player, class)))
-    player:SetResource(UTIL.GetClassLevelString(class), CoreMath.Round(API.GetClassXP(player, class)))
+    player:SetResource(UTIL.GetClassLevelString(class), CoreMath.Round(level))
+    player:SetResource(CONST.CLASS_LEVEL, CoreMath.Round(level))
 end
 
 --@param object player

@@ -71,7 +71,7 @@ end
 
 function Tick()
     local xp = LOCAL_PLAYER:GetResource("CLASS_XP")
-    local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL) + 1
+    local level = LOCAL_PLAYER:GetResource(CONST.CLASS_LEVEL)
     if xp and level and level >= 1 then
         local reqXp = CONST.ReqXp[level] or 0
         PROGRESS_BAR.progress = xp / reqXp
