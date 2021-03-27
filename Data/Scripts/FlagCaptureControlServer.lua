@@ -90,7 +90,8 @@ local lastProgress = 0
 
 local BINDING_IGNORE = {
     ability_extra_19 = true,
-    ability_extra_45 = true
+    ability_extra_45 = true,
+    ability_extra_16 = true
 }
 
 -- nil Reset()

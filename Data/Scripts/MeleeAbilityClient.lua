@@ -125,7 +125,7 @@ function Tick()
 	if isCharging > 0 and time() - chargeStart > MIN_CHARGE then
 		local chargeAmount = time() - chargeStart
 
-		if LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
+		if Object.IsValid(EQUIPMENT) and LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
 			local chargeText = ChargeBar.clientUserData.text
 			ChargePanel.visibility = Visibility.INHERIT
 			ChargeBar.progress = chargeAmount / MAX_CHARGE
@@ -185,6 +185,7 @@ end
 
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
+	if not Object.IsValid(EQUIPMENT) then return end
 	isCharging = 0
 
 	if IS_CHARGE_ATTACK and Object.IsValid(ChargeupSFX) then

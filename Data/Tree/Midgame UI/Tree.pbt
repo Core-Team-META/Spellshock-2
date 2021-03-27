@@ -1085,9 +1085,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 25
-    Height: 25
-    UIY: -2
+    Width: 30
+    Height: 30
+    UIX: -3.14967871
+    UIY: -4.29882669
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1095,7 +1096,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 955340689223569148
       }
       Color {
         A: 0.582
@@ -1142,18 +1143,19 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 25
-    Height: 25
-    UIX: -1
-    UIY: -2.84942627
+    Width: -3
+    Height: -3
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 955340689223569148
       }
       Color {
         R: 1

@@ -22,6 +22,16 @@ local ChargeBar = nil
 local CHARGE_DELAY = 0.1
 local CHARGE_DURATION = 0.5
 
+local listeners = {}
+
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
+
 
 function AbilityTick(ability, deltaTime)
     if ability.owner ~= LOCAL_PLAYER then
@@ -123,10 +133,10 @@ end
 
 
 -- Connect up the ability
-SHOOT_ABILITY.tickEvent:Connect(AbilityTick)
-SHOOT_ABILITY.executeEvent:Connect(OnExecuteAbility)
-SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
-SHOOT_ABILITY.interruptedEvent:Connect(OnInterruptAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.tickEvent:Connect(AbilityTick)
+listeners[#listeners + 1] = SHOOT_ABILITY.executeEvent:Connect(OnExecuteAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.interruptedEvent:Connect(OnInterruptAbility)
 
 function OnEquipped(_, player)
     --print ("On equipped")
@@ -191,10 +201,11 @@ end
 script.destroyEvent:Connect(
 function()
     DestroyReticle()
+    DisconnectListeners()
 end
 )
 
-WEAPON.equippedEvent:Connect(OnEquipped)
+listeners[#listeners + 1] = WEAPON.equippedEvent:Connect(OnEquipped)
 
 if WEAPON.owner then
 	OnEquipped(WEAPON, WEAPON.owner)
