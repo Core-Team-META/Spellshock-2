@@ -178,7 +178,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 5338351160029262659
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
@@ -245,7 +245,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 15165554833363844727
+        Id: 5338351160029262659
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
