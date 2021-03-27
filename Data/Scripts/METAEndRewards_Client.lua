@@ -51,6 +51,7 @@ local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
 local canSelect = false
 local SelectionCount = 0 -- determines how many cards the player can choose
+local SelectionCountMax = 0
 local SelectedCards = {} -- stores all the cards the player has chosen
 local CardPanels = {}
 local CardButtons = {}
@@ -448,7 +449,8 @@ local function CalculateSelectionCount()
     -- +1 for Extra Reward Perk #TODO
 
     -- For testing
-    --SelectionCount = 4
+    SelectionCount = 4
+    SelectionCountMax = SelectionCount
 
     --Set UI text
     if SelectionCount > 1 then
@@ -463,7 +465,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(thisButton)
-    local selectionCountMax = SelectionCount
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -478,7 +479,7 @@ function OnRewardSelected(thisButton)
 
     -- Update UI
     if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, selectionCountMax)
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         Events.Broadcast("SRC.OnRewardSelected", false)
     elseif SelectionCount == 1 then
         ChooseRewardText.text = string.format("Choose 1 reward")

@@ -14624,7 +14624,6 @@ Objects {
   ParentId: 9772533843055238086
   ChildIds: 17701775311613924152
   ChildIds: 13603280838754200110
-  ChildIds: 6358131771289088724
   ChildIds: 15652120835959082685
   ChildIds: 1217799195324761245
   ChildIds: 11629786244772394359
@@ -15207,64 +15206,6 @@ Objects {
         R: 0.65
         G: 0.348675489
         A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 6358131771289088724
-  Name: "BG_1"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16159407632645753072
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 257
-    Height: 200
-    UIX: -428.720276
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        A: 0.405000031
       }
       TeamSettings {
       }
