@@ -40,6 +40,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ChargeBar"
+        AssetReference {
+          Id: 8511853874731229801
+        }
+      }
+      Overrides {
         Name: "cs:Ability:tooltip"
         String: "Reference to the Ability tracked by this script. The Ability is what detects player input and drives the player avatar\'s animation."
       }
