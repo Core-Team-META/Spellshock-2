@@ -54,9 +54,11 @@ end
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
         TeamInfoPanel.visibility = Visibility.INHERIT
+    elseif _G.CurrentMenu == _G.MENU_TABLE["NONE"] and newState == ABGS.GAME_STATE_LOBBY then
+        TeamInfoPanel.visibility = Visibility.INHERIT
     else
         TeamInfoPanel.visibility = Visibility.FORCE_OFF
-	end
+    end
 end
 
 function AddNewPanel(player)
