@@ -114,21 +114,26 @@ local function OnRoundEnd()
          then
             ACH_API.AddProgress(player, "AS_UNKILLABLE", 1)
         end
+
+        if not Object.IsValid(player) then
+            return
+        end
         player.serverUserData.ACH_killCount = 0
         player.serverUserData.ACH_diedInRound = false
         Task.Wait()
-        ACH_API.GiveAllRewards(player)
+        if Object.IsValid(player) then
+            ACH_API.GiveAllRewards(player)
+        end
+        Task.Spawn(
+            function()
+                for _, player in ipairs(Game.GetPlayers()) do
+                    ACH_API.ResetRepeatable(player)
+                end
+            end,
+            10
+        )
     end
-    Task.Spawn(
-        function()
-            for _, player in ipairs(Game.GetPlayers()) do
-                ACH_API.ResetRepeatable(player)
-            end
-        end,
-        10
-    )
 end
-
 
 local function OnPlayerRespawn(player)
     player.serverUserData.ACH_killCredited = false
@@ -155,11 +160,9 @@ function OnKillStreak(player, value)
     end
 end
 
-
 function OnRewardCollected(player, id)
     ACH_API.CollectReward(player, id)
 end
-
 
 function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
@@ -178,7 +181,6 @@ function OnKillStreak(player, value)
         ACH_API.UnlockAchievement(player, "AS_10KS")
     end
 end
-
 
 --#TODO Needs to be changed to cross key
 function OnPlayerJoined(player)
@@ -199,7 +201,6 @@ function OnPlayerLeft(player)
         listeners[player.id] = nil
     end
 end
-
 
 function OnGameStateChanged(object, string)
     if string == "State" then
