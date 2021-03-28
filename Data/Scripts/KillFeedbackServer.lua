@@ -8,7 +8,7 @@
 function OnPlayerDied(player, dmg)
 	if Object.IsValid(dmg.sourcePlayer) then
 		-- TEMP for demo
-		dmg.sourcePlayer:AddResource("GOLD", 50)
+		--dmg.sourcePlayer:AddResource("GOLD", 50)
 		Events.BroadcastToPlayer(dmg.sourcePlayer, "KillFeedback")
 	end
 end

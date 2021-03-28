@@ -7,7 +7,7 @@ Assets {
       RootId: 11284980453171384606
       Objects {
         Id: 11284980453171384606
-        Name: "Healer Orc Divine Light Active Basic 2"
+        Name: "Healer Orc Divine Light Active Fire"
         Transform {
           Scale {
             X: 1
@@ -154,7 +154,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -218,7 +218,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -3389,7 +3389,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }
