@@ -88,10 +88,12 @@ function OnSpecialAbilityExecute(thisAbility)
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	
 	goingToTakeDamageListener = Events.Connect("CombatWrapAPI.GoingToTakeDamage", OnGoingToTakeDamage)
-	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
-
 	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
+	Task.Wait(0.5)
+	if thisAbility.owner and Object.IsValid(thisAbility.owner) and not thisAbility.owner.isDead then
+		BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )	
+	end
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
