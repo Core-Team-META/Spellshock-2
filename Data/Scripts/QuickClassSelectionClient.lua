@@ -8,6 +8,10 @@ local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
 
+local function META_CP()
+    return _G["Class.Progression"]
+end
+
 while not _G.CurrentMenu do Task.Wait() end
 
 local Audio_ClassHover = Audio:GetCustomProperty("Audio_ClassHover"):WaitForObject()
@@ -26,6 +30,15 @@ function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["Respawn"] then -- show
         local classID = LOCAL_PLAYER:GetResource("CLASS_MAP")
         OnClassClicked(ClassID_To_Button[classID])
+
+        -- Update class level UI
+        for index, classData in ipairs(ClassMenuData:GetChildren()) do
+            local UI_Panel = ClassPanels[index]
+            local ClassLevel = UI_Panel:GetCustomProperty("ClassLevel"):WaitForObject()
+            local ClassID = META_AP()[string.upper(classData:GetCustomProperty("ClassID"))]
+            ClassLevel.text = tostring(META_CP().GetClassLevel(LOCAL_PLAYER, ClassID))
+        end
+
         Task.Wait()
 		Respawn_UI.visibility = Visibility.INHERIT
 		UI.SetCursorVisible(true)
