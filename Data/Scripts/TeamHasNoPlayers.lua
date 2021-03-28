@@ -4,6 +4,9 @@ local ABGS = require(script:GetCustomProperty("ABGS"))
 if not IsEnabled then return end
 
 function OnPlayerLeft(player)
+    if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
+        return
+    end
     local playerTeam = player.team
     local numPlayers = #Game.GetPlayers({includeTeams = playerTeam}) - 1
     
@@ -19,18 +22,3 @@ end
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
---#TODO Remove everthing below this line
-
-function OnBindingPressed(whichPlayer, binding)
-	if (binding == "ability_extra_0") then 
-        ABGS.SetGameState(ABGS.GAME_STATE_REWARDS)
-	end
-end
-
-function OnPlayerJoined(player)
-	-- hook up binding in player joined event here, move to more appropriate place if needed
-	player.bindingPressedEvent:Connect(OnBindingPressed)
-end
-
--- on player joined/left functions need to be defined before calling event:Connect()
---Game.playerJoinedEvent:Connect(OnPlayerJoined)--]]

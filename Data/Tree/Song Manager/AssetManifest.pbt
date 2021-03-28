@@ -71,6 +71,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1218285282438840969
+  Name: "\"Legendary Dragons\" Music Construction Kit (Sections) 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_legendary_dragons_sections_kit_ref"
+  }
+}
+Assets {
   Id: 709537143699190667
   Name: "\"The Dark Spiritwatcher\" Music Construction Kit (Layers) 01"
   PlatformAssetType: 10

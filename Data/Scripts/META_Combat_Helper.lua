@@ -80,6 +80,24 @@ local function DevHelperFunction(attackData)
     end
 end
 
+local function GiveGoldOnKill(source, target)
+    local sourceData = source.serverUserData
+    if not sourceData.bonusGoldCount or sourceData.bonusGoldCount < CONST.MAX_KILL_GOLD then
+        local bonusGold = target:GetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK) * CONST.KILL_STREAK_BONUS_GOLD
+        local sourceLevel = source:GetResource(CONST.CLASS_LEVEL)
+        local levelDifference = target:GetResource(CONST.CLASS_LEVEL) - sourceLevel
+        --local levelBonusGold = sourceLevel * CONST.CLASS_LEVEL_BONUS_GOLD
+        --local baseGold = CONST.GOLD_PER_KILL * levelBonusGold
+
+        local levelBonus = CONST.LEVEL_DIF_BONUS[levelDifference] or 0
+        bonusGold =  CoreMath.Round(bonusGold + CONST.GOLD_PER_KILL + levelBonus)
+
+        source:AddResource(CONST.GOLD, bonusGold)
+        sourceData.bonusGoldCount = sourceData.bonusGoldCount or 0
+        sourceData.bonusGoldCount = sourceData.bonusGoldCount + bonusGold
+    end
+end
+
 local function ResetPlayers()
     for _, player in ipairs(Game.GetPlayers()) do
         for _, resName in pairs(CONST.COMBAT_STATS) do
@@ -117,21 +135,13 @@ function OnDied(attackData)
     local target = attackData.object
     local source = attackData.source
     if target and ShouldTrack(target) then
-        local bonusGold = target:GetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK) * CONST.KILL_STREAK_BONUS_GOLD
-        bonusGold = bonusGold + CONST.GOLD_PER_KILL
-
-        target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
         if source then
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
-            local sourceData = source.serverUserData
-            if not sourceData.bonusGoldCount or sourceData.bonusGoldCount < CONST.MAX_KILL_GOLD then
-                source:AddResource(CONST.GOLD, CoreMath.Round(bonusGold))
-                sourceData.bonusGoldCount = sourceData.bonusGoldCount or 0
-                sourceData.bonusGoldCount = sourceData.bonusGoldCount + bonusGold
-            end
+            GiveGoldOnKill(source, target)
         end
     end
+    target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
 end
 
 function OnCapturePointChanged(playerId)
@@ -141,7 +151,6 @@ function OnCapturePointChanged(playerId)
                 CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS,
                 player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS) + 1
             )
-            player:AddResource(CONST.GOLD, CONST.GOLD_PER_CAPTURE)
             Events.Broadcast("AS.PlayerPointCapture", player, 1)
         end
     end
