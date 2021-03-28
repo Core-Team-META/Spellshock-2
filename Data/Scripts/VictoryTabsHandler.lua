@@ -106,7 +106,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 
     if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         OnPlayerShowCase()
-    elseif newState == ABGS.GAME_STATE_REWARDS then
+    elseif newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         OnRewards()
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
         OnRewardsEnd()

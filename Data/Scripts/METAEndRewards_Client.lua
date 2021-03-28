@@ -541,7 +541,7 @@ function OnRewardSelect()
 end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if newState == ABGS.GAME_STATE_REWARDS then
+    if newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         CalculateSelectionCount()
         Task.Wait(2)
         ToggleUI(true)

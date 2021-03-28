@@ -32,6 +32,18 @@ local function isAllowed(time)
     return true
 end
 
+local function ClaimButtonPressed()
+    BUTTON.isInteractable = false
+    END_REWARDS.context.OnRewardSelect()
+    Events.BroadcastToServer("RewardSelected")
+    Task.Wait(3)
+    LOCAL_PLAYER.clientUserData.hasSkippedReward = true
+    Events.Broadcast("RestoreFromPodium")
+    Events.Broadcast("Changing Menu", "ShowIcons")
+    Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
+    TurnOffButton()
+end
+
 function OnGameStateChanged(oldState, newState, hasDuration, time)
     if newState ~= ABGS.GAME_STATE_REWARDS then
         TurnOffButton()
@@ -60,18 +72,19 @@ end
 BUTTON.clickedEvent:Connect(
     function()
         if isAllowed(5) then
-            BUTTON.isInteractable = false
-            END_REWARDS.context.OnRewardSelect()
-            Events.BroadcastToServer("RewardSelected")
-            Task.Wait(3)
-            LOCAL_PLAYER.clientUserData.hasSkippedReward = true
-            Events.Broadcast("RestoreFromPodium")
-            Events.Broadcast("Changing Menu", "ShowIcons")
-            Events.Broadcast("Changing Menu", _G.MENU_TABLE.ClassSelection)
-            TurnOffButton()
+            ClaimButtonPressed()
         end
     end
 )
+
+local currentState = ABGS.GetGameState()
+if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
+    ClaimButtonPressed()
+elseif currentState == ABGS.GAME_STATE_REWARDS then
+    ClaimButtonPressed()
+elseif currentState == ABGS.GAME_STATE_REWARDS_END then
+    ClaimButtonPressed()
+end
 
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("SRC.OnRewardSelected", OnRewardSelected)

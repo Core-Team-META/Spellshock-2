@@ -46,7 +46,7 @@ function OnGameStateChanged(oldState, newState)
 		LOCAL_PLAYER.clientUserData.hasSkippedReward = false
 	elseif newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
-	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+	elseif newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
 		Events.Broadcast("Changing Menu", _G.MENU_TABLE["Rewards"])
 	elseif newState == ABGS.GAME_STATE_REWARDS_END and oldState ~= ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
 		Events.Broadcast("Changing Menu", "ShowIcons")
