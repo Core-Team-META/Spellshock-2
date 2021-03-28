@@ -191,8 +191,6 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
 
-	local HealthBonus = RightPanel_GlobalStats:GetCustomProperty("HealthBonus"):WaitForObject()
-	local HealingPotion = RightPanel_GlobalStats:GetCustomProperty("HealingPotion"):WaitForObject()
 
 	-- #TODO
 	--HealingPotion = tostring( META_Consumables().GetValue(LOCAL_PLAYER, META_Consumables().HEALTH_POTION) )

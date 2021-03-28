@@ -400,7 +400,7 @@ Objects {
   Control {
     Width: 226
     Height: 34
-    UIY: -2.15045166
+    UIY: 7.15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -420,6 +420,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1075,7 +1076,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1141,7 +1142,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1207,7 +1208,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1273,7 +1274,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1338,7 +1339,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1383,6 +1384,7 @@ Objects {
   Control {
     Width: 275
     Height: 60
+    UIY: 7
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1402,7 +1404,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1524,7 +1526,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1590,7 +1592,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1656,7 +1658,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1722,7 +1724,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1787,7 +1789,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -1832,6 +1834,7 @@ Objects {
   Control {
     Width: 275
     Height: 60
+    UIY: 7
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1851,7 +1854,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
-        Id: 841534158063459245
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {

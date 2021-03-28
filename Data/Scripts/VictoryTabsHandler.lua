@@ -72,12 +72,15 @@ function OnRewards()
     OnTabClicked(victoryButton)
     VictoryTabs.visibility = Visibility.FORCE_OFF
 
+    -- Set TimerPanel info
+    WaitText.text = "SELECTION LOCKED IN"
+
+    Task.Wait(1)
     -- Show rewards title
     VictoryHeader.visibility = Visibility.INHERIT
     RewardsTitle.visibility = Visibility.INHERIT
 
-    -- Set TimerPanel info
-    WaitText.text = "SELECTION LOCKED IN"
+    
     --WaitIcon:SetImage()
 end
 
