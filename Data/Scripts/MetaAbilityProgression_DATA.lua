@@ -207,22 +207,8 @@ classTable = {
             [9] = {mod1 = 710, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 4.6, mod6 = 15},
            [10] = {mod1 = 770, mod2 = 0, mod3 = 3000, mod4 = 1.5, mod5 = 5, mod6 = 15}
         },
-        --Iceberg
-        [CONST.BIND.R] = {
-            -- mod1 = Damage Radius, mod2 = DOT, mod3 = Duration, mod4 = Block Percentage, mod5 = Heal Ammount
-            [1] = {mod1 = 800, mod2 = 25, mod3 = 5, mod4 = 1, mod5 = 15, mod6 = 40},
-            [2] = {mod1 = 800, mod2 = 27, mod3 = 5, mod4 = 1, mod5 = 16, mod6 = 39},
-            [3] = {mod1 = 800, mod2 = 29, mod3 = 5, mod4 = 1, mod5 = 17, mod6 = 38},
-            [4] = {mod1 = 800, mod2 = 31, mod3 = 5, mod4 = 1, mod5 = 18, mod6 = 37},
-            [5] = {mod1 = 800, mod2 = 33, mod3 = 5, mod4 = 1, mod5 = 19, mod6 = 36},
-            [6] = {mod1 = 800, mod2 = 35, mod3 = 5, mod4 = 1, mod5 = 20, mod6 = 35},
-            [7] = {mod1 = 800, mod2 = 37, mod3 = 5, mod4 = 1, mod5 = 21, mod6 = 34},
-            [8] = {mod1 = 800, mod2 = 39, mod3 = 5, mod4 = 1, mod5 = 22, mod6 = 33},
-            [9] = {mod1 = 800, mod2 = 42, mod3 = 5, mod4 = 1, mod5 = 23, mod6 = 32},
-           [10] = {mod1 = 800, mod2 = 45, mod3 = 5, mod4 = 1, mod5 = 24, mod6 = 30}
-        },
         --Pyroblast
-        [CONST.BIND.T] = {
+        [CONST.BIND.R] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range, mod4 = Knockback
             [1] = {mod1 = 130, mod2 = 900, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 20},
             [2] = {mod1 = 135, mod2 = 920, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 19},
@@ -234,6 +220,20 @@ classTable = {
             [8] = {mod1 = 165, mod2 = 1050, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 16},
             [9] = {mod1 = 170, mod2 = 1080, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15.5},
            [10] = {mod1 = 185, mod2 = 1100, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15}
+        },
+        --Iceberg
+        [CONST.BIND.T] = {
+            -- mod1 = Damage Radius, mod2 = DOT, mod3 = Duration, mod4 = Block Percentage, mod5 = Heal Ammount
+            [1] = {mod1 = 800, mod2 = 25, mod3 = 5, mod4 = 1, mod5 = 15, mod6 = 40},
+            [2] = {mod1 = 800, mod2 = 27, mod3 = 5, mod4 = 1, mod5 = 16, mod6 = 39},
+            [3] = {mod1 = 800, mod2 = 29, mod3 = 5, mod4 = 1, mod5 = 17, mod6 = 38},
+            [4] = {mod1 = 800, mod2 = 31, mod3 = 5, mod4 = 1, mod5 = 18, mod6 = 37},
+            [5] = {mod1 = 800, mod2 = 33, mod3 = 5, mod4 = 1, mod5 = 19, mod6 = 36},
+            [6] = {mod1 = 800, mod2 = 35, mod3 = 5, mod4 = 1, mod5 = 20, mod6 = 35},
+            [7] = {mod1 = 800, mod2 = 37, mod3 = 5, mod4 = 1, mod5 = 21, mod6 = 34},
+            [8] = {mod1 = 800, mod2 = 39, mod3 = 5, mod4 = 1, mod5 = 22, mod6 = 33},
+            [9] = {mod1 = 800, mod2 = 42, mod3 = 5, mod4 = 1, mod5 = 23, mod6 = 32},
+           [10] = {mod1 = 800, mod2 = 45, mod3 = 5, mod4 = 1, mod5 = 24, mod6 = 30}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {

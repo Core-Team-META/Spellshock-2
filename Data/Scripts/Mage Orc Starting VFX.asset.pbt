@@ -41,33 +41,33 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:03_Iceberg_Attachment"
-        AssetReference {
-          Id: 10750937685288866590
-        }
-      }
-      Overrides {
-        Name: "cs:03_Iceberg_Break"
-        AssetReference {
-          Id: 12874348109318974616
-        }
-      }
-      Overrides {
-        Name: "cs:04_Pyroblast_Projectile"
-        AssetReference {
-          Id: 13667023393242254669
-        }
-      }
-      Overrides {
-        Name: "cs:04_Pyroblast_Target"
+        Name: "cs:03_Pyroblast_Target"
         AssetReference {
           Id: 13272352193882752730
         }
       }
       Overrides {
-        Name: "cs:04_Pyroblast_Impact"
+        Name: "cs:03_Pyroblast_Projectile"
+        AssetReference {
+          Id: 13667023393242254669
+        }
+      }
+      Overrides {
+        Name: "cs:03_Pyroblast_Impact"
         AssetReference {
           Id: 313465437675986879
+        }
+      }
+      Overrides {
+        Name: "cs:04_Iceberg_Attachment"
+        AssetReference {
+          Id: 10750937685288866590
+        }
+      }
+      Overrides {
+        Name: "cs:04_Iceberg_Break"
+        AssetReference {
+          Id: 12874348109318974616
         }
       }
       Overrides {
