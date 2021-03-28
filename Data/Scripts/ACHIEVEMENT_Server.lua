@@ -165,6 +165,7 @@ function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
     ACH_API.AddProgress(player, "AS_CAP2", value)
     META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Captures)
+    player:AddResource(CONST.GOLD, CONST.GOLD_PER_CAPTURE)
 end
 
 function OnPlayerAssistCapture(player, value)
