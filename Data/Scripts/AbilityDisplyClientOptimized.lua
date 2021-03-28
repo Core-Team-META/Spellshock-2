@@ -32,7 +32,7 @@ local BINDS = {
     ability_extra_20 = "Q",
     ability_extra_22 = "E",
     ability_extra_23 = "R",
-    ability_extra_24 = "T"
+    ability_extra_4 = "T"
 }
 
 -- Constants
