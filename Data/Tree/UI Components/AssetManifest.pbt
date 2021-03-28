@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17807712156856663918
+  Name: "Dragon"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Dragon"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -98,15 +107,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15165554833363844727
-  Name: "Amarante"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "AmaranteRegular_ref"
-  }
-}
-Assets {
   Id: 14263710291750082864
   Name: "Player Selection Core 01 SFX"
   PlatformAssetType: 7
@@ -140,15 +140,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 14012817403198044743
-  Name: "Globe"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_019"
   }
 }
 Assets {
@@ -446,6 +437,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFI_Icon_031"
+  }
+}
+Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
   }
 }
 Assets {
