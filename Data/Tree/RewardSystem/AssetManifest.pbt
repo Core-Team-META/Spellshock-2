@@ -80,12 +80,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12086971798166130178
-  Name: "BG Flat 010"
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_27"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
   }
 }
 Assets {
