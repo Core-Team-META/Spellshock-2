@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/25
--- Version 0.1.6
+-- Date: 2021/3/28
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -19,7 +19,7 @@ local playerDead = {}
 
 local function ShouldTrack(player)
     local timeNow = time()
-    if playerTimer[player.id] ~= nil and (timeNow - playerTimer[player.id]) < 25 then
+    if playerTimer[player.id] ~= nil and (timeNow - playerTimer[player.id]) < 12 then
         playerDead[player.id] = true
         return false
     end
@@ -87,6 +87,7 @@ local function ResetPlayers()
         end
         player.kills = 0
         player.deaths = 0
+        player.serverUserData.bonusGoldCount = 0
     end
     playerTimer = {}
     playerDead = {}
@@ -116,10 +117,19 @@ function OnDied(attackData)
     local target = attackData.object
     local source = attackData.source
     if target and ShouldTrack(target) then
+        local bonusGold = target:GetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK) * CONST.KILL_STREAK_BONUS_GOLD
+        bonusGold = bonusGold + CONST.GOLD_PER_KILL
+
         target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
         if source then
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
+            local sourceData = source.serverUserData
+            if not sourceData.bonusGoldCount or sourceData.bonusGoldCount < CONST.MAX_KILL_GOLD then
+                source:AddResource(CONST.GOLD, CoreMath.Round(bonusGold))
+                sourceData.bonusGoldCount = sourceData.bonusGoldCount or 0
+                sourceData.bonusGoldCount = sourceData.bonusGoldCount + bonusGold
+            end
         end
     end
 end
@@ -131,6 +141,7 @@ function OnCapturePointChanged(playerId)
                 CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS,
                 player:GetResource(CONST.COMBAT_STATS.TOTAL_CAPTURE_POINTS) + 1
             )
+            player:AddResource(CONST.GOLD, CONST.GOLD_PER_CAPTURE)
             Events.Broadcast("AS.PlayerPointCapture", player, 1)
         end
     end

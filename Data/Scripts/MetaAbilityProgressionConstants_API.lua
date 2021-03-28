@@ -125,6 +125,11 @@ API.CLASS_XP = {
     Wins = 300
 }
 
+API.GOLD_PER_KILL = 50
+API.GOLD_PER_CAPTURE = 50
+API.KILL_STREAK_BONUS_GOLD = 5
+API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSUMABLE KEYS
