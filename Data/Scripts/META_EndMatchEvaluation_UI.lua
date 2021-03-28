@@ -184,7 +184,7 @@ local function BuildStats(players, parentPanel)
                 stats.text = tostring(value)
                 player.clientUserData.MVP_Stats = player.clientUserData.MVP_Stats + value
             end
-            playerStats.y = (i - 1) * 30 --+ 52
+            playerStats.y = (i - 1) * 30--+ 52
             statPanels[#statPanels + 1] = playerStats
         end
     end
