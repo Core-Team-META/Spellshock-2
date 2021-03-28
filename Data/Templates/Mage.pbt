@@ -1567,7 +1567,7 @@ Assets {
           }
           Overrides {
             Name: "cs:BindingName"
-            String: "R"
+            String: "T"
           }
           Overrides {
             Name: "cs:AbilitySettings"
@@ -2014,8 +2014,8 @@ Assets {
         ParentId: 12470675891570633924
         ChildIds: 17789038938063754529
         ChildIds: 1109302873163087110
-        ChildIds: 3870953613855714336
         ChildIds: 9844938775364500632
+        ChildIds: 3870953613855714336
         ChildIds: 2988604534664961180
         ChildIds: 14738406619974674146
         UnregisteredParameters {
@@ -2260,6 +2260,87 @@ Assets {
         }
       }
       Objects {
+        Id: 9844938775364500632
+        Name: "Pyroblast"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10663446143340725464
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:CooldownOverride"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:CooldownOverride:isrep"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.3
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.03
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 100
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            PreventOtherAbilities: true
+          }
+          Animation: "unarmed_magic_bolt"
+          KeyBinding_v2 {
+            Value: "mc:egameaction:extraaction_33"
+          }
+        }
+      }
+      Objects {
         Id: 3870953613855714336
         Name: "Iceberg"
         Transform {
@@ -2365,87 +2446,6 @@ Assets {
             CanRotate: true
             PreventOtherAbilities: true
           }
-          KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_33"
-          }
-        }
-      }
-      Objects {
-        Id: 9844938775364500632
-        Name: "Pyroblast"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10663446143340725464
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:CooldownOverride"
-            Float: 0
-          }
-          Overrides {
-            Name: "cs:CooldownOverride:isrep"
-            Bool: true
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.3
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            Duration: 0.03
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 100
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-          }
-          Animation: "unarmed_magic_bolt"
           KeyBinding_v2 {
             Value: "mc:egameaction:extraaction_14"
           }

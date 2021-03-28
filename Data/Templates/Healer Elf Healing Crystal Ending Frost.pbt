@@ -7,7 +7,7 @@ Assets {
       RootId: 4037803395661114971
       Objects {
         Id: 4037803395661114971
-        Name: "Healer Elf Healing Crystal Ending Basic"
+        Name: "Healer Elf Healing Crystal Ending Frost"
         Transform {
           Scale {
             X: 1
@@ -108,7 +108,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
