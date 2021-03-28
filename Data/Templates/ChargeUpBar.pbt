@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 942795955972537342
         ChildIds: 6393992099231424456
         UnregisteredParameters {
           Overrides {
@@ -87,7 +87,7 @@ Assets {
         }
         ParentId: 2951714985022959670
         ChildIds: 8984540495440241995
-        ChildIds: 194485816392555020
+        ChildIds: 2308862271051946810
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -172,13 +172,70 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 12804716500201279526
+              Id: 48307754774318265
             }
             Color {
-              A: 0.5
+              R: 1
+              G: 0.459213376
+              A: 0.358
             }
             TeamSettings {
             }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2308862271051946810
+        Name: "UI Panel"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -3.07358423e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6393992099231424456
+        ChildIds: 194485816392555020
+        ChildIds: 17366856850648966921
+        ChildIds: 18048937312439893914
+        ChildIds: 1007492715372536531
+        ChildIds: 11433547853366810445
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
           }
           AnchorLayout {
             SelfAnchor {
@@ -212,7 +269,287 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6393992099231424456
+        ParentId: 2308862271051946810
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          UIX: -1
+          UIY: -1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "Charging ..."
+            Color {
+              R: 1
+              G: 0.595416188
+              B: 0.0899266
+              A: 0.420000017
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17366856850648966921
+        Name: "UI Text Box"
+        Transform {
+          Location {
+            X: -6615.00342
+            Y: -6569.99658
+            Z: -3000
+          }
+          Rotation {
+            Yaw: -3.05175727e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2308862271051946810
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          UIX: 1
+          UIY: -1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "Charging ..."
+            Color {
+              R: 1
+              G: 0.595416188
+              B: 0.0899266
+              A: 0.420000017
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 18048937312439893914
+        Name: "UI Text Box"
+        Transform {
+          Location {
+            X: -6615.00342
+            Y: -6569.99658
+            Z: -3000
+          }
+          Rotation {
+            Yaw: -3.05175727e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2308862271051946810
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          UIX: -1
+          UIY: 1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "Charging ..."
+            Color {
+              R: 1
+              G: 0.595416188
+              B: 0.0899266
+              A: 0.420000017
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1007492715372536531
+        Name: "UI Text Box"
+        Transform {
+          Location {
+            X: -6615.00342
+            Y: -6569.99658
+            Z: -3000
+          }
+          Rotation {
+            Yaw: -3.05175727e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2308862271051946810
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          UIX: 1
+          UIY: 1
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "Charging ..."
+            Color {
+              R: 1
+              G: 0.595416188
+              B: 0.0899266
+              A: 0.420000017
+            }
+            Size: 13
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 11336346532215892341
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11433547853366810445
+        Name: "UI Text Box"
+        Transform {
+          Location {
+            X: -6615.00342
+            Y: -6569.99658
+            Z: -3000
+          }
+          Rotation {
+            Yaw: -3.05175727e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2308862271051946810
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -235,9 +572,8 @@ Assets {
           Text {
             Label: "Charging ..."
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.046875
+              G: 0.020441724
               A: 1
             }
             Size: 13
@@ -265,12 +601,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12804716500201279526
-      Name: "BG Highlighted 001"
+      Id: 48307754774318265
+      Name: "UI Gradient Rectangular 001"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "BackgroundHighlighted_020"
+        AssetId: "UI_Basic_Shape_002"
       }
     }
     Assets {
