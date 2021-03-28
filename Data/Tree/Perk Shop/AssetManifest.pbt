@@ -80,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
+  }
+}
+Assets {
   Id: 11905301668479447552
   Name: "Fantasy Chest 002"
   PlatformAssetType: 9
@@ -221,15 +230,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
-  }
-}
-Assets {
-  Id: 4727080213227783003
-  Name: "Fantasy Craft Crystal 007"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Crafting_Crystal_007"
   }
 }
 Assets {
