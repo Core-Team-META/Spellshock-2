@@ -313,7 +313,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 17601287680247368645
+        SelfId: 6737949795334203683
       }
     }
   }
@@ -575,7 +575,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 8688153027707487342
+        SelfId: 12407423805149081047
       }
     }
   }
@@ -1005,6 +1005,7 @@ Objects {
   ChildIds: 945024203867131124
   ChildIds: 7533910292317192694
   ChildIds: 17601287680247368645
+  ChildIds: 6737949795334203683
   ChildIds: 6993845471095540870
   ChildIds: 935252118520641425
   ChildIds: 12204854251400153961
@@ -1455,6 +1456,43 @@ Objects {
   }
 }
 Objects {
+  Id: 6737949795334203683
+  Name: "\"Legendary Dragons\" Music Construction Kit (Sections) 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12652278405279320986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 1218285282438840969
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+    }
+  }
+}
+Objects {
   Id: 17601287680247368645
   Name: "\"Legendary Dragons\" Music Construction Kit (Layers) 01"
   Transform {
@@ -1486,7 +1524,7 @@ Objects {
     }
     AudioBP {
       Repeat: true
-      Volume: 0.35
+      Volume: 1
       Falloff: 3600
       Radius: 400
     }

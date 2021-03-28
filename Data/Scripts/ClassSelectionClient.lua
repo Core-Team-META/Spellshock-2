@@ -220,8 +220,8 @@ function UpdateClassInfo(thisButton)
 		local ConfirmIcon = abilityPanel:GetCustomProperty("ConfirmIcon"):WaitForObject()
 		local Level = abilityPanel:GetCustomProperty("Level"):WaitForObject()
 		local AbilityButton = abilityPanel:GetCustomProperty("Button"):WaitForObject()
-		local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
-		--local UpgradePanel =  abilityPanel:GetCustomProperty("UpgradePanel"):WaitForObject()
+		--local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
+		local UpgradePanel =  abilityPanel:GetCustomProperty("UpgradePanel"):WaitForObject()
 
 		Icon:SetImage(dataTable["Abilities"][i]["Icon"])
 		ConfirmIcon.visibility = Visibility.FORCE_OFF
@@ -237,11 +237,11 @@ function UpdateClassInfo(thisButton)
 		local goldCost = SHARD_COSTS[level].reqGold
 
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
-			--UpgradePanel.visibility = Visibility.INHERIT
-			ShowMorePanel.visibility = Visibility.FORCE_OFF
+			UpgradePanel.visibility = Visibility.INHERIT
+			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 		else
-			--UpgradePanel.visibility = Visibility.FORCE_OFF
-			ShowMorePanel.visibility = Visibility.INHERIT
+			UpgradePanel.visibility = Visibility.FORCE_OFF
+			--ShowMorePanel.visibility = Visibility.INHERIT
 		end
 	end
 
