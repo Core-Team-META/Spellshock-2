@@ -362,7 +362,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to create powerful targeted explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are damaged and stunned."
+      String: "Instant \342\200\223 Press 4 to create powerful targeted explosion of sunlight. When it reaches its limit, allies in its radius are healed and enemies are damaged and stunned."
     }
     Overrides {
       Name: "cs:Bind"
@@ -1370,7 +1370,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Placement \342\200\223 Press T to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact. Placement Range = 6000. Damage Radius = 750. Stun Duration = 4s."
+      String: "Placement \342\200\223 Press 4 to launch yourself high into the air and choose where to strike. Press LMB to descend, dealing massive damage to enemies near the point of impact. Placement Range = 6000. Damage Radius = 750. Stun Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
@@ -2469,7 +2469,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant/Guided \342\200\223 Press T to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle. "
+      String: "Instant/Guided \342\200\223 Press 4 to launch an orb of chaotic flames that detonates on impact, dealing massive damage. Hold RMB to guide the flames towards your reticle. "
     }
     Overrides {
       Name: "cs:Bind"
@@ -3613,7 +3613,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target. Hawk Attack Range = 2000. Slow Effect = 50%."
+      String: "Instant \342\200\223 Press 4 to release your hawk companion, who will seek out enemies and attack them for the duration of the ability. If an enemy is killed, the hawk will search for a new target. Hawk Attack Range = 2000. Slow Effect = 50%."
     }
     Overrides {
       Name: "cs:Bind"
@@ -4809,7 +4809,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press T to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
+      String: "Instant \342\200\223 Press 4 to unearth a massive boulder and throw it in the direction you\342\200\231re facing. It will damage enemies and pass through allies. Projectile Speed = 2000. Lifespan = 3 seconds."
     }
     Overrides {
       Name: "cs:Bind"

@@ -11791,7 +11791,7 @@ Objects {
       }
     }
     Text {
-      Label: "T"
+      Label: "4"
       Color {
         A: 0.384
       }
@@ -11856,7 +11856,7 @@ Objects {
       }
     }
     Text {
-      Label: "T"
+      Label: "4"
       Color {
         R: 0.97
         G: 0.539602697

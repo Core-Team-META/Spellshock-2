@@ -20939,7 +20939,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:Binding"
-      String: "ability_extra_24"
+      String: "ability_extra_4"
     }
     Overrides {
       Name: "cs:Binding:tooltip"
@@ -22641,7 +22641,7 @@ Objects {
       }
     }
     Text {
-      Label: "T"
+      Label: "4"
       Color {
         R: 0.109461717
         G: 0.0368894525
@@ -22705,7 +22705,7 @@ Objects {
       }
     }
     Text {
-      Label: "T"
+      Label: "4"
       Color {
         R: 1
         G: 0.737417221

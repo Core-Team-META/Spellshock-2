@@ -2447,7 +2447,7 @@ Assets {
           }
           Animation: "unarmed_magic_bolt"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:extraaction_14"
           }
         }
       }
