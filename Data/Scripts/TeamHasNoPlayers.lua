@@ -15,7 +15,8 @@ function OnPlayerLeft(player)
         if otherTeam > 0 then
             _G["GameWinner"] = 3-playerTeam
             Events.Broadcast("TeamVictory", 3-playerTeam)
-            ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
+            Game.SetTeamScore(_G["GameWinner"], 500)
+            --ABGS.SetGameState(ABGS.GAME_STATE_ROUND_END)
         end
     end
 end
