@@ -5109,8 +5109,6 @@ Objects {
     }
   }
   ParentId: 12488170078717737129
-  ChildIds: 14291697051539403353
-  ChildIds: 4218599091152088783
   ChildIds: 6939426054804853754
   ChildIds: 9708979073703936543
   Collidable_v2 {
@@ -5177,23 +5175,29 @@ Objects {
     Width: 342
     Height: 37
     UIX: 2
-    UIY: -7
+    UIY: 0.00115919113
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "NEWS"
+      Label: "News & Updates"
       Color {
-        A: 0.577
+        R: 1
+        G: 0.435376763
+        A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -5245,18 +5249,19 @@ Objects {
       }
     }
     Text {
-      Label: "NEWS"
+      Label: "News & Updates"
       Color {
-        R: 1
-        G: 0.456411064
+        R: 0.0572916679
+        G: 0.0232537258
         A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -5335,124 +5340,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4218599091152088783
-  Name: "FRAME_BRIGHT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 537256020649118188
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: -21
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        A: 0.232000008
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14291697051539403353
-  Name: "FADE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 537256020649118188
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 23
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        R: 0.252
-        G: 0.0851125568
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 10057774063789717516
   Name: "UI Button"
   Transform {
@@ -5492,8 +5379,8 @@ Objects {
       }
       FontSize: 20
       ButtonColor {
-        R: 0.439657241
-        G: 0.201556295
+        R: 0.765625
+        G: 0.350992858
         A: 1
       }
       HoveredColor {
@@ -5869,8 +5756,6 @@ Objects {
     }
   }
   ParentId: 5718647270618527409
-  ChildIds: 17926320497577423332
-  ChildIds: 3956490528642660201
   ChildIds: 14401356453786173603
   ChildIds: 765605187791658445
   Collidable_v2 {
@@ -5937,23 +5822,29 @@ Objects {
     Width: 342
     Height: 37
     UIX: 2
-    UIY: -7
+    UIY: 0.00115919113
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "SCOREBOARD"
+      Label: "Scoreboard"
       Color {
-        A: 0.577
+        R: 1
+        G: 0.435376763
+        A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -6005,18 +5896,19 @@ Objects {
       }
     }
     Text {
-      Label: "SCOREBOARD"
+      Label: "Scoreboard"
       Color {
-        R: 1
-        G: 0.456411064
+        R: 0.0572916679
+        G: 0.0232537258
         A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6095,124 +5987,6 @@ Objects {
   }
 }
 Objects {
-  Id: 3956490528642660201
-  Name: "FRAME_BRIGHT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16198801181620882682
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: -21
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        A: 0.232000008
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 17926320497577423332
-  Name: "FADE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16198801181620882682
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 23
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        R: 0.252
-        G: 0.0851125568
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 3219018841464365305
   Name: "UI Button"
   Transform {
@@ -6252,8 +6026,8 @@ Objects {
       }
       FontSize: 20
       ButtonColor {
-        R: 0.439657241
-        G: 0.201556295
+        R: 0.765625
+        G: 0.350992858
         A: 1
       }
       HoveredColor {
@@ -6629,8 +6403,6 @@ Objects {
     }
   }
   ParentId: 1403662450418952445
-  ChildIds: 836645768688981471
-  ChildIds: 4423119821559843855
   ChildIds: 17523557802679654753
   ChildIds: 10710130909666036435
   Collidable_v2 {
@@ -6697,23 +6469,29 @@ Objects {
     Width: 342
     Height: 37
     UIX: 2
-    UIY: -7
+    UIY: 0.00115919113
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "TOP PLAYERS"
+      Label: "Top Players"
       Color {
-        A: 0.577
+        R: 1
+        G: 0.435376763
+        A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -6765,18 +6543,19 @@ Objects {
       }
     }
     Text {
-      Label: "TOP PLAYERS"
+      Label: "Top Players"
       Color {
-        R: 1
-        G: 0.456411064
+        R: 0.0572916679
+        G: 0.0232537258
         A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -6855,124 +6634,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4423119821559843855
-  Name: "FRAME_BRIGHT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2789553667169006518
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: -21
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        A: 0.232000008
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 836645768688981471
-  Name: "FADE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2789553667169006518
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 23
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        R: 0.252
-        G: 0.0851125568
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 8166545166822597025
   Name: "UI Button"
   Transform {
@@ -7012,8 +6673,8 @@ Objects {
       }
       FontSize: 20
       ButtonColor {
-        R: 0.439657241
-        G: 0.201556295
+        R: 0.765625
+        G: 0.350992858
         A: 1
       }
       HoveredColor {
@@ -7389,8 +7050,6 @@ Objects {
     }
   }
   ParentId: 1676233643148967154
-  ChildIds: 14000097750553908851
-  ChildIds: 5166739322734855047
   ChildIds: 3697729651594611928
   ChildIds: 17246823055027504548
   Collidable_v2 {
@@ -7457,23 +7116,29 @@ Objects {
     Width: 342
     Height: 37
     UIX: 2
-    UIY: -7
+    UIY: 0.00115919113
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
     Text {
-      Label: "TEAM VICTORY"
+      Label: "Team Victory"
       Color {
-        A: 0.577
+        R: 1
+        G: 0.435376763
+        A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -7525,18 +7190,19 @@ Objects {
       }
     }
     Text {
-      Label: "TEAM VICTORY"
+      Label: "Team Victory"
       Color {
-        R: 1
-        G: 0.456411064
+        R: 0.0572916679
+        G: 0.0232537258
         A: 1
       }
-      Size: 24
+      Size: 26
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -7615,124 +7281,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5166739322734855047
-  Name: "FRAME_BRIGHT"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15277304102084969693
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: -21
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        A: 0.232000008
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14000097750553908851
-  Name: "FADE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15277304102084969693
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 23
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 48307754774318265
-      }
-      Color {
-        R: 0.252
-        G: 0.0851125568
-        A: 1
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 6678869814592941366
   Name: "UI Button"
   Transform {
@@ -7772,8 +7320,8 @@ Objects {
       }
       FontSize: 20
       ButtonColor {
-        R: 0.439657241
-        G: 0.201556295
+        R: 0.765625
+        G: 0.350992858
         A: 1
       }
       HoveredColor {
