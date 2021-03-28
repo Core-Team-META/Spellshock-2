@@ -93,10 +93,20 @@ function OnDailyShopOpen(player, keybind)
 end
 
 function OnInteracted(trigger, player)
-    if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and not PARENT_UI:IsVisibleInHierarchy() then
+    if player == LOCAL_PLAYER and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
         ToggleUi(true)
         isAllowed(0.5)
     end
+end
+
+function OnButtonInteracted(player, keybind)
+    if player == LOCAL_PLAYER and keybind == "ability_extra_28" and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
+        ToggleUi(true)
+        isAllowed(0.5)
+    elseif player == LOCAL_PLAYER and keybind == "ability_extra_28" and PARENT_UI:IsVisibleInHierarchy() then
+        ToggleUi(false)
+    end
+    
 end
 
 function OnEndOverlap(trigger, player)
@@ -112,7 +122,7 @@ PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
 ConnectNpcListener()
 CLOSE_BUTTON.clickedEvent:Connect(OnButtonPressed)
-
 ORC_PERK_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 ELF_PERK_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
+LOCAL_PLAYER.bindingReleasedEvent:Connect(OnButtonInteracted)

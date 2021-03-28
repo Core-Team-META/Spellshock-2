@@ -318,10 +318,20 @@ function OnDailyShopOpen(player, keybind)
 end
 
 function OnInteracted(trigger, player)
-    if player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["NONE"] and not PARENT_UI:IsVisibleInHierarchy() then
+    if player == LOCAL_PLAYER and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
         isAllowed(0.5)
+    end
+end
+
+function OnButtonInteracted(player, keybind)
+    if player == LOCAL_PLAYER and keybind == "ability_extra_38" and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
+        Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
+        ToggleUi(true)
+        isAllowed(0.5)
+    elseif player == LOCAL_PLAYER and keybind == "ability_extra_38" and PARENT_UI:IsVisibleInHierarchy() then
+        ToggleUi(false)
     end
 end
 
@@ -366,8 +376,8 @@ ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 
 NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
 REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
-
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
+LOCAL_PLAYER.bindingReleasedEvent:Connect(OnButtonInteracted)
 CLOSE_BUTTON.clickedEvent:Connect(
     function()
         ToggleUi(false)
