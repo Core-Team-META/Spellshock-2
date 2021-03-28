@@ -585,6 +585,12 @@ Objects {
         SelfId: 13991475613113003821
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 11272340813945395881
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -636,6 +642,7 @@ Objects {
     }
   }
   ParentId: 11947164930796232742
+  ChildIds: 11272340813945395881
   ChildIds: 3579330138678760939
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -680,7 +687,7 @@ Objects {
 }
 Objects {
   Id: 3579330138678760939
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -732,6 +739,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11272340813945395881
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9531
+      Y: -10550.6475
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11144355667734217060
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -1443,6 +1512,12 @@ Objects {
         SelfId: 16612042357197007263
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 6454405882975034622
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1494,6 +1569,7 @@ Objects {
     }
   }
   ParentId: 14659542688848139115
+  ChildIds: 6454405882975034622
   ChildIds: 3218016608105542137
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1538,7 +1614,7 @@ Objects {
 }
 Objects {
   Id: 3218016608105542137
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -1591,6 +1667,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6454405882975034622
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9502
+      Y: -10550.6465
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000839
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7812479363598018879
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -2302,6 +2440,12 @@ Objects {
         SelfId: 17775753794783506042
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 5349633347765001612
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2353,6 +2497,7 @@ Objects {
     }
   }
   ParentId: 5037246728575528784
+  ChildIds: 5349633347765001612
   ChildIds: 15453385033458020324
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2397,7 +2542,7 @@ Objects {
 }
 Objects {
   Id: 15453385033458020324
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -2450,6 +2595,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:top"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5349633347765001612
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9512
+      Y: -10550.6465
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000839
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11612937493400778015
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -3161,6 +3368,12 @@ Objects {
         SelfId: 5752048983886222194
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 10415323128169117703
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3212,6 +3425,7 @@ Objects {
     }
   }
   ParentId: 3396600744909483539
+  ChildIds: 10415323128169117703
   ChildIds: 15637179351284552448
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3256,7 +3470,7 @@ Objects {
 }
 Objects {
   Id: 15637179351284552448
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -3309,6 +3523,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10415323128169117703
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9512
+      Y: -10550.6445
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000763
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7641564306973096157
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -4020,6 +4296,12 @@ Objects {
         SelfId: 11483156140016206883
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 543582567923706674
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4071,6 +4353,7 @@ Objects {
     }
   }
   ParentId: 13032207187416518952
+  ChildIds: 543582567923706674
   ChildIds: 7504935455415351989
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4115,7 +4398,7 @@ Objects {
 }
 Objects {
   Id: 7504935455415351989
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -4168,6 +4451,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 543582567923706674
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9512
+      Y: -10550.6445
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000648
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3558322273209883179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -4878,6 +5223,12 @@ Objects {
         SelfId: 16061538892613616324
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 4270350849822082350
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4929,6 +5280,7 @@ Objects {
     }
   }
   ParentId: 6505722721321020143
+  ChildIds: 4270350849822082350
   ChildIds: 4652809902445437309
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4973,7 +5325,7 @@ Objects {
 }
 Objects {
   Id: 4652809902445437309
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -5026,6 +5378,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 4270350849822082350
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9512
+      Y: -10550.6445
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000572
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15585075690233387962
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -5736,6 +6150,12 @@ Objects {
         SelfId: 4884922705379856024
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 16653186177871180279
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5787,6 +6207,7 @@ Objects {
     }
   }
   ParentId: 15109727849405503682
+  ChildIds: 16653186177871180279
   ChildIds: 15451084784814862118
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5831,7 +6252,7 @@ Objects {
 }
 Objects {
   Id: 15451084784814862118
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -5884,6 +6305,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16653186177871180279
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9512
+      Y: -10550.6445
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000534
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15776094202023155524
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -6594,6 +7077,12 @@ Objects {
         SelfId: 15844705236316783254
       }
     }
+    Overrides {
+      Name: "cs:MeMarker"
+      ObjectReference {
+        SelfId: 14067419001786256606
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6644,6 +7133,7 @@ Objects {
     }
   }
   ParentId: 17081271930865778008
+  ChildIds: 14067419001786256606
   ChildIds: 17282409250886290432
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6688,7 +7178,7 @@ Objects {
 }
 Objects {
   Id: 17282409250886290432
-  Name: "Text"
+  Name: "Name Text"
   Transform {
     Location {
       X: -1516.74414
@@ -6741,6 +7231,68 @@ Objects {
       }
       VerticalJustification {
         Value: "mc:everticaljustification:center"
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14067419001786256606
+  Name: "Me Marker"
+  Transform {
+    Location {
+      X: -13424.9502
+      Y: -10550.6416
+      Z: -9716.59473
+    }
+    Rotation {
+      Yaw: 50.0000458
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 354829973894076641
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+      }
+      Color {
+        R: 0.200000018
+        G: 0.0470588282
+        A: 0.866666734
+      }
+      TeamSettings {
       }
     }
     AnchorLayout {
@@ -7446,24 +7998,6 @@ Objects {
       Name: "cs:Container"
       ObjectReference {
         SelfId: 16766948595417691007
-      }
-    }
-    Overrides {
-      Name: "cs:Player1Panel"
-      ObjectReference {
-        SelfId: 17081271930865778008
-      }
-    }
-    Overrides {
-      Name: "cs:Player2Panel"
-      ObjectReference {
-        SelfId: 15109727849405503682
-      }
-    }
-    Overrides {
-      Name: "cs:Player3Panel"
-      ObjectReference {
-        SelfId: 6505722721321020143
       }
     }
     Overrides {
