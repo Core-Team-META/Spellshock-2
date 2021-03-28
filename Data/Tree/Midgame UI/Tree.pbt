@@ -14039,9 +14039,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 94
+    Width: 100
     Height: 37
-    UIY: 13.9777985
+    UIY: 18
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -14055,7 +14055,7 @@ Objects {
         B: 0.349160016
         A: 1
       }
-      Size: 24
+      Size: 20
       Justification {
         Value: "mc:etextjustify:center"
       }
