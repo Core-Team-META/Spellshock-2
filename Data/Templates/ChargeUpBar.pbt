@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 942795955972537342
+        ParentId: 4781671109827199097
         ChildIds: 6393992099231424456
         UnregisteredParameters {
           Overrides {
@@ -33,9 +33,9 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Text"
+            Name: "cs:TextPanel"
             ObjectReference {
-              SubObjectId: 194485816392555020
+              SubObjectId: 2308862271051946810
             }
           }
         }
@@ -198,7 +198,7 @@ Assets {
       }
       Objects {
         Id: 2308862271051946810
-        Name: "UI Panel"
+        Name: "Text Panel"
         Transform {
           Location {
           }
