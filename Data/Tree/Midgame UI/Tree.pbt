@@ -717,6 +717,7 @@ Objects {
     Width: 125
     Height: 35
     UIX: 44
+    UIY: 4
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -736,6 +737,10 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
       }
     }
     AnchorLayout {
@@ -788,7 +793,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 4727080213227783003
+        Id: 12253460684865638729
       }
       Color {
         A: 0.582
@@ -846,7 +851,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 4727080213227783003
+        Id: 12253460684865638729
       }
       Color {
         R: 1
@@ -1024,6 +1029,7 @@ Objects {
     Width: 125
     Height: 35
     UIX: 40
+    UIY: 4
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1043,6 +1049,10 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
+      }
+      VerticalJustification {
+        Value: "mc:none:none"
       }
     }
     AnchorLayout {
@@ -9534,7 +9544,7 @@ Objects {
   Control {
     Width: 113
     Height: 37
-    UIX: 58.4850159
+    UIX: 64.189
     UIY: 23.225668
     RenderTransformPivot {
       Anchor {
@@ -9666,8 +9676,8 @@ Objects {
   Control {
     Width: 200
     Height: 37
-    UIX: 5.82043457
-    UIY: 23.225668
+    UIX: 7.87825871
+    UIY: 27.7280083
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -9684,6 +9694,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -9748,6 +9759,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -13244,7 +13256,7 @@ Objects {
   Control {
     Width: 94
     Height: 28
-    UIY: 52.3499832
+    UIY: 53.3345909
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -13258,12 +13270,13 @@ Objects {
         B: 0.539999962
         A: 1
       }
-      Size: 16
+      Size: 20
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -14042,12 +14055,13 @@ Objects {
         B: 0.349160016
         A: 1
       }
-      Size: 19
+      Size: 24
       Justification {
         Value: "mc:etextjustify:center"
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -14948,8 +14962,8 @@ Objects {
     Text {
       Label: "Legion of Light"
       Color {
-        R: 1
-        G: 0.456411064
+        G: 0.58407861
+        B: 0.361306936
         A: 1
       }
       Size: 20
@@ -15696,8 +15710,8 @@ Objects {
     Text {
       Label: "Dark Devout"
       Color {
-        R: 1
-        G: 0.456411064
+        R: 0.723055363
+        G: 0.0703600496
         A: 1
       }
       Size: 20
