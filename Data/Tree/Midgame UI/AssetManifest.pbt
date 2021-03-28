@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15575092074641359796
+  Name: "Frame Outlined 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_033"
+  }
+}
+Assets {
   Id: 15204381781527651531
   Name: "Line Full 003"
   PlatformAssetType: 9
@@ -239,6 +248,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Banner_007"
+  }
+}
+Assets {
+  Id: 7809958927931360774
+  Name: "BG Flat 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_33"
   }
 }
 Assets {
