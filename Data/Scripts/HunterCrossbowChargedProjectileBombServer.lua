@@ -14,7 +14,7 @@ local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 local EXPLOSION_VFX = script:GetCustomProperty("HunterChargedArrowExplosionVFX")
 local EXPLOSION_SOURCE = script:GetCustomProperty("ExplosionSource"):WaitForObject()
 
-Task.Wait(0.25)
+Task.Wait(2)
 
 local damageRange = ROOT.serverUserData.damageRange
 local sourcePlayer = ROOT.serverUserData.sourcePlayer
@@ -37,7 +37,7 @@ local enemiesInRange =
 
 for _, enemy in pairs(enemiesInRange) do
     if Object.IsValid(enemy) then
-        local amount = math.random(damageRange.x, damageRange.y)
+        local amount = math.random(damageRange.x, damageRange.y) * 2
         local dmg = Damage.New(amount)
 
         dmg.reason = DamageReason.COMBAT
