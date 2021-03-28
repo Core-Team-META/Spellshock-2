@@ -76,7 +76,7 @@ function OnBindingPressed(whichPlayer, binding)
 	elseif (binding == "ability_extra_29" and SpamPrevent()) then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if
 			LOCAL_PLAYER.clientUserData.hasSkippedReward or
-				((CurrentGameState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE) and (CurrentGameState ~= ABGS.GAME_STATE_REWARDS))
+				((CurrentGameState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE) and (CurrentGameState ~= ABGS.GAME_STATE_REWARDS) and (CurrentGameState ~= ABGS.GAME_STATE_ROUND_END))
 		 then
 			--print(">> COSMETIC SHOP")
 			if _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
