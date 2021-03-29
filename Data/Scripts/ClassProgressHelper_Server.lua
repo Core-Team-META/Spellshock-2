@@ -70,7 +70,7 @@ local function GiveGoldOnKill(source, target)
             warn("Level Dif Bonus: " .. tostring(levelDifBonus))
         end
 
-        bonusGold = GetKillDiminishingReturns(source, target, (bonusGold + CONST.GOLD_PER_KILL + levelDifBonus))
+        bonusGold = GetKillDiminishingReturns(source, target, (bonusGold + CONST.GOLD_PER_KILL + levelDifBonus) * CONST.EVENT_GOLD_MULTIPLIER)
 
         source:AddResource(CONST.GOLD, bonusGold)
         sourceData.bonusGoldCount = sourceData.bonusGoldCount and sourceData.bonusGoldCount + bonusGold or bonusGold
@@ -90,7 +90,8 @@ local function GiveXPOnKill(source, target)
     if isOnCapture then
         gainedXp = gainedXp + CONST.CLASS_XP.KillOnPoint
     end
-    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), gainedXp)
+    --#TODO Need diminishing returns for kill XP
+    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CoreMath.Round(gainedXp * CONST.EVENT_XP_MULITPLIER))
 end
 
 local function OnRoundEnd()
@@ -102,7 +103,7 @@ local function OnRoundEnd()
             (orcScore > elfScore and player.team == CONST.TEAM.ORC) or
                 (orcScore < elfScore and player.team == CONST.TEAM.ELF)
          then
-            CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins)
+            CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CoreMath.Round(CONST.CLASS_XP.Wins * CONST.EVENT_XP_MULITPLIER))
         end
     end
     playerInteruptCount = {}
@@ -130,13 +131,21 @@ end
 
 --@params object player
 function OnPlayerCapture(player)
-    CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Captures)
-    player:AddResource(CONST.GOLD, CONST.GOLD_PER_CAPTURE)
+    CLASS_PROGRESS.AddXP(
+        player,
+        player:GetResource(CONST.CLASS_RES),
+        CoreMath.Round(CONST.CLASS_XP.Captures * CONST.EVENT_XP_MULITPLIER)
+    )
+    player:AddResource(CONST.GOLD, CoreMath.Round(CONST.GOLD_PER_CAPTURE * CONST.EVENT_XP_MULITPLIER))
 end
 
 --@params object player
 function OnPlayerAssistCapture(player)
-    CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.CapAssists)
+    CLASS_PROGRESS.AddXP(
+        player,
+        player:GetResource(CONST.CLASS_RES),
+        CoreMath.Round(CONST.CLASS_XP.CapAssists * CONST.EVENT_XP_MULITPLIER)
+    )
 end
 
 --@params table attackData
@@ -157,9 +166,14 @@ function GoingToTakeDamage(attackData)
         CLASS_PROGRESS.AddXP(
             source,
             source:GetResource(CONST.CLASS_RES),
-            GetCaptureDiminishingReturns(source, CONST.CLASS_XP.Interrupt, sourceInterupt)
+            GetCaptureDiminishingReturns(
+                source,
+                CoreMath.Round(CONST.CLASS_XP.Interrupt * CONST.EVENT_XP_MULITPLIER),
+                sourceInterupt
+            )
         )
         playerInteruptCount[source] = sourceInterupt
+        target.serverUserData.isCapturingPoint = false
     end
 end
 

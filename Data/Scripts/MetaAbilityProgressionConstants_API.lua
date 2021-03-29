@@ -170,11 +170,17 @@ API.CLASS_XP = {
     KillOnPoint = 100
 }
 
+-- Server Wide Mulitpliers (1.0 is default no multiplier)
+API.EVENT_XP_MULITPLIER = 1.0 
+API.EVENT_GOLD_MULTIPLIER = 1.0
+
+
 API.GOLD_PER_KILL = 10
 API.GOLD_PER_CAPTURE = 20
 API.KILL_STREAK_BONUS_GOLD = 5
 API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
 API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
     [1] = 3,
     [2] = 6,

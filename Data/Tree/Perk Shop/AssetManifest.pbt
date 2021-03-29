@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14803987366094808844
+  Name: "Fantasy Medal 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_001"
+  }
+}
+Assets {
   Id: 14060330023043759337
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -251,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4569484101736324280
+  Name: "BG Gradient 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_015"
+  }
+}
+Assets {
   Id: 3822700371723488046
   Name: "BG Gradient 016"
   PlatformAssetType: 9
@@ -293,6 +311,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Urban_Icon_028"
+  }
+}
+Assets {
+  Id: 2286364455446697578
+  Name: "Frame Beveled 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px__015"
   }
 }
 Assets {
