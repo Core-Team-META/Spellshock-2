@@ -5186,6 +5186,12 @@ Objects {
         SelfId: 14436508907838374357
       }
     }
+    Overrides {
+      Name: "cs:ChooseReward"
+      ObjectReference {
+        SelfId: 12728164660628082286
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

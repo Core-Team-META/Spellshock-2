@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12086971798166130178
+  Name: "BG Flat 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_27"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9

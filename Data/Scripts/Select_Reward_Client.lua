@@ -7,7 +7,7 @@ local BUTTON_PANEL = script:GetCustomProperty("BUTTON_PANEL"):WaitForObject()
 local BUTTON_DISABLED = script:GetCustomProperty("BUTTON_DISABLED"):WaitForObject()
 local BUTTON_ACTIVE = script:GetCustomProperty("BUTTON_ACTIVE"):WaitForObject()
 local BUTTON_TEXT = script:GetCustomProperty("TextShadow"):WaitForObject()
-
+local ChooseReward = script:GetCustomProperty("ChooseReward"):WaitForObject()
 
 local spamPrevent
 
@@ -27,6 +27,13 @@ local function TurnOffButton()
     BUTTON_TEXT:GetChildren()[1].text = "CLAIM"
 end
 
+local function SetClaimedText()
+    ChooseReward.text = "Congratulations\nRewards Received"
+    ChooseReward.fontSize = 20
+    BUTTON_TEXT.text = "CLAIMED"
+    BUTTON_TEXT:GetChildren()[1].text = "CLAIMED"
+end
+
 --Used for spam prevention
 --@return bool
 local function isAllowed(time)
@@ -39,13 +46,16 @@ local function isAllowed(time)
 end
 
 local function ClaimButtonPressed()
+
     BUTTON.isInteractable = false
     LOCAL_PLAYER.clientUserData.hasClaimedReward = true
-    BUTTON_TEXT.text = "CLAIMED"
-    BUTTON_TEXT:GetChildren()[1].text = "CLAIMED"
+
+    SetClaimedText()
     END_REWARDS.context.OnRewardSelect()
     Events.BroadcastToServer("RewardSelected")
+
     Task.Wait(3)
+    
     LOCAL_PLAYER.clientUserData.hasSkippedReward = true
     Events.Broadcast("RestoreFromPodium")
     Events.Broadcast("Changing Menu", "ShowIcons")
