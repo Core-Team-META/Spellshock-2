@@ -468,6 +468,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(thisButton)
+    if LOCAL_PLAYER.clientUserData.hasClaimedReward then return end
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -542,6 +543,8 @@ end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
     if newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
+        ChooseRewardText.fontSize = 34
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         CalculateSelectionCount()
         Task.Wait(2)
         ToggleUI(true)
