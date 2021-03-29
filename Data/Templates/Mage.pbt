@@ -839,7 +839,7 @@ Assets {
       }
       Objects {
         Id: 7631188985751234265
-        Name: "DestructibleWeaponServer"
+        Name: "MageWandServer"
         Transform {
           Location {
           }
@@ -1651,7 +1651,7 @@ Assets {
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 11897496511447897982
+              SubObjectId: 1254248059045754243
             }
           }
           Overrides {
@@ -1807,7 +1807,6 @@ Assets {
         }
         ParentId: 11747234676183721272
         ChildIds: 719838432390101910
-        ChildIds: 17159496003125532655
         ChildIds: 7077416276664488021
         ChildIds: 10667830993055628084
         ChildIds: 5904571599766240539
@@ -1889,51 +1888,6 @@ Assets {
         }
       }
       Objects {
-        Id: 17159496003125532655
-        Name: "AutoShootClient"
-        Transform {
-          Location {
-            X: -595
-            Y: 355
-            Z: 225
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7617081542033333176
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
-          }
-          Overrides {
-            Name: "cs:ShootAbility"
-            ObjectReference {
-              SubObjectId: 11897496511447897982
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 14074483271059500969
-          }
-        }
-      }
-      Objects {
         Id: 7077416276664488021
         Name: "ChargeUpBarClient"
         Transform {
@@ -1958,7 +1912,7 @@ Assets {
           Overrides {
             Name: "cs:Shoot"
             ObjectReference {
-              SubObjectId: 11897496511447897982
+              SubObjectId: 1254248059045754243
             }
           }
           Overrides {
@@ -1970,7 +1924,7 @@ Assets {
           Overrides {
             Name: "cs:ChargeUpVFX"
             ObjectReference {
-              SubObjectId: 1572193051143611592
+              SubObjectId: 1009956904966595480
             }
           }
         }
@@ -2004,38 +1958,6 @@ Assets {
           }
         }
         ParentId: 7617081542033333176
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Weapon"
-            ObjectReference {
-              SubObjectId: 14738406619974674146
-            }
-          }
-          Overrides {
-            Name: "cs:ChargedWeapon"
-            ObjectReference {
-              SubObjectId: 12902761704525450861
-            }
-          }
-          Overrides {
-            Name: "cs:Shoot"
-            ObjectReference {
-              SubObjectId: 1254248059045754243
-            }
-          }
-          Overrides {
-            Name: "cs:ShootCharged"
-            ObjectReference {
-              SubObjectId: 8398189269609213643
-            }
-          }
-          Overrides {
-            Name: "cs:ChargeAbility"
-            ObjectReference {
-              SubObjectId: 11897496511447897982
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2327,7 +2249,6 @@ Assets {
         ChildIds: 9844938775364500632
         ChildIds: 3870953613855714336
         ChildIds: 2988604534664961180
-        ChildIds: 11897496511447897982
         ChildIds: 14738406619974674146
         ChildIds: 12902761704525450861
         UnregisteredParameters {
@@ -2841,79 +2762,6 @@ Assets {
         }
       }
       Objects {
-        Id: 11897496511447897982
-        Name: "WandCharge"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10663446143340725464
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          CastPhaseSettings {
-            Duration: 1000
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 0.05
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            IsTargetDataUpdated: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 5
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          Animation: "2hand_staff_magic_bolt"
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:invalid"
-          }
-        }
-      }
-      Objects {
         Id: 14738406619974674146
         Name: "Wand"
         Transform {
@@ -3053,7 +2901,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.1
+            Duration: 1000
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3081,6 +2929,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3144,7 +2993,7 @@ Assets {
           }
           Weapon {
             ProjectileAssetRef {
-              Id: 5848035641096396117
+              Id: 15211008498432540868
             }
             MuzzleFlashAssetRef {
               Id: 2580083533563872171
@@ -3263,6 +3112,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
+            Duration: 5
             CanMove: true
             CanJump: true
             CanRotate: true
