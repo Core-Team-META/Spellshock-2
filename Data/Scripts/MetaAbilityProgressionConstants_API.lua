@@ -166,7 +166,7 @@ API.CLASS_XP = {
     Captures = 500,
     CapAssists = 150,
     Wins = 1500,
-    Interrupt = 100, -- Interrupt Capture Point Player
+    Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
 }
 

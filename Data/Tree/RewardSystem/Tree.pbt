@@ -13340,6 +13340,10 @@ Objects {
       Name: "cs:ID:tooltip"
       String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
     }
+    Overrides {
+      Name: "cs:Bind"
+      Int: 2
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

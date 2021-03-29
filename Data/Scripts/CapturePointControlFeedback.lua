@@ -17,6 +17,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom properties
 local ABCP = require(script:GetCustomProperty("API"))
+local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
 -- Constant variables
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -27,17 +28,16 @@ function CapturePointChanged (id, prevTeam, newTeam)
 
     local capturePointState = ABCP.GetCapturePointState(id)
 
-	-- Return if capture point is neutral or has been reset
-	if newTeam == 0 then
+	if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND then
 		return
 	end
 
     if LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team == prevTeam then
-        Events.Broadcast("BannerMessage", "Lost Point " .. capturePointState.name)
-    elseif LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team ~= prevTeam then
-        Events.Broadcast("BannerMessage", "Enemy Captured Point " .. capturePointState.name)
+        Events.Broadcast("BannerMessage", "Lost " .. capturePointState.name)
+    elseif newTeam ~= 0 and LOCAL_PLAYER.team ~= newTeam and LOCAL_PLAYER.team ~= prevTeam then
+        Events.Broadcast("BannerMessage", "Enemy Captured " .. capturePointState.name)
     elseif LOCAL_PLAYER.team == newTeam then
-        Events.Broadcast("BannerMessage", "Captured Point " .. capturePointState.name)
+        Events.Broadcast("BannerMessage", "Captured " .. capturePointState.name)
     end
 
 end
