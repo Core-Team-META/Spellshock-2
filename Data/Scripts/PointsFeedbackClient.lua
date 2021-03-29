@@ -37,19 +37,23 @@ local trackedResources = RESOURCES_TO_TRACK:GetChildren()
 local resourceTable = {}
 local originalValue = {}
 
-for _, res in ipairs(trackedResources) do
-	originalValue[res.name] = localPlayer:GetResource(res.name) or 0
+local function SetupTrackedResources()
+	for _, res in ipairs(trackedResources) do
+		originalValue[res.name] = localPlayer:GetResource(res.name) or 0
 
-	resourceTable[res.name] = {
-		label = res:GetCustomProperty("FeedLabel"),
-		labelColor = res:GetCustomProperty("FeedLabelColor"),
-		icon = res:GetCustomProperty("FeedIcon"),
-		iconColor = res:GetCustomProperty("FeedIconColor"),
-		value = res:GetCustomProperty("ValueOverride"),
-		addPlus = res:GetCustomProperty("AddPlusSign")
-	}
+		resourceTable[res.name] = {
+			label = res:GetCustomProperty("FeedLabel"),
+			labelColor = res:GetCustomProperty("FeedLabelColor"),
+			icon = res:GetCustomProperty("FeedIcon"),
+			iconColor = res:GetCustomProperty("FeedIconColor"),
+			value = res:GetCustomProperty("ValueOverride"),
+			addPlus = res:GetCustomProperty("AddPlusSign")
+		}
 
+	end
 end
+
+SetupTrackedResources()
 
 -- Text
 local mainReasonText = mainMessage:GetCustomProperty("ReasonText"):WaitForObject()
@@ -324,9 +328,6 @@ function CycleAnimation(givenResource, givenValue)
 	local reason = result[1]
 	local value = result[2]
 
-	-- print(givenResource .. " value: " .. tostring(value))
-	-- print("addingScore: " .. tostring(addingScore))
-
 	if value == 0 then
 		return
 	end
@@ -384,6 +385,12 @@ end
 function OnResourceChanged(player, resourceName, resourceValue)
 	-- print("--------------------------")
 	-- print(resourceName .. " : " .. tostring(resourceValue))
+
+	-- If changes class, update original amounts
+	if (resourceName == "CLASS_MAP") then
+		SetupTrackedResources()
+		return
+	end
 
 	if CheckResource(resourceName, resourceValue) and not allowFeed then
 		originalValue[resourceName] = resourceValue
