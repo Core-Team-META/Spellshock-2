@@ -28,8 +28,8 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
     local currentState = ABGS.GetGameState()
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or newMenu == _G.MENU_TABLE["Tutorial"]) and newMenu ~= _G.MENU_TABLE["CosmeticStore"]
-    and (currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_ROUND or currentState == ABGS.GAME_STATE_ROUND_END) then -- show
+    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["ClassSelection"] or newMenu == _G.MENU_TABLE["Respawn"] or newMenu == _G.MENU_TABLE["Tutorial"]) and newMenu ~= _G.MENU_TABLE["CosmeticStore"]
+    and (currentState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE) then -- show
 		TopBar.visibility = Visibility.INHERIT
 	else -- hide
 		TopBar.visibility = Visibility.FORCE_OFF
@@ -69,16 +69,17 @@ function Tick(deltaTime)
             UpdateTimeRemaining(remainingTime)
         end
 
-        if currentState == ABGS.GAME_STATE_REWARDS then
+        if currentState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
             UpdateTimeRemaining(remainingTime)
         end
 
         if LOCAL_PLAYER.clientUserData.hasSkippedReward then
-            STATE_NAME_TEXT.text = "REWARDS"
-            TopBar.visibility = Visibility.INHERIT
+            STATE_NAME_TEXT.text = "Lobby"
         end
+
         if currentState == ABGS.GAME_STATE_LOBBY or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
             if not remainingTime then return end
+            if currentState == ABGS.GAME_STATE_REWARDS and LOCAL_PLAYER.clientUserData.hasSkippedReward then return end
             local currentSecond = math.ceil(remainingTime)
             if currentSecond <= 6 and currentSecond ~= PreviousSecond then
                 TickSFX:Play()

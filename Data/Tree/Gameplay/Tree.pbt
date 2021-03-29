@@ -33135,7 +33135,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 5
+      Float: 30
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
@@ -33780,7 +33780,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsEnabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
