@@ -1,31 +1,75 @@
+------------------------------------------------------------------------------------------------------------------------
+-- Points Feedback
+-- Author Estlogic (META)
+-- Date: 2021/3/28
+-- Version 0.1
+------------------------------------------------------------------------------------------------------------------------
+
 local CP_API
 repeat
 	CP_API = _G["Class.Progression"]
 	Task.Wait()
 until CP_API
 
+------------------------------------------------------------------------------------------------------------------------
+-- REQUIRED
+------------------------------------------------------------------------------------------------------------------------
 local EaseUI = require(script:GetCustomProperty("EaseUI"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
 
+------------------------------------------------------------------------------------------------------------------------
+-- CUSTOM SETTINGS
+------------------------------------------------------------------------------------------------------------------------
 local CoinSFX = script:GetCustomProperty("SFX_UI_BuyGeneric")
 
+local RESOURCES_TO_TRACK = script:GetCustomProperty("ResourcesToTrack"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- CONTENT PANELS
+------------------------------------------------------------------------------------------------------------------------
 local mainMessage = script:GetCustomProperty("MainMessage"):WaitForObject()
 local cyclingMessages = script:GetCustomProperty("CyclingMessages"):WaitForObject()
 local pointsFeedbacKMainPanel = script:GetCustomProperty("PointsFeedbacKMainPanel"):WaitForObject()
 
+local localPlayer = Game.GetLocalPlayer()
+
+local trackedResources = RESOURCES_TO_TRACK:GetChildren()
+local resourceTable = {}
+local originalValue = {}
+
+for _, res in ipairs(trackedResources) do
+	originalValue[res.name] = localPlayer:GetResource(res.name) or 0
+
+	resourceTable[res.name] = {
+		label = res:GetCustomProperty("FeedLabel"),
+		labelColor = res:GetCustomProperty("FeedLabelColor"),
+		icon = res:GetCustomProperty("FeedIcon"),
+		iconColor = res:GetCustomProperty("FeedIconColor"),
+		value = res:GetCustomProperty("ValueOverride"),
+		addPlus = res:GetCustomProperty("AddPlusSign")
+	}
+
+end
+
+-- Text
 local mainReasonText = mainMessage:GetCustomProperty("ReasonText"):WaitForObject()
 local mainPointsText = mainMessage:GetCustomProperty("PointsText"):WaitForObject()
 
+-- Text and UI fields
 local allText = pointsFeedbacKMainPanel:FindDescendantsByType("UIText")
 local allImages = pointsFeedbacKMainPanel:FindDescendantsByType("UIImage")
 
+-- Message fields
 local messages = cyclingMessages:GetChildren()
 local messagePositions = {}
 
-local originalValue = {}
+-- Hold original values
+
+
 
 local oc = {}
 local allowIcon = {}
+
 
 local passToTask = {}
 local passComplete = false
@@ -42,48 +86,47 @@ local kills = 0
 local addingScore = 0
 local previousAddingScore = 0
 
-local localPlayer = Game.GetLocalPlayer()
 
 local queue = {first = 0, last = -1}
 
 function PushQueue(value)
 	local first = queue.first - 1
-	
+
 	queue.first = first
 	queue[first] = value
 end
 
 function PopQueue()
 	local last = queue.last
-	
-	if queue.first > last then 
+
+	if queue.first > last then
 		return nil
 	end
-	
+
 	local value = queue[last]
-	
+
 	queue[last] = nil
 	queue.last = last - 1
-	
+
 	return value
 end
 
 function FadeIn()
-	local alpha = 0	
-	
+	local alpha = 0
+
 	for i = 1, 20 do
-		alpha = i/20
-		
+		alpha = i / 20
+
 		alpha = alpha * alpha
 
 		for _, text in ipairs(allText) do
 			if i < 20 then
 				text:SetColor(Color.New(oc[text.id].r, oc[text.id].g, oc[text.id].b, alpha))
-			else 
+			else
 				text:SetColor(oc[text.id])
 			end
 		end
-		
+
 		for _, image in ipairs(allImages) do
 			if i < 20 and allowIcon[image.id] then
 				image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, alpha))
@@ -91,41 +134,41 @@ function FadeIn()
 				image:SetColor(oc[image.id])
 			end
 		end
-		
+
 		Task.Wait(0.025)
 	end
 end
 
 function FadeInImage(image)
 	local alpha = 0
-	
+
 	passComplete = false
 	passToTask = {image}
-	
+
 	local task =
 		Task.Spawn(
 		function()
 			local image = passToTask[1]
 
-			passComplete = true	
-	
+			passComplete = true
+
 			for i = 1, 20 do
-				alpha = i/20
-				
+				alpha = i / 20
+
 				alpha = alpha * alpha
-		
+
 				if i < 20 then
 					image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, alpha))
-				else 
+				else
 					image:SetColor(oc[image.id])
 				end
-				
+
 				Task.Wait(0.025)
 			end
 		end,
 		0
 	)
-	
+
 	while not passComplete do
 		Task.Wait()
 	end
@@ -141,29 +184,29 @@ end
 
 function FadeOut()
 	local alpha = 1
-	
+
 	for i = 20, 1, -1 do
-		alpha = i/20
-		
+		alpha = i / 20
+
 		alpha = alpha * alpha
 
 		for _, text in ipairs(allText) do
 			if i > 1 then
 				text:SetColor(Color.New(oc[text.id].r, oc[text.id].g, oc[text.id].b, alpha))
-			else 
+			else
 				text:SetColor(Color.New(oc[text.id].r, oc[text.id].g, oc[text.id].b, 0))
 			end
 		end
-		
+
 		for _, image in ipairs(allImages) do
 			if i > 1 and image:GetColor().a > 0 then
 				image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, alpha))
-			else 
+			else
 				allowIcon[image.id] = false
 				image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, 0))
 			end
 		end
-		
+
 		Task.Wait(0.025)
 	end
 end
@@ -198,18 +241,18 @@ function CountThisTextUp(givenText, startingNumber, targetNumber, extra)
 			local extra = passToTask[4]
 
 			passComplete = true
-			
+
 			if startingNumber < targetNumber then
 				for i = startingNumber, targetNumber, math.ceil(math.abs(targetNumber - startingNumber) / 10) do
 					givenText.text = extra .. tostring(i)
-	
+
 					SetChildrenText(givenText, givenText.text)
-	
+
 					Task.Wait(0.05)
 				end
 			end
 
-			SetChildrenText(givenText, extra .. string.format("%d",targetNumber))
+			SetChildrenText(givenText, extra .. string.format("%d", targetNumber))
 		end,
 		0
 	)
@@ -228,96 +271,66 @@ function CountThisTextUp(givenText, startingNumber, targetNumber, extra)
 end
 
 function ResetAllText()
-
 	Task.Wait(3)
-	
+
 	erasing = true
-	
+
 	FadeOut()
 	faded = true
-	
+
 	SetChildrenText(mainReasonText, "")
 	SetChildrenText(mainPointsText, "")
-	
+
 	for x, m in ipairs(messages) do
 		SetChildrenText(m:GetCustomProperty("ReasonText"):WaitForObject(), "")
-	end	
-	
+	end
+
 	addingScore = 0
 	previousAddingScore = 0
-	
-	erasing = false
 
+	erasing = false
 end
 
 function EditResourceChangedMessage(resource, value)
-	local newResource = resource
 	local newValue = value
-	local allowPlus = true
-	
-	if resource == "CLASS_XP" then	
-		newResource = "Gained XP "
-		
-		if value > 0 then
-			addingScore = addingScore + value
-		else
-			addingScore = 0
-			newValue = 0
-		end
-		
-	elseif resource == "C1L" or resource == "C2L" or resource == "C3L" or resource == "C4L" or resource == "C5L" then
-		newResource = "Leveled Up "
-		newValue = 1
-	elseif resource == "GOLD" then
-		newResource = "COINS"
-	else 
-		newResource = ""
-		newValue = 0
+
+	local newResource = resourceTable[resource]["label"] or resource
+
+	if resourceTable[resource]["value"] > 0 then
+		addingScore = addingScore + resourceTable[resource]["value"]
+	else
+		addingScore = 0
+		-- newValue = 0
 	end
-	
-	if newValue > 0 and allowPlus then
+
+	if newValue > 0 and resourceTable[resource]["addPlus"] then
 		newResource = newResource .. " +"
 	end
-	
+
 	return {newResource, newValue}
 end
 
 function CheckResource(resource, value)
-	local pass = false
-	
-	if resource == "CLASS_XP" then
-		pass = true
-		
-		if value == 0 then
-			originalValue[resource] = 0
-		end	
-		
-	elseif resource == "GOLD" then
-		pass = true
-					
-	elseif resource == "C1L" or resource == "C2L" or resource == "C3L" or resource == "C4L" or resource == "C5L" then
-		pass = true	
-	end
-	
-	if pass and value > 0 then
+
+	if resourceTable[resource] and value > 0 then
 		return true
 	end
-	
+
 	return false
 end
-	
-function CycleAnimation(givenResource, givenValue)	
+
+function CycleAnimation(givenResource, givenValue)
 	local result = EditResourceChangedMessage(givenResource, givenValue)
 	local reason = result[1]
 	local value = result[2]
-	
-	--print(givenResource .. " value: " .. tostring(value))
-	--print("addingScore: " .. tostring(addingScore))
-	
+
+	-- print(givenResource .. " value: " .. tostring(value))
+	-- print("addingScore: " .. tostring(addingScore))
+
 	if value == 0 then
 		return
 	end
-	
+
 	if resetTask then
 		if erasing then
 			Task.Wait(0.1)
@@ -325,66 +338,65 @@ function CycleAnimation(givenResource, givenValue)
 			resetTask:Cancel()
 		end
 	end
-	
+
 	if faded then
 		Task.Spawn(FadeIn, 0)
 		faded = false
-	end	
-	
+	end
+
 	if not string.match(reason, "COIN") then
 		if addingScore > 0 then
 			CountThisTextUp(mainPointsText, previousAddingScore, addingScore, "")
-		else 
+		else
 			CountThisTextUp(mainPointsText, 0, value, "")
 		end
-	
+
 		CountThisTextUp(messages[1]:GetCustomProperty("ReasonText"):WaitForObject(), 0, value, reason)
-	else 
+	else
 		local sound = World.SpawnAsset(CoinSFX)
 		sound.lifeSpan = 3
-		
+
 		FadeInImage(messages[1]:GetCustomProperty("CoinIcon"):WaitForObject())
 		CountThisTextUp(mainPointsText, 0, value, "")
-	
+
 		CountThisTextUp(messages[1]:GetCustomProperty("ReasonText"):WaitForObject(), 0, value, "      +")
 	end
-		
+
 	local lastMessage = table.remove(messages)
 	table.insert(messages, 1, lastMessage)
-		
-	for x, m in ipairs(messages) do	
+
+	for x, m in ipairs(messages) do
 		if m.y > messagePositions[x] then
 			SetChildrenText(messages[#messages]:GetCustomProperty("ReasonText"):WaitForObject(), "")
 			m.y = messagePositions[x]
-		else 
+		else
 			EaseUI.EaseY(m, messagePositions[x], 0.3, EaseUI.EasingEquation.QUADRATIC, EaseUI.EasingDirection.INOUT)
 		end
 	end
-	
+
 	previousAddingScore = addingScore
-	
+
 	Task.Wait(0.3)
-	
+
 	resetTask = Task.Spawn(ResetAllText, 0)
 end
 
 function OnResourceChanged(player, resourceName, resourceValue)
-	--print("--------------------------")
-	--print(resourceName .. " : " .. tostring(resourceValue))
-	
+	-- print("--------------------------")
+	-- print(resourceName .. " : " .. tostring(resourceValue))
+
 	if CheckResource(resourceName, resourceValue) and not allowFeed then
 		originalValue[resourceName] = resourceValue
-		return		
+		returnw
 	elseif not CheckResource(resourceName, resourceValue) or not allowFeed then
 		return
 	end
-	
-	if not originalValue[resourceName] then
-		originalValue[resourceName] = 0
-	end	
-	--print("Resource " .. resourceName .. " has value " .. tostring(resourceValue) .. " Difference: " .. tostring(resourceValue - originalValue[resourceName]))
-	
-	PushQueue({resourceName, resourceValue - originalValue[resourceName]})
+
+	-- print("Resource " .. resourceName .. " has value " .. tostring(resourceValue) .. " originalValue: " .. tostring(originalValue[resourceName]) .. " Difference: " .. tostring(resourceValue - originalValue[resourceName]))
+
+	if (resourceValue - originalValue[resourceName] > 0) then
+		PushQueue({resourceName, resourceValue - originalValue[resourceName]})
+	end
 	originalValue[resourceName] = resourceValue
 end
 
@@ -397,29 +409,29 @@ function ShowFeed()
 end
 
 function Initialize()
-	for _, text in ipairs(allText) do	
-		oc[text.id] = text:GetColor()		
-	end
-	
-	for _, image in ipairs(allImages) do	
-		oc[image.id] = image:GetColor()
-		image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, 0))	
+	for _, text in ipairs(allText) do
+		oc[text.id] = text:GetColor()
 	end
 
-	for x, m in ipairs(messages) do	
-		if not readyMessage then		
-			readyMessage = m 		
+	for _, image in ipairs(allImages) do
+		oc[image.id] = image:GetColor()
+		image:SetColor(Color.New(oc[image.id].r, oc[image.id].g, oc[image.id].b, 0))
+	end
+
+	for x, m in ipairs(messages) do
+		if not readyMessage then
+			readyMessage = m
 		end
-		
-		table.insert(messagePositions, m.y)		
+
+		table.insert(messagePositions, m.y)
 	end
-	
-	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then	
-		allowFeed = true	
+
+	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then
+		allowFeed = true
 	end
-	
+
 	pointsFeedbacKMainPanel.visibility = Visibility.INHERIT
-	
+
 	--[[
 	for x, y in pairs(localPlayer:GetResources()) do
 		print( x .. " : " .. tostring(y))
@@ -429,11 +441,11 @@ end
 
 function Tick()
 	local newMessage = PopQueue()
-		
-	if not newMessage then	
-		return		
+
+	if not newMessage then
+		return
 	end
-	
+
 	CycleAnimation(newMessage[1], newMessage[2])
 	Task.Wait(0.1)
 end
@@ -441,11 +453,11 @@ end
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_ROUND or newState == ABGS.GAME_STATE_ROUND_END then
 		Task.Wait(5)
-		allowFeed = true			        
-    else 
-    	allowFeed = false 
-    	kills = 0
-    end
+		allowFeed = true
+	else
+		allowFeed = false
+		kills = 0
+	end
 end
 
 Initialize()
