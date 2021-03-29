@@ -1829,9 +1829,13 @@ Objects {
   }
 }
 Objects {
-  Id: 7820318464840177922
+  Id: 2117647049914167800
   Name: "Capture Point Control Feedback"
   Transform {
+    Location {
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -1839,6 +1843,7 @@ Objects {
     }
   }
   ParentId: 527033524674069522
+  ChildIds: 10295276800436755102
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1850,45 +1855,100 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 2747140211805712411
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FlagCaptureControlClient"
-        }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 2117647049914167800
+    SubobjectId: 11698519804033821645
+    InstanceId: 7820318464840177922
+    TemplateId: 14677087816454980018
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 10295276800436755102
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2117647049914167800
+  ChildIds: 11035460064480176686
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 10295276800436755102
+    SubobjectId: 3592239411772588203
+    InstanceId: 7820318464840177922
+    TemplateId: 14677087816454980018
+  }
+}
+Objects {
+  Id: 11035460064480176686
+  Name: "CapturePointControlFeedback"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10295276800436755102
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:API"
+      AssetReference {
+        Id: 5415161041024035059
       }
     }
-    ParameterOverrideMap {
-      key: 11698519804033821645
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Capture Point Control Feedback"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
       }
     }
-    TemplateAsset {
-      Id: 14677087816454980018
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 12278046237934023350
     }
+  }
+  InstanceHistory {
+    SelfId: 11035460064480176686
+    SubobjectId: 2747140211805712411
+    InstanceId: 7820318464840177922
+    TemplateId: 14677087816454980018
   }
 }
