@@ -12,6 +12,7 @@
 	- Get(player, key)
 	- GetNumber(player, key)
 	- Set(player, key, value)
+	- WaitForPlayer(player)
 	- valueChangedEvent<player, key, value>
 --]]
 
@@ -207,6 +208,13 @@ function API.Set(player, key, value)
 	
 	-- Fire event
 	API.valueChangedEvent:Trigger({player, key, value})
+end
+
+
+function API.WaitForPlayer(player)
+	while not API.netObjects[player] do
+		Task.Wait()
+	end
 end
 
 
