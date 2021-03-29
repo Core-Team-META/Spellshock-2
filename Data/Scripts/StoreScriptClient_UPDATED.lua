@@ -966,7 +966,7 @@ function PopulateStore(direction)
 		local gridX = (k - 1) % ITEMS_PER_ROW
 		local gridY = (k - 1) // ITEMS_PER_ROW
 
-		local target = Vector3.New(gridX * -ITEM_PADDING + 20, 0, gridY * -(ITEM_PADDING + 20) - 35)
+		local target = Vector3.New(gridX * -ITEM_PADDING + 20, 0, gridY * -(ITEM_PADDING + 25) - 35)
 
 		local start = Vector3.New(gridX * -100 + 1000, 0, gridY * -100)
 
@@ -1151,10 +1151,11 @@ end
 function UpdateUIPos()
 	local screenSize = UI.GetScreenSize()
 	local currentTime = time()
-
 	local newScale = (1.6 * UI.GetScreenSize().y) / UI.GetScreenSize().x
 
 	for k, v in pairs(StoreUIButtons) do
+		v.targetPos = Vector3.New(v.gridX * -ITEM_PADDING + 20, 0, v.gridY * -(ITEM_PADDING + (newScale - 0.4) * 70) - 40)
+		
 		if currentTime < v.startTime + v.travelTime and propEnableStoreAnimations then
 			local lerpVal
 			if not v.deleting then
@@ -1170,9 +1171,10 @@ function UpdateUIPos()
 		end
 
 		v.overlay.x, v.overlay.y = WorldPosToUIPos(v.geo:GetWorldPosition())
+		v.overlay.y = v.overlay.y + newScale * 5
 
 		v.overlay.width = math.floor(screenSize.x * 0.15 * BUTTON_SCALE)
-		v.overlay.height = math.floor(v.overlay.width * 1.5)
+		v.overlay.height = math.floor((newScale + 0.6) * v.overlay.width * 1.05)
 
 		v.itemName.fontSize = math.floor(screenSize.x * 0.014 * BUTTON_SCALE * newScale)
 		v.price.fontSize = math.floor(screenSize.x * 0.012 * BUTTON_SCALE * newScale)

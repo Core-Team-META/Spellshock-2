@@ -235,4 +235,9 @@ if IS_CHARGE_ATTACK then
 	ABILITY.interruptedEvent:Connect(OnInterrupted)
 	ABILITY.readyEvent:Connect(OnReady)
 end
+ABILITY.interruptedEvent:Connect(
+	function()
+		canAttack = false
+	end
+)
 ABILITY.recoveryEvent:Connect(ResetMelee)
