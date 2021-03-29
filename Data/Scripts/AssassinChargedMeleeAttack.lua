@@ -25,7 +25,7 @@ function OnExecuteAbility(ability)
         local cameraOffset = Vector3.UP * 130
         local closestDotDistance = nil
         for _, p in pairs(Game.GetPlayers()) do
-            if p ~= player and p.teamId ~= player.teamId then
+            if p ~= player and p.team ~= player.team then
                 local delta = p:GetWorldPosition() - ownerPosition
                 if delta.sizeSquared < 1500 * 1500 then
                     delta = delta - p:GetLookWorldRotation() * cameraOffset
