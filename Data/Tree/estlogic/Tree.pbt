@@ -1058,6 +1058,7 @@ Objects {
     }
   }
   ParentId: 13203278664486088247
+  ChildIds: 11868207678346394917
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1077,7 +1078,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11868207678346394917
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14796256833909855847
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -1091,7 +1153,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -1246,6 +1308,7 @@ Objects {
     }
   }
   ParentId: 18188951867222756270
+  ChildIds: 13640398262337819670
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1265,7 +1328,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13640398262337819670
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 953236834933509180
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -1279,7 +1403,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -1434,6 +1558,7 @@ Objects {
     }
   }
   ParentId: 14091674099240728291
+  ChildIds: 15519658789603645972
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1453,7 +1578,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 15519658789603645972
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9840466516938569782
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -1467,7 +1653,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -1622,6 +1808,7 @@ Objects {
     }
   }
   ParentId: 8357885581108465053
+  ChildIds: 1434244799614000400
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1641,7 +1828,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1434244799614000400
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8236618170910816576
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -1655,7 +1903,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -1810,6 +2058,7 @@ Objects {
     }
   }
   ParentId: 15190141058599635140
+  ChildIds: 12323646084323757924
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1829,7 +2078,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12323646084323757924
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14053876392593340146
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -1843,7 +2153,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -1997,6 +2307,7 @@ Objects {
     }
   }
   ParentId: 8021854946719997153
+  ChildIds: 10923957301930734768
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2016,7 +2327,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10923957301930734768
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1102505450798032844
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -2030,7 +2402,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -2185,6 +2557,7 @@ Objects {
     }
   }
   ParentId: 11243305063337024093
+  ChildIds: 6680698250909487671
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2204,7 +2577,68 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
+      }
+      Color {
+        R: 0.0572916679
+        G: 0.0193077307
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6680698250909487671
+  Name: "CoinIcon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 243206281635838655
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -3
+    Height: -3
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 3910619376972392297
       }
       Color {
         R: 1
@@ -2218,7 +2652,7 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
@@ -2498,6 +2932,7 @@ Objects {
     }
   }
   ParentId: 2840645594886480912
+  ChildIds: 16271895847566493980
   UnregisteredParameters {
     Overrides {
       Name: "cs:EaseUI"
@@ -2535,6 +2970,12 @@ Objects {
         SelfId: 6957376178355688345
       }
     }
+    Overrides {
+      Name: "cs:ResourcesToTrack"
+      ObjectReference {
+        SelfId: 16271895847566493980
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2548,6 +2989,347 @@ Objects {
   Script {
     ScriptAsset {
       Id: 5067110347379818947
+    }
+  }
+}
+Objects {
+  Id: 16271895847566493980
+  Name: "Resources To Track"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14589994922527136937
+  ChildIds: 17957751336439280716
+  ChildIds: 10156838864163244475
+  ChildIds: 2402120587404453377
+  ChildIds: 13007091913782972396
+  ChildIds: 7366673129161362686
+  ChildIds: 9641406643524037692
+  ChildIds: 11718384431422539498
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11718384431422539498
+  Name: "C5L"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Leveled Up "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ValueOverride"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 9641406643524037692
+  Name: "C4L"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Leveled Up "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ValueOverride"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 7366673129161362686
+  Name: "C3L"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Leveled Up "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ValueOverride"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 13007091913782972396
+  Name: "C2L"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Leveled Up "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ValueOverride"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 2402120587404453377
+  Name: "C1L"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Leveled Up "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ValueOverride"
+      Int: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 10156838864163244475
+  Name: "CLASS_XP"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "Gained XP "
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
+    }
+  }
+}
+Objects {
+  Id: 17957751336439280716
+  Name: "GOLD"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16271895847566493980
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:FeedLabel"
+      String: "COINS"
+    }
+    Overrides {
+      Name: "cs:FeedIcon"
+      AssetReference {
+        Id: 3910619376972392297
+      }
+    }
+    Overrides {
+      Name: "cs:AddPlusSign"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8145846929446732435
     }
   }
 }

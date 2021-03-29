@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/25
--- Version 0.1.6
+-- Date: 2021/3/29
+-- Version 0.1.8
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -19,7 +19,7 @@ local playerDead = {}
 
 local function ShouldTrack(player)
     local timeNow = time()
-    if playerTimer[player.id] ~= nil and (timeNow - playerTimer[player.id]) < 25 then
+    if playerTimer[player.id] ~= nil and (timeNow - playerTimer[player.id]) < 12 then
         playerDead[player.id] = true
         return false
     end
@@ -80,6 +80,8 @@ local function DevHelperFunction(attackData)
     end
 end
 
+
+
 local function ResetPlayers()
     for _, player in ipairs(Game.GetPlayers()) do
         for _, resName in pairs(CONST.COMBAT_STATS) do
@@ -87,6 +89,8 @@ local function ResetPlayers()
         end
         player.kills = 0
         player.deaths = 0
+        player.serverUserData.bonusGoldCount = 0
+        player.serverUserData.playersKilled = {}
     end
     playerTimer = {}
     playerDead = {}
@@ -116,12 +120,16 @@ function OnDied(attackData)
     local target = attackData.object
     local source = attackData.source
     if target and ShouldTrack(target) then
-        target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
         if source then
+            local sourceData = source.serverUserData
+            sourceData.playersKilled = sourceData.playersKilled or {}
+            sourceData.playersKilled[target.id] = sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
+            Events.Broadcast("META_CH.OnDied", attackData)
         end
     end
+    target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)
 end
 
 function OnCapturePointChanged(playerId)

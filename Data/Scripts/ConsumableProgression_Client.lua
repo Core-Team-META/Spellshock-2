@@ -62,4 +62,3 @@ function API.GetXp(player, consumable)
     return player:GetResource(UTIL.GetConsumableXpString(consumable))
 end
 
-

@@ -51,6 +51,7 @@ local rewardAssets = REWARD_UTIL.BuildRewardsTable(REWARD_INFO, ClassMenuData)
 
 local canSelect = false
 local SelectionCount = 0 -- determines how many cards the player can choose
+local SelectionCountMax = 0
 local SelectedCards = {} -- stores all the cards the player has chosen
 local CardPanels = {}
 local CardButtons = {}
@@ -303,24 +304,24 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             Legend:Destroy()
             Footnote:Destroy()
 
-            if rewardType == REWARD_UTIL.REWARD_TYPES.CONSUMABLES then
+            if rewardType == REWARD_UTIL.REWARD_TYPES.CONSUMABLES or rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
                 local function CONSUMABLE()
                     return _G["Consumables"]
                 end
 
                 local Level = CONSUMABLE().GetLevel(LOCAL_PLAYER, bind)
                 currentAmmount = CONSUMABLE().GetXp(LOCAL_PLAYER, bind)
-                reqXp = CONSUMABLES_COSTS[Level].reqXP
+                reqXp = CONSUMABLES_COSTS[Level]
 
                 CurrentLevel.text = tostring(Level)
                 NextLevel.text = tostring(Level + 1)
-            elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
+            --[[elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
                 PointsPanel:Destroy()
                 ProgressPanel:Destroy()
                 ProgressPanel = nil
                 RarityTextOutline:Destroy()
                 RarityTextOutline = nil
-                SkillPointsAmount:Destroy()
+                SkillPointsAmount:Destroy()]]
             else -- Gold or Cosmetic
                 GlobalStatsIcon:Destroy()
                 PointsPanel:Destroy()
@@ -445,14 +446,18 @@ local function CalculateSelectionCount()
         end
     end
 
+    
+
     -- +1 for Extra Reward Perk #TODO
 
     -- For testing
     --SelectionCount = 4
+    SelectionCountMax = SelectionCount
 
     --Set UI text
-    if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
+    ChooseRewardText.fontSize = 34
+    if SelectionCount >= 1 then
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
     else
         ChooseRewardText.text = string.format("Choose 1 reward")
     end
@@ -463,6 +468,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 
 function OnRewardSelected(thisButton)
+    if LOCAL_PLAYER.clientUserData.hasClaimedReward then return end
     if SelectedCards[thisButton] then
         -- Deselect
         thisButton.clientUserData.selected.visibility = Visibility.FORCE_OFF
@@ -475,15 +481,16 @@ function OnRewardSelected(thisButton)
         SelectionCount = SelectionCount - 1
     end
 
+
+
     -- Update UI
-    if SelectionCount > 1 then
-        ChooseRewardText.text = string.format("Choose %d rewards", SelectionCount)
-        Events.Broadcast("SRC.OnRewardSelected", false)
-    elseif SelectionCount == 1 then
-        ChooseRewardText.text = string.format("Choose 1 reward")
+    if SelectionCount >= 1 then
+        ChooseRewardText.fontSize = 34
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         Events.Broadcast("SRC.OnRewardSelected", false)
     else
-        ChooseRewardText.text = "0"
+        ChooseRewardText.fontSize = 20
+        ChooseRewardText.text = tostring("All Rewards Selected!\nClick the cards again to unselect")
         Events.Broadcast("SRC.OnRewardSelected", true)
     end
 end
@@ -528,13 +535,15 @@ function OnRewardSelect()
 end
 
 function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) --
-    if newState == ABGS.GAME_STATE_REWARDS then
+    if newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
+        ChooseRewardText.fontSize = 34
+        ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         CalculateSelectionCount()
         Task.Wait(2)
         ToggleUI(true)
         canSelect = true
         ANIMATION.context.OnRewardShow(CardPanels)
-    elseif newState == ABGS.GAME_STATE_REWARDS_END then
+    elseif newState == ABGS.GAME_STATE_REWARDS_END and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         AutoSelectRewards()
         local playerRewards = {}
         for cardButton, slotID in pairs(SelectedCards) do

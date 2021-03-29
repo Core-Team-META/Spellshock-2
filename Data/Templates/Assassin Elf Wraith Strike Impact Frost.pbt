@@ -7,7 +7,7 @@ Assets {
       RootId: 1069049167534334551
       Objects {
         Id: 1069049167534334551
-        Name: "Assassin_Ability4_ImpactVFX"
+        Name: "Assassin Elf Wraith Strike Impact Frost"
         Transform {
           Scale {
             X: 1
@@ -128,7 +128,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -209,7 +209,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }

@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17807712156856663918
+  Name: "Dragon"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Dragon"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -107,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14540886471016565903
+  Name: "Emblem 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_051"
+  }
+}
+Assets {
   Id: 14263710291750082864
   Name: "Player Selection Core 01 SFX"
   PlatformAssetType: 7
@@ -140,15 +158,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
-  }
-}
-Assets {
-  Id: 14012817403198044743
-  Name: "Globe"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_019"
   }
 }
 Assets {
@@ -368,6 +377,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6494160000227737456
+  Name: "Fantasy Spell Potion 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
   Id: 6488609383494304708
   Name: "Fantasy Frame 003"
   PlatformAssetType: 9
@@ -404,6 +422,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4941923027931780178
+  Name: "Horse"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Horse"
+  }
+}
+Assets {
   Id: 4722208266744308418
   Name: "Button Click Press Core 01 SFX"
   PlatformAssetType: 7
@@ -428,6 +455,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_SciFI_Icon_031"
+  }
+}
+Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
   }
 }
 Assets {

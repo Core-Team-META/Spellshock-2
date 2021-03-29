@@ -7,7 +7,7 @@ Assets {
       RootId: 455114187498673851
       Objects {
         Id: 455114187498673851
-        Name: "Healer Staff Surface Impact FX"
+        Name: "Healer Orc Staff Surface Impact FX Fire"
         Transform {
           Scale {
             X: 1
@@ -83,6 +83,10 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 2
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -103,7 +107,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -194,7 +198,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -271,7 +275,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

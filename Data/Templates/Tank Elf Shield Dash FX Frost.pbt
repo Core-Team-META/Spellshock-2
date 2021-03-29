@@ -7,7 +7,7 @@ Assets {
       RootId: 1507013899359661841
       Objects {
         Id: 1507013899359661841
-        Name: "Frost Elf Shield Dash FX"
+        Name: "Tank Elf Shield Dash FX Frost"
         Transform {
           Scale {
             X: 1
@@ -218,7 +218,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -284,7 +284,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -349,7 +349,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

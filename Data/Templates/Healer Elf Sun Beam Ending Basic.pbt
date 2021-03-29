@@ -7,7 +7,7 @@ Assets {
       RootId: 15352069285394374984
       Objects {
         Id: 15352069285394374984
-        Name: "Healer Elf Sun Beam Ending Basic 2"
+        Name: "Healer Elf Sun Beam Ending Basic"
         Transform {
           Scale {
             X: 1
@@ -159,7 +159,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -220,7 +220,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }

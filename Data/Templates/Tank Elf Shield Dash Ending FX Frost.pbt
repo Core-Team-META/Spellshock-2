@@ -7,7 +7,7 @@ Assets {
       RootId: 12022425869194037944
       Objects {
         Id: 12022425869194037944
-        Name: "Tank Shield Dash Ending FX Basic"
+        Name: "Tank Elf Shield Dash Ending FX Frost"
         Transform {
           Scale {
             X: 1
@@ -202,7 +202,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }

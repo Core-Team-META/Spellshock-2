@@ -122,6 +122,7 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
+    if not player:IsA("Player") then return end --Not sure how it's not getting a player passed, but fails the get resource
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
     local skinId = API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then

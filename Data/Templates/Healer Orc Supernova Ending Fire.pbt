@@ -7,7 +7,7 @@ Assets {
       RootId: 12411312343244899116
       Objects {
         Id: 12411312343244899116
-        Name: "Healer Orc Supernova Ending Basic"
+        Name: "Healer Orc Supernova Ending Fire"
         Transform {
           Scale {
             X: 1
@@ -113,7 +113,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -174,7 +174,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -347,7 +347,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }

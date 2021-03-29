@@ -2110,7 +2110,7 @@ Assets {
           }
           Animation: "2hand_melee_dig_shovel"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:extraaction_14"
           }
         }
       }

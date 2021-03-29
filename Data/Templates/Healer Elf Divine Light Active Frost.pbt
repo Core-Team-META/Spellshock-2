@@ -7,7 +7,7 @@ Assets {
       RootId: 1758679529107509426
       Objects {
         Id: 1758679529107509426
-        Name: "Healer Elf Divine Light Active Frost 2"
+        Name: "Healer Elf Divine Light Active Frost"
         Transform {
           Scale {
             X: 1
@@ -155,7 +155,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -220,7 +220,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -269,7 +269,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

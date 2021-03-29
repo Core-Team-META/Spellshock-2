@@ -28,9 +28,9 @@ local CancelBindings = {
 	ability_extra_20 = true, 
 	ability_extra_22 = true, 
 	ability_extra_23 = true, 
-	ability_extra_24 = true, 
+	--ability_extra_4 = true, 
 	ability_primary = true,
-	ability_secondary = true,
+	--ability_secondary = true,
 	--ability_extra_12 = true,
 	ability_extra_17 = true
 }
@@ -44,7 +44,7 @@ function OnGoingToTakeDamage(attackData)
 	end
 
     if attackData.object == Equipment.owner then
-        local BlockPercentage = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_BlockPercentage, SpecialAbility.name..": Block %")
+        local BlockPercentage = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", DEFAULT_BlockPercentage, SpecialAbility.name..": Block %")
         attackData.damage.amount = attackData.damage.amount - (attackData.damage.amount * BlockPercentage)
 	end
 end
@@ -69,7 +69,7 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	-- Heal player (moved into the timer)
 	--local dmg = Damage.New()
-	--dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount")
+	--dmg.amount = -META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", 15, SpecialAbility.name..": Heal Amount")
 	--dmg.reason = DamageReason.COMBAT
 	--dmg.sourcePlayer = SpecialAbility.owner
 	--dmg.sourceAbility = SpecialAbility
@@ -84,20 +84,22 @@ function OnSpecialAbilityExecute(thisAbility)
 	--}
 	--COMBAT().ApplyDamage(attackData)
 
-	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+	local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 	CurrentIceCube:SetWorldScale(Vector3.New( CoreMath.Round(DamageRadius / DEFAULT_DamageRadius, 3) ))
 	CurrentIceCube:AttachToPlayer(thisAbility.owner, "root")	
 	goingToTakeDamageListener = Events.Connect("CombatWrapAPI.GoingToTakeDamage", OnGoingToTakeDamage)
-	BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )
-
-	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
+	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	damageTimer = 0
+	Task.Wait(0.5)
+	if thisAbility.owner and Object.IsValid(thisAbility.owner) and not thisAbility.owner.isDead then
+		BindingPressedEvent = thisAbility.owner.bindingPressedEvent:Connect( OnBindingPressed )	
+	end
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
-	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 40, thisAbility.name..": Cooldown")
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 40, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -153,7 +155,7 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().MAGE)
+	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().MAGE)
 end
 
 function OnUnequip(equipment, player)
@@ -182,12 +184,12 @@ function Tick(deltaTime)
 		-- do damage every second
 		if damageTimer < 0 then
 			-- Damage enemies
-			local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
+			local DamageRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod1", DEFAULT_DamageRadius, SpecialAbility.name..": Radius")
 			local nearbyEnemies = Game.FindPlayersInSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {ignoreTeams = SpecialAbility.owner.team, ignoreDead = true})
 			--CoreDebug.DrawSphere(SpecialAbility.owner:GetWorldPosition(), DamageRadius, {duration = 1})
 			for _, enemy in pairs(nearbyEnemies) do
 				local dmg = Damage.New()
-				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_DOT, SpecialAbility.name..": DOT")
+				dmg.amount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod2", DEFAULT_DOT, SpecialAbility.name..": DOT")
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
@@ -207,9 +209,8 @@ function Tick(deltaTime)
 
 			-- heal every second as
 			local dmg = Damage.New()
-			local healDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
-			local heal = math.ceil(META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod5", 15, SpecialAbility.name..": Heal Amount") / (healDuration))
-			print (heal)
+			local healDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
+			local heal = math.ceil(META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod5", 15, SpecialAbility.name..": Heal Amount") / (healDuration))
 			dmg.amount = -heal
 			dmg.reason = DamageReason.COMBAT
 			dmg.sourcePlayer = SpecialAbility.owner

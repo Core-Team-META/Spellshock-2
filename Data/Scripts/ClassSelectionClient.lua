@@ -2,6 +2,7 @@
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 
 local MenuData = script:GetCustomProperty("MenuData"):WaitForObject()
 local LeftPanel = script:GetCustomProperty("LeftPanel"):WaitForObject()
@@ -191,11 +192,49 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
 
-	local HealthBonus = RightPanel_GlobalStats:GetCustomProperty("HealthBonus"):WaitForObject()
-	local HealingPotion = RightPanel_GlobalStats:GetCustomProperty("HealingPotion"):WaitForObject()
+	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
 
-	-- #TODO
-	--HealingPotion = tostring( META_Consumables().GetValue(LOCAL_PLAYER, META_Consumables().HEALTH_POTION) )
+	for _, statPanel in ipairs(PlayerStatsPanel:GetChildren()) do
+		if statPanel:IsA("UIPanel") then
+			local level
+			local currentStat
+			local nextStat
+			local currentXP
+			local reqXP
+
+			local LevelText = statPanel:GetCustomProperty("LevelText"):WaitForObject()
+			local CurrentStat = statPanel:GetCustomProperty("CurrentStat"):WaitForObject()
+			local NextStat = statPanel:GetCustomProperty("NextStat"):WaitForObject()
+			local XP_Progress = statPanel:GetCustomProperty("XP_Progress"):WaitForObject()
+			local XP_Amount = statPanel:GetCustomProperty("XP_Amount"):WaitForObject()
+
+			if statPanel.name == "Mount Speed" then
+				--#TODO
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				currentStat = level - 1
+				nextStat = level
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
+
+				CurrentStat.text = "+"..tostring(currentStat).."%"
+				NextStat.text = "+"..tostring(nextStat).."%"
+			elseif statPanel.name == "Healing Potion" then
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				local consumablesTable = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION]
+				currentStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * level)
+				nextStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * (level+1))
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
+
+				CurrentStat.text = "+"..tostring(currentStat).." HP"
+				NextStat.text = "+"..tostring(nextStat).." HP"
+			end
+
+			LevelText.text = tostring(level)
+			XP_Progress.progress = currentXP / reqXP
+			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
+		end
+	end
 end
 
 function UpdateClassInfo(thisButton)
@@ -222,7 +261,7 @@ function UpdateClassInfo(thisButton)
 		local ConfirmIcon = abilityPanel:GetCustomProperty("ConfirmIcon"):WaitForObject()
 		local Level = abilityPanel:GetCustomProperty("Level"):WaitForObject()
 		local AbilityButton = abilityPanel:GetCustomProperty("Button"):WaitForObject()
-		local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
+		--local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
 		local UpgradePanel =  abilityPanel:GetCustomProperty("UpgradePanel"):WaitForObject()
 
 		Icon:SetImage(dataTable["Abilities"][i]["Icon"])
@@ -240,10 +279,10 @@ function UpdateClassInfo(thisButton)
 
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			UpgradePanel.visibility = Visibility.INHERIT
-			ShowMorePanel.visibility = Visibility.FORCE_OFF
+			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 		else
 			UpgradePanel.visibility = Visibility.FORCE_OFF
-			ShowMorePanel.visibility = Visibility.INHERIT
+			--ShowMorePanel.visibility = Visibility.INHERIT
 		end
 	end
 
@@ -331,18 +370,31 @@ function OnClassUnhovered(thisButton)
 	end
 end
 
+local function UpdateText(parent, newText, extra)
+	if (extra) then newText = tostring(newText) .. tostring(extra) end
+	for _, textField in ipairs(parent:GetChildren()) do
+		textField.text = tostring(newText)
+	end
+
+end
+
 function UpdateAbilityInfo(thisButton)
 	local dataTable = thisButton.clientUserData.dataTable -- Get the ability data for this button
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
-	local AbilityXP = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityXP"):WaitForObject()
+	local AbilityXPPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityXP"):WaitForObject()
+	local MaxLevelPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("MaxLevelPanel"):WaitForObject()	
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
 	local UpgradeLabel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeLabel"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
+	local LevelNextText = LevelInfoPanel:GetCustomProperty("LevelNextText"):WaitForObject()
+	-- local LevelNextPanel = script:GetCustomProperty("LevelNextPanel"):WaitForObject()
 	local LevelProgressBar = LevelInfoPanel:GetCustomProperty("LevelProgressBar"):WaitForObject()
+	local RegularFillColor = LevelInfoPanel:GetCustomProperty("RegularFillColor")
+	local MaxFillColor = LevelInfoPanel:GetCustomProperty("MaxFillColor")
 
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[dataTable["BindID"]], META_AP()[dataTable["ClassID"]])
 	local currentXP = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
@@ -353,11 +405,45 @@ function UpdateAbilityInfo(thisButton)
 	AbilityName.text = dataTable["Name"]
 	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
-	AbilityXP.text = string.format("%d / %d XP", currentXP, reqXP)
+
+	local CurrentXPPanel = AbilityXPPanel:GetCustomProperty("CurrentXP"):WaitForObject()
+	local CXPMainText = CurrentXPPanel:GetCustomProperty("MainText"):WaitForObject()
+	-- local DividerPanel = AbilityXPPanel:GetCustomProperty("Divider"):WaitForObject()
+	local NextLevelXPPanel = AbilityXPPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
+
+	UpdateText(CurrentXPPanel, currentXP)
+	UpdateText(NextLevelXPPanel, reqXP)
+
+	if (currentXP < reqXP) then
+		CXPMainText:SetColor(Color.RED)
+	end
+
 	GoldCost.text = UTIL.FormatInt(goldCost)
 
-	LevelText.text = tostring(abilityLevel)
+
 	LevelProgressBar.progress = currentXP / reqXP
+
+	LevelText.text = tostring(abilityLevel)
+	if (abilityLevel < 10) then
+		LevelNextText.text = tostring(abilityLevel + 1)
+		if (not RightPanel_UpgradeButtonPanel:IsVisibleInHierarchy()) then RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON end
+		if (not AbilityXPPanel:IsVisibleInHierarchy()) then AbilityXPPanel.visibility = Visibility.FORCE_ON end
+		if (MaxLevelPanel:IsVisibleInHierarchy()) then MaxLevelPanel.visibility = Visibility.FORCE_OFF end
+		if (LevelProgressBar:GetFillColor() ~= RegularFillColor) then
+			LevelProgressBar:SetFillColor(RegularFillColor)
+		end
+	else
+		if (not MaxLevelPanel:IsVisibleInHierarchy()) then MaxLevelPanel.visibility = Visibility.FORCE_ON end
+		if (RightPanel_UpgradeButtonPanel:IsVisibleInHierarchy()) then RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF end
+		if (AbilityXPPanel:IsVisibleInHierarchy()) then AbilityXPPanel.visibility = Visibility.FORCE_OFF end
+		LevelNextText.text = "!"
+		LevelProgressBar.progress = 1
+		if (LevelProgressBar:GetFillColor() ~= MaxFillColor) then
+			LevelProgressBar:SetFillColor(MaxFillColor)
+		end
+		-- LevelNextPanel.visibility = Visibility.FORCE_OFF
+
+	end
 
 	if currentGold >= goldCost then
 		GoldCost:SetColor(Color.FromStandardHex("FFC200FF"))

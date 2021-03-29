@@ -7,7 +7,7 @@ Assets {
       RootId: 17725540983601457306
       Objects {
         Id: 17725540983601457306
-        Name: "Tank Shield Dash Ending FX Basic"
+        Name: "Tank Orc Shield Dash Ending FX Fire"
         Transform {
           Scale {
             X: 1
@@ -201,7 +201,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }

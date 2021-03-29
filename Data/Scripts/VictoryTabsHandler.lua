@@ -72,12 +72,15 @@ function OnRewards()
     OnTabClicked(victoryButton)
     VictoryTabs.visibility = Visibility.FORCE_OFF
 
+    -- Set TimerPanel info
+    WaitText.text = "SELECTION LOCKED IN"
+
+    Task.Wait(1)
     -- Show rewards title
     VictoryHeader.visibility = Visibility.INHERIT
     RewardsTitle.visibility = Visibility.INHERIT
 
-    -- Set TimerPanel info
-    WaitText.text = "SELECTION LOCKED IN"
+    
     --WaitIcon:SetImage()
 end
 
@@ -103,7 +106,7 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 
     if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
         OnPlayerShowCase()
-    elseif newState == ABGS.GAME_STATE_REWARDS then
+    elseif newState == ABGS.GAME_STATE_REWARDS and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
         OnRewards()
     elseif newState == ABGS.GAME_STATE_REWARDS_END then
         OnRewardsEnd()

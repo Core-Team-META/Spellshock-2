@@ -7,7 +7,7 @@ Assets {
       RootId: 13710811239096943882
       Objects {
         Id: 13710811239096943882
-        Name: "StoneWallPrimerWitcher"
+        Name: "Tank Stone Wall Preview Basic"
         Transform {
           Scale {
             X: 1

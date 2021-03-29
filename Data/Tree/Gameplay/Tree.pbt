@@ -33131,11 +33131,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 30
+      Float: 5
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
@@ -33703,7 +33703,7 @@ Objects {
     PlayerMovementSettings {
       WalkSpeed: 640
       MaxAcceleration: 1800
-      WalkableFloorAngle: 44
+      WalkableFloorAngle: 48
       JumpMaxCount: 1
       JumpVelocity: 900
       GroundFriction: 8

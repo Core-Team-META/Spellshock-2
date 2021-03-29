@@ -7,7 +7,7 @@ Assets {
       RootId: 11227495897027109769
       Objects {
         Id: 11227495897027109769
-        Name: "Healer Elf Supernova Ending Basic"
+        Name: "Healer Elf Supernova Ending Frost"
         Transform {
           Scale {
             X: 1
@@ -113,7 +113,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -174,7 +174,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -273,7 +273,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {

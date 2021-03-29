@@ -7,7 +7,7 @@ Assets {
       RootId: 6987114558760701861
       Objects {
         Id: 6987114558760701861
-        Name: "Mage Wand MuzzleFlash"
+        Name: "Mage Wand MuzzleFlash Basic"
         Transform {
           Scale {
             X: 1
@@ -48,7 +48,7 @@ Assets {
           }
         }
         ParentId: 6987114558760701861
-        ChildIds: 7592698327376965101
+        ChildIds: 5070333794541326152
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -65,8 +65,8 @@ Assets {
         }
       }
       Objects {
-        Id: 7592698327376965101
-        Name: "Electricity Spark Arc 01 SFX"
+        Id: 5070333794541326152
+        Name: "Electricity Power Plast Whoosh 01 SFX"
         Transform {
           Location {
           }
@@ -79,8 +79,6 @@ Assets {
           }
         }
         ParentId: 10628719277443670977
-        UnregisteredParameters {
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -92,24 +90,24 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 1070990391264695100
+            Id: 12852598895490891923
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 2600
-          Radius: 400
+          Falloff: 3300
+          Radius: 750
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
       }
     }
     Assets {
-      Id: 1070990391264695100
-      Name: "Magic Beam Sparkle Swift Whoosh 01 SFX"
+      Id: 12852598895490891923
+      Name: "Electricity Power Plast Whoosh 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_beam_sparkle_swift_whoosh_01_Cue_ref"
+        AssetId: "sfx_electricity_power_blast_whoosh_01_Cue_ref"
       }
     }
     PrimaryAssetId {

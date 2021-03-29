@@ -15,7 +15,7 @@ Assets {
             Z: 1.53538072
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 7191665239526606624
         ChildIds: 12802937858870327589
         ChildIds: 15787657866961663676
         ChildIds: 6165135625673163333
@@ -794,19 +794,19 @@ Assets {
         Name: "Prism - 3-Sided"
         Transform {
           Location {
-            X: 2.94613409
-            Y: -198.384476
-            Z: 41.7766533
+            X: -9.6118412
+            Y: -195.859695
+            Z: 42.6648941
           }
           Rotation {
-            Pitch: -3.34615731
-            Yaw: -1.57485974
-            Roll: -90
+            Pitch: -1.85510254
+            Yaw: 5.53928041
+            Roll: -90.414
           }
           Scale {
-            X: 3.90868449
-            Y: 6.11149
-            Z: 4.11059713
+            X: 3.49002147
+            Y: 6.1114912
+            Z: 4.11059666
           }
         }
         ParentId: 4786230234118320641
@@ -814,7 +814,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12889861000896994476
+              Id: 2754963224534021958
             }
           }
         }
@@ -835,6 +835,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
             }
@@ -1879,6 +1880,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_prism_001"
+      }
+    }
+    Assets {
+      Id: 2754963224534021958
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

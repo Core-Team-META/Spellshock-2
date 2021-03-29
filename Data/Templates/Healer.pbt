@@ -2035,7 +2035,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Binding"
-            String: "ability_extra_24"
+            String: "ability_extra_4"
           }
         }
         WantsNetworking: true

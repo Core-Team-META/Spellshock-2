@@ -7,7 +7,7 @@ Assets {
       RootId: 8510115313151259704
       Objects {
         Id: 8510115313151259704
-        Name: "Mage Elf Animorph Potion Attachment Basic"
+        Name: "Mage Orc Animorph Potion Attachment Basic"
         Transform {
           Scale {
             X: 1

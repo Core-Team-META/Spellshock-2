@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17812816660570473491
+  Name: "Tonemapping Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_tonemapping"
+  }
+}
+Assets {
   Id: 17786706417721973926
   Name: "Decal Bullet Damage Wood"
   PlatformAssetType: 14
@@ -1250,6 +1259,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11972672084376847955
+  Name: "Hill 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_003"
+  }
+}
+Assets {
   Id: 11893514062468969040
   Name: "Bone Human Ribcage 01"
   PlatformAssetType: 1
@@ -2282,6 +2300,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_leaves_001"
+  }
+}
+Assets {
+  Id: 7363477334452929865
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
   }
 }
 Assets {

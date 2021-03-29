@@ -7,7 +7,7 @@ Assets {
       RootId: 15880176679219807707
       Objects {
         Id: 15880176679219807707
-        Name: "Hunter Trap Activation"
+        Name: "Hunter Trap Activation Basic"
         Transform {
           Scale {
             X: 1
@@ -2448,7 +2448,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -2559,7 +2559,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }

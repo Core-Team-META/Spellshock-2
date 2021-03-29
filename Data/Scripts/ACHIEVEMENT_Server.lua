@@ -1,17 +1,13 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Achievement System Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/25-SS2
--- Version 0.1.6
+-- Date: 2021/3/29-SS2
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
 if not isEnabled then
     return
-end
-
-local function META_CP()
-    return _G["Class.Progression"]
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -91,7 +87,6 @@ local function PlayerKilled(player, target, weaponType, isHeadShot)
 
     target.serverUserData.ACH_killCredited = true
     target.serverUserData.ACH_diedInRound = true
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Kills)
 end
 
 local function OnRoundEnd()
@@ -104,7 +99,6 @@ local function OnRoundEnd()
                 (orcScore < elfScore and player.team == CONST.TEAM.ELF)
          then
             ACH_API.AddProgress(player, "AS_100WINS", 1)
-            META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins)
         end
 
         ACH_API.AddProgress(player, "AS_500MATCHES", 1)
@@ -114,21 +108,26 @@ local function OnRoundEnd()
          then
             ACH_API.AddProgress(player, "AS_UNKILLABLE", 1)
         end
+
+        if not Object.IsValid(player) then
+            return
+        end
         player.serverUserData.ACH_killCount = 0
         player.serverUserData.ACH_diedInRound = false
         Task.Wait()
-        ACH_API.GiveAllRewards(player)
+        if Object.IsValid(player) then
+            ACH_API.GiveAllRewards(player)
+        end
+        Task.Spawn(
+            function()
+                for _, player in ipairs(Game.GetPlayers()) do
+                    ACH_API.ResetRepeatable(player)
+                end
+            end,
+            10
+        )
     end
-    Task.Spawn(
-        function()
-            for _, player in ipairs(Game.GetPlayers()) do
-                ACH_API.ResetRepeatable(player)
-            end
-        end,
-        10
-    )
 end
-
 
 local function OnPlayerRespawn(player)
     player.serverUserData.ACH_killCredited = false
@@ -155,21 +154,17 @@ function OnKillStreak(player, value)
     end
 end
 
-
 function OnRewardCollected(player, id)
     ACH_API.CollectReward(player, id)
 end
 
-
 function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
     ACH_API.AddProgress(player, "AS_CAP2", value)
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Captures)
 end
 
 function OnPlayerAssistCapture(player, value)
     ACH_API.AddProgress(player, "AS_ASSISTCAP25", value)
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.CapAssists)
 end
 
 function OnKillStreak(player, value)
@@ -177,7 +172,6 @@ function OnKillStreak(player, value)
         ACH_API.UnlockAchievement(player, "AS_10KS")
     end
 end
-
 
 --#TODO Needs to be changed to cross key
 function OnPlayerJoined(player)
@@ -198,7 +192,6 @@ function OnPlayerLeft(player)
         listeners[player.id] = nil
     end
 end
-
 
 function OnGameStateChanged(object, string)
     if string == "State" then

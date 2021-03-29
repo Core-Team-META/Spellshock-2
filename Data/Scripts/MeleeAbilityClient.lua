@@ -90,7 +90,7 @@ local ChargeReleaseEffect = script:GetCustomProperty("ChargeReleaseEffect")
 local FullChargeEffect = script:GetCustomProperty("FullChargeEffect")
 local ChargeupSFX
 local ChargeupVFX
-local ChargeUITemp = "76202E0057632269:ChargeUpBar"
+local ChargeUITemp = script:GetCustomProperty("ChargeBar")
 local defaultPitch
 
 if IS_CHARGE_ATTACK then
@@ -125,8 +125,8 @@ function Tick()
 	if isCharging > 0 and time() - chargeStart > MIN_CHARGE then
 		local chargeAmount = time() - chargeStart
 
-		if LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
-			local chargeText = ChargeBar.clientUserData.text
+		if Object.IsValid(EQUIPMENT) and LOCAL_PLAYER == EQUIPMENT.owner and Object.IsValid(ChargePanel) then
+            local chargeText = ChargeBar.clientUserData.textPanel:GetChildren()
 			ChargePanel.visibility = Visibility.INHERIT
 			ChargeBar.progress = chargeAmount / MAX_CHARGE
 
@@ -135,7 +135,9 @@ function Tick()
 				ChargeupVFX:Play()
 				ChargeupSFX:Play()
 				ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
-				chargeText.text = "Charging..."
+				for _, text in ipairs(chargeText) do
+					text.text = "Charging..."
+				end
 			end
 
 			ChargeupSFX.pitch = (chargeAmount / MAX_CHARGE) * 300 + defaultPitch
@@ -145,7 +147,9 @@ function Tick()
 				ChargeupSFX:Stop()
 				World.SpawnAsset(FullChargeEffect, {position = EQUIPMENT.owner:GetWorldPosition()})
 				ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
-				chargeText.text = "READY!"
+				for _, text in ipairs(chargeText) do
+					text.text = "Ready!"
+				end
 				isCharging = 2
 			end
 		else
@@ -185,6 +189,7 @@ end
 
 function OnExecute(ability)
 	Task.Wait(SWIPE_SPAWN_DELAY)
+	if not Object.IsValid(EQUIPMENT) then return end
 	isCharging = 0
 
 	if IS_CHARGE_ATTACK and Object.IsValid(ChargeupSFX) then
@@ -228,7 +233,7 @@ function OnEquipped(equipment, player)
 		ChargeBar = ChargePanel:GetCustomProperty("ProgressBar"):WaitForObject()
 		ChargeBar.clientUserData.defaultColor = ChargeBar:GetFillColor()
 		ChargeBar.clientUserData.chargedColor = ChargePanel:GetCustomProperty("FullChargeColor")
-		ChargeBar.clientUserData.text = ChargePanel:GetCustomProperty("Text"):WaitForObject()
+		ChargeBar.clientUserData.textPanel = ChargePanel:GetCustomProperty("TextPanel"):WaitForObject()
 	end
 end
 

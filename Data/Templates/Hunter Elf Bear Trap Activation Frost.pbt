@@ -7,7 +7,7 @@ Assets {
       RootId: 18265184571272157034
       Objects {
         Id: 18265184571272157034
-        Name: "Frost Elf Hunter Trap Activation"
+        Name: "Hunter Elf Bear Trap Activation Frost"
         Transform {
           Scale {
             X: 1
@@ -2379,7 +2379,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -2490,7 +2490,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }

@@ -7,7 +7,7 @@ Assets {
       RootId: 16345032910267213676
       Objects {
         Id: 16345032910267213676
-        Name: "Assassin_Ability4_ImpactVFX"
+        Name: "Assassin Orc Wraith Strike Impact Fire"
         Transform {
           Scale {
             X: 1
@@ -128,7 +128,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -209,7 +209,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }

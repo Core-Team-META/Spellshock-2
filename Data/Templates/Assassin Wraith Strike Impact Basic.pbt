@@ -7,7 +7,7 @@ Assets {
       RootId: 9920646406956792753
       Objects {
         Id: 9920646406956792753
-        Name: "Assassin_Ability4_ImpactVFX"
+        Name: "Assassin Wraith Strike Impact Basic"
         Transform {
           Scale {
             X: 1
@@ -128,7 +128,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -209,7 +209,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }

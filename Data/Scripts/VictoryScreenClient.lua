@@ -77,12 +77,23 @@ local function UpdatePanelForPlayer(panel, player)
 		
 	end
 
-	local nameTextLabel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel =
+	local nameTextLabel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker =
 	panel:GetCustomProperty("NameText"):WaitForObject(),
 	panel:GetCustomProperty("DeathsValue"):WaitForObject(),
 	panel:GetCustomProperty("KillsValue"):WaitForObject(),
 	panel:GetCustomProperty("ResourceValue"):WaitForObject(),
-	panel:GetCustomProperty("ResourcePanel"):WaitForObject()
+	panel:GetCustomProperty("ResourcePanel"):WaitForObject(),
+	panel:GetCustomProperty("MeMarker"):WaitForObject()
+
+	if player == LocalPlayer then
+		if not meMarker:IsVisibleInHierarchy() then
+			meMarker.visibility = Visibility.FORCE_ON
+		end
+	else
+		if meMarker:IsVisibleInHierarchy() then
+			meMarker.visibility = Visibility.FORCE_OFF
+		end
+	end
 
 	nameTextLabel.text = player.name
 	killsValueLabel.text = tostring(player.kills)

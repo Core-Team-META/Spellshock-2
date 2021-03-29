@@ -7,7 +7,7 @@ Assets {
       RootId: 3185878250927913247
       Objects {
         Id: 3185878250927913247
-        Name: "Healer Elf Supernova Charge Basic 2"
+        Name: "Healer Elf Supernova Charge Basic"
         Transform {
           Scale {
             X: 1
@@ -261,7 +261,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -473,7 +473,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -509,6 +509,14 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.976353943
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.724513471
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -529,7 +537,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -937,7 +945,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1015,7 +1023,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1093,7 +1101,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {

@@ -15,12 +15,22 @@ local SHOOT_BINDING = "ability_primary"
 
 local reticleInstance = nil
 
-local ChargeUITemp = "76202E0057632269:ChargeUpBar"
+local ChargeUITemp = script:GetCustomProperty("ChargeBar")
 local ChargePanel = nil
 local ChargeBar = nil
 
 local CHARGE_DELAY = 0.1
 local CHARGE_DURATION = 0.5
+
+local listeners = {}
+
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
 
 
 function AbilityTick(ability, deltaTime)
@@ -52,14 +62,16 @@ function AbilityTick(ability, deltaTime)
 
         -------------------------------------------------------------
         if Object.IsValid(ChargePanel) then
-            local chargeText = ChargeBar.clientUserData.text
+            local chargeText = ChargeBar.clientUserData.textPanel:GetChildren()
             if chargeAmount == 1 then
                 if CHARGE_UP_SFX.isPlaying then
                     CHARGE_UP_SFX:Stop()
                     ChargeBar:SetFillColor(ChargeBar.clientUserData.chargedColor)
                     ChargeBar.progress = 1
                     World.SpawnAsset(FULL_CHARGE_EFFECT, {position = WEAPON.owner:GetWorldPosition()})
-                    chargeText.text = "READY!"
+                    for _, text in ipairs(chargeText) do
+                        text.text = "Ready!"
+                    end
                 end
             elseif chargeTime > 0 then
                 if Object.IsValid(ChargePanel) then
@@ -68,7 +80,9 @@ function AbilityTick(ability, deltaTime)
                     if not CHARGE_UP_SFX.isPlaying then
                         CHARGE_UP_SFX:Play()
                         ChargeBar:SetFillColor(ChargeBar.clientUserData.defaultColor)
-                        chargeText.text = "Charging..."
+                        for _, text in ipairs(chargeText) do
+                            text.text = "Charging..."
+                        end
                     end
 
                     CHARGE_UP_SFX.pitch = (chargeAmount) * 300 + defaultPitch
@@ -82,7 +96,7 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then 
         Events.Broadcast("OnCrossbowFired")
-        World.SpawnAsset(BIG_CHARGE, {position = WEAPON.owner:GetWorldPosition()})        
+        World.SpawnAsset(BIG_CHARGE, {position = WEAPON.owner:GetWorldPosition()})
         ChargePanel.visibility = Visibility.FORCE_OFF
         CHARGE_UP_SFX:Stop()
     end
@@ -123,10 +137,10 @@ end
 
 
 -- Connect up the ability
-SHOOT_ABILITY.tickEvent:Connect(AbilityTick)
-SHOOT_ABILITY.executeEvent:Connect(OnExecuteAbility)
-SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
-SHOOT_ABILITY.interruptedEvent:Connect(OnInterruptAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.tickEvent:Connect(AbilityTick)
+listeners[#listeners + 1] = SHOOT_ABILITY.executeEvent:Connect(OnExecuteAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.castEvent:Connect(OnCastAbility)
+listeners[#listeners + 1] = SHOOT_ABILITY.interruptedEvent:Connect(OnInterruptAbility)
 
 function OnEquipped(_, player)
     --print ("On equipped")
@@ -144,7 +158,7 @@ function OnEquipped(_, player)
 		ChargeBar = ChargePanel:GetCustomProperty("ProgressBar"):WaitForObject()
 		ChargeBar.clientUserData.defaultColor = ChargeBar:GetFillColor()
 		ChargeBar.clientUserData.chargedColor = ChargePanel:GetCustomProperty("FullChargeColor")
-		ChargeBar.clientUserData.text = ChargePanel:GetCustomProperty("Text"):WaitForObject()
+		ChargeBar.clientUserData.textPanel = ChargePanel:GetCustomProperty("TextPanel"):WaitForObject()
         ChargePanel.visibility = Visibility.FORCE_OFF
     end
 end
@@ -191,10 +205,11 @@ end
 script.destroyEvent:Connect(
 function()
     DestroyReticle()
+    DisconnectListeners()
 end
 )
 
-WEAPON.equippedEvent:Connect(OnEquipped)
+listeners[#listeners + 1] = WEAPON.equippedEvent:Connect(OnEquipped)
 
 if WEAPON.owner then
 	OnEquipped(WEAPON, WEAPON.owner)
