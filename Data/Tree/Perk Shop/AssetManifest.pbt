@@ -1,4 +1,13 @@
 Assets {
+  Id: 17696531540460943644
+  Name: "Fantasy Trophy 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_003"
+  }
+}
+Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -131,6 +140,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_005"
+  }
+}
+Assets {
+  Id: 10590055343228908066
+  Name: "Survival Craft Ribbon 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Survival_Crafting_Ribbon_001"
   }
 }
 Assets {
