@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.6
+-- Date: 2021/3/29
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    MOUNT_SPEED = 11
+    MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
 
@@ -220,7 +220,8 @@ API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
 ------------------------------------------------------------------------------------------------------------------------
 
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
+    HEALTH_POTION = 1,
+    MOUNT_SPEED = 2
 }
 
 API.CONSUMABLES = {

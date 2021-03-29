@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.15
+-- Date: 2021/3/29
+-- Version 0.1.16
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -75,6 +75,7 @@ local function AddDefaultCosmetics(player)
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
                     end
+                    --#FIXME very hacky code to stop bind cosmetics
                     if skin == 2 and bind < 8 then
                     elseif skin == 3 and bind < 8 then
                     elseif skin == 4 and bind < 8 then
@@ -267,7 +268,7 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    --data = {} --#TODO Testing
+    --data = {} --#Used when resetting data for Testing
     if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
@@ -278,8 +279,8 @@ local function OnPlayerJoined(player)
         OnLoadClassLevelData(player, data)
         OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
-        MOUNT_MANAGER.context.OnPlayerJoined(player, data[CONST.STORAGE.MOUNT_SPEED])
     end
+    CONSUMABLES.context.OnPlayerJoined(player)
 end
 
 --@param object player
@@ -296,7 +297,7 @@ local function OnPlayerLeft(player)
     OnSaveClassLeveData(player, data)
     OnSaveConsumableData(player, data)
 
-    data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
+    --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
 
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
@@ -310,7 +311,7 @@ local function OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
     CLASS_PROGRESSION.context.OnPlayerLeft(player)
     CONSUMABLES.context.OnPlayerLeft(player)
-    MOUNT_MANAGER.context.OnPlayerLeft(player)
+    --MOUNT_MANAGER.context.OnPlayerLeft(player)
 
     for _, equipment in ipairs(player:GetEquipment()) do
 		if Object.IsValid(equipment) then

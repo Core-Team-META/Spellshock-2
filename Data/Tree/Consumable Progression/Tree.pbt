@@ -102,6 +102,14 @@ Objects {
     }
   }
   ParentId: 14798374780867381676
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:MountLevels"
+      ObjectReference {
+        SelfId: 17424699769896010276
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
