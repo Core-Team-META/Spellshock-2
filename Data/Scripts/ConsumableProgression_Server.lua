@@ -81,8 +81,7 @@ end
 --@return int reqXP, int reqGold
 local function GetReqXp(player, consumable)
     local currentLevel = GetLevel(player, consumable)
-    local costTable = COST_TABLE[currentLevel]
-    return costTable.reqXP, costTable.reqGold
+    return COST_TABLE[currentLevel]
 end
 
 --@param object player
@@ -102,7 +101,7 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 function DoLevelUp(player, consumable)
     local level = GetLevel(player, consumable)
-    local reqXp, reqGold = GetReqXp(player, consumable)
+    local reqXp = GetReqXp(player, consumable)
     --local currentGold = player:GetResource(CONST.GOLD)
     local xp = GetXp(player, consumable)
     if xp >= reqXp and level < CONST.MAX_LEVEL then
@@ -115,6 +114,7 @@ function DoLevelUp(player, consumable)
         if consumable == API.MOUNT_SPEED then
             SetPlayerMountSpeed(player)
         end
+        DoLevelUp(player, consumable) -- Keep leveling
     end
 end
 

@@ -81,6 +81,13 @@ local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the 
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
+local MOUNT_SPEED_AMOUNT = {
+    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
+    [API.RARITY.RARE] =      {min = 20, max = 30},
+    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.LEGENDARY] = {min = 40, max = 50}
+}
+
 local CLASS_XP_AMOUNT = {
     [API.RARITY.UNCOMMON] =  {min = 1000, max = 1200},
     [API.RARITY.RARE] =      {min = 2000, max = 2400},
@@ -214,11 +221,12 @@ end
 
 function API.GetMountSpeedReward()
     local reward = {}
-    local randomChance = math.random(1, 100)
+    GetDefaultRarity(reward)
 
-    reward.rarity = API.RARITY.LEGENDARY
+    local amountsTable = MOUNT_SPEED_AMOUNT[reward.rarity]
+    reward.amount = math.random(amountsTable.min, amountsTable.max)
     reward.type = API.REWARD_TYPES.MOUNT_SPEED
-    reward.bind = 1
+    reward.bind = CONST.CONSUMABLE_KEYS.MOUNT_SPEED
 
     return reward
 end
