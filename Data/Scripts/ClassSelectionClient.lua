@@ -2,6 +2,7 @@
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 
 local MenuData = script:GetCustomProperty("MenuData"):WaitForObject()
 local LeftPanel = script:GetCustomProperty("LeftPanel"):WaitForObject()
@@ -191,6 +192,45 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
 
+	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
+
+	for _, statPanel in ipairs(PlayerStatsPanel:GetChildren()) do
+		if statPanel:IsA("UIPanel") then
+			local level
+			local currentStat
+			local nextStat
+			local currentXP
+			local reqXP
+
+			local LevelText = statPanel:GetCustomProperty("LevelText"):WaitForObject()
+			local CurrentStat = statPanel:GetCustomProperty("CurrentStat"):WaitForObject()
+			local NextStat = statPanel:GetCustomProperty("NextStat"):WaitForObject()
+			local XP_Progress = statPanel:GetCustomProperty("XP_Progress"):WaitForObject()
+			local XP_Amount = statPanel:GetCustomProperty("XP_Amount"):WaitForObject()
+
+			if statPanel.name == "Mount Speed" then
+				--#TODO
+				level = 1
+				currentStat = 1
+				nextStat = 2
+				currentXP = 5
+				reqXP = 10
+
+				CurrentStat.text = "+"..tostring(currentStat).."%"
+				NextStat.text = "+"..tostring(nextStat).."%"
+			elseif statPanel.name == "Healing Potion" then
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				currentStat = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].BaseHealth + (CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].LevelMultiplier * level)
+				nextStat = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].BaseHealth + (CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].LevelMultiplier * level+1)
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
+			end
+
+			LevelText.text = tostring(level)
+			XP_Progress.progress = currentXP / reqXP
+			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
+		end
+	end
 
 	-- #TODO
 	--HealingPotion = tostring( META_Consumables().GetValue(LOCAL_PLAYER, META_Consumables().HEALTH_POTION) )
