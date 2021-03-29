@@ -50,10 +50,8 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then
         if ability.clientUserData.chargeAmount < 1 then
-            print ("Activate shoot")
             SHOOT_ABILITY:Activate()
         else
-            print ("Activate charged shoot")
             SHOOT_CHARGED_ABILITY:Activate()
         end
     end
