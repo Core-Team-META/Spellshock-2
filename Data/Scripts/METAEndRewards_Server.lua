@@ -105,7 +105,7 @@ local function CalculateRegularSlot()
         reward = REWARD_UTIL.GetSkillReward()
     end
 
-    return reward --REWARD_UTIL.GetHealingPotionReward()
+    return reward
 end
 
 -- Should return 4-10

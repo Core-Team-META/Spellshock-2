@@ -304,24 +304,24 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
             Legend:Destroy()
             Footnote:Destroy()
 
-            if rewardType == REWARD_UTIL.REWARD_TYPES.CONSUMABLES then
+            if rewardType == REWARD_UTIL.REWARD_TYPES.CONSUMABLES or rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
                 local function CONSUMABLE()
                     return _G["Consumables"]
                 end
 
                 local Level = CONSUMABLE().GetLevel(LOCAL_PLAYER, bind)
                 currentAmmount = CONSUMABLE().GetXp(LOCAL_PLAYER, bind)
-                reqXp = CONSUMABLES_COSTS[Level].reqXP
+                reqXp = CONSUMABLES_COSTS[Level]
 
                 CurrentLevel.text = tostring(Level)
                 NextLevel.text = tostring(Level + 1)
-            elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
+            --[[elseif rewardType == REWARD_UTIL.REWARD_TYPES.MOUNT_SPEED then
                 PointsPanel:Destroy()
                 ProgressPanel:Destroy()
                 ProgressPanel = nil
                 RarityTextOutline:Destroy()
                 RarityTextOutline = nil
-                SkillPointsAmount:Destroy()
+                SkillPointsAmount:Destroy()]]
             else -- Gold or Cosmetic
                 GlobalStatsIcon:Destroy()
                 PointsPanel:Destroy()

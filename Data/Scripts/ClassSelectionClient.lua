@@ -210,20 +210,24 @@ function OnGlobalStatsClicked(thisButton)
 
 			if statPanel.name == "Mount Speed" then
 				--#TODO
-				level = 1
-				currentStat = 1
-				nextStat = 2
-				currentXP = 5
-				reqXP = 10
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				currentStat = level - 1
+				nextStat = level
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
 
 				CurrentStat.text = "+"..tostring(currentStat).."%"
 				NextStat.text = "+"..tostring(nextStat).."%"
 			elseif statPanel.name == "Healing Potion" then
 				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
-				currentStat = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].BaseHealth + (CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].LevelMultiplier * level)
-				nextStat = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].BaseHealth + (CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION].LevelMultiplier * level+1)
+				local consumablesTable = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION]
+				currentStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * level)
+				nextStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * (level+1))
 				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
 				reqXP = tostring(CONSUMABLES_COSTS[level])
+
+				CurrentStat.text = "+"..tostring(currentStat).." HP"
+				NextStat.text = "+"..tostring(nextStat).." HP"
 			end
 
 			LevelText.text = tostring(level)
@@ -231,9 +235,6 @@ function OnGlobalStatsClicked(thisButton)
 			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
 		end
 	end
-
-	-- #TODO
-	--HealingPotion = tostring( META_Consumables().GetValue(LOCAL_PLAYER, META_Consumables().HEALTH_POTION) )
 end
 
 function UpdateClassInfo(thisButton)
