@@ -303,7 +303,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Dynamic Shadow Distance"
-            Float: 6
+            Float: 2.5
           }
           Overrides {
             Name: "bp:Cast Volumetric Shadows"
@@ -328,6 +328,18 @@ Assets {
           Overrides {
             Name: "bp:Intensity"
             Float: 3.7
+          }
+          Overrides {
+            Name: "bp:Soft Distance Shadows"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Shadow Cascade Count"
+            Int: 2
+          }
+          Overrides {
+            Name: "bp:Cascade Distribution Adjustment"
+            Float: 1.5
           }
         }
         Collidable_v2 {
@@ -564,7 +576,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Intensity"
-            Float: 0.65
+            Float: 0.8
           }
           Overrides {
             Name: "bp:Blend Target Image"
@@ -597,7 +609,7 @@ Assets {
         Name: "Environment Fog Default VFX"
         Transform {
           Location {
-            Z: 4485.7041
+            Z: 7200
           }
           Rotation {
           }
@@ -628,7 +640,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Layered Fog Offset Height"
-            Float: 15.5264587
+            Float: -28.3203354
           }
           Overrides {
             Name: "bp:Falloff"
@@ -636,7 +648,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Layered Fog Falloff"
-            Float: 0.05
+            Float: 1.58213699
           }
           Overrides {
             Name: "bp:Light Absorption Amount"
@@ -661,7 +673,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Layered Fog Density"
-            Float: 0.1
+            Float: 0.251030564
           }
           Overrides {
             Name: "bp:Directional Inscattering Color"

@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17812816660570473491
+  Name: "Tonemapping Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_tonemapping"
+  }
+}
+Assets {
   Id: 17786706417721973926
   Name: "Decal Bullet Damage Wood"
   PlatformAssetType: 14
