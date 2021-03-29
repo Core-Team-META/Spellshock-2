@@ -1081,6 +1081,8 @@ Assets {
         ChildIds: 2240986400692986383
         ChildIds: 3456609236666824797
         ChildIds: 14328014872396548696
+        ChildIds: 5845621310675190650
+        ChildIds: 10078693908526600732
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1864,6 +1866,30 @@ Assets {
               SubObjectId: 2716804742797173936
             }
           }
+          Overrides {
+            Name: "cs:ChargeupSFX"
+            ObjectReference {
+              SubObjectId: 10078693908526600732
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupVFX"
+            ObjectReference {
+              SubObjectId: 13263500662269639637
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeReleaseEffect"
+            AssetReference {
+              Id: 8798478507278226874
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 6147896150544354150
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1929,6 +1955,30 @@ Assets {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupSFX"
+            ObjectReference {
+              SubObjectId: 10078693908526600732
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupVFX"
+            ObjectReference {
+              SubObjectId: 13263500662269639637
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeReleaseEffect"
+            AssetReference {
+              Id: 8798478507278226874
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 6147896150544354150
             }
           }
         }
@@ -2122,6 +2172,147 @@ Assets {
           ScriptAsset {
             Id: 6342549352078680519
           }
+        }
+      }
+      Objects {
+        Id: 5845621310675190650
+        Name: "ChargeUpVFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 13263500662269639637
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13263500662269639637
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+            Z: 57
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5845621310675190650
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 10078693908526600732
+        Name: "Charge Up SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7193292322058698384
+          }
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
         }
       }
       Objects {
@@ -2722,6 +2913,28 @@ Assets {
             Name: "cs:EquipmentStance"
             String: "unarmed_ready"
           }
+          Overrides {
+            Name: "cs:IsChargeAttack"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:HitBox"
+            ObjectReference {
+              SubObjectId: 18369595493276635491
+            }
+          }
+          Overrides {
+            Name: "cs:MinCharge"
+            Float: 0.2
+          }
+          Overrides {
+            Name: "cs:ChargeDuration"
+            Float: 1
+          }
+          Overrides {
+            Name: "cs:HoldLimit"
+            Float: 10
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -2771,7 +2984,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.1
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2840,7 +3053,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.1
+            Duration: 100
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -3037,6 +3250,24 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Dagger_003"
+      }
+    }
+    Assets {
+      Id: 18322083209027112941
+      Name: "Plasma Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold"
+      }
+    }
+    Assets {
+      Id: 7193292322058698384
+      Name: "Magic Sparkle Glitter Loop 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_sparkle_glitter_loop_02_Cue_ref"
       }
     }
     PrimaryAssetId {

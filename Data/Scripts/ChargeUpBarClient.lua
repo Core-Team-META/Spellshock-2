@@ -28,7 +28,6 @@ local function DisconnectListeners()
 	end
 end
 
-
 function AbilityTick(ability, deltaTime)
     if ability.owner ~= LOCAL_PLAYER then
         return
@@ -36,10 +35,8 @@ function AbilityTick(ability, deltaTime)
 
     if SHOOT_ABILITY:GetCurrentPhase() == AbilityPhase.CAST then
         --------------------------------------------------------------
-
         local chargeTime = math.max(0, SHOOT_ABILITY.castPhaseSettings.duration - SHOOT_ABILITY:GetPhaseTimeRemaining() - CHARGE_DELAY)
         local chargeAmount = CoreMath.Clamp(chargeTime / CHARGE_DURATION )
-        ability.clientUserData.chargeAmount = chargeAmount
 
         -------------------------------------------------------------
         if Object.IsValid(ChargePanel) then
@@ -77,7 +74,6 @@ end
 function OnExecuteAbility(ability)
     if ability.owner == LOCAL_PLAYER then 
         Events.Broadcast("OnCrossbowFired")
-        World.SpawnAsset(BIG_CHARGE, {position = WEAPON.owner:GetWorldPosition()})
         ChargePanel.visibility = Visibility.FORCE_OFF
         CHARGE_UP_SFX:Stop()
     end
@@ -86,9 +82,7 @@ function OnExecuteAbility(ability)
 end
 
 function OnCastAbility(ability)
-    ability.clientUserData.chargeAmount = 0
-
-     Task.Wait(CHARGE_DELAY + CHARGE_DURATION)
+    Task.Wait(CHARGE_DELAY + CHARGE_DURATION)
 
     if not Object.IsValid(ability) then return end
     
