@@ -107,24 +107,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15165554833363844727
-  Name: "Amarante"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "AmaranteRegular_ref"
-  }
-}
-Assets {
-  Id: 14540886471016565903
-  Name: "Emblem 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Military_Icon_051"
-  }
-}
-Assets {
   Id: 14263710291750082864
   Name: "Player Selection Core 01 SFX"
   PlatformAssetType: 7

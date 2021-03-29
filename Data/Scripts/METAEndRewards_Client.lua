@@ -481,20 +481,13 @@ function OnRewardSelected(thisButton)
         SelectionCount = SelectionCount - 1
     end
 
-    --[[ KB's fix
-    if (selectionCountMax < SelectionCount) then
-        selectionCountMax = SelectionCount
-    end]]
+
 
     -- Update UI
     if SelectionCount >= 1 then
         ChooseRewardText.fontSize = 34
         ChooseRewardText.text = string.format("Choose %d of %d rewards", SelectionCount, SelectionCountMax)
         Events.Broadcast("SRC.OnRewardSelected", false)
-    --[[elseif SelectionCount == 1 then
-        ChooseRewardText.fontSize = 34
-        ChooseRewardText.text = string.format("Choose 1 of reward")
-        Events.Broadcast("SRC.OnRewardSelected", false)]]
     else
         ChooseRewardText.fontSize = 20
         ChooseRewardText.text = tostring("All Rewards Selected!\nClick the cards again to unselect")

@@ -968,7 +968,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 29
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1032,7 +1032,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 29
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1096,7 +1096,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 29
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1160,7 +1160,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 29
+            Size: 28
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1344,7 +1344,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 27
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1408,7 +1408,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 27
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1472,7 +1472,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 27
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -1536,7 +1536,7 @@ Assets {
               G: 0.020441724
               A: 1
             }
-            Size: 27
+            Size: 26
             Justification {
               Value: "mc:etextjustify:center"
             }

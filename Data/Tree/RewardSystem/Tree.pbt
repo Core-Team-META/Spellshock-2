@@ -4909,7 +4909,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4973,8 +4973,8 @@ Objects {
   Control {
     Width: 182
     Height: 59
-    UIX: -313.110107
-    UIY: 31.387661
+    UIX: -295.432526
+    UIY: 28.7885647
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5097,9 +5097,9 @@ Objects {
     Text {
       Label: "CLAIM"
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.229166672
+        G: 0.229166672
+        B: 0.229166672
         A: 1
       }
       Size: 25
@@ -13968,13 +13968,13 @@ Objects {
     Overrides {
       Name: "cs:GemIcon"
       AssetReference {
-        Id: 4727080213227783003
+        Id: 12253460684865638729
       }
     }
     Overrides {
       Name: "cs:GoldIcon"
       AssetReference {
-        Id: 7585529932942736913
+        Id: 3910619376972392297
       }
     }
     Overrides {

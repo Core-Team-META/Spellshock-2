@@ -16,6 +16,7 @@ local function TurnOnButton()
     BUTTON_DISABLED.visibility = Visibility.FORCE_OFF
     BUTTON_ACTIVE.visibility = Visibility.FORCE_ON
     BUTTON_TEXT.text = "CLAIM"
+    BUTTON_TEXT:GetChildren()[1]:SetColor(Color.WHITE)
     BUTTON_TEXT:GetChildren()[1].text = "CLAIM"
 end
 
@@ -24,13 +25,16 @@ local function TurnOffButton()
     BUTTON_DISABLED.visibility = Visibility.FORCE_ON
     BUTTON_ACTIVE.visibility = Visibility.FORCE_OFF
     BUTTON_TEXT.text = "CLAIM"
+    BUTTON_TEXT:GetChildren()[1]:SetColor(Color.GRAY)
     BUTTON_TEXT:GetChildren()[1].text = "CLAIM"
 end
 
 local function SetClaimedText()
     ChooseReward.text = "Congratulations\nRewards Received"
     ChooseReward.fontSize = 20
+    BUTTON_DISABLED.visibility = Visibility.FORCE_ON
     BUTTON_TEXT.text = "CLAIMED"
+    BUTTON_TEXT:GetChildren()[1]:SetColor(Color.GREEN)
     BUTTON_TEXT:GetChildren()[1].text = "CLAIMED"
 end
 

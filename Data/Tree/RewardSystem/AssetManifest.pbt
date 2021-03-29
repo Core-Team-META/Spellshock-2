@@ -242,6 +242,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
+  }
+}
+Assets {
   Id: 3483798833601977176
   Name: "Fantasy Shape 003"
   PlatformAssetType: 9
