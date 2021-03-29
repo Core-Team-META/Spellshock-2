@@ -52759,6 +52759,12 @@ Objects {
         SelfId: 4322653546660966320
       }
     }
+    Overrides {
+      Name: "cs:ConsumablesUpgradeCost_Data"
+      AssetReference {
+        Id: 3692130031545591443
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
