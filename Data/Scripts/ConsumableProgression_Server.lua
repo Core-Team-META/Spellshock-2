@@ -53,8 +53,9 @@ end
 --@param object player
 --@param int class => id of class (API.HEALTH_POTION)
 local function SetLevel(player, consumable, level)
-    player:SetResource(UTIL.GetConsumableLevelString(consumable), level)
     consumables[player.id][consumable][API.LEVEL] = level
+    --player:SetResource(UTIL.GetConsumableLevelString(consumable), level)
+    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), level)
 end
 
 --@param object player
@@ -67,7 +68,8 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 local function SetXp(player, consumable, xp)
     consumables[player.id][consumable][API.XP] = xp
-    player:SetResource(UTIL.GetConsumableXpString(consumable), xp)
+    --player:SetResource(UTIL.GetConsumableXpString(consumable), xp)
+    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableXpString(consumable), xp)
 end
 
 --@param object player
@@ -141,9 +143,11 @@ function BuildDataTable(player, data)
             for key, value in pairs(consumableData) do
                 consumables[player.id][consumable][key] = value
                 if key == CONST.PROGRESS.LEVEL then
-                    player:SetResource(UTIL.GetConsumableLevelString(consumable), value)
+                    --player:SetResource(UTIL.GetConsumableLevelString(consumable), value)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), value)
                 elseif key == CONST.PROGRESS.XP then
-                    player:SetResource(UTIL.GetConsumableXpString(consumable), value)
+                    --player:SetResource(UTIL.GetConsumableXpString(consumable), value)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableXpString(consumable), value)
                 end
             end
         end
@@ -154,7 +158,8 @@ function BuildDataTable(player, data)
             for _, key in pairs(CONST.PROGRESS) do
                 if key == CONST.PROGRESS.LEVEL then
                     consumables[player.id][consumable][key] = CONST.STARTING_LEVEL
-                    player:SetResource(UTIL.GetConsumableLevelString(consumable), CONST.STARTING_LEVEL)
+                    --player:SetResource(UTIL.GetConsumableLevelString(consumable), CONST.STARTING_LEVEL)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), CONST.STARTING_LEVEL)
                 else
                     consumables[player.id][consumable][key] = 0
                 end

@@ -303,7 +303,8 @@ function API.CalculateDailyShopCost(player, slot, id, class, bind, reward)
             --Shard Cost
             cost = API.CalculateShardCost(reward)
             infoTable = rewardAssets[id][class][bind]
-            currentAmmount = player:GetResource(UTIL.GetXpString(class, bind))
+            --currentAmmount = player:GetResource(UTIL.GetXpString(class, bind))
+            currentAmmount = _G.PerPlayerDictionary.GetNumber(player, UTIL.GetXpString(class, bind))
         else
             if id == 2 then
                 currentAmmount = player:GetResource(CONST.GOLD)
