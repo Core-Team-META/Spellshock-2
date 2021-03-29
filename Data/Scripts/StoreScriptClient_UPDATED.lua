@@ -664,21 +664,29 @@ function UpdateEntryButton(entry, highlighted)
 	end
 
 	if highlighted then
-		SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor)
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor) dulled down
 		--entry.priceBG:SetColor(entry.priceBGHoverColor)
-		entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor"))		
+		entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color - entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor")) dulled down
 	elseif  CosmeticIsEquipped(entry.data.id) then
-		SetFramesColor(entry.frames, entry.frameEquippedColor)
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameEquippedColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGEquippedColor)
-		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor"))
+		entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color - entry.geo:GetCustomProperty("OwnedColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor")) dulled down
 	elseif  HasCosmetic(entry.data.id) then
-		SetFramesColor(entry.frames, entry.frameOwnedColor)
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameOwnedColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGOwnedColor)
-		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor"))	
+		entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color - entry.geo:GetCustomProperty("DefaultColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor")) dulled down
 	else 
-		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameDefaultColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGDefaultColor)
-		entry.BGMesh:SetColor(entry.geo:GetCustomProperty("DefaultColor"))
+		entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color - entry.geo:GetCustomProperty("DefaultColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("DefaultColor")) --dulled down
 	end
 	
 end
