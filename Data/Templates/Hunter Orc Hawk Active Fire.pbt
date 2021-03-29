@@ -47,6 +47,7 @@ Assets {
             Bool: true
           }
         }
+        Lifespan: 20
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -70,9 +71,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 1608319055817845223
@@ -4639,7 +4640,6 @@ Assets {
           Volume: 1
           Falloff: -1
           Radius: -1
-          EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
