@@ -324,6 +324,7 @@ end
 function OnCapturePlayerDamaged(player, damage)
     if player == capturePlayer and damage.amount > 0 then
         ResetCapturePlayer()
+        player.serverUserData.isCapturingPoint = nil 
     end
 end
 
@@ -337,6 +338,7 @@ function OnInteractedEvent(thisTrigger, player)
     -- update capturePlayer
     if capturePlayer == nil then
         capturePlayer = player
+        player.serverUserData.isCapturingPoint = true
         table.insert(capturePlayerEvents, capturePlayer.damagedEvent:Connect(OnCapturePlayerDamaged))
         table.insert(capturePlayerEvents, capturePlayer.bindingPressedEvent:Connect(OnBindingPressed))
         capturePlayer:ResetVelocity()
@@ -352,12 +354,14 @@ CAPTURE_TRIGGER.interactedEvent:Connect(OnInteractedEvent)
 function OnBeginOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = true
+        other.serverUserData.onCapturePoint = true
     end
 end
 
 function OnEndOverlap(thisTrigger, other)
     if other:IsA("Player") then
         playersOnPoint[other] = nil
+        other.serverUserData.onCapturePoint = nil
     end
 end
 

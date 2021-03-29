@@ -4909,7 +4909,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -13339,6 +13339,10 @@ Objects {
     Overrides {
       Name: "cs:ID:tooltip"
       String: "ID Shards = 1, Gold = 2, Cosmetic = 3"
+    }
+    Overrides {
+      Name: "cs:Bind"
+      Int: 2
     }
   }
   Collidable_v2 {

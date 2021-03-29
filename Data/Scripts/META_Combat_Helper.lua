@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Combat Stats Helper
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/28
--- Version 0.1.7
+-- Date: 2021/3/29
+-- Version 0.1.8
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -80,23 +80,7 @@ local function DevHelperFunction(attackData)
     end
 end
 
-local function GiveGoldOnKill(source, target)
-    local sourceData = source.serverUserData
-    if not sourceData.bonusGoldCount or sourceData.bonusGoldCount < CONST.MAX_KILL_GOLD then
-        local bonusGold = target:GetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK) * CONST.KILL_STREAK_BONUS_GOLD
-        local sourceLevel = source:GetResource(CONST.CLASS_LEVEL)
-        local levelDifference = target:GetResource(CONST.CLASS_LEVEL) - sourceLevel
-        --local levelBonusGold = sourceLevel * CONST.CLASS_LEVEL_BONUS_GOLD
-        --local baseGold = CONST.GOLD_PER_KILL * levelBonusGold
 
-        local levelBonus = CONST.LEVEL_DIF_BONUS[levelDifference] or 0
-        bonusGold =  CoreMath.Round(bonusGold + CONST.GOLD_PER_KILL + levelBonus)
-
-        source:AddResource(CONST.GOLD, bonusGold)
-        sourceData.bonusGoldCount = sourceData.bonusGoldCount or 0
-        sourceData.bonusGoldCount = sourceData.bonusGoldCount + bonusGold
-    end
-end
 
 local function ResetPlayers()
     for _, player in ipairs(Game.GetPlayers()) do
@@ -106,6 +90,7 @@ local function ResetPlayers()
         player.kills = 0
         player.deaths = 0
         player.serverUserData.bonusGoldCount = 0
+        player.serverUserData.playersKilled = {}
     end
     playerTimer = {}
     playerDead = {}
@@ -136,9 +121,12 @@ function OnDied(attackData)
     local source = attackData.source
     if target and ShouldTrack(target) then
         if source then
+            local sourceData = source.serverUserData
+            sourceData.playersKilled = sourceData.playersKilled or {}
+            sourceData.playersKilled[target.id] = sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
-            GiveGoldOnKill(source, target)
+            Events.Broadcast("META_CH.OnDied", attackData)
         end
     end
     target:SetResource(CONST.COMBAT_STATS.CURRENT_KILL_STREAK, 0)

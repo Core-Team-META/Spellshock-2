@@ -236,7 +236,7 @@ end
 
 function OnNetworkedPropertyChanged(thisObject, name)
     if name == "OwningTeam" then
-        newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
+        local newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
         if newOwner ~= owningTeam then
             Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
             owningTeam = newOwner

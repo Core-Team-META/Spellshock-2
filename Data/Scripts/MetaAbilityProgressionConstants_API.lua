@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.6
+-- Date: 2021/3/29
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    MOUNT_SPEED = 11
+    MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
 
@@ -148,17 +148,32 @@ API.ReqXp = {
     [50] = 389505 
 }
 
+API.DIMINISHING_RETURNS = { -- Uses a float 1.0 = 100% , 0.05 = 5%
+    [1] = 1.0,
+    [2] = 1.0,
+    [3] = 1.0,
+    [4] = 1.0,
+    [5] = 0.80,
+    [6] = 0.60,
+    [7] = 0.40,
+    [8] = 0.20,
+    [9] = 0.10,
+    [10] = 0.05
+}
+
 API.CLASS_XP = {
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
-    Wins = 1500
+    Wins = 1500,
+    Interrupt = 25, -- Interrupt Capture Point Player
+    KillOnPoint = 100
 }
 
 API.GOLD_PER_KILL = 10
 API.GOLD_PER_CAPTURE = 20
 API.KILL_STREAK_BONUS_GOLD = 5
-API.CLASS_LEVEL_BONUS_GOLD = 1 --Keep at 1 for no bonus
+API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
 API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
 API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
     [1] = 3,
@@ -220,7 +235,8 @@ API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
 ------------------------------------------------------------------------------------------------------------------------
 
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
+    HEALTH_POTION = 1,
+    MOUNT_SPEED = 2
 }
 
 API.CONSUMABLES = {

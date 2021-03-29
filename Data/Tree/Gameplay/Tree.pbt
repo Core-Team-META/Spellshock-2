@@ -1506,8 +1506,8 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 3.5
-      Y: 3.5
+      X: 5
+      Y: 5
       Z: 7.39999723
     }
   }
@@ -9402,8 +9402,8 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 3.5
-      Y: 3.5
+      X: 5
+      Y: 5
       Z: 7.39999723
     }
   }
@@ -13741,8 +13741,8 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 3.5
-      Y: 3.5
+      X: 5
+      Y: 5
       Z: 7.39999723
     }
   }
@@ -17705,8 +17705,8 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 3.5
-      Y: 3.5
+      X: 5
+      Y: 5
       Z: 7.39999723
     }
   }
@@ -22047,8 +22047,8 @@ Objects {
       Roll: -0.00622558594
     }
     Scale {
-      X: 3.5
-      Y: 3.5
+      X: 5
+      Y: 5
       Z: 7.39999723
     }
   }
@@ -33135,7 +33135,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 5
+      Float: 30
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
