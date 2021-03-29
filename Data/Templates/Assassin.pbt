@@ -392,6 +392,8 @@ Assets {
         ChildIds: 17585539102530407397
         ChildIds: 16793278118655160600
         ChildIds: 7466746896168637483
+        ChildIds: 15475229615349227676
+        ChildIds: 3168555170791150736
         ChildIds: 12664533810910303685
         ChildIds: 13400387010289401457
         WantsNetworking: true
@@ -980,6 +982,117 @@ Assets {
         }
       }
       Objects {
+        Id: 15475229615349227676
+        Name: "AssassinChargedMeleeAttack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 3557475336528325194
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 12422489422158297470
+            }
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 2716804742797173936
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 7332628159333715675
+          }
+        }
+      }
+      Objects {
+        Id: 3168555170791150736
+        Name: "MeleeAbilityServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 3557475336528325194
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 12422489422158297470
+            }
+          }
+          Overrides {
+            Name: "cs:HitBox"
+            ObjectReference {
+              SubObjectId: 18369595493276635491
+            }
+          }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 28
+              Y: 35
+            }
+          }
+          Overrides {
+            Name: "cs:AttackImpulse"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:VerticalImpulse"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 2716804742797173936
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9748598691135565465
+          }
+        }
+      }
+      Objects {
         Id: 12664533810910303685
         Name: "HealthRegenServer"
         Transform {
@@ -1076,11 +1189,14 @@ Assets {
         ChildIds: 7355506324767663929
         ChildIds: 14326137833624201234
         ChildIds: 12219954214652104381
+        ChildIds: 15877197364675350470
         ChildIds: 12637696742421662481
         ChildIds: 15505641406647177733
         ChildIds: 2240986400692986383
-        ChildIds: 3456609236666824797
         ChildIds: 14328014872396548696
+        ChildIds: 8269407347384744348
+        ChildIds: 5845621310675190650
+        ChildIds: 10078693908526600732
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1814,6 +1930,80 @@ Assets {
         }
       }
       Objects {
+        Id: 15877197364675350470
+        Name: "AssassinDaggerClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:ChargingAbility"
+            ObjectReference {
+              SubObjectId: 12422489422158297470
+            }
+          }
+          Overrides {
+            Name: "cs:DaggerLeftAbility"
+            ObjectReference {
+              SubObjectId: 6522519753598108575
+            }
+          }
+          Overrides {
+            Name: "cs:DaggerRightAbility"
+            ObjectReference {
+              SubObjectId: 3230213687525692580
+            }
+          }
+          Overrides {
+            Name: "cs:DaggerSwipeCharged"
+            AssetReference {
+              Id: 12429467218307849634
+            }
+          }
+          Overrides {
+            Name: "cs:PlayerImpactVFX"
+            AssetReference {
+              Id: 1116952164133996881
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 4569115510025570718
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3945927400747733741
+          }
+        }
+      }
+      Objects {
         Id: 12637696742421662481
         Name: "MeleeAbilityClient"
         Transform {
@@ -1862,6 +2052,30 @@ Assets {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupSFX"
+            ObjectReference {
+              SubObjectId: 10078693908526600732
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupVFX"
+            ObjectReference {
+              SubObjectId: 13263500662269639637
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeReleaseEffect"
+            AssetReference {
+              Id: 8798478507278226874
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 6147896150544354150
             }
           }
         }
@@ -1929,6 +2143,30 @@ Assets {
             Name: "cs:Equipment"
             ObjectReference {
               SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupSFX"
+            ObjectReference {
+              SubObjectId: 10078693908526600732
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeupVFX"
+            ObjectReference {
+              SubObjectId: 13263500662269639637
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeReleaseEffect"
+            AssetReference {
+              Id: 8798478507278226874
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 6147896150544354150
             }
           }
         }
@@ -2007,59 +2245,6 @@ Assets {
         }
       }
       Objects {
-        Id: 3456609236666824797
-        Name: "BasicAttackAbilityClient"
-        Transform {
-          Location {
-            X: -10610.2256
-            Y: -26569.7402
-            Z: 2978.5835
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12390733973333184270
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 6522519753598108575
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 4569115510025570718
-            }
-          }
-          Overrides {
-            Name: "cs:Ability2"
-            ObjectReference {
-              SubObjectId: 3230213687525692580
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1407559862931273718
-          }
-        }
-      }
-      Objects {
         Id: 14328014872396548696
         Name: "VenomAimLine"
         Transform {
@@ -2125,6 +2310,206 @@ Assets {
         }
       }
       Objects {
+        Id: 8269407347384744348
+        Name: "ChargeUpBarClient"
+        Transform {
+          Location {
+            X: 595
+            Y: -355
+            Z: -225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 2716804742797173936
+            }
+          }
+          Overrides {
+            Name: "cs:Shoot"
+            ObjectReference {
+              SubObjectId: 12422489422158297470
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpSFX"
+            ObjectReference {
+              SubObjectId: 10078693908526600732
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpVFX"
+            ObjectReference {
+              SubObjectId: 13263500662269639637
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1799007856612243505
+          }
+        }
+      }
+      Objects {
+        Id: 5845621310675190650
+        Name: "ChargeUpVFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 13263500662269639637
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13263500662269639637
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+            Z: 57
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5845621310675190650
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 10078693908526600732
+        Name: "Charge Up SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7193292322058698384
+          }
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+        }
+      }
+      Objects {
         Id: 15969373231472315619
         Name: "Load Out"
         Transform {
@@ -2144,6 +2529,7 @@ Assets {
         ChildIds: 8184323746341847196
         ChildIds: 87249608989476396
         ChildIds: 4951305031756499143
+        ChildIds: 12422489422158297470
         ChildIds: 2716804742797173936
         UnregisteredParameters {
         }
@@ -2700,6 +3086,76 @@ Assets {
         }
       }
       Objects {
+        Id: 12422489422158297470
+        Name: "Dagger Charge"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 15969373231472315619
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsAbilityChain"
+            Bool: true
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 100
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.35
+            CanMove: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 0.1
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          Animation: "dual_melee_dual_thrust"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
         Id: 2716804742797173936
         Name: "Dagger"
         Transform {
@@ -2741,7 +3197,7 @@ Assets {
       }
       Objects {
         Id: 6522519753598108575
-        Name: "Dagger"
+        Name: "Dagger Left"
         Transform {
           Location {
           }
@@ -2810,7 +3266,7 @@ Assets {
       }
       Objects {
         Id: 3230213687525692580
-        Name: "Dagger"
+        Name: "Dagger Right"
         Transform {
           Location {
           }
@@ -3037,6 +3493,24 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Dagger_003"
+      }
+    }
+    Assets {
+      Id: 18322083209027112941
+      Name: "Plasma Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold"
+      }
+    }
+    Assets {
+      Id: 7193292322058698384
+      Name: "Magic Sparkle Glitter Loop 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_sparkle_glitter_loop_02_Cue_ref"
       }
     }
     PrimaryAssetId {
