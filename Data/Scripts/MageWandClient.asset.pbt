@@ -10,14 +10,23 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ChargedWeapon"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:Shoot"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:ChargeBar"
-        AssetReference {
-          Id: 8511853874731229801
+        Name: "cs:ShootCharged"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:ChargeAbility"
+        ObjectReference {
         }
       }
     }
