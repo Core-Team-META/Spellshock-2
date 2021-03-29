@@ -401,6 +401,7 @@ Assets {
         ChildIds: 1004186579194125424
         ChildIds: 5059740429878840452
         ChildIds: 1911379253016179784
+        ChildIds: 14680580072878226303
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1074,6 +1075,36 @@ Assets {
         }
       }
       Objects {
+        Id: 14680580072878226303
+        Name: "HealerStaffServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17566732273178486209
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15332437072175436836
+          }
+        }
+      }
+      Objects {
         Id: 14081494435077508625
         Name: "ClientContext"
         Transform {
@@ -1092,8 +1123,7 @@ Assets {
         ChildIds: 15031445199558909656
         ChildIds: 11626540599974007922
         ChildIds: 2336331780423953990
-        ChildIds: 2176729734375800191
-        ChildIds: 15778048683844327364
+        ChildIds: 8292272785772752412
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1211,7 +1241,6 @@ Assets {
         ChildIds: 7575872334836133316
         ChildIds: 4017261440786260585
         ChildIds: 15759265484500681867
-        ChildIds: 632464087035937151
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1345,53 +1374,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 17529172217946308633
-          }
-        }
-      }
-      Objects {
-        Id: 632464087035937151
-        Name: "BasicAttackAbilityClient"
-        Transform {
-          Location {
-            X: 13534.7744
-            Y: 14815.2598
-            Z: -16.4165039
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11626540599974007922
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 4620336145958381494
-            }
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 1551665899132109167
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1407559862931273718
           }
         }
       }
@@ -1674,6 +1656,138 @@ Assets {
         }
       }
       Objects {
+        Id: 8292272785772752412
+        Name: "Staff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14081494435077508625
+        ChildIds: 4160366009459324555
+        ChildIds: 6488379560348676199
+        ChildIds: 2176729734375800191
+        ChildIds: 15778048683844327364
+        ChildIds: 2723287005588774636
+        ChildIds: 8209633294423066892
+        ChildIds: 7279603757092407380
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4160366009459324555
+        Name: "HealerStaffClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8292272785772752412
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+          Overrides {
+            Name: "cs:Shoot"
+            ObjectReference {
+              SubObjectId: 4620336145958381494
+            }
+          }
+          Overrides {
+            Name: "cs:Charging"
+            ObjectReference {
+              SubObjectId: 15637150772461375192
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5268055149364618641
+          }
+        }
+      }
+      Objects {
+        Id: 6488379560348676199
+        Name: "BasicAttackAbilityClient"
+        Transform {
+          Location {
+            X: 13534.7744
+            Y: 14815.2598
+            Z: -16.4165039
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8292272785772752412
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 15637150772461375192
+            }
+          }
+          Overrides {
+            Name: "cs:Equipment"
+            ObjectReference {
+              SubObjectId: 1551665899132109167
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1407559862931273718
+          }
+        }
+      }
+      Objects {
         Id: 2176729734375800191
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -1688,7 +1802,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14081494435077508625
+        ParentId: 8292272785772752412
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
@@ -1744,12 +1858,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14081494435077508625
+        ParentId: 8292272785772752412
         UnregisteredParameters {
           Overrides {
             Name: "cs:ShootAbility"
             ObjectReference {
-              SubObjectId: 4620336145958381494
+              SubObjectId: 15637150772461375192
             }
           }
           Overrides {
@@ -1773,6 +1887,206 @@ Assets {
         }
       }
       Objects {
+        Id: 2723287005588774636
+        Name: "ChargeUpBarClient"
+        Transform {
+          Location {
+            X: 595
+            Y: -355
+            Z: -225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8292272785772752412
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 18270922159998676275
+            }
+          }
+          Overrides {
+            Name: "cs:Shoot"
+            ObjectReference {
+              SubObjectId: 15637150772461375192
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpSFX"
+            ObjectReference {
+              SubObjectId: 7279603757092407380
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpVFX"
+            ObjectReference {
+              SubObjectId: 3925533277137838420
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1799007856612243505
+          }
+        }
+      }
+      Objects {
+        Id: 8209633294423066892
+        Name: "ChargeUpVFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8292272785772752412
+        ChildIds: 3925533277137838420
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3925533277137838420
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+            Z: 57
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8209633294423066892
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 7279603757092407380
+        Name: "Charge Up SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8292272785772752412
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7193292322058698384
+          }
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+        }
+      }
+      Objects {
         Id: 4708996743668767698
         Name: "Load Out"
         Transform {
@@ -1792,6 +2106,7 @@ Assets {
         ChildIds: 12861631058086445073
         ChildIds: 9970096027225536454
         ChildIds: 12132236651039923972
+        ChildIds: 15637150772461375192
         ChildIds: 18270922159998676275
         UnregisteredParameters {
         }
@@ -2169,6 +2484,75 @@ Assets {
         }
       }
       Objects {
+        Id: 15637150772461375192
+        Name: "Charging Blast"
+        Transform {
+          Location {
+            Z: 43.4432373
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 4708996743668767698
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 20
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          CooldownPhaseSettings {
+            Duration: 5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          Animation: "2hand_staff_magic_bolt"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
         Id: 18270922159998676275
         Name: "Healer Staff"
         Transform {
@@ -2306,7 +2690,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2331,7 +2715,7 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 5
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2447,6 +2831,24 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Yellow_001"
+      }
+    }
+    Assets {
+      Id: 18322083209027112941
+      Name: "Plasma Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold"
+      }
+    }
+    Assets {
+      Id: 7193292322058698384
+      Name: "Magic Sparkle Glitter Loop 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_sparkle_glitter_loop_02_Cue_ref"
       }
     }
     Assets {
