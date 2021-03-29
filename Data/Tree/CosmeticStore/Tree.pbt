@@ -12650,9 +12650,9 @@ Objects {
   Name: "Camera"
   Transform {
     Location {
-      X: 25
-      Y: -120
-      Z: 350
+      X: 25.001091
+      Y: -120.001526
+      Z: 370
     }
     Rotation {
       Yaw: 89.9995422
