@@ -37,7 +37,7 @@ end
 --@params object Object
 --@return bool true if player
 local function IsValidPlayer(object)
-    return Object.IsValid(object) and object:IsA("Player")
+    return object and Object.IsValid(object) and object:IsA("Player")
 end
 
 --@params object source -- player
@@ -77,8 +77,13 @@ end
 --@params object source -- player
 --@params object target -- player
 local function GiveXPOnKill(source, target)
+    local isOnCapture = target.serverUserData.onCapturePoint
     local sourceData = source.serverUserData
-    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Kills)
+    local gainedXp = CONST.CLASS_XP.Kills
+    if isOnCapture then
+        gainedXp = gainedXp + CONST.CLASS_XP.KillOnPoint
+    end
+    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), gainedXp)
 end
 
 local function OnRoundEnd()
@@ -106,10 +111,10 @@ function OnGameStateChanged(oldState, newState, stateHasDuration, stateEndTime) 
 end
 
 --@params table attackData
-function OnDied(attackData)
+function OnPlayerDied(attackData)
     local target = attackData.object
     local source = attackData.source
-    if target and source and IsValidPlayer(target) and IsValidPlayer(target) then
+    if IsValidPlayer(target) and IsValidPlayer(source) then
         GiveGoldOnKill(source, target)
         GiveXPOnKill(source, target)
     end
@@ -126,10 +131,25 @@ function OnPlayerAssistCapture(player)
     CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.CapAssists)
 end
 
+--@params table attackData
+function GoingToTakeDamage(attackData)
+    local target = attackData.object
+    local isCapturing = target.serverUserData.isCapturingPoint
+    if not isCapturing then
+        return
+    end
+
+    local source = attackData.source
+    if IsValidPlayer(target) and IsValidPlayer(source) then
+        CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Interrupt)
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
-Events.Connect("META_CH.OnDied", OnDied)
+Events.Connect("META_CH.OnDied", OnPlayerDied)
 Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
 Events.Connect("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)

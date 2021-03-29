@@ -165,7 +165,9 @@ API.CLASS_XP = {
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
-    Wins = 1500
+    Wins = 1500,
+    Interrupt = 100, -- Interrupt Capture Point Player
+    KillOnPoint = 100
 }
 
 API.GOLD_PER_KILL = 10
