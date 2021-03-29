@@ -425,7 +425,8 @@ Assets {
         ChildIds: 16029334459249137091
         ChildIds: 17441912587668400096
         ChildIds: 8228187279433582210
-        ChildIds: 3773820494088276868
+        ChildIds: 7631188985751234265
+        ChildIds: 10156097226255100435
         ChildIds: 6012454820415092162
         ChildIds: 14293992110905083350
         WantsNetworking: true
@@ -837,12 +838,10 @@ Assets {
         }
       }
       Objects {
-        Id: 3773820494088276868
-        Name: "DestructibleWeaponServer"
+        Id: 7631188985751234265
+        Name: "MageWandServer"
         Transform {
           Location {
-            X: -83.375
-            Y: 332.015625
           }
           Rotation {
           }
@@ -854,10 +853,6 @@ Assets {
         }
         ParentId: 18222319590489236690
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:DamageToObjects"
-            Int: 129
-          }
           Overrides {
             Name: "cs:BindingName"
             String: "LMB"
@@ -885,6 +880,52 @@ Assets {
         Script {
           ScriptAsset {
             Id: 18154052875178810801
+          }
+        }
+      }
+      Objects {
+        Id: 10156097226255100435
+        Name: "MageWandServer"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18222319590489236690
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:BindingName"
+            String: "LMB"
+          }
+          Overrides {
+            Name: "cs:AbilityMod"
+            String: "mod1"
+          }
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 12902761704525450861
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 7783916155483450032
           }
         }
       }
@@ -1766,8 +1807,11 @@ Assets {
         }
         ParentId: 11747234676183721272
         ChildIds: 719838432390101910
-        ChildIds: 4906948746998877600
+        ChildIds: 7077416276664488021
+        ChildIds: 10667830993055628084
         ChildIds: 5904571599766240539
+        ChildIds: 1009956904966595480
+        ChildIds: 6376349754682002383
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1844,13 +1888,10 @@ Assets {
         }
       }
       Objects {
-        Id: 4906948746998877600
-        Name: "AutoShootClient"
+        Id: 7077416276664488021
+        Name: "ChargeUpBarClient"
         Transform {
           Location {
-            X: -7045
-            Y: -15775
-            Z: -3825
           }
           Rotation {
           }
@@ -1863,14 +1904,28 @@ Assets {
         ParentId: 7617081542033333176
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ShootAbility"
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 14738406619974674146
+            }
+          }
+          Overrides {
+            Name: "cs:Shoot"
             ObjectReference {
               SubObjectId: 1254248059045754243
             }
           }
           Overrides {
-            Name: "cs:Class"
-            String: "MAGE"
+            Name: "cs:ChargeUpSFX"
+            ObjectReference {
+              SubObjectId: 6376349754682002383
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpVFX"
+            ObjectReference {
+              SubObjectId: 1009956904966595480
+            }
           }
         }
         Collidable_v2 {
@@ -1884,7 +1939,37 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 14074483271059500969
+            Id: 1799007856612243505
+          }
+        }
+      }
+      Objects {
+        Id: 10667830993055628084
+        Name: "MageWandClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 359992821562966212
           }
         }
       }
@@ -1998,6 +2083,153 @@ Assets {
         }
       }
       Objects {
+        Id: 1009956904966595480
+        Name: "ChargeUpVFX"
+        Transform {
+          Location {
+            X: -595
+            Y: 355
+            Z: 225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        ChildIds: 1572193051143611592
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1572193051143611592
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+            Z: 57
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1009956904966595480
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 6376349754682002383
+        Name: "Charge Up SFX"
+        Transform {
+          Location {
+            X: -595
+            Y: 355
+            Z: 225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7617081542033333176
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 7193292322058698384
+          }
+          Pitch: -100
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+        }
+      }
+      Objects {
         Id: 10663446143340725464
         Name: "Load Out"
         Transform {
@@ -2018,6 +2250,7 @@ Assets {
         ChildIds: 3870953613855714336
         ChildIds: 2988604534664961180
         ChildIds: 14738406619974674146
+        ChildIds: 12902761704525450861
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -2668,7 +2901,190 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.2
+            Duration: 1000
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            Duration: 5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "2hand_staff_magic_bolt"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
+        Id: 12902761704525450861
+        Name: "WandCharged"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10663446143340725464
+        ChildIds: 8398189269609213643
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:EquipmentIcon"
+            AssetReference {
+              Id: 5172885977700681968
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentColor"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Equipment {
+          SocketName: "right_prop"
+          PickupTrigger {
+          }
+          Weapon {
+            ProjectileAssetRef {
+              Id: 15211008498432540868
+            }
+            MuzzleFlashAssetRef {
+              Id: 2580083533563872171
+            }
+            TrailAssetRef {
+              Id: 14811229842374036418
+            }
+            ImpactAssetRef {
+              Id: 3388166754574365222
+            }
+            Muzzle {
+              Location {
+                X: -40
+                Y: 60
+                Z: 46.8154297
+              }
+            }
+            AnimationSet: "2hand_staff_ready"
+            OutOfAmmoSfxAssetRef {
+              Id: 841534158063459245
+            }
+            ReloadSfxAssetRef {
+              Id: 9390915965553320450
+            }
+            ImpactProjectileAssetRef {
+              Id: 841534158063459245
+            }
+            BeamAssetRef {
+              Id: 841534158063459245
+            }
+            BurstCount: 1
+            BurstDuration: 1
+            BurstStopsWithRelease: true
+            Range: 7000
+            ImpactPlayerAssetRef {
+              Id: 7162940562527151262
+            }
+            ReticleType {
+              Value: "mc:ereticletype:crosshair"
+            }
+            MaxAmmo: -1
+            AmmoType: "rounds"
+            MultiShot: 1
+            ProjectileSpeed: 20000
+            ProjectileLifeSpan: 10
+            ProjectileLength: 30
+            ProjectileRadius: 30
+            ProjectileDrag: -0.1
+            SpreadMin: 0.2
+            SpreadMax: 4
+            SpreadDecreaseSpeed: 6
+            DefaultAbility {
+              SubObjectId: 8398189269609213643
+            }
+            ReloadAbility {
+              SelfId: 841534158063459245
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8398189269609213643
+        Name: "ZapCharged"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12902761704525450861
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2814,6 +3230,24 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Ability_Blue_033"
+      }
+    }
+    Assets {
+      Id: 18322083209027112941
+      Name: "Plasma Charge Up Hold VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_ChargeUp_Hold"
+      }
+    }
+    Assets {
+      Id: 7193292322058698384
+      Name: "Magic Sparkle Glitter Loop 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_magic_sparkle_glitter_loop_02_Cue_ref"
       }
     }
     Assets {
