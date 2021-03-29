@@ -30,7 +30,6 @@ local consumables = {}
 local MOUNT_LEVELS = MOUNT_LEVELS:GetChildren()
 local MAX_MOUNT_LEVEL = #MOUNT_LEVELS
 
-
 -- Currency Resource Names
 API.GOLD_RES = CONST.GOLD
 
@@ -86,7 +85,6 @@ local function GetReqXp(player, consumable)
     return costTable.reqXP, costTable.reqGold
 end
 
-
 --@param object player
 local function SetPlayerMountSpeed(player)
     local level = GetLevel(player, API.MOUNT_SPEED) or 1
@@ -114,6 +112,9 @@ function DoLevelUp(player, consumable)
         --player:SetResource(CONST.GOLD, currentGold)
         SetLevel(player, consumable, level)
         SetXp(player, consumable, xp)
+        if consumable == API.MOUNT_SPEED then
+            SetPlayerMountSpeed(player)
+        end
     end
 end
 
@@ -167,7 +168,6 @@ end
 function GetConsumables(player)
     return consumables[player.id]
 end
-
 
 function OnPlayerJoined(player)
     Task.Wait()
