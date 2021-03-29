@@ -102,9 +102,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 1.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 15042652410770879605
