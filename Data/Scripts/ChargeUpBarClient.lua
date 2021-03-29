@@ -15,8 +15,8 @@ local ChargeUITemp = script:GetCustomProperty("ChargeBar")
 local ChargePanel = nil
 local ChargeBar = nil
 
-local CHARGE_DELAY = 0.1
-local CHARGE_DURATION = 0.5
+local CHARGE_DELAY = 0.3
+local CHARGE_DURATION = 1
 
 local listeners = {}
 
