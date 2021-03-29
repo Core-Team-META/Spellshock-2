@@ -387,7 +387,7 @@ function OnResourceChanged(player, resourceName, resourceValue)
 
 	if CheckResource(resourceName, resourceValue) and not allowFeed then
 		originalValue[resourceName] = resourceValue
-		returnw
+		return
 	elseif not CheckResource(resourceName, resourceValue) or not allowFeed then
 		return
 	end
