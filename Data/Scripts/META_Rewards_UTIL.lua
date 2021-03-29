@@ -393,7 +393,7 @@ function API.OnRewardSelect(player, slotID, tbl, bool)
                 CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.HEALTH_POTION, reward.amount)
             end
         elseif reward.type == API.REWARD_TYPES.MOUNT_SPEED then
-            MOUNT().AddLevel(player)
+            CONSUMABLE().AddXP(player, CONST.CONSUMABLE_KEYS.MOUNT_SPEED, reward.amount)
         elseif reward.type == API.REWARD_TYPES.CLASS_XP then
             META_CP().AddXP(player, reward.class, reward.amount)
         end
