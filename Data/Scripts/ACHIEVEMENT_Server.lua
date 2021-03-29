@@ -1,17 +1,13 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Achievement System Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/25-SS2
--- Version 0.1.6
+-- Date: 2021/3/29-SS2
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 local ROOT = script:GetCustomProperty("AchievementSystem"):WaitForObject()
 local isEnabled = ROOT:GetCustomProperty("Enabled")
 if not isEnabled then
     return
-end
-
-local function META_CP()
-    return _G["Class.Progression"]
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRES
@@ -91,7 +87,6 @@ local function PlayerKilled(player, target, weaponType, isHeadShot)
 
     target.serverUserData.ACH_killCredited = true
     target.serverUserData.ACH_diedInRound = true
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Kills)
 end
 
 local function OnRoundEnd()
@@ -104,7 +99,6 @@ local function OnRoundEnd()
                 (orcScore < elfScore and player.team == CONST.TEAM.ELF)
          then
             ACH_API.AddProgress(player, "AS_100WINS", 1)
-            META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins)
         end
 
         ACH_API.AddProgress(player, "AS_500MATCHES", 1)
@@ -167,13 +161,10 @@ end
 function OnPlayerCapture(player, value)
     ACH_API.AddProgress(player, "AS_CAP1", value)
     ACH_API.AddProgress(player, "AS_CAP2", value)
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Captures)
-    player:AddResource(CONST.GOLD, CONST.GOLD_PER_CAPTURE)
 end
 
 function OnPlayerAssistCapture(player, value)
     ACH_API.AddProgress(player, "AS_ASSISTCAP25", value)
-    META_CP().AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.CapAssists)
 end
 
 function OnKillStreak(player, value)

@@ -148,6 +148,19 @@ API.ReqXp = {
     [50] = 389505 
 }
 
+API.DIMINISHING_RETURNS = { -- Uses a float 1.0 = 100% , 0.05 = 5%
+    [1] = 1.0,
+    [2] = 1.0,
+    [3] = 1.0,
+    [4] = 1.0,
+    [5] = 0.80,
+    [6] = 0.60,
+    [7] = 0.40,
+    [8] = 0.20,
+    [9] = 0.10,
+    [10] = 0.05
+}
+
 API.CLASS_XP = {
     Kills = 300,
     Captures = 500,
@@ -158,7 +171,7 @@ API.CLASS_XP = {
 API.GOLD_PER_KILL = 10
 API.GOLD_PER_CAPTURE = 20
 API.KILL_STREAK_BONUS_GOLD = 5
-API.CLASS_LEVEL_BONUS_GOLD = 1 --Keep at 1 for no bonus
+API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
 API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
 API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
     [1] = 3,
