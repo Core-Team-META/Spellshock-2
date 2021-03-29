@@ -1,6 +1,6 @@
 Assets {
   Id: 17514476953377261584
-  Name: "CombatProgress_Server"
+  Name: "ClassProgressHelper_Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

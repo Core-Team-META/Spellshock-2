@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------------------------
--- Combat Progress Server
+-- Class Progress Helper Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/3/28
 -- Version 0.1.1
@@ -15,6 +15,11 @@ while not _G["Class.Progression"] do
     Task.Wait()
 end
 local CLASS_PROGRESS = _G["Class.Progression"]
+
+------------------------------------------------------------------------------------------------------------------------
+-- LOCAL VARIABLES
+------------------------------------------------------------------------------------------------------------------------
+local playerInteruptCount = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -31,7 +36,9 @@ end
 
 --@params object source -- player
 --@params int value
-local function GetCaptureDiminishingReturns(source, value)
+local function GetCaptureDiminishingReturns(source, value, count)
+    local diminishing = CONST.DIMINISHING_RETURNS[count] or CONST.DIMINISHING_RETURNS[#CONST.DIMINISHING_RETURNS]
+    return CoreMath.Round(value * diminishing)
 end
 
 --@params object Object
@@ -98,6 +105,7 @@ local function OnRoundEnd()
             CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins)
         end
     end
+    playerInteruptCount = {}
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -140,8 +148,18 @@ function GoingToTakeDamage(attackData)
     end
 
     local source = attackData.source
+
+    local sourceInterupt = playerInteruptCount[source]
+
     if IsValidPlayer(target) and IsValidPlayer(source) then
-        CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Interrupt)
+        sourceInterupt = sourceInterupt and sourceInterupt + 1 or 1
+
+        CLASS_PROGRESS.AddXP(
+            source,
+            source:GetResource(CONST.CLASS_RES),
+            GetCaptureDiminishingReturns(source, CONST.CLASS_XP.Interrupt, sourceInterupt)
+        )
+        playerInteruptCount[source] = sourceInterupt
     end
 end
 
