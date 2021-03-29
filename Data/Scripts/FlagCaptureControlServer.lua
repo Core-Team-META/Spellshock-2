@@ -324,7 +324,7 @@ end
 function OnCapturePlayerDamaged(player, damage)
     if player == capturePlayer and damage.amount > 0 then
         ResetCapturePlayer()
-        player.serverUserData.isCapturingPoint = nil 
+        player.serverUserData.isCapturingPoint = false
     end
 end
 

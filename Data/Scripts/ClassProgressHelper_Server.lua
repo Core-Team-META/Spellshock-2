@@ -90,7 +90,8 @@ local function GiveXPOnKill(source, target)
     if isOnCapture then
         gainedXp = gainedXp + CONST.CLASS_XP.KillOnPoint
     end
-    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), gainedXp * CONST.EVENT_XP_MULITPLIER)
+    --#TODO Need diminishing returns for kill XP
+    CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CoreMath.Round(gainedXp * CONST.EVENT_XP_MULITPLIER))
 end
 
 local function OnRoundEnd()
@@ -102,7 +103,7 @@ local function OnRoundEnd()
             (orcScore > elfScore and player.team == CONST.TEAM.ORC) or
                 (orcScore < elfScore and player.team == CONST.TEAM.ELF)
          then
-            CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CONST.CLASS_XP.Wins * CONST.EVENT_XP_MULITPLIER)
+            CLASS_PROGRESS.AddXP(player, player:GetResource(CONST.CLASS_RES), CoreMath.Round(CONST.CLASS_XP.Wins * CONST.EVENT_XP_MULITPLIER))
         end
     end
     playerInteruptCount = {}
@@ -172,6 +173,7 @@ function GoingToTakeDamage(attackData)
             )
         )
         playerInteruptCount[source] = sourceInterupt
+        target.serverUserData.isCapturingPoint = false
     end
 end
 
