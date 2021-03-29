@@ -2024,7 +2024,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
       Volume: 0.35
       Falloff: 2500
       Radius: 8100
