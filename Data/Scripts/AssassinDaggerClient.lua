@@ -16,8 +16,6 @@ local CHARGE_DURATION = 1
 
 local listeners = {}
 
-
-
 local function DisconnectListeners()
 	for _, listener in ipairs(listeners) do
 		if listener.isConnected then
@@ -27,24 +25,22 @@ local function DisconnectListeners()
 end
 
 function AbilityTick(ability, deltaTime)
-    if ability.owner ~= LOCAL_PLAYER then
-        return
-    end
-
     if CHARGING_ABILITY:GetCurrentPhase() == AbilityPhase.CAST then
-        if LOCAL_PLAYER.isDead then
-            CHARGING_ABILITY:Interrupt()
-        end
-        if not LOCAL_PLAYER:IsBindingPressed(SHOOT_BINDING) then
-            CHARGING_ABILITY:AdvancePhase()
-            return
-        end
-        if LOCAL_PLAYER:IsBindingPressed("ability_secondary") then
-            CHARGING_ABILITY:Interrupt()
+        -- Only do this for local player
+        if ability.owner == LOCAL_PLAYER then
+            if LOCAL_PLAYER.isDead then
+                CHARGING_ABILITY:Interrupt()
+            end
+            if not LOCAL_PLAYER:IsBindingPressed(SHOOT_BINDING) then
+                CHARGING_ABILITY:AdvancePhase()
+                return
+            end
+            if LOCAL_PLAYER:IsBindingPressed("ability_secondary") then
+                CHARGING_ABILITY:Interrupt()
+            end
         end
 
         --------------------------------------------------------------
-
         local chargeTime = math.max(0, CHARGING_ABILITY.castPhaseSettings.duration - CHARGING_ABILITY:GetPhaseTimeRemaining() - CHARGE_DELAY)
         local chargeAmount = CoreMath.Clamp(chargeTime / CHARGE_DURATION )
         ability.clientUserData.chargeAmount = chargeAmount
@@ -61,21 +57,23 @@ function OnExecuteAbility(ability)
             else
                 CHARGING_ABILITY:Interrupt()
             end
-        else
-            print ("Activate charged shoot")
-
-            -- Do a charged attack
-            local swipe1 = World.SpawnAsset(DAGGER_SWIPE_CHARGED_VFX)
-            local swipe2 = World.SpawnAsset(DAGGER_SWIPE_CHARGED_VFX)
-
-            swipe1:AttachToPlayer(ability.owner, "left_prop")
-            swipe2:AttachToPlayer(ability.owner,"right_prop")
-
-            Task.Wait(0.4)
-
-            DeactiveTrail(swipe1)
-            DeactiveTrail(swipe2)
+            return
         end
+    end
+
+    -- For the charged attack make vfx
+    if ability.clientUserData.chargeAmount >= 1 then
+        -- Do a charged attack
+        local swipe1 = World.SpawnAsset(DAGGER_SWIPE_CHARGED_VFX)
+        local swipe2 = World.SpawnAsset(DAGGER_SWIPE_CHARGED_VFX)
+
+        swipe1:AttachToPlayer(ability.owner, "left_prop")
+        swipe2:AttachToPlayer(ability.owner,"right_prop")
+
+        Task.Wait(0.4)
+
+        DeactiveTrail(swipe1)
+        DeactiveTrail(swipe2)
     end
 end
 
@@ -92,9 +90,7 @@ end
 
 function OnInterruptAbility(ability)
     ability.clientUserData.chargeAmount = 0
-    if ability.owner ~= LOCAL_PLAYER then return end
 end
-
 
 -- Connect up the ability
 listeners[#listeners+1] = CHARGING_ABILITY.tickEvent:Connect(AbilityTick)
@@ -105,7 +101,9 @@ listeners[#listeners+1] = CHARGING_ABILITY.interruptedEvent:Connect(OnInterruptA
 function OnBindingPressed(player, binding)
 	if binding == "ability_primary" and not ROOT_EQUIPMENT.clientUserData.isPreviewing then
         if DAGGER_LEFT_ABILITY:GetCurrentPhase() == AbilityPhase.READY or DAGGER_RIGHT_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
-		    CHARGING_ABILITY:Activate()
+		    if CHARGING_ABILITY:GetCurrentPhase() == AbilityPhase.READY then
+                CHARGING_ABILITY:Activate()
+            end
         end
 	end
 end

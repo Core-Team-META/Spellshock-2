@@ -127,15 +127,17 @@ function OnEquipped(_, player)
 end
 
 WEAPON.unequippedEvent:Connect(function()
-	if ChargePanel then
+	if Object.IsValid(ChargePanel) then
 		ChargePanel:Destroy()
+        ChargePanel = nil
 	end
 end)
 
 script.destroyEvent:Connect(
 function()
-    if ChargePanel then
+    if Object.IsValid(ChargePanel) then
         ChargePanel:Destroy()
+        ChargePanel = nil
     end
     DisconnectListeners()
 end
