@@ -16,13 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 5342039914114689738
-        ChildIds: 1802962906714921640
-        ChildIds: 3655646741166042187
-        ChildIds: 8715514430191820336
-        ChildIds: 6668755532381922856
-        ChildIds: 1387695381622696505
-        ChildIds: 4662501779038797083
+        ChildIds: 14218430384572435386
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -39,16 +33,15 @@ Assets {
         }
       }
       Objects {
-        Id: 5342039914114689738
-        Name: "Sky Dome"
+        Id: 14218430384572435386
+        Name: "ClientContext"
         Transform {
           Location {
-            X: -200
-            Y: -300
-            Z: 100
+            X: -327.966461
+            Y: 75.2325287
+            Z: -6172.94971
           }
           Rotation {
-            Yaw: -44.3717041
           }
           Scale {
             X: 1
@@ -57,6 +50,44 @@ Assets {
           }
         }
         ParentId: 18071166912119165262
+        ChildIds: 5342039914114689738
+        ChildIds: 1802962906714921640
+        ChildIds: 3655646741166042187
+        ChildIds: 8715514430191820336
+        ChildIds: 6668755532381922856
+        ChildIds: 1387695381622696505
+        ChildIds: 4662501779038797083
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 5342039914114689738
+        Name: "Sky Dome"
+        Transform {
+          Location {
+            X: 127.966461
+            Y: -375.232544
+            Z: 6272.94971
+          }
+          Rotation {
+            Yaw: -44.3716774
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Cloud Shape"
@@ -232,13 +263,14 @@ Assets {
         Name: "Sun Light"
         Transform {
           Location {
-            X: -50
-            Z: 300
+            X: 277.966461
+            Y: -75.2325287
+            Z: 6472.94971
           }
           Rotation {
-            Pitch: -55.7193
-            Yaw: 169.320099
-            Roll: 4.45716524
+            Pitch: -55.7192802
+            Yaw: 169.320084
+            Roll: 4.45716572
           }
           Scale {
             X: 1
@@ -246,7 +278,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Light Color"
@@ -303,7 +335,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Dynamic Shadow Distance"
-            Float: 2.5
+            Float: 3
           }
           Overrides {
             Name: "bp:Cast Volumetric Shadows"
@@ -362,6 +394,9 @@ Assets {
         Name: "Ambient Occlusion Post Process"
         Transform {
           Location {
+            X: 327.966461
+            Y: -75.2325287
+            Z: 6172.94971
           }
           Rotation {
           }
@@ -371,7 +406,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Quality"
@@ -428,12 +463,11 @@ Assets {
         Name: "Advanced Color Grading Post Process"
         Transform {
           Location {
-            X: -2295.76514
-            Y: 526.627686
-            Z: -6172.94971
+            X: -1967.79871
+            Y: 451.395142
           }
           Rotation {
-            Yaw: 1.36603767e-05
+            Yaw: 1.36603758e-05
           }
           Scale {
             X: 300
@@ -441,7 +475,7 @@ Assets {
             Z: 200
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color Contrast"
@@ -474,7 +508,7 @@ Assets {
               R: 1
               G: 1
               B: 1
-              A: 0.95
+              A: 1
             }
           }
           Overrides {
@@ -509,6 +543,9 @@ Assets {
         Name: "Simple Exposure Post Process"
         Transform {
           Location {
+            X: 327.966461
+            Y: -75.2325287
+            Z: 6172.94971
           }
           Rotation {
           }
@@ -518,7 +555,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Exposure"
@@ -547,8 +584,9 @@ Assets {
         Name: "Skylight"
         Transform {
           Location {
-            X: 250
-            Y: 300
+            X: 577.966431
+            Y: 224.767471
+            Z: 6172.94971
           }
           Rotation {
           }
@@ -558,7 +596,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Index"
@@ -609,7 +647,9 @@ Assets {
         Name: "Environment Fog Default VFX"
         Transform {
           Location {
-            Z: 7200
+            X: 327.966461
+            Y: -75.2325287
+            Z: 13372.9492
           }
           Rotation {
           }
@@ -619,7 +659,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18071166912119165262
+        ParentId: 14218430384572435386
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"

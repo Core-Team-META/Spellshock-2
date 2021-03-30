@@ -1970,6 +1970,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8912770877519493962
+  Name: "Screen Space Reflection Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_ssr"
+  }
+}
+Assets {
   Id: 8834933182589795814
   Name: "Wedge - Corner Complex"
   PlatformAssetType: 1

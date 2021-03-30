@@ -22658,10 +22658,12 @@ Objects {
   Name: "Rock Block 01"
   Transform {
     Location {
+      X: 4.30041838
+      Y: 0.397858679
     }
     Rotation {
       Pitch: 0.988328338
-      Yaw: 68.4663696
+      Yaw: 72.9368515
       Roll: 177.179855
     }
     Scale {
