@@ -7,7 +7,7 @@ Assets {
       RootId: 16539040428646565497
       Objects {
         Id: 16539040428646565497
-        Name: "SlowStatusFX"
+        Name: "Helper_SlowStatusFX"
         Transform {
           Scale {
             X: 1
@@ -47,7 +47,7 @@ Assets {
         ParentId: 16539040428646565497
         ChildIds: 2381585590699441043
         ChildIds: 1848160653864328488
-        ChildIds: 14469045063229085727
+        ChildIds: 14451659404839324466
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -258,11 +258,10 @@ Assets {
         }
       }
       Objects {
-        Id: 14469045063229085727
-        Name: "Magic Dark Portal Summon 01 SFX"
+        Id: 14451659404839324466
+        Name: "Meta Fantasy Debuff 01 SFX"
         Transform {
           Location {
-            Z: 250
           }
           Rotation {
           }
@@ -284,9 +283,10 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 8390081188686627930
+            Id: 6769684776685552986
           }
           AutoPlay: true
+          Pitch: -1200
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -314,12 +314,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8390081188686627930
-      Name: "Magic Dark Portal Summon 01 SFX"
+      Id: 6769684776685552986
+      Name: "Meta Fantasy Debuff 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_dark_portal_summon_01_Cue_ref"
+        AssetId: "sfx_meta_fantasy_debuff_01_Cue_ref"
       }
     }
     PrimaryAssetId {
