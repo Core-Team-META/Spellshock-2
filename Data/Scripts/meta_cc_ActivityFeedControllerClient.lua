@@ -59,8 +59,15 @@ function TablePrint(tbl, indent)
     end
 end
 
+
+
 -- Kill Feed
 local KILL_FEED_SETTINGS = script:GetCustomProperty("KillFeedSettings"):WaitForObject()
+
+local JOINED_ICON = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIcon")
+local LEFT_ICON = KILL_FEED_SETTINGS:GetCustomProperty("LeftIcon")
+local JOINED_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("JoinedIconColor")
+local LEFT_ICON_COLOR = KILL_FEED_SETTINGS:GetCustomProperty("LeftIconColor")
 
 local NUM_LINES = KILL_FEED_SETTINGS:GetCustomProperty("NumLines")
 local LINE_DURATION = KILL_FEED_SETTINGS:GetCustomProperty("LineDuration")
@@ -174,12 +181,19 @@ function AddLine(line, color)
 	lines[1].skillUsedImage = line[3] or ""
 	lines[1].killerMaxHP = line[4] or ""
 	lines[1].killerHP = line[5] or ""
-	lines[1].distance = line[6] or ""
+	lines[1].distance = 0 -- line[6] or ""
 	lines[1].color = line[7] or color
 	lines[1].killerColor = line[8] or color
 	lines[1].killedColor = line[9] or color
 	lines[1].killerImage = line[10]
-	lines[1].killedImage = line[11]
+
+	if (line[4] == "PlayerJoined") then
+		lines[1].killedImage = JOINED_ICON
+	elseif (line[4] == "PlayerLeft") then
+		lines[1].killedImage = LEFT_ICON
+	else
+		lines[1].killedImage = line[11]
+	end
 	lines[1].displayTime = time()
 
 end
@@ -328,7 +342,7 @@ function Tick(deltaTime)
 
 				for _, element in ipairs(feedLines) do
 					if (element.name == "KillerImage") then
-						if (lines[i].killerImage ~= "") then
+						if (lines[i].killerImage ~= "" and lines[i].killer ~= "") then
 
 							local feedIcon = element:FindDescendantByName("Layer_05")
 							feedIcon:SetColor(Color.New(1,0.3579, 0, 1))
@@ -428,7 +442,7 @@ function Tick(deltaTime)
 						end
 					end
 					if (element.name == "KilledWithTextLabel") then
-						if (lines[i].killed ~= "") then
+						if (lines[i].killed ~= "" and lines[i].skillUsedImage ~= "") then
 							local textBox = element:FindDescendantByName("Text Box")
 							textBox.text = "using"
 							textBox.justification = TextJustify.CENTER
@@ -537,16 +551,11 @@ function Tick(deltaTime)
 					-- Skill
 					feedElements["SkillImage"].x = xPos
 					xPos = xPos - feedElements["SkillImage"].width - GAP_SPACE
+
+					feedElements["KilledWithTextLabel"].x = xPos
+					xPos = xPos - feedElements["KilledWithTextLabel"].width - GAP_SPACE
 				end
 
-				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
-				-- 	-- Distance
-				-- 	feedElements["Distance"].x = xPos
-				-- 	xPos = xPos - feedElements["Distance"].width - GAP_SPACE
-				-- end
-
-				feedElements["KilledWithTextLabel"].x = xPos
-				xPos = xPos - feedElements["KilledWithTextLabel"].width - GAP_SPACE
 
 				-- killed
 				feedElements["KilledText"].x = xPos
@@ -582,7 +591,11 @@ function Tick(deltaTime)
 				end
 
 
-
+				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
+				-- 	-- Distance
+				-- 	feedElements["Distance"].x = xPos
+				-- 	xPos = xPos - feedElements["Distance"].width - GAP_SPACE
+				-- end
 
 
 
@@ -694,3 +707,4 @@ if SHOW_JOIN_AND_LEAVE then
 	Game.playerJoinedEvent:Connect(OnPlayerJoined)
 	Game.playerLeftEvent:Connect(OnPlayerLeft)
 end
+

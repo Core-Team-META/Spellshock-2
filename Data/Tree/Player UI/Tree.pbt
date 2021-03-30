@@ -383,6 +383,32 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:JoinedIcon"
+      AssetReference {
+        Id: 14436976356615594853
+      }
+    }
+    Overrides {
+      Name: "cs:LeftIcon"
+      AssetReference {
+        Id: 9384520849142346961
+      }
+    }
+    Overrides {
+      Name: "cs:JoinedIconColor"
+      Color {
+        G: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:LeftIconColor"
+      Color {
+        R: 0.98
+        A: 1
+      }
+    }
+    Overrides {
       Name: "cs:NumLines:tooltip"
       String: "Number of lines to display"
     }
