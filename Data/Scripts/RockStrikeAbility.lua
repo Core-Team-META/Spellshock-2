@@ -133,7 +133,7 @@ end
 
 
 function OnEquip(equipment, player)
-	local skin = equipment:GetCustomProperty("QID")
+	local skin = equipment:GetCustomProperty("QID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().Q)
 end
 

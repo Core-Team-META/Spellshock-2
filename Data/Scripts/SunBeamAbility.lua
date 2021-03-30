@@ -142,7 +142,7 @@ function Tick(deltaTime)
 end
 
 function OnEquip(thisEquipment, player)
-	local skin = Equipment:GetCustomProperty("QID")
+	local skin = Equipment:GetCustomProperty("QID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HEALER, player.team, skin, META_AP().Q)
 end
 

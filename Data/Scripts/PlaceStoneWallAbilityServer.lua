@@ -45,7 +45,7 @@ end
 function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
-	local skin = equipment:GetCustomProperty("EID")
+	local skin = equipment:GetCustomProperty("EID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().E)
 
 end

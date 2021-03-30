@@ -19,7 +19,7 @@ end
 
 function AttachCostume(player)
 	Task.Wait()
-	local skin = ParentEquipment:GetCustomProperty("OID")
+	local skin = ParentEquipment:GetCustomProperty("OID") or 1
 	local CostumeTemplate = META_VFX().GetCosmeticMuid(player, ClassID, player.team, skin, 8)
 	--local CostumeTemplate = META_VFX().GetCurrentCostume(player, ClassID) --ParentEquipment:GetCustomProperty("CostumeTemplate")
 	local PlayerAttachments = {}
