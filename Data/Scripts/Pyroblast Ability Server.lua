@@ -212,7 +212,7 @@ function OnEquip(equipment, player)
 	EventListeners["respawnedEvent"] = player.respawnedEvent:Connect(OnPlayerRespawn)
 	EventListeners["cooldownEvent"] = SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown )
 	
-	local skin = Equipment:GetCustomProperty("RID")
+	local skin = Equipment:GetCustomProperty("RID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().MAGE, player.team, skin, META_AP().R)
 end
 

@@ -287,6 +287,7 @@ Assets {
         ChildIds: 5860721053988265057
         ChildIds: 5299436359358767007
         ChildIds: 13362444373570816513
+        ChildIds: 15530712968859105786
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -378,7 +379,7 @@ Assets {
           Overrides {
             Name: "cs:Burst"
             ObjectReference {
-              SubObjectId: 5299436359358767007
+              SubObjectId: 15530712968859105786
             }
           }
           Overrides {
@@ -565,7 +566,7 @@ Assets {
           Volume: 1
           Falloff: 3000
           Radius: 3000
-          FadeInTime: 0.5
+          FadeInTime: 1.5
           IsAttenuationEnabled: true
         }
       }
@@ -636,9 +637,9 @@ Assets {
           AudioAsset {
             Id: 2538994747368739144
           }
-          Pitch: -400
-          Volume: 1
-          Falloff: 15000
+          Pitch: -800
+          Volume: 1.2
+          Falloff: 20000
           Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -6407,6 +6408,42 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 15530712968859105786
+        Name: "Big Hammer Huge Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17112164974070941038
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          Pitch: -1800
+          Volume: 1.2
+          Falloff: 20000
+          Radius: 5000
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 13950225922132296555
@@ -6577,6 +6614,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "fxsm_candleflame"
+      }
+    }
+    Assets {
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
     PrimaryAssetId {

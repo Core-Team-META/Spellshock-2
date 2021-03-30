@@ -171,7 +171,7 @@ function OnEquip(equipment, player)
 	end
 	if not PreviewObjectTemplate then
 		local bind = META_AP()[BindingName]
-		local skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		local skin = Equipment:GetCustomProperty(NetworkProperties[bind]) or 1
 		PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP()[Class], player.team, skin, bind)
 	end
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

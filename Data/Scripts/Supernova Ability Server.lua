@@ -113,7 +113,7 @@ function OnSpecialAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local skin = Equipment:GetCustomProperty("TID")
+	local skin = Equipment:GetCustomProperty("TID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HEALER, player.team, skin, META_AP().T)	
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))

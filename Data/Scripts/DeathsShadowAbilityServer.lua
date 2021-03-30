@@ -137,7 +137,7 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
 
-	local skin = Equipment:GetCustomProperty("EID")
+	local skin = Equipment:GetCustomProperty("EID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().E)
 end
 
