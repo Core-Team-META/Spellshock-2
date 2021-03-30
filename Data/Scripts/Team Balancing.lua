@@ -39,9 +39,9 @@ function ComputePlayerValue(player)
 	player.serverUserData.balanceValue = value
 	
 	print("[Balance] Player " .. player.name .. 
-		", classValue = " .. accountLevel .. "->" .. totalClassValue .. 
-		", winRateValue = " .. weightedWinRate .. "->" .. winRateValue .. 
-		", totalValue = " .. value)
+		", classValue = " .. tostring(accountLevel) .. "->" .. tostring(totalClassValue) .. 
+		", winRateValue = " .. tostring(weightedWinRate) .. "->" .. tostring(winRateValue) .. 
+		", totalValue = " .. tostring(value))
 	
 	return value
 end
