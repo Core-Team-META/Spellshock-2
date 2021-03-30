@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/31/2020
@@ -56,7 +56,11 @@ end
 --@return int reqXP, int reqGold
 local function GetReqCurrency(player, class, bind, level)
     --local currentLevel = level or player:GetResource(UTIL.GetLevelString(class, bind))
-    local currentLevel = level or _G.PerPlayerDictionary.GetNumber(UTIL.GetLevelString(class, bind))
+    local currentLevel = level
+    if not level then
+    	_G.PerPlayerDictionary.WaitForPlayer(player)
+    	currentLevel = _G.PerPlayerDictionary.GetNumber(UTIL.GetLevelString(class, bind))
+    end
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
 end
