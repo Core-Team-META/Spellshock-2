@@ -1989,6 +1989,12 @@ Assets {
               SubObjectId: 3925533277137838420
             }
           }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 14260752558408215515
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

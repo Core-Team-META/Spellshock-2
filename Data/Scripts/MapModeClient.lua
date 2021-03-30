@@ -1,4 +1,4 @@
-﻿ --[[
+ --[[
 Copyright 2019 Manticore Games, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -19,6 +19,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local AS = require(script:GetCustomProperty("API"))
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
+local MAP_OPEN_SFX = script:GetCustomProperty("MapOpenSFX"):WaitForObject()
 
 -- User exposed properties
 local MAP_BINDING = COMPONENT_ROOT:GetCustomProperty("MapBinding")
@@ -41,6 +42,7 @@ function OnBindingPressed(player, binding)
 	not LOCAL_PLAYER:GetOverrideCamera() and _G.CurrentMenu == _G.MENU_TABLE["NONE"] then
 		LOCAL_PLAYER:SetOverrideCamera(CAMERA)
 		AS.SetIsViewingMap(true)
+		MAP_OPEN_SFX:Play()
 	end
 end
 

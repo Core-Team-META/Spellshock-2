@@ -24,6 +24,7 @@ Assets {
         ChildIds: 5523059630807632295
         ChildIds: 17698061587794857673
         ChildIds: 11773711938537467510
+        ChildIds: 9119047969509907838
         Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
@@ -7478,6 +7479,43 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 9119047969509907838
+        Name: "Crossbow Compound Bow Shot 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15727976444308209285
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 364058193793040760
+          }
+          AutoPlay: true
+          Pitch: -400
+          Volume: 0.8
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 17977280587505271142
@@ -7549,6 +7587,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_designer_ground_shaking_deep_impact_hit_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 364058193793040760
+      Name: "Crossbow Compound Bow Shot 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crossbow_compound_bow_shot_01a_Cue_ref"
       }
     }
     PrimaryAssetId {

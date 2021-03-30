@@ -2328,9 +2328,10 @@ Assets {
           AudioAsset {
             Id: 14165644718560975210
           }
-          Volume: 1
-          Falloff: 4000
-          Radius: 200
+          Pitch: -600
+          Volume: 1.5
+          Falloff: 8000
+          Radius: 2000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -2392,7 +2393,7 @@ Assets {
           Overrides {
             Name: "bp:Type"
             Enum {
-              Value: "mc:esfx_explosions_small:51"
+              Value: "mc:esfx_explosions_small:54"
             }
           }
         }
@@ -2413,9 +2414,9 @@ Assets {
           }
           AudioBP {
             Pitch: -316.049316
-            Volume: 1
-            Falloff: 4000
-            Radius: 200
+            Volume: 1.2
+            Falloff: 8000
+            Radius: 2000
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
           }

@@ -1,4 +1,13 @@
 Assets {
+  Id: 15863266387157766240
+  Name: "Paper Book Open Close Page 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_paper_book_open_close_page_01_Cue_ref"
+  }
+}
+Assets {
   Id: 10769838940944209875
   Name: "Score Tick Tally Single 01 SFX"
   PlatformAssetType: 7

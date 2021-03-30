@@ -128,6 +128,7 @@ Objects {
   ParentId: 12124708511639495803
   ChildIds: 11849857975967017671
   ChildIds: 9182481905067773040
+  ChildIds: 4086918191996775237
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -137,11 +138,55 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a concentrated orb of solar fire that damages enemies."
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a concentrated orb of solar fire that damages enemies. Charge and hold for a more powerful attack that heals you!"
     }
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 4086918191996775237
+  Name: "Self Healing"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16964737736516394105
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Amount of healing from a charged attack"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
     }
   }
   Collidable_v2 {
@@ -2236,6 +2281,7 @@ Objects {
   ParentId: 12532102525843773576
   ChildIds: 15672601001082038311
   ChildIds: 2100149664327673084
+  ChildIds: 3130471854481449729
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -2245,11 +2291,55 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire an orb of pure magic that damages enemies."
+      String: "Ranged Weapon \342\200\223 Press LMB to fire an orb of pure magic that damages enemies. Charge and hold for a powerful attack that slows the target!"
     }
     Overrides {
       Name: "cs:Bind"
       String: "LMB"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3130471854481449729
+  Name: "Slow Charge Amount"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15120668890933236329
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Effect % of slow on a fully charged attack"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 6771331753314177437
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
     }
   }
   Collidable_v2 {

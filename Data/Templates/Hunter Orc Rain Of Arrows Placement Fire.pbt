@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 7210072172428516374
         ChildIds: 9383788969873379515
         ChildIds: 13486999584329278724
@@ -24,6 +24,7 @@ Assets {
         ChildIds: 1451725938873711867
         ChildIds: 8993383170236580241
         ChildIds: 5238679175490094115
+        ChildIds: 10788285486382408761
         Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
@@ -7478,6 +7479,43 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 10788285486382408761
+        Name: "Crossbow Compound Bow Shot 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17517058638544218899
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 364058193793040760
+          }
+          AutoPlay: true
+          Pitch: -400
+          Volume: 0.8
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 2721088161473172859
@@ -7549,6 +7587,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pyramid_001"
+      }
+    }
+    Assets {
+      Id: 364058193793040760
+      Name: "Crossbow Compound Bow Shot 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crossbow_compound_bow_shot_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
