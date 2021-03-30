@@ -275,6 +275,8 @@ end
 function API.GetCurrentCosmeticId(player, class, bind)
     --return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     --local key = UTIL.GetSkinString(class, player.team, bind)
+    while not playerEquippedCosmetic[player] do Task.Wait() end
+
     return playerEquippedCosmetic[player][class][bind][player.team]
 end
 

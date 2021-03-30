@@ -43,7 +43,9 @@ end
 
 function Tick()
     if _G.CurrentMenu and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"]) and
-    ABGS.GetGameState() == ABGS.GAME_STATE_ROUND and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap()then
+    (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) or 
+    ((ABGS.GetGameState() == ABGS.GAME_STATE_REWARDS or ABGS.GetGameState() == ABGS.GAME_STATE_REWARDS_END) and LOCAL_PLAYER.clientUserData.hasSkippedReward and _G.CurrentMenu == _G.MENU_TABLE["NONE"])
+    and not LOCAL_PLAYER.isDead and not AS.IsJoiningMidgame() and not AS.IsViewingMap()then
         BottomBar.visibility = Visibility.INHERIT
         if currentClassId then
             local level = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(currentClassId))

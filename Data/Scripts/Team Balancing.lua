@@ -27,6 +27,10 @@ function ComputePlayerValue(player)
 	totalClassValue = totalClassValue * TOTAL_CLASS_VALUE_COEFFICIENT
 	value = value + totalClassValue
 	
+	while not player.serverUserData.weightedWinRate do
+		Task.Wait()
+	end
+
 	-- Add the player's win rate
 	local weightedWinRate = player.serverUserData.weightedWinRate
 	local winRateValue = weightedWinRate
