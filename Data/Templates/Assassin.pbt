@@ -58,11 +58,51 @@ Assets {
             String: "unarmed_ready"
           }
           Overrides {
+            Name: "cs:OID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:QID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:EID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:RID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:TID"
+            Int: 0
+          }
+          Overrides {
             Name: "cs:T_isPreviewing:isrep"
             Bool: true
           }
           Overrides {
             Name: "cs:isInvisible:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:OID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:QID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:EID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:RID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:TID:isrep"
             Bool: true
           }
         }

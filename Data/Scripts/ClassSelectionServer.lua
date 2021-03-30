@@ -3,6 +3,12 @@
     return _G["Meta.Ability.Progression"]
 end
 
+
+local function GetCurrentCosmeticId(player, classID, bind)
+    return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
+end
+
+
 local ABGS = require(script:GetCustomProperty("ABGS"))
 
 local ClassTemplates = {
@@ -20,6 +26,22 @@ local Class_Stances = {
 	[META_AP().ASSASSIN] = "unarmed_ready",
 	[META_AP().HEALER] = "2hand_staff_stance"
 }
+
+local function EquipPlayer(player, classID)
+    local newClass = World.SpawnAsset(ClassTemplates[classID])
+    local oId = GetCurrentCosmeticId(player, classID, 8)
+    local qId = GetCurrentCosmeticId(player, classID, 1)
+    local eId = GetCurrentCosmeticId(player, classID, 2)
+    local rId = GetCurrentCosmeticId(player, classID, 3)
+    local tId = GetCurrentCosmeticId(player, classID, 4)
+    newClass:SetNetworkedCustomProperty("OID", oId)
+    newClass:SetNetworkedCustomProperty("QID", qId)
+    newClass:SetNetworkedCustomProperty("EID", eId)
+    newClass:SetNetworkedCustomProperty("RID", rId)
+    newClass:SetNetworkedCustomProperty("TID", tId)
+    Task.Wait()
+    newClass:Equip(player)
+end
 
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end 
@@ -49,8 +71,7 @@ function OnClassChanged(player, classID)
         end
 
         player.animationStance = Class_Stances[classID]
-        local newClass = World.SpawnAsset(ClassTemplates[classID])
-        newClass:Equip(player)
+        EquipPlayer(player, classID)
 
         -- Used for determining which class is used during the round; used for calculating reward slot 1
         player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
@@ -83,8 +104,7 @@ function OnGameStateChanged(oldState, newState)
                 classID = META_AP().TANK
             end
 
-            local newClass = World.SpawnAsset(ClassTemplates[classID])
-	        newClass:Equip(player)
+            EquipPlayer(player, classID)
 
             player.serverUserData.ClassesPlayed = {}
             player.serverUserData.ClassesPlayed[classID] = 1
