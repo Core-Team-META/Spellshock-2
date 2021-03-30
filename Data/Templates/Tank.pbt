@@ -573,7 +573,7 @@ Assets {
       }
       Objects {
         Id: 2523905926295798748
-        Name: "ShieldDashAbilityServer"
+        Name: "LandslideAbilityServer"
         Transform {
           Location {
             Z: -55
@@ -608,6 +608,12 @@ Assets {
             Name: "cs:ModuleManager"
             AssetReference {
               Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:ClassEquipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
             }
           }
         }
