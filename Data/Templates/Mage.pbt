@@ -2020,6 +2020,12 @@ Assets {
               SubObjectId: 1572193051143611592
             }
           }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 11061498928952833517
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

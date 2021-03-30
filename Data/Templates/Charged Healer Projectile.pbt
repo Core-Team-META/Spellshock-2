@@ -1,13 +1,13 @@
 Assets {
-  Id: 5848035641096396117
-  Name: "Mage Wand Charged Projectile"
+  Id: 3220085175167232675
+  Name: "Charged Healer Projectile"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13812049559045740344
+      RootId: 12173040903141248011
       Objects {
-        Id: 13812049559045740344
-        Name: "Mage Wand Charged Projectile"
+        Id: 12173040903141248011
+        Name: "Charged Healer Projectile"
         Transform {
           Scale {
             X: 1
@@ -16,9 +16,9 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 17527243013910238081
-        ChildIds: 5533752448421984765
-        ChildIds: 776918528432049167
+        ChildIds: 16090600127308832863
+        ChildIds: 8011460957073006069
+        ChildIds: 14755650529493556098
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -33,7 +33,36 @@ Assets {
         }
       }
       Objects {
-        Id: 17527243013910238081
+        Id: 16090600127308832863
+        Name: "Group"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12173040903141248011
+        ChildIds: 17900891789027779417
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17900891789027779417
         Name: "Magic Tracer VFX"
         Transform {
           Location {
@@ -41,16 +70,16 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 2
-            Y: 2
-            Z: 2
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 13812049559045740344
+        ParentId: 16090600127308832863
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
-            Int: 4
+            Int: 2
           }
           Overrides {
             Name: "bp:Emissive Boost"
@@ -59,9 +88,8 @@ Assets {
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.00999999
-              G: 0.0362248421
-              B: 1
+              R: 0.0222516246
+              G: 0.419999957
               A: 1
             }
           }
@@ -76,35 +104,10 @@ Assets {
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.0231126547
-              G: 0.00999999
-              B: 1
+              G: 0.590000033
+              B: 0.168013334
               A: 1
             }
-          }
-          Overrides {
-            Name: "bp:Hot Spot"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Secondary Index"
-            Int: 13
-          }
-          Overrides {
-            Name: "bp:Tertiary Index"
-            Int: 1
-          }
-          Overrides {
-            Name: "bp:Height"
-            Float: 1.7
-          }
-          Overrides {
-            Name: "bp:Width"
-            Float: 1.7
-          }
-          Overrides {
-            Name: "bp:Length"
-            Float: 1.3
           }
         }
         Collidable_v2 {
@@ -125,7 +128,68 @@ Assets {
         }
       }
       Objects {
-        Id: 5533752448421984765
+        Id: 8011460957073006069
+        Name: "Torch Fire VFX"
+        Transform {
+          Location {
+            Z: -7.70004272
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.377714
+            Y: 0.377714
+            Z: 0.377714
+          }
+        }
+        ParentId: 12173040903141248011
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:color"
+            Color {
+              R: 0.590000033
+              G: 0.164105952
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.7
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              G: 0.65
+              B: 0.340066373
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 4603537691901304316
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14755650529493556098
         Name: "Magic Projectile VFX"
         Transform {
           Location {
@@ -133,44 +197,35 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 2
-            Y: 2
-            Z: 2
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 13812049559045740344
+        ParentId: 12173040903141248011
         UnregisteredParameters {
           Overrides {
             Name: "bp:Secondary Color"
             Color {
-              R: 0.0500000119
-              G: 0.0940397382
-              B: 1
+              G: 0.559999943
+              B: 0.11496684
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color"
             Color {
-              G: 0.00384080433
-              B: 0.580000043
+              G: 0.480000019
+              B: 0.203443795
               A: 1
             }
-          }
-          Overrides {
-            Name: "bp:Enable Main Trail"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 2
           }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -189,74 +244,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 776918528432049167
-        Name: "Plasma Ball Projectile VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.37348533
-            Y: 1.37348533
-            Z: 1.37348533
-          }
-        }
-        ParentId: 13812049559045740344
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Enable Flare"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Enable Plasma"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.00701990584
-              B: 0.53
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Enable Arc Ball"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Enable Arcs "
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 15
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 1831315401048516328
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
     }
     Assets {
       Id: 1062948212017374859
@@ -268,21 +255,21 @@ Assets {
       }
     }
     Assets {
+      Id: 4603537691901304316
+      Name: "Torch Fire VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_torch_fire"
+      }
+    }
+    Assets {
       Id: 9919395327939304349
       Name: "Magic Projectile VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_magic_projectile"
-      }
-    }
-    Assets {
-      Id: 1831315401048516328
-      Name: "Plasma Ball Projectile VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_plasmaball_projectile"
       }
     }
     PrimaryAssetId {
