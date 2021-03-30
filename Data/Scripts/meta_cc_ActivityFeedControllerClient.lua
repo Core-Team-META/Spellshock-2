@@ -227,13 +227,13 @@ function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	]]
 		local feedTable = {}
 
-		feedTable[feedFields.killer] = "Hillbilly" --killerPlayer.name
-		feedTable[feedFields.killed] = "CitySlicker" --killedPlayer.name
+		feedTable[feedFields.killer] = killerPlayer.name
+		feedTable[feedFields.killed] = killedPlayer.name
 		feedTable[feedFields.skillUsedImage] = skillIcons[damageAbilityName]
 		feedTable[feedFields.killerMaxHP] = "" -- killerMaxHP
 		feedTable[feedFields.killerHP] = "" -- killer HP, default
 		feedTable[feedFields.distance] = "" -- Distance, default
-		feedTable[feedFields.color] = lineColor 
+		feedTable[feedFields.color] = lineColor
 		feedTable[feedFields.killerColor] = killerColor
 		feedTable[feedFields.killedColor] = killedColor
 		feedTable[feedFields.killerImage] = classIcons[ClassIDs[killerPlayer:GetResource("CLASS_MAP")]]
@@ -330,9 +330,11 @@ function Tick(deltaTime)
 					if (element.name == "KillerImage") then
 						if (lines[i].killerImage ~= "") then
 
-							local feedIcon = element:FindDescendantByName("Layer_06")
+							local feedIcon = element:FindDescendantByName("Layer_05")
+							feedIcon:SetColor(Color.New(1,0.3579, 0, 1))
+							feedIcon = element:FindDescendantByName("Layer_06")
 							feedIcon:SetImage(lines[i].killerImage)
-
+							feedIcon:SetColor(Color.WHITE)
 
 							feedElements["KillerImage"] = element
 							feedElements["KillerImage"].width = 35
@@ -346,7 +348,10 @@ function Tick(deltaTime)
 					if (element.name == "KilledImage") then
 						if (lines[i].killedImage ~= "") then
 
-							local feedIcon = element:FindDescendantByName("Layer_06")
+							local feedIcon = element:FindDescendantByName("Layer_05")
+							feedIcon:SetColor(Color.New(1,0.357906, 0, 1))
+							feedIcon = element:FindDescendantByName("Layer_06")
+							feedIcon:SetColor(Color.WHITE)
 							feedIcon:SetImage(lines[i].killedImage)
 
 							feedElements["KilledImage"] = element
@@ -389,8 +394,9 @@ function Tick(deltaTime)
 
 							local feedIcon = element:FindDescendantByName("Layer_05")
 							feedIcon:SetColor(Color.BROWN)
-							local feedIcon = element:FindDescendantByName("Layer_06")
+							feedIcon = element:FindDescendantByName("Layer_06")
 							feedIcon:SetImage(lines[i].skillUsedImage)
+							feedIcon:SetColor(Color.WHITE)
 
 							feedElements["SkillImage"] = element
 							feedElements["SkillImage"].width = 40
@@ -530,7 +536,7 @@ function Tick(deltaTime)
 				if (lines[i].skillUsedImage ~= "") then
 					-- Skill
 					feedElements["SkillImage"].x = xPos
-					xPos = xPos - feedElements["SkillImage"].width - GAP_SPACE - 5
+					xPos = xPos - feedElements["SkillImage"].width - GAP_SPACE
 				end
 
 				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
