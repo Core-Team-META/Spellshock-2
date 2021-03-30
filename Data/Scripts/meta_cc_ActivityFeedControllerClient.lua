@@ -537,10 +537,6 @@ function Tick(deltaTime)
 					-- Skill
 					feedElements["SkillImage"].x = xPos
 					xPos = xPos - feedElements["SkillImage"].width - GAP_SPACE
-
-					feedElements["KilledWithTextLabel"].x = xPos
-					xPos = xPos - feedElements["KilledWithTextLabel"].width - GAP_SPACE
-	
 				end
 
 				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
@@ -549,6 +545,8 @@ function Tick(deltaTime)
 				-- 	xPos = xPos - feedElements["Distance"].width - GAP_SPACE
 				-- end
 
+				feedElements["KilledWithTextLabel"].x = xPos
+				xPos = xPos - feedElements["KilledWithTextLabel"].width - GAP_SPACE
 
 				-- killed
 				feedElements["KilledText"].x = xPos
@@ -561,12 +559,6 @@ function Tick(deltaTime)
 				end
 
 				if (SHOW_KILLER_HP and lines[i].killerHP ~= "") then
-
-					if (lines[i].killedImage ~= "") then
-						-- KilledImage
-						feedElements["KilledImage"].x = xPos
-						xPos = xPos - feedElements["KilledImage"].width - GAP_SPACE
-					end
 
 					feedElements["KilledTextLabel"].x = xPos
 					xPos = xPos - feedElements["KilledTextLabel"].width - GAP_SPACE - 5
@@ -588,6 +580,13 @@ function Tick(deltaTime)
 					feedElements["KillerImage"].x = xPos
 					xPos = xPos - feedElements["KillerImage"].width - GAP_SPACE
 				end
+
+
+
+
+
+
+
 
 			end
 		end
