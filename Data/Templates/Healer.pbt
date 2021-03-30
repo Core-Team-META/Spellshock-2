@@ -1142,6 +1142,12 @@ Assets {
               SubObjectId: 15637150772461375192
             }
           }
+          Overrides {
+            Name: "cs:HealingStaffReturnProjectile"
+            AssetReference {
+              Id: 12152625057104981380
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
