@@ -221,9 +221,8 @@ function API.GetConsumableXpString(consumable)
     return "CS" .. tostring(consumable) .. "XP"
 end
 
-
 function API.GetMountIdString(mount)
-    return "M" .. tostring(mount) 
+    return "M" .. tostring(mount)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -350,7 +349,10 @@ function API.CosmeticConvertAddToTable(str, startTbl)
     local tbl = API.StringSplit(",", str)
     if next(tbl) then
         for _, s in ipairs(tbl) do
-            --s = BASE.Decode24(s) or s
+            local newNumber = tonumber(s)
+            if not newNumber or newNumber and newNumber < 10000 then
+                s = BASE.Decode24(s) or s
+            end
             s = tostring(s)
             local cId = tonumber(s:sub(1, 1))
             local tId = tonumber(s:sub(2, 2))
@@ -543,7 +545,7 @@ function API.DailyShopConvertToString(tbl)
         str = str .. key .. "^"
         for k, v in pairs(values) do
             str = str .. k .. "~" .. tostring(v)
-             --API.ConvertTableToString(v, ",", "=")
+            --API.ConvertTableToString(v, ",", "=")
             str = next(values, k) and str .. "^" or str
         end
         str = next(tbl, key) and str .. "|" or str
