@@ -86,7 +86,7 @@ end
 
 function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.respawnedEvent:Connect(OnPlayerRespawn))
-	local skin = Equipment:GetCustomProperty("TID")
+	local skin = Equipment:GetCustomProperty("TID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HUNTER, player.team, skin, META_AP().T)
 end
 

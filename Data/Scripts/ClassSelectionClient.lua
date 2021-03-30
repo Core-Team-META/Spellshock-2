@@ -583,9 +583,10 @@ function OnUpgradeButtonClicked(thisButton)
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
 
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
-	ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnLocalResourceChanged)
+	--ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnLocalResourceChanged)
+	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
-
+	
 	-- Make the animated mesh do an animation
 	local AnimMesh
 	if LOCAL_PLAYER.team == 1 then
