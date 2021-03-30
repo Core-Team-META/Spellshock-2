@@ -3436,7 +3436,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Charge and hold for an empowered attack!Slow Effect = 40%. Slow Duration = 1.5s"
+      String: "Ranged Weapon \342\200\223 Press LMB to fire a heavy bolt from your crossbow that damages and slows enemies. Charge and hold for an empowered attack!Slow Effect = 30%. Slow Duration = 1.5s"
     }
     Overrides {
       Name: "cs:Bind"
