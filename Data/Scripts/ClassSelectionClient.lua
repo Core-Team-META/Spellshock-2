@@ -654,12 +654,13 @@ function AttachCostumeToPlayer(player)
 	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
 		DetachCostumeFromPlayer(player)
-		
+		warn("Attaching costume: "..player.name)
 		-- Equip new costume
 		local attachmentTable = {}
 		local costumeTemplate = META_AP().VFX.GetCurrentCostume(player, player.clientUserData.CurrentClass)
 		local newCostume = World.SpawnAsset(costumeTemplate)
 		for _, attachment in ipairs(newCostume:GetChildren()) do
+			attachment.isEnabled = true
 			attachment:AttachToPlayer(player, attachment.name)
 			table.insert(attachmentTable, attachment)
 		end
@@ -680,9 +681,9 @@ end
 function OnResourceChanged(player, name, amount)
 	if name == "CLASS_MAP" then
 		player.clientUserData.CurrentClass = amount
-		if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+		--[[if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 			AttachCostumeToPlayer(player)
-		end
+		end]]
 
 		-- If the local player changed their class then close the menu and make the button interactable
 		if player == LOCAL_PLAYER then --and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
@@ -695,20 +696,6 @@ function OnResourceChanged(player, name, amount)
 		if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
-		ConfirmChoiceButton.isInteractable = true
-	end
-end
-
-function OnClassChanged(player, Class, InitClass)
-	player.clientUserData.CurrentClass = Class
-	
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
-		AttachCostumeToPlayer(player)
-	end
-
-	-- If the local player changed their class then close the menu and make the button interactable
-	if not InitClass and player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
-		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		ConfirmChoiceButton.isInteractable = true
 	end
 end
@@ -732,7 +719,7 @@ function OnGameStateChanged(oldState, newState)
 		for _, player in ipairs(Game.GetPlayers()) do
 			AttachCostumeToPlayer(player)
 		end
-	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+	elseif (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) then
 		-- Destroy lobby costumes
 		for _, player in ipairs(Game.GetPlayers()) do
 			DetachCostumeFromPlayer(player)
@@ -743,7 +730,7 @@ end
 function OnPlayerJoined(player)
 	player.clientUserData.CurrentClass = META_AP().TANK
 	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then
 		AttachCostumeToPlayer(player)
 	end
 end
@@ -882,7 +869,7 @@ OnMenuChanged(nil, _G.CurrentMenu)
 for _, player in ipairs(Game.GetPlayers()) do
 	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
 
-	if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
+	--[[if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
 		AttachCostumeToPlayer(player)
-	end
+	end]]
 end

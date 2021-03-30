@@ -2020,6 +2020,12 @@ Assets {
               SubObjectId: 1572193051143611592
             }
           }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 11061498928952833517
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3200,7 +3206,7 @@ Assets {
               Id: 14811229842374036418
             }
             ImpactAssetRef {
-              Id: 3388166754574365222
+              Id: 8153339995745265250
             }
             Muzzle {
               Location {
@@ -3235,7 +3241,7 @@ Assets {
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 20000
+            ProjectileSpeed: 35000
             ProjectileLifeSpan: 10
             ProjectileLength: 30
             ProjectileRadius: 30
