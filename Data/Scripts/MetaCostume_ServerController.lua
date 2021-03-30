@@ -84,8 +84,8 @@ local function SetCurrentCosmetic(player, skinId)
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
     --player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
     --print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
-    local key = UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)
-    _G.PerPlayerDictionary.Set(player, key, skinId)
+    --local key = UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)
+    --_G.PerPlayerDictionary.Set(player, key, skinId)
     --print("SetCurrentCosmetic: " .. key)
 end
 
@@ -100,8 +100,8 @@ local function SetBindCosmetic(player, class, team, bind, skin)
     playerEquippedCosmetic[player][class][bind][team] = skin
     --player:SetResource(UTIL.GetSkinString(class, team, bind), skin)
     --print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
-    local key = UTIL.GetSkinString(class, team, bind)
-    _G.PerPlayerDictionary.Set(player, key, skin)
+    --local key = UTIL.GetSkinString(class, team, bind)
+    --_G.PerPlayerDictionary.Set(player, key, skin)
     --print("SetBindCosmetic: " .. key)
 end
 
@@ -194,8 +194,8 @@ function BuildEquippedCosmeticDataTable(player, data)
                 for teamId, skinId in pairs(binds) do
                     playerEquippedCosmetic[player][class][bind][teamId] = skinId
                     --player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
-                    local key = UTIL.GetSkinString(class, teamId, bind)
-                    _G.PerPlayerDictionary.Set(player, key, skinId)
+                    --local key = UTIL.GetSkinString(class, teamId, bind)
+                   -- _G.PerPlayerDictionary.Set(player, key, skinId)
                     --print("BuildEquippedCosmeticDataTable 1: " .. key)
                 end
             end
@@ -210,8 +210,8 @@ function BuildEquippedCosmeticDataTable(player, data)
                 for _, team in pairs(CONST.TEAM) do
                     playerEquippedCosmetic[player][class][bind][team] = CONST.DEFAULT_SKIN
                     --player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
-                    local key = UTIL.GetSkinString(class, team, bind)
-                    _G.PerPlayerDictionary.Set(player, key, 1)
+                    --local key = UTIL.GetSkinString(class, team, bind)
+                    --_G.PerPlayerDictionary.Set(player, key, 1)
                     --print("BuildEquippedCosmeticDataTable 2: " .. key)
                 end
             end
@@ -274,8 +274,8 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind)
     --return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
-    local key = UTIL.GetSkinString(class, player.team, bind)
-    return _G.PerPlayerDictionary.GetNumber(player, key)
+    --local key = UTIL.GetSkinString(class, player.team, bind)
+    return playerEquippedCosmetic[player][class][bind][player.team]
 end
 
 --@param object player
