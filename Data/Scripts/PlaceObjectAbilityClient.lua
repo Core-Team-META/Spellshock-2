@@ -170,8 +170,15 @@ function OnEquip(equipment, player)
 		return
 	end
 	if not PreviewObjectTemplate then
+		while not _G.COSMETIC_TABLE_BUILT do
+			Task.Wait()
+		end
 		local bind = META_AP()[BindingName]
-		local skin = Equipment:GetCustomProperty(NetworkProperties[bind]) or 1
+		local skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		while skin == 0 do
+			Task.Wait() 
+			skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		end
 		PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP()[Class], player.team, skin, bind)
 	end
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))

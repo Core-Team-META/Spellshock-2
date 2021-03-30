@@ -36,6 +36,7 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
+    _G.COSMETIC_TABLE_BUILT = true
     repeat
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
