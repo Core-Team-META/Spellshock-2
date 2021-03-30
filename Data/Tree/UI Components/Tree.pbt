@@ -37525,7 +37525,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "Filler text that can be replaced later. Adjust font size and y-offset accordingly.   This text is not set at runtime."
+      Label: "Healing applied from the healing potion. Applies to all classes."
       Color {
         R: 1
         G: 0.592220783
@@ -39923,7 +39923,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "Filler text that can be replaced later. Adjust font size and y-offset accordingly.   This text is not set at runtime."
+      Label: "Permanent % bonus to movement speed while mounted. Applies to all classes."
       Color {
         R: 1
         G: 0.592220783
