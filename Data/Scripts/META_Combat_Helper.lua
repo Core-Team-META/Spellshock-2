@@ -90,7 +90,6 @@ local function ResetPlayers()
         player.kills = 0
         player.deaths = 0
         player.serverUserData.bonusGoldCount = 0
-        player.serverUserData.playersKilled = {}
     end
     playerTimer = {}
     playerDead = {}
