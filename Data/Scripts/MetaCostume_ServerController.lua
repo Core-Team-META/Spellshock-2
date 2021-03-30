@@ -319,6 +319,7 @@ function API.GetCosmeticMuid(player, class, team, skin, bind)
 end
 
 Int()
+
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end

@@ -142,7 +142,8 @@ function OnInterrupted(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().TANK)
+	local skin = Equipment:GetCustomProperty("TID")
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().T)
 end
 
 function OnUnequip(equipment, player)

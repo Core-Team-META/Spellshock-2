@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Cosmetic Manager Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 2021/3/18
@@ -36,16 +36,6 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
-   --[[ repeat
-        Task.Wait()
-        for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
-            if child.name == LOCAL_PLAYER.id then
-                local dataStr = child:GetCustomProperty("data")
-                playerCosmetic = UTIL.CosmeticConvertToTable(dataStr)
-            end
-        end
-    until playerCosmetic
-    Events.BroadcastToServer("OnDestroyPlayerDataObject")]]--
 end
 
 function OnChildAdded(parent, object)

@@ -1,6 +1,9 @@
 ﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 local function META_AP()
+	while not _G["Meta.Ability.Progression"] do
+		Task.Wait()
+	end
     return _G["Meta.Ability.Progression"]
 end
 
@@ -122,7 +125,12 @@ function OnAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().TANK)
+	local skin = equipment:GetCustomProperty("RID")
+	print("SkinId: " .. tostring(skin))
+	print("ClassId: " .. tostring(META_AP().TANK))
+	print("TeamId: " .. tostring(player.team))
+	print("BindId: " .. tostring(META_AP().R))
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().R)
 end
 
 function OnUnequip(equipment, player)

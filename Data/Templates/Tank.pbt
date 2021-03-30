@@ -62,11 +62,11 @@ Assets {
             Int: 0
           }
           Overrides {
-            Name: "cs:RID"
+            Name: "cs:TID"
             Int: 0
           }
           Overrides {
-            Name: "cs:TID"
+            Name: "cs:RID"
             Int: 0
           }
           Overrides {
@@ -82,11 +82,11 @@ Assets {
             Bool: true
           }
           Overrides {
-            Name: "cs:RID:isrep"
+            Name: "cs:TID:isrep"
             Bool: true
           }
           Overrides {
-            Name: "cs:TID:isrep"
+            Name: "cs:RID:isrep"
             Bool: true
           }
         }
