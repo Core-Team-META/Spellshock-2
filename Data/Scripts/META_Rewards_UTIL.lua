@@ -89,10 +89,10 @@ local MOUNT_SPEED_AMOUNT = {
 }
 
 local CLASS_XP_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 200, max = 200},
-    [API.RARITY.RARE] =      {min = 350, max = 350},
-    [API.RARITY.EPIC] =      {min = 700, max = 700},
-    [API.RARITY.LEGENDARY] = {min = 1000, max = 1000}
+    [API.RARITY.UNCOMMON] =  {min = 1000, max = 1200},
+    [API.RARITY.RARE] =      {min = 2000, max = 2400},
+    [API.RARITY.EPIC] =      {min = 4000, max = 4500},
+    [API.RARITY.LEGENDARY] = {min = 9000, max = 9900}
 }
 
 ------------------------------------------------------------------------------------------------------------------------

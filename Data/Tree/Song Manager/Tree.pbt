@@ -1070,6 +1070,8 @@ Objects {
       Volume: 0.4
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1104,6 +1106,8 @@ Objects {
     Volume: 0.817564428
     Falloff: -1
     Radius: -1
+    FadeInTime: 0.2
+    FadeOutTime: 0.2
   }
 }
 Objects {
@@ -1195,6 +1199,8 @@ Objects {
       Volume: 0.35
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1241,6 +1247,8 @@ Objects {
       Volume: 0.5
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1287,6 +1295,8 @@ Objects {
       Volume: 0.5
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1324,6 +1334,8 @@ Objects {
       Volume: 0.5
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1369,6 +1381,8 @@ Objects {
       Volume: 0.5
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1415,6 +1429,8 @@ Objects {
       Volume: 0.4
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1452,6 +1468,8 @@ Objects {
       Volume: 0.5
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1489,6 +1507,8 @@ Objects {
       Volume: 1
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1527,6 +1547,8 @@ Objects {
       Volume: 1
       Falloff: 3600
       Radius: 400
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1568,6 +1590,8 @@ Objects {
       Volume: 0.35
       Falloff: 2100
       Radius: 7500
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1649,6 +1673,8 @@ Objects {
       Volume: 0.35
       Falloff: 2100
       Radius: 6900
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1738,6 +1764,8 @@ Objects {
       Volume: 0.35
       Falloff: 2100
       Radius: 7500
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1827,6 +1855,8 @@ Objects {
       Volume: 0.35
       Falloff: 2600
       Radius: 9500
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1915,6 +1945,8 @@ Objects {
       Volume: 0.35
       Falloff: 2500
       Radius: 6500
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -1992,10 +2024,11 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
       Volume: 0.35
       Falloff: 2500
       Radius: 8100
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
@@ -2086,6 +2119,8 @@ Objects {
       Volume: 0.35
       Falloff: 2500
       Radius: 6500
+      FadeInTime: 1
+      FadeOutTime: 1
     }
   }
 }
