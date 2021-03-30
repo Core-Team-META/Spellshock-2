@@ -57,7 +57,8 @@ function OnSpecialAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R, META_AP().HEALER)
+	local skin = Equipment:GetCustomProperty("RID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HEALER, player.team, skin, META_AP().R)
 end
 
 function OnUnequip(equipment, player)

@@ -49,6 +49,46 @@ Assets {
             Name: "cs:AnimationStance"
             String: "2hand_staff_stance"
           }
+          Overrides {
+            Name: "cs:OID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:QID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:EID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:RID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:TID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:OID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:QID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:EID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:RID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:TID:isrep"
+            Bool: true
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -1100,6 +1140,12 @@ Assets {
             Name: "cs:ShootAbility"
             ObjectReference {
               SubObjectId: 15637150772461375192
+            }
+          }
+          Overrides {
+            Name: "cs:HealingStaffReturnProjectile"
+            AssetReference {
+              Id: 12152625057104981380
             }
           }
         }

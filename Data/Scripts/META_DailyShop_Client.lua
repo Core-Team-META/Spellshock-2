@@ -159,7 +159,8 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 --Shard Cost
                 cost = REWARD_UTIL.CalculateShardCost(reward)
                 infoTable = rewardAssets[id][class][bind]
-                currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+                --currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+                currentAmmount = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetXpString(class, bind))
                 requiredAmount = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
             else
                 if id == 2 then

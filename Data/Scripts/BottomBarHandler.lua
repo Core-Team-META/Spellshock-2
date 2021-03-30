@@ -36,6 +36,7 @@ function OnClassIconSet(name, icon)
     level = level - 6]] currentClassId =
         classID
     local level = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(classID))
+    --local level = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetClassLevelString(classID))
     ClassLevel.text = "Lv. " .. tostring(level)
     ClassLevel:GetChildren()[1].text = "Lv. " .. tostring(level)
 end
@@ -46,6 +47,7 @@ function Tick()
         BottomBar.visibility = Visibility.INHERIT
         if currentClassId then
             local level = LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(currentClassId))
+            --local level = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetClassLevelString(currentClassId))
             ClassLevel.text = "Lv. " .. tostring(level)
             ClassLevel:GetChildren()[1].text = "Lv. " .. tostring(level)
         end

@@ -269,6 +269,8 @@ end
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
     --data = {} --#Used when resetting data for Testing
+    Task.Wait()
+    if not Object.IsValid(player) then return end
     if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)

@@ -253,7 +253,8 @@ local function BuildCardInfo(slot, rewardType, class, bind, rarity, amount)
         -- Set all the stuff
         if rewardType == REWARD_UTIL.REWARD_TYPES.SKILLPOINTS then
             infoTable = rewardAssets[rewardType][class][bind]
-            currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+            --currentAmmount = LOCAL_PLAYER:GetResource(UTIL.GetXpString(class, bind))
+            currentAmmount = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetXpString(class, bind))
             reqXp, reqGold = META_AP().GetReqCurrency(LOCAL_PLAYER, class, bind)
 
             ClassIcon:SetImage(infoTable.ClassIcon)

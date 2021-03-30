@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progression System Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
 -- Date: 12/31/2020
@@ -55,7 +55,13 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@return int reqXP, int reqGold
 local function GetReqCurrency(player, class, bind, level)
-    local currentLevel = level or player:GetResource(UTIL.GetLevelString(class, bind))
+    --local currentLevel = level or player:GetResource(UTIL.GetLevelString(class, bind))
+    local currentLevel = level
+    if not level then
+    	_G.PerPlayerDictionary.WaitForPlayer(player)
+    	local key = UTIL.GetLevelString(class, bind)
+    	currentLevel = _G.PerPlayerDictionary.GetNumber(player, key)
+    end
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
 end
@@ -72,7 +78,9 @@ function API.GetBindLevel(player, bind, class)
         class = player:GetResource(CONST.CLASS_RES)
     end
     local resName = UTIL.GetLevelString(class, bind)
-    return player:GetResource(resName)
+    --return player:GetResource(resName)
+    _G.PerPlayerDictionary.WaitForPlayer(player)
+    return _G.PerPlayerDictionary.GetNumber(player, resName)
 end
 
 --@param object player
@@ -81,7 +89,8 @@ end
 --@return bool
 function API.IsMaxLevel(player, class, bind)
     local resName = UTIL.GetLevelString(class, bind)
-    return player:GetResource(resName) >= CONST.MAX_LEVEL
+    --return player:GetResource(resName) >= CONST.MAX_LEVEL
+    return _G.PerPlayerDictionary.GetNumber(player, resName) >= CONST.MAX_LEVEL
 end
 
 --@param object player
@@ -91,7 +100,8 @@ end
 function API.GetAbilityShards(player, class, bind)
     class = class or player:GetResource(CONST.CLASS_RES)
     local resName = UTIL.GetXpString(class, bind)
-    return player:GetResource(resName)
+    --return player:GetResource(resName)
+    return _G.PerPlayerDictionary.GetNumber(player, resName)
 end
 
 --@param object player

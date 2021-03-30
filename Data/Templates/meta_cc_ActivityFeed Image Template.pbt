@@ -624,7 +624,6 @@ Assets {
             Color {
               R: 0.765625
               G: 0.350992858
-              A: 1
             }
             TeamSettings {
             }
@@ -686,7 +685,6 @@ Assets {
               R: 1
               G: 1
               B: 1
-              A: 1
             }
             TeamSettings {
             }

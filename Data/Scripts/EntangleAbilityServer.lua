@@ -112,7 +112,8 @@ end
 end]]
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HUNTER)
+	local skin = Equipment:GetCustomProperty("EID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HUNTER, player.team, skin, META_AP().E)
 end
 
 function OnUnequip(equipment, player)

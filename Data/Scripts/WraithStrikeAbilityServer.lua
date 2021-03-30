@@ -356,7 +356,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
 	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
 
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
+	local skin = Equipment:GetCustomProperty("TID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().T)
 	Task.Wait()
 	--SpecialAbility.isEnabled = false
 end

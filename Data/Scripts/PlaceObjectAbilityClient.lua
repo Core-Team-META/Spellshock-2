@@ -43,6 +43,13 @@ local CancelBindings = {
 	ability_extra_12 = true
 }
 
+local NetworkProperties = {
+	[1] = "QID",
+	[2] = "EID",
+	[3] = "RID",
+	[4] = "TID"
+}
+
 local function DisconnectListeners()
 	for _, listener in ipairs(listeners) do
 		if listener.isConnected then
@@ -163,7 +170,16 @@ function OnEquip(equipment, player)
 		return
 	end
 	if not PreviewObjectTemplate then
-		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+		while not _G.COSMETIC_TABLE_BUILT do
+			Task.Wait()
+		end
+		local bind = META_AP()[BindingName]
+		local skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		while skin == 0 do
+			Task.Wait() 
+			skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		end
+		PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP()[Class], player.team, skin, bind)
 	end
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))

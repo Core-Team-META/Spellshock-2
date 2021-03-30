@@ -149,8 +149,6 @@ end
 function OnChargedProjectileImpacted(projectile, other, hitResult)
 	--print ("We hit ... something")
 
-
-	
 	local rangeTable = META_AP().GetAbilityMod(WEAPON.owner, META_AP()[BindingName], AbilityMod, DEFAULT_DamageRange, "Ranged Weapon: Damage Range")
 	local damageRange = Vector2.New(rangeTable.min, rangeTable.max)
 	local sourcePlayer = WEAPON.owner
@@ -160,20 +158,17 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
 	local normal = projectile:GetVelocity()
 	local rotation = Rotation.New(normal, Vector3.UP)
 
-	CROSS_CONTEXT_CALLER().Call(function()
-		if Object.IsValid(other) then
-			if other:IsA("Player") then
-				local bomb = World.SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
-				bomb.serverUserData.damageRange = damageRange
-				bomb.serverUserData.sourcePlayer = sourcePlayer
-				bomb.serverUserData.sourceAbility = sourceAbility
-				bomb.serverUserData.sourceTeam = sourcePlayer.team
-				local socket = "head"
-				bomb:AttachToPlayer(other, socket)
-			end
+	if Object.IsValid(other) then
+		if other:IsA("Player") then
+			local bomb = META_AP().SpawnAsset(CHARGED_PROJECTILE_BOMB, {position = position, rotation = rotation})
+			bomb.serverUserData.damageRange = damageRange
+			bomb.serverUserData.sourcePlayer = sourcePlayer
+			bomb.serverUserData.sourceAbility = sourceAbility
+			bomb.serverUserData.sourceTeam = sourcePlayer.team
+			local socket = "head"
+			bomb:AttachToPlayer(other, socket)
 		end
-	end)
---]]
+	end
 end
 
 
