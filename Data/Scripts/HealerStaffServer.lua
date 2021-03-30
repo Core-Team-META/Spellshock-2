@@ -58,7 +58,7 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
             local healProjectile = Projectile.Spawn(HEALING_STAFF_RETURN_PROJECTILE, other:GetWorldPosition(), spawnDirection)
             healProjectile.speed = 200
             healProjectile:SetVelocity(Vector3.UP * healProjectile.speed)
-            healProjectile.homingTarget = SHOOT_ABILITY
+            healProjectile.homingTarget = SHOOT_ABILITY.owner
             healProjectile.drag = 2
             healProjectile.homingAcceleration = 12000
             healProjectile.lifeSpan = 3
