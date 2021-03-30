@@ -13,6 +13,7 @@
 	- GetNumber(player, key)
 	- Set(player, key, value)
 	- WaitForPlayer(player)
+	- Debug(player)
 	- valueChangedEvent<player, key, value>
 --]]
 
@@ -214,6 +215,20 @@ end
 function API.WaitForPlayer(player)
 	while not API.netObjects[player] do
 		Task.Wait()
+	end
+end
+
+
+function API.Debug(player)
+	local obj = API.netObjects[player]
+	print("##### Debugging object " .. tostring(obj) .. " for player " .. tostring(player))
+	for k,v in pairs(obj:GetCustomProperties()) do
+		print(k, ":", tostring(v))
+	end
+	local collection = API.GetCollection(player)
+	print("##### Collection: " .. tostring(collection))
+	for k,v in pairs(collection) do
+		print(k, ":", tostring(v))
 	end
 end
 

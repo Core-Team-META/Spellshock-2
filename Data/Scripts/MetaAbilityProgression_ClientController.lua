@@ -74,6 +74,7 @@ function API.GetBindLevel(player, bind, class)
     end
     local resName = UTIL.GetLevelString(class, bind)
     --return player:GetResource(resName)
+    _G.PerPlayerDictionary.WaitForPlayer(player)
     return _G.PerPlayerDictionary.GetNumber(player, resName)
 end
 

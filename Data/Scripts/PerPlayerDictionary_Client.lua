@@ -13,6 +13,7 @@
 	- GetNumber(player, key)
 	- Set(player, key, value)
 	- WaitForPlayer(player)
+	- Debug(player)
 	- valueChangedEvent<player, key, value>
 --]]
 
@@ -66,6 +67,8 @@ end
 
 
 function API.Set(player, key, value)
+	--print("Setting", tostring(player), tostring(key), tostring(value))
+	
 	if not key then return end
 	
 	if not API.collections[player] then
@@ -83,13 +86,29 @@ end
 
 
 function API.WaitForPlayer(player)
-	while not API.netObjects[player] do
+	while not API.netObjects[player] or not API.collections[player] do
 		Task.Wait()
 	end
 end
 
 
+function API.Debug(player)
+	local obj = API.netObjects[player]
+	print("##### Debugging object " .. tostring(obj) .. " for player " .. tostring(player))
+	for k,v in pairs(obj:GetCustomProperties()) do
+		print(k, ":", tostring(v))
+	end
+	local collection = API.collections[player]
+	print("##### Collection: " .. tostring(collection))
+	for k,v in pairs(collection) do
+		print(k, ":", tostring(v))
+	end
+end
+
+
 function API.RegisterPlayerObject(player, obj)
+	--print("Registering player: " .. tostring(player))
+
 	API.netObjects[player] = obj
 	
 	obj.networkedPropertyChangedEvent:Connect(OnPropertyChanged)
@@ -121,6 +140,10 @@ function Tick()
 	if not Object.IsValid(obj) then return end
 	
 	for k,v in pairs(pendingPropertyGroups) do
+		if not API.collections[player] then
+			API.collections[player] = {}
+		end
+		
 		local kPropName = "Keys" .. k
 		local vPropName = "Vals" .. k
 		
