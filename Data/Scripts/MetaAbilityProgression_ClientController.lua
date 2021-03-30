@@ -59,7 +59,8 @@ local function GetReqCurrency(player, class, bind, level)
     local currentLevel = level
     if not level then
     	_G.PerPlayerDictionary.WaitForPlayer(player)
-    	currentLevel = _G.PerPlayerDictionary.GetNumber(UTIL.GetLevelString(class, bind))
+    	local key = UTIL.GetLevelString(class, bind)
+    	currentLevel = _G.PerPlayerDictionary.GetNumber(player, key)
     end
     local costTable = COST_TABLE[currentLevel]
     return costTable.reqXP, costTable.reqGold
