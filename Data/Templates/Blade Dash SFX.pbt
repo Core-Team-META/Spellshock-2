@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 12139489683160554794
         UnregisteredParameters {
         }
@@ -62,6 +62,7 @@ Assets {
             Id: 3606642509834312935
           }
           AutoPlay: true
+          Pitch: 500
           Volume: 1
           Falloff: 3000
           Radius: -1

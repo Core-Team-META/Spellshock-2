@@ -7,7 +7,7 @@ Assets {
       RootId: 6467535272233804239
       Objects {
         Id: 6467535272233804239
-        Name: "Healer Orc Supernova Charge Basic 3"
+        Name: "Healer Orc Supernova Charge Basic"
         Transform {
           Scale {
             X: 1
@@ -285,6 +285,7 @@ Assets {
         ChildIds: 10842876065804876349
         ChildIds: 4260531253085883843
         ChildIds: 2197991794226474
+        ChildIds: 2951289451697322699
         ChildIds: 6748188655955453122
         ChildIds: 17957463029467702292
         WantsNetworking: true
@@ -378,7 +379,7 @@ Assets {
           Overrides {
             Name: "cs:Burst"
             ObjectReference {
-              SubObjectId: 6748188655955453122
+              SubObjectId: 2951289451697322699
             }
           }
           Overrides {
@@ -565,7 +566,7 @@ Assets {
           Volume: 1
           Falloff: 3000
           Radius: 3000
-          FadeInTime: 0.5
+          FadeInTime: 1.5
           IsAttenuationEnabled: true
         }
       }
@@ -608,6 +609,42 @@ Assets {
         }
       }
       Objects {
+        Id: 2951289451697322699
+        Name: "Big Hammer Huge Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7611905090597350052
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          Pitch: -1800
+          Volume: 1.2
+          Falloff: 20000
+          Radius: 5000
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
         Id: 6748188655955453122
         Name: "Growl Warning Synth Horn 01 SFX"
         Transform {
@@ -636,9 +673,9 @@ Assets {
           AudioAsset {
             Id: 2538994747368739144
           }
-          Pitch: -400
-          Volume: 1
-          Falloff: 15000
+          Pitch: -800
+          Volume: 1.2
+          Falloff: 20000
           Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -6803,6 +6840,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_magic_dark_buff_powerup_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
     Assets {
