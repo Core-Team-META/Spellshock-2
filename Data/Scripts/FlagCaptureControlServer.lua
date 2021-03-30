@@ -91,7 +91,10 @@ local lastProgress = 0
 local BINDING_IGNORE = {
     ability_extra_19 = true,
     ability_extra_45 = true,
-    ability_extra_16 = true
+    ability_extra_16 = true,
+    ability_extra_10 = true,
+    ability_extra_14 = true,
+    ability_extra_27 = true
 }
 
 -- nil Reset()
@@ -324,7 +327,7 @@ end
 function OnCapturePlayerDamaged(player, damage)
     if player == capturePlayer and damage.amount > 0 then
         ResetCapturePlayer()
-        player.serverUserData.isCapturingPoint = nil 
+        player.serverUserData.isCapturingPoint = false
     end
 end
 
