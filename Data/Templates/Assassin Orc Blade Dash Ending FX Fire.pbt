@@ -19,7 +19,7 @@ Assets {
         ChildIds: 15260230363335808594
         ChildIds: 17539267313061571167
         ChildIds: 13152677604025851392
-        ChildIds: 9304361161374457106
+        ChildIds: 9273390776699456096
         Lifespan: 1.4
         WantsNetworking: true
         Collidable_v2 {
@@ -178,8 +178,8 @@ Assets {
         }
       }
       Objects {
-        Id: 9304361161374457106
-        Name: "Magic Fireball Medium Impact 01 SFX"
+        Id: 9273390776699456096
+        Name: "Sword Swipe Schwing SFX"
         Transform {
           Location {
           }
@@ -203,10 +203,10 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 5282185091843795035
+            Id: 6328382799080238542
           }
           AutoPlay: true
-          Pitch: -200
+          Pitch: -400
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -243,12 +243,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5282185091843795035
-      Name: "Magic Fireball Medium Impact 01 SFX"
+      Id: 6328382799080238542
+      Name: "Sword Swipe Schwing SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_fireball_medium_impact_02_Cue_ref"
+        AssetId: "sfx_sword_swipe_schwing"
       }
     }
     PrimaryAssetId {

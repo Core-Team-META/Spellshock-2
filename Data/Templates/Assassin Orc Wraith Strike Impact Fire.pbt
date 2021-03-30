@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
+        ChildIds: 2327452423758814361
         ChildIds: 598313155620922309
         ChildIds: 8427804964253704270
         ChildIds: 3975853450910287937
@@ -31,6 +32,43 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 2327452423758814361
+        Name: "Big Hammer Huge Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 16345032910267213676
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          AutoPlay: true
+          Pitch: -800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -62,6 +100,7 @@ Assets {
             Id: 1434205963690287959
           }
           AutoPlay: true
+          Pitch: 400
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -211,6 +250,15 @@ Assets {
         Relevance {
           Value: "mc:eproxyrelevance:high"
         }
+      }
+    }
+    Assets {
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
     Assets {
