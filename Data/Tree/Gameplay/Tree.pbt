@@ -33137,7 +33137,7 @@ Objects {
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 4
+      Float: 10
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"
