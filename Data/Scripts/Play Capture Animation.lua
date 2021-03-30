@@ -16,7 +16,7 @@ function Tick(deltaTime)
 	if Object.IsValid(AnimationAbility) and Object.IsValid(AnimationAbility.owner) 
 	and AnimationAbility.owner == LOCAL_PLAYER and AnimationAbility:GetCurrentPhase() == AbilityPhase.READY then
 		AnimationAbility:Activate()
-		Attachment:AttachToPlayer(AnimationAbility.owner, "root")
-		Player_CaptureVFX:Play()
+		--Attachment:AttachToPlayer(AnimationAbility.owner, "root")
+		--Player_CaptureVFX:Play()
 	end
 end

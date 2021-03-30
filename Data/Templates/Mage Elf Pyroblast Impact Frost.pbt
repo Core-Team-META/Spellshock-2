@@ -15,12 +15,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 12771607081744968686
         ChildIds: 194798614852827632
         ChildIds: 6066097525588116490
-        ChildIds: 12805941739439042021
-        ChildIds: 15898285169024311286
+        ChildIds: 17958985711902919561
+        ChildIds: 11959144585791898813
+        ChildIds: 9311569260760423404
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -241,8 +242,8 @@ Assets {
         }
       }
       Objects {
-        Id: 12805941739439042021
-        Name: "Ice Break Hit Impact 01 SFX"
+        Id: 17958985711902919561
+        Name: "Epic Explosions Set 01 SFX"
         Transform {
           Location {
           }
@@ -255,6 +256,18 @@ Assets {
           }
         }
         ParentId: 10967820473134866711
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_explosions_standalone:29"
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Dynamic Distant Sound"
+            Bool: false
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -264,22 +277,74 @@ Assets {
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        AudioInstance {
-          AudioAsset {
-            Id: 6499280909429149265
+        Blueprint {
+          BlueprintAsset {
+            Id: 15571543861317404417
           }
-          AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Volume: 1
+            Falloff: 10000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
       Objects {
-        Id: 15898285169024311286
-        Name: "Ice Frost Attack Whoosh Impact 01 SFX"
+        Id: 11959144585791898813
+        Name: "Epic Explosion Impact Designer Sweetener Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10967820473134866711
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_explosions_sw_impact_standalone:22"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8238254718744248163
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -400
+            Volume: 1.5
+            Falloff: 10000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 9311569260760423404
+        Name: "Magic Fireball Whoosh Impact 02 SFX"
         Transform {
           Location {
           }
@@ -303,13 +368,13 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 17039004499830472759
+            Id: 2032606640260190659
           }
           AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
+          Pitch: -400
+          Volume: 2
+          Falloff: 10000
+          Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -343,21 +408,30 @@ Assets {
       }
     }
     Assets {
-      Id: 6499280909429149265
-      Name: "Ice Break Hit Impact 01 SFX"
-      PlatformAssetType: 7
+      Id: 15571543861317404417
+      Name: "Epic Explosions Set 01 SFX"
+      PlatformAssetType: 10
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_ice_break_hit_impact_01a_Cue_ref"
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_epic_explosion_set_01_ref"
       }
     }
     Assets {
-      Id: 17039004499830472759
-      Name: "Ice Frost Attack Whoosh Impact 01 SFX"
+      Id: 8238254718744248163
+      Name: "Epic Explosion Impact Designer Sweetener Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_explosion_impact_designer_sweetener_set_01_ref"
+      }
+    }
+    Assets {
+      Id: 2032606640260190659
+      Name: "Magic Fireball Whoosh Impact 02 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_ice_frost_attack_whoosh_impact_01a_Cue_ref"
+        AssetId: "sfx_magic_fireball_whoosh_impact_02_Cue_ref"
       }
     }
     PrimaryAssetId {

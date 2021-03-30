@@ -7,7 +7,7 @@ Assets {
       RootId: 10393214660969083880
       Objects {
         Id: 10393214660969083880
-        Name: "Mage Orc Pyroblast Impact Basic"
+        Name: "Mage Orc Pyroblast Impact Fire"
         Transform {
           Scale {
             X: 1
@@ -19,7 +19,9 @@ Assets {
         ChildIds: 12718563345135958441
         ChildIds: 8302887789005155420
         ChildIds: 273535845034986416
-        ChildIds: 7098498104271738640
+        ChildIds: 5975719324574945246
+        ChildIds: 10769138732634695797
+        ChildIds: 3099510692082625763
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -228,7 +230,59 @@ Assets {
         }
       }
       Objects {
-        Id: 7098498104271738640
+        Id: 5975719324574945246
+        Name: "Epic Explosions Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10393214660969083880
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_explosions_standalone:29"
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Dynamic Distant Sound"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 15571543861317404417
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Volume: 1
+            Falloff: 10000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 10769138732634695797
         Name: "Magic Fireball Whoosh Impact 02 SFX"
         Transform {
           Location {
@@ -256,12 +310,61 @@ Assets {
             Id: 2032606640260190659
           }
           AutoPlay: true
-          Volume: 1
-          Falloff: -1
-          Radius: -1
-          EnableOcclusion: true
+          Pitch: -400
+          Volume: 2
+          Falloff: 10000
+          Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 3099510692082625763
+        Name: "Epic Explosion Impact Designer Sweetener Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10393214660969083880
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_explosions_sw_impact_standalone:22"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8238254718744248163
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -400
+            Volume: 1.5
+            Falloff: 10000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
     }
@@ -293,12 +396,30 @@ Assets {
       }
     }
     Assets {
+      Id: 15571543861317404417
+      Name: "Epic Explosions Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_epic_explosion_set_01_ref"
+      }
+    }
+    Assets {
       Id: 2032606640260190659
       Name: "Magic Fireball Whoosh Impact 02 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_magic_fireball_whoosh_impact_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 8238254718744248163
+      Name: "Epic Explosion Impact Designer Sweetener Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_explosion_impact_designer_sweetener_set_01_ref"
       }
     }
     PrimaryAssetId {
