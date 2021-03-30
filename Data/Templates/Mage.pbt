@@ -953,6 +953,13 @@ Assets {
               SubObjectId: 12902761704525450861
             }
           }
+          Overrides {
+            Name: "cs:DamageRange"
+            Vector2 {
+              X: 30
+              Y: 40
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

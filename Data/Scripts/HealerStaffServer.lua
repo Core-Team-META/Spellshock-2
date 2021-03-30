@@ -44,14 +44,11 @@ function OnChargedProjectileImpacted(projectile, other, hitResult)
     print ("On charged projectile hit the other palyer")
     if Object.IsValid(other) then
         if other:IsA("Player") then
-            CROSS_CONTEXT_CALLER().Call(function()
-                local position = hitResult:GetImpactPosition()
-                local bomb = World.SpawnAsset(HEAL_EXPLOSION_TEMPLATE, {position = position})
+            local position = hitResult:GetImpactPosition()
+            local bomb = META_AP().SpawnAsset(HEAL_EXPLOSION_TEMPLATE, {position = position})
+            local trigger = bomb:GetCustomProperty("Trigger"):WaitForObject()
 
-                local trigger = bomb:GetCustomProperty("Trigger"):WaitForObject()
-
-                HealAllPlayersInRadius(trigger)
-            end)
+            HealAllPlayersInRadius(trigger)
         end
     end
 end
