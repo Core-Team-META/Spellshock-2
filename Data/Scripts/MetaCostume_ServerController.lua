@@ -311,6 +311,13 @@ function API.GetCurrentCostume(player, class)
     return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
 
+--@param object player
+--@param int bind => id of bind (API.Q, API.E)
+--@param int class => id of class (API.TANK, API.MAGE)
+function API.GetCosmeticMuid(player, class, team, skin, bind)
+    return cosmeticTable[class][team][skin][bind]
+end
+
 Int()
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)

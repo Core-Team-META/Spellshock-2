@@ -36,7 +36,7 @@ function Int()
     if not next(cosmeticTable) then
         cosmeticTable = UTIL.BuildCosmeticTable(VFX_LIST)
     end
-    repeat
+   --[[ repeat
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
             if child.name == LOCAL_PLAYER.id then
@@ -45,8 +45,7 @@ function Int()
             end
         end
     until playerCosmetic
-    Events.BroadcastToServer("OnDestroyPlayerDataObject")
-    --UTIL.TablePrint(playerCosmetic)
+    Events.BroadcastToServer("OnDestroyPlayerDataObject")]]--
 end
 
 function OnChildAdded(parent, object)
@@ -140,4 +139,4 @@ end
 -- INITIALIZE
 ------------------------------------------------------------------------------------------------------------------------
 Int()
-DATA_TRANSFER.childAddedEvent:Connect(OnChildAdded)
+--DATA_TRANSFER.childAddedEvent:Connect(OnChildAdded)
