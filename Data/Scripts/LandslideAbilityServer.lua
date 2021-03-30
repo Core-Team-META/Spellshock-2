@@ -8,6 +8,7 @@ local function META_AP()
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local ClassEquipment = script:GetCustomProperty("ClassEquipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
@@ -141,8 +142,8 @@ function OnUnequip(equipment, player)
 	end
 end
 
-Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)
+ClassEquipment.equippedEvent:Connect(OnEquip)
+ClassEquipment.unequippedEvent:Connect(OnUnequip)
 SpecialAbility.castEvent:Connect(OnAbilityCast)
 SpecialAbility.executeEvent:Connect(OnAbilityExecute)
 SpecialAbility.cooldownEvent:Connect(OnAbilityCooldown)
