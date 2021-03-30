@@ -185,14 +185,14 @@ function AddLine(line, color)
 	lines[1].color = line[7] or color
 	lines[1].killerColor = line[8] or color
 	lines[1].killedColor = line[9] or color
-	lines[1].killerImage = line[10]
+	lines[1].killerImage = line[10] or nil
 
 	if (line[4] == "PlayerJoined") then
 		lines[1].killedImage = JOINED_ICON
 	elseif (line[4] == "PlayerLeft") then
 		lines[1].killedImage = LEFT_ICON
 	else
-		lines[1].killedImage = line[11]
+		lines[1].killedImage = line[11] or nil
 	end
 	lines[1].displayTime = time()
 
@@ -582,13 +582,15 @@ function Tick(deltaTime)
 					-- Killer
 					feedElements["KillerText"].x = xPos
 					xPos = xPos - feedElements["KillerText"].width - GAP_SPACE
+
+					if (lines[i].killerImage ~= "") then
+						-- KillerImage
+						feedElements["KillerImage"].x = xPos
+						xPos = xPos - feedElements["KillerImage"].width - GAP_SPACE
+					end
 				end
 
-				if (lines[i].killerImage ~= "") then
-					-- KillerImage
-					feedElements["KillerImage"].x = xPos
-					xPos = xPos - feedElements["KillerImage"].width - GAP_SPACE
-				end
+
 
 
 				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
