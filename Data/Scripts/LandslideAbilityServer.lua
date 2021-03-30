@@ -66,10 +66,10 @@ function ToggleDash(mode)
 	end
 	
 	if mode then
-		originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
-		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
-		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction
+		--[[originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
+		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]]--
 		originalPlayerSettings.BrakingDecelerationWalking = SpecialAbility.owner.brakingDecelerationWalking
+		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
 		
 		SpecialAbility.owner.movementControlMode = MovementMode.NONE
 		SpecialAbility.owner.animationStance = "1hand_melee_shield_block"
@@ -86,11 +86,11 @@ function ToggleDash(mode)
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
-
-		SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
-		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
-		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction
+		--[[SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
+		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction]]--
 		SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
+		_G["Consumables"].SetMovement(SpecialAbility.owner)
 	end
 	isDashing = mode
 end

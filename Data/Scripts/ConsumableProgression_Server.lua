@@ -216,3 +216,7 @@ function API.GetValue(player, consumable)
     local level = GetLevel(player, consumable)
     return AP_DATA.GetConsumableValue(consumable, level)
 end
+
+function API.SetMovement(player)
+    SetPlayerMountSpeed(player)
+end
