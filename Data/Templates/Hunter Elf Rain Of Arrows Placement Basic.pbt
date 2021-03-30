@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 14162296025304194376
         ChildIds: 6692537383379622831
         ChildIds: 1934945512424372475
         ChildIds: 376276497193745113
@@ -24,6 +24,7 @@ Assets {
         ChildIds: 553165762812746632
         ChildIds: 12187401942740579224
         ChildIds: 8079153129852693278
+        ChildIds: 18245679421917315172
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -7479,6 +7480,43 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 18245679421917315172
+        Name: "Crossbow Compound Bow Shot 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 521308411396895614
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 364058193793040760
+          }
+          AutoPlay: true
+          Pitch: -400
+          Volume: 0.8
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 2721088161473172859
@@ -7550,6 +7588,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_magic_burst_hemicircle"
+      }
+    }
+    Assets {
+      Id: 364058193793040760
+      Name: "Crossbow Compound Bow Shot 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crossbow_compound_bow_shot_01a_Cue_ref"
       }
     }
     PrimaryAssetId {

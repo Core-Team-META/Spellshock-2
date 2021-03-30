@@ -2402,8 +2402,8 @@ Assets {
           }
           Pitch: -400
           Volume: 1
-          Falloff: 3000
-          Radius: 200
+          Falloff: 8000
+          Radius: 2000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }

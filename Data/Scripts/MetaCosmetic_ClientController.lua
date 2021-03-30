@@ -90,6 +90,9 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind, team)
+    while not _G.COSMETIC_TABLE_BUILT do
+        Task.Wait()
+    end
     if not team then
         team = player.team
     end
@@ -102,6 +105,9 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
+    while not _G.COSMETIC_TABLE_BUILT do
+        Task.Wait()
+    end
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
     local skinId = API.GetCurrentCosmeticId(player, class, bind)
     if skinId == 0 then
@@ -114,15 +120,22 @@ end
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCosmeticMuid(player, class, team, skin, bind)
+    while not _G.COSMETIC_TABLE_BUILT do
+        Task.Wait()
+    end
     return cosmeticTable[class][team][skin][bind]
 end
 
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
+    while not _G.COSMETIC_TABLE_BUILT do
+        Task.Wait()
+    end
+    class = class or 1
     if not player:IsA("Player") then return end --Not sure how it's not getting a player passed, but fails the get resource
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
-    local skinId = API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
+    local skinId = 1--API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end
