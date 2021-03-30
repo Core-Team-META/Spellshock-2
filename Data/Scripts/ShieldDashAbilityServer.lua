@@ -125,11 +125,7 @@ function OnAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	local skin = equipment:GetCustomProperty("RID")
-	print("SkinId: " .. tostring(skin))
-	print("ClassId: " .. tostring(META_AP().TANK))
-	print("TeamId: " .. tostring(player.team))
-	print("BindId: " .. tostring(META_AP().R))
+	local skin = equipment:GetCustomProperty("RID") or 1
 	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().R)
 end
 
