@@ -128,6 +128,12 @@ function OnMenuChanged(oldMenu, newMenu)
 		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
 			LOCAL_PLAYER:ClearOverrideCamera()
 		end
+
+		if ResourceChangedEventListener then
+			ResourceChangedEventListener:Disconnect()
+			ResourceChangedEventListener = nil
+		end
+		isUpgrading = false
 	end
 end
 
@@ -416,6 +422,8 @@ function UpdateAbilityInfo(thisButton)
 
 	if (currentXP < reqXP) then
 		CXPMainText:SetColor(Color.RED)
+	else
+		CXPMainText:SetColor(Color.FromStandardHex("FFCB8DFF"))
 	end
 
 	GoldCost.text = UTIL.FormatInt(goldCost)
@@ -748,6 +756,37 @@ function isAllowed(delay)
     end
     spamPrevent = timeNow
     return true
+end
+
+function Tick()
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+		-- Auto select currently viewed class
+		
+		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
+		UI.SetCursorVisible(false)
+		UI.SetCanCursorInteractWithUI(false)
+
+		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
+			LOCAL_PLAYER:ClearOverrideCamera()
+		end
+
+		if ResourceChangedEventListener then
+			ResourceChangedEventListener:Disconnect()
+			ResourceChangedEventListener = nil
+		end
+		isUpgrading = false
+
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+
+		ConfirmChoiceButton.isInteractable = false -- disable button
+		-- Play audio
+		Audio_ClassConfirmed:Play() 
+		Audio_ClassConfirmed_2:Play()
+		Audio_ClassConfirmed_3:Play()
+
+		local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
+		Events.BroadcastToServer("ClassChanged_SERVER", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
+	end
 end
 
 -- Spawn Class Buttons in LeftPanel
