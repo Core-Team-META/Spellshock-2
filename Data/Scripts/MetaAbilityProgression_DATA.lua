@@ -82,16 +82,16 @@ classTable = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-            [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 115}, mod4 = 90000, mod5 = 2, mod6 = 8},
-            [2] = {mod1 = 4000, mod2 = 1670, mod3 = {min = 93, max = 118}, mod4 = 90000, mod5 = 2, mod6 = 7.5},
-            [3] = {mod1 = 4000, mod2 = 1690, mod3 = {min = 95, max = 121}, mod4 = 90000, mod5 = 2, mod6 = 7},
-            [4] = {mod1 = 4000, mod2 = 1710, mod3 = {min = 97, max = 125}, mod4 = 90000, mod5 = 2, mod6 = 6.6},
-            [5] = {mod1 = 4000, mod2 = 1730, mod3 = {min = 100, max = 130}, mod4 = 90000, mod5 = 2, mod6 = 6.3},
-            [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 103, max = 135}, mod4 = 90000, mod5 = 2, mod6 = 6},
-            [7] = {mod1 = 4000, mod2 = 1800, mod3 = {min = 106, max = 140}, mod4 = 90000, mod5 = 2, mod6 = 5.8},
-            [8] = {mod1 = 4000, mod2 = 1900, mod3 = {min = 110, max = 145}, mod4 = 90000, mod5 = 2, mod6 = 5.5},
-            [9] = {mod1 = 4000, mod2 = 2000, mod3 = {min = 115, max = 150}, mod4 = 90000, mod5 = 2, mod6 = 5.2},
-           [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 120, max = 160}, mod4 = 90000, mod5 = 2, mod6 = 5}
+            [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 112}, mod4 = 110000, mod5 = 2, mod6 = 8},
+            [2] = {mod1 = 4000, mod2 = 1670, mod3 = {min = 93, max = 115}, mod4 = 110000, mod5 = 2, mod6 = 7.5},
+            [3] = {mod1 = 4000, mod2 = 1690, mod3 = {min = 95, max = 118}, mod4 = 110000, mod5 = 2, mod6 = 7},
+            [4] = {mod1 = 4000, mod2 = 1710, mod3 = {min = 97, max = 122}, mod4 = 110000, mod5 = 2, mod6 = 6.6},
+            [5] = {mod1 = 4000, mod2 = 1730, mod3 = {min = 100, max = 125}, mod4 = 110000, mod5 = 2, mod6 = 6.3},
+            [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 103, max = 132}, mod4 = 110000, mod5 = 2, mod6 = 6},
+            [7] = {mod1 = 4000, mod2 = 1800, mod3 = {min = 106, max = 137}, mod4 = 110000, mod5 = 2, mod6 = 5.8},
+            [8] = {mod1 = 4000, mod2 = 1900, mod3 = {min = 110, max = 142}, mod4 = 110000, mod5 = 2, mod6 = 5.5},
+            [9] = {mod1 = 4000, mod2 = 2000, mod3 = {min = 115, max = 148}, mod4 = 110000, mod5 = 2, mod6 = 5.2},
+           [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 120, max = 150}, mod4 = 110000, mod5 = 2, mod6 = 5}
         },
         --Stone Wall
         [CONST.BIND.E] = {

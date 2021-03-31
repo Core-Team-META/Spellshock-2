@@ -5347,7 +5347,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you. Projectile Speed = 4000. Impulse Amount = 90000."
+      String: "Instant \342\200\223 Press Q to send out a trail of rocks that damages and launches enemies toward you. Projectile Speed = 4000. Impulse Amount = 110000."
     }
     Overrides {
       Name: "cs:Bind"
