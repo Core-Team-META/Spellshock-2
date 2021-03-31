@@ -1845,8 +1845,8 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIX: 430
-    UIY: 4
+    UIX: 610
+    UIY: -30
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -13027,6 +13027,12 @@ Objects {
       Name: "cs:STORE_CollapsibleFilterButtons"
       AssetReference {
         Id: 4874185373360533013
+      }
+    }
+    Overrides {
+      Name: "cs:STORE_RowButton"
+      AssetReference {
+        Id: 12115923796101286243
       }
     }
     Overrides {
