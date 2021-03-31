@@ -3248,6 +3248,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2920556432021751741
+  Name: "Vignette Grain Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_vignette_grain"
+  }
+}
+Assets {
   Id: 2790673031089680043
   Name: "Bone Human Scattered 02"
   PlatformAssetType: 1

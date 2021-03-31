@@ -1632,6 +1632,60 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1802962906714921640
+      value {
+      }
+    }
+    ParameterOverrideMap {
+      key: 3655646741166042187
+      value {
+        Overrides {
+          Name: "bp:Intensity"
+          Float: 0.85
+        }
+        Overrides {
+          Name: "bp:Radius"
+          Float: 300
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4662501779038797083
+      value {
+        Overrides {
+          Name: "bp:Fog Density"
+          Float: 3
+        }
+        Overrides {
+          Name: "bp:Layered Fog Density"
+          Float: 0.2
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5342039914114689738
+      value {
+        Overrides {
+          Name: "bp:Cloud Opacity"
+          Float: 0.7
+        }
+        Overrides {
+          Name: "bp:Cloud Wisp Color"
+          Color {
+            R: 0.74
+            G: 0.0244098939
+            B: 0.0244098939
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6668755532381922856
+      value {
+      }
+    }
+    ParameterOverrideMap {
       key: 18071166912119165262
       value {
         Overrides {
