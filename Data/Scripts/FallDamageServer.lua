@@ -56,7 +56,7 @@ end
 -- Checks for any players that hit the ground since last frame, applies damage if appropriate, and sends events
 function Tick(deltaTime)
 	for _, player in ipairs(Game.GetPlayers()) do
-		if(player.serverUserData.immuneToFallDamage) then return end
+		--if(player.serverUserData.immuneToFallDamage) then return end
 		if(player:GetResource("CLASS_MAP") == 5) then return end --Assassin, immune to fall damage
 		
 		local fallingSpeed = math.max(0.0, -player:GetVelocity().z)
