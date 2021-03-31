@@ -2,8 +2,8 @@ local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Client Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/1/6
--- Version 0.1.2
+-- Date: 2021/3/30
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -24,6 +24,7 @@ local REWARD_INFO = script:GetCustomProperty("Reward_Icons"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local SHOP_ITEMS = script:GetCustomProperty("Shop_Items"):WaitForObject()
 local REFRESH_BUTTON = script:GetCustomProperty("Refresh"):WaitForObject()
+local REFRESH_BUTTON_PREMIUM = script:GetCustomProperty("Refresh_Premium"):WaitForObject()
 local PARENT_UI = script:GetCustomProperty("DailyShop"):WaitForObject()
 local ORC_DAILY_SHOP_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_TRIGGER"):WaitForObject()
 local ORC_DAILY_SHOP_LEAVE_TRIGGER = script:GetCustomProperty("ORC_DAILY_SHOP_LEAVE_TRIGGER"):WaitForObject()
@@ -34,22 +35,29 @@ local REFRESH_IN_TEXT = script:GetCustomProperty("REFRESH_IN_TEXT"):WaitForObjec
 local REFRESH_IN_TEXT_HIGHLIGHT = script:GetCustomProperty("REFRESH_IN_TEXT_HIGHLIGHT"):WaitForObject()
 local REFRESH_IN_TEXT_SHADOW = script:GetCustomProperty("REFRESH_IN_TEXT_SHADOW"):WaitForObject()
 local GOLD_TXT = script:GetCustomProperty("GOLD"):WaitForObject()
-local GemIcon = script:GetCustomProperty("GemIcon")
-local ShardIcon = script:GetCustomProperty("ShardIcon")
+local DIAMOND_TXT = script:GetCustomProperty("DiamondAmount"):WaitForObject()
+
+
 
 local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
 local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
+
+local REFRESH_AMOUNT_SHADOW_PREMIUM = script:GetCustomProperty("REFRESH_AMOUNT_SHADOW_PREMIUM"):WaitForObject()
+local REFRESH_AMOUNT_PREMIUM = script:GetCustomProperty("REFRESH_AMOUNT_PREMIUM"):WaitForObject()
 
 local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenDailyShop")
 local SFX_CLOSE = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 local SFX_REFRESH = script:GetCustomProperty("SFX_UI_RefreshDailyShop")
 local SFX_HOVER = script:GetCustomProperty("SFX_UI_Hover")
 local SFX_REFRESH_CLICK = script:GetCustomProperty("SFX_REFRESH_CLICK")
+local GemIcon = script:GetCustomProperty("GemIcon")
+local ShardIcon = script:GetCustomProperty("ShardIcon")
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
 local dailyRewards = {}
 local listeners = {}
+local playerListeners = {}
 local npcTriggers = {}
 local spamPrevent
 local refreshTime, refreshCount
@@ -70,7 +78,7 @@ local function isAllowed(currentTime)
     return true
 end
 
-local function DisconnectButtonListener()
+local function DisconnectButtonListener(listeners)
     for _, listener in ipairs(listeners) do
         listener:Disconnect()
     end
@@ -97,7 +105,7 @@ local function ToggleUi(bool)
         Task.Wait()
         ORC_DAILY_SHOP_TRIGGER.isInteractable = true
         ELF_DAILY_SHOP_TRIGGER.isInteractable = true
-        DisconnectButtonListener()
+        DisconnectButtonListener(listeners)
         Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
     end
 end
@@ -264,7 +272,7 @@ local function BuildRewardSlots(tbl)
         end
     end
     local refreshCost = REWARD_UTIL.CalculateRefreshCost(refreshCount)
-    if refreshCost > LOCAL_PLAYER:GetResource("Gold") then
+    if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
         REFRESH_BUTTON.isInteractable = false
@@ -272,6 +280,16 @@ local function BuildRewardSlots(tbl)
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
         REFRESH_BUTTON.isInteractable = true
+    end
+    refreshCost = CoreMath.Round(refreshCost / 500)
+    if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
+        REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_BUTTON_PREMIUM.isInteractable = false
+    else
+        REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+        REFRESH_BUTTON_PREMIUM.isInteractable = true
     end
 end
 
@@ -307,19 +325,27 @@ function OnDataObjectAdded(parent, object)
             Task.Wait()
         until dataStr and dataStr ~= ""
         dailyRewards = UTIL.DailyShopConvertToTable(dataStr)
-        DisconnectButtonListener()
+        DisconnectButtonListener(listeners)
         BuildRewardSlots(dailyRewards)
         Events.BroadcastToServer(NAMESPACE .. "DESTROY")
         World.SpawnAsset(SFX_REFRESH)
     end
 end
 
-function OnRefresh()
+function OnGoldRefresh()
     if not isAllowed(0.2) then
         return
     end
     World.SpawnAsset(SFX_REFRESH_CLICK)
     Events.BroadcastToServer(NAMESPACE .. "REFRESH")
+end
+
+function OnPremiumRefresh()
+    if not isAllowed(0.2) then
+        return
+    end
+    World.SpawnAsset(SFX_REFRESH_CLICK)
+    Events.BroadcastToServer(NAMESPACE .. "PREM_REFRESH")
 end
 
 function OnDailyShopOpen(player, keybind)
@@ -360,6 +386,18 @@ function OnEndOverlap(trigger, player)
     end
 end
 
+function OnResourceChanged(player, key, value)
+    if key == CONST.GOLD and PARENT_UI:IsVisibleInHierarchy() then
+        BuildRewardSlots(dailyRewards)
+    end
+end
+
+function OnPlayerLeft(player)
+    if player == LOCAL_PLAYER then
+        DisconnectButtonListener(playerListeners)
+    end
+end
+
 function Tick()
     if refreshTime and PARENT_UI:IsVisibleInHierarchy() then
         local currentTime = CoreMath.Round(LOCAL_PLAYER:GetResource("DS_REFRESHTIME") - time())
@@ -379,7 +417,8 @@ function Tick()
             REFRESH_IN_TEXT_SHADOW.text = timeText
         end
         -- UPDATE GOLD (Added by KonzZwodrei, better check this) -- checked
-        GOLD_TXT.text = FormatInt(LOCAL_PLAYER:GetResource("Gold"))
+        GOLD_TXT.text = FormatInt(LOCAL_PLAYER:GetResource(CONST.GOLD))
+        DIAMOND_TXT.text = FormatInt(LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN))
     end
 end
 
@@ -390,15 +429,21 @@ PARENT_UI.visibility = Visibility.FORCE_OFF
 ------------------------------------------------------------------------------------------------------------------------
 ConnectNpcListener()
 
-ORC_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
-ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
+playerListeners[#playerListeners + 1] = ORC_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
+playerListeners[#playerListeners + 1] = ELF_DAILY_SHOP_LEAVE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
 
-NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
-REFRESH_BUTTON.clickedEvent:Connect(OnRefresh)
+playerListeners[#playerListeners + 1] = NETWORKED.childAddedEvent:Connect(OnDataObjectAdded)
+REFRESH_BUTTON.clickedEvent:Connect(OnGoldRefresh)
+REFRESH_BUTTON_PREMIUM.clickedEvent:Connect(OnPremiumRefresh)
+
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnDailyShopOpen)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(OnButtonInteracted)
+playerListeners[#playerListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+
 CLOSE_BUTTON.clickedEvent:Connect(
     function()
         ToggleUi(false)
     end
 )
+
+Game.playerLeftEvent:Connect(OnPlayerLeft)
