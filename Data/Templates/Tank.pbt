@@ -616,6 +616,12 @@ Assets {
               SubObjectId: 7855160156328725233
             }
           }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

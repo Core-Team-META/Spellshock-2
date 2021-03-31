@@ -199,7 +199,8 @@ end
 -- bool IsNameplateVisible(Player)
 -- Can we see this player's nameplate given team and distance properties?
 function IsNameplateVisible(player)
-	if not shouldShow then
+	
+	if not shouldShow and not LOCAL_PLAYER.clientUserData.hasSkippedReward then
 		return false
 	end
 
