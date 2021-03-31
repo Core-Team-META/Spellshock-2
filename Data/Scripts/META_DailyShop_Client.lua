@@ -37,8 +37,6 @@ local REFRESH_IN_TEXT_SHADOW = script:GetCustomProperty("REFRESH_IN_TEXT_SHADOW"
 local GOLD_TXT = script:GetCustomProperty("GOLD"):WaitForObject()
 local DIAMOND_TXT = script:GetCustomProperty("DiamondAmount"):WaitForObject()
 
-
-
 local AMOUNT_SHADOW = script:GetCustomProperty("AMOUNT_SHADOW"):WaitForObject()
 local AMOUNT = script:GetCustomProperty("AMOUNT"):WaitForObject()
 
@@ -205,9 +203,19 @@ local function BuildShopItems(slot, id, class, bind, reward)
             PROGRESS_BARS.visibility = Visibility.FORCE_OFF
             if id == 1 then
                 --Progress Bars
-                local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
                 local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
+                local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
+                local LVL = PROGRESS_BARS:GetCustomProperty("LVL"):WaitForObject()
+                local NextLevel = PROGRESS_BARS:GetCustomProperty("NextLevel"):WaitForObject()
 
+                local currentLevel = _G.PerPlayerDictionary.GetNumber(LOCAL_PLAYER, UTIL.GetLevelString(class, bind))
+                LVL.text = tostring(currentLevel)
+                local nextLevel = currentLevel + 1
+                if nextLevel < 10 then
+                    NextLevel.text = tostring(nextLevel)
+                else
+                    NextLevel.text = "MAX"
+                end
                 RewardCurrencyIcon:SetImage(ShardIcon)
                 CURRENT_BAR.progress = currentAmmount / requiredAmount
                 REWARD_BAR.progress = (currentAmmount + reward) / requiredAmount
@@ -241,6 +249,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 Button.isInteractable = false
                 Button:SetDisabledColor(Color.GRAY)
                 soldPanel.visibility = Visibility.FORCE_ON
+                PROGRESS_BARS.visibility = Visibility.FORCE_OFF
             end
         end
     end
@@ -291,7 +300,6 @@ local function BuildRewardSlots(tbl)
     end
     refreshCost = CoreMath.Round(refreshCost / 500)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
-
         REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
         REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
 
