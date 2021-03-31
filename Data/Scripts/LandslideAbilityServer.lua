@@ -1,5 +1,6 @@
 ﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local function META_AP()
 	while not _G["Meta.Ability.Progression"] do
 		Task.Wait()
@@ -27,14 +28,22 @@ local TriggerEventConnection = nil
 local AttachedFX = nil
 
 function AddImpulseToPlayer(player)
+	--[[
 	local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 	directionVector = directionVector/directionVector.size
 	directionVector.z = 0.5
 	local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Enemy Impulse")
 
 	player:ResetVelocity()
-	player:AddImpulse(impulseVector)
+	player:AddImpulse(impulseVector)]]
 	
+	-- Apply stun
+	local status = {}
+	status.duration = 2
+	status.damage = 0
+	status.multiplier = 0
+	API_SE.ApplyStatusEffect(player, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+
 	-- Do damage
 	local dmgAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, SpecialAbility.name..": Damage")
 	local dmg = Damage.New(dmgAmount)

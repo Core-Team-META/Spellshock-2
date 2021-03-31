@@ -162,7 +162,7 @@ end
 local function RestoreFromPodium()
 	inVictory = false
 	Events.Broadcast("ShowUI")
-	if LocalPlayer.clientUserData.hasSkippedReward then
+	if not LocalPlayer.clientUserData.hasSkippedReward then
 		LocalPlayer:ClearOverrideCamera()
 		LocalPlayer.lookSensitivity = 1
 	end
