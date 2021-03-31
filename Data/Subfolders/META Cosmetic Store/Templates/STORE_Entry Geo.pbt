@@ -15,7 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1672145936829432866
+        ParentId: 4781671109827199097
+        ChildIds: 229621793103206118
         ChildIds: 7808404998850808861
         ChildIds: 6604133153937003334
         ChildIds: 16914064471433568227
@@ -35,15 +36,15 @@ Assets {
           Overrides {
             Name: "cs:BGMesh"
             ObjectReference {
-              SubObjectId: 16914064471433568227
+              SubObjectId: 229621793103206118
             }
           }
           Overrides {
             Name: "cs:DefaultColor"
             Color {
-              R: 0.01
-              G: 0.01
-              B: 0.01
+              R: 0.004
+              G: 0.004
+              B: 0.004
               A: 1
             }
           }
@@ -74,6 +75,12 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "cs:Swirl"
+            ObjectReference {
+              SubObjectId: 229621793103206118
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -86,6 +93,158 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 229621793103206118
+        Name: "Game Portal"
+        Transform {
+          Location {
+            Y: -4.97851563
+            Z: -8.72924805
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 0.09
+            Y: 0.091
+            Z: 0.0924065635
+          }
+        }
+        ParentId: 9134274018311211015
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Portal Shape"
+            Int: 2
+          }
+          Overrides {
+            Name: "bp:Intensity Color Blend"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Portal Spread"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:View Distortion Amount"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Scene View Distortion Type"
+            Enum {
+              Value: "mc:eportalscenedistortiontype:newenumerator0"
+            }
+          }
+          Overrides {
+            Name: "bp:Swirl Color"
+            Color {
+              R: 0.078
+              G: 0.078
+              B: 0.078
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              A: 0.05
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              A: 0.05
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              A: 0.05
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Distortion"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Swirl Element Distance"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Speed"
+            Float: 0.256840646
+          }
+          Overrides {
+            Name: "bp:Unlit"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Disable Swirl and Edge"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Horizontal Bend Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Bend Distance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Scene Tint Color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Mask Color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 0.05
+            }
+          }
+          Overrides {
+            Name: "bp:Use Radial Mask"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Edge Distance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Use World Capture"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17413793273080869839
+          }
+          TeamSettings {
+          }
         }
       }
       Objects {
@@ -331,9 +490,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.018446181
-              G: 0.0253517944
-              B: 0.0520833321
               A: 1
             }
           }
@@ -372,6 +528,15 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 17413793273080869839
+      Name: "Game Portal"
+      PlatformAssetType: 6
+      PrimaryAsset {
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_webportal"
       }
     }
     Assets {
