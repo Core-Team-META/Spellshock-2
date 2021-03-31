@@ -1,4 +1,13 @@
 Assets {
+  Id: 18003367190556965134
+  Name: "Fantasy Timepiece 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Timepiece_002"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -188,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10419872046358570920
+  Name: "Fantasy Gear Top 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Top_004"
+  }
+}
+Assets {
   Id: 10304004596054394633
   Name: "Frame Highlighted 001"
   PlatformAssetType: 9
@@ -221,15 +239,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_001"
-  }
-}
-Assets {
-  Id: 8434473936653101930
-  Name: "Fantasy Scroll 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Scroll_001"
   }
 }
 Assets {
@@ -296,15 +305,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6203847595979390649
-  Name: "Fantasy Book 011"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Book_011"
-  }
-}
-Assets {
   Id: 6173243591385665392
   Name: "Frame Outlined 008"
   PlatformAssetType: 9
@@ -356,6 +356,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 5000878413771410888
+  Name: "Fantasy Anvil 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Anvil_001"
   }
 }
 Assets {
@@ -428,6 +437,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Alert"
+  }
+}
+Assets {
+  Id: 180266187625907627
+  Name: "Fantasy Compass 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Compass_001"
   }
 }
 Assets {
