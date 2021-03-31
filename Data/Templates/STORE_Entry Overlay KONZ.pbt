@@ -15,15 +15,15 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 19402726770889437
+        ParentId: 14710332786633172429
         ChildIds: 15613006457679444845
         ChildIds: 13114953145776296687
         ChildIds: 17529104032688472860
         ChildIds: 949572228161442332
+        ChildIds: 1935541717091752298
         ChildIds: 3198581902970870347
         ChildIds: 17018226905069306366
         ChildIds: 13160699268130470060
-        ChildIds: 1935541717091752298
         ChildIds: 2594391602656768132
         ChildIds: 2898606390466801523
         ChildIds: 14149949894093164750
@@ -468,6 +468,303 @@ Assets {
         }
       }
       Objects {
+        Id: 1935541717091752298
+        Name: "Top Rarity Fin Panel"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15017360723897601218
+        ChildIds: 11748566915578985230
+        ChildIds: 4739751513587226671
+        ChildIds: 17316770183776865867
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 154
+          Height: 30
+          UIX: -1.85
+          UIY: 41
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11748566915578985230
+        Name: "Top Fin Panel"
+        Transform {
+          Location {
+            X: 19756.3887
+            Y: -39813.1719
+            Z: -6910
+          }
+          Rotation {
+            Yaw: -30.0000057
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1935541717091752298
+        ChildIds: 11491445977266947348
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 80
+          UIY: 1.35664463
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          Panel {
+            IsClipping: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11491445977266947348
+        Name: "Rarity Fin"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11748566915578985230
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: -97
+          Height: 200
+          UIY: 142.936584
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 15775978992330089425
+            }
+            Color {
+              R: 0.651405811
+              G: 0.351532698
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middleleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4739751513587226671
+        Name: "Class Icon"
+        Transform {
+          Location {
+            X: 1340
+            Y: -1270
+            Z: 700
+          }
+          Rotation {
+            Yaw: 39.9999847
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1935541717091752298
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 26
+          Height: 26
+          UIX: 30
+          UIY: -2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 17459582866457614450
+            }
+            Color {
+              A: 0.5
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17316770183776865867
+        Name: "Type Icon"
+        Transform {
+          Location {
+            X: 1340
+            Y: -1270
+            Z: 700
+          }
+          Rotation {
+            Yaw: 39.999958
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1935541717091752298
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 26
+          Height: 26
+          UIX: 65
+          UIY: -2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 2200816922913628269
+            }
+            Color {
+              A: 0.5
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
         Id: 3198581902970870347
         Name: "Item Name Panel"
         Transform {
@@ -544,6 +841,7 @@ Assets {
         }
         Control {
           Width: -31
+          UIY: 6.31999922
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -566,6 +864,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1542,245 +1841,6 @@ Assets {
         }
       }
       Objects {
-        Id: 1935541717091752298
-        Name: "Top Rarity Fin Panel"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15017360723897601218
-        ChildIds: 11491445977266947348
-        ChildIds: 4739751513587226671
-        ChildIds: 17316770183776865867
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 154
-          Height: 30
-          UIX: 2
-          UIY: 40
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          UseParentWidth: true
-          Panel {
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:topleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 11491445977266947348
-        Name: "Rarity Fin"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1935541717091752298
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: -5
-          Height: 200
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          AddSizeToParentIfUsingParentSize: true
-          UseParentWidth: true
-          UseParentHeight: true
-          Image {
-            Brush {
-              Id: 15602681661189935351
-            }
-            Color {
-              R: 0.651405811
-              G: 0.351532698
-              A: 1
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middleleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 4739751513587226671
-        Name: "Class Icon"
-        Transform {
-          Location {
-            X: 1340
-            Y: -1270
-            Z: 700
-          }
-          Rotation {
-            Yaw: 39.9999847
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1935541717091752298
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 26
-          Height: 26
-          UIX: 30
-          UIY: -2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 17459582866457614450
-            }
-            Color {
-              A: 0.5
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17316770183776865867
-        Name: "Type Icon"
-        Transform {
-          Location {
-            X: 1340
-            Y: -1270
-            Z: 700
-          }
-          Rotation {
-            Yaw: 39.999958
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1935541717091752298
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 26
-          Height: 26
-          UIX: 65
-          UIY: -2
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 2200816922913628269
-            }
-            Color {
-              A: 0.5
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomleft"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 2594391602656768132
         Name: "Top Rarity Fin Panel"
         Transform {
@@ -1878,6 +1938,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -1993,7 +2054,7 @@ Assets {
         ChildIds: 130520307409118465
         ChildIds: 15819887109873040302
         ChildIds: 6103169764064421575
-        ChildIds: 3800441062715065441
+        ChildIds: 5611929271817827520
         ChildIds: 4952959141040710486
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2057,7 +2118,7 @@ Assets {
         Control {
           Width: -2
           Height: -41
-          UIY: -2.20830536
+          UIY: -1.17142105
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2278,8 +2339,66 @@ Assets {
         }
       }
       Objects {
-        Id: 3800441062715065441
-        Name: "Not Rarity Fin"
+        Id: 5611929271817827520
+        Name: "Top Fin Panel"
+        Transform {
+          Location {
+            X: 19756.3887
+            Y: -39813.1719
+            Z: -6910
+          }
+          Rotation {
+            Yaw: -30.0000057
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5656437231004079263
+        ChildIds: 169582720953494620
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 80
+          UIX: -1.85
+          UIY: 41
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          Panel {
+            IsClipping: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 169582720953494620
+        Name: "Rarity Fin"
         Transform {
           Location {
           }
@@ -2291,7 +2410,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5656437231004079263
+        ParentId: 5611929271817827520
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2302,9 +2421,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: -3
-          Height: 233
-          UIY: -92.0072174
+          Width: -97
+          Height: 200
+          UIY: 143.162216
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2312,9 +2431,10 @@ Assets {
           }
           AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
+          UseParentHeight: true
           Image {
             Brush {
-              Id: 15602681661189935351
+              Id: 15775978992330089425
             }
             Color {
               A: 0.765
@@ -2325,12 +2445,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middleleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middleleft"
               }
             }
           }
@@ -2541,7 +2661,7 @@ Assets {
               R: 1
               G: 1
               B: 1
-              A: 1
+              A: 0.765000045
             }
             TeamSettings {
             }
@@ -2634,6 +2754,42 @@ Assets {
       }
     }
     Assets {
+      Id: 15775978992330089425
+      Name: "BG Flat 015"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_32"
+      }
+    }
+    Assets {
+      Id: 17459582866457614450
+      Name: "Hammer"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Icon_Hammer"
+      }
+    }
+    Assets {
+      Id: 2200816922913628269
+      Name: "Icon Damage"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Damage"
+      }
+    }
+    Assets {
+      Id: 11336346532215892341
+      Name: "Germania One"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "GermaniaOneRegular_ref"
+      }
+    }
+    Assets {
       Id: 17558830247768350468
       Name: "Fantasy Ability Yellow 017"
       PlatformAssetType: 9
@@ -2685,33 +2841,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "FrameSolid4px_020"
-      }
-    }
-    Assets {
-      Id: 15602681661189935351
-      Name: "Line Half 010a"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "LineHalf_010a"
-      }
-    }
-    Assets {
-      Id: 17459582866457614450
-      Name: "Hammer"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Icon_Hammer"
-      }
-    }
-    Assets {
-      Id: 2200816922913628269
-      Name: "Icon Damage"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Damage"
       }
     }
     Assets {

@@ -15,7 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1672145936829432866
+        ParentId: 4781671109827199097
+        ChildIds: 229621793103206118
         ChildIds: 7808404998850808861
         ChildIds: 6604133153937003334
         ChildIds: 16914064471433568227
@@ -86,6 +87,162 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 229621793103206118
+        Name: "Game Portal"
+        Transform {
+          Location {
+            Y: -4.97851563
+            Z: -8.72924805
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 0.09
+            Y: 0.091
+            Z: 0.0924065635
+          }
+        }
+        ParentId: 9134274018311211015
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Portal Shape"
+            Int: 2
+          }
+          Overrides {
+            Name: "bp:Intensity Color Blend"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Portal Spread"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:View Distortion Amount"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Rotation"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Scene View Distortion Type"
+            Enum {
+              Value: "mc:eportalscenedistortiontype:newenumerator0"
+            }
+          }
+          Overrides {
+            Name: "bp:Swirl Color"
+            Color {
+              R: 0.0128475213
+              G: 0.97
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color A"
+            Color {
+              R: 0.102237403
+              G: 0.65625
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color B"
+            Color {
+              R: 0.0734121725
+              G: 0.46875
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Color C"
+            Color {
+              R: 0.36900723
+              G: 3
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Edge Distortion"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Swirl Element Distance"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Speed"
+            Float: 0.256840646
+          }
+          Overrides {
+            Name: "bp:Unlit"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Disable Swirl and Edge"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Horizontal Bend Amount"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Bend Distance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Scene Tint Color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Mask Color"
+            Color {
+              R: 0.0131265428
+              G: 0.0885416642
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Use Radial Mask"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Edge Distance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Use World Capture"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 17413793273080869839
+          }
+          TeamSettings {
+          }
         }
       }
       Objects {
@@ -372,6 +529,15 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 17413793273080869839
+      Name: "Game Portal"
+      PlatformAssetType: 6
+      PrimaryAsset {
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_webportal"
       }
     }
     Assets {
