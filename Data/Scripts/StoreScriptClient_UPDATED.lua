@@ -49,6 +49,8 @@ local propPageNextButton = script:GetCustomProperty("PageNextButton"):WaitForObj
 local propPurchaseButton = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 local PurchaseButton = propPurchaseButton:GetCustomProperty("Button"):WaitForObject()
 local ClearFiltersButton = script:GetCustomProperty("ClearFiltersButton"):WaitForObject()
+local propRowButton = script:GetCustomProperty("STORE_RowButton")
+
 
 local propStoreGeoHolder = script:GetCustomProperty("StoreGeoHolder"):WaitForObject()
 local propFilterListHolder = script:GetCustomProperty("FilterListHolder"):WaitForObject()
@@ -390,6 +392,7 @@ function ShowStore_ClientHelper()
 	local currentClassID = player:GetResource("CLASS_MAP")
 	if currentClassID ~= 0 then
 		OnClassFilterButtonSelected(classID_TO_filterButton[currentClassID])
+		FilterStoreItems()
 	else
 		FilterStoreItems()
 	end
@@ -1446,7 +1449,8 @@ function InitStore()
 	end
 
 	if propEnableFilterByTag then
-		SpawnCollapsibleFilterButton("CLASS", "TOP", 1, TagDefs, OnClassFilterButtonSelected)
+		--SpawnCollapsibleFilterButton("CLASS", "TOP", 1, TagDefs, OnClassFilterButtonSelected)
+		SpawnFilterButtonRow(propTypeFilterListHolder, TagDefs, OnClassFilterButtonSelected)
 		propFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
@@ -1516,7 +1520,7 @@ end
 end]]
 function SpawnCollapsibleFilterButton(displayName, section, position, defList, clickFunction, color)
 	
-	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons) -- {parent = propfilterlistbuttons}
+	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons)
 
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
 	local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
@@ -1618,8 +1622,65 @@ function SpawnCollapsibleFilterButton(displayName, section, position, defList, c
 	end
 end
 
+function SpawnFilterButtonRow(holder, defList, clickFunction, color)
+
+	for _, data in pairs(defList) do
+		local newFilterPanel = World.SpawnAsset(propRowButton, {parent = holder})
+
+		local propButton = newFilterPanel:GetCustomProperty("Button"):WaitForObject()
+		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
+		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
+		local position = data.number - 1
+		
+		newFilterPanel.x = (newFilterPanel.width * position) + (4 * position)
+		newFilterPanel.y = 0
+		propTitle.text = data.name
+		
+		if data.icon then
+			propIcon:SetImage(data.icon)
+			propIcon:GetChildren()[1]:SetImage(data.icon)
+		else
+			propIcon.visibility = Visibility.FORCE_OFF
+			propTitle.anchor = UIPivot.MIDDLE_CENTER
+			propTitle.dock = UIPivot.MIDDLE_CENTER
+			propTitle.x = 0
+			propTitle.y = 0
+			propTitle.justification = TextJustify.CENTER
+		end
+
+		if data.color then
+			local buttonColor = Color.New(data.color)
+			buttonColor.a = 1
+			propIcon:GetChildren()[1]:SetColor(buttonColor)
+		end
+
+		filterButtonData[propButton] = {
+			listener = propButton.clickedEvent:Connect(clickFunction),
+			button = propButton,
+			root = newFilterPanel,
+			tag = data.name,
+			color = propButton:GetButtonColor(),
+			clickedColor = propButton:GetPressedColor(),
+			selectedPanel = SelectedPanel,
+			position = position
+		}
+
+
+		if data.name == "Warrior" then
+			classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+		else
+			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+		end
+	end
+end
+
 function OnClassFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
+		return
+	end
+	
+	if not Object.IsValid(button) then
+		print( "button not valid")
 		return
 	end
 	
@@ -1634,12 +1695,12 @@ function OnClassFilterButtonSelected(button)
 	end
 
 	button:SetButtonColor(buttonData.clickedColor)
-	buttonData.selectedPanel.visibility = Visibility.INHERIT
+	--buttonData.selectedPanel.visibility = Visibility.INHERIT
 
 	if currentClass.tag == tag then -- if the current active filter is this button, reset filter and highlight color
 		currentClass = {tag = nil}
 		button:SetButtonColor(buttonData.color)
-		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
+		--buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
 		FilterStoreItems()
 		return
 	elseif currentClass.tag ~= nil then -- if the current active filter is not this button, reset highlight color
