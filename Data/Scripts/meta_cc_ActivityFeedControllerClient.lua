@@ -163,7 +163,9 @@ local ClassIDs = Enum{
 for _, class in ipairs(propClassData:GetChildren()) do
 	classIcons[class:GetCustomProperty("ClassID")] = class:GetCustomProperty("Icon")
 	for _, skill in ipairs(class:GetChildren()) do
-		skillIcons[skill.name] = skill:GetCustomProperty("Icon")
+		if (skill.name ~= "Aim") then
+			skillIcons[skill.name] = skill:GetCustomProperty("Icon")
+		end
 	end
 end
 

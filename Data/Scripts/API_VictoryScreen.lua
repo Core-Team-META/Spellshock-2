@@ -212,7 +212,9 @@ end
 --	Callback, overwriteable, called when a player is spawned
 function API.OnPlayerTeleported(victoryScreen, player,  topThreePlayerStats, duration, respawnOnDeactivate)
 	for _, equipment in pairs(player:GetEquipment()) do -- remove all equipment
-		equipment:Destroy()
+		if Object.IsValid(equipment) then
+			equipment:Destroy()
+		end
 	end
 
 	
