@@ -1436,23 +1436,23 @@ function InitStore()
 		Equipped = {name = "Equipped", number = 3}
 	}
 
-	SpawnCollapsibleFilterButton("TITLE", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
+	SpawnCollapsibleFilterButton("TITLE", "BOTTOM", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
 
 	if propEnableFilterByType then
-		SpawnCollapsibleFilterButton("TYPE", 1, TypeDefs, OnTypeFilterButtonSelected)
+		SpawnCollapsibleFilterButton("TYPE", "BOTTOM", 1, TypeDefs, OnTypeFilterButtonSelected)
 		propTypeFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propTypeFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
 	if propEnableFilterByTag then
-		SpawnCollapsibleFilterButton("CLASS", 2, TagDefs, OnClassFilterButtonSelected)
+		SpawnCollapsibleFilterButton("CLASS", "TOP", 1, TagDefs, OnClassFilterButtonSelected)
 		propFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
-	SpawnCollapsibleFilterButton("RARITY", 3, RarityDefs, OnRarityFilterButtonSelected)
+	SpawnCollapsibleFilterButton("RARITY", "BOTTOM", 2, RarityDefs, OnRarityFilterButtonSelected)
 
 	--print("Requesting other player costume data")
 	ReliableEvents.BroadcastToServer("REQUEST_OTHER_COSMETICS")
@@ -1514,8 +1514,9 @@ end
 		position = position
 	}
 end]]
-function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunction, color)
-	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons, {parent = propFilterListHolder})
+function SpawnCollapsibleFilterButton(displayName, section, position, defList, clickFunction, color)
+	
+	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons) -- {parent = propfilterlistbuttons}
 
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
 	local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
@@ -1526,6 +1527,14 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 	local Title = MainButtonPanel:GetCustomProperty("Title"):WaitForObject()
 	local MainButton = newCollapsibleMenu:GetCustomProperty("MainButton"):WaitForObject()
 	local CollapsibleButtonTemplate = newCollapsibleMenu:GetCustomProperty("CollapsibleButtonTemplate")
+	
+	if section == "TOP" then
+		newCollapsibleMenu.parent = propTypeFilterListHolder
+		newCollapsibleMenu.rotationAngle = 180
+		Title.rotationAngle = 180
+	elseif section == "BOTTOM" then
+		newCollapsibleMenu.parent = propFilterListHolder
+	end	
 
 	newCollapsibleMenu.x = (newCollapsibleMenu.width * position) + (position + 15)
 	newCollapsibleMenu.y = 0
@@ -1544,11 +1553,16 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
 		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
 		local position = data.number - 1
+		
+		if section == "TOP" then
+			newFilterPanel.rotationAngle = 180
+			position = data.number
+		end
 
 		newFilterPanel.x = 0
 		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position)
 		propTitle.text = data.name
-
+		
 		if data.icon then
 			propIcon:SetImage(data.icon)
 			propIcon:GetChildren()[1]:SetImage(data.icon)
