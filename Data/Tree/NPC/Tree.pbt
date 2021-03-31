@@ -173,6 +173,7 @@ Objects {
   ChildIds: 12339254670262005637
   ChildIds: 10214143562767828285
   ChildIds: 11599957882329937433
+  ChildIds: 10148554227077741016
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -184,6 +185,810 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 10148554227077741016
+  Name: "Hourglass"
+  Transform {
+    Location {
+      X: -32.5231552
+      Y: 10.4640608
+      Z: 2.28268051
+    }
+    Rotation {
+      Yaw: 57.2793465
+      Roll: 15.416831
+    }
+    Scale {
+      X: 0.373600751
+      Y: 0.373600751
+      Z: 0.373600751
+    }
+  }
+  ParentId: 12291039679276221737
+  ChildIds: 1484716724436893369
+  ChildIds: 15190748028731719103
+  ChildIds: 16743898506808412730
+  ChildIds: 3993197581312590330
+  ChildIds: 18202174758160408880
+  ChildIds: 8081982184364317156
+  ChildIds: 5836744379397643410
+  ChildIds: 5388974495457785109
+  ChildIds: 7010132806584371531
+  ChildIds: 14310148173241434765
+  ChildIds: 7559439827622423345
+  ChildIds: 2161735640996074741
+  ChildIds: 14198368315059111572
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 14198368315059111572
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: -0.503034711
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.114225425
+      Y: 0.642338097
+      Z: 0.0402593836
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.111749902
+        G: 0.447000027
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 2161735640996074741
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: -0.503034711
+    }
+    Rotation {
+      Yaw: -9.15527344e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.117580436
+      Y: 0.661204398
+      Z: 0.0132843833
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7559439827622423345
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.117580406
+      Y: 0.661204338
+      Z: 0.0132843833
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14310148173241434765
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: -179.999969
+    }
+    Scale {
+      X: 0.114225395
+      Y: 0.642338037
+      Z: 0.0402593799
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.111749902
+        G: 0.447000027
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7010132806584371531
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      X: -0.00279765925
+      Y: -1.6339184
+      Z: 29.3219051
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: 118.48349
+    }
+    Scale {
+      X: 0.0434122
+      Y: 0.144003674
+      Z: 0.144317463
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7363477334452929865
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5388974495457785109
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 37.1382027
+    }
+    Rotation {
+      Roll: 118.483505
+    }
+    Scale {
+      X: 0.028465312
+      Y: 0.12160103
+      Z: 0.094677
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7363477334452929865
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5836744379397643410
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 49.620697
+    }
+    Rotation {
+      Roll: 180
+    }
+    Scale {
+      X: 0.134137928
+      Y: 0.121960185
+      Z: 0.114573702
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 8081982184364317156
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -9.15527344e-05
+    }
+    Scale {
+      X: 0.237784445
+      Y: 0.524209321
+      Z: 0.612776577
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 18202174758160408880
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+    }
+    Scale {
+      X: 0.163461581
+      Y: 0.534294546
+      Z: 0.737874329
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 3993197581312590330
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 0.163461566
+      Y: 0.534294546
+      Z: 0.737874269
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 16743898506808412730
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: -179.999969
+    }
+    Scale {
+      X: 0.163461581
+      Y: 0.534294546
+      Z: 0.737874269
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 15190748028731719103
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Roll: 180
+    }
+    Scale {
+      X: 0.219978541
+      Y: 0.525114059
+      Z: 0.727639914
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.00635761535
+        G: 0.0300000012
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 1484716724436893369
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.70754709e-06
+    }
+    Scale {
+      X: 0.219978496
+      Y: 0.525114059
+      Z: 0.727639914
+    }
+  }
+  ParentId: 10148554227077741016
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.00635761535
+        G: 0.0300000012
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
   }
 }
 Objects {
@@ -1691,7 +2496,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18689,6 +19494,7 @@ Objects {
   ParentId: 1800172549103872497
   ChildIds: 16159202376643545404
   ChildIds: 13751068357760011049
+  ChildIds: 4905680022230682296
   ChildIds: 3824626514608650492
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -20117,6 +20923,810 @@ Objects {
   }
 }
 Objects {
+  Id: 4905680022230682296
+  Name: "Hourglass"
+  Transform {
+    Location {
+      X: -32.5231552
+      Y: 10.4640608
+      Z: 2.28268051
+    }
+    Rotation {
+      Yaw: 57.2793465
+      Roll: 15.416831
+    }
+    Scale {
+      X: 0.373600751
+      Y: 0.373600751
+      Z: 0.373600751
+    }
+  }
+  ParentId: 15854707247158741528
+  ChildIds: 1062090639915291527
+  ChildIds: 14648613175931943776
+  ChildIds: 5844582595427068773
+  ChildIds: 3531586747521180718
+  ChildIds: 2877091151106985901
+  ChildIds: 16308096917068138242
+  ChildIds: 11618100226003675320
+  ChildIds: 1532557892044404323
+  ChildIds: 14403435291204261412
+  ChildIds: 4328341523937050471
+  ChildIds: 4256525434139524650
+  ChildIds: 7407624277762298610
+  ChildIds: 12404224536235002994
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12404224536235002994
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: -0.503034711
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.114225425
+      Y: 0.642338097
+      Z: 0.0402593836
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.111749902
+        G: 0.447000027
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7407624277762298610
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: -0.503034711
+    }
+    Rotation {
+      Yaw: -9.15527344e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.117580436
+      Y: 0.661204398
+      Z: 0.0132843833
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4256525434139524650
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+      Roll: -179.999954
+    }
+    Scale {
+      X: 0.117580406
+      Y: 0.661204338
+      Z: 0.0132843833
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4328341523937050471
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: -179.999969
+    }
+    Scale {
+      X: 0.114225395
+      Y: 0.642338037
+      Z: 0.0402593799
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.111749902
+        G: 0.447000027
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13950225922132296555
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14403435291204261412
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      X: -0.00279765925
+      Y: -1.6339184
+      Z: 29.3219051
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: 118.48349
+    }
+    Scale {
+      X: 0.0434122
+      Y: 0.144003674
+      Z: 0.144317463
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7363477334452929865
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 1532557892044404323
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 37.1382027
+    }
+    Rotation {
+      Roll: 118.483505
+    }
+    Scale {
+      X: 0.028465312
+      Y: 0.12160103
+      Z: 0.094677
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7363477334452929865
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 11618100226003675320
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 49.620697
+    }
+    Rotation {
+      Roll: 180
+    }
+    Scale {
+      X: 0.134137928
+      Y: 0.121960185
+      Z: 0.114573702
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 16308096917068138242
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -9.15527344e-05
+    }
+    Scale {
+      X: 0.237784445
+      Y: 0.524209321
+      Z: 0.612776577
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.110000007
+        G: 0.0502648838
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 2877091151106985901
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -6.10351563e-05
+    }
+    Scale {
+      X: 0.163461581
+      Y: 0.534294546
+      Z: 0.737874329
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 3531586747521180718
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+    }
+    Scale {
+      X: 0.163461566
+      Y: 0.534294546
+      Z: 0.737874269
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5844582595427068773
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Yaw: -3.05175781e-05
+      Roll: -179.999969
+    }
+    Scale {
+      X: 0.163461581
+      Y: 0.534294546
+      Z: 0.737874269
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 675563715440209277
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0454999395
+        G: 0.182000011
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14648613175931943776
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+      Z: 88.0205688
+    }
+    Rotation {
+      Roll: 180
+    }
+    Scale {
+      X: 0.219978541
+      Y: 0.525114059
+      Z: 0.727639914
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.00635761535
+        G: 0.0300000012
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 1062090639915291527
+  Name: "Thorn - Wide"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.70754709e-06
+    }
+    Scale {
+      X: 0.219978496
+      Y: 0.525114059
+      Z: 0.727639914
+    }
+  }
+  ParentId: 4905680022230682296
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5351428073291024820
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.00635761535
+        G: 0.0300000012
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12395428038630206210
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 13751068357760011049
   Name: "Group"
   Transform {
@@ -20159,7 +21769,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"

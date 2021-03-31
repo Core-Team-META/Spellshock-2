@@ -152,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13950225922132296555
+  Name: "Cylinder"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
   Id: 13888119501670323283
   Name: "Fantasy Sword Blade 04"
   PlatformAssetType: 1
@@ -212,6 +221,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_coupling_005_ref"
+  }
+}
+Assets {
+  Id: 12395428038630206210
+  Name: "Thorn - Wide"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tooth_001"
   }
 }
 Assets {
