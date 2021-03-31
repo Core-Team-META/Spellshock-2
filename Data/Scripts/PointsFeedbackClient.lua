@@ -358,6 +358,7 @@ function CycleAnimation(givenResource, givenValue)
 		sound.lifeSpan = 3
 
 		FadeInImage(messages[1]:GetCustomProperty("CoinIcon"):WaitForObject())
+		FadeInImage(messages[1]:GetCustomProperty("CoinIcon"):WaitForObject():GetChildren()[1])
 		CountThisTextUp(mainPointsText, 0, value, "")
 
 		CountThisTextUp(messages[1]:GetCustomProperty("ReasonText"):WaitForObject(), 0, value, "      +")
