@@ -2738,7 +2738,7 @@ Assets {
       }
       Objects {
         Id: 4620336145958381494
-        Name: "Blast"
+        Name: "Staff"
         ParentId: 18270922159998676275
         UnregisteredParameters {
         }
