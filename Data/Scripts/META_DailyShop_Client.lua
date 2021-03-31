@@ -275,20 +275,37 @@ local function BuildRewardSlots(tbl)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
+
+        AMOUNT:SetColor(Color.RED)
+        AMOUNT_SHADOW:SetColor(Color.RED)
+
         REFRESH_BUTTON.isInteractable = false
     else
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
+
+        AMOUNT:SetColor(Color.BLACK)
+        AMOUNT_SHADOW:SetColor(Color.BLACK)
+
         REFRESH_BUTTON.isInteractable = true
     end
     refreshCost = CoreMath.Round(refreshCost / 500)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
+
         REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
         REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+
+        REFRESH_AMOUNT_PREMIUM:SetColor(Color.RED)
+        REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.RED)
+
         REFRESH_BUTTON_PREMIUM.isInteractable = false
     else
         REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
         REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)
+
+        REFRESH_AMOUNT_PREMIUM:SetColor(Color.BLACK)
+        REFRESH_AMOUNT_SHADOW_PREMIUM:SetColor(Color.BLACK)
+
         REFRESH_BUTTON_PREMIUM.isInteractable = true
     end
 end
