@@ -670,25 +670,26 @@ function UpdateEntryButton(entry, highlighted)
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor) dulled down
 		--entry.priceBG:SetColor(entry.priceBGHoverColor)
-		-- entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor")) dulled down
 	elseif  CosmeticIsEquipped(entry.data.id) then
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frameEquippedColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGEquippedColor)
-		-- entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("EquippedColor")) --matching rarity
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("EquippedColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor")) dulled down
 	elseif  HasCosmetic(entry.data.id) then
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frameOwnedColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGOwnedColor)
-		-- entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("OwnedColor")) --matching rarity
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("OwnedColor")) --matching rarity
 		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor")) dulled down
 	else 
 		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
 		--SetFramesColor(entry.frames, entry.frameDefaultColor) dulled down
 		entry.priceBG:SetColor(entry.priceBGDefaultColor)
-		-- entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("DefaultColor")) --matching rarity
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("DefaultColor")) --matching rarity
+		entry.BGMesh:SetSmartProperty("Swirl Color", RarityDefs[entry.data.rarity].color)
 		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("DefaultColor")) --dulled down
 	end
 	
@@ -1160,7 +1161,8 @@ function UpdateUIPos()
 	local newScale = (1.6 * UI.GetScreenSize().y) / UI.GetScreenSize().x
 
 	for k, v in pairs(StoreUIButtons) do
-		v.targetPos = Vector3.New(v.gridX * -ITEM_PADDING + 20, 0, v.gridY * -(ITEM_PADDING + (newScale - 0.4) * 70) - 40)
+		-- This line was breaking the shop item movement.  Can it be removed?  -Chris
+		--v.targetPos = Vector3.New(v.gridX * -ITEM_PADDING + 20, 0, v.gridY * -(ITEM_PADDING + (newScale - 0.4) * 70) - 40)
 		
 		if currentTime < v.startTime + v.travelTime and propEnableStoreAnimations then
 			local lerpVal

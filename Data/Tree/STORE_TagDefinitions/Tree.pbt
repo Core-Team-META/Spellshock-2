@@ -34,6 +34,14 @@ Objects {
         Id: 1140002898835594765
       }
     }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.94600004
+        G: 0.299566746
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -82,6 +90,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.40791747
+        B: 0.979000032
+        A: 1
       }
     }
   }
@@ -134,6 +150,14 @@ Objects {
         Id: 1140002898835594765
       }
     }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        G: 0.192847013
+        B: 0.91
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -182,6 +206,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.0438417792
+        G: 0.66200006
+        A: 1
       }
     }
   }
@@ -233,6 +265,15 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.770000041
+        G: 0.770000041
+        B: 0.770000041
+        A: 1
       }
     }
   }

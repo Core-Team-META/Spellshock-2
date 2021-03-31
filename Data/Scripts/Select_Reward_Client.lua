@@ -78,8 +78,9 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
         BUTTON_PANEL.visibility = Visibility.FORCE_ON
         isRewards = true
     end
-    if newState == ABGS.GAME_STATE_LOBBY then
+    if newState == ABGS.GAME_STATE_ROUND then
         LOCAL_PLAYER.clientUserData.hasClaimedReward = false
+        LOCAL_PLAYER.clientUserData.hasSkippedReward = false
     end
 end
 
