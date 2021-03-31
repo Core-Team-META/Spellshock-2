@@ -394,6 +394,12 @@ Objects {
         Id: 1046635934407451220
       }
     }
+    Overrides {
+      Name: "cs:SFX_REFRESH_CLICK"
+      AssetReference {
+        Id: 17427715677023329960
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -29944,8 +29950,8 @@ Objects {
         A: 1
       }
       DisabledColor {
-        R: 0.752942443
-        G: 0.371237785
+        R: 0.210000038
+        G: 0.0458940491
         A: 1
       }
       Brush {

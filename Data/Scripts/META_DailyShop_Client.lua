@@ -44,6 +44,7 @@ local SFX_OPEN = script:GetCustomProperty("SFX_UI_OpenDailyShop")
 local SFX_CLOSE = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
 local SFX_REFRESH = script:GetCustomProperty("SFX_UI_RefreshDailyShop")
 local SFX_HOVER = script:GetCustomProperty("SFX_UI_Hover")
+local SFX_REFRESH_CLICK = script:GetCustomProperty("SFX_REFRESH_CLICK")
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 ------------------------------------------------------------------------------------------------------------------------
@@ -198,7 +199,7 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 --Progress Bars
                 local CURRENT_BAR = PROGRESS_BARS:GetCustomProperty("CURRENT_BAR"):WaitForObject()
                 local REWARD_BAR = PROGRESS_BARS:GetCustomProperty("REWARD_BAR"):WaitForObject()
-                
+
                 RewardCurrencyIcon:SetImage(ShardIcon)
                 CURRENT_BAR.progress = currentAmmount / requiredAmount
                 REWARD_BAR.progress = (currentAmmount + reward) / requiredAmount
@@ -257,13 +258,21 @@ local function BuildRewardSlots(tbl)
                 refreshCount = rewards
             end
         end
-    
+
         if id and bind and reward then
             BuildShopItems(slot, id, class, bind, reward)
         end
     end
-    AMOUNT.text = FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount))
-    AMOUNT_SHADOW.text = FormatInt(REWARD_UTIL.CalculateRefreshCost(refreshCount))
+    local refreshCost = REWARD_UTIL.CalculateRefreshCost(refreshCount)
+    if refreshCost > LOCAL_PLAYER:GetResource("Gold") then
+        AMOUNT.text = FormatInt(refreshCost)
+        AMOUNT_SHADOW.text = FormatInt(refreshCost)
+        REFRESH_BUTTON.isInteractable = false
+    else
+        AMOUNT.text = FormatInt(refreshCost)
+        AMOUNT_SHADOW.text = FormatInt(refreshCost)
+        REFRESH_BUTTON.isInteractable = true
+    end
 end
 
 local function DisconnectNpcListener()
@@ -309,6 +318,7 @@ function OnRefresh()
     if not isAllowed(0.2) then
         return
     end
+    World.SpawnAsset(SFX_REFRESH_CLICK)
     Events.BroadcastToServer(NAMESPACE .. "REFRESH")
 end
 
@@ -319,7 +329,11 @@ function OnDailyShopOpen(player, keybind)
 end
 
 function OnInteracted(trigger, player)
-    if player == LOCAL_PLAYER and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
+    if
+        player == LOCAL_PLAYER and
+            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
+            not PARENT_UI:IsVisibleInHierarchy()
+     then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
         isAllowed(0.5)
@@ -327,7 +341,11 @@ function OnInteracted(trigger, player)
 end
 
 function OnButtonInteracted(player, keybind)
-    if player == LOCAL_PLAYER and keybind == "ability_extra_38" and (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and not PARENT_UI:IsVisibleInHierarchy() then
+    if
+        player == LOCAL_PLAYER and keybind == "ability_extra_38" and
+            (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
+            not PARENT_UI:IsVisibleInHierarchy()
+     then
         Events.BroadcastToServer(NAMESPACE .. "OPENSHOP")
         ToggleUi(true)
         isAllowed(0.5)
