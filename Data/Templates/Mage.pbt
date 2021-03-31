@@ -3078,7 +3078,7 @@ Assets {
       }
       Objects {
         Id: 1254248059045754243
-        Name: "Zap"
+        Name: "Wand"
         Transform {
           Location {
           }
