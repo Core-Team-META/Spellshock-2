@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17824683867460661746
-  Name: "Fantasy Staff 013"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Staff_013"
-  }
-}
-Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -77,6 +68,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Purple_010"
+  }
+}
+Assets {
+  Id: 16876013848738050406
+  Name: "Fantasy Ability Yellow 020"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_021"
   }
 }
 Assets {
@@ -161,12 +161,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11777958130908294853
-  Name: "Fantasy Ability Yellow 001"
+  Id: 11559340443332851237
+  Name: "Fantasy Ability Green 002"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Yellow_001"
+    AssetId: "UI_Fantasy_Ability_Green_002"
   }
 }
 Assets {
@@ -185,15 +185,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Blue_003"
-  }
-}
-Assets {
-  Id: 10192819447049905622
-  Name: "Fantasy Dagger 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Dagger_003"
   }
 }
 Assets {
@@ -332,6 +323,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6020653271052380125
+  Name: "Fantasy Ability Yellow 013"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_013"
+  }
+}
+Assets {
   Id: 5751567816530114738
   Name: "Fantasy Ability Red 029"
   PlatformAssetType: 9
@@ -347,6 +347,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Blue_029"
+  }
+}
+Assets {
+  Id: 5231252917595305835
+  Name: "Fantasy Ability Yellow 032"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_032"
   }
 }
 Assets {
@@ -431,15 +440,6 @@ Assets {
   }
 }
 Assets {
-  Id: 2439865559819884120
-  Name: "Fantasy Crossbow 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Crossbow_002"
-  }
-}
-Assets {
   Id: 2396467018832549261
   Name: "Fantasy Ability Blue 023"
   PlatformAssetType: 9
@@ -467,21 +467,21 @@ Assets {
   }
 }
 Assets {
-  Id: 1031800327856440791
-  Name: "Fantasy Hammer 005"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Weapon_Hammer_005"
-  }
-}
-Assets {
   Id: 804681952734696509
   Name: "Fantasy Ability Teal 023"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Teal_023"
+  }
+}
+Assets {
+  Id: 405738147373459326
+  Name: "Fantasy Ability Teal 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Teal_004"
   }
 }
 Assets {
