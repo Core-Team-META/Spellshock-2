@@ -10,6 +10,8 @@ local BUTTON_TEXT = script:GetCustomProperty("TextShadow"):WaitForObject()
 local ChooseReward = script:GetCustomProperty("ChooseReward"):WaitForObject()
 
 local spamPrevent
+local isRewards = false
+local isActive = false
 
 local function TurnOnButton()
     BUTTON.isInteractable = true
@@ -50,7 +52,6 @@ local function isAllowed(time)
 end
 
 local function ClaimButtonPressed()
-
     BUTTON.isInteractable = false
     LOCAL_PLAYER.clientUserData.hasClaimedReward = true
 
@@ -59,7 +60,7 @@ local function ClaimButtonPressed()
     Events.BroadcastToServer("RewardSelected")
 
     Task.Wait(3)
-    
+
     LOCAL_PLAYER.clientUserData.hasSkippedReward = true
     Events.Broadcast("RestoreFromPodium")
     Events.Broadcast("Changing Menu", "ShowIcons")
@@ -70,9 +71,12 @@ function OnGameStateChanged(oldState, newState, hasDuration, time)
     if newState ~= ABGS.GAME_STATE_REWARDS then
         TurnOffButton()
         BUTTON_PANEL.visibility = Visibility.FORCE_OFF
+        isRewards = false
+        isActive = false
     else
         TurnOffButton()
         BUTTON_PANEL.visibility = Visibility.FORCE_ON
+        isRewards = true
     end
     if newState == ABGS.GAME_STATE_LOBBY then
         LOCAL_PLAYER.clientUserData.hasClaimedReward = false
@@ -95,6 +99,25 @@ function OnRewardSelected(bool)
     end
 end
 
+function Tick()
+    if isRewards then
+        local remainingTime = ABGS.GetTimeRemainingInState()
+        if not isActive or remainingTime and remainingTime > 50 then
+            remainingTime = remainingTime - 50
+            if remainingTime > 0 then
+                local seconds = math.floor(remainingTime) % 60
+                BUTTON_TEXT.text = string.format("%02d", seconds)
+                BUTTON_TEXT:GetChildren()[1].text = string.format("%02d", seconds)
+            else
+                BUTTON_TEXT.text = "CLAIM"
+                BUTTON_TEXT:GetChildren()[1]:SetColor(Color.GRAY)
+                BUTTON_TEXT:GetChildren()[1].text = "CLAIM"
+                isActive = true
+            end
+        end
+    end
+end
+
 -- handler params: UIButton_
 BUTTON.clickedEvent:Connect(
     function()
@@ -108,6 +131,7 @@ local currentState = ABGS.GetGameState()
 if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then
     ClaimButtonPressed()
 elseif currentState == ABGS.GAME_STATE_REWARDS then
+    isRewards = true
     ClaimButtonPressed()
 elseif currentState == ABGS.GAME_STATE_REWARDS_END then
     ClaimButtonPressed()
