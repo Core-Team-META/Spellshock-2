@@ -8143,7 +8143,7 @@ Objects {
     AudioAsset {
       Id: 2587567105337529696
     }
-    Pitch: 200
+    Pitch: 1600
     Volume: 2
     Falloff: 2500
     Radius: 500
@@ -12536,7 +12536,7 @@ Objects {
     AudioAsset {
       Id: 2587567105337529696
     }
-    Pitch: 200
+    Pitch: 1600
     Volume: 2
     Falloff: 2500
     Radius: 500
@@ -16499,7 +16499,7 @@ Objects {
     AudioAsset {
       Id: 2587567105337529696
     }
-    Pitch: 200
+    Pitch: 1600
     Volume: 2
     Falloff: 2500
     Radius: 500
@@ -20836,7 +20836,7 @@ Objects {
     AudioAsset {
       Id: 2587567105337529696
     }
-    Pitch: 200
+    Pitch: 1600
     Volume: 2
     Falloff: 2500
     Radius: 500
@@ -30356,7 +30356,7 @@ Objects {
     AudioAsset {
       Id: 2587567105337529696
     }
-    Pitch: 200
+    Pitch: 1600
     Volume: 2
     Falloff: 2500
     Radius: 500
