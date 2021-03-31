@@ -2,8 +2,8 @@ local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/10
--- Version 0.1.3
+-- Date: 2021/3/30
+-- Version 0.1.4
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -123,6 +123,7 @@ end
 
 --@param object player
 function OnPlayerLeft(player)
+    OnDeletePlayerDataObject(player)
     dailyRewards[player.id] = nil
 end
 
@@ -135,7 +136,7 @@ function OnPurchase(player, id, slot)
     end
 end
 
-function OnRefresh(player)
+function OnGoldRefresh(player)
     local refreshCount = player.serverUserData.DS_REFRESH or 0
     local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.CalculateRefreshCost(refreshCount)
     if remainingGold >= 0 then
@@ -145,10 +146,21 @@ function OnRefresh(player)
     end
 end
 
+function OnPremiumRefresh(player)
+    local refreshCount = player.serverUserData.DS_REFRESH or 0
+    local remainingCosmToken = player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculateRefreshCost(refreshCount) / 500)
+    if remainingCosmToken >= 0 then
+        GenerateShopItems(player, true)
+        ReplicateShopItems(player)
+        player:SetResource(CONST.COSMETIC_TOKEN, remainingCosmToken)
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------
 Events.ConnectForPlayer(NAMESPACE .. "DESTROY", OnDeletePlayerDataObject)
 Events.ConnectForPlayer(NAMESPACE .. "PURCHASE", OnPurchase)
-Events.ConnectForPlayer(NAMESPACE .. "REFRESH", OnRefresh)
+Events.ConnectForPlayer(NAMESPACE .. "REFRESH", OnGoldRefresh)
+Events.ConnectForPlayer(NAMESPACE .. "PREM_REFRESH", OnPremiumRefresh)
 Events.ConnectForPlayer(NAMESPACE .. "OPENSHOP", ReplicateShopItems)
