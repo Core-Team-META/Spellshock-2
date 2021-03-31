@@ -727,11 +727,18 @@ function OnGameStateChanged(oldState, newState)
 		for _, player in ipairs(Game.GetPlayers()) do
 			AttachCostumeToPlayer(player)
 		end
-	elseif (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) then
+	elseif (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) and not LOCAL_PLAYER.hasSkippedRewardReward then
 		-- Destroy lobby costumes
 		for _, player in ipairs(Game.GetPlayers()) do
 			DetachCostumeFromPlayer(player)
 		end
+	end
+end
+
+function OnRestoreFromPodium()
+	-- Destroy lobby costumes
+	for _, player in ipairs(Game.GetPlayers()) do
+		DetachCostumeFromPlayer(player)
 	end
 end
 
@@ -894,6 +901,7 @@ SpinnerTask.repeatInterval = 0
 OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("RestoreFromPodium", OnRestoreFromPodium)
 GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
