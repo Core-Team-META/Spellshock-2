@@ -111,6 +111,7 @@ function OnCastAbility(ability)
     end
 
     Task.Wait(0.2)
+    if not Object.IsValid(ability) then return end
 
     if ability:GetCurrentPhase() == AbilityPhase.CAST then
         if Object.IsValid(aimLine) then
