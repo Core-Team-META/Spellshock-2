@@ -19,7 +19,9 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 function OnPlayerDied(player, damage)
 	if damage.sourceAbility then
 		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, damage.sourceAbility.name)
+		print(player.name .. " - " .. damage.sourceAbility.name)
 	elseif not player.serverUserData.killedByStatusEffect then
+		print(player.name .. "No source ability")
 		Events.BroadcastToAllPlayers("AKI", damage.sourcePlayer, player, nil)
 	end
 end

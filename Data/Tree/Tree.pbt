@@ -35,8 +35,6 @@ Objects {
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
   ChildIds: 1672145936829432866
-  ChildIds: 12857723749699049181
-  ChildIds: 10244107505845218646
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -49,81 +47,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 10244107505845218646
-  Name: "STORE_Entry Geo"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9134274018311211015
-      value {
-        Overrides {
-          Name: "Name"
-          String: "STORE_Entry Geo"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 6943.85742
-            Y: 7104.63867
-            Z: 3318.07983
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 14017068995717020871
-    }
-  }
-}
-Objects {
-  Id: 12857723749699049181
-  Name: "TestKillFeed"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11911571504260382777
-    }
   }
 }
 Objects {

@@ -2337,7 +2337,7 @@ Assets {
       }
       Objects {
         Id: 10839953769775855596
-        Name: "Shoot"
+        Name: "Crossbow"
         ParentId: 13944462686745880869
         UnregisteredParameters {
         }

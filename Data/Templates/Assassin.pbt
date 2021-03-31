@@ -3237,7 +3237,7 @@ Assets {
       }
       Objects {
         Id: 6522519753598108575
-        Name: "Dagger Left"
+        Name: "Dagger"
         Transform {
           Location {
           }
@@ -3306,7 +3306,7 @@ Assets {
       }
       Objects {
         Id: 3230213687525692580
-        Name: "Dagger Right"
+        Name: "Dagger"
         Transform {
           Location {
           }
