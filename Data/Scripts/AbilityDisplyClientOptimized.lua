@@ -80,6 +80,12 @@ function OnAbilityIconSet(thisAbility, icon, color)
         DURATION_BAR.progress = 0
         currentAbility.clientUserData.durationBar = DURATION_BAR
         
+        if RMB_INDICATOR then
+            currentAbility.clientUserData.isSteering = false
+            RMB_INDICATOR.visibility = Visibility.FORCE_OFF
+            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
+		end
+
         -- Listen for networked property changes
         if networkedEventListener then
         	networkedEventListener:Disconnect()
