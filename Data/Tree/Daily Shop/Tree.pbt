@@ -25587,7 +25587,7 @@ Objects {
     Overrides {
       Name: "cs:PROGRESS_BARS"
       ObjectReference {
-        SelfId: 5236907573468577620
+        SelfId: 12915170654962031329
       }
     }
   }
