@@ -36,15 +36,15 @@ Assets {
           Overrides {
             Name: "cs:BGMesh"
             ObjectReference {
-              SubObjectId: 16914064471433568227
+              SubObjectId: 229621793103206118
             }
           }
           Overrides {
             Name: "cs:DefaultColor"
             Color {
-              R: 0.01
-              G: 0.01
-              B: 0.01
+              R: 0.004
+              G: 0.004
+              B: 0.004
               A: 1
             }
           }
@@ -73,6 +73,12 @@ Assets {
               G: 0.02
               B: 0.02
               A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:Swirl"
+            ObjectReference {
+              SubObjectId: 229621793103206118
             }
           }
         }
@@ -137,33 +143,28 @@ Assets {
           Overrides {
             Name: "bp:Swirl Color"
             Color {
-              R: 0.0128475213
-              G: 0.97
+              R: 0.078
+              G: 0.078
+              B: 0.078
               A: 1
             }
           }
           Overrides {
             Name: "bp:Color A"
             Color {
-              R: 0.102237403
-              G: 0.65625
-              A: 1
+              A: 0.05
             }
           }
           Overrides {
             Name: "bp:Color B"
             Color {
-              R: 0.0734121725
-              G: 0.46875
-              A: 1
+              A: 0.05
             }
           }
           Overrides {
             Name: "bp:Color C"
             Color {
-              R: 0.36900723
-              G: 3
-              A: 1
+              A: 0.05
             }
           }
           Overrides {
@@ -206,9 +207,10 @@ Assets {
           Overrides {
             Name: "bp:Mask Color"
             Color {
-              R: 0.0131265428
-              G: 0.0885416642
-              A: 1
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 0.05
             }
           }
           Overrides {
@@ -488,9 +490,6 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.018446181
-              G: 0.0253517944
-              B: 0.0520833321
               A: 1
             }
           }
