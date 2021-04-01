@@ -3,6 +3,7 @@ local AS = require(script:GetCustomProperty("API_Spectator"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ClassInfo = script:GetCustomProperty("ClassInfo"):WaitForObject()
 local BottomBar = script:GetCustomProperty("BottomBar"):WaitForObject()
+local ClassSelectionKeyIcon = script:GetCustomProperty("ClassSelectionKeyIcon"):WaitForObject()
 
 local ClassName = ClassInfo:GetCustomProperty("ClassName"):WaitForObject()
 local Icon = ClassInfo:GetCustomProperty("Icon"):WaitForObject()
@@ -25,7 +26,7 @@ function OnClassIconSet(name, icon)
     end
     ClassName:GetChildren()[1].text  = ClassName.text
     Icon:SetImage(icon)
-
+    ClassSelectionKeyIcon:SetImage(icon)
     local classID = META_AP()[string.upper(name)]
     --
     --[[local level = 0
