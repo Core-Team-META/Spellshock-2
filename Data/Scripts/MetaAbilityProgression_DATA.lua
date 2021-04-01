@@ -110,16 +110,16 @@ classTable = {
         --Shield Dash
         [CONST.BIND.R] = {
             -- mod1 = Ending Radius, mod2 = Enemy Impulse, mod3 = Damage Amount
-            [1] = {mod1 = 350, mod2 = 200000, mod3 = 60, mod4 = 0, mod5 = 0, mod6 = 12},
-            [2] = {mod1 = 400, mod2 = 200000, mod3 = 65, mod4 = 0, mod5 = 0, mod6 = 11},
-            [3] = {mod1 = 450, mod2 = 200000, mod3 = 70, mod4 = 0, mod5 = 0, mod6 = 10},
-            [4] = {mod1 = 500, mod2 = 200000, mod3 = 75, mod4 = 0, mod5 = 0, mod6 = 9},
-            [5] = {mod1 = 550, mod2 = 200000, mod3 = 80, mod4 = 0, mod5 = 0, mod6 = 8.5},
-            [6] = {mod1 = 600, mod2 = 200000, mod3 = 85, mod4 = 0, mod5 = 0, mod6 = 8},
-            [7] = {mod1 = 650, mod2 = 200000, mod3 = 90, mod4 = 0, mod5 = 0, mod6 = 7.5},
-            [8] = {mod1 = 700, mod2 = 200000, mod3 = 95, mod4 = 0, mod5 = 0, mod6 = 7},
-            [9] = {mod1 = 800, mod2 = 200000, mod3 = 100, mod4 = 0, mod5 = 0, mod6 = 6.5},
-           [10] = {mod1 = 900, mod2 = 200000, mod3 = 105, mod4 = 0, mod5 = 0, mod6 = 6}
+            [1] = {mod1 = 350, mod2 = 200000, mod3 = 60, mod4 = {duration = 4.0, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 12},
+            [2] = {mod1 = 400, mod2 = 200000, mod3 = 65, mod4 = {duration = 4.1, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 11},
+            [3] = {mod1 = 450, mod2 = 200000, mod3 = 70, mod4 = {duration = 4.2, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 10},
+            [4] = {mod1 = 500, mod2 = 200000, mod3 = 75, mod4 = {duration = 4.3, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 9},
+            [5] = {mod1 = 550, mod2 = 200000, mod3 = 80, mod4 = {duration = 4.4, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 8.5},
+            [6] = {mod1 = 600, mod2 = 200000, mod3 = 85, mod4 = {duration = 4.5, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 8},
+            [7] = {mod1 = 650, mod2 = 200000, mod3 = 90, mod4 = {duration = 4.6, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 7.5},
+            [8] = {mod1 = 700, mod2 = 200000, mod3 = 95, mod4 = {duration = 4.7, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 7},
+            [9] = {mod1 = 800, mod2 = 200000, mod3 = 100, mod4 = {duration = 4.8, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 6.5},
+           [10] = {mod1 = 900, mod2 = 200000, mod3 = 105, mod4 = {duration = 5.0, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 6}
         },
         --Boulder Throw
         [CONST.BIND.T] = {
