@@ -517,6 +517,12 @@ Assets {
             Name: "cs:Range"
             Int: 3000
           }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
