@@ -95,6 +95,14 @@ API.CLASS_HEALTH = {
     [API.CLASS.ASSASSIN] = 300
 }
 
+API.CLASS_REGEN = {
+    [API.CLASS.TANK] = 10.0,
+    [API.CLASS.MAGE] = 1.0,
+    [API.CLASS.HUNTER] = 1.0,
+    [API.CLASS.HEALER] = 1.0,
+    [API.CLASS.ASSASSIN] = 1.0
+}
+
 API.ReqXp = {
     [1] = 1000,
     [2] = 2145,
