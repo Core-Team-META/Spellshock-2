@@ -79,7 +79,7 @@ local function GiveGoldOnKill(source, target, sourceLevel, targetLevel)
             warn("Level Dif Bonus: " .. tostring(levelDifBonus))
         end
         bonusGold = (bonusGold + CONST.GOLD_PER_KILL + levelDifBonus) * CONST.EVENT_GOLD_MULTIPLIER
-        if source.serverUserData.IsVIP then
+        if source.serverUserData.IsVip then
             bonusGold = bonusGold * CONST.VIP_GOLD_MULTIPLIER
         end
 
@@ -110,7 +110,7 @@ local function GiveXPOnKill(source, target, sourceLevel, targetLevel)
 
     gainedXp = gainedXp * CONST.EVENT_XP_MULITPLIER
 
-    if source.serverUserData.IsVIP then
+    if source.serverUserData.IsVip then
         gainedXp = gainedXp * CONST.VIP_XP_MULTIPLIER
     end
 
@@ -130,7 +130,7 @@ local function OnRoundEnd()
          then
             local gainedXp = CONST.CLASS_XP.Wins * CONST.EVENT_XP_MULITPLIER
 
-            if player.serverUserData.IsVIP then
+            if player.serverUserData.IsVip then
                 gainedXp = gainedXp * CONST.VIP_XP_MULTIPLIER
             end
 
@@ -175,7 +175,7 @@ function OnPlayerCapture(player)
     local gainedXp = CONST.CLASS_XP.Captures * CONST.EVENT_XP_MULITPLIER
     local gainedGold = CONST.GOLD_PER_CAPTURE * CONST.EVENT_GOLD_MULTIPLIER
 
-    if player.serverUserData.IsVIP then
+    if player.serverUserData.IsVip then
         gainedXp = gainedXp * CONST.VIP_XP_MULTIPLIER
         gainedGold = gainedGold * CONST.VIP_GOLD_MULTIPLIER
     end
@@ -210,7 +210,7 @@ function GoingToTakeDamage(attackData)
 
         local gainedXp = CONST.CLASS_XP.Interrupt * CONST.EVENT_XP_MULITPLIER
 
-        if source.serverUserData.IsVIP then
+        if source.serverUserData.IsVip then
             gainedXp = gainedXp * CONST.VIP_XP_MULTIPLIER
         end
         CLASS_PROGRESS.AddXP(

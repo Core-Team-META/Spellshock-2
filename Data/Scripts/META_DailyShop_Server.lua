@@ -128,7 +128,15 @@ function OnPlayerLeft(player)
 end
 
 function OnPurchase(player, id, slot)
-    local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
+    local cost = REWARD_UTIL.GetRewardCost(dailyRewards[player.id][id])
+
+    -- Event Daily Cost Reduction
+    cost = CoreMath.Round(cost * CONST.EVENT_DAILY_SHOP_DISCOUNT)
+
+    if player.serverUserData.IsVip then
+        cost = CoreMath.Round(cost * CONST.VIP_DAILY_SHOP_DISCOUNT)
+    end
+    local remainingGold = player:GetResource(CONST.GOLD) - cost
     if remainingGold >= 0 then
         player:SetResource(CONST.GOLD, remainingGold)
         REWARD_UTIL.OnRewardSelect(player, id, dailyRewards, true)
@@ -148,7 +156,8 @@ end
 
 function OnPremiumRefresh(player)
     local refreshCount = player.serverUserData.DS_REFRESH or 0
-    local remainingCosmToken = player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculateRefreshCost(refreshCount) / 500)
+    local remainingCosmToken =
+        player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculateRefreshCost(refreshCount) / 500)
     if remainingCosmToken >= 0 then
         GenerateShopItems(player, true)
         ReplicateShopItems(player)

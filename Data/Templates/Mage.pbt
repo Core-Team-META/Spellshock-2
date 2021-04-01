@@ -3049,7 +3049,7 @@ Assets {
             BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
-            Range: 7000
+            Range: 15000
             ImpactPlayerAssetRef {
               Id: 7162940562527151262
             }
@@ -3231,7 +3231,7 @@ Assets {
             BurstCount: 1
             BurstDuration: 1
             BurstStopsWithRelease: true
-            Range: 7000
+            Range: 15000
             ImpactPlayerAssetRef {
               Id: 7162940562527151262
             }
