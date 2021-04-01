@@ -2312,7 +2312,7 @@ Assets {
             BurstDuration: 1
             BurstStopsWithRelease: true
             AttackCooldown: 0.25
-            Range: 7000
+            Range: 15000
             ImpactPlayerAssetRef {
               Id: 14373757464648078715
             }
@@ -2322,10 +2322,10 @@ Assets {
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
-            ProjectileSpeed: 40000
+            ProjectileSpeed: 50000
             ProjectileLifeSpan: 10
             ProjectileLength: 50
-            ProjectileRadius: 5
+            ProjectileRadius: 8
             SpreadMax: 10
             DefaultAbility {
               SubObjectId: 10839953769775855596
