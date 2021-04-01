@@ -381,7 +381,6 @@ local function UpdateText(parent, newText, extra)
 	for _, textField in ipairs(parent:GetChildren()) do
 		textField.text = tostring(newText)
 	end
-
 end
 
 function UpdateAbilityInfo(thisButton)
@@ -412,45 +411,38 @@ function UpdateAbilityInfo(thisButton)
 	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
 
-	local CurrentXPPanel = AbilityXPPanel:GetCustomProperty("CurrentXP"):WaitForObject()
-	local CXPMainText = CurrentXPPanel:GetCustomProperty("MainText"):WaitForObject()
-	-- local DividerPanel = AbilityXPPanel:GetCustomProperty("Divider"):WaitForObject()
-	local NextLevelXPPanel = AbilityXPPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
-
-	UpdateText(CurrentXPPanel, currentXP)
-	UpdateText(NextLevelXPPanel, reqXP)
-
-	if (currentXP < reqXP) then
-		CXPMainText:SetColor(Color.RED)
-	else
-		CXPMainText:SetColor(Color.FromStandardHex("FFCB8DFF"))
-	end
-
-	GoldCost.text = UTIL.FormatInt(goldCost)
-
-
-	LevelProgressBar.progress = currentXP / reqXP
-
 	LevelText.text = tostring(abilityLevel)
 	if (abilityLevel < 10) then
-		LevelNextText.text = tostring(abilityLevel + 1)
-		if (not RightPanel_UpgradeButtonPanel:IsVisibleInHierarchy()) then RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_ON end
-		if (not AbilityXPPanel:IsVisibleInHierarchy()) then AbilityXPPanel.visibility = Visibility.FORCE_ON end
-		if (MaxLevelPanel:IsVisibleInHierarchy()) then MaxLevelPanel.visibility = Visibility.FORCE_OFF end
-		if (LevelProgressBar:GetFillColor() ~= RegularFillColor) then
-			LevelProgressBar:SetFillColor(RegularFillColor)
+		local CurrentXPPanel = AbilityXPPanel:GetCustomProperty("CurrentXP"):WaitForObject()
+		local CXPMainText = CurrentXPPanel:GetCustomProperty("MainText"):WaitForObject()
+		-- local DividerPanel = AbilityXPPanel:GetCustomProperty("Divider"):WaitForObject()
+		local NextLevelXPPanel = AbilityXPPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
+
+		UpdateText(CurrentXPPanel, currentXP)
+		UpdateText(NextLevelXPPanel, reqXP)
+
+		if (currentXP < reqXP) then
+			CXPMainText:SetColor(Color.RED)
+		else
+			CXPMainText:SetColor(Color.FromStandardHex("FFCB8DFF"))
 		end
+
+		GoldCost.text = UTIL.FormatInt(goldCost)
+		LevelProgressBar.progress = currentXP / reqXP
+		LevelNextText.text = tostring(abilityLevel + 1)
+
+		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
+		AbilityXPPanel.visibility = Visibility.INHERIT
+		MaxLevelPanel.visibility = Visibility.FORCE_OFF
+		LevelProgressBar:SetFillColor(RegularFillColor)
 	else
-		if (not MaxLevelPanel:IsVisibleInHierarchy()) then MaxLevelPanel.visibility = Visibility.FORCE_ON end
-		if (RightPanel_UpgradeButtonPanel:IsVisibleInHierarchy()) then RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF end
-		if (AbilityXPPanel:IsVisibleInHierarchy()) then AbilityXPPanel.visibility = Visibility.FORCE_OFF end
 		LevelNextText.text = "!"
 		LevelProgressBar.progress = 1
-		if (LevelProgressBar:GetFillColor() ~= MaxFillColor) then
-			LevelProgressBar:SetFillColor(MaxFillColor)
-		end
-		-- LevelNextPanel.visibility = Visibility.FORCE_OFF
+		LevelProgressBar:SetFillColor(MaxFillColor)
 
+		MaxLevelPanel.visibility = Visibility.INHERIT
+		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+		AbilityXPPanel.visibility = Visibility.FORCE_OFF
 	end
 
 	if currentGold >= goldCost then
@@ -610,7 +602,7 @@ end
 
 function OnLocalResourceChanged(player, resName, resAmount)
 	if resName ~= LevelResourceName then return end -- Check resource name
-	Task.Wait()
+	--Task.Wait()
 	print("Upgrade complete: "..tostring(resAmount))
 	ResourceChangedEventListener:Disconnect()
 	ResourceChangedEventListener = nil

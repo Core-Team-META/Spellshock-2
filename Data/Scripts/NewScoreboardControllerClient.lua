@@ -65,6 +65,8 @@ end
 -- Keep track of the binding state to show the scoreboard 
 function OnBindingPressed(player, binding)
     if binding == BINDING then
+        local currentState = ABGS.GetGameState()
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then return end
         bindingDown = true
     end
 end

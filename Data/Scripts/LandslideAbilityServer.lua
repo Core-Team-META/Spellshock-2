@@ -19,6 +19,7 @@ local DEFAULT_Radius = Equipment:GetCustomProperty("EndingRadius")
 local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
 local DEFAULT_EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
 local DEFAULT_DamageAmount = Equipment:GetCustomProperty("DamageAmount")
+local DEFAULT_Stun = {duration = 4.0, damage = 0, multiplier = 0}
 
 local PlayerVFX = nil
 local DashImpulseVector = nil
@@ -38,10 +39,7 @@ function AddImpulseToPlayer(player)
 	player:AddImpulse(impulseVector)]]
 	
 	-- Apply stun
-	local status = {}
-	status.duration = 2
-	status.damage = 0
-	status.multiplier = 0
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Stun")
 	API_SE.ApplyStatusEffect(player, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 
 	-- Do damage

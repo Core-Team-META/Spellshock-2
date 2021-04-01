@@ -82,16 +82,16 @@ classTable = {
         --Rock Strike
         [CONST.BIND.Q] = {
             --mod1 = Projectile Speed, mod2 = Range, mod3 = Damage Range, mod4 = Impulse Amount
-            [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 112}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 8},
-            [2] = {mod1 = 4000, mod2 = 1670, mod3 = {min = 93, max = 115}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 7.5},
-            [3] = {mod1 = 4000, mod2 = 1690, mod3 = {min = 95, max = 118}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 7},
-            [4] = {mod1 = 4000, mod2 = 1710, mod3 = {min = 97, max = 122}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 6.6},
-            [5] = {mod1 = 4000, mod2 = 1730, mod3 = {min = 100, max = 125}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 6.3},
-            [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 103, max = 132}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 6},
-            [7] = {mod1 = 4000, mod2 = 1800, mod3 = {min = 106, max = 137}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 5.8},
-            [8] = {mod1 = 4000, mod2 = 1900, mod3 = {min = 110, max = 142}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 5.5},
-            [9] = {mod1 = 4000, mod2 = 2000, mod3 = {min = 115, max = 148}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 5.2},
-           [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 120, max = 150}, mod4 = 110000, mod5 = {duration = 5.0, damage = 0, multiplier = 0.5}, mod6 = 5}
+            [1] = {mod1 = 4000, mod2 = 1650, mod3 = {min = 91, max = 112}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 8},
+            [2] = {mod1 = 4000, mod2 = 1670, mod3 = {min = 93, max = 115}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 7.5},
+            [3] = {mod1 = 4000, mod2 = 1690, mod3 = {min = 95, max = 118}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 7},
+            [4] = {mod1 = 4000, mod2 = 1710, mod3 = {min = 97, max = 122}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 6.6},
+            [5] = {mod1 = 4000, mod2 = 1730, mod3 = {min = 100, max = 125}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 6.3},
+            [6] = {mod1 = 4000, mod2 = 1750, mod3 = {min = 103, max = 132}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 6},
+            [7] = {mod1 = 4000, mod2 = 1800, mod3 = {min = 106, max = 137}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 5.8},
+            [8] = {mod1 = 4000, mod2 = 1900, mod3 = {min = 110, max = 142}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 5.5},
+            [9] = {mod1 = 4000, mod2 = 2000, mod3 = {min = 115, max = 148}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 5.2},
+           [10] = {mod1 = 4000, mod2 = 2150, mod3 = {min = 120, max = 150}, mod4 = 110000, mod5 = {duration = 4.0, damage = 0, multiplier = 0.4}, mod6 = 5}
         },
         --Stone Wall
         [CONST.BIND.E] = {
@@ -110,30 +110,30 @@ classTable = {
         --Shield Dash
         [CONST.BIND.R] = {
             -- mod1 = Ending Radius, mod2 = Enemy Impulse, mod3 = Damage Amount
-            [1] = {mod1 = 350, mod2 = 200000, mod3 = 60, mod4 = 0, mod5 = 0, mod6 = 12},
-            [2] = {mod1 = 400, mod2 = 200000, mod3 = 65, mod4 = 0, mod5 = 0, mod6 = 11},
-            [3] = {mod1 = 450, mod2 = 200000, mod3 = 70, mod4 = 0, mod5 = 0, mod6 = 10},
-            [4] = {mod1 = 500, mod2 = 200000, mod3 = 75, mod4 = 0, mod5 = 0, mod6 = 9},
-            [5] = {mod1 = 550, mod2 = 200000, mod3 = 80, mod4 = 0, mod5 = 0, mod6 = 8.5},
-            [6] = {mod1 = 600, mod2 = 200000, mod3 = 85, mod4 = 0, mod5 = 0, mod6 = 8},
-            [7] = {mod1 = 650, mod2 = 200000, mod3 = 90, mod4 = 0, mod5 = 0, mod6 = 7.5},
-            [8] = {mod1 = 700, mod2 = 200000, mod3 = 95, mod4 = 0, mod5 = 0, mod6 = 7},
-            [9] = {mod1 = 800, mod2 = 200000, mod3 = 100, mod4 = 0, mod5 = 0, mod6 = 6.5},
-           [10] = {mod1 = 900, mod2 = 200000, mod3 = 105, mod4 = 0, mod5 = 0, mod6 = 6}
+            [1] = {mod1 = 350, mod2 = 200000, mod3 = 60, mod4 = {duration = 3.0, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 12},
+            [2] = {mod1 = 400, mod2 = 200000, mod3 = 65, mod4 = {duration = 3.1, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 11.5},
+            [3] = {mod1 = 450, mod2 = 200000, mod3 = 70, mod4 = {duration = 3.2, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 11},
+            [4] = {mod1 = 500, mod2 = 200000, mod3 = 75, mod4 = {duration = 3.3, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 10.5},
+            [5] = {mod1 = 550, mod2 = 200000, mod3 = 80, mod4 = {duration = 3.4, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 10},
+            [6] = {mod1 = 600, mod2 = 200000, mod3 = 85, mod4 = {duration = 3.5, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 9.5},
+            [7] = {mod1 = 650, mod2 = 200000, mod3 = 90, mod4 = {duration = 3.6, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 9},
+            [8] = {mod1 = 700, mod2 = 200000, mod3 = 95, mod4 = {duration = 3.7, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 8},
+            [9] = {mod1 = 800, mod2 = 200000, mod3 = 100, mod4 = {duration = 3.8, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 7.5},
+           [10] = {mod1 = 900, mod2 = 200000, mod3 = 105, mod4 = {duration = 4.0, damage = 0, multiplier = 0}, mod5 = 0, mod6 = 7}
         },
         --Boulder Throw
         [CONST.BIND.T] = {
             -- mod1 = Damage Amount, mod2 = Lifespan, mod3 = Projectile Speed, mod4 = Projectile Scale
-            [1] = {mod1 = 125, mod2 = 3, mod3 = 2000, mod4 = 4.0, mod5 = 0, mod6 = 15},
-            [2] = {mod1 = 135, mod2 = 3, mod3 = 2000, mod4 = 4.2, mod5 = 0, mod6 = 14},
-            [3] = {mod1 = 145, mod2 = 3, mod3 = 2000, mod4 = 4.4, mod5 = 0, mod6 = 13},
-            [4] = {mod1 = 150, mod2 = 3, mod3 = 2000, mod4 = 4.6, mod5 = 0, mod6 = 12},
-            [5] = {mod1 = 155, mod2 = 3, mod3 = 2000, mod4 = 4.8, mod5 = 0, mod6 = 12},
-            [6] = {mod1 = 165, mod2 = 3, mod3 = 2000, mod4 = 5.0, mod5 = 0, mod6 = 12},
-            [7] = {mod1 = 170, mod2 = 3, mod3 = 2000, mod4 = 5.2, mod5 = 0, mod6 = 11},
-            [8] = {mod1 = 175, mod2 = 3, mod3 = 2000, mod4 = 5.4, mod5 = 0, mod6 = 11},
-            [9] = {mod1 = 180, mod2 = 3, mod3 = 2000, mod4 = 5.6, mod5 = 0, mod6 = 11},
-           [10] = {mod1 = 185, mod2 = 3, mod3 = 2000, mod4 = 5.8, mod5 = 0, mod6 = 10}
+            [1] = {mod1 = 125, mod2 = 3, mod3 = 2500, mod4 = 4.0, mod5 = 0, mod6 = 15},
+            [2] = {mod1 = 135, mod2 = 3, mod3 = 2500, mod4 = 4.2, mod5 = 0, mod6 = 14},
+            [3] = {mod1 = 145, mod2 = 3, mod3 = 2500, mod4 = 4.4, mod5 = 0, mod6 = 13},
+            [4] = {mod1 = 150, mod2 = 3, mod3 = 2500, mod4 = 4.6, mod5 = 0, mod6 = 12},
+            [5] = {mod1 = 155, mod2 = 3, mod3 = 2500, mod4 = 4.8, mod5 = 0, mod6 = 12},
+            [6] = {mod1 = 165, mod2 = 3, mod3 = 2500, mod4 = 5.0, mod5 = 0, mod6 = 12},
+            [7] = {mod1 = 170, mod2 = 3, mod3 = 2500, mod4 = 5.2, mod5 = 0, mod6 = 11},
+            [8] = {mod1 = 175, mod2 = 3, mod3 = 2500, mod4 = 5.4, mod5 = 0, mod6 = 11},
+            [9] = {mod1 = 180, mod2 = 3, mod3 = 2500, mod4 = 5.6, mod5 = 0, mod6 = 11},
+           [10] = {mod1 = 185, mod2 = 3, mod3 = 2500, mod4 = 5.8, mod5 = 0, mod6 = 10}
         },
         --Roll
         [CONST.BIND.SHIFT] = {
@@ -151,16 +151,16 @@ classTable = {
         --Hammer
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min = 80, max = 95}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.6},
-            [2] = {mod1 = {min = 85, max = 100}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.58},
-            [3] = {mod1 = {min = 90, max = 105}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.56},
-            [4] = {mod1 = {min = 95, max = 110}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.54},
-            [5] = {mod1 = {min = 100, max = 115}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.52},
-            [6] = {mod1 = {min = 105, max = 120}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.5},
-            [7] = {mod1 = {min = 110, max = 125}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.47},
-            [8] = {mod1 = {min = 115, max = 130}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.44},
-            [9] = {mod1 = {min = 120, max = 140}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.42},
-           [10] = {mod1 = {min = 125, max = 145}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.35}
+            [1] = {mod1 = {min = 75, max = 95}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.6},
+            [2] = {mod1 = {min = 80, max = 100}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.58},
+            [3] = {mod1 = {min = 85, max = 105}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.56},
+            [4] = {mod1 = {min = 90, max = 110}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.54},
+            [5] = {mod1 = {min = 95, max = 115}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.52},
+            [6] = {mod1 = {min = 100, max = 120}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.5},
+            [7] = {mod1 = {min = 105, max = 125}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.47},
+            [8] = {mod1 = {min = 110, max = 130}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.44},
+            [9] = {mod1 = {min = 115, max = 140}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.42},
+           [10] = {mod1 = {min = 120, max = 145}, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 2, mod6 = 0.35}
         },
         --Block
         [CONST.BIND.RMB] = {
@@ -210,16 +210,16 @@ classTable = {
         --Pyroblast
         [CONST.BIND.R] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Targeting Range, mod4 = Knockback
-            [1] = {mod1 = 130, mod2 = 900, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 20},
-            [2] = {mod1 = 135, mod2 = 920, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 19},
-            [3] = {mod1 = 140, mod2 = 940, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 18.5},
-            [4] = {mod1 = 145, mod2 = 960, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 18},
-            [5] = {mod1 = 150, mod2 = 980, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 17.5},
-            [6] = {mod1 = 155, mod2 = 1000, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 17},
-            [7] = {mod1 = 160, mod2 = 1020, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 16.5},
-            [8] = {mod1 = 165, mod2 = 1050, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 16},
-            [9] = {mod1 = 170, mod2 = 1080, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15.5},
-           [10] = {mod1 = 185, mod2 = 1100, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15}
+            [1] = {mod1 = 130, mod2 = 700, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 20},
+            [2] = {mod1 = 135, mod2 = 720, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 19},
+            [3] = {mod1 = 140, mod2 = 730, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 18.5},
+            [4] = {mod1 = 145, mod2 = 740, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 18},
+            [5] = {mod1 = 150, mod2 = 750, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 17.5},
+            [6] = {mod1 = 155, mod2 = 760, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 17},
+            [7] = {mod1 = 160, mod2 = 770, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 16.5},
+            [8] = {mod1 = 165, mod2 = 780, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 16},
+            [9] = {mod1 = 170, mod2 = 790, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15.5},
+           [10] = {mod1 = 185, mod2 = 800, mod3 = 15000, mod4 = 20000, mod5 = 0, mod6 = 15}
         },
         --Iceberg
         [CONST.BIND.T] = {
@@ -237,30 +237,30 @@ classTable = {
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
-            [1] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9},
-            [2] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.8},
-            [3] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.6},
-            [4] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.4},
-            [5] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.2},
-            [6] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8},
-            [7] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7.8},
-            [8] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7.6},
-            [9] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7.3},
-           [10] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 7}
+            [1] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 10},
+            [2] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9.8},
+            [3] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9.6},
+            [4] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9.4},
+            [5] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9.2},
+            [6] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 9},
+            [7] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.8},
+            [8] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.6},
+            [9] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8.3},
+           [10] = {mod1 = 2900, mod2 = 0, mod3 = 0, mod4 = 0, mod5 = 0, mod6 = 8}
         },
         --Zap
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min = 35, max = 41}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.65},
-            [2] = {mod1 = {min = 37, max = 44}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.64},
-            [3] = {mod1 = {min = 39, max = 47}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.63},
-            [4] = {mod1 = {min = 41, max = 52}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.62},
-            [5] = {mod1 = {min = 43, max = 57}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.61},
-            [6] = {mod1 = {min = 45, max = 60}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.60},
-            [7] = {mod1 = {min = 47, max = 64}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.58},
-            [8] = {mod1 = {min = 49, max = 70}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.56},
-            [9] = {mod1 = {min = 53, max = 71}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.53},
-           [10] = {mod1 = {min = 55, max = 72}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.50}
+            [1] = {mod1 = {min = 36, max = 41}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.65},
+            [2] = {mod1 = {min = 38, max = 44}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.64},
+            [3] = {mod1 = {min = 40, max = 47}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.63},
+            [4] = {mod1 = {min = 42, max = 52}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.62},
+            [5] = {mod1 = {min = 44, max = 57}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.61},
+            [6] = {mod1 = {min = 46, max = 60}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.60},
+            [7] = {mod1 = {min = 48, max = 64}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.58},
+            [8] = {mod1 = {min = 50, max = 70}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.56},
+            [9] = {mod1 = {min = 55, max = 71}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.53},
+           [10] = {mod1 = {min = 62, max = 72}, mod2 = 0, mod3 = 0, mod4 = 90, mod5 = 0, mod6 = 0.50}
         },
         --Aim
         [CONST.BIND.RMB] = {
@@ -350,16 +350,16 @@ classTable = {
         --Shoot
         [CONST.BIND.LMB] = {
             -- mod1 = Damage Range
-            [1] = {mod1 = {min = 27, max = 28}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [2] = {mod1 = {min = 28, max = 29}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [3] = {mod1 = {min = 30, max = 32}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [4] = {mod1 = {min = 32, max = 33}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [5] = {mod1 = {min = 33, max = 34}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [6] = {mod1 = {min = 35, max = 37}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [7] = {mod1 = {min = 37, max = 39}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [8] = {mod1 = {min = 39, max = 41}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-            [9] = {mod1 = {min = 42, max = 43}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
-           [10] = {mod1 = {min = 44, max = 47}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35}
+            [1] = {mod1 = {min = 27, max = 29}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [2] = {mod1 = {min = 28, max = 30}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [3] = {mod1 = {min = 30, max = 33}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [4] = {mod1 = {min = 32, max = 34}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [5] = {mod1 = {min = 33, max = 35}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [6] = {mod1 = {min = 35, max = 36}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [7] = {mod1 = {min = 37, max = 40}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [8] = {mod1 = {min = 39, max = 42}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+            [9] = {mod1 = {min = 42, max = 44}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35},
+           [10] = {mod1 = {min = 44, max = 48}, mod2 = 30, mod3 = 3, mod4 = 0, mod5 = {duration = 1.5, damage = 0, multiplier = 0.7}, mod6 = 0.35}
         },
         --Aim
         [CONST.BIND.RMB] = {
@@ -394,44 +394,44 @@ classTable = {
         --Healing Crystal
         [CONST.BIND.E] = {
             -- mod1 = Heal Amount, mod2 = Duration, mod3 = Delay Between Heals, mod4 = Placement Range, mod5 = Radius
-            [1] = {mod1 = 26, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 500, mod6 = 26},
-            [2] = {mod1 = 27, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 520, mod6 = 25},
-            [3] = {mod1 = 28, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 540, mod6 = 24},
-            [4] = {mod1 = 29, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 560, mod6 = 23},
-            [5] = {mod1 = 30, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 580, mod6 = 22},
-            [6] = {mod1 = 31, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 600, mod6 = 21},
-            [7] = {mod1 = 32, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 650, mod6 = 20},
-            [8] = {mod1 = 33, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 700, mod6 = 19},
-            [9] = {mod1 = 35, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 750, mod6 = 18},
-           [10] = {mod1 = 37, mod2 = 8, mod3 = 0.5, mod4 = 2800, mod5 = 800, mod6 = 17}
+            [1] = {mod1 = 25, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 600, mod6 = 28},
+            [2] = {mod1 = 26, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 620, mod6 = 27},
+            [3] = {mod1 = 27, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 640, mod6 = 26},
+            [4] = {mod1 = 28, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 660, mod6 = 25},
+            [5] = {mod1 = 29, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 680, mod6 = 24},
+            [6] = {mod1 = 30, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 700, mod6 = 23},
+            [7] = {mod1 = 31, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 750, mod6 = 22},
+            [8] = {mod1 = 32, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 21},
+            [9] = {mod1 = 33, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 20},
+           [10] = {mod1 = 35, mod2 = 7, mod3 = 0.5, mod4 = 3000, mod5 = 800, mod6 = 19}
         },
         --Divine Light
         [CONST.BIND.R] = {
             -- mod1 = Impluse Amount, mod2 = Radius, mod3 = Stun Duration, mod4 = Heal Ammount, mod5 = Status Effect Blind & Speed
-            [1] = {mod1 = 120000, mod2 = 800, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.5, damage = 0, multiplier = 1.6}}, mod6 = 14},
-            [2] = {mod1 = 120000, mod2 = 820, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.7, damage = 0, multiplier = 1.6}}, mod6 = 13},
-            [3] = {mod1 = 120000, mod2 = 840, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.9, damage = 0, multiplier = 1.6}}, mod6 = 12},
-            [4] = {mod1 = 120000, mod2 = 860, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.1, damage = 0, multiplier = 1.6}}, mod6 = 11},
-            [5] = {mod1 = 120000, mod2 = 900, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.3, damage = 0, multiplier = 1.6}}, mod6 = 10},
-            [6] = {mod1 = 120000, mod2 = 920, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.5, damage = 0, multiplier = 1.6}}, mod6 = 9.5},
-            [7] = {mod1 = 120000, mod2 = 960, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.7, damage = 0, multiplier = 1.6}}, mod6 = 9},
-            [8] = {mod1 = 120000, mod2 = 1000, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.9, damage = 0, multiplier = 1.6}}, mod6 = 8.5},
-            [9] = {mod1 = 120000, mod2 = 1100, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 7.1, damage = 0, multiplier = 1.6}}, mod6 = 8},
-            [10] = {mod1 = 120000, mod2 = 1250, mod3 = 2000, mod4 = 50, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 7.3, damage = 0, multiplier = 1.6}}, mod6 = 7.5}
+            [1] = {mod1 = 120000, mod2 = 800, mod3 = 2000, mod4 = 30, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.5, damage = 0, multiplier = 1.6}}, mod6 = 14},
+            [2] = {mod1 = 120000, mod2 = 820, mod3 = 2000, mod4 = 31, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.7, damage = 0, multiplier = 1.6}}, mod6 = 13},
+            [3] = {mod1 = 120000, mod2 = 840, mod3 = 2000, mod4 = 32, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 5.9, damage = 0, multiplier = 1.6}}, mod6 = 12},
+            [4] = {mod1 = 120000, mod2 = 860, mod3 = 2000, mod4 = 33, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.1, damage = 0, multiplier = 1.6}}, mod6 = 11},
+            [5] = {mod1 = 120000, mod2 = 900, mod3 = 2000, mod4 = 34, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.3, damage = 0, multiplier = 1.6}}, mod6 = 10},
+            [6] = {mod1 = 120000, mod2 = 920, mod3 = 2000, mod4 = 35, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.5, damage = 0, multiplier = 1.6}}, mod6 = 9.5},
+            [7] = {mod1 = 120000, mod2 = 960, mod3 = 2000, mod4 = 36, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.7, damage = 0, multiplier = 1.6}}, mod6 = 9},
+            [8] = {mod1 = 120000, mod2 = 1000, mod3 = 2000, mod4 = 37, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 6.9, damage = 0, multiplier = 1.6}}, mod6 = 8.5},
+            [9] = {mod1 = 120000, mod2 = 1100, mod3 = 2000, mod4 = 38, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 7.1, damage = 0, multiplier = 1.6}}, mod6 = 8},
+            [10] = {mod1 = 120000, mod2 = 1250, mod3 = 2000, mod4 = 39, mod5 = {BLIND = {duration = 3, damage = 0, multiplier = 0}, SPEED = {duration = 7.3, damage = 0, multiplier = 1.6}}, mod6 = 7.5}
         },
         --Supernova
         [CONST.BIND.T] = {
             -- mod1 = Heal Amount, mod2 = Damage Amount, mod3 = Radius, mod4 = Placement Range, mod5 = Status Effect Stun
-            [1] = {mod1 = 120, mod2 = 75, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.25, damage = 0, multiplier = 0}, mod6 = 30},
-            [2] = {mod1 = 125, mod2 = 80, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.35, damage = 0, multiplier = 0}, mod6 = 29},
-            [3] = {mod1 = 130, mod2 = 85, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.45, damage = 0, multiplier = 0}, mod6 = 28},
-            [4] = {mod1 = 135, mod2 = 90, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.55, damage = 0, multiplier = 0}, mod6 = 27},
-            [5] = {mod1 = 140, mod2 = 95, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.65, damage = 0, multiplier = 0}, mod6 = 26},
-            [6] = {mod1 = 145, mod2 = 100, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.75, damage = 0, multiplier = 0}, mod6 = 25},
-            [7] = {mod1 = 150, mod2 = 105, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.85, damage = 0, multiplier = 0}, mod6 = 24},
-            [8] = {mod1 = 160, mod2 = 110, mod3 = 1200, mod4 = 5000, mod5 = {duration = 1.95, damage = 0, multiplier = 0}, mod6 = 23},
-            [9] = {mod1 = 170, mod2 = 120, mod3 = 1200, mod4 = 5000, mod5 = {duration = 2.15, damage = 0, multiplier = 0}, mod6 = 22},
-           [10] = {mod1 = 180, mod2 = 125, mod3 = 1200, mod4 = 5000, mod5 = {duration = 2.35, damage = 0, multiplier = 0}, mod6 = 21}
+            [1] = {mod1 = 160, mod2 = 95, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.25, damage = 0, multiplier = 0}, mod6 = 50},
+            [2] = {mod1 = 165, mod2 = 100, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.35, damage = 0, multiplier = 0}, mod6 = 49},
+            [3] = {mod1 = 170, mod2 = 105, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.45, damage = 0, multiplier = 0}, mod6 = 48},
+            [4] = {mod1 = 175, mod2 = 110, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.55, damage = 0, multiplier = 0}, mod6 = 47},
+            [5] = {mod1 = 180, mod2 = 115, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.65, damage = 0, multiplier = 0}, mod6 = 46},
+            [6] = {mod1 = 185, mod2 = 125, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.75, damage = 0, multiplier = 0}, mod6 = 45},
+            [7] = {mod1 = 190, mod2 = 135, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.85, damage = 0, multiplier = 0}, mod6 = 44},
+            [8] = {mod1 = 195, mod2 = 145, mod3 = 1250, mod4 = 5000, mod5 = {duration = 1.95, damage = 0, multiplier = 0}, mod6 = 43},
+            [9] = {mod1 = 215, mod2 = 160, mod3 = 1250, mod4 = 5000, mod5 = {duration = 2.15, damage = 0, multiplier = 0}, mod6 = 42},
+           [10] = {mod1 = 235, mod2 = 175, mod3 = 1250, mod4 = 5000, mod5 = {duration = 2.35, damage = 0, multiplier = 0}, mod6 = 41}
         },
         --Teleport
         [CONST.BIND.SHIFT] = {
@@ -507,16 +507,16 @@ classTable = {
         --Venom Bomb
         [CONST.BIND.R] = {
             -- mod1 = Damage Amount, mod2 = Damage Radius, mod3 = Projectile Speed, mod4 = Status Effect Slow, mod 5 = Status Effect Poison
-            [1] = {mod1 = 35, mod2 = 660, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 5, multiplier = 0}, mod6 = 17},
-            [2] = {mod1 = 40, mod2 = 725, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 6, multiplier = 0}, mod6 = 16},
-            [3] = {mod1 = 40, mod2 = 775, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 7, multiplier = 0}, mod6 = 15},
-            [4] = {mod1 = 45, mod2 = 825, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 8, multiplier = 0}, mod6 = 14},
-            [5] = {mod1 = 45, mod2 = 850, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 9, multiplier = 0}, mod6 = 13},
-            [6] = {mod1 = 50, mod2 = 870, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [7] = {mod1 = 50, mod2 = 890, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [8] = {mod1 = 60, mod2 = 910, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 10, multiplier = 0}, mod6 = 12},
-            [9] = {mod1 = 60, mod2 = 930, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 11, multiplier = 0}, mod6 = 11},
-           [10] = {mod1 = 65, mod2 = 950, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 10.0, damage = 12, multiplier = 0}, mod6 = 10}
+            [1] = {mod1 = 45, mod2 = 700, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 5.0, damage = 10, multiplier = 0}, mod6 = 17},
+            [2] = {mod1 = 50, mod2 = 725, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 5.0, damage = 11, multiplier = 0}, mod6 = 16},
+            [3] = {mod1 = 50, mod2 = 775, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 6.0, damage = 12, multiplier = 0}, mod6 = 15},
+            [4] = {mod1 = 55, mod2 = 825, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 6.0, damage = 13, multiplier = 0}, mod6 = 14},
+            [5] = {mod1 = 55, mod2 = 850, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 7.0, damage = 14, multiplier = 0}, mod6 = 13},
+            [6] = {mod1 = 60, mod2 = 870, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 7.0, damage = 15, multiplier = 0}, mod6 = 12},
+            [7] = {mod1 = 60, mod2 = 890, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 7.0, damage = 16, multiplier = 0}, mod6 = 12},
+            [8] = {mod1 = 70, mod2 = 910, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 8.0, damage = 17, multiplier = 0}, mod6 = 12},
+            [9] = {mod1 = 70, mod2 = 930, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 8.0, damage = 18, multiplier = 0}, mod6 = 11},
+           [10] = {mod1 = 75, mod2 = 950, mod3 = 3500, mod4 = {duration = 4, damage = 0, multiplier = 0.7}, mod5 = {duration = 8.0, damage = 20, multiplier = 0}, mod6 = 10}
         },
         --Wraith Strike
         [CONST.BIND.T] = {
