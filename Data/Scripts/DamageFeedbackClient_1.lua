@@ -31,6 +31,7 @@ local IS_BIG_TEXT = COMPONENT_ROOT:GetCustomProperty("DisplayBigText")
 local SHOW_HIT_FEEDBACK = COMPONENT_ROOT:GetCustomProperty("ShowHitFeedback")
 local SHOW_HEALTH_CHANGE_EFFECT = COMPONENT_ROOT:GetCustomProperty("ShowHealthChangeEffect")
 local HIT_FEEDBACK_SOUND = COMPONENT_ROOT:GetCustomProperty("HitFeedbackSound"):WaitForObject()
+local SameTeamDamageColor = Color.New(1,0.8,0, 1)
 
 -- Constant variables
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -114,8 +115,9 @@ function DisplayDamage(damage, position, targetPlayer, sourcePlayer)
 		
 		-- Show text on targetPlayer
 		if Object.IsValid(targetPlayer) then
-			if damage >= 0 and targetPlayer.team ~= sourcePlayer.team then -- Show damage number on targetPlayer
-				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), EnemyDamageColor)
+			if damage >= 0 then --and targetPlayer.team ~= sourcePlayer.team then -- Show damage number on targetPlayer
+                local isEnemy = targetPlayer.team ~= sourcePlayer.team
+				ShowFlyUpText(math.abs(damage), targetPlayer:GetWorldPosition() + Vector3.New(0,0,50), isEnemy and EnemyDamageColor or SameTeamDamageColor)
 				-- Play the damage feedback sound to the source player
 		        if HIT_FEEDBACK_SOUND then
 		            HIT_FEEDBACK_SOUND:Play()
