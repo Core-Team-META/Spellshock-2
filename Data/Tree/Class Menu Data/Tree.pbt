@@ -624,6 +624,7 @@ Objects {
   ParentId: 12124708511639495803
   ChildIds: 3472045051803980741
   ChildIds: 1315606167183961674
+  ChildIds: 15293475008938167409
   UnregisteredParameters {
     Overrides {
       Name: "cs:Icon"
@@ -638,6 +639,50 @@ Objects {
     Overrides {
       Name: "cs:Bind"
       String: "R"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15293475008938167409
+  Name: "Self Healing"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7866126941647045844
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Description"
+      String: "Self healing applied from Divine Light"
+    }
+    Overrides {
+      Name: "cs:Icon"
+      AssetReference {
+        Id: 8854358530398708523
+      }
+    }
+    Overrides {
+      Name: "cs:Mod"
+      String: "mod4"
     }
   }
   Collidable_v2 {
