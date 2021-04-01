@@ -224,6 +224,14 @@ local function BuildShopItems(slot, id, class, bind, reward)
                 RewardCurrencyIcon:SetImage(GemIcon)
             end
 
+            -- Event Cost Reduction
+            cost = CoreMath.Round(cost * CONST.EVENT_DAILY_SHOP_DISCOUNT)
+
+            -- VIP Cost Reduction
+            if LOCAL_PLAYER.clientUserData.IsVip then
+                cost = CoreMath.Round(cost * CONST.VIP_DAILY_SHOP_DISCOUNT)
+            end
+
             if tonumber(dailyRewards[slot].P) == 0 then
                 if cost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
                     costText:SetColor(Color.RED)

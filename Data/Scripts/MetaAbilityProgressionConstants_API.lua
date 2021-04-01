@@ -173,10 +173,15 @@ API.CLASS_XP = {
 -- Server Wide Mulitpliers (1.0 is default no multiplier)
 API.EVENT_XP_MULITPLIER = 1.0 
 API.EVENT_GOLD_MULTIPLIER = 1.0
+API.EVENT_REWARD_MULTIPLIER = 1.0
+API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 -- 1.0 = 100% Cost | .90 = 90% Cost IE 10% Discount
 
 -- VIP Player Values
 API.VIP_XP_MULTIPLIER = 2.0
 API.VIP_GOLD_MULTIPLIER = 2.0
+API.VIP_REWARD_MULTIPLIER = 2.0
+API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+
 
 API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
 
