@@ -7,7 +7,7 @@ Assets {
       RootId: 112211500302111760
       Objects {
         Id: 112211500302111760
-        Name: "Healer Elf Divine Light Active Basic 2"
+        Name: "Healer Elf Divine Light Active Basic"
         Transform {
           Scale {
             X: 1
@@ -30,7 +30,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -154,7 +154,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -162,14 +162,14 @@ Assets {
         Name: "Resurrection VFX"
         Transform {
           Location {
-            Z: 111.757813
+            Z: -8.59762573
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.616777301
+            Y: 0.616777301
+            Z: 0.616777301
           }
         }
         ParentId: 112211500302111760
@@ -180,7 +180,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Enable Spiral"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "bp:Emissive Boost"
@@ -198,12 +198,24 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "bp:Enable Base Rays"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Rings"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Upward Velocity"
+            Float: 6
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -219,7 +231,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -560,7 +572,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -803,7 +815,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1045,7 +1057,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }
@@ -1108,5 +1120,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

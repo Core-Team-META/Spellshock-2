@@ -1,10 +1,10 @@
-﻿---DEV--
+---DEV--
 local DEBUG = true
 -----------------------------------------------------------------------------------------------------------------------
 -- Meta Costume Manager Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/18
--- Version 0.1.8
+-- Date: 2021/3/23
+-- Version 0.1.9
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -82,8 +82,11 @@ end
 local function SetCurrentCosmetic(player, skinId)
     local class = player:GetResource(CONST.CLASS_RES)
     playerEquippedCosmetic[player][class][CONST.COSTUME_ID][player.team] = skinId
-    player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
-    print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
+    --player:SetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID), skinId)
+    --print(player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)))
+    --local key = UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID)
+    --_G.PerPlayerDictionary.Set(player, key, skinId)
+    --print("SetCurrentCosmetic: " .. key)
 end
 
 
@@ -95,8 +98,11 @@ end
 local function SetBindCosmetic(player, class, team, bind, skin)
     class = class or player:GetResource(CONST.CLASS_RES)
     playerEquippedCosmetic[player][class][bind][team] = skin
-    player:SetResource(UTIL.GetSkinString(class, team, bind), skin)
-    print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
+    --player:SetResource(UTIL.GetSkinString(class, team, bind), skin)
+    --print(player:GetResource(UTIL.GetSkinString(class, team, bind)))
+    --local key = UTIL.GetSkinString(class, team, bind)
+    --_G.PerPlayerDictionary.Set(player, key, skin)
+    --print("SetBindCosmetic: " .. key)
 end
 
 
@@ -127,6 +133,8 @@ function OnPlayerLeft(player)
     playerCosmetic[player] = nil
     playerEquippedCosmetic[player] = nil
     playerCosmeticStrings[player] = nil
+    --Check to make sure the player has no data transfers pending
+    OnDeletePlayerDataObject(player)
 end
 
 function BuildCosmeticStringTable(player, str)
@@ -135,6 +143,8 @@ function BuildCosmeticStringTable(player, str)
     dataObject:SetNetworkedCustomProperty("data", str)
     Task.Wait()
     dataObject.parent = DATA_TRANSFER
+    
+    --print("Spawned 1 cosmetic string table")
 end
 
 --Note data comes in as 1021,2011,3021 => classId, skinId, abilityId
@@ -147,7 +157,9 @@ function BuildCosmeticDataTable(player, data)
             for team, teams in ipairs(classes) do
                 for skin, skins in pairs(teams) do
                     for bind, binds in pairs(skins) do
-                        player:SetResource(UTIL.GetCosmeticIdString(class, team, skin, bind), 1)
+                        --player:SetResource(UTIL.GetCosmeticIdString(class, team, skin, bind), 1)
+                        local key = UTIL.GetCosmeticIdString(class, team, skin, bind)
+                        _G.PerPlayerDictionary.Set(player, key, 1)
                     end
                 end
             end
@@ -161,7 +173,9 @@ function BuildCosmeticDataTable(player, data)
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
                     end
-                    player:SetResource(UTIL.GetCosmeticIdString(class, team, CONST.DEFAULT_SKIN, bind), 1)
+                    --player:SetResource(UTIL.GetCosmeticIdString(class, team, CONST.DEFAULT_SKIN, bind), 1)
+                    local key = UTIL.GetCosmeticIdString(class, team, CONST.DEFAULT_SKIN, bind)
+                    _G.PerPlayerDictionary.Set(player, key, 1)
                 end
             end
         end
@@ -179,7 +193,10 @@ function BuildEquippedCosmeticDataTable(player, data)
                 playerEquippedCosmetic[player][class][bind] = {}
                 for teamId, skinId in pairs(binds) do
                     playerEquippedCosmetic[player][class][bind][teamId] = skinId
-                    player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
+                    --player:SetResource(UTIL.GetSkinString(class, teamId, bind), skinId)
+                    --local key = UTIL.GetSkinString(class, teamId, bind)
+                   -- _G.PerPlayerDictionary.Set(player, key, skinId)
+                    --print("BuildEquippedCosmeticDataTable 1: " .. key)
                 end
             end
         end
@@ -192,7 +209,10 @@ function BuildEquippedCosmeticDataTable(player, data)
                 playerEquippedCosmetic[player][class][bind] = {}
                 for _, team in pairs(CONST.TEAM) do
                     playerEquippedCosmetic[player][class][bind][team] = CONST.DEFAULT_SKIN
-                    player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
+                    --player:SetResource(UTIL.GetSkinString(class, team, bind), 1)
+                    --local key = UTIL.GetSkinString(class, team, bind)
+                    --_G.PerPlayerDictionary.Set(player, key, 1)
+                    --print("BuildEquippedCosmeticDataTable 2: " .. key)
                 end
             end
         end
@@ -253,14 +273,19 @@ end
 --@param int class => id of class (API.TANK, API.MAGE)
 --@param int bind => id of bind (API.Q, API.E)
 function API.GetCurrentCosmeticId(player, class, bind)
-    return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    --return player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    --local key = UTIL.GetSkinString(class, player.team, bind)
+    while not playerEquippedCosmetic[player] do Task.Wait() end
+
+    return playerEquippedCosmetic[player][class][bind][player.team]
 end
 
 --@param object player
 --@param int bind => id of bind (API.Q, API.E)
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCosmetic(player, bind, class)
-    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, bind))
+    local skinId = API.GetCurrentCosmeticId(player, class, bind)
     if skinId == 0 then
         skinId = 1
     end
@@ -275,7 +300,8 @@ end
 --@param object player
 --@param int class => id of class (API.TANK, API.MAGE)
 function API.GetCurrentCostume(player, class)
-    local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
+    local skinId = API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end
@@ -287,7 +313,15 @@ function API.GetCurrentCostume(player, class)
     return cosmeticTable[class][player.team][skinId][CONST.COSTUME_ID]
 end
 
+--@param object player
+--@param int bind => id of bind (API.Q, API.E)
+--@param int class => id of class (API.TANK, API.MAGE)
+function API.GetCosmeticMuid(player, class, team, skin, bind)
+    return cosmeticTable[class][team][skin][bind]
+end
+
 Int()
+
 if DEBUG then
     Events.ConnectForPlayer("META_AP.ChangeCosmetic", SetCurrentCosmetic)
 end

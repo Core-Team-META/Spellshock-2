@@ -7,7 +7,7 @@ Assets {
       RootId: 16586183630275364105
       Objects {
         Id: 16586183630275364105
-        Name: "Healer Orc Sun Beam Ending Fire 2"
+        Name: "Healer Orc Sun Beam Ending Fire"
         Transform {
           Scale {
             X: 1
@@ -58,7 +58,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -158,7 +158,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -218,7 +218,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }
@@ -254,5 +254,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

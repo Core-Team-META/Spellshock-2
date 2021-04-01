@@ -49,7 +49,7 @@ end
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 20, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -75,7 +75,7 @@ function OnBoulderBeginOverlap(thisTrigger, other)
 	Events.BroadcastToPlayer(other, "Camera Shake", 2, 90, 5)
 			
 	local dmg = Damage.New()
-	dmg.amount = DEFAULT_DamageAmount --META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
+	dmg.amount = META_AP().GetAbilityMod(PickupAbility.owner, META_AP().T, "mod1", DEFAULT_DamageAmount, PickupAbility.name..": Damage")
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = PickupAbility.owner
 	dmg.sourceAbility = PickupAbility
@@ -142,7 +142,8 @@ function OnInterrupted(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T,  META_AP().TANK)
+	local skin = Equipment:GetCustomProperty("TID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().T)
 end
 
 function OnUnequip(equipment, player)

@@ -282,6 +282,9 @@ function API.GetStatusEffectsOnPlayer(player)
 		return
 	end
 	local tracker = API.GetStateTracker(player)
+	if not tracker or not Object.IsValid(tracker) then
+		return
+	end
 	local result = {}
 
 	for i = 1, API.MAX_STATUS_EFFECTS do

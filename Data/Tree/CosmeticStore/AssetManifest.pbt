@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15450196944859968109
+  Name: "Crosshair 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_021"
+  }
+}
+Assets {
   Id: 15165554833363844727
   Name: "Amarante"
   PlatformAssetType: 28
@@ -98,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13186791447862463406
+  Name: "Stone Wall End 6m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_stone-edge_6m_001"
+  }
+}
+Assets {
   Id: 12997925938585460975
   Name: "Fantasy Shape 004"
   PlatformAssetType: 9
@@ -140,6 +158,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Crystal_005"
+  }
+}
+Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
   }
 }
 Assets {

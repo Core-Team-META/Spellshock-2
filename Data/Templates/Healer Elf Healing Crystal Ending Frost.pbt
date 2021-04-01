@@ -7,7 +7,7 @@ Assets {
       RootId: 4037803395661114971
       Objects {
         Id: 4037803395661114971
-        Name: "Healer Elf Healing Crystal Ending Basic"
+        Name: "Healer Elf Healing Crystal Ending Frost"
         Transform {
           Scale {
             X: 1
@@ -27,7 +27,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -108,7 +108,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -174,5 +174,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

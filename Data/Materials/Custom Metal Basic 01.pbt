@@ -2,7 +2,7 @@ Assets {
   Id: 18099048474841844083
   Name: "Custom Metal Basic 01"
   PlatformAssetType: 13
-  SerializationVersion: 80
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 10313519700874090434
     ParameterOverrides {
@@ -26,6 +26,15 @@ Assets {
       Overrides {
         Name: "gradient_shift"
         Float: 0
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.458333343
+          G: 0.458333343
+          B: 0.458333343
+          A: 1
+        }
       }
     }
     Assets {

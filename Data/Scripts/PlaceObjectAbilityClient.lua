@@ -32,14 +32,31 @@ local lastValidPlacement = {position = nil, rotation = nil}
 local durationTimer = 0
 local totalDuration = 0
 
+local listeners = {}
+
 local CancelBindings = {
 	ability_extra_20 = true,
 	ability_extra_22 = true,
 	ability_extra_23 = true,
-	ability_extra_24 = true,
+	ability_extra_4 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
+
+local NetworkProperties = {
+	[1] = "QID",
+	[2] = "EID",
+	[3] = "RID",
+	[4] = "TID"
+}
+
+local function DisconnectListeners()
+	for _, listener in ipairs(listeners) do
+		if listener.isConnected then
+			listener:Disconnect()
+		end
+	end
+end
 
 function SetPreviewing(value)
 	isPreviewing = value
@@ -54,14 +71,21 @@ function SetPreviewing(value)
 		local previewScale = Vector3.ONE
 		if RadiusMod then
 			local DEFAULT_Radius = ServerScript:GetCustomProperty("DamageRadius")
-			local radius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], RadiusMod, DEFAULT_Radius, SpecialAbility.name .. ": Radius")
+			local radius =
+				META_AP().GetAbilityMod(
+				SpecialAbility.owner,
+				META_AP()[Class],
+				META_AP()[BindingName],
+				RadiusMod,
+				DEFAULT_Radius,
+				SpecialAbility.name .. ": Radius"
+			)
 			previewScale = Vector3.New(CoreMath.Round(radius / 50, 3)) --Vector3.New(CoreMath.Round(radius / DEFAULT_Radius, 3))
 		end
 
 		local ObjectTemplate
 		if PreviewObjectTemplate then
 			ObjectTemplate = PreviewObjectTemplate
-			
 		elseif PlayerVFX.Preview then
 			ObjectTemplate = PlayerVFX.Preview
 		else
@@ -89,17 +113,18 @@ function OnBindingPressed(player, binding)
 	if not isPreviewing and binding == AbilityBinding and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 		SetPreviewing(true)
 		lastValidPlacement = {}
-	elseif isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and Object.IsValid(objectHalogram) and
-	lastValidPlacement.position and lastValidPlacement.rotation then
+	elseif
+		isPreviewing and binding == "ability_primary" and SpecialAbility.isEnabled and Object.IsValid(objectHalogram) and
+			lastValidPlacement.position and
+			lastValidPlacement.rotation
+	 then
 		SpecialAbility:Activate()
 		Task.Wait()
 		SetPreviewing(false)
-		
 	elseif isPreviewing and binding ~= AbilityBinding and CancelBindings[binding] then
 		SetPreviewing(false)
-	end	
+	end
 end
-
 
 function OnSpecialAbilityCast(thisAbility)
 	-- Get the target data, to modify it before it's sent over the network
@@ -113,7 +138,6 @@ function OnSpecialAbilityCast(thisAbility)
 	thisAbility:SetTargetData(targetData)
 end
 
-
 function OnSpecialAbilityExecute(thisAbility)
 	Task.Wait()
 
@@ -124,7 +148,15 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	-- Activate duration bar UI if DurationMod was set
 	if DurationMod then
-		totalDuration = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP()[Class], META_AP()[BindingName], DurationMod, DEFAULT_Range, SpecialAbility.name .. ": Duration")
+		totalDuration =
+			META_AP().GetAbilityMod(
+			SpecialAbility.owner,
+			META_AP()[Class],
+			META_AP()[BindingName],
+			DurationMod,
+			DEFAULT_Range,
+			SpecialAbility.name .. ": Duration"
+		)
 		if type(totalDuration) == "table" then
 			totalDuration = totalDuration.duration
 		end
@@ -132,14 +164,22 @@ function OnSpecialAbilityExecute(thisAbility)
 	end
 end
 
-
 function OnEquip(equipment, player)
 	if player ~= LOCAL_PLAYER then
 		script:Destroy()
 		return
 	end
 	if not PreviewObjectTemplate then
-		PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+		while not _G.COSMETIC_TABLE_BUILT do
+			Task.Wait()
+		end
+		local bind = META_AP()[BindingName]
+		local skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		while skin == 0 do
+			Task.Wait() 
+			skin = Equipment:GetCustomProperty(NetworkProperties[bind])
+		end
+		PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP()[Class], player.team, skin, bind)
 	end
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
@@ -161,7 +201,7 @@ end
 
 function CalculatePlacement()
 	local playerViewRotation = LOCAL_PLAYER:GetViewWorldRotation()
-	
+
 	-- Projection of the player's position onto the camera's vector, as starting point for the raycast
 	local playerViewPosition = LOCAL_PLAYER:GetViewWorldPosition()
 	local playerViewDirection = Quaternion.New(playerViewRotation):GetForwardVector()
@@ -169,7 +209,7 @@ function CalculatePlacement()
 	local AP = playerPosition - playerViewPosition
 	local AB = playerViewDirection
 	playerViewPosition = playerViewPosition + (AP .. AB) / (AB .. AB) * AB
-	
+
 	--local modsTable = META_AP().GetBindMods(LOCAL_PLAYER, META_AP().TANK, META_AP().E)
 	local PlacementRange
 	if AbilityMod == "NONE" then
@@ -190,17 +230,23 @@ function CalculatePlacement()
 	--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 
-	if hr ~= nil then
+	if hr ~= nil and hr.other ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
-		if hr ~= nil then
+		if hr ~= nil and hr.other ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
 			return nil
 		end
+	end
+end
+
+function OnPlayerLeft(player)
+	if Object.IsValid(Equipment) and player == Equipment.owner then
+		DisconnectListeners()
 	end
 end
 
@@ -261,11 +307,10 @@ function Tick(deltaTime)
 	end
 end
 
-
 if Equipment.owner then
 	OnEquip(Equipment, Equipment.owner)
 end
 
-Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)
-
+listeners[#listeners + 1] = Equipment.equippedEvent:Connect(OnEquip)
+listeners[#listeners + 1] = Equipment.unequippedEvent:Connect(OnUnequip)
+Game.playerLeftEvent:Connect(OnPlayerLeft)

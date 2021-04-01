@@ -1,4 +1,13 @@
 Assets {
+  Id: 17696531540460943644
+  Name: "Fantasy Trophy 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Trophy_003"
+  }
+}
+Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -35,12 +44,12 @@ Assets {
   }
 }
 Assets {
-  Id: 15165554833363844727
-  Name: "Amarante"
-  PlatformAssetType: 28
+  Id: 14803987366094808844
+  Name: "Fantasy Medal 001"
+  PlatformAssetType: 9
   PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "AmaranteRegular_ref"
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Medal_001"
   }
 }
 Assets {
@@ -89,6 +98,24 @@ Assets {
   }
 }
 Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
+  }
+}
+Assets {
+  Id: 11905301668479447552
+  Name: "Fantasy Chest 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chest_002"
+  }
+}
+Assets {
   Id: 11726854071015571091
   Name: "Fantasy Craft Crystal 042"
   PlatformAssetType: 9
@@ -107,12 +134,30 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 11067005555803527386
   Name: "Fantasy Corners 005"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Corners_005"
+  }
+}
+Assets {
+  Id: 10590055343228908066
+  Name: "Survival Craft Ribbon 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Survival_Crafting_Ribbon_001"
   }
 }
 Assets {
@@ -143,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8578995028087510781
+  Name: "UI Gradient Circular 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_001"
+  }
+}
+Assets {
   Id: 8277338959376334210
   Name: "Frame Outline Thin 008"
   PlatformAssetType: 9
@@ -167,6 +221,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Coins_009"
+  }
+}
+Assets {
+  Id: 6969133191751451521
+  Name: "Center Arrow 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_009"
   }
 }
 Assets {
@@ -197,12 +260,21 @@ Assets {
   }
 }
 Assets {
-  Id: 4727080213227783003
-  Name: "Fantasy Craft Crystal 007"
+  Id: 4569484101736324280
+  Name: "BG Gradient 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Crafting_Crystal_007"
+    AssetId: "BackgroundFlat_015"
+  }
+}
+Assets {
+  Id: 3822700371723488046
+  Name: "BG Gradient 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_033"
   }
 }
 Assets {
@@ -239,6 +311,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Urban_Icon_028"
+  }
+}
+Assets {
+  Id: 2286364455446697578
+  Name: "Frame Beveled 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px__015"
   }
 }
 Assets {

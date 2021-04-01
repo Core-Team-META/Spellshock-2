@@ -201,12 +201,28 @@ function API.GetClassLevelString(class)
     return "C" .. tostring(class) .. "L"
 end
 
+function API.GetClassXPString(class)
+    return "C" .. tostring(class) .. "XP"
+end
+
 function API.GetSkinString(class, team, bind)
     return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
 end
 
 function API.GetCosmeticIdString(class, team, skin, bind)
     return "S" .. tostring(class) .. tostring(team) .. NumConverter(skin) .. tostring(bind)
+end
+
+function API.GetConsumableLevelString(consumable)
+    return "CS" .. tostring(consumable)
+end
+
+function API.GetConsumableXpString(consumable)
+    return "CS" .. tostring(consumable) .. "XP"
+end
+
+function API.GetMountIdString(mount)
+    return "M" .. tostring(mount)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -293,54 +309,6 @@ function API.RewardConvertToString(tbl)
     return str
 end
 
-local function GetRewardInfo(tempTable, list)
-    local bindId = list:GetCustomProperty("Bind")
-    local name = list:GetCustomProperty("Name")
-    local image = list:GetCustomProperty("Image")
-    tempTable[bindId] = tempTable[bindId] or {}
-    tempTable[bindId].Name = name
-    tempTable[bindId].Image = image
-    return tempTable
-end
-
---@param object list => VFX object
---@return table cosmeticTable
-function API.BuildRewardsTable(list, classData)
-    local tempTable = {}
-    for _, rewardType in ipairs(list:GetChildren()) do
-        local id = rewardType:GetCustomProperty("ID")
-        if id == CONST.REWARDS.GOLD then
-            tempTable[CONST.REWARDS.GOLD] = tempTable[CONST.REWARDS.GOLD] or {}
-            tempTable[CONST.REWARDS.GOLD] = GetRewardInfo(tempTable[CONST.REWARDS.GOLD], rewardType)
-        elseif id == CONST.REWARDS.COSMETIC then
-            tempTable[CONST.REWARDS.COSMETIC] = tempTable[CONST.REWARDS.COSMETIC] or {}
-            tempTable[CONST.REWARDS.COSMETIC] = GetRewardInfo(tempTable[CONST.REWARDS.COSMETIC], rewardType)
-        end
-    end
-
-    if classData then
-        tempTable[CONST.REWARDS.SHARDS] = tempTable[CONST.REWARDS.SHARDS] or {}
-        for _, class in ipairs(classData:GetChildren()) do
-            local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
-            tempTable[CONST.REWARDS.SHARDS][classId] = tempTable[CONST.REWARDS.SHARDS][classId] or {}
-            for _, bind in ipairs(class:GetChildren()) do 
-                local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
-                local icon = bind:GetCustomProperty("Icon")
-                local description = bind:GetCustomProperty("Description")
-                local classIcon = class:GetCustomProperty("Icon")
-
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId] = tempTable[CONST.REWARDS.SHARDS][classId][bindId] or {}
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Name = bind.name
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Image = icon
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].Description = description
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassIcon = classIcon
-                tempTable[CONST.REWARDS.SHARDS][classId][bindId].ClassName = class.name
-            end
-        end
-    end
-    return tempTable
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- COSMETIC DATA FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -381,7 +349,10 @@ function API.CosmeticConvertAddToTable(str, startTbl)
     local tbl = API.StringSplit(",", str)
     if next(tbl) then
         for _, s in ipairs(tbl) do
-            --s = BASE.Decode24(s) or s
+            local newNumber = tonumber(s)
+            if not newNumber or newNumber and newNumber < 10000 then
+                s = BASE.Decode24(s) or s
+            end
             s = tostring(s)
             local cId = tonumber(s:sub(1, 1))
             local tId = tonumber(s:sub(2, 2))
@@ -574,7 +545,7 @@ function API.DailyShopConvertToString(tbl)
         str = str .. key .. "^"
         for k, v in pairs(values) do
             str = str .. k .. "~" .. tostring(v)
-             --API.ConvertTableToString(v, ",", "=")
+            --API.ConvertTableToString(v, ",", "=")
             str = next(values, k) and str .. "^" or str
         end
         str = next(tbl, key) and str .. "|" or str
@@ -584,4 +555,4 @@ function API.DailyShopConvertToString(tbl)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
-return API
+return API, CONST

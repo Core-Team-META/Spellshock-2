@@ -38,5 +38,8 @@ function OnGameStateChanged(oldState, newState)
 	end
 end
 
+Task.Wait(1)
+OnToggle(false)
+
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("ToggleLoadScreen", OnToggle)

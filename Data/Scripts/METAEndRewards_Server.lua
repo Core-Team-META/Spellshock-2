@@ -11,6 +11,10 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -59,53 +63,95 @@ end
 --@param object player
 --@return table tempTbl
 local function CalculateSlot1(player)
-    local tempTbl = {}
-    local classesPlayedCount = 0
+    local reward = {}
+    local mostPlayedClass = REWARD_UTIL.GetRandomClass()
     local randomChance = math.random(1, 100)
-    local classTable = {}
-    for classId, _ in pairs(player.serverUserData.ClassesPlayed) do
-        classesPlayedCount = classesPlayedCount + 1
-        classTable[classesPlayedCount] = classId
+
+    if player.serverUserData.ClassesPlayed then
+        local mostPlays = 0
+        for classId, count in pairs(player.serverUserData.ClassesPlayed) do
+            if count > mostPlays then
+                mostPlays = count
+                mostPlayedClass = classId
+            --print("Most played: "..tostring(classId))
+            end
+        end
     end
-    if randomChance < 50 then
-        local randomClass = math.random(1, #classTable)
-        local bindId = tonumber(tostring(classTable[randomClass]) .. tostring(REWARD_UTIL.GetRandomBind()))
-        tempTbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount()}
-    elseif randomChance > 50 and randomChance < 98 then
-        local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
-        tempTbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount()}
+
+    if randomChance > 85 then
+        reward = REWARD_UTIL.GetClassXPReward()
     else
-        tempTbl = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+        reward = REWARD_UTIL.GetSkillReward()
     end
-    return tempTbl
+    reward.class = mostPlayedClass
+    return reward
 end
 
 local function CalculateRegularSlot()
-    local result
+    local reward
     local random = math.random(1, 100)
-    --90% chance to be a random class bind shards
-    if random >= 10 then -- #FIXME 10
-        result = {
-            [tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))] = REWARD_UTIL.GetSkillLargeAmmount()
-        }
-    else -- 10% chance to be costume tokens
-        result = {C = REWARD_UTIL.GetCostumeTokenAmmount()}
+
+    if random > 95 then
+        reward = REWARD_UTIL.GetCosmeticReward()
+    elseif random <= 95 and random > 90 then
+        reward = REWARD_UTIL.GetGoldReward()
+    elseif random <= 90 and random > 85 then
+        reward = REWARD_UTIL.GetHealingPotionReward()
+    elseif random <= 85 and random > 80 then
+        reward = REWARD_UTIL.GetMountSpeedReward()
+    elseif random <= 80 and random > 75 then
+        reward = REWARD_UTIL.GetClassXPReward()
+    else
+        reward = REWARD_UTIL.GetSkillReward()
     end
-    return result
+
+    return reward
 end
 
---#TODO Need to actually write logic
 -- Should return 4-10
 local function GetNumberOfCards(player)
-    return TEMP_CardCount
+    local cardCount = 4
+    local topRanks = {0, 0}
+
+    -- Need to loop through all the classes and track the two highest ranking ones
+    for _, classID in pairs(CONST.CLASS) do
+        local classRank = META_CP().GetClassLevel(player, classID)
+        if classRank > topRanks[1] then
+            topRanks[1] = classRank
+        elseif classRank > topRanks[2] then
+            topRanks[2] = classRank
+        end
+    end
+    --print(string.format("Top ranks: %d %d", topRanks[1], topRanks[2]))
+
+    -- Any class rank 50 and one other other class rank 25
+    if (topRanks[1] >= 50 and topRanks[2] >= 25) or (topRanks[2] >= 50 and topRanks[1] >= 25) then
+        -- At least 2 classes rank 25
+        cardCount = 10
+    elseif topRanks[1] >= 25 and topRanks[2] >= 25 then
+        -- Any class rank 25
+        cardCount = 9
+    elseif topRanks[1] >= 25 or topRanks[2] >= 25 then
+        -- Any two classes rank 10
+        cardCount = 8
+    elseif topRanks[1] >= 10 and topRanks[2] >= 10 then
+        -- Any class rank 10
+        cardCount = 7
+    elseif topRanks[1] >= 10 or topRanks[2] >= 10 then
+        -- Any class rank 5
+        cardCount = 6
+    elseif topRanks[1] >= 5 or topRanks[2] >= 5 then
+        cardCount = 5
+    end
+    --print("Card count: "..tostring(cardCount))
+    return cardCount
 end
 
---#TODO NEEDS WORK
 --@param object player
 local function GetPlayerRewards(player)
     local numberOfCards = GetNumberOfCards(player) -- 4 to 10
     local tempTable = {}
-    
+
     -- Slot one always has a higher chance of being an ability from the last used class
     tempTable[1] = CalculateSlot1(player)
 
@@ -113,13 +159,13 @@ local function GetPlayerRewards(player)
     if IsTeamWinner(player) then
         --If winning team give large gold ammount
         IsFirstWinOfTheDay(player)
-        tempTable[2] = {G = REWARD_UTIL.GetGoldLargeAmmount()}
+        tempTable[2] = REWARD_UTIL.GetWinnerGoldAmmount()
     else
         --Losing team gets small gold amount.
-        tempTable[2] = {G = REWARD_UTIL.GetGoldSmallAmmount()}
+        tempTable[2] = REWARD_UTIL.GetLoserGoldAmmount()
     end
 
-    for slot=3, numberOfCards, 1 do
+    for slot = 3, numberOfCards, 1 do
         tempTable[slot] = CalculateRegularSlot()
     end
 
@@ -135,16 +181,19 @@ function CalculateRewards()
     for _, player in ipairs(Game.GetPlayers()) do
         if player.serverUserData.ClassesPlayed then
             playerRewards[player.id] = GetPlayerRewards(player)
-        -- player.serverUserData.ClassesPlayed = nil
+            -- player.serverUserData.ClassesPlayed = nil
+            local isVip = player.serverUserData.IsVip
+            for _, reward in ipairs(playerRewards[player.id]) do
+                if isVip and reward.amount then
+                    reward.amount = CoreMath.Round(reward.amount * CONST.VIP_REWARD_MULTIPLIER)
+                end
+                if reward.amount then
+                    reward.amount = CoreMath.Round(reward.amount * CONST.EVENT_REWARD_MULTIPLIER)
+                end
+            end
         end
     end
     ReplicateRewards(UTIL.RewardConvertToString(playerRewards))
-end
-
---@param object player
---@param int rewardId
-function OnRewardSelect(player, rewardId)
-    choosenRewards[player] = rewardId
 end
 
 function GivePlayerRewards(player, rewardList)
@@ -173,16 +222,16 @@ Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
 
 -- FOR TESTING -----------------------
 function OnBindingPressed(whichPlayer, binding)
-	if (binding == "ability_extra_46") then 
+    if (binding == "ability_extra_46") then
         TEMP_CardCount = TEMP_CardCount + 1
-	end
+    end
 end
 
 function OnPlayerJoined(player)
-	-- hook up binding in player joined event here, move to more appropriate place if needed
-	player.bindingPressedEvent:Connect(OnBindingPressed)
+    -- hook up binding in player joined event here, move to more appropriate place if needed
+    player.bindingPressedEvent:Connect(OnBindingPressed)
 end
 
 -- on player joined/left functions need to be defined before calling event:Connect()
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
 ----------------------------------------------------------------------------------------------------

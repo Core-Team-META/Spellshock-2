@@ -150,6 +150,7 @@ Objects {
   ParentId: 6148191999456879294
   ChildIds: 16876453173366929200
   ChildIds: 17192106309769407465
+  ChildIds: 3791886473208191826
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -161,6 +162,39 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 3791886473208191826
+  Name: "Sci-fi Wind Whoosh Flyby 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9924191688709884587
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 15863266387157766240
+    }
+    Volume: 0.8
+    Falloff: -1
+    Radius: -1
   }
 }
 Objects {
@@ -285,7 +319,7 @@ Objects {
       Pitch: -53.2585754
       Yaw: -36.7458496
     }
-    FieldOfView: 85
+    FieldOfView: 90
     ViewWidth: 12000
     RotationMode {
       Value: "mc:erotationmode:fixed"
@@ -683,6 +717,12 @@ Objects {
     Overrides {
       Name: "cs:ApplyPostProcess"
       Bool: false
+    }
+    Overrides {
+      Name: "cs:MapOpenSFX"
+      ObjectReference {
+        SelfId: 3791886473208191826
+      }
     }
   }
   Collidable_v2 {

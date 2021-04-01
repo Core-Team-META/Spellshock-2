@@ -7,7 +7,7 @@ Assets {
       RootId: 12411312343244899116
       Objects {
         Id: 12411312343244899116
-        Name: "Healer Orc Supernova Ending Basic"
+        Name: "Healer Orc Supernova Ending Fire"
         Transform {
           Scale {
             X: 1
@@ -21,6 +21,8 @@ Assets {
         ChildIds: 141724634791840937
         ChildIds: 12443047617045159798
         ChildIds: 14144228398258445076
+        ChildIds: 10752197899965322216
+        ChildIds: 13688528000214876775
         Lifespan: 2.5
         WantsNetworking: true
         Collidable_v2 {
@@ -30,7 +32,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -113,7 +115,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -174,7 +176,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -208,7 +210,7 @@ Assets {
           AutoPlay: true
           Pitch: -100
           Volume: 1
-          Falloff: 3000
+          Falloff: 5000
           Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -244,8 +246,8 @@ Assets {
           }
           AutoPlay: true
           Pitch: -100
-          Volume: 0.5
-          Falloff: 3000
+          Volume: 0.8
+          Falloff: 5000
           Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -347,7 +349,92 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 10752197899965322216
+        Name: "Sci-fi Sharp Heavy Impact Laser Energy Boom 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12411312343244899116
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 10083202590626169692
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 13688528000214876775
+        Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12411312343244899116
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_cinematic_boomy_impacts_01:16"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 1316376324599490360
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -200
+            Volume: 1
+            Falloff: 20000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
     }
@@ -396,10 +483,28 @@ Assets {
         AssetId: "fxbp_mil_explosion_ground"
       }
     }
+    Assets {
+      Id: 10083202590626169692
+      Name: "Sci-fi Sharp Heavy Impact Laser Energy Boom 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_scifi_sharp_heavy_impact_laser_energy_boom_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 1316376324599490360
+      Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

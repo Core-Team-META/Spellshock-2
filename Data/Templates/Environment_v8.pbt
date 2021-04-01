@@ -637,7 +637,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Light Absorption Amount"
-            Float: 1.5
+            Float: 1.2
           }
           Overrides {
             Name: "bp:Fog Density"
@@ -741,5 +741,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

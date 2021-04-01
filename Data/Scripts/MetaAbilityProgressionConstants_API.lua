@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.6
+-- Date: 2021/3/29
+-- Version 0.1.7
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -21,7 +21,17 @@ API.STORAGE = {
     PERKS = 7,
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
-    CONSUMABLE = 10
+    CONSUMABLE = 10,
+    MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- GAME INFO KEYS
+------------------------------------------------------------------------------------------------------------------------
+API.TEAM = {
+    ORC = 1,
+    ELF = 2
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -36,62 +46,21 @@ API.CLASS = {
     ASSASSIN = 5
 }
 
-API.CLASS_NAME = {
-    [API.CLASS.TANK] = "Warrior",
-    [API.CLASS.MAGE] = "Mage",
-    [API.CLASS.HUNTER] = "Hunter",
-    [API.CLASS.HEALER] = "Healer",
-    [API.CLASS.ASSASSIN] = "Assassin"
-}
-
-API.CLASS_HEALTH = {
-    [API.CLASS.TANK] = 500,
-    [API.CLASS.MAGE] = 300,
-    [API.CLASS.HUNTER] = 350,
-    [API.CLASS.HEALER] = 400,
-    [API.CLASS.ASSASSIN] = 300
-}
-
 -- BINDING KEYS
 API.BIND = {
     Q = 1,
     E = 2,
     R = 3,
     T = 4,
-    SHIFT = 5,
-    LMB = 6,
-    RMB = 7
-}
-
--- BINDING KEYS
-API.COSMETIC_BIND = {
-    Q = 1,
-    E = 2,
-    R = 3,
-    T = 4,
-    OUTFIT = 8
-}
-
--- COSMETIC SKINS
-API.COSMETIC_SKIN = {
-    COMMON = 1,
-    UNCOMMON = 2,
-    RARE = 3,
-    LEGENDARY = 4,
-    ELEMENTAL = 5
+    LMB = 5,
+    RMB = 6,
+    SHIFT = 7
 }
 
 -- PROGRESS KEYS
 API.PROGRESS = {
     LEVEL = 1,
     XP = 2
-}
-
--- REWARD KEYS
-API.REWARDS = {
-    SHARDS = 1,
-    GOLD = 2,
-    COSMETIC = 3
 }
 
 -- STATUS EFFECT KEYS
@@ -104,57 +73,223 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
+
+API.STARTING_LEVEL = 1
+API.MAX_LEVEL = 10
+API.MAX_CLASS_LEVEL = 50
+
+
+API.CLASS_NAME = {
+    [API.CLASS.TANK] = "Warrior",
+    [API.CLASS.MAGE] = "Mage",
+    [API.CLASS.HUNTER] = "Hunter",
+    [API.CLASS.HEALER] = "Healer",
+    [API.CLASS.ASSASSIN] = "Assassin"
+}
+
+API.CLASS_HEALTH = {
+    [API.CLASS.TANK] = 500,
+    [API.CLASS.MAGE] = 300,
+    [API.CLASS.HUNTER] = 350,
+    [API.CLASS.HEALER] = 320,
+    [API.CLASS.ASSASSIN] = 300
+}
+
+API.ReqXp = {
+    [1] = 1000,
+    [2] = 2145,
+    [3] = 3420,
+    [4] = 4830,
+    [5] = 6375,
+    [6] = 8060,
+    [7] = 9890,
+    [8] = 11865,
+    [9] = 13995,
+    [10] = 16295,
+    [11] = 18775,
+    [12] = 21455,
+    [13] = 24340,
+    [14] = 27435,
+    [15] = 30745,
+    [16] = 34295,
+    [17] = 38095,
+    [18] = 42145,
+    [19] = 46465,
+    [20] = 51065,
+    [21] = 55955,
+    [22] = 61155,
+    [23] = 66675,
+    [24] = 72525,
+    [25] = 78725,
+    [26] = 85285,
+    [27] = 92215,
+    [28] = 99535,
+    [29] = 107255,
+    [30] = 115385,
+    [31] = 123945,
+    [32] = 132945,
+    [33] = 142415,
+    [34] = 152415,
+    [35] = 162855,
+    [36] = 173805,
+    [37] = 185275,
+    [38] = 197275,
+    [39] = 209835,
+    [40] = 222965,
+    [41] = 236675,
+    [42] = 250995,
+    [43] = 265935,
+    [44] = 281505,
+    [45] = 297725,
+    [46] = 314625,
+    [47] = 332215,
+    [48] = 350505,
+    [49] = 369505,
+    [50] = 389505 
+}
+
+API.DIMINISHING_RETURNS = { -- Uses a float 1.0 = 100% , 0.05 = 5%
+    [1] = 1.0,
+    [2] = 1.0,
+    [3] = 1.0,
+    [4] = 1.0,
+    [5] = 0.80,
+    [6] = 0.60,
+    [7] = 0.40,
+    [8] = 0.20,
+    [9] = 0.10,
+    [10] = 0.05
+}
+
+API.CLASS_XP = {
+    Kills = 300,
+    Captures = 500,
+    CapAssists = 150,
+    Wins = 1500,
+    Interrupt = 25, -- Interrupt Capture Point Player
+    KillOnPoint = 100
+}
+
+-- Server Wide Mulitpliers (1.0 is default no multiplier)
+API.EVENT_XP_MULITPLIER = 1.0 
+API.EVENT_GOLD_MULTIPLIER = 1.0
+API.EVENT_REWARD_MULTIPLIER = 1.0
+API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 -- 1.0 = 100% Cost | .90 = 90% Cost IE 10% Discount
+
+-- VIP Player Values
+API.VIP_XP_MULTIPLIER = 2.0
+API.VIP_GOLD_MULTIPLIER = 2.0
+API.VIP_REWARD_MULTIPLIER = 2.0
+API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+
+
+API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
+
+API.GOLD_PER_KILL = 10
+API.GOLD_PER_CAPTURE = 20
+API.KILL_STREAK_BONUS_GOLD = 5
+API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
+API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
+API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
+    [1] = 3,
+    [2] = 6,
+    [3] = 9,
+    [4] = 12,
+    [5] = 15,
+    [6] = 18,
+    [7] = 21,
+    [8] = 24,
+    [9] = 27,
+    [10] = 30,
+    [11] = 33,
+    [12] = 36,
+    [13] = 39,
+    [14] = 42,
+    [15] = 45,
+    [16] = 48,
+    [17] = 51,
+    [18] = 54,
+    [19] = 57,
+    [20] = 60,
+    [21] = 63,
+    [22] = 66,
+    [23] = 69,
+    [24] = 72,
+    [25] = 75,
+    [26] = 78,
+    [27] = 81,
+    [28] = 84,
+    [29] = 87,
+    [30] = 90,
+    [31] = 93,
+    [32] = 96,
+    [33] = 99,
+    [34] = 102,
+    [35] = 105,
+    [36] = 108,
+    [37] = 111,
+    [38] = 114,
+    [39] = 117,
+    [40] = 120,
+    [41] = 123,
+    [42] = 126,
+    [43] = 129,
+    [44] = 132,
+    [45] = 135,
+    [46] = 138,
+    [47] = 141,
+    [48] = 144,
+    [49] = 147,
+    [50] = 150
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- CONSUMABLE KEYS
+------------------------------------------------------------------------------------------------------------------------
+
 API.CONSUMABLE_KEYS = {
-    HEALTH_POTION = 1
+    HEALTH_POTION = 1,
+    MOUNT_SPEED = 2
 }
 
 API.CONSUMABLES = {
     [API.CONSUMABLE_KEYS.HEALTH_POTION] = {
-        BaseHeal = 100,
+        BaseHeal = 95,
         LevelMultiplier = 5
     }
 }
 
 API.MAX_CONSUMABLE_LEVEL = 10
 
-API.COSTUME_ID = 8
-
-API.STARTING_LEVEL = 1
-API.MAX_LEVEL = 10
-API.MAX_CLASS_LEVEL = 50
-
-API.ReqXp = {
-    [1] = 500,
-    [2] = 2000,
-    [3] = 3500,
-    [4] = 5000,
-    [5] = 6500,
-    [6] = 7500,
-    [7] = 8500,
-    [8] = 9500,
-    [9] = 10500,
-    [10] = 11500,
-    [11] = 12500,
-    [12] = 13500,
-    [13] = 14500,
-    [14] = 15000,
-    [15] = 15500,
-    [16] = 16000,
-    [17] = 16500,
-    [18] = 17000,
-    [19] = 18500,
-    [20] = 20000
-}
-
-API.CLASS_XP = {
-    Kills = 500,
-    Captures = 100,
-    CapAssists = 50,
-    Wins = 300
-}
+------------------------------------------------------------------------------------------------------------------------
+-- COSMETIC KEYS
+------------------------------------------------------------------------------------------------------------------------
 
 -- COSTUME KEYS
 API.DEFAULT_SKIN = 1
+API.COSTUME_ID = 8
+
+-- COSMETIC SKINS
+API.COSMETIC_SKIN = {
+    COMMON = 1,
+    UNCOMMON = 2,
+    RARE = 3,
+    LEGENDARY = 4,
+    ELEMENTAL = 5
+}
+
+-- BINDING KEYS
+API.COSMETIC_BIND = {
+    Q = 1,
+    E = 2,
+    R = 3,
+    T = 4,
+    OUTFIT = 8
+}
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- RESOURCE NAMES
@@ -198,9 +333,5 @@ API.CURRENCY = {
 API.GOLD = API.CURRENCY[1]
 API.COSMETIC_TOKEN = API.CURRENCY[2]
 
-API.TEAM = {
-    ORC = 1,
-    ELF = 2
-}
 ------------------------------------------------------------------------------------------------------------------------
 return API

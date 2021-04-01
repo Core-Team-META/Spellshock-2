@@ -32,7 +32,7 @@ end
 
 function OnBindingPressed(player, binding)
     -- U key
-    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] 
+    if binding == "ability_extra_26" and _G.CurrentMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"]
     or _G.CurrentMenu == _G.MENU_TABLE["Respawn"] and ABGS.GetGameState() == ABGS.GAME_STATE_ROUND  then
         if TeamInfoPanel.visibility == Visibility.INHERIT then
             TeamInfoPanel.visibility = Visibility.FORCE_OFF
@@ -43,7 +43,7 @@ function OnBindingPressed(player, binding)
 end
 
 function OnMenuChanged(oldMenu, newMenu)
-    if (newMenu == _G.MENU_TABLE["NONE"] or newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
+    if (newMenu == _G.MENU_TABLE["NONE"] or _G.CurrentMenu == _G.MENU_TABLE["Tutorial"] or  newMenu == _G.MENU_TABLE["Respawn"] or _G.CurrentMenu == _G.MENU_TABLE["ClassAbilities"])
     and (ABGS.GetGameState() == ABGS.GAME_STATE_ROUND or ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY) then -- show
         TeamLeftSideBar.visibility = Visibility.INHERIT
     else
@@ -54,9 +54,11 @@ end
 function OnGameStateChanged (oldState, newState)
 	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
         TeamInfoPanel.visibility = Visibility.INHERIT
+    elseif _G.CurrentMenu == _G.MENU_TABLE["NONE"] and newState == ABGS.GAME_STATE_LOBBY then
+        TeamInfoPanel.visibility = Visibility.INHERIT
     else
         TeamInfoPanel.visibility = Visibility.FORCE_OFF
-	end
+    end
 end
 
 function AddNewPanel(player)
@@ -70,8 +72,10 @@ function AddNewPanel(player)
 end
 
 function RemovePanel(player)
-    local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
-    panel:Destroy()
+    if AllPanels[player.clientUserData.panelIndex] then
+        local panel = table.remove(AllPanels, player.clientUserData.panelIndex)
+        panel:Destroy()
+    end
 end
 
 function OnPlayerJoined(player)
@@ -167,14 +171,14 @@ end
 
 OnMenuChanged(nil, _G.CurrentMenu)
 TeamInfoPanel.visibility = Visibility.FORCE_OFF
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 -- Add a new panel for every player already in the server
 for _, player in ipairs(Game.GetPlayers({ignorePlayers = LOCAL_PLAYER})) do --, includeTeams = LOCAL_PLAYER.team
     AddNewPanel(player)
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+--LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)

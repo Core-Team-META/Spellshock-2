@@ -1,8 +1,8 @@
 Assets {
   Id: 12558501937767822560
-  Name: "ShieldDashAbilityServer"
+  Name: "LandslideAbilityServer"
   PlatformAssetType: 3
   TextAsset {
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

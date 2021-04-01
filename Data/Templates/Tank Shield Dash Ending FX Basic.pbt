@@ -7,7 +7,7 @@ Assets {
       RootId: 14594014689050906518
       Objects {
         Id: 14594014689050906518
-        Name: "Tank Shield Dash Ending FX"
+        Name: "Tank Shield Dash Ending FX Basic"
         Transform {
           Scale {
             X: 1
@@ -28,7 +28,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -203,7 +203,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }
@@ -239,5 +239,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

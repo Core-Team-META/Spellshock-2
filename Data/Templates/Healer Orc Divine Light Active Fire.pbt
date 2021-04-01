@@ -7,7 +7,7 @@ Assets {
       RootId: 11284980453171384606
       Objects {
         Id: 11284980453171384606
-        Name: "Healer Orc Divine Light Active Basic 2"
+        Name: "Healer Orc Divine Light Active Fire"
         Transform {
           Scale {
             X: 1
@@ -31,7 +31,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -154,7 +154,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -218,7 +218,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -3389,7 +3389,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
     }
@@ -3515,5 +3515,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

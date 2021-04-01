@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Consumable Progression System
 -- Author Morticai - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.1
+-- Date: 2021/3/29
+-- Version 0.1.3
 ------------------------------------------------------------------------------------------------------------------------
 -- Require
 ------------------------------------------------------------------------------------------------------------------------
@@ -10,7 +10,10 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local COST_TABLE = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 local AP_DATA = require(script:GetCustomProperty("MetaAbilityProgression_DATA"))
-
+------------------------------------------------------------------------------------------------------------------------
+-- Objects
+------------------------------------------------------------------------------------------------------------------------
+local MOUNT_LEVELS = script:GetCustomProperty("MountLevels"):WaitForObject()
 ------------------------------------------------------------------------------------------------------------------------
 -- Global Table Setup
 ------------------------------------------------------------------------------------------------------------------------
@@ -24,6 +27,9 @@ local consumables = {}
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSTANTS
 ------------------------------------------------------------------------------------------------------------------------
+local MOUNT_LEVELS = MOUNT_LEVELS:GetChildren()
+local MAX_MOUNT_LEVEL = #MOUNT_LEVELS
+
 -- Currency Resource Names
 API.GOLD_RES = CONST.GOLD
 
@@ -45,9 +51,11 @@ end
 
 ------------------------------------------------------------------------------------------------------------------------
 --@param object player
---@param int class => id of class (API.TANK, API.MAGE)
+--@param int class => id of class (API.HEALTH_POTION)
 local function SetLevel(player, consumable, level)
     consumables[player.id][consumable][API.LEVEL] = level
+    --player:SetResource(UTIL.GetConsumableLevelString(consumable), level)
+    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), level)
 end
 
 --@param object player
@@ -60,6 +68,8 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 local function SetXp(player, consumable, xp)
     consumables[player.id][consumable][API.XP] = xp
+    --player:SetResource(UTIL.GetConsumableXpString(consumable), xp)
+    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableXpString(consumable), xp)
 end
 
 --@param object player
@@ -73,8 +83,16 @@ end
 --@return int reqXP, int reqGold
 local function GetReqXp(player, consumable)
     local currentLevel = GetLevel(player, consumable)
-    local costTable = COST_TABLE[currentLevel]
-    return costTable.reqXP, costTable.reqGold
+    return COST_TABLE[currentLevel]
+end
+
+--@param object player
+local function SetPlayerMountSpeed(player)
+    local level = GetLevel(player, API.MOUNT_SPEED) or 1
+    local mountSpeed = MOUNT_LEVELS[level]
+    if mountSpeed then
+        mountSpeed:ApplyToPlayer(player)
+    end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -85,16 +103,20 @@ end
 --@param int class => id of class (API.HEALTH_POTION)
 function DoLevelUp(player, consumable)
     local level = GetLevel(player, consumable)
-    local reqXp, reqGold = GetReqXp(player, consumable)
-    local currentGold = player:GetResource(CONST.GOLD)
+    local reqXp = GetReqXp(player, consumable)
+    --local currentGold = player:GetResource(CONST.GOLD)
     local xp = GetXp(player, consumable)
-    if xp >= reqXp and currentGold >= reqGold and level < CONST.MAX_LEVEL then
+    if xp >= reqXp and level < CONST.MAX_LEVEL then
         level = CoreMath.Round(level + 1)
         xp = xp - reqXp
-        currentGold = currentGold - reqGold
-        player:SetResource(CONST.GOLD, currentGold)
+        --currentGold = currentGold - reqGold
+        --player:SetResource(CONST.GOLD, currentGold)
         SetLevel(player, consumable, level)
         SetXp(player, consumable, xp)
+        if consumable == API.MOUNT_SPEED then
+            SetPlayerMountSpeed(player)
+        end
+        DoLevelUp(player, consumable) -- Keep leveling
     end
 end
 
@@ -120,6 +142,13 @@ function BuildDataTable(player, data)
             consumables[player.id][consumable] = {}
             for key, value in pairs(consumableData) do
                 consumables[player.id][consumable][key] = value
+                if key == CONST.PROGRESS.LEVEL then
+                    --player:SetResource(UTIL.GetConsumableLevelString(consumable), value)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), value)
+                elseif key == CONST.PROGRESS.XP then
+                    --player:SetResource(UTIL.GetConsumableXpString(consumable), value)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableXpString(consumable), value)
+                end
             end
         end
     end
@@ -129,6 +158,8 @@ function BuildDataTable(player, data)
             for _, key in pairs(CONST.PROGRESS) do
                 if key == CONST.PROGRESS.LEVEL then
                     consumables[player.id][consumable][key] = CONST.STARTING_LEVEL
+                    --player:SetResource(UTIL.GetConsumableLevelString(consumable), CONST.STARTING_LEVEL)
+                    _G.PerPlayerDictionary.Set(player, UTIL.GetConsumableLevelString(consumable), CONST.STARTING_LEVEL)
                 else
                     consumables[player.id][consumable][key] = 0
                 end
@@ -141,6 +172,13 @@ end
 --@param table consumables
 function GetConsumables(player)
     return consumables[player.id]
+end
+
+function OnPlayerJoined(player)
+    Task.Wait()
+    if Object.IsValid(player) then
+        SetPlayerMountSpeed(player)
+    end
 end
 
 --@param object player
@@ -171,10 +209,14 @@ function API.AddXP(player, consumable, xp)
         return
     end
     consumables[player.id][consumable][CONST.PROGRESS.XP] = CoreMath.Round(GetXp(player, consumable) + xp)
-    --LevelUp(player, consumable)
+    DoLevelUp(player, consumable)
 end
 
 function API.GetValue(player, consumable)
     local level = GetLevel(player, consumable)
     return AP_DATA.GetConsumableValue(consumable, level)
+end
+
+function API.SetMovement(player)
+    SetPlayerMountSpeed(player)
 end

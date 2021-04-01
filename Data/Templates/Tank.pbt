@@ -47,7 +47,47 @@ Assets {
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "1hand_melee_stance"
+            String: "2hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:OID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:QID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:EID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:TID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:RID"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:OID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:QID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:EID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:TID:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:RID:isrep"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -477,6 +517,12 @@ Assets {
             Name: "cs:Range"
             Int: 3000
           }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -533,7 +579,7 @@ Assets {
       }
       Objects {
         Id: 2523905926295798748
-        Name: "ShieldDashAbilityServer"
+        Name: "LandslideAbilityServer"
         Transform {
           Location {
             Z: -55
@@ -568,6 +614,18 @@ Assets {
             Name: "cs:ModuleManager"
             AssetReference {
               Id: 9770511928359673738
+            }
+          }
+          Overrides {
+            Name: "cs:ClassEquipment"
+            ObjectReference {
+              SubObjectId: 7855160156328725233
+            }
+          }
+          Overrides {
+            Name: "cs:APIStatusEffects"
+            AssetReference {
+              Id: 6140123420589022677
             }
           }
         }
@@ -631,7 +689,7 @@ Assets {
           }
           Overrides {
             Name: "cs:DamageAmount"
-            Int: 50
+            Int: 125
           }
           Overrides {
             Name: "cs:ProjectileSpeed"
@@ -681,7 +739,6 @@ Assets {
         ParentId: 4159325021862714735
         ChildIds: 13203218025387527418
         ChildIds: 12017777593537436719
-        ChildIds: 8962058382446678117
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -828,61 +885,6 @@ Assets {
         }
       }
       Objects {
-        Id: 8962058382446678117
-        Name: "BlockAbilityServer"
-        Transform {
-          Location {
-            X: 3754.84961
-            Y: 3909.14063
-            Z: 7270.2793
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1059382485272021003
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 3260764097856570315
-            }
-          }
-          Overrides {
-            Name: "cs:AbilityAnimationStance"
-            String: "1hand_melee_shield_block"
-          }
-          Overrides {
-            Name: "cs:BlockPercentage"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "cs:Equipment"
-            ObjectReference {
-              SubObjectId: 13709554481697835406
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 17883032561719865561
-          }
-        }
-      }
-      Objects {
         Id: 2626836070982711195
         Name: "HealthRegenServer"
         Transform {
@@ -976,9 +978,7 @@ Assets {
         ChildIds: 12141073967094505460
         ChildIds: 11608906771778473422
         ChildIds: 8484312664012694213
-        ChildIds: 11057856131540664296
         ChildIds: 14358940177883270596
-        ChildIds: 8138751453774018183
         ChildIds: 8465538153470191218
         ChildIds: 17098134254791101238
         WantsNetworking: true
@@ -989,7 +989,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -1647,44 +1647,6 @@ Assets {
         }
       }
       Objects {
-        Id: 11057856131540664296
-        Name: "BlockAbilityClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4127929006948487058
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 3260764097856570315
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 10117957785966738228
-          }
-        }
-      }
-      Objects {
         Id: 14358940177883270596
         Name: "SetAbilityIconClientOptimized"
         Transform {
@@ -1716,56 +1678,6 @@ Assets {
             Name: "cs:Icon"
             AssetReference {
               Id: 1031800327856440791
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8799101599018051692
-          }
-        }
-      }
-      Objects {
-        Id: 8138751453774018183
-        Name: "SetAbilityIconClientOptimized"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4127929006948487058
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Ability"
-            ObjectReference {
-              SubObjectId: 3260764097856570315
-            }
-          }
-          Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 7445855579671141283
-            }
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 12289747022974899819
             }
           }
         }
@@ -1886,16 +1798,7 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 12880357743881602078
-            }
-          }
-          Overrides {
-            Name: "cs:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
+              Id: 5751567816530114738
             }
           }
         }
@@ -2084,7 +1987,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Ability {
           IsEnabled: true
@@ -2156,7 +2059,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Ability {
           IsEnabled: true
@@ -2229,7 +2132,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Ability {
           IsEnabled: true
@@ -2265,7 +2168,7 @@ Assets {
           }
           Animation: "2hand_melee_dig_shovel"
           KeyBinding_v2 {
-            Value: "mc:egameaction:extraaction_34"
+            Value: "mc:egameaction:extraaction_14"
           }
         }
       }
@@ -2371,7 +2274,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Ability {
           IsEnabled: true
@@ -2434,7 +2337,6 @@ Assets {
         }
         ParentId: 16112677035434330704
         ChildIds: 13977688717675933557
-        ChildIds: 3260764097856570315
         ChildIds: 793349449599853437
         UnregisteredParameters {
           Overrides {
@@ -2517,7 +2419,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Ability {
           IsEnabled: true
@@ -2555,81 +2457,10 @@ Assets {
             CanJump: true
             CanRotate: true
           }
-          Animation: "1hand_melee_slash_right"
+          Animation: "2hand_melee_slash_right"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:invalid"
-          }
-        }
-      }
-      Objects {
-        Id: 3260764097856570315
-        Name: "Block"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 13709554481697835406
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsAbilityChain"
-            Bool: false
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Ability {
-          IsEnabled: true
-          KeyBinding: "ability_primary"
-          CastPhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          ExecutePhaseSettings {
-            Duration: 5
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
-            }
-          }
-          RecoveryPhaseSettings {
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-            PreventOtherAbilities: true
-            Facing_V2 {
-              Value: "mc:eabilitysetfacing:none"
-            }
-          }
-          CooldownPhaseSettings {
-            Duration: 8
-            CanMove: true
-            CanJump: true
-            CanRotate: true
-          }
-          CanBePrevented: true
-          KeyBinding_v2 {
-            Value: "mc:egameaction:secondaryaction"
           }
         }
       }
@@ -2673,7 +2504,7 @@ Assets {
       }
       Objects {
         Id: 14809710803316002615
-        Name: "Shield Dash"
+        Name: "Landslide"
         Transform {
           Location {
             Z: -55
@@ -2725,7 +2556,7 @@ Assets {
       }
       Objects {
         Id: 15328715113681216029
-        Name: "Shield Dash"
+        Name: "Landslide"
         Transform {
           Location {
           }
@@ -3002,21 +2833,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12289747022974899819
-      Name: "Fantasy Shield 003"
+      Id: 5751567816530114738
+      Name: "Fantasy Ability Red 029"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Shield_003"
-      }
-    }
-    Assets {
-      Id: 12880357743881602078
-      Name: "Fantasy Ability Red 008"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Ability_Red_008"
+        AssetId: "UI_Fantasy_Ability_Red_029"
       }
     }
     Assets {
@@ -3042,5 +2864,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

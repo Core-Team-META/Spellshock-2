@@ -7,7 +7,7 @@ Assets {
       RootId: 1069049167534334551
       Objects {
         Id: 1069049167534334551
-        Name: "Assassin_Ability4_ImpactVFX"
+        Name: "Assassin Elf Wraith Strike Impact Frost"
         Transform {
           Scale {
             X: 1
@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
+        ChildIds: 11581787596336380262
         ChildIds: 8144050940375131418
         ChildIds: 5866003244609584462
         ChildIds: 12902694963072881025
@@ -28,9 +29,46 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 11581787596336380262
+        Name: "Big Hammer Huge Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1069049167534334551
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          AutoPlay: true
+          Pitch: -800
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -62,6 +100,7 @@ Assets {
             Id: 1434205963690287959
           }
           AutoPlay: true
+          Pitch: 400
           Volume: 1
           Falloff: -1
           Radius: -1
@@ -128,7 +167,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -209,8 +248,17 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
+      }
+    }
+    Assets {
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
       }
     }
     Assets {
@@ -245,5 +293,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

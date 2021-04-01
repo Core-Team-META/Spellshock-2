@@ -1,6 +1,7 @@
 ﻿-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local function META_AP()
     return _G["Meta.Ability.Progression"]
 end
@@ -27,6 +28,10 @@ function OnBeginOverlap(thisTrigger, other)
 	if not Object.IsValid(SpecialAbility.owner) then return end
 	if otherTeam and Teams.AreTeamsFriendly(otherTeam, SpecialAbility.owner.team) then return end
 	
+	local DEFAULT_Slow = {duration = 5.0, damage = 0, multiplier = 0.5}
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod5", DEFAULT_Slow, SpecialAbility.name..": Slow")
+	API_SE.ApplyStatusEffect(other, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+
 	local damageRangeTable = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().Q, "mod3", DEFAULT_DamageRange, SpecialAbility.name..": Damage Range")
 	local dmgMin = damageRangeTable.min
 	local dmgMax = damageRangeTable.max
@@ -125,14 +130,16 @@ end
 function OnAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().Q, "mod6", 5, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
 end
 
+
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q,  META_AP().TANK)
+	local skin = equipment:GetCustomProperty("QID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().Q)
 end
 
 function Tick(deltaTime)

@@ -41,6 +41,10 @@ Assets {
         String: ""
       }
       Overrides {
+        Name: "cs:LockedUntil"
+        Int: 0
+      }
+      Overrides {
         Name: "cs:Types"
         String: ""
       }
@@ -100,5 +104,5 @@ Assets {
       }
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

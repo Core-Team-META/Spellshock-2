@@ -368,15 +368,17 @@ Assets {
         }
         AudioInstance {
           AudioAsset {
-            Id: 9100686647221469272
+            Id: 1408128956061360635
           }
           AutoPlay: true
-          Pitch: -200
+          Pitch: 800
           Volume: 1
           Falloff: -1
           Radius: -1
+          FadeOutTime: 1.35
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+          StopTime: 0.1
         }
       }
     }
@@ -390,12 +392,12 @@ Assets {
       }
     }
     Assets {
-      Id: 9100686647221469272
-      Name: "Magic Dark Large Item Collect 01 SFX"
+      Id: 1408128956061360635
+      Name: "Sparkle Energy Powerdown 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_magic_dark_large_item_collect_01_Cue_ref"
+        AssetId: "sfx_sparkle_energy_powerdown_01_Cue_ref"
       }
     }
     PrimaryAssetId {
@@ -403,5 +405,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

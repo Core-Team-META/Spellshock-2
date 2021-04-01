@@ -21,7 +21,7 @@ Objects {
       Color {
         R: 0.575000048
         G: 0.182083383
-        A: 0.8
+        A: 1
       }
     }
     Overrides {
@@ -32,6 +32,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.94600004
+        G: 0.299566746
+        A: 1
       }
     }
   }
@@ -69,9 +77,9 @@ Objects {
     Overrides {
       Name: "cs:TagColor"
       Color {
-        R: 0.231277958
+        R: 0.231278241
         B: 0.603333235
-        A: 0.8
+        A: 1
       }
     }
     Overrides {
@@ -82,6 +90,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.40791747
+        B: 0.979000032
+        A: 1
       }
     }
   }
@@ -119,9 +135,9 @@ Objects {
     Overrides {
       Name: "cs:TagColor"
       Color {
-        G: 0.0911257043
+        G: 0.0911256
         B: 0.429999948
-        A: 0.8
+        A: 1
       }
     }
     Overrides {
@@ -132,6 +148,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        G: 0.192847013
+        B: 0.91
+        A: 1
       }
     }
   }
@@ -169,9 +193,9 @@ Objects {
     Overrides {
       Name: "cs:TagColor"
       Color {
-        R: 0.0227377936
+        R: 0.0227377526
         G: 0.343333244
-        A: 0.8
+        A: 1
       }
     }
     Overrides {
@@ -182,6 +206,14 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.0438417792
+        G: 0.66200006
+        A: 1
       }
     }
   }
@@ -219,10 +251,10 @@ Objects {
     Overrides {
       Name: "cs:TagColor"
       Color {
-        R: 0.603333235
-        G: 0.603333235
-        B: 0.603333235
-        A: 0.8
+        R: 0.394000024
+        G: 0.394000024
+        B: 0.394000024
+        A: 1
       }
     }
     Overrides {
@@ -233,6 +265,15 @@ Objects {
       Name: "cs:Icon"
       AssetReference {
         Id: 1140002898835594765
+      }
+    }
+    Overrides {
+      Name: "cs:HighlightColor"
+      Color {
+        R: 0.770000041
+        G: 0.770000041
+        B: 0.770000041
+        A: 1
       }
     }
   }

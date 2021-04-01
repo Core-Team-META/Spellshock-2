@@ -40,7 +40,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 	local DamageRadius =
 		META_AP().GetAbilityMod(
 		SpecialAbility.owner,
-		META_AP().T,
+		META_AP().R,
 		"mod2",
 		DEFAULT_DamageRadius,
 		SpecialAbility.name .. ": Radius"
@@ -57,7 +57,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 		dmg.amount =
 			META_AP().GetAbilityMod(
 			SpecialAbility.owner,
-			META_AP().T,
+			META_AP().R,
 			"mod1",
 			DEFAULT_DamageAmount,
 			SpecialAbility.name .. ": Damage Amount"
@@ -70,7 +70,7 @@ function OnProjectileImpact(projectile, other, hitResult)
 		directionVector = directionVector / directionVector.size
 		directionVector.z = 0.7
 		--#TODO Fix the magic number
-		local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod4", 100000, SpecialAbility.name .. ": Enemy Impulse")
+		local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", 100000, SpecialAbility.name .. ": Enemy Impulse")
 
 		local attackData = {
 			object = enemy,
@@ -98,7 +98,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local targetingRange = 100000
 		--[[META_AP().GetAbilityMod(
 		SpecialAbility.owner,
-		META_AP().T,
+		META_AP().R,
 		"mod3",
 		DEFAULT_TargetingRange,
 		SpecialAbility.name .. ": Targeting Range"
@@ -109,7 +109,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	if hitResult then
 		endPoint = hitResult:GetImpactPosition()
 	end
-
+	print(tostring(PlayerVFX.Target))
 	CurrentTarget = META_AP().SpawnAsset(PlayerVFX.Target)
 
 	-- Spawn a new projectile
@@ -121,7 +121,7 @@ function OnSpecialAbilityExecute(thisAbility)
 
 	local differenceVector = endPoint - spawnPosition
 	local directionVector = differenceVector:GetNormalized()
-
+	print(tostring(PlayerVFX.Projectile))
 	CurrentProjectile = Projectile.Spawn(PlayerVFX.Projectile, spawnPosition, directionVector)
 	--local distanceVector = CurrentTarget:GetWorldPosition() - CurrentProjectile:GetWorldPosition()
 
@@ -145,12 +145,12 @@ function SetCooldownOverride(value)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
-	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().T, "mod6", 90, thisAbility.name..": Cooldown")
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 90, thisAbility.name..": Cooldown")
 	
 	SetCooldownOverride(Cooldown)
 	
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -211,7 +211,9 @@ function OnEquip(equipment, player)
 	EventListeners["diedEvent"] = player.diedEvent:Connect(OnPlayerDied)
 	EventListeners["respawnedEvent"] = player.respawnedEvent:Connect(OnPlayerRespawn)
 	EventListeners["cooldownEvent"] = SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown )
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().MAGE)
+	
+	local skin = Equipment:GetCustomProperty("RID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().MAGE, player.team, skin, META_AP().R)
 end
 
 function OnUnequip(equipment, player)
@@ -231,7 +233,9 @@ function Tick(deltaTime)
 		if MoveTarget and CurrentTarget and Object.IsValid(CurrentTarget) then
 			local viewRotation = CurrentProjectile.owner:GetViewWorldRotation()
 			local viewPosition = CurrentProjectile.owner:GetViewWorldPosition()
-			local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().T, "mod3", DEFAULT_TargetingRange, SpecialAbility.name .. ": Targeting Range")
+			local targetingRange = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_TargetingRange, SpecialAbility.name .. ": Targeting Range")
+			local projectileDistance = (CurrentProjectile:GetWorldPosition() - viewPosition).size
+			targetingRange = math.min(targetingRange, projectileDistance + 1000)
 			local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 			local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = CurrentProjectile.owner.team})
 
@@ -242,6 +246,7 @@ function Tick(deltaTime)
 
 			CurrentProjectile.homingTarget = CurrentTarget
 			CurrentProjectile.homingAcceleration = HOMING_ACCELERATION
+			CurrentProjectile.drag = 10
 			
 			--local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
 			--CurrentProjectile.lifeSpan = distanceVector.size / ProjectileSpeed + 1.5
@@ -250,6 +255,7 @@ function Tick(deltaTime)
 			CurrentProjectile.homingTarget = nil
 			CurrentProjectile.homingAcceleration = 0
 			CurrentProjectile.speed = ProjectileSpeed
+			CurrentProjectile.drag = -0.1
 		end
 
 		--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed

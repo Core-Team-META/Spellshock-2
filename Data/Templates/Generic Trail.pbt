@@ -53,22 +53,31 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
+              R: 0.487037748
               G: 0.49
-              B: 0.0364900529
+              B: 0.362089962
               A: 1
             }
           }
           Overrides {
             Name: "bp:Emissive Boost"
-            Float: 15
+            Float: 8
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.5
+            Float: 0.3
           }
           Overrides {
             Name: "bp:Spawn Radius"
-            Float: 0.15
+            Float: 0.11
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.8
           }
         }
         Collidable_v2 {
@@ -135,24 +144,27 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
+              R: 0.237135381
               G: 0.289999962
-              B: 0.0364900529
+              B: 0.243787214
               A: 1
             }
           }
           Overrides {
             Name: "bp:ColorB"
             Color {
+              R: 0.0937499851
               G: 0.149999976
-              B: 0.0129139405
+              B: 0.0985927135
               A: 1
             }
           }
           Overrides {
             Name: "bp:ColorC"
             Color {
-              R: 0.106622525
+              R: 0.474392951
               G: 0.700000048
+              B: 0.433854163
               A: 1
             }
           }
@@ -202,5 +214,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

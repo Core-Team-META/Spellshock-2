@@ -27,6 +27,11 @@ local AUDIO = script:GetCustomProperty("Audio"):WaitForObject()
 
 local ChargeUpSFX = AUDIO:GetCustomProperty("ChargeUpSFX"):WaitForObject()
 local CapturedSFX = AUDIO:GetCustomProperty("CapturedSFX"):WaitForObject()
+local propAmbientBackgroundLoop = AUDIO:GetCustomProperty("AmbientBackgroundLoop")
+local AmbientBackgroundLoop
+if propAmbientBackgroundLoop then
+    AmbientBackgroundLoop = propAmbientBackgroundLoop:WaitForObject()
+end
 local SpawnPoints = SERVER_SCRIPT:GetCustomProperty("SpawnPoints"):WaitForObject()
 local BaseSpawn = SERVER_SCRIPT:GetCustomProperty("BaseSpawn"):WaitForObject()
 
@@ -231,7 +236,7 @@ end
 
 function OnNetworkedPropertyChanged(thisObject, name)
     if name == "OwningTeam" then
-        newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
+        local newOwner = SERVER_SCRIPT:GetCustomProperty("OwningTeam")
         if newOwner ~= owningTeam then
             Events.Broadcast("CapturePointOwnerChanged", ORDER, owningTeam, newOwner)
             owningTeam = newOwner
@@ -254,6 +259,15 @@ function OnNetworkedPropertyChanged(thisObject, name)
             previousEnabledState = isEnabled
         end
         SetGeometryTeam(SERVER_SCRIPT:GetCustomProperty("OwningTeam"))   
+
+        if AmbientBackgroundLoop then
+            if isEnabled then
+                AmbientBackgroundLoop:Play()
+            else
+                AmbientBackgroundLoop:Stop()
+            end
+        end
+
     elseif name == "ProgressedTeam" or name == "CapturePlayerID" then
         for _, vfx in pairs(CAPTURE_ANIMATIONS:GetChildren()) do
             vfx.visibility = Visibility.FORCE_OFF

@@ -7,7 +7,6 @@
 	+ WitcherSilver (META) (Art) (https://www.coregames.com/user/e730c40ae54d4c588658667927acc6d8)
 
 --]]
-
 ------------------------------------------------------------------------------------------------------------------------
 --	EXTERNAL SCRIPTS AND APIS
 ------------------------------------------------------------------------------------------------------------------------
@@ -45,21 +44,29 @@ function Deactivate()
 	end
 end
 
+function OnRewardSelected(player)
+	local emptyData = {}
+	VictoryScreenAPI.OnPlayerRestored(RootGroup, player, emptyData)
+	VictoryScreenAPI.playerRestoredEvent:_Fire(player, RootGroup, emptyData)
+	--Events.Broadcast("TeleportPlayer", player)
+	player:Respawn()
+end
+
 function OnGameStateChanged(oldState, newState, hasDuration, time)
 	if newState == ABGS.GAME_STATE_PLAYER_SHOWCASE and oldState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
 		print("Team Victory")
 		Activate()
-    elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
-        print("CLOSING Team Victory")
-		Deactivate()   
-    end
+	elseif newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+		print("CLOSING Team Victory")
+		Deactivate()
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
 --	INITIALIZATION
 ------------------------------------------------------------------------------------------------------------------------
 Events.Connect("GameStateChanged", OnGameStateChanged)
-
+Events.ConnectForPlayer("RewardSelected", OnRewardSelected)
 --[[	Connect Game.roundEndEvent to teleport players if ACTIVATE_AUTOMATICALLY is true
 if(ACTIVATE_AUTOMATICALLY) then
 	Game.roundEndEvent:Connect(Activate)

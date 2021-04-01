@@ -44,7 +44,7 @@ end
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 10, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -54,7 +54,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().HEALER)
+	local skin = Equipment:GetCustomProperty("EID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HEALER, player.team, skin, META_AP().E)
 end
 
 function OnUnequip(equipment, player)

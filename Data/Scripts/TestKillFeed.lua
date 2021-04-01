@@ -1,0 +1,83 @@
+local player = Game.GetPlayers()[1]
+
+function OnBindingPressed(player, binding)
+
+	if (binding == "ability_extra_0") then 
+
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Rock Strike")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Stone Wall")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Landslide")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Boulder Throw")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Roll")
+        -- Task.Wait(1)
+        Events.BroadcastToAllPlayers("AKI", player, player, "Hammer")
+        Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Shield")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Rain of Arrows")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Entangle")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Bear Trap")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Hawk")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Roll")
+        -- Task.Wait(1)
+        Events.BroadcastToAllPlayers("AKI", player, player, "Crossbow")
+        Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Tornado")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Animorph Potion")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Pyroblast")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Iceberg")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Teleport")
+        -- Task.Wait(1)
+        Events.BroadcastToAllPlayers("AKI", player, player, "Wand")
+        Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Blade Dash")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Death's Shadow")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Venom Bomb")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Wraith Strike")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Roll")
+        -- Task.Wait(1)
+        Events.BroadcastToAllPlayers("AKI", player, player, "Dagger")
+        Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Coming Soon")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Sun Beam")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Healing Crystal")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Divine Light")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Supernova")
+        -- Task.Wait(1)
+        -- Events.BroadcastToAllPlayers("AKI", player, player, "Teleport")
+        -- Task.Wait(1)
+        Events.BroadcastToAllPlayers("AKI", player, player, "Staff")
+
+
+	end
+end
+
+function OnPlayerJoined(player)
+	-- hook up binding in player joined event here, move to more appropriate place if needed
+	player.bindingPressedEvent:Connect(OnBindingPressed)
+end
+
+-- on player joined/left functions need to be defined before calling event:Connect()
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+
+

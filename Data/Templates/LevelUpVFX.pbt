@@ -29,7 +29,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -64,7 +64,7 @@ Assets {
           }
           AutoPlay: true
           Pitch: 100
-          Volume: 1
+          Volume: 0.6
           Falloff: -1
           Radius: -1
           IsSpatializationEnabled: true
@@ -111,7 +111,7 @@ Assets {
           }
           AudioBP {
             AutoPlay: true
-            Volume: 1
+            Volume: 0.6
             Falloff: 3600
             Radius: 400
             IsSpatializationEnabled: true
@@ -345,5 +345,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

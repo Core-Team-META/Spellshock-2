@@ -67,7 +67,7 @@ Assets {
           Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Folder {
           IsFilePartition: true
@@ -425,5 +425,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

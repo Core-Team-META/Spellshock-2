@@ -9,6 +9,10 @@ local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end
 
+local function META_VFX()
+	return _G["Meta.Ability.Progression"]["VFX"]
+end
+
 local AbilitySettings = script:GetCustomProperty("AbilitySettings"):WaitForObject()
 local Equipment = AbilitySettings:GetCustomProperty("Equipment"):WaitForObject()
 local SpecialAbility = AbilitySettings:GetCustomProperty("SpecialAbility"):WaitForObject()
@@ -71,7 +75,7 @@ end
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().Q, "mod6", 30, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -81,7 +85,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect(OnSpecialAbilityCooldown))
 
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q, META_AP().HUNTER)
+	local skin = Equipment:GetCustomProperty("QID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().HUNTER, player.team, skin, META_AP().Q)
 end
 
 function OnUnequip(equipment, player)

@@ -12185,6 +12185,182 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 2859209933721982798
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4195307576424009913
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5293820043605764205
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6468796690085417804
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7427889377032051286
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7877639053098735898
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8687066581584233358
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9464402799700025336
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9724209440096501390
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11623038588948470408
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12767628140320148703
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13050513909162947981
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14645955012805354464
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14660161968355480543
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16229132328552883968
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16394348207650384399
+      value {
+        Overrides {
+          Name: "CoreProxy.Relevance"
+          Enum {
+            Value: "mc:eproxyrelevance:medium"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 16963435698510783957
       value {
         Overrides {
@@ -12376,149 +12552,6 @@ Objects {
     }
     TemplateAsset {
       Id: 13115565443093371155
-    }
-  }
-}
-Objects {
-  Id: 14237155299322317803
-  Name: "NemesisTracker"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14162296025304194376
-  ChildIds: 14875930949579151972
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 14875930949579151972
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14237155299322317803
-  ChildIds: 9286080460226456581
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 9286080460226456581
-  Name: "NemesisTrackerClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14875930949579151972
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:APIBasicGameState"
-      AssetReference {
-        Id: 11974742996071064388
-      }
-    }
-    Overrides {
-      Name: "cs:EaseUI"
-      AssetReference {
-        Id: 12045507068401926921
-      }
-    }
-    Overrides {
-      Name: "cs:PlayerKilledEvent"
-      String: "AKI"
-    }
-    Overrides {
-      Name: "cs:YourNemesisText"
-      ObjectReference {
-        SelfId: 14698468600538133779
-      }
-    }
-    Overrides {
-      Name: "cs:YourNemesisKillsText"
-      ObjectReference {
-        SelfId: 2344863400105103918
-      }
-    }
-    Overrides {
-      Name: "cs:NemesisOfText"
-      ObjectReference {
-        SelfId: 12755197281558524576
-      }
-    }
-    Overrides {
-      Name: "cs:NemesisOfKillsText"
-      ObjectReference {
-        SelfId: 5111648794313959499
-      }
-    }
-    Overrides {
-      Name: "cs:VictoryScreenContainer"
-      ObjectReference {
-        SelfId: 16766948595417691007
-      }
-    }
-    Overrides {
-      Name: "cs:NemesisVictoryScreenMarker"
-      AssetReference {
-        Id: 9653194334873660604
-      }
-    }
-    Overrides {
-      Name: "cs:RollTextTickSFX"
-      AssetReference {
-        Id: 3523787590995695701
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 13015194634821144853
     }
   }
 }

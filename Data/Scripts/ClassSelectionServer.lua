@@ -3,6 +3,12 @@
     return _G["Meta.Ability.Progression"]
 end
 
+
+local function GetCurrentCosmeticId(player, classID, bind)
+    return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
+end
+
+
 local ABGS = require(script:GetCustomProperty("ABGS"))
 
 local ClassTemplates = {
@@ -14,12 +20,28 @@ local ClassTemplates = {
 }
 
 local Class_Stances = {
-	[META_AP().TANK] = "1hand_melee_stance",
+	[META_AP().TANK] = "2hand_melee_stance",
 	[META_AP().HUNTER] = "2hand_rifle_aim_shoulder",
 	[META_AP().MAGE] = "2hand_staff_ready",
 	[META_AP().ASSASSIN] = "unarmed_ready",
 	[META_AP().HEALER] = "2hand_staff_stance"
 }
+
+local function EquipPlayer(player, classID)
+    local newClass = World.SpawnAsset(ClassTemplates[classID])
+    local oId = GetCurrentCosmeticId(player, classID, 8)
+    local qId = GetCurrentCosmeticId(player, classID, 1)
+    local eId = GetCurrentCosmeticId(player, classID, 2)
+    local rId = GetCurrentCosmeticId(player, classID, 3)
+    local tId = GetCurrentCosmeticId(player, classID, 4)
+    newClass:SetNetworkedCustomProperty("OID", oId)
+    newClass:SetNetworkedCustomProperty("QID", qId)
+    newClass:SetNetworkedCustomProperty("EID", eId)
+    newClass:SetNetworkedCustomProperty("RID", rId)
+    newClass:SetNetworkedCustomProperty("TID", tId)
+    Task.Wait()
+    newClass:Equip(player)
+end
 
 function OnClassChanged(player, classID)
     --if classID == player.serverUserData.CurrentClass then return end 
@@ -34,9 +56,9 @@ function OnClassChanged(player, classID)
         player:SetResource("CLASS_MAP", classID)
     end
 
-    if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
-        player.animationStance = Class_Stances[classID]
-    elseif ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+    --[[if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+        player.animationStance = Class_Stances[classID]]
+    if ABGS.GetGameState() ~= ABGS.GAME_STATE_ROUND_END or ABGS.GetGameState() ~= ABGS.GAME_STATE_PLAYER_SHOWCASE then
         --unequip everything
         for _, equipment in pairs(player:GetEquipment()) do
             if Object.IsValid(equipment) then
@@ -48,18 +70,37 @@ function OnClassChanged(player, classID)
             end
         end
 
-        player.animationStance = Class_Stances[classID]
-        local newClass = World.SpawnAsset(ClassTemplates[classID])
-        newClass:Equip(player)
+        --player.animationStance = Class_Stances[classID]
+        EquipPlayer(player, classID)
+
+        -- Used for determining which class is used during the round; used for calculating reward slot 1
+        player.serverUserData.ClassesPlayed = player.serverUserData.ClassesPlayed or {}
+        local current = player.serverUserData.ClassesPlayed[classID]
+        if current then
+            player.serverUserData.ClassesPlayed[classID] = current + 1
+        else
+            player.serverUserData.ClassesPlayed[classID] = 1
+        end
     end
 end
 
+function OnRewardSelected(player)
+    warn(player.name.." skipped rewards. Equipping class.")
+    local classID = player:GetResource("CLASS_MAP")
+    if classID == 0 then
+        classID = META_AP().TANK
+    end
+
+    EquipPlayer(player, classID)
+end
+
 function OnGameStateChanged(oldState, newState)
-    if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+    if (newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND) or
+    (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) then
         -- Equip a class for every player
-        for _, player in pairs(Game.GetPlayers()) do 
+        for _, player in ipairs(Game.GetPlayers()) do 
             -- unequip everything just in case
-            for _, equipment in pairs(player:GetEquipment()) do
+            for _, equipment in ipairs(player:GetEquipment()) do
                 if Object.IsValid(equipment) then
                     equipment:Unequip()
                 end
@@ -74,12 +115,16 @@ function OnGameStateChanged(oldState, newState)
                 classID = META_AP().TANK
             end
 
-            local newClass = World.SpawnAsset(ClassTemplates[classID])
-	        newClass:Equip(player)
+            EquipPlayer(player, classID)
+
+            if newState == ABGS.GAME_STATE_ROUND then
+                player.serverUserData.ClassesPlayed = {}
+                player.serverUserData.ClassesPlayed[classID] = 1
+            end
         end
     elseif newState == ABGS.GAME_STATE_ROUND_END and oldState ~= ABGS.GAME_STATE_ROUND_END then
         Task.Wait()
-        for _, player in pairs(Game.GetPlayers()) do 
+        for _, player in ipairs(Game.GetPlayers()) do 
             -- unequip everything 
             for _, equipment in pairs(player:GetEquipment()) do
                 if Object.IsValid(equipment) then
@@ -100,16 +145,27 @@ end
 function OnPlayerJoined(player)
     --player.serverUserData.CurrentClass = META_AP().TANK
     player:SetResource("CLASS_MAP", META_AP().TANK)
-
-    if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND then
+    player.animationStance = Class_Stances[META_AP().TANK]
+    local currentState = ABGS.GetGameState()
+    if currentState == ABGS.GAME_STATE_LOBBY then
+        if ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+            -- Don't equip if the game state is about to change
+            return
+        end
+        EquipPlayer(player, META_AP().TANK)
+    elseif currentState == ABGS.GAME_STATE_ROUND then
         --local newClass = World.SpawnAsset(ClassTemplates[META_AP().TANK])
         --newClass:Equip(player)
         player:SetVisibility(false)
+    elseif currentState == ABGS.GAME_STATE_ROUND_END or currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE
+    or currentState == ABGS.GAME_STATE_REWARDS or currentState == ABGS.GAME_STATE_REWARDS_END then
+        EquipPlayer(player, META_AP().TANK)
     end
 
-    Task.Wait(2)
-    player:SetResource("GOLD", 100000)
+    --[[Task.Wait(2)
+    player:SetResource("GOLD", 10)
     player:SetResource("COSM_TOKEN", 100000)
+    ]]
 end
 
 if Environment.IsSinglePlayerPreview() then
@@ -120,3 +176,4 @@ Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Events.ConnectForPlayer("ClassChanged_SERVER", OnClassChanged)
 Events.Connect("CH_ClassChanged_SERVER", OnClassChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.ConnectForPlayer("RewardSelected", OnRewardSelected)

@@ -23,7 +23,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
   }
@@ -120,6 +120,7 @@ Objects {
         Id: 1814707273787853473
       }
       Color {
+        A: 1
       }
       TeamSettings {
       }

@@ -26,7 +26,7 @@ local CancelKeys = {
 	ability_extra_20 = true, 
 	ability_extra_22 = true, 
 	ability_extra_23 = true, 
-	ability_extra_24 = true, 
+	ability_extra_4 = true, 
 	ability_primary = true,
 	ability_secondary = true
 }
@@ -101,7 +101,7 @@ end
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().E, "mod6", 30, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -136,7 +136,9 @@ function OnEquip(thisEquipment, player)
 	table.insert(EventListeners, player.diedEvent:Connect( OnPlayerDied ))
 	table.insert(EventListeners, player.damagedEvent:Connect( OnPlayerDamaged ))
 	table.insert(EventListeners, player.respawnedEvent:Connect( OnPlayerRespawn ))
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().E, META_AP().ASSASSIN)
+
+	local skin = Equipment:GetCustomProperty("EID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().E)
 end
 
 function OnUnequip(thisEquipment, player)

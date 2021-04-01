@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/15
--- Version 0.1.15
+-- Date: 2021/3/29
+-- Version 0.1.16
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -18,6 +18,7 @@ local DATA_TRANSFER = script:GetCustomProperty("DataTransfer"):WaitForObject()
 local DAILY_SHOP = script:GetCustomProperty("META_DailyShop_Server"):WaitForObject()
 local CLASS_PROGRESSION = script:GetCustomProperty("ClassProgression_Server"):WaitForObject()
 local CONSUMABLES = script:GetCustomProperty("ConsumableProgression_Server"):WaitForObject()
+local MOUNT_MANAGER = script:GetCustomProperty("MountManager_Server"):WaitForObject()
 
 local PLAYER_DATA_TEMP = script:GetCustomProperty("META_Player_Cosmetic_Data")
 ------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +33,8 @@ local versionControl = {
     [CONST.STORAGE.EQUIPPED_COSMETIC] = 1,
     [CONST.STORAGE.DAILY_SHOP] = 1,
     [CONST.STORAGE.CLASS_PROGRESSION] = 1,
-    [CONST.STORAGE.CONSUMABLE] = 1
+    [CONST.STORAGE.CONSUMABLE] = 1,
+    ["TIME"] = os.time(os.date("!*t"))
 }
 ------------------------------------------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -48,7 +50,7 @@ local function DoesDataVersionMatch(data)
     if data[CONST.STORAGE.VERSION] then
         local tbl = UTIL.ConvertStringToTable(data[CONST.STORAGE.VERSION], "|", "^")
         for id, version in pairs(versionControl) do
-            if tbl[id] and tbl[id] ~= version then
+            if tbl[id] and tbl[id] ~= version and id ~= "TIME" then
                 -- Return false if version mismatch
                 return false
             end
@@ -73,6 +75,7 @@ local function AddDefaultCosmetics(player)
                     if bind == 5 then
                         bind = 8 -- Used for costume ID
                     end
+                    --#FIXME very hacky code to stop bind cosmetics
                     if skin == 2 and bind < 8 then
                     elseif skin == 3 and bind < 8 then
                     elseif skin == 4 and bind < 8 then
@@ -208,7 +211,7 @@ local function OnSaveEquippedCosmetic(player, data)
         next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
 end
 
---#TODO Needs to be written
+
 --@param object player
 --@param table data
 local function OnLoadDailyShopData(player, data)
@@ -219,7 +222,6 @@ local function OnLoadDailyShopData(player, data)
     DAILY_SHOP.context.OnLoadPlayerDailyShop(player, dailyShopItems)
 end
 
---#TODO Needs to be written
 --@param object player
 --@param table data
 local function OnSaveDailyShopData(player, data)
@@ -266,7 +268,9 @@ end
 --@param object player
 local function OnPlayerJoined(player)
     local data = Storage.GetPlayerData(player)
-    --data = {} --#TODO Testing
+    --data = {} --#Used when resetting data for Testing
+    Task.Wait()
+    if not Object.IsValid(player) then return end
     if DoesDataVersionMatch(data) then
         OnLoadProgressionData(player, data)
         OnLoadCostumeData(player, data)
@@ -278,6 +282,7 @@ local function OnPlayerJoined(player)
         OnLoadConsumableData(player, data)
         AddDefaultCosmetics(player)
     end
+    CONSUMABLES.context.OnPlayerJoined(player)
 end
 
 --@param object player
@@ -294,6 +299,8 @@ local function OnPlayerLeft(player)
     OnSaveClassLeveData(player, data)
     OnSaveConsumableData(player, data)
 
+    --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
+
     --Save data storage version
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
@@ -306,6 +313,14 @@ local function OnPlayerLeft(player)
     ADAPTOR.context.OnPlayerLeft(player)
     CLASS_PROGRESSION.context.OnPlayerLeft(player)
     CONSUMABLES.context.OnPlayerLeft(player)
+    --MOUNT_MANAGER.context.OnPlayerLeft(player)
+
+    for _, equipment in ipairs(player:GetEquipment()) do
+		if Object.IsValid(equipment) then
+			equipment:Unequip()
+			equipment:Destroy()
+		end
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------

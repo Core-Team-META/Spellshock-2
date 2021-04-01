@@ -15,26 +15,11 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Player1Panel"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:Player2Panel"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:Player3Panel"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:Spawns"
         ObjectReference {
         }
       }
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

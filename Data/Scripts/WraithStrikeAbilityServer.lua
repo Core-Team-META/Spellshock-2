@@ -37,7 +37,7 @@ local CancelBindings = {
 	ability_extra_20 = true,
 	ability_extra_22 = true,
 	ability_extra_23 = true,
-	ability_extra_24 = true,
+	ability_extra_4 = true,
 	ability_secondary = true,
 	ability_extra_12 = true
 }
@@ -242,10 +242,10 @@ function DamageInArea()
 end
 
 function DisableFlying()
-	print("Disabling Wraith Strike")
+	--print("Disabling Wraith Strike")
 
 	if Object.IsValid(OWNER) then 
-		print("Resetting playe settings")
+		--print("Resetting playe settings")
 		OWNER:ResetVelocity()
 		OWNER:ActivateWalking()
 		OWNER.movementControlMode = MovementControlMode.LOOK_RELATIVE
@@ -306,10 +306,10 @@ end
 
 function PrintAbilities(player)
 	for _, thisAbility in pairs(player:GetAbilities()) do
-		print(thisAbility.name)
-		print(thisAbility.actionBinding)
-		print(thisAbility.isEnabled)
-		print("\n")
+		--print(thisAbility.name)
+		--print(thisAbility.actionBinding)
+		--print(thisAbility.isEnabled)
+		--print("\n")
 	end
 end
 
@@ -356,7 +356,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, Events.Connect("Toggle Ability", OnAbilityToggled))
 	table.insert(EventListeners, Events.Connect("Toggle All Abilities", OnAbilityToggled))
 
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().T, META_AP().ASSASSIN)
+	local skin = Equipment:GetCustomProperty("TID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().T)
 	Task.Wait()
 	--SpecialAbility.isEnabled = false
 end

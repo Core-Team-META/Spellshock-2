@@ -15,9 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 7872514914426734254
-        ChildIds: 5378462426602717923
         ChildIds: 10265349607065655858
         Lifespan: 0.6
         WantsNetworking: true
@@ -63,59 +62,10 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 5000
+          Falloff: 4300
           Radius: -1
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
-        }
-      }
-      Objects {
-        Id: 5378462426602717923
-        Name: "Generic Muzzleflash VFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1735922973232511623
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              G: 0.535894036
-              B: 0.0400000215
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 16322635077100878811
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -149,8 +99,8 @@ Assets {
           AutoPlay: true
           Pitch: 200
           Volume: 1
-          Falloff: -1
-          Radius: -1
+          Falloff: 4300
+          Radius: 600
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -163,15 +113,6 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_flamethrower_ignite_02_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 16322635077100878811
-      Name: "Generic Muzzleflash VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_generic_muzzleflash"
       }
     }
     Assets {
@@ -188,5 +129,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

@@ -14,6 +14,12 @@ local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_
 while not _G.CurrentMenu do
 	Task.Wait()
 end
+local CP_API
+repeat
+	CP_API = _G["Class.Progression"]
+	Task.Wait()
+until CP_API
+
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -43,6 +49,8 @@ local propPageNextButton = script:GetCustomProperty("PageNextButton"):WaitForObj
 local propPurchaseButton = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 local PurchaseButton = propPurchaseButton:GetCustomProperty("Button"):WaitForObject()
 local ClearFiltersButton = script:GetCustomProperty("ClearFiltersButton"):WaitForObject()
+local propRowButton = script:GetCustomProperty("STORE_RowButton")
+
 
 local propStoreGeoHolder = script:GetCustomProperty("StoreGeoHolder"):WaitForObject()
 local propFilterListHolder = script:GetCustomProperty("FilterListHolder"):WaitForObject()
@@ -86,6 +94,17 @@ local store = require(prop_CosmeticStore)
 
 local propUIMarkersAndPreviews = script:GetCustomProperty("UIMarkersAndPreviews"):WaitForObject()
 local propBaseUIContainer = propStoreRoot:GetCustomProperty("BaseUIContainer"):WaitForObject()
+
+------------------------------------------------------------------------------------------------------------------------
+-- SFX
+------------------------------------------------------------------------------------------------------------------------
+local propSFX_UI_Hover = script:GetCustomProperty("SFX_UI_Hover")
+local propSFX_UI_BuyGeneric = script:GetCustomProperty("SFX_UI_BuyGeneric")
+local propSFX_UI_PurchaseFailure = script:GetCustomProperty("SFX_UI_PurchaseFailure")
+local propSFX_UI_ChangeOutfit = script:GetCustomProperty("SFX_UI_ChangeOutfit")
+local propSFX_UI_PageTurnSelect = script:GetCustomProperty("SFX_UI_PageTurnSelect")
+local propSFX_UI_OpenInventoryPanel = script:GetCustomProperty("SFX_UI_OpenInventoryPanel")
+local propSFX_UI_PurchaseSkinConfirm = script:GetCustomProperty("SFX_UI_PurchaseSkinConfirm")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM PROPERTIES
@@ -150,7 +169,7 @@ local playerSockets = {
 }
 
 local PreviewAnimationStances = {
-	Warrior = "1hand_melee_idle_ready",
+	Warrior = "2hand_melee_idle_ready",
 	Hunter = "2hand_rifle_aim_shoulder",
 	Mage = "2hand_staff_idle_ready",
 	Assassin = "unarmed_idle_ready",
@@ -158,7 +177,7 @@ local PreviewAnimationStances = {
 }
 
 local ItemAnimationStances = {
-	Warrior = "2hand_staff_idle_relaxed",
+	Warrior = "2hand_melee_idle_ready",
 	Hunter = "2hand_rifle_idle_relaxed",
 	Mage = "2hand_staff_idle_relaxed",
 	Assassin = "unarmed_idle_ready",
@@ -298,6 +317,49 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 	)
 end
 
+function CheckIfLocked(class, requiredLvl, id)
+	local localPlayer = Game.GetLocalPlayer()
+	local selectedClass = 0
+	
+	if class == "Warrior" then
+		selectedClass = CP_API.TANK
+	elseif class == "Hunter" then
+		selectedClass = CP_API.HUNTER
+	elseif class == "Mage" then
+		selectedClass = CP_API.MAGE
+	elseif class == "Healer" then
+		selectedClass = CP_API.HEALER
+	elseif class == "Assassin" then
+		selectedClass = CP_API.ASSASSIN
+	end
+	
+	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(localPlayer, selectedClass) .. " vs " .. tostring(requiredLvl))
+	return CP_API.GetClassLevel(localPlayer, selectedClass) >= requiredLvl or HasCosmetic(id)
+end
+
+function PlaySFX(requestedSFX)
+	local sfx = nil
+	
+	if requestedSFX == "Hover" then
+		sfx = propSFX_UI_Hover
+	elseif requestedSFX == "Buy" then
+		sfx = propSFX_UI_PurchaseSkinConfirm
+	elseif requestedSFX == "Fail" then
+		sfx = propSFX_UI_PurchaseFailure
+	elseif requestedSFX == "Change" then
+		sfx = propSFX_UI_ChangeOutfit
+	elseif requestedSFX == "Page" then
+		sfx = propSFX_UI_PageTurnSelect
+	elseif requestedSFX == "Open" then
+		sfx = propSFX_UI_OpenInventoryPanel
+	end
+	
+	if sfx then
+		local playingSFX = World.SpawnAsset(sfx)
+		playingSFX.lifeSpan = 3	
+	end
+end
+
 ----------------------------------------------------------------------------------------------------------------
 -- SHOW/HIDE HELPERS
 ----------------------------------------------------------------------------------------------------------------
@@ -330,6 +392,7 @@ function ShowStore_ClientHelper()
 	local currentClassID = player:GetResource("CLASS_MAP")
 	if currentClassID ~= 0 then
 		OnClassFilterButtonSelected(classID_TO_filterButton[currentClassID])
+		FilterStoreItems()
 	else
 		FilterStoreItems()
 	end
@@ -363,8 +426,10 @@ end
 
 function OnMenuChanged(oldMenu, newMenu)
 	if newMenu == _G.MENU_TABLE["CosmeticStore"] then -- show
+		PlaySFX("Open")
 		ShowStore_ClientHelper()
 	elseif oldMenu == _G.MENU_TABLE["CosmeticStore"] then -- hide
+		PlaySFX("Open")
 		HideStore_ClientHelper()
 	end
 end
@@ -391,6 +456,7 @@ function StoreItemHovered(button)
 	if entry then
 		currentlyHovered = entry
 		UpdateEntryButton(StoreUIButtons[button], true)
+		PlaySFX("Hover")
 	end
 end
 
@@ -405,6 +471,7 @@ function StoreItemClicked(button)
 	end
 	local entry = StoreUIButtons[button]
 	if entry then
+		PlaySFX("Change")
 		currentlySelected = entry
 		--currentlyHovered = entry
 		SpawnPreview(entry.data.templateId, setPreviewMesh, entry.data.visible)
@@ -429,7 +496,7 @@ function StoreItemClicked(button)
 			end
 		else
 			local currency = player:GetResource(entry.data.currencyName)
-			if currency >= entry.data.cost then
+			if currency >= entry.data.cost and not entry.locked then
 				local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 				purchaseText.text = "PURCHASE"
 				purchaseText:GetChildren()[1].text = "PURCHASE"
@@ -452,6 +519,7 @@ function PurchaseButtonClicked(button)
 
 	if HasCosmetic(currentlySelected.data.id) then
 		-- EQUIP
+		PlaySFX("Change")
 		ApplyCosmetic(currentlySelected)
 	else
 		-- PURCHASE
@@ -474,9 +542,11 @@ function PurchaseButtonClicked(button)
 				return
 			end
 		elseif currency < currentlySelected.data.cost then
+			PlaySFX("Fail")
 			currentlySelected = nil
 			return
 		else
+			PlaySFX("Buy")
 			expectedNewCurrency = currency - currentlySelected.data.cost
 			controlsLocked = true
 			propPurchaseButton.visibility = Visibility.FORCE_OFF
@@ -527,7 +597,7 @@ function UpdateEntryButton(entry, highlighted)
 
 	local currencySymbol = entry.overlay:GetCustomProperty("CurrencySymbol"):WaitForObject()
 	currencySymbol.visibility = Visibility.FORCE_OFF
-	entry.BGMesh:SetColor(entry.BGMeshColor)
+	--entry.BGMesh:SetColor(entry.BGMeshColor)
 	local rarityColor = RarityDefs[entry.data.rarity].color
 	entry.rarityFin:SetColor(rarityColor)
 	entry.rarityOverlay:SetColor(rarityColor)
@@ -536,14 +606,12 @@ function UpdateEntryButton(entry, highlighted)
 		-- currently equipped
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "EQUIPPED"
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
-		local newColor = entry.geo:GetCustomProperty("EquippedColor")
-		entry.BGMesh:SetColor(newColor)
+		--entry.BGImage:SetColor(Color.FromLinearHex("000002FF")) -- dark blue
 	elseif HasCosmetic(entry.data.id) then --and not highlighted then
 		-- owned
 		entry.price:SetColor(entry.priceColor)
 		entry.price.text = "OWNED"
-		entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
+		--entry.BGImage:SetColor(Color.FromLinearHex("0808DDFF")) -- purple
 	elseif not highlighted then
 		--entry.itemName:SetColor(Color.WHITE)
 
@@ -562,10 +630,10 @@ function UpdateEntryButton(entry, highlighted)
 		end
 
 		--entry.itemName:SetColor(entry.BGImageColor)
-		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		--SetFramesColor(entry.frames, entry.frameDefaultColor)
 		currencySymbol.visibility = Visibility.INHERIT
 
-		entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
+		--entry.BGImage:SetColor(Color.FromLinearHex("000002FF"))
 		local currency = player:GetResource(entry.data.currencyName)
 		if entry.data.cost > currency then
 			entry.price:SetColor(Color.RED)
@@ -585,7 +653,7 @@ function UpdateEntryButton(entry, highlighted)
 		if entry.data.cost <= currency and not entry.PartOfSubscription then
 			--entry.itemName:SetColor(Color.WHITE)
 			currencySymbol.visibility = Visibility.INHERIT
-			entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
+			--entry.BGImage:SetColor(Color.FromLinearHex("063300FF")) -- dark green
 		else
 			--entry.itemName:SetColor(Color.RED)
 			if entry.PartOfSubscription then
@@ -594,19 +662,37 @@ function UpdateEntryButton(entry, highlighted)
 				entry.price.text = "NOT ENOUGH FUNDS"
 			end
 
-			entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
+			--entry.BGImage:SetColor(Color.FromLinearHex("280000FF")) -- dark red
 		end
 	end
 
 	if highlighted then
-		SetFramesColor(entry.frames, entry.frameHoverColor)
-	else
-		SetFramesColor(entry.frames, entry.frameDefaultColor)
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor) dulled down
+		--entry.priceBG:SetColor(entry.priceBGHoverColor)
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.BGMesh:GetColor() + entry.geo:GetCustomProperty("HighlightColor")) dulled down
+	elseif  CosmeticIsEquipped(entry.data.id) then
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameEquippedColor) dulled down
+		entry.priceBG:SetColor(entry.priceBGEquippedColor)
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("EquippedColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("EquippedColor")) dulled down
+	elseif  HasCosmetic(entry.data.id) then
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameOwnedColor) dulled down
+		entry.priceBG:SetColor(entry.priceBGOwnedColor)
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("OwnedColor")) --matching rarity
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("OwnedColor")) dulled down
+	else 
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		--SetFramesColor(entry.frames, entry.frameDefaultColor) dulled down
+		entry.priceBG:SetColor(entry.priceBGDefaultColor)
+		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("DefaultColor")) --matching rarity
+		entry.BGMesh:SetSmartProperty("Swirl Color", RarityDefs[entry.data.rarity].color)
+		--entry.BGMesh:SetColor(entry.geo:GetCustomProperty("DefaultColor")) --dulled down
 	end
-
-	--[[if not highlighted then
-		entry.BGMesh:SetColor(entry.BGMeshColor)
-	end]]
+	
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -788,7 +874,8 @@ function BackPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	storePos = storePos - ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
 		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
@@ -805,7 +892,8 @@ function NextPageClicked()
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	storePos = storePos + ITEMS_PER_PAGE
 	if storePos > ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE) then
 		storePos = ITEMS_PER_PAGE * (#CurrentStoreElements // ITEMS_PER_PAGE)
@@ -882,7 +970,7 @@ function PopulateStore(direction)
 		local gridX = (k - 1) % ITEMS_PER_ROW
 		local gridY = (k - 1) // ITEMS_PER_ROW
 
-		local target = Vector3.New(gridX * -ITEM_PADDING + 20, 0, gridY * -(ITEM_PADDING + 20) - 35)
+		local target = Vector3.New(gridX * -ITEM_PADDING + 20, 0, gridY * -(ITEM_PADDING + 25) - 35)
 
 		local start = Vector3.New(gridX * -100 + 1000, 0, gridY * -100)
 
@@ -910,8 +998,34 @@ function PopulateStore(direction)
 		local propPriceFrame = newOverlay:GetCustomProperty("PriceFrame"):WaitForObject()
 		local propFrameDefaultColor = newOverlay:GetCustomProperty("FrameDefaultColor")
 		local propFrameHoverColor = newOverlay:GetCustomProperty("FrameHoverColor")
+		local propFrameOwnedColor = newOverlay:GetCustomProperty("FrameOwnedColor")
+		local propFrameEquippedColor = newOverlay:GetCustomProperty("FrameEquippedColor")	
 		local propClassIcon = newOverlay:GetCustomProperty("ClassIcon"):WaitForObject()
 		local propTypeIcon = newOverlay:GetCustomProperty("TypeIcon"):WaitForObject()
+		local propPriceBG = newOverlay:GetCustomProperty("PriceBG"):WaitForObject()
+		local propPriceBGDefaultColor = newOverlay:GetCustomProperty("PriceBGDefaultColor")
+		local propPriceBGHoverColor = newOverlay:GetCustomProperty("PriceBGHoverColor")
+		local propPriceBGOwnedColor = newOverlay:GetCustomProperty("PriceBGOwnedColor")
+		local propPriceBGEquippedColor = newOverlay:GetCustomProperty("PriceBGEquippedColor")
+		local propLockedMessage = newOverlay:GetCustomProperty("LockedMessage"):WaitForObject()
+		local propLockedPanel = newOverlay:GetCustomProperty("LockedPanel"):WaitForObject()
+		
+		local locked = true
+		
+		if CheckIfLocked(v.class, v.requirement, v.id) then
+		
+			propLockedPanel.visibility = Visibility.FORCE_OFF
+			
+			locked = false
+			
+		else 
+		
+			propLockedPanel.visibility = Visibility.INHERIT
+			
+			propLockedMessage.text = "UNLOCKED AT LVL " .. tostring(v.requirement)
+			
+		end
+
 
 		local Frames = propFramePanel:GetChildren()
 		table.insert(Frames, propPriceFrame)
@@ -966,7 +1080,10 @@ function PopulateStore(direction)
 			propPrice.text = tostring(v.cost)
 		end
 
-		BGMesh:SetColor(BGMeshColor)
+		-- KB TEST
+		-- BGMesh:SetColor(BGMeshColor)
+
+
 		newGeo.visibility = Visibility.FORCE_ON
 
 		local entry = {
@@ -988,6 +1105,7 @@ function PopulateStore(direction)
 			BGImage = propBGImage,
 			BGImageColor = BGImageColor,
 			PartOfSubscription = partOfSubscription,
+			locked = locked,
 			data = v,
 			-- Stuff for sliding around and being cool.
 			startPos = Vector3.New(gridX * -ITEM_PADDING, 0, gridY * -ITEM_PADDING) + Vector3.FORWARD * -1000 * direction +
@@ -1000,7 +1118,14 @@ function PopulateStore(direction)
 			gridY = gridY,
 			frames = Frames,
 			frameDefaultColor = propFrameDefaultColor,
-			frameHoverColor = propFrameHoverColor
+			frameHoverColor = propFrameHoverColor,
+			frameEquippedColor = propFrameEquippedColor,
+			frameOwnedColor = propFrameOwnedColor,
+			priceBG = propPriceBG,
+			priceBGDefaultColor = propPriceBGDefaultColor,
+			priceBGHoverColor = propPriceBGHoverColor,
+			priceBGOwnedColor = propPriceBGOwnedColor,
+			priceBGEquippedColor = propPriceBGEquippedColor
 		}
 		StoreUIButtons[propButton] = entry
 		UpdateEntryButton(entry, false)
@@ -1033,10 +1158,12 @@ end
 function UpdateUIPos()
 	local screenSize = UI.GetScreenSize()
 	local currentTime = time()
-
 	local newScale = (1.6 * UI.GetScreenSize().y) / UI.GetScreenSize().x
 
 	for k, v in pairs(StoreUIButtons) do
+		-- This line was breaking the shop item movement.  Can it be removed?  -Chris
+		--v.targetPos = Vector3.New(v.gridX * -ITEM_PADDING + 20, 0, v.gridY * -(ITEM_PADDING + (newScale - 0.4) * 70) - 40)
+		
 		if currentTime < v.startTime + v.travelTime and propEnableStoreAnimations then
 			local lerpVal
 			if not v.deleting then
@@ -1052,9 +1179,10 @@ function UpdateUIPos()
 		end
 
 		v.overlay.x, v.overlay.y = WorldPosToUIPos(v.geo:GetWorldPosition())
+		v.overlay.y = v.overlay.y + newScale * 5
 
 		v.overlay.width = math.floor(screenSize.x * 0.15 * BUTTON_SCALE)
-		v.overlay.height = math.floor(v.overlay.width * 1.5)
+		v.overlay.height = math.floor((newScale + 0.6) * v.overlay.width * 1.05)
 
 		v.itemName.fontSize = math.floor(screenSize.x * 0.014 * BUTTON_SCALE * newScale)
 		v.price.fontSize = math.floor(screenSize.x * 0.012 * BUTTON_SCALE * newScale)
@@ -1146,6 +1274,7 @@ function InitStore()
 				local propTags = storeInfo:GetCustomProperty("Tags")
 				local propTypes = storeInfo:GetCustomProperty("Types")
 				local propRarity = storeInfo:GetCustomProperty("Rarity")
+				local propLockedUntil = storeInfo:GetCustomProperty("LockedUntil")
 				local propZoomView = storeInfo:GetCustomProperty("ZoomView")
 				local propPlayerVisibility = storeInfo:GetCustomProperty("PlayerVisibility")
 				local propClassIcon = storeInfo:GetCustomProperty("ClassIcon")
@@ -1188,6 +1317,7 @@ function InitStore()
 					tags = tagList,
 					class = propTags,
 					rarity = propRarity,
+					requirement = propLockedUntil,
 					types = typeList,
 					visible = propPlayerVisibility,
 					zoom = propZoomView,
@@ -1314,23 +1444,24 @@ function InitStore()
 		Equipped = {name = "Equipped", number = 3}
 	}
 
-	SpawnCollapsibleFilterButton("TITLE", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
+	SpawnCollapsibleFilterButton("TITLE", "BOTTOM", 0, OwnerShipDefs, OnOwnershipFilterButtonSelected)
 
 	if propEnableFilterByType then
-		SpawnCollapsibleFilterButton("TYPE", 1, TypeDefs, OnTypeFilterButtonSelected)
+		SpawnCollapsibleFilterButton("TYPE", "BOTTOM", 1, TypeDefs, OnTypeFilterButtonSelected)
 		propTypeFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propTypeFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
 	if propEnableFilterByTag then
-		SpawnCollapsibleFilterButton("CLASS", 2, TagDefs, OnClassFilterButtonSelected)
+		--SpawnCollapsibleFilterButton("CLASS", "TOP", 1, TagDefs, OnClassFilterButtonSelected)
+		SpawnFilterButtonRow(propTypeFilterListHolder, TagDefs, OnClassFilterButtonSelected)
 		propFilterListHolder.visibility = Visibility.INHERIT
 	else
 		propFilterListHolder.visibility = Visibility.FORCE_OFF
 	end
 
-	SpawnCollapsibleFilterButton("RARITY", 3, RarityDefs, OnRarityFilterButtonSelected)
+	SpawnCollapsibleFilterButton("RARITY", "BOTTOM", 2, RarityDefs, OnRarityFilterButtonSelected)
 
 	--print("Requesting other player costume data")
 	ReliableEvents.BroadcastToServer("REQUEST_OTHER_COSMETICS")
@@ -1392,8 +1523,9 @@ end
 		position = position
 	}
 end]]
-function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunction, color)
-	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons, {parent = propFilterListHolder})
+function SpawnCollapsibleFilterButton(displayName, section, position, defList, clickFunction, color)
+	
+	local newCollapsibleMenu = World.SpawnAsset(propSTORE_CollapsibleFilterButtons)
 
 	local TopPanel = newCollapsibleMenu:GetCustomProperty("TopPanel"):WaitForObject()
 	local ListPanel = TopPanel:GetCustomProperty("ListPanel"):WaitForObject()
@@ -1404,6 +1536,14 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 	local Title = MainButtonPanel:GetCustomProperty("Title"):WaitForObject()
 	local MainButton = newCollapsibleMenu:GetCustomProperty("MainButton"):WaitForObject()
 	local CollapsibleButtonTemplate = newCollapsibleMenu:GetCustomProperty("CollapsibleButtonTemplate")
+	
+	if section == "TOP" then
+		newCollapsibleMenu.parent = propTypeFilterListHolder
+		newCollapsibleMenu.rotationAngle = 180
+		Title.rotationAngle = 180
+	elseif section == "BOTTOM" then
+		newCollapsibleMenu.parent = propFilterListHolder
+	end	
 
 	newCollapsibleMenu.x = (newCollapsibleMenu.width * position) + (position + 15)
 	newCollapsibleMenu.y = 0
@@ -1422,11 +1562,16 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
 		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
 		local position = data.number - 1
+		
+		if section == "TOP" then
+			newFilterPanel.rotationAngle = 180
+			position = data.number
+		end
 
 		newFilterPanel.x = 0
 		newFilterPanel.y = (-newFilterPanel.height * position) + (4 * position)
 		propTitle.text = data.name
-
+		
 		if data.icon then
 			propIcon:SetImage(data.icon)
 			propIcon:GetChildren()[1]:SetImage(data.icon)
@@ -1482,11 +1627,69 @@ function SpawnCollapsibleFilterButton(displayName, position, defList, clickFunct
 	end
 end
 
+function SpawnFilterButtonRow(holder, defList, clickFunction, color)
+
+	for _, data in pairs(defList) do
+		local newFilterPanel = World.SpawnAsset(propRowButton, {parent = holder})
+
+		local propButton = newFilterPanel:GetCustomProperty("Button"):WaitForObject()
+		local propIcon = newFilterPanel:GetCustomProperty("Icon"):WaitForObject()
+		local propTitle = newFilterPanel:GetCustomProperty("Title"):WaitForObject()
+		local position = data.number - 1
+		
+		newFilterPanel.x = (newFilterPanel.width * position) + (4 * position)
+		newFilterPanel.y = 0
+		propTitle.text = data.name
+		
+		if data.icon then
+			propIcon:SetImage(data.icon)
+			propIcon:GetChildren()[1]:SetImage(data.icon)
+		else
+			propIcon.visibility = Visibility.FORCE_OFF
+			propTitle.anchor = UIPivot.MIDDLE_CENTER
+			propTitle.dock = UIPivot.MIDDLE_CENTER
+			propTitle.x = 0
+			propTitle.y = 0
+			propTitle.justification = TextJustify.CENTER
+		end
+
+		if data.color then
+			local buttonColor = Color.New(data.color)
+			buttonColor.a = 1
+			propIcon:GetChildren()[1]:SetColor(buttonColor)
+		end
+
+		filterButtonData[propButton] = {
+			listener = propButton.clickedEvent:Connect(clickFunction),
+			button = propButton,
+			root = newFilterPanel,
+			tag = data.name,
+			color = propButton:GetButtonColor(),
+			clickedColor = propButton:GetPressedColor(),
+			selectedPanel = SelectedPanel,
+			position = position
+		}
+
+
+		if data.name == "Warrior" then
+			classID_TO_filterButton[CONST.CLASS.TANK] = propButton
+		else
+			classID_TO_filterButton[CONST.CLASS[string.upper(data.name)]] = propButton
+		end
+	end
+end
+
 function OnClassFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	if not Object.IsValid(button) then
+		print( "button not valid")
+		return
+	end
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1497,12 +1700,12 @@ function OnClassFilterButtonSelected(button)
 	end
 
 	button:SetButtonColor(buttonData.clickedColor)
-	buttonData.selectedPanel.visibility = Visibility.INHERIT
+	--buttonData.selectedPanel.visibility = Visibility.INHERIT
 
 	if currentClass.tag == tag then -- if the current active filter is this button, reset filter and highlight color
 		currentClass = {tag = nil}
 		button:SetButtonColor(buttonData.color)
-		buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
+		--buttonData.selectedPanel.visibility = Visibility.FORCE_OFF
 		FilterStoreItems()
 		return
 	elseif currentClass.tag ~= nil then -- if the current active filter is not this button, reset highlight color
@@ -1521,7 +1724,8 @@ function OnRarityFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1644,7 +1848,8 @@ function OnTypeFilterButtonSelected(button)
 	if controlsLocked or controlsLockedSecondary then
 		return
 	end
-
+	
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1676,6 +1881,7 @@ function OnOwnershipFilterButtonSelected(button)
 		return
 	end
 
+	PlaySFX("Page")
 	local buttonData = filterButtonData[button]
 	local tag = buttonData.tag
 
@@ -1800,6 +2006,7 @@ function FilterStoreItems()
 end
 
 function ClearFilters()
+	PlaySFX("Page")
 	if currentClass.tag then
 		currentClass.button:SetButtonColor(currentClass.color)
 		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
@@ -1933,6 +2140,7 @@ end
 
 function SwapMannequin(button)
 	--print("Swapping")
+	PlaySFX("Page")
 
 	local oldSetMesh = setPreviewMesh
 	local femaleIcon = propSwapText:GetCustomProperty("Female"):WaitForObject()

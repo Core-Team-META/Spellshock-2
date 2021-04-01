@@ -65,6 +65,8 @@ end
 -- Keep track of the binding state to show the scoreboard 
 function OnBindingPressed(player, binding)
     if binding == BINDING then
+        local currentState = ABGS.GetGameState()
+        if currentState == ABGS.GAME_STATE_PLAYER_SHOWCASE then return end
         bindingDown = true
     end
 end
@@ -155,7 +157,13 @@ function Tick(deltaTime)
             local RES = CONST.COMBAT_STATS
             --line:GetCustomProperty("PlayerImage"):WaitForObject():SetImage(player)
             line:GetCustomProperty("Name"):WaitForObject().text = "[" .. tostring(player:GetResource(CONST.CLASS_LEVEL)) .. "] " .. player.name
-            line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
+            
+            if player == LOCAL_PLAYER then
+                local myColor = Color.FromStandardHex("FFD624FF")
+                line:GetCustomProperty("Name"):WaitForObject():SetColor(myColor)
+            else
+                line:GetCustomProperty("Name"):WaitForObject():SetColor(_G.TeamColors[player.team])
+            end
             line:GetCustomProperty("KillsText"):WaitForObject().text = tostring(player.kills)
             line:GetCustomProperty("DeathsText"):WaitForObject().text = tostring(player.deaths)
             line:GetCustomProperty("UltKills"):WaitForObject().text = tostring(player:GetResource(RES.ULTIMATE_KILL))

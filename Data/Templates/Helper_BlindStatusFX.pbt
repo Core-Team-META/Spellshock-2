@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14162296025304194376
+        ParentId: 4781671109827199097
         ChildIds: 11905359394757445664
         UnregisteredParameters {
           Overrides {
@@ -53,6 +53,7 @@ Assets {
           }
         }
         ParentId: 8862268323532329590
+        ChildIds: 1091524057735169455
         ChildIds: 1788026589390922202
         ChildIds: 16763501930608199328
         ChildIds: 8883202962330462818
@@ -64,9 +65,79 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 1091524057735169455
+        Name: "Plasma Ball Projectile VFX"
+        Transform {
+          Location {
+            Z: 222.321045
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.901672
+            Y: 0.901672
+            Z: 0.901672
+          }
+        }
+        ParentId: 11905359394757445664
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.815364242
+              B: 0.18
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Enable Flare"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Plasma"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Arc Ball"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Arcs "
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 25
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 1831315401048516328
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -148,14 +219,14 @@ Assets {
         Name: "Smoke Puff Radial VFX"
         Transform {
           Location {
-            Z: 215.125488
+            Z: 215.125732
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 0.165811017
+            X: 0.888527274
+            Y: 0.888527274
+            Z: 0.888527274
           }
         }
         ParentId: 11905359394757445664
@@ -165,22 +236,25 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "bp:Density"
-            Float: 3.11165404
-          }
-          Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.60608238
           }
           Overrides {
             Name: "bp:Color"
             Color {
+              R: 0.5
+              G: 0.436258256
+              B: 0.11500001
               A: 1
             }
           }
           Overrides {
             Name: "bp:Local Space"
             Bool: true
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.7
           }
         }
         Collidable_v2 {
@@ -309,6 +383,15 @@ Assets {
       }
     }
     Assets {
+      Id: 1831315401048516328
+      Name: "Plasma Ball Projectile VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_plasmaball_projectile"
+      }
+    }
+    Assets {
       Id: 6195507304793363254
       Name: "Sci-fi Item Callout VFX"
       PlatformAssetType: 8
@@ -349,5 +432,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

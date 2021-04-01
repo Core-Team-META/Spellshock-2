@@ -7,7 +7,7 @@ Assets {
       RootId: 12022425869194037944
       Objects {
         Id: 12022425869194037944
-        Name: "Tank Shield Dash Ending FX Basic"
+        Name: "Tank Elf Shield Dash Ending FX Frost"
         Transform {
           Scale {
             X: 1
@@ -28,7 +28,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -202,7 +202,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }
@@ -238,5 +238,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

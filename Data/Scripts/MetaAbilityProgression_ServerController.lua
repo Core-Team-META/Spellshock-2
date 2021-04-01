@@ -70,7 +70,8 @@ end
 local function SetBindLevel(player, class, bind, level)
     playerProgression[player][class][bind][API.LEVEL] = level
     local resName = UTIL.GetLevelString(class, bind)
-    player:SetResource(resName, level)
+    --player:SetResource(resName, level)
+    _G.PerPlayerDictionary.Set(player, resName, level)
 end
 
 --@param object player
@@ -86,7 +87,8 @@ end
 local function SetBindXp(player, class, bind, ammount)
     playerProgression[player][class][bind][API.XP] = ammount
     local resName = UTIL.GetXpString(class, bind)
-    player:SetResource(resName, CoreMath.Round(ammount))
+    --player:SetResource(resName, CoreMath.Round(ammount))
+    _G.PerPlayerDictionary.Set(player, resName, CoreMath.Round(ammount))
 end
 
 --@param object player

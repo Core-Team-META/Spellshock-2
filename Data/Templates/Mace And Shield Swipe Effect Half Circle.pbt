@@ -42,7 +42,7 @@ Assets {
           Location {
           }
           Rotation {
-            Roll: -179.999939
+            Roll: 160
           }
           Scale {
             X: 1
@@ -80,7 +80,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.35
+            Float: 0.4
           }
           Overrides {
             Name: "bp:Emissive Boost"
@@ -221,6 +221,7 @@ Assets {
           AudioBP {
             AutoPlay: true
             Transient: true
+            Pitch: -350
             Volume: 0.8
             Falloff: 3600
             Radius: 400
@@ -253,5 +254,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

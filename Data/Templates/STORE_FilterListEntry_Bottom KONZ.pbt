@@ -127,7 +127,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -487,6 +487,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -551,6 +552,7 @@ Assets {
             }
             AutoWrapText: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -2122,6 +2124,15 @@ Assets {
       }
     }
     Assets {
+      Id: 11336346532215892341
+      Name: "Germania One"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "GermaniaOneRegular_ref"
+      }
+    }
+    Assets {
       Id: 16072726743892194472
       Name: "Fantasy Corners 006"
       PlatformAssetType: 9
@@ -2180,5 +2191,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

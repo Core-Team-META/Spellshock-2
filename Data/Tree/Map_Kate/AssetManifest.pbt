@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17812816660570473491
+  Name: "Tonemapping Post Process"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_tonemapping"
+  }
+}
+Assets {
   Id: 17786706417721973926
   Name: "Decal Bullet Damage Wood"
   PlatformAssetType: 14
@@ -239,15 +248,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_half_octagon_001"
-  }
-}
-Assets {
-  Id: 16845241941935487831
-  Name: "Glass 01 (no distortion)"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_glass_001"
   }
 }
 Assets {
@@ -512,6 +512,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15121749094906828004
+  Name: "Simple Depth Blur Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_simple_depthblur"
+  }
+}
+Assets {
   Id: 15100497118567945550
   Name: "Pyramid - 8-Sided Truncated Polished"
   PlatformAssetType: 1
@@ -680,6 +689,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_urb_pipes_acc_coupling_001_ref"
+  }
+}
+Assets {
+  Id: 14465316728247841933
+  Name: "Plane 1m - Two Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_1m_002"
   }
 }
 Assets {
@@ -1088,6 +1106,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12476654224073211161
+  Name: "Rock Hexagonal"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_008"
+  }
+}
+Assets {
   Id: 12456021343966508143
   Name: "Sci-fi Panel 1x4m"
   PlatformAssetType: 1
@@ -1229,6 +1256,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_porch_001_post"
+  }
+}
+Assets {
+  Id: 11972672084376847955
+  Name: "Hill 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_003"
   }
 }
 Assets {
@@ -1934,6 +1970,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8912770877519493962
+  Name: "Screen Space Reflection Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_ssr"
+  }
+}
+Assets {
   Id: 8834933182589795814
   Name: "Wedge - Corner Complex"
   PlatformAssetType: 1
@@ -2264,6 +2309,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_leaves_001"
+  }
+}
+Assets {
+  Id: 7363477334452929865
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
   }
 }
 Assets {
@@ -3194,6 +3248,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2920556432021751741
+  Name: "Vignette Grain Post Process"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_post_process_vignette_grain"
+  }
+}
+Assets {
   Id: 2790673031089680043
   Name: "Bone Human Scattered 02"
   PlatformAssetType: 1
@@ -3275,6 +3338,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2494920176024075778
+  Name: "Fire Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_fire_volume_vfx"
+  }
+}
+Assets {
   Id: 2452465297983906772
   Name: "Fantasy Castle Wall 03 Half"
   PlatformAssetType: 1
@@ -3335,6 +3407,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pyramid_truncated_001"
+  }
+}
+Assets {
+  Id: 2143996029754697336
+  Name: "Pyramid - 6-Sided Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_sixsided_truncated_001"
   }
 }
 Assets {
@@ -3662,6 +3743,15 @@ Assets {
   }
 }
 Assets {
+  Id: 674459473947709713
+  Name: "Pyramid - 6-Sided Truncated Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_sixsided_truncated_hq_001"
+  }
+}
+Assets {
   Id: 551966555971815703
   Name: "Fantasy Castle Floor 02 - Corner 01"
   PlatformAssetType: 1
@@ -3758,15 +3848,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_wedge_002"
-  }
-}
-Assets {
-  Id: 207164075973335940
-  Name: "Chromatic Aberration Post Process Volume"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_post_process_chromatic_abberation"
   }
 }
 Assets {

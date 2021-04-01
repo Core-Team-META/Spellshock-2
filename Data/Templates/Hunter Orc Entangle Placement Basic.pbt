@@ -7,7 +7,7 @@ Assets {
       RootId: 1404575228675216371
       Objects {
         Id: 1404575228675216371
-        Name: "Hunter Orc Leap Placement Basic"
+        Name: "Hunter Orc Entangle Placement Basic"
         Transform {
           Scale {
             X: 1
@@ -80,7 +80,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -8690,7 +8690,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -8906,5 +8906,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

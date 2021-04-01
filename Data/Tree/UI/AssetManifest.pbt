@@ -116,6 +116,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
+  }
+}
+Assets {
   Id: 8885537733943985189
   Name: "Sci-fi Ability Purple 030"
   PlatformAssetType: 9

@@ -15,7 +15,7 @@ Assets {
             Z: 0.480833977
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 7183471705418217801
         ChildIds: 16288016639616168729
         ChildIds: 14791299909526739295
         ChildIds: 1516166720981538048
@@ -72,7 +72,6 @@ Assets {
         }
         ParentId: 700686040892271832
         ChildIds: 4662264559304323132
-        ChildIds: 13068458576607320479
         ChildIds: 18405242943172759517
         ChildIds: 17647809315823165873
         ChildIds: 8114703711095122651
@@ -154,7 +153,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -173,7 +172,7 @@ Assets {
           Light {
             Temperature: 2313.85107
             LocalLight {
-              AttenuationRadius: 580.061523
+              AttenuationRadius: 853.639771
               PointLight {
                 SourceRadius: 20
                 SoftSourceRadius: 20
@@ -374,71 +373,6 @@ Assets {
             Id: 4488444258523261897
           }
           TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 13068458576607320479
-        Name: "Pyramid - 8-Sided Truncated Polished"
-        Transform {
-          Location {
-            X: 6.92731667
-            Y: -7.44824171
-            Z: 20.9481792
-          }
-          Rotation {
-            Yaw: -179.999954
-            Roll: -179.999954
-          }
-          Scale {
-            X: 0.791419744
-            Y: 0.791418731
-            Z: 0.834545195
-          }
-        }
-        ParentId: 16288016639616168729
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16845241941935487831
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 0.635099292
-              B: 0.0500000119
-              A: 0.726
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15100497118567945550
-          }
-          Teams {
-          }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-            }
           }
         }
       }
@@ -1700,7 +1634,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -2428,24 +2362,6 @@ Assets {
       }
     }
     Assets {
-      Id: 15100497118567945550
-      Name: "Pyramid - 8-Sided Truncated Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_eighsided_truncated_hq_001"
-      }
-    }
-    Assets {
-      Id: 16845241941935487831
-      Name: "Glass 01 (no distortion)"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_glass_001"
-      }
-    }
-    Assets {
       Id: 18141993204830915813
       Name: "Fantasy Castle Accessory Roof 01 "
       PlatformAssetType: 1
@@ -2621,5 +2537,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

@@ -62,12 +62,39 @@ Assets {
   }
 }
 Assets {
+  Id: 13462854128336502995
+  Name: "Center Circle 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001Outline"
+  }
+}
+Assets {
   Id: 12631208036329707850
   Name: "Fantasy Ability Purple 036"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ability_Purple_036"
+  }
+}
+Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
+  }
+}
+Assets {
+  Id: 12086971798166130178
+  Name: "BG Flat 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_27"
   }
 }
 Assets {
@@ -161,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6494160000227737456
+  Name: "Fantasy Spell Potion 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
   Id: 5784792452233078693
   Name: "Melee Combat - Air Swipe Whooshes Set 01 SFX"
   PlatformAssetType: 10
@@ -179,6 +215,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4941923027931780178
+  Name: "Horse"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Horse"
+  }
+}
+Assets {
   Id: 4727080213227783003
   Name: "Fantasy Craft Crystal 007"
   PlatformAssetType: 9
@@ -194,6 +239,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_shine_star_shimmer_04_Cue_ref"
+  }
+}
+Assets {
+  Id: 3910619376972392297
+  Name: "Fantasy Coins 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_005"
   }
 }
 Assets {

@@ -1,4 +1,13 @@
 Assets {
+  Id: 17568320209395937032
+  Name: "Center Rect 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterRect_001"
+  }
+}
+Assets {
   Id: 17440982127418626575
   Name: "Frame Tri 001 Wedge"
   PlatformAssetType: 9
@@ -71,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13707030425558109407
+  Name: "Oswald"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldRegular_ref"
+  }
+}
+Assets {
   Id: 13462854128336502995
   Name: "Center Circle 001 Outline"
   PlatformAssetType: 9
@@ -95,6 +113,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundHighlighted_020"
+  }
+}
+Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
   }
 }
 Assets {

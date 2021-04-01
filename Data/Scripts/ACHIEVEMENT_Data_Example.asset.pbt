@@ -13,7 +13,25 @@ Assets {
         String: ""
       }
       Overrides {
+        Name: "cs:Family"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:IsRepeatable"
+        Bool: false
+      }
+      Overrides {
+        Name: "cs:SaveCompletedCount"
+        Bool: false
+      }
+      Overrides {
         Name: "cs:Icon"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:IconBG"
         AssetReference {
           Id: 841534158063459245
         }
@@ -27,20 +45,14 @@ Assets {
         String: ""
       }
       Overrides {
-        Name: "cs:RewardName"
-        String: ""
+        Name: "cs:GivesReward"
+        Bool: false
       }
       Overrides {
-        Name: "cs:RewardAmount"
-        Int: 0
-      }
-      Overrides {
-        Name: "cs:RewardIcon"
-        AssetReference {
-          Id: 841534158063459245
-        }
+        Name: "cs:AchievementTier"
+        Int: 1
       }
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

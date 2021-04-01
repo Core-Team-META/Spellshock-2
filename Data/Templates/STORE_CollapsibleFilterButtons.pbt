@@ -58,6 +58,8 @@ Assets {
         Control {
           Width: 225
           Height: 138
+          UIX: 1140
+          UIY: -420
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1083,7 +1085,10 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
             }
           }
           AnchorLayout {
@@ -1148,18 +1153,18 @@ Assets {
             }
             AutoWrapText: true
             Font {
-              Id: 15165554833363844727
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -2687,12 +2692,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15165554833363844727
-      Name: "Amarante"
+      Id: 11336346532215892341
+      Name: "Germania One"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "AmaranteRegular_ref"
+        AssetId: "GermaniaOneRegular_ref"
       }
     }
     Assets {
@@ -2754,5 +2759,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

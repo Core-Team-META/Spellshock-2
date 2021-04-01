@@ -7,7 +7,7 @@ Assets {
       RootId: 13851715903889630529
       Objects {
         Id: 13851715903889630529
-        Name: "Healer Orc Healing Crystal Ending Basic"
+        Name: "Healer Orc Healing Crystal Ending Fire"
         Transform {
           Scale {
             X: 1
@@ -27,7 +27,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -107,7 +107,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -173,5 +173,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

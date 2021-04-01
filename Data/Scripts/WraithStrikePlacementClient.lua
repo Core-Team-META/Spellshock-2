@@ -73,13 +73,18 @@ function OnBindingPressed(player, binding)
 end
 
 function OnSpecialAbilityCast(thisAbility)
+	if lastValidPlacement.position == nil then
+		-- If this happens, then all other failsafes didn't work. This is a last resort. 
+		lastValidPlacement.position = LOCAL_PLAYER:GetWorldPosition() - Vector3.New(0, 0, 1000)
+	end
+	
 	-- Get the target data, to modify it before it's sent over the network
 	local targetData = thisAbility:GetTargetData()
 	-- Position
 	targetData:SetHitPosition(lastValidPlacement.position)
-	-- Rotation
+	--[[ Rotation
 	local r = lastValidPlacement.rotation
-	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))
+	targetData:SetAimPosition(Vector3.New(r.x, r.y, r.z))]]
 	-- Set the target data back
 	thisAbility:SetTargetData(targetData)
 end
@@ -106,7 +111,8 @@ function OnEquip(equipment, player)
 		return
 	end
 	
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP()[BindingName], META_AP()[Class])
+	local skin = Equipment:GetCustomProperty("QID")
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().ASSASSIN, player.team, skin, META_AP().T)
 	
 	table.insert(EventListeners, SpecialAbility.castEvent:Connect(OnSpecialAbilityCast))
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(OnSpecialAbilityExecute))
@@ -149,13 +155,13 @@ function CalculatePlacement()
 	--MAX_PLACEMENT_RANGE)
 	local hr = World.Raycast(playerViewPosition, edgeOfRange, {ignorePlayers = true})
 
-	if hr ~= nil then
+	if hr ~= nil and hr.other ~= nil then
 		return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 	else
 		-- Couldn't find a legal spot nearby, so we're probably out of range.  Try
 		-- to find a spot at the edge of the range:
 		hr = World.Raycast(edgeOfRange + Vector3.UP * 1000, edgeOfRange + Vector3.UP * -1000, {ignorePlayers = true})
-		if hr ~= nil then
+		if hr ~= nil and hr.other ~= nil then
 			return hr:GetImpactPosition(), hr:GetImpactNormal(), hr.other:IsVisibleInHierarchy()
 		else
 			return nil

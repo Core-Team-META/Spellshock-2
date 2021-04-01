@@ -39,6 +39,7 @@ Assets {
             Bool: true
           }
         }
+        Lifespan: 20
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -62,9 +63,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 15396417406637580467
@@ -80,7 +81,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -4526,7 +4527,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -4727,7 +4728,6 @@ Assets {
           Volume: 1
           Falloff: -1
           Radius: -1
-          EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
@@ -4943,5 +4943,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

@@ -7,7 +7,7 @@ Assets {
       RootId: 13710811239096943882
       Objects {
         Id: 13710811239096943882
-        Name: "StoneWallPrimerWitcher"
+        Name: "Tank Stone Wall Preview Basic"
         Transform {
           Scale {
             X: 1
@@ -63,7 +63,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -476,5 +476,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

@@ -40,9 +40,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.8
+            Y: 0.8
+            Z: 0.8
           }
         }
         ParentId: 13812049559045740344
@@ -181,5 +181,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

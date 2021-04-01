@@ -7,7 +7,7 @@ Assets {
       RootId: 10585008555547023758
       Objects {
         Id: 10585008555547023758
-        Name: "Mage Wand Impact"
+        Name: "Mage Wand Impact Basic"
         Transform {
           Scale {
             X: 1
@@ -192,7 +192,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }
@@ -228,5 +228,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

@@ -7,7 +7,7 @@ Assets {
       RootId: 15109727969398359112
       Objects {
         Id: 15109727969398359112
-        Name: "Healer Elf Supernova Charge Basic 2"
+        Name: "Healer Elf Supernova Charge Frost"
         Transform {
           Scale {
             X: 1
@@ -261,7 +261,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -287,6 +287,7 @@ Assets {
         ChildIds: 8070193683219799257
         ChildIds: 15777896418825515839
         ChildIds: 3304213957701067195
+        ChildIds: 9642099728220872653
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -295,7 +296,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
         }
@@ -378,7 +379,7 @@ Assets {
           Overrides {
             Name: "cs:Burst"
             ObjectReference {
-              SubObjectId: 15777896418825515839
+              SubObjectId: 9642099728220872653
             }
           }
           Overrides {
@@ -473,7 +474,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -529,7 +530,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -565,7 +566,7 @@ Assets {
           Volume: 1
           Falloff: 3000
           Radius: 3000
-          FadeInTime: 0.5
+          FadeInTime: 1.5
           IsAttenuationEnabled: true
         }
       }
@@ -636,9 +637,9 @@ Assets {
           AudioAsset {
             Id: 2538994747368739144
           }
-          Pitch: -400
-          Volume: 1
-          Falloff: 15000
+          Pitch: -800
+          Volume: 1.2
+          Falloff: 20000
           Radius: 5000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -780,7 +781,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -967,7 +968,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1045,7 +1046,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1123,7 +1124,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -1461,6 +1462,42 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 9642099728220872653
+        Name: "Big Hammer Huge Ground Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3603252599378369513
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 888725854457039636
+          }
+          Pitch: -1800
+          Volume: 1.2
+          Falloff: 20000
+          Radius: 5000
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 13950225922132296555
@@ -1579,10 +1616,19 @@ Assets {
         AssetId: "sm_weap_fan_shield_002"
       }
     }
+    Assets {
+      Id: 888725854457039636
+      Name: "Big Hammer Huge Ground Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_big_hammer_explode_ground_impact_01a_Cue_ref"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

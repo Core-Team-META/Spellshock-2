@@ -1,4 +1,13 @@
 Assets {
+  Id: 18003367190556965134
+  Name: "Fantasy Timepiece 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Timepiece_002"
+  }
+}
+Assets {
   Id: 17752702521577453302
   Name: "Fantasy Ability Yellow 027"
   PlatformAssetType: 9
@@ -44,12 +53,30 @@ Assets {
   }
 }
 Assets {
+  Id: 15575092074641359796
+  Name: "Frame Outlined 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_033"
+  }
+}
+Assets {
   Id: 15204381781527651531
   Name: "Line Full 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "LineFull_003"
+  }
+}
+Assets {
+  Id: 14100456703306476565
+  Name: "Baloo 2 Extra Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "Baloo2ExtraBold_ref"
   }
 }
 Assets {
@@ -125,12 +152,30 @@ Assets {
   }
 }
 Assets {
+  Id: 12253460684865638729
+  Name: "Fantasy Craft Gem 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Crafting_Gem_005"
+  }
+}
+Assets {
   Id: 12086971798166130178
   Name: "BG Flat 010"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_27"
+  }
+}
+Assets {
+  Id: 11336346532215892341
+  Name: "Germania One"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "GermaniaOneRegular_ref"
   }
 }
 Assets {
@@ -149,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Potion_004"
+  }
+}
+Assets {
+  Id: 10419872046358570920
+  Name: "Fantasy Gear Top 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Top_004"
   }
 }
 Assets {
@@ -188,15 +242,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8434473936653101930
-  Name: "Fantasy Scroll 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Scroll_001"
-  }
-}
-Assets {
   Id: 8277338959376334210
   Name: "Frame Outline Thin 008"
   PlatformAssetType: 9
@@ -215,21 +260,21 @@ Assets {
   }
 }
 Assets {
+  Id: 7809958927931360774
+  Name: "BG Flat 016"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_33"
+  }
+}
+Assets {
   Id: 7615847344375253670
   Name: "UI Basic Frame 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Frame_001"
-  }
-}
-Assets {
-  Id: 7585529932942736913
-  Name: "Fantasy Coins 009"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_009"
   }
 }
 Assets {
@@ -257,15 +302,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
-  Id: 6203847595979390649
-  Name: "Fantasy Book 011"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Book_011"
   }
 }
 Assets {
@@ -323,12 +359,21 @@ Assets {
   }
 }
 Assets {
-  Id: 4727080213227783003
-  Name: "Fantasy Craft Crystal 007"
+  Id: 5000878413771410888
+  Name: "Fantasy Anvil 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Crafting_Crystal_007"
+    AssetId: "UI_Fantasy_Equip_Anvil_001"
+  }
+}
+Assets {
+  Id: 4941923027931780178
+  Name: "Horse"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Horse"
   }
 }
 Assets {
@@ -377,12 +422,30 @@ Assets {
   }
 }
 Assets {
+  Id: 955340689223569148
+  Name: "Fantasy Coins 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
   Id: 489188521779173368
   Name: "Icon Alert"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Alert"
+  }
+}
+Assets {
+  Id: 180266187625907627
+  Name: "Fantasy Compass 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Compass_001"
   }
 }
 Assets {

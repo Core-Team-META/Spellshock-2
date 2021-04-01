@@ -14,7 +14,6 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
-
 -- Internal custom properties --
 local ABCP = require(script:GetCustomProperty("API"))
 local AS = require(script:GetCustomProperty("AS"))
@@ -41,6 +40,15 @@ while not _G.TeamColors or not ready do
 	Task.Wait()
 end
 
+function Int()
+	for _, indicator in ipairs(indicators) do
+		indicator.clientUserData.iconImage = indicator:GetCustomProperty("IconImage"):WaitForObject()
+		indicator.clientUserData.iconBackground = indicator:GetCustomProperty("IconBackground"):WaitForObject()
+		indicator.clientUserData.nameText = indicator:GetCustomProperty("NameText"):WaitForObject()
+		indicator.clientUserData.panelClipper = indicator:GetCustomProperty("PanelClipper"):WaitForObject()
+	end
+end
+
 -- bool CompareStates(table, table)
 -- Helpers to sort capture point states by their order property
 function CompareStates(state1, state2)
@@ -51,12 +59,14 @@ end
 -- Updates the state, position and count of capture point indicators
 function Tick(DeltaTime)
 	if AS.IsRespawning() or AS.IsViewingMap() or AS.IsJoiningMidgame() then
-		PANEL.visibility = Visibility.FORCE_OFF
+		if PANEL.visibility == Visibility.INHERIT then
+			PANEL.visibility = Visibility.FORCE_OFF
+		end
 		return
-	else
+	elseif PANEL.visibility == Visibility.FORCE_OFF then
 		PANEL.visibility = Visibility.INHERIT
 	end
-	
+
 	-- Get states and sort by order
 	local capturePointIds = ABCP.GetCapturePoints()
 	local capturePointStates = {}
@@ -67,13 +77,13 @@ function Tick(DeltaTime)
 	--table.sort(capturePointStates, CompareStates)
 
 	-- Update indicators
-	for i, capturePointState in pairs(capturePointStates) do
+	for i, capturePointState in ipairs(capturePointStates) do
 		local indicator = indicators[capturePointState.order]
 
-		local iconImage = indicator:GetCustomProperty("IconImage"):WaitForObject()
-		local iconBackground = indicator:GetCustomProperty("IconBackground"):WaitForObject()
-		local nameText = indicator:GetCustomProperty("NameText"):WaitForObject()
-		local panelClipper = indicator:GetCustomProperty("PanelClipper"):WaitForObject()
+		local iconImage = indicator.clientUserData.iconImage
+		local iconBackground = indicator.clientUserData.iconBackground
+		local nameText = indicator.clientUserData.nameText
+		local panelClipper = indicator.clientUserData.panelClipper
 
 		-- Setting panel clip progress
 		panelClipper.height = math.ceil(capturePointState.captureProgress * indicator.height)
@@ -81,24 +91,30 @@ function Tick(DeltaTime)
 		-- Set colors on icon image
 		if iconImage then
 			if capturePointState.isEnabled then
-				indicator.visibility = Visibility.INHERIT
+				if indicator.visibility ~= Visibility.INHERIT then
+					indicator.visibility = Visibility.INHERIT
+				end
 				-- Set icon image to represent current progressing team
-				if capturePointState.progressedTeam == 0 then
+				if capturePointState.progressedTeam == 0 and iconBackground:GetColor() ~= NEUTRAL_COLOR then
 					iconImage:SetColor(NEUTRAL_COLOR)
-				else
+				elseif capturePointState.progressedTeam ~= 0 then
 					iconImage:SetColor(_G.TeamColors[capturePointState.progressedTeam])
 				end
 
 				-- Set icon background to represent current owner team
-				if capturePointState.owningTeam == 0 then
+				if capturePointState.owningTeam == 0 and iconBackground:GetColor() ~= NEUTRAL_COLOR then
 					iconBackground:SetColor(NEUTRAL_COLOR)
-				else
+				elseif capturePointState.owningTeam ~= 0 then
 					local teamColor = _G.TeamColors[capturePointState.owningTeam]
 					teamColor.a = 0.655
-					iconBackground:SetColor(teamColor)
+					if iconBackground:GetColor() ~= teamColor then
+						iconBackground:SetColor(teamColor)
+					end
 				end
 			else
-				indicator.visibility = Visibility.FORCE_OFF
+				if indicator.visibility ~= Visibility.FORCE_OFF then
+					indicator.visibility = Visibility.FORCE_OFF
+				end
 				iconImage.isTeamColorUsed = false
 				iconBackground.isTeamColorUsed = false
 				--iconImage:SetColor(DISABLED_COLOR)
@@ -120,3 +136,5 @@ function Tick(DeltaTime)
 		end
 	end
 end
+
+Int()

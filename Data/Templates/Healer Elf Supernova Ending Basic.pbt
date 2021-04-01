@@ -16,6 +16,8 @@ Assets {
           }
         }
         ParentId: 14162296025304194376
+        ChildIds: 14786554542506356064
+        ChildIds: 12913396027250432676
         ChildIds: 4347260479540699765
         ChildIds: 18440920329637206996
         ChildIds: 3611799041323297013
@@ -30,9 +32,94 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 14786554542506356064
+        Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2363486019203186635
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_cinematic_boomy_impacts_01:16"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 1316376324599490360
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -200
+            Volume: 1
+            Falloff: 20000
+            Radius: 5000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 12913396027250432676
+        Name: "Sci-fi Sharp Heavy Impact Laser Energy Boom 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2363486019203186635
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 10083202590626169692
+          }
+          AutoPlay: true
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
         }
       }
       Objects {
@@ -113,7 +200,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -174,7 +261,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -255,7 +342,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -292,7 +379,7 @@ Assets {
           AutoPlay: true
           Pitch: -100
           Volume: 1
-          Falloff: 3000
+          Falloff: 5000
           Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -328,12 +415,30 @@ Assets {
           }
           AutoPlay: true
           Pitch: -100
-          Volume: 0.5
-          Falloff: 3000
+          Volume: 0.8
+          Falloff: 5000
           Radius: 3000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
         }
+      }
+    }
+    Assets {
+      Id: 1316376324599490360
+      Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
+      }
+    }
+    Assets {
+      Id: 10083202590626169692
+      Name: "Sci-fi Sharp Heavy Impact Laser Energy Boom 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_scifi_sharp_heavy_impact_laser_energy_boom_01_Cue_ref"
       }
     }
     Assets {
@@ -386,5 +491,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

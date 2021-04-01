@@ -7,7 +7,7 @@ Assets {
       RootId: 11861313653374629684
       Objects {
         Id: 11861313653374629684
-        Name: "Mage Wand Trail"
+        Name: "Mage Wand Trail Basic"
         Transform {
           Scale {
             X: 1
@@ -213,7 +213,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -288,7 +288,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -363,5 +363,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

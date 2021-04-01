@@ -144,6 +144,7 @@ Assets {
         Control {
           Width: 200
           Height: 200
+          UIY: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -205,6 +206,7 @@ Assets {
           Width: 20
           Height: 20
           UIX: 15
+          UIY: -5
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -286,6 +288,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -352,6 +355,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -418,6 +422,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -484,6 +489,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -550,6 +556,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -616,6 +623,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -682,6 +690,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -748,6 +757,7 @@ Assets {
             AutoWrapText: true
             ClipTextToSize: true
             Font {
+              Id: 11336346532215892341
             }
           }
           AnchorLayout {
@@ -783,10 +793,19 @@ Assets {
         AssetId: "Icon_Profile"
       }
     }
+    Assets {
+      Id: 11336346532215892341
+      Name: "Germania One"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "GermaniaOneRegular_ref"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

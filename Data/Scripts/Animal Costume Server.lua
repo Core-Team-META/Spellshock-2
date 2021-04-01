@@ -6,6 +6,18 @@ local Timer = -1
 local _Owner = nil
 local PlayerDiedEvent = nil
 
+local function META_AP()
+	while not _G["Meta.Ability.Progression"] do Task.Wait() end
+    return _G["Meta.Ability.Progression"]
+end
+
+
+local function GetCurrentCosmeticId(player, classID, bind)
+    return META_AP()["VFX"].GetCurrentCosmeticId(player, classID, bind)
+end
+
+
+
 function OnPlayerDied(player, _)
 	PlayerDiedEvent:Disconnect()
 	Timer = 0
@@ -64,6 +76,17 @@ function Tick(deltaTime)
 			World.SpawnAsset(FX_Template, {position = _Owner:GetWorldPosition()})
 			if ClassEquipmentReference then
 				local classEquipment = World.SpawnAsset(ClassEquipmentReference)
+				local classID = classEquipment:GetCustomProperty("ClassID")
+				local oId = GetCurrentCosmeticId(_Owner, classID, 8)
+				local qId = GetCurrentCosmeticId(_Owner, classID, 1)
+				local eId = GetCurrentCosmeticId(_Owner, classID, 2)
+				local rId = GetCurrentCosmeticId(_Owner, classID, 3)
+				local tId = GetCurrentCosmeticId(_Owner, classID, 4)
+				classEquipment:SetNetworkedCustomProperty("OID", oId)
+				classEquipment:SetNetworkedCustomProperty("QID", qId)
+				classEquipment:SetNetworkedCustomProperty("EID", eId)
+				classEquipment:SetNetworkedCustomProperty("RID", rId)
+				classEquipment:SetNetworkedCustomProperty("TID", tId)
 				classEquipment:Equip(_Owner)
 			end
 			Equipment:Unequip()

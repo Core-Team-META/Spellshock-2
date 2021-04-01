@@ -1,6 +1,8 @@
 ﻿local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
+local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local CONSUMABLES_COSTS = require(script:GetCustomProperty("ConsumablesUpgradeCost_Data"))
 
 local MenuData = script:GetCustomProperty("MenuData"):WaitForObject()
 local LeftPanel = script:GetCustomProperty("LeftPanel"):WaitForObject()
@@ -8,6 +10,7 @@ local RightPanel = script:GetCustomProperty("RightPanel"):WaitForObject()
 local ConfirmChoicePanel = script:GetCustomProperty("ConfirmChoicePanel"):WaitForObject()
 local Audio = script:GetCustomProperty("Audio"):WaitForObject()
 local ClassSelectionCanvas = script.parent
+local GlobalStatsButton = script:GetCustomProperty("GlobalStatsButton"):WaitForObject()
 
 local OrcClassSelection = script:GetCustomProperty("OrcClassSelection"):WaitForObject()
 local ElfClassSelection = script:GetCustomProperty("ElfClassSelection"):WaitForObject()
@@ -20,8 +23,12 @@ local LeftPanel_HoverPanel = LeftPanel:GetCustomProperty("HoverPanel"):WaitForOb
 local RightPanel_Icon = RightPanel:GetCustomProperty("Icon"):WaitForObject()
 local RightPanel_ClassName = RightPanel:GetCustomProperty("ClassName"):WaitForObject()
 local RightPanel_AbilitiesPanel = RightPanel:GetCustomProperty("AbilitiesPanel"):WaitForObject()
+local RightPanel_AbilityButtons = RightPanel:GetCustomProperty("AbilityButtons"):WaitForObject()
 local RightPanel_ClassDescriptionPanel = RightPanel:GetCustomProperty("ClassDescriptionPanel"):WaitForObject()
 local RightPanel_AbilityOverviewPanel = RightPanel:GetCustomProperty("AbilityOverviewPanel"):WaitForObject()
+local RightPanel_GlobalStats = RightPanel:GetCustomProperty("GlobalStats"):WaitForObject()
+local RightPanel_AbilitiesLabel = RightPanel:GetCustomProperty("AbilitiesLabel"):WaitForObject()
+local RightPanel_ClassLevelPanel = RightPanel:GetCustomProperty("ClassLevelPanel"):WaitForObject()
 
 local RightPanel_UpgradeButtonPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeButtonPanel"):WaitForObject()
 local RightPanel_UpgradeButton = RightPanel_UpgradeButtonPanel:GetCustomProperty("UpgradeButton"):WaitForObject()
@@ -46,6 +53,14 @@ local Audio_AbilitySelect = Audio:GetCustomProperty("Audio_AbilitySelect"):WaitF
 local function META_AP()
 	while not _G["Meta.Ability.Progression"] do Task.Wait() end
     return _G["Meta.Ability.Progression"]
+end
+
+local function META_CP()
+    return _G["Class.Progression"]
+end
+
+local function META_Consumables()
+    return _G["Consumables"]
 end
 
 while not _G.CurrentMenu do Task.Wait() end
@@ -113,6 +128,12 @@ function OnMenuChanged(oldMenu, newMenu)
 		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
 			LOCAL_PLAYER:ClearOverrideCamera()
 		end
+
+		if ResourceChangedEventListener then
+			ResourceChangedEventListener:Disconnect()
+			ResourceChangedEventListener = nil
+		end
+		isUpgrading = false
 	end
 end
 
@@ -145,10 +166,88 @@ function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation
 	AnimMesh:PlayAnimation(Animation, {playbackRate=0.6})
 end
 
+function OnGlobalStatsClicked(thisButton)
+	-- return CurrentClassButton to idle state
+	if CurrentClassButton then
+		CurrentClassButton.clientUserData.panel.parent = LeftPanel_IdlePanel 
+		CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.FORCE_OFF
+		CurrentClassButton = nil
+	end
+
+	-- return CurrentAbilityButton to idle state
+	if CurrentAbilityButton then
+		local ConfirmIcon = CurrentAbilityButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject()
+		ConfirmIcon.visibility = Visibility.FORCE_OFF
+		ConfirmIcon:SetColor(Color.New(1,1,1, 0.5))
+		CurrentAbilityButton = nil -- reset to nil
+	end
+	
+	-- Update Class Name text
+	RightPanel_ClassName.text = "Global Stats"
+	RightPanel_ClassName:GetChildren()[1].text = RightPanel_ClassName.text
+
+	-- Update Ability Name Text
+	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
+	AbilityName.text = "Overview"
+	AbilityName:GetChildren()[1].text = "Overview"
+
+	RightPanel_GlobalStats.visibility = Visibility.INHERIT
+	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilitiesPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
+	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
+
+	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
+
+	for _, statPanel in ipairs(PlayerStatsPanel:GetChildren()) do
+		if statPanel:IsA("UIPanel") then
+			local level
+			local currentStat
+			local nextStat
+			local currentXP
+			local reqXP
+
+			local LevelText = statPanel:GetCustomProperty("LevelText"):WaitForObject()
+			local CurrentStat = statPanel:GetCustomProperty("CurrentStat"):WaitForObject()
+			local NextStat = statPanel:GetCustomProperty("NextStat"):WaitForObject()
+			local XP_Progress = statPanel:GetCustomProperty("XP_Progress"):WaitForObject()
+			local XP_Amount = statPanel:GetCustomProperty("XP_Amount"):WaitForObject()
+
+			if statPanel.name == "Mount Speed" then
+				--#TODO
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				currentStat = level - 1
+				nextStat = level
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.MOUNT_SPEED)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
+
+				CurrentStat.text = "+"..tostring(currentStat).."%"
+				NextStat.text = "+"..tostring(nextStat).."%"
+			elseif statPanel.name == "Healing Potion" then
+				level = META_Consumables().GetLevel(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				local consumablesTable = CONST.CONSUMABLES[CONST.CONSUMABLE_KEYS.HEALTH_POTION]
+				currentStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * level)
+				nextStat = consumablesTable.BaseHeal + (consumablesTable.LevelMultiplier * (level+1))
+				currentXP = META_Consumables().GetXp(LOCAL_PLAYER, CONST.CONSUMABLE_KEYS.HEALTH_POTION)
+				reqXP = tostring(CONSUMABLES_COSTS[level])
+
+				CurrentStat.text = "+"..tostring(currentStat).." HP"
+				NextStat.text = "+"..tostring(nextStat).." HP"
+			end
+
+			LevelText.text = tostring(level)
+			XP_Progress.progress = currentXP / reqXP
+			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
+		end
+	end
+end
+
 function UpdateClassInfo(thisButton)
 	local dataTable = thisButton.clientUserData.dataTable
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.INHERIT
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
+	RightPanel_GlobalStats.visibility = Visibility.FORCE_OFF
 
 	-- Update Class Icon
 	RightPanel_Icon:SetImage(dataTable["Icon"])
@@ -163,13 +262,12 @@ function UpdateClassInfo(thisButton)
 	AbilityName:GetChildren()[1].text = "Overview"
 
 	-- Update all ability buttons and reset them to their idle state
-	local classLevel = 0
-	for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
+	for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 		local Icon = abilityPanel:GetCustomProperty("AbilityIcon"):WaitForObject()
 		local ConfirmIcon = abilityPanel:GetCustomProperty("ConfirmIcon"):WaitForObject()
 		local Level = abilityPanel:GetCustomProperty("Level"):WaitForObject()
 		local AbilityButton = abilityPanel:GetCustomProperty("Button"):WaitForObject()
-		local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
+		--local ShowMorePanel = abilityPanel:GetCustomProperty("ShowMorePanel"):WaitForObject()
 		local UpgradePanel =  abilityPanel:GetCustomProperty("UpgradePanel"):WaitForObject()
 
 		Icon:SetImage(dataTable["Abilities"][i]["Icon"])
@@ -179,7 +277,6 @@ function UpdateClassInfo(thisButton)
 		local bind = dataTable["Abilities"][i]["BindID"]
 		local level = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[bind], META_AP()[class])
 		Level.text = tostring(level)
-		classLevel = classLevel + level
 
 		local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[class], META_AP()[bind])
 		local shardCost = SHARD_COSTS[level].reqXP
@@ -188,22 +285,41 @@ function UpdateClassInfo(thisButton)
 
 		if currentShards >= shardCost and currentGold >= goldCost and level < 10 then
 			UpgradePanel.visibility = Visibility.INHERIT
-			ShowMorePanel.visibility = Visibility.FORCE_OFF
+			--ShowMorePanel.visibility = Visibility.FORCE_OFF
 		else
 			UpgradePanel.visibility = Visibility.FORCE_OFF
-			ShowMorePanel.visibility = Visibility.INHERIT
+			--ShowMorePanel.visibility = Visibility.INHERIT
 		end
 	end
 
 	-- Update the Class Description Panel
 	local ClassLevel = RightPanel_ClassDescriptionPanel:GetCustomProperty("ClassLevel"):WaitForObject()
 	local DescriptionText = RightPanel_ClassDescriptionPanel:GetCustomProperty("DescriptionText"):WaitForObject()
-	ClassLevel.text = tostring(classLevel-6)
+	local BaseHealth = RightPanel_ClassDescriptionPanel:GetCustomProperty("BaseHealth"):WaitForObject()
+	local HealthRegen = RightPanel_ClassDescriptionPanel:GetCustomProperty("HealthRegen"):WaitForObject()
+	local XP_Progress = RightPanel_ClassDescriptionPanel:GetCustomProperty("XP_Progress"):WaitForObject()
+	local ClassXP = RightPanel_ClassDescriptionPanel:GetCustomProperty("ClassXP"):WaitForObject()
+
 	if LOCAL_PLAYER.team == 1 then
 		DescriptionText.text = dataTable["OrcDescription"]
 	else
 		DescriptionText.text = dataTable["ElfDescription"]
 	end
+
+	local classLevel = META_CP().GetClassLevel(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]]) --LOCAL_PLAYER:GetResource(UTIL.GetClassLevelString(META_AP()[dataTable["ClassID"]]))
+	ClassLevel.text = tostring(classLevel)
+
+	local currentXP = META_CP().GetClassXp(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
+	local reqXP = CONST.ReqXp[CoreMath.Clamp(classLevel, 1, 20)]
+	XP_Progress.progress = currentXP / reqXP
+	ClassXP.text = UTIL.FormatInt(currentXP).."/"..UTIL.FormatInt(reqXP)
+
+	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
+	BaseHealth.text = tostring(classHealth)
+
+	local regenAmount = 0.06 + (0.04 * classLevel)
+    if regenAmount > 2 then regenAmount = 2 end
+	HealthRegen.text = string.format("+%s / 1s", tostring(regenAmount))
 
 	-- Change the costume on the animated mesh
 	local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
@@ -235,6 +351,10 @@ function OnClassClicked(thisButton)
 	end
 	CurrentAbilityButton = nil -- reset to nil
 	
+	RightPanel_AbilitiesPanel.visibility = Visibility.INHERIT
+	RightPanel_AbilitiesLabel.visibility = Visibility.INHERIT
+	RightPanel_ClassLevelPanel.visibility = Visibility.INHERIT
+
 	CurrentClassButton.clientUserData.panel.parent = LeftPanel_HoverPanel -- Set new CurrentClassButton to hover state
 	CurrentClassButton.clientUserData.panel:GetCustomProperty("ConfirmIcon"):WaitForObject().visibility = Visibility.INHERIT
 	UpdateClassInfo(thisButton)
@@ -256,39 +376,87 @@ function OnClassUnhovered(thisButton)
 	end
 end
 
+local function UpdateText(parent, newText, extra)
+	if (extra) then newText = tostring(newText) .. tostring(extra) end
+	for _, textField in ipairs(parent:GetChildren()) do
+		textField.text = tostring(newText)
+	end
+end
+
 function UpdateAbilityInfo(thisButton)
 	local dataTable = thisButton.clientUserData.dataTable -- Get the ability data for this button
 	RightPanel_AbilityStatsPanel.visibility = Visibility.FORCE_OFF -- hide panel while changes are made
 	local AbilityName = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityName"):WaitForObject()
 	local AbilityDescription = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityDescription"):WaitForObject()
-	local ShardCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("ShardCost"):WaitForObject()
+	local AbilityXPPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("AbilityXP"):WaitForObject()
+	local MaxLevelPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("MaxLevelPanel"):WaitForObject()	
 	local GoldCost = RightPanel_AbilityOverviewPanel:GetCustomProperty("GoldCost"):WaitForObject()
+	local UpgradeLabel = RightPanel_AbilityOverviewPanel:GetCustomProperty("UpgradeLabel"):WaitForObject()
 	local LevelInfoPanel = RightPanel_AbilityOverviewPanel:GetCustomProperty("LevelInfoPanel"):WaitForObject()
 
 	local LevelText = LevelInfoPanel:GetCustomProperty("LevelText"):WaitForObject()
+	local LevelNextText = LevelInfoPanel:GetCustomProperty("LevelNextText"):WaitForObject()
+	-- local LevelNextPanel = script:GetCustomProperty("LevelNextPanel"):WaitForObject()
 	local LevelProgressBar = LevelInfoPanel:GetCustomProperty("LevelProgressBar"):WaitForObject()
-	local NextLevelXP = LevelInfoPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
+	local RegularFillColor = LevelInfoPanel:GetCustomProperty("RegularFillColor")
+	local MaxFillColor = LevelInfoPanel:GetCustomProperty("MaxFillColor")
 
 	local abilityLevel = META_AP().GetBindLevel(LOCAL_PLAYER, META_AP()[dataTable["BindID"]], META_AP()[dataTable["ClassID"]])
-	local currentShards = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
-	local shardCost = SHARD_COSTS[abilityLevel].reqXP
+	local currentXP = META_AP().GetAbilityShards(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]], META_AP()[dataTable["BindID"]])
+	local reqXP = SHARD_COSTS[abilityLevel].reqXP
 	local currentGold = LOCAL_PLAYER:GetResource("GOLD")
 	local goldCost = SHARD_COSTS[abilityLevel].reqGold
 
 	AbilityName.text = dataTable["Name"]
 	AbilityName:GetChildren()[1].text = dataTable["Name"]
 	AbilityDescription.text = dataTable["Description"]
-	ShardCost.text = string.format("%d / %d", currentShards, shardCost)
-	GoldCost.text = string.format("%d / %d", currentGold, goldCost)
 
 	LevelText.text = tostring(abilityLevel)
-	LevelProgressBar.progress = currentShards / shardCost
-	NextLevelXP.text = tostring(shardCost)
+	if (abilityLevel < 10) then
+		local CurrentXPPanel = AbilityXPPanel:GetCustomProperty("CurrentXP"):WaitForObject()
+		local CXPMainText = CurrentXPPanel:GetCustomProperty("MainText"):WaitForObject()
+		-- local DividerPanel = AbilityXPPanel:GetCustomProperty("Divider"):WaitForObject()
+		local NextLevelXPPanel = AbilityXPPanel:GetCustomProperty("NextLevelXP"):WaitForObject()
 
-	if currentShards >= shardCost and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
+		UpdateText(CurrentXPPanel, currentXP)
+		UpdateText(NextLevelXPPanel, reqXP)
+
+		if (currentXP < reqXP) then
+			CXPMainText:SetColor(Color.RED)
+		else
+			CXPMainText:SetColor(Color.FromStandardHex("FFCB8DFF"))
+		end
+
+		GoldCost.text = UTIL.FormatInt(goldCost)
+		LevelProgressBar.progress = currentXP / reqXP
+		LevelNextText.text = tostring(abilityLevel + 1)
+
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.INHERIT
+		AbilityXPPanel.visibility = Visibility.INHERIT
+		MaxLevelPanel.visibility = Visibility.FORCE_OFF
+		LevelProgressBar:SetFillColor(RegularFillColor)
 	else
+		LevelNextText.text = "!"
+		LevelProgressBar.progress = 1
+		LevelProgressBar:SetFillColor(MaxFillColor)
+
+		MaxLevelPanel.visibility = Visibility.INHERIT
 		RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+		AbilityXPPanel.visibility = Visibility.FORCE_OFF
+	end
+
+	if currentGold >= goldCost then
+		GoldCost:SetColor(Color.FromStandardHex("FFC200FF"))
+	else
+		GoldCost:SetColor(Color.FromStandardHex("F81818FF"))
+	end
+
+	if currentXP >= reqXP and currentGold >= goldCost and abilityLevel < 10 then --and ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY
+		RightPanel_UpgradeButton.isInteractable = true
+		UpgradeLabel:SetColor(Color.FromStandardHex("FFC200FF"))
+	else
+		RightPanel_UpgradeButton.isInteractable = false
+		UpgradeLabel:SetColor(Color.FromStandardHex("CBCBCBFF"))
 	end
 
 	-- Remove any previous mod panels 
@@ -355,12 +523,12 @@ function UpdateAbilityInfo(thisButton)
 		if currentMod == nextMod or abilityLevel == 10 then
 			NextLevelPanel.visibility = Visibility.FORCE_OFF
 		else
-			local glowLength = 150
+			--[[local glowLength = 150
 			if not usingHyphen then
 				glowLength = CoreMath.Clamp(85 + (7 * string.len(nextText)), 1, 360)
 			end
 			NextLevelPanel:GetCustomProperty("Glow1"):WaitForObject().height = glowLength
-			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength
+			NextLevelPanel:GetCustomProperty("Glow2"):WaitForObject().height = glowLength]]
 		end
 	end
 	RightPanel_AbilityStatsPanel.visibility = Visibility.INHERIT
@@ -415,9 +583,10 @@ function OnUpgradeButtonClicked(thisButton)
 	local abilityData = CurrentAbilityButton.clientUserData.dataTable
 
 	LevelResourceName = UTIL.GetLevelString(META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
-	ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnLocalResourceChanged)
+	--ResourceChangedEventListener = LOCAL_PLAYER.resourceChangedEvent:Connect(OnLocalResourceChanged)
+	ResourceChangedEventListener = _G.PerPlayerDictionary.valueChangedEvent:Connect(OnLocalResourceChanged)
 	META_AP().BindLevelUp(LOCAL_PLAYER, META_AP()[abilityData["ClassID"]], META_AP()[abilityData["BindID"]])
-
+	
 	-- Make the animated mesh do an animation
 	local AnimMesh
 	if LOCAL_PLAYER.team == 1 then
@@ -433,7 +602,8 @@ end
 
 function OnLocalResourceChanged(player, resName, resAmount)
 	if resName ~= LevelResourceName then return end -- Check resource name
-	
+	--Task.Wait()
+	print("Upgrade complete: "..tostring(resAmount))
 	ResourceChangedEventListener:Disconnect()
 	ResourceChangedEventListener = nil
 	LevelResourceName = nil
@@ -460,17 +630,17 @@ function OnLocalResourceChanged(player, resName, resAmount)
 	if currentShards >= shardCost and currentGold >= goldCost then
 		UpgradePanel.visibility = Visibility.INHERIT
 		ShowMorePanel.visibility = Visibility.FORCE_OFF
+		RightPanel_UpgradeButton.isInteractable = true
 	else
 		UpgradePanel.visibility = Visibility.FORCE_OFF
 		ShowMorePanel.visibility = Visibility.INHERIT
+		RightPanel_UpgradeButton.isInteractable = false
 	end
 
 	isUpgrading = false -- turn upgradin off
 
 	-- Force the clicked event so the text updates with the new values
 	OnAbilityClicked(CurrentAbilityButton)
-	
-	RightPanel_UpgradeButton.isInteractable = true -- turn Upgrade button back on
 end
 
 function AttachCostumeToPlayer(player)
@@ -484,12 +654,13 @@ function AttachCostumeToPlayer(player)
 	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
 		DetachCostumeFromPlayer(player)
-		
+		warn("Attaching costume: "..player.name)
 		-- Equip new costume
 		local attachmentTable = {}
 		local costumeTemplate = META_AP().VFX.GetCurrentCostume(player, player.clientUserData.CurrentClass)
 		local newCostume = World.SpawnAsset(costumeTemplate)
 		for _, attachment in ipairs(newCostume:GetChildren()) do
+			attachment.isEnabled = true
 			attachment:AttachToPlayer(player, attachment.name)
 			table.insert(attachmentTable, attachment)
 		end
@@ -510,9 +681,9 @@ end
 function OnResourceChanged(player, name, amount)
 	if name == "CLASS_MAP" then
 		player.clientUserData.CurrentClass = amount
-		if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+		--[[if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 			AttachCostumeToPlayer(player)
-		end
+		end]]
 
 		-- If the local player changed their class then close the menu and make the button interactable
 		if player == LOCAL_PLAYER then --and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
@@ -525,20 +696,6 @@ function OnResourceChanged(player, name, amount)
 		if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
 			Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		end
-		ConfirmChoiceButton.isInteractable = true
-	end
-end
-
-function OnClassChanged(player, Class, InitClass)
-	player.clientUserData.CurrentClass = Class
-	
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
-		AttachCostumeToPlayer(player)
-	end
-
-	-- If the local player changed their class then close the menu and make the button interactable
-	if not InitClass and player == LOCAL_PLAYER and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then
-		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
 		ConfirmChoiceButton.isInteractable = true
 	end
 end
@@ -562,7 +719,7 @@ function OnGameStateChanged(oldState, newState)
 		for _, player in ipairs(Game.GetPlayers()) do
 			AttachCostumeToPlayer(player)
 		end
-	elseif newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
+	elseif (newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY) and not LOCAL_PLAYER.hasSkippedRewardReward then
 		-- Destroy lobby costumes
 		for _, player in ipairs(Game.GetPlayers()) do
 			DetachCostumeFromPlayer(player)
@@ -570,10 +727,17 @@ function OnGameStateChanged(oldState, newState)
 	end
 end
 
+function OnRestoreFromPodium()
+	-- Destroy lobby costumes
+	for _, player in ipairs(Game.GetPlayers()) do
+		DetachCostumeFromPlayer(player)
+	end
+end
+
 function OnPlayerJoined(player)
 	player.clientUserData.CurrentClass = META_AP().TANK
 	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
+	if ABGS.GetGameState() == ABGS.GAME_STATE_ROUND_END then
 		AttachCostumeToPlayer(player)
 	end
 end
@@ -591,6 +755,37 @@ function isAllowed(delay)
     end
     spamPrevent = timeNow
     return true
+end
+
+function Tick()
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+		-- Auto select currently viewed class
+		
+		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
+		UI.SetCursorVisible(false)
+		UI.SetCanCursorInteractWithUI(false)
+
+		if oldMenu == _G.MENU_TABLE["ClassSelection"] then
+			LOCAL_PLAYER:ClearOverrideCamera()
+		end
+
+		if ResourceChangedEventListener then
+			ResourceChangedEventListener:Disconnect()
+			ResourceChangedEventListener = nil
+		end
+		isUpgrading = false
+
+		Events.Broadcast("Changing Menu", _G.MENU_TABLE["NONE"])
+
+		ConfirmChoiceButton.isInteractable = false -- disable button
+		-- Play audio
+		Audio_ClassConfirmed:Play() 
+		Audio_ClassConfirmed_2:Play()
+		Audio_ClassConfirmed_3:Play()
+
+		local dataTable = CurrentClassButton.clientUserData.dataTable -- Get the data for the Current Class Button
+		Events.BroadcastToServer("ClassChanged_SERVER", META_AP()[dataTable["ClassID"]]) -- broadcast to server the player's selected class
+	end
 end
 
 -- Spawn Class Buttons in LeftPanel
@@ -671,7 +866,7 @@ for i, childClass in ipairs(MenuData:GetChildren()) do
 end
 
 -- Connect ability buttons
-for i, abilityPanel in ipairs(RightPanel_AbilitiesPanel:GetChildren()) do
+for i, abilityPanel in ipairs(RightPanel_AbilityButtons:GetChildren()) do
 	local buttonComponent = abilityPanel:GetCustomProperty("Button"):WaitForObject()
 	buttonComponent.clickedEvent:Connect(OnAbilityClicked)
 	buttonComponent.hoveredEvent:Connect(OnAbilityHovered)
@@ -685,7 +880,7 @@ end
 
 -- Setup the Upgrade button
 RightPanel_UpgradeButton.clickedEvent:Connect(OnUpgradeButtonClicked)
-RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
+--RightPanel_UpgradeButtonPanel.visibility = Visibility.FORCE_OFF
 
 -- Setup the Confirm Choice button
 ConfirmChoiceButton.clickedEvent:Connect(OnConfirmChoiceClicked)
@@ -698,6 +893,8 @@ SpinnerTask.repeatInterval = 0
 OnClassClicked(CurrentClassButton)
 Events.Connect("Menu Changed", OnMenuChanged)
 Events.Connect("GameStateChanged", OnGameStateChanged)
+Events.Connect("RestoreFromPodium", OnRestoreFromPodium)
+GlobalStatsButton.clickedEvent:Connect(OnGlobalStatsClicked)
 --Events.Connect("ClassChanged_CLIENT", OnClassChanged)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
@@ -711,7 +908,7 @@ OnMenuChanged(nil, _G.CurrentMenu)
 for _, player in ipairs(Game.GetPlayers()) do
 	ResourceListeners[player] = player.resourceChangedEvent:Connect(OnResourceChanged)
 
-	if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
+	--[[if _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] then 
 		AttachCostumeToPlayer(player)
-	end
+	end]]
 end

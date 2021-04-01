@@ -1,10 +1,15 @@
 ﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
+local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local function META_AP()
+	while not _G["Meta.Ability.Progression"] do
+		Task.Wait()
+	end
     return _G["Meta.Ability.Progression"]
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
+local ClassEquipment = script:GetCustomProperty("ClassEquipment"):WaitForObject()
 local SpecialAbility = script:GetCustomProperty("Ability"):WaitForObject()
 local Trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
@@ -14,6 +19,7 @@ local DEFAULT_Radius = Equipment:GetCustomProperty("EndingRadius")
 local OwnerImpulseAmount = Equipment:GetCustomProperty("OwnerImpulse")
 local DEFAULT_EnemyImpulseAmount = Equipment:GetCustomProperty("EnemyImpulse")
 local DEFAULT_DamageAmount = Equipment:GetCustomProperty("DamageAmount")
+local DEFAULT_Stun = {duration = 4.0, damage = 0, multiplier = 0}
 
 local PlayerVFX = nil
 local DashImpulseVector = nil
@@ -23,14 +29,19 @@ local TriggerEventConnection = nil
 local AttachedFX = nil
 
 function AddImpulseToPlayer(player)
+	--[[
 	local directionVector = player:GetWorldPosition() - SpecialAbility.owner:GetWorldPosition()
 	directionVector = directionVector/directionVector.size
 	directionVector.z = 0.5
 	local impulseVector = directionVector * META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod2", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Enemy Impulse")
 
 	player:ResetVelocity()
-	player:AddImpulse(impulseVector)
+	player:AddImpulse(impulseVector)]]
 	
+	-- Apply stun
+	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Stun")
+	API_SE.ApplyStatusEffect(player, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+
 	-- Do damage
 	local dmgAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, SpecialAbility.name..": Damage")
 	local dmg = Damage.New(dmgAmount)
@@ -62,10 +73,10 @@ function ToggleDash(mode)
 	end
 	
 	if mode then
-		originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
-		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
-		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction
+		--[[originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
+		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]]--
 		originalPlayerSettings.BrakingDecelerationWalking = SpecialAbility.owner.brakingDecelerationWalking
+		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
 		
 		SpecialAbility.owner.movementControlMode = MovementMode.NONE
 		SpecialAbility.owner.animationStance = "1hand_melee_shield_block"
@@ -82,11 +93,11 @@ function ToggleDash(mode)
 	else
 		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
-
-		SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
-		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
-		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction
+		--[[SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
+		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction]]--
 		SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
+		_G["Consumables"].SetMovement(SpecialAbility.owner)
 	end
 	isDashing = mode
 end
@@ -104,7 +115,7 @@ end
 function OnAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 7, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -122,7 +133,8 @@ function OnAbilityCooldown(thisAbility)
 end
 
 function OnEquip(equipment, player)
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().R,  META_AP().TANK)
+	local skin = equipment:GetCustomProperty("RID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().TANK, player.team, skin, META_AP().R)
 end
 
 function OnUnequip(equipment, player)
@@ -137,8 +149,8 @@ function OnUnequip(equipment, player)
 	end
 end
 
-Equipment.equippedEvent:Connect(OnEquip)
-Equipment.unequippedEvent:Connect(OnUnequip)
+ClassEquipment.equippedEvent:Connect(OnEquip)
+ClassEquipment.unequippedEvent:Connect(OnUnequip)
 SpecialAbility.castEvent:Connect(OnAbilityCast)
 SpecialAbility.executeEvent:Connect(OnAbilityExecute)
 SpecialAbility.cooldownEvent:Connect(OnAbilityCooldown)

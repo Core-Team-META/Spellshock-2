@@ -1,4 +1,4 @@
-﻿------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 -- StoreScript
 -- Authors:	Montoli (META) (https://www.coregames.com/user/422e57c184374923b8ce32176b018db5)
 --			Estlogic (META) (https://www.coregames.com/user/385b45d7abdb499f8664c6cb01df521b)
@@ -9,6 +9,13 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
+
+local CP_API
+repeat
+	CP_API = _G["Class.Progression"]
+	Task.Wait()
+until CP_API
+
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
@@ -90,6 +97,37 @@ function ID_Converter(id, returnString, hierarchyName) -- Example input: Tank_Or
 
 		return class, team, skin, bind
 	end
+end
+
+function CheckIfLocked(player, class, requiredLvl)
+	
+	local selectedClass = 0
+	
+	if class == "Warrior" then
+		
+		selectedClass = CP_API.TANK
+		
+	elseif class == "Hunter" then
+	
+		selectedClass = CP_API.HUNTER
+		
+	elseif class == "Mage" then
+	
+		selectedClass = CP_API.MAGE
+		
+	elseif class == "Healer" then
+	
+		selectedClass = CP_API.HEALER
+		
+	elseif class == "Assassin" then
+	
+		selectedClass = CP_API.ASSASSIN
+		
+	end
+	
+	--print("Checking " .. class .. " : " .. CP_API.GetClassLevel(player, selectedClass) .. " vs " .. tostring(requiredLvl))
+	
+	return CP_API.GetClassLevel(player, selectedClass) >= requiredLvl
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -197,12 +235,16 @@ function VerifyPurchase(player, cosmeticId, isPartOfSubscription, cost, currency
 					--print("cost match")
 					if player:GetResource(currency) >= StoreElements[cosmeticId][1] and not StoreElements[cosmeticId][3] then -- check if player can afford the item.
 						--print("player can afford this")
-						--print(tostring(cosmeticId) .. " verified!")
-						return true
+						if CheckIfLocked(player, StoreElements[cosmeticId][4], StoreElements[cosmeticId][5]) then
+							--print(tostring(cosmeticId) .. " verified!")
+							return true
+						end
 					elseif StoreElements[cosmeticId][3] and player:HasPerk(subscriptionPerk) then
 						--print("player has subscription")
-						--print(tostring(cosmeticId) .. " verified!")
-						return true
+						if CheckIfLocked(player, StoreElements[cosmeticId][4], StoreElements[cosmeticId][5]) then
+							--print(tostring(cosmeticId) .. " verified!")
+							return true
+						end
 					end
 				end
 			end
@@ -291,7 +333,8 @@ function SaveOwnedCosmeticsAndMoney(player)
 		saveTable.COSMETICS.fromSubscription = playerOwnedSubscriptionCosmetics[player.id]
 
 		local ownedCosmetics = {}
-		for k, v in pairs(player:GetResources()) do
+		--for k, v in pairs(player:GetResources()) do
+		for k, v in pairs(_G.PerPlayerDictionary.GetCollection(player)) do
 			if IsCosmeticName(k) then
 				ownedCosmetics[k] = 1
 			end
@@ -325,7 +368,8 @@ function LoadOwnedCosmeticsAndMoney(player)
 
 				if data.COSMETICS.owned then
 					for k, v in pairs(data.COSMETICS.owned) do
-						player:SetResource(k, 1)
+						--player:SetResource(k, 1)
+						_G.PerPlayerDictionary.Set(player, k, 1)
 					end
 				end
 
@@ -385,9 +429,12 @@ function CheckSubscription(player)
 end
 
 function ResetPurchases(player)
-	for k, v in pairs(player:GetResources()) do
+	--for k, v in pairs(player:GetResources()) do
+	--	if IsCosmeticName(k) then
+	--		player:SetResource(v, 0)
+	for k, v in pairs(_G.PerPlayerDictionary.GetCollection(player)) do
 		if IsCosmeticName(k) then
-			player:SetResource(v, 0)
+			_G.PerPlayerDictionary.Set(player, k, 0)
 		end
 	end
 end
@@ -416,6 +463,7 @@ function InitializeStoreSever()
 				local propCost = storeInfo:GetCustomProperty("Cost")
 				local propResourceName = storeInfo:GetCustomProperty("CurrencyResourceName")
 				local propTags = storeInfo:GetCustomProperty("Tags")
+				local propLockedUntil = storeInfo:GetCustomProperty("LockedUntil")
 
 				local tagList = {}
 				--print("tags for " .. propID)
@@ -440,7 +488,7 @@ function InitializeStoreSever()
 					error("Item "..storeInfo.name.." has the same ID as another item: "..storeInfo:GetCustomProperty("ID"))
 				end
 
-				StoreElements[propID] = {propCost, propResourceName, partOfSubscription}
+				StoreElements[propID] = {propCost, propResourceName, partOfSubscription, propTags, propLockedUntil}
 			end
 		end
 	end

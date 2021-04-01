@@ -17,7 +17,7 @@ Gates[OrcGateLeft].targetRotation = Rotation.New(0, 0, 41)
 Gates[OrcGateRight].targetRotation = Rotation.New(0, 0, 92)
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_LOBBY and oldState ~= ABGS.GAME_STATE_LOBBY then
+	if newState ~= ABGS.GAME_STATE_ROUND then
 		for gate, settings in pairs(Gates) do
 			gate:SetWorldRotation(settings.startingRotation)
 		end

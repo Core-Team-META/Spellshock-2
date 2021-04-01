@@ -17,7 +17,7 @@ Objects {
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
-  ChildIds: 7332626658021963653
+  ChildIds: 7942565228071284537
   ChildIds: 15519234200537269827
   ChildIds: 880106829888079510
   ChildIds: 1551213308783341965
@@ -34,6 +34,7 @@ Objects {
   ChildIds: 783937512602456512
   ChildIds: 15804942893272727399
   ChildIds: 7134391544964931455
+  ChildIds: 1672145936829432866
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -43,9 +44,38 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 1672145936829432866
+  Name: "estlogic"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "estlogic"
   }
 }
 Objects {
@@ -1553,8 +1583,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7332626658021963653
-  Name: "Environment_v8"
+  Id: 7942565228071284537
+  Name: "Environment_v12"
   Transform {
     Scale {
       X: 1
@@ -1563,30 +1593,88 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  CameraCollidable {
+  Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 2690972611223122670
+      key: 1802962906714921640
+      value {
+      }
+    }
+    ParameterOverrideMap {
+      key: 3655646741166042187
       value {
         Overrides {
-          Name: "Name"
-          String: "Environment_v8"
+          Name: "bp:Intensity"
+          Float: 0.85
+        }
+        Overrides {
+          Name: "bp:Radius"
+          Float: 300
         }
       }
     }
     ParameterOverrideMap {
-      key: 6849253983036855207
+      key: 4662501779038797083
       value {
         Overrides {
-          Name: "bp:Light Absorption Amount"
-          Float: 1.2
+          Name: "bp:Fog Density"
+          Float: 3
+        }
+        Overrides {
+          Name: "bp:Layered Fog Density"
+          Float: 0.2
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5342039914114689738
+      value {
+        Overrides {
+          Name: "bp:Cloud Opacity"
+          Float: 0.7
+        }
+        Overrides {
+          Name: "bp:Cloud Wisp Color"
+          Color {
+            R: 0.74
+            G: 0.0244098939
+            B: 0.0244098939
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6668755532381922856
+      value {
+      }
+    }
+    ParameterOverrideMap {
+      key: 18071166912119165262
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Environment_v12"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
     TemplateAsset {
-      Id: 12982727639299389883
+      Id: 10083459288577079857
     }
   }
 }

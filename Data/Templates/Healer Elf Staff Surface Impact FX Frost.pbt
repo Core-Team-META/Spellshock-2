@@ -7,7 +7,7 @@ Assets {
       RootId: 13587140553705695835
       Objects {
         Id: 13587140553705695835
-        Name: "Healer Staff Surface Impact FX"
+        Name: "Healer Elf Staff Surface Impact FX Frost"
         Transform {
           Scale {
             X: 1
@@ -82,6 +82,10 @@ Assets {
               B: 0.679999948
               A: 1
             }
+          }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 2
           }
         }
         Collidable_v2 {
@@ -194,7 +198,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -271,7 +275,7 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
         }
       }
       Objects {
@@ -389,5 +393,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 80
+  SerializationVersion: 81
 }

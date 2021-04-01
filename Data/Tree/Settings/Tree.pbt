@@ -107,7 +107,7 @@ Objects {
         }
         ChatPosition {
           X: 15
-          Y: -20
+          Y: -40
         }
         ChatSize {
           X: 450
@@ -141,8 +141,8 @@ Objects {
         key: "vfx"
         value {
           LowDistance: 4500
-          MediumDistance: 7000
-          HighDistance: 9000
+          MediumDistance: 8000
+          HighDistance: 13000
         }
       }
     }

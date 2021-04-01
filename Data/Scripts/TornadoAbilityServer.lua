@@ -67,13 +67,13 @@ function PlaceObject(thisAbility)
 		API_SE.ApplyStatusEffect(enemy, API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
 	end	]]
 	
-	Timer = 0
+	Timer = 0.1
 end
 
 function OnSpecialAbilityCooldown(thisAbility)
 	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().Q, "mod6", 15, thisAbility.name..": Cooldown")
 	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) then
+		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
 			thisAbility:AdvancePhase()
 		end
 	end, Cooldown)
@@ -83,7 +83,8 @@ function OnEquip(equipment, player)
 	table.insert(EventListeners, SpecialAbility.executeEvent:Connect(PlaceObject))
 	table.insert(EventListeners, SpecialAbility.cooldownEvent:Connect( OnSpecialAbilityCooldown ))
 	
-	PlayerVFX = META_AP().VFX.GetCurrentCosmetic(player, META_AP().Q,  META_AP().MAGE)
+	local skin = Equipment:GetCustomProperty("QID") or 1
+	PlayerVFX = META_AP().VFX.GetCosmeticMuid(player, META_AP().MAGE, player.team, skin, META_AP().Q)
 end
 
 function OnUnequip(equipment, player)
@@ -109,6 +110,8 @@ function Tick(deltaTime)
 				dmg.reason = DamageReason.COMBAT
 				dmg.sourcePlayer = SpecialAbility.owner
 				dmg.sourceAbility = SpecialAbility
+
+				print(tostring(mod4.damage))
 
 				local attackData = {
 					object = enemy,

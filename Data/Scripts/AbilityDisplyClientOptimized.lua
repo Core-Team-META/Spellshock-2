@@ -32,7 +32,7 @@ local BINDS = {
     ability_extra_20 = "Q",
     ability_extra_22 = "E",
     ability_extra_23 = "R",
-    ability_extra_24 = "T"
+    ability_extra_4 = "T"
 }
 
 -- Constants
@@ -80,6 +80,12 @@ function OnAbilityIconSet(thisAbility, icon, color)
         DURATION_BAR.progress = 0
         currentAbility.clientUserData.durationBar = DURATION_BAR
         
+        if RMB_INDICATOR then
+            currentAbility.clientUserData.isSteering = false
+            RMB_INDICATOR.visibility = Visibility.FORCE_OFF
+            ACTIVE_FLASH.visibility = Visibility.FORCE_OFF
+		end
+
         -- Listen for networked property changes
         if networkedEventListener then
         	networkedEventListener:Disconnect()
