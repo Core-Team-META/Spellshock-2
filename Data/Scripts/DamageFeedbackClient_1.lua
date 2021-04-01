@@ -31,7 +31,7 @@ local IS_BIG_TEXT = COMPONENT_ROOT:GetCustomProperty("DisplayBigText")
 local SHOW_HIT_FEEDBACK = COMPONENT_ROOT:GetCustomProperty("ShowHitFeedback")
 local SHOW_HEALTH_CHANGE_EFFECT = COMPONENT_ROOT:GetCustomProperty("ShowHealthChangeEffect")
 local HIT_FEEDBACK_SOUND = COMPONENT_ROOT:GetCustomProperty("HitFeedbackSound"):WaitForObject()
-local SameTeamDamageColor = Color.New(1,0.8,0, 1)
+local SameTeamDamageColor = Color.New(1,0.2,0, 1)
 
 -- Constant variables
 local LOCAL_PLAYER = Game.GetLocalPlayer()
