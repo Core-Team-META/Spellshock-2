@@ -31,6 +31,50 @@ Objects {
   }
 }
 Objects {
+  Id: 1716975878147083837
+  Name: "MetaPlayerStorageHelper_Server"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15057716785033630782
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StorageManager"
+      ObjectReference {
+        SelfId: 6952690835358040343
+      }
+    }
+    Overrides {
+      Name: "cs:APIBasicGameState"
+      AssetReference {
+        Id: 11974742996071064388
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16778058870011329019
+    }
+  }
+}
+Objects {
   Id: 6952690835358040343
   Name: "MetaPlayerStorageManager_Server"
   Transform {

@@ -285,8 +285,29 @@ local function OnPlayerJoined(player)
     CONSUMABLES.context.OnPlayerJoined(player)
 end
 
---@param object player
 local function OnPlayerLeft(player)
+    OnSavePlayerData(player)
+
+    for _, equipment in ipairs(player:GetEquipment()) do
+		if Object.IsValid(equipment) then
+			equipment:Unequip()
+			equipment:Destroy()
+		end
+	end
+    
+     --Nil out data tables
+     META_AP.context.OnPlayerLeft(player)
+     META_COSMETIC.context.OnPlayerLeft(player)
+     DAILY_SHOP.context.OnPlayerLeft(player)
+     ADAPTOR.context.OnPlayerLeft(player)
+     CLASS_PROGRESSION.context.OnPlayerLeft(player)
+     CONSUMABLES.context.OnPlayerLeft(player)
+     --MOUNT_MANAGER.context.OnPlayerLeft(player)
+end
+
+
+--@param object player
+function OnSavePlayerData(player)
     local data = Storage.GetPlayerData(player)
 
     --Build string from data tables
@@ -305,22 +326,6 @@ local function OnPlayerLeft(player)
     data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
     Storage.SetPlayerData(player, data)
-
-    --Nil out data tables
-    META_AP.context.OnPlayerLeft(player)
-    META_COSMETIC.context.OnPlayerLeft(player)
-    DAILY_SHOP.context.OnPlayerLeft(player)
-    ADAPTOR.context.OnPlayerLeft(player)
-    CLASS_PROGRESSION.context.OnPlayerLeft(player)
-    CONSUMABLES.context.OnPlayerLeft(player)
-    --MOUNT_MANAGER.context.OnPlayerLeft(player)
-
-    for _, equipment in ipairs(player:GetEquipment()) do
-		if Object.IsValid(equipment) then
-			equipment:Unequip()
-			equipment:Destroy()
-		end
-	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
