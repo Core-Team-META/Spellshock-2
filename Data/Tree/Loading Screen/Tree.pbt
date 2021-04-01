@@ -120,6 +120,7 @@ Objects {
         Id: 1814707273787853473
       }
       Color {
+        A: 1
       }
       TeamSettings {
       }
