@@ -760,6 +760,7 @@ Objects {
   ChildIds: 15940961261362330534
   ChildIds: 4423950474415881218
   ChildIds: 5853737910244577816
+  ChildIds: 16018582516280022432
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -770,6 +771,38 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 16018582516280022432
+  Name: "StatusEffectsDefinition_Electric"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 388783345485890869
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4312583580324946312
+    }
   }
 }
 Objects {
@@ -1110,6 +1143,7 @@ Objects {
   ChildIds: 6127590355833688739
   ChildIds: 12694298116994829951
   ChildIds: 11872582013329450630
+  ChildIds: 15530579309059873086
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1121,6 +1155,38 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+}
+Objects {
+  Id: 15530579309059873086
+  Name: "StatusEffectsDefinition_Electric"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4042260062498603935
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4312583580324946312
+    }
   }
 }
 Objects {

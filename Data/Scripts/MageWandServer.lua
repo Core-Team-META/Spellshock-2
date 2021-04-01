@@ -61,6 +61,7 @@ function OnTargetImpact(theWeapon, impactData)
 	}
 	COMBAT().ApplyDamage(attackData)
 
+	--[[
 	if impactData.targetObject:IsA("Player") then
 		print ("Doing the impulse!")
 		local impactPlayer = impactData.targetObject
@@ -70,18 +71,18 @@ function OnTargetImpact(theWeapon, impactData)
 		speed = speed:GetNormalized()
 		speed = speed * 800 + Vector3.UP * 400
 		impactPlayer:AddImpulse(speed * impactPlayer.mass)
-	end
+	end]]--
 	
 	-- Apply the slowdown thing on the heavy attack
 	if  impactData.targetObject:IsA("Player") then
 		--local status = META_AP().GetAbilityMod(theWeapon.owner, META_AP().LMB, "mod5", {}, WEAPON.name .. ": Status")
 		API_SE.ApplyStatusEffect(
 			impactData.targetObject,
-			API_SE.STATUS_EFFECT_DEFINITIONS["Slow"].id,
+			API_SE.STATUS_EFFECT_DEFINITIONS["Electric"].id,
 			theWeapon.owner,
-			1,
-			0,
-			0.1
+			3,
+			15,
+			1
 			--status.duration,
 			--status.damage,
 			--status.multiplier
