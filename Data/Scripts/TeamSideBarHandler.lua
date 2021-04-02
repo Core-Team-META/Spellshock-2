@@ -1,4 +1,9 @@
-﻿local TeamName = script:GetCustomProperty("TeamName"):WaitForObject()
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local TeamName = script:GetCustomProperty("TeamName"):WaitForObject()
 local TeamInfoPanel = script:GetCustomProperty("TeamInfoPanel"):WaitForObject()
 local TeamMembersPanel = script:GetCustomProperty("TeamMembersPanel"):WaitForObject()
 local Helper_TeamMemberPanel = script:GetCustomProperty("Helper_TeamMemberPanel")

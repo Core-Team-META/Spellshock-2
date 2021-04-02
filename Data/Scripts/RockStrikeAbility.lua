@@ -1,4 +1,9 @@
-﻿-- Module dependencies
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))

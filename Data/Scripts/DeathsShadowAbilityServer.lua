@@ -1,4 +1,9 @@
-﻿-- Module dependencies
+﻿-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
+-- Module dependencies
 local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE:Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
@@ -78,8 +83,6 @@ function OnBindingPressed(player, binding)
 	end
 end
 
-
-
 function OnPlayerDamaged(player, damage)
 	if isInvisible and not player.isDead then
 		DisableInvisility()
@@ -93,9 +96,12 @@ function OnAbilityExecute(thisAbility)
 	isInvisible = true
 	SpecialAbility.serverUserData.OriginalStance = SpecialAbility.owner.animationStance
 	SpecialAbility.owner.animationStance = "unarmed_sit_chair_upright"
+	API_SE.RemoveAllStatusEffects(thisAbility.owner)
 	thisAbility.owner.maxWalkSpeed = OriginalWalkSpeed + META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod4", DEFAULT_SpeedBoost, SpecialAbility.name..": Speed Boost")
 	Timer = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().E, "mod3", DEFAULT_Duration, SpecialAbility.name..": Duration")
 	SetNetworkProperty(isInvisible)
+	Task.Wait()
+	API_SE.RemoveAllStatusEffects(thisAbility.owner)
 end
 
 function OnSpecialAbilityCooldown(thisAbility)

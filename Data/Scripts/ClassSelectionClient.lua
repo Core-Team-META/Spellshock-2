@@ -1,4 +1,9 @@
-﻿local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
