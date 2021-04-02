@@ -55,6 +55,36 @@ Objects {
   }
 }
 Objects {
+  Id: 5892343681043908828
+  Name: "ServerAnalysis"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 783937512602456512
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 10932134586341208386
+    }
+  }
+}
+Objects {
   Id: 11075572209613369341
   Name: "Team Balancing"
   Transform {
