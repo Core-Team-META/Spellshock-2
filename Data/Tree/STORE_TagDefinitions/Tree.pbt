@@ -211,7 +211,7 @@ Objects {
     Overrides {
       Name: "cs:HighlightColor"
       Color {
-        R: 0.0438417792
+        R: 0.0438416973
         G: 0.66200006
         A: 1
       }
