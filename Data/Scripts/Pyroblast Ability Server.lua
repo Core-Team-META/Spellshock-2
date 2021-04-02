@@ -1,3 +1,8 @@
+-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
 -- Module dependencies
 local MODULE = require(script:GetCustomProperty("ModuleManager"))
 function COMBAT()
@@ -96,13 +101,7 @@ function OnSpecialAbilityExecute(thisAbility)
 	local viewRotation = thisAbility.owner:GetViewWorldRotation()
 	local viewPosition = thisAbility.owner:GetViewWorldPosition()
 	local targetingRange = 100000
-		--[[META_AP().GetAbilityMod(
-		SpecialAbility.owner,
-		META_AP().R,
-		"mod3",
-		DEFAULT_TargetingRange,
-		SpecialAbility.name .. ": Targeting Range"
-	)]]
+
 	local endPoint = viewPosition + (viewRotation * Vector3.FORWARD * targetingRange)
 	local hitResult = World.Raycast(viewPosition, endPoint, {ignoreTeams = thisAbility.owner.team})
 
@@ -247,9 +246,6 @@ function Tick(deltaTime)
 			CurrentProjectile.homingTarget = CurrentTarget
 			CurrentProjectile.homingAcceleration = HOMING_ACCELERATION
 			CurrentProjectile.drag = 10
-			
-			--local distanceVector = endPoint - CurrentProjectile:GetWorldPosition()
-			--CurrentProjectile.lifeSpan = distanceVector.size / ProjectileSpeed + 1.5
 		else
 			-- Disable homing
 			CurrentProjectile.homingTarget = nil
@@ -257,14 +253,6 @@ function Tick(deltaTime)
 			CurrentProjectile.speed = ProjectileSpeed
 			CurrentProjectile.drag = -0.1
 		end
-
-		--local newVelocity = viewRotation * Vector3.FORWARD * ProjectileSpeed
-		--CurrentProjectile:SetVelocity(newVelocity)
-
-		--[[local viewRotation = SpecialAbility.owner:GetViewWorldRotation()
-		local directionVector = viewRotation * Vector3.FORWARD 
-		local velocityVector = directionVector * ProjectileSpeed 
-		CurrentProjectile:SetVelocity(velocityVector)]]
 	end
 end
 

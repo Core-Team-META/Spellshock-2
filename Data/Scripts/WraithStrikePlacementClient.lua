@@ -1,3 +1,8 @@
+-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
 local function META_AP()
 	return _G["Meta.Ability.Progression"]
 end

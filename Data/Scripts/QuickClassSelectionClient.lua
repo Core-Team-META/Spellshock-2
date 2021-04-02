@@ -1,4 +1,9 @@
-﻿local Respawn_UI = script:GetCustomProperty("Respawn_UI"):WaitForObject()
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local Respawn_UI = script:GetCustomProperty("Respawn_UI"):WaitForObject()
 local QuickClassSelectionPanel = script:GetCustomProperty("QuickClassSelectionPanel"):WaitForObject()
 local ClassMenuData = script:GetCustomProperty("ClassMenuData"):WaitForObject()
 local Audio = script:GetCustomProperty("Audio"):WaitForObject()
