@@ -152,35 +152,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5611420104663390633
-  Name: "Perk Shop"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13334626079586580612
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Perk Shop"
-  }
-}
-Objects {
   Id: 4683464414535277849
   Name: "Combat Stats Scoreboard"
   Transform {

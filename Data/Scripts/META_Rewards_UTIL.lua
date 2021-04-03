@@ -53,7 +53,7 @@ API.RARITY = {
     LEGENDARY = 4
 }
 
-API.GOLD_REFRESH = {
+API.GOLD_REFRESH = { -- Daily Shop refresh cost in Gold
     [1] = 500,
     [2] = 750,
     [3] = 1000,
@@ -66,7 +66,7 @@ API.GOLD_REFRESH = {
     [10] = 20000
 }
 
-API.PREMIUM_REFRESH = {
+API.PREMIUM_REFRESH = { -- Daily Shop refresh cost in Premium currency
     [1] = 10,
     [2] = 12,
     [3] = 15,
