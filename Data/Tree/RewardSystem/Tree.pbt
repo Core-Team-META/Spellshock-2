@@ -3279,7 +3279,7 @@ Objects {
   Control {
     Width: 226
     Height: 34
-    UIY: -2.15045166
+    UIY: 8.15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3299,6 +3299,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
