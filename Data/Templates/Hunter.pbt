@@ -1797,16 +1797,16 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              G: 0.75
-              B: 0.198675692
+              R: 0.65
+              G: 0.374503285
               A: 1
             }
           }
           Overrides {
             Name: "bp:Inner Core Color"
             Color {
-              G: 0.74
-              B: 0.0343046486
+              R: 0.5
+              G: 0.149006635
               A: 1
             }
           }
