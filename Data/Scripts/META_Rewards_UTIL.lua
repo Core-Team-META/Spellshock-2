@@ -53,10 +53,36 @@ API.RARITY = {
     LEGENDARY = 4
 }
 
+API.GOLD_REFRESH = {
+    [1] = 500,
+    [2] = 750,
+    [3] = 1000,
+    [4] = 1500,
+    [5] = 2500,
+    [6] = 4000,
+    [7] = 7500,
+    [8] = 10000,
+    [9] = 15000,
+    [10] = 20000
+}
+
+API.PREMIUM_REFRESH = {
+    [1] = 10,
+    [2] = 12,
+    [3] = 15,
+    [4] = 18,
+    [5] = 20,
+    [6] = 30,
+    [7] = 35,
+    [8] = 40,
+    [9] = 45,
+    [10] = 50
+}
+
 local SKILL_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 5, max = 8},
-    [API.RARITY.RARE] =      {min = 10, max = 15},
-    [API.RARITY.EPIC] =      {min = 30, max = 35},
+    [API.RARITY.UNCOMMON] = {min = 5, max = 8},
+    [API.RARITY.RARE] = {min = 10, max = 15},
+    [API.RARITY.EPIC] = {min = 30, max = 35},
     [API.RARITY.LEGENDARY] = {min = 50, max = 75}
     --[[ KB Test
     [API.RARITY.UNCOMMON] =  {min = 500000, max = 800000},
@@ -67,37 +93,38 @@ local SKILL_AMOUNT = {
 }
 
 local COSMETIC_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 2, max = 4},
-    [API.RARITY.RARE] =      {min = 4, max = 6},
-    [API.RARITY.EPIC] =      {min = 6, max = 8},
+    [API.RARITY.UNCOMMON] = {min = 2, max = 4},
+    [API.RARITY.RARE] = {min = 4, max = 6},
+    [API.RARITY.EPIC] = {min = 6, max = 8},
     [API.RARITY.LEGENDARY] = {min = 8, max = 10}
 }
 
 local GOLD_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 150, max = 250},
-    [API.RARITY.RARE] =      {min = 400, max = 500},
-    [API.RARITY.EPIC] =      {min = 800, max = 950},
+    [API.RARITY.UNCOMMON] = {min = 150, max = 250},
+    [API.RARITY.RARE] = {min = 400, max = 500},
+    [API.RARITY.EPIC] = {min = 800, max = 950},
     [API.RARITY.LEGENDARY] = {min = 1500, max = 1500}
 }
 
-local HEALING_POTION_AMOUNT = { -- these amounts are XP towards leveling up the healing potion
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
+local HEALING_POTION_AMOUNT = {
+    -- these amounts are XP towards leveling up the healing potion
+    [API.RARITY.UNCOMMON] = {min = 10, max = 20},
+    [API.RARITY.RARE] = {min = 20, max = 30},
+    [API.RARITY.EPIC] = {min = 30, max = 40},
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
 local MOUNT_SPEED_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 10, max = 20},
-    [API.RARITY.RARE] =      {min = 20, max = 30},
-    [API.RARITY.EPIC] =      {min = 30, max = 40},
+    [API.RARITY.UNCOMMON] = {min = 10, max = 20},
+    [API.RARITY.RARE] = {min = 20, max = 30},
+    [API.RARITY.EPIC] = {min = 30, max = 40},
     [API.RARITY.LEGENDARY] = {min = 40, max = 50}
 }
 
 local CLASS_XP_AMOUNT = {
-    [API.RARITY.UNCOMMON] =  {min = 1000, max = 1200},
-    [API.RARITY.RARE] =      {min = 2000, max = 2400},
-    [API.RARITY.EPIC] =      {min = 4000, max = 4500},
+    [API.RARITY.UNCOMMON] = {min = 1000, max = 1200},
+    [API.RARITY.RARE] = {min = 2000, max = 2400},
+    [API.RARITY.EPIC] = {min = 4000, max = 4500},
     [API.RARITY.LEGENDARY] = {min = 9000, max = 9900}
 }
 
@@ -114,7 +141,7 @@ local function GetDefaultRarity(reward)
         reward.rarity = API.RARITY.EPIC
     elseif randomChance <= 70 and randomChance > 40 then
         reward.rarity = API.RARITY.RARE
-    else -- randomChance <= 40    
+    else -- randomChance <= 40
         reward.rarity = API.RARITY.UNCOMMON
     end
 end
@@ -124,7 +151,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 function API.GetSkillReward()
     local reward = {}
-    GetDefaultRarity(reward)    
+    GetDefaultRarity(reward)
 
     local amountsTable = SKILL_AMOUNT[reward.rarity]
     reward.amount = math.random(amountsTable.min, amountsTable.max)
@@ -182,7 +209,7 @@ function API.GetLoserGoldAmmount()
     if randomChance > 80 then
         reward.rarity = API.RARITY.RARE
         reward.bind = 1
-    else -- randomChance <= 80    
+    else -- randomChance <= 80
         reward.rarity = API.RARITY.UNCOMMON
         reward.bind = 1
     end
@@ -201,7 +228,7 @@ function API.GetWinnerGoldAmmount()
     if randomChance > 80 then
         reward.rarity = API.RARITY.LEGENDARY
         reward.bind = 2
-    else -- randomChance <= 80 
+    else -- randomChance <= 80
         reward.rarity = API.RARITY.EPIC
         reward.bind = 2
     end
@@ -276,13 +303,26 @@ end
 
 --@param int value
 --@return int cost
-function API.CalculateRefreshCost(value)
-    if value == 0 then
-        return 500
-    else
-        return CoreMath.Round((2 ^ value) * 500)
+function API.CalculateGoldRefreshCost(value)
+    value = tonumber(value + 1)
+    if value > 10 then
+        value = 10
     end
+    return CoreMath.Round(API.GOLD_REFRESH[value])
 end
+
+--@param int value
+--@return int cost
+function API.CalculatePremiumRefreshCost(value)
+    value = tonumber(value + 1)
+    if value == 0 then
+        value = 1
+    elseif value > 10 then
+        value = 10
+    end
+    return CoreMath.Round(API.PREMIUM_REFRESH[value])
+end
+
 
 function API.GetRewardCost(dailyRewards)
     local cost = 0
@@ -343,8 +383,10 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
     local tempTable = {}
     for _, rewardType in ipairs(list:GetChildren()) do
         local id = rewardType:GetCustomProperty("ID")
-        if id == API.REWARD_TYPES.GOLD or id == API.REWARD_TYPES.COSMETIC or 
-        id == API.REWARD_TYPES.CONSUMABLES or id == API.REWARD_TYPES.MOUNT_SPEED then
+        if
+            id == API.REWARD_TYPES.GOLD or id == API.REWARD_TYPES.COSMETIC or id == API.REWARD_TYPES.CONSUMABLES or
+                id == API.REWARD_TYPES.MOUNT_SPEED
+         then
             tempTable[id] = tempTable[id] or {}
             tempTable[id] = GetRewardInfo(tempTable[id], rewardType)
         end
@@ -355,13 +397,14 @@ function API.BuildRewardsTable(list, classData) -- #FIXME
         for _, class in ipairs(classData:GetChildren()) do
             local classId = CONST.CLASS[class:GetCustomProperty("ClassID")]
             tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId] or {}
-            for _, bind in ipairs(class:GetChildren()) do 
+            for _, bind in ipairs(class:GetChildren()) do
                 local bindId = CONST.BIND[bind:GetCustomProperty("Bind")]
                 local icon = bind:GetCustomProperty("Icon")
                 local description = bind:GetCustomProperty("Description")
                 local classIcon = class:GetCustomProperty("Icon")
 
-                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] = tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] or {}
+                tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] =
+                    tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId] or {}
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Name = bind.name
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Image = icon
                 tempTable[API.REWARD_TYPES.SKILLPOINTS][classId][bindId].Description = description

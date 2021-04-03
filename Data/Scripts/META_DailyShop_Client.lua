@@ -288,7 +288,7 @@ local function BuildRewardSlots(tbl)
             BuildShopItems(slot, id, class, bind, reward)
         end
     end
-    local refreshCost = REWARD_UTIL.CalculateRefreshCost(refreshCount)
+    local refreshCost = REWARD_UTIL.CalculateGoldRefreshCost(refreshCount)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.GOLD) then
         AMOUNT.text = FormatInt(refreshCost)
         AMOUNT_SHADOW.text = FormatInt(refreshCost)
@@ -306,7 +306,7 @@ local function BuildRewardSlots(tbl)
 
         REFRESH_BUTTON.isInteractable = true
     end
-    refreshCost = CoreMath.Round(refreshCost / 500)
+    refreshCost = REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount)
     if refreshCost > LOCAL_PLAYER:GetResource(CONST.COSMETIC_TOKEN) then
         REFRESH_AMOUNT_SHADOW_PREMIUM.text = FormatInt(refreshCost)
         REFRESH_AMOUNT_PREMIUM.text = FormatInt(refreshCost)

@@ -667,7 +667,7 @@ function UpdateEntryButton(entry, highlighted)
 	end
 
 	if highlighted then
-		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].color) --matching rarity
+		SetFramesColor(entry.frames, RarityDefs[entry.data.rarity].highlightColor) --matching rarity
 		--SetFramesColor(entry.frames, entry.frames[1]:GetColor() + entry.frameHoverColor) dulled down
 		--entry.priceBG:SetColor(entry.priceBGHoverColor)
 		--entry.BGMesh:SetColor(RarityDefs[entry.data.rarity].color + entry.geo:GetCustomProperty("HighlightColor")) --matching rarity
@@ -1407,9 +1407,12 @@ function InitStore()
 			local propTagColor = v:GetCustomProperty("TagColor")
 			local propNumber = v:GetCustomProperty("Number")
 			local propIcon = v:GetCustomProperty("Icon")
+			local propHighlightColor = v:GetCustomProperty("HighlightColor")
+
 			RarityDefs[v.name] = {
 				name = propDisplayName,
 				color = propTagColor,
+				highlightColor = propHighlightColor,
 				number = propNumber,
 				icon = propIcon
 			}
