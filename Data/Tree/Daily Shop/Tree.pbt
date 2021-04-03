@@ -44963,7 +44963,6 @@ Objects {
   ParentId: 4362092203162598167
   UnregisteredParameters {
   }
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

@@ -1,6 +1,35 @@
 Name: "Brent"
 RootId: 3612684566017260609
 Objects {
+  Id: 3457668934632133835
+  Name: "Progression Mutlipliers"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612684566017260609
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Progression Mutlipliers"
+  }
+}
+Objects {
   Id: 5611420104663390633
   Name: "Perk Shop"
   Transform {

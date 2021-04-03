@@ -14124,8 +14124,32 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:xsm"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:gsm"
+      Float: 0
+    }
+    Overrides {
       Name: "cs:rewards:isrep"
       Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:tooltip"
+      String: "Server Wide XP Multiplier"
+    }
+    Overrides {
+      Name: "cs:gsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:gsm:tooltip"
+      String: "Server Wide Gold Multiplier"
     }
   }
   WantsNetworking: true

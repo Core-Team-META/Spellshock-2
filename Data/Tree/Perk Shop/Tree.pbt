@@ -126,6 +126,42 @@ Objects {
         }
       }
     }
+    Overrides {
+      Name: "cs:SELFGOLDBOOST"
+      NetReference {
+        Key: "4299f56202d54c70862eda996b69bc67"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:SELFXPBOOST"
+      NetReference {
+        Key: "ed3f26e02a3f4bbaa2b8953812753225"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:SERVERGOLDBOOST"
+      NetReference {
+        Key: "abbb8b1d3a674f4d83a3c1c3dbcc312d"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:SERVERXPBOOST"
+      NetReference {
+        Key: "25da71fa7f8c4e95b9f553f6ab9163f9"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -21218,7 +21254,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "3f8c29a31a864f3ea218c867addcd49a"
+        Key: "abbb8b1d3a674f4d83a3c1c3dbcc312d"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -22309,7 +22345,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "3f8c29a31a864f3ea218c867addcd49a"
+        Key: "25da71fa7f8c4e95b9f553f6ab9163f9"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -24120,7 +24156,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "3f8c29a31a864f3ea218c867addcd49a"
+        Key: "4299f56202d54c70862eda996b69bc67"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }
@@ -25876,7 +25912,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "3f8c29a31a864f3ea218c867addcd49a"
+        Key: "ed3f26e02a3f4bbaa2b8953812753225"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }

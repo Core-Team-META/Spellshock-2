@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/2
--- Version 0.1.2
+-- Date: 2021/4/3
+-- Version 0.1.3
 local isEnabled = true
 if not isEnabled then
     return
@@ -13,7 +13,11 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
---
+
+while not _G.PROGRESS_MULTIPLIER do
+    Task.Wait()
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- NET REFRENCE
 ------------------------------------------------------------------------------------------------------------------------
@@ -26,29 +30,96 @@ local JewelPack2 = script:GetCustomProperty("JewelPack2")
 local JewelPack3 = script:GetCustomProperty("JewelPack3")
 local JewelPack4 = script:GetCustomProperty("JewelPack4")
 local VIP_MEMBERSHIP = script:GetCustomProperty("VIPMEMBR")
+local SELFGOLDBOOST = script:GetCustomProperty("SELFGOLDBOOST")
+local SELFXPBOOST = script:GetCustomProperty("SELFXPBOOST")
+local SERVERGOLDBOOST = script:GetCustomProperty("SERVERGOLDBOOST")
+local SERVERXPBOOST = script:GetCustomProperty("SERVERXPBOOST")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- TABLE BUILDER
 ------------------------------------------------------------------------------------------------------------------------
 local bundles = {}
-bundles[1] = {
+bundles[#bundles + 1] = {
     perk = VIP_MEMBERSHIP,
-    storageId = 1,
-    perkType = 1,
-    flag = "IsVip",
+    storageId = CONST.PERK_STORAGE_KEYS.VIP_MEMBER,
+    perkType = CONST.PERK_TYPES.FLAG,
+    flag = CONST.VIP_MEMBERSHIP_KEY,
     resourceName = CONST.COSMETIC_TOKEN,
     reward = 10
 } --
 
-bundles[2] = {perk = GoldPack1, storageId = 2, resourceName = CONST.GOLD, reward = 2000}
-bundles[3] = {perk = GoldPack2, storageId = 3, resourceName = CONST.GOLD, reward = 5000}
-bundles[4] = {perk = GoldPack3, storageId = 4, resourceName = CONST.GOLD, reward = 25000}
-bundles[5] = {perk = GoldPack4, storageId = 5, resourceName = CONST.GOLD, reward = 100000}
-bundles[6] = {perk = JewelPack1, storageId = 6, resourceName = CONST.COSMETIC_TOKEN, reward = 25}
-bundles[7] = {perk = JewelPack2, storageId = 7, resourceName = CONST.COSMETIC_TOKEN, reward = 50}
-bundles[8] = {perk = JewelPack3, storageId = 8, resourceName = CONST.COSMETIC_TOKEN, reward = 100}
-bundles[9] = {perk = JewelPack4, storageId = 9, resourceName = CONST.COSMETIC_TOKEN, reward = 250}
-
+bundles[#bundles + 1] = {
+    perk = SELFGOLDBOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
+    perkType = CONST.PERK_TYPES.FLAG,
+    flag = CONST.SELF_GOLD_BOOST_KEY
+}
+bundles[#bundles + 1] = {
+    perk = SELFXPBOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SELF_XP_BOOST,
+    perkType = CONST.PERK_TYPES.FLAG,
+    flag = CONST.SELF_XP_BOOST_KEY
+}
+bundles[#bundles + 1] = {
+    perk = SERVERXPBOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SERVER_XP_BOOST,
+    perkType = CONST.PERK_TYPES.FLAG,
+    flag = CONST.SERVER_XP_BOOST_KEY
+}
+bundles[#bundles + 1] = {
+    perk = SERVERGOLDBOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
+    perkType = CONST.PERK_TYPES.FLAG,
+    flag = CONST.SERVER_GOLD_BOOST_KEY
+}
+bundles[#bundles + 1] = {
+    perk = GoldPack1,
+    storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK1,
+    resourceName = CONST.GOLD,
+    reward = 2000
+}
+bundles[#bundles + 1] = {
+    perk = GoldPack2,
+    storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK2,
+    resourceName = CONST.GOLD,
+    reward = 5000
+}
+bundles[#bundles + 1] = {
+    perk = GoldPack3,
+    storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK3,
+    resourceName = CONST.GOLD,
+    reward = 25000
+}
+bundles[#bundles + 1] = {
+    perk = GoldPack4,
+    storageId = CONST.PERK_STORAGE_KEYS.GOLD_PACK4,
+    resourceName = CONST.GOLD,
+    reward = 100000
+}
+bundles[#bundles + 1] = {
+    perk = JewelPack1,
+    storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK1,
+    resourceName = CONST.COSMETIC_TOKEN,
+    reward = 25
+}
+bundles[#bundles + 1] = {
+    perk = JewelPack2,
+    storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK2,
+    resourceName = CONST.COSMETIC_TOKEN,
+    reward = 50
+}
+bundles[#bundles + 1] = {
+    perk = JewelPack3,
+    storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK3,
+    resourceName = CONST.COSMETIC_TOKEN,
+    reward = 100
+}
+bundles[#bundles + 1] = {
+    perk = JewelPack4,
+    storageId = CONST.PERK_STORAGE_KEYS.PREM_PACK4,
+    resourceName = CONST.COSMETIC_TOKEN,
+    reward = 250
+}
 
 --Check to make sure all perks are enabled
 for _, bundle in ipairs(bundles) do
@@ -109,7 +180,7 @@ function CheckPerkCountWithStorage(player, data)
         if perkCount ~= storageCount then
             perks[bundle.storageId] = perkCount
 
-            if perkCount > storageCount then
+            if bundle.resourceName and perkCount > storageCount then
                 local countDifference = perkCount - storageCount
                 local reward = bundle.reward
                 if countDifference > 0 then
@@ -117,12 +188,13 @@ function CheckPerkCountWithStorage(player, data)
                 end
                 player:AddResource(bundle.resourceName, reward)
             end
-            if perkCount > storageCount and bundle.perkType == 1 then
-                player.serverUserData[bundle.flag] = true
+            if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
+                _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
         end
     end
     OnSavePerkData(player, data, perks)
+    _G.PROGRESS_MULTIPLIER.CalculateServerMultiplier()
 end
 
 -- If player spend and earns the currency resource, update the storage
@@ -148,14 +220,12 @@ function OnPlayerJoined(player)
         if not perks[bundle.storageId] then
             perks[bundle.storageId] = player:GetPerkCount(bundle.perk)
         end
-        if perks[bundle.storageId] == 1 then
-            player.serverUserData[bundle.flag] = true
+        if bundle.flag and player:HasPerk(bundle.perk) then
+            _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
         end
     end
     OnSavePerkData(player, data, perks)
     CheckPerkCountWithStorage(player, data)
-    warn(tostring(player.serverUserData.IsVip))
-
     -- Connect events that updates currency balance for player
     player.resourceChangedEvent:Connect(OnResourceChanged)
     player.perkChangedEvent:Connect(OnPerksChanged)
