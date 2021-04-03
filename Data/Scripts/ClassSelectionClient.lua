@@ -674,8 +674,12 @@ function AttachCostumeToPlayer(player)
 	--end
 end
 
-function DetachCostumeFromPlayer(player)
-	if player.clientUserData.LobbyCostume then
+function DetachCostumeFromPlayer(player, isLeaving)
+	if isLeaving then
+		for _, attachment in ipairs(player:GetAttachedObjects()) do
+			attachment:Destroy()
+		end
+	elseif player.clientUserData.LobbyCostume then
 		for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
 			attachment:Destroy()
 		end
@@ -750,7 +754,7 @@ end
 function OnPlayerLeft(player)
 	ResourceListeners[player]:Disconnect()
 	ResourceListeners[player] = nil
-	DetachCostumeFromPlayer(player)
+	DetachCostumeFromPlayer(player, true)
 end
 
 function isAllowed(delay)

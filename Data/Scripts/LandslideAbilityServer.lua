@@ -146,12 +146,16 @@ function OnUnequip(equipment, player)
 	if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 	if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
 
-	if originalPlayerSettings.MovementMode then
+	--[[if originalPlayerSettings.MovementMode then
 		player.movementControlMode = originalPlayerSettings.MovementMode
 		player.animationStance = originalPlayerSettings.AnimationStance
 		player.groundFriction = originalPlayerSettings.GroundFriction
 		player.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
-	end
+	end]]
+
+	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+	player.groundFriction = 8
+	player.brakingDecelerationWalking = 1000
 end
 
 ClassEquipment.equippedEvent:Connect(OnEquip)

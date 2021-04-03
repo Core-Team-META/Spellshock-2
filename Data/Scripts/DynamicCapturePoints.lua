@@ -68,6 +68,12 @@ function OnRoundStart()
 
         Events.Broadcast("ToggleLoadScreen", false)
         Events.Broadcast("Teleport")
+    else
+        for _, player in ipairs(AllPlayers) do
+            if Object.IsValid(player) then
+                player:Respawn()
+            end
+        end
     end
 end
 
