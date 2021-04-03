@@ -37,18 +37,12 @@ local xpServerMultiplier = 0
 
 --@param float value
 local function SetServerXpMultiplier(value)
-    if value > CONST.MAX_TOTAL_MULTIPLIER then
-        value = CONST.MAX_TOTAL_MULTIPLIER
-    end
     NETWORKED:SetNetworkedCustomProperty("xsm", value)
     xpServerMultiplier = value
 end
 
 --@param float value
 local function SetServerGoldMultiplier(value)
-    if value > CONST.MAX_TOTAL_MULTIPLIER then
-        value = CONST.MAX_TOTAL_MULTIPLIER
-    end
     NETWORKED:SetNetworkedCustomProperty("gsm", value)
     goldServerMultiplier = value
 end
@@ -150,9 +144,16 @@ end
 --@param int value after mutlipliers applied
 local function GetXpAfterMultipliers(player, value)
     local multiplier = CONST.EVENT_XP_MULITPLIER + xpServerMultiplier
+
+    --Server Multiplier Perk
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
     end
+    -- Self XP Boost Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.SELF_XP_BOOST_KEY) then
+        multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
+    end
+
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
@@ -164,10 +165,16 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 local function GetGoldAfterMultipliers(player, value)
-    local multiplier = CONST.EVENT_GOLD_MULTIPLIER + xpServerMultiplier
+    local multiplier = CONST.EVENT_GOLD_MULTIPLIER + goldServerMultiplier
+
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
     end
+
+    if _G.PerPlayerDictionary.Get(player, CONST.SELF_GOLD_BOOST_KEY) then
+        multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
+    end
+
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end

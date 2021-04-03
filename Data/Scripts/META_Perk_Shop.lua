@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/2
--- Version 0.1.2
+-- Date: 2021/4/3
+-- Version 0.1.3
 local isEnabled = true
 if not isEnabled then
     return
@@ -188,8 +188,7 @@ function CheckPerkCountWithStorage(player, data)
                 end
                 player:AddResource(bundle.resourceName, reward)
             end
-            if perkCount > storageCount and bundle.perkType == CONST.PERK_TYPES.FLAG then
-                -- player.serverUserData[bundle.flag] = true
+            if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
         end
@@ -221,7 +220,7 @@ function OnPlayerJoined(player)
         if not perks[bundle.storageId] then
             perks[bundle.storageId] = player:GetPerkCount(bundle.perk)
         end
-        if bundle.flag and perks[bundle.storageId] >= 1 then
+        if bundle.flag and player:HasPerk(bundle.perk) then
             _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
         end
     end
