@@ -3554,6 +3554,8 @@ Objects {
   ChildIds: 13671284273415983427
   ChildIds: 7718568551427512001
   ChildIds: 9217056826464283178
+  ChildIds: 16648946032976381228
+  ChildIds: 4051748264459384856
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3566,6 +3568,96 @@ Objects {
   }
   NetworkContext {
     Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 4051748264459384856
+  Name: "players collision"
+  Transform {
+    Location {
+      X: -48.9364967
+      Y: -507.81427
+      Z: 1677.51904
+    }
+    Rotation {
+      Yaw: -119.411728
+    }
+    Scale {
+      X: 41.3965263
+      Y: 41.3965263
+      Z: 136.811356
+    }
+  }
+  ParentId: 9332962590063961445
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7049191719222274714
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 16648946032976381228
+  Name: "players collision"
+  Transform {
+    Location {
+      X: -127.978134
+      Y: 205.92688
+      Z: 1647.68909
+    }
+    Rotation {
+      Yaw: 62.0396
+    }
+    Scale {
+      X: 41.3965263
+      Y: 41.3965263
+      Z: 136.811356
+    }
+  }
+  ParentId: 9332962590063961445
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7049191719222274714
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+      }
+    }
   }
 }
 Objects {
@@ -7789,9 +7881,9 @@ Objects {
   Name: "players collision"
   Transform {
     Location {
-      X: -202.501068
-      Y: 67.9762344
-      Z: 1677.51904
+      X: -202.501083
+      Y: 67.976181
+      Z: 1647.68909
     }
     Rotation {
       Yaw: 62.0395889
