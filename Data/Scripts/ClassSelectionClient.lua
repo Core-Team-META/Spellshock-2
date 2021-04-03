@@ -659,7 +659,7 @@ function AttachCostumeToPlayer(player)
 	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
 		DetachCostumeFromPlayer(player)
-		warn("Attaching costume: "..player.name)
+		--warn("Attaching costume: "..player.name)
 		-- Equip new costume
 		local attachmentTable = {}
 		local costumeTemplate = META_AP().VFX.GetCurrentCostume(player, player.clientUserData.CurrentClass)
