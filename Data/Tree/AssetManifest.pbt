@@ -21,6 +21,19 @@ Assets {
   }
 }
 Assets {
+  Id: 15969669977645369301
+  Name: "SERVERXPBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "25da71fa7f8c4e95b9f553f6ab9163f9"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 15827781868427444608
   Name: "GoldPack4"
   PlatformAssetType: 24
@@ -100,6 +113,19 @@ Assets {
   }
 }
 Assets {
+  Id: 11588052875130059778
+  Name: "SELFXPBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "ed3f26e02a3f4bbaa2b8953812753225"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 11232852364461677985
   Name: "JewelPack3"
   PlatformAssetType: 24
@@ -128,6 +154,19 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10039668417810932723
+  Name: "SELFGOLDBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "4299f56202d54c70862eda996b69bc67"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
@@ -203,6 +242,19 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_grass_generic_002"
+  }
+}
+Assets {
+  Id: 1082298521074732115
+  Name: "SERVERGOLDBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "abbb8b1d3a674f4d83a3c1c3dbcc312d"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
