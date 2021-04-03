@@ -492,7 +492,7 @@ Objects {
 }
 Objects {
   Id: 1191209798326641928
-  Name: "Player Panel"
+  Name: "Local Player Panel"
   Transform {
     Location {
     }
@@ -505,6 +505,7 @@ Objects {
     }
   }
   ParentId: 17853759817212828662
+  ChildIds: 5635680865410820218
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -529,6 +530,56 @@ Objects {
       SelfAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5635680865410820218
+  Name: "Player Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1191209798326641928
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
         }
       }
       TargetAnchor {
@@ -3157,7 +3208,7 @@ Objects {
     Overrides {
       Name: "cs:PlayerPanel"
       ObjectReference {
-        SelfId: 1191209798326641928
+        SelfId: 5635680865410820218
       }
     }
     Overrides {
@@ -3175,6 +3226,12 @@ Objects {
       Name: "cs:AS"
       AssetReference {
         Id: 13062533657555781867
+      }
+    }
+    Overrides {
+      Name: "cs:LocalPlayerPanel"
+      ObjectReference {
+        SelfId: 1191209798326641928
       }
     }
     Overrides {
