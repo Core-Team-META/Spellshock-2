@@ -175,7 +175,7 @@ function Tick()
 end
 
 OnMenuChanged(nil, _G.CurrentMenu)
-TeamInfoPanel.visibility = Visibility.FORCE_OFF
+--TeamInfoPanel.visibility = Visibility.FORCE_OFF
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
@@ -186,4 +186,4 @@ end
 
 --LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
 Events.Connect("Menu Changed", OnMenuChanged)
-Events.Connect("GameStateChanged", OnGameStateChanged)
+--Events.Connect("GameStateChanged", OnGameStateChanged)
