@@ -433,7 +433,7 @@ function Tick(deltaTime)
         lastTeamScoreAwardTime = lastTeamScoreAwardTime + 5.0
 
         if owningTeam ~= 0 then
-            Game.IncreaseTeamScore(owningTeam, TEAM_SCORE_RATE)
+            Game.IncreaseTeamScore(owningTeam, ABCP.GetTeamScoreRate(owningTeam))
         end
     end
 
