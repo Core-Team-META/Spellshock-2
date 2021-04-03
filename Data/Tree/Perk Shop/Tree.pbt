@@ -162,6 +162,15 @@ Objects {
         }
       }
     }
+    Overrides {
+      Name: "cs:StarterPack"
+      NetReference {
+        Key: "f4899621951e458c93fce70b147adf7d"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -27430,7 +27439,7 @@ Objects {
     PurchaseButton {
       IsButtonEnabled: true
       PerkReference {
-        Key: "3f8c29a31a864f3ea218c867addcd49a"
+        Key: "f4899621951e458c93fce70b147adf7d"
         Type {
           Value: "mc:enetreferencetype:creatorperk"
         }

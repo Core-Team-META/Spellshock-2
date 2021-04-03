@@ -129,13 +129,20 @@ end
 local function GetRewardAfterMultipliers(player, value)
     --#FIXME Do we need one for rewards too?
     local multiplier = CONST.EVENT_REWARD_MULTIPLIER + 0
+
+    --VIP Member Multiplier Perk
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_REWARD_MULTIPLIER
     end
+
+    --Starter Pack Multiplier Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
+        multiplier = multiplier + CONST.STARTER_PACK_MULTIPLIER
+    end
+
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
-
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -145,10 +152,16 @@ end
 local function GetXpAfterMultipliers(player, value)
     local multiplier = CONST.EVENT_XP_MULITPLIER + xpServerMultiplier
 
-    --Server Multiplier Perk
+    --VIP Member Multiplier Perk
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
     end
+
+    --Starter Pack Multiplier Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
+        multiplier = multiplier + CONST.STARTER_PACK_MULTIPLIER
+    end
+
     -- Self XP Boost Perk
     if _G.PerPlayerDictionary.Get(player, CONST.SELF_XP_BOOST_KEY) then
         multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
@@ -171,6 +184,12 @@ local function GetGoldAfterMultipliers(player, value)
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
     end
 
+    --Starter Pack Multiplier Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
+        multiplier = multiplier + CONST.STARTER_PACK_MULTIPLIER
+    end
+
+    --Self Gold Boost Perk
     if _G.PerPlayerDictionary.Get(player, CONST.SELF_GOLD_BOOST_KEY) then
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
     end
@@ -341,7 +360,7 @@ function API.GetGoldAfterMultipliers(player, value)
 end
 
 function API.CalculateServerMultiplier()
-    print("RECHECKING MULTIPLIERS")
+    --print("RECHECKING MULTIPLIERS")
     CalculateServerMultiplier()
 end
 ------------------------------------------------------------------------------------------------------------------------

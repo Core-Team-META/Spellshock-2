@@ -34,6 +34,7 @@ local SELFGOLDBOOST = script:GetCustomProperty("SELFGOLDBOOST")
 local SELFXPBOOST = script:GetCustomProperty("SELFXPBOOST")
 local SERVERGOLDBOOST = script:GetCustomProperty("SERVERGOLDBOOST")
 local SERVERXPBOOST = script:GetCustomProperty("SERVERXPBOOST")
+local STARTERPACK = script:GetCustomProperty("StarterPack")
 
 ------------------------------------------------------------------------------------------------------------------------
 -- TABLE BUILDER
@@ -71,6 +72,12 @@ bundles[#bundles + 1] = {
     storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
     perkType = CONST.PERK_TYPES.FLAG,
     flag = CONST.SERVER_GOLD_BOOST_KEY
+}
+bundles[#bundles + 1] = {
+    perk = STARTERPACK,
+    storageId = CONST.PERK_STORAGE_KEYS.STARTER_PACK,
+    perkType = CONST.PERK_TYPES.STARTER_PACK,
+    flag = CONST.STARTER_PACK_KEY
 }
 bundles[#bundles + 1] = {
     perk = GoldPack1,
@@ -121,12 +128,7 @@ bundles[#bundles + 1] = {
     reward = 250
 }
 
---Check to make sure all perks are enabled
-for _, bundle in ipairs(bundles) do
-    if not bundle.perk then
-        return
-    end
-end
+
 --------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -190,6 +192,11 @@ function CheckPerkCountWithStorage(player, data)
             end
             if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+            end
+            if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) and perkCount > storageCount then
+                _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
+                player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
+                player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
             end
         end
     end

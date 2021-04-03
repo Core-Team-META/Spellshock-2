@@ -201,6 +201,19 @@ Assets {
   }
 }
 Assets {
+  Id: 7169333528181342794
+  Name: "Starter Pack"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "f4899621951e458c93fce70b147adf7d"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 6981536508008379085
   Name: "Rock 03"
   PlatformAssetType: 1

@@ -136,10 +136,12 @@ local function OnLoadCurrencyData(player, data)
             end
         end
     else
-        for k, name in ipairs(CONST.CURRENCY) do
+        --[[for k, name in ipairs(CONST.CURRENCY) do
             player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
-            warn(tostring(player:GetResource(name)))
-        end
+            --warn(tostring(player:GetResource(name)))
+        end]]--
+        player:SetResource(CONST.GOLD, 1000)
+        player:SetResource(CONST.COSMETIC_TOKEN, 50)
     end
 end
 

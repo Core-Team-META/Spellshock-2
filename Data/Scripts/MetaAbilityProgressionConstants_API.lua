@@ -167,7 +167,7 @@ API.DIMINISHING_RETURNS = {
     [10] = 0.05
 }
 
-API.CLASS_XP = {
+API.CLASS_XP = { --Default XP Values before multipliers
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
@@ -188,6 +188,11 @@ API.VIP_GOLD_MULTIPLIER = 0.5 -- 50% Bonus
 API.VIP_REWARD_MULTIPLIER = 0.5 -- 50% Bonus
 API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 20% Discount in Daily Shop
 API.VIP_SERVER_MULTIPLIER = 0.05 -- Each VIP in a server gives a 5% boost to both gold & xp
+
+--STARTER Pack Muliplier Value
+API.STARTER_PACK_MULTIPLIER = 0.2 -- 20% To XP & Currency Gains
+API.STARTER_PACK_GOLD_BONUS = 5000
+API.STARTER_PACK_PREMIUM_BONUS = 100
 
 API.XP_SERVER_BOOST_MULTIPLIER = 1
 API.GOLD_SERVER_BOOST_MULTIPLIER = 1
@@ -349,6 +354,7 @@ API.SELF_GOLD_BOOST_KEY = "PGBK"
 API.SELF_XP_BOOST_KEY = "PXBK"
 API.SERVER_XP_BOOST_KEY = "SXBK"
 API.SERVER_GOLD_BOOST_KEY = "SGBK"
+API.STARTER_PACK_KEY = "SPK"
 
 API.PERK_STORAGE_KEYS = {
     VIP_MEMBER = 1,
@@ -363,12 +369,14 @@ API.PERK_STORAGE_KEYS = {
     PREM_PACK1 = 10,
     PREM_PACK2 = 11,
     PREM_PACK3 = 12,
-    PREM_PACK4 = 13
+    PREM_PACK4 = 13,
+    STARTER_PACK = 14
 }
 
 API.PERK_TYPES = {
     FLAG = 1,
-    CURRENCY = 2
+    CURRENCY = 2,
+    STARTER_PACK = 3
 }
 
 ------------------------------------------------------------------------------------------------------------------------
