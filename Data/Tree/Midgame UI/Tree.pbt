@@ -7502,7 +7502,7 @@ Objects {
       }
     }
     Text {
-      Label: "P"
+      Label: "O"
       Color {
         R: 1
         G: 0.609006643
@@ -7567,7 +7567,7 @@ Objects {
       }
     }
     Text {
-      Label: "P"
+      Label: "O"
       Color {
         A: 0.321
       }
@@ -8788,7 +8788,7 @@ Objects {
       }
     }
     Text {
-      Label: "O"
+      Label: "P"
       Color {
         R: 1
         G: 0.609006643
@@ -8853,7 +8853,7 @@ Objects {
       }
     }
     Text {
-      Label: "O"
+      Label: "P"
       Color {
         A: 0.321
       }

@@ -724,14 +724,21 @@ end
 function CosmeticPurchaseChange()
 	print("Cosmetic Purchse Change")
 	if not currentlySelected then
+		controlsLocked = false
 		return
 	end
 	UpdateEntryButton(currentlySelected, false)
-	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
-	purchaseText.text = "EQUIP"
-	purchaseText:GetChildren()[1].text = "EQUIP"
-	controlsLocked = false
-	propPurchaseButton.visibility = Visibility.INHERIT
+
+	if HasCosmetic(currentlySelected.data.id) then
+		-- EQUIP
+		ApplyCosmetic(currentlySelected)
+	else
+		local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+		purchaseText.text = "EQUIP"
+		purchaseText:GetChildren()[1].text = "EQUIP"
+		controlsLocked = false
+		propPurchaseButton.visibility = Visibility.INHERIT
+	end	
 end
 
 --[[function BuyCosmeticResponse(storeId, success)
