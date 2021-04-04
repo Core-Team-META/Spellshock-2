@@ -22,7 +22,7 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
+    --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -330,8 +330,11 @@ API.GAME_PLAYER_STATS = {
     [2] = "GAMES_LOST",
     [3] = "TOTAL_GAMES",
     [4] = "weightedWinRate",
-    [5] = "winOfTheDayTimeStamp"
+    [5] = "winOfTheDayTimeStamp",
+    [6] = "LIFE_TIME_KILLS"
 }
+
+API.LIFE_TIME_KILLS = API.GAME_PLAYER_STATS[6]
 API.WIN_OF_THE_DAY_TIME = API.GAME_PLAYER_STATS[5]
 API.WEIGHTED_WINS_KEY = 4
 
