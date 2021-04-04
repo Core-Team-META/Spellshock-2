@@ -11,6 +11,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 while not _G.CurrentMenu do
 	Task.Wait()
 end
@@ -860,7 +861,7 @@ function ApplyCosmetic(entry)
 	local team = tonumber(id:sub(2, 2))
 	local skin = tonumber(id:sub(3, 4))
 	local bind = tonumber(id:sub(5, 5))
-	cosmeticResourceName = "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
+	cosmeticResourceName = UTIL.GetSkinString(class, team, bind)
 	print("Broadcasting Equip: "..cosmeticResourceName)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
