@@ -2018,11 +2018,11 @@ end
 
 function ClearFilters()
 	PlaySFX("Page")
-	if currentClass.tag then
+	--[[if currentClass.tag then
 		currentClass.button:SetButtonColor(currentClass.color)
 		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
 		currentClass = {tag = nil}
-	end
+	end]]--
 
 	if currentType.tag then
 		currentType.button:SetButtonColor(currentType.color)
