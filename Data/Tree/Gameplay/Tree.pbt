@@ -1,65 +1,6 @@
 Name: "Gameplay"
 RootId: 6139923059512821780
 Objects {
-  Id: 1239155287608710259
-  Name: "StorageKeys"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6139923059512821780
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Cosmetics"
-      NetReference {
-        Key: "30ca443eaba945c2a3c11aad3a7c56d1"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-    Overrides {
-      Name: "cs:Currency"
-      NetReference {
-        Key: "23203bff6138497f965b2532cf16c4d5"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-    Overrides {
-      Name: "cs:Progression"
-      NetReference {
-        Key: "640f20ff35974e609d178e06f752ac29"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8607471445973396824
-    }
-  }
-}
-Objects {
   Id: 6492356358097797580
   Name: "Damage Feedback"
   Transform {
