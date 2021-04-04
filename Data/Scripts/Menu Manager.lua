@@ -78,7 +78,7 @@ function OnBindingPressed(whichPlayer, binding)
 			return
 		end
 		Events.Broadcast("Changing Menu", newState)
-	elseif (binding == "ability_extra_29" and SpamPrevent()) then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
+	elseif (binding == "ability_extra_28" and SpamPrevent()) then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if
 			LOCAL_PLAYER.clientUserData.hasSkippedReward or
 				((CurrentGameState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE) and (CurrentGameState ~= ABGS.GAME_STATE_REWARDS) and (CurrentGameState ~= ABGS.GAME_STATE_ROUND_END))

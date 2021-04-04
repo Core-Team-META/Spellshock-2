@@ -130,13 +130,13 @@ end
 
 function OnButtonInteracted(player, keybind)
     if
-        player == LOCAL_PLAYER and keybind == "ability_extra_28" and
+        player == LOCAL_PLAYER and keybind == "ability_extra_29" and
             (_G.CurrentMenu == _G.MENU_TABLE["NONE"] or LOCAL_PLAYER.clientUserData.hasSkippedReward) and
             not PARENT_UI:IsVisibleInHierarchy()
      then
         ToggleUi(true)
         isAllowed(0.5)
-    elseif player == LOCAL_PLAYER and keybind == "ability_extra_28" and PARENT_UI:IsVisibleInHierarchy() then
+    elseif player == LOCAL_PLAYER and keybind == "ability_extra_29" and PARENT_UI:IsVisibleInHierarchy() then
         ToggleUi(false)
     end
 end
