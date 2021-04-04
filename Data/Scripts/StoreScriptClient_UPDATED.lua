@@ -700,15 +700,18 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function CosmeticResourceChange(_, name)
+	print("Resource change: "..name)
 	if name == cosmeticResourceName then
+		print("Equip resource change")
 		if string.find(name, "S") then
 			ApplyCosmeticHelper()
 			UpdateEntryButton(currentlySelected, false)
-			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+			controlsLocked = false
+			
+			--[[local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 			purchaseText.text = "EQUIP"
 			purchaseText:GetChildren()[1].text = "EQUIP"
-			controlsLocked = false
-			propPurchaseButton.visibility = Visibility.INHERIT
+			propPurchaseButton.visibility = Visibility.INHERIT]]
 		end
 		if cosmeticResourceChangeEvent then
 			cosmeticResourceChangeEvent:Disconnect()
@@ -718,6 +721,7 @@ function CosmeticResourceChange(_, name)
 end
 
 function CosmeticPurchaseChange()
+	print("Cosmetic Purchse Change")
 	if not currentlySelected then
 		return
 	end
@@ -850,16 +854,19 @@ function ApplyCosmetic(entry)
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
 	local id = entry.data.id
 
-	cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	--cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	cosmeticResourceChangeEvent = _G.PerPlayerDictionary.valueChangedEvent:Connect(CosmeticResourceChange)
 	local class = tonumber(id:sub(1, 1))
 	local team = tonumber(id:sub(2, 2))
 	local skin = tonumber(id:sub(3, 4))
 	local bind = tonumber(id:sub(5, 5))
 	cosmeticResourceName = "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
+	print("Broadcasting Equip: "..cosmeticResourceName)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
 function ApplyCosmeticHelper()
+	print("Updating UI after Equip\n")
 	-- Update UI
 	for _, v in pairs(StoreUIButtons) do
 		UpdateEntryButton(v, false)
