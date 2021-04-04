@@ -47,6 +47,19 @@ Assets {
   }
 }
 Assets {
+  Id: 15565505981041774787
+  Name: "SS2_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "640f20ff35974e609d178e06f752ac29"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 15329646696100681115
   Name: "JewelPack1"
   PlatformAssetType: 24
@@ -258,6 +271,19 @@ Assets {
   }
 }
 Assets {
+  Id: 3448662144291263500
+  Name: "SS2_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "23203bff6138497f965b2532cf16c4d5"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 1082298521074732115
   Name: "SERVERGOLDBOOST"
   PlatformAssetType: 24
@@ -266,6 +292,19 @@ Assets {
       Key: "abbb8b1d3a674f4d83a3c1c3dbcc312d"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 1044227786093593712
+  Name: "SS2_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "30ca443eaba945c2a3c11aad3a7c56d1"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }
