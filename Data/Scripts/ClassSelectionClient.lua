@@ -815,7 +815,8 @@ function isAllowed(delay)
 end
 
 function Tick()
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 
+	and CurrentClassButton then
 		-- Auto select currently viewed class
 		
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
