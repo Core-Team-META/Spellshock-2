@@ -5,9 +5,8 @@ local wasVisible = true
 
 function Tick()
     if not _G.MENU_TABLE then return end
-    
+
     local isVisible = (_G.CurrentMenu == _G.MENU_TABLE["NONE"])
-    print ("Is visible = ".. tostring(isVisible))
 
     if isVisible ~= wasVisible then
         wasVisible = isVisible
