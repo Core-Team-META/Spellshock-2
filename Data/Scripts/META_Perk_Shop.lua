@@ -14,7 +14,7 @@ end
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 
-while not _G.PROGRESS_MULTIPLIER do
+while not _G.PROGRESS_MULTIPLIER or not _G.STORAGE_KEYS do
     Task.Wait()
 end
 
@@ -128,7 +128,6 @@ bundles[#bundles + 1] = {
     reward = 250
 }
 
-
 --------------------------------------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 ------------------------------------------------------------------------------------------------------------------------
@@ -136,15 +135,15 @@ bundles[#bundles + 1] = {
 --@param object player
 --@param table data
 local function OnSaveCurrencyData(player)
-    local data = Storage.GetPlayerData(player)
+    local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     local playerCurrency = {}
     for index, resName in ipairs(CONST.CURRENCY) do
         playerCurrency[index] = player:GetResource(resName)
     end
 
-    data[CONST.STORAGE.CURRENCY] =
+    currencyData[CONST.STORAGE.CURRENCY] =
         next(playerCurrency) ~= nil and UTIL.ConvertTableToString(playerCurrency, ",", "=") or ""
-    Storage.SetPlayerData(player, data)
+    Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
 end
 
 --@param table data
@@ -163,7 +162,7 @@ end
 --@param table perks
 local function OnSavePerkData(player, data, perks)
     data[CONST.STORAGE.PERKS] = next(perks) ~= nil and UTIL.ConvertTableToString(perks, ",", "=") or ""
-    Storage.SetPlayerData(player, data)
+    Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, data)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -173,7 +172,7 @@ end
 -- Check if each storage bundle purchase count is different from Perk purchase count.
 -- If yes, then grant currency as reward to the player.
 function CheckPerkCountWithStorage(player, data)
-    local data = data or Storage.GetPlayerData(player)
+    local data = data or Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     local perks = OnLoadPerkData(data)
 
     for _, bundle in ipairs(bundles) do
@@ -193,7 +192,9 @@ function CheckPerkCountWithStorage(player, data)
             if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
-            if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) and perkCount > storageCount then
+            if
+                bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk)
+             then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
                 player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
                 player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
@@ -220,7 +221,7 @@ end
 
 -- Sets player resource from storage and connects player events
 function OnPlayerJoined(player)
-    local data = Storage.GetPlayerData(player)
+    local data = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
     local perks = OnLoadPerkData(data)
     -- Setup current Perk purchased count per bundle
     for _, bundle in ipairs(bundles) do

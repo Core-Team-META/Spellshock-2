@@ -22,6 +22,7 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
+    ACHIEVEMENTS = 11
     --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
 
