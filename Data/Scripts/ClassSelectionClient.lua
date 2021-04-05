@@ -72,6 +72,8 @@ while not _G.CurrentMenu do Task.Wait() end
 
 local HelperClassButtonTemplate = script:GetCustomProperty("Helper_Class_Button")
 local HelperAbilityModTemplate = script:GetCustomProperty("Helper_AbilityModPanel")
+local Helper_LifeTimeStatLine = script:GetCustomProperty("Helper_LifeTimeStatLine")
+
 local UpgradeVFX = script:GetCustomProperty("UpgradeVFX")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -171,6 +173,15 @@ function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation
 	AnimMesh:PlayAnimation(Animation, {playbackRate=0.6})
 end
 
+function GetLifetimePanel(parentPanel, index)
+	local children = parentPanel:GetChildren()
+	if index > #children then
+		return World.SpawnAsset(Helper_LifeTimeStatLine, {parent = parentPanel})
+	else
+		return children[index]
+	end
+end
+
 function OnGlobalStatsClicked(thisButton)
 	-- return CurrentClassButton to idle state
 	if CurrentClassButton then
@@ -196,6 +207,7 @@ function OnGlobalStatsClicked(thisButton)
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
 
+	-- Toggle visibility
 	RightPanel_GlobalStats.visibility = Visibility.INHERIT
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
@@ -203,8 +215,8 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
 
+	-- Update the global stats
 	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
-
 	for _, statPanel in ipairs(PlayerStatsPanel:GetChildren()) do
 		if statPanel:IsA("UIPanel") then
 			local level
@@ -245,6 +257,42 @@ function OnGlobalStatsClicked(thisButton)
 			XP_Progress.progress = currentXP / reqXP
 			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
 		end
+	end
+
+	-- Update the lifetime stats
+	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
+	
+	local totalBattles = LOCAL_PLAYER:GetResource(CONST.TOTAL_GAMES)
+	local battlesWon = LOCAL_PLAYER:GetResource(CONST.GAMES_WON)
+	local battlesLost = LOCAL_PLAYER:GetResource(CONST.GAMES_LOST)
+	local totalKills = LOCAL_PLAYER:GetResource(CONST.LIFE_TIME_KILLS)
+	local killsPerBattle 
+	local winRate
+
+	if totalBattles > 0 then
+		killsPerBattle = CoreMath.Round(totalKills/totalBattles)
+		winRate = CoreMath.Round(battlesWon/totalBattles, 4)*100
+	else
+		killsPerBattle = 0
+		winRate = 0
+	end
+
+	local statsList = {
+		{"Total Battles", totalBattles},
+		{"Battles Won", battlesWon},
+		{"Battles Lost", battlesLost},
+		{"Total Kills", totalKills},
+		{"Kills Per Battle", killsPerBattle},
+		{"Win Rate", winRate}
+	}
+
+	for index, stat in ipairs(statsList) do
+		local panel = GetLifetimePanel(LifetimeStatsParent, index)
+		panel.y = (index-1) * panel.height
+		local propStatName = panel:GetCustomProperty("StatName"):WaitForObject()
+		local propStatValue = panel:GetCustomProperty("StatValue"):WaitForObject()
+		propStatName.text = stat[1]
+		propStatValue.text = tostring(stat[2])
 	end
 end
 
