@@ -532,13 +532,19 @@ Assets {
           Overrides {
             Name: "cs:ShootAbility"
             ObjectReference {
-              SubObjectId: 10839953769775855596
+              SubObjectId: 11297253980920919647
             }
           }
           Overrides {
             Name: "cs:ChargedProjectileBomb"
             AssetReference {
               Id: 5887319667457082430
+            }
+          }
+          Overrides {
+            Name: "cs:ChargedWeapon"
+            ObjectReference {
+              SubObjectId: 5245914432937620260
             }
           }
         }
@@ -1484,6 +1490,7 @@ Assets {
         ChildIds: 10814169424989923108
         ChildIds: 8423088236831540030
         ChildIds: 2695547812234798459
+        ChildIds: 7293914528016226270
         ChildIds: 1378042834406374347
         ChildIds: 7791818600051775762
         Collidable_v2 {
@@ -1524,7 +1531,7 @@ Assets {
           Overrides {
             Name: "cs:Shoot"
             ObjectReference {
-              SubObjectId: 10839953769775855596
+              SubObjectId: 11297253980920919647
             }
           }
           Overrides {
@@ -1555,6 +1562,18 @@ Assets {
             Name: "cs:BigCharge"
             AssetReference {
               Id: 15718917274813081166
+            }
+          }
+          Overrides {
+            Name: "cs:Fire"
+            ObjectReference {
+              SubObjectId: 10839953769775855596
+            }
+          }
+          Overrides {
+            Name: "cs:FireCharged"
+            ObjectReference {
+              SubObjectId: 1216614822230837042
             }
           }
         }
@@ -1595,7 +1614,7 @@ Assets {
           Overrides {
             Name: "cs:ShootAbility"
             ObjectReference {
-              SubObjectId: 10839953769775855596
+              SubObjectId: 11297253980920919647
             }
           }
           Overrides {
@@ -1640,7 +1659,7 @@ Assets {
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 10839953769775855596
+              SubObjectId: 11297253980920919647
             }
           }
           Overrides {
@@ -1706,6 +1725,71 @@ Assets {
         Script {
           ScriptAsset {
             Id: 8799101599018051692
+          }
+        }
+      }
+      Objects {
+        Id: 7293914528016226270
+        Name: "ChargeUpBarClient"
+        Transform {
+          Location {
+            X: 595
+            Y: -355
+            Z: -225
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4017735643055830044
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Weapon"
+            ObjectReference {
+              SubObjectId: 13944462686745880869
+            }
+          }
+          Overrides {
+            Name: "cs:Shoot"
+            ObjectReference {
+              SubObjectId: 11297253980920919647
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpSFX"
+            ObjectReference {
+              SubObjectId: 7791818600051775762
+            }
+          }
+          Overrides {
+            Name: "cs:ChargeUpVFX"
+            ObjectReference {
+              SubObjectId: 11981134953901756606
+            }
+          }
+          Overrides {
+            Name: "cs:FullChargeEffect"
+            AssetReference {
+              Id: 4708628973238390037
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 1799007856612243505
           }
         }
       }
@@ -1887,7 +1971,9 @@ Assets {
         ChildIds: 1433284731599134094
         ChildIds: 16077949688686323587
         ChildIds: 12322270892486371816
+        ChildIds: 11297253980920919647
         ChildIds: 13944462686745880869
+        ChildIds: 5245914432937620260
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -2243,6 +2329,82 @@ Assets {
         }
       }
       Objects {
+        Id: 11297253980920919647
+        Name: "CrossbowCharge"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 406380117814010332
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ChargeDelay"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "cs:ChargeDuration"
+            Float: 0.5
+          }
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 100
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          CooldownPhaseSettings {
+            Duration: 5
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          Animation: "2hand_rifle_shoot"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
         Id: 13944462686745880869
         Name: "Crossbow"
         Transform {
@@ -2355,7 +2517,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 100
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -2380,7 +2542,157 @@ Assets {
             CanRotate: true
           }
           CooldownPhaseSettings {
-            Duration: 5
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          Animation: "2hand_rifle_shoot"
+          CanBePrevented: true
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
+        Id: 5245914432937620260
+        Name: "CrossbowCharged"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.99999994
+            Y: 0.99999994
+            Z: 1
+          }
+        }
+        ParentId: 406380117814010332
+        ChildIds: 1216614822230837042
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Equipment {
+          SocketName: "right_prop"
+          PickupTrigger {
+          }
+          Weapon {
+            ProjectileAssetRef {
+              Id: 7873447472770106816
+            }
+            MuzzleFlashAssetRef {
+              Id: 3452198850354539067
+            }
+            TrailAssetRef {
+              Id: 16943198897384362849
+            }
+            ImpactAssetRef {
+              Id: 4200143341945439636
+            }
+            UseReticle: true
+            Muzzle {
+              Location {
+                X: 100
+                Z: 40
+              }
+            }
+            AnimationSet: "2hand_rifle_aim_shoulder"
+            OutOfAmmoSfxAssetRef {
+              Id: 1518160165269425996
+            }
+            ReloadSfxAssetRef {
+              Id: 13298384700354758282
+            }
+            ShootAnimation: "2hand_rifle_shoot"
+            ImpactProjectileAssetRef {
+              Id: 7826957446471998063
+            }
+            BeamAssetRef {
+              Id: 841534158063459245
+            }
+            BurstCount: 1
+            BurstDuration: 1
+            BurstStopsWithRelease: true
+            AttackCooldown: 0.25
+            Range: 15000
+            ImpactPlayerAssetRef {
+              Id: 14373757464648078715
+            }
+            ReticleType {
+              Value: "mc:ereticletype:none"
+            }
+            MaxAmmo: -1
+            AmmoType: "rounds"
+            MultiShot: 1
+            ProjectileSpeed: 50000
+            ProjectileLifeSpan: 10
+            ProjectileLength: 50
+            ProjectileRadius: 8
+            SpreadMax: 10
+            DefaultAbility {
+              SubObjectId: 1216614822230837042
+            }
+            ReloadAbility {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1216614822230837042
+        Name: "CrossbowCharged"
+        ParentId: 5245914432937620260
+        UnregisteredParameters {
+        }
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Ability {
+          IsEnabled: true
+          KeyBinding: "ability_primary"
+          CastPhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          ExecutePhaseSettings {
+            Duration: 0.05
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+            IsTargetDataUpdated: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:aim"
+            }
+          }
+          RecoveryPhaseSettings {
+            CanMove: true
+            CanJump: true
+            CanRotate: true
+          }
+          CooldownPhaseSettings {
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
