@@ -19,8 +19,18 @@ local function DisconnectListeners()
 	end
 end
 
+function IsInsideMenu()
+	if not _G.MENU_TABLE then
+		return false
+	end
+	return (_G.CurrentMenu ~= _G.MENU_TABLE["NONE"])
+end
+
 function OnBindingPressed(player, binding)
 	if binding == "ability_primary" and not Equipment.clientUserData.isPreviewing then
+		if IsInsideMenu() then
+			return
+		end
 		if SpecialAbility.owner and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
 			SpecialAbility:Activate()
 		end
