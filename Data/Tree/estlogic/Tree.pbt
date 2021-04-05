@@ -2954,6 +2954,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:MetaAbilityProgressionConstants_API"
+      AssetReference {
+        Id: 15718075383189814537
+      }
+    }
+    Overrides {
       Name: "cs:SFX_UI_BuyGeneric"
       AssetReference {
         Id: 17427715677023329960
