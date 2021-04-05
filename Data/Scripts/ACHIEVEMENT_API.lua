@@ -371,8 +371,10 @@ function API.LoadAchievementStorage(player)
     local data = Storage.GetPlayerData(player)
     if data[CONST.STORAGE.ACHIEVEMENTS] then
         local achievementData = data[CONST.STORAGE.ACHIEVEMENTS]
-        for key, value in pairs(achievementData) do
-            player:SetResource(key, value)
+        if type(achievementData) ~= "number" then
+            for key, value in pairs(achievementData) do
+                player:SetResource(key, value)
+            end
         end
     end
 end
