@@ -109,7 +109,7 @@ function ClassLevelUp(player, class)
     local reqXp = GetReqXp(level)
     local xp = API.GetClassXP(player, class)
     if xp >= reqXp and level < CONST.MAX_CLASS_LEVEL then
-        print("Gained Kill XP " .. player.name)
+        --print("Gained Kill XP " .. player.name)
         level = CoreMath.Round(level + 1)
         xp = xp - reqXp
         API.SetClassLevel(player, class)

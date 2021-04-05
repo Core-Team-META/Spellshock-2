@@ -1,4 +1,9 @@
-﻿local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local SHARD_COSTS = require(script:GetCustomProperty("AbilityUpgradeCosts"))
 local ABGS = require(script:GetCustomProperty("ABGS"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
@@ -67,6 +72,8 @@ while not _G.CurrentMenu do Task.Wait() end
 
 local HelperClassButtonTemplate = script:GetCustomProperty("Helper_Class_Button")
 local HelperAbilityModTemplate = script:GetCustomProperty("Helper_AbilityModPanel")
+local Helper_LifeTimeStatLine = script:GetCustomProperty("Helper_LifeTimeStatLine")
+
 local UpgradeVFX = script:GetCustomProperty("UpgradeVFX")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -166,6 +173,15 @@ function EquipCostumeToAnimatedMesh(AnimMesh, CostumeTemplate, Stance, Animation
 	AnimMesh:PlayAnimation(Animation, {playbackRate=0.6})
 end
 
+function GetLifetimePanel(parentPanel, index)
+	local children = parentPanel:GetChildren()
+	if index > #children then
+		return World.SpawnAsset(Helper_LifeTimeStatLine, {parent = parentPanel})
+	else
+		return children[index]
+	end
+end
+
 function OnGlobalStatsClicked(thisButton)
 	-- return CurrentClassButton to idle state
 	if CurrentClassButton then
@@ -191,6 +207,7 @@ function OnGlobalStatsClicked(thisButton)
 	AbilityName.text = "Overview"
 	AbilityName:GetChildren()[1].text = "Overview"
 
+	-- Toggle visibility
 	RightPanel_GlobalStats.visibility = Visibility.INHERIT
 	RightPanel_ClassDescriptionPanel.visibility = Visibility.FORCE_OFF
 	RightPanel_AbilityOverviewPanel.visibility = Visibility.FORCE_OFF
@@ -198,8 +215,8 @@ function OnGlobalStatsClicked(thisButton)
 	RightPanel_AbilitiesLabel.visibility = Visibility.FORCE_OFF
 	RightPanel_ClassLevelPanel.visibility = Visibility.FORCE_OFF
 
+	-- Update the global stats
 	local PlayerStatsPanel = RightPanel_GlobalStats:GetCustomProperty("PlayerStatsPanel"):WaitForObject()
-
 	for _, statPanel in ipairs(PlayerStatsPanel:GetChildren()) do
 		if statPanel:IsA("UIPanel") then
 			local level
@@ -240,6 +257,42 @@ function OnGlobalStatsClicked(thisButton)
 			XP_Progress.progress = currentXP / reqXP
 			XP_Amount.text = UTIL.FormatInt(currentXP).." / "..UTIL.FormatInt(reqXP).." XP"
 		end
+	end
+
+	-- Update the lifetime stats
+	local LifetimeStatsParent = RightPanel_GlobalStats:GetCustomProperty("LifetimeStatsParent"):WaitForObject()
+	
+	local totalBattles = LOCAL_PLAYER:GetResource(CONST.TOTAL_GAMES)
+	local battlesWon = LOCAL_PLAYER:GetResource(CONST.GAMES_WON)
+	local battlesLost = LOCAL_PLAYER:GetResource(CONST.GAMES_LOST)
+	local totalKills = LOCAL_PLAYER:GetResource(CONST.LIFE_TIME_KILLS)
+	local killsPerBattle 
+	local winRate
+
+	if totalBattles > 0 then
+		killsPerBattle = CoreMath.Round(totalKills/totalBattles)
+		winRate = CoreMath.Round(battlesWon/totalBattles, 4)*100
+	else
+		killsPerBattle = 0
+		winRate = 0
+	end
+
+	local statsList = {
+		{"Total Battles", totalBattles},
+		{"Battles Won", battlesWon},
+		{"Battles Lost", battlesLost},
+		{"Total Kills", totalKills},
+		{"Kills Per Battle", killsPerBattle},
+		{"Win Rate", winRate}
+	}
+
+	for index, stat in ipairs(statsList) do
+		local panel = GetLifetimePanel(LifetimeStatsParent, index)
+		panel.y = (index-1) * panel.height
+		local propStatName = panel:GetCustomProperty("StatName"):WaitForObject()
+		local propStatValue = panel:GetCustomProperty("StatValue"):WaitForObject()
+		propStatName.text = stat[1]
+		propStatValue.text = tostring(stat[2])
 	end
 end
 
@@ -317,9 +370,9 @@ function UpdateClassInfo(thisButton)
 	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
 	BaseHealth.text = tostring(classHealth)
 
-	local regenAmount = 0.06 + (0.04 * classLevel)
-    if regenAmount > 2 then regenAmount = 2 end
-	HealthRegen.text = string.format("+%s / 1s", tostring(regenAmount))
+	local regenAmount = (0.06 + (0.04 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
+    --if regenAmount > 2 then regenAmount = 2 end
+	HealthRegen.text = string.format("+%s / 1m", tostring(regenAmount))
 
 	-- Change the costume on the animated mesh
 	local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
@@ -654,7 +707,7 @@ function AttachCostumeToPlayer(player)
 	--if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY then
 		-- Remove previous costume
 		DetachCostumeFromPlayer(player)
-		warn("Attaching costume: "..player.name)
+		--warn("Attaching costume: "..player.name)
 		-- Equip new costume
 		local attachmentTable = {}
 		local costumeTemplate = META_AP().VFX.GetCurrentCostume(player, player.clientUserData.CurrentClass)
@@ -669,8 +722,12 @@ function AttachCostumeToPlayer(player)
 	--end
 end
 
-function DetachCostumeFromPlayer(player)
-	if player.clientUserData.LobbyCostume then
+function DetachCostumeFromPlayer(player, isLeaving)
+	if isLeaving then
+		for _, attachment in ipairs(player:GetAttachedObjects()) do
+			attachment:Destroy()
+		end
+	elseif player.clientUserData.LobbyCostume then
 		for _, attachment in ipairs(player.clientUserData.LobbyCostume) do
 			attachment:Destroy()
 		end
@@ -745,7 +802,7 @@ end
 function OnPlayerLeft(player)
 	ResourceListeners[player]:Disconnect()
 	ResourceListeners[player] = nil
-	DetachCostumeFromPlayer(player)
+	DetachCostumeFromPlayer(player, true)
 end
 
 function isAllowed(delay)

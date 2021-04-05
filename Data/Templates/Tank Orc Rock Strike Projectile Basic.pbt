@@ -84,7 +84,7 @@ Assets {
           }
           Scale {
             X: 1
-            Y: 4.3
+            Y: 7.5
             Z: 1.5
           }
         }
@@ -143,7 +143,7 @@ Assets {
           }
           Overrides {
             Name: "bp:Density"
-            Float: 2.5
+            Float: 4
           }
           Overrides {
             Name: "bp:Cracks Color"
@@ -275,7 +275,7 @@ Assets {
           }
           Scale {
             X: 2.69999957
-            Y: 5.5
+            Y: 7.8
             Z: 2.4
           }
         }

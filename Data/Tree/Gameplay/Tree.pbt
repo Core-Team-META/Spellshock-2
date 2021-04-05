@@ -6735,6 +6735,7 @@ Objects {
     }
   }
   ParentId: 15819500716202258374
+  ChildIds: 11210969010747381860
   ChildIds: 8879766115870299565
   ChildIds: 1488866186106834297
   Collidable_v2 {
@@ -6889,6 +6890,49 @@ Objects {
     SubobjectId: 7292696434604847301
     InstanceId: 10925421981391100152
     TemplateId: 10298965103520888440
+  }
+}
+Objects {
+  Id: 11210969010747381860
+  Name: "COLLISION"
+  Transform {
+    Location {
+      X: -2.87353516
+      Y: 0.921630859
+      Z: 214.89975
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.26875043
+      Y: 1.26875043
+      Z: 1.68994355
+    }
+  }
+  ParentId: 9490064333890190551
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
   }
 }
 Objects {
@@ -9468,7 +9512,6 @@ Objects {
   ChildIds: 11497466510338826114
   ChildIds: 5591602329318949446
   ChildIds: 1043776464625190604
-  ChildIds: 3360235286474157871
   ChildIds: 16447672695625406299
   ChildIds: 7016181093148375044
   ChildIds: 13256783284733820806
@@ -11040,25 +11083,107 @@ Objects {
   }
 }
 Objects {
+  Id: 1043776464625190604
+  Name: "Group"
+  Transform {
+    Location {
+      X: 8.81640625
+      Y: -11.7792969
+      Z: 1007.33374
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.5999999
+      Y: 1.5999999
+      Z: 1.5999999
+    }
+  }
+  ParentId: 5561658870418342519
+  ChildIds: 17794850422011916214
+  ChildIds: 11053740010128291682
+  ChildIds: 3360235286474157871
+  ChildIds: 13211728342935304424
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 1043776464625190604
+    SubobjectId: 11366209989367437759
+    InstanceId: 12419766084897398505
+    TemplateId: 10298965103520888440
+  }
+}
+Objects {
+  Id: 13211728342935304424
+  Name: "COLLISION"
+  Transform {
+    Location {
+      Z: 213.383255
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.26875031
+      Y: 1.26875031
+      Z: 1.68994355
+    }
+  }
+  ParentId: 1043776464625190604
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 3360235286474157871
   Name: "Scifi Ship Engine 01"
   Transform {
     Location {
-      X: 9.10742188
-      Y: -7.3125
-      Z: 1072.33374
+      X: 0.181884766
+      Y: 2.79174805
+      Z: 40.625
     }
     Rotation {
       Pitch: 90
-      Roll: 180
+      Roll: -179.999985
     }
     Scale {
-      X: 1.89999986
-      Y: 1.9
-      Z: 1.9
+      X: 1.18749988
+      Y: 1.1875
+      Z: 1.1875
     }
   }
-  ParentId: 5561658870418342519
+  ParentId: 1043776464625190604
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -11110,45 +11235,6 @@ Objects {
   InstanceHistory {
     SelfId: 3360235286474157871
     SubobjectId: 13646235458351247452
-    InstanceId: 12419766084897398505
-    TemplateId: 10298965103520888440
-  }
-}
-Objects {
-  Id: 1043776464625190604
-  Name: "Group"
-  Transform {
-    Location {
-      X: 8.81640625
-      Y: -11.7792969
-      Z: 1007.33374
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5999999
-      Y: 1.5999999
-      Z: 1.5999999
-    }
-  }
-  ParentId: 5561658870418342519
-  ChildIds: 17794850422011916214
-  ChildIds: 11053740010128291682
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 1043776464625190604
-    SubobjectId: 11366209989367437759
     InstanceId: 12419766084897398505
     TemplateId: 10298965103520888440
   }
@@ -13807,7 +13893,6 @@ Objects {
   ChildIds: 8608770617648507823
   ChildIds: 11920490747351922283
   ChildIds: 16612502174854132449
-  ChildIds: 14291821215385787138
   ChildIds: 916083059207742326
   ChildIds: 9919512550752111657
   ChildIds: 6849629464231758763
@@ -15379,25 +15464,108 @@ Objects {
   }
 }
 Objects {
+  Id: 16612502174854132449
+  Name: "Group"
+  Transform {
+    Location {
+      X: 8.81640625
+      Y: -11.7792969
+      Z: 1007.33374
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.5999999
+      Y: 1.5999999
+      Z: 1.5999999
+    }
+  }
+  ParentId: 11950777538992666202
+  ChildIds: 2162653272761605019
+  ChildIds: 8183478563748987727
+  ChildIds: 14291821215385787138
+  ChildIds: 1894071029231773512
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 16612502174854132449
+    SubobjectId: 11366209989367437759
+    InstanceId: 12117967644652967285
+    TemplateId: 10298965103520888440
+  }
+}
+Objects {
+  Id: 1894071029231773512
+  Name: "COLLISION"
+  Transform {
+    Location {
+      Z: 215.295563
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.26875031
+      Y: 1.26875031
+      Z: 1.68994355
+    }
+  }
+  ParentId: 16612502174854132449
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 14291821215385787138
   Name: "Scifi Ship Engine 01"
   Transform {
     Location {
-      X: 9.10742188
-      Y: -7.3125
-      Z: 1072.33374
+      X: 0.182007134
+      Y: 2.79154539
+      Z: 40.625
     }
     Rotation {
       Pitch: 90
-      Roll: 180
+      Yaw: 1.13836484e-06
+      Roll: -179.999985
     }
     Scale {
-      X: 1.89999986
-      Y: 1.9
-      Z: 1.9
+      X: 1.18749988
+      Y: 1.1875
+      Z: 1.1875
     }
   }
-  ParentId: 11950777538992666202
+  ParentId: 16612502174854132449
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -15449,45 +15617,6 @@ Objects {
   InstanceHistory {
     SelfId: 14291821215385787138
     SubobjectId: 13646235458351247452
-    InstanceId: 12117967644652967285
-    TemplateId: 10298965103520888440
-  }
-}
-Objects {
-  Id: 16612502174854132449
-  Name: "Group"
-  Transform {
-    Location {
-      X: 8.81640625
-      Y: -11.7792969
-      Z: 1007.33374
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5999999
-      Y: 1.5999999
-      Z: 1.5999999
-    }
-  }
-  ParentId: 11950777538992666202
-  ChildIds: 2162653272761605019
-  ChildIds: 8183478563748987727
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 16612502174854132449
-    SubobjectId: 11366209989367437759
     InstanceId: 12117967644652967285
     TemplateId: 10298965103520888440
   }
@@ -17771,7 +17900,6 @@ Objects {
   ChildIds: 1035237389047175048
   ChildIds: 15873938014446258764
   ChildIds: 11506397011365318342
-  ChildIds: 13795411885575137061
   ChildIds: 8472129720900312913
   ChildIds: 17333415655143485454
   ChildIds: 2750393275638298508
@@ -19343,25 +19471,109 @@ Objects {
   }
 }
 Objects {
+  Id: 11506397011365318342
+  Name: "Group"
+  Transform {
+    Location {
+      X: 8.81640625
+      Y: -11.7792969
+      Z: 1007.33374
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.5999999
+      Y: 1.5999999
+      Z: 1.5999999
+    }
+  }
+  ParentId: 15923647955446368893
+  ChildIds: 7432857041465829308
+  ChildIds: 627152417528889192
+  ChildIds: 13795411885575137061
+  ChildIds: 3127173570955034797
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 11506397011365318342
+    SubobjectId: 11366209989367437759
+    InstanceId: 17417064048651013341
+    TemplateId: 10298965103520888440
+  }
+}
+Objects {
+  Id: 3127173570955034797
+  Name: "COLLISION"
+  Transform {
+    Location {
+      Z: 213.383484
+    }
+    Rotation {
+      Yaw: 11.5518227
+    }
+    Scale {
+      X: 1.26875031
+      Y: 1.26875031
+      Z: 1.68994355
+    }
+  }
+  ParentId: 11506397011365318342
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 13795411885575137061
   Name: "Scifi Ship Engine 01"
   Transform {
     Location {
-      X: 9.10742188
-      Y: -7.3125
-      Z: 1072.33374
+      X: 0.181590781
+      Y: 2.79189134
+      Z: 40.6246948
     }
     Rotation {
       Pitch: 90
-      Roll: 180
+      Yaw: 1.68760669
+      Roll: -178.312378
     }
     Scale {
-      X: 1.89999986
-      Y: 1.9
-      Z: 1.9
+      X: 1.18749988
+      Y: 1.1875
+      Z: 1.1875
     }
   }
-  ParentId: 15923647955446368893
+  ParentId: 11506397011365318342
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -19413,45 +19625,6 @@ Objects {
   InstanceHistory {
     SelfId: 13795411885575137061
     SubobjectId: 13646235458351247452
-    InstanceId: 17417064048651013341
-    TemplateId: 10298965103520888440
-  }
-}
-Objects {
-  Id: 11506397011365318342
-  Name: "Group"
-  Transform {
-    Location {
-      X: 8.81640625
-      Y: -11.7792969
-      Z: 1007.33374
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5999999
-      Y: 1.5999999
-      Z: 1.5999999
-    }
-  }
-  ParentId: 15923647955446368893
-  ChildIds: 7432857041465829308
-  ChildIds: 627152417528889192
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 11506397011365318342
-    SubobjectId: 11366209989367437759
     InstanceId: 17417064048651013341
     TemplateId: 10298965103520888440
   }
@@ -27247,7 +27420,6 @@ Objects {
   ChildIds: 5695956120579881428
   ChildIds: 11320485439571207184
   ChildIds: 15134537802915834789
-  ChildIds: 18312437657568037241
   ChildIds: 3801867230790480141
   ChildIds: 12816495436302491218
   ChildIds: 7456451485735786960
@@ -28819,81 +28991,6 @@ Objects {
   }
 }
 Objects {
-  Id: 18312437657568037241
-  Name: "Scifi Ship Engine 01"
-  Transform {
-    Location {
-      X: 9.10742188
-      Y: -7.3125
-      Z: 1072.33374
-    }
-    Rotation {
-      Pitch: 90
-      Roll: 180
-    }
-    Scale {
-      X: 1.89999986
-      Y: 1.9
-      Z: 1.9
-    }
-  }
-  ParentId: 11361973214402946081
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.734375
-        G: 0.573603034
-        B: 0.36336264
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 17118136979191323600
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Trim:color"
-      Color {
-        R: 0.09375
-        G: 0.09375
-        B: 0.09375
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6789604014209716330
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 18312437657568037241
-    SubobjectId: 13646235458351247452
-    InstanceId: 10847475115936183263
-    TemplateId: 10298965103520888440
-  }
-}
-Objects {
   Id: 15134537802915834789
   Name: "Flag StaticContext"
   Transform {
@@ -28946,6 +29043,8 @@ Objects {
   ParentId: 15134537802915834789
   ChildIds: 2771735889786227168
   ChildIds: 5324918112035410228
+  ChildIds: 18312437657568037241
+  ChildIds: 15018721129417698312
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -28961,6 +29060,122 @@ Objects {
   InstanceHistory {
     SelfId: 16068579708668207258
     SubobjectId: 11366209989367437759
+    InstanceId: 10847475115936183263
+    TemplateId: 10298965103520888440
+  }
+}
+Objects {
+  Id: 15018721129417698312
+  Name: "COLLISION"
+  Transform {
+    Location {
+      Z: 213.065643
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.26875031
+      Y: 1.26875031
+      Z: 1.68994355
+    }
+  }
+  ParentId: 16068579708668207258
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15683169359350375517
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 18312437657568037241
+  Name: "Scifi Ship Engine 01"
+  Transform {
+    Location {
+      X: 0.181884766
+      Y: 2.79174805
+      Z: 40.625
+    }
+    Rotation {
+      Pitch: 90
+      Roll: -179.999985
+    }
+    Scale {
+      X: 1.18749988
+      Y: 1.1875
+      Z: 1.1875
+    }
+  }
+  ParentId: 16068579708668207258
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.734375
+        G: 0.573603034
+        B: 0.36336264
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17118136979191323600
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Trim:color"
+      Color {
+        R: 0.09375
+        G: 0.09375
+        B: 0.09375
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6789604014209716330
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 18312437657568037241
+    SubobjectId: 13646235458351247452
     InstanceId: 10847475115936183263
     TemplateId: 10298965103520888440
   }
@@ -33133,11 +33348,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:RequiredPlayers"
-      Int: 2
+      Int: 1
     }
     Overrides {
       Name: "cs:CountdownTime"
-      Float: 5
+      Float: 10
     }
     Overrides {
       Name: "cs:RequiredPlayers:tooltip"

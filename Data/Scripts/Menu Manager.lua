@@ -1,4 +1,9 @@
-﻿local ABGS = require(script:GetCustomProperty("ABGS"))
+﻿-- Author Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version 0.0.1
+--===========================================================================================
+
+local ABGS = require(script:GetCustomProperty("ABGS"))
 local propClassSelectionClient = script:GetCustomProperty("ClassSelectionClient"):WaitForObject() -- This just here to ensure that it loads before this script does
 
 while not ABGS.IsGameStateManagerRegistered() do
@@ -73,7 +78,7 @@ function OnBindingPressed(whichPlayer, binding)
 			return
 		end
 		Events.Broadcast("Changing Menu", newState)
-	elseif (binding == "ability_extra_29" and SpamPrevent()) then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
+	elseif (binding == "ability_extra_28" and SpamPrevent()) then -- P and CurrentGameState == ABGS.GAME_STATE_LOBBY
 		if
 			LOCAL_PLAYER.clientUserData.hasSkippedReward or
 				((CurrentGameState ~= ABGS.GAME_STATE_PLAYER_SHOWCASE) and (CurrentGameState ~= ABGS.GAME_STATE_REWARDS) and (CurrentGameState ~= ABGS.GAME_STATE_ROUND_END))

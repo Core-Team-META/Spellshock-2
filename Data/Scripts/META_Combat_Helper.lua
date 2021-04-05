@@ -125,6 +125,7 @@ function OnDied(attackData)
             sourceData.playersKilled[target.id] = sourceData.playersKilled[target.id] and sourceData.playersKilled[target.id] + 1 or 1
             UpdateKillStreak(attackData)
             UpdateUltimateKillAmmount(attackData)
+            source:AddResource(CONST.LIFE_TIME_KILLS, 1)
             Events.Broadcast("META_CH.OnDied", attackData)
         end
     end

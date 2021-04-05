@@ -2707,7 +2707,7 @@ Objects {
   Control {
     Width: 226
     Height: 34
-    UIY: -2.15045166
+    UIY: 8.15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2727,6 +2727,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -13552,8 +13553,32 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:xsm"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:gsm"
+      Float: 0
+    }
+    Overrides {
       Name: "cs:rewards:isrep"
       Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:tooltip"
+      String: "Server Wide XP Multiplier"
+    }
+    Overrides {
+      Name: "cs:gsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:gsm:tooltip"
+      String: "Server Wide Gold Multiplier"
     }
   }
   WantsNetworking: true

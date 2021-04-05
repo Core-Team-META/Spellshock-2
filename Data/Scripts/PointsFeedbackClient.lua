@@ -16,6 +16,7 @@ until CP_API
 ------------------------------------------------------------------------------------------------------------------------
 local EaseUI = require(script:GetCustomProperty("EaseUI"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local MPC_API = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 
 ------------------------------------------------------------------------------------------------------------------------
 -- CUSTOM SETTINGS
@@ -316,7 +317,7 @@ end
 
 function CheckResource(resource, value)
 
-	if resourceTable[resource] and value > 0 then
+	if resourceTable[resource] and value > 0 or resource == "CLASS_XP" then
 		return true
 	end
 
@@ -404,6 +405,8 @@ function OnResourceChanged(player, resourceName, resourceValue)
 
 	if (resourceValue - originalValue[resourceName] > 0) then
 		PushQueue({resourceName, resourceValue - originalValue[resourceName]})
+	elseif resourceName == "CLASS_XP" and localPlayer:GetResource("C_LEVEL") > 1 then
+		PushQueue({resourceName, MPC_API.ReqXp[localPlayer:GetResource("C_LEVEL") - 1] - originalValue[resourceName] + localPlayer:GetResource(resourceName)})
 	end
 	originalValue[resourceName] = resourceValue
 end

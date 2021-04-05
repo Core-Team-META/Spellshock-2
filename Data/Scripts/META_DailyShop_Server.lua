@@ -146,7 +146,7 @@ end
 
 function OnGoldRefresh(player)
     local refreshCount = player.serverUserData.DS_REFRESH or 0
-    local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.CalculateRefreshCost(refreshCount)
+    local remainingGold = player:GetResource(CONST.GOLD) - REWARD_UTIL.CalculateGoldRefreshCost(refreshCount)
     if remainingGold >= 0 then
         GenerateShopItems(player, true)
         ReplicateShopItems(player)
@@ -157,7 +157,7 @@ end
 function OnPremiumRefresh(player)
     local refreshCount = player.serverUserData.DS_REFRESH or 0
     local remainingCosmToken =
-        player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculateRefreshCost(refreshCount) / 500)
+        player:GetResource(CONST.COSMETIC_TOKEN) - CoreMath.Round(REWARD_UTIL.CalculatePremiumRefreshCost(refreshCount))
     if remainingCosmToken >= 0 then
         GenerateShopItems(player, true)
         ReplicateShopItems(player)

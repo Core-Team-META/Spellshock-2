@@ -1,11 +1,15 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Player Storage Manager
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/29
--- Version 0.1.16
+-- Date: 2021/4/4
+-- Version 0.2.0
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
+while not _G.STORAGE_KEYS do
+    Task.Wait()
+end
+
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 ------------------------------------------------------------------------------------------------------------------------
@@ -62,7 +66,6 @@ local function DoesDataVersionMatch(data)
         return true
     end
 end
-
 
 -- #TODO Currently used for adding multiple cosmetics to a player
 -- Builds default cosmetics
@@ -135,11 +138,15 @@ local function OnLoadCurrencyData(player, data)
                 player:SetResource(CONST.CURRENCY[key], value)
             end
         end
-    else
-        for k, name in ipairs(CONST.CURRENCY) do
+    else --
+        --[[for k, name in ipairs(CONST.CURRENCY) do
             player:SetResource(name, 0) -- Needs to add to player resource as 0 to store properly
-            warn(tostring(player:GetResource(name)))
-        end
+            --warn(tostring(player:GetResource(name)))
+        end]] player:SetResource(
+            CONST.GOLD,
+            1000
+        )
+        player:SetResource(CONST.COSMETIC_TOKEN, 50)
     end
 end
 
@@ -211,7 +218,6 @@ local function OnSaveEquippedCosmetic(player, data)
         next(playerCosmetics) ~= nil and UTIL.EquippedCosmeticConvertToString(playerCosmetics) or ""
 end
 
-
 --@param object player
 --@param table data
 local function OnLoadDailyShopData(player, data)
@@ -267,21 +273,26 @@ end
 
 --@param object player
 local function OnPlayerJoined(player)
-    local data = Storage.GetPlayerData(player)
-    --data = {} --#Used when resetting data for Testing
     Task.Wait()
-    if not Object.IsValid(player) then return end
-    if DoesDataVersionMatch(data) then
-        OnLoadProgressionData(player, data)
-        OnLoadCostumeData(player, data)
-        OnLoadCurrencyData(player, data)
-        OnLoadEquippedCosmetic(player, data)
-        OnLoadDailyShopData(player, data)
-        OnLoadGamePlayStatsData(player, data)
-        OnLoadClassLevelData(player, data)
-        OnLoadConsumableData(player, data)
-        AddDefaultCosmetics(player)
+    if not Object.IsValid(player) then
+        return
     end
+    --if DoesDataVersionMatch(data) then
+        local progressData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player)
+        OnLoadProgressionData(player, progressData)
+        OnLoadClassLevelData(player, progressData)
+        OnLoadConsumableData(player, progressData)
+
+        local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
+        OnLoadCurrencyData(player, currencyData)
+        OnLoadDailyShopData(player, currencyData)
+        OnLoadGamePlayStatsData(player, currencyData)
+
+        local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
+        OnLoadCostumeData(player, cosmeticData)
+        OnLoadEquippedCosmetic(player, cosmeticData)
+        AddDefaultCosmetics(player)
+    --end
     CONSUMABLES.context.OnPlayerJoined(player)
 end
 
@@ -289,43 +300,50 @@ local function OnPlayerLeft(player)
     OnSavePlayerData(player)
 
     for _, equipment in ipairs(player:GetEquipment()) do
-		if Object.IsValid(equipment) then
-			equipment:Unequip()
-			equipment:Destroy()
-		end
-	end
-    
-     --Nil out data tables
-     META_AP.context.OnPlayerLeft(player)
-     META_COSMETIC.context.OnPlayerLeft(player)
-     DAILY_SHOP.context.OnPlayerLeft(player)
-     ADAPTOR.context.OnPlayerLeft(player)
-     CLASS_PROGRESSION.context.OnPlayerLeft(player)
-     CONSUMABLES.context.OnPlayerLeft(player)
-     --MOUNT_MANAGER.context.OnPlayerLeft(player)
-end
+        if Object.IsValid(equipment) then
+            equipment:Unequip()
+            equipment:Destroy()
+        end
+    end
 
+    --Nil out data tables
+    META_AP.context.OnPlayerLeft(player)
+    META_COSMETIC.context.OnPlayerLeft(player)
+    DAILY_SHOP.context.OnPlayerLeft(player)
+    ADAPTOR.context.OnPlayerLeft(player)
+    CLASS_PROGRESSION.context.OnPlayerLeft(player)
+    CONSUMABLES.context.OnPlayerLeft(player)
+    --MOUNT_MANAGER.context.OnPlayerLeft(player)
+end
 
 --@param object player
 function OnSavePlayerData(player)
-    local data = Storage.GetPlayerData(player)
+    --local data = Storage.GetPlayerData(player)
 
     --Build string from data tables
-    OnSaveProgressionData(player, data)
-    OnSaveCostumeData(player, data)
-    OnSaveCurrencyData(player, data)
-    OnSaveGamePlayStatsData(player, data)
-    OnSaveEquippedCosmetic(player, data)
-    OnSaveDailyShopData(player, data)
-    OnSaveClassLeveData(player, data)
-    OnSaveConsumableData(player, data)
+    local cosmeticData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player)
+    OnSaveCostumeData(player, cosmeticData)
+    OnSaveEquippedCosmetic(player, cosmeticData)
+    Storage.SetSharedPlayerData(_G.STORAGE_KEYS.COSMETICS, player, cosmeticData)
+
+    local progressData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player)
+    OnSaveProgressionData(player, progressData)
+    OnSaveClassLeveData(player, progressData)
+    OnSaveConsumableData(player, progressData)
+    Storage.SetSharedPlayerData(_G.STORAGE_KEYS.PROGRESSION, player, progressData)
+
+    local currencyData = Storage.GetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player)
+    OnSaveCurrencyData(player, currencyData)
+    OnSaveGamePlayStatsData(player, currencyData)
+    OnSaveDailyShopData(player, currencyData)
+    Storage.SetSharedPlayerData(_G.STORAGE_KEYS.CURRENCY, player, currencyData)
 
     --data[CONST.STORAGE.MOUNT_SPEED] = MOUNT_MANAGER.context.GetMountLevel(player)
 
     --Save data storage version
-    data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
+    --data[CONST.STORAGE.VERSION] = UTIL.ConvertTableToString(versionControl, "|", "^")
 
-    Storage.SetPlayerData(player, data)
+    --Storage.SetPlayerData(player, data)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -333,4 +351,3 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
-

@@ -2565,10 +2565,10 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 60
-    Height: 60
-    UIX: 18.5162907
-    UIY: 7.52651024
+    Width: 70
+    Height: 70
+    UIX: 48.9785728
+    UIY: 7
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2579,12 +2579,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2618,8 +2618,6 @@ Objects {
   Control {
     Width: 35
     Height: 35
-    UIX: 39
-    UIY: -12
     RotationAngle: 135
     RenderTransformPivot {
       Anchor {
@@ -2640,12 +2638,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2678,9 +2676,7 @@ Objects {
   }
   Control {
     Width: 38
-    Height: 37
-    UIX: 40
-    UIY: -13
+    Height: 38
     RotationAngle: 135
     RenderTransformPivot {
       Anchor {
@@ -2701,12 +2697,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2739,8 +2735,6 @@ Objects {
   Control {
     Width: 43
     Height: 43
-    UIX: 3
-    UIY: -1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2762,12 +2756,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2799,9 +2793,7 @@ Objects {
   }
   Control {
     Width: 38
-    Height: 37
-    UIX: 40
-    UIY: -13
+    Height: 38
     RotationAngle: 135
     RenderTransformPivot {
       Anchor {
@@ -2823,12 +2815,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2861,7 +2853,6 @@ Objects {
   Control {
     Width: 38
     Height: 38
-    UIX: 6
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2880,12 +2871,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2928,8 +2919,7 @@ Objects {
         Id: 13591847256893365151
       }
       Color {
-        R: 0.590000033
-        G: 0.304768234
+        R: 0.64
         A: 1
       }
       TeamSettings {
@@ -2938,12 +2928,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -2976,7 +2966,6 @@ Objects {
   Control {
     Width: 52
     Height: 52
-    UIX: -1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2987,9 +2976,7 @@ Objects {
         Id: 13591847256893365151
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.24000001
         A: 1
       }
       TeamSettings {
@@ -2998,12 +2985,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -3036,8 +3023,7 @@ Objects {
   Control {
     Width: 56
     Height: 56
-    UIX: -2
-    UIY: 1
+    UIY: 2
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3056,12 +3042,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middleleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -3096,7 +3082,7 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: -9.44885254
+    UIX: -1.6924696
     UIY: -5.92478943
     RenderTransformPivot {
       Anchor {
@@ -3163,7 +3149,7 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: -9.44885254
+    UIX: -1.6924696
     UIY: 25.5265121
     RenderTransformPivot {
       Anchor {
@@ -3230,7 +3216,7 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: -12.4488525
+    UIX: 2.47796249
     UIY: 28.5265121
     RenderTransformPivot {
       Anchor {
@@ -3294,7 +3280,7 @@ Objects {
   Control {
     Width: 85
     Height: 41
-    UIX: -12.4488525
+    UIX: 2.47796249
     UIY: -2.92478943
     RenderTransformPivot {
       Anchor {
@@ -3350,7 +3336,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3419,7 +3405,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 142
+    Width: 106
     Height: 1
     UIX: -19.2463875
     UIY: 7

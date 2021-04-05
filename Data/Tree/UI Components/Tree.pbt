@@ -45926,6 +45926,12 @@ Objects {
         SelfId: 4286485536456451516
       }
     }
+    Overrides {
+      Name: "cs:LifetimeStatsParent"
+      ObjectReference {
+        SelfId: 3612288466135902759
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -45938,7 +45944,7 @@ Objects {
   }
   Control {
     Width: 553
-    Height: 574
+    Height: 660
     UIY: -3
     RenderTransformPivot {
       Anchor {
@@ -45983,7 +45989,6 @@ Objects {
   ChildIds: 4286485536456451516
   ChildIds: 14422354040835388288
   ChildIds: 14620165037073086550
-  ChildIds: 13104231110766959551
   ChildIds: 7090391959537246835
   ChildIds: 17168978682002411742
   Collidable_v2 {
@@ -46040,7 +46045,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -46049,7 +46054,7 @@ Objects {
     Width: 66
     Height: 148
     UIX: -74.6628113
-    UIY: 47.2924728
+    UIY: 33.7976
     RotationAngle: 90
     RenderTransformPivot {
       Anchor {
@@ -46101,7 +46106,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -46110,7 +46115,7 @@ Objects {
     Width: 66
     Height: 148
     UIX: -74.6628113
-    UIY: 52.5606461
+    UIY: 39.065773
     RotationAngle: 90
     RenderTransformPivot {
       Anchor {
@@ -46144,65 +46149,6 @@ Objects {
   }
 }
 Objects {
-  Id: 13104231110766959551
-  Name: "FADE_LINE"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5968751008444635816
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 544
-    Height: 2
-    UIY: -78.000061
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 7615847344375253670
-      }
-      Color {
-        R: 0.651405811
-        G: 0.351532698
-        A: 0.545098066
-      }
-      TeamSettings {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 14620165037073086550
   Name: "Lifetime Stats"
   Transform {
@@ -46224,19 +46170,20 @@ Objects {
   ChildIds: 18417657155663340415
   ChildIds: 5258179051441550548
   ChildIds: 5182105897559873193
+  ChildIds: 3612288466135902759
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
     Width: 540
-    Height: 140
-    UIY: 410
+    Height: 255
+    UIY: 400
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46255,6 +46202,107 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 3612288466135902759
+  Name: "Stats Parent"
+  Transform {
+    Location {
+      X: 37047.1875
+      Y: 7782.17285
+      Z: -4762.94238
+    }
+    Rotation {
+      Yaw: -47.5032043
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14620165037073086550
+  ChildIds: 10197375047689963497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Panel {
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10197375047689963497
+  Name: "Helper_LifeTimeStatLine"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3612288466135902759
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14305463446335837900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Helper_LifeTimeStatLine"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 378.224091
+            Y: -461.052551
+            Z: 741.342773
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -11.5785065
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 646998292043101154
     }
   }
 }
@@ -46292,7 +46340,6 @@ Objects {
   Control {
     Width: 180
     Height: 26
-    UIY: 1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -46354,7 +46401,7 @@ Objects {
       }
     }
     Text {
-      Label: "Coming Soon"
+      Label: "Lifetime Stats"
       Color {
         A: 0.379
       }
@@ -46428,7 +46475,7 @@ Objects {
     }
     UseParentWidth: true
     Text {
-      Label: "Coming Soon"
+      Label: "Lifetime Stats"
       Color {
         R: 1
         G: 0.592220783
@@ -46739,8 +46786,8 @@ Objects {
   }
   Control {
     Width: 540
-    Height: 364
-    UIY: 205
+    Height: 200
+    UIY: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -47257,7 +47304,7 @@ Objects {
   }
   Control {
     Width: 540
-    Height: 203
+    Height: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52350,7 +52397,6 @@ Objects {
   }
   Control {
     Width: -2
-    Height: 34
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52375,12 +52421,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -52436,12 +52482,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -55895,7 +55941,7 @@ Objects {
     Width: 292
     Height: 37
     UIX: 2
-    UIY: 17
+    UIY: 23
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -55912,6 +55958,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -55977,6 +56024,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -60031,7 +60079,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 124.047058
-    UIY: 22
+    UIY: 26
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -60048,6 +60096,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -60111,6 +60160,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -62027,7 +62077,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 124.047058
-    UIY: 22
+    UIY: 26
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -62044,6 +62094,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -62107,6 +62158,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -64023,7 +64075,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 124.047058
-    UIY: 22
+    UIY: 26
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -64040,6 +64092,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -64103,6 +64156,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -65959,7 +66013,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 124.047058
-    UIY: 22
+    UIY: 26
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -65976,6 +66030,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -66039,6 +66094,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -67955,7 +68011,7 @@ Objects {
     Width: 200
     Height: 37
     UIX: 124.047058
-    UIY: 22
+    UIY: 26
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -67972,6 +68028,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -68035,6 +68092,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -68825,6 +68883,12 @@ Objects {
       Name: "cs:ConsumablesUpgradeCost_Data"
       AssetReference {
         Id: 3692130031545591443
+      }
+    }
+    Overrides {
+      Name: "cs:Helper_LifeTimeStatLine"
+      AssetReference {
+        Id: 646998292043101154
       }
     }
   }

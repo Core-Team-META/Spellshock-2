@@ -64,5 +64,3 @@ data.type = API_SE.STATUS_EFFECT_TYPE_CUSTOM
 data.tickFunction = EffectTick
 
 API_SE.DefineStatusEffect(data)
-
-print ("Electric effect registered")

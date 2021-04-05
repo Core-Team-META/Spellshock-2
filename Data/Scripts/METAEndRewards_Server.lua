@@ -15,6 +15,10 @@ local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
 local function META_CP()
     return _G["Class.Progression"]
 end
+
+while not _G.PROGRESS_MULTIPLIER do
+    Task.Wait()
+end
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -182,14 +186,9 @@ function CalculateRewards()
         if player.serverUserData.ClassesPlayed then
             playerRewards[player.id] = GetPlayerRewards(player)
             -- player.serverUserData.ClassesPlayed = nil
-            local isVip = player.serverUserData.IsVip
+            --local isVip = player.serverUserData.IsVip
             for _, reward in ipairs(playerRewards[player.id]) do
-                if isVip and reward.amount then
-                    reward.amount = CoreMath.Round(reward.amount * CONST.VIP_REWARD_MULTIPLIER)
-                end
-                if reward.amount then
-                    reward.amount = CoreMath.Round(reward.amount * CONST.EVENT_REWARD_MULTIPLIER)
-                end
+                reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward.amount)
             end
         end
     end

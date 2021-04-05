@@ -1,4 +1,9 @@
-﻿local MODULE = require( script:GetCustomProperty("ModuleManager") )
+﻿-- Author: Ooccoo - (https://www.coregames.com/user/a136c0d1d9454d539c9932354198fc29)
+-- Date: 04/02/2021
+-- Version: 0.0.1
+--===========================================================================================
+
+local MODULE = require( script:GetCustomProperty("ModuleManager") )
 function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local function META_AP()
@@ -141,12 +146,16 @@ function OnUnequip(equipment, player)
 	if TriggerEventConnection then TriggerEventConnection:Disconnect() end
 	if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
 
-	if originalPlayerSettings.MovementMode then
+	--[[if originalPlayerSettings.MovementMode then
 		player.movementControlMode = originalPlayerSettings.MovementMode
 		player.animationStance = originalPlayerSettings.AnimationStance
 		player.groundFriction = originalPlayerSettings.GroundFriction
 		player.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
-	end
+	end]]
+
+	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
+	player.groundFriction = 8
+	player.brakingDecelerationWalking = 1000
 end
 
 ClassEquipment.equippedEvent:Connect(OnEquip)
