@@ -11,6 +11,7 @@ local DEV_TOOLS = false
 ------------------------------------------------------------------------------------------------------------------------
 local UTIL, CONST = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local ABGS = require(script:GetCustomProperty("APIBasicGameState"))
+local REWARD = require(script:GetCustomProperty("META_Rewards_UTIL"))
 
 while not _G["Class.Progression"] do
     Task.Wait()
@@ -126,29 +127,6 @@ end
 --@param object player
 --@param int value
 --@param int value after mutlipliers applied
-local function GetRewardAfterMultipliers(player, value)
-    --#FIXME Do we need one for rewards too?
-    local multiplier = CONST.EVENT_REWARD_MULTIPLIER + 0
-
-    --VIP Member Multiplier Perk
-    if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
-        multiplier = multiplier + CONST.VIP_REWARD_MULTIPLIER
-    end
-
-    --Starter Pack Multiplier Perk
-    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
-        multiplier = multiplier + CONST.STARTER_PACK_MULTIPLIER
-    end
-
-    if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
-        multiplier = CONST.MAX_TOTAL_MULTIPLIER
-    end
-    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
-end
-
---@param object player
---@param int value
---@param int value after mutlipliers applied
 local function GetXpAfterMultipliers(player, value)
     local multiplier = CONST.EVENT_XP_MULITPLIER + xpServerMultiplier
 
@@ -201,6 +179,50 @@ local function GetGoldAfterMultipliers(player, value)
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
+--@param object player
+--@param int value
+--@param int value after mutlipliers applied
+local function GetShardsAfterMultipliers(player, value)
+    local multiplier = CONST.EVENT_SHARD_MULTIPLIER
+
+    if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
+        multiplier = multiplier + CONST.VIP_SHARDS_MULTIPLIER
+    end
+
+    --Starter Pack Multiplier Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
+        multiplier = multiplier + CONST.STARTER_PACK_SHARDS_MULTIPLIER
+    end
+
+    if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
+        multiplier = CONST.MAX_TOTAL_MULTIPLIER
+    end
+
+    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+end
+
+--@param object player
+--@param int value
+--@param int value after mutlipliers applied
+local function GetCosmeticAfterMultipliers(player, value)
+    local multiplier = CONST.EVENT_COSMETIC_MULTIPLIER
+
+    if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
+        multiplier = multiplier + CONST.VIP_COSMETIC_MULTIPLIER
+    end
+
+    --Starter Pack Multiplier Perk
+    if _G.PerPlayerDictionary.Get(player, CONST.STARTER_PACK_KEY) then
+        multiplier = multiplier + CONST.STARTER_PACK_COSMETIC_MULTIPLIER
+    end
+
+    if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
+        multiplier = CONST.MAX_TOTAL_MULTIPLIER
+    end
+
+    return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
+end
+
 --@params object source -- player
 --@params object target -- player
 local function GiveGoldOnKill(source, target, sourceLevel, targetLevel)
@@ -243,6 +265,26 @@ local function GiveXPOnKill(source, target, sourceLevel, targetLevel)
     gainedXp = GetKillDiminishingReturns(source, target, gainedXp)
     --warn("Final Xp " .. tostring(gainedXp))
     CLASS_PROGRESS.AddXP(source, source:GetResource(CONST.CLASS_RES), CoreMath.Round(gainedXp))
+end
+
+--@param object player
+--@param int value
+--@param int value after mutlipliers applied
+local function GetRewardAfterMultipliers(player, reward)
+    local amount
+    --warn("Before Multiplier - Reward Type: " .. tostring(reward.type) .. " Amount: " .. tostring(reward.amount))
+    if reward.type == REWARD.REWARD_TYPES.SKILLPOINTS or reward.type == REWARD.REWARD_TYPES.CONSUMABLES or reward.type == REWARD.REWARD_TYPES.MOUNT_SPEED then -- Shard Multipliers
+        amount = GetShardsAfterMultipliers(player, reward.amount)
+    elseif reward.type == REWARD.REWARD_TYPES.GOLD then -- Gold Multiplier
+        amount = GetXpAfterMultipliers(player, reward.amount)
+    elseif reward.type == REWARD.REWARD_TYPES.COSMETIC then
+        amount = GetCosmeticAfterMultipliers(player, reward.amount)
+    elseif reward.type == REWARD.REWARD_TYPES.CLASS_XP then -- Class XP Multiplier
+        amount = GetXpAfterMultipliers(player, reward.amount)
+    end
+    amount = amount or reward.amount
+    --warn("Before Multiplier - Reward Type: " .. tostring(reward.type) .. " Amount: " .. tostring(amount))
+    return CoreMath.Round(amount)
 end
 
 local function OnRoundEnd()
