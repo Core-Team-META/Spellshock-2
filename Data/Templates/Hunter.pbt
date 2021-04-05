@@ -2588,13 +2588,13 @@ Assets {
           }
           Weapon {
             ProjectileAssetRef {
-              Id: 7873447472770106816
+              Id: 3560142934859293255
             }
             MuzzleFlashAssetRef {
               Id: 3452198850354539067
             }
             TrailAssetRef {
-              Id: 16943198897384362849
+              Id: 15322823562239517501
             }
             ImpactAssetRef {
               Id: 4200143341945439636
