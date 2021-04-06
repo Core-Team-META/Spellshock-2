@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/3
--- Version 0.1.8
+-- Date: 2021/4/6
+-- Version 0.1.9
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -168,7 +168,9 @@ API.DIMINISHING_RETURNS = {
     [10] = 0.05
 }
 
-API.CLASS_XP = { --Default XP Values before multipliers
+
+--Default XP Values before multipliers
+API.CLASS_XP = { 
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
@@ -176,6 +178,14 @@ API.CLASS_XP = { --Default XP Values before multipliers
     Interrupt = 25, -- Interrupt Capture Point Player
     KillOnPoint = 100
 }
+
+-- Default Gold Values
+API.GOLD_PER_KILL = 10
+API.GOLD_PER_CAPTURE = 20
+API.KILL_STREAK_BONUS_GOLD = 5
+API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
+API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 
 -- Server Wide Mulitpliers (0 is default no multiplier)
 API.EVENT_XP_MULITPLIER = 0
@@ -203,17 +213,14 @@ API.STARTER_PACK_PREMIUM_BONUS = 100 -- How many cosmetic tokens a player gets w
 -- Mulipliers for Server Boost Perks - Gold & XP
 API.XP_SERVER_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
 API.GOLD_SERVER_BOOST_MULTIPLIER = 1 -- Gold Boost 100% for the entire server
+API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
-
 API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
 
-API.GOLD_PER_KILL = 10
-API.GOLD_PER_CAPTURE = 20
-API.KILL_STREAK_BONUS_GOLD = 5
-API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
-API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
+
 
 API.LEVEL_DIF_BONUS = {
     --Gold player gets from killing a higher level player
