@@ -701,9 +701,9 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function CosmeticResourceChange(_, name)
-	print("Resource change: "..name)
+	--print("Resource change: "..name)
 	if name == cosmeticResourceName then
-		print("Equip resource change")
+		--print("Equip resource change")
 		if string.find(name, "S") then
 			ApplyCosmeticHelper()
 			UpdateEntryButton(currentlySelected, false)
@@ -722,7 +722,7 @@ function CosmeticResourceChange(_, name)
 end
 
 function CosmeticPurchaseChange()
-	print("Cosmetic Purchse Change")
+	--print("Cosmetic Purchse Change")
 	if not currentlySelected then
 		controlsLocked = false
 		return
@@ -869,12 +869,12 @@ function ApplyCosmetic(entry)
 	local skin = tonumber(id:sub(3, 4))
 	local bind = tonumber(id:sub(5, 5))
 	cosmeticResourceName = UTIL.GetSkinString(class, team, bind)
-	print("Broadcasting Equip: "..cosmeticResourceName)
+	--print("Broadcasting Equip: "..cosmeticResourceName)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
 function ApplyCosmeticHelper()
-	print("Updating UI after Equip\n")
+	--print("Updating UI after Equip\n")
 	-- Update UI
 	for _, v in pairs(StoreUIButtons) do
 		UpdateEntryButton(v, false)
