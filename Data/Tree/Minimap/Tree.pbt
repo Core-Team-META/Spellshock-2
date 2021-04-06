@@ -285,7 +285,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Game ID"
-      String: "3d44f5/dividesscreenshots"
+      String: "4ce78c/screenshotstestdivided"
     }
     Overrides {
       Name: "bp:Screenshot Index"

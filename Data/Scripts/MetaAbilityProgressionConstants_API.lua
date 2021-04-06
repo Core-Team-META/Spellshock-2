@@ -180,23 +180,29 @@ API.CLASS_XP = { --Default XP Values before multipliers
 -- Server Wide Mulitpliers (0 is default no multiplier)
 API.EVENT_XP_MULITPLIER = 0
 API.EVENT_GOLD_MULTIPLIER = 0
-API.EVENT_REWARD_MULTIPLIER = 0
-API.EVENT_DAILY_SHOP_DISCOUNT = 0
+API.EVENT_SHARD_MULTIPLIER = 0 
+API.EVENT_COSMETIC_MULTIPLIER = 0
+API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
 -- VIP Player Values
 API.VIP_XP_MULTIPLIER = 0.5 -- 50% Bonus
 API.VIP_GOLD_MULTIPLIER = 0.5 -- 50% Bonus
-API.VIP_REWARD_MULTIPLIER = 0.5 -- 50% Bonus
+API.VIP_SHARDS_MULTIPLIER = 0.5 -- 50% Bonus
+API.VIP_COSMETIC_MULTIPLIER = 0.1 -- 10% Bonus
 API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 20% Discount in Daily Shop
 API.VIP_SERVER_MULTIPLIER = 0.05 -- Each VIP in a server gives a 5% boost to both gold & xp
 
+
 --STARTER Pack Muliplier Value
 API.STARTER_PACK_MULTIPLIER = 0.2 -- 20% To XP & Currency Gains
-API.STARTER_PACK_GOLD_BONUS = 5000
-API.STARTER_PACK_PREMIUM_BONUS = 100
+API.STARTER_PACK_SHARDS_MULTIPLIER = 0 -- Currently A 0% Bonus
+API.STARTER_PACK_COSMETIC_MULTIPLIER = 0 -- 0% Bonus to cosmetic muliplier
+API.STARTER_PACK_GOLD_BONUS = 5000 -- How much Gold a player gets when purchasing the Starter Pack
+API.STARTER_PACK_PREMIUM_BONUS = 100 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
 
-API.XP_SERVER_BOOST_MULTIPLIER = 1
-API.GOLD_SERVER_BOOST_MULTIPLIER = 1
+-- Mulipliers for Server Boost Perks - Gold & XP
+API.XP_SERVER_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
+API.GOLD_SERVER_BOOST_MULTIPLIER = 1 -- Gold Boost 100% for the entire server
 
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%

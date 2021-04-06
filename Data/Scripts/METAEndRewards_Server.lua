@@ -188,7 +188,7 @@ function CalculateRewards()
             -- player.serverUserData.ClassesPlayed = nil
             --local isVip = player.serverUserData.IsVip
             for _, reward in ipairs(playerRewards[player.id]) do
-                reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward.amount)
+                reward.amount = _G.PROGRESS_MULTIPLIER.GetRewardAfterMultipliers(player, reward)
             end
         end
     end

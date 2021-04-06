@@ -169,6 +169,10 @@ for _, class in ipairs(propClassData:GetChildren()) do
 	end
 end
 
+-- team 1 is Orc
+-- team 2 is Elf
+-- _G.TeamColors[1] = Root:GetCustomProperty("Orc")
+-- _G.TeamColors[2] = Root:GetCustomProperty("Elf")
 
 -- nil AddLine(string, Color)
 -- Adds a line to the killfeed
@@ -214,17 +218,16 @@ end
 
 function OnKill(killerPlayer, killedPlayer, damageAbilityName)
 	local lineColor = TEXT_COLOR
-	local killerColor = TEXT_COLOR
-	local killedColor = TEXT_COLOR
+	local killerColor = _G.TeamColors[killerPlayer.team]
+	local killedColor = _G.TeamColors[killedPlayer.team]
 
 	if (killerPlayer) then
-		killerColor = GetTeamColor(killerPlayer) or Color.WHITE
+		-- killerColor = GetTeamColor(killerPlayer) or Color.WHITE
 		if killerPlayer == LOCAL_PLAYER then
 			killerColor = SELF_TEXT_COLOR
 		end
 	end
 
-	killedColor = GetTeamColor(killedPlayer)
 	if  killedPlayer == LOCAL_PLAYER then
 		killedColor = SELF_TEXT_COLOR
 	end
@@ -336,7 +339,6 @@ function Tick(deltaTime)
 				-- Full opacity until LINE_DURATION, then lerp to invisible over FADE_DURATION
 				-- color.a = CoreMath.Clamp(1.0 - (age - LINE_DURATION) / FADE_DURATION, 0.0, 1.0)
 
-
 				-- Full opacity until LINE_DURATION, then lerp to invisible over FADE_DURATION
 				local feedLines = lineTemplates[i]:GetChildren()
 				-- TablePrint(feedLines, 4)
@@ -391,10 +393,10 @@ function Tick(deltaTime)
 								textShadow.justification = TextJustify.LEFT
 							end
 
-							if (lines[i].killedColor ~= color) then
+							if (lines[i].killedColor) then
 								textBox:SetColor(lines[i].killedColor)
 							else
-								textBox:SetColor(color)
+								print("Failed KilledColor")
 							end
 							feedElements["KilledText"] = element
 							feedElements["KilledText"].width = textBox:ComputeApproximateSize().x
@@ -476,10 +478,10 @@ function Tick(deltaTime)
 								textShadow.justification = TextJustify.RIGHT
 							end
 
-							if (lines[i].killerColor ~= color) then
+							if (lines[i].killerColor) then
 								textBox:SetColor(lines[i].killerColor)
 							else
-								textBox:SetColor(color)
+								print("Failed KilledColor")
 							end
 							feedElements["KillerText"] = element
 							feedElements["KillerText"].width = textBox:ComputeApproximateSize().x
@@ -558,7 +560,6 @@ function Tick(deltaTime)
 					xPos = xPos - feedElements["KilledWithTextLabel"].width - GAP_SPACE
 				end
 
-
 				-- killed
 				feedElements["KilledText"].x = xPos
 				xPos = xPos - feedElements["KilledText"].width - GAP_SPACE
@@ -591,9 +592,6 @@ function Tick(deltaTime)
 						xPos = xPos - feedElements["KillerImage"].width - GAP_SPACE
 					end
 				end
-
-
-
 
 				-- if (SHOW_DISTANCE and lines[i].distance ~= "") then
 				-- 	-- Distance

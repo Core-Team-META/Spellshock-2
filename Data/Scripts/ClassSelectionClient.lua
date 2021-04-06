@@ -370,9 +370,9 @@ function UpdateClassInfo(thisButton)
 	local classHealth = CONST.CLASS_HEALTH[META_AP()[dataTable.ClassID]] + (classLevel * 2)
 	BaseHealth.text = tostring(classHealth)
 
-	local regenAmount = 0.06 + (0.04 * classLevel)
-    if regenAmount > 2 then regenAmount = 2 end
-	HealthRegen.text = string.format("+%s / 1s", tostring(regenAmount))
+	local regenAmount = (0.06 + (0.04 * classLevel)) * CONST.CLASS_REGEN[META_AP()[dataTable["ClassID"]]] * 60
+    --if regenAmount > 2 then regenAmount = 2 end
+	HealthRegen.text = string.format("+%s / 1m", tostring(regenAmount))
 
 	-- Change the costume on the animated mesh
 	local costumeTemplate = META_AP().VFX.GetCurrentCostume(LOCAL_PLAYER, META_AP()[dataTable["ClassID"]])
@@ -815,7 +815,8 @@ function isAllowed(delay)
 end
 
 function Tick()
-	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 then
+	if ABGS.GetGameState() == ABGS.GAME_STATE_LOBBY and _G.CurrentMenu == _G.MENU_TABLE["ClassSelection"] and ABGS.GetTimeRemainingInState() and ABGS.GetTimeRemainingInState() < 2 
+	and CurrentClassButton then
 		-- Auto select currently viewed class
 		
 		ClassSelectionCanvas.visibility = Visibility.FORCE_OFF
