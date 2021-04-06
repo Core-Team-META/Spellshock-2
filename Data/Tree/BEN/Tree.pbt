@@ -1099,6 +1099,15 @@ Objects {
         A: 1
       }
     }
+    Overrides {
+      Name: "cs:Self"
+      Color {
+        R: 1
+        G: 0.839215755
+        B: 0.141176477
+        A: 1
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
