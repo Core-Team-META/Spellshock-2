@@ -3,14 +3,16 @@
 -- Version: 0.0.1
 --===========================================================================================
 
-local MODULE = require( script:GetCustomProperty("ModuleManager") )
-function COMBAT() return MODULE.Get("standardcombo.Combat.Wrap") end
+local MODULE = require(script:GetCustomProperty("ModuleManager"))
+function COMBAT()
+	return MODULE.Get("standardcombo.Combat.Wrap")
+end
 local API_SE = require(script:GetCustomProperty("APIStatusEffects"))
 local function META_AP()
 	while not _G["Meta.Ability.Progression"] do
 		Task.Wait()
 	end
-    return _G["Meta.Ability.Progression"]
+	return _G["Meta.Ability.Progression"]
 end
 
 local Equipment = script:GetCustomProperty("Equipment"):WaitForObject()
@@ -32,6 +34,18 @@ local originalPlayerSettings = {}
 local isDashing = false
 local TriggerEventConnection = nil
 local AttachedFX = nil
+local spamPrevent = nil
+
+--Used for spam prevention
+--@return bool
+local function isAllowed(time)
+	local timeNow = os.clock()
+	if spamPrevent ~= nil and (timeNow - spamPrevent) < time then
+		return false
+	end
+	spamPrevent = timeNow
+	return true
+end
 
 function AddImpulseToPlayer(player)
 	--[[
@@ -42,13 +56,33 @@ function AddImpulseToPlayer(player)
 
 	player:ResetVelocity()
 	player:AddImpulse(impulseVector)]]
-	
 	-- Apply stun
-	local status = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod4", DEFAULT_EnemyImpulseAmount, SpecialAbility.name..": Stun")
-	API_SE.ApplyStatusEffect(player, API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id, SpecialAbility.owner, status.duration, status.damage, status.multiplier)
+	local status =
+		META_AP().GetAbilityMod(
+		SpecialAbility.owner,
+		META_AP().R,
+		"mod4",
+		DEFAULT_EnemyImpulseAmount,
+		SpecialAbility.name .. ": Stun"
+	)
+	API_SE.ApplyStatusEffect(
+		player,
+		API_SE.STATUS_EFFECT_DEFINITIONS["Stun"].id,
+		SpecialAbility.owner,
+		status.duration,
+		status.damage,
+		status.multiplier
+	)
 
 	-- Do damage
-	local dmgAmount = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod3", DEFAULT_DamageAmount, SpecialAbility.name..": Damage")
+	local dmgAmount =
+		META_AP().GetAbilityMod(
+		SpecialAbility.owner,
+		META_AP().R,
+		"mod3",
+		DEFAULT_DamageAmount,
+		SpecialAbility.name .. ": Damage"
+	)
 	local dmg = Damage.New(dmgAmount)
 	dmg.reason = DamageReason.COMBAT
 	dmg.sourcePlayer = SpecialAbility.owner
@@ -63,7 +97,6 @@ function AddImpulseToPlayer(player)
 		tags = {id = "Tank_E"}
 	}
 	COMBAT().ApplyDamage(attackData)
-	
 end
 
 function OnBeginOverlap(thisTrigger, other)
@@ -73,36 +106,44 @@ function OnBeginOverlap(thisTrigger, other)
 end
 
 function ToggleDash(mode)
-	if SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then 
-		return 
+	if SpecialAbility and Object.IsValid(SpecialAbility) and SpecialAbility:GetCurrentPhase() == AbilityPhase.READY then
+		return
 	end
-	
-	if mode then
+
+	if mode then --
 		--[[originalPlayerSettings.MovementMode = SpecialAbility.owner.movementControlMode
-		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]]--
-		originalPlayerSettings.BrakingDecelerationWalking = SpecialAbility.owner.brakingDecelerationWalking
+		originalPlayerSettings.GroundFriction = SpecialAbility.owner.groundFriction]] originalPlayerSettings.BrakingDecelerationWalking =
+			SpecialAbility.owner.brakingDecelerationWalking
 		originalPlayerSettings.AnimationStance = SpecialAbility.owner.animationStance
-		
+
 		SpecialAbility.owner.movementControlMode = MovementMode.NONE
 		SpecialAbility.owner.animationStance = "1hand_melee_shield_block"
 		SpecialAbility.owner.groundFriction = 0
 		SpecialAbility.owner.brakingDecelerationWalking = 0
-		
+
 		local directionVector = SpecialAbility.owner:GetWorldRotation() * Vector3.FORWARD
 		DashImpulseVector = directionVector * OwnerImpulseAmount
-		TriggerEventConnection = Trigger.beginOverlapEvent:Connect( OnBeginOverlap )
-		
+		TriggerEventConnection = Trigger.beginOverlapEvent:Connect(OnBeginOverlap)
+
 		local attachmentTemplate = PlayerVFX.Attachment
 		AttachedFX = META_AP().SpawnAsset(attachmentTemplate, {position = SpecialAbility.owner:GetWorldPosition()})
 		AttachedFX:AttachToPlayer(SpecialAbility.owner, "root")
 	else
-		if TriggerEventConnection then TriggerEventConnection:Disconnect() end
-		if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
+		if TriggerEventConnection then
+			TriggerEventConnection:Disconnect()
+		end
+		if Object.IsValid(AttachedFX) then
+			AttachedFX:Destroy()
+		end
+		 --
 		--[[SpecialAbility.owner.movementControlMode = originalPlayerSettings.MovementMode
-		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction]]--
-		SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
-		SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
-		_G["Consumables"].SetMovement(SpecialAbility.owner)
+		SpecialAbility.owner.groundFriction = originalPlayerSettings.GroundFriction]] if
+			SpecialAbility and Object.IsValid(SpecialAbility)
+		 then
+			SpecialAbility.owner.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
+			SpecialAbility.owner.animationStance = originalPlayerSettings.AnimationStance
+			_G["Consumables"].SetMovement(Equipment.owner)
+		end
 	end
 	isDashing = mode
 end
@@ -114,24 +155,40 @@ function OnAbilityCast(thisAbility)
 end
 
 function OnAbilityExecute(thisAbility)
-	ToggleDash(true)
+	if isAllowed(1) then
+		ToggleDash(true)
+		Task.Spawn(
+			function()
+				ToggleDash(false)
+			end,
+			6
+		)
+	end
 end
 
 function OnAbilityCooldown(thisAbility)
-	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 7, thisAbility.name..": Cooldown")
-	Task.Spawn(function ()
-		if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
-			thisAbility:AdvancePhase()
-		end
-	end, Cooldown)
+	local Cooldown = META_AP().GetAbilityMod(thisAbility.owner, META_AP().R, "mod6", 7, thisAbility.name .. ": Cooldown")
+	Task.Spawn(
+		function()
+			if Object.IsValid(thisAbility) and thisAbility:GetCurrentPhase() == AbilityPhase.COOLDOWN then
+				thisAbility:AdvancePhase()
+			end
+		end,
+		Cooldown
+	)
 
 	ToggleDash(false)
 
 	local bashTemplate = PlayerVFX.Bash
-	META_AP().SpawnAsset(bashTemplate, {position = SpecialAbility.owner:GetWorldPosition(), rotation = SpecialAbility.owner:GetWorldRotation()})
+	META_AP().SpawnAsset(
+		bashTemplate,
+		{position = SpecialAbility.owner:GetWorldPosition(), rotation = SpecialAbility.owner:GetWorldRotation()}
+	)
 
-	local sphereRadius = META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_Radius, SpecialAbility.name..": Radius")
-	local nearbyEnemies = Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})
+	local sphereRadius =
+		META_AP().GetAbilityMod(SpecialAbility.owner, META_AP().R, "mod1", DEFAULT_Radius, SpecialAbility.name .. ": Radius")
+	local nearbyEnemies =
+		Game.FindPlayersInSphere(thisAbility.owner:GetWorldPosition(), sphereRadius, {ignoreTeams = thisAbility.owner.team})
 	for _, enemy in pairs(nearbyEnemies) do
 		AddImpulseToPlayer(enemy)
 	end
@@ -143,8 +200,12 @@ function OnEquip(equipment, player)
 end
 
 function OnUnequip(equipment, player)
-	if TriggerEventConnection then TriggerEventConnection:Disconnect() end
-	if Object.IsValid(AttachedFX) then AttachedFX:Destroy() end 
+	if TriggerEventConnection then
+		TriggerEventConnection:Disconnect()
+	end
+	if Object.IsValid(AttachedFX) then
+		AttachedFX:Destroy()
+	end
 
 	--[[if originalPlayerSettings.MovementMode then
 		player.movementControlMode = originalPlayerSettings.MovementMode
@@ -152,7 +213,6 @@ function OnUnequip(equipment, player)
 		player.groundFriction = originalPlayerSettings.GroundFriction
 		player.brakingDecelerationWalking = originalPlayerSettings.BrakingDecelerationWalking
 	end]]
-
 	player.movementControlMode = MovementControlMode.LOOK_RELATIVE
 	player.groundFriction = 8
 	player.brakingDecelerationWalking = 1000
