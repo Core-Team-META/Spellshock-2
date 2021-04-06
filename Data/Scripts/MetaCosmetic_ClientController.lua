@@ -129,6 +129,7 @@ function API.GetCosmeticMuid(player, class, team, skin, bind)
     while not _G.COSMETIC_TABLE_BUILT do
         Task.Wait()
     end
+    Task.Wait()
     return cosmeticTable[class][team][skin][bind]
 end
 

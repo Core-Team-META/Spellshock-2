@@ -193,9 +193,9 @@ function CheckPerkCountWithStorage(player, data)
 
             -- Server & Self Perk Modifers (Repeatable Purchase)
             if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
-                NETWORKED:SetNetworkedCustomProperty("xsm", time() + CONST.XP_SERVER_BOOST_DURATION)
+                NETWORKED:SetNetworkedCustomProperty("sxt", time() + CONST.XP_SERVER_BOOST_DURATION)
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
-                NETWORKED:SetNetworkedCustomProperty("gsm", time() + CONST.GOLD_SERVER_BOOST_DURATION)
+                NETWORKED:SetNetworkedCustomProperty("sgt", time() + CONST.GOLD_SERVER_BOOST_DURATION)
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
                 _G.PerPlayerDictionary.Set(player, CONST.SELF_XP_BOOST_KEY, time() + CONST.XP_SERVER_BOOST_DURATION)
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
@@ -204,7 +204,7 @@ function CheckPerkCountWithStorage(player, data)
         end
     end
     OnSavePerkData(player, data, perks)
-    --_G.PROGRESS_MULTIPLIER.CalculateServerMultiplier()
+    _G.PROGRESS_MULTIPLIER.CalculateServerMultiplier()
 end
 
 -- If player spend and earns the currency resource, update the storage

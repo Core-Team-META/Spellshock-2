@@ -564,10 +564,21 @@ function PurchaseButtonClicked(button)
 			end
 		end
 	end
-
+	
 	--SpawnPreview(currentlySelected.data.templateId, setPreviewMesh, currentlySelected.data.visible)
 	UpdateEntryButton(currentlySelected, false)
 	currentZoom = currentlySelected.data.zoom
+	
+	local count = 0
+	
+	while controlsLocked do 
+		Task.Wait(0.1)
+		count = count + 0.1
+		if count >= 5 then
+			controlsLocked = false
+		end
+	end
+	
 end
 
 ----------------------------------------------------------------------------------------------------------------
