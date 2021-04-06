@@ -14,7 +14,7 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 1239155287608710259
+  ChildIds: 11064051587082207804
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
@@ -1788,7 +1788,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1239155287608710259
+  Id: 11064051587082207804
   Name: "StorageKeys"
   Transform {
     Location {
@@ -1802,35 +1802,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Cosmetics"
-      NetReference {
-        Key: "30ca443eaba945c2a3c11aad3a7c56d1"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-    Overrides {
-      Name: "cs:Currency"
-      NetReference {
-        Key: "23203bff6138497f965b2532cf16c4d5"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-    Overrides {
-      Name: "cs:Progression"
-      NetReference {
-        Key: "640f20ff35974e609d178e06f752ac29"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1840,9 +1811,8 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Script {
-    ScriptAsset {
-      Id: 8607471445973396824
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "StorageKeys"
   }
 }

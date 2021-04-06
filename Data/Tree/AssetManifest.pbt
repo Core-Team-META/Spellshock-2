@@ -47,19 +47,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15565505981041774787
-  Name: "SS2_PROGRESSION"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "640f20ff35974e609d178e06f752ac29"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 15329646696100681115
   Name: "JewelPack1"
   PlatformAssetType: 24
@@ -161,6 +148,19 @@ Assets {
   }
 }
 Assets {
+  Id: 11128327002986300852
+  Name: "SS2_BE_PROD_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "627fd490885c4745bc44c7d55a8fb5db"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 10784387645319107096
   Name: "Tree Oak 01"
   PlatformAssetType: 1
@@ -236,6 +236,19 @@ Assets {
   }
 }
 Assets {
+  Id: 6314502537449923968
+  Name: "SS2_BE_PROD_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "06aa8a5ccba94efe82095b881462eab5"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 5903239611249009820
   Name: "GoldPack2"
   PlatformAssetType: 24
@@ -271,19 +284,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3448662144291263500
-  Name: "SS2_CURRENCY"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "23203bff6138497f965b2532cf16c4d5"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 1082298521074732115
   Name: "SERVERGOLDBOOST"
   PlatformAssetType: 24
@@ -297,25 +297,25 @@ Assets {
   }
 }
 Assets {
-  Id: 1044227786093593712
-  Name: "SS2_COSMETICS"
-  PlatformAssetType: 23
-  NetReferenceAsset {
-    NetReference {
-      Key: "30ca443eaba945c2a3c11aad3a7c56d1"
-      Type {
-        Value: "mc:enetreferencetype:sharedpersistence"
-      }
-    }
-  }
-}
-Assets {
   Id: 901541979513849367
   Name: "Bush 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
+  Id: 153758362961739178
+  Name: "SS2_BE_PROD_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "5de58cc9214344bca1a53c803d5d9292"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
   }
 }
 Assets {
