@@ -214,6 +214,12 @@ Assets {
               SubObjectId: 123815056087435166
             }
           }
+          Overrides {
+            Name: "cs:Capture_VFX_Template"
+            AssetReference {
+              Id: 9234036076987094357
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
