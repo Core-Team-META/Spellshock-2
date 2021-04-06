@@ -1,4 +1,17 @@
 Assets {
+  Id: 18326571579384765473
+  Name: "pro"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "312445ce408644eda48604ad4dc9553b"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 16772265683136066156
   Name: "JewelPack4"
   PlatformAssetType: 24
@@ -183,6 +196,19 @@ Assets {
   }
 }
 Assets {
+  Id: 9512273062214045890
+  Name: "cos"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "ae73536faf0e4f61b29178f46b83662c"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 8553298544017934648
   Name: "Grass Tall"
   PlatformAssetType: 1
@@ -209,6 +235,19 @@ Assets {
       Key: "a6ce54693101494f951fb3cfc42a0f3c"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 7561409343049487072
+  Name: "cur"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "a21283edc0934496909046005d42fd02"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
       }
     }
   }

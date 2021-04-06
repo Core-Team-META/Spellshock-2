@@ -37,8 +37,10 @@ local localPlayer = Game.GetLocalPlayer()
 local trackedResources = RESOURCES_TO_TRACK:GetChildren()
 local resourceTable = {}
 local originalValue = {}
+local reseting = false
 
 local function SetupTrackedResources()
+	reseting = true
 	for _, res in ipairs(trackedResources) do
 		originalValue[res.name] = localPlayer:GetResource(res.name) or 0
 
@@ -52,6 +54,7 @@ local function SetupTrackedResources()
 		}
 
 	end
+	reseting = false
 end
 
 SetupTrackedResources()
@@ -386,12 +389,18 @@ end
 
 function OnResourceChanged(player, resourceName, resourceValue)
 	-- print("--------------------------")
-	-- print(resourceName .. " : " .. tostring(resourceValue))
+	print(resourceName .. " : " .. tostring(resourceValue))
 
 	-- If changes class, update original amounts
 	if (resourceName == "CLASS_MAP") then
 		SetupTrackedResources()
 		return
+	end
+	
+	Task.Wait(0.1)
+	
+	while reseting do
+		Task.Wait()
 	end
 
 	if CheckResource(resourceName, resourceValue) and not allowFeed then
