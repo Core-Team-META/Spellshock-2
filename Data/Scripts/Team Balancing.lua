@@ -239,26 +239,42 @@ function DoRebalance_Friends()
 	end
 	local teamPoints1 = CountFriendConnections(team1)
 	local teamPoints2 = CountFriendConnections(team2)
-		
-	local bestDelta = math.abs(teamPoints1 - teamPoints2)
 	
-	for n = 1,100 do
+	local bestPointsTotal = teamPoints1 + teamPoints2
+	
+	local shuffleCount = 100
+	if len <= 4 then
+		shuffleCount = 5
+	elseif len <= 6 then
+		shuffleCount = 12
+	elseif len <= 8 then
+		shuffleCount = 25
+	elseif len <= 10 then
+		shuffleCount = 50
+	end
+	
+	for n = 1, shuffleCount do
 		if #team1 > #team2 then
 			local randomIndex = math.random(1, CoreMath.Round(#team1 / 2))
-			
 			local randomPlayer = team1[randomIndex]
-			if randomPlayer.serverUserData.friendConnections == 0 then goto continue end
+			
+			if randomPlayer.serverUserData.friendConnections == 0 then
+				-- Push player to end of table and ignore
+				table.remove(team1, randomIndex)
+				table.insert(team1, randomPlayer)
+				goto continue
+			end
 			
 			table.remove(team1, randomIndex)
 			table.insert(team2, randomPlayer)
 			local newTeamPoints1 = CountFriendConnections(team1)
 			local newTeamPoints2 = CountFriendConnections(team2)
 			
-			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
-			if bestDelta <= newDelta then
+			if bestPointsTotal <= newPointsTotal then
 				-- Save this change as an improvement
-				bestDelta = newDelta
+				bestPointsTotal = newPointsTotal
 				teamPoints1 = newTeamPoints1
 				teamPoints2 = newTeamPoints2
 			else
@@ -269,20 +285,25 @@ function DoRebalance_Friends()
 			
 		elseif #team2 > #team1 then
 			local randomIndex = math.random(1, #team2 - 1)
-			
 			local randomPlayer = team2[randomIndex]
-			if randomPlayer.serverUserData.friendConnections == 0 then goto continue end
+			
+			if randomPlayer.serverUserData.friendConnections == 0 then
+				-- Push player to end of table and ignore
+				table.remove(team2, randomIndex)
+				table.insert(team2, randomPlayer)
+				goto continue
+			end
 			
 			table.remove(team2, randomIndex)
 			table.insert(team1, randomPlayer)
 			local newTeamPoints1 = CountFriendConnections(team1)
 			local newTeamPoints2 = CountFriendConnections(team2)
 			
-			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
-			if bestDelta <= newDelta then
+			if bestPointsTotal <= newPointsTotal then
 				-- Save this change as an improvement
-				bestDelta = newDelta
+				bestPointsTotal = newPointsTotal
 				teamPoints1 = newTeamPoints1
 				teamPoints2 = newTeamPoints2
 			else
@@ -307,11 +328,11 @@ function DoRebalance_Friends()
 			local newTeamPoints1 = CountFriendConnections(team1)
 			local newTeamPoints2 = CountFriendConnections(team2)
 			
-			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			local newPointsTotal = newTeamPoints1 + newTeamPoints2
 			
-			if bestDelta <= newDelta then
+			if bestPointsTotal <= newPointsTotal then
 				-- Save this change as an improvement
-				bestDelta = newDelta
+				bestPointsTotal = newPointsTotal
 				teamPoints1 = newTeamPoints1
 				teamPoints2 = newTeamPoints2
 			else

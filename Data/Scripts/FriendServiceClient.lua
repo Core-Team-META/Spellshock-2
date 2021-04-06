@@ -15,8 +15,8 @@ end
 function IsUntrackedFriend(player)
 	if player ~= LOCAL_PLAYER 
 	and not tableIDs[player.id]
-	--and CoreSocial.IsFriendsWithLocalPlayer(player) then
-	and math.random() < 0.5 then -- TODO: Testing 
+	and CoreSocial.IsFriendsWithLocalPlayer(player) then
+	--and math.random() < 0.5 then -- TODO: Testing
 		return true
 	end
 	return false
