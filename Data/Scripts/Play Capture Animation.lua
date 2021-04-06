@@ -1,27 +1,34 @@
 local AnimationAbility = script:GetCustomProperty("AnimationAbility"):WaitForObject()
-local Player_CaptureVFX = script:GetCustomProperty("Player_CaptureVFX"):WaitForObject()
 local Attachment = script:GetCustomProperty("Attachment"):WaitForObject()
-
-local Capture_VFX_Template = script:GetCustomProperty("Capture_VFX_Template")
+local Orc_VFX = script:GetCustomProperty("Orc_VFX"):WaitForObject()
+local Elf_VFX = script:GetCustomProperty("Elf_VFX"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 while not AnimationAbility.owner do
-	Task.Wait()
+    Task.Wait()
 end
 
-if AnimationAbility.owner ~= LOCAL_PLAYER then
-	return
+function OnDestroyed()
+    Attachment:Destroy()
 end
 
 function Tick(deltaTime)
-	if Object.IsValid(AnimationAbility) and Object.IsValid(AnimationAbility.owner) 
-	and AnimationAbility.owner == LOCAL_PLAYER and AnimationAbility:GetCurrentPhase() == AbilityPhase.READY then
-		AnimationAbility:Activate()
-		local Player_POS = LOCAL_PLAYER:GetWorldPosition()
-		Task.Wait()
-		World.SpawnAsset("8025E2E353F51555:HealingPotionVFX", {position = Player_POS})
-		--Attachment:AttachToPlayer(AnimationAbility.owner, "root")
-		--Player_CaptureVFX:Play()
-	end
+    if Object.IsValid(AnimationAbility) and Object.IsValid(AnimationAbility.owner) 
+    and AnimationAbility:GetCurrentPhase() == AbilityPhase.READY then
+        
+        if AnimationAbility.owner == LOCAL_PLAYER then 
+            AnimationAbility:Activate()
+        end
+        
+        
+        Attachment:AttachToPlayer(AnimationAbility.owner, "root")
+        if AnimationAbility.owner.team == 1 then
+        	Orc_VFX:Play()
+        elseif AnimationAbility.owner.team == 2 then
+        	Elf_VFX:Play()
+        end
+    end
 end
+
+AnimationAbility.destroyEvent:Connect(OnDestroyed)

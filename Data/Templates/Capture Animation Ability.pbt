@@ -203,21 +203,21 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Player_CaptureVFX"
-            ObjectReference {
-              SubObjectId: 13434496887934698782
-            }
-          }
-          Overrides {
             Name: "cs:Attachment"
             ObjectReference {
               SubObjectId: 123815056087435166
             }
           }
           Overrides {
-            Name: "cs:Capture_VFX_Template"
-            AssetReference {
-              Id: 9234036076987094357
+            Name: "cs:Orc_VFX"
+            ObjectReference {
+              SubObjectId: 673863440480263622
+            }
+          }
+          Overrides {
+            Name: "cs:Elf_VFX"
+            ObjectReference {
+              SubObjectId: 11257114354016941739
             }
           }
         }
@@ -251,7 +251,8 @@ Assets {
           }
         }
         ParentId: 5918496311518185852
-        ChildIds: 13434496887934698782
+        ChildIds: 11257114354016941739
+        ChildIds: 673863440480263622
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -266,78 +267,52 @@ Assets {
         }
       }
       Objects {
-        Id: 13434496887934698782
+        Id: 11257114354016941739
         Name: "Plasma Charge Up Hold VFX"
         Transform {
           Location {
-            X: 46
-            Z: 145.084961
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 123815056087435166
         UnregisteredParameters {
           Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: false
+          }
+          Overrides {
             Name: "bp:Arc Color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              G: 0.99
+              B: 0.478609294
               A: 1
             }
           }
           Overrides {
             Name: "bp:Outer Core Color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              G: 0.700000048
+              B: 0.352318
               A: 1
             }
-          }
-          Overrides {
-            Name: "bp:Inner Core Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 5
-          }
-          Overrides {
-            Name: "bp:Enable Outer Core"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Enable Inner Core"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Enable Beams"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Enable Arc Rings"
-            Bool: true
           }
         }
         Collidable_v2 {
@@ -359,7 +334,78 @@ Assets {
           }
         }
         Relevance {
-          Value: "mc:eproxyrelevance:critical"
+          Value: "mc:eproxyrelevance:high"
+        }
+      }
+      Objects {
+        Id: 673863440480263622
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 123815056087435166
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.480000019
+              G: 0.114437088
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Outer Core Color"
+            Color {
+              R: 0.64
+              G: 0.17801322
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:high"
         }
       }
     }
