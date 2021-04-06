@@ -54,6 +54,7 @@ end
 function ClearCachedPlayerValues()
 	for _,player in ipairs(Game.GetPlayers()) do
 		player.serverUserData.balanceValue = nil
+		player.serverUserData.friendConnections = 0
 	end
 end
 
@@ -171,6 +172,192 @@ function DoRebalance(playerToIgnore)
 end
 
 
+function ShuffleTeams()
+	local allPlayers = Game.GetPlayers()
+	local len = #allPlayers
+	if len < 2 then return end
+	
+	for n = 1, 3 do
+		for i = 1, (len - 1) do
+			local j = i + 1
+			if math.random() < 0.5 then
+				local temp = allPlayers[i]
+				allPlayers[i] = allPlayers[j]
+				allPlayers[j] = temp
+			end
+		end
+	end
+	
+	for i = 1, len do
+		local player = allPlayers[i]
+		local targetTeam = 2
+		if i <= len/2 then
+			targetTeam = 1
+		end
+		if player.team ~= targetTeam then
+			SwitchTeam(player)
+		end
+	end
+end
+
+
+function DoRebalance_Friends()
+	local allPlayers = Game.GetPlayers()
+	local len = #allPlayers
+	if len <= 2 then return end
+	
+	-- Count friend connections for each player
+	local totalConnections = 0
+	for i = 1, len do
+		local player = allPlayers[i]
+		player.serverUserData.friendConnections = 0
+		
+		for j = 1, len do
+			if i ~= j then
+				local otherPlayer = allPlayers[j]
+				
+				if _G.FriendService.AreFriends(player, otherPlayer) then
+					player.serverUserData.friendConnections = player.serverUserData.friendConnections + 1
+					totalConnections = totalConnections + 1
+				end
+			end
+		end
+	end
+	
+	-- Exit early in this case
+	if totalConnections == 0 then return end
+	
+	-- Count the team point starting values. They are based on the number of friend connections
+	local team1 = {}
+	local team2 = {}
+	for _,player in ipairs(allPlayers) do
+		if player.team == 1 then
+			table.insert(team1, player)
+		else
+			table.insert(team2, player)
+		end
+	end
+	local teamPoints1 = CountFriendConnections(team1)
+	local teamPoints2 = CountFriendConnections(team2)
+		
+	local bestDelta = math.abs(teamPoints1 - teamPoints2)
+	
+	for n = 1,100 do
+		if #team1 > #team2 then
+			local randomIndex = math.random(1, CoreMath.Round(#team1 / 2))
+			
+			local randomPlayer = team1[randomIndex]
+			if randomPlayer.serverUserData.friendConnections == 0 then goto continue end
+			
+			table.remove(team1, randomIndex)
+			table.insert(team2, randomPlayer)
+			local newTeamPoints1 = CountFriendConnections(team1)
+			local newTeamPoints2 = CountFriendConnections(team2)
+			
+			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			
+			if bestDelta <= newDelta then
+				-- Save this change as an improvement
+				bestDelta = newDelta
+				teamPoints1 = newTeamPoints1
+				teamPoints2 = newTeamPoints2
+			else
+				-- Revert the change
+				table.remove(team2, #team2)
+				table.insert(team1, randomPlayer)
+			end
+			
+		elseif #team2 > #team1 then
+			local randomIndex = math.random(1, #team2 - 1)
+			
+			local randomPlayer = team2[randomIndex]
+			if randomPlayer.serverUserData.friendConnections == 0 then goto continue end
+			
+			table.remove(team2, randomIndex)
+			table.insert(team1, randomPlayer)
+			local newTeamPoints1 = CountFriendConnections(team1)
+			local newTeamPoints2 = CountFriendConnections(team2)
+			
+			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			
+			if bestDelta <= newDelta then
+				-- Save this change as an improvement
+				bestDelta = newDelta
+				teamPoints1 = newTeamPoints1
+				teamPoints2 = newTeamPoints2
+			else
+				-- Revert the change
+				table.remove(team1, #team1)
+				table.insert(team2, randomPlayer)
+			end
+			
+		else --Even number of players
+			local randomIndex1 = math.random(1, #team1)
+			local randomIndex2 = math.random(1, #team2)
+			local randomPlayer1 = team1[randomIndex1]
+			local randomPlayer2 = team2[randomIndex2]
+			
+			if randomPlayer1.serverUserData.friendConnections == 0
+			and randomPlayer2.serverUserData.friendConnections == 0 then goto continue end
+			
+			table.remove(team1, randomIndex1)
+			table.remove(team2, randomIndex2)
+			table.insert(team2, randomPlayer1)
+			table.insert(team1, randomPlayer2)
+			local newTeamPoints1 = CountFriendConnections(team1)
+			local newTeamPoints2 = CountFriendConnections(team2)
+			
+			local newDelta = math.abs(newTeamPoints1 - newTeamPoints2)
+			
+			if bestDelta <= newDelta then
+				-- Save this change as an improvement
+				bestDelta = newDelta
+				teamPoints1 = newTeamPoints1
+				teamPoints2 = newTeamPoints2
+			else
+				-- Revert the change
+				table.remove(team1, #team1)
+				table.remove(team2, #team2)
+				table.insert(team1, randomPlayer1)
+				table.insert(team2, randomPlayer2)
+			end
+		end
+		
+		::continue::
+	end
+	
+	-- Complete the switches
+	for _,player in ipairs(team1) do
+		if player.team ~= 1 then
+			SwitchTeam(player)
+		end
+	end
+	for _,player in ipairs(team2) do
+		if player.team ~= 2 then
+			SwitchTeam(player)
+		end
+	end
+end
+
+function CountFriendConnections(players)
+	local teamPoints = 0
+	for i = 1,#players do
+		local playerA = players[i]
+		local playerPoints = 0
+		
+		for j = 1,#players do
+			local playerB = players[j]
+			if i ~= j and _G.FriendService.AreFriends(playerA, playerB) then
+				playerPoints = playerPoints + 1 + playerB.serverUserData.friendConnections * 0.1
+			end
+		end
+		playerA.serverUserData.friendPointsOnTeam = playerPoints
+		teamPoints = teamPoints + playerPoints
+	end
+	return teamPoints
+end
+
+
 function OnResourceChanged(player, resourceName, newValue)
 	--
 end
@@ -208,6 +395,7 @@ function OnPlayerLeft(playerToIgnore)
 	-- Does the leaving player still appear on list of GetPlayers() ?
 	-- If so, ignore them in the algorithm
 	
+	--[[ This is currently disabled
 	if IsLobby() then
 		DoRebalance(playerToIgnore)
 	else
@@ -217,6 +405,7 @@ function OnPlayerLeft(playerToIgnore)
 			OfferSwitchChoice()
 		end
 	end
+	--]]
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoin)
@@ -224,9 +413,11 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 
 function OnGameStateChanged(oldState, newState)
-	if newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+	--if newState == ABGS.GAME_STATE_REWARDS and oldState ~= ABGS.GAME_STATE_REWARDS then
+	if newState == ABGS.GAME_STATE_ROUND and oldState ~= ABGS.GAME_STATE_ROUND then
 		ClearCachedPlayerValues()
-		DoRebalance()
+		ShuffleTeams()
+		DoRebalance_Friends()
 	end
 end
 Events.Connect("GameStateChanged", OnGameStateChanged)

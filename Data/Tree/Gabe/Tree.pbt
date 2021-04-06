@@ -1,6 +1,35 @@
 Name: "Gabe"
 RootId: 783937512602456512
 Objects {
+  Id: 6263139142237801270
+  Name: "FriendService"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 783937512602456512
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FriendService"
+  }
+}
+Objects {
   Id: 4484498410314588185
   Name: "Per Player Dictionary"
   Transform {
