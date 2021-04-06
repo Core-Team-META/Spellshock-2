@@ -113,6 +113,19 @@ Assets {
   }
 }
 Assets {
+  Id: 12805171153576188001
+  Name: "SS2_ZS_PROD_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "efb8cc776c454a7faa0ae8a959d38706"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 11588052875130059778
   Name: "SELFXPBOOST"
   PlatformAssetType: 24
@@ -236,6 +249,19 @@ Assets {
   }
 }
 Assets {
+  Id: 6808601939512767875
+  Name: "SS2_ZS_PROD_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "62a4022574c249e9a7c4f5227e02bf61"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 6314502537449923968
   Name: "SS2_BE_PROD_PROGRESSION"
   PlatformAssetType: 23
@@ -281,6 +307,19 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_grass_generic_002"
+  }
+}
+Assets {
+  Id: 3375524747070021385
+  Name: "SS2_ZS_PROD_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "89c321e4f4904b25afd9c8acb39a446d"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
   }
 }
 Assets {
