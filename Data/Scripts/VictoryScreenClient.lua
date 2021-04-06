@@ -70,11 +70,11 @@ end
 local function UpdatePanelForPlayer(panel, player)
 
 	if not Object.IsValid(player) then
-	
+
 		panel.visibility = Visibility.FORCE_OFF
-		
+
 		return
-		
+
 	end
 
 	local nameTextLabel, deathsValueLabel, killsValueLabel, resourceValueLabel, resourcePanel, meMarker =
@@ -96,6 +96,12 @@ local function UpdatePanelForPlayer(panel, player)
 	end
 
 	nameTextLabel.text = player.name
+	if player.name == LocalPlayer then
+		nameTextLabel:SetColor(_G.TeamColors[3])
+	else
+		nameTextLabel:SetColor(_G.TeamColors[player.team])
+	end
+
 	killsValueLabel.text = tostring(player.kills)
 	deathsValueLabel.text = tostring(player.deaths)
 
@@ -112,25 +118,20 @@ end
 local function UpdateUI()
 
 	local selectedPlayer = nil
-	
+
 	for index, trigger in pairs(WinnerTriggers) do
-	
+
 		selectedPlayer = nil
-	
+
 		for _, object in pairs(trigger:GetOverlappingObjects()) do
-			
 			if object:IsA("Player") then
-			
 				selectedPlayer = object
-				
 				break
-			
 			end
-		
 		end
-		
+
 		UpdatePanelForPlayer(PlayerPanels[index], selectedPlayer)
-				
+
 	end
 
 end
@@ -143,16 +144,15 @@ local function SendToVictoryScreen() -- topThreePlayerStats
 	LocalPlayer:SetLookWorldRotation(RootGroup:GetWorldRotation() + Rotation.New(0, 0, 180))
 	LocalPlayer:SetOverrideCamera(OverrideCamera)
 	--LocalPlayer.lookSensitivity = 0
-	
+
 	if not UpdateUITask then
-	
+
 		UpdateUITask = Task.Spawn(UpdateUI)
 		UpdateUITask.repeatCount = -1
 		UpdateUITask.repeatInterval = 0
-		
+
 	end
-	
-	
+
 	Task.Wait(.1)
 	Events.Broadcast("HideUI")
 end
@@ -166,14 +166,14 @@ local function RestoreFromPodium()
 		LocalPlayer:ClearOverrideCamera()
 		LocalPlayer.lookSensitivity = 1
 	end
-		
+
 	if UpdateUITask then
-	
+
 		UpdateUITask:Cancel()
 		UpdateUITask = nil
-		
+
 	end
-		
+
 	for _, panel in pairs(PlayerPanels) do
 		panel.visibility = Visibility.FORCE_OFF
 
