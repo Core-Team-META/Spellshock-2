@@ -11,11 +11,6 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
-
-while not _G.PROGRESS_MULTIPLIER do
-    Task.Wait()
-end
-
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
