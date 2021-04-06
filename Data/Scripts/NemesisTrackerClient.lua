@@ -28,9 +28,12 @@ local resetting = false
 
 local youAreNemesisOf = ""
 local yourKillCountAsNemesis = 0
+
 	
 local yourNemesisIs = ""
 local yourNemesisKillCount = 0
+
+local defaultNemesisColor = NemesisOfText:GetColor()
 
 local nemesisList = {}
 
@@ -45,6 +48,19 @@ local letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 
 local tickNumber = 1
 local tickList = tickGroup:GetChildren()
+
+
+local function GetNemesisTextColor(playerName)
+	for _, player in ipairs(Game.GetPlayers()) do
+		if player.name == playerName then
+			return _G.TeamColors[3 - localPlayer.team]	
+		end
+	end
+	return defaultNemesisColor
+end
+
+
+
 
 function PlayTick()
 	
@@ -336,10 +352,11 @@ function ShowNemesis()
 
 	--AnimateWordText(YourNemesisText, yourNemesisIs, true)
 	SetChildrenText(YourNemesisText, yourNemesisIs)	
-		
+	YourNemesisText:SetColor(GetNemesisTextColor(yourNemesisIs))
 	
 	--AnimateWordText(NemesisOfText, youAreNemesisOf, true)
 	SetChildrenText(NemesisOfText, youAreNemesisOf)	
+	NemesisOfText:SetColor(GetNemesisTextColor(youAreNemesisOf))
 		
 end
 
