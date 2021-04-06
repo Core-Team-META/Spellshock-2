@@ -26,15 +26,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16694726705708733533
-  Name: "Sci-fi Ability Red 034"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Ability_Red_034"
-  }
-}
-Assets {
   Id: 16259713446874198849
   Name: "Military Frame 006"
   PlatformAssetType: 9
