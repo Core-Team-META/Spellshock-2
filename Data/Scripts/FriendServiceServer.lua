@@ -1,13 +1,23 @@
+--[[
+	Friend Service - Server
+	v1.0
+	by: standardcombo
+	
+	Transfers friend connections from client to server.
+--]]
 
 local API = {}
 _G.FriendService = API
+
+local ID = require( script:GetCustomProperty("GetID") )
 
 local EVENT_NAME = "FriendsService_Report"
 
 
 function API.AreFriends(playerA, playerB)
 	if playerA.serverUserData.friendIDs then
-		return playerA.serverUserData.friendIDs[playerB.id]
+		local id = ID.GetPlayerID(playerB)
+		return playerA.serverUserData.friendIDs[id]
 	end
 	return false
 end
