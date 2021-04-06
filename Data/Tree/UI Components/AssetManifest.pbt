@@ -953,6 +953,15 @@ Assets {
   }
 }
 Assets {
+  Id: 955340689223569148
+  Name: "Fantasy Coins 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Coins_010"
+  }
+}
+Assets {
   Id: 901541979513849367
   Name: "Bush 01"
   PlatformAssetType: 1
