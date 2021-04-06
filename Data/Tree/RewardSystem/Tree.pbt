@@ -118,7 +118,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 1127
+    Width: 1763
     Height: 620
     UIY: 272.363312
     RenderTransformPivot {
@@ -932,8 +932,6 @@ Objects {
   ParentId: 8590337546907338713
   ChildIds: 18384280984022673144
   ChildIds: 18070972377166179088
-  ChildIds: 18028924116997198165
-  ChildIds: 1500056729778265397
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -972,456 +970,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1500056729778265397
-  Name: "UI Scroll Panel"
-  Transform {
-    Location {
-      Y: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4012484446371524607
-  ChildIds: 4788343348190443946
-  ChildIds: 3522675778749802269
-  ChildIds: 15136511743753495813
-  ChildIds: 10325655512495398825
-  ChildIds: 3752673582438507803
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 760
-    Height: 270
-    UIX: 30
-    UIY: 55
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    ScrollPanel {
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 3752673582438507803
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1500056729778265397
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 250
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 10325655512495398825
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1500056729778265397
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 180
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 15136511743753495813
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1500056729778265397
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 110
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 3522675778749802269
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1500056729778265397
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 75
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 4788343348190443946
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1500056729778265397
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 18028924116997198165
-  Name: "Coming Soon"
-  Transform {
-    Location {
-      Y: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4012484446371524607
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 275
-    Height: 60
-    UIY: 7
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Text {
-      Label: "Coming Soon"
-      Color {
-        R: 1
-        G: 0.65668875
-        B: 0.19
-        A: 1
-      }
-      Size: 24
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleleft"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 18070972377166179088
   Name: "UI Scroll Panel"
   Transform {
@@ -1437,11 +985,9 @@ Objects {
     }
   }
   ParentId: 4012484446371524607
-  ChildIds: 10037167226728796004
-  ChildIds: 963497243995710120
-  ChildIds: 14452816365977274654
-  ChildIds: 6261885290109550960
-  ChildIds: 14205563027702221212
+  ChildIds: 6529653167673284169
+  ChildIds: 13763259943393568038
+  ChildIds: 16975952185676555745
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1452,8 +998,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 760
-    Height: 270
+    Width: -56
+    Height: -52
     UIX: 30
     UIY: 55
     RenderTransformPivot {
@@ -1461,6 +1007,9 @@ Objects {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
     ScrollPanel {
     }
     AnchorLayout {
@@ -1478,11 +1027,11 @@ Objects {
   }
 }
 Objects {
-  Id: 14205563027702221212
-  Name: "UI Text Box"
+  Id: 16975952185676555745
+  Name: "Spellshock 2 News and Updates"
   Transform {
     Location {
-      X: -0.00390625
+      Y: 0.0078125
     }
     Rotation {
     }
@@ -1493,6 +1042,26 @@ Objects {
     }
   }
   ParentId: 18070972377166179088
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:TargetUIPanel"
+      ObjectReference {
+        SelfId: 6529653167673284169
+      }
+    }
+    Overrides {
+      Name: "cs:image"
+      AssetReference {
+        Id: 12175762712311518774
+      }
+    }
+    Overrides {
+      Name: "cs:ImageDir"
+      ObjectReference {
+        SelfId: 13763259943393568038
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1502,53 +1071,24 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 250
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
+  Script {
+    ScriptAsset {
+      Id: 11540395547409075260
     }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
+  }
+  InstanceHistory {
+    SelfId: 10774445345847538829
+    SubobjectId: 4493518818899862469
+    InstanceId: 222179726257204090
+    TemplateId: 17186813151703232486
   }
 }
 Objects {
-  Id: 6261885290109550960
-  Name: "UI Text Box"
+  Id: 13763259943393568038
+  Name: "ImageDir"
   Transform {
     Location {
-      X: -0.00390625
+      Y: 0.0078125
     }
     Rotation {
     }
@@ -1559,6 +1099,56 @@ Objects {
     }
   }
   ParentId: 18070972377166179088
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:trophy"
+      AssetReference {
+        Id: 17696531540460943644
+      }
+    }
+    Overrides {
+      Name: "cs:gem"
+      AssetReference {
+        Id: 12253460684865638729
+      }
+    }
+    Overrides {
+      Name: "cs:unlock"
+      AssetReference {
+        Id: 7294692278211928688
+      }
+    }
+    Overrides {
+      Name: "cs:chest"
+      AssetReference {
+        Id: 3031555368145541451
+      }
+    }
+    Overrides {
+      Name: "cs:fireball"
+      AssetReference {
+        Id: 4990637989068521051
+      }
+    }
+    Overrides {
+      Name: "cs:essencePearl"
+      AssetReference {
+        Id: 12978135121763375046
+      }
+    }
+    Overrides {
+      Name: "cs:square"
+      AssetReference {
+        Id: 7387673503276873905
+      }
+    }
+    Overrides {
+      Name: "cs:gradient"
+      AssetReference {
+        Id: 17289448223043935888
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1568,53 +1158,23 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 180
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 10871482731989767081
+    SubobjectId: 4397176299007657185
+    InstanceId: 222179726257204090
+    TemplateId: 17186813151703232486
   }
 }
 Objects {
-  Id: 14452816365977274654
-  Name: "UI Text Box"
+  Id: 6529653167673284169
+  Name: "Rich Text News"
   Transform {
     Location {
-      X: -0.00390625
+      X: 0.00390625
+      Y: 0.00390625
     }
     Rotation {
     }
@@ -1625,6 +1185,14 @@ Objects {
     }
   }
   ParentId: 18070972377166179088
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:TargetUIPanel"
+      ObjectReference {
+        SelfId: 6529653167673284169
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1635,175 +1203,35 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 200
-    Height: 60
-    UIY: 110
+    Width: 1327
+    Height: 333
+    UIX: -1.5
+    UIY: -15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
+    Panel {
     }
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
   }
-}
-Objects {
-  Id: 963497243995710120
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18070972377166179088
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    UIY: 75
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 10037167226728796004
-  Name: "UI Text Box"
-  Transform {
-    Location {
-      X: -0.00390625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18070972377166179088
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 200
-    Height: 60
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Text {
-      Label: "- Really really really long text stuff Really really really long text stuff Really really really long text stuff."
-      Color {
-        R: 1
-        G: 0.674569547
-        B: 0.459999979
-        A: 1
-      }
-      Size: 20
-      Justification {
-        Value: "mc:etextjustify:left"
-      }
-      AutoWrapText: true
-      Font {
-        Id: 11336346532215892341
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
+  InstanceHistory {
+    SelfId: 3610406057196426493
+    SubobjectId: 11078879633985881013
+    InstanceId: 222179726257204090
+    TemplateId: 17186813151703232486
   }
 }
 Objects {
@@ -3279,7 +2707,7 @@ Objects {
   Control {
     Width: 226
     Height: 34
-    UIY: -2.15045166
+    UIY: 8.15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3299,6 +2727,7 @@ Objects {
       }
       AutoWrapText: true
       Font {
+        Id: 11336346532215892341
       }
     }
     AnchorLayout {
@@ -14124,8 +13553,32 @@ Objects {
       String: ""
     }
     Overrides {
+      Name: "cs:xsm"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:gsm"
+      Float: 0
+    }
+    Overrides {
       Name: "cs:rewards:isrep"
       Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:xsm:tooltip"
+      String: "Server Wide XP Multiplier"
+    }
+    Overrides {
+      Name: "cs:gsm:isrep"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:gsm:tooltip"
+      String: "Server Wide Gold Multiplier"
     }
   }
   WantsNetworking: true

@@ -11,6 +11,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
+local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 while not _G.CurrentMenu do
 	Task.Wait()
 end
@@ -700,15 +701,18 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function CosmeticResourceChange(_, name)
+	--print("Resource change: "..name)
 	if name == cosmeticResourceName then
+		--print("Equip resource change")
 		if string.find(name, "S") then
 			ApplyCosmeticHelper()
 			UpdateEntryButton(currentlySelected, false)
-			local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+			controlsLocked = false
+			
+			--[[local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
 			purchaseText.text = "EQUIP"
 			purchaseText:GetChildren()[1].text = "EQUIP"
-			controlsLocked = false
-			propPurchaseButton.visibility = Visibility.INHERIT
+			propPurchaseButton.visibility = Visibility.INHERIT]]
 		end
 		if cosmeticResourceChangeEvent then
 			cosmeticResourceChangeEvent:Disconnect()
@@ -718,15 +722,23 @@ function CosmeticResourceChange(_, name)
 end
 
 function CosmeticPurchaseChange()
+	--print("Cosmetic Purchse Change")
 	if not currentlySelected then
+		controlsLocked = false
 		return
 	end
 	UpdateEntryButton(currentlySelected, false)
-	local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
-	purchaseText.text = "EQUIP"
-	purchaseText:GetChildren()[1].text = "EQUIP"
-	controlsLocked = false
-	propPurchaseButton.visibility = Visibility.INHERIT
+
+	if HasCosmetic(currentlySelected.data.id) then
+		-- EQUIP
+		ApplyCosmetic(currentlySelected)
+	else
+		local purchaseText = propPurchaseButton:GetCustomProperty("Text"):WaitForObject()
+		purchaseText.text = "EQUIP"
+		purchaseText:GetChildren()[1].text = "EQUIP"
+		controlsLocked = false
+		propPurchaseButton.visibility = Visibility.INHERIT
+	end	
 end
 
 --[[function BuyCosmeticResponse(storeId, success)
@@ -850,16 +862,19 @@ function ApplyCosmetic(entry)
 	propPurchaseButton.visibility = Visibility.FORCE_OFF
 	local id = entry.data.id
 
-	cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	--cosmeticResourceChangeEvent = player.resourceChangedEvent:Connect(CosmeticResourceChange)
+	cosmeticResourceChangeEvent = _G.PerPlayerDictionary.valueChangedEvent:Connect(CosmeticResourceChange)
 	local class = tonumber(id:sub(1, 1))
 	local team = tonumber(id:sub(2, 2))
 	local skin = tonumber(id:sub(3, 4))
 	local bind = tonumber(id:sub(5, 5))
-	cosmeticResourceName = "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
+	cosmeticResourceName = UTIL.GetSkinString(class, team, bind)
+	--print("Broadcasting Equip: "..cosmeticResourceName)
 	ReliableEvents.BroadcastToServer("REQUESTCOSMETIC", entry.data.templateId, entry.data.id, entry.data.visible)
 end
 
 function ApplyCosmeticHelper()
+	--print("Updating UI after Equip\n")
 	-- Update UI
 	for _, v in pairs(StoreUIButtons) do
 		UpdateEntryButton(v, false)
@@ -2012,7 +2027,7 @@ function ClearFilters()
 	PlaySFX("Page")
 	if currentClass.tag then
 		currentClass.button:SetButtonColor(currentClass.color)
-		currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
+		--currentClass.selectedPanel.visibility = Visibility.FORCE_OFF
 		currentClass = {tag = nil}
 	end
 

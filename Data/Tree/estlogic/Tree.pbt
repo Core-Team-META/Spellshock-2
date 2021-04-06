@@ -1,36 +1,6 @@
 Name: "estlogic"
 RootId: 1672145936829432866
 Objects {
-  Id: 4525852930169215045
-  Name: "GoldAdd"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1672145936829432866
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1890521278955572303
-    }
-  }
-}
-Objects {
   Id: 3401383139692093591
   Name: "UI Container"
   Transform {
@@ -2981,6 +2951,12 @@ Objects {
       Name: "cs:APIBasicGameState"
       AssetReference {
         Id: 11974742996071064388
+      }
+    }
+    Overrides {
+      Name: "cs:MetaAbilityProgressionConstants_API"
+      AssetReference {
+        Id: 15718075383189814537
       }
     }
     Overrides {

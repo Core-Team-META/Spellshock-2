@@ -41,9 +41,15 @@ function Int()
         Task.Wait()
         for _, child in ipairs(DATA_TRANSFER:GetChildren()) do
             if child.name == LOCAL_PLAYER.id then
+                local dataStr = child:GetCustomProperty("data")
+                while dataStr == "" or not dataStr do
+                    dataStr = child:GetCustomProperty("data")
+                end
+                playerCosmetic = UTIL.CosmeticConvertAddToTable(dataStr, playerCosmetic)
             end
         end
-    until playerCosmetic
+    until next(playerCosmetic)
+    --UTIL.TablePrint(playerCosmetic)
     Events.BroadcastToServer("OnDestroyPlayerDataObject")
 end
 
@@ -133,9 +139,12 @@ function API.GetCurrentCostume(player, class)
         Task.Wait()
     end
     class = class or 1
-    if not player:IsA("Player") then return end --Not sure how it's not getting a player passed, but fails the get resource
+    if not player:IsA("Player") then
+        return
+    end --Not sure how it's not getting a player passed, but fails the get resource
     --local skinId = player:GetResource(UTIL.GetSkinString(class, player.team, CONST.COSTUME_ID))
-    local skinId = 1--API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
+    local skinId = 1
+     --API.GetCurrentCosmeticId(player, class, CONST.COSTUME_ID)
     if skinId == 0 then
         skinId = 1
     end

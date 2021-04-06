@@ -1236,6 +1236,7 @@ Assets {
         ChildIds: 14328014872396548696
         ChildIds: 8269407347384744348
         ChildIds: 5845621310675190650
+        ChildIds: 4326958157534787840
         ChildIds: 10078693908526600732
         WantsNetworking: true
         Collidable_v2 {
@@ -2392,6 +2393,16 @@ Assets {
               SubObjectId: 13263500662269639637
             }
           }
+          Overrides {
+            Name: "cs:BothHands"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:OtherHandVFX"
+            ObjectReference {
+              SubObjectId: 14691404772144920954
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2443,7 +2454,6 @@ Assets {
         Transform {
           Location {
             X: 3
-            Z: 57
           }
           Rotation {
           }
@@ -2454,6 +2464,112 @@ Assets {
           }
         }
         ParentId: 5845621310675190650
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Arc Rings"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Beams"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Enable Outer Core"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Enable Inner Core"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 5
+          }
+          Overrides {
+            Name: "bp:Arc Size"
+            Float: 0.443080842
+          }
+          Overrides {
+            Name: "bp:Arc Density"
+            Float: 1.30277085
+          }
+          Overrides {
+            Name: "bp:Arc Color"
+            Color {
+              R: 0.946
+              G: 0.986285746
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 18322083209027112941
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 4326958157534787840
+        Name: "ChargeUpVFX2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12390733973333184270
+        ChildIds: 14691404772144920954
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14691404772144920954
+        Name: "Plasma Charge Up Hold VFX"
+        Transform {
+          Location {
+            X: 3
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4326958157534787840
         UnregisteredParameters {
           Overrides {
             Name: "bp:Enable Arc Rings"

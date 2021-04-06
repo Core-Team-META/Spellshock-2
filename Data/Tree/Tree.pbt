@@ -14,6 +14,7 @@ Objects {
       Z: 1
     }
   }
+  ChildIds: 11064051587082207804
   ChildIds: 6139923059512821780
   ChildIds: 13334626079586580612
   ChildIds: 728687643111351772
@@ -1784,5 +1785,34 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Gameplay"
+  }
+}
+Objects {
+  Id: 11064051587082207804
+  Name: "StorageKeys"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "StorageKeys"
   }
 }

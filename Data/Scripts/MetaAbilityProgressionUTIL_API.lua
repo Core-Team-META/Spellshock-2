@@ -206,7 +206,7 @@ function API.GetClassXPString(class)
 end
 
 function API.GetSkinString(class, team, bind)
-    return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "SKIN"
+    return "C" .. tostring(class) .. "T" .. tostring(team) .. "B" .. tostring(bind) .. "S"
 end
 
 function API.GetCosmeticIdString(class, team, skin, bind)

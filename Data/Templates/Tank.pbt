@@ -2138,7 +2138,7 @@ Assets {
           IsEnabled: true
           KeyBinding: "ability_primary"
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             PreventOtherAbilities: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:aim"
@@ -2200,7 +2200,7 @@ Assets {
         }
         Ability {
           CastPhaseSettings {
-            Duration: 0.5
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true

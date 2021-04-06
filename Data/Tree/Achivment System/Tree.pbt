@@ -3775,7 +3775,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -3911,7 +3911,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -4041,7 +4041,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -4177,7 +4177,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -4319,7 +4319,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -4455,7 +4455,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -4591,7 +4591,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -4721,7 +4721,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -4857,7 +4857,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -4993,7 +4993,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -5129,7 +5129,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -5271,7 +5271,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -5401,7 +5401,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"
@@ -5537,7 +5537,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Enabled"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:Icon"

@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Ability Progressioni Constants
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/29
--- Version 0.1.7
+-- Date: 2021/4/3
+-- Version 0.1.8
 ------------------------------------------------------------------------------------------------------------------------
 local API = {}
 ------------------------------------------------------------------------------------------------------------------------
@@ -22,9 +22,9 @@ API.STORAGE = {
     GAME_PLAYER_STATS = 8,
     CLASS_PROGRESSION = 9,
     CONSUMABLE = 10,
-    MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
+    ACHIEVEMENTS = 11
+    --MOUNT_SPEED = 11 --#TODO Check if still used before adding new key
 }
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- GAME INFO KEYS
@@ -73,11 +73,9 @@ API.STATUS_EFFECT = {
     STUN = 6
 }
 
-
 API.STARTING_LEVEL = 1
 API.MAX_LEVEL = 10
 API.MAX_CLASS_LEVEL = 50
-
 
 API.CLASS_NAME = {
     [API.CLASS.TANK] = "Warrior",
@@ -153,10 +151,11 @@ API.ReqXp = {
     [47] = 332215,
     [48] = 350505,
     [49] = 369505,
-    [50] = 389505 
+    [50] = 389505
 }
 
-API.DIMINISHING_RETURNS = { -- Uses a float 1.0 = 100% , 0.05 = 5%
+API.DIMINISHING_RETURNS = {
+    -- Uses a float 1.0 = 100% , 0.05 = 5%
     [1] = 1.0,
     [2] = 1.0,
     [3] = 1.0,
@@ -169,7 +168,7 @@ API.DIMINISHING_RETURNS = { -- Uses a float 1.0 = 100% , 0.05 = 5%
     [10] = 0.05
 }
 
-API.CLASS_XP = {
+API.CLASS_XP = { --Default XP Values before multipliers
     Kills = 300,
     Captures = 500,
     CapAssists = 150,
@@ -178,18 +177,35 @@ API.CLASS_XP = {
     KillOnPoint = 100
 }
 
--- Server Wide Mulitpliers (1.0 is default no multiplier)
-API.EVENT_XP_MULITPLIER = 1.0 
-API.EVENT_GOLD_MULTIPLIER = 1.0
-API.EVENT_REWARD_MULTIPLIER = 1.0
-API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 -- 1.0 = 100% Cost | .90 = 90% Cost IE 10% Discount
+-- Server Wide Mulitpliers (0 is default no multiplier)
+API.EVENT_XP_MULITPLIER = 0
+API.EVENT_GOLD_MULTIPLIER = 0
+API.EVENT_SHARD_MULTIPLIER = 0 
+API.EVENT_COSMETIC_MULTIPLIER = 0
+API.EVENT_DAILY_SHOP_DISCOUNT = 1.0 --Leave at 1.0 for 100% (Default Price)
 
 -- VIP Player Values
-API.VIP_XP_MULTIPLIER = 2.0
-API.VIP_GOLD_MULTIPLIER = 2.0
-API.VIP_REWARD_MULTIPLIER = 2.0
-API.VIP_DAILY_SHOP_DISCOUNT = 0.9 -- 10% Discount in Daily Shop
+API.VIP_XP_MULTIPLIER = 0.5 -- 50% Bonus
+API.VIP_GOLD_MULTIPLIER = 0.5 -- 50% Bonus
+API.VIP_SHARDS_MULTIPLIER = 0.5 -- 50% Bonus
+API.VIP_COSMETIC_MULTIPLIER = 0.1 -- 10% Bonus
+API.VIP_DAILY_SHOP_DISCOUNT = 0.8 -- 20% Discount in Daily Shop
+API.VIP_SERVER_MULTIPLIER = 0.05 -- Each VIP in a server gives a 5% boost to both gold & xp
 
+
+--STARTER Pack Muliplier Value
+API.STARTER_PACK_MULTIPLIER = 0.2 -- 20% To XP & Currency Gains
+API.STARTER_PACK_SHARDS_MULTIPLIER = 0 -- Currently A 0% Bonus
+API.STARTER_PACK_COSMETIC_MULTIPLIER = 0 -- 0% Bonus to cosmetic muliplier
+API.STARTER_PACK_GOLD_BONUS = 5000 -- How much Gold a player gets when purchasing the Starter Pack
+API.STARTER_PACK_PREMIUM_BONUS = 100 -- How many cosmetic tokens a player gets when purchasing the Starter Pack
+
+-- Mulipliers for Server Boost Perks - Gold & XP
+API.XP_SERVER_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
+API.GOLD_SERVER_BOOST_MULTIPLIER = 1 -- Gold Boost 100% for the entire server
+
+-- Will cap a players total multipliers to make sure nothing gets out of control
+API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
 
 API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus
 
@@ -199,7 +215,8 @@ API.KILL_STREAK_BONUS_GOLD = 5
 API.CLASS_LEVEL_BONUS_GOLD = 0 --Keep at 0 for no bonus
 API.MAX_KILL_GOLD = 1000000 --#TEMP For Testing
 
-API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
+API.LEVEL_DIF_BONUS = {
+    --Gold player gets from killing a higher level player
     [1] = 3,
     [2] = 6,
     [3] = 9,
@@ -252,8 +269,6 @@ API.LEVEL_DIF_BONUS = { --Gold player gets from killing a higher level player
     [50] = 150
 }
 
-
-
 ------------------------------------------------------------------------------------------------------------------------
 -- CONSUMABLE KEYS
 ------------------------------------------------------------------------------------------------------------------------
@@ -298,7 +313,6 @@ API.COSMETIC_BIND = {
     OUTFIT = 8
 }
 
-
 ------------------------------------------------------------------------------------------------------------------------
 -- RESOURCE NAMES
 ------------------------------------------------------------------------------------------------------------------------
@@ -323,8 +337,11 @@ API.GAME_PLAYER_STATS = {
     [2] = "GAMES_LOST",
     [3] = "TOTAL_GAMES",
     [4] = "weightedWinRate",
-    [5] = "winOfTheDayTimeStamp"
+    [5] = "winOfTheDayTimeStamp",
+    [6] = "LIFE_TIME_KILLS"
 }
+
+API.LIFE_TIME_KILLS = API.GAME_PLAYER_STATS[6]
 API.WIN_OF_THE_DAY_TIME = API.GAME_PLAYER_STATS[5]
 API.WEIGHTED_WINS_KEY = 4
 
@@ -340,6 +357,37 @@ API.CURRENCY = {
 
 API.GOLD = API.CURRENCY[1]
 API.COSMETIC_TOKEN = API.CURRENCY[2]
+
+-- PERK KEYS
+API.VIP_MEMBERSHIP_KEY = "IsVip"
+API.SELF_GOLD_BOOST_KEY = "PGBK"
+API.SELF_XP_BOOST_KEY = "PXBK"
+API.SERVER_XP_BOOST_KEY = "SXBK"
+API.SERVER_GOLD_BOOST_KEY = "SGBK"
+API.STARTER_PACK_KEY = "SPK"
+
+API.PERK_STORAGE_KEYS = {
+    VIP_MEMBER = 1,
+    SELF_GOLD_BOOST = 2,
+    SELF_XP_BOOST = 3,
+    SERVER_XP_BOOST = 4,
+    SERVER_GOLD_BOOST = 5,
+    GOLD_PACK1 = 6,
+    GOLD_PACK2 = 7,
+    GOLD_PACK3 = 8,
+    GOLD_PACK4 = 9,
+    PREM_PACK1 = 10,
+    PREM_PACK2 = 11,
+    PREM_PACK3 = 12,
+    PREM_PACK4 = 13,
+    STARTER_PACK = 14
+}
+
+API.PERK_TYPES = {
+    FLAG = 1,
+    CURRENCY = 2,
+    STARTER_PACK = 3
+}
 
 ------------------------------------------------------------------------------------------------------------------------
 return API

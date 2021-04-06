@@ -1,6 +1,6 @@
 Assets {
   Id: 17514476953377261584
-  Name: "ClassProgressHelper_Server"
+  Name: "ProgressionMutliplier_Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -14,6 +14,12 @@ Assets {
         Name: "cs:APIBasicGameState"
         AssetReference {
           Id: 11974742996071064388
+        }
+      }
+      Overrides {
+        Name: "cs:META_Rewards_UTIL"
+        AssetReference {
+          Id: 2433320775435313890
         }
       }
     }

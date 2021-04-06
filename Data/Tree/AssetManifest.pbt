@@ -1,4 +1,17 @@
 Assets {
+  Id: 16772265683136066156
+  Name: "JewelPack4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "a183bac968a34367a7cca182287d8ac8"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 16388825162191980240
   Name: "Rock Pile 002"
   PlatformAssetType: 1
@@ -8,12 +21,77 @@ Assets {
   }
 }
 Assets {
+  Id: 15969669977645369301
+  Name: "SERVERXPBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "25da71fa7f8c4e95b9f553f6ab9163f9"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 15827781868427444608
+  Name: "GoldPack4"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "294eece8d73a49f0a56c278792698f35"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 15329646696100681115
+  Name: "JewelPack1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "7d4e142e08ce44bf92d8728ea09fe9b0"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 15306349002621259878
+  Name: "VIPMEMBR"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "f47765b43b1843cf8405fb84bae9fd39"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 15128280182623405640
   Name: "Fern 04"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fern_generic_004"
+  }
+}
+Assets {
+  Id: 14862609072787733245
+  Name: "GoldPack1"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "6abe1fc3670941009de6d03e43c15762"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
@@ -35,6 +113,32 @@ Assets {
   }
 }
 Assets {
+  Id: 11588052875130059778
+  Name: "SELFXPBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "ed3f26e02a3f4bbaa2b8953812753225"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 11232852364461677985
+  Name: "JewelPack3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "180fc957bdf5486da0fe539f1f9873f9"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 11228299035028749551
   Name: "Leafy Patch 02"
   PlatformAssetType: 1
@@ -44,12 +148,38 @@ Assets {
   }
 }
 Assets {
+  Id: 11128327002986300852
+  Name: "SS2_BE_PROD_CURRENCY"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "627fd490885c4745bc44c7d55a8fb5db"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 10784387645319107096
   Name: "Tree Oak 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tree_oak_001"
+  }
+}
+Assets {
+  Id: 10039668417810932723
+  Name: "SELFGOLDBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "4299f56202d54c70862eda996b69bc67"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
@@ -71,12 +201,77 @@ Assets {
   }
 }
 Assets {
+  Id: 7683608552441739235
+  Name: "JewelPack2"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "a6ce54693101494f951fb3cfc42a0f3c"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 7169333528181342794
+  Name: "Starter Pack"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "f4899621951e458c93fce70b147adf7d"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 6981536508008379085
   Name: "Rock 03"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
+  Id: 6314502537449923968
+  Name: "SS2_BE_PROD_PROGRESSION"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "06aa8a5ccba94efe82095b881462eab5"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
+  Id: 5903239611249009820
+  Name: "GoldPack2"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "199fe948139b4afcaa1c584b6f6271bf"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 4231794252657893743
+  Name: "GoldPack3"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "8f8ca3e0429143cca9e8f957c37b375c"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
   }
 }
 Assets {
@@ -89,12 +284,38 @@ Assets {
   }
 }
 Assets {
+  Id: 1082298521074732115
+  Name: "SERVERGOLDBOOST"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "abbb8b1d3a674f4d83a3c1c3dbcc312d"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 901541979513849367
   Name: "Bush 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bush_generic_001"
+  }
+}
+Assets {
+  Id: 153758362961739178
+  Name: "SS2_BE_PROD_COSMETICS"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "5de58cc9214344bca1a53c803d5d9292"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
   }
 }
 Assets {
