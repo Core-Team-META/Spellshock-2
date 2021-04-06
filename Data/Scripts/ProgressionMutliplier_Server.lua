@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Progression Multiplier Server
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/3
--- Version 0.1.2
+-- Date: 2021/4/6
+-- Version 0.1.4
 -- Used to determine how much XP, Gold and other progress a player should from combat and muiltipliers
 ------------------------------------------------------------------------------------------------------------------------
 local DEV_TOOLS = false
@@ -42,6 +42,20 @@ local function SetServerXpMultiplier(value)
     xpServerMultiplier = value
 end
 
+local function IsServerXpMultiplierActive()
+    if xpServerMultiplier >= time() then
+        return true
+    end
+    return false
+end
+
+local function IsServerGoldMultiplierActive()
+    if goldServerMultiplier >= time() then
+        return true
+    end
+    return false
+end
+
 --@param float value
 local function SetServerGoldMultiplier(value)
     NETWORKED:SetNetworkedCustomProperty("gsm", value)
@@ -63,8 +77,8 @@ local function SetVipMultiplier(vipCount, goldCount, xpCount)
         xpMultiplier = xpMultiplier + (CONST.XP_SERVER_BOOST_MULTIPLIER * xpCount)
     end
 
-    SetServerGoldMultiplier(goldMultiplier)
-    SetServerXpMultiplier(xpMultiplier)
+    --SetServerGoldMultiplier(goldMultiplier)
+    --SetServerXpMultiplier(xpMultiplier)
 end
 
 local function CalculateServerMultiplier()
@@ -128,7 +142,10 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 local function GetXpAfterMultipliers(player, value)
-    local multiplier = CONST.EVENT_XP_MULITPLIER + xpServerMultiplier
+    local multiplier = CONST.EVENT_XP_MULITPLIER
+    if IsServerXpMultiplierActive() then
+        multiplier = multiplier + CONST.XP_SERVER_BOOST_MULTIPLIER
+    end
 
     --VIP Member Multiplier Perk
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
@@ -141,7 +158,8 @@ local function GetXpAfterMultipliers(player, value)
     end
 
     -- Self XP Boost Perk
-    if _G.PerPlayerDictionary.Get(player, CONST.SELF_XP_BOOST_KEY) then
+    local selfBoostTime = _G.PerPlayerDictionary.GetNumber(player, CONST.SELF_XP_BOOST_KEY)
+    if selfBoostTime and selfBoostTime >= time() then
         multiplier = multiplier + CONST.VIP_XP_MULTIPLIER
     end
 
@@ -156,7 +174,11 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 local function GetGoldAfterMultipliers(player, value)
-    local multiplier = CONST.EVENT_GOLD_MULTIPLIER + goldServerMultiplier
+    local multiplier = CONST.EVENT_GOLD_MULTIPLIER
+
+    if IsServerGoldMultiplierActive() then
+        multiplier = multiplier + CONST.GOLD_SERVER_BOOST_MULTIPLIER
+    end
 
     if _G.PerPlayerDictionary.Get(player, CONST.VIP_MEMBERSHIP_KEY) then
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
@@ -168,7 +190,8 @@ local function GetGoldAfterMultipliers(player, value)
     end
 
     --Self Gold Boost Perk
-    if _G.PerPlayerDictionary.Get(player, CONST.SELF_GOLD_BOOST_KEY) then
+    local selfBoostTtime = _G.PerPlayerDictionary.GetNumber(player, CONST.SELF_GOLD_BOOST_KEY)
+    if selfBoostTtime and selfBoostTtime >= time() then
         multiplier = multiplier + CONST.VIP_GOLD_MULTIPLIER
     end
 
@@ -271,7 +294,10 @@ end
 local function GetRewardAfterMultipliers(player, reward)
     local amount
     --warn("Before Multiplier - Reward Type: " .. tostring(reward.type) .. " Amount: " .. tostring(reward.amount))
-    if reward.type == REWARD.REWARD_TYPES.SKILLPOINTS or reward.type == REWARD.REWARD_TYPES.CONSUMABLES or reward.type == REWARD.REWARD_TYPES.MOUNT_SPEED then -- Shard Multipliers
+    if
+        reward.type == REWARD.REWARD_TYPES.SKILLPOINTS or reward.type == REWARD.REWARD_TYPES.CONSUMABLES or
+            reward.type == REWARD.REWARD_TYPES.MOUNT_SPEED
+     then -- Shard Multipliers
         amount = GetShardsAfterMultipliers(player, reward.amount)
     elseif reward.type == REWARD.REWARD_TYPES.GOLD then -- Gold Multiplier
         amount = GetXpAfterMultipliers(player, reward.amount)
@@ -374,6 +400,17 @@ function GoingToTakeDamage(attackData)
     end
 end
 
+-- handler params: CoreObject_, string_
+function OnNetworkedChanged(object, string)
+    if object == NETWORKED then
+        if string == "xsm" then
+            xpServerMultiplier = object:GetCustomProperty(string)
+        elseif string == "gsm" then
+            goldServerMultiplier = object:GetCustomProperty(string)
+        end
+    end
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Public Server API
 ------------------------------------------------------------------------------------------------------------------------
@@ -408,7 +445,7 @@ end
 --@param int value
 --@param int value after mutlipliers applied
 function API.GetShardsAfterMultipliers(player, value)
-   return GetShardsAfterMultipliers(player, value)
+    return GetShardsAfterMultipliers(player, value)
 end
 
 --@param object player
@@ -426,3 +463,4 @@ Events.Connect("AS.PlayerPointCapture", OnPlayerCapture)
 Events.Connect("AS.PlayerAssistPointCapture", OnPlayerAssistCapture)
 Events.Connect("GameStateChanged", OnGameStateChanged)
 Events.Connect("CombatWrapAPI.GoingToTakeDamage", GoingToTakeDamage)
+NETWORKED.networkedPropertyChangedEvent:Connect(OnNetworkedChanged)
