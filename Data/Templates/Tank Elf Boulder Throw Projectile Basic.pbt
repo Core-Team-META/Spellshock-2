@@ -284,6 +284,15 @@ Assets {
             Name: "bp:Burst"
             Bool: false
           }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.387000024
+              G: 0.282200426
+              B: 0.125000983
+              A: 1
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
