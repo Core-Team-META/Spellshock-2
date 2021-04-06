@@ -197,7 +197,6 @@ local function GetShardsAfterMultipliers(player, value)
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
-
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -219,7 +218,6 @@ local function GetCosmeticAfterMultipliers(player, value)
     if multiplier > CONST.MAX_TOTAL_MULTIPLIER then
         multiplier = CONST.MAX_TOTAL_MULTIPLIER
     end
-
     return CoreMath.Round(GetProgressAfterMultiplier(multiplier, value))
 end
 
@@ -405,6 +403,21 @@ function API.CalculateServerMultiplier()
     --print("RECHECKING MULTIPLIERS")
     CalculateServerMultiplier()
 end
+
+--@param object player
+--@param int value
+--@param int value after mutlipliers applied
+function API.GetShardsAfterMultipliers(player, value)
+   return GetShardsAfterMultipliers(player, value)
+end
+
+--@param object player
+--@param int value
+--@param int value after mutlipliers applied
+function API.GetCosmeticAfterMultipliers(player, value)
+    return GetCosmeticAfterMultipliers(player, value)
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- LISTENERS
 ------------------------------------------------------------------------------------------------------------------------

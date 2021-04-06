@@ -2,8 +2,8 @@ local NAMESPACE = "METADS."
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Daily Shop Server Controller
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/3/30
--- Version 0.1.4
+-- Date: 2021/4/5
+-- Version 0.1.5
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -11,6 +11,11 @@ local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local REWARD_UTIL = require(script:GetCustomProperty("META_Rewards_UTIL"))
 local GAME_STATE_API = require(script:GetCustomProperty("APIBasicGameState"))
+
+while not _G.PROGRESS_MULTIPLIER do
+    Task.Wait()
+end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- OBJECTS
 ------------------------------------------------------------------------------------------------------------------------
@@ -59,14 +64,14 @@ local function CalculateRewardSlot(player)
     if randomChance < 98 then
         local bindId = tonumber(tostring(REWARD_UTIL.GetRandomClass()) .. tostring(REWARD_UTIL.GetRandomBind()))
         if randomChance > 85 then
-            tbl = {[bindId] = REWARD_UTIL.GetSkillLargeAmmount() * 5, P = 0}
+            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillLargeAmmount()), P = 0}
         elseif randomChance > 40 then
-            tbl = {[bindId] = REWARD_UTIL.GetSkillMediumAmmount() * 5, P = 0}
+            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillMediumAmmount()), P = 0}
         else
-            tbl = {[bindId] = REWARD_UTIL.GetSkillSmallAmmount() * 5, P = 0}
+            tbl = {[bindId] = _G.PROGRESS_MULTIPLIER.GetShardsAfterMultipliers(player, REWARD_UTIL.GetSkillSmallAmmount()), P = 0}
         end
     else
-        tbl = {C = REWARD_UTIL.GetCostumeTokenAmmount() * 3, P = 0}
+        tbl = {C = _G.PROGRESS_MULTIPLIER.GetCosmeticAfterMultipliers(player, REWARD_UTIL.GetCostumeTokenAmmount()), P = 0}
     end
     return tbl
 end

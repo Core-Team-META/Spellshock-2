@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- Meta Rewards UTIL
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/2/10
--- Version 0.1.1
+-- Date: 2021/4/5
+-- Version 0.1.2
 ------------------------------------------------------------------------------------------------------------------------
 -- REQUIRE
 ------------------------------------------------------------------------------------------------------------------------
@@ -265,19 +265,19 @@ function API.GetMountSpeedReward()
 end
 
 function API.GetSkillSmallAmmount()
-    return math.random(4, 5)
+    return math.random(20, 25)
 end
 
 function API.GetSkillMediumAmmount()
-    return math.random(6, 7)
+    return math.random(30, 35)
 end
 
 function API.GetSkillLargeAmmount()
-    return math.random(7, 9)
+    return math.random(35, 45)
 end
 
 function API.GetCostumeTokenAmmount()
-    return math.random(1, 3)
+    return math.random(3, 9)
 end
 
 --#TODO Currently Turned off RMB and SHIFT
