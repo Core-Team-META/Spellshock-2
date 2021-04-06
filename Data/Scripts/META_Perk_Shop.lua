@@ -1,8 +1,8 @@
 ﻿------------------------------------------------------------------------------------------------------------------------
 -- Meta Perk Shop
 -- Author Morticai (META) - (https://www.coregames.com/user/d1073dbcc404405cbef8ce728e53d380)
--- Date: 2021/4/3
--- Version 0.1.3
+-- Date: 2021/4/6
+-- Version 0.1.4
 local isEnabled = true
 if not isEnabled then
     return
@@ -13,6 +13,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 local CONST = require(script:GetCustomProperty("MetaAbilityProgressionConstants_API"))
 local UTIL = require(script:GetCustomProperty("MetaAbilityProgressionUTIL_API"))
+local NETWORKED = script:GetCustomProperty("METARewards_Networked"):WaitForObject()
 
 while not _G.PROGRESS_MULTIPLIER or not _G.STORAGE_KEYS do
     Task.Wait()
@@ -52,26 +53,18 @@ bundles[#bundles + 1] = {
 bundles[#bundles + 1] = {
     perk = SELFGOLDBOOST,
     storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
-    perkType = CONST.PERK_TYPES.FLAG,
-    flag = CONST.SELF_GOLD_BOOST_KEY
 }
 bundles[#bundles + 1] = {
     perk = SELFXPBOOST,
     storageId = CONST.PERK_STORAGE_KEYS.SELF_XP_BOOST,
-    perkType = CONST.PERK_TYPES.FLAG,
-    flag = CONST.SELF_XP_BOOST_KEY
 }
 bundles[#bundles + 1] = {
     perk = SERVERXPBOOST,
     storageId = CONST.PERK_STORAGE_KEYS.SERVER_XP_BOOST,
-    perkType = CONST.PERK_TYPES.FLAG,
-    flag = CONST.SERVER_XP_BOOST_KEY
 }
 bundles[#bundles + 1] = {
     perk = SERVERGOLDBOOST,
     storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
-    perkType = CONST.PERK_TYPES.FLAG,
-    flag = CONST.SERVER_GOLD_BOOST_KEY
 }
 bundles[#bundles + 1] = {
     perk = STARTERPACK,
@@ -192,17 +185,26 @@ function CheckPerkCountWithStorage(player, data)
             if bundle.perkType == CONST.PERK_TYPES.FLAG and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
             end
-            if
-                bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk)
-             then
+            if bundle.perkType == CONST.PERK_TYPES.STARTER_PACK and player:HasPerk(bundle.perk) then
                 _G.PerPlayerDictionary.Set(player, bundle.flag, 1)
                 player:AddResource(CONST.COSMETIC_TOKEN, CONST.STARTER_PACK_PREMIUM_BONUS)
                 player:AddResource(CONST.GOLD, CONST.STARTER_PACK_GOLD_BONUS)
             end
+
+            -- Server & Self Perk Modifers (Repeatable Purchase)
+            if bundle.perk == SERVERXPBOOST and perkCount > storageCount then
+                NETWORKED:SetNetworkedCustomProperty("xsm", time() + CONST.XP_SERVER_BOOST_DURATION)
+            elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
+                NETWORKED:SetNetworkedCustomProperty("gsm", time() + CONST.GOLD_SERVER_BOOST_DURATION)
+            elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
+                _G.PerPlayerDictionary.Set(player, CONST.SELF_XP_BOOST_KEY, time() + CONST.XP_SERVER_BOOST_DURATION)
+            elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
+                _G.PerPlayerDictionary.Set(player, CONST.SELF_GOLD_BOOST_KEY, time() + CONST.GOLD_SERVER_BOOST_DURATION)
+            end
         end
     end
     OnSavePerkData(player, data, perks)
-    _G.PROGRESS_MULTIPLIER.CalculateServerMultiplier()
+    --_G.PROGRESS_MULTIPLIER.CalculateServerMultiplier()
 end
 
 -- If player spend and earns the currency resource, update the storage
