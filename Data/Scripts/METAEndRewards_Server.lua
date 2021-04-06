@@ -219,7 +219,7 @@ GAME_STATE.networkedPropertyChangedEvent:Connect(OnGameStateChanged)
 Events.ConnectForPlayer(NAMESPACE .. "GivePlayerRewards", GivePlayerRewards)
 Events.ConnectForPlayer(NAMESPACE .. "TriggerReward", CalculateRewards)
 
--- FOR TESTING -----------------------
+--[[ FOR TESTING -----------------------
 function OnBindingPressed(whichPlayer, binding)
     if (binding == "ability_extra_46") then
         TEMP_CardCount = TEMP_CardCount + 1
@@ -234,3 +234,4 @@ end
 -- on player joined/left functions need to be defined before calling event:Connect()
 --Game.playerJoinedEvent:Connect(OnPlayerJoined)
 ----------------------------------------------------------------------------------------------------
+]]
