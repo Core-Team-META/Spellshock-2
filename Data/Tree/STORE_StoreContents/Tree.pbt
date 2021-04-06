@@ -87,7 +87,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -184,7 +184,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -467,7 +467,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -564,7 +564,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -847,7 +847,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -944,7 +944,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -1227,7 +1227,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -1324,7 +1324,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -1607,7 +1607,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -1704,7 +1704,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -1801,7 +1801,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -1898,7 +1898,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -1995,7 +1995,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -2084,7 +2084,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -2173,7 +2173,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -2262,7 +2262,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -2579,7 +2579,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -2676,7 +2676,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -2959,7 +2959,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -3056,7 +3056,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -3339,7 +3339,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -3436,7 +3436,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -3719,7 +3719,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -3816,7 +3816,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -4099,7 +4099,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -4196,7 +4196,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -4293,7 +4293,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -4382,7 +4382,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -4471,7 +4471,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -4568,7 +4568,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -4665,7 +4665,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -4754,7 +4754,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -5087,7 +5087,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -5184,7 +5184,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -5467,7 +5467,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -5564,7 +5564,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -5847,7 +5847,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -5944,7 +5944,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -6227,7 +6227,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -6324,7 +6324,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -6607,7 +6607,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -6704,7 +6704,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -6801,7 +6801,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -6898,7 +6898,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -6995,7 +6995,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -7084,7 +7084,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -7173,7 +7173,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -7262,7 +7262,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -7579,7 +7579,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -7676,7 +7676,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -7959,7 +7959,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8056,7 +8056,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8339,7 +8339,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8436,7 +8436,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8719,7 +8719,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -8816,7 +8816,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -9099,7 +9099,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -9196,7 +9196,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -9293,7 +9293,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -9382,7 +9382,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -9471,7 +9471,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -9568,7 +9568,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -9665,7 +9665,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -9754,7 +9754,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -10071,7 +10071,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -10168,7 +10168,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -10451,7 +10451,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 120
     }
     Overrides {
       Name: "cs:Tags"
@@ -10548,7 +10548,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 120
     }
     Overrides {
       Name: "cs:Tags"
@@ -10831,7 +10831,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -10928,7 +10928,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -10978,7 +10978,7 @@ Objects {
     }
     Overrides {
       Name: "cs:LockedUntil"
-      Int: 20
+      Int: 200
     }
   }
   Collidable_v2 {
@@ -11211,7 +11211,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -11308,7 +11308,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 100
     }
     Overrides {
       Name: "cs:Tags"
@@ -11591,7 +11591,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -11688,7 +11688,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 500
     }
     Overrides {
       Name: "cs:Tags"
@@ -11785,7 +11785,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -11874,7 +11874,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 250
     }
     Overrides {
       Name: "cs:Tags"
@@ -11963,7 +11963,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -12060,7 +12060,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 50
     }
     Overrides {
       Name: "cs:Tags"
@@ -12157,7 +12157,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"
@@ -12246,7 +12246,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Cost"
-      Int: 20
+      Int: 25
     }
     Overrides {
       Name: "cs:Tags"

@@ -1281,7 +1281,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Melee Weapon \342\200\223 Press LMB to attack nearby enemies with quick, precise strikes."
+      String: "Melee Weapon \342\200\223 Press LMB to attack nearby enemies with quick, precise strikes. Charge and hold to leap forward!"
     }
     Overrides {
       Name: "cs:Bind"
@@ -1640,7 +1640,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Description"
-      String: "Instant \342\200\223 Press Q to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
+      String: "Instant \342\200\223 Press R to throw a small bottle of poison that shatters when it lands; poisoning nearby enemies. Slow Effect = 70%. Slow Duration = 4s."
     }
     Overrides {
       Name: "cs:Bind"
