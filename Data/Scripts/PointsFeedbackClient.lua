@@ -389,7 +389,7 @@ end
 
 function OnResourceChanged(player, resourceName, resourceValue)
 	-- print("--------------------------")
-	print(resourceName .. " : " .. tostring(resourceValue))
+	--print(resourceName .. " : " .. tostring(resourceValue))
 
 	-- If changes class, update original amounts
 	if (resourceName == "CLASS_MAP") then
