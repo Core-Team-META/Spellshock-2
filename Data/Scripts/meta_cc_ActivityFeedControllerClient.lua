@@ -702,15 +702,15 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 function OnResourceChanged(player, resName, resAmt)
 
-	if (resName == "C_LEVEL" and levelUpEnabled) then
-		AddLine({"", 
-			string.format("%s has reached %s level %d",
-							player.name,
-							ClassNamesByID[player:GetResource("CLASS_MAP")],
-							tostring(resAmt)
-						), "", "PlayerLeveled"}, TEXT_COLOR)
-		NEEDS_UPDATE = true
-	end
+	-- if (resName == "C_LEVEL" and levelUpEnabled) then
+	-- 	AddLine({"", 
+	-- 		string.format("%s has reached %s level %d",
+	-- 						player.name,
+	-- 						ClassNamesByID[player:GetResource("CLASS_MAP")],
+	-- 						tostring(resAmt)
+	-- 					), "", "PlayerLeveled"}, TEXT_COLOR)
+	-- 	NEEDS_UPDATE = true
+	-- end
 
 end
 
@@ -732,8 +732,8 @@ function OnPlayerLeft(player)
 	NEEDS_UPDATE = true
 end
 
-Game.roundStartEvent:Connect(OnRoundStart)
-Game.roundEndEvent:Connect(OnRoundEnd)
+-- Game.roundStartEvent:Connect(OnRoundStart)
+Game.roundEndEvent:Connect(ResetFeed)
 
 AF_PANEL.visibility = Visibility.FORCE_OFF
 
@@ -743,7 +743,7 @@ if SHOW_JOIN_AND_LEAVE then
 end
 
 
-scriptListeners[#scriptListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
+-- scriptListeners[#scriptListeners + 1] = LOCAL_PLAYER.resourceChangedEvent:Connect(OnResourceChanged)
 scriptListeners[#scriptListeners + 1] = Events.Connect("GameStateChanged", OnGameStateChanged)
 
 scriptListeners[#scriptListeners + 1] =
