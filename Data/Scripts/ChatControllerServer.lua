@@ -12,6 +12,13 @@ local AdminData = require(script:GetCustomProperty("AdminData"))
 function OnReceiveMessage(player, params)
     local splitMessage = {CoreString.Split(string.lower(params.message))}
     if COMMANDS_LIST[splitMessage[1]] then
+        
+        --- Allow in server Preview
+        if Environment.IsPreview() then 
+            COMMANDS_LIST[splitMessage[1]].OnCommandCalledServer(player, params.message)
+            return 
+        end
+
         --- Admin ranking check
         if COMMANDS_LIST[splitMessage[1]].adminOnly then
             if COMMANDS_LIST[splitMessage[1]].adminRank > (AdminData.Rank[player.name] or AdminData.AdminRanks.None) then 
