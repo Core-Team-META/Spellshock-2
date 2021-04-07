@@ -216,6 +216,12 @@ API.GOLD_SERVER_BOOST_MULTIPLIER = 0.5 -- Gold Boost 100% for the entire server
 API.XP_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 API.GOLD_SERVER_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
 
+-- Mulipliers for Server Boost Perks - Gold & XP
+API.XP_SELF_BOOST_MULTIPLIER = 1 -- XP Boost 100% for the entire server
+API.GOLD_SELF_BOOST_MULTIPLIER = 1 -- Gold Boost 100% for the entire server
+API.XP_SELF_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+API.GOLD_SELF_BOOST_DURATION = 60 * 60 -- Currently set to 1 hour
+
 -- Will cap a players total multipliers to make sure nothing gets out of control
 API.MAX_TOTAL_MULTIPLIER = 3 -- Max bonus 300%
 API.TARGET_LEVEL_XP_BONUS = 5 -- Mulitplied by the targets level IE: level 10 * 5 = 50xp bonus

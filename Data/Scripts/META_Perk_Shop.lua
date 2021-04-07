@@ -52,7 +52,7 @@ bundles[#bundles + 1] = {
 
 bundles[#bundles + 1] = {
     perk = SELFGOLDBOOST,
-    storageId = CONST.PERK_STORAGE_KEYS.SERVER_GOLD_BOOST,
+    storageId = CONST.PERK_STORAGE_KEYS.SELF_GOLD_BOOST,
 }
 bundles[#bundles + 1] = {
     perk = SELFXPBOOST,
@@ -197,9 +197,9 @@ function CheckPerkCountWithStorage(player, data)
             elseif bundle.perk == SERVERGOLDBOOST and perkCount > storageCount then
                 NETWORKED:SetNetworkedCustomProperty("sgt", time() + CONST.GOLD_SERVER_BOOST_DURATION)
             elseif bundle.perk == SELFXPBOOST and perkCount > storageCount then
-                _G.PerPlayerDictionary.Set(player, CONST.SELF_XP_BOOST_KEY, time() + CONST.XP_SERVER_BOOST_DURATION)
+                _G.PerPlayerDictionary.Set(player, CONST.SELF_XP_BOOST_KEY, time() + CONST.XP_SELF_BOOST_DURATION)
             elseif bundle.perk == SELFGOLDBOOST and perkCount > storageCount then
-                _G.PerPlayerDictionary.Set(player, CONST.SELF_GOLD_BOOST_KEY, time() + CONST.GOLD_SERVER_BOOST_DURATION)
+                _G.PerPlayerDictionary.Set(player, CONST.SELF_GOLD_BOOST_KEY, time() + CONST.GOLD_SELF_BOOST_DURATION)
             end
         end
     end
