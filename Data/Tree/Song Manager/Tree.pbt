@@ -313,7 +313,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 6737949795334203683
+        SelfId: 17601287680247368645
       }
     }
   }
@@ -575,7 +575,7 @@ Objects {
     Overrides {
       Name: "cs:SFX"
       ObjectReference {
-        SelfId: 12407423805149081047
+        SelfId: 8159300865285051927
       }
     }
   }
@@ -1543,7 +1543,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
       Volume: 0.35
       Falloff: 3600
       Radius: 400
@@ -1941,7 +1940,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Repeat: true
       Volume: 0.35
       Falloff: 2500
       Radius: 6500
